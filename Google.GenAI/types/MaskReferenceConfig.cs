@@ -23,62 +23,53 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// An image.
+  /// Configuration for a Mask reference image.
   /// </summary>
 
-  public record Image {
+  public record MaskReferenceConfig {
     /// <summary>
-    /// The Cloud Storage URI of the image. ``Image`` can contain a value  for this field or the
-    /// ``image_bytes`` field but not both.
+    /// Prompts the model to generate a mask instead of you needing to  provide one (unless
+    /// MASK_MODE_USER_PROVIDED is used).
     /// </summary>
-    [JsonPropertyName("gcsUri")]
+    [JsonPropertyName("maskMode")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? GcsUri { get; set; }
+    public MaskReferenceMode ? MaskMode { get; set; }
 
     /// <summary>
-    /// The image bytes data. ``Image`` can contain a value for this field  or the ``gcs_uri`` field
-    /// but not both.
+    /// A list of up to 5 class ids to use for semantic segmentation.  Automatically creates an
+    /// image mask based on specific objects.
     /// </summary>
-    [JsonPropertyName("imageBytes")]
+    [JsonPropertyName("segmentationClasses")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public byte[]
-        ? ImageBytes {
+    public List<int>
+        ? SegmentationClasses {
             get; set;
           }
 
     /// <summary>
-    /// The MIME type of the image.
+    /// Dilation percentage of the mask provided.  Float between 0 and 1.
     /// </summary>
-    [JsonPropertyName("mimeType")]
+    [JsonPropertyName("maskDilation")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string
-        ? MimeType {
+    public double
+        ? MaskDilation {
             get; set;
           }
 
     /// <summary>
-    /// Deserializes a JSON string to a Image object.
+    /// Deserializes a JSON string to a MaskReferenceConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized Image object, or null if deserialization fails.</returns>
-    public static Image ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
+    /// <returns>The deserialized MaskReferenceConfig object, or null if deserialization
+    /// fails.</returns>
+    public static MaskReferenceConfig
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<Image>(jsonString, options);
+        return JsonSerializer.Deserialize<MaskReferenceConfig>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
-      }
-    }
-
-    public static Image FromFile(string location, string mimeType) {
-      try {
-        return new Image {
-          ImageBytes = File.ReadAllBytes(location),
-          MimeType = mimeType,
-        };
-      } catch (IOException e) {
-        throw new IOException($"Failed to read image from file: {location}", e);
       }
     }
   }

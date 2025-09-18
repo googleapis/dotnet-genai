@@ -23,63 +23,60 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// An image.
+  /// A raw reference image.   A raw reference image represents the base image to edit, provided by
+  /// the user.  It can optionally be provided in addition to a mask reference image or  a style
+  /// reference image.
   /// </summary>
 
-  public record Image {
+  public record RawReferenceImage : IReferenceImageInternal {
     /// <summary>
-    /// The Cloud Storage URI of the image. ``Image`` can contain a value  for this field or the
-    /// ``image_bytes`` field but not both.
+    /// The reference image for the editing operation.
     /// </summary>
-    [JsonPropertyName("gcsUri")]
+    [JsonPropertyName("referenceImage")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? GcsUri { get; set; }
+    public Image ? ReferenceImage { get; set; }
 
     /// <summary>
-    /// The image bytes data. ``Image`` can contain a value for this field  or the ``gcs_uri`` field
-    /// but not both.
+    /// The id of the reference image.
     /// </summary>
-    [JsonPropertyName("imageBytes")]
+    [JsonPropertyName("referenceId")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public byte[]
-        ? ImageBytes {
+    public int
+        ? ReferenceId {
             get; set;
           }
 
     /// <summary>
-    /// The MIME type of the image.
+    /// The type of the reference image. Only set by the SDK.
     /// </summary>
-    [JsonPropertyName("mimeType")]
+    [JsonPropertyName("referenceType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? MimeType {
+        ? ReferenceType {
             get; set;
           }
 
     /// <summary>
-    /// Deserializes a JSON string to a Image object.
+    /// Deserializes a JSON string to a RawReferenceImage object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized Image object, or null if deserialization fails.</returns>
-    public static Image ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
+    /// <returns>The deserialized RawReferenceImage object, or null if deserialization
+    /// fails.</returns>
+    public static RawReferenceImage
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<Image>(jsonString, options);
+        return JsonSerializer.Deserialize<RawReferenceImage>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }
     }
 
-    public static Image FromFile(string location, string mimeType) {
-      try {
-        return new Image {
-          ImageBytes = File.ReadAllBytes(location),
-          MimeType = mimeType,
-        };
-      } catch (IOException e) {
-        throw new IOException($"Failed to read image from file: {location}", e);
-      }
+    ReferenceImageAPI IReferenceImageInternal.ToReferenceImageAPI() {
+      return new ReferenceImageAPI { ReferenceImage = this.ReferenceImage,
+                                     ReferenceId = this.ReferenceId,
+                                     ReferenceType = "REFERENCE_TYPE_RAW" };
     }
   }
 }
