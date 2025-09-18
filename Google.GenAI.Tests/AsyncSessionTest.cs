@@ -72,7 +72,6 @@ namespace Google.GenAI.Tests {
       var response = new HttpResponseMessage();
       return response.Headers;
     }
-
   }
 
   [TestClass]
