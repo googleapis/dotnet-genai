@@ -1,0 +1,120 @@
+{
+  "recordID": "GenerateContentStreamToolsTest.GenerateContentStreamManualFunctionCallVertexTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-2.0-flash:streamGenerateContent?alt=sse",
+        "request": "POST /v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-2.0-flash:streamGenerateContent?alt=sse HTTP/1.1",
+        "headers": {
+          "Content-Length": "364",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test-Name": "GenerateContentStreamToolsTest.GenerateContentStreamManualFunctionCallVertexTest"
+        },
+        "bodySegments": [
+          {
+            "contents": [
+              {
+                "parts": [
+                  {
+                    "text": "What's the weather like in Melbourne?"
+                  }
+                ],
+                "role": "user"
+              }
+            ],
+            "generationConfig": {},
+            "tools": [
+              {
+                "functionDeclarations": [
+                  {
+                    "description": "return the real time weather of the location",
+                    "name": "GetWeather",
+                    "parameters": {
+                      "properties": {
+                        "location": {
+                          "type": "STRING"
+                        }
+                      },
+                      "required": [
+                        "location"
+                      ],
+                      "type": "OBJECT"
+                    },
+                    "response": {
+                      "type": "STRING"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "us-central1-aiplatform.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "d4b906a85e960e79df52d35e36a1c749b739760c1d0301da6c6af1fbfd4ca374",
+      "response": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Disposition": "attachment",
+          "Content-Type": "text/event-stream",
+          "Date": "Tue, 26 Aug 2025 04:54:05 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "functionCall": {
+                        "args": {
+                          "location": "Melbourne"
+                        },
+                        "name": "GetWeather"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                },
+                "finishReason": "STOP"
+              }
+            ],
+            "createTime": "2025-08-26T04:54:04.936048Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "7D2taPCQOd_-ld8PxfacgQE",
+            "usageMetadata": {
+              "billablePromptUsage": {
+                "textCount": 95
+              },
+              "candidatesTokenCount": 4,
+              "candidatesTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 4
+                }
+              ],
+              "promptTokenCount": 24,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 24
+                }
+              ],
+              "totalTokenCount": 28,
+              "trafficType": "ON_DEMAND"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <RunConfiguration>
+    <ResultsDirectory>TestResults</ResultsDirectory>
+    <TargetFrameworkVersion>net8.0</TargetFrameworkVersion>
+  </RunConfiguration>
+  <LoggerRunSettings>
+    <Loggers>
+      <Logger friendlyName="console" enabled="true" uri="logger://microsoft/TestPlatform/ConsoleLogger/v2">
+        <Configuration>
+          <Verbosity>normal</Verbosity>
+        </Configuration>
+      </Logger>
+      <Logger friendlyName="trx" uri="logger://Microsoft/TestPlatform/TrxLogger/v1" enabled="true">
+        <Configuration>
+            <LogFileName>test-results.trx</LogFileName>
+        </Configuration>
+      </Logger>
+    </Loggers>
+  </LoggerRunSettings>
+  <MSTest>
+    <CaptureTraceOutput>true</CaptureTraceOutput>
+  </MSTest>
+</RunSettings>

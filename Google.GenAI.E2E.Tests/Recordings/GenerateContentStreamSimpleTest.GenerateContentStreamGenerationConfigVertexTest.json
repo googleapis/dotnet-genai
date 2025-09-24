@@ -1,0 +1,198 @@
+{
+  "recordID": "GenerateContentStreamSimpleTest.GenerateContentStreamGenerationConfigVertexTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-2.0-flash:streamGenerateContent?alt=sse",
+        "request": "POST /v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-2.0-flash:streamGenerateContent?alt=sse HTTP/1.1",
+        "headers": {
+          "Content-Length": "174",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test-Name": "GenerateContentStreamSimpleTest.GenerateContentStreamGenerationConfigVertexTest"
+        },
+        "bodySegments": [
+          {
+            "contents": [
+              {
+                "parts": [
+                  {
+                    "text": "Why is the sky blue?"
+                  }
+                ],
+                "role": "user"
+              }
+            ],
+            "generationConfig": {
+              "maxOutputTokens": 100,
+              "responseModalities": [
+                "TEXT"
+              ],
+              "temperature": 0.5,
+              "topP": 0.9
+            }
+          }
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "us-central1-aiplatform.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "7e06b15a3f479db59c12c76d3702eafbab0465028c6243c5794c6497e13f1897",
+      "response": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Disposition": "attachment",
+          "Content-Type": "text/event-stream",
+          "Date": "Tue, 26 Aug 2025 04:54:03 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "The"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "createTime": "2025-08-26T04:54:03.184499Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "6z2taLOhC5-rmecPgMyN8AM",
+            "usageMetadata": {
+              "billablePromptUsage": {
+                "textCount": 16
+              },
+              "trafficType": "ON_DEMAND"
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": " sky is blue"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "createTime": "2025-08-26T04:54:03.184499Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "6z2taLOhC5-rmecPgMyN8AM",
+            "usageMetadata": {
+              "trafficType": "ON_DEMAND"
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": " due to a phenomenon called **Rayleigh scattering**. Here's a breakdown of"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "createTime": "2025-08-26T04:54:03.184499Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "6z2taLOhC5-rmecPgMyN8AM",
+            "usageMetadata": {
+              "trafficType": "ON_DEMAND"
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": " why:\n\n*   **Sunlight is composed of all colors:** White sunlight"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "createTime": "2025-08-26T04:54:03.184499Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "6z2taLOhC5-rmecPgMyN8AM",
+            "usageMetadata": {
+              "trafficType": "ON_DEMAND"
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": " is actually a mixture of all the colors of the rainbow (red, orange, yellow, green, blue, indigo, violet).\n\n*   **Sunlight"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "createTime": "2025-08-26T04:54:03.184499Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "6z2taLOhC5-rmecPgMyN8AM",
+            "usageMetadata": {
+              "trafficType": "ON_DEMAND"
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": " enters the Earth's atmosphere:** As sunlight enters the Earth's atmosphere, it collides with tiny air molecules (mostly nitrogen and oxygen).\n\n*   "
+                    }
+                  ],
+                  "role": "model"
+                },
+                "finishReason": "MAX_TOKENS"
+              }
+            ],
+            "createTime": "2025-08-26T04:54:03.184499Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "6z2taLOhC5-rmecPgMyN8AM",
+            "usageMetadata": {
+              "candidatesTokenCount": 98,
+              "candidatesTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 98
+                }
+              ],
+              "promptTokenCount": 6,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 6
+                }
+              ],
+              "totalTokenCount": 104,
+              "trafficType": "ON_DEMAND"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "recordID": "GenerateContentStreamResponseConfigTest.GenerateContentStreamResponseSchemaWithDefaultVertexTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-2.0-flash:streamGenerateContent?alt=sse",
+        "request": "POST /v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-2.0-flash:streamGenerateContent?alt=sse HTTP/1.1",
+        "headers": {
+          "Content-Length": "527",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test-Name": "GenerateContentStreamResponseConfigTest.GenerateContentStreamResponseSchemaWithDefaultVertexTest"
+        },
+        "bodySegments": [
+          {
+            "contents": [
+              {
+                "parts": [
+                  {
+                    "text": "Can you recommend a restaurant for me?"
+                  }
+                ],
+                "role": "user"
+              }
+            ],
+            "generationConfig": {
+              "responseMimeType": "application/json",
+              "responseSchema": {
+                "properties": {
+                  "address": {
+                    "title": "Address",
+                    "type": "STRING"
+                  },
+                  "city": {
+                    "default": "New York",
+                    "title": "City",
+                    "type": "STRING"
+                  },
+                  "name": {
+                    "title": "Name",
+                    "type": "STRING"
+                  },
+                  "rating": {
+                    "default": 3,
+                    "title": "Rating",
+                    "type": "NUMBER"
+                  }
+                },
+                "propertyOrdering": [
+                  "name",
+                  "city",
+                  "address",
+                  "rating"
+                ],
+                "required": [
+                  "name",
+                  "city",
+                  "address",
+                  "rating"
+                ],
+                "title": "restaurantInfo",
+                "type": "OBJECT"
+              }
+            }
+          }
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "us-central1-aiplatform.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "5c433fe366ff189ac7c1c593307606ac211df5621d33ae5ee19c4cdbf5fddfda",
+      "response": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Disposition": "attachment",
+          "Content-Type": "text/event-stream",
+          "Date": "Wed, 27 Aug 2025 03:44:36 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "{"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "createTime": "2025-08-27T03:44:35.913390Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "I3-uaO7fN46cmecPqJHW6Qo",
+            "usageMetadata": {
+              "billablePromptUsage": {
+                "textCount": 150
+              },
+              "trafficType": "PROVISIONED_THROUGHPUT"
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "\n  \""
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "createTime": "2025-08-27T03:44:35.913390Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "I3-uaO7fN46cmecPqJHW6Qo",
+            "usageMetadata": {
+              "trafficType": "PROVISIONED_THROUGHPUT"
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "name\": \"Pasta Paradise\",\n  \"city\": \"New York\",\n  "
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "createTime": "2025-08-27T03:44:35.913390Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "I3-uaO7fN46cmecPqJHW6Qo",
+            "usageMetadata": {
+              "trafficType": "PROVISIONED_THROUGHPUT"
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "\"address\": \"123 Main Street\",\n  \"rating\": "
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "createTime": "2025-08-27T03:44:35.913390Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "I3-uaO7fN46cmecPqJHW6Qo",
+            "usageMetadata": {
+              "trafficType": "PROVISIONED_THROUGHPUT"
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "4.5\n}"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "finishReason": "STOP"
+              }
+            ],
+            "createTime": "2025-08-27T03:44:35.913390Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "I3-uaO7fN46cmecPqJHW6Qo",
+            "usageMetadata": {
+              "candidatesTokenCount": 42,
+              "candidatesTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 42
+                }
+              ],
+              "promptTokenCount": 34,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 34
+                }
+              ],
+              "totalTokenCount": 76,
+              "trafficType": "PROVISIONED_THROUGHPUT"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

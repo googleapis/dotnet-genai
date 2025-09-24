@@ -1,0 +1,213 @@
+{
+  "recordID": "GenerateContentStreamResponseConfigTest.GenerateContentStreamResponseSchemaVertexTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-2.0-flash:streamGenerateContent?alt=sse",
+        "request": "POST /v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-2.0-flash:streamGenerateContent?alt=sse HTTP/1.1",
+        "headers": {
+          "Content-Length": "599",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test-Name": "GenerateContentStreamResponseConfigTest.GenerateContentStreamResponseSchemaVertexTest"
+        },
+        "bodySegments": [
+          {
+            "contents": [
+              {
+                "parts": [
+                  {
+                    "text": "Give me information about Australia"
+                  }
+                ],
+                "role": "user"
+              }
+            ],
+            "generationConfig": {
+              "responseMimeType": "application/json",
+              "responseSchema": {
+                "properties": {
+                  "capital": {
+                    "title": "Capital",
+                    "type": "STRING"
+                  },
+                  "continent": {
+                    "title": "Continent",
+                    "type": "STRING"
+                  },
+                  "language": {
+                    "title": "Language",
+                    "type": "STRING"
+                  },
+                  "population": {
+                    "title": "Population",
+                    "type": "INTEGER"
+                  },
+                  "title": {
+                    "title": "Title",
+                    "type": "STRING"
+                  }
+                },
+                "propertyOrdering": [
+                  "title",
+                  "population",
+                  "capital",
+                  "continent",
+                  "language"
+                ],
+                "required": [
+                  "title",
+                  "population",
+                  "capital",
+                  "continent",
+                  "language"
+                ],
+                "title": "CountryInfo",
+                "type": "OBJECT"
+              }
+            }
+          }
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "us-central1-aiplatform.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "b4e488995fee31bdb36325dd948207d2315c0c304fed4e42ee89cc16be1e6253",
+      "response": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Disposition": "attachment",
+          "Content-Type": "text/event-stream",
+          "Date": "Wed, 27 Aug 2025 03:34:33 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "{"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "createTime": "2025-08-27T03:34:33.028188Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "yXyuaJzcAZaemecPspqn-QE",
+            "usageMetadata": {
+              "billablePromptUsage": {
+                "textCount": 204
+              },
+              "trafficType": "ON_DEMAND"
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "\n  \""
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "createTime": "2025-08-27T03:34:33.028188Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "yXyuaJzcAZaemecPspqn-QE",
+            "usageMetadata": {
+              "trafficType": "ON_DEMAND"
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "title\": \"Australia\",\n  \"population\": 25000"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "createTime": "2025-08-27T03:34:33.028188Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "yXyuaJzcAZaemecPspqn-QE",
+            "usageMetadata": {
+              "trafficType": "ON_DEMAND"
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "000,\n  \"capital\": \"Canberra\",\n  \""
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "createTime": "2025-08-27T03:34:33.028188Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "yXyuaJzcAZaemecPspqn-QE",
+            "usageMetadata": {
+              "trafficType": "ON_DEMAND"
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "continent\": \"Australia\",\n  \"language\": \"English\"\n}"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "finishReason": "STOP"
+              }
+            ],
+            "createTime": "2025-08-27T03:34:33.028188Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "yXyuaJzcAZaemecPspqn-QE",
+            "usageMetadata": {
+              "candidatesTokenCount": 51,
+              "candidatesTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 51
+                }
+              ],
+              "promptTokenCount": 33,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 33
+                }
+              ],
+              "totalTokenCount": 84,
+              "trafficType": "ON_DEMAND"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

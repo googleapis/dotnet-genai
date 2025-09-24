@@ -1,0 +1,224 @@
+{
+  "recordID": "GenerateContentStreamSimpleTest.GenerateContentStreamGenerationConfigGeminiTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1beta/models/gemini-2.0-flash:streamGenerateContent?alt=sse",
+        "request": "POST /v1beta/models/gemini-2.0-flash:streamGenerateContent?alt=sse HTTP/1.1",
+        "headers": {
+          "Content-Length": "174",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test-Name": "GenerateContentStreamSimpleTest.GenerateContentStreamGenerationConfigGeminiTest"
+        },
+        "bodySegments": [
+          {
+            "contents": [
+              {
+                "parts": [
+                  {
+                    "text": "Why is the sky blue?"
+                  }
+                ],
+                "role": "user"
+              }
+            ],
+            "generationConfig": {
+              "maxOutputTokens": 100,
+              "responseModalities": [
+                "TEXT"
+              ],
+              "temperature": 0.5,
+              "topP": 0.9
+            }
+          }
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "generativelanguage.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "109e06737e7e3fe506f2034430790131e1539455e0720e530dcfc08e013c551e",
+      "response": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Disposition": "attachment",
+          "Content-Type": "text/event-stream",
+          "Date": "Tue, 26 Aug 2025 04:54:04 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Server-Timing": "gfet4t7; dur=420",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "The"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "7D2taKs3q4Sf2Q_lgK_pCA",
+            "usageMetadata": {
+              "promptTokenCount": 7,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 7
+                }
+              ],
+              "totalTokenCount": 7
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": " sky is blue"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "7D2taKs3q4Sf2Q_lgK_pCA",
+            "usageMetadata": {
+              "promptTokenCount": 7,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 7
+                }
+              ],
+              "totalTokenCount": 7
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": " due to a phenomenon called **Rayleigh scattering**. Here's a breakdown:"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "7D2taKs3q4Sf2Q_lgK_pCA",
+            "usageMetadata": {
+              "promptTokenCount": 7,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 7
+                }
+              ],
+              "totalTokenCount": 7
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "\n\n*   **Sunlight and Colors:** Sunlight, which appears white, is actually made"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "7D2taKs3q4Sf2Q_lgK_pCA",
+            "usageMetadata": {
+              "promptTokenCount": 7,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 7
+                }
+              ],
+              "totalTokenCount": 7
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": " up of all the colors of the rainbow. Each color has a different wavelength. Blue and violet light have shorter wavelengths, while red and orange light have longer wavelengths"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "7D2taKs3q4Sf2Q_lgK_pCA",
+            "usageMetadata": {
+              "promptTokenCount": 7,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 7
+                }
+              ],
+              "totalTokenCount": 7
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": ".\n\n*   **Earth's Atmosphere:** The Earth's atmosphere is filled with tiny particles like nitrogen and oxygen molecules.\n\n*   **"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "finishReason": "MAX_TOKENS"
+              }
+            ],
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "7D2taKs3q4Sf2Q_lgK_pCA",
+            "usageMetadata": {
+              "candidatesTokenCount": 99,
+              "candidatesTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 99
+                }
+              ],
+              "promptTokenCount": 6,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 6
+                }
+              ],
+              "totalTokenCount": 105
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

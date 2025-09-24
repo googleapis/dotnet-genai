@@ -1,0 +1,63 @@
+>389 {
+  "setup": {
+    "model": "projects/REDACTED/locations/us-central1/publishers/google/models/gemini-2.0-flash-live-preview-04-09",
+    "generationConfig": {
+      "responseModalities": [
+        "TEXT"
+      ]
+    },
+    "systemInstruction": {
+      "parts": [
+        {
+          "text": "You are a helpful chatbot that specializes in providing fun facts."
+        }
+      ]
+    }
+  }
+}
+>203 {
+  "clientContent": {
+    "turns": [
+      {
+        "parts": [
+          {
+            "text": "Tell me a fun fact about the ocean."
+          }
+        ]
+      }
+    ],
+    "turnComplete": true
+  }
+}
+<86 {
+  "setupComplete": {
+    "sessionId": "42eb6c88-f1ff-4af1-9f87-bfa2548ebb9d"
+  }
+}
+
+<147 {
+  "serverContent": {
+    "modelTurn": {
+      "role": "model",
+      "parts": [
+        {
+          "text": "The"
+        }
+      ]
+    }
+  }
+}
+
+<204 {
+  "serverContent": {
+    "modelTurn": {
+      "role": "model",
+      "parts": [
+        {
+          "text": " ocean is so big that over 95% of it remains unexplored. Did"
+        }
+      ]
+    }
+  }
+}
+

@@ -1,0 +1,66 @@
+>712 {
+  "setup": {
+    "model": "projects/REDACTED/locations/us-central1/publishers/google/models/gemini-2.0-flash-live-preview-04-09",
+    "tools": [
+      {
+        "functionDeclarations": [
+          {
+            "description": "Get the current weather in a given location",
+            "name": "GetCurrentWeather",
+            "parameters": {
+              "properties": {
+                "location": {
+                  "description": "The city and state, e.g. San Francisco, CA",
+                  "type": "STRING"
+                }
+              },
+              "required": [
+                "location"
+              ],
+              "type": "OBJECT"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+>209 {
+  "clientContent": {
+    "turns": [
+      {
+        "parts": [
+          {
+            "text": "what is the weather in Redmond Washington"
+          }
+        ]
+      }
+    ],
+    "turnComplete": true
+  }
+}
+<86 {
+  "setupComplete": {
+    "sessionId": "862a4019-163c-4441-b7a4-dcb9ef1652bb"
+  }
+}
+
+<171 {
+  "toolCall": {
+    "functionCalls": [
+      {
+        "name": "GetCurrentWeather",
+        "args": {
+          "location": "Redmond, WA"
+        }
+      }
+    ]
+  }
+}
+
+<61 {
+  "serverContent": {
+    "generationComplete": true
+  }
+}
+

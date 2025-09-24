@@ -1,0 +1,229 @@
+{
+  "recordID": "GenerateContentStreamResponseConfigTest.GenerateContentStreamResponseSchemaWithDefaultGeminiTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1beta/models/gemini-2.0-flash:streamGenerateContent?alt=sse",
+        "request": "POST /v1beta/models/gemini-2.0-flash:streamGenerateContent?alt=sse HTTP/1.1",
+        "headers": {
+          "Content-Length": "527",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test-Name": "GenerateContentStreamResponseConfigTest.GenerateContentStreamResponseSchemaWithDefaultGeminiTest"
+        },
+        "bodySegments": [
+          {
+            "contents": [
+              {
+                "parts": [
+                  {
+                    "text": "Can you recommend a restaurant for me?"
+                  }
+                ],
+                "role": "user"
+              }
+            ],
+            "generationConfig": {
+              "responseMimeType": "application/json",
+              "responseSchema": {
+                "properties": {
+                  "address": {
+                    "title": "Address",
+                    "type": "STRING"
+                  },
+                  "city": {
+                    "default": "New York",
+                    "title": "City",
+                    "type": "STRING"
+                  },
+                  "name": {
+                    "title": "Name",
+                    "type": "STRING"
+                  },
+                  "rating": {
+                    "default": 3,
+                    "title": "Rating",
+                    "type": "NUMBER"
+                  }
+                },
+                "propertyOrdering": [
+                  "name",
+                  "city",
+                  "address",
+                  "rating"
+                ],
+                "required": [
+                  "name",
+                  "city",
+                  "address",
+                  "rating"
+                ],
+                "title": "restaurantInfo",
+                "type": "OBJECT"
+              }
+            }
+          }
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "generativelanguage.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "5ac4af45a6e57125bd12c81abdd5850ae52e66d6ff8146452abe4b717c53492c",
+      "response": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Disposition": "attachment",
+          "Content-Type": "text/event-stream",
+          "Date": "Wed, 27 Aug 2025 03:44:51 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Server-Timing": "gfet4t7; dur=751",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "{"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "M3-uaPCeBcuBn9kP0IiXwQ0",
+            "usageMetadata": {
+              "promptTokenCount": 9,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 9
+                }
+              ],
+              "totalTokenCount": 9
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "\n  \""
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "M3-uaPCeBcuBn9kP0IiXwQ0",
+            "usageMetadata": {
+              "promptTokenCount": 9,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 9
+                }
+              ],
+              "totalTokenCount": 9
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "name\": \"Delicious Burger Joint\",\n  \"city\": \"New York\",\n  "
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "M3-uaPCeBcuBn9kP0IiXwQ0",
+            "usageMetadata": {
+              "promptTokenCount": 9,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 9
+                }
+              ],
+              "totalTokenCount": 9
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "\"address\": \"123 Main Street\",\n  \"rating\": 4"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "M3-uaPCeBcuBn9kP0IiXwQ0",
+            "usageMetadata": {
+              "promptTokenCount": 9,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 9
+                }
+              ],
+              "totalTokenCount": 9
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": ".5\n}"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "finishReason": "STOP"
+              }
+            ],
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "M3-uaPCeBcuBn9kP0IiXwQ0",
+            "usageMetadata": {
+              "candidatesTokenCount": 43,
+              "candidatesTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 43
+                }
+              ],
+              "promptTokenCount": 34,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 34
+                }
+              ],
+              "totalTokenCount": 77
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

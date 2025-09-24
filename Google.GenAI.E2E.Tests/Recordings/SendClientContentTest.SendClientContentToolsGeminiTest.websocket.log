@@ -1,0 +1,74 @@
+>648 {
+  "setup": {
+    "model": "models/gemini-live-2.5-flash-preview",
+    "tools": [
+      {
+        "functionDeclarations": [
+          {
+            "description": "Get the current weather in a given location",
+            "name": "GetCurrentWeather",
+            "parameters": {
+              "properties": {
+                "location": {
+                  "description": "The city and state, e.g. San Francisco, CA",
+                  "type": "STRING"
+                }
+              },
+              "required": [
+                "location"
+              ],
+              "type": "OBJECT"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+>209 {
+  "clientContent": {
+    "turns": [
+      {
+        "parts": [
+          {
+            "text": "what is the weather in Redmond Washington"
+          }
+        ]
+      }
+    ],
+    "turnComplete": true
+  }
+}
+<27 {
+  "setupComplete": {}
+}
+
+<259 {
+  "serverContent": {
+    "modelTurn": {
+      "parts": [
+        {
+          "executableCode": {
+            "language": "PYTHON",
+            "code": "print(default_api.GetCurrentWeather(location='Redmond, WA'))"
+          }
+        }
+      ]
+    }
+  }
+}
+
+<223 {
+  "toolCall": {
+    "functionCalls": [
+      {
+        "name": "GetCurrentWeather",
+        "args": {
+          "location": "Redmond, WA"
+        },
+        "id": "function-call-18067616153683755698"
+      }
+    ]
+  }
+}
+

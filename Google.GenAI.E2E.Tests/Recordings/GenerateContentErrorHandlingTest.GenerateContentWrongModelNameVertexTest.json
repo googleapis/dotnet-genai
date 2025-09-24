@@ -1,0 +1,63 @@
+{
+  "recordID": "GenerateContentErrorHandlingTest.GenerateContentWrongModelNameVertexTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/wrong-model-name:generateContent",
+        "request": "POST /v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/wrong-model-name:generateContent HTTP/1.1",
+        "headers": {
+          "Content-Length": "82",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test-Name": "GenerateContentErrorHandlingTest.GenerateContentWrongModelNameVertexTest"
+        },
+        "bodySegments": [
+          {
+            "contents": [
+              {
+                "parts": [
+                  {
+                    "text": "What is the capital of France?"
+                  }
+                ],
+                "role": "user"
+              }
+            ]
+          }
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "us-central1-aiplatform.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "337db7c1a123a72b70a5760e61426a70ea2fda2adcf238cb5044c499e1bd0915",
+      "response": {
+        "statusCode": 404,
+        "headers": {
+          "Content-Type": "application/json; charset=UTF-8",
+          "Date": "Thu, 28 Aug 2025 01:39:12 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "error": {
+              "code": 404,
+              "details": [
+                {
+                  "@type": "type.googleapis.com/google.rpc.DebugInfo",
+                  "detail": "[ORIGINAL ERROR] generic::not_found: Publisher Model `projects/cloud-llm-preview1/locations/us-central1/publishers/google/models/wrong-model-name` not found. [google.rpc.error_details_ext] { message: \"Publisher Model `projects/cloud-llm-preview1/locations/us-central1/publishers/google/models/wrong-model-name` not found.\" } 525003295 { 1 { 1 { 1 { 2: \"Cardolan\" 3: \"GenerateContent\" } 2 { 1: 5 2: \"generic\" 3: \"Publisher Model `projects/cloud-llm-preview1/locations/us-central1/publishers/google/models/wrong-model-name` not found.\" 5 { 1 { 2: 82012934 3 { 2: \"Publisher Model `projects/cloud-llm-preview1/locations/us-central1/publishers/google/models/wrong-model-name` not found.\" } } } } 8: 1 10 { 1: 0 } } 2: \"VertexServingRpcRoot\" } }"
+                }
+              ],
+              "message": "Publisher Model `projects/cloud-llm-preview1/locations/us-central1/publishers/google/models/wrong-model-name` not found.",
+              "status": "NOT_FOUND"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

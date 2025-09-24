@@ -1,0 +1,58 @@
+{
+  "recordID": "GenerateImagesErrorHandlingTest.GenerateImagesWrongModelNameVertexTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/wrong-model-name:predict",
+        "request": "POST /v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/wrong-model-name:predict HTTP/1.1",
+        "headers": {
+          "Content-Length": "43",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test-Name": "GenerateImagesErrorHandlingTest.GenerateImagesWrongModelNameVertexTest"
+        },
+        "bodySegments": [
+          {
+            "instances": [
+              {
+                "prompt": "Red skateboard"
+              }
+            ]
+          }
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "us-central1-aiplatform.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "e50fe3cdc886e2b45e7218cbe78d4d5da7f052851d2def7eee29f4f99288c2de",
+      "response": {
+        "statusCode": 404,
+        "headers": {
+          "Content-Type": "application/json; charset=UTF-8",
+          "Date": "Wed, 10 Sep 2025 23:18:59 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "error": {
+              "code": 404,
+              "details": [
+                {
+                  "@type": "type.googleapis.com/google.rpc.DebugInfo",
+                  "detail": "[ORIGINAL ERROR] generic::not_found: Publisher Model `projects/cloud-llm-preview1/locations/us-central1/publishers/google/models/wrong-model-name` not found. [google.rpc.error_details_ext] { message: \"Publisher Model `projects/cloud-llm-preview1/locations/us-central1/publishers/google/models/wrong-model-name` not found.\" }"
+                }
+              ],
+              "message": "Publisher Model `projects/cloud-llm-preview1/locations/us-central1/publishers/google/models/wrong-model-name` not found.",
+              "status": "NOT_FOUND"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "recordID": "GenerateImagesErrorHandlingTest.GenerateImagesBlockedGeminiTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1beta/models/imagen-3.0-generate-002:predict",
+        "request": "POST /v1beta/models/imagen-3.0-generate-002:predict HTTP/1.1",
+        "headers": {
+          "Content-Length": "101",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test-Name": "GenerateImagesErrorHandlingTest.GenerateImagesBlockedGeminiTest"
+        },
+        "bodySegments": [
+          {
+            "instances": [
+              {
+                "prompt": "Violence and gore"
+              }
+            ],
+            "parameters": {
+              "includeRaiReason": true,
+              "sampleCount": 1
+            }
+          }
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "generativelanguage.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "925723c9a5912b0b2caa989178c709ed9edc7d7e3360986590ab9397e655e848",
+      "response": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=UTF-8",
+          "Date": "Wed, 10 Sep 2025 23:19:16 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Server-Timing": "gfet4t7; dur=8957",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "predictions": [
+              {
+                "raiFilteredReason": "Unable to show generated images. Your current safety filter threshold filtered out all generated images. You will not be charged for blocked images. Try rephrasing the prompt. If you think this was an error, send feedback."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

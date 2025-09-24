@@ -1,0 +1,64 @@
+{
+  "recordID": "GenerateContentErrorHandlingTest.GenerateContentWrongModelNameGeminiTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1beta/models/wrong-model-name:generateContent",
+        "request": "POST /v1beta/models/wrong-model-name:generateContent HTTP/1.1",
+        "headers": {
+          "Content-Length": "82",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test-Name": "GenerateContentErrorHandlingTest.GenerateContentWrongModelNameGeminiTest"
+        },
+        "bodySegments": [
+          {
+            "contents": [
+              {
+                "parts": [
+                  {
+                    "text": "What is the capital of France?"
+                  }
+                ],
+                "role": "user"
+              }
+            ]
+          }
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "generativelanguage.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "c5f2227742dbc379fa6803a1dae4af15a2419150fffa48df4d2e74411d51db45",
+      "response": {
+        "statusCode": 404,
+        "headers": {
+          "Content-Type": "application/json; charset=UTF-8",
+          "Date": "Thu, 28 Aug 2025 01:44:03 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Server-Timing": "gfet4t7; dur=183",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "error": {
+              "code": 404,
+              "details": [
+                {
+                  "@type": "type.googleapis.com/google.rpc.DebugInfo",
+                  "detail": "[ORIGINAL ERROR] generic::not_found: models/wrong-model-name is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. [google.rpc.error_details_ext] { message: \"models/wrong-model-name is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.\" }"
+                }
+              ],
+              "message": "models/wrong-model-name is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+              "status": "NOT_FOUND"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "recordID": "GenerateContentResponseConfigTest.GenerateContentResponseSchemaWithDefaultGeminiTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1beta/models/gemini-2.0-flash:generateContent",
+        "request": "POST /v1beta/models/gemini-2.0-flash:generateContent HTTP/1.1",
+        "headers": {
+          "Content-Length": "527",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test-Name": "GenerateContentResponseConfigTest.GenerateContentResponseSchemaWithDefaultGeminiTest"
+        },
+        "bodySegments": [
+          {
+            "contents": [
+              {
+                "parts": [
+                  {
+                    "text": "Can you recommend a restaurant for me?"
+                  }
+                ],
+                "role": "user"
+              }
+            ],
+            "generationConfig": {
+              "responseMimeType": "application/json",
+              "responseSchema": {
+                "properties": {
+                  "address": {
+                    "title": "Address",
+                    "type": "STRING"
+                  },
+                  "city": {
+                    "default": "New York",
+                    "title": "City",
+                    "type": "STRING"
+                  },
+                  "name": {
+                    "title": "Name",
+                    "type": "STRING"
+                  },
+                  "rating": {
+                    "default": 3,
+                    "title": "Rating",
+                    "type": "NUMBER"
+                  }
+                },
+                "propertyOrdering": [
+                  "name",
+                  "city",
+                  "address",
+                  "rating"
+                ],
+                "required": [
+                  "name",
+                  "city",
+                  "address",
+                  "rating"
+                ],
+                "title": "restaurantInfo",
+                "type": "OBJECT"
+              }
+            }
+          }
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "generativelanguage.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "8d86400681e8c903027d62f580d74576cb7f8e883725b21a53a7fa27cda4c923",
+      "response": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=UTF-8",
+          "Date": "Wed, 27 Aug 2025 00:54:21 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Server-Timing": "gfet4t7; dur=907",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "candidates": [
+              {
+                "avgLogprobs": -0.047327677408854164,
+                "content": {
+                  "parts": [
+                    {
+                      "text": "{\n  \"name\": \"Delicious Burger\",\n  \"city\": \"New York\",\n  \"address\": \"123 Main Street\",\n  \"rating\": 4.5\n}"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "finishReason": "STOP"
+              }
+            ],
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "PVeuaIO5EujUz7IPv_7t6Qw",
+            "usageMetadata": {
+              "candidatesTokenCount": 42,
+              "candidatesTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 42
+                }
+              ],
+              "promptTokenCount": 34,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 34
+                }
+              ],
+              "totalTokenCount": 76
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

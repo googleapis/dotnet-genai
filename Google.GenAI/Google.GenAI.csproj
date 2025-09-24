@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>Google.GenAI</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Google LLC</Authors>
+    <Description>Google GenAI SDK for .NET</Description>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <WarningsAsErrors />
+    <WarningsNotAsErrors>IDE0005</WarningsNotAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Net.WebSockets.Client" />
+    <PackageReference Include="Google.Apis.Auth" />
+    <InternalsVisibleTo Include="Google.GenAI.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="/"/>
+  </ItemGroup>
+
+</Project>

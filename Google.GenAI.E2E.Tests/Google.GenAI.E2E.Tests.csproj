@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <warningLevel>3</warningLevel>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="TestServerSdk" />
+    <ProjectReference Include="..\Google.GenAI\Google.GenAI.csproj" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="MSTest.TestFramework" />
+    <PackageReference Include="MSTest.TestAdapter" />
+    <PackageReference Include="Moq" />
+    <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" />
+  </ItemGroup>
+
+  <!-- Add None ItemGroup to make sure files are tracked by MSBuild -->
+  <ItemGroup>
+    <None Include="Recordings/**/*">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Include="Live/*.pcm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <Target Name="CopyTestServerFile" AfterTargets="Build">
+    <Copy SourceFiles="test-server.yml" DestinationFolder="$(OutputPath)/../" />
+  </Target>
+  <!-- Updated Target to copy Recordings to bin/Debug/Recordings -->
+  <Target Name="CopyRecordingsToOutput" AfterTargets="Build">
+    <ItemGroup>
+      <RecordingFiles Include="Recordings/**/*" />
+      <TestAssetFiles Include="TestAssets/**/*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(RecordingFiles)" DestinationFolder="$(OutputPath)/../Recordings/%(RecursiveDir)" />
+    <Copy SourceFiles="@(TestAssetFiles)" DestinationFolder="$(OutputPath)/TestAssets/%(RecursiveDir)" />
+  </Target>
+  <Target Name="CopyRecordings" AfterTargets="VSTest">
+    <ItemGroup>
+      <RecordingFiles Include="$(OutputPath)/../Recordings/**/*.json" />
+      <RecordingFiles Include="$(OutputPath)/../Recordings/**/*.websocket.log" />
+    </ItemGroup>
+    <Copy SourceFiles="@(RecordingFiles)" DestinationFolder="$(MSBuildProjectDirectory)/Recordings" />
+  </Target>
+
+</Project>

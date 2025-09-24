@@ -1,0 +1,47 @@
+>223 {
+  "setup": {
+    "model": "projects/REDACTED/locations/us-central1/publishers/google/models/gemini-2.0-flash-live-preview-04-09",
+    "generationConfig": {
+      "responseModalities": [
+        "TEXT"
+      ]
+    }
+  }
+}
+>66 {
+  "realtime_input": {
+    "text": "Are you there Gemini?"
+  }
+}
+<86 {
+  "setupComplete": {
+    "sessionId": "c70c8d9c-e0d8-4c91-937f-938dc77bb480"
+  }
+}
+
+<147 {
+  "serverContent": {
+    "modelTurn": {
+      "role": "model",
+      "parts": [
+        {
+          "text": "Yes"
+        }
+      ]
+    }
+  }
+}
+
+<183 {
+  "serverContent": {
+    "modelTurn": {
+      "role": "model",
+      "parts": [
+        {
+          "text": ", I'm here. How can I help you today?\n"
+        }
+      ]
+    }
+  }
+}
+

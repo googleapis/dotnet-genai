@@ -1,0 +1,270 @@
+{
+  "recordID": "GenerateContentStreamSimpleTest.GenerateContentStreamSimpleTextVertexTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-2.0-flash:streamGenerateContent?alt=sse",
+        "request": "POST /v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-2.0-flash:streamGenerateContent?alt=sse HTTP/1.1",
+        "headers": {
+          "Content-Length": "72",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test-Name": "GenerateContentStreamSimpleTest.GenerateContentStreamSimpleTextVertexTest"
+        },
+        "bodySegments": [
+          {
+            "contents": [
+              {
+                "parts": [
+                  {
+                    "text": "why is the sky blue?"
+                  }
+                ],
+                "role": "user"
+              }
+            ]
+          }
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "us-central1-aiplatform.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "11e3ff8b4188e6cbd99e42e63f75ca9f46cf133871f5a1a0acb979f6b4cf217f",
+      "response": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Disposition": "attachment",
+          "Content-Type": "text/event-stream",
+          "Date": "Tue, 26 Aug 2025 04:54:00 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "The"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "createTime": "2025-08-26T04:54:00.091710Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "6D2taL7MBf6imecPsaqQyQc",
+            "usageMetadata": {
+              "billablePromptUsage": {
+                "textCount": 16
+              },
+              "trafficType": "ON_DEMAND"
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": " sky is blue"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "createTime": "2025-08-26T04:54:00.091710Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "6D2taL7MBf6imecPsaqQyQc",
+            "usageMetadata": {
+              "trafficType": "ON_DEMAND"
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": " because of a phenomenon called **Rayleigh scattering**. Here's the breakdown:\n\n*"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "createTime": "2025-08-26T04:54:00.091710Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "6D2taL7MBf6imecPsaqQyQc",
+            "usageMetadata": {
+              "trafficType": "ON_DEMAND"
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "   **Sunlight and Colors:** Sunlight is actually made up of all the colors of the rainbow"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "createTime": "2025-08-26T04:54:00.091710Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "6D2taL7MBf6imecPsaqQyQc",
+            "usageMetadata": {
+              "trafficType": "ON_DEMAND"
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": ".\n\n*   **Entering the Atmosphere:** When sunlight enters the Earth's atmosphere, it collides with tiny air molecules (mostly nitrogen and oxygen).\n\n*   **"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "createTime": "2025-08-26T04:54:00.091710Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "6D2taL7MBf6imecPsaqQyQc",
+            "usageMetadata": {
+              "trafficType": "ON_DEMAND"
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "Scattering:** This collision causes the light to scatter in different directions.\n\n*   **Rayleigh Scattering Favors Blue:** Rayleigh scattering is much more effective at"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "createTime": "2025-08-26T04:54:00.091710Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "6D2taL7MBf6imecPsaqQyQc",
+            "usageMetadata": {
+              "trafficType": "ON_DEMAND"
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": " scattering shorter wavelengths of light, like blue and violet. Red and orange have longer wavelengths and are scattered less.\n\n*   **Why We See Blue, Not Violet:** While violet is scattered even more than blue, there are a couple of reasons we"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "createTime": "2025-08-26T04:54:00.091710Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "6D2taL7MBf6imecPsaqQyQc",
+            "usageMetadata": {
+              "trafficType": "ON_DEMAND"
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": " see a blue sky:\n    *   The sun emits slightly less violet light than blue light.\n    *   Our eyes are more sensitive to blue light than violet light.\n\n**In summary:** The shorter wavelengths of blue light are scattered more by"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "createTime": "2025-08-26T04:54:00.091710Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "6D2taL7MBf6imecPsaqQyQc",
+            "usageMetadata": {
+              "trafficType": "ON_DEMAND"
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": " the air molecules in the atmosphere than other colors, making the sky appear blue.\n\n**Think of it like this:** Imagine throwing small balls (blue light) and large balls (red light) at a field of obstacles. The small balls are more likely to bounce off in different directions, while the large balls are more likely to"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "createTime": "2025-08-26T04:54:00.091710Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "6D2taL7MBf6imecPsaqQyQc",
+            "usageMetadata": {
+              "trafficType": "ON_DEMAND"
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": " travel straight through.\n"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "finishReason": "STOP"
+              }
+            ],
+            "createTime": "2025-08-26T04:54:00.091710Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "6D2taL7MBf6imecPsaqQyQc",
+            "usageMetadata": {
+              "candidatesTokenCount": 279,
+              "candidatesTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 279
+                }
+              ],
+              "promptTokenCount": 6,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 6
+                }
+              ],
+              "totalTokenCount": 285,
+              "trafficType": "ON_DEMAND"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

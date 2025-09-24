@@ -1,0 +1,129 @@
+{
+  "recordID": "GenerateContentResponseConfigTest.GenerateContentResponseSchemaGeminiTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1beta/models/gemini-2.0-flash:generateContent",
+        "request": "POST /v1beta/models/gemini-2.0-flash:generateContent HTTP/1.1",
+        "headers": {
+          "Content-Length": "599",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test-Name": "GenerateContentResponseConfigTest.GenerateContentResponseSchemaGeminiTest"
+        },
+        "bodySegments": [
+          {
+            "contents": [
+              {
+                "parts": [
+                  {
+                    "text": "Give me information about Australia"
+                  }
+                ],
+                "role": "user"
+              }
+            ],
+            "generationConfig": {
+              "responseMimeType": "application/json",
+              "responseSchema": {
+                "properties": {
+                  "capital": {
+                    "title": "Capital",
+                    "type": "STRING"
+                  },
+                  "continent": {
+                    "title": "Continent",
+                    "type": "STRING"
+                  },
+                  "language": {
+                    "title": "Language",
+                    "type": "STRING"
+                  },
+                  "population": {
+                    "title": "Population",
+                    "type": "INTEGER"
+                  },
+                  "title": {
+                    "title": "Title",
+                    "type": "STRING"
+                  }
+                },
+                "propertyOrdering": [
+                  "title",
+                  "population",
+                  "capital",
+                  "continent",
+                  "language"
+                ],
+                "required": [
+                  "title",
+                  "population",
+                  "capital",
+                  "continent",
+                  "language"
+                ],
+                "title": "CountryInfo",
+                "type": "OBJECT"
+              }
+            }
+          }
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "generativelanguage.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "12c4fc9c65096699cac06a2b893e2dcbc1cc61163cdb41ae4d7285b3ff1f5a7e",
+      "response": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=UTF-8",
+          "Date": "Tue, 26 Aug 2025 22:58:58 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Server-Timing": "gfet4t7; dur=898",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "candidates": [
+              {
+                "avgLogprobs": -0.03035871569926922,
+                "content": {
+                  "parts": [
+                    {
+                      "text": "{\n  \"title\": \"Australia\",\n  \"population\": 25000000,\n  \"capital\": \"Canberra\",\n  \"continent\": \"Oceania\",\n  \"language\": \"English\"\n}"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "finishReason": "STOP"
+              }
+            ],
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "MTyuaN2kKM6dz7IPx4Uy",
+            "usageMetadata": {
+              "candidatesTokenCount": 52,
+              "candidatesTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 52
+                }
+              ],
+              "promptTokenCount": 33,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 33
+                }
+              ],
+              "totalTokenCount": 85
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

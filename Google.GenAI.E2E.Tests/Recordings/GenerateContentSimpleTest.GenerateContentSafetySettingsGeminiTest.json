@@ -1,0 +1,111 @@
+{
+  "recordID": "GenerateContentSimpleTest.GenerateContentSafetySettingsGeminiTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1beta/models/gemini-2.0-flash:generateContent",
+        "request": "POST /v1beta/models/gemini-2.0-flash:generateContent HTTP/1.1",
+        "headers": {
+          "Content-Length": "217",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test-Name": "GenerateContentSimpleTest.GenerateContentSafetySettingsGeminiTest"
+        },
+        "bodySegments": [
+          {
+            "contents": [
+              {
+                "parts": [
+                  {
+                    "text": "What hate speech is prohibited by responsible AI?"
+                  }
+                ],
+                "role": "user"
+              }
+            ],
+            "generationConfig": {},
+            "safetySettings": [
+              {
+                "category": "HARM_CATEGORY_HATE_SPEECH",
+                "threshold": "BLOCK_LOW_AND_ABOVE"
+              }
+            ]
+          }
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "generativelanguage.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "3a6238d9b9ab891fb20e8abcfe8ce322c3ec6ffd03687ce47b105e94abf96681",
+      "response": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=UTF-8",
+          "Date": "Tue, 26 Aug 2025 04:53:56 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Server-Timing": "gfet4t7; dur=6973",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "candidates": [
+              {
+                "avgLogprobs": -0.3296060570779975,
+                "content": {
+                  "parts": [
+                    {
+                      "text": "Responsible AI frameworks generally aim to prohibit hate speech that violates human rights and promotes discrimination, violence, and harm. Here's a breakdown of the types of hate speech typically prohibited, along with relevant considerations:\n\n**Core Principles:**\n\n*   **Promoting Discrimination and Exclusion:** Any content that targets individuals or groups based on protected characteristics (race, ethnicity, religion, gender, sexual orientation, gender identity, disability, etc.) with the intent to create division, exclusion, or marginalization.\n*   **Inciting Violence or Harm:** Speech that directly encourages, promotes, or celebrates violence, harassment, or other forms of harm against individuals or groups.\n*   **Dehumanization and Demonization:** Content that portrays individuals or groups as less than human, evil, or deserving of violence or abuse.\n*   **Spreading False or Misleading Information:** Spreading false or misleading information with the intention of inciting hatred, discrimination, or violence against individuals or groups.\n*   **Glorifying or Trivializing Violence and Hate Crimes:** Content that glorifies or minimizes the impact of hate crimes, terrorist acts, or other forms of violence motivated by hate.\n*   **Hate Symbols and Imagery:** Use of symbols, images, or slogans associated with hate groups or ideologies with the intent to promote hate or discrimination.\n\n**Specific Examples:**\n\n*   **Racial slurs and epithets:** Using derogatory terms to describe individuals or groups based on their race or ethnicity.\n*   **Religious bigotry:** Promoting hatred or discrimination against individuals or groups based on their religious beliefs.\n*   **Homophobic and transphobic speech:** Promoting hatred or discrimination against individuals or groups based on their sexual orientation or gender identity.\n*   **Ableist speech:** Promoting hatred or discrimination against individuals or groups based on their disability.\n*   **Sexist speech:** Promoting hatred or discrimination against individuals or groups based on their gender.\n*   **Xenophobic speech:** Promoting hatred or discrimination against individuals or groups based on their nationality or immigration status.\n*   **Calls for violence against specific groups:** Direct or indirect calls for violence against individuals or groups based on their protected characteristics.\n*   **Denial of historical atrocities:** Denying or minimizing the severity of historical atrocities, such as the Holocaust, with the intent to promote hatred or discrimination.\n*   **Conspiracy theories that incite hatred:** Spreading conspiracy theories that target specific groups and promote hatred or discrimination against them.\n\n**Important Considerations:**\n\n*   **Context:** The context in which speech is used is crucial for determining whether it constitutes hate speech.  Satire, criticism, or academic discussions may not be considered hate speech, even if they contain potentially offensive language.\n*   **Intent:** The intent of the speaker or author is also important.  However, it can be difficult to determine intent, and the impact of speech on the target audience should also be considered.\n*   **Power dynamics:**  Hate speech is often associated with power imbalances, where the speaker or group has more power than the target group.\n*   **Cultural norms:** Cultural norms and sensitivities can vary across different regions and communities.  What is considered hate speech in one culture may not be in another.\n*   **Freedom of speech:**  Responsible AI frameworks must balance the need to prohibit hate speech with the protection of freedom of speech.  Content should only be restricted when it poses a clear and present danger of harm.\n*   **Evolving nature of hate speech:** Hate speech is constantly evolving, with new forms and tactics emerging over time. Responsible AI systems must be continuously updated to detect and address these new forms of hate speech.\n\n**Technical Challenges:**\n\n*   **Ambiguity and nuance:** Human language is complex and ambiguous, making it difficult for AI systems to accurately identify hate speech.\n*   **Euphemisms and code words:** Hate speech often uses euphemisms and code words to disguise its true meaning.\n*   **Context dependence:** The meaning of words and phrases can vary depending on the context in which they are used.\n*   **Multilingualism:** Hate speech can occur in any language, requiring AI systems to be trained on data from a wide range of languages.\n*   **Adversarial attacks:** Malicious actors may attempt to manipulate AI systems to produce or disseminate hate speech.\n\n**Responsible AI practices involve:**\n\n*   **Data curation:** Using diverse and representative datasets for training AI models.\n*   **Bias detection and mitigation:** Identifying and mitigating biases in AI models that could lead to discriminatory outcomes.\n*   **Transparency and explainability:** Providing transparency into how AI models work and why they make certain decisions.\n*   **Human oversight:** Ensuring that humans are involved in the decision-making process, especially in cases where the potential for harm is high.\n*   **Continuous monitoring and evaluation:** Continuously monitoring and evaluating AI systems to ensure that they are not producing or disseminating hate speech.\n\nIn summary, responsible AI aims to prohibit hate speech that promotes discrimination, violence, and harm against individuals or groups based on protected characteristics. This requires a careful consideration of context, intent, power dynamics, and cultural norms, as well as ongoing efforts to address the technical challenges associated with detecting and mitigating hate speech in AI systems. Responsible AI also seeks to balance this with the need to uphold freedom of expression.\n"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "finishReason": "STOP",
+                "safetyRatings": [
+                  {
+                    "category": "HARM_CATEGORY_HATE_SPEECH",
+                    "probability": "NEGLIGIBLE"
+                  },
+                  {
+                    "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+                    "probability": "NEGLIGIBLE"
+                  },
+                  {
+                    "category": "HARM_CATEGORY_HARASSMENT",
+                    "probability": "NEGLIGIBLE"
+                  },
+                  {
+                    "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+                    "probability": "NEGLIGIBLE"
+                  }
+                ]
+              }
+            ],
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "3T2taNqrO6iGz7IP8ZW48Q0",
+            "usageMetadata": {
+              "candidatesTokenCount": 1103,
+              "candidatesTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 1103
+                }
+              ],
+              "promptTokenCount": 9,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 9
+                }
+              ],
+              "totalTokenCount": 1112
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

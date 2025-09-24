@@ -1,0 +1,134 @@
+{
+  "recordID": "GenerateContentStreamErrorHandlingTest.GenerateContentStreamLabelsVertexTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-2.0-flash:streamGenerateContent?alt=sse",
+        "request": "POST /v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-2.0-flash:streamGenerateContent?alt=sse HTTP/1.1",
+        "headers": {
+          "Content-Length": "151",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test-Name": "GenerateContentStreamErrorHandlingTest.GenerateContentStreamLabelsVertexTest"
+        },
+        "bodySegments": [
+          {
+            "contents": [
+              {
+                "parts": [
+                  {
+                    "text": "What is the capital of France?"
+                  }
+                ],
+                "role": "user"
+              }
+            ],
+            "generationConfig": {},
+            "labels": {
+              "test-label-key": "test-label-value"
+            }
+          }
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "us-central1-aiplatform.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "036227fd0fc455fcad20c6d44d99ff278e218b7975e0d68ffd63474600fa73f2",
+      "response": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Disposition": "attachment",
+          "Content-Type": "text/event-stream",
+          "Date": "Thu, 28 Aug 2025 04:01:56 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "The"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "createTime": "2025-08-28T04:01:56.292613Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "tNSvaIXuEfz2ld8PypvtyAo",
+            "usageMetadata": {
+              "billablePromptUsage": {
+                "textCount": 25
+              },
+              "trafficType": "PROVISIONED_THROUGHPUT"
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": " capital of France"
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ],
+            "createTime": "2025-08-28T04:01:56.292613Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "tNSvaIXuEfz2ld8PypvtyAo",
+            "usageMetadata": {
+              "trafficType": "PROVISIONED_THROUGHPUT"
+            }
+          },
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": " is **Paris**.\n"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "finishReason": "STOP"
+              }
+            ],
+            "createTime": "2025-08-28T04:01:56.292613Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "tNSvaIXuEfz2ld8PypvtyAo",
+            "usageMetadata": {
+              "candidatesTokenCount": 9,
+              "candidatesTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 9
+                }
+              ],
+              "promptTokenCount": 7,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 7
+                }
+              ],
+              "totalTokenCount": 16,
+              "trafficType": "PROVISIONED_THROUGHPUT"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "recordID": "GenerateImagesErrorHandlingTest.GenerateImagesBlockedVertexTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/imagen-3.0-generate-002:predict",
+        "request": "POST /v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/imagen-3.0-generate-002:predict HTTP/1.1",
+        "headers": {
+          "Content-Length": "101",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test-Name": "GenerateImagesErrorHandlingTest.GenerateImagesBlockedVertexTest"
+        },
+        "bodySegments": [
+          {
+            "instances": [
+              {
+                "prompt": "Violence and gore"
+              }
+            ],
+            "parameters": {
+              "includeRaiReason": true,
+              "sampleCount": 1
+            }
+          }
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "us-central1-aiplatform.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "e61a4f1df20aeac1e082eb59f4833d8dc85e60ff2b2ddc761a61c075c98d8a32",
+      "response": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=UTF-8",
+          "Date": "Wed, 10 Sep 2025 23:19:07 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "predictions": [
+              {
+                "raiFilteredReason": "Unable to show generated images. Your current safety filter threshold filtered out all generated images. You will not be charged for blocked images. Try rephrasing the prompt. If you think this was an error, send feedback. Support codes: 56562880, 64151117"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

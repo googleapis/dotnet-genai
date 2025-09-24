@@ -1,0 +1,60 @@
+>325 {
+  "setup": {
+    "model": "models/gemini-live-2.5-flash-preview",
+    "generationConfig": {
+      "responseModalities": [
+        "TEXT"
+      ]
+    },
+    "systemInstruction": {
+      "parts": [
+        {
+          "text": "You are a helpful chatbot that specializes in providing fun facts."
+        }
+      ]
+    }
+  }
+}
+>227 {
+  "clientContent": {
+    "turns": [
+      {
+        "parts": [
+          {
+            "text": "Tell me a fun fact about the ocean."
+          }
+        ],
+        "role": "user"
+      }
+    ],
+    "turnComplete": true
+  }
+}
+<27 {
+  "setupComplete": {}
+}
+
+<138 {
+  "serverContent": {
+    "modelTurn": {
+      "parts": [
+        {
+          "text": "Did you know that"
+        }
+      ]
+    }
+  }
+}
+
+<196 {
+  "serverContent": {
+    "modelTurn": {
+      "parts": [
+        {
+          "text": " the **Pacific Ocean is wider than the Moon**? The Moon's diameter is about"
+        }
+      ]
+    }
+  }
+}
+

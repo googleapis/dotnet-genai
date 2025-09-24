@@ -1,0 +1,36 @@
+# editorconfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Default settings:
+# A newline ending every file
+# Use 2 spaces as indentation
+# Trim trailing whitespace
+[*]
+insert_final_newline = true
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+
+[*.cs]
+# Rule: Remove unused using directives
+# IDE0005: Using directive is unnecessary
+# Setting severity to 'suggestion', 'warning', or 'error' will enable the analyzer.
+# Code cleanup tools (like in Visual Studio or `dotnet format`) can then remove them.
+# 'silent' would still report it for `dotnet format` but not show in IDE as a squiggle.
+# 'none' would disable the check entirely.
+dotnet_diagnostic.IDE0005.severity = error
+dotnet_sort_system_directives_first = true
+dotnet_separate_import_directive_groups = true
+csharp_preferred_using_directive_placement = outside_namespace
+indent_size = 2
+
+[*.csproj]
+indent_size = 2
+
+[*.nuspec]
+indent_size = 2
+
+
+

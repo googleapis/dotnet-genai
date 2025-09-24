@@ -1,0 +1,127 @@
+{
+  "recordID": "GenerateContentSimpleTest.GenerateContentSafetySettingsVertexTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-2.0-flash:generateContent",
+        "request": "POST /v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-2.0-flash:generateContent HTTP/1.1",
+        "headers": {
+          "Content-Length": "217",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test-Name": "GenerateContentSimpleTest.GenerateContentSafetySettingsVertexTest"
+        },
+        "bodySegments": [
+          {
+            "contents": [
+              {
+                "parts": [
+                  {
+                    "text": "What hate speech is prohibited by responsible AI?"
+                  }
+                ],
+                "role": "user"
+              }
+            ],
+            "generationConfig": {},
+            "safetySettings": [
+              {
+                "category": "HARM_CATEGORY_HATE_SPEECH",
+                "threshold": "BLOCK_LOW_AND_ABOVE"
+              }
+            ]
+          }
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "us-central1-aiplatform.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "0d2aacbaef66e1c0fc7d22f17887742760124ea4946e527d6d6f34ce6fae519a",
+      "response": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=UTF-8",
+          "Date": "Tue, 26 Aug 2025 04:53:59 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "candidates": [
+              {
+                "avgLogprobs": -0.2559965326544944,
+                "content": {
+                  "parts": [
+                    {
+                      "text": "Responsible AI frameworks generally prohibit hate speech that targets individuals or groups based on certain protected characteristics. While the specific definitions and protected characteristics vary depending on the framework and context, some common categories include:\n\n*   **Race and ethnicity:** Speech that promotes hatred, discrimination, or violence against people based on their racial or ethnic background.\n*   **Religion:** Speech that promotes hatred, discrimination, or violence against people based on their religious beliefs or lack thereof.\n*   **Gender and gender identity:** Speech that promotes hatred, discrimination, or violence against people based on their gender or gender identity, including transgender individuals.\n*   **Sexual orientation:** Speech that promotes hatred, discrimination, or violence against people based on their sexual orientation.\n*   **Disability:** Speech that promotes hatred, discrimination, or violence against people based on their physical or mental disabilities.\n*   **Nationality and immigration status:** Speech that promotes hatred, discrimination, or violence against people based on their nationality or immigration status.\n*   **Age:** Speech that promotes hatred, discrimination, or violence against people based on their age.\n\nIt is important to note that the prohibition of hate speech in responsible AI is not absolute. There are often exceptions for speech that is considered political commentary, artistic expression, or scientific inquiry, as long as it does not incite violence or hatred. Additionally, the line between offensive speech and hate speech can be blurry, and it is important to consider the context and intent of the speaker when making such determinations.\n\nHere are some examples of hate speech that would likely be prohibited by responsible AI frameworks:\n\n*   Using racial slurs or stereotypes to denigrate a person or group.\n*   Making threats of violence against people based on their religion.\n*   Promoting the idea that certain groups of people are inferior to others.\n*   Denying the humanity of a particular group of people.\n*   Calling for the genocide of a particular group of people.\n*   Spreading misinformation with the intent to cause discrimination.\n\nResponsible AI frameworks aim to create AI systems that are fair, unbiased, and respectful of all people. Prohibiting hate speech is an important step in achieving these goals."
+                    }
+                  ],
+                  "role": "model"
+                },
+                "finishReason": "STOP",
+                "safetyRatings": [
+                  {
+                    "category": "HARM_CATEGORY_HATE_SPEECH",
+                    "probability": "NEGLIGIBLE",
+                    "probabilityScore": 0.000008265366,
+                    "severity": "HARM_SEVERITY_NEGLIGIBLE"
+                  },
+                  {
+                    "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+                    "probability": "NEGLIGIBLE",
+                    "probabilityScore": 0.000008859644,
+                    "severity": "HARM_SEVERITY_NEGLIGIBLE",
+                    "severityScore": 0.016487971
+                  },
+                  {
+                    "category": "HARM_CATEGORY_HARASSMENT",
+                    "probability": "NEGLIGIBLE",
+                    "probabilityScore": 0.0000024549531,
+                    "severity": "HARM_SEVERITY_NEGLIGIBLE",
+                    "severityScore": 0.025322646
+                  },
+                  {
+                    "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+                    "probability": "NEGLIGIBLE",
+                    "probabilityScore": 6.0407736e-8,
+                    "severity": "HARM_SEVERITY_NEGLIGIBLE",
+                    "severityScore": 0.017974257
+                  }
+                ],
+                "score": -113.91845703125
+              }
+            ],
+            "createTime": "2025-08-26T04:53:56.989994Z",
+            "modelVersion": "gemini-2.0-flash",
+            "responseId": "5D2taKq2PNiWmecP3JK06Qc",
+            "usageMetadata": {
+              "billablePromptUsage": {
+                "textCount": 42
+              },
+              "candidatesTokenCount": 445,
+              "candidatesTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 445
+                }
+              ],
+              "promptTokenCount": 9,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 9
+                }
+              ],
+              "totalTokenCount": 454,
+              "trafficType": "ON_DEMAND"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "recordID": "GenerateImagesErrorHandlingTest.GenerateImagesWrongModelNameGeminiTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1beta/models/wrong-model-name:predict",
+        "request": "POST /v1beta/models/wrong-model-name:predict HTTP/1.1",
+        "headers": {
+          "Content-Length": "43",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test-Name": "GenerateImagesErrorHandlingTest.GenerateImagesWrongModelNameGeminiTest"
+        },
+        "bodySegments": [
+          {
+            "instances": [
+              {
+                "prompt": "Red skateboard"
+              }
+            ]
+          }
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "generativelanguage.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "08a8d1ede4ee91085de8da33c6bf53a5e392c8cb77472200ac59cee6fc8c4d9b",
+      "response": {
+        "statusCode": 404,
+        "headers": {
+          "Content-Type": "application/json; charset=UTF-8",
+          "Date": "Wed, 10 Sep 2025 23:18:59 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Server-Timing": "gfet4t7; dur=245",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "error": {
+              "code": 404,
+              "details": [
+                {
+                  "@type": "type.googleapis.com/google.rpc.DebugInfo",
+                  "detail": "[ORIGINAL ERROR] generic::not_found: models/wrong-model-name is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods. [google.rpc.error_details_ext] { message: \"models/wrong-model-name is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods.\" }"
+                }
+              ],
+              "message": "models/wrong-model-name is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods.",
+              "status": "NOT_FOUND"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

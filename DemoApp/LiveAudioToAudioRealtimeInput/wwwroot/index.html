@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>C# GenAI Live Audio Conversation</title>
+    <style>
+        body { font-family: sans-serif; max-width: 900px; margin: auto; padding: 20px; }
+        #controls { margin-bottom: 20px; }
+        #status { font-style: italic; color: #555; }
+        #chat-history { border: 1px solid #ccc; padding: 10px; height: 60vh; overflow-y: scroll; background-color: #f9f9f9; }
+        .message-container { display: flex; flex-direction: column; margin-bottom: 10px; }
+        .align-right { align-items: flex-end; }
+        .message-container audio { max-width: 100%; margin-top: 5px; }
+        .message-container div { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>C# GenAI Live Audio Conversation</h1>
+    <div id="controls">
+        <button id='recordButton'>Start Conversation</button>
+        <button id='closeButton'>Close Connection</button>
+    </div>
+    <p id="status">Connecting to server...</p>
+    <div id="chat-history"></div>
+
+    <script>
+        const recordButton = document.getElementById('recordButton');
+        const closeButton = document.getElementById('closeButton');
+        const statusDiv = document.getElementById('status');
+        const chatHistory = document.getElementById('chat-history');
+
+        let ws;
+        let isRecording = false;
+        let audioContext, processor, userStream;
+        const sampleRate = 24000;
+
+        // Buffers for displaying full conversation turns
+        let userAudioTurnBuffer = [];
+        let geminiAudioTurnBuffer = [];
+
+        function connectWs() {
+            if (ws && ws.readyState === WebSocket.OPEN) return;
+
+            const wsProtocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsUrl = `${wsProtocol}//${window.location.host}/ws`;
+            ws = new WebSocket(wsUrl);
+
+            ws.onopen = () => {
+                statusDiv.textContent = 'Connected. Click "Start Conversation" to talk.';
+                recordButton.disabled = false;
+            };
+
+            ws.onmessage = (event) => {
+                const serverMsg = JSON.parse(event.data);
+                if (serverMsg.serverContent) {
+                    const content = serverMsg.serverContent;
+                    if (content.modelTurn && content.modelTurn.parts) {
+                        content.modelTurn.parts.forEach(part => {
+                            if (part.inlineData && part.inlineData.mimeType?.startsWith('audio/')) {
+                                const audioData = base64ToUint8Array(part.inlineData.data);
+                                geminiAudioTurnBuffer.push(audioData);
+                            }
+                        });
+                    }
+                    if (content.turnComplete) {
+                        statusDiv.textContent = 'Gemini finished speaking. Your turn.';
+                        playFullTurnAudio(geminiAudioTurnBuffer, "Gemini");
+                        geminiAudioTurnBuffer = [];
+                    }
+                }
+            };
+
+            ws.onclose = () => {
+                statusDiv.textContent = 'Connection closed.';
+                recordButton.disabled = true;
+                isRecording = false;
+                recordButton.textContent = 'Start Conversation';
+            };
+
+            ws.onerror = (error) => {
+                statusDiv.textContent = 'WebSocket error.';
+                console.error('WebSocket Error:', error);
+            };
+        }
+
+        function playFullTurnAudio(audioBuffer, userName) {
+            if (audioBuffer.length === 0) return;
+            const wavBlob = encodeToWav(audioBuffer);
+            printChatAudio(wavBlob, userName);
+            const audio = new Audio(URL.createObjectURL(wavBlob));
+            audio.play();
+        }
+
+        function printChatAudio(audioBlob, userName) {
+            const container = document.createElement('div');
+            container.classList.add('message-container');
+            if (userName === 'Me') {
+                container.classList.add('align-right');
+            }
+            const nameDiv = document.createElement('div');
+            nameDiv.textContent = userName;
+            container.appendChild(nameDiv);
+
+            const audioElement = document.createElement('audio');
+            audioElement.src = URL.createObjectURL(audioBlob);
+            audioElement.controls = true;
+            container.appendChild(audioElement);
+
+            chatHistory.appendChild(container);
+            chatHistory.scrollTop = chatHistory.scrollHeight;
+        }
+
+        function sendJsonMessage(payload) {
+            if (ws && ws.readyState === WebSocket.OPEN) {
+                ws.send(JSON.stringify(payload));
+            }
+        }
+
+        async function startRecording() {
+            if (isRecording) return;
+            try {
+                audioContext = new (window.AudioContext || window.webkitAudioContext)({ sampleRate });
+                userStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                const source = audioContext.createMediaStreamSource(userStream);
+                processor = audioContext.createScriptProcessor(1024, 1, 1);
+
+                processor.onaudioprocess = (e) => {
+                    if (!isRecording) return;
+                    const pcm16 = convertFloat32ToInt16(e.inputBuffer.getChannelData(0));
+                    userAudioTurnBuffer.push(new Uint8Array(pcm16.buffer));
+                    sendJsonMessage({
+                        media: { data: arrayBufferToBase64(pcm16.buffer), mimeType: "audio/pcm" }
+                    });
+                };
+                source.connect(processor);
+                processor.connect(audioContext.destination); // Let's you hear yourself
+                isRecording = true;
+                recordButton.textContent = 'Stop Conversation';
+                statusDiv.textContent = 'Listening...';
+            } catch (err) {
+                statusDiv.textContent = `Error starting audio: ${err.message}`;
+            }
+        }
+
+        function stopRecording() {
+            if (!isRecording) return;
+            isRecording = false;
+            recordButton.textContent = 'Start Conversation';
+            statusDiv.textContent = 'Processing...';
+
+            if (processor) processor.disconnect();
+            if (userStream) userStream.getTracks().forEach(track => track.stop());
+            if (audioContext) audioContext.close();
+
+            // Display user's full turn audio in history
+            playFullTurnAudio(userAudioTurnBuffer, "Me");
+            userAudioTurnBuffer = [];
+
+            // Signal to Gemini that the user's turn is complete
+            sendJsonMessage({ clientContent: { turnComplete: true } });
+        }
+
+        const INT16_MAX = 32767;
+        const INT16_MIN = -32768;
+
+        // --- Utility Functions ---
+        function convertFloat32ToInt16(buffer) {
+            let l = buffer.length;
+            const buf = new Int16Array(l);
+            while (l--) buf[l] = Math.max(INT16_MIN, Math.min(INT16_MAX, buffer[l] * INT16_MAX));
+            return buf;
+        }
+
+        function arrayBufferToBase64(buffer) {
+            let binary = '';
+            const bytes = new Uint8Array(buffer);
+            for (let i = 0; i < bytes.byteLength; i++) {
+                binary += String.fromCharCode(bytes[i]);
+            }
+            return btoa(binary);
+        }
+
+        function base64ToUint8Array(base64) {
+            const binary_string = atob(base64);
+            const bytes = new Uint8Array(binary_string.length);
+            for (let i = 0; i < binary_string.length; i++) {
+                bytes[i] = binary_string.charCodeAt(i);
+            }
+            return bytes;
+        }
+
+        function mergeUint8Arrays(arrays) {
+            const totalSize = arrays.reduce((acc, e) => acc + e.length, 0);
+            const merged = new Uint8Array(totalSize);
+            let offset = 0;
+            arrays.forEach(array => {
+                merged.set(array, offset);
+                offset += array.length;
+            });
+            return merged;
+        }
+
+        function encodeToWav(pcmDataArray, sampleRate = 24000, channels = 1, bitsPerSample = 16) {
+            const pcmData = mergeUint8Arrays(pcmDataArray);
+            const blockAlign = channels * bitsPerSample / 8;
+            const byteRate = sampleRate * blockAlign;
+            const dataSize = pcmData.byteLength;
+            const buffer = new ArrayBuffer(44);
+            const view = new DataView(buffer);
+            const writeString = (offset, str) => {
+                for (let i = 0; i < str.length; i++) view.setUint8(offset + i, str.charCodeAt(i));
+            };
+            writeString(0, 'RIFF');
+            view.setUint32(4, 36 + dataSize, true);
+            writeString(8, 'WAVE');
+            writeString(12, 'fmt ');
+            view.setUint32(16, 16, true);
+            view.setUint16(20, 1, true);
+            view.setUint16(22, channels, true);
+            view.setUint32(24, sampleRate, true);
+            view.setUint32(28, byteRate, true);
+            view.setUint16(32, blockAlign, true);
+            view.setUint16(34, bitsPerSample, true);
+            writeString(36, 'data');
+            view.setUint32(40, dataSize, true);
+            const wavBytes = new Uint8Array(44 + dataSize);
+            wavBytes.set(new Uint8Array(buffer), 0);
+            wavBytes.set(pcmData, 44);
+            return new Blob([wavBytes], { type: 'audio/wav' });
+        }
+
+        // --- Event Listeners ---
+        window.addEventListener('load', () => {
+            recordButton.disabled = true;
+            connectWs();
+            recordButton.onclick = () => isRecording ? stopRecording() : startRecording();
+            closeButton.onclick = () => ws?.close();
+        });
+    </script>
+</body>
+</html>
