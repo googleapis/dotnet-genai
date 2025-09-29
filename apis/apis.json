@@ -2,7 +2,8 @@
   "apis": [
     {
       "id": "Google.GenAI",
-      "path": "Google.GenAI"
+      "path": "Google.GenAI",
+      "version": "0.1.0"
     }
   ]
 }
