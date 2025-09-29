@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class AsyncSession | Google GenAI .NET SDK </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class AsyncSession | Google GenAI .NET SDK ">
+      
+      <meta name="description" content="Represents a websocket connection to the Google&#39;s GenAI Live API. This class is not meant to be instantiated directly. Instead, use  to create an instance.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/googleapis/dotnet-genai/new/main/apiSpec/new?filename=Google_GenAI_AsyncSession.md&amp;value=---%0Auid%3A%20Google.GenAI.AsyncSession%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Google.GenAI.AsyncSession">
+
+
+
+  <h1 id="Google_GenAI_AsyncSession" data-uid="Google.GenAI.AsyncSession" class="text-break">
+Class AsyncSession  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Google.html">Google</a>.<a class="xref" href="Google.GenAI.html">GenAI</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a websocket connection to the Google's GenAI Live API.
+This class is not meant to be instantiated directly.
+Instead, use <a class="xref" href="Google.GenAI.Live.html#Google_GenAI_Live_ConnectAsync_System_String_Google_GenAI_Types_LiveConnectConfig_System_Threading_CancellationToken_">ConnectAsync(string, LiveConnectConfig, CancellationToken)</a> to create an instance.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AsyncSession : IAsyncDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">AsyncSession</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable">IAsyncDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Google_GenAI_AsyncSession__ctor_" data-uid="Google.GenAI.AsyncSession.#ctor*"></a>
+
+  <h3 id="Google_GenAI_AsyncSession__ctor_System_Net_WebSockets_WebSocket_Google_GenAI_ApiClient_" data-uid="Google.GenAI.AsyncSession.#ctor(System.Net.WebSockets.WebSocket,Google.GenAI.ApiClient)">
+  AsyncSession(WebSocket, ApiClient)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L184"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AsyncSession(WebSocket webSocket, ApiClient apiClient)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>webSocket</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.websockets.websocket">WebSocket</a></dt>
+    <dd></dd>
+    <dt><code>apiClient</code> <a class="xref" href="Google.GenAI.ApiClient.html">ApiClient</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_AsyncSession_CloseAsync_" data-uid="Google.GenAI.AsyncSession.CloseAsync*"></a>
+
+  <h3 id="Google_GenAI_AsyncSession_CloseAsync" data-uid="Google.GenAI.AsyncSession.CloseAsync">
+  CloseAsync()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L334"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Closes the WebSocket connection gracefully. This method is thread-safe and idempotent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task CloseAsync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_AsyncSession_DisposeAsync_" data-uid="Google.GenAI.AsyncSession.DisposeAsync*"></a>
+
+  <h3 id="Google_GenAI_AsyncSession_DisposeAsync" data-uid="Google.GenAI.AsyncSession.DisposeAsync">
+  DisposeAsync()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L371"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Asynchronously disposes the session by closing the WebSocket connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValueTask DisposeAsync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_AsyncSession_ReceiveAsync_" data-uid="Google.GenAI.AsyncSession.ReceiveAsync*"></a>
+
+  <h3 id="Google_GenAI_AsyncSession_ReceiveAsync_System_Threading_CancellationToken_" data-uid="Google.GenAI.AsyncSession.ReceiveAsync(System.Threading.CancellationToken)">
+  ReceiveAsync(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L278"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Receives model responses from the server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;LiveServerMessage?&gt; ReceiveAsync(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Google.GenAI.Types.LiveServerMessage.html">LiveServerMessage</a>&gt;</dt>
+    <dd><p>A <a class="xref" href="Google.GenAI.Types.LiveServerMessage.html">LiveServerMessage</a> containing the model's response, or <code>null</code> if the
+connection has been gracefully closed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown if an empty or invalid message is received.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.websockets.websocketexception">WebSocketException</a></dt>
+    <dd><p>Thrown for underlying WebSocket errors that are not a graceful close.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Google_GenAI_AsyncSession_SendClientContentAsync_" data-uid="Google.GenAI.AsyncSession.SendClientContentAsync*"></a>
+
+  <h3 id="Google_GenAI_AsyncSession_SendClientContentAsync_Google_GenAI_Types_LiveSendClientContentParameters_System_Threading_CancellationToken_" data-uid="Google.GenAI.AsyncSession.SendClientContentAsync(Google.GenAI.Types.LiveSendClientContentParameters,System.Threading.CancellationToken)">
+  SendClientContentAsync(LiveSendClientContentParameters, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L230"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sends non-realtime, turn-based content to the model.</p>
+<p>
+There are two ways to send messages to the live API:
+<code>SendClientContentAsync</code> and <code>SendRealtimeInputAsync</code>.
+</p>
+<p>
+<code>SendClientContentAsync</code> messages are added to the model context
+<b>in order</b>. Because <code>SendClientContentAsync</code> guarantees the order
+of messages between the client and the server, the model cannot respond as
+quickly as with <code>SendRealtimeInputAsync</code>. This is most noticeable when
+sending objects that require significant preprocessing time (typically images).
+</p>
+<p>
+<code>SendRealtimeInputAsync</code> sends a list of <a class="xref" href="Google.GenAI.Types.Content.html">Content</a> objects,
+which offers more options than the <a class="xref" href="Google.GenAI.Types.Blob.html">Blob</a> objects sent by
+<code>SendClientContentAsync</code>.
+</p>
+<p>
+The main use cases for <code>SendClientContentAsync</code> over
+<code>SendRealtimeInputAsync</code> are:
+<ol><li>
+Prefilling a conversation context (including sending anything that can't be
+represented as a realtime message) before starting a realtime conversation.
+</li><li>
+Conducting a non-realtime conversation with the live API.
+</li></ol>
+<b>Caution:</b> Interleaving <code>SendClientContentAsync</code> and
+<code>SendRealtimeInputAsync</code> in the same conversation is not recommended and
+can lead to unexpected behavior.
+
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task SendClientContentAsync(LiveSendClientContentParameters clientContent, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>clientContent</code> <a class="xref" href="Google.GenAI.Types.LiveSendClientContentParameters.html">LiveSendClientContentParameters</a></dt>
+    <dd><p>The client content to send to the model.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation token to use for the send operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_AsyncSession_SendRealtimeInputAsync_" data-uid="Google.GenAI.AsyncSession.SendRealtimeInputAsync*"></a>
+
+  <h3 id="Google_GenAI_AsyncSession_SendRealtimeInputAsync_Google_GenAI_Types_LiveSendRealtimeInputParameters_System_Threading_CancellationToken_" data-uid="Google.GenAI.AsyncSession.SendRealtimeInputAsync(Google.GenAI.Types.LiveSendRealtimeInputParameters,System.Threading.CancellationToken)">
+  SendRealtimeInputAsync(LiveSendRealtimeInputParameters, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L252"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sends realtime input to the model. With <code>SendRealtimeInputAsync</code>,
+Google's GenAI Live API will respond to audio automatically based on voice
+activity detection (VAD). <code>SendRealtimeInputAsync</code> is optimized for
+responsiveness at the expense of deterministic ordering of the conversation
+messages. Response tokens are added to the context as they become available.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task SendRealtimeInputAsync(LiveSendRealtimeInputParameters realtimeInput, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>realtimeInput</code> <a class="xref" href="Google.GenAI.Types.LiveSendRealtimeInputParameters.html">LiveSendRealtimeInputParameters</a></dt>
+    <dd><p>The realtime input to send to the model.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation token to use for the send operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_AsyncSession_SendToolResponseAsync_" data-uid="Google.GenAI.AsyncSession.SendToolResponseAsync*"></a>
+
+  <h3 id="Google_GenAI_AsyncSession_SendToolResponseAsync_Google_GenAI_Types_LiveSendToolResponseParameters_System_Threading_CancellationToken_" data-uid="Google.GenAI.AsyncSession.SendToolResponseAsync(Google.GenAI.Types.LiveSendToolResponseParameters,System.Threading.CancellationToken)">
+  SendToolResponseAsync(LiveSendToolResponseParameters, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L259"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task SendToolResponseAsync(LiveSendToolResponseParameters toolResponse, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>toolResponse</code> <a class="xref" href="Google.GenAI.Types.LiveSendToolResponseParameters.html">LiveSendToolResponseParameters</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L178" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

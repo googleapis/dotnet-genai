@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> | Google GenAI .NET SDK </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" | Google GenAI .NET SDK ">
+      
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/googleapis/dotnet-genai/blob/main/README.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p>Google Gen AI .Net SDK provides an interface for developers to integrate
+Google's generative models into their .Net applications. It supports the
+<a href="https://ai.google.dev/gemini-api/docs">Gemini Developer API</a> and
+<a href="https://cloud.google.com/vertex-ai/generative-ai/docs/learn/overview">Vertex AI</a>
+APIs.</p>
+<h2 id="supported-net-version">Supported .NET version</h2>
+<p>This library is built for and requires .NET 8.0 or a later compatible version.</p>
+<h2 id="install">Install</h2>
+<p>In your dotnet project directory, type the the following command</p>
+<pre><code>dotnet add package Google.GenAI
+</code></pre>
+<h2 id="imports">Imports</h2>
+<pre><code class="lang-csharp">using Google.GenAI;
+using Google.GenAI.Types;
+</code></pre>
+<h2 id="create-a-client">Create a client</h2>
+<p>Please run one of the following code blocks to create a client for
+different services (<a href="https://ai.google.dev/gemini-api/docs">Gemini Developer API</a> or <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/learn/overview">Vertex AI</a>).</p>
+<pre><code class="lang-csharp">using Google.GenAI;
+
+//  Only run this block for Gemini Developer API
+var client = new Client(apiKey: apiKey);
+</code></pre>
+<pre><code class="lang-csharp">using Google.GenAI;
+
+// only run this block for Vertex AI API
+client = new Client(
+    project: project, location: location, vertexAI: true
+)
+</code></pre>
+<p><strong>(Optional) Using environment variables:</strong></p>
+<p>You can create a client by configuring the necessary environment variables.
+Configuration setup instructions depends on whether you're using the Gemini
+Developer API or the Gemini API in Vertex AI.</p>
+<p><strong>Gemini Developer API:</strong> Set the <code>GOOGLE_API_KEY</code>. It will automatically be
+picked up by the client.</p>
+<pre><code class="lang-bash">export GEMINI_API_KEY='your-api-key'
+</code></pre>
+<p><strong>Gemini API on Vertex AI:</strong> Set <code>GOOGLE_GENAI_USE_VERTEXAI</code>,
+<code>GOOGLE_CLOUD_PROJECT</code> and <code>GOOGLE_CLOUD_LOCATION</code>, as shown below:</p>
+<pre><code class="lang-bash">export GOOGLE_GENAI_USE_VERTEXAI=true
+export GOOGLE_CLOUD_PROJECT='your-project-id'
+export GOOGLE_CLOUD_LOCATION='us-central1'
+</code></pre>
+<pre><code class="lang-csharp">using Google.GenAI;
+
+client = new Client();
+</code></pre>
+<h2 id="types">Types</h2>
+<p>Parameter types are specified in the <code>Google.GenAI.Types</code> namespace.</p>
+<h2 id="models">Models</h2>
+<p>The <code>client.Models</code> module exposes model inferencing. See <code>Create a client</code>
+section above to initialize a client.</p>
+<h3 id="generate-content">Generate Content</h3>
+<h4 id="with-simple-text-content">With simple text content</h4>
+<pre><code class="lang-csharp">using Google.GenAI;
+using Google.GenAI.Types;
+
+public class GenerateContentSimpleText {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client();
+    var response = await client.Models.GenerateContentAsync(
+      model: &quot;gemini-2.0-flash&quot;, contents: &quot;why is the sky blue?&quot;
+    );
+    Console.WriteLine(response.Candidates[0].Content.Parts[0].Text);
+  }
+}
+</code></pre>
+<h4 id="system-instructions-and-other-configs">System Instructions and Other Configs</h4>
+<p>The output of the model can be influenced by several optional settings
+available in GenerateContentAsync's config parameter. For example, to make a model more
+deterministic, lowering the <code>Temperature</code> parameter reduces randomness, with
+values near 0 minimizing variability. Capabilities and parameter defaults for
+each model is shown in the
+<a href="https://cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-5-flash">Vertex AI docs</a>
+and <a href="https://ai.google.dev/gemini-api/docs/models">Gemini API docs</a> respectively.</p>
+<pre><code class="lang-csharp">using Google.GenAI;
+using Google.GenAI.Types;
+
+public class GenerateContentWithConfig {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client();
+    var generateContentConfig =
+    new GenerateContentConfig {
+        SystemInstruction = new Content
+        {
+          Parts = new List&lt;Part&gt; {
+              new Part {Text = &quot;I say high you say low.&quot;}
+          }
+        },
+        Temperature = 0.1,
+        MaxOutputTokens = 3
+    };
+    var response = await client.Models.GenerateContentAsync(
+        model: &quot;gemini-2.0-flash&quot;,
+        contents: &quot;high&quot;,
+        config: generateContentConfig
+    );
+    Console.WriteLine(response.Candidates[0].Content.Parts[0].Text);
+  }
+}
+
+</code></pre>
+<h4 id="safety-settings">Safety Settings</h4>
+<pre><code class="lang-csharp">using Google.GenAI;
+using Googel.GenAI.Types;
+
+class GenerateContentWithSafetySettings {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client();
+
+    var safetySettings = new List&lt;SafetySetting&gt; {
+      new SafetySetting {
+        Category = HarmCategory.HARM_CATEGORY_HATE_SPEECH,
+        Threshold = HarmBlockThreshold.BLOCK_LOW_AND_ABOVE
+      }
+    };
+    var generateContentConfig = new GenerateContentConfig
+    {
+      SafetySettings =  new List&lt;SafetySetting&gt;(safetySettings)
+    };
+    var response = await client.Models.GenerateContentAsync(
+        model: &quot;gemini-2.0-flash&quot;,
+        contents: &quot;say something hateful&quot;,
+        config: generateContentConfig
+    );
+    Console.WriteLine(response.Candidates[0].SafetyRatings);
+  }
+}
+</code></pre>
+<h4 id="json-response-scehema">Json response scehema</h4>
+<p>However you define your schema, don't duplicate it in your input prompt,
+including by giving examples of expected JSON output. If you do, the generated
+output might be lower in quality.</p>
+<pre><code class="lang-csharp">using Goolge.GenAI;
+using Google.GenAI.Types;
+
+public class GenerateContentWithJsonSchema {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client();
+
+    // define the response schema you desire
+    Schema countryInfo = new Schema {
+      Properties =
+        new Dictionary&lt;string, Schema&gt; {
+          {
+            &quot;title&quot;, new Schema { Type = Type.STRING, Title = &quot;Title&quot; }
+          },
+          {
+            &quot;population&quot;, new Schema { Type = Type.INTEGER, Title = &quot;Population&quot; }
+          },
+          {
+            &quot;capital&quot;, new Schema { Type = Type.STRING, Title = &quot;Capital&quot; }
+          },
+          {
+            &quot;continent&quot;, new Schema { Type = Type.STRING, Title = &quot;Continent&quot; }
+          },
+          {
+            &quot;language&quot;, new Schema { Type = Type.STRING, Title = &quot;Language&quot; }
+          }
+        },
+      PropertyOrdering =
+          new List&lt;string&gt; { &quot;title&quot;, &quot;population&quot;, &quot;capital&quot;, &quot;continent&quot;, &quot;language&quot; },
+      Required = new List&lt;string&gt; { &quot;title&quot;, &quot;population&quot;, &quot;capital&quot;, &quot;continent&quot;, &quot;language&quot; },
+      Title = &quot;CountryInfo&quot;, Type = Type.OBJECT
+    };
+
+    var response = await client.Models.GenerateContentAsync(
+        model: &quot;gemini-2.0-flash&quot;,
+        contents: &quot;Give me information about Australia&quot;,
+        config: new GenerateContentConfig {
+            ResponseMimeType = &quot;application/json&quot;,
+            ResponseSchema = countryInfo
+        }
+    );
+
+    string text = response.Candidates[0].Content.Parts[0].Text;
+    var parsedText = JsonSerializer.Deserialize&lt;Dictionary&lt;string, object&gt;&gt;(text);
+    Console.WriteLine(parsedText);
+  }
+}
+
+</code></pre>
+<h3 id="generate-content-stream">Generate Content Stream</h3>
+<p>The usage of GenerateContentStreamAsync is similar to GenerateContentAsync, this section shows one simple example to showcase the nuance in the usage.</p>
+<pre><code class="lang-csharp">using Google.GenAI;
+using Google.GenAI.Types;
+
+class GenerateContentStreamSimpleText {
+  public static async Task main() {
+
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client();
+    await foreach (var chunk in client.Models.GenerateContentStreamAsync(
+        model: &quot;gemini-2.0-flash&quot;,
+        contents: &quot;why is the sky blue?&quot;
+    )) {
+        Console.WriteLine(chunk.Candidates[0].Content.Parts[0].Text);
+    }
+  }
+}
+
+</code></pre>
+<h3 id="generate-images">Generate Images</h3>
+<pre><code class="lang-csharp">using Google.GenAI;
+using Google.GenAI.Types;
+
+public class GenerateImagesSimple {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client();
+    var generateImagesConfig = new GenerateImagesConfig
+    {
+      NumberOfImages = 1,
+      AspectRatio = &quot;1:1&quot;,
+      SafetyFilterLevel = SafetyFilterLevel.BLOCK_LOW_AND_ABOVE,
+      PersonGeneration = PersonGeneration.DONT_ALLOW,
+      IncludeSafetyAttributes = true,
+      IncludeRaiReason = true,
+      OutputMimeType = &quot;image/jpeg&quot;,
+    };
+    var response = await client.Models.GenerateImagesAsync(
+      model: &quot;imagen-3.0-generate-002&quot;,
+      prompt: &quot;Red skateboard&quot;,
+      config: generateImagesConfig
+    );
+    // Do something with the generated image
+    var image = response.GeneratedImages.First().Image;
+  }
+}
+</code></pre>
+<h3 id="upscale-image">Upscale Image</h3>
+<p>Upscaling an image is only supported on the Vertex AI client.</p>
+<pre><code class="lang-csharp">using Google.GenAI;
+using Google.GenAI.Types;
+
+public class UpscaleImageSimple {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client();
+    var upscaleImageConfig = new UpscaleImageConfig {
+      OutputMimeType = &quot;image/jpeg&quot;, EnhanceInputImage = true
+    };
+    var image; // Image to upscale here
+    var response = await client.Models.UpscaleImageAsync(
+      model: modelName, image: image, upscaleFactor: &quot;x2&quot;,
+      config: upscaleImageConfig);
+
+    // Do something with the generated image
+    var image = response.GeneratedImages.First().Image;
+  }
+}
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/README.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
