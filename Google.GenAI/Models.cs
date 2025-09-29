@@ -33,96 +33,6 @@ namespace Google.GenAI {
   public sealed class Models {
     private readonly ApiClient _apiClient;
 
-    internal JsonNode ApiKeyConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "apiKeyString" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "apiKeyString" },
-                              Common.GetValueByPath(fromObject, new string[] { "apiKeyString" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode AuthConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "apiKeyConfig" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "apiKeyConfig" },
-            ApiKeyConfigToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                     fromObject, new string[] { "apiKeyConfig" }))),
-                                 toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "authType" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "authType" },
-                              Common.GetValueByPath(fromObject, new string[] { "authType" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "googleServiceAccountConfig" }) !=
-          null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "googleServiceAccountConfig" },
-            Common.GetValueByPath(fromObject, new string[] { "googleServiceAccountConfig" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "httpBasicAuthConfig" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "httpBasicAuthConfig" },
-            Common.GetValueByPath(fromObject, new string[] { "httpBasicAuthConfig" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "oauthConfig" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "oauthConfig" },
-                              Common.GetValueByPath(fromObject, new string[] { "oauthConfig" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "oidcConfig" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "oidcConfig" },
-                              Common.GetValueByPath(fromObject, new string[] { "oidcConfig" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode BlobFromMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "data" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "data" },
-                              Common.GetValueByPath(fromObject, new string[] { "data" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "mimeType" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "mimeType" },
-                              Common.GetValueByPath(fromObject, new string[] { "mimeType" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode BlobFromVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "displayName" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "displayName" },
-                              Common.GetValueByPath(fromObject, new string[] { "displayName" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "data" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "data" },
-                              Common.GetValueByPath(fromObject, new string[] { "data" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "mimeType" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "mimeType" },
-                              Common.GetValueByPath(fromObject, new string[] { "mimeType" }));
-      }
-
-      return toObject;
-    }
-
     internal JsonNode BlobToMldev(JsonNode fromObject, JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
@@ -143,36 +53,12 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode BlobToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "displayName" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "displayName" },
-                              Common.GetValueByPath(fromObject, new string[] { "displayName" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "data" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "data" },
-                              Common.GetValueByPath(fromObject, new string[] { "data" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "mimeType" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "mimeType" },
-                              Common.GetValueByPath(fromObject, new string[] { "mimeType" }));
-      }
-
-      return toObject;
-    }
-
     internal JsonNode CandidateFromMldev(JsonNode fromObject, JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "content" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "content" },
-            ContentFromMldev(JsonNode.Parse(JsonSerializer.Serialize(
-                                 Common.GetValueByPath(fromObject, new string[] { "content" }))),
-                             toObject));
+        Common.SetValueByPath(toObject, new string[] { "content" },
+                              Common.GetValueByPath(fromObject, new string[] { "content" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "citationMetadata" }) != null) {
@@ -194,77 +80,9 @@ namespace Google.GenAI {
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "urlContextMetadata" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "urlContextMetadata" },
-                              UrlContextMetadataFromMldev(
-                                  JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                      fromObject, new string[] { "urlContextMetadata" }))),
-                                  toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "avgLogprobs" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "avgLogprobs" },
-                              Common.GetValueByPath(fromObject, new string[] { "avgLogprobs" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "groundingMetadata" }) != null) {
         Common.SetValueByPath(
-            toObject, new string[] { "groundingMetadata" },
-            Common.GetValueByPath(fromObject, new string[] { "groundingMetadata" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "index" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "index" },
-                              Common.GetValueByPath(fromObject, new string[] { "index" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "logprobsResult" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "logprobsResult" },
-                              Common.GetValueByPath(fromObject, new string[] { "logprobsResult" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "safetyRatings" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "safetyRatings" },
-                              Common.GetValueByPath(fromObject, new string[] { "safetyRatings" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode CandidateFromVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "content" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "content" },
-            ContentFromVertex(JsonNode.Parse(JsonSerializer.Serialize(
-                                  Common.GetValueByPath(fromObject, new string[] { "content" }))),
-                              toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "citationMetadata" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "citationMetadata" },
-                              CitationMetadataFromVertex(
-                                  JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                      fromObject, new string[] { "citationMetadata" }))),
-                                  toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "finishMessage" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "finishMessage" },
-                              Common.GetValueByPath(fromObject, new string[] { "finishMessage" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "finishReason" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "finishReason" },
-                              Common.GetValueByPath(fromObject, new string[] { "finishReason" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "urlContextMetadata" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "urlContextMetadata" },
-                              UrlContextMetadataFromVertex(
-                                  JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                      fromObject, new string[] { "urlContextMetadata" }))),
-                                  toObject));
+            toObject, new string[] { "urlContextMetadata" },
+            Common.GetValueByPath(fromObject, new string[] { "urlContextMetadata" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "avgLogprobs" }) != null) {
@@ -308,95 +126,6 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode CitationMetadataFromVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "citations" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "citations" },
-                              Common.GetValueByPath(fromObject, new string[] { "citations" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode ComputerUseToMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "environment" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "environment" },
-                              Common.GetValueByPath(fromObject, new string[] { "environment" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "excludedPredefinedFunctions" }) !=
-          null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "excludedPredefinedFunctions" },
-            Common.GetValueByPath(fromObject, new string[] { "excludedPredefinedFunctions" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode ComputerUseToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "environment" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "environment" },
-                              Common.GetValueByPath(fromObject, new string[] { "environment" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "excludedPredefinedFunctions" }) !=
-          null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "excludedPredefinedFunctions" },
-            Common.GetValueByPath(fromObject, new string[] { "excludedPredefinedFunctions" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode ContentFromMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "parts" }) != null) {
-        JsonArray keyArray = (JsonArray)Common.GetValueByPath(fromObject, new string[] { "parts" });
-        JsonArray result = new JsonArray();
-
-        foreach (var record in keyArray) {
-          result.Add(PartFromMldev(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
-        }
-        Common.SetValueByPath(toObject, new string[] { "parts" }, result);
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "role" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "role" },
-                              Common.GetValueByPath(fromObject, new string[] { "role" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode ContentFromVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "parts" }) != null) {
-        JsonArray keyArray = (JsonArray)Common.GetValueByPath(fromObject, new string[] { "parts" });
-        JsonArray result = new JsonArray();
-
-        foreach (var record in keyArray) {
-          result.Add(PartFromVertex(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
-        }
-        Common.SetValueByPath(toObject, new string[] { "parts" }, result);
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "role" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "role" },
-                              Common.GetValueByPath(fromObject, new string[] { "role" }));
-      }
-
-      return toObject;
-    }
-
     internal JsonNode ContentToMldev(JsonNode fromObject, JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
@@ -418,109 +147,6 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode ContentToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "parts" }) != null) {
-        JsonArray keyArray = (JsonArray)Common.GetValueByPath(fromObject, new string[] { "parts" });
-        JsonArray result = new JsonArray();
-
-        foreach (var record in keyArray) {
-          result.Add(PartToVertex(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
-        }
-        Common.SetValueByPath(toObject, new string[] { "parts" }, result);
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "role" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "role" },
-                              Common.GetValueByPath(fromObject, new string[] { "role" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode DynamicRetrievalConfigToMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "mode" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "mode" },
-                              Common.GetValueByPath(fromObject, new string[] { "mode" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "dynamicThreshold" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "dynamicThreshold" },
-            Common.GetValueByPath(fromObject, new string[] { "dynamicThreshold" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode DynamicRetrievalConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "mode" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "mode" },
-                              Common.GetValueByPath(fromObject, new string[] { "mode" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "dynamicThreshold" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "dynamicThreshold" },
-            Common.GetValueByPath(fromObject, new string[] { "dynamicThreshold" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode EnterpriseWebSearchToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "excludeDomains" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "excludeDomains" },
-                              Common.GetValueByPath(fromObject, new string[] { "excludeDomains" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode FileDataFromMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "fileUri" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "fileUri" },
-                              Common.GetValueByPath(fromObject, new string[] { "fileUri" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "mimeType" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "mimeType" },
-                              Common.GetValueByPath(fromObject, new string[] { "mimeType" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode FileDataFromVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "displayName" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "displayName" },
-                              Common.GetValueByPath(fromObject, new string[] { "displayName" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "fileUri" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "fileUri" },
-                              Common.GetValueByPath(fromObject, new string[] { "fileUri" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "mimeType" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "mimeType" },
-                              Common.GetValueByPath(fromObject, new string[] { "mimeType" }));
-      }
-
-      return toObject;
-    }
-
     internal JsonNode FileDataToMldev(JsonNode fromObject, JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
@@ -536,188 +162,6 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "mimeType" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "mimeType" },
                               Common.GetValueByPath(fromObject, new string[] { "mimeType" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode FileDataToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "displayName" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "displayName" },
-                              Common.GetValueByPath(fromObject, new string[] { "displayName" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "fileUri" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "fileUri" },
-                              Common.GetValueByPath(fromObject, new string[] { "fileUri" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "mimeType" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "mimeType" },
-                              Common.GetValueByPath(fromObject, new string[] { "mimeType" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode FunctionCallFromMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "id" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "id" },
-                              Common.GetValueByPath(fromObject, new string[] { "id" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "args" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "args" },
-                              Common.GetValueByPath(fromObject, new string[] { "args" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "name" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "name" },
-                              Common.GetValueByPath(fromObject, new string[] { "name" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode FunctionCallFromVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "id" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "id" },
-                              Common.GetValueByPath(fromObject, new string[] { "id" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "args" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "args" },
-                              Common.GetValueByPath(fromObject, new string[] { "args" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "name" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "name" },
-                              Common.GetValueByPath(fromObject, new string[] { "name" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode FunctionCallToMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "id" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "id" },
-                              Common.GetValueByPath(fromObject, new string[] { "id" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "args" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "args" },
-                              Common.GetValueByPath(fromObject, new string[] { "args" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "name" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "name" },
-                              Common.GetValueByPath(fromObject, new string[] { "name" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode FunctionCallToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "id" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "id" },
-                              Common.GetValueByPath(fromObject, new string[] { "id" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "args" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "args" },
-                              Common.GetValueByPath(fromObject, new string[] { "args" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "name" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "name" },
-                              Common.GetValueByPath(fromObject, new string[] { "name" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode FunctionCallingConfigToMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "mode" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "mode" },
-                              Common.GetValueByPath(fromObject, new string[] { "mode" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "allowedFunctionNames" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "allowedFunctionNames" },
-            Common.GetValueByPath(fromObject, new string[] { "allowedFunctionNames" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode FunctionCallingConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "mode" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "mode" },
-                              Common.GetValueByPath(fromObject, new string[] { "mode" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "allowedFunctionNames" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "allowedFunctionNames" },
-            Common.GetValueByPath(fromObject, new string[] { "allowedFunctionNames" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode FunctionDeclarationToMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "behavior" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "behavior" },
-                              Common.GetValueByPath(fromObject, new string[] { "behavior" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "description" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "description" },
-                              Common.GetValueByPath(fromObject, new string[] { "description" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "name" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "name" },
-                              Common.GetValueByPath(fromObject, new string[] { "name" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "parameters" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "parameters" },
-                              Common.GetValueByPath(fromObject, new string[] { "parameters" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "parametersJsonSchema" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "parametersJsonSchema" },
-            Common.GetValueByPath(fromObject, new string[] { "parametersJsonSchema" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "response" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "response" },
-                              Common.GetValueByPath(fromObject, new string[] { "response" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "responseJsonSchema" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "responseJsonSchema" },
-            Common.GetValueByPath(fromObject, new string[] { "responseJsonSchema" }));
       }
 
       return toObject;
@@ -844,12 +288,9 @@ namespace Google.GenAI {
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "responseSchema" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "responseSchema" },
-            SchemaToMldev(
-                JsonNode.Parse(JsonSerializer.Serialize(Transformers.TSchema(
-                    Common.GetValueByPath(fromObject, new string[] { "responseSchema" })))),
-                toObject));
+        Common.SetValueByPath(toObject, new string[] { "responseSchema" },
+                              Transformers.TSchema(Common.GetValueByPath(
+                                  fromObject, new string[] { "responseSchema" })));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "responseJsonSchema" }) != null) {
@@ -892,11 +333,8 @@ namespace Google.GenAI {
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "toolConfig" }) != null) {
-        Common.SetValueByPath(
-            parentObject, new string[] { "toolConfig" },
-            ToolConfigToMldev(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                  fromObject, new string[] { "toolConfig" }))),
-                              toObject));
+        Common.SetValueByPath(parentObject, new string[] { "toolConfig" },
+                              Common.GetValueByPath(fromObject, new string[] { "toolConfig" }));
       }
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "labels" }))) {
@@ -924,12 +362,9 @@ namespace Google.GenAI {
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "speechConfig" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "speechConfig" },
-            SpeechConfigToMldev(
-                JsonNode.Parse(JsonSerializer.Serialize(Transformers.TSpeechConfig(
-                    Common.GetValueByPath(fromObject, new string[] { "speechConfig" })))),
-                toObject));
+        Common.SetValueByPath(toObject, new string[] { "speechConfig" },
+                              Transformers.TSpeechConfig(Common.GetValueByPath(
+                                  fromObject, new string[] { "speechConfig" })));
       }
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "audioTimestamp" }))) {
@@ -937,19 +372,13 @@ namespace Google.GenAI {
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "thinkingConfig" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "thinkingConfig" },
-            ThinkingConfigToMldev(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                      fromObject, new string[] { "thinkingConfig" }))),
-                                  toObject));
+        Common.SetValueByPath(toObject, new string[] { "thinkingConfig" },
+                              Common.GetValueByPath(fromObject, new string[] { "thinkingConfig" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "imageConfig" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "imageConfig" },
-            ImageConfigToMldev(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                   fromObject, new string[] { "imageConfig" }))),
-                               toObject));
+        Common.SetValueByPath(toObject, new string[] { "imageConfig" },
+                              Common.GetValueByPath(fromObject, new string[] { "imageConfig" }));
       }
 
       return toObject;
@@ -960,12 +389,9 @@ namespace Google.GenAI {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "systemInstruction" }) != null) {
-        Common.SetValueByPath(
-            parentObject, new string[] { "systemInstruction" },
-            ContentToVertex(
-                JsonNode.Parse(JsonSerializer.Serialize(Transformers.TContent(
-                    Common.GetValueByPath(fromObject, new string[] { "systemInstruction" })))),
-                toObject));
+        Common.SetValueByPath(parentObject, new string[] { "systemInstruction" },
+                              Transformers.TContent(Common.GetValueByPath(
+                                  fromObject, new string[] { "systemInstruction" })));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "temperature" }) != null) {
@@ -1034,12 +460,9 @@ namespace Google.GenAI {
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "responseSchema" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "responseSchema" },
-            SchemaToVertex(
-                JsonNode.Parse(JsonSerializer.Serialize(Transformers.TSchema(
-                    Common.GetValueByPath(fromObject, new string[] { "responseSchema" })))),
-                toObject));
+        Common.SetValueByPath(toObject, new string[] { "responseSchema" },
+                              Transformers.TSchema(Common.GetValueByPath(
+                                  fromObject, new string[] { "responseSchema" })));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "responseJsonSchema" }) != null) {
@@ -1054,23 +477,14 @@ namespace Google.GenAI {
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "modelSelectionConfig" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "modelConfig" },
-                              ModelSelectionConfigToVertex(
-                                  JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                      fromObject, new string[] { "modelSelectionConfig" }))),
-                                  toObject));
+        Common.SetValueByPath(
+            toObject, new string[] { "modelConfig" },
+            Common.GetValueByPath(fromObject, new string[] { "modelSelectionConfig" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "safetySettings" }) != null) {
-        JsonArray keyArray =
-            (JsonArray)Common.GetValueByPath(fromObject, new string[] { "safetySettings" });
-        JsonArray result = new JsonArray();
-
-        foreach (var record in keyArray) {
-          result.Add(
-              SafetySettingToVertex(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
-        }
-        Common.SetValueByPath(parentObject, new string[] { "safetySettings" }, result);
+        Common.SetValueByPath(parentObject, new string[] { "safetySettings" },
+                              Common.GetValueByPath(fromObject, new string[] { "safetySettings" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "tools" }) != null) {
@@ -1085,11 +499,8 @@ namespace Google.GenAI {
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "toolConfig" }) != null) {
-        Common.SetValueByPath(
-            parentObject, new string[] { "toolConfig" },
-            ToolConfigToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                   fromObject, new string[] { "toolConfig" }))),
-                               toObject));
+        Common.SetValueByPath(parentObject, new string[] { "toolConfig" },
+                              Common.GetValueByPath(fromObject, new string[] { "toolConfig" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "labels" }) != null) {
@@ -1132,19 +543,13 @@ namespace Google.GenAI {
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "thinkingConfig" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "thinkingConfig" },
-            ThinkingConfigToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                       fromObject, new string[] { "thinkingConfig" }))),
-                                   toObject));
+        Common.SetValueByPath(toObject, new string[] { "thinkingConfig" },
+                              Common.GetValueByPath(fromObject, new string[] { "thinkingConfig" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "imageConfig" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "imageConfig" },
-            ImageConfigToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                    fromObject, new string[] { "imageConfig" }))),
-                                toObject));
+        Common.SetValueByPath(toObject, new string[] { "imageConfig" },
+                              Common.GetValueByPath(fromObject, new string[] { "imageConfig" }));
       }
 
       return toObject;
@@ -1196,14 +601,9 @@ namespace Google.GenAI {
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "contents" }) != null) {
-        JsonArray keyArray =
-            (JsonArray)Common.GetValueByPath(fromObject, new string[] { "contents" });
-        JsonArray result = new JsonArray();
-
-        foreach (var record in keyArray) {
-          result.Add(ContentToVertex(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
-        }
-        Common.SetValueByPath(toObject, new string[] { "contents" }, result);
+        Common.SetValueByPath(
+            toObject, new string[] { "contents" },
+            Transformers.TContents(Common.GetValueByPath(fromObject, new string[] { "contents" })));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "config" }) != null) {
@@ -1262,15 +662,8 @@ namespace Google.GenAI {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "candidates" }) != null) {
-        JsonArray keyArray =
-            (JsonArray)Common.GetValueByPath(fromObject, new string[] { "candidates" });
-        JsonArray result = new JsonArray();
-
-        foreach (var record in keyArray) {
-          result.Add(
-              CandidateFromVertex(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
-        }
-        Common.SetValueByPath(toObject, new string[] { "candidates" }, result);
+        Common.SetValueByPath(toObject, new string[] { "candidates" },
+                              Common.GetValueByPath(fromObject, new string[] { "candidates" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "createTime" }) != null) {
@@ -1651,102 +1044,17 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode GoogleMapsToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "authConfig" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "authConfig" },
-            AuthConfigToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                   fromObject, new string[] { "authConfig" }))),
-                               toObject));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode GoogleSearchRetrievalToMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "dynamicRetrievalConfig" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "dynamicRetrievalConfig" },
-                              DynamicRetrievalConfigToMldev(
-                                  JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                      fromObject, new string[] { "dynamicRetrievalConfig" }))),
-                                  toObject));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode GoogleSearchRetrievalToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "dynamicRetrievalConfig" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "dynamicRetrievalConfig" },
-                              DynamicRetrievalConfigToVertex(
-                                  JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                      fromObject, new string[] { "dynamicRetrievalConfig" }))),
-                                  toObject));
-      }
-
-      return toObject;
-    }
-
     internal JsonNode GoogleSearchToMldev(JsonNode fromObject, JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "timeRangeFilter" }) != null) {
         Common.SetValueByPath(
             toObject, new string[] { "timeRangeFilter" },
-            IntervalToMldev(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                fromObject, new string[] { "timeRangeFilter" }))),
-                            toObject));
+            Common.GetValueByPath(fromObject, new string[] { "timeRangeFilter" }));
       }
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "excludeDomains" }))) {
         throw new NotSupportedException("excludeDomains parameter is not supported in Gemini API.");
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode GoogleSearchToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "timeRangeFilter" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "timeRangeFilter" },
-            IntervalToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                 fromObject, new string[] { "timeRangeFilter" }))),
-                             toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "excludeDomains" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "excludeDomains" },
-                              Common.GetValueByPath(fromObject, new string[] { "excludeDomains" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode ImageConfigToMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "aspectRatio" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "aspectRatio" },
-                              Common.GetValueByPath(fromObject, new string[] { "aspectRatio" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode ImageConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "aspectRatio" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "aspectRatio" },
-                              Common.GetValueByPath(fromObject, new string[] { "aspectRatio" }));
       }
 
       return toObject;
@@ -1813,252 +1121,12 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode IntervalToMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "startTime" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "startTime" },
-                              Common.GetValueByPath(fromObject, new string[] { "startTime" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "endTime" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "endTime" },
-                              Common.GetValueByPath(fromObject, new string[] { "endTime" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode IntervalToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "startTime" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "startTime" },
-                              Common.GetValueByPath(fromObject, new string[] { "startTime" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "endTime" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "endTime" },
-                              Common.GetValueByPath(fromObject, new string[] { "endTime" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode LatLngToMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "latitude" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "latitude" },
-                              Common.GetValueByPath(fromObject, new string[] { "latitude" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "longitude" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "longitude" },
-                              Common.GetValueByPath(fromObject, new string[] { "longitude" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode LatLngToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "latitude" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "latitude" },
-                              Common.GetValueByPath(fromObject, new string[] { "latitude" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "longitude" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "longitude" },
-                              Common.GetValueByPath(fromObject, new string[] { "longitude" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode ModelSelectionConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "featureSelectionPreference" }) !=
-          null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "featureSelectionPreference" },
-            Common.GetValueByPath(fromObject, new string[] { "featureSelectionPreference" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode MultiSpeakerVoiceConfigToMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "speakerVoiceConfigs" }) != null) {
-        JsonArray keyArray =
-            (JsonArray)Common.GetValueByPath(fromObject, new string[] { "speakerVoiceConfigs" });
-        JsonArray result = new JsonArray();
-
-        foreach (var record in keyArray) {
-          result.Add(SpeakerVoiceConfigToMldev(JsonNode.Parse(JsonSerializer.Serialize(record)),
-                                               toObject));
-        }
-        Common.SetValueByPath(toObject, new string[] { "speakerVoiceConfigs" }, result);
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode PartFromMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "videoMetadata" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "videoMetadata" },
-            VideoMetadataFromMldev(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                       fromObject, new string[] { "videoMetadata" }))),
-                                   toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "thought" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "thought" },
-                              Common.GetValueByPath(fromObject, new string[] { "thought" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "inlineData" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "inlineData" },
-            BlobFromMldev(JsonNode.Parse(JsonSerializer.Serialize(
-                              Common.GetValueByPath(fromObject, new string[] { "inlineData" }))),
-                          toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "fileData" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "fileData" },
-            FileDataFromMldev(JsonNode.Parse(JsonSerializer.Serialize(
-                                  Common.GetValueByPath(fromObject, new string[] { "fileData" }))),
-                              toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "thoughtSignature" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "thoughtSignature" },
-            Common.GetValueByPath(fromObject, new string[] { "thoughtSignature" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "functionCall" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "functionCall" },
-            FunctionCallFromMldev(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                      fromObject, new string[] { "functionCall" }))),
-                                  toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "codeExecutionResult" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "codeExecutionResult" },
-            Common.GetValueByPath(fromObject, new string[] { "codeExecutionResult" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "executableCode" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "executableCode" },
-                              Common.GetValueByPath(fromObject, new string[] { "executableCode" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "functionResponse" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "functionResponse" },
-            Common.GetValueByPath(fromObject, new string[] { "functionResponse" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "text" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "text" },
-                              Common.GetValueByPath(fromObject, new string[] { "text" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode PartFromVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "videoMetadata" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "videoMetadata" },
-            VideoMetadataFromVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                        fromObject, new string[] { "videoMetadata" }))),
-                                    toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "thought" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "thought" },
-                              Common.GetValueByPath(fromObject, new string[] { "thought" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "inlineData" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "inlineData" },
-            BlobFromVertex(JsonNode.Parse(JsonSerializer.Serialize(
-                               Common.GetValueByPath(fromObject, new string[] { "inlineData" }))),
-                           toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "fileData" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "fileData" },
-            FileDataFromVertex(JsonNode.Parse(JsonSerializer.Serialize(
-                                   Common.GetValueByPath(fromObject, new string[] { "fileData" }))),
-                               toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "thoughtSignature" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "thoughtSignature" },
-            Common.GetValueByPath(fromObject, new string[] { "thoughtSignature" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "functionCall" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "functionCall" },
-            FunctionCallFromVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                       fromObject, new string[] { "functionCall" }))),
-                                   toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "codeExecutionResult" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "codeExecutionResult" },
-            Common.GetValueByPath(fromObject, new string[] { "codeExecutionResult" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "executableCode" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "executableCode" },
-                              Common.GetValueByPath(fromObject, new string[] { "executableCode" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "functionResponse" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "functionResponse" },
-            Common.GetValueByPath(fromObject, new string[] { "functionResponse" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "text" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "text" },
-                              Common.GetValueByPath(fromObject, new string[] { "text" }));
-      }
-
-      return toObject;
-    }
-
     internal JsonNode PartToMldev(JsonNode fromObject, JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "videoMetadata" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "videoMetadata" },
-            VideoMetadataToMldev(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                     fromObject, new string[] { "videoMetadata" }))),
-                                 toObject));
+        Common.SetValueByPath(toObject, new string[] { "videoMetadata" },
+                              Common.GetValueByPath(fromObject, new string[] { "videoMetadata" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "thought" }) != null) {
@@ -2089,11 +1157,8 @@ namespace Google.GenAI {
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "functionCall" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "functionCall" },
-            FunctionCallToMldev(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                    fromObject, new string[] { "functionCall" }))),
-                                toObject));
+        Common.SetValueByPath(toObject, new string[] { "functionCall" },
+                              Common.GetValueByPath(fromObject, new string[] { "functionCall" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "codeExecutionResult" }) != null) {
@@ -2116,137 +1181,6 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "text" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "text" },
                               Common.GetValueByPath(fromObject, new string[] { "text" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode PartToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "videoMetadata" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "videoMetadata" },
-            VideoMetadataToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                      fromObject, new string[] { "videoMetadata" }))),
-                                  toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "thought" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "thought" },
-                              Common.GetValueByPath(fromObject, new string[] { "thought" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "inlineData" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "inlineData" },
-            BlobToVertex(JsonNode.Parse(JsonSerializer.Serialize(
-                             Common.GetValueByPath(fromObject, new string[] { "inlineData" }))),
-                         toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "fileData" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "fileData" },
-            FileDataToVertex(JsonNode.Parse(JsonSerializer.Serialize(
-                                 Common.GetValueByPath(fromObject, new string[] { "fileData" }))),
-                             toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "thoughtSignature" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "thoughtSignature" },
-            Common.GetValueByPath(fromObject, new string[] { "thoughtSignature" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "functionCall" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "functionCall" },
-            FunctionCallToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                     fromObject, new string[] { "functionCall" }))),
-                                 toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "codeExecutionResult" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "codeExecutionResult" },
-            Common.GetValueByPath(fromObject, new string[] { "codeExecutionResult" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "executableCode" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "executableCode" },
-                              Common.GetValueByPath(fromObject, new string[] { "executableCode" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "functionResponse" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "functionResponse" },
-            Common.GetValueByPath(fromObject, new string[] { "functionResponse" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "text" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "text" },
-                              Common.GetValueByPath(fromObject, new string[] { "text" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode PrebuiltVoiceConfigToMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "voiceName" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "voiceName" },
-                              Common.GetValueByPath(fromObject, new string[] { "voiceName" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode PrebuiltVoiceConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "voiceName" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "voiceName" },
-                              Common.GetValueByPath(fromObject, new string[] { "voiceName" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode RetrievalConfigToMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "latLng" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "latLng" },
-            LatLngToMldev(JsonNode.Parse(JsonSerializer.Serialize(
-                              Common.GetValueByPath(fromObject, new string[] { "latLng" }))),
-                          toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "languageCode" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "languageCode" },
-                              Common.GetValueByPath(fromObject, new string[] { "languageCode" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode RetrievalConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "latLng" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "latLng" },
-            LatLngToVertex(JsonNode.Parse(JsonSerializer.Serialize(
-                               Common.GetValueByPath(fromObject, new string[] { "latLng" }))),
-                           toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "languageCode" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "languageCode" },
-                              Common.GetValueByPath(fromObject, new string[] { "languageCode" }));
       }
 
       return toObject;
@@ -2322,346 +1256,12 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode SafetySettingToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "method" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "method" },
-                              Common.GetValueByPath(fromObject, new string[] { "method" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "category" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "category" },
-                              Common.GetValueByPath(fromObject, new string[] { "category" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "threshold" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "threshold" },
-                              Common.GetValueByPath(fromObject, new string[] { "threshold" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode SchemaToMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (!Common.IsZero(
-              Common.GetValueByPath(fromObject, new string[] { "additionalProperties" }))) {
-        throw new NotSupportedException(
-            "additionalProperties parameter is not supported in Gemini API.");
-      }
-
-      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "defs" }))) {
-        throw new NotSupportedException("defs parameter is not supported in Gemini API.");
-      }
-
-      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "ref" }))) {
-        throw new NotSupportedException("ref parameter is not supported in Gemini API.");
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "anyOf" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "anyOf" },
-                              Common.GetValueByPath(fromObject, new string[] { "anyOf" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "default" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "default" },
-                              Common.GetValueByPath(fromObject, new string[] { "default" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "description" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "description" },
-                              Common.GetValueByPath(fromObject, new string[] { "description" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "enum" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "enum" },
-                              Common.GetValueByPath(fromObject, new string[] { "enum" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "example" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "example" },
-                              Common.GetValueByPath(fromObject, new string[] { "example" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "format" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "format" },
-                              Common.GetValueByPath(fromObject, new string[] { "format" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "items" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "items" },
-                              Common.GetValueByPath(fromObject, new string[] { "items" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "maxItems" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "maxItems" },
-                              Common.GetValueByPath(fromObject, new string[] { "maxItems" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "maxLength" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "maxLength" },
-                              Common.GetValueByPath(fromObject, new string[] { "maxLength" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "maxProperties" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "maxProperties" },
-                              Common.GetValueByPath(fromObject, new string[] { "maxProperties" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "maximum" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "maximum" },
-                              Common.GetValueByPath(fromObject, new string[] { "maximum" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "minItems" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "minItems" },
-                              Common.GetValueByPath(fromObject, new string[] { "minItems" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "minLength" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "minLength" },
-                              Common.GetValueByPath(fromObject, new string[] { "minLength" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "minProperties" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "minProperties" },
-                              Common.GetValueByPath(fromObject, new string[] { "minProperties" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "minimum" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "minimum" },
-                              Common.GetValueByPath(fromObject, new string[] { "minimum" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "nullable" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "nullable" },
-                              Common.GetValueByPath(fromObject, new string[] { "nullable" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "pattern" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "pattern" },
-                              Common.GetValueByPath(fromObject, new string[] { "pattern" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "properties" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "properties" },
-                              Common.GetValueByPath(fromObject, new string[] { "properties" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "propertyOrdering" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "propertyOrdering" },
-            Common.GetValueByPath(fromObject, new string[] { "propertyOrdering" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "required" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "required" },
-                              Common.GetValueByPath(fromObject, new string[] { "required" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "title" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "title" },
-                              Common.GetValueByPath(fromObject, new string[] { "title" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "type" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "type" },
-                              Common.GetValueByPath(fromObject, new string[] { "type" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode SchemaToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "additionalProperties" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "additionalProperties" },
-            Common.GetValueByPath(fromObject, new string[] { "additionalProperties" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "defs" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "defs" },
-                              Common.GetValueByPath(fromObject, new string[] { "defs" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "ref" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "ref" },
-                              Common.GetValueByPath(fromObject, new string[] { "ref" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "anyOf" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "anyOf" },
-                              Common.GetValueByPath(fromObject, new string[] { "anyOf" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "default" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "default" },
-                              Common.GetValueByPath(fromObject, new string[] { "default" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "description" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "description" },
-                              Common.GetValueByPath(fromObject, new string[] { "description" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "enum" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "enum" },
-                              Common.GetValueByPath(fromObject, new string[] { "enum" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "example" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "example" },
-                              Common.GetValueByPath(fromObject, new string[] { "example" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "format" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "format" },
-                              Common.GetValueByPath(fromObject, new string[] { "format" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "items" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "items" },
-                              Common.GetValueByPath(fromObject, new string[] { "items" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "maxItems" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "maxItems" },
-                              Common.GetValueByPath(fromObject, new string[] { "maxItems" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "maxLength" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "maxLength" },
-                              Common.GetValueByPath(fromObject, new string[] { "maxLength" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "maxProperties" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "maxProperties" },
-                              Common.GetValueByPath(fromObject, new string[] { "maxProperties" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "maximum" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "maximum" },
-                              Common.GetValueByPath(fromObject, new string[] { "maximum" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "minItems" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "minItems" },
-                              Common.GetValueByPath(fromObject, new string[] { "minItems" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "minLength" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "minLength" },
-                              Common.GetValueByPath(fromObject, new string[] { "minLength" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "minProperties" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "minProperties" },
-                              Common.GetValueByPath(fromObject, new string[] { "minProperties" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "minimum" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "minimum" },
-                              Common.GetValueByPath(fromObject, new string[] { "minimum" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "nullable" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "nullable" },
-                              Common.GetValueByPath(fromObject, new string[] { "nullable" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "pattern" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "pattern" },
-                              Common.GetValueByPath(fromObject, new string[] { "pattern" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "properties" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "properties" },
-                              Common.GetValueByPath(fromObject, new string[] { "properties" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "propertyOrdering" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "propertyOrdering" },
-            Common.GetValueByPath(fromObject, new string[] { "propertyOrdering" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "required" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "required" },
-                              Common.GetValueByPath(fromObject, new string[] { "required" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "title" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "title" },
-                              Common.GetValueByPath(fromObject, new string[] { "title" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "type" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "type" },
-                              Common.GetValueByPath(fromObject, new string[] { "type" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode SpeakerVoiceConfigToMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "speaker" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "speaker" },
-                              Common.GetValueByPath(fromObject, new string[] { "speaker" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "voiceConfig" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "voiceConfig" },
-            VoiceConfigToMldev(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                   fromObject, new string[] { "voiceConfig" }))),
-                               toObject));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode SpeechConfigToMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "voiceConfig" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "voiceConfig" },
-            VoiceConfigToMldev(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                   fromObject, new string[] { "voiceConfig" }))),
-                               toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "multiSpeakerVoiceConfig" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "multiSpeakerVoiceConfig" },
-                              MultiSpeakerVoiceConfigToMldev(
-                                  JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                      fromObject, new string[] { "multiSpeakerVoiceConfig" }))),
-                                  toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "languageCode" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "languageCode" },
-                              Common.GetValueByPath(fromObject, new string[] { "languageCode" }));
-      }
-
-      return toObject;
-    }
-
     internal JsonNode SpeechConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "voiceConfig" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "voiceConfig" },
-            VoiceConfigToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                    fromObject, new string[] { "voiceConfig" }))),
-                                toObject));
+        Common.SetValueByPath(toObject, new string[] { "voiceConfig" },
+                              Common.GetValueByPath(fromObject, new string[] { "voiceConfig" }));
       }
 
       if (!Common.IsZero(
@@ -2678,97 +1278,13 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode ThinkingConfigToMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "includeThoughts" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "includeThoughts" },
-            Common.GetValueByPath(fromObject, new string[] { "includeThoughts" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "thinkingBudget" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "thinkingBudget" },
-                              Common.GetValueByPath(fromObject, new string[] { "thinkingBudget" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode ThinkingConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "includeThoughts" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "includeThoughts" },
-            Common.GetValueByPath(fromObject, new string[] { "includeThoughts" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "thinkingBudget" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "thinkingBudget" },
-                              Common.GetValueByPath(fromObject, new string[] { "thinkingBudget" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode ToolConfigToMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "functionCallingConfig" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "functionCallingConfig" },
-                              FunctionCallingConfigToMldev(
-                                  JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                      fromObject, new string[] { "functionCallingConfig" }))),
-                                  toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "retrievalConfig" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "retrievalConfig" },
-            RetrievalConfigToMldev(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                       fromObject, new string[] { "retrievalConfig" }))),
-                                   toObject));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode ToolConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "functionCallingConfig" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "functionCallingConfig" },
-                              FunctionCallingConfigToVertex(
-                                  JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                      fromObject, new string[] { "functionCallingConfig" }))),
-                                  toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "retrievalConfig" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "retrievalConfig" },
-            RetrievalConfigToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                        fromObject, new string[] { "retrievalConfig" }))),
-                                    toObject));
-      }
-
-      return toObject;
-    }
-
     internal JsonNode ToolToMldev(JsonNode fromObject, JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "functionDeclarations" }) != null) {
-        JsonArray keyArray =
-            (JsonArray)Common.GetValueByPath(fromObject, new string[] { "functionDeclarations" });
-        JsonArray result = new JsonArray();
-
-        foreach (var record in keyArray) {
-          result.Add(FunctionDeclarationToMldev(JsonNode.Parse(JsonSerializer.Serialize(record)),
-                                                toObject));
-        }
-        Common.SetValueByPath(toObject, new string[] { "functionDeclarations" }, result);
+        Common.SetValueByPath(
+            toObject, new string[] { "functionDeclarations" },
+            Common.GetValueByPath(fromObject, new string[] { "functionDeclarations" }));
       }
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "retrieval" }))) {
@@ -2784,11 +1300,9 @@ namespace Google.GenAI {
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "googleSearchRetrieval" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "googleSearchRetrieval" },
-                              GoogleSearchRetrievalToMldev(
-                                  JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                      fromObject, new string[] { "googleSearchRetrieval" }))),
-                                  toObject));
+        Common.SetValueByPath(
+            toObject, new string[] { "googleSearchRetrieval" },
+            Common.GetValueByPath(fromObject, new string[] { "googleSearchRetrieval" }));
       }
 
       if (!Common.IsZero(
@@ -2802,19 +1316,13 @@ namespace Google.GenAI {
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "urlContext" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "urlContext" },
-            UrlContextToMldev(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                  fromObject, new string[] { "urlContext" }))),
-                              toObject));
+        Common.SetValueByPath(toObject, new string[] { "urlContext" },
+                              Common.GetValueByPath(fromObject, new string[] { "urlContext" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "computerUse" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "computerUse" },
-            ComputerUseToMldev(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                   fromObject, new string[] { "computerUse" }))),
-                               toObject));
+        Common.SetValueByPath(toObject, new string[] { "computerUse" },
+                              Common.GetValueByPath(fromObject, new string[] { "computerUse" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "codeExecution" }) != null) {
@@ -2846,51 +1354,35 @@ namespace Google.GenAI {
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "googleSearch" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "googleSearch" },
-            GoogleSearchToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                     fromObject, new string[] { "googleSearch" }))),
-                                 toObject));
+        Common.SetValueByPath(toObject, new string[] { "googleSearch" },
+                              Common.GetValueByPath(fromObject, new string[] { "googleSearch" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "googleSearchRetrieval" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "googleSearchRetrieval" },
-                              GoogleSearchRetrievalToVertex(
-                                  JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                      fromObject, new string[] { "googleSearchRetrieval" }))),
-                                  toObject));
+        Common.SetValueByPath(
+            toObject, new string[] { "googleSearchRetrieval" },
+            Common.GetValueByPath(fromObject, new string[] { "googleSearchRetrieval" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "enterpriseWebSearch" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "enterpriseWebSearch" },
-                              EnterpriseWebSearchToVertex(
-                                  JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                      fromObject, new string[] { "enterpriseWebSearch" }))),
-                                  toObject));
+        Common.SetValueByPath(
+            toObject, new string[] { "enterpriseWebSearch" },
+            Common.GetValueByPath(fromObject, new string[] { "enterpriseWebSearch" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "googleMaps" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "googleMaps" },
-            GoogleMapsToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                   fromObject, new string[] { "googleMaps" }))),
-                               toObject));
+        Common.SetValueByPath(toObject, new string[] { "googleMaps" },
+                              Common.GetValueByPath(fromObject, new string[] { "googleMaps" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "urlContext" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "urlContext" },
-            UrlContextToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                   fromObject, new string[] { "urlContext" }))),
-                               toObject));
+        Common.SetValueByPath(toObject, new string[] { "urlContext" },
+                              Common.GetValueByPath(fromObject, new string[] { "urlContext" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "computerUse" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "computerUse" },
-            ComputerUseToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                    fromObject, new string[] { "computerUse" }))),
-                                toObject));
+        Common.SetValueByPath(toObject, new string[] { "computerUse" },
+                              Common.GetValueByPath(fromObject, new string[] { "computerUse" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "codeExecution" }) != null) {
@@ -3005,200 +1497,6 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode UrlContextMetadataFromMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "urlMetadata" }) != null) {
-        JsonArray keyArray =
-            (JsonArray)Common.GetValueByPath(fromObject, new string[] { "urlMetadata" });
-        JsonArray result = new JsonArray();
-
-        foreach (var record in keyArray) {
-          result.Add(
-              UrlMetadataFromMldev(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
-        }
-        Common.SetValueByPath(toObject, new string[] { "urlMetadata" }, result);
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode UrlContextMetadataFromVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "urlMetadata" }) != null) {
-        JsonArray keyArray =
-            (JsonArray)Common.GetValueByPath(fromObject, new string[] { "urlMetadata" });
-        JsonArray result = new JsonArray();
-
-        foreach (var record in keyArray) {
-          result.Add(
-              UrlMetadataFromVertex(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
-        }
-        Common.SetValueByPath(toObject, new string[] { "urlMetadata" }, result);
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode UrlContextToMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      return toObject;
-    }
-
-    internal JsonNode UrlContextToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      return toObject;
-    }
-
-    internal JsonNode UrlMetadataFromMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "retrievedUrl" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "retrievedUrl" },
-                              Common.GetValueByPath(fromObject, new string[] { "retrievedUrl" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "urlRetrievalStatus" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "urlRetrievalStatus" },
-            Common.GetValueByPath(fromObject, new string[] { "urlRetrievalStatus" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode UrlMetadataFromVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "retrievedUrl" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "retrievedUrl" },
-                              Common.GetValueByPath(fromObject, new string[] { "retrievedUrl" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "urlRetrievalStatus" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "urlRetrievalStatus" },
-            Common.GetValueByPath(fromObject, new string[] { "urlRetrievalStatus" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode VideoMetadataFromMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "fps" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "fps" },
-                              Common.GetValueByPath(fromObject, new string[] { "fps" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "endOffset" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "endOffset" },
-                              Common.GetValueByPath(fromObject, new string[] { "endOffset" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "startOffset" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "startOffset" },
-                              Common.GetValueByPath(fromObject, new string[] { "startOffset" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode VideoMetadataFromVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "fps" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "fps" },
-                              Common.GetValueByPath(fromObject, new string[] { "fps" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "endOffset" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "endOffset" },
-                              Common.GetValueByPath(fromObject, new string[] { "endOffset" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "startOffset" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "startOffset" },
-                              Common.GetValueByPath(fromObject, new string[] { "startOffset" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode VideoMetadataToMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "fps" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "fps" },
-                              Common.GetValueByPath(fromObject, new string[] { "fps" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "endOffset" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "endOffset" },
-                              Common.GetValueByPath(fromObject, new string[] { "endOffset" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "startOffset" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "startOffset" },
-                              Common.GetValueByPath(fromObject, new string[] { "startOffset" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode VideoMetadataToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "fps" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "fps" },
-                              Common.GetValueByPath(fromObject, new string[] { "fps" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "endOffset" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "endOffset" },
-                              Common.GetValueByPath(fromObject, new string[] { "endOffset" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "startOffset" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "startOffset" },
-                              Common.GetValueByPath(fromObject, new string[] { "startOffset" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode VoiceConfigToMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "prebuiltVoiceConfig" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "prebuiltVoiceConfig" },
-                              PrebuiltVoiceConfigToMldev(
-                                  JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                      fromObject, new string[] { "prebuiltVoiceConfig" }))),
-                                  toObject));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode VoiceConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "prebuiltVoiceConfig" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "prebuiltVoiceConfig" },
-                              PrebuiltVoiceConfigToVertex(
-                                  JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
-                                      fromObject, new string[] { "prebuiltVoiceConfig" }))),
-                                  toObject));
-      }
-
-      return toObject;
-    }
-
     public Models(ApiClient apiClient) {
       _apiClient = apiClient;
     }
@@ -3245,12 +1543,16 @@ namespace Google.GenAI {
       if (httpContentNode == null) {
         throw new NotSupportedException("Failed to parse response to JsonNode.");
       }
-      JsonNode responseNode;
+      JsonNode responseNode = httpContentNode;
+
       if (this._apiClient.VertexAI) {
         responseNode = GenerateContentResponseFromVertex(httpContentNode, new JsonObject());
-      } else {
+      }
+
+      if (!this._apiClient.VertexAI) {
         responseNode = GenerateContentResponseFromMldev(httpContentNode, new JsonObject());
       }
+
       return JsonSerializer.Deserialize<GenerateContentResponse>(responseNode.ToString()) ??
              throw new InvalidOperationException(
                  "Failed to deserialize Task<GenerateContentResponse>.");
@@ -3351,12 +1653,16 @@ namespace Google.GenAI {
       if (httpContentNode == null) {
         throw new NotSupportedException("Failed to parse response to JsonNode.");
       }
-      JsonNode responseNode;
+      JsonNode responseNode = httpContentNode;
+
       if (this._apiClient.VertexAI) {
         responseNode = GenerateImagesResponseFromVertex(httpContentNode, new JsonObject());
-      } else {
+      }
+
+      if (!this._apiClient.VertexAI) {
         responseNode = GenerateImagesResponseFromMldev(httpContentNode, new JsonObject());
       }
+
       return JsonSerializer.Deserialize<GenerateImagesResponse>(responseNode.ToString()) ??
              throw new InvalidOperationException(
                  "Failed to deserialize Task<GenerateImagesResponse>.");
@@ -3406,12 +1712,16 @@ namespace Google.GenAI {
       if (httpContentNode == null) {
         throw new NotSupportedException("Failed to parse response to JsonNode.");
       }
-      JsonNode responseNode;
+      JsonNode responseNode = httpContentNode;
+
       if (this._apiClient.VertexAI) {
         responseNode = UpscaleImageResponseFromVertex(httpContentNode, new JsonObject());
-      } else {
+      }
+
+      if (!this._apiClient.VertexAI) {
         throw new NotSupportedException("This method is only supported in the Vertex AI client.");
       }
+
       return JsonSerializer.Deserialize<UpscaleImageResponse>(responseNode.ToString()) ??
              throw new InvalidOperationException(
                  "Failed to deserialize Task<UpscaleImageResponse>.");

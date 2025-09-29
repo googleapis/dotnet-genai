@@ -152,6 +152,10 @@ namespace Google.GenAI
       {
         return JsonSerializer.Deserialize<List<Content>>(jsonObject.ToString());
       }
+      else if (contents is JsonNode jsonNode)
+      {
+        return JsonSerializer.Deserialize<List<Content>>(jsonNode.ToString());
+      }
 
       throw new ArgumentException($"Unsupported contents type: {contents.GetType()}");
     }
