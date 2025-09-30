@@ -504,6 +504,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ComputerUse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ComputerUse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ComputerUse",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ComputerUse.yml\" sourcestartlinenumber=\"1\">Tool to support computer use.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.Content.yml",
       "output": {
         ".html": {

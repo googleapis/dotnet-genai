@@ -2220,6 +2220,54 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CodeExecutionResult.Output
   nameWithType: CodeExecutionResult.Output
+- uid: Google.GenAI.Types.ComputerUse
+  name: ComputerUse
+  href: api/Google.GenAI.Types.ComputerUse.html
+  commentId: T:Google.GenAI.Types.ComputerUse
+  fullName: Google.GenAI.Types.ComputerUse
+  nameWithType: ComputerUse
+- uid: Google.GenAI.Types.ComputerUse.Environment
+  name: Environment
+  href: api/Google.GenAI.Types.ComputerUse.html#Google_GenAI_Types_ComputerUse_Environment
+  commentId: P:Google.GenAI.Types.ComputerUse.Environment
+  fullName: Google.GenAI.Types.ComputerUse.Environment
+  nameWithType: ComputerUse.Environment
+- uid: Google.GenAI.Types.ComputerUse.Environment*
+  name: Environment
+  href: api/Google.GenAI.Types.ComputerUse.html#Google_GenAI_Types_ComputerUse_Environment_
+  commentId: Overload:Google.GenAI.Types.ComputerUse.Environment
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ComputerUse.Environment
+  nameWithType: ComputerUse.Environment
+- uid: Google.GenAI.Types.ComputerUse.ExcludedPredefinedFunctions
+  name: ExcludedPredefinedFunctions
+  href: api/Google.GenAI.Types.ComputerUse.html#Google_GenAI_Types_ComputerUse_ExcludedPredefinedFunctions
+  commentId: P:Google.GenAI.Types.ComputerUse.ExcludedPredefinedFunctions
+  fullName: Google.GenAI.Types.ComputerUse.ExcludedPredefinedFunctions
+  nameWithType: ComputerUse.ExcludedPredefinedFunctions
+- uid: Google.GenAI.Types.ComputerUse.ExcludedPredefinedFunctions*
+  name: ExcludedPredefinedFunctions
+  href: api/Google.GenAI.Types.ComputerUse.html#Google_GenAI_Types_ComputerUse_ExcludedPredefinedFunctions_
+  commentId: Overload:Google.GenAI.Types.ComputerUse.ExcludedPredefinedFunctions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ComputerUse.ExcludedPredefinedFunctions
+  nameWithType: ComputerUse.ExcludedPredefinedFunctions
+- uid: Google.GenAI.Types.ComputerUse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ComputerUse.html#Google_GenAI_Types_ComputerUse_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ComputerUse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ComputerUse.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ComputerUse.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ComputerUse.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ComputerUse.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ComputerUse.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ComputerUse.html#Google_GenAI_Types_ComputerUse_FromJson_
+  commentId: Overload:Google.GenAI.Types.ComputerUse.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ComputerUse.FromJson
+  nameWithType: ComputerUse.FromJson
 - uid: Google.GenAI.Types.Content
   name: Content
   href: api/Google.GenAI.Types.Content.html
