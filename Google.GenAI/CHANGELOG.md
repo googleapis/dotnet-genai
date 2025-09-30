@@ -3,6 +3,13 @@
 ## Version 0.1.0, released 2025-09-30
 
 
+### Bug fixes
+
+* manually update change log to release ([09d356c](https://github.com/googleapis/dotnet-genai/commit/09d356cb8c18d7d323e4482a7d2f3fd7c0bce031))
+
+## Version 0.1.0, released 2025-09-30
+
+
 ### Features
 
 * Add support for `GenerateContentAsync`, `GenerateContentStreamAsync`, `GenerateImagesAsync`, and 3 Live APIs, which includes `SendClientContentAsync`, `SendRealtimeInputAsync` and `SendToolResponseAsync`.([c9fbf99](https://github.com/googleapis/dotnet-genai/commit/c9fbf99b6bac159260ed66938854c4e8c211e910))
