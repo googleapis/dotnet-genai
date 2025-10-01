@@ -1442,6 +1442,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ImageConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ImageConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ImageConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ImageConfig.yml\" sourcestartlinenumber=\"1\">The image generation configuration to be used in GenerateContentConfig.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.ImagePromptLanguage.yml",
       "output": {
         ".html": {

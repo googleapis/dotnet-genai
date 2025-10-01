@@ -3274,6 +3274,12 @@ references:
   commentId: F:Google.GenAI.Types.FinishReason.FINISH_REASON_UNSPECIFIED
   fullName: Google.GenAI.Types.FinishReason.FINISH_REASON_UNSPECIFIED
   nameWithType: FinishReason.FINISH_REASON_UNSPECIFIED
+- uid: Google.GenAI.Types.FinishReason.IMAGE_PROHIBITED_CONTENT
+  name: IMAGE_PROHIBITED_CONTENT
+  href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_IMAGE_PROHIBITED_CONTENT
+  commentId: F:Google.GenAI.Types.FinishReason.IMAGE_PROHIBITED_CONTENT
+  fullName: Google.GenAI.Types.FinishReason.IMAGE_PROHIBITED_CONTENT
+  nameWithType: FinishReason.IMAGE_PROHIBITED_CONTENT
 - uid: Google.GenAI.Types.FinishReason.IMAGE_SAFETY
   name: IMAGE_SAFETY
   href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_IMAGE_SAFETY
@@ -3959,6 +3965,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerateContentConfig.HttpOptions
   nameWithType: GenerateContentConfig.HttpOptions
+- uid: Google.GenAI.Types.GenerateContentConfig.ImageConfig
+  name: ImageConfig
+  href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_ImageConfig
+  commentId: P:Google.GenAI.Types.GenerateContentConfig.ImageConfig
+  fullName: Google.GenAI.Types.GenerateContentConfig.ImageConfig
+  nameWithType: GenerateContentConfig.ImageConfig
+- uid: Google.GenAI.Types.GenerateContentConfig.ImageConfig*
+  name: ImageConfig
+  href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_ImageConfig_
+  commentId: Overload:Google.GenAI.Types.GenerateContentConfig.ImageConfig
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateContentConfig.ImageConfig
+  nameWithType: GenerateContentConfig.ImageConfig
 - uid: Google.GenAI.Types.GenerateContentConfig.Labels
   name: Labels
   href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_Labels
@@ -6838,6 +6857,41 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Image.MimeType
   nameWithType: Image.MimeType
+- uid: Google.GenAI.Types.ImageConfig
+  name: ImageConfig
+  href: api/Google.GenAI.Types.ImageConfig.html
+  commentId: T:Google.GenAI.Types.ImageConfig
+  fullName: Google.GenAI.Types.ImageConfig
+  nameWithType: ImageConfig
+- uid: Google.GenAI.Types.ImageConfig.AspectRatio
+  name: AspectRatio
+  href: api/Google.GenAI.Types.ImageConfig.html#Google_GenAI_Types_ImageConfig_AspectRatio
+  commentId: P:Google.GenAI.Types.ImageConfig.AspectRatio
+  fullName: Google.GenAI.Types.ImageConfig.AspectRatio
+  nameWithType: ImageConfig.AspectRatio
+- uid: Google.GenAI.Types.ImageConfig.AspectRatio*
+  name: AspectRatio
+  href: api/Google.GenAI.Types.ImageConfig.html#Google_GenAI_Types_ImageConfig_AspectRatio_
+  commentId: Overload:Google.GenAI.Types.ImageConfig.AspectRatio
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageConfig.AspectRatio
+  nameWithType: ImageConfig.AspectRatio
+- uid: Google.GenAI.Types.ImageConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ImageConfig.html#Google_GenAI_Types_ImageConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ImageConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ImageConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ImageConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ImageConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ImageConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ImageConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ImageConfig.html#Google_GenAI_Types_ImageConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.ImageConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageConfig.FromJson
+  nameWithType: ImageConfig.FromJson
 - uid: Google.GenAI.Types.ImagePromptLanguage
   name: ImagePromptLanguage
   href: api/Google.GenAI.Types.ImagePromptLanguage.html
