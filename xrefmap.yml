@@ -3304,6 +3304,12 @@ references:
   commentId: F:Google.GenAI.Types.FinishReason.MAX_TOKENS
   fullName: Google.GenAI.Types.FinishReason.MAX_TOKENS
   nameWithType: FinishReason.MAX_TOKENS
+- uid: Google.GenAI.Types.FinishReason.NO_IMAGE
+  name: NO_IMAGE
+  href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_NO_IMAGE
+  commentId: F:Google.GenAI.Types.FinishReason.NO_IMAGE
+  fullName: Google.GenAI.Types.FinishReason.NO_IMAGE
+  nameWithType: FinishReason.NO_IMAGE
 - uid: Google.GenAI.Types.FinishReason.OTHER
   name: OTHER
   href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_OTHER
