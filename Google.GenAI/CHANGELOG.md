@@ -1,5 +1,18 @@
 # Changelog
 
+## Version 0.1.0, released 2025-10-02
+
+
+### New features
+
+* Add `ImageConfig` to `GenerateContentConfig` ([03c0426](https://github.com/googleapis/dotnet-genai/commit/03c0426d285d5f5d89499c639fab5e3faa4a3336))
+* rename ComputerUse tool (early access) ([64891b3](https://github.com/googleapis/dotnet-genai/commit/64891b35b23d3613f571fd624b75eb22d2056c07))
+
+
+### Bug fixes
+
+* manually update change log to release ([09d356c](https://github.com/googleapis/dotnet-genai/commit/09d356cb8c18d7d323e4482a7d2f3fd7c0bce031))
+
 ## Version 0.1.0, released 2025-09-30
 
 
