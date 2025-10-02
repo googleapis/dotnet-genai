@@ -7834,6 +7834,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.LiveConnectConfig.Temperature
   nameWithType: LiveConnectConfig.Temperature
+- uid: Google.GenAI.Types.LiveConnectConfig.ThinkingConfig
+  name: ThinkingConfig
+  href: api/Google.GenAI.Types.LiveConnectConfig.html#Google_GenAI_Types_LiveConnectConfig_ThinkingConfig
+  commentId: P:Google.GenAI.Types.LiveConnectConfig.ThinkingConfig
+  fullName: Google.GenAI.Types.LiveConnectConfig.ThinkingConfig
+  nameWithType: LiveConnectConfig.ThinkingConfig
+- uid: Google.GenAI.Types.LiveConnectConfig.ThinkingConfig*
+  name: ThinkingConfig
+  href: api/Google.GenAI.Types.LiveConnectConfig.html#Google_GenAI_Types_LiveConnectConfig_ThinkingConfig_
+  commentId: Overload:Google.GenAI.Types.LiveConnectConfig.ThinkingConfig
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LiveConnectConfig.ThinkingConfig
+  nameWithType: LiveConnectConfig.ThinkingConfig
 - uid: Google.GenAI.Types.LiveConnectConfig.Tools
   name: Tools
   href: api/Google.GenAI.Types.LiveConnectConfig.html#Google_GenAI_Types_LiveConnectConfig_Tools
