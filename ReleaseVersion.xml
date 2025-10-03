@@ -4,6 +4,6 @@
     - in all projects.
     -->
   <PropertyGroup>
-    <Version>0.1.0</Version>
+    <Version>0.2.0</Version>
   </PropertyGroup>
 </Project>
