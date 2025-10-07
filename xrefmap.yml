@@ -4735,6 +4735,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerateImagesConfig.IncludeSafetyAttributes
   nameWithType: GenerateImagesConfig.IncludeSafetyAttributes
+- uid: Google.GenAI.Types.GenerateImagesConfig.Labels
+  name: Labels
+  href: api/Google.GenAI.Types.GenerateImagesConfig.html#Google_GenAI_Types_GenerateImagesConfig_Labels
+  commentId: P:Google.GenAI.Types.GenerateImagesConfig.Labels
+  fullName: Google.GenAI.Types.GenerateImagesConfig.Labels
+  nameWithType: GenerateImagesConfig.Labels
+- uid: Google.GenAI.Types.GenerateImagesConfig.Labels*
+  name: Labels
+  href: api/Google.GenAI.Types.GenerateImagesConfig.html#Google_GenAI_Types_GenerateImagesConfig_Labels_
+  commentId: Overload:Google.GenAI.Types.GenerateImagesConfig.Labels
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateImagesConfig.Labels
+  nameWithType: GenerateImagesConfig.Labels
 - uid: Google.GenAI.Types.GenerateImagesConfig.Language
   name: Language
   href: api/Google.GenAI.Types.GenerateImagesConfig.html#Google_GenAI_Types_GenerateImagesConfig_Language
@@ -12381,6 +12394,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.UpscaleImageConfig.IncludeRaiReason
   nameWithType: UpscaleImageConfig.IncludeRaiReason
+- uid: Google.GenAI.Types.UpscaleImageConfig.Labels
+  name: Labels
+  href: api/Google.GenAI.Types.UpscaleImageConfig.html#Google_GenAI_Types_UpscaleImageConfig_Labels
+  commentId: P:Google.GenAI.Types.UpscaleImageConfig.Labels
+  fullName: Google.GenAI.Types.UpscaleImageConfig.Labels
+  nameWithType: UpscaleImageConfig.Labels
+- uid: Google.GenAI.Types.UpscaleImageConfig.Labels*
+  name: Labels
+  href: api/Google.GenAI.Types.UpscaleImageConfig.html#Google_GenAI_Types_UpscaleImageConfig_Labels_
+  commentId: Overload:Google.GenAI.Types.UpscaleImageConfig.Labels
+  isSpec: "True"
+  fullName: Google.GenAI.Types.UpscaleImageConfig.Labels
+  nameWithType: UpscaleImageConfig.Labels
 - uid: Google.GenAI.Types.UpscaleImageConfig.OutputCompressionQuality
   name: OutputCompressionQuality
   href: api/Google.GenAI.Types.UpscaleImageConfig.html#Google_GenAI_Types_UpscaleImageConfig_OutputCompressionQuality
