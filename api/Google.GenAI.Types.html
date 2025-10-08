@@ -92,14 +92,14 @@ Classes
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ActivityEnd.html">ActivityEnd</a></dt>
-      <dd><p>Marks the end of user activity.   This can only be sent if automatic (i.e. server-side)
-activity detection is  disabled.</p>
+      <dd><p>Marks the end of user activity.  This can only be sent if automatic (i.e. server-side)
+activity detection is disabled.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ActivityStart.html">ActivityStart</a></dt>
-      <dd><p>Marks the start of user activity.   This can only be sent if automatic (i.e. server-side)
-activity detection is  disabled.</p>
+      <dd><p>Marks the start of user activity.  This can only be sent if automatic (i.e. server-side)
+activity detection is disabled.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -285,7 +285,7 @@ by Google, but need to follow the pre-defined API spec.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.FunctionDeclaration.html">FunctionDeclaration</a></dt>
-      <dd><p>Defines a function that the model can generate JSON inputs for.   The inputs are based on
+      <dd><p>Defines a function that the model can generate JSON inputs for.  The inputs are based on
 OpenAPI 3.0 specifications (<a href="https://spec.openapis.org/oas/v3.0.3">https://spec.openapis.org/oas/v3.0.3</a>).</p>
 </dd>
     </dl>
@@ -296,8 +296,8 @@ OpenAPI 3.0 specifications (<a href="https://spec.openapis.org/oas/v3.0.3">https
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.FunctionResponseBlob.html">FunctionResponseBlob</a></dt>
-      <dd><p>Raw media bytes for function response.   Text should not be sent as raw bytes, use the
-FunctionResponse.response  field.</p>
+      <dd><p>Raw media bytes for function response.  Text should not be sent as raw bytes, use the
+FunctionResponse.response field.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -307,17 +307,17 @@ FunctionResponse.response  field.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.FunctionResponsePart.html">FunctionResponsePart</a></dt>
-      <dd><p>A datatype containing media that is part of a <code>FunctionResponse</code> message.   A
+      <dd><p>A datatype containing media that is part of a <code>FunctionResponse</code> message.  A
 <code>FunctionResponsePart</code> consists of data which has an associated datatype. A
 <code>FunctionResponsePart</code> can only contain one of the accepted types in
-<code>FunctionResponsePart.data</code>.   A <code>FunctionResponsePart</code> must have a fixed IANA MIME type
-identifying the  type and subtype of the media if the <code>inline_data</code> field is filled with raw
+<code>FunctionResponsePart.data</code>.  A <code>FunctionResponsePart</code> must have a fixed IANA MIME type
+identifying the type and subtype of the media if the <code>inline_data</code> field is filled with raw
 bytes.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.GenerateContentConfig.html">GenerateContentConfig</a></dt>
-      <dd><p>Optional model configuration parameters.   For more information, see Content generation
+      <dd><p>Optional model configuration parameters.  For more information, see Content generation
 parameters
 (<a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/content-generation-parameters">https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/content-generation-parameters</a>).</p>
 </dd>
@@ -491,9 +491,9 @@ google.protobuf.Timestamp</p>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.Interval.html">Interval</a></dt>
       <dd><p>Represents a time interval, encoded as a start time (inclusive) and an end time (exclusive).
-The start time must be less than or equal to the end time.  When the start equals the end
-time, the interval is an empty interval.  (matches no time)  When both start and end are
-unspecified, the interval matches any time.</p>
+The start time must be less than or equal to the end time. When the start equals the end time,
+the interval is an empty interval. (matches no time) When both start and end are unspecified,
+the interval matches any time.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -503,18 +503,18 @@ unspecified, the interval matches any time.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.LatLng.html">LatLng</a></dt>
-      <dd><p>An object that represents a latitude/longitude pair.   This is expressed as a pair of doubles
-to represent degrees latitude and  degrees longitude. Unless specified otherwise, this object
-must conform to the  &lt;a
-href=&quot;https://en.wikipedia.org/wiki/World_Geodetic_System#1984_version&quot;&gt;  WGS84
+      <dd><p>An object that represents a latitude/longitude pair.  This is expressed as a pair of doubles
+to represent degrees latitude and degrees longitude. Unless specified otherwise, this object
+must conform to the &lt;a
+href=&quot;https://en.wikipedia.org/wiki/World_Geodetic_System#1984_version&quot;&gt; WGS84
 standard&lt;/a&gt;. Values must be within normalized ranges.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.LiveClientContent.html">LiveClientContent</a></dt>
-      <dd><p>Incremental update of the current conversation delivered from the client.   All the content
-here will unconditionally be appended to the conversation  history and used as part of the
-prompt to the model to generate content.   A message here will interrupt any current model
+      <dd><p>Incremental update of the current conversation delivered from the client.  All the content
+here will unconditionally be appended to the conversation history and used as part of the
+prompt to the model to generate content.  A message here will interrupt any current model
 generation.</p>
 </dd>
     </dl>
@@ -525,7 +525,7 @@ generation.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.LiveClientRealtimeInput.html">LiveClientRealtimeInput</a></dt>
-      <dd><p>User input that is sent in real time.   This is different from <code>LiveClientContent</code> in a few
+      <dd><p>User input that is sent in real time.  This is different from <code>LiveClientContent</code> in a few
 ways:   - Can be sent continuously without interruption to model generation.  - If there is a
 need to mix data interleaved across the  <code>LiveClientContent</code> and the
 <code>LiveClientRealtimeInput</code>, server attempts to  optimize for best response, but there are no
@@ -542,11 +542,11 @@ assumed to be the user's input (cannot be used to populate  conversation history
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.LiveClientToolResponse.html">LiveClientToolResponse</a></dt>
-      <dd><p>Client generated response to a <code>ToolCall</code> received from the server.   Individual
-<code>FunctionResponse</code> objects are matched to the respective  <code>FunctionCall</code> objects by the <code>id</code>
-field.   Note that in the unary and server-streaming GenerateContent APIs function  calling
-happens by exchanging the <code>Content</code> parts, while in the bidi  GenerateContent APIs function
-calling happens over this dedicated set of  messages.</p>
+      <dd><p>Client generated response to a <code>ToolCall</code> received from the server.  Individual
+<code>FunctionResponse</code> objects are matched to the respective <code>FunctionCall</code> objects by the <code>id</code>
+field.  Note that in the unary and server-streaming GenerateContent APIs function calling
+happens by exchanging the <code>Content</code> parts, while in the bidi GenerateContent APIs function
+calling happens over this dedicated set of messages.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -586,8 +586,8 @@ calling happens over this dedicated set of  messages.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.LiveServerContent.html">LiveServerContent</a></dt>
-      <dd><p>Incremental server update generated by the model in response to client messages.   Content is
-generated as quickly as possible, and not in real time. Clients  may choose to buffer and play
+      <dd><p>Incremental server update generated by the model in response to client messages.  Content is
+generated as quickly as possible, and not in real time. Clients may choose to buffer and play
 it out in real time.</p>
 </dd>
     </dl>
@@ -603,7 +603,7 @@ it out in real time.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.LiveServerSessionResumptionUpdate.html">LiveServerSessionResumptionUpdate</a></dt>
-      <dd><p>Update of the session resumption state.   Only sent if <code>session_resumption</code> was set in the
+      <dd><p>Update of the session resumption state.  Only sent if <code>session_resumption</code> was set in the
 connection config.</p>
 </dd>
     </dl>
@@ -621,9 +621,9 @@ matching <code>id</code>s.</p>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.LiveServerToolCallCancellation.html">LiveServerToolCallCancellation</a></dt>
       <dd><p>Notification for the client that a previously issued <code>ToolCallMessage</code> with the specified
-<code>id</code>s should have been not executed and should be cancelled.   If there were side-effects to
-those tool calls, clients may attempt to undo  the tool calls. This message occurs only in
-cases where the clients interrupt  server turns.</p>
+<code>id</code>s should have been not executed and should be cancelled.  If there were side-effects to
+those tool calls, clients may attempt to undo the tool calls. This message occurs only in
+cases where the clients interrupt server turns.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -663,9 +663,9 @@ cases where the clients interrupt  server turns.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.Part.html">Part</a></dt>
-      <dd><p>A datatype containing media content.   Exactly one field within a Part should be set,
-representing the specific type  of content being conveyed. Using multiple fields within the
-same <code>Part</code>  instance is considered invalid.</p>
+      <dd><p>A datatype containing media content.  Exactly one field within a Part should be set,
+representing the specific type of content being conveyed. Using multiple fields within the
+same <code>Part</code> instance is considered invalid.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -720,8 +720,8 @@ same <code>Part</code>  instance is considered invalid.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.RealtimeInputConfig.html">RealtimeInputConfig</a></dt>
-      <dd><p>Marks the end of user activity.   This can only be sent if automatic (i.e. server-side)
-activity detection is  disabled.</p>
+      <dd><p>Marks the end of user activity.  This can only be sent if automatic (i.e. server-side)
+activity detection is disabled.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -776,9 +776,9 @@ activity detection is  disabled.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.Schema.html">Schema</a></dt>
-      <dd><p>Schema is used to define the format of input/output data.   Represents a select subset of an
-OpenAPI 3.0 schema  object (<a href="https://spec.openapis.org/oas/v3.0.3#schema-object">https://spec.openapis.org/oas/v3.0.3#schema-object</a>). More fields
-may  be added in the future as needed.</p>
+      <dd><p>Schema is used to define the format of input/output data.  Represents a select subset of an
+OpenAPI 3.0 schema object (<a href="https://spec.openapis.org/oas/v3.0.3#schema-object">https://spec.openapis.org/oas/v3.0.3#schema-object</a>). More fields
+may be added in the future as needed.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -793,8 +793,8 @@ may  be added in the future as needed.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.SessionResumptionConfig.html">SessionResumptionConfig</a></dt>
-      <dd><p>Configuration of session resumption mechanism.   Included in
-<code>LiveConnectConfig.session_resumption</code>. If included server  will send
+      <dd><p>Configuration of session resumption mechanism.  Included in
+<code>LiveConnectConfig.session_resumption</code>. If included server will send
 <code>LiveServerSessionResumptionUpdate</code> messages.</p>
 </dd>
     </dl>
@@ -805,10 +805,10 @@ may  be added in the future as needed.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.SlidingWindow.html">SlidingWindow</a></dt>
-      <dd><p>Context window will be truncated by keeping only suffix of it.   Context window will always be
-cut at start of USER role turn. System  instructions and
-<code>BidiGenerateContentSetup.prefix_turns</code> will not be  subject to the sliding window mechanism,
-they will always stay at the  beginning of context window.</p>
+      <dd><p>Context window will be truncated by keeping only suffix of it.  Context window will always be
+cut at start of USER role turn. System instructions and
+<code>BidiGenerateContentSetup.prefix_turns</code> will not be subject to the sliding window mechanism,
+they will always stay at the beginning of context window.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -853,7 +853,7 @@ tool.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ToolConfig.html">ToolConfig</a></dt>
-      <dd><p>Tool config.   This config is shared for all tools provided in the request.</p>
+      <dd><p>Tool config.  This config is shared for all tools provided in the request.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -883,7 +883,7 @@ tool.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.UpscaleImageConfig.html">UpscaleImageConfig</a></dt>
-      <dd><p>Configuration for upscaling an image.   For more information on this configuration, refer to
+      <dd><p>Configuration for upscaling an image.  For more information on this configuration, refer to
 the Imagen API reference documentation
 (<a href="https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/imagen-api">https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/imagen-api</a>).</p>
 </dd>
@@ -1000,7 +1000,7 @@ Enums
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.FinishReason.html">FinishReason</a></dt>
-      <dd><p>Output only. The reason why the model stopped generating tokens.   If empty, the model has not
+      <dd><p>Output only. The reason why the model stopped generating tokens.  If empty, the model has not
 stopped generating the tokens.</p>
 </dd>
     </dl>

@@ -162,7 +162,7 @@ Class LiveConnectConfig  <a class="header-action link-secondary" title="View sou
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/LiveConnectConfig.cs/#L226"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Configures context window compression mechanism.   If included, server will compress context
+  <div class="markdown level1 summary"><p>Configures context window compression mechanism.  If included, server will compress context
 window to fit into given length.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -401,7 +401,7 @@ public MediaResolution? MediaResolution { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/LiveConnectConfig.cs/#L205"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The transcription of the output aligns with the language code  specified for the output
+  <div class="markdown level1 summary"><p>The transcription of the output aligns with the language code specified for the output
 audio.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -505,7 +505,7 @@ public RealtimeInputConfig? RealtimeInputConfig { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/LiveConnectConfig.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The requested modalities of the response. Represents the set of  modalities that the model
+  <div class="markdown level1 summary"><p>The requested modalities of the response. Represents the set of modalities that the model
 can return. Defaults to AUDIO if not specified.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -540,8 +540,8 @@ public List&lt;Modality&gt;? ResponseModalities { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/LiveConnectConfig.cs/#L119"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>When <code>seed</code> is fixed to a specific number, the model makes a best  effort to provide the
-same response for repeated requests. By default, a  random number is used.</p>
+  <div class="markdown level1 summary"><p>When <code>seed</code> is fixed to a specific number, the model makes a best effort to provide the
+same response for repeated requests. By default, a random number is used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -644,8 +644,8 @@ public SpeechConfig? SpeechConfig { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/LiveConnectConfig.cs/#L161"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The user provided system instructions for the model.  Note: only text should be used in
-parts and content in each part will be  in a separate paragraph.</p>
+  <div class="markdown level1 summary"><p>The user provided system instructions for the model. Note: only text should be used in parts
+and content in each part will be in a separate paragraph.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -679,9 +679,9 @@ public Content? SystemInstruction { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/LiveConnectConfig.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Value that controls the degree of randomness in token selection.  Lower temperatures are
-good for prompts that require a less open-ended or  creative response, while higher
-temperatures can lead to more diverse or  creative results.</p>
+  <div class="markdown level1 summary"><p>Value that controls the degree of randomness in token selection. Lower temperatures are good
+for prompts that require a less open-ended or creative response, while higher temperatures
+can lead to more diverse or creative results.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -715,8 +715,8 @@ public double? Temperature { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/LiveConnectConfig.cs/#L140"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Config for thinking features.  An error will be returned if this field is set for models
-that don't  support thinking.</p>
+  <div class="markdown level1 summary"><p>Config for thinking features. An error will be returned if this field is set for models that
+don't support thinking.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -750,9 +750,9 @@ public ThinkingConfig? ThinkingConfig { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/LiveConnectConfig.cs/#L173"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>A list of <code>Tools</code> the model may use to generate the next response.   A <code>Tool</code> is a piece of
-code that enables the system to interact with  external systems to perform an action, or set
-of actions, outside of  knowledge and scope of the model.</p>
+  <div class="markdown level1 summary"><p>A list of <code>Tools</code> the model may use to generate the next response.  A <code>Tool</code> is a piece of
+code that enables the system to interact with external systems to perform an action, or set
+of actions, outside of knowledge and scope of the model.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -786,10 +786,10 @@ public List&lt;Tool&gt;? Tools { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/LiveConnectConfig.cs/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>For each token selection step, the <code>top_k</code> tokens with the  highest probabilities are
-sampled. Then tokens are further filtered based  on <code>top_p</code> with the final token selected
-using temperature sampling. Use  a lower number for less random responses and a higher
-number for more  random responses.</p>
+  <div class="markdown level1 summary"><p>For each token selection step, the <code>top_k</code> tokens with the highest probabilities are
+sampled. Then tokens are further filtered based on <code>top_p</code> with the final token selected
+using temperature sampling. Use a lower number for less random responses and a higher number
+for more random responses.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -823,8 +823,8 @@ public double? TopK { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/LiveConnectConfig.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Tokens are selected from the most to least probable until the sum  of their probabilities
-equals this value. Use a lower value for less  random responses and a higher value for more
+  <div class="markdown level1 summary"><p>Tokens are selected from the most to least probable until the sum of their probabilities
+equals this value. Use a lower value for less random responses and a higher value for more
 random responses.</p>
 </div>
   <div class="markdown level1 conceptual"></div>

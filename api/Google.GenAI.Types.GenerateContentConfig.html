@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class GenerateContentConfig | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Optional model configuration parameters.   For more information, see Content generation parameters (https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/content-generation-parameters).">
+      <meta name="description" content="Optional model configuration parameters.  For more information, see Content generation parameters (https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/content-generation-parameters).">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -93,7 +93,7 @@ Class GenerateContentConfig  <a class="header-action link-secondary" title="View
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Optional model configuration parameters.   For more information, see Content generation
+  <div class="markdown summary"><p>Optional model configuration parameters.  For more information, see Content generation
 parameters
 (<a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/content-generation-parameters">https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/content-generation-parameters</a>).</p>
 </div>
@@ -164,7 +164,7 @@ parameters
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentConfig.cs/#L325"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>If enabled, audio timestamp will be included in the request to the  model.</p>
+  <div class="markdown level1 summary"><p>If enabled, audio timestamp will be included in the request to the model.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -198,7 +198,7 @@ public bool? AudioTimestamp { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentConfig.cs/#L284"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Resource name of a context cache that can be used in subsequent  requests.</p>
+  <div class="markdown level1 summary"><p>Resource name of a context cache that can be used in subsequent requests.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -266,8 +266,8 @@ public int? CandidateCount { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentConfig.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Positive values penalize tokens that repeatedly appear in the  generated text, increasing
-the probability of generating more diverse  content.</p>
+  <div class="markdown level1 summary"><p>Positive values penalize tokens that repeatedly appear in the generated text, increasing the
+probability of generating more diverse content.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -403,7 +403,7 @@ public Dictionary&lt;string, string&gt;? Labels { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentConfig.cs/#L132"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Number of top candidate tokens to return the log probabilities for  at each generation step.</p>
+  <div class="markdown level1 summary"><p>Number of top candidate tokens to return the log probabilities for at each generation step.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -539,8 +539,8 @@ public ModelSelectionConfig? ModelSelectionConfig { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentConfig.cs/#L143"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Positive values penalize tokens that already appear in the  generated text, increasing the
-probability of generating more diverse  content.</p>
+  <div class="markdown level1 summary"><p>Positive values penalize tokens that already appear in the generated text, increasing the
+probability of generating more diverse content.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -574,18 +574,18 @@ public double? PresencePenalty { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentConfig.cs/#L213"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. Output schema of the generated response.  This is an alternative to
-<code>response_schema</code> that accepts JSON  Schema (<a href="https://json-schema.org/">https://json-schema.org/</a>). If set,
-<code>response_schema</code> must be  omitted, but <code>response_mime_type</code> is required. While the full
-JSON Schema  may be sent, not all features are supported. Specifically, only the  following
-properties are supported: - <code>$id</code> - <code>$defs</code> - <code>$ref</code> - <code>$anchor</code>  - <code>type</code> - <code>format</code> -
-<code>title</code> - <code>description</code> - <code>enum</code> (for strings and  numbers) - <code>items</code> - <code>prefixItems</code> -
-<code>minItems</code> - <code>maxItems</code> - <code>minimum</code> -  <code>maximum</code> - <code>anyOf</code> - <code>oneOf</code> (interpreted the same
-as <code>anyOf</code>) -  <code>properties</code> - <code>additionalProperties</code> - <code>required</code> The non-standard
-<code>propertyOrdering</code> property may also be set. Cyclic references are  unrolled to a limited
-degree and, as such, may only be used within  non-required properties. (Nullable properties
-are not sufficient.) If  <code>$ref</code> is set on a sub-schema, no other properties, except for than
-those  starting as a <code>$</code>, may be set.</p>
+  <div class="markdown level1 summary"><p>Optional. Output schema of the generated response. This is an alternative to
+<code>response_schema</code> that accepts JSON Schema (<a href="https://json-schema.org/">https://json-schema.org/</a>). If set,
+<code>response_schema</code> must be omitted, but <code>response_mime_type</code> is required. While the full JSON
+Schema may be sent, not all features are supported. Specifically, only the following
+properties are supported: - <code>$id</code> - <code>$defs</code> - <code>$ref</code> - <code>$anchor</code> - <code>type</code> - <code>format</code> -
+<code>title</code> - <code>description</code> - <code>enum</code> (for strings and numbers) - <code>items</code> - <code>prefixItems</code> -
+<code>minItems</code> - <code>maxItems</code> - <code>minimum</code> - <code>maximum</code> - <code>anyOf</code> - <code>oneOf</code> (interpreted the same as
+<code>anyOf</code>) - <code>properties</code> - <code>additionalProperties</code> - <code>required</code> The non-standard
+<code>propertyOrdering</code> property may also be set. Cyclic references are unrolled to a limited
+degree and, as such, may only be used within non-required properties. (Nullable properties
+are not sufficient.) If <code>$ref</code> is set on a sub-schema, no other properties, except for than
+those starting as a <code>$</code>, may be set.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -619,7 +619,7 @@ public object? ResponseJsonSchema { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentConfig.cs/#L122"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Whether to return the log probabilities of the tokens that were  chosen by the model at each
+  <div class="markdown level1 summary"><p>Whether to return the log probabilities of the tokens that were chosen by the model at each
 step.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -654,10 +654,10 @@ public bool? ResponseLogprobs { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentConfig.cs/#L178"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Output response mimetype of the generated candidate text.  Supported mimetype:  -
+  <div class="markdown level1 summary"><p>Output response mimetype of the generated candidate text. Supported mimetype:  -
 <code>text/plain</code>: (default) Text output.  - <code>application/json</code>: JSON response in the candidates.
-The model needs to be prompted to output the appropriate response type,  otherwise the
-behavior is undefined.  This is a preview feature.</p>
+The model needs to be prompted to output the appropriate response type, otherwise the
+behavior is undefined. This is a preview feature.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -691,7 +691,7 @@ public string? ResponseMimeType { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentConfig.cs/#L295"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The requested modalities of the response. Represents the set of  modalities that the model
+  <div class="markdown level1 summary"><p>The requested modalities of the response. Represents the set of modalities that the model
 can return.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -726,10 +726,10 @@ public List&lt;string&gt;? ResponseModalities { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentConfig.cs/#L192"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The <code>Schema</code> object allows the definition of input and output data types.  These types can
-be objects, but also primitives and arrays.  Represents a select subset of an OpenAPI 3.0
-schema  object (<a href="https://spec.openapis.org/oas/v3.0.3#schema">https://spec.openapis.org/oas/v3.0.3#schema</a>).  If set, a compatible
-response_mime_type must also be set.  Compatible mimetypes: <code>application/json</code>: Schema for
+  <div class="markdown level1 summary"><p>The <code>Schema</code> object allows the definition of input and output data types. These types can be
+objects, but also primitives and arrays. Represents a select subset of an OpenAPI 3.0 schema
+object (<a href="https://spec.openapis.org/oas/v3.0.3#schema">https://spec.openapis.org/oas/v3.0.3#schema</a>). If set, a compatible
+response_mime_type must also be set. Compatible mimetypes: <code>application/json</code>: Schema for
 JSON response.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -798,7 +798,7 @@ public GenerationConfigRoutingConfig? RoutingConfig { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentConfig.cs/#L243"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Safety settings in the request to block unsafe content in the  response.</p>
+  <div class="markdown level1 summary"><p>Safety settings in the request to block unsafe content in the response.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -832,8 +832,8 @@ public List&lt;SafetySetting&gt;? SafetySettings { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentConfig.cs/#L165"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>When <code>seed</code> is fixed to a specific number, the model makes a best  effort to provide the
-same response for repeated requests. By default, a  random number is used.</p>
+  <div class="markdown level1 summary"><p>When <code>seed</code> is fixed to a specific number, the model makes a best effort to provide the
+same response for repeated requests. By default, a random number is used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -901,7 +901,7 @@ public SpeechConfig? SpeechConfig { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentConfig.cs/#L111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>List of strings that tells the model to stop generating text if one  of the strings is
+  <div class="markdown level1 summary"><p>List of strings that tells the model to stop generating text if one of the strings is
 encountered in the response.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -936,8 +936,8 @@ public List&lt;string&gt;? StopSequences { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentConfig.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Instructions for the model to steer it toward better performance.  For example, &quot;Answer as
-concisely as possible&quot; or &quot;Don't use technical  terms in your response&quot;.</p>
+  <div class="markdown level1 summary"><p>Instructions for the model to steer it toward better performance. For example, &quot;Answer as
+concisely as possible&quot; or &quot;Don't use technical terms in your response&quot;.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -971,9 +971,9 @@ public Content? SystemInstruction { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentConfig.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Value that controls the degree of randomness in token selection.  Lower temperatures are
-good for prompts that require a less open-ended or  creative response, while higher
-temperatures can lead to more diverse or  creative results.</p>
+  <div class="markdown level1 summary"><p>Value that controls the degree of randomness in token selection. Lower temperatures are good
+for prompts that require a less open-ended or creative response, while higher temperatures
+can lead to more diverse or creative results.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1075,7 +1075,7 @@ public ToolConfig? ToolConfig { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentConfig.cs/#L254"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Code that enables the system to interact with external systems to  perform an action outside
+  <div class="markdown level1 summary"><p>Code that enables the system to interact with external systems to perform an action outside
 of the knowledge and scope of the model.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1110,10 +1110,10 @@ public List&lt;Tool&gt;? Tools { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentConfig.cs/#L80"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>For each token selection step, the <code>top_k</code> tokens with the  highest probabilities are
-sampled. Then tokens are further filtered based  on <code>top_p</code> with the final token selected
-using temperature sampling. Use  a lower number for less random responses and a higher
-number for more  random responses.</p>
+  <div class="markdown level1 summary"><p>For each token selection step, the <code>top_k</code> tokens with the highest probabilities are
+sampled. Then tokens are further filtered based on <code>top_p</code> with the final token selected
+using temperature sampling. Use a lower number for less random responses and a higher number
+for more random responses.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1147,8 +1147,8 @@ public double? TopK { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentConfig.cs/#L67"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Tokens are selected from the most to least probable until the sum  of their probabilities
-equals this value. Use a lower value for less  random responses and a higher value for more
+  <div class="markdown level1 summary"><p>Tokens are selected from the most to least probable until the sum of their probabilities
+equals this value. Use a lower value for less random responses and a higher value for more
 random responses.</p>
 </div>
   <div class="markdown level1 conceptual"></div>

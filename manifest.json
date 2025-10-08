@@ -192,7 +192,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ActivityEnd",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ActivityEnd.yml\" sourcestartlinenumber=\"1\">Marks the end of user activity.   This can only be sent if automatic (i.e. server-side)\nactivity detection is  disabled.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ActivityEnd.yml\" sourcestartlinenumber=\"1\">Marks the end of user activity.  This can only be sent if automatic (i.e. server-side)\nactivity detection is disabled.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -220,7 +220,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ActivityStart",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ActivityStart.yml\" sourcestartlinenumber=\"1\">Marks the start of user activity.   This can only be sent if automatic (i.e. server-side)\nactivity detection is  disabled.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ActivityStart.yml\" sourcestartlinenumber=\"1\">Marks the start of user activity.  This can only be sent if automatic (i.e. server-side)\nactivity detection is disabled.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -808,7 +808,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.FinishReason",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FinishReason.yml\" sourcestartlinenumber=\"1\">Output only. The reason why the model stopped generating tokens.   If empty, the model has not\nstopped generating the tokens.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FinishReason.yml\" sourcestartlinenumber=\"1\">Output only. The reason why the model stopped generating tokens.  If empty, the model has not\nstopped generating the tokens.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -864,7 +864,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.FunctionDeclaration",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FunctionDeclaration.yml\" sourcestartlinenumber=\"1\">Defines a function that the model can generate JSON inputs for.   The inputs are based on\nOpenAPI 3.0 specifications (<a href=\"https://spec.openapis.org/oas/v3.0.3\" sourcefile=\"api/Google.GenAI.Types.FunctionDeclaration.yml\" sourcestartlinenumber=\"2\">https://spec.openapis.org/oas/v3.0.3</a>).</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FunctionDeclaration.yml\" sourcestartlinenumber=\"1\">Defines a function that the model can generate JSON inputs for.  The inputs are based on\nOpenAPI 3.0 specifications (<a href=\"https://spec.openapis.org/oas/v3.0.3\" sourcefile=\"api/Google.GenAI.Types.FunctionDeclaration.yml\" sourcestartlinenumber=\"2\">https://spec.openapis.org/oas/v3.0.3</a>).</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -892,7 +892,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.FunctionResponseBlob",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FunctionResponseBlob.yml\" sourcestartlinenumber=\"1\">Raw media bytes for function response.   Text should not be sent as raw bytes, use the\nFunctionResponse.response  field.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FunctionResponseBlob.yml\" sourcestartlinenumber=\"1\">Raw media bytes for function response.  Text should not be sent as raw bytes, use the\nFunctionResponse.response field.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -920,7 +920,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.FunctionResponsePart",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"1\">A datatype containing media that is part of a <code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"1\">FunctionResponse</code> message.   A\n<code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"2\">FunctionResponsePart</code> consists of data which has an associated datatype. A\n<code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"3\">FunctionResponsePart</code> can only contain one of the accepted types in\n<code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"4\">FunctionResponsePart.data</code>.   A <code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"4\">FunctionResponsePart</code> must have a fixed IANA MIME type\nidentifying the  type and subtype of the media if the <code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"5\">inline_data</code> field is filled with raw\nbytes.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"1\">A datatype containing media that is part of a <code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"1\">FunctionResponse</code> message.  A\n<code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"2\">FunctionResponsePart</code> consists of data which has an associated datatype. A\n<code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"3\">FunctionResponsePart</code> can only contain one of the accepted types in\n<code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"4\">FunctionResponsePart.data</code>.  A <code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"4\">FunctionResponsePart</code> must have a fixed IANA MIME type\nidentifying the type and subtype of the media if the <code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"5\">inline_data</code> field is filled with raw\nbytes.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -948,7 +948,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GenerateContentConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerateContentConfig.yml\" sourcestartlinenumber=\"1\">Optional model configuration parameters.   For more information, see Content generation\nparameters\n(<a href=\"https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/content-generation-parameters\" sourcefile=\"api/Google.GenAI.Types.GenerateContentConfig.yml\" sourcestartlinenumber=\"3\">https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/content-generation-parameters</a>).</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerateContentConfig.yml\" sourcestartlinenumber=\"1\">Optional model configuration parameters.  For more information, see Content generation\nparameters\n(<a href=\"https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/content-generation-parameters\" sourcefile=\"api/Google.GenAI.Types.GenerateContentConfig.yml\" sourcestartlinenumber=\"3\">https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/content-generation-parameters</a>).</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1494,7 +1494,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Interval",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Interval.yml\" sourcestartlinenumber=\"1\">Represents a time interval, encoded as a start time (inclusive) and an end time (exclusive).\nThe start time must be less than or equal to the end time.  When the start equals the end\ntime, the interval is an empty interval.  (matches no time)  When both start and end are\nunspecified, the interval matches any time.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Interval.yml\" sourcestartlinenumber=\"1\">Represents a time interval, encoded as a start time (inclusive) and an end time (exclusive).\nThe start time must be less than or equal to the end time. When the start equals the end time,\nthe interval is an empty interval. (matches no time) When both start and end are unspecified,\nthe interval matches any time.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1536,7 +1536,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.LatLng",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LatLng.yml\" sourcestartlinenumber=\"1\">An object that represents a latitude/longitude pair.   This is expressed as a pair of doubles\nto represent degrees latitude and  degrees longitude. Unless specified otherwise, this object\nmust conform to the  &lt;a\nhref=&quot;https://en.wikipedia.org/wiki/World_Geodetic_System#1984_version&quot;&gt;  WGS84\nstandard&lt;/a&gt;. Values must be within normalized ranges.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LatLng.yml\" sourcestartlinenumber=\"1\">An object that represents a latitude/longitude pair.  This is expressed as a pair of doubles\nto represent degrees latitude and degrees longitude. Unless specified otherwise, this object\nmust conform to the &lt;a\nhref=&quot;https://en.wikipedia.org/wiki/World_Geodetic_System#1984_version&quot;&gt; WGS84\nstandard&lt;/a&gt;. Values must be within normalized ranges.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1550,7 +1550,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.LiveClientContent",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LiveClientContent.yml\" sourcestartlinenumber=\"1\">Incremental update of the current conversation delivered from the client.   All the content\nhere will unconditionally be appended to the conversation  history and used as part of the\nprompt to the model to generate content.   A message here will interrupt any current model\ngeneration.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LiveClientContent.yml\" sourcestartlinenumber=\"1\">Incremental update of the current conversation delivered from the client.  All the content\nhere will unconditionally be appended to the conversation history and used as part of the\nprompt to the model to generate content.  A message here will interrupt any current model\ngeneration.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1578,7 +1578,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.LiveClientRealtimeInput",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LiveClientRealtimeInput.yml\" sourcestartlinenumber=\"1\">User input that is sent in real time.   This is different from <code sourcefile=\"api/Google.GenAI.Types.LiveClientRealtimeInput.yml\" sourcestartlinenumber=\"1\">LiveClientContent</code> in a few\nways:   - Can be sent continuously without interruption to model generation.  - If there is a\nneed to mix data interleaved across the  <code sourcefile=\"api/Google.GenAI.Types.LiveClientRealtimeInput.yml\" sourcestartlinenumber=\"3\">LiveClientContent</code> and the\n<code sourcefile=\"api/Google.GenAI.Types.LiveClientRealtimeInput.yml\" sourcestartlinenumber=\"4\">LiveClientRealtimeInput</code>, server attempts to  optimize for best response, but there are no\nguarantees.  - End of turn is not explicitly specified, but is rather derived from user\nactivity (for example, end of speech).  - Even before the end of turn, the data is processed\nincrementally  to optimize for a fast start of the response from the model.  - Is always\nassumed to be the user's input (cannot be used to populate  conversation history).</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LiveClientRealtimeInput.yml\" sourcestartlinenumber=\"1\">User input that is sent in real time.  This is different from <code sourcefile=\"api/Google.GenAI.Types.LiveClientRealtimeInput.yml\" sourcestartlinenumber=\"1\">LiveClientContent</code> in a few\nways:   - Can be sent continuously without interruption to model generation.  - If there is a\nneed to mix data interleaved across the  <code sourcefile=\"api/Google.GenAI.Types.LiveClientRealtimeInput.yml\" sourcestartlinenumber=\"3\">LiveClientContent</code> and the\n<code sourcefile=\"api/Google.GenAI.Types.LiveClientRealtimeInput.yml\" sourcestartlinenumber=\"4\">LiveClientRealtimeInput</code>, server attempts to  optimize for best response, but there are no\nguarantees.  - End of turn is not explicitly specified, but is rather derived from user\nactivity (for example, end of speech).  - Even before the end of turn, the data is processed\nincrementally  to optimize for a fast start of the response from the model.  - Is always\nassumed to be the user's input (cannot be used to populate  conversation history).</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1606,7 +1606,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.LiveClientToolResponse",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LiveClientToolResponse.yml\" sourcestartlinenumber=\"1\">Client generated response to a <code sourcefile=\"api/Google.GenAI.Types.LiveClientToolResponse.yml\" sourcestartlinenumber=\"1\">ToolCall</code> received from the server.   Individual\n<code sourcefile=\"api/Google.GenAI.Types.LiveClientToolResponse.yml\" sourcestartlinenumber=\"2\">FunctionResponse</code> objects are matched to the respective  <code sourcefile=\"api/Google.GenAI.Types.LiveClientToolResponse.yml\" sourcestartlinenumber=\"2\">FunctionCall</code> objects by the <code sourcefile=\"api/Google.GenAI.Types.LiveClientToolResponse.yml\" sourcestartlinenumber=\"2\">id</code>\nfield.   Note that in the unary and server-streaming GenerateContent APIs function  calling\nhappens by exchanging the <code sourcefile=\"api/Google.GenAI.Types.LiveClientToolResponse.yml\" sourcestartlinenumber=\"4\">Content</code> parts, while in the bidi  GenerateContent APIs function\ncalling happens over this dedicated set of  messages.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LiveClientToolResponse.yml\" sourcestartlinenumber=\"1\">Client generated response to a <code sourcefile=\"api/Google.GenAI.Types.LiveClientToolResponse.yml\" sourcestartlinenumber=\"1\">ToolCall</code> received from the server.  Individual\n<code sourcefile=\"api/Google.GenAI.Types.LiveClientToolResponse.yml\" sourcestartlinenumber=\"2\">FunctionResponse</code> objects are matched to the respective <code sourcefile=\"api/Google.GenAI.Types.LiveClientToolResponse.yml\" sourcestartlinenumber=\"2\">FunctionCall</code> objects by the <code sourcefile=\"api/Google.GenAI.Types.LiveClientToolResponse.yml\" sourcestartlinenumber=\"2\">id</code>\nfield.  Note that in the unary and server-streaming GenerateContent APIs function calling\nhappens by exchanging the <code sourcefile=\"api/Google.GenAI.Types.LiveClientToolResponse.yml\" sourcestartlinenumber=\"4\">Content</code> parts, while in the bidi GenerateContent APIs function\ncalling happens over this dedicated set of messages.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1718,7 +1718,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.LiveServerContent",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LiveServerContent.yml\" sourcestartlinenumber=\"1\">Incremental server update generated by the model in response to client messages.   Content is\ngenerated as quickly as possible, and not in real time. Clients  may choose to buffer and play\nit out in real time.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LiveServerContent.yml\" sourcestartlinenumber=\"1\">Incremental server update generated by the model in response to client messages.  Content is\ngenerated as quickly as possible, and not in real time. Clients may choose to buffer and play\nit out in real time.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1760,7 +1760,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.LiveServerSessionResumptionUpdate",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LiveServerSessionResumptionUpdate.yml\" sourcestartlinenumber=\"1\">Update of the session resumption state.   Only sent if <code sourcefile=\"api/Google.GenAI.Types.LiveServerSessionResumptionUpdate.yml\" sourcestartlinenumber=\"1\">session_resumption</code> was set in the\nconnection config.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LiveServerSessionResumptionUpdate.yml\" sourcestartlinenumber=\"1\">Update of the session resumption state.  Only sent if <code sourcefile=\"api/Google.GenAI.Types.LiveServerSessionResumptionUpdate.yml\" sourcestartlinenumber=\"1\">session_resumption</code> was set in the\nconnection config.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1802,7 +1802,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.LiveServerToolCallCancellation",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LiveServerToolCallCancellation.yml\" sourcestartlinenumber=\"1\">Notification for the client that a previously issued <code sourcefile=\"api/Google.GenAI.Types.LiveServerToolCallCancellation.yml\" sourcestartlinenumber=\"1\">ToolCallMessage</code> with the specified\n<code sourcefile=\"api/Google.GenAI.Types.LiveServerToolCallCancellation.yml\" sourcestartlinenumber=\"2\">id</code>s should have been not executed and should be cancelled.   If there were side-effects to\nthose tool calls, clients may attempt to undo  the tool calls. This message occurs only in\ncases where the clients interrupt  server turns.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LiveServerToolCallCancellation.yml\" sourcestartlinenumber=\"1\">Notification for the client that a previously issued <code sourcefile=\"api/Google.GenAI.Types.LiveServerToolCallCancellation.yml\" sourcestartlinenumber=\"1\">ToolCallMessage</code> with the specified\n<code sourcefile=\"api/Google.GenAI.Types.LiveServerToolCallCancellation.yml\" sourcestartlinenumber=\"2\">id</code>s should have been not executed and should be cancelled.  If there were side-effects to\nthose tool calls, clients may attempt to undo the tool calls. This message occurs only in\ncases where the clients interrupt server turns.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1984,7 +1984,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Part",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Part.yml\" sourcestartlinenumber=\"1\">A datatype containing media content.   Exactly one field within a Part should be set,\nrepresenting the specific type  of content being conveyed. Using multiple fields within the\nsame <code sourcefile=\"api/Google.GenAI.Types.Part.yml\" sourcestartlinenumber=\"3\">Part</code>  instance is considered invalid.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Part.yml\" sourcestartlinenumber=\"1\">A datatype containing media content.  Exactly one field within a Part should be set,\nrepresenting the specific type of content being conveyed. Using multiple fields within the\nsame <code sourcefile=\"api/Google.GenAI.Types.Part.yml\" sourcestartlinenumber=\"3\">Part</code> instance is considered invalid.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2152,7 +2152,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.RealtimeInputConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RealtimeInputConfig.yml\" sourcestartlinenumber=\"1\">Marks the end of user activity.   This can only be sent if automatic (i.e. server-side)\nactivity detection is  disabled.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RealtimeInputConfig.yml\" sourcestartlinenumber=\"1\">Marks the end of user activity.  This can only be sent if automatic (i.e. server-side)\nactivity detection is disabled.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2320,7 +2320,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Schema",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Schema.yml\" sourcestartlinenumber=\"1\">Schema is used to define the format of input/output data.   Represents a select subset of an\nOpenAPI 3.0 schema  object (<a href=\"https://spec.openapis.org/oas/v3.0.3#schema-object\" sourcefile=\"api/Google.GenAI.Types.Schema.yml\" sourcestartlinenumber=\"2\">https://spec.openapis.org/oas/v3.0.3#schema-object</a>). More fields\nmay  be added in the future as needed.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Schema.yml\" sourcestartlinenumber=\"1\">Schema is used to define the format of input/output data.  Represents a select subset of an\nOpenAPI 3.0 schema object (<a href=\"https://spec.openapis.org/oas/v3.0.3#schema-object\" sourcefile=\"api/Google.GenAI.Types.Schema.yml\" sourcestartlinenumber=\"2\">https://spec.openapis.org/oas/v3.0.3#schema-object</a>). More fields\nmay be added in the future as needed.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2362,7 +2362,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.SessionResumptionConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SessionResumptionConfig.yml\" sourcestartlinenumber=\"1\">Configuration of session resumption mechanism.   Included in\n<code sourcefile=\"api/Google.GenAI.Types.SessionResumptionConfig.yml\" sourcestartlinenumber=\"2\">LiveConnectConfig.session_resumption</code>. If included server  will send\n<code sourcefile=\"api/Google.GenAI.Types.SessionResumptionConfig.yml\" sourcestartlinenumber=\"3\">LiveServerSessionResumptionUpdate</code> messages.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SessionResumptionConfig.yml\" sourcestartlinenumber=\"1\">Configuration of session resumption mechanism.  Included in\n<code sourcefile=\"api/Google.GenAI.Types.SessionResumptionConfig.yml\" sourcestartlinenumber=\"2\">LiveConnectConfig.session_resumption</code>. If included server will send\n<code sourcefile=\"api/Google.GenAI.Types.SessionResumptionConfig.yml\" sourcestartlinenumber=\"3\">LiveServerSessionResumptionUpdate</code> messages.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2390,7 +2390,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.SlidingWindow",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SlidingWindow.yml\" sourcestartlinenumber=\"1\">Context window will be truncated by keeping only suffix of it.   Context window will always be\ncut at start of USER role turn. System  instructions and\n<code sourcefile=\"api/Google.GenAI.Types.SlidingWindow.yml\" sourcestartlinenumber=\"3\">BidiGenerateContentSetup.prefix_turns</code> will not be  subject to the sliding window mechanism,\nthey will always stay at the  beginning of context window.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SlidingWindow.yml\" sourcestartlinenumber=\"1\">Context window will be truncated by keeping only suffix of it.  Context window will always be\ncut at start of USER role turn. System instructions and\n<code sourcefile=\"api/Google.GenAI.Types.SlidingWindow.yml\" sourcestartlinenumber=\"3\">BidiGenerateContentSetup.prefix_turns</code> will not be subject to the sliding window mechanism,\nthey will always stay at the beginning of context window.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2530,7 +2530,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ToolConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ToolConfig.yml\" sourcestartlinenumber=\"1\">Tool config.   This config is shared for all tools provided in the request.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ToolConfig.yml\" sourcestartlinenumber=\"1\">Tool config.  This config is shared for all tools provided in the request.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2670,7 +2670,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.UpscaleImageConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.UpscaleImageConfig.yml\" sourcestartlinenumber=\"1\">Configuration for upscaling an image.   For more information on this configuration, refer to\nthe Imagen API reference documentation\n(<a href=\"https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/imagen-api\" sourcefile=\"api/Google.GenAI.Types.UpscaleImageConfig.yml\" sourcestartlinenumber=\"3\">https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/imagen-api</a>).</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.UpscaleImageConfig.yml\" sourcestartlinenumber=\"1\">Configuration for upscaling an image.  For more information on this configuration, refer to\nthe Imagen API reference documentation\n(<a href=\"https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/imagen-api\" sourcefile=\"api/Google.GenAI.Types.UpscaleImageConfig.yml\" sourcestartlinenumber=\"3\">https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/imagen-api</a>).</p>\n"
     },
     {
       "type": "ManagedReference",
