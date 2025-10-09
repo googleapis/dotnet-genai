@@ -125,7 +125,8 @@ client = new Client();
 section above to initialize a client.</p>
 <h3 id="generate-content">Generate Content</h3>
 <h4 id="with-simple-text-content">With simple text content</h4>
-<pre><code class="lang-csharp">using Google.GenAI;
+<pre><code class="lang-csharp">using System.Threading.Tasks;
+using Google.GenAI;
 using Google.GenAI.Types;
 
 public class GenerateContentSimpleText {
@@ -147,7 +148,8 @@ values near 0 minimizing variability. Capabilities and parameter defaults for
 each model is shown in the
 <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-5-flash">Vertex AI docs</a>
 and <a href="https://ai.google.dev/gemini-api/docs/models">Gemini API docs</a> respectively.</p>
-<pre><code class="lang-csharp">using Google.GenAI;
+<pre><code class="lang-csharp">using System.Threading.Tasks;
+using Google.GenAI;
 using Google.GenAI.Types;
 
 public class GenerateContentWithConfig {
@@ -176,7 +178,8 @@ public class GenerateContentWithConfig {
 
 </code></pre>
 <h4 id="safety-settings">Safety Settings</h4>
-<pre><code class="lang-csharp">using Google.GenAI;
+<pre><code class="lang-csharp">using System.Threading.Tasks;
+using Google.GenAI;
 using Googel.GenAI.Types;
 
 class GenerateContentWithSafetySettings {
@@ -207,7 +210,8 @@ class GenerateContentWithSafetySettings {
 <p>However you define your schema, don't duplicate it in your input prompt,
 including by giving examples of expected JSON output. If you do, the generated
 output might be lower in quality.</p>
-<pre><code class="lang-csharp">using Goolge.GenAI;
+<pre><code class="lang-csharp">using System.Threading.Tasks;
+using Goolge.GenAI;
 using Google.GenAI.Types;
 
 public class GenerateContentWithJsonSchema {
@@ -259,7 +263,8 @@ public class GenerateContentWithJsonSchema {
 </code></pre>
 <h3 id="generate-content-stream">Generate Content Stream</h3>
 <p>The usage of GenerateContentStreamAsync is similar to GenerateContentAsync, this section shows one simple example to showcase the nuance in the usage.</p>
-<pre><code class="lang-csharp">using Google.GenAI;
+<pre><code class="lang-csharp">using System.Threading.Tasks;
+using Google.GenAI;
 using Google.GenAI.Types;
 
 class GenerateContentStreamSimpleText {
@@ -278,7 +283,8 @@ class GenerateContentStreamSimpleText {
 
 </code></pre>
 <h3 id="generate-images">Generate Images</h3>
-<pre><code class="lang-csharp">using Google.GenAI;
+<pre><code class="lang-csharp">using System.Threading.Tasks;
+using Google.GenAI;
 using Google.GenAI.Types;
 
 public class GenerateImagesSimple {
@@ -307,7 +313,8 @@ public class GenerateImagesSimple {
 </code></pre>
 <h3 id="upscale-image">Upscale Image</h3>
 <p>Upscaling an image is only supported on the Vertex AI client.</p>
-<pre><code class="lang-csharp">using Google.GenAI;
+<pre><code class="lang-csharp">using System.Threading.Tasks;
+using Google.GenAI;
 using Google.GenAI.Types;
 
 public class UpscaleImageSimple {
