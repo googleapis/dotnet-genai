@@ -147,6 +147,177 @@ namespace Google.GenAI {
       return toObject;
     }
 
+    internal JsonNode ControlReferenceConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "controlType" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "controlType" },
+                              Common.GetValueByPath(fromObject, new string[] { "controlType" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "enableControlImageComputation" }) !=
+          null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "computeControl" },
+            Common.GetValueByPath(fromObject, new string[] { "enableControlImageComputation" }));
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode EditImageConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "outputGcsUri" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "parameters", "storageUri" },
+                              Common.GetValueByPath(fromObject, new string[] { "outputGcsUri" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "negativePrompt" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "parameters", "negativePrompt" },
+                              Common.GetValueByPath(fromObject, new string[] { "negativePrompt" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "numberOfImages" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "parameters", "sampleCount" },
+                              Common.GetValueByPath(fromObject, new string[] { "numberOfImages" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "aspectRatio" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "parameters", "aspectRatio" },
+                              Common.GetValueByPath(fromObject, new string[] { "aspectRatio" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "guidanceScale" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "parameters", "guidanceScale" },
+                              Common.GetValueByPath(fromObject, new string[] { "guidanceScale" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "seed" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "parameters", "seed" },
+                              Common.GetValueByPath(fromObject, new string[] { "seed" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "safetyFilterLevel" }) != null) {
+        Common.SetValueByPath(
+            parentObject, new string[] { "parameters", "safetySetting" },
+            Common.GetValueByPath(fromObject, new string[] { "safetyFilterLevel" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "personGeneration" }) != null) {
+        Common.SetValueByPath(
+            parentObject, new string[] { "parameters", "personGeneration" },
+            Common.GetValueByPath(fromObject, new string[] { "personGeneration" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "includeSafetyAttributes" }) != null) {
+        Common.SetValueByPath(
+            parentObject, new string[] { "parameters", "includeSafetyAttributes" },
+            Common.GetValueByPath(fromObject, new string[] { "includeSafetyAttributes" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "includeRaiReason" }) != null) {
+        Common.SetValueByPath(
+            parentObject, new string[] { "parameters", "includeRaiReason" },
+            Common.GetValueByPath(fromObject, new string[] { "includeRaiReason" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "language" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "parameters", "language" },
+                              Common.GetValueByPath(fromObject, new string[] { "language" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "outputMimeType" }) != null) {
+        Common.SetValueByPath(parentObject,
+                              new string[] { "parameters", "outputOptions", "mimeType" },
+                              Common.GetValueByPath(fromObject, new string[] { "outputMimeType" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "outputCompressionQuality" }) != null) {
+        Common.SetValueByPath(
+            parentObject, new string[] { "parameters", "outputOptions", "compressionQuality" },
+            Common.GetValueByPath(fromObject, new string[] { "outputCompressionQuality" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "addWatermark" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "parameters", "addWatermark" },
+                              Common.GetValueByPath(fromObject, new string[] { "addWatermark" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "labels" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "labels" },
+                              Common.GetValueByPath(fromObject, new string[] { "labels" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "editMode" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "parameters", "editMode" },
+                              Common.GetValueByPath(fromObject, new string[] { "editMode" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "baseSteps" }) != null) {
+        Common.SetValueByPath(parentObject,
+                              new string[] { "parameters", "editConfig", "baseSteps" },
+                              Common.GetValueByPath(fromObject, new string[] { "baseSteps" }));
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode EditImageParametersToVertex(ApiClient apiClient, JsonNode fromObject,
+                                                  JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "model" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "_url", "model" },
+            Transformers.TModel(this._apiClient,
+                                Common.GetValueByPath(fromObject, new string[] { "model" })));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "prompt" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "instances[0]", "prompt" },
+                              Common.GetValueByPath(fromObject, new string[] { "prompt" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "referenceImages" }) != null) {
+        JsonArray keyArray =
+            (JsonArray)Common.GetValueByPath(fromObject, new string[] { "referenceImages" });
+        JsonArray result = new JsonArray();
+
+        foreach (var record in keyArray) {
+          result.Add(ReferenceImageAPIToVertex(JsonNode.Parse(JsonSerializer.Serialize(record)),
+                                               toObject));
+        }
+        Common.SetValueByPath(toObject, new string[] { "instances[0]", "referenceImages" }, result);
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "config" }) != null) {
+        _ = EditImageConfigToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
+                                        fromObject, new string[] { "config" }))),
+                                    toObject);
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode EditImageResponseFromVertex(JsonNode fromObject, JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "predictions" }) != null) {
+        JsonArray keyArray =
+            (JsonArray)Common.GetValueByPath(fromObject, new string[] { "predictions" });
+        JsonArray result = new JsonArray();
+
+        foreach (var record in keyArray) {
+          result.Add(
+              GeneratedImageFromVertex(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
+        }
+        Common.SetValueByPath(toObject, new string[] { "generatedImages" }, result);
+      }
+
+      return toObject;
+    }
+
     internal JsonNode FileDataToMldev(JsonNode fromObject, JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
@@ -1140,6 +1311,28 @@ namespace Google.GenAI {
       return toObject;
     }
 
+    internal JsonNode MaskReferenceConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "maskMode" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "maskMode" },
+                              Common.GetValueByPath(fromObject, new string[] { "maskMode" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "segmentationClasses" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "maskClasses" },
+            Common.GetValueByPath(fromObject, new string[] { "segmentationClasses" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "maskDilation" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "dilation" },
+                              Common.GetValueByPath(fromObject, new string[] { "maskDilation" }));
+      }
+
+      return toObject;
+    }
+
     internal JsonNode PartToMldev(JsonNode fromObject, JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
@@ -1200,6 +1393,58 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "text" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "text" },
                               Common.GetValueByPath(fromObject, new string[] { "text" }));
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode ReferenceImageAPIToVertex(JsonNode fromObject, JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "referenceImage" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "referenceImage" },
+            ImageToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
+                              fromObject, new string[] { "referenceImage" }))),
+                          toObject));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "referenceId" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "referenceId" },
+                              Common.GetValueByPath(fromObject, new string[] { "referenceId" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "referenceType" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "referenceType" },
+                              Common.GetValueByPath(fromObject, new string[] { "referenceType" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "maskImageConfig" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "maskImageConfig" },
+                              MaskReferenceConfigToVertex(
+                                  JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
+                                      fromObject, new string[] { "maskImageConfig" }))),
+                                  toObject));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "controlImageConfig" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "controlImageConfig" },
+                              ControlReferenceConfigToVertex(
+                                  JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
+                                      fromObject, new string[] { "controlImageConfig" }))),
+                                  toObject));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "styleImageConfig" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "styleImageConfig" },
+            Common.GetValueByPath(fromObject, new string[] { "styleImageConfig" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "subjectImageConfig" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "subjectImageConfig" },
+            Common.GetValueByPath(fromObject, new string[] { "subjectImageConfig" }));
       }
 
       return toObject;
@@ -1696,6 +1941,65 @@ namespace Google.GenAI {
                  "Failed to deserialize Task<GenerateImagesResponse>.");
     }
 
+    private async Task<EditImageResponse> PrivateEditImageAsync(
+        string model, string prompt, List<ReferenceImageAPI> referenceImages,
+        EditImageConfig config) {
+      EditImageParameters parameter = new EditImageParameters();
+
+      if (!Common.IsZero(model)) {
+        parameter.Model = model;
+      }
+      if (!Common.IsZero(prompt)) {
+        parameter.Prompt = prompt;
+      }
+      if (!Common.IsZero(referenceImages)) {
+        parameter.ReferenceImages = referenceImages;
+      }
+      if (!Common.IsZero(config)) {
+        parameter.Config = config;
+      }
+      string jsonString = JsonSerializer.Serialize(parameter);
+      JsonNode? parameterNode = JsonNode.Parse(jsonString);
+      if (parameterNode == null) {
+        throw new NotSupportedException("Failed to parse EditImageParameters to JsonNode.");
+      }
+
+      JsonNode body;
+      string path;
+      if (this._apiClient.VertexAI) {
+        body = EditImageParametersToVertex(this._apiClient, parameterNode, new JsonObject());
+        path = Common.FormatMap("{model}:predict", body["_url"]);
+      } else {
+        throw new NotSupportedException("This method is only supported in the Vertex AI client.");
+      }
+      JsonObject? bodyObj = body?.AsObject();
+      bodyObj?.Remove("_url");
+      // TODO: Handle "_query" in the body (for list support).
+      bodyObj?.Remove("_query");
+      HttpOptions? requestHttpOptions = config?.HttpOptions;
+
+      ApiResponse response = await this._apiClient.RequestAsync(
+          HttpMethod.Post, path, JsonSerializer.Serialize(body), requestHttpOptions);
+      HttpContent httpContent = response.GetEntity();
+      string contentString = await httpContent.ReadAsStringAsync();
+      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      if (httpContentNode == null) {
+        throw new NotSupportedException("Failed to parse response to JsonNode.");
+      }
+      JsonNode responseNode = httpContentNode;
+
+      if (this._apiClient.VertexAI) {
+        responseNode = EditImageResponseFromVertex(httpContentNode, new JsonObject());
+      }
+
+      if (!this._apiClient.VertexAI) {
+        throw new NotSupportedException("This method is only supported in the Vertex AI client.");
+      }
+
+      return JsonSerializer.Deserialize<EditImageResponse>(responseNode.ToString()) ??
+             throw new InvalidOperationException("Failed to deserialize Task<EditImageResponse>.");
+    }
+
     private async Task<UpscaleImageResponse> PrivateUpscaleImageAsync(
         string model, Image image, string upscaleFactor, UpscaleImageAPIConfig config) {
       UpscaleImageAPIParameters parameter = new UpscaleImageAPIParameters();
@@ -1882,6 +2186,15 @@ namespace Google.GenAI {
       }
 
       return response;
+    }
+
+    public async Task<EditImageResponse> EditImageAsync(String model, String prompt,
+                                                        List<IReferenceImage> referenceImages,
+                                                        EditImageConfig? config = null) {
+      List<ReferenceImageAPI> referenceImagesAPI =
+          referenceImages.Select(i => ((IReferenceImageInternal)i).ToReferenceImageAPI()).ToList();
+
+      return await PrivateEditImageAsync(model, prompt, referenceImagesAPI, config);
     }
 
     public async Task<UpscaleImageResponse> UpscaleImageAsync(String model, Image image,

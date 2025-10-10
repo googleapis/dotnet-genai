@@ -23,62 +23,61 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// An image.
+  /// Parameters for the request to edit an image.
   /// </summary>
 
-  public record Image {
+  internal record EditImageParameters {
     /// <summary>
-    /// The Cloud Storage URI of the image. ``Image`` can contain a value for this field or the
-    /// ``image_bytes`` field but not both.
+    /// The model to use.
     /// </summary>
-    [JsonPropertyName("gcsUri")]
+    [JsonPropertyName("model")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? GcsUri { get; set; }
+    public string ? Model { get; set; }
 
     /// <summary>
-    /// The image bytes data. ``Image`` can contain a value for this field or the ``gcs_uri`` field
-    /// but not both.
+    /// A text description of the edit to apply to the image.
     /// </summary>
-    [JsonPropertyName("imageBytes")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public byte[]
-        ? ImageBytes {
-            get; set;
-          }
-
-    /// <summary>
-    /// The MIME type of the image.
-    /// </summary>
-    [JsonPropertyName("mimeType")]
+    [JsonPropertyName("prompt")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? MimeType {
+        ? Prompt {
             get; set;
           }
 
     /// <summary>
-    /// Deserializes a JSON string to a Image object.
+    /// The reference images for editing.
+    /// </summary>
+    [JsonPropertyName("referenceImages")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public List<ReferenceImageAPI>
+        ? ReferenceImages {
+            get; set;
+          }
+
+    /// <summary>
+    /// Configuration for editing.
+    /// </summary>
+    [JsonPropertyName("config")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public EditImageConfig
+        ? Config {
+            get; set;
+          }
+
+    /// <summary>
+    /// Deserializes a JSON string to a EditImageParameters object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized Image object, or null if deserialization fails.</returns>
-    public static Image ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
+    /// <returns>The deserialized EditImageParameters object, or null if deserialization
+    /// fails.</returns>
+    public static EditImageParameters
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<Image>(jsonString, options);
+        return JsonSerializer.Deserialize<EditImageParameters>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
-      }
-    }
-
-    public static Image FromFile(string location, string mimeType) {
-      try {
-        return new Image {
-          ImageBytes = File.ReadAllBytes(location),
-          MimeType = mimeType,
-        };
-      } catch (IOException e) {
-        throw new IOException($"Failed to read image from file: {location}", e);
       }
     }
   }
