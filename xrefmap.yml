@@ -5711,6 +5711,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GoogleMaps.AuthConfig
   nameWithType: GoogleMaps.AuthConfig
+- uid: Google.GenAI.Types.GoogleMaps.EnableWidget
+  name: EnableWidget
+  href: api/Google.GenAI.Types.GoogleMaps.html#Google_GenAI_Types_GoogleMaps_EnableWidget
+  commentId: P:Google.GenAI.Types.GoogleMaps.EnableWidget
+  fullName: Google.GenAI.Types.GoogleMaps.EnableWidget
+  nameWithType: GoogleMaps.EnableWidget
+- uid: Google.GenAI.Types.GoogleMaps.EnableWidget*
+  name: EnableWidget
+  href: api/Google.GenAI.Types.GoogleMaps.html#Google_GenAI_Types_GoogleMaps_EnableWidget_
+  commentId: Overload:Google.GenAI.Types.GoogleMaps.EnableWidget
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GoogleMaps.EnableWidget
+  nameWithType: GoogleMaps.EnableWidget
 - uid: Google.GenAI.Types.GoogleMaps.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
   name: FromJson(string, JsonSerializerOptions?)
   href: api/Google.GenAI.Types.GoogleMaps.html#Google_GenAI_Types_GoogleMaps_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
@@ -6215,6 +6228,32 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.Review
   nameWithType: GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.Review
+- uid: Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.ReviewId
+  name: ReviewId
+  href: api/Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.html#Google_GenAI_Types_GroundingChunkMapsPlaceAnswerSourcesReviewSnippet_ReviewId
+  commentId: P:Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.ReviewId
+  fullName: Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.ReviewId
+  nameWithType: GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.ReviewId
+- uid: Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.ReviewId*
+  name: ReviewId
+  href: api/Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.html#Google_GenAI_Types_GroundingChunkMapsPlaceAnswerSourcesReviewSnippet_ReviewId_
+  commentId: Overload:Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.ReviewId
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.ReviewId
+  nameWithType: GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.ReviewId
+- uid: Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.Title
+  name: Title
+  href: api/Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.html#Google_GenAI_Types_GroundingChunkMapsPlaceAnswerSourcesReviewSnippet_Title
+  commentId: P:Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.Title
+  fullName: Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.Title
+  nameWithType: GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.Title
+- uid: Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.Title*
+  name: Title
+  href: api/Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.html#Google_GenAI_Types_GroundingChunkMapsPlaceAnswerSourcesReviewSnippet_Title_
+  commentId: Overload:Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.Title
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.Title
+  nameWithType: GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.Title
 - uid: Google.GenAI.Types.GroundingChunkRetrievedContext
   name: GroundingChunkRetrievedContext
   href: api/Google.GenAI.Types.GroundingChunkRetrievedContext.html
@@ -6463,6 +6502,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GroundingMetadata.SearchEntryPoint
   nameWithType: GroundingMetadata.SearchEntryPoint
+- uid: Google.GenAI.Types.GroundingMetadata.SourceFlaggingUris
+  name: SourceFlaggingUris
+  href: api/Google.GenAI.Types.GroundingMetadata.html#Google_GenAI_Types_GroundingMetadata_SourceFlaggingUris
+  commentId: P:Google.GenAI.Types.GroundingMetadata.SourceFlaggingUris
+  fullName: Google.GenAI.Types.GroundingMetadata.SourceFlaggingUris
+  nameWithType: GroundingMetadata.SourceFlaggingUris
+- uid: Google.GenAI.Types.GroundingMetadata.SourceFlaggingUris*
+  name: SourceFlaggingUris
+  href: api/Google.GenAI.Types.GroundingMetadata.html#Google_GenAI_Types_GroundingMetadata_SourceFlaggingUris_
+  commentId: Overload:Google.GenAI.Types.GroundingMetadata.SourceFlaggingUris
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingMetadata.SourceFlaggingUris
+  nameWithType: GroundingMetadata.SourceFlaggingUris
 - uid: Google.GenAI.Types.GroundingMetadata.WebSearchQueries
   name: WebSearchQueries
   href: api/Google.GenAI.Types.GroundingMetadata.html#Google_GenAI_Types_GroundingMetadata_WebSearchQueries
@@ -6476,6 +6528,54 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GroundingMetadata.WebSearchQueries
   nameWithType: GroundingMetadata.WebSearchQueries
+- uid: Google.GenAI.Types.GroundingMetadataSourceFlaggingUri
+  name: GroundingMetadataSourceFlaggingUri
+  href: api/Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.html
+  commentId: T:Google.GenAI.Types.GroundingMetadataSourceFlaggingUri
+  fullName: Google.GenAI.Types.GroundingMetadataSourceFlaggingUri
+  nameWithType: GroundingMetadataSourceFlaggingUri
+- uid: Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.FlagContentUri
+  name: FlagContentUri
+  href: api/Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.html#Google_GenAI_Types_GroundingMetadataSourceFlaggingUri_FlagContentUri
+  commentId: P:Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.FlagContentUri
+  fullName: Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.FlagContentUri
+  nameWithType: GroundingMetadataSourceFlaggingUri.FlagContentUri
+- uid: Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.FlagContentUri*
+  name: FlagContentUri
+  href: api/Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.html#Google_GenAI_Types_GroundingMetadataSourceFlaggingUri_FlagContentUri_
+  commentId: Overload:Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.FlagContentUri
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.FlagContentUri
+  nameWithType: GroundingMetadataSourceFlaggingUri.FlagContentUri
+- uid: Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.html#Google_GenAI_Types_GroundingMetadataSourceFlaggingUri_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: GroundingMetadataSourceFlaggingUri.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: GroundingMetadataSourceFlaggingUri.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.html#Google_GenAI_Types_GroundingMetadataSourceFlaggingUri_FromJson_
+  commentId: Overload:Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.FromJson
+  nameWithType: GroundingMetadataSourceFlaggingUri.FromJson
+- uid: Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.SourceId
+  name: SourceId
+  href: api/Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.html#Google_GenAI_Types_GroundingMetadataSourceFlaggingUri_SourceId
+  commentId: P:Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.SourceId
+  fullName: Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.SourceId
+  nameWithType: GroundingMetadataSourceFlaggingUri.SourceId
+- uid: Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.SourceId*
+  name: SourceId
+  href: api/Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.html#Google_GenAI_Types_GroundingMetadataSourceFlaggingUri_SourceId_
+  commentId: Overload:Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.SourceId
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.SourceId
+  nameWithType: GroundingMetadataSourceFlaggingUri.SourceId
 - uid: Google.GenAI.Types.GroundingSupport
   name: GroundingSupport
   href: api/Google.GenAI.Types.GroundingSupport.html

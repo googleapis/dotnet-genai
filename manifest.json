@@ -1330,6 +1330,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.GroundingMetadataSourceFlaggingUri",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.yml\" sourcestartlinenumber=\"1\">Source content flagging uri for a place or review. This is currently populated only for Google\nMaps grounding.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.GroundingSupport.yml",
       "output": {
         ".html": {
