@@ -803,6 +803,22 @@ references:
   fullName.vb: Google.GenAI.Models.New
   nameWithType: Models.Models
   nameWithType.vb: Models.New
+- uid: Google.GenAI.Models.EditImageAsync(System.String,System.String,System.Collections.Generic.List{Google.GenAI.Types.IReferenceImage},Google.GenAI.Types.EditImageConfig)
+  name: EditImageAsync(string, string, List<IReferenceImage>, EditImageConfig?)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_EditImageAsync_System_String_System_String_System_Collections_Generic_List_Google_GenAI_Types_IReferenceImage__Google_GenAI_Types_EditImageConfig_
+  commentId: M:Google.GenAI.Models.EditImageAsync(System.String,System.String,System.Collections.Generic.List{Google.GenAI.Types.IReferenceImage},Google.GenAI.Types.EditImageConfig)
+  name.vb: EditImageAsync(String, String, List(Of IReferenceImage), EditImageConfig)
+  fullName: Google.GenAI.Models.EditImageAsync(string, string, System.Collections.Generic.List<Google.GenAI.Types.IReferenceImage>, Google.GenAI.Types.EditImageConfig?)
+  fullName.vb: Google.GenAI.Models.EditImageAsync(String, String, System.Collections.Generic.List(Of Google.GenAI.Types.IReferenceImage), Google.GenAI.Types.EditImageConfig)
+  nameWithType: Models.EditImageAsync(string, string, List<IReferenceImage>, EditImageConfig?)
+  nameWithType.vb: Models.EditImageAsync(String, String, List(Of IReferenceImage), EditImageConfig)
+- uid: Google.GenAI.Models.EditImageAsync*
+  name: EditImageAsync
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_EditImageAsync_
+  commentId: Overload:Google.GenAI.Models.EditImageAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Models.EditImageAsync
+  nameWithType: Models.EditImageAsync
 - uid: Google.GenAI.Models.GenerateContentAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.GenerateContentConfig)
   name: GenerateContentAsync(string, Content, GenerateContentConfig?)
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_GenerateContentAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_GenerateContentConfig_
@@ -2412,6 +2428,67 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ContentEmbeddingStatistics.Truncated
   nameWithType: ContentEmbeddingStatistics.Truncated
+- uid: Google.GenAI.Types.ContentReferenceImage
+  name: ContentReferenceImage
+  href: api/Google.GenAI.Types.ContentReferenceImage.html
+  commentId: T:Google.GenAI.Types.ContentReferenceImage
+  fullName: Google.GenAI.Types.ContentReferenceImage
+  nameWithType: ContentReferenceImage
+- uid: Google.GenAI.Types.ContentReferenceImage.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ContentReferenceImage.html#Google_GenAI_Types_ContentReferenceImage_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ContentReferenceImage.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ContentReferenceImage.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ContentReferenceImage.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ContentReferenceImage.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ContentReferenceImage.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ContentReferenceImage.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ContentReferenceImage.html#Google_GenAI_Types_ContentReferenceImage_FromJson_
+  commentId: Overload:Google.GenAI.Types.ContentReferenceImage.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ContentReferenceImage.FromJson
+  nameWithType: ContentReferenceImage.FromJson
+- uid: Google.GenAI.Types.ContentReferenceImage.ReferenceId
+  name: ReferenceId
+  href: api/Google.GenAI.Types.ContentReferenceImage.html#Google_GenAI_Types_ContentReferenceImage_ReferenceId
+  commentId: P:Google.GenAI.Types.ContentReferenceImage.ReferenceId
+  fullName: Google.GenAI.Types.ContentReferenceImage.ReferenceId
+  nameWithType: ContentReferenceImage.ReferenceId
+- uid: Google.GenAI.Types.ContentReferenceImage.ReferenceId*
+  name: ReferenceId
+  href: api/Google.GenAI.Types.ContentReferenceImage.html#Google_GenAI_Types_ContentReferenceImage_ReferenceId_
+  commentId: Overload:Google.GenAI.Types.ContentReferenceImage.ReferenceId
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ContentReferenceImage.ReferenceId
+  nameWithType: ContentReferenceImage.ReferenceId
+- uid: Google.GenAI.Types.ContentReferenceImage.ReferenceImage
+  name: ReferenceImage
+  href: api/Google.GenAI.Types.ContentReferenceImage.html#Google_GenAI_Types_ContentReferenceImage_ReferenceImage
+  commentId: P:Google.GenAI.Types.ContentReferenceImage.ReferenceImage
+  fullName: Google.GenAI.Types.ContentReferenceImage.ReferenceImage
+  nameWithType: ContentReferenceImage.ReferenceImage
+- uid: Google.GenAI.Types.ContentReferenceImage.ReferenceImage*
+  name: ReferenceImage
+  href: api/Google.GenAI.Types.ContentReferenceImage.html#Google_GenAI_Types_ContentReferenceImage_ReferenceImage_
+  commentId: Overload:Google.GenAI.Types.ContentReferenceImage.ReferenceImage
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ContentReferenceImage.ReferenceImage
+  nameWithType: ContentReferenceImage.ReferenceImage
+- uid: Google.GenAI.Types.ContentReferenceImage.ReferenceType
+  name: ReferenceType
+  href: api/Google.GenAI.Types.ContentReferenceImage.html#Google_GenAI_Types_ContentReferenceImage_ReferenceType
+  commentId: P:Google.GenAI.Types.ContentReferenceImage.ReferenceType
+  fullName: Google.GenAI.Types.ContentReferenceImage.ReferenceType
+  nameWithType: ContentReferenceImage.ReferenceType
+- uid: Google.GenAI.Types.ContentReferenceImage.ReferenceType*
+  name: ReferenceType
+  href: api/Google.GenAI.Types.ContentReferenceImage.html#Google_GenAI_Types_ContentReferenceImage_ReferenceType_
+  commentId: Overload:Google.GenAI.Types.ContentReferenceImage.ReferenceType
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ContentReferenceImage.ReferenceType
+  nameWithType: ContentReferenceImage.ReferenceType
 - uid: Google.GenAI.Types.ContextWindowCompressionConfig
   name: ContextWindowCompressionConfig
   href: api/Google.GenAI.Types.ContextWindowCompressionConfig.html
@@ -2460,6 +2537,158 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ContextWindowCompressionConfig.TriggerTokens
   nameWithType: ContextWindowCompressionConfig.TriggerTokens
+- uid: Google.GenAI.Types.ControlReferenceConfig
+  name: ControlReferenceConfig
+  href: api/Google.GenAI.Types.ControlReferenceConfig.html
+  commentId: T:Google.GenAI.Types.ControlReferenceConfig
+  fullName: Google.GenAI.Types.ControlReferenceConfig
+  nameWithType: ControlReferenceConfig
+- uid: Google.GenAI.Types.ControlReferenceConfig.ControlType
+  name: ControlType
+  href: api/Google.GenAI.Types.ControlReferenceConfig.html#Google_GenAI_Types_ControlReferenceConfig_ControlType
+  commentId: P:Google.GenAI.Types.ControlReferenceConfig.ControlType
+  fullName: Google.GenAI.Types.ControlReferenceConfig.ControlType
+  nameWithType: ControlReferenceConfig.ControlType
+- uid: Google.GenAI.Types.ControlReferenceConfig.ControlType*
+  name: ControlType
+  href: api/Google.GenAI.Types.ControlReferenceConfig.html#Google_GenAI_Types_ControlReferenceConfig_ControlType_
+  commentId: Overload:Google.GenAI.Types.ControlReferenceConfig.ControlType
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ControlReferenceConfig.ControlType
+  nameWithType: ControlReferenceConfig.ControlType
+- uid: Google.GenAI.Types.ControlReferenceConfig.EnableControlImageComputation
+  name: EnableControlImageComputation
+  href: api/Google.GenAI.Types.ControlReferenceConfig.html#Google_GenAI_Types_ControlReferenceConfig_EnableControlImageComputation
+  commentId: P:Google.GenAI.Types.ControlReferenceConfig.EnableControlImageComputation
+  fullName: Google.GenAI.Types.ControlReferenceConfig.EnableControlImageComputation
+  nameWithType: ControlReferenceConfig.EnableControlImageComputation
+- uid: Google.GenAI.Types.ControlReferenceConfig.EnableControlImageComputation*
+  name: EnableControlImageComputation
+  href: api/Google.GenAI.Types.ControlReferenceConfig.html#Google_GenAI_Types_ControlReferenceConfig_EnableControlImageComputation_
+  commentId: Overload:Google.GenAI.Types.ControlReferenceConfig.EnableControlImageComputation
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ControlReferenceConfig.EnableControlImageComputation
+  nameWithType: ControlReferenceConfig.EnableControlImageComputation
+- uid: Google.GenAI.Types.ControlReferenceConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ControlReferenceConfig.html#Google_GenAI_Types_ControlReferenceConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ControlReferenceConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ControlReferenceConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ControlReferenceConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ControlReferenceConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ControlReferenceConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ControlReferenceConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ControlReferenceConfig.html#Google_GenAI_Types_ControlReferenceConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.ControlReferenceConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ControlReferenceConfig.FromJson
+  nameWithType: ControlReferenceConfig.FromJson
+- uid: Google.GenAI.Types.ControlReferenceImage
+  name: ControlReferenceImage
+  href: api/Google.GenAI.Types.ControlReferenceImage.html
+  commentId: T:Google.GenAI.Types.ControlReferenceImage
+  fullName: Google.GenAI.Types.ControlReferenceImage
+  nameWithType: ControlReferenceImage
+- uid: Google.GenAI.Types.ControlReferenceImage.Config
+  name: Config
+  href: api/Google.GenAI.Types.ControlReferenceImage.html#Google_GenAI_Types_ControlReferenceImage_Config
+  commentId: P:Google.GenAI.Types.ControlReferenceImage.Config
+  fullName: Google.GenAI.Types.ControlReferenceImage.Config
+  nameWithType: ControlReferenceImage.Config
+- uid: Google.GenAI.Types.ControlReferenceImage.Config*
+  name: Config
+  href: api/Google.GenAI.Types.ControlReferenceImage.html#Google_GenAI_Types_ControlReferenceImage_Config_
+  commentId: Overload:Google.GenAI.Types.ControlReferenceImage.Config
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ControlReferenceImage.Config
+  nameWithType: ControlReferenceImage.Config
+- uid: Google.GenAI.Types.ControlReferenceImage.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ControlReferenceImage.html#Google_GenAI_Types_ControlReferenceImage_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ControlReferenceImage.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ControlReferenceImage.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ControlReferenceImage.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ControlReferenceImage.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ControlReferenceImage.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ControlReferenceImage.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ControlReferenceImage.html#Google_GenAI_Types_ControlReferenceImage_FromJson_
+  commentId: Overload:Google.GenAI.Types.ControlReferenceImage.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ControlReferenceImage.FromJson
+  nameWithType: ControlReferenceImage.FromJson
+- uid: Google.GenAI.Types.ControlReferenceImage.ReferenceId
+  name: ReferenceId
+  href: api/Google.GenAI.Types.ControlReferenceImage.html#Google_GenAI_Types_ControlReferenceImage_ReferenceId
+  commentId: P:Google.GenAI.Types.ControlReferenceImage.ReferenceId
+  fullName: Google.GenAI.Types.ControlReferenceImage.ReferenceId
+  nameWithType: ControlReferenceImage.ReferenceId
+- uid: Google.GenAI.Types.ControlReferenceImage.ReferenceId*
+  name: ReferenceId
+  href: api/Google.GenAI.Types.ControlReferenceImage.html#Google_GenAI_Types_ControlReferenceImage_ReferenceId_
+  commentId: Overload:Google.GenAI.Types.ControlReferenceImage.ReferenceId
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ControlReferenceImage.ReferenceId
+  nameWithType: ControlReferenceImage.ReferenceId
+- uid: Google.GenAI.Types.ControlReferenceImage.ReferenceImage
+  name: ReferenceImage
+  href: api/Google.GenAI.Types.ControlReferenceImage.html#Google_GenAI_Types_ControlReferenceImage_ReferenceImage
+  commentId: P:Google.GenAI.Types.ControlReferenceImage.ReferenceImage
+  fullName: Google.GenAI.Types.ControlReferenceImage.ReferenceImage
+  nameWithType: ControlReferenceImage.ReferenceImage
+- uid: Google.GenAI.Types.ControlReferenceImage.ReferenceImage*
+  name: ReferenceImage
+  href: api/Google.GenAI.Types.ControlReferenceImage.html#Google_GenAI_Types_ControlReferenceImage_ReferenceImage_
+  commentId: Overload:Google.GenAI.Types.ControlReferenceImage.ReferenceImage
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ControlReferenceImage.ReferenceImage
+  nameWithType: ControlReferenceImage.ReferenceImage
+- uid: Google.GenAI.Types.ControlReferenceImage.ReferenceType
+  name: ReferenceType
+  href: api/Google.GenAI.Types.ControlReferenceImage.html#Google_GenAI_Types_ControlReferenceImage_ReferenceType
+  commentId: P:Google.GenAI.Types.ControlReferenceImage.ReferenceType
+  fullName: Google.GenAI.Types.ControlReferenceImage.ReferenceType
+  nameWithType: ControlReferenceImage.ReferenceType
+- uid: Google.GenAI.Types.ControlReferenceImage.ReferenceType*
+  name: ReferenceType
+  href: api/Google.GenAI.Types.ControlReferenceImage.html#Google_GenAI_Types_ControlReferenceImage_ReferenceType_
+  commentId: Overload:Google.GenAI.Types.ControlReferenceImage.ReferenceType
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ControlReferenceImage.ReferenceType
+  nameWithType: ControlReferenceImage.ReferenceType
+- uid: Google.GenAI.Types.ControlReferenceType
+  name: ControlReferenceType
+  href: api/Google.GenAI.Types.ControlReferenceType.html
+  commentId: T:Google.GenAI.Types.ControlReferenceType
+  fullName: Google.GenAI.Types.ControlReferenceType
+  nameWithType: ControlReferenceType
+- uid: Google.GenAI.Types.ControlReferenceType.CONTROL_TYPE_CANNY
+  name: CONTROL_TYPE_CANNY
+  href: api/Google.GenAI.Types.ControlReferenceType.html#Google_GenAI_Types_ControlReferenceType_CONTROL_TYPE_CANNY
+  commentId: F:Google.GenAI.Types.ControlReferenceType.CONTROL_TYPE_CANNY
+  fullName: Google.GenAI.Types.ControlReferenceType.CONTROL_TYPE_CANNY
+  nameWithType: ControlReferenceType.CONTROL_TYPE_CANNY
+- uid: Google.GenAI.Types.ControlReferenceType.CONTROL_TYPE_DEFAULT
+  name: CONTROL_TYPE_DEFAULT
+  href: api/Google.GenAI.Types.ControlReferenceType.html#Google_GenAI_Types_ControlReferenceType_CONTROL_TYPE_DEFAULT
+  commentId: F:Google.GenAI.Types.ControlReferenceType.CONTROL_TYPE_DEFAULT
+  fullName: Google.GenAI.Types.ControlReferenceType.CONTROL_TYPE_DEFAULT
+  nameWithType: ControlReferenceType.CONTROL_TYPE_DEFAULT
+- uid: Google.GenAI.Types.ControlReferenceType.CONTROL_TYPE_FACE_MESH
+  name: CONTROL_TYPE_FACE_MESH
+  href: api/Google.GenAI.Types.ControlReferenceType.html#Google_GenAI_Types_ControlReferenceType_CONTROL_TYPE_FACE_MESH
+  commentId: F:Google.GenAI.Types.ControlReferenceType.CONTROL_TYPE_FACE_MESH
+  fullName: Google.GenAI.Types.ControlReferenceType.CONTROL_TYPE_FACE_MESH
+  nameWithType: ControlReferenceType.CONTROL_TYPE_FACE_MESH
+- uid: Google.GenAI.Types.ControlReferenceType.CONTROL_TYPE_SCRIBBLE
+  name: CONTROL_TYPE_SCRIBBLE
+  href: api/Google.GenAI.Types.ControlReferenceType.html#Google_GenAI_Types_ControlReferenceType_CONTROL_TYPE_SCRIBBLE
+  commentId: F:Google.GenAI.Types.ControlReferenceType.CONTROL_TYPE_SCRIBBLE
+  fullName: Google.GenAI.Types.ControlReferenceType.CONTROL_TYPE_SCRIBBLE
+  nameWithType: ControlReferenceType.CONTROL_TYPE_SCRIBBLE
 - uid: Google.GenAI.Types.CreateAuthTokenConfig
   name: CreateAuthTokenConfig
   href: api/Google.GenAI.Types.CreateAuthTokenConfig.html
@@ -2661,6 +2890,351 @@ references:
   commentId: F:Google.GenAI.Types.DynamicRetrievalConfigMode.MODE_UNSPECIFIED
   fullName: Google.GenAI.Types.DynamicRetrievalConfigMode.MODE_UNSPECIFIED
   nameWithType: DynamicRetrievalConfigMode.MODE_UNSPECIFIED
+- uid: Google.GenAI.Types.EditImageConfig
+  name: EditImageConfig
+  href: api/Google.GenAI.Types.EditImageConfig.html
+  commentId: T:Google.GenAI.Types.EditImageConfig
+  fullName: Google.GenAI.Types.EditImageConfig
+  nameWithType: EditImageConfig
+- uid: Google.GenAI.Types.EditImageConfig.AddWatermark
+  name: AddWatermark
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_AddWatermark
+  commentId: P:Google.GenAI.Types.EditImageConfig.AddWatermark
+  fullName: Google.GenAI.Types.EditImageConfig.AddWatermark
+  nameWithType: EditImageConfig.AddWatermark
+- uid: Google.GenAI.Types.EditImageConfig.AddWatermark*
+  name: AddWatermark
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_AddWatermark_
+  commentId: Overload:Google.GenAI.Types.EditImageConfig.AddWatermark
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EditImageConfig.AddWatermark
+  nameWithType: EditImageConfig.AddWatermark
+- uid: Google.GenAI.Types.EditImageConfig.AspectRatio
+  name: AspectRatio
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_AspectRatio
+  commentId: P:Google.GenAI.Types.EditImageConfig.AspectRatio
+  fullName: Google.GenAI.Types.EditImageConfig.AspectRatio
+  nameWithType: EditImageConfig.AspectRatio
+- uid: Google.GenAI.Types.EditImageConfig.AspectRatio*
+  name: AspectRatio
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_AspectRatio_
+  commentId: Overload:Google.GenAI.Types.EditImageConfig.AspectRatio
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EditImageConfig.AspectRatio
+  nameWithType: EditImageConfig.AspectRatio
+- uid: Google.GenAI.Types.EditImageConfig.BaseSteps
+  name: BaseSteps
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_BaseSteps
+  commentId: P:Google.GenAI.Types.EditImageConfig.BaseSteps
+  fullName: Google.GenAI.Types.EditImageConfig.BaseSteps
+  nameWithType: EditImageConfig.BaseSteps
+- uid: Google.GenAI.Types.EditImageConfig.BaseSteps*
+  name: BaseSteps
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_BaseSteps_
+  commentId: Overload:Google.GenAI.Types.EditImageConfig.BaseSteps
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EditImageConfig.BaseSteps
+  nameWithType: EditImageConfig.BaseSteps
+- uid: Google.GenAI.Types.EditImageConfig.EditMode
+  name: EditMode
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_EditMode
+  commentId: P:Google.GenAI.Types.EditImageConfig.EditMode
+  fullName: Google.GenAI.Types.EditImageConfig.EditMode
+  nameWithType: EditImageConfig.EditMode
+- uid: Google.GenAI.Types.EditImageConfig.EditMode*
+  name: EditMode
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_EditMode_
+  commentId: Overload:Google.GenAI.Types.EditImageConfig.EditMode
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EditImageConfig.EditMode
+  nameWithType: EditImageConfig.EditMode
+- uid: Google.GenAI.Types.EditImageConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.EditImageConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.EditImageConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.EditImageConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: EditImageConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: EditImageConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.EditImageConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.EditImageConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EditImageConfig.FromJson
+  nameWithType: EditImageConfig.FromJson
+- uid: Google.GenAI.Types.EditImageConfig.GuidanceScale
+  name: GuidanceScale
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_GuidanceScale
+  commentId: P:Google.GenAI.Types.EditImageConfig.GuidanceScale
+  fullName: Google.GenAI.Types.EditImageConfig.GuidanceScale
+  nameWithType: EditImageConfig.GuidanceScale
+- uid: Google.GenAI.Types.EditImageConfig.GuidanceScale*
+  name: GuidanceScale
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_GuidanceScale_
+  commentId: Overload:Google.GenAI.Types.EditImageConfig.GuidanceScale
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EditImageConfig.GuidanceScale
+  nameWithType: EditImageConfig.GuidanceScale
+- uid: Google.GenAI.Types.EditImageConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.EditImageConfig.HttpOptions
+  fullName: Google.GenAI.Types.EditImageConfig.HttpOptions
+  nameWithType: EditImageConfig.HttpOptions
+- uid: Google.GenAI.Types.EditImageConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.EditImageConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EditImageConfig.HttpOptions
+  nameWithType: EditImageConfig.HttpOptions
+- uid: Google.GenAI.Types.EditImageConfig.IncludeRaiReason
+  name: IncludeRaiReason
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_IncludeRaiReason
+  commentId: P:Google.GenAI.Types.EditImageConfig.IncludeRaiReason
+  fullName: Google.GenAI.Types.EditImageConfig.IncludeRaiReason
+  nameWithType: EditImageConfig.IncludeRaiReason
+- uid: Google.GenAI.Types.EditImageConfig.IncludeRaiReason*
+  name: IncludeRaiReason
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_IncludeRaiReason_
+  commentId: Overload:Google.GenAI.Types.EditImageConfig.IncludeRaiReason
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EditImageConfig.IncludeRaiReason
+  nameWithType: EditImageConfig.IncludeRaiReason
+- uid: Google.GenAI.Types.EditImageConfig.IncludeSafetyAttributes
+  name: IncludeSafetyAttributes
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_IncludeSafetyAttributes
+  commentId: P:Google.GenAI.Types.EditImageConfig.IncludeSafetyAttributes
+  fullName: Google.GenAI.Types.EditImageConfig.IncludeSafetyAttributes
+  nameWithType: EditImageConfig.IncludeSafetyAttributes
+- uid: Google.GenAI.Types.EditImageConfig.IncludeSafetyAttributes*
+  name: IncludeSafetyAttributes
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_IncludeSafetyAttributes_
+  commentId: Overload:Google.GenAI.Types.EditImageConfig.IncludeSafetyAttributes
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EditImageConfig.IncludeSafetyAttributes
+  nameWithType: EditImageConfig.IncludeSafetyAttributes
+- uid: Google.GenAI.Types.EditImageConfig.Labels
+  name: Labels
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_Labels
+  commentId: P:Google.GenAI.Types.EditImageConfig.Labels
+  fullName: Google.GenAI.Types.EditImageConfig.Labels
+  nameWithType: EditImageConfig.Labels
+- uid: Google.GenAI.Types.EditImageConfig.Labels*
+  name: Labels
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_Labels_
+  commentId: Overload:Google.GenAI.Types.EditImageConfig.Labels
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EditImageConfig.Labels
+  nameWithType: EditImageConfig.Labels
+- uid: Google.GenAI.Types.EditImageConfig.Language
+  name: Language
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_Language
+  commentId: P:Google.GenAI.Types.EditImageConfig.Language
+  fullName: Google.GenAI.Types.EditImageConfig.Language
+  nameWithType: EditImageConfig.Language
+- uid: Google.GenAI.Types.EditImageConfig.Language*
+  name: Language
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_Language_
+  commentId: Overload:Google.GenAI.Types.EditImageConfig.Language
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EditImageConfig.Language
+  nameWithType: EditImageConfig.Language
+- uid: Google.GenAI.Types.EditImageConfig.NegativePrompt
+  name: NegativePrompt
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_NegativePrompt
+  commentId: P:Google.GenAI.Types.EditImageConfig.NegativePrompt
+  fullName: Google.GenAI.Types.EditImageConfig.NegativePrompt
+  nameWithType: EditImageConfig.NegativePrompt
+- uid: Google.GenAI.Types.EditImageConfig.NegativePrompt*
+  name: NegativePrompt
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_NegativePrompt_
+  commentId: Overload:Google.GenAI.Types.EditImageConfig.NegativePrompt
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EditImageConfig.NegativePrompt
+  nameWithType: EditImageConfig.NegativePrompt
+- uid: Google.GenAI.Types.EditImageConfig.NumberOfImages
+  name: NumberOfImages
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_NumberOfImages
+  commentId: P:Google.GenAI.Types.EditImageConfig.NumberOfImages
+  fullName: Google.GenAI.Types.EditImageConfig.NumberOfImages
+  nameWithType: EditImageConfig.NumberOfImages
+- uid: Google.GenAI.Types.EditImageConfig.NumberOfImages*
+  name: NumberOfImages
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_NumberOfImages_
+  commentId: Overload:Google.GenAI.Types.EditImageConfig.NumberOfImages
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EditImageConfig.NumberOfImages
+  nameWithType: EditImageConfig.NumberOfImages
+- uid: Google.GenAI.Types.EditImageConfig.OutputCompressionQuality
+  name: OutputCompressionQuality
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_OutputCompressionQuality
+  commentId: P:Google.GenAI.Types.EditImageConfig.OutputCompressionQuality
+  fullName: Google.GenAI.Types.EditImageConfig.OutputCompressionQuality
+  nameWithType: EditImageConfig.OutputCompressionQuality
+- uid: Google.GenAI.Types.EditImageConfig.OutputCompressionQuality*
+  name: OutputCompressionQuality
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_OutputCompressionQuality_
+  commentId: Overload:Google.GenAI.Types.EditImageConfig.OutputCompressionQuality
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EditImageConfig.OutputCompressionQuality
+  nameWithType: EditImageConfig.OutputCompressionQuality
+- uid: Google.GenAI.Types.EditImageConfig.OutputGcsUri
+  name: OutputGcsUri
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_OutputGcsUri
+  commentId: P:Google.GenAI.Types.EditImageConfig.OutputGcsUri
+  fullName: Google.GenAI.Types.EditImageConfig.OutputGcsUri
+  nameWithType: EditImageConfig.OutputGcsUri
+- uid: Google.GenAI.Types.EditImageConfig.OutputGcsUri*
+  name: OutputGcsUri
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_OutputGcsUri_
+  commentId: Overload:Google.GenAI.Types.EditImageConfig.OutputGcsUri
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EditImageConfig.OutputGcsUri
+  nameWithType: EditImageConfig.OutputGcsUri
+- uid: Google.GenAI.Types.EditImageConfig.OutputMimeType
+  name: OutputMimeType
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_OutputMimeType
+  commentId: P:Google.GenAI.Types.EditImageConfig.OutputMimeType
+  fullName: Google.GenAI.Types.EditImageConfig.OutputMimeType
+  nameWithType: EditImageConfig.OutputMimeType
+- uid: Google.GenAI.Types.EditImageConfig.OutputMimeType*
+  name: OutputMimeType
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_OutputMimeType_
+  commentId: Overload:Google.GenAI.Types.EditImageConfig.OutputMimeType
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EditImageConfig.OutputMimeType
+  nameWithType: EditImageConfig.OutputMimeType
+- uid: Google.GenAI.Types.EditImageConfig.PersonGeneration
+  name: PersonGeneration
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_PersonGeneration
+  commentId: P:Google.GenAI.Types.EditImageConfig.PersonGeneration
+  fullName: Google.GenAI.Types.EditImageConfig.PersonGeneration
+  nameWithType: EditImageConfig.PersonGeneration
+- uid: Google.GenAI.Types.EditImageConfig.PersonGeneration*
+  name: PersonGeneration
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_PersonGeneration_
+  commentId: Overload:Google.GenAI.Types.EditImageConfig.PersonGeneration
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EditImageConfig.PersonGeneration
+  nameWithType: EditImageConfig.PersonGeneration
+- uid: Google.GenAI.Types.EditImageConfig.SafetyFilterLevel
+  name: SafetyFilterLevel
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_SafetyFilterLevel
+  commentId: P:Google.GenAI.Types.EditImageConfig.SafetyFilterLevel
+  fullName: Google.GenAI.Types.EditImageConfig.SafetyFilterLevel
+  nameWithType: EditImageConfig.SafetyFilterLevel
+- uid: Google.GenAI.Types.EditImageConfig.SafetyFilterLevel*
+  name: SafetyFilterLevel
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_SafetyFilterLevel_
+  commentId: Overload:Google.GenAI.Types.EditImageConfig.SafetyFilterLevel
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EditImageConfig.SafetyFilterLevel
+  nameWithType: EditImageConfig.SafetyFilterLevel
+- uid: Google.GenAI.Types.EditImageConfig.Seed
+  name: Seed
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_Seed
+  commentId: P:Google.GenAI.Types.EditImageConfig.Seed
+  fullName: Google.GenAI.Types.EditImageConfig.Seed
+  nameWithType: EditImageConfig.Seed
+- uid: Google.GenAI.Types.EditImageConfig.Seed*
+  name: Seed
+  href: api/Google.GenAI.Types.EditImageConfig.html#Google_GenAI_Types_EditImageConfig_Seed_
+  commentId: Overload:Google.GenAI.Types.EditImageConfig.Seed
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EditImageConfig.Seed
+  nameWithType: EditImageConfig.Seed
+- uid: Google.GenAI.Types.EditImageResponse
+  name: EditImageResponse
+  href: api/Google.GenAI.Types.EditImageResponse.html
+  commentId: T:Google.GenAI.Types.EditImageResponse
+  fullName: Google.GenAI.Types.EditImageResponse
+  nameWithType: EditImageResponse
+- uid: Google.GenAI.Types.EditImageResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.EditImageResponse.html#Google_GenAI_Types_EditImageResponse_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.EditImageResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.EditImageResponse.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.EditImageResponse.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: EditImageResponse.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: EditImageResponse.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.EditImageResponse.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.EditImageResponse.html#Google_GenAI_Types_EditImageResponse_FromJson_
+  commentId: Overload:Google.GenAI.Types.EditImageResponse.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EditImageResponse.FromJson
+  nameWithType: EditImageResponse.FromJson
+- uid: Google.GenAI.Types.EditImageResponse.GeneratedImages
+  name: GeneratedImages
+  href: api/Google.GenAI.Types.EditImageResponse.html#Google_GenAI_Types_EditImageResponse_GeneratedImages
+  commentId: P:Google.GenAI.Types.EditImageResponse.GeneratedImages
+  fullName: Google.GenAI.Types.EditImageResponse.GeneratedImages
+  nameWithType: EditImageResponse.GeneratedImages
+- uid: Google.GenAI.Types.EditImageResponse.GeneratedImages*
+  name: GeneratedImages
+  href: api/Google.GenAI.Types.EditImageResponse.html#Google_GenAI_Types_EditImageResponse_GeneratedImages_
+  commentId: Overload:Google.GenAI.Types.EditImageResponse.GeneratedImages
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EditImageResponse.GeneratedImages
+  nameWithType: EditImageResponse.GeneratedImages
+- uid: Google.GenAI.Types.EditMode
+  name: EditMode
+  href: api/Google.GenAI.Types.EditMode.html
+  commentId: T:Google.GenAI.Types.EditMode
+  fullName: Google.GenAI.Types.EditMode
+  nameWithType: EditMode
+- uid: Google.GenAI.Types.EditMode.EDIT_MODE_BGSWAP
+  name: EDIT_MODE_BGSWAP
+  href: api/Google.GenAI.Types.EditMode.html#Google_GenAI_Types_EditMode_EDIT_MODE_BGSWAP
+  commentId: F:Google.GenAI.Types.EditMode.EDIT_MODE_BGSWAP
+  fullName: Google.GenAI.Types.EditMode.EDIT_MODE_BGSWAP
+  nameWithType: EditMode.EDIT_MODE_BGSWAP
+- uid: Google.GenAI.Types.EditMode.EDIT_MODE_CONTROLLED_EDITING
+  name: EDIT_MODE_CONTROLLED_EDITING
+  href: api/Google.GenAI.Types.EditMode.html#Google_GenAI_Types_EditMode_EDIT_MODE_CONTROLLED_EDITING
+  commentId: F:Google.GenAI.Types.EditMode.EDIT_MODE_CONTROLLED_EDITING
+  fullName: Google.GenAI.Types.EditMode.EDIT_MODE_CONTROLLED_EDITING
+  nameWithType: EditMode.EDIT_MODE_CONTROLLED_EDITING
+- uid: Google.GenAI.Types.EditMode.EDIT_MODE_DEFAULT
+  name: EDIT_MODE_DEFAULT
+  href: api/Google.GenAI.Types.EditMode.html#Google_GenAI_Types_EditMode_EDIT_MODE_DEFAULT
+  commentId: F:Google.GenAI.Types.EditMode.EDIT_MODE_DEFAULT
+  fullName: Google.GenAI.Types.EditMode.EDIT_MODE_DEFAULT
+  nameWithType: EditMode.EDIT_MODE_DEFAULT
+- uid: Google.GenAI.Types.EditMode.EDIT_MODE_INPAINT_INSERTION
+  name: EDIT_MODE_INPAINT_INSERTION
+  href: api/Google.GenAI.Types.EditMode.html#Google_GenAI_Types_EditMode_EDIT_MODE_INPAINT_INSERTION
+  commentId: F:Google.GenAI.Types.EditMode.EDIT_MODE_INPAINT_INSERTION
+  fullName: Google.GenAI.Types.EditMode.EDIT_MODE_INPAINT_INSERTION
+  nameWithType: EditMode.EDIT_MODE_INPAINT_INSERTION
+- uid: Google.GenAI.Types.EditMode.EDIT_MODE_INPAINT_REMOVAL
+  name: EDIT_MODE_INPAINT_REMOVAL
+  href: api/Google.GenAI.Types.EditMode.html#Google_GenAI_Types_EditMode_EDIT_MODE_INPAINT_REMOVAL
+  commentId: F:Google.GenAI.Types.EditMode.EDIT_MODE_INPAINT_REMOVAL
+  fullName: Google.GenAI.Types.EditMode.EDIT_MODE_INPAINT_REMOVAL
+  nameWithType: EditMode.EDIT_MODE_INPAINT_REMOVAL
+- uid: Google.GenAI.Types.EditMode.EDIT_MODE_OUTPAINT
+  name: EDIT_MODE_OUTPAINT
+  href: api/Google.GenAI.Types.EditMode.html#Google_GenAI_Types_EditMode_EDIT_MODE_OUTPAINT
+  commentId: F:Google.GenAI.Types.EditMode.EDIT_MODE_OUTPAINT
+  fullName: Google.GenAI.Types.EditMode.EDIT_MODE_OUTPAINT
+  nameWithType: EditMode.EDIT_MODE_OUTPAINT
+- uid: Google.GenAI.Types.EditMode.EDIT_MODE_PRODUCT_IMAGE
+  name: EDIT_MODE_PRODUCT_IMAGE
+  href: api/Google.GenAI.Types.EditMode.html#Google_GenAI_Types_EditMode_EDIT_MODE_PRODUCT_IMAGE
+  commentId: F:Google.GenAI.Types.EditMode.EDIT_MODE_PRODUCT_IMAGE
+  fullName: Google.GenAI.Types.EditMode.EDIT_MODE_PRODUCT_IMAGE
+  nameWithType: EditMode.EDIT_MODE_PRODUCT_IMAGE
+- uid: Google.GenAI.Types.EditMode.EDIT_MODE_STYLE
+  name: EDIT_MODE_STYLE
+  href: api/Google.GenAI.Types.EditMode.html#Google_GenAI_Types_EditMode_EDIT_MODE_STYLE
+  commentId: F:Google.GenAI.Types.EditMode.EDIT_MODE_STYLE
+  fullName: Google.GenAI.Types.EditMode.EDIT_MODE_STYLE
+  nameWithType: EditMode.EDIT_MODE_STYLE
 - uid: Google.GenAI.Types.EmbedContentBatch
   name: EmbedContentBatch
   href: api/Google.GenAI.Types.EmbedContentBatch.html
@@ -6915,12 +7489,34 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.HttpOptions.Timeout
   nameWithType: HttpOptions.Timeout
+- uid: Google.GenAI.Types.IReferenceImage
+  name: IReferenceImage
+  href: api/Google.GenAI.Types.IReferenceImage.html
+  commentId: T:Google.GenAI.Types.IReferenceImage
+  fullName: Google.GenAI.Types.IReferenceImage
+  nameWithType: IReferenceImage
 - uid: Google.GenAI.Types.Image
   name: Image
   href: api/Google.GenAI.Types.Image.html
   commentId: T:Google.GenAI.Types.Image
   fullName: Google.GenAI.Types.Image
   nameWithType: Image
+- uid: Google.GenAI.Types.Image.FromFile(System.String,System.String)
+  name: FromFile(string, string)
+  href: api/Google.GenAI.Types.Image.html#Google_GenAI_Types_Image_FromFile_System_String_System_String_
+  commentId: M:Google.GenAI.Types.Image.FromFile(System.String,System.String)
+  name.vb: FromFile(String, String)
+  fullName: Google.GenAI.Types.Image.FromFile(string, string)
+  fullName.vb: Google.GenAI.Types.Image.FromFile(String, String)
+  nameWithType: Image.FromFile(string, string)
+  nameWithType.vb: Image.FromFile(String, String)
+- uid: Google.GenAI.Types.Image.FromFile*
+  name: FromFile
+  href: api/Google.GenAI.Types.Image.html#Google_GenAI_Types_Image_FromFile_
+  commentId: Overload:Google.GenAI.Types.Image.FromFile
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Image.FromFile
+  nameWithType: Image.FromFile
 - uid: Google.GenAI.Types.Image.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
   name: FromJson(string, JsonSerializerOptions?)
   href: api/Google.GenAI.Types.Image.html#Google_GenAI_Types_Image_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
@@ -8942,6 +9538,177 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.LogprobsResultTopCandidates.FromJson
   nameWithType: LogprobsResultTopCandidates.FromJson
+- uid: Google.GenAI.Types.MaskReferenceConfig
+  name: MaskReferenceConfig
+  href: api/Google.GenAI.Types.MaskReferenceConfig.html
+  commentId: T:Google.GenAI.Types.MaskReferenceConfig
+  fullName: Google.GenAI.Types.MaskReferenceConfig
+  nameWithType: MaskReferenceConfig
+- uid: Google.GenAI.Types.MaskReferenceConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.MaskReferenceConfig.html#Google_GenAI_Types_MaskReferenceConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.MaskReferenceConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.MaskReferenceConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.MaskReferenceConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: MaskReferenceConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: MaskReferenceConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.MaskReferenceConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.MaskReferenceConfig.html#Google_GenAI_Types_MaskReferenceConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.MaskReferenceConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.MaskReferenceConfig.FromJson
+  nameWithType: MaskReferenceConfig.FromJson
+- uid: Google.GenAI.Types.MaskReferenceConfig.MaskDilation
+  name: MaskDilation
+  href: api/Google.GenAI.Types.MaskReferenceConfig.html#Google_GenAI_Types_MaskReferenceConfig_MaskDilation
+  commentId: P:Google.GenAI.Types.MaskReferenceConfig.MaskDilation
+  fullName: Google.GenAI.Types.MaskReferenceConfig.MaskDilation
+  nameWithType: MaskReferenceConfig.MaskDilation
+- uid: Google.GenAI.Types.MaskReferenceConfig.MaskDilation*
+  name: MaskDilation
+  href: api/Google.GenAI.Types.MaskReferenceConfig.html#Google_GenAI_Types_MaskReferenceConfig_MaskDilation_
+  commentId: Overload:Google.GenAI.Types.MaskReferenceConfig.MaskDilation
+  isSpec: "True"
+  fullName: Google.GenAI.Types.MaskReferenceConfig.MaskDilation
+  nameWithType: MaskReferenceConfig.MaskDilation
+- uid: Google.GenAI.Types.MaskReferenceConfig.MaskMode
+  name: MaskMode
+  href: api/Google.GenAI.Types.MaskReferenceConfig.html#Google_GenAI_Types_MaskReferenceConfig_MaskMode
+  commentId: P:Google.GenAI.Types.MaskReferenceConfig.MaskMode
+  fullName: Google.GenAI.Types.MaskReferenceConfig.MaskMode
+  nameWithType: MaskReferenceConfig.MaskMode
+- uid: Google.GenAI.Types.MaskReferenceConfig.MaskMode*
+  name: MaskMode
+  href: api/Google.GenAI.Types.MaskReferenceConfig.html#Google_GenAI_Types_MaskReferenceConfig_MaskMode_
+  commentId: Overload:Google.GenAI.Types.MaskReferenceConfig.MaskMode
+  isSpec: "True"
+  fullName: Google.GenAI.Types.MaskReferenceConfig.MaskMode
+  nameWithType: MaskReferenceConfig.MaskMode
+- uid: Google.GenAI.Types.MaskReferenceConfig.SegmentationClasses
+  name: SegmentationClasses
+  href: api/Google.GenAI.Types.MaskReferenceConfig.html#Google_GenAI_Types_MaskReferenceConfig_SegmentationClasses
+  commentId: P:Google.GenAI.Types.MaskReferenceConfig.SegmentationClasses
+  fullName: Google.GenAI.Types.MaskReferenceConfig.SegmentationClasses
+  nameWithType: MaskReferenceConfig.SegmentationClasses
+- uid: Google.GenAI.Types.MaskReferenceConfig.SegmentationClasses*
+  name: SegmentationClasses
+  href: api/Google.GenAI.Types.MaskReferenceConfig.html#Google_GenAI_Types_MaskReferenceConfig_SegmentationClasses_
+  commentId: Overload:Google.GenAI.Types.MaskReferenceConfig.SegmentationClasses
+  isSpec: "True"
+  fullName: Google.GenAI.Types.MaskReferenceConfig.SegmentationClasses
+  nameWithType: MaskReferenceConfig.SegmentationClasses
+- uid: Google.GenAI.Types.MaskReferenceImage
+  name: MaskReferenceImage
+  href: api/Google.GenAI.Types.MaskReferenceImage.html
+  commentId: T:Google.GenAI.Types.MaskReferenceImage
+  fullName: Google.GenAI.Types.MaskReferenceImage
+  nameWithType: MaskReferenceImage
+- uid: Google.GenAI.Types.MaskReferenceImage.Config
+  name: Config
+  href: api/Google.GenAI.Types.MaskReferenceImage.html#Google_GenAI_Types_MaskReferenceImage_Config
+  commentId: P:Google.GenAI.Types.MaskReferenceImage.Config
+  fullName: Google.GenAI.Types.MaskReferenceImage.Config
+  nameWithType: MaskReferenceImage.Config
+- uid: Google.GenAI.Types.MaskReferenceImage.Config*
+  name: Config
+  href: api/Google.GenAI.Types.MaskReferenceImage.html#Google_GenAI_Types_MaskReferenceImage_Config_
+  commentId: Overload:Google.GenAI.Types.MaskReferenceImage.Config
+  isSpec: "True"
+  fullName: Google.GenAI.Types.MaskReferenceImage.Config
+  nameWithType: MaskReferenceImage.Config
+- uid: Google.GenAI.Types.MaskReferenceImage.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.MaskReferenceImage.html#Google_GenAI_Types_MaskReferenceImage_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.MaskReferenceImage.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.MaskReferenceImage.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.MaskReferenceImage.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: MaskReferenceImage.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: MaskReferenceImage.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.MaskReferenceImage.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.MaskReferenceImage.html#Google_GenAI_Types_MaskReferenceImage_FromJson_
+  commentId: Overload:Google.GenAI.Types.MaskReferenceImage.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.MaskReferenceImage.FromJson
+  nameWithType: MaskReferenceImage.FromJson
+- uid: Google.GenAI.Types.MaskReferenceImage.ReferenceId
+  name: ReferenceId
+  href: api/Google.GenAI.Types.MaskReferenceImage.html#Google_GenAI_Types_MaskReferenceImage_ReferenceId
+  commentId: P:Google.GenAI.Types.MaskReferenceImage.ReferenceId
+  fullName: Google.GenAI.Types.MaskReferenceImage.ReferenceId
+  nameWithType: MaskReferenceImage.ReferenceId
+- uid: Google.GenAI.Types.MaskReferenceImage.ReferenceId*
+  name: ReferenceId
+  href: api/Google.GenAI.Types.MaskReferenceImage.html#Google_GenAI_Types_MaskReferenceImage_ReferenceId_
+  commentId: Overload:Google.GenAI.Types.MaskReferenceImage.ReferenceId
+  isSpec: "True"
+  fullName: Google.GenAI.Types.MaskReferenceImage.ReferenceId
+  nameWithType: MaskReferenceImage.ReferenceId
+- uid: Google.GenAI.Types.MaskReferenceImage.ReferenceImage
+  name: ReferenceImage
+  href: api/Google.GenAI.Types.MaskReferenceImage.html#Google_GenAI_Types_MaskReferenceImage_ReferenceImage
+  commentId: P:Google.GenAI.Types.MaskReferenceImage.ReferenceImage
+  fullName: Google.GenAI.Types.MaskReferenceImage.ReferenceImage
+  nameWithType: MaskReferenceImage.ReferenceImage
+- uid: Google.GenAI.Types.MaskReferenceImage.ReferenceImage*
+  name: ReferenceImage
+  href: api/Google.GenAI.Types.MaskReferenceImage.html#Google_GenAI_Types_MaskReferenceImage_ReferenceImage_
+  commentId: Overload:Google.GenAI.Types.MaskReferenceImage.ReferenceImage
+  isSpec: "True"
+  fullName: Google.GenAI.Types.MaskReferenceImage.ReferenceImage
+  nameWithType: MaskReferenceImage.ReferenceImage
+- uid: Google.GenAI.Types.MaskReferenceImage.ReferenceType
+  name: ReferenceType
+  href: api/Google.GenAI.Types.MaskReferenceImage.html#Google_GenAI_Types_MaskReferenceImage_ReferenceType
+  commentId: P:Google.GenAI.Types.MaskReferenceImage.ReferenceType
+  fullName: Google.GenAI.Types.MaskReferenceImage.ReferenceType
+  nameWithType: MaskReferenceImage.ReferenceType
+- uid: Google.GenAI.Types.MaskReferenceImage.ReferenceType*
+  name: ReferenceType
+  href: api/Google.GenAI.Types.MaskReferenceImage.html#Google_GenAI_Types_MaskReferenceImage_ReferenceType_
+  commentId: Overload:Google.GenAI.Types.MaskReferenceImage.ReferenceType
+  isSpec: "True"
+  fullName: Google.GenAI.Types.MaskReferenceImage.ReferenceType
+  nameWithType: MaskReferenceImage.ReferenceType
+- uid: Google.GenAI.Types.MaskReferenceMode
+  name: MaskReferenceMode
+  href: api/Google.GenAI.Types.MaskReferenceMode.html
+  commentId: T:Google.GenAI.Types.MaskReferenceMode
+  fullName: Google.GenAI.Types.MaskReferenceMode
+  nameWithType: MaskReferenceMode
+- uid: Google.GenAI.Types.MaskReferenceMode.MASK_MODE_BACKGROUND
+  name: MASK_MODE_BACKGROUND
+  href: api/Google.GenAI.Types.MaskReferenceMode.html#Google_GenAI_Types_MaskReferenceMode_MASK_MODE_BACKGROUND
+  commentId: F:Google.GenAI.Types.MaskReferenceMode.MASK_MODE_BACKGROUND
+  fullName: Google.GenAI.Types.MaskReferenceMode.MASK_MODE_BACKGROUND
+  nameWithType: MaskReferenceMode.MASK_MODE_BACKGROUND
+- uid: Google.GenAI.Types.MaskReferenceMode.MASK_MODE_DEFAULT
+  name: MASK_MODE_DEFAULT
+  href: api/Google.GenAI.Types.MaskReferenceMode.html#Google_GenAI_Types_MaskReferenceMode_MASK_MODE_DEFAULT
+  commentId: F:Google.GenAI.Types.MaskReferenceMode.MASK_MODE_DEFAULT
+  fullName: Google.GenAI.Types.MaskReferenceMode.MASK_MODE_DEFAULT
+  nameWithType: MaskReferenceMode.MASK_MODE_DEFAULT
+- uid: Google.GenAI.Types.MaskReferenceMode.MASK_MODE_FOREGROUND
+  name: MASK_MODE_FOREGROUND
+  href: api/Google.GenAI.Types.MaskReferenceMode.html#Google_GenAI_Types_MaskReferenceMode_MASK_MODE_FOREGROUND
+  commentId: F:Google.GenAI.Types.MaskReferenceMode.MASK_MODE_FOREGROUND
+  fullName: Google.GenAI.Types.MaskReferenceMode.MASK_MODE_FOREGROUND
+  nameWithType: MaskReferenceMode.MASK_MODE_FOREGROUND
+- uid: Google.GenAI.Types.MaskReferenceMode.MASK_MODE_SEMANTIC
+  name: MASK_MODE_SEMANTIC
+  href: api/Google.GenAI.Types.MaskReferenceMode.html#Google_GenAI_Types_MaskReferenceMode_MASK_MODE_SEMANTIC
+  commentId: F:Google.GenAI.Types.MaskReferenceMode.MASK_MODE_SEMANTIC
+  fullName: Google.GenAI.Types.MaskReferenceMode.MASK_MODE_SEMANTIC
+  nameWithType: MaskReferenceMode.MASK_MODE_SEMANTIC
+- uid: Google.GenAI.Types.MaskReferenceMode.MASK_MODE_USER_PROVIDED
+  name: MASK_MODE_USER_PROVIDED
+  href: api/Google.GenAI.Types.MaskReferenceMode.html#Google_GenAI_Types_MaskReferenceMode_MASK_MODE_USER_PROVIDED
+  commentId: F:Google.GenAI.Types.MaskReferenceMode.MASK_MODE_USER_PROVIDED
+  fullName: Google.GenAI.Types.MaskReferenceMode.MASK_MODE_USER_PROVIDED
+  nameWithType: MaskReferenceMode.MASK_MODE_USER_PROVIDED
 - uid: Google.GenAI.Types.MediaModality
   name: MediaModality
   href: api/Google.GenAI.Types.MediaModality.html
@@ -10018,6 +10785,67 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.RagRetrievalConfigRankingRankService.ModelName
   nameWithType: RagRetrievalConfigRankingRankService.ModelName
+- uid: Google.GenAI.Types.RawReferenceImage
+  name: RawReferenceImage
+  href: api/Google.GenAI.Types.RawReferenceImage.html
+  commentId: T:Google.GenAI.Types.RawReferenceImage
+  fullName: Google.GenAI.Types.RawReferenceImage
+  nameWithType: RawReferenceImage
+- uid: Google.GenAI.Types.RawReferenceImage.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.RawReferenceImage.html#Google_GenAI_Types_RawReferenceImage_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.RawReferenceImage.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.RawReferenceImage.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.RawReferenceImage.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: RawReferenceImage.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: RawReferenceImage.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.RawReferenceImage.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.RawReferenceImage.html#Google_GenAI_Types_RawReferenceImage_FromJson_
+  commentId: Overload:Google.GenAI.Types.RawReferenceImage.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RawReferenceImage.FromJson
+  nameWithType: RawReferenceImage.FromJson
+- uid: Google.GenAI.Types.RawReferenceImage.ReferenceId
+  name: ReferenceId
+  href: api/Google.GenAI.Types.RawReferenceImage.html#Google_GenAI_Types_RawReferenceImage_ReferenceId
+  commentId: P:Google.GenAI.Types.RawReferenceImage.ReferenceId
+  fullName: Google.GenAI.Types.RawReferenceImage.ReferenceId
+  nameWithType: RawReferenceImage.ReferenceId
+- uid: Google.GenAI.Types.RawReferenceImage.ReferenceId*
+  name: ReferenceId
+  href: api/Google.GenAI.Types.RawReferenceImage.html#Google_GenAI_Types_RawReferenceImage_ReferenceId_
+  commentId: Overload:Google.GenAI.Types.RawReferenceImage.ReferenceId
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RawReferenceImage.ReferenceId
+  nameWithType: RawReferenceImage.ReferenceId
+- uid: Google.GenAI.Types.RawReferenceImage.ReferenceImage
+  name: ReferenceImage
+  href: api/Google.GenAI.Types.RawReferenceImage.html#Google_GenAI_Types_RawReferenceImage_ReferenceImage
+  commentId: P:Google.GenAI.Types.RawReferenceImage.ReferenceImage
+  fullName: Google.GenAI.Types.RawReferenceImage.ReferenceImage
+  nameWithType: RawReferenceImage.ReferenceImage
+- uid: Google.GenAI.Types.RawReferenceImage.ReferenceImage*
+  name: ReferenceImage
+  href: api/Google.GenAI.Types.RawReferenceImage.html#Google_GenAI_Types_RawReferenceImage_ReferenceImage_
+  commentId: Overload:Google.GenAI.Types.RawReferenceImage.ReferenceImage
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RawReferenceImage.ReferenceImage
+  nameWithType: RawReferenceImage.ReferenceImage
+- uid: Google.GenAI.Types.RawReferenceImage.ReferenceType
+  name: ReferenceType
+  href: api/Google.GenAI.Types.RawReferenceImage.html#Google_GenAI_Types_RawReferenceImage_ReferenceType
+  commentId: P:Google.GenAI.Types.RawReferenceImage.ReferenceType
+  fullName: Google.GenAI.Types.RawReferenceImage.ReferenceType
+  nameWithType: RawReferenceImage.ReferenceType
+- uid: Google.GenAI.Types.RawReferenceImage.ReferenceType*
+  name: ReferenceType
+  href: api/Google.GenAI.Types.RawReferenceImage.html#Google_GenAI_Types_RawReferenceImage_ReferenceType_
+  commentId: Overload:Google.GenAI.Types.RawReferenceImage.ReferenceType
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RawReferenceImage.ReferenceType
+  nameWithType: RawReferenceImage.ReferenceType
 - uid: Google.GenAI.Types.RealtimeInputConfig
   name: RealtimeInputConfig
   href: api/Google.GenAI.Types.RealtimeInputConfig.html
@@ -11478,6 +12306,267 @@ references:
   commentId: F:Google.GenAI.Types.StartSensitivity.START_SENSITIVITY_UNSPECIFIED
   fullName: Google.GenAI.Types.StartSensitivity.START_SENSITIVITY_UNSPECIFIED
   nameWithType: StartSensitivity.START_SENSITIVITY_UNSPECIFIED
+- uid: Google.GenAI.Types.StyleReferenceConfig
+  name: StyleReferenceConfig
+  href: api/Google.GenAI.Types.StyleReferenceConfig.html
+  commentId: T:Google.GenAI.Types.StyleReferenceConfig
+  fullName: Google.GenAI.Types.StyleReferenceConfig
+  nameWithType: StyleReferenceConfig
+- uid: Google.GenAI.Types.StyleReferenceConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.StyleReferenceConfig.html#Google_GenAI_Types_StyleReferenceConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.StyleReferenceConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.StyleReferenceConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.StyleReferenceConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: StyleReferenceConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: StyleReferenceConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.StyleReferenceConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.StyleReferenceConfig.html#Google_GenAI_Types_StyleReferenceConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.StyleReferenceConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.StyleReferenceConfig.FromJson
+  nameWithType: StyleReferenceConfig.FromJson
+- uid: Google.GenAI.Types.StyleReferenceConfig.StyleDescription
+  name: StyleDescription
+  href: api/Google.GenAI.Types.StyleReferenceConfig.html#Google_GenAI_Types_StyleReferenceConfig_StyleDescription
+  commentId: P:Google.GenAI.Types.StyleReferenceConfig.StyleDescription
+  fullName: Google.GenAI.Types.StyleReferenceConfig.StyleDescription
+  nameWithType: StyleReferenceConfig.StyleDescription
+- uid: Google.GenAI.Types.StyleReferenceConfig.StyleDescription*
+  name: StyleDescription
+  href: api/Google.GenAI.Types.StyleReferenceConfig.html#Google_GenAI_Types_StyleReferenceConfig_StyleDescription_
+  commentId: Overload:Google.GenAI.Types.StyleReferenceConfig.StyleDescription
+  isSpec: "True"
+  fullName: Google.GenAI.Types.StyleReferenceConfig.StyleDescription
+  nameWithType: StyleReferenceConfig.StyleDescription
+- uid: Google.GenAI.Types.StyleReferenceImage
+  name: StyleReferenceImage
+  href: api/Google.GenAI.Types.StyleReferenceImage.html
+  commentId: T:Google.GenAI.Types.StyleReferenceImage
+  fullName: Google.GenAI.Types.StyleReferenceImage
+  nameWithType: StyleReferenceImage
+- uid: Google.GenAI.Types.StyleReferenceImage.Config
+  name: Config
+  href: api/Google.GenAI.Types.StyleReferenceImage.html#Google_GenAI_Types_StyleReferenceImage_Config
+  commentId: P:Google.GenAI.Types.StyleReferenceImage.Config
+  fullName: Google.GenAI.Types.StyleReferenceImage.Config
+  nameWithType: StyleReferenceImage.Config
+- uid: Google.GenAI.Types.StyleReferenceImage.Config*
+  name: Config
+  href: api/Google.GenAI.Types.StyleReferenceImage.html#Google_GenAI_Types_StyleReferenceImage_Config_
+  commentId: Overload:Google.GenAI.Types.StyleReferenceImage.Config
+  isSpec: "True"
+  fullName: Google.GenAI.Types.StyleReferenceImage.Config
+  nameWithType: StyleReferenceImage.Config
+- uid: Google.GenAI.Types.StyleReferenceImage.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.StyleReferenceImage.html#Google_GenAI_Types_StyleReferenceImage_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.StyleReferenceImage.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.StyleReferenceImage.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.StyleReferenceImage.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: StyleReferenceImage.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: StyleReferenceImage.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.StyleReferenceImage.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.StyleReferenceImage.html#Google_GenAI_Types_StyleReferenceImage_FromJson_
+  commentId: Overload:Google.GenAI.Types.StyleReferenceImage.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.StyleReferenceImage.FromJson
+  nameWithType: StyleReferenceImage.FromJson
+- uid: Google.GenAI.Types.StyleReferenceImage.ReferenceId
+  name: ReferenceId
+  href: api/Google.GenAI.Types.StyleReferenceImage.html#Google_GenAI_Types_StyleReferenceImage_ReferenceId
+  commentId: P:Google.GenAI.Types.StyleReferenceImage.ReferenceId
+  fullName: Google.GenAI.Types.StyleReferenceImage.ReferenceId
+  nameWithType: StyleReferenceImage.ReferenceId
+- uid: Google.GenAI.Types.StyleReferenceImage.ReferenceId*
+  name: ReferenceId
+  href: api/Google.GenAI.Types.StyleReferenceImage.html#Google_GenAI_Types_StyleReferenceImage_ReferenceId_
+  commentId: Overload:Google.GenAI.Types.StyleReferenceImage.ReferenceId
+  isSpec: "True"
+  fullName: Google.GenAI.Types.StyleReferenceImage.ReferenceId
+  nameWithType: StyleReferenceImage.ReferenceId
+- uid: Google.GenAI.Types.StyleReferenceImage.ReferenceImage
+  name: ReferenceImage
+  href: api/Google.GenAI.Types.StyleReferenceImage.html#Google_GenAI_Types_StyleReferenceImage_ReferenceImage
+  commentId: P:Google.GenAI.Types.StyleReferenceImage.ReferenceImage
+  fullName: Google.GenAI.Types.StyleReferenceImage.ReferenceImage
+  nameWithType: StyleReferenceImage.ReferenceImage
+- uid: Google.GenAI.Types.StyleReferenceImage.ReferenceImage*
+  name: ReferenceImage
+  href: api/Google.GenAI.Types.StyleReferenceImage.html#Google_GenAI_Types_StyleReferenceImage_ReferenceImage_
+  commentId: Overload:Google.GenAI.Types.StyleReferenceImage.ReferenceImage
+  isSpec: "True"
+  fullName: Google.GenAI.Types.StyleReferenceImage.ReferenceImage
+  nameWithType: StyleReferenceImage.ReferenceImage
+- uid: Google.GenAI.Types.StyleReferenceImage.ReferenceType
+  name: ReferenceType
+  href: api/Google.GenAI.Types.StyleReferenceImage.html#Google_GenAI_Types_StyleReferenceImage_ReferenceType
+  commentId: P:Google.GenAI.Types.StyleReferenceImage.ReferenceType
+  fullName: Google.GenAI.Types.StyleReferenceImage.ReferenceType
+  nameWithType: StyleReferenceImage.ReferenceType
+- uid: Google.GenAI.Types.StyleReferenceImage.ReferenceType*
+  name: ReferenceType
+  href: api/Google.GenAI.Types.StyleReferenceImage.html#Google_GenAI_Types_StyleReferenceImage_ReferenceType_
+  commentId: Overload:Google.GenAI.Types.StyleReferenceImage.ReferenceType
+  isSpec: "True"
+  fullName: Google.GenAI.Types.StyleReferenceImage.ReferenceType
+  nameWithType: StyleReferenceImage.ReferenceType
+- uid: Google.GenAI.Types.SubjectReferenceConfig
+  name: SubjectReferenceConfig
+  href: api/Google.GenAI.Types.SubjectReferenceConfig.html
+  commentId: T:Google.GenAI.Types.SubjectReferenceConfig
+  fullName: Google.GenAI.Types.SubjectReferenceConfig
+  nameWithType: SubjectReferenceConfig
+- uid: Google.GenAI.Types.SubjectReferenceConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.SubjectReferenceConfig.html#Google_GenAI_Types_SubjectReferenceConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.SubjectReferenceConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.SubjectReferenceConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.SubjectReferenceConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: SubjectReferenceConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: SubjectReferenceConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.SubjectReferenceConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.SubjectReferenceConfig.html#Google_GenAI_Types_SubjectReferenceConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.SubjectReferenceConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SubjectReferenceConfig.FromJson
+  nameWithType: SubjectReferenceConfig.FromJson
+- uid: Google.GenAI.Types.SubjectReferenceConfig.SubjectDescription
+  name: SubjectDescription
+  href: api/Google.GenAI.Types.SubjectReferenceConfig.html#Google_GenAI_Types_SubjectReferenceConfig_SubjectDescription
+  commentId: P:Google.GenAI.Types.SubjectReferenceConfig.SubjectDescription
+  fullName: Google.GenAI.Types.SubjectReferenceConfig.SubjectDescription
+  nameWithType: SubjectReferenceConfig.SubjectDescription
+- uid: Google.GenAI.Types.SubjectReferenceConfig.SubjectDescription*
+  name: SubjectDescription
+  href: api/Google.GenAI.Types.SubjectReferenceConfig.html#Google_GenAI_Types_SubjectReferenceConfig_SubjectDescription_
+  commentId: Overload:Google.GenAI.Types.SubjectReferenceConfig.SubjectDescription
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SubjectReferenceConfig.SubjectDescription
+  nameWithType: SubjectReferenceConfig.SubjectDescription
+- uid: Google.GenAI.Types.SubjectReferenceConfig.SubjectType
+  name: SubjectType
+  href: api/Google.GenAI.Types.SubjectReferenceConfig.html#Google_GenAI_Types_SubjectReferenceConfig_SubjectType
+  commentId: P:Google.GenAI.Types.SubjectReferenceConfig.SubjectType
+  fullName: Google.GenAI.Types.SubjectReferenceConfig.SubjectType
+  nameWithType: SubjectReferenceConfig.SubjectType
+- uid: Google.GenAI.Types.SubjectReferenceConfig.SubjectType*
+  name: SubjectType
+  href: api/Google.GenAI.Types.SubjectReferenceConfig.html#Google_GenAI_Types_SubjectReferenceConfig_SubjectType_
+  commentId: Overload:Google.GenAI.Types.SubjectReferenceConfig.SubjectType
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SubjectReferenceConfig.SubjectType
+  nameWithType: SubjectReferenceConfig.SubjectType
+- uid: Google.GenAI.Types.SubjectReferenceImage
+  name: SubjectReferenceImage
+  href: api/Google.GenAI.Types.SubjectReferenceImage.html
+  commentId: T:Google.GenAI.Types.SubjectReferenceImage
+  fullName: Google.GenAI.Types.SubjectReferenceImage
+  nameWithType: SubjectReferenceImage
+- uid: Google.GenAI.Types.SubjectReferenceImage.Config
+  name: Config
+  href: api/Google.GenAI.Types.SubjectReferenceImage.html#Google_GenAI_Types_SubjectReferenceImage_Config
+  commentId: P:Google.GenAI.Types.SubjectReferenceImage.Config
+  fullName: Google.GenAI.Types.SubjectReferenceImage.Config
+  nameWithType: SubjectReferenceImage.Config
+- uid: Google.GenAI.Types.SubjectReferenceImage.Config*
+  name: Config
+  href: api/Google.GenAI.Types.SubjectReferenceImage.html#Google_GenAI_Types_SubjectReferenceImage_Config_
+  commentId: Overload:Google.GenAI.Types.SubjectReferenceImage.Config
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SubjectReferenceImage.Config
+  nameWithType: SubjectReferenceImage.Config
+- uid: Google.GenAI.Types.SubjectReferenceImage.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.SubjectReferenceImage.html#Google_GenAI_Types_SubjectReferenceImage_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.SubjectReferenceImage.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.SubjectReferenceImage.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.SubjectReferenceImage.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: SubjectReferenceImage.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: SubjectReferenceImage.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.SubjectReferenceImage.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.SubjectReferenceImage.html#Google_GenAI_Types_SubjectReferenceImage_FromJson_
+  commentId: Overload:Google.GenAI.Types.SubjectReferenceImage.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SubjectReferenceImage.FromJson
+  nameWithType: SubjectReferenceImage.FromJson
+- uid: Google.GenAI.Types.SubjectReferenceImage.ReferenceId
+  name: ReferenceId
+  href: api/Google.GenAI.Types.SubjectReferenceImage.html#Google_GenAI_Types_SubjectReferenceImage_ReferenceId
+  commentId: P:Google.GenAI.Types.SubjectReferenceImage.ReferenceId
+  fullName: Google.GenAI.Types.SubjectReferenceImage.ReferenceId
+  nameWithType: SubjectReferenceImage.ReferenceId
+- uid: Google.GenAI.Types.SubjectReferenceImage.ReferenceId*
+  name: ReferenceId
+  href: api/Google.GenAI.Types.SubjectReferenceImage.html#Google_GenAI_Types_SubjectReferenceImage_ReferenceId_
+  commentId: Overload:Google.GenAI.Types.SubjectReferenceImage.ReferenceId
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SubjectReferenceImage.ReferenceId
+  nameWithType: SubjectReferenceImage.ReferenceId
+- uid: Google.GenAI.Types.SubjectReferenceImage.ReferenceImage
+  name: ReferenceImage
+  href: api/Google.GenAI.Types.SubjectReferenceImage.html#Google_GenAI_Types_SubjectReferenceImage_ReferenceImage
+  commentId: P:Google.GenAI.Types.SubjectReferenceImage.ReferenceImage
+  fullName: Google.GenAI.Types.SubjectReferenceImage.ReferenceImage
+  nameWithType: SubjectReferenceImage.ReferenceImage
+- uid: Google.GenAI.Types.SubjectReferenceImage.ReferenceImage*
+  name: ReferenceImage
+  href: api/Google.GenAI.Types.SubjectReferenceImage.html#Google_GenAI_Types_SubjectReferenceImage_ReferenceImage_
+  commentId: Overload:Google.GenAI.Types.SubjectReferenceImage.ReferenceImage
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SubjectReferenceImage.ReferenceImage
+  nameWithType: SubjectReferenceImage.ReferenceImage
+- uid: Google.GenAI.Types.SubjectReferenceImage.ReferenceType
+  name: ReferenceType
+  href: api/Google.GenAI.Types.SubjectReferenceImage.html#Google_GenAI_Types_SubjectReferenceImage_ReferenceType
+  commentId: P:Google.GenAI.Types.SubjectReferenceImage.ReferenceType
+  fullName: Google.GenAI.Types.SubjectReferenceImage.ReferenceType
+  nameWithType: SubjectReferenceImage.ReferenceType
+- uid: Google.GenAI.Types.SubjectReferenceImage.ReferenceType*
+  name: ReferenceType
+  href: api/Google.GenAI.Types.SubjectReferenceImage.html#Google_GenAI_Types_SubjectReferenceImage_ReferenceType_
+  commentId: Overload:Google.GenAI.Types.SubjectReferenceImage.ReferenceType
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SubjectReferenceImage.ReferenceType
+  nameWithType: SubjectReferenceImage.ReferenceType
+- uid: Google.GenAI.Types.SubjectReferenceType
+  name: SubjectReferenceType
+  href: api/Google.GenAI.Types.SubjectReferenceType.html
+  commentId: T:Google.GenAI.Types.SubjectReferenceType
+  fullName: Google.GenAI.Types.SubjectReferenceType
+  nameWithType: SubjectReferenceType
+- uid: Google.GenAI.Types.SubjectReferenceType.SUBJECT_TYPE_ANIMAL
+  name: SUBJECT_TYPE_ANIMAL
+  href: api/Google.GenAI.Types.SubjectReferenceType.html#Google_GenAI_Types_SubjectReferenceType_SUBJECT_TYPE_ANIMAL
+  commentId: F:Google.GenAI.Types.SubjectReferenceType.SUBJECT_TYPE_ANIMAL
+  fullName: Google.GenAI.Types.SubjectReferenceType.SUBJECT_TYPE_ANIMAL
+  nameWithType: SubjectReferenceType.SUBJECT_TYPE_ANIMAL
+- uid: Google.GenAI.Types.SubjectReferenceType.SUBJECT_TYPE_DEFAULT
+  name: SUBJECT_TYPE_DEFAULT
+  href: api/Google.GenAI.Types.SubjectReferenceType.html#Google_GenAI_Types_SubjectReferenceType_SUBJECT_TYPE_DEFAULT
+  commentId: F:Google.GenAI.Types.SubjectReferenceType.SUBJECT_TYPE_DEFAULT
+  fullName: Google.GenAI.Types.SubjectReferenceType.SUBJECT_TYPE_DEFAULT
+  nameWithType: SubjectReferenceType.SUBJECT_TYPE_DEFAULT
+- uid: Google.GenAI.Types.SubjectReferenceType.SUBJECT_TYPE_PERSON
+  name: SUBJECT_TYPE_PERSON
+  href: api/Google.GenAI.Types.SubjectReferenceType.html#Google_GenAI_Types_SubjectReferenceType_SUBJECT_TYPE_PERSON
+  commentId: F:Google.GenAI.Types.SubjectReferenceType.SUBJECT_TYPE_PERSON
+  fullName: Google.GenAI.Types.SubjectReferenceType.SUBJECT_TYPE_PERSON
+  nameWithType: SubjectReferenceType.SUBJECT_TYPE_PERSON
+- uid: Google.GenAI.Types.SubjectReferenceType.SUBJECT_TYPE_PRODUCT
+  name: SUBJECT_TYPE_PRODUCT
+  href: api/Google.GenAI.Types.SubjectReferenceType.html#Google_GenAI_Types_SubjectReferenceType_SUBJECT_TYPE_PRODUCT
+  commentId: F:Google.GenAI.Types.SubjectReferenceType.SUBJECT_TYPE_PRODUCT
+  fullName: Google.GenAI.Types.SubjectReferenceType.SUBJECT_TYPE_PRODUCT
+  nameWithType: SubjectReferenceType.SUBJECT_TYPE_PRODUCT
 - uid: Google.GenAI.Types.TestTableFile
   name: TestTableFile
   href: api/Google.GenAI.Types.TestTableFile.html

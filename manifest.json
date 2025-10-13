@@ -560,6 +560,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ContentReferenceImage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ContentReferenceImage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ContentReferenceImage",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ContentReferenceImage.yml\" sourcestartlinenumber=\"1\">A content reference image.  A content reference image represents a subject to reference (ex.\nperson, product, animal) provided by the user. It can optionally be provided in addition to a\nstyle reference image (ex. background, style reference).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.ContextWindowCompressionConfig.yml",
       "output": {
         ".html": {
@@ -571,6 +585,48 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ContextWindowCompressionConfig",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ContextWindowCompressionConfig.yml\" sourcestartlinenumber=\"1\">Enables context window compression -- mechanism managing model context window so it does not\nexceed given length.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ControlReferenceConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ControlReferenceConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ControlReferenceConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ControlReferenceConfig.yml\" sourcestartlinenumber=\"1\">Configuration for a Control reference image.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ControlReferenceImage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ControlReferenceImage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ControlReferenceImage",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ControlReferenceImage.yml\" sourcestartlinenumber=\"1\">A control reference image.  The image of the control reference image is either a control image\nprovided by the user, or a regular image which the backend will use to generate a control\nimage of. In the case of the latter, the enable_control_image_computation field in the config\nshould be set to True.  A control image is an image that represents a sketch image of areas\nfor the model to fill in based on the prompt.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ControlReferenceType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ControlReferenceType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ControlReferenceType",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ControlReferenceType.yml\" sourcestartlinenumber=\"1\">Enum representing the control type of a control reference image.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -627,6 +683,48 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.DynamicRetrievalConfigMode",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DynamicRetrievalConfigMode.yml\" sourcestartlinenumber=\"1\">Config for the dynamic retrieval config mode.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.EditImageConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.EditImageConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.EditImageConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.EditImageConfig.yml\" sourcestartlinenumber=\"1\">Configuration for editing an image.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.EditImageResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.EditImageResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.EditImageResponse",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.EditImageResponse.yml\" sourcestartlinenumber=\"1\">Response for the request to edit an image.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.EditMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.EditMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.EditMode",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.EditMode.yml\" sourcestartlinenumber=\"1\">Enum representing the editing mode.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1442,6 +1540,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.IReferenceImage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.IReferenceImage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.IReferenceImage",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.IReferenceImage.yml\" sourcestartlinenumber=\"1\">The interface for ReferenceImage.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.Image.yml",
       "output": {
         ".html": {
@@ -1862,6 +1974,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.MaskReferenceConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.MaskReferenceConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.MaskReferenceConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.MaskReferenceConfig.yml\" sourcestartlinenumber=\"1\">Configuration for a Mask reference image.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.MaskReferenceImage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.MaskReferenceImage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.MaskReferenceImage",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.MaskReferenceImage.yml\" sourcestartlinenumber=\"1\">A mask reference image.  This encapsulates either a mask image provided by the user and\nconfigs for the user provided mask, or only config parameters for the model to generate a\nmask.  A mask image is an image whose non-zero values indicate where to edit the base image.\nIf the user provides a mask image, the mask must be in the same dimensions as the raw image.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.MaskReferenceMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.MaskReferenceMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.MaskReferenceMode",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.MaskReferenceMode.yml\" sourcestartlinenumber=\"1\">Enum representing the mask mode of a mask reference image.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.MediaModality.yml",
       "output": {
         ".html": {
@@ -2156,6 +2310,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.RawReferenceImage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.RawReferenceImage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.RawReferenceImage",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RawReferenceImage.yml\" sourcestartlinenumber=\"1\">A raw reference image.  A raw reference image represents the base image to edit, provided by\nthe user. It can optionally be provided in addition to a mask reference image or a style\nreference image.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.RealtimeInputConfig.yml",
       "output": {
         ".html": {
@@ -2447,6 +2615,76 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.StartSensitivity",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.StartSensitivity.yml\" sourcestartlinenumber=\"1\">Start of speech sensitivity.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.StyleReferenceConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.StyleReferenceConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.StyleReferenceConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.StyleReferenceConfig.yml\" sourcestartlinenumber=\"1\">Configuration for a Style reference image.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.StyleReferenceImage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.StyleReferenceImage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.StyleReferenceImage",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.StyleReferenceImage.yml\" sourcestartlinenumber=\"1\">A style reference image.  This encapsulates a style reference image provided by the user, and\nadditionally optional config parameters for the style reference image.  A raw reference image\ncan also be provided as a destination for the style to be applied to.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.SubjectReferenceConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.SubjectReferenceConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.SubjectReferenceConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SubjectReferenceConfig.yml\" sourcestartlinenumber=\"1\">Configuration for a Subject reference image.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.SubjectReferenceImage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.SubjectReferenceImage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.SubjectReferenceImage",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SubjectReferenceImage.yml\" sourcestartlinenumber=\"1\">A subject reference image.  This encapsulates a subject reference image provided by the user,\nand additionally optional config parameters for the subject reference image.  A raw reference\nimage can also be provided as a destination for the subject to be applied to.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.SubjectReferenceType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.SubjectReferenceType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.SubjectReferenceType",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SubjectReferenceType.yml\" sourcestartlinenumber=\"1\">Enum representing the subject type of a subject reference image.</p>\n"
     },
     {
       "type": "ManagedReference",

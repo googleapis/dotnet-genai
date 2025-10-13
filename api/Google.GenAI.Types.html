@@ -205,9 +205,30 @@ and always follows a <code>part</code> containing the [ExecutableCode].</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.ContentReferenceImage.html">ContentReferenceImage</a></dt>
+      <dd><p>A content reference image.  A content reference image represents a subject to reference (ex.
+person, product, animal) provided by the user. It can optionally be provided in addition to a
+style reference image (ex. background, style reference).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ContextWindowCompressionConfig.html">ContextWindowCompressionConfig</a></dt>
       <dd><p>Enables context window compression -- mechanism managing model context window so it does not
 exceed given length.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.ControlReferenceConfig.html">ControlReferenceConfig</a></dt>
+      <dd><p>Configuration for a Control reference image.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.ControlReferenceImage.html">ControlReferenceImage</a></dt>
+      <dd><p>A control reference image.  The image of the control reference image is either a control image
+provided by the user, or a regular image which the backend will use to generate a control
+image of. In the case of the latter, the enable_control_image_computation field in the config
+should be set to True.  A control image is an image that represents a sketch image of areas
+for the model to fill in based on the prompt.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -223,6 +244,16 @@ exceed given length.</p>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.DynamicRetrievalConfig.html">DynamicRetrievalConfig</a></dt>
       <dd><p>Describes the options to customize dynamic retrieval.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.EditImageConfig.html">EditImageConfig</a></dt>
+      <dd><p>Configuration for editing an image.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.EditImageResponse.html">EditImageResponse</a></dt>
+      <dd><p>Response for the request to edit an image.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -648,6 +679,19 @@ cases where the clients interrupt server turns.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.MaskReferenceConfig.html">MaskReferenceConfig</a></dt>
+      <dd><p>Configuration for a Mask reference image.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.MaskReferenceImage.html">MaskReferenceImage</a></dt>
+      <dd><p>A mask reference image.  This encapsulates either a mask image provided by the user and
+configs for the user provided mask, or only config parameters for the model to generate a
+mask.  A mask image is an image whose non-zero values indicate where to edit the base image.
+If the user provides a mask image, the mask must be in the same dimensions as the raw image.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ModalityTokenCount.html">ModalityTokenCount</a></dt>
       <dd><p>Represents token counting info for a single modality.</p>
 </dd>
@@ -722,6 +766,13 @@ same <code>Part</code> instance is considered invalid.</p>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.RagRetrievalConfigRankingRankService.html">RagRetrievalConfigRankingRankService</a></dt>
       <dd><p>Config for Rank Service.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.RawReferenceImage.html">RawReferenceImage</a></dt>
+      <dd><p>A raw reference image.  A raw reference image represents the base image to edit, provided by
+the user. It can optionally be provided in addition to a mask reference image or a style
+reference image.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -825,6 +876,30 @@ they will always stay at the beginning of context window.</p>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.SpeechConfig.html">SpeechConfig</a></dt>
       <dd><p>The speech generation configuration.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.StyleReferenceConfig.html">StyleReferenceConfig</a></dt>
+      <dd><p>Configuration for a Style reference image.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.StyleReferenceImage.html">StyleReferenceImage</a></dt>
+      <dd><p>A style reference image.  This encapsulates a style reference image provided by the user, and
+additionally optional config parameters for the style reference image.  A raw reference image
+can also be provided as a destination for the style to be applied to.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.SubjectReferenceConfig.html">SubjectReferenceConfig</a></dt>
+      <dd><p>Configuration for a Subject reference image.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.SubjectReferenceImage.html">SubjectReferenceImage</a></dt>
+      <dd><p>A subject reference image.  This encapsulates a subject reference image provided by the user,
+and additionally optional config parameters for the subject reference image.  A raw reference
+image can also be provided as a destination for the subject to be applied to.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -956,6 +1031,14 @@ data stores. For more information, see
       <dd><p>The configuration for the voice to use.</p>
 </dd>
     </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.IReferenceImage.html">IReferenceImage</a></dt>
+      <dd><p>The interface for ReferenceImage.</p>
+</dd>
+    </dl>
     <h3 id="enums">
 Enums
 </h3>
@@ -985,8 +1068,18 @@ Enums
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.ControlReferenceType.html">ControlReferenceType</a></dt>
+      <dd><p>Enum representing the control type of a control reference image.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.DynamicRetrievalConfigMode.html">DynamicRetrievalConfigMode</a></dt>
       <dd><p>Config for the dynamic retrieval config mode.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.EditMode.html">EditMode</a></dt>
+      <dd><p>Enum representing the editing mode.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -1057,6 +1150,11 @@ specified, the threshold is used for probability score.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.MaskReferenceMode.html">MaskReferenceMode</a></dt>
+      <dd><p>Enum representing the mask mode of a mask reference image.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.MediaModality.html">MediaModality</a></dt>
       <dd><p>Server content modalities.</p>
 </dd>
@@ -1094,6 +1192,11 @@ specified, the threshold is used for probability score.</p>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.StartSensitivity.html">StartSensitivity</a></dt>
       <dd><p>Start of speech sensitivity.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.SubjectReferenceType.html">SubjectReferenceType</a></dt>
+      <dd><p>Enum representing the subject type of a subject reference image.</p>
 </dd>
     </dl>
     <dl class="jumplist">
