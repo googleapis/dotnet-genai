@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// Required. The harm block threshold.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<HarmBlockThreshold>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum HarmBlockThreshold {
     /// <summary>
     /// Unspecified harm block threshold.

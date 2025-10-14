@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// The media resolution to use.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<MediaResolution>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum MediaResolution {
     /// <summary>
     /// Media resolution has not been set

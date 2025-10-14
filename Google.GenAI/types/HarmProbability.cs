@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// Output only. Harm probability levels in the content.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<HarmProbability>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum HarmProbability {
     /// <summary>
     /// Harm probability unspecified.

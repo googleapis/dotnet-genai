@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// Enum representing the subject type of a subject reference image.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<SubjectReferenceType>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum SubjectReferenceType {
     /// <summary>
     ///

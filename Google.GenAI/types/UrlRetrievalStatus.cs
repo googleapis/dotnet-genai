@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// Status of the url retrieval.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<UrlRetrievalStatus>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum UrlRetrievalStatus {
     /// <summary>
     /// Default value. This value is unused

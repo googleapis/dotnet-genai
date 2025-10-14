@@ -2,7 +2,7 @@
 
   <Import Project="../ReleaseVersion.xml" />
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFrameworks>net6.0;net8.0</TargetFrameworks>
     <Nullable>enable</Nullable>
     <warningLevel>1</warningLevel>
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>

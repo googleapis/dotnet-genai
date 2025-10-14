@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// The reason why the turn is complete.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<TurnCompleteReason>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum TurnCompleteReason {
     /// <summary>
     /// Default value. Reason is unspecified.

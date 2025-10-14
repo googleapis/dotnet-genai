@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// The different ways of handling user activity.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<ActivityHandling>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum ActivityHandling {
     /// <summary>
     /// If unspecified, the default behavior is `START_OF_ACTIVITY_INTERRUPTS`.

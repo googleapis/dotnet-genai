@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// The API spec that the external API implements.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<ApiSpec>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum ApiSpec {
     /// <summary>
     /// Unspecified API spec. This value should not be used.

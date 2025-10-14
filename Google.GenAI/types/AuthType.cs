@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// Type of auth scheme.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<AuthType>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum AuthType {
     /// <summary>
     ///

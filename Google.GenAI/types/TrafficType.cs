@@ -23,7 +23,7 @@ namespace Google.GenAI.Types {
   /// Output only. Traffic type. This shows whether a request consumes Pay-As-You-Go or Provisioned
   /// Throughput quota.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<TrafficType>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum TrafficType {
     /// <summary>
     /// Unspecified request traffic type.

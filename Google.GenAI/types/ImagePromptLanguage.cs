@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// Enum that specifies the language of the text in the prompt.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<ImagePromptLanguage>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum ImagePromptLanguage {
     /// <summary>
     /// Auto-detect the language.

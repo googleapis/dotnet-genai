@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// Specifies how the response should be scheduled in the conversation.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<FunctionResponseScheduling>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum FunctionResponseScheduling {
     /// <summary>
     /// This value is unused.

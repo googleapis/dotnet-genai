@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// Config for the function calling config mode.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<FunctionCallingConfigMode>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum FunctionCallingConfigMode {
     /// <summary>
     /// The function calling config mode is unspecified. Should not be used.

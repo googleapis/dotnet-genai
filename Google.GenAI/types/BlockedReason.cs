@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// Output only. Blocked reason.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<BlockedReason>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum BlockedReason {
     /// <summary>
     /// Unspecified blocked reason.

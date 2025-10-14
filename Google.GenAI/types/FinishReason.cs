@@ -23,7 +23,7 @@ namespace Google.GenAI.Types {
   /// Output only. The reason why the model stopped generating tokens.  If empty, the model has not
   /// stopped generating the tokens.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<FinishReason>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum FinishReason {
     /// <summary>
     /// The finish reason is unspecified.

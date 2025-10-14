@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// Defines the function behavior. Defaults to `BLOCKING`.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<Behavior>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum Behavior {
     /// <summary>
     /// This value is unused.

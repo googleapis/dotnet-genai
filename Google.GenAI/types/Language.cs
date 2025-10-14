@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// Required. Programming language of the `code`.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<Language>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum Language {
     /// <summary>
     /// Unspecified language. This value should not be used.

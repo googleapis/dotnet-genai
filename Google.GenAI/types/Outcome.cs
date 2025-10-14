@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// Required. Outcome of the code execution.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<Outcome>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum Outcome {
     /// <summary>
     /// Unspecified status. This value should not be used.

@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// Config for the dynamic retrieval config mode.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<DynamicRetrievalConfigMode>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum DynamicRetrievalConfigMode {
     /// <summary>
     /// Always trigger retrieval.

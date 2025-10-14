@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// End of speech sensitivity.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<EndSensitivity>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum EndSensitivity {
     /// <summary>
     /// The default is END_SENSITIVITY_LOW.

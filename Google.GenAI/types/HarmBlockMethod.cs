@@ -23,7 +23,7 @@ namespace Google.GenAI.Types {
   /// Optional. Specify if the threshold is used for probability or severity score. If not
   /// specified, the threshold is used for probability score.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<HarmBlockMethod>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum HarmBlockMethod {
     /// <summary>
     /// The harm block method is unspecified.

@@ -3,8 +3,8 @@
   <Import Project="../ReleaseVersion.xml" />
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
-    <warningLevel>1</warningLevel>
+    <TargetFrameworks>netstandard2.1;net8.0;net6.0</TargetFrameworks>
+    <LangVersion>10.0</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -29,6 +29,12 @@
     <PackageReference Include="System.Net.WebSockets.Client" />
     <PackageReference Include="Google.Apis.Auth" />
     <InternalsVisibleTo Include="Google.GenAI.Tests" />
+  </ItemGroup>
+
+  <!-- Add additional packages for netstandard2.1 target -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
+    <PackageReference Include="System.Text.Json" />
+    <PackageReference Include="System.Collections.Immutable" />
   </ItemGroup>
 
   <ItemGroup>

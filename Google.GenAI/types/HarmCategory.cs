@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// Required. Harm category.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<HarmCategory>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum HarmCategory {
     /// <summary>
     /// The harm category is unspecified.

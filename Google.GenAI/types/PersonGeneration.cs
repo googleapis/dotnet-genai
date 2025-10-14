@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// Enum that controls the generation of people.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<PersonGeneration>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum PersonGeneration {
     /// <summary>
     /// Block generation of images of people.

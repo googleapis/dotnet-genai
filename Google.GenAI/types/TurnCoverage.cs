@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// Options about which input is included in the user's turn.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<TurnCoverage>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum TurnCoverage {
     /// <summary>
     /// If unspecified, the default behavior is `TURN_INCLUDES_ONLY_ACTIVITY`.

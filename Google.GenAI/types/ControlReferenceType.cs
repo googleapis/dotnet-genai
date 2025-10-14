@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// Enum representing the control type of a control reference image.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<ControlReferenceType>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum ControlReferenceType {
     /// <summary>
     ///

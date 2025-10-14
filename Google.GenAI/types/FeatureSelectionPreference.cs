@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// Options for feature selection preference.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<FeatureSelectionPreference>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum FeatureSelectionPreference {
     /// <summary>
     ///

@@ -290,7 +290,11 @@ namespace Google.GenAI
     public virtual ValueTask DisposeAsync()
     {
         Dispose();
+#if NETSTANDARD2_1
+        return new ValueTask(Task.CompletedTask);
+#else
         return ValueTask.CompletedTask;
+#endif
     }
 
     private static string GetSdkVersion()

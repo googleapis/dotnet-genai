@@ -149,7 +149,11 @@ namespace Google.GenAI
       }
 
       using (response)
+#if NETSTANDARD2_1
+      using (var stream = await response.Content.ReadAsStreamAsync())
+#else
       using (var stream = await response.Content.ReadAsStreamAsync(cancellationToken))
+#endif
       {
         await foreach (string chunk in ProcessStreamResponse(stream, cancellationToken))
         {

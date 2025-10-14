@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// Start of speech sensitivity.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<StartSensitivity>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum StartSensitivity {
     /// <summary>
     /// The default is START_SENSITIVITY_LOW.

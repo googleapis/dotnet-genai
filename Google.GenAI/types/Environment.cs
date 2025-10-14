@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// The environment being operated.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<Environment>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum Environment {
     /// <summary>
     /// Defaults to browser.

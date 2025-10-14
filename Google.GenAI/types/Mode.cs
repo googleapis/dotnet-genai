@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// The mode of the predictor to be used in dynamic retrieval.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<Mode>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum Mode {
     /// <summary>
     /// Always trigger retrieval.

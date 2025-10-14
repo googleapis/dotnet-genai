@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// Server content modalities.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<MediaModality>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum MediaModality {
     /// <summary>
     /// The modality is unspecified.

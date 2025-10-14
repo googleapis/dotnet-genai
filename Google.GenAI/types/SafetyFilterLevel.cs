@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// Enum that controls the safety filter level for objectionable content.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<SafetyFilterLevel>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum SafetyFilterLevel {
     /// <summary>
     ///

@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// Enum representing the mask mode of a mask reference image.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<MaskReferenceMode>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum MaskReferenceMode {
     /// <summary>
     ///

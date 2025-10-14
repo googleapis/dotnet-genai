@@ -22,7 +22,7 @@ namespace Google.GenAI.Types {
   /// <summary>
   /// Enum representing the editing mode.
   /// </summary>
-  [JsonConverter(typeof(JsonStringEnumConverter<EditMode>))]
+  [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum EditMode {
     /// <summary>
     ///
