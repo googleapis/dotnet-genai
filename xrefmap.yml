@@ -903,6 +903,22 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Models.GenerateImagesAsync
   nameWithType: Models.GenerateImagesAsync
+- uid: Google.GenAI.Models.SegmentImageAsync(System.String,Google.GenAI.Types.SegmentImageSource,Google.GenAI.Types.SegmentImageConfig)
+  name: SegmentImageAsync(string, SegmentImageSource, SegmentImageConfig)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_SegmentImageAsync_System_String_Google_GenAI_Types_SegmentImageSource_Google_GenAI_Types_SegmentImageConfig_
+  commentId: M:Google.GenAI.Models.SegmentImageAsync(System.String,Google.GenAI.Types.SegmentImageSource,Google.GenAI.Types.SegmentImageConfig)
+  name.vb: SegmentImageAsync(String, SegmentImageSource, SegmentImageConfig)
+  fullName: Google.GenAI.Models.SegmentImageAsync(string, Google.GenAI.Types.SegmentImageSource, Google.GenAI.Types.SegmentImageConfig)
+  fullName.vb: Google.GenAI.Models.SegmentImageAsync(String, Google.GenAI.Types.SegmentImageSource, Google.GenAI.Types.SegmentImageConfig)
+  nameWithType: Models.SegmentImageAsync(string, SegmentImageSource, SegmentImageConfig)
+  nameWithType.vb: Models.SegmentImageAsync(String, SegmentImageSource, SegmentImageConfig)
+- uid: Google.GenAI.Models.SegmentImageAsync*
+  name: SegmentImageAsync
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_SegmentImageAsync_
+  commentId: Overload:Google.GenAI.Models.SegmentImageAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Models.SegmentImageAsync
+  nameWithType: Models.SegmentImageAsync
 - uid: Google.GenAI.Models.UpscaleImageAsync(System.String,Google.GenAI.Types.Image,System.String,Google.GenAI.Types.UpscaleImageConfig)
   name: UpscaleImageAsync(string, Image, string, UpscaleImageConfig?)
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_UpscaleImageAsync_System_String_Google_GenAI_Types_Image_System_String_Google_GenAI_Types_UpscaleImageConfig_
@@ -3490,6 +3506,54 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.EnterpriseWebSearch.FromJson
   nameWithType: EnterpriseWebSearch.FromJson
+- uid: Google.GenAI.Types.EntityLabel
+  name: EntityLabel
+  href: api/Google.GenAI.Types.EntityLabel.html
+  commentId: T:Google.GenAI.Types.EntityLabel
+  fullName: Google.GenAI.Types.EntityLabel
+  nameWithType: EntityLabel
+- uid: Google.GenAI.Types.EntityLabel.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.EntityLabel.html#Google_GenAI_Types_EntityLabel_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.EntityLabel.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.EntityLabel.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.EntityLabel.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: EntityLabel.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: EntityLabel.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.EntityLabel.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.EntityLabel.html#Google_GenAI_Types_EntityLabel_FromJson_
+  commentId: Overload:Google.GenAI.Types.EntityLabel.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EntityLabel.FromJson
+  nameWithType: EntityLabel.FromJson
+- uid: Google.GenAI.Types.EntityLabel.Label
+  name: Label
+  href: api/Google.GenAI.Types.EntityLabel.html#Google_GenAI_Types_EntityLabel_Label
+  commentId: P:Google.GenAI.Types.EntityLabel.Label
+  fullName: Google.GenAI.Types.EntityLabel.Label
+  nameWithType: EntityLabel.Label
+- uid: Google.GenAI.Types.EntityLabel.Label*
+  name: Label
+  href: api/Google.GenAI.Types.EntityLabel.html#Google_GenAI_Types_EntityLabel_Label_
+  commentId: Overload:Google.GenAI.Types.EntityLabel.Label
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EntityLabel.Label
+  nameWithType: EntityLabel.Label
+- uid: Google.GenAI.Types.EntityLabel.Score
+  name: Score
+  href: api/Google.GenAI.Types.EntityLabel.html#Google_GenAI_Types_EntityLabel_Score
+  commentId: P:Google.GenAI.Types.EntityLabel.Score
+  fullName: Google.GenAI.Types.EntityLabel.Score
+  nameWithType: EntityLabel.Score
+- uid: Google.GenAI.Types.EntityLabel.Score*
+  name: Score
+  href: api/Google.GenAI.Types.EntityLabel.html#Google_GenAI_Types_EntityLabel_Score_
+  commentId: Overload:Google.GenAI.Types.EntityLabel.Score
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EntityLabel.Score
+  nameWithType: EntityLabel.Score
 - uid: Google.GenAI.Types.Environment
   name: Environment
   href: api/Google.GenAI.Types.Environment.html
@@ -5722,6 +5786,54 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GeneratedImage.SafetyAttributes
   nameWithType: GeneratedImage.SafetyAttributes
+- uid: Google.GenAI.Types.GeneratedImageMask
+  name: GeneratedImageMask
+  href: api/Google.GenAI.Types.GeneratedImageMask.html
+  commentId: T:Google.GenAI.Types.GeneratedImageMask
+  fullName: Google.GenAI.Types.GeneratedImageMask
+  nameWithType: GeneratedImageMask
+- uid: Google.GenAI.Types.GeneratedImageMask.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.GeneratedImageMask.html#Google_GenAI_Types_GeneratedImageMask_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.GeneratedImageMask.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.GeneratedImageMask.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.GeneratedImageMask.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: GeneratedImageMask.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: GeneratedImageMask.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.GeneratedImageMask.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.GeneratedImageMask.html#Google_GenAI_Types_GeneratedImageMask_FromJson_
+  commentId: Overload:Google.GenAI.Types.GeneratedImageMask.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GeneratedImageMask.FromJson
+  nameWithType: GeneratedImageMask.FromJson
+- uid: Google.GenAI.Types.GeneratedImageMask.Labels
+  name: Labels
+  href: api/Google.GenAI.Types.GeneratedImageMask.html#Google_GenAI_Types_GeneratedImageMask_Labels
+  commentId: P:Google.GenAI.Types.GeneratedImageMask.Labels
+  fullName: Google.GenAI.Types.GeneratedImageMask.Labels
+  nameWithType: GeneratedImageMask.Labels
+- uid: Google.GenAI.Types.GeneratedImageMask.Labels*
+  name: Labels
+  href: api/Google.GenAI.Types.GeneratedImageMask.html#Google_GenAI_Types_GeneratedImageMask_Labels_
+  commentId: Overload:Google.GenAI.Types.GeneratedImageMask.Labels
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GeneratedImageMask.Labels
+  nameWithType: GeneratedImageMask.Labels
+- uid: Google.GenAI.Types.GeneratedImageMask.Mask
+  name: Mask
+  href: api/Google.GenAI.Types.GeneratedImageMask.html#Google_GenAI_Types_GeneratedImageMask_Mask
+  commentId: P:Google.GenAI.Types.GeneratedImageMask.Mask
+  fullName: Google.GenAI.Types.GeneratedImageMask.Mask
+  nameWithType: GeneratedImageMask.Mask
+- uid: Google.GenAI.Types.GeneratedImageMask.Mask*
+  name: Mask
+  href: api/Google.GenAI.Types.GeneratedImageMask.html#Google_GenAI_Types_GeneratedImageMask_Mask_
+  commentId: Overload:Google.GenAI.Types.GeneratedImageMask.Mask
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GeneratedImageMask.Mask
+  nameWithType: GeneratedImageMask.Mask
 - uid: Google.GenAI.Types.GeneratedVideo
   name: GeneratedVideo
   href: api/Google.GenAI.Types.GeneratedVideo.html
@@ -11920,6 +12032,41 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Schema.Type
   nameWithType: Schema.Type
+- uid: Google.GenAI.Types.ScribbleImage
+  name: ScribbleImage
+  href: api/Google.GenAI.Types.ScribbleImage.html
+  commentId: T:Google.GenAI.Types.ScribbleImage
+  fullName: Google.GenAI.Types.ScribbleImage
+  nameWithType: ScribbleImage
+- uid: Google.GenAI.Types.ScribbleImage.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ScribbleImage.html#Google_GenAI_Types_ScribbleImage_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ScribbleImage.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ScribbleImage.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ScribbleImage.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ScribbleImage.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ScribbleImage.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ScribbleImage.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ScribbleImage.html#Google_GenAI_Types_ScribbleImage_FromJson_
+  commentId: Overload:Google.GenAI.Types.ScribbleImage.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ScribbleImage.FromJson
+  nameWithType: ScribbleImage.FromJson
+- uid: Google.GenAI.Types.ScribbleImage.Image
+  name: Image
+  href: api/Google.GenAI.Types.ScribbleImage.html#Google_GenAI_Types_ScribbleImage_Image
+  commentId: P:Google.GenAI.Types.ScribbleImage.Image
+  fullName: Google.GenAI.Types.ScribbleImage.Image
+  nameWithType: ScribbleImage.Image
+- uid: Google.GenAI.Types.ScribbleImage.Image*
+  name: Image
+  href: api/Google.GenAI.Types.ScribbleImage.html#Google_GenAI_Types_ScribbleImage_Image_
+  commentId: Overload:Google.GenAI.Types.ScribbleImage.Image
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ScribbleImage.Image
+  nameWithType: ScribbleImage.Image
 - uid: Google.GenAI.Types.SearchEntryPoint
   name: SearchEntryPoint
   href: api/Google.GenAI.Types.SearchEntryPoint.html
@@ -12042,6 +12189,251 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Segment.Text
   nameWithType: Segment.Text
+- uid: Google.GenAI.Types.SegmentImageConfig
+  name: SegmentImageConfig
+  href: api/Google.GenAI.Types.SegmentImageConfig.html
+  commentId: T:Google.GenAI.Types.SegmentImageConfig
+  fullName: Google.GenAI.Types.SegmentImageConfig
+  nameWithType: SegmentImageConfig
+- uid: Google.GenAI.Types.SegmentImageConfig.BinaryColorThreshold
+  name: BinaryColorThreshold
+  href: api/Google.GenAI.Types.SegmentImageConfig.html#Google_GenAI_Types_SegmentImageConfig_BinaryColorThreshold
+  commentId: P:Google.GenAI.Types.SegmentImageConfig.BinaryColorThreshold
+  fullName: Google.GenAI.Types.SegmentImageConfig.BinaryColorThreshold
+  nameWithType: SegmentImageConfig.BinaryColorThreshold
+- uid: Google.GenAI.Types.SegmentImageConfig.BinaryColorThreshold*
+  name: BinaryColorThreshold
+  href: api/Google.GenAI.Types.SegmentImageConfig.html#Google_GenAI_Types_SegmentImageConfig_BinaryColorThreshold_
+  commentId: Overload:Google.GenAI.Types.SegmentImageConfig.BinaryColorThreshold
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SegmentImageConfig.BinaryColorThreshold
+  nameWithType: SegmentImageConfig.BinaryColorThreshold
+- uid: Google.GenAI.Types.SegmentImageConfig.ConfidenceThreshold
+  name: ConfidenceThreshold
+  href: api/Google.GenAI.Types.SegmentImageConfig.html#Google_GenAI_Types_SegmentImageConfig_ConfidenceThreshold
+  commentId: P:Google.GenAI.Types.SegmentImageConfig.ConfidenceThreshold
+  fullName: Google.GenAI.Types.SegmentImageConfig.ConfidenceThreshold
+  nameWithType: SegmentImageConfig.ConfidenceThreshold
+- uid: Google.GenAI.Types.SegmentImageConfig.ConfidenceThreshold*
+  name: ConfidenceThreshold
+  href: api/Google.GenAI.Types.SegmentImageConfig.html#Google_GenAI_Types_SegmentImageConfig_ConfidenceThreshold_
+  commentId: Overload:Google.GenAI.Types.SegmentImageConfig.ConfidenceThreshold
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SegmentImageConfig.ConfidenceThreshold
+  nameWithType: SegmentImageConfig.ConfidenceThreshold
+- uid: Google.GenAI.Types.SegmentImageConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.SegmentImageConfig.html#Google_GenAI_Types_SegmentImageConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.SegmentImageConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.SegmentImageConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.SegmentImageConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: SegmentImageConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: SegmentImageConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.SegmentImageConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.SegmentImageConfig.html#Google_GenAI_Types_SegmentImageConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.SegmentImageConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SegmentImageConfig.FromJson
+  nameWithType: SegmentImageConfig.FromJson
+- uid: Google.GenAI.Types.SegmentImageConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.SegmentImageConfig.html#Google_GenAI_Types_SegmentImageConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.SegmentImageConfig.HttpOptions
+  fullName: Google.GenAI.Types.SegmentImageConfig.HttpOptions
+  nameWithType: SegmentImageConfig.HttpOptions
+- uid: Google.GenAI.Types.SegmentImageConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.SegmentImageConfig.html#Google_GenAI_Types_SegmentImageConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.SegmentImageConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SegmentImageConfig.HttpOptions
+  nameWithType: SegmentImageConfig.HttpOptions
+- uid: Google.GenAI.Types.SegmentImageConfig.Labels
+  name: Labels
+  href: api/Google.GenAI.Types.SegmentImageConfig.html#Google_GenAI_Types_SegmentImageConfig_Labels
+  commentId: P:Google.GenAI.Types.SegmentImageConfig.Labels
+  fullName: Google.GenAI.Types.SegmentImageConfig.Labels
+  nameWithType: SegmentImageConfig.Labels
+- uid: Google.GenAI.Types.SegmentImageConfig.Labels*
+  name: Labels
+  href: api/Google.GenAI.Types.SegmentImageConfig.html#Google_GenAI_Types_SegmentImageConfig_Labels_
+  commentId: Overload:Google.GenAI.Types.SegmentImageConfig.Labels
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SegmentImageConfig.Labels
+  nameWithType: SegmentImageConfig.Labels
+- uid: Google.GenAI.Types.SegmentImageConfig.MaskDilation
+  name: MaskDilation
+  href: api/Google.GenAI.Types.SegmentImageConfig.html#Google_GenAI_Types_SegmentImageConfig_MaskDilation
+  commentId: P:Google.GenAI.Types.SegmentImageConfig.MaskDilation
+  fullName: Google.GenAI.Types.SegmentImageConfig.MaskDilation
+  nameWithType: SegmentImageConfig.MaskDilation
+- uid: Google.GenAI.Types.SegmentImageConfig.MaskDilation*
+  name: MaskDilation
+  href: api/Google.GenAI.Types.SegmentImageConfig.html#Google_GenAI_Types_SegmentImageConfig_MaskDilation_
+  commentId: Overload:Google.GenAI.Types.SegmentImageConfig.MaskDilation
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SegmentImageConfig.MaskDilation
+  nameWithType: SegmentImageConfig.MaskDilation
+- uid: Google.GenAI.Types.SegmentImageConfig.MaxPredictions
+  name: MaxPredictions
+  href: api/Google.GenAI.Types.SegmentImageConfig.html#Google_GenAI_Types_SegmentImageConfig_MaxPredictions
+  commentId: P:Google.GenAI.Types.SegmentImageConfig.MaxPredictions
+  fullName: Google.GenAI.Types.SegmentImageConfig.MaxPredictions
+  nameWithType: SegmentImageConfig.MaxPredictions
+- uid: Google.GenAI.Types.SegmentImageConfig.MaxPredictions*
+  name: MaxPredictions
+  href: api/Google.GenAI.Types.SegmentImageConfig.html#Google_GenAI_Types_SegmentImageConfig_MaxPredictions_
+  commentId: Overload:Google.GenAI.Types.SegmentImageConfig.MaxPredictions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SegmentImageConfig.MaxPredictions
+  nameWithType: SegmentImageConfig.MaxPredictions
+- uid: Google.GenAI.Types.SegmentImageConfig.Mode
+  name: Mode
+  href: api/Google.GenAI.Types.SegmentImageConfig.html#Google_GenAI_Types_SegmentImageConfig_Mode
+  commentId: P:Google.GenAI.Types.SegmentImageConfig.Mode
+  fullName: Google.GenAI.Types.SegmentImageConfig.Mode
+  nameWithType: SegmentImageConfig.Mode
+- uid: Google.GenAI.Types.SegmentImageConfig.Mode*
+  name: Mode
+  href: api/Google.GenAI.Types.SegmentImageConfig.html#Google_GenAI_Types_SegmentImageConfig_Mode_
+  commentId: Overload:Google.GenAI.Types.SegmentImageConfig.Mode
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SegmentImageConfig.Mode
+  nameWithType: SegmentImageConfig.Mode
+- uid: Google.GenAI.Types.SegmentImageResponse
+  name: SegmentImageResponse
+  href: api/Google.GenAI.Types.SegmentImageResponse.html
+  commentId: T:Google.GenAI.Types.SegmentImageResponse
+  fullName: Google.GenAI.Types.SegmentImageResponse
+  nameWithType: SegmentImageResponse
+- uid: Google.GenAI.Types.SegmentImageResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.SegmentImageResponse.html#Google_GenAI_Types_SegmentImageResponse_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.SegmentImageResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.SegmentImageResponse.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.SegmentImageResponse.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: SegmentImageResponse.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: SegmentImageResponse.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.SegmentImageResponse.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.SegmentImageResponse.html#Google_GenAI_Types_SegmentImageResponse_FromJson_
+  commentId: Overload:Google.GenAI.Types.SegmentImageResponse.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SegmentImageResponse.FromJson
+  nameWithType: SegmentImageResponse.FromJson
+- uid: Google.GenAI.Types.SegmentImageResponse.GeneratedMasks
+  name: GeneratedMasks
+  href: api/Google.GenAI.Types.SegmentImageResponse.html#Google_GenAI_Types_SegmentImageResponse_GeneratedMasks
+  commentId: P:Google.GenAI.Types.SegmentImageResponse.GeneratedMasks
+  fullName: Google.GenAI.Types.SegmentImageResponse.GeneratedMasks
+  nameWithType: SegmentImageResponse.GeneratedMasks
+- uid: Google.GenAI.Types.SegmentImageResponse.GeneratedMasks*
+  name: GeneratedMasks
+  href: api/Google.GenAI.Types.SegmentImageResponse.html#Google_GenAI_Types_SegmentImageResponse_GeneratedMasks_
+  commentId: Overload:Google.GenAI.Types.SegmentImageResponse.GeneratedMasks
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SegmentImageResponse.GeneratedMasks
+  nameWithType: SegmentImageResponse.GeneratedMasks
+- uid: Google.GenAI.Types.SegmentImageSource
+  name: SegmentImageSource
+  href: api/Google.GenAI.Types.SegmentImageSource.html
+  commentId: T:Google.GenAI.Types.SegmentImageSource
+  fullName: Google.GenAI.Types.SegmentImageSource
+  nameWithType: SegmentImageSource
+- uid: Google.GenAI.Types.SegmentImageSource.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.SegmentImageSource.html#Google_GenAI_Types_SegmentImageSource_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.SegmentImageSource.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.SegmentImageSource.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.SegmentImageSource.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: SegmentImageSource.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: SegmentImageSource.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.SegmentImageSource.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.SegmentImageSource.html#Google_GenAI_Types_SegmentImageSource_FromJson_
+  commentId: Overload:Google.GenAI.Types.SegmentImageSource.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SegmentImageSource.FromJson
+  nameWithType: SegmentImageSource.FromJson
+- uid: Google.GenAI.Types.SegmentImageSource.Image
+  name: Image
+  href: api/Google.GenAI.Types.SegmentImageSource.html#Google_GenAI_Types_SegmentImageSource_Image
+  commentId: P:Google.GenAI.Types.SegmentImageSource.Image
+  fullName: Google.GenAI.Types.SegmentImageSource.Image
+  nameWithType: SegmentImageSource.Image
+- uid: Google.GenAI.Types.SegmentImageSource.Image*
+  name: Image
+  href: api/Google.GenAI.Types.SegmentImageSource.html#Google_GenAI_Types_SegmentImageSource_Image_
+  commentId: Overload:Google.GenAI.Types.SegmentImageSource.Image
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SegmentImageSource.Image
+  nameWithType: SegmentImageSource.Image
+- uid: Google.GenAI.Types.SegmentImageSource.Prompt
+  name: Prompt
+  href: api/Google.GenAI.Types.SegmentImageSource.html#Google_GenAI_Types_SegmentImageSource_Prompt
+  commentId: P:Google.GenAI.Types.SegmentImageSource.Prompt
+  fullName: Google.GenAI.Types.SegmentImageSource.Prompt
+  nameWithType: SegmentImageSource.Prompt
+- uid: Google.GenAI.Types.SegmentImageSource.Prompt*
+  name: Prompt
+  href: api/Google.GenAI.Types.SegmentImageSource.html#Google_GenAI_Types_SegmentImageSource_Prompt_
+  commentId: Overload:Google.GenAI.Types.SegmentImageSource.Prompt
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SegmentImageSource.Prompt
+  nameWithType: SegmentImageSource.Prompt
+- uid: Google.GenAI.Types.SegmentImageSource.ScribbleImage
+  name: ScribbleImage
+  href: api/Google.GenAI.Types.SegmentImageSource.html#Google_GenAI_Types_SegmentImageSource_ScribbleImage
+  commentId: P:Google.GenAI.Types.SegmentImageSource.ScribbleImage
+  fullName: Google.GenAI.Types.SegmentImageSource.ScribbleImage
+  nameWithType: SegmentImageSource.ScribbleImage
+- uid: Google.GenAI.Types.SegmentImageSource.ScribbleImage*
+  name: ScribbleImage
+  href: api/Google.GenAI.Types.SegmentImageSource.html#Google_GenAI_Types_SegmentImageSource_ScribbleImage_
+  commentId: Overload:Google.GenAI.Types.SegmentImageSource.ScribbleImage
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SegmentImageSource.ScribbleImage
+  nameWithType: SegmentImageSource.ScribbleImage
+- uid: Google.GenAI.Types.SegmentMode
+  name: SegmentMode
+  href: api/Google.GenAI.Types.SegmentMode.html
+  commentId: T:Google.GenAI.Types.SegmentMode
+  fullName: Google.GenAI.Types.SegmentMode
+  nameWithType: SegmentMode
+- uid: Google.GenAI.Types.SegmentMode.BACKGROUND
+  name: BACKGROUND
+  href: api/Google.GenAI.Types.SegmentMode.html#Google_GenAI_Types_SegmentMode_BACKGROUND
+  commentId: F:Google.GenAI.Types.SegmentMode.BACKGROUND
+  fullName: Google.GenAI.Types.SegmentMode.BACKGROUND
+  nameWithType: SegmentMode.BACKGROUND
+- uid: Google.GenAI.Types.SegmentMode.FOREGROUND
+  name: FOREGROUND
+  href: api/Google.GenAI.Types.SegmentMode.html#Google_GenAI_Types_SegmentMode_FOREGROUND
+  commentId: F:Google.GenAI.Types.SegmentMode.FOREGROUND
+  fullName: Google.GenAI.Types.SegmentMode.FOREGROUND
+  nameWithType: SegmentMode.FOREGROUND
+- uid: Google.GenAI.Types.SegmentMode.INTERACTIVE
+  name: INTERACTIVE
+  href: api/Google.GenAI.Types.SegmentMode.html#Google_GenAI_Types_SegmentMode_INTERACTIVE
+  commentId: F:Google.GenAI.Types.SegmentMode.INTERACTIVE
+  fullName: Google.GenAI.Types.SegmentMode.INTERACTIVE
+  nameWithType: SegmentMode.INTERACTIVE
+- uid: Google.GenAI.Types.SegmentMode.PROMPT
+  name: PROMPT
+  href: api/Google.GenAI.Types.SegmentMode.html#Google_GenAI_Types_SegmentMode_PROMPT
+  commentId: F:Google.GenAI.Types.SegmentMode.PROMPT
+  fullName: Google.GenAI.Types.SegmentMode.PROMPT
+  nameWithType: SegmentMode.PROMPT
+- uid: Google.GenAI.Types.SegmentMode.SEMANTIC
+  name: SEMANTIC
+  href: api/Google.GenAI.Types.SegmentMode.html#Google_GenAI_Types_SegmentMode_SEMANTIC
+  commentId: F:Google.GenAI.Types.SegmentMode.SEMANTIC
+  fullName: Google.GenAI.Types.SegmentMode.SEMANTIC
+  nameWithType: SegmentMode.SEMANTIC
 - uid: Google.GenAI.Types.SessionResumptionConfig
   name: SessionResumptionConfig
   href: api/Google.GenAI.Types.SessionResumptionConfig.html

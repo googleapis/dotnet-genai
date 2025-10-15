@@ -798,6 +798,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.EntityLabel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.EntityLabel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.EntityLabel",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.EntityLabel.yml\" sourcestartlinenumber=\"1\">An entity representing the segmented area.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.Environment.yml",
       "output": {
         ".html": {
@@ -1159,6 +1173,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GeneratedImage",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GeneratedImage.yml\" sourcestartlinenumber=\"1\">An output image.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.GeneratedImageMask.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.GeneratedImageMask.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.GeneratedImageMask",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GeneratedImageMask.yml\" sourcestartlinenumber=\"1\">A generated image mask.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2506,6 +2534,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ScribbleImage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ScribbleImage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ScribbleImage",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ScribbleImage.yml\" sourcestartlinenumber=\"1\">An image mask representing a brush scribble.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.SearchEntryPoint.yml",
       "output": {
         ".html": {
@@ -2531,6 +2573,62 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Segment",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Segment.yml\" sourcestartlinenumber=\"1\">Segment of the content.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.SegmentImageConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.SegmentImageConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.SegmentImageConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SegmentImageConfig.yml\" sourcestartlinenumber=\"1\">Configuration for segmenting an image.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.SegmentImageResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.SegmentImageResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.SegmentImageResponse",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SegmentImageResponse.yml\" sourcestartlinenumber=\"1\">The output images response.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.SegmentImageSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.SegmentImageSource.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.SegmentImageSource",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SegmentImageSource.yml\" sourcestartlinenumber=\"1\">A set of source input(s) for image segmentation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.SegmentMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.SegmentMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.SegmentMode",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SegmentMode.yml\" sourcestartlinenumber=\"1\">Enum that represents the segmentation mode.</p>\n"
     },
     {
       "type": "ManagedReference",
