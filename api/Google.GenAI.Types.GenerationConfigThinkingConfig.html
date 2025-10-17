@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Types_GenerationConfigThinkingConfig" data-uid="Google.GenAI.Types.GenerationConfigThinkingConfig" class="text-break">
-Class GenerationConfigThinkingConfig  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfigThinkingConfig.cs/#L29"><i class="bi bi-code-slash"></i></a>
+Class GenerationConfigThinkingConfig  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfigThinkingConfig.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -98,7 +98,8 @@ Class GenerationConfigThinkingConfig  <a class="header-action link-secondary" ti
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public record GenerationConfigThinkingConfig : IEquatable&lt;GenerationConfigThinkingConfig&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This record will be deprecated. Please use ThinkingConfig instead.&quot;, false)]
+public record GenerationConfigThinkingConfig : ThinkingConfig, IEquatable&lt;ThinkingConfig&gt;, IEquatable&lt;GenerationConfigThinkingConfig&gt;</code></pre>
   </div>
 
 
@@ -108,6 +109,7 @@ Class GenerationConfigThinkingConfig  <a class="header-action link-secondary" ti
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Google.GenAI.Types.ThinkingConfig.html">ThinkingConfig</a></div>
       <div><span class="xref">GenerationConfigThinkingConfig</span></div>
     </dd>
   </dl>
@@ -115,6 +117,7 @@ Class GenerationConfigThinkingConfig  <a class="header-action link-secondary" ti
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.ThinkingConfig.html">ThinkingConfig</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.GenerationConfigThinkingConfig.html">GenerationConfigThinkingConfig</a>&gt;</div>
     </dd>
   </dl>
@@ -123,6 +126,12 @@ Class GenerationConfigThinkingConfig  <a class="header-action link-secondary" ti
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="Google.GenAI.Types.ThinkingConfig.html#Google_GenAI_Types_ThinkingConfig_IncludeThoughts">ThinkingConfig.IncludeThoughts</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.GenAI.Types.ThinkingConfig.html#Google_GenAI_Types_ThinkingConfig_ThinkingBudget">ThinkingConfig.ThinkingBudget</a>
+    </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
@@ -151,79 +160,6 @@ Class GenerationConfigThinkingConfig  <a class="header-action link-secondary" ti
 
 
 
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="Google_GenAI_Types_GenerationConfigThinkingConfig_IncludeThoughts_" data-uid="Google.GenAI.Types.GenerationConfigThinkingConfig.IncludeThoughts*"></a>
-
-  <h3 id="Google_GenAI_Types_GenerationConfigThinkingConfig_IncludeThoughts" data-uid="Google.GenAI.Types.GenerationConfigThinkingConfig.IncludeThoughts">
-  IncludeThoughts
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfigThinkingConfig.cs/#L34"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Optional. Indicates whether to include thoughts in the response. If true, thoughts are
-returned only when available.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;includeThoughts&quot;)]
-[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-public bool? IncludeThoughts { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Google_GenAI_Types_GenerationConfigThinkingConfig_ThinkingBudget_" data-uid="Google.GenAI.Types.GenerationConfigThinkingConfig.ThinkingBudget*"></a>
-
-  <h3 id="Google_GenAI_Types_GenerationConfigThinkingConfig_ThinkingBudget" data-uid="Google.GenAI.Types.GenerationConfigThinkingConfig.ThinkingBudget">
-  ThinkingBudget
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfigThinkingConfig.cs/#L41"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Optional. Indicates the thinking budget in tokens.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;thinkingBudget&quot;)]
-[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-public int? ThinkingBudget { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -232,7 +168,7 @@ public int? ThinkingBudget { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GenerationConfigThinkingConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.GenerationConfigThinkingConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfigThinkingConfig.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfigThinkingConfig.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a GenerationConfigThinkingConfig object.</p>
@@ -275,7 +211,7 @@ fails.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfigThinkingConfig.cs/#L29" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfigThinkingConfig.cs/#L30" class="edit-link">Edit this page</a>
         </div>
 
 

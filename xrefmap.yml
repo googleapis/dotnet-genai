@@ -5914,6 +5914,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerationConfig.EnableAffectiveDialog
   nameWithType: GenerationConfig.EnableAffectiveDialog
+- uid: Google.GenAI.Types.GenerationConfig.EnableEnhancedCivicAnswers
+  name: EnableEnhancedCivicAnswers
+  href: api/Google.GenAI.Types.GenerationConfig.html#Google_GenAI_Types_GenerationConfig_EnableEnhancedCivicAnswers
+  commentId: P:Google.GenAI.Types.GenerationConfig.EnableEnhancedCivicAnswers
+  fullName: Google.GenAI.Types.GenerationConfig.EnableEnhancedCivicAnswers
+  nameWithType: GenerationConfig.EnableEnhancedCivicAnswers
+- uid: Google.GenAI.Types.GenerationConfig.EnableEnhancedCivicAnswers*
+  name: EnableEnhancedCivicAnswers
+  href: api/Google.GenAI.Types.GenerationConfig.html#Google_GenAI_Types_GenerationConfig_EnableEnhancedCivicAnswers_
+  commentId: Overload:Google.GenAI.Types.GenerationConfig.EnableEnhancedCivicAnswers
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerationConfig.EnableEnhancedCivicAnswers
+  nameWithType: GenerationConfig.EnableEnhancedCivicAnswers
 - uid: Google.GenAI.Types.GenerationConfig.FrequencyPenalty
   name: FrequencyPenalty
   href: api/Google.GenAI.Types.GenerationConfig.html#Google_GenAI_Types_GenerationConfig_FrequencyPenalty
@@ -6317,32 +6330,6 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerationConfigThinkingConfig.FromJson
   nameWithType: GenerationConfigThinkingConfig.FromJson
-- uid: Google.GenAI.Types.GenerationConfigThinkingConfig.IncludeThoughts
-  name: IncludeThoughts
-  href: api/Google.GenAI.Types.GenerationConfigThinkingConfig.html#Google_GenAI_Types_GenerationConfigThinkingConfig_IncludeThoughts
-  commentId: P:Google.GenAI.Types.GenerationConfigThinkingConfig.IncludeThoughts
-  fullName: Google.GenAI.Types.GenerationConfigThinkingConfig.IncludeThoughts
-  nameWithType: GenerationConfigThinkingConfig.IncludeThoughts
-- uid: Google.GenAI.Types.GenerationConfigThinkingConfig.IncludeThoughts*
-  name: IncludeThoughts
-  href: api/Google.GenAI.Types.GenerationConfigThinkingConfig.html#Google_GenAI_Types_GenerationConfigThinkingConfig_IncludeThoughts_
-  commentId: Overload:Google.GenAI.Types.GenerationConfigThinkingConfig.IncludeThoughts
-  isSpec: "True"
-  fullName: Google.GenAI.Types.GenerationConfigThinkingConfig.IncludeThoughts
-  nameWithType: GenerationConfigThinkingConfig.IncludeThoughts
-- uid: Google.GenAI.Types.GenerationConfigThinkingConfig.ThinkingBudget
-  name: ThinkingBudget
-  href: api/Google.GenAI.Types.GenerationConfigThinkingConfig.html#Google_GenAI_Types_GenerationConfigThinkingConfig_ThinkingBudget
-  commentId: P:Google.GenAI.Types.GenerationConfigThinkingConfig.ThinkingBudget
-  fullName: Google.GenAI.Types.GenerationConfigThinkingConfig.ThinkingBudget
-  nameWithType: GenerationConfigThinkingConfig.ThinkingBudget
-- uid: Google.GenAI.Types.GenerationConfigThinkingConfig.ThinkingBudget*
-  name: ThinkingBudget
-  href: api/Google.GenAI.Types.GenerationConfigThinkingConfig.html#Google_GenAI_Types_GenerationConfigThinkingConfig_ThinkingBudget_
-  commentId: Overload:Google.GenAI.Types.GenerationConfigThinkingConfig.ThinkingBudget
-  isSpec: "True"
-  fullName: Google.GenAI.Types.GenerationConfigThinkingConfig.ThinkingBudget
-  nameWithType: GenerationConfigThinkingConfig.ThinkingBudget
 - uid: Google.GenAI.Types.GetOperationConfig
   name: GetOperationConfig
   href: api/Google.GenAI.Types.GetOperationConfig.html

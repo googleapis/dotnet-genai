@@ -257,6 +257,40 @@ public bool? EnableAffectiveDialog { get; set; }</code></pre>
 
 
 
+  <a id="Google_GenAI_Types_GenerationConfig_EnableEnhancedCivicAnswers_" data-uid="Google.GenAI.Types.GenerationConfig.EnableEnhancedCivicAnswers*"></a>
+
+  <h3 id="Google_GenAI_Types_GenerationConfig_EnableEnhancedCivicAnswers" data-uid="Google.GenAI.Types.GenerationConfig.EnableEnhancedCivicAnswers">
+  EnableEnhancedCivicAnswers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfig.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional. Enables enhanced civic answers. It may not be available for all models.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;enableEnhancedCivicAnswers&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public bool? EnableEnhancedCivicAnswers { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_GenerationConfig_FrequencyPenalty_" data-uid="Google.GenAI.Types.GenerationConfig.FrequencyPenalty*"></a>
 
   <h3 id="Google_GenAI_Types_GenerationConfig_FrequencyPenalty" data-uid="Google.GenAI.Types.GenerationConfig.FrequencyPenalty">
@@ -834,7 +868,7 @@ models that don't support thinking.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;thinkingConfig&quot;)]
 [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-public GenerationConfigThinkingConfig? ThinkingConfig { get; set; }</code></pre>
+public ThinkingConfig? ThinkingConfig { get; set; }</code></pre>
   </div>
 
 
@@ -843,7 +877,7 @@ public GenerationConfigThinkingConfig? ThinkingConfig { get; set; }</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Google.GenAI.Types.GenerationConfigThinkingConfig.html">GenerationConfigThinkingConfig</a></dt>
+    <dt><a class="xref" href="Google.GenAI.Types.ThinkingConfig.html">ThinkingConfig</a></dt>
     <dd></dd>
   </dl>
 
@@ -930,7 +964,7 @@ public double? TopP { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GenerationConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.GenerationConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfig.cs/#L273"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfig.cs/#L283"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a GenerationConfig object.</p>
