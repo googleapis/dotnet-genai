@@ -448,20 +448,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.Checkpoint.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.Checkpoint.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.Checkpoint",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Checkpoint.yml\" sourcestartlinenumber=\"1\">Describes the machine learning model version checkpoint.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.Citation.yml",
       "output": {
         ".html": {
@@ -630,20 +616,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.CreateAuthTokenConfig.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.CreateAuthTokenConfig.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.CreateAuthTokenConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CreateAuthTokenConfig.yml\" sourcestartlinenumber=\"1\">Optional parameters.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.DownloadFileConfig.yml",
       "output": {
         ".html": {
@@ -767,20 +739,6 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.EndSensitivity",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.EndSensitivity.yml\" sourcestartlinenumber=\"1\">End of speech sensitivity.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.Endpoint.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.Endpoint.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.Endpoint",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Endpoint.yml\" sourcestartlinenumber=\"1\">An endpoint where you deploy models.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1134,34 +1092,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.GenerateVideosOperation.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.GenerateVideosOperation.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.GenerateVideosOperation",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerateVideosOperation.yml\" sourcestartlinenumber=\"1\">A video generation operation.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.GenerateVideosResponse.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.GenerateVideosResponse.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.GenerateVideosResponse",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerateVideosResponse.yml\" sourcestartlinenumber=\"1\">Response with generated videos.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.GeneratedImage.yml",
       "output": {
         ".html": {
@@ -1187,20 +1117,6 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GeneratedImageMask",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GeneratedImageMask.yml\" sourcestartlinenumber=\"1\">A generated image mask.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.GeneratedVideo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.GeneratedVideo.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.GeneratedVideo",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GeneratedVideo.yml\" sourcestartlinenumber=\"1\">A generated video.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1271,20 +1187,6 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GenerationConfigThinkingConfig",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerationConfigThinkingConfig.yml\" sourcestartlinenumber=\"1\">Config for thinking features.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.GetOperationConfig.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.GetOperationConfig.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.GetOperationConfig",
-      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1778,20 +1680,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.LiveConnectConstraints.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.LiveConnectConstraints.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.LiveConnectConstraints",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LiveConnectConstraints.yml\" sourcestartlinenumber=\"1\">Config for LiveConnectConstraints for Auth Token creation.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.LiveConnectParameters.yml",
       "output": {
         ".html": {
@@ -1803,20 +1691,6 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.LiveConnectParameters",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LiveConnectParameters.yml\" sourcestartlinenumber=\"1\">Parameters for connecting to the live API.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.LiveMusicServerSetupComplete.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.LiveMusicServerSetupComplete.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.LiveMusicServerSetupComplete",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LiveMusicServerSetupComplete.yml\" sourcestartlinenumber=\"1\">Sent in response to a <code sourcefile=\"api/Google.GenAI.Types.LiveMusicServerSetupComplete.yml\" sourcestartlinenumber=\"1\">LiveMusicClientSetup</code> message from the client.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2111,20 +1985,6 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Mode",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Mode.yml\" sourcestartlinenumber=\"1\">The mode of the predictor to be used in dynamic retrieval.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.Model.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.Model.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.Model",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Model.yml\" sourcestartlinenumber=\"1\">A trained machine learning model.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2856,20 +2716,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.ToolComputerUse.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.ToolComputerUse.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.ToolComputerUse",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ToolComputerUse.yml\" sourcestartlinenumber=\"1\">Tool to support computer use.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.ToolConfig.yml",
       "output": {
         ".html": {
@@ -2912,20 +2758,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.TunedModelInfo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.TunedModelInfo.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.TunedModelInfo",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.TunedModelInfo.yml\" sourcestartlinenumber=\"1\">A tuned machine learning model.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.TurnCompleteReason.yml",
       "output": {
         ".html": {
@@ -2965,34 +2797,6 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Type",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Type.yml\" sourcestartlinenumber=\"1\">Optional. The type of the data.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.UpdateModelConfig.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.UpdateModelConfig.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.UpdateModelConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.UpdateModelConfig.yml\" sourcestartlinenumber=\"1\">Configuration for updating a tuned model.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.UpdateModelParameters.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.UpdateModelParameters.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.UpdateModelParameters",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.UpdateModelParameters.yml\" sourcestartlinenumber=\"1\">Configuration for updating a tuned model.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3161,20 +2965,6 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.VertexRagStoreRagResource",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VertexRagStoreRagResource.yml\" sourcestartlinenumber=\"1\">The definition of the Rag resource.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.Video.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.Video.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.Video",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Video.yml\" sourcestartlinenumber=\"1\">A generated video.</p>\n"
     },
     {
       "type": "ManagedReference",
