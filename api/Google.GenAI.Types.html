@@ -350,7 +350,8 @@ parameters
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.GenerateContentResponsePromptFeedback.html">GenerateContentResponsePromptFeedback</a></dt>
-      <dd><p>Content filter results for a prompt sent in the request.</p>
+      <dd><p>Content filter results for a prompt sent in the request. Note: This is sent only in the first
+stream chunk and only if no candidates were generated due to content violations.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -1020,7 +1021,7 @@ Enums
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.BlockedReason.html">BlockedReason</a></dt>
-      <dd><p>Output only. Blocked reason.</p>
+      <dd><p>Output only. The reason why the prompt was blocked.</p>
 </dd>
     </dl>
     <dl class="jumplist">

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class GenerateContentResponsePromptFeedback | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Content filter results for a prompt sent in the request.">
+      <meta name="description" content="Content filter results for a prompt sent in the request. Note: This is sent only in the first stream chunk and only if no candidates were generated due to content violations.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Types_GenerateContentResponsePromptFeedback" data-uid="Google.GenAI.Types.GenerateContentResponsePromptFeedback" class="text-break">
-Class GenerateContentResponsePromptFeedback  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentResponsePromptFeedback.cs/#L29"><i class="bi bi-code-slash"></i></a>
+Class GenerateContentResponsePromptFeedback  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentResponsePromptFeedback.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,7 +93,8 @@ Class GenerateContentResponsePromptFeedback  <a class="header-action link-second
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Content filter results for a prompt sent in the request.</p>
+  <div class="markdown summary"><p>Content filter results for a prompt sent in the request. Note: This is sent only in the first
+stream chunk and only if no candidates were generated due to content violations.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -159,10 +160,10 @@ Class GenerateContentResponsePromptFeedback  <a class="header-action link-second
 
   <h3 id="Google_GenAI_Types_GenerateContentResponsePromptFeedback_BlockReason" data-uid="Google.GenAI.Types.GenerateContentResponsePromptFeedback.BlockReason">
   BlockReason
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentResponsePromptFeedback.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentResponsePromptFeedback.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Output only. Blocked reason.</p>
+  <div class="markdown level1 summary"><p>Output only. The reason why the prompt was blocked.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -193,10 +194,10 @@ public BlockedReason? BlockReason { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GenerateContentResponsePromptFeedback_BlockReasonMessage" data-uid="Google.GenAI.Types.GenerateContentResponsePromptFeedback.BlockReasonMessage">
   BlockReasonMessage
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentResponsePromptFeedback.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentResponsePromptFeedback.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Output only. A readable block reason message.</p>
+  <div class="markdown level1 summary"><p>Output only. A readable message that explains the reason why the prompt was blocked.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -227,10 +228,10 @@ public string? BlockReasonMessage { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GenerateContentResponsePromptFeedback_SafetyRatings" data-uid="Google.GenAI.Types.GenerateContentResponsePromptFeedback.SafetyRatings">
   SafetyRatings
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentResponsePromptFeedback.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentResponsePromptFeedback.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Output only. Safety ratings.</p>
+  <div class="markdown level1 summary"><p>Output only. A list of safety ratings for the prompt. There is one rating per category.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -265,7 +266,7 @@ public List&lt;SafetyRating&gt;? SafetyRatings { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GenerateContentResponsePromptFeedback_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.GenerateContentResponsePromptFeedback.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentResponsePromptFeedback.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentResponsePromptFeedback.cs/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a GenerateContentResponsePromptFeedback object.</p>
@@ -308,7 +309,7 @@ deserialization fails.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentResponsePromptFeedback.cs/#L29" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentResponsePromptFeedback.cs/#L30" class="edit-link">Edit this page</a>
         </div>
 
 

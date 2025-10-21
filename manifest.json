@@ -430,7 +430,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.BlockedReason",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.BlockedReason.yml\" sourcestartlinenumber=\"1\">Output only. Blocked reason.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.BlockedReason.yml\" sourcestartlinenumber=\"1\">Output only. The reason why the prompt was blocked.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1046,7 +1046,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GenerateContentResponsePromptFeedback",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerateContentResponsePromptFeedback.yml\" sourcestartlinenumber=\"1\">Content filter results for a prompt sent in the request.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerateContentResponsePromptFeedback.yml\" sourcestartlinenumber=\"1\">Content filter results for a prompt sent in the request. Note: This is sent only in the first\nstream chunk and only if no candidates were generated due to content violations.</p>\n"
     },
     {
       "type": "ManagedReference",

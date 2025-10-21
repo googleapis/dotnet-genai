@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Enum BlockedReason | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Output only. Blocked reason.">
+      <meta name="description" content="Output only. The reason why the prompt was blocked.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -94,7 +94,7 @@ Enum BlockedReason  <a class="header-action link-secondary" title="View source" 
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Output only. Blocked reason.</p>
+  <div class="markdown summary"><p>Output only. The reason why the prompt was blocked.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -117,32 +117,43 @@ public enum BlockedReason</code></pre>
     <dt id="Google_GenAI_Types_BlockedReason_BLOCKED_REASON_UNSPECIFIED"><code>[JsonPropertyName(&quot;BLOCKED_REASON_UNSPECIFIED&quot;)]
 BLOCKED_REASON_UNSPECIFIED = 0</code></dt>
   
-  <dd><p>Unspecified blocked reason.</p>
+  <dd><p>The blocked reason is unspecified.</p>
 </dd>
     <dt id="Google_GenAI_Types_BlockedReason_BLOCKLIST"><code>[JsonPropertyName(&quot;BLOCKLIST&quot;)]
 BLOCKLIST = 3</code></dt>
   
-  <dd><p>Candidates blocked due to the terms which are included from the terminology blocklist.</p>
+  <dd><p>The prompt was blocked because it contains a term from the terminology blocklist.</p>
 </dd>
     <dt id="Google_GenAI_Types_BlockedReason_IMAGE_SAFETY"><code>[JsonPropertyName(&quot;IMAGE_SAFETY&quot;)]
 IMAGE_SAFETY = 5</code></dt>
   
-  <dd><p>Candidates blocked due to unsafe image generation content.</p>
+  <dd><p>The prompt was blocked because it contains content that is unsafe for image generation.</p>
+</dd>
+    <dt id="Google_GenAI_Types_BlockedReason_JAILBREAK"><code>[JsonPropertyName(&quot;JAILBREAK&quot;)]
+JAILBREAK = 7</code></dt>
+  
+  <dd><p>The prompt was blocked as a jailbreak attempt.</p>
+</dd>
+    <dt id="Google_GenAI_Types_BlockedReason_MODEL_ARMOR"><code>[JsonPropertyName(&quot;MODEL_ARMOR&quot;)]
+MODEL_ARMOR = 6</code></dt>
+  
+  <dd><p>The prompt was blocked by Model Armor.</p>
 </dd>
     <dt id="Google_GenAI_Types_BlockedReason_OTHER"><code>[JsonPropertyName(&quot;OTHER&quot;)]
 OTHER = 2</code></dt>
   
-  <dd><p>Candidates blocked due to other reason.</p>
+  <dd><p>The prompt was blocked for other reasons. For example, it may be due to the prompt's
+language, or because it contains other harmful content.</p>
 </dd>
     <dt id="Google_GenAI_Types_BlockedReason_PROHIBITED_CONTENT"><code>[JsonPropertyName(&quot;PROHIBITED_CONTENT&quot;)]
 PROHIBITED_CONTENT = 4</code></dt>
   
-  <dd><p>Candidates blocked due to prohibited content.</p>
+  <dd><p>The prompt was blocked because it contains prohibited content.</p>
 </dd>
     <dt id="Google_GenAI_Types_BlockedReason_SAFETY"><code>[JsonPropertyName(&quot;SAFETY&quot;)]
 SAFETY = 1</code></dt>
   
-  <dd><p>Candidates blocked due to safety.</p>
+  <dd><p>The prompt was blocked for safety reasons.</p>
 </dd>
   </dl>
 

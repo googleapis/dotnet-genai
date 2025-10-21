@@ -1825,6 +1825,18 @@ references:
   commentId: F:Google.GenAI.Types.BlockedReason.IMAGE_SAFETY
   fullName: Google.GenAI.Types.BlockedReason.IMAGE_SAFETY
   nameWithType: BlockedReason.IMAGE_SAFETY
+- uid: Google.GenAI.Types.BlockedReason.JAILBREAK
+  name: JAILBREAK
+  href: api/Google.GenAI.Types.BlockedReason.html#Google_GenAI_Types_BlockedReason_JAILBREAK
+  commentId: F:Google.GenAI.Types.BlockedReason.JAILBREAK
+  fullName: Google.GenAI.Types.BlockedReason.JAILBREAK
+  nameWithType: BlockedReason.JAILBREAK
+- uid: Google.GenAI.Types.BlockedReason.MODEL_ARMOR
+  name: MODEL_ARMOR
+  href: api/Google.GenAI.Types.BlockedReason.html#Google_GenAI_Types_BlockedReason_MODEL_ARMOR
+  commentId: F:Google.GenAI.Types.BlockedReason.MODEL_ARMOR
+  fullName: Google.GenAI.Types.BlockedReason.MODEL_ARMOR
+  nameWithType: BlockedReason.MODEL_ARMOR
 - uid: Google.GenAI.Types.BlockedReason.OTHER
   name: OTHER
   href: api/Google.GenAI.Types.BlockedReason.html#Google_GenAI_Types_BlockedReason_OTHER
@@ -6990,6 +7002,12 @@ references:
   commentId: F:Google.GenAI.Types.HarmCategory.HARM_CATEGORY_IMAGE_SEXUALLY_EXPLICIT
   fullName: Google.GenAI.Types.HarmCategory.HARM_CATEGORY_IMAGE_SEXUALLY_EXPLICIT
   nameWithType: HarmCategory.HARM_CATEGORY_IMAGE_SEXUALLY_EXPLICIT
+- uid: Google.GenAI.Types.HarmCategory.HARM_CATEGORY_JAILBREAK
+  name: HARM_CATEGORY_JAILBREAK
+  href: api/Google.GenAI.Types.HarmCategory.html#Google_GenAI_Types_HarmCategory_HARM_CATEGORY_JAILBREAK
+  commentId: F:Google.GenAI.Types.HarmCategory.HARM_CATEGORY_JAILBREAK
+  fullName: Google.GenAI.Types.HarmCategory.HARM_CATEGORY_JAILBREAK
+  nameWithType: HarmCategory.HARM_CATEGORY_JAILBREAK
 - uid: Google.GenAI.Types.HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT
   name: HARM_CATEGORY_SEXUALLY_EXPLICIT
   href: api/Google.GenAI.Types.HarmCategory.html#Google_GenAI_Types_HarmCategory_HARM_CATEGORY_SEXUALLY_EXPLICIT
