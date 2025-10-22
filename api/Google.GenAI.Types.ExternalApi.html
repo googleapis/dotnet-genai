@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ExternalApi | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Retrieve from data source powered by external API for grounding. The external API is not owned by Google, but need to follow the pre-defined API spec.">
+      <meta name="description" content="Retrieve from data source powered by external API for grounding. The external API is not owned by Google, but need to follow the pre-defined API spec. This data type is not supported in Gemini API.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Types_ExternalApi" data-uid="Google.GenAI.Types.ExternalApi" class="text-break">
-Class ExternalApi  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ExternalApi.cs/#L30"><i class="bi bi-code-slash"></i></a>
+Class ExternalApi  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ExternalApi.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -94,7 +94,8 @@ Class ExternalApi  <a class="header-action link-secondary" title="View source" h
   </div>
 
   <div class="markdown summary"><p>Retrieve from data source powered by external API for grounding. The external API is not owned
-by Google, but need to follow the pre-defined API spec.</p>
+by Google, but need to follow the pre-defined API spec. This data type is not supported in
+Gemini API.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -160,7 +161,7 @@ by Google, but need to follow the pre-defined API spec.</p>
 
   <h3 id="Google_GenAI_Types_ExternalApi_ApiAuth" data-uid="Google.GenAI.Types.ExternalApi.ApiAuth">
   ApiAuth
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ExternalApi.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ExternalApi.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The authentication config to access the API. Deprecated. Please use auth_config instead.</p>
@@ -194,7 +195,7 @@ public ApiAuth? ApiAuth { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_ExternalApi_ApiSpec" data-uid="Google.GenAI.Types.ExternalApi.ApiSpec">
   ApiSpec
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ExternalApi.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ExternalApi.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The API spec that the external API implements.</p>
@@ -228,7 +229,7 @@ public ApiSpec? ApiSpec { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_ExternalApi_AuthConfig" data-uid="Google.GenAI.Types.ExternalApi.AuthConfig">
   AuthConfig
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ExternalApi.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ExternalApi.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The authentication config to access the API.</p>
@@ -262,7 +263,7 @@ public AuthConfig? AuthConfig { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_ExternalApi_ElasticSearchParams" data-uid="Google.GenAI.Types.ExternalApi.ElasticSearchParams">
   ElasticSearchParams
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ExternalApi.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ExternalApi.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Parameters for the elastic search API.</p>
@@ -296,7 +297,7 @@ public ExternalApiElasticSearchParams? ElasticSearchParams { get; set; }</code><
 
   <h3 id="Google_GenAI_Types_ExternalApi_Endpoint" data-uid="Google.GenAI.Types.ExternalApi.Endpoint">
   Endpoint
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ExternalApi.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ExternalApi.cs/#L73"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The endpoint of the external API. The system will call the API at this endpoint to retrieve
@@ -331,7 +332,7 @@ public string? Endpoint { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_ExternalApi_SimpleSearchParams" data-uid="Google.GenAI.Types.ExternalApi.SimpleSearchParams">
   SimpleSearchParams
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ExternalApi.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ExternalApi.cs/#L83"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Parameters for the simple search API.</p>
@@ -369,7 +370,7 @@ public ExternalApiSimpleSearchParams? SimpleSearchParams { get; set; }</code></p
 
   <h3 id="Google_GenAI_Types_ExternalApi_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.ExternalApi.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ExternalApi.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ExternalApi.cs/#L96"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a ExternalApi object.</p>
@@ -411,7 +412,7 @@ public ExternalApiSimpleSearchParams? SimpleSearchParams { get; set; }</code></p
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ExternalApi.cs/#L30" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ExternalApi.cs/#L31" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class VertexAISearch | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Retrieve from Vertex AI Search datastore or engine for grounding. datastore and engine are mutually exclusive. See https://cloud.google.com/products/agent-builder">
+      <meta name="description" content="Retrieve from Vertex AI Search datastore or engine for grounding. datastore and engine are mutually exclusive. See https://cloud.google.com/products/agent-builder. This data type is not supported in Gemini API.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Types_VertexAISearch" data-uid="Google.GenAI.Types.VertexAISearch" class="text-break">
-Class VertexAISearch  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VertexAISearch.cs/#L30"><i class="bi bi-code-slash"></i></a>
+Class VertexAISearch  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VertexAISearch.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -94,7 +94,8 @@ Class VertexAISearch  <a class="header-action link-secondary" title="View source
   </div>
 
   <div class="markdown summary"><p>Retrieve from Vertex AI Search datastore or engine for grounding. datastore and engine are
-mutually exclusive. See <a href="https://cloud.google.com/products/agent-builder">https://cloud.google.com/products/agent-builder</a></p>
+mutually exclusive. See <a href="https://cloud.google.com/products/agent-builder">https://cloud.google.com/products/agent-builder</a>. This data type is not
+supported in Gemini API.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -160,7 +161,7 @@ mutually exclusive. See <a href="https://cloud.google.com/products/agent-builder
 
   <h3 id="Google_GenAI_Types_VertexAISearch_DataStoreSpecs" data-uid="Google.GenAI.Types.VertexAISearch.DataStoreSpecs">
   DataStoreSpecs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VertexAISearch.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VertexAISearch.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Specifications that define the specific DataStores to be searched, along with configurations
@@ -196,7 +197,7 @@ public List&lt;VertexAISearchDataStoreSpec&gt;? DataStoreSpecs { get; set; }</co
 
   <h3 id="Google_GenAI_Types_VertexAISearch_Datastore" data-uid="Google.GenAI.Types.VertexAISearch.Datastore">
   Datastore
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VertexAISearch.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VertexAISearch.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. Fully-qualified Vertex AI Search data store resource ID. Format:
@@ -231,7 +232,7 @@ public string? Datastore { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_VertexAISearch_Engine" data-uid="Google.GenAI.Types.VertexAISearch.Engine">
   Engine
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VertexAISearch.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VertexAISearch.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. Fully-qualified Vertex AI Search engine resource ID. Format:
@@ -266,7 +267,7 @@ public string? Engine { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_VertexAISearch_Filter" data-uid="Google.GenAI.Types.VertexAISearch.Filter">
   Filter
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VertexAISearch.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VertexAISearch.cs/#L66"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. Filter strings to be passed to the search API.</p>
@@ -300,7 +301,7 @@ public string? Filter { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_VertexAISearch_MaxResults" data-uid="Google.GenAI.Types.VertexAISearch.MaxResults">
   MaxResults
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VertexAISearch.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VertexAISearch.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. Number of search results to return per query. The default value is 10. The
@@ -339,7 +340,7 @@ public int? MaxResults { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_VertexAISearch_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.VertexAISearch.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VertexAISearch.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VertexAISearch.cs/#L90"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a VertexAISearch object.</p>
@@ -381,7 +382,7 @@ public int? MaxResults { get; set; }</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VertexAISearch.cs/#L30" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VertexAISearch.cs/#L31" class="edit-link">Edit this page</a>
         </div>
 
 

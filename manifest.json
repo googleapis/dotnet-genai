@@ -234,7 +234,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ApiAuth",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ApiAuth.yml\" sourcestartlinenumber=\"1\">The generic reusable api auth config. Deprecated. Please use AuthConfig\n(google/cloud/aiplatform/master/auth.proto) instead.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ApiAuth.yml\" sourcestartlinenumber=\"1\">The generic reusable api auth config. Deprecated. Please use AuthConfig\n(google/cloud/aiplatform/master/auth.proto) instead. This data type is not supported in Gemini\nAPI.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -248,7 +248,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ApiAuthApiKeyConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ApiAuthApiKeyConfig.yml\" sourcestartlinenumber=\"1\">The API secret.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ApiAuthApiKeyConfig.yml\" sourcestartlinenumber=\"1\">The API secret. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -318,7 +318,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.AuthConfigGoogleServiceAccountConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.AuthConfigGoogleServiceAccountConfig.yml\" sourcestartlinenumber=\"1\">Config for Google Service Account Authentication.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.AuthConfigGoogleServiceAccountConfig.yml\" sourcestartlinenumber=\"1\">Config for Google Service Account Authentication. This data type is not supported in Gemini\nAPI.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -332,7 +332,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.AuthConfigHttpBasicAuthConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.AuthConfigHttpBasicAuthConfig.yml\" sourcestartlinenumber=\"1\">Config for HTTP Basic Authentication.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.AuthConfigHttpBasicAuthConfig.yml\" sourcestartlinenumber=\"1\">Config for HTTP Basic Authentication. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -346,7 +346,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.AuthConfigOauthConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.AuthConfigOauthConfig.yml\" sourcestartlinenumber=\"1\">Config for user oauth.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.AuthConfigOauthConfig.yml\" sourcestartlinenumber=\"1\">Config for user oauth. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -360,7 +360,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.AuthConfigOidcConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.AuthConfigOidcConfig.yml\" sourcestartlinenumber=\"1\">Config for user OIDC auth.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.AuthConfigOidcConfig.yml\" sourcestartlinenumber=\"1\">Config for user OIDC auth. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -458,7 +458,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Citation",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Citation.yml\" sourcestartlinenumber=\"1\">Source attributions for content.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Citation.yml\" sourcestartlinenumber=\"1\">Source attributions for content. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -808,7 +808,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ExternalApi",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ExternalApi.yml\" sourcestartlinenumber=\"1\">Retrieve from data source powered by external API for grounding. The external API is not owned\nby Google, but need to follow the pre-defined API spec.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ExternalApi.yml\" sourcestartlinenumber=\"1\">Retrieve from data source powered by external API for grounding. The external API is not owned\nby Google, but need to follow the pre-defined API spec. This data type is not supported in\nGemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -822,7 +822,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ExternalApiElasticSearchParams",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ExternalApiElasticSearchParams.yml\" sourcestartlinenumber=\"1\">The search parameters to use for the ELASTIC_SEARCH spec.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ExternalApiElasticSearchParams.yml\" sourcestartlinenumber=\"1\">The search parameters to use for the ELASTIC_SEARCH spec. This data type is not supported in\nGemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -836,7 +836,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ExternalApiSimpleSearchParams",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ExternalApiSimpleSearchParams.yml\" sourcestartlinenumber=\"1\">The search parameters to use for SIMPLE_SEARCH spec.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ExternalApiSimpleSearchParams.yml\" sourcestartlinenumber=\"1\">The search parameters to use for SIMPLE_SEARCH spec. This data type is not supported in Gemini\nAPI.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1060,7 +1060,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GenerateContentResponseUsageMetadata",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerateContentResponseUsageMetadata.yml\" sourcestartlinenumber=\"1\">Usage metadata about response(s).</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerateContentResponseUsageMetadata.yml\" sourcestartlinenumber=\"1\">Usage metadata about response(s). This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1144,7 +1144,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GenerationConfigRoutingConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerationConfigRoutingConfig.yml\" sourcestartlinenumber=\"1\">The configuration for routing the request to a specific model.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerationConfigRoutingConfig.yml\" sourcestartlinenumber=\"1\">The configuration for routing the request to a specific model. This data type is not supported\nin Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1158,7 +1158,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GenerationConfigRoutingConfigAutoRoutingMode",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerationConfigRoutingConfigAutoRoutingMode.yml\" sourcestartlinenumber=\"1\">When automated routing is specified, the routing will be determined by the pretrained routing\nmodel and customer provided model routing preference.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerationConfigRoutingConfigAutoRoutingMode.yml\" sourcestartlinenumber=\"1\">When automated routing is specified, the routing will be determined by the pretrained routing\nmodel and customer provided model routing preference. This data type is not supported in\nGemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1172,7 +1172,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GenerationConfigRoutingConfigManualRoutingMode",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerationConfigRoutingConfigManualRoutingMode.yml\" sourcestartlinenumber=\"1\">When manual routing is set, the specified model will be used directly.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerationConfigRoutingConfigManualRoutingMode.yml\" sourcestartlinenumber=\"1\">When manual routing is set, the specified model will be used directly. This data type is not\nsupported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1242,7 +1242,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GoogleTypeDate",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GoogleTypeDate.yml\" sourcestartlinenumber=\"1\">Represents a whole or partial calendar date, such as a birthday. The time of day and time zone\nare either specified elsewhere or are insignificant. The date is relative to the Gregorian\nCalendar. This can represent one of the following: * A full date, with non-zero year, month,\nand day values. * A month and day, with a zero year (for example, an anniversary). * A year on\nits own, with a zero month and a zero day. * A year and month, with a zero day (for example, a\ncredit card expiration date). Related types: * google.type.TimeOfDay * google.type.DateTime *\ngoogle.protobuf.Timestamp</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GoogleTypeDate.yml\" sourcestartlinenumber=\"1\">Represents a whole or partial calendar date, such as a birthday. The time of day and time zone\nare either specified elsewhere or are insignificant. The date is relative to the Gregorian\nCalendar. This can represent one of the following: * A full date, with non-zero year, month,\nand day values. * A month and day, with a zero year (for example, an anniversary). * A year on\nits own, with a zero month and a zero day. * A year and month, with a zero day (for example, a\ncredit card expiration date). Related types: * google.type.TimeOfDay * google.type.DateTime *\ngoogle.protobuf.Timestamp. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1270,7 +1270,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GroundingChunkMaps",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingChunkMaps.yml\" sourcestartlinenumber=\"1\">Chunk from Google Maps.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingChunkMaps.yml\" sourcestartlinenumber=\"1\">Chunk from Google Maps. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1284,7 +1284,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSources",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSources.yml\" sourcestartlinenumber=\"1\">Sources used to generate the place answer.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSources.yml\" sourcestartlinenumber=\"1\">Sources used to generate the place answer. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1298,7 +1298,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesAuthorAttribution",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesAuthorAttribution.yml\" sourcestartlinenumber=\"1\">Author attribution for a photo or review.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesAuthorAttribution.yml\" sourcestartlinenumber=\"1\">Author attribution for a photo or review. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1312,7 +1312,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesReviewSnippet",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.yml\" sourcestartlinenumber=\"1\">Encapsulates a review snippet.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.yml\" sourcestartlinenumber=\"1\">Encapsulates a review snippet. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1326,7 +1326,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GroundingChunkRetrievedContext",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingChunkRetrievedContext.yml\" sourcestartlinenumber=\"1\">Chunk from context retrieved by the retrieval tools.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingChunkRetrievedContext.yml\" sourcestartlinenumber=\"1\">Chunk from context retrieved by the retrieval tools. This data type is not supported in Gemini\nAPI.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1368,7 +1368,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GroundingMetadataSourceFlaggingUri",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.yml\" sourcestartlinenumber=\"1\">Source content flagging uri for a place or review. This is currently populated only for Google\nMaps grounding.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.yml\" sourcestartlinenumber=\"1\">Source content flagging uri for a place or review. This is currently populated only for Google\nMaps grounding. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2096,7 +2096,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.RagChunk",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RagChunk.yml\" sourcestartlinenumber=\"1\">A RagChunk includes the content of a chunk of a RagFile, and associated metadata.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RagChunk.yml\" sourcestartlinenumber=\"1\">A RagChunk includes the content of a chunk of a RagFile, and associated metadata. This data\ntype is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2110,7 +2110,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.RagChunkPageSpan",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RagChunkPageSpan.yml\" sourcestartlinenumber=\"1\">Represents where the chunk starts and ends in the document.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RagChunkPageSpan.yml\" sourcestartlinenumber=\"1\">Represents where the chunk starts and ends in the document. This data type is not supported in\nGemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2124,7 +2124,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.RagRetrievalConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RagRetrievalConfig.yml\" sourcestartlinenumber=\"1\">Specifies the context retrieval config.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RagRetrievalConfig.yml\" sourcestartlinenumber=\"1\">Specifies the context retrieval config. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2138,7 +2138,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.RagRetrievalConfigFilter",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RagRetrievalConfigFilter.yml\" sourcestartlinenumber=\"1\">Config for filters.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RagRetrievalConfigFilter.yml\" sourcestartlinenumber=\"1\">Config for filters. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2152,7 +2152,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.RagRetrievalConfigHybridSearch",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RagRetrievalConfigHybridSearch.yml\" sourcestartlinenumber=\"1\">Config for Hybrid Search.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RagRetrievalConfigHybridSearch.yml\" sourcestartlinenumber=\"1\">Config for Hybrid Search. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2166,7 +2166,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.RagRetrievalConfigRanking",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RagRetrievalConfigRanking.yml\" sourcestartlinenumber=\"1\">Config for ranking and reranking.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RagRetrievalConfigRanking.yml\" sourcestartlinenumber=\"1\">Config for ranking and reranking. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2180,7 +2180,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.RagRetrievalConfigRankingLlmRanker",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RagRetrievalConfigRankingLlmRanker.yml\" sourcestartlinenumber=\"1\">Config for LlmRanker.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RagRetrievalConfigRankingLlmRanker.yml\" sourcestartlinenumber=\"1\">Config for LlmRanker. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2194,7 +2194,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.RagRetrievalConfigRankingRankService",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RagRetrievalConfigRankingRankService.yml\" sourcestartlinenumber=\"1\">Config for Rank Service.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RagRetrievalConfigRankingRankService.yml\" sourcestartlinenumber=\"1\">Config for Rank Service. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2292,7 +2292,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Retrieval",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Retrieval.yml\" sourcestartlinenumber=\"1\">Defines a retrieval tool that model can call to access external knowledge.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Retrieval.yml\" sourcestartlinenumber=\"1\">Defines a retrieval tool that model can call to access external knowledge. This data type is\nnot supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2712,7 +2712,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ToolCodeExecution",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ToolCodeExecution.yml\" sourcestartlinenumber=\"1\">Tool that executes code generated by the model, and automatically returns the result to the\nmodel. See also [ExecutableCode]and [CodeExecutionResult] which are input and output to this\ntool.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ToolCodeExecution.yml\" sourcestartlinenumber=\"1\">Tool that executes code generated by the model, and automatically returns the result to the\nmodel. See also [ExecutableCode]and [CodeExecutionResult] which are input and output to this\ntool. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2922,7 +2922,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.VertexAISearch",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VertexAISearch.yml\" sourcestartlinenumber=\"1\">Retrieve from Vertex AI Search datastore or engine for grounding. datastore and engine are\nmutually exclusive. See <a href=\"https://cloud.google.com/products/agent-builder\" sourcefile=\"api/Google.GenAI.Types.VertexAISearch.yml\" sourcestartlinenumber=\"2\">https://cloud.google.com/products/agent-builder</a></p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VertexAISearch.yml\" sourcestartlinenumber=\"1\">Retrieve from Vertex AI Search datastore or engine for grounding. datastore and engine are\nmutually exclusive. See <a href=\"https://cloud.google.com/products/agent-builder\" sourcefile=\"api/Google.GenAI.Types.VertexAISearch.yml\" sourcestartlinenumber=\"2\">https://cloud.google.com/products/agent-builder</a>. This data type is not\nsupported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2936,7 +2936,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.VertexAISearchDataStoreSpec",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VertexAISearchDataStoreSpec.yml\" sourcestartlinenumber=\"1\">Define data stores within engine to filter on in a search call and configurations for those\ndata stores. For more information, see\n<a href=\"https://cloud.google.com/generative-ai-app-builder/docs/reference/rpc/google.cloud.discoveryengine.v1#datastorespec\" sourcefile=\"api/Google.GenAI.Types.VertexAISearchDataStoreSpec.yml\" sourcestartlinenumber=\"3\">https://cloud.google.com/generative-ai-app-builder/docs/reference/rpc/google.cloud.discoveryengine.v1#datastorespec</a></p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VertexAISearchDataStoreSpec.yml\" sourcestartlinenumber=\"1\">Define data stores within engine to filter on in a search call and configurations for those\ndata stores. For more information, see\n<a href=\"https://cloud.google.com/generative-ai-app-builder/docs/reference/rpc/google.cloud.discoveryengine.v1#datastorespec\" sourcefile=\"api/Google.GenAI.Types.VertexAISearchDataStoreSpec.yml\" sourcestartlinenumber=\"3\">https://cloud.google.com/generative-ai-app-builder/docs/reference/rpc/google.cloud.discoveryengine.v1#datastorespec</a>.\nThis data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2950,7 +2950,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.VertexRagStore",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VertexRagStore.yml\" sourcestartlinenumber=\"1\">Retrieve from Vertex RAG Store for grounding.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VertexRagStore.yml\" sourcestartlinenumber=\"1\">Retrieve from Vertex RAG Store for grounding. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2964,7 +2964,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.VertexRagStoreRagResource",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VertexRagStoreRagResource.yml\" sourcestartlinenumber=\"1\">The definition of the Rag resource.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VertexRagStoreRagResource.yml\" sourcestartlinenumber=\"1\">The definition of the Rag resource. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
