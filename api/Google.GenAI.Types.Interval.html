@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class Interval | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Represents a time interval, encoded as a start time (inclusive) and an end time (exclusive). The start time must be less than or equal to the end time. When the start equals the end time, the interval is an empty interval. (matches no time) When both start and end are unspecified, the interval matches any time.">
+      <meta name="description" content="Represents a time interval, encoded as a Timestamp start (inclusive) and a Timestamp end (exclusive). The start must be less than or equal to the end. When the start equals the end, the interval is empty (matches no time). When both start and end are unspecified, the interval matches any time.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -93,10 +93,10 @@ Class Interval  <a class="header-action link-secondary" title="View source" href
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a time interval, encoded as a start time (inclusive) and an end time (exclusive).
-The start time must be less than or equal to the end time. When the start equals the end time,
-the interval is an empty interval. (matches no time) When both start and end are unspecified,
-the interval matches any time.</p>
+  <div class="markdown summary"><p>Represents a time interval, encoded as a Timestamp start (inclusive) and a Timestamp end
+(exclusive). The start must be less than or equal to the end. When the start equals the end,
+the interval is empty (matches no time). When both start and end are unspecified, the interval
+matches any time.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -162,10 +162,11 @@ the interval matches any time.</p>
 
   <h3 id="Google_GenAI_Types_Interval_EndTime" data-uid="Google.GenAI.Types.Interval.EndTime">
   EndTime
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Interval.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Interval.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The end time of the interval.</p>
+  <div class="markdown level1 summary"><p>Optional. Exclusive end of the interval. If specified, a Timestamp matching this interval
+will have to be before the end.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -196,10 +197,11 @@ public DateTime? EndTime { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Interval_StartTime" data-uid="Google.GenAI.Types.Interval.StartTime">
   StartTime
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Interval.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Interval.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The start time of the interval.</p>
+  <div class="markdown level1 summary"><p>Optional. Inclusive start of the interval. If specified, a Timestamp matching this interval
+will have to be the same or after the start.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -234,7 +236,7 @@ public DateTime? StartTime { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Interval_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.Interval.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Interval.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Interval.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a Interval object.</p>

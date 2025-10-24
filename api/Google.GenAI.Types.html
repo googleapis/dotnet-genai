@@ -260,7 +260,8 @@ for the model to fill in based on the prompt.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.EnterpriseWebSearch.html">EnterpriseWebSearch</a></dt>
-      <dd><p>Tool to search public web data, powered by Vertex AI Search and Sec4 compliance.</p>
+      <dd><p>Tool to search public web data, powered by Vertex AI Search and Sec4 compliance. This data
+type is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -420,7 +421,7 @@ supported in Gemini API.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.GoogleSearch.html">GoogleSearch</a></dt>
-      <dd><p>Tool to support Google Search in Model. Powered by Google.</p>
+      <dd><p>GoogleSearch tool type. Tool to support Google Search in Model. Powered by Google.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -513,10 +514,10 @@ Maps grounding. This data type is not supported in Gemini API.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.Interval.html">Interval</a></dt>
-      <dd><p>Represents a time interval, encoded as a start time (inclusive) and an end time (exclusive).
-The start time must be less than or equal to the end time. When the start equals the end time,
-the interval is an empty interval. (matches no time) When both start and end are unspecified,
-the interval matches any time.</p>
+      <dd><p>Represents a time interval, encoded as a Timestamp start (inclusive) and a Timestamp end
+(exclusive). The start must be less than or equal to the end. When the start equals the end,
+the interval is empty (matches no time). When both start and end are unspecified, the interval
+matches any time.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -949,7 +950,7 @@ the Imagen API reference documentation
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.UrlContext.html">UrlContext</a></dt>
-      <dd><p>Tool to support URL context retrieval.</p>
+      <dd><p>Tool to support URL context.</p>
 </dd>
     </dl>
     <dl class="jumplist">

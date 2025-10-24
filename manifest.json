@@ -766,7 +766,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.EnterpriseWebSearch",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.EnterpriseWebSearch.yml\" sourcestartlinenumber=\"1\">Tool to search public web data, powered by Vertex AI Search and Sec4 compliance.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.EnterpriseWebSearch.yml\" sourcestartlinenumber=\"1\">Tool to search public web data, powered by Vertex AI Search and Sec4 compliance. This data\ntype is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1228,7 +1228,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GoogleSearch",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GoogleSearch.yml\" sourcestartlinenumber=\"1\">Tool to support Google Search in Model. Powered by Google.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GoogleSearch.yml\" sourcestartlinenumber=\"1\">GoogleSearch tool type. Tool to support Google Search in Model. Powered by Google.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1564,7 +1564,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Interval",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Interval.yml\" sourcestartlinenumber=\"1\">Represents a time interval, encoded as a start time (inclusive) and an end time (exclusive).\nThe start time must be less than or equal to the end time. When the start equals the end time,\nthe interval is an empty interval. (matches no time) When both start and end are unspecified,\nthe interval matches any time.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Interval.yml\" sourcestartlinenumber=\"1\">Represents a time interval, encoded as a Timestamp start (inclusive) and a Timestamp end\n(exclusive). The start must be less than or equal to the end. When the start equals the end,\nthe interval is empty (matches no time). When both start and end are unspecified, the interval\nmatches any time.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2866,7 +2866,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.UrlContext",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.UrlContext.yml\" sourcestartlinenumber=\"1\">Tool to support URL context retrieval.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.UrlContext.yml\" sourcestartlinenumber=\"1\">Tool to support URL context.</p>\n"
     },
     {
       "type": "ManagedReference",
