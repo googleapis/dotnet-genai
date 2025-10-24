@@ -276,7 +276,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ApiSpec",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ApiSpec.yml\" sourcestartlinenumber=\"1\">The API spec that the external API implements.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ApiSpec.yml\" sourcestartlinenumber=\"1\">The API spec that the external API implements. This enum is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -374,7 +374,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.AuthType",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.AuthType.yml\" sourcestartlinenumber=\"1\">Type of auth scheme.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.AuthType.yml\" sourcestartlinenumber=\"1\">Type of auth scheme. This enum is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1396,7 +1396,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.HarmBlockMethod",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.HarmBlockMethod.yml\" sourcestartlinenumber=\"1\">Optional. Specify if the threshold is used for probability or severity score. If not\nspecified, the threshold is used for probability score.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.HarmBlockMethod.yml\" sourcestartlinenumber=\"1\">Specify if the threshold is used for probability or severity score. If not specified, the\nthreshold is used for probability score. This enum is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1410,7 +1410,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.HarmBlockThreshold",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.HarmBlockThreshold.yml\" sourcestartlinenumber=\"1\">Required. The harm block threshold.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.HarmBlockThreshold.yml\" sourcestartlinenumber=\"1\">The harm block threshold.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1424,7 +1424,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.HarmCategory",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.HarmCategory.yml\" sourcestartlinenumber=\"1\">Required. Harm category.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.HarmCategory.yml\" sourcestartlinenumber=\"1\">Harm category.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1452,7 +1452,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.HarmSeverity",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.HarmSeverity.yml\" sourcestartlinenumber=\"1\">Output only. Harm severity levels in the content.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.HarmSeverity.yml\" sourcestartlinenumber=\"1\">Output only. Harm severity levels in the content. This enum is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1578,7 +1578,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Language",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Language.yml\" sourcestartlinenumber=\"1\">Required. Programming language of the <code sourcefile=\"api/Google.GenAI.Types.Language.yml\" sourcestartlinenumber=\"1\">code</code>.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Language.yml\" sourcestartlinenumber=\"1\">Programming language of the <code sourcefile=\"api/Google.GenAI.Types.Language.yml\" sourcestartlinenumber=\"1\">code</code>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2026,7 +2026,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Outcome",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Outcome.yml\" sourcestartlinenumber=\"1\">Required. Outcome of the code execution.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Outcome.yml\" sourcestartlinenumber=\"1\">Outcome of the code execution.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2740,7 +2740,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.TrafficType",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.TrafficType.yml\" sourcestartlinenumber=\"1\">Output only. Traffic type. This shows whether a request consumes Pay-As-You-Go or Provisioned\nThroughput quota.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.TrafficType.yml\" sourcestartlinenumber=\"1\">Output only. Traffic type. This shows whether a request consumes Pay-As-You-Go or Provisioned\nThroughput quota. This enum is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2796,7 +2796,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Type",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Type.yml\" sourcestartlinenumber=\"1\">Optional. The type of the data.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Type.yml\" sourcestartlinenumber=\"1\">The type of the data.</p>\n"
     },
     {
       "type": "ManagedReference",
