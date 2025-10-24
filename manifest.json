@@ -140,6 +140,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.MimeTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.MimeTypes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.MimeTypes",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.MimeTypes.yml\" sourcestartlinenumber=\"1\">Provides utilities for mapping file names and extensions to MIME-types.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Models.yml",
       "output": {
         ".html": {

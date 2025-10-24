@@ -778,6 +778,73 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Live.ConnectAsync
   nameWithType: Live.ConnectAsync
+- uid: Google.GenAI.MimeTypes
+  name: MimeTypes
+  href: api/Google.GenAI.MimeTypes.html
+  commentId: T:Google.GenAI.MimeTypes
+  fullName: Google.GenAI.MimeTypes
+  nameWithType: MimeTypes
+- uid: Google.GenAI.MimeTypes.FallbackMimeType
+  name: FallbackMimeType
+  href: api/Google.GenAI.MimeTypes.html#Google_GenAI_MimeTypes_FallbackMimeType
+  commentId: P:Google.GenAI.MimeTypes.FallbackMimeType
+  fullName: Google.GenAI.MimeTypes.FallbackMimeType
+  nameWithType: MimeTypes.FallbackMimeType
+- uid: Google.GenAI.MimeTypes.FallbackMimeType*
+  name: FallbackMimeType
+  href: api/Google.GenAI.MimeTypes.html#Google_GenAI_MimeTypes_FallbackMimeType_
+  commentId: Overload:Google.GenAI.MimeTypes.FallbackMimeType
+  isSpec: "True"
+  fullName: Google.GenAI.MimeTypes.FallbackMimeType
+  nameWithType: MimeTypes.FallbackMimeType
+- uid: Google.GenAI.MimeTypes.GetMimeType(System.String)
+  name: GetMimeType(string)
+  href: api/Google.GenAI.MimeTypes.html#Google_GenAI_MimeTypes_GetMimeType_System_String_
+  commentId: M:Google.GenAI.MimeTypes.GetMimeType(System.String)
+  name.vb: GetMimeType(String)
+  fullName: Google.GenAI.MimeTypes.GetMimeType(string)
+  fullName.vb: Google.GenAI.MimeTypes.GetMimeType(String)
+  nameWithType: MimeTypes.GetMimeType(string)
+  nameWithType.vb: MimeTypes.GetMimeType(String)
+- uid: Google.GenAI.MimeTypes.GetMimeType*
+  name: GetMimeType
+  href: api/Google.GenAI.MimeTypes.html#Google_GenAI_MimeTypes_GetMimeType_
+  commentId: Overload:Google.GenAI.MimeTypes.GetMimeType
+  isSpec: "True"
+  fullName: Google.GenAI.MimeTypes.GetMimeType
+  nameWithType: MimeTypes.GetMimeType
+- uid: Google.GenAI.MimeTypes.GetMimeTypeExtensions(System.String)
+  name: GetMimeTypeExtensions(string)
+  href: api/Google.GenAI.MimeTypes.html#Google_GenAI_MimeTypes_GetMimeTypeExtensions_System_String_
+  commentId: M:Google.GenAI.MimeTypes.GetMimeTypeExtensions(System.String)
+  name.vb: GetMimeTypeExtensions(String)
+  fullName: Google.GenAI.MimeTypes.GetMimeTypeExtensions(string)
+  fullName.vb: Google.GenAI.MimeTypes.GetMimeTypeExtensions(String)
+  nameWithType: MimeTypes.GetMimeTypeExtensions(string)
+  nameWithType.vb: MimeTypes.GetMimeTypeExtensions(String)
+- uid: Google.GenAI.MimeTypes.GetMimeTypeExtensions*
+  name: GetMimeTypeExtensions
+  href: api/Google.GenAI.MimeTypes.html#Google_GenAI_MimeTypes_GetMimeTypeExtensions_
+  commentId: Overload:Google.GenAI.MimeTypes.GetMimeTypeExtensions
+  isSpec: "True"
+  fullName: Google.GenAI.MimeTypes.GetMimeTypeExtensions
+  nameWithType: MimeTypes.GetMimeTypeExtensions
+- uid: Google.GenAI.MimeTypes.TryGetMimeType(System.String,System.String@)
+  name: TryGetMimeType(string?, out string?)
+  href: api/Google.GenAI.MimeTypes.html#Google_GenAI_MimeTypes_TryGetMimeType_System_String_System_String__
+  commentId: M:Google.GenAI.MimeTypes.TryGetMimeType(System.String,System.String@)
+  name.vb: TryGetMimeType(String, String)
+  fullName: Google.GenAI.MimeTypes.TryGetMimeType(string?, out string?)
+  fullName.vb: Google.GenAI.MimeTypes.TryGetMimeType(String, String)
+  nameWithType: MimeTypes.TryGetMimeType(string?, out string?)
+  nameWithType.vb: MimeTypes.TryGetMimeType(String, String)
+- uid: Google.GenAI.MimeTypes.TryGetMimeType*
+  name: TryGetMimeType
+  href: api/Google.GenAI.MimeTypes.html#Google_GenAI_MimeTypes_TryGetMimeType_
+  commentId: Overload:Google.GenAI.MimeTypes.TryGetMimeType
+  isSpec: "True"
+  fullName: Google.GenAI.MimeTypes.TryGetMimeType
+  nameWithType: MimeTypes.TryGetMimeType
 - uid: Google.GenAI.Models
   name: Models
   href: api/Google.GenAI.Models.html
@@ -7179,13 +7246,13 @@ references:
   fullName: Google.GenAI.Types.Image
   nameWithType: Image
 - uid: Google.GenAI.Types.Image.FromFile(System.String,System.String)
-  name: FromFile(string, string)
+  name: FromFile(string, string?)
   href: api/Google.GenAI.Types.Image.html#Google_GenAI_Types_Image_FromFile_System_String_System_String_
   commentId: M:Google.GenAI.Types.Image.FromFile(System.String,System.String)
   name.vb: FromFile(String, String)
-  fullName: Google.GenAI.Types.Image.FromFile(string, string)
+  fullName: Google.GenAI.Types.Image.FromFile(string, string?)
   fullName.vb: Google.GenAI.Types.Image.FromFile(String, String)
-  nameWithType: Image.FromFile(string, string)
+  nameWithType: Image.FromFile(string, string?)
   nameWithType.vb: Image.FromFile(String, String)
 - uid: Google.GenAI.Types.Image.FromFile*
   name: FromFile
