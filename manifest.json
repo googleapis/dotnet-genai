@@ -2026,7 +2026,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.MultiSpeakerVoiceConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.MultiSpeakerVoiceConfig.yml\" sourcestartlinenumber=\"1\">The configuration for the multi-speaker setup.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.MultiSpeakerVoiceConfig.yml\" sourcestartlinenumber=\"1\">The configuration for the multi-speaker setup. This data type is not supported in Vertex AI.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2558,7 +2558,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.SpeakerVoiceConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SpeakerVoiceConfig.yml\" sourcestartlinenumber=\"1\">The configuration for the speaker to use.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SpeakerVoiceConfig.yml\" sourcestartlinenumber=\"1\">The configuration for a single speaker in a multi speaker setup. This data type is not\nsupported in Vertex AI.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2572,7 +2572,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.SpeechConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SpeechConfig.yml\" sourcestartlinenumber=\"1\">The speech generation configuration.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SpeechConfig.yml\" sourcestartlinenumber=\"1\">The speech generation config.</p>\n"
     },
     {
       "type": "ManagedReference",

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class SpeechConfig | Google GenAI .NET SDK ">
       
-      <meta name="description" content="The speech generation configuration.">
+      <meta name="description" content="The speech generation config.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -93,7 +93,7 @@ Class SpeechConfig  <a class="header-action link-secondary" title="View source" 
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>The speech generation configuration.</p>
+  <div class="markdown summary"><p>The speech generation config.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -159,11 +159,10 @@ Class SpeechConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Google_GenAI_Types_SpeechConfig_LanguageCode" data-uid="Google.GenAI.Types.SpeechConfig.LanguageCode">
   LanguageCode
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SpeechConfig.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SpeechConfig.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Language code (ISO 639. e.g. en-US) for the speech synthesization. Only available for Live
-API.</p>
+  <div class="markdown level1 summary"><p>Optional. Language code (ISO 639. e.g. en-US) for the speech synthesization.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -194,11 +193,11 @@ public string? LanguageCode { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_SpeechConfig_MultiSpeakerVoiceConfig" data-uid="Google.GenAI.Types.SpeechConfig.MultiSpeakerVoiceConfig">
   MultiSpeakerVoiceConfig
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SpeechConfig.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SpeechConfig.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The configuration for the multi-speaker setup. It is mutually exclusive with the
-voice_config field.</p>
+  <div class="markdown level1 summary"><p>Optional. The configuration for the multi-speaker setup. It is mutually exclusive with the
+voice_config field. This field is not supported in Vertex AI.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -229,7 +228,7 @@ public MultiSpeakerVoiceConfig? MultiSpeakerVoiceConfig { get; set; }</code></pr
 
   <h3 id="Google_GenAI_Types_SpeechConfig_VoiceConfig" data-uid="Google.GenAI.Types.SpeechConfig.VoiceConfig">
   VoiceConfig
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SpeechConfig.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SpeechConfig.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The configuration for the speaker to use.</p>
@@ -267,7 +266,7 @@ public VoiceConfig? VoiceConfig { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_SpeechConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.SpeechConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SpeechConfig.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SpeechConfig.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a SpeechConfig object.</p>
