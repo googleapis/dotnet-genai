@@ -2100,6 +2100,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ProductImage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ProductImage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ProductImage",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ProductImage.yml\" sourcestartlinenumber=\"1\">An image of the product.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.RagChunk.yml",
       "output": {
         ".html": {
@@ -2237,6 +2251,48 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.RealtimeInputConfig",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RealtimeInputConfig.yml\" sourcestartlinenumber=\"1\">Marks the end of user activity.  This can only be sent if automatic (i.e. server-side)\nactivity detection is disabled.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.RecontextImageConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.RecontextImageConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.RecontextImageConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RecontextImageConfig.yml\" sourcestartlinenumber=\"1\">Configuration for recontextualizing an image.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.RecontextImageResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.RecontextImageResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.RecontextImageResponse",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RecontextImageResponse.yml\" sourcestartlinenumber=\"1\">The output images response.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.RecontextImageSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.RecontextImageSource.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.RecontextImageSource",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RecontextImageSource.yml\" sourcestartlinenumber=\"1\">A set of source input(s) for image recontextualization.</p>\n"
     },
     {
       "type": "ManagedReference",

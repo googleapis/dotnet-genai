@@ -970,6 +970,22 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Models.GenerateImagesAsync
   nameWithType: Models.GenerateImagesAsync
+- uid: Google.GenAI.Models.RecontextImageAsync(System.String,Google.GenAI.Types.RecontextImageSource,Google.GenAI.Types.RecontextImageConfig)
+  name: RecontextImageAsync(string, RecontextImageSource, RecontextImageConfig)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_RecontextImageAsync_System_String_Google_GenAI_Types_RecontextImageSource_Google_GenAI_Types_RecontextImageConfig_
+  commentId: M:Google.GenAI.Models.RecontextImageAsync(System.String,Google.GenAI.Types.RecontextImageSource,Google.GenAI.Types.RecontextImageConfig)
+  name.vb: RecontextImageAsync(String, RecontextImageSource, RecontextImageConfig)
+  fullName: Google.GenAI.Models.RecontextImageAsync(string, Google.GenAI.Types.RecontextImageSource, Google.GenAI.Types.RecontextImageConfig)
+  fullName.vb: Google.GenAI.Models.RecontextImageAsync(String, Google.GenAI.Types.RecontextImageSource, Google.GenAI.Types.RecontextImageConfig)
+  nameWithType: Models.RecontextImageAsync(string, RecontextImageSource, RecontextImageConfig)
+  nameWithType.vb: Models.RecontextImageAsync(String, RecontextImageSource, RecontextImageConfig)
+- uid: Google.GenAI.Models.RecontextImageAsync*
+  name: RecontextImageAsync
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_RecontextImageAsync_
+  commentId: Overload:Google.GenAI.Models.RecontextImageAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Models.RecontextImageAsync
+  nameWithType: Models.RecontextImageAsync
 - uid: Google.GenAI.Models.SegmentImageAsync(System.String,Google.GenAI.Types.SegmentImageSource,Google.GenAI.Types.SegmentImageConfig)
   name: SegmentImageAsync(string, SegmentImageSource, SegmentImageConfig)
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_SegmentImageAsync_System_String_Google_GenAI_Types_SegmentImageSource_Google_GenAI_Types_SegmentImageConfig_
@@ -9897,6 +9913,41 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ProactivityConfig.ProactiveAudio
   nameWithType: ProactivityConfig.ProactiveAudio
+- uid: Google.GenAI.Types.ProductImage
+  name: ProductImage
+  href: api/Google.GenAI.Types.ProductImage.html
+  commentId: T:Google.GenAI.Types.ProductImage
+  fullName: Google.GenAI.Types.ProductImage
+  nameWithType: ProductImage
+- uid: Google.GenAI.Types.ProductImage.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ProductImage.html#Google_GenAI_Types_ProductImage_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ProductImage.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ProductImage.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ProductImage.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ProductImage.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ProductImage.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ProductImage.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ProductImage.html#Google_GenAI_Types_ProductImage_FromJson_
+  commentId: Overload:Google.GenAI.Types.ProductImage.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ProductImage.FromJson
+  nameWithType: ProductImage.FromJson
+- uid: Google.GenAI.Types.ProductImage.ProductImageField
+  name: ProductImageField
+  href: api/Google.GenAI.Types.ProductImage.html#Google_GenAI_Types_ProductImage_ProductImageField
+  commentId: P:Google.GenAI.Types.ProductImage.ProductImageField
+  fullName: Google.GenAI.Types.ProductImage.ProductImageField
+  nameWithType: ProductImage.ProductImageField
+- uid: Google.GenAI.Types.ProductImage.ProductImageField*
+  name: ProductImageField
+  href: api/Google.GenAI.Types.ProductImage.html#Google_GenAI_Types_ProductImage_ProductImageField_
+  commentId: Overload:Google.GenAI.Types.ProductImage.ProductImageField
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ProductImage.ProductImageField
+  nameWithType: ProductImage.ProductImageField
 - uid: Google.GenAI.Types.RagChunk
   name: RagChunk
   href: api/Google.GenAI.Types.RagChunk.html
@@ -10403,6 +10454,280 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.RealtimeInputConfig.TurnCoverage
   nameWithType: RealtimeInputConfig.TurnCoverage
+- uid: Google.GenAI.Types.RecontextImageConfig
+  name: RecontextImageConfig
+  href: api/Google.GenAI.Types.RecontextImageConfig.html
+  commentId: T:Google.GenAI.Types.RecontextImageConfig
+  fullName: Google.GenAI.Types.RecontextImageConfig
+  nameWithType: RecontextImageConfig
+- uid: Google.GenAI.Types.RecontextImageConfig.AddWatermark
+  name: AddWatermark
+  href: api/Google.GenAI.Types.RecontextImageConfig.html#Google_GenAI_Types_RecontextImageConfig_AddWatermark
+  commentId: P:Google.GenAI.Types.RecontextImageConfig.AddWatermark
+  fullName: Google.GenAI.Types.RecontextImageConfig.AddWatermark
+  nameWithType: RecontextImageConfig.AddWatermark
+- uid: Google.GenAI.Types.RecontextImageConfig.AddWatermark*
+  name: AddWatermark
+  href: api/Google.GenAI.Types.RecontextImageConfig.html#Google_GenAI_Types_RecontextImageConfig_AddWatermark_
+  commentId: Overload:Google.GenAI.Types.RecontextImageConfig.AddWatermark
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RecontextImageConfig.AddWatermark
+  nameWithType: RecontextImageConfig.AddWatermark
+- uid: Google.GenAI.Types.RecontextImageConfig.BaseSteps
+  name: BaseSteps
+  href: api/Google.GenAI.Types.RecontextImageConfig.html#Google_GenAI_Types_RecontextImageConfig_BaseSteps
+  commentId: P:Google.GenAI.Types.RecontextImageConfig.BaseSteps
+  fullName: Google.GenAI.Types.RecontextImageConfig.BaseSteps
+  nameWithType: RecontextImageConfig.BaseSteps
+- uid: Google.GenAI.Types.RecontextImageConfig.BaseSteps*
+  name: BaseSteps
+  href: api/Google.GenAI.Types.RecontextImageConfig.html#Google_GenAI_Types_RecontextImageConfig_BaseSteps_
+  commentId: Overload:Google.GenAI.Types.RecontextImageConfig.BaseSteps
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RecontextImageConfig.BaseSteps
+  nameWithType: RecontextImageConfig.BaseSteps
+- uid: Google.GenAI.Types.RecontextImageConfig.EnhancePrompt
+  name: EnhancePrompt
+  href: api/Google.GenAI.Types.RecontextImageConfig.html#Google_GenAI_Types_RecontextImageConfig_EnhancePrompt
+  commentId: P:Google.GenAI.Types.RecontextImageConfig.EnhancePrompt
+  fullName: Google.GenAI.Types.RecontextImageConfig.EnhancePrompt
+  nameWithType: RecontextImageConfig.EnhancePrompt
+- uid: Google.GenAI.Types.RecontextImageConfig.EnhancePrompt*
+  name: EnhancePrompt
+  href: api/Google.GenAI.Types.RecontextImageConfig.html#Google_GenAI_Types_RecontextImageConfig_EnhancePrompt_
+  commentId: Overload:Google.GenAI.Types.RecontextImageConfig.EnhancePrompt
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RecontextImageConfig.EnhancePrompt
+  nameWithType: RecontextImageConfig.EnhancePrompt
+- uid: Google.GenAI.Types.RecontextImageConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.RecontextImageConfig.html#Google_GenAI_Types_RecontextImageConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.RecontextImageConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.RecontextImageConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.RecontextImageConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: RecontextImageConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: RecontextImageConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.RecontextImageConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.RecontextImageConfig.html#Google_GenAI_Types_RecontextImageConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.RecontextImageConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RecontextImageConfig.FromJson
+  nameWithType: RecontextImageConfig.FromJson
+- uid: Google.GenAI.Types.RecontextImageConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.RecontextImageConfig.html#Google_GenAI_Types_RecontextImageConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.RecontextImageConfig.HttpOptions
+  fullName: Google.GenAI.Types.RecontextImageConfig.HttpOptions
+  nameWithType: RecontextImageConfig.HttpOptions
+- uid: Google.GenAI.Types.RecontextImageConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.RecontextImageConfig.html#Google_GenAI_Types_RecontextImageConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.RecontextImageConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RecontextImageConfig.HttpOptions
+  nameWithType: RecontextImageConfig.HttpOptions
+- uid: Google.GenAI.Types.RecontextImageConfig.Labels
+  name: Labels
+  href: api/Google.GenAI.Types.RecontextImageConfig.html#Google_GenAI_Types_RecontextImageConfig_Labels
+  commentId: P:Google.GenAI.Types.RecontextImageConfig.Labels
+  fullName: Google.GenAI.Types.RecontextImageConfig.Labels
+  nameWithType: RecontextImageConfig.Labels
+- uid: Google.GenAI.Types.RecontextImageConfig.Labels*
+  name: Labels
+  href: api/Google.GenAI.Types.RecontextImageConfig.html#Google_GenAI_Types_RecontextImageConfig_Labels_
+  commentId: Overload:Google.GenAI.Types.RecontextImageConfig.Labels
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RecontextImageConfig.Labels
+  nameWithType: RecontextImageConfig.Labels
+- uid: Google.GenAI.Types.RecontextImageConfig.NumberOfImages
+  name: NumberOfImages
+  href: api/Google.GenAI.Types.RecontextImageConfig.html#Google_GenAI_Types_RecontextImageConfig_NumberOfImages
+  commentId: P:Google.GenAI.Types.RecontextImageConfig.NumberOfImages
+  fullName: Google.GenAI.Types.RecontextImageConfig.NumberOfImages
+  nameWithType: RecontextImageConfig.NumberOfImages
+- uid: Google.GenAI.Types.RecontextImageConfig.NumberOfImages*
+  name: NumberOfImages
+  href: api/Google.GenAI.Types.RecontextImageConfig.html#Google_GenAI_Types_RecontextImageConfig_NumberOfImages_
+  commentId: Overload:Google.GenAI.Types.RecontextImageConfig.NumberOfImages
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RecontextImageConfig.NumberOfImages
+  nameWithType: RecontextImageConfig.NumberOfImages
+- uid: Google.GenAI.Types.RecontextImageConfig.OutputCompressionQuality
+  name: OutputCompressionQuality
+  href: api/Google.GenAI.Types.RecontextImageConfig.html#Google_GenAI_Types_RecontextImageConfig_OutputCompressionQuality
+  commentId: P:Google.GenAI.Types.RecontextImageConfig.OutputCompressionQuality
+  fullName: Google.GenAI.Types.RecontextImageConfig.OutputCompressionQuality
+  nameWithType: RecontextImageConfig.OutputCompressionQuality
+- uid: Google.GenAI.Types.RecontextImageConfig.OutputCompressionQuality*
+  name: OutputCompressionQuality
+  href: api/Google.GenAI.Types.RecontextImageConfig.html#Google_GenAI_Types_RecontextImageConfig_OutputCompressionQuality_
+  commentId: Overload:Google.GenAI.Types.RecontextImageConfig.OutputCompressionQuality
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RecontextImageConfig.OutputCompressionQuality
+  nameWithType: RecontextImageConfig.OutputCompressionQuality
+- uid: Google.GenAI.Types.RecontextImageConfig.OutputGcsUri
+  name: OutputGcsUri
+  href: api/Google.GenAI.Types.RecontextImageConfig.html#Google_GenAI_Types_RecontextImageConfig_OutputGcsUri
+  commentId: P:Google.GenAI.Types.RecontextImageConfig.OutputGcsUri
+  fullName: Google.GenAI.Types.RecontextImageConfig.OutputGcsUri
+  nameWithType: RecontextImageConfig.OutputGcsUri
+- uid: Google.GenAI.Types.RecontextImageConfig.OutputGcsUri*
+  name: OutputGcsUri
+  href: api/Google.GenAI.Types.RecontextImageConfig.html#Google_GenAI_Types_RecontextImageConfig_OutputGcsUri_
+  commentId: Overload:Google.GenAI.Types.RecontextImageConfig.OutputGcsUri
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RecontextImageConfig.OutputGcsUri
+  nameWithType: RecontextImageConfig.OutputGcsUri
+- uid: Google.GenAI.Types.RecontextImageConfig.OutputMimeType
+  name: OutputMimeType
+  href: api/Google.GenAI.Types.RecontextImageConfig.html#Google_GenAI_Types_RecontextImageConfig_OutputMimeType
+  commentId: P:Google.GenAI.Types.RecontextImageConfig.OutputMimeType
+  fullName: Google.GenAI.Types.RecontextImageConfig.OutputMimeType
+  nameWithType: RecontextImageConfig.OutputMimeType
+- uid: Google.GenAI.Types.RecontextImageConfig.OutputMimeType*
+  name: OutputMimeType
+  href: api/Google.GenAI.Types.RecontextImageConfig.html#Google_GenAI_Types_RecontextImageConfig_OutputMimeType_
+  commentId: Overload:Google.GenAI.Types.RecontextImageConfig.OutputMimeType
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RecontextImageConfig.OutputMimeType
+  nameWithType: RecontextImageConfig.OutputMimeType
+- uid: Google.GenAI.Types.RecontextImageConfig.PersonGeneration
+  name: PersonGeneration
+  href: api/Google.GenAI.Types.RecontextImageConfig.html#Google_GenAI_Types_RecontextImageConfig_PersonGeneration
+  commentId: P:Google.GenAI.Types.RecontextImageConfig.PersonGeneration
+  fullName: Google.GenAI.Types.RecontextImageConfig.PersonGeneration
+  nameWithType: RecontextImageConfig.PersonGeneration
+- uid: Google.GenAI.Types.RecontextImageConfig.PersonGeneration*
+  name: PersonGeneration
+  href: api/Google.GenAI.Types.RecontextImageConfig.html#Google_GenAI_Types_RecontextImageConfig_PersonGeneration_
+  commentId: Overload:Google.GenAI.Types.RecontextImageConfig.PersonGeneration
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RecontextImageConfig.PersonGeneration
+  nameWithType: RecontextImageConfig.PersonGeneration
+- uid: Google.GenAI.Types.RecontextImageConfig.SafetyFilterLevel
+  name: SafetyFilterLevel
+  href: api/Google.GenAI.Types.RecontextImageConfig.html#Google_GenAI_Types_RecontextImageConfig_SafetyFilterLevel
+  commentId: P:Google.GenAI.Types.RecontextImageConfig.SafetyFilterLevel
+  fullName: Google.GenAI.Types.RecontextImageConfig.SafetyFilterLevel
+  nameWithType: RecontextImageConfig.SafetyFilterLevel
+- uid: Google.GenAI.Types.RecontextImageConfig.SafetyFilterLevel*
+  name: SafetyFilterLevel
+  href: api/Google.GenAI.Types.RecontextImageConfig.html#Google_GenAI_Types_RecontextImageConfig_SafetyFilterLevel_
+  commentId: Overload:Google.GenAI.Types.RecontextImageConfig.SafetyFilterLevel
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RecontextImageConfig.SafetyFilterLevel
+  nameWithType: RecontextImageConfig.SafetyFilterLevel
+- uid: Google.GenAI.Types.RecontextImageConfig.Seed
+  name: Seed
+  href: api/Google.GenAI.Types.RecontextImageConfig.html#Google_GenAI_Types_RecontextImageConfig_Seed
+  commentId: P:Google.GenAI.Types.RecontextImageConfig.Seed
+  fullName: Google.GenAI.Types.RecontextImageConfig.Seed
+  nameWithType: RecontextImageConfig.Seed
+- uid: Google.GenAI.Types.RecontextImageConfig.Seed*
+  name: Seed
+  href: api/Google.GenAI.Types.RecontextImageConfig.html#Google_GenAI_Types_RecontextImageConfig_Seed_
+  commentId: Overload:Google.GenAI.Types.RecontextImageConfig.Seed
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RecontextImageConfig.Seed
+  nameWithType: RecontextImageConfig.Seed
+- uid: Google.GenAI.Types.RecontextImageResponse
+  name: RecontextImageResponse
+  href: api/Google.GenAI.Types.RecontextImageResponse.html
+  commentId: T:Google.GenAI.Types.RecontextImageResponse
+  fullName: Google.GenAI.Types.RecontextImageResponse
+  nameWithType: RecontextImageResponse
+- uid: Google.GenAI.Types.RecontextImageResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.RecontextImageResponse.html#Google_GenAI_Types_RecontextImageResponse_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.RecontextImageResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.RecontextImageResponse.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.RecontextImageResponse.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: RecontextImageResponse.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: RecontextImageResponse.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.RecontextImageResponse.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.RecontextImageResponse.html#Google_GenAI_Types_RecontextImageResponse_FromJson_
+  commentId: Overload:Google.GenAI.Types.RecontextImageResponse.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RecontextImageResponse.FromJson
+  nameWithType: RecontextImageResponse.FromJson
+- uid: Google.GenAI.Types.RecontextImageResponse.GeneratedImages
+  name: GeneratedImages
+  href: api/Google.GenAI.Types.RecontextImageResponse.html#Google_GenAI_Types_RecontextImageResponse_GeneratedImages
+  commentId: P:Google.GenAI.Types.RecontextImageResponse.GeneratedImages
+  fullName: Google.GenAI.Types.RecontextImageResponse.GeneratedImages
+  nameWithType: RecontextImageResponse.GeneratedImages
+- uid: Google.GenAI.Types.RecontextImageResponse.GeneratedImages*
+  name: GeneratedImages
+  href: api/Google.GenAI.Types.RecontextImageResponse.html#Google_GenAI_Types_RecontextImageResponse_GeneratedImages_
+  commentId: Overload:Google.GenAI.Types.RecontextImageResponse.GeneratedImages
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RecontextImageResponse.GeneratedImages
+  nameWithType: RecontextImageResponse.GeneratedImages
+- uid: Google.GenAI.Types.RecontextImageSource
+  name: RecontextImageSource
+  href: api/Google.GenAI.Types.RecontextImageSource.html
+  commentId: T:Google.GenAI.Types.RecontextImageSource
+  fullName: Google.GenAI.Types.RecontextImageSource
+  nameWithType: RecontextImageSource
+- uid: Google.GenAI.Types.RecontextImageSource.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.RecontextImageSource.html#Google_GenAI_Types_RecontextImageSource_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.RecontextImageSource.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.RecontextImageSource.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.RecontextImageSource.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: RecontextImageSource.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: RecontextImageSource.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.RecontextImageSource.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.RecontextImageSource.html#Google_GenAI_Types_RecontextImageSource_FromJson_
+  commentId: Overload:Google.GenAI.Types.RecontextImageSource.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RecontextImageSource.FromJson
+  nameWithType: RecontextImageSource.FromJson
+- uid: Google.GenAI.Types.RecontextImageSource.PersonImage
+  name: PersonImage
+  href: api/Google.GenAI.Types.RecontextImageSource.html#Google_GenAI_Types_RecontextImageSource_PersonImage
+  commentId: P:Google.GenAI.Types.RecontextImageSource.PersonImage
+  fullName: Google.GenAI.Types.RecontextImageSource.PersonImage
+  nameWithType: RecontextImageSource.PersonImage
+- uid: Google.GenAI.Types.RecontextImageSource.PersonImage*
+  name: PersonImage
+  href: api/Google.GenAI.Types.RecontextImageSource.html#Google_GenAI_Types_RecontextImageSource_PersonImage_
+  commentId: Overload:Google.GenAI.Types.RecontextImageSource.PersonImage
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RecontextImageSource.PersonImage
+  nameWithType: RecontextImageSource.PersonImage
+- uid: Google.GenAI.Types.RecontextImageSource.ProductImages
+  name: ProductImages
+  href: api/Google.GenAI.Types.RecontextImageSource.html#Google_GenAI_Types_RecontextImageSource_ProductImages
+  commentId: P:Google.GenAI.Types.RecontextImageSource.ProductImages
+  fullName: Google.GenAI.Types.RecontextImageSource.ProductImages
+  nameWithType: RecontextImageSource.ProductImages
+- uid: Google.GenAI.Types.RecontextImageSource.ProductImages*
+  name: ProductImages
+  href: api/Google.GenAI.Types.RecontextImageSource.html#Google_GenAI_Types_RecontextImageSource_ProductImages_
+  commentId: Overload:Google.GenAI.Types.RecontextImageSource.ProductImages
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RecontextImageSource.ProductImages
+  nameWithType: RecontextImageSource.ProductImages
+- uid: Google.GenAI.Types.RecontextImageSource.Prompt
+  name: Prompt
+  href: api/Google.GenAI.Types.RecontextImageSource.html#Google_GenAI_Types_RecontextImageSource_Prompt
+  commentId: P:Google.GenAI.Types.RecontextImageSource.Prompt
+  fullName: Google.GenAI.Types.RecontextImageSource.Prompt
+  nameWithType: RecontextImageSource.Prompt
+- uid: Google.GenAI.Types.RecontextImageSource.Prompt*
+  name: Prompt
+  href: api/Google.GenAI.Types.RecontextImageSource.html#Google_GenAI_Types_RecontextImageSource_Prompt_
+  commentId: Overload:Google.GenAI.Types.RecontextImageSource.Prompt
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RecontextImageSource.Prompt
+  nameWithType: RecontextImageSource.Prompt
 - uid: Google.GenAI.Types.ReplayFile
   name: ReplayFile
   href: api/Google.GenAI.Types.ReplayFile.html
