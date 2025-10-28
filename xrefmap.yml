@@ -13180,6 +13180,32 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.UpscaleImageConfig.OutputMimeType
   nameWithType: UpscaleImageConfig.OutputMimeType
+- uid: Google.GenAI.Types.UpscaleImageConfig.PersonGeneration
+  name: PersonGeneration
+  href: api/Google.GenAI.Types.UpscaleImageConfig.html#Google_GenAI_Types_UpscaleImageConfig_PersonGeneration
+  commentId: P:Google.GenAI.Types.UpscaleImageConfig.PersonGeneration
+  fullName: Google.GenAI.Types.UpscaleImageConfig.PersonGeneration
+  nameWithType: UpscaleImageConfig.PersonGeneration
+- uid: Google.GenAI.Types.UpscaleImageConfig.PersonGeneration*
+  name: PersonGeneration
+  href: api/Google.GenAI.Types.UpscaleImageConfig.html#Google_GenAI_Types_UpscaleImageConfig_PersonGeneration_
+  commentId: Overload:Google.GenAI.Types.UpscaleImageConfig.PersonGeneration
+  isSpec: "True"
+  fullName: Google.GenAI.Types.UpscaleImageConfig.PersonGeneration
+  nameWithType: UpscaleImageConfig.PersonGeneration
+- uid: Google.GenAI.Types.UpscaleImageConfig.SafetyFilterLevel
+  name: SafetyFilterLevel
+  href: api/Google.GenAI.Types.UpscaleImageConfig.html#Google_GenAI_Types_UpscaleImageConfig_SafetyFilterLevel
+  commentId: P:Google.GenAI.Types.UpscaleImageConfig.SafetyFilterLevel
+  fullName: Google.GenAI.Types.UpscaleImageConfig.SafetyFilterLevel
+  nameWithType: UpscaleImageConfig.SafetyFilterLevel
+- uid: Google.GenAI.Types.UpscaleImageConfig.SafetyFilterLevel*
+  name: SafetyFilterLevel
+  href: api/Google.GenAI.Types.UpscaleImageConfig.html#Google_GenAI_Types_UpscaleImageConfig_SafetyFilterLevel_
+  commentId: Overload:Google.GenAI.Types.UpscaleImageConfig.SafetyFilterLevel
+  isSpec: "True"
+  fullName: Google.GenAI.Types.UpscaleImageConfig.SafetyFilterLevel
+  nameWithType: UpscaleImageConfig.SafetyFilterLevel
 - uid: Google.GenAI.Types.UpscaleImageResponse
   name: UpscaleImageResponse
   href: api/Google.GenAI.Types.UpscaleImageResponse.html
