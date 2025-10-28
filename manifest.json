@@ -2894,7 +2894,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.UrlMetadata",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.UrlMetadata.yml\" sourcestartlinenumber=\"1\">Context for a single url retrieval.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.UrlMetadata.yml\" sourcestartlinenumber=\"1\">Context of the a single url retrieval.</p>\n"
     },
     {
       "type": "ManagedReference",
