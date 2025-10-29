@@ -9,17 +9,13 @@
     </PackageVersion>
     <PackageVersion Include="Microsoft.AspNetCore.StaticFiles" Version="2.3.0" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.10.0" />
-    <PackageVersion Include="MimeTypes" Version="2.5.2">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageVersion>
+    <PackageVersion Include="MimeTypes" Version="2.5.2" />
     <PackageVersion Include="MSTest.TestFramework" Version="3.4.3" />
     <PackageVersion Include="MSTest.TestAdapter" Version="3.4.3" />
     <PackageVersion Include="Moq" Version="4.20.70" />
+    <PackageVersion Include="Microsoft.Extensions.AI.Abstractions" Version="10.1.1" />
     <PackageVersion Include="Microsoft.Testing.Extensions.CodeCoverage" Version="17.10.1" />
-    <PackageVersion Include="System.Net.WebSockets.Client" Version="4.3.2" />
-    <PackageVersion Include="System.Text.Json" Version="8.0.0" />
-    <PackageVersion Include="System.Collections.Immutable" Version="8.0.0" />
+    <PackageVersion Include="System.Text.Json" Version="10.0.1" />
     <PackageVersion Include="Google.Apis.Auth" Version="1.69.0" />
     <PackageVersion Include="NAudio" Version="2.2.1" />
     <PackageVersion Include="TestServerSdk" Version="0.1.5" />

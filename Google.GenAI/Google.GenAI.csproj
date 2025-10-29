@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <Import Project="../ReleaseVersion.xml" />
   <PropertyGroup>
@@ -23,20 +23,15 @@
   <PropertyGroup>
     <WarningsAsErrors>$(WarningsAsErrors);CS1570</WarningsAsErrors><NoWarn>$(NoWarn);CS1591</NoWarn>
     <WarningsNotAsErrors>IDE0005</WarningsNotAsErrors>
+    <NoWarn>$(NoWarn);MEAI001</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MimeTypes">
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
     <PackageReference Include="Google.Apis.Auth" />
+    <PackageReference Include="Microsoft.Extensions.AI.Abstractions" />
+    <PackageReference Include="MimeTypes" />
     <InternalsVisibleTo Include="Google.GenAI.Tests" />
     <InternalsVisibleTo Include="Google.GenAI.Netstandard2_0.Tests" />
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
-    <PackageReference Include="System.Text.Json" />
-    <PackageReference Include="System.Collections.Immutable" />
   </ItemGroup>
 
   <ItemGroup>

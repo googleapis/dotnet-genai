@@ -6,11 +6,12 @@
     <Nullable>enable</Nullable>
     <warningLevel>1</warningLevel>
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <NoWarn>MEAI001</NoWarn>
   </PropertyGroup>
 
   <!-- Include all test source files from parent directory -->
   <ItemGroup>
-    <Compile Include="../**/*.cs" Exclude="../Netstandard2_1Tests/**/*.cs;../bin/**;../obj/**" />
+    <Compile Include="../**/*.cs" Exclude="../Netstandard2_0Tests/**/*.cs;../bin/**;../obj/**" />
   </ItemGroup>
 
   <ItemGroup>

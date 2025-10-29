@@ -259,6 +259,38 @@ class GenerateContentStreamSimpleText {
 
 ```
 
+### IChatClient
+
+Microsoft.Extensions.AI provides abstractions and exchange types for working with AI services. The Google.GenAI library includes an implementation of the IChatClient interface to enable
+easy integration with applications that use these abstractions.
+```csharp
+using Google.GenAI;
+using Microsoft.Extensions.AI;
+using System.ComponentModel
+
+// assuming credentials are set up in environment variables as instructed above.
+IChatClient chatClient = new Client().AsIChatClient("gemini-2.0-flash")
+    .AsBuilder()
+    .UseFunctionInvocation()
+    .UseOpenTelemetry()
+    .Build();
+
+ChatOptions options = new()
+{
+    Tools = [AIFunctionFactory.Create(([Description("The name of the person whose age is to be retrieved")] string personName) => personName switch
+    {
+        "Alice" => 30,
+        "Bob" => 25,
+        _ => 35
+    }, "get_person_age", "Gets the age of the specified person");
+};
+
+await foreach (var update in chatClient.GetStreamingResponseAsync("How much older is Alice than Bob?", options))
+{
+    Console.Write(update);
+}
+```
+
 ### Generate Images
 
 ```csharp

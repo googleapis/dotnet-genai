@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <Import Project="../ReleaseVersion.xml" />
   <PropertyGroup>
@@ -6,16 +6,18 @@
     <Nullable>enable</Nullable>
     <warningLevel>1</warningLevel>
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <LangVersion>latest</LangVersion>
+    <NoWarn>$(NoWarn);MEAI001</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Netstandard2_0Tests\**" />
+    
     <PackageReference Include="coverlet.collector">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <ProjectReference Include="..\Google.GenAI\Google.GenAI.csproj">
-      <SetTargetFramework>TargetFramework=net8.0</SetTargetFramework>
-    </ProjectReference>
+    <ProjectReference Include="..\Google.GenAI\Google.GenAI.csproj" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
     <PackageReference Include="MSTest.TestFramework" />
     <PackageReference Include="MSTest.TestAdapter" />

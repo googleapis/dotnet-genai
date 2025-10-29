@@ -43,6 +43,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.GenAI.Netstandard2_0.Tests", "Google.GenAI.Tests\Netstandard2_0Tests\Google.GenAI.Netstandard2_0.Tests.csproj", "{750DC926-0B2D-504C-7168-FEE801B21D12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -89,6 +91,10 @@ Global
 		{794DEEC8-86DB-2ACD-25B9-3D360F800432}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{794DEEC8-86DB-2ACD-25B9-3D360F800432}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{794DEEC8-86DB-2ACD-25B9-3D360F800432}.Release|Any CPU.Build.0 = Release|Any CPU
+		{750DC926-0B2D-504C-7168-FEE801B21D12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{750DC926-0B2D-504C-7168-FEE801B21D12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{750DC926-0B2D-504C-7168-FEE801B21D12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{750DC926-0B2D-504C-7168-FEE801B21D12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -104,6 +110,7 @@ Global
 		{9245217E-BC52-BC71-07B7-879540F9BFC3} = {814B1E4F-AA62-4EE1-BC14-8DF9A3088398}
 		{976E5ABB-E26C-053A-3462-591503F3E67D} = {814B1E4F-AA62-4EE1-BC14-8DF9A3088398}
 		{794DEEC8-86DB-2ACD-25B9-3D360F800432} = {814B1E4F-AA62-4EE1-BC14-8DF9A3088398}
+		{750DC926-0B2D-504C-7168-FEE801B21D12} = {FD96F647-C6D2-4C03-9BCD-5491AB949CDF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C5C5D6D6-276F-43FA-89C8-AA44F98787DF}
