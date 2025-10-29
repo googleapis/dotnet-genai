@@ -3048,7 +3048,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.VideoMetadata",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VideoMetadata.yml\" sourcestartlinenumber=\"1\">Describes how the video in the Part should be used by the model.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VideoMetadata.yml\" sourcestartlinenumber=\"1\">Metadata describes the input video content.</p>\n"
     },
     {
       "type": "ManagedReference",

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class VideoMetadata | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Describes how the video in the Part should be used by the model.">
+      <meta name="description" content="Metadata describes the input video content.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -93,7 +93,7 @@ Class VideoMetadata  <a class="header-action link-secondary" title="View source"
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Describes how the video in the Part should be used by the model.</p>
+  <div class="markdown summary"><p>Metadata describes the input video content.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -159,7 +159,7 @@ Class VideoMetadata  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Google_GenAI_Types_VideoMetadata_EndOffset" data-uid="Google.GenAI.Types.VideoMetadata.EndOffset">
   EndOffset
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoMetadata.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoMetadata.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. The end offset of the video.</p>
@@ -193,11 +193,11 @@ public string? EndOffset { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_VideoMetadata_Fps" data-uid="Google.GenAI.Types.VideoMetadata.Fps">
   Fps
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoMetadata.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoMetadata.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The frame rate of the video sent to the model. If not specified, the default value will
-be 1.0. The fps range is (0.0, 24.0].</p>
+  <div class="markdown level1 summary"><p>Optional. The frame rate of the video sent to the model. If not specified, the default value
+will be 1.0. The fps range is (0.0, 24.0].</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
