@@ -156,6 +156,41 @@ type is not supported in Gemini API.</p>
 </h2>
 
 
+  <a id="Google_GenAI_Types_EnterpriseWebSearch_BlockingConfidence_" data-uid="Google.GenAI.Types.EnterpriseWebSearch.BlockingConfidence*"></a>
+
+  <h3 id="Google_GenAI_Types_EnterpriseWebSearch_BlockingConfidence" data-uid="Google.GenAI.Types.EnterpriseWebSearch.BlockingConfidence">
+  BlockingConfidence
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/EnterpriseWebSearch.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional. Sites with confidence level chosen &amp; above this value will be blocked from the
+search results.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;blockingConfidence&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public PhishBlockThreshold? BlockingConfidence { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.PhishBlockThreshold.html">PhishBlockThreshold</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_EnterpriseWebSearch_ExcludeDomains_" data-uid="Google.GenAI.Types.EnterpriseWebSearch.ExcludeDomains*"></a>
 
   <h3 id="Google_GenAI_Types_EnterpriseWebSearch_ExcludeDomains" data-uid="Google.GenAI.Types.EnterpriseWebSearch.ExcludeDomains">
@@ -199,7 +234,7 @@ public List&lt;string&gt;? ExcludeDomains { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_EnterpriseWebSearch_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.EnterpriseWebSearch.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/EnterpriseWebSearch.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/EnterpriseWebSearch.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a EnterpriseWebSearch object.</p>

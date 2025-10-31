@@ -3363,6 +3363,19 @@ references:
   commentId: T:Google.GenAI.Types.EnterpriseWebSearch
   fullName: Google.GenAI.Types.EnterpriseWebSearch
   nameWithType: EnterpriseWebSearch
+- uid: Google.GenAI.Types.EnterpriseWebSearch.BlockingConfidence
+  name: BlockingConfidence
+  href: api/Google.GenAI.Types.EnterpriseWebSearch.html#Google_GenAI_Types_EnterpriseWebSearch_BlockingConfidence
+  commentId: P:Google.GenAI.Types.EnterpriseWebSearch.BlockingConfidence
+  fullName: Google.GenAI.Types.EnterpriseWebSearch.BlockingConfidence
+  nameWithType: EnterpriseWebSearch.BlockingConfidence
+- uid: Google.GenAI.Types.EnterpriseWebSearch.BlockingConfidence*
+  name: BlockingConfidence
+  href: api/Google.GenAI.Types.EnterpriseWebSearch.html#Google_GenAI_Types_EnterpriseWebSearch_BlockingConfidence_
+  commentId: Overload:Google.GenAI.Types.EnterpriseWebSearch.BlockingConfidence
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EnterpriseWebSearch.BlockingConfidence
+  nameWithType: EnterpriseWebSearch.BlockingConfidence
 - uid: Google.GenAI.Types.EnterpriseWebSearch.ExcludeDomains
   name: ExcludeDomains
   href: api/Google.GenAI.Types.EnterpriseWebSearch.html#Google_GenAI_Types_EnterpriseWebSearch_ExcludeDomains
@@ -6074,6 +6087,19 @@ references:
   commentId: T:Google.GenAI.Types.GoogleSearch
   fullName: Google.GenAI.Types.GoogleSearch
   nameWithType: GoogleSearch
+- uid: Google.GenAI.Types.GoogleSearch.BlockingConfidence
+  name: BlockingConfidence
+  href: api/Google.GenAI.Types.GoogleSearch.html#Google_GenAI_Types_GoogleSearch_BlockingConfidence
+  commentId: P:Google.GenAI.Types.GoogleSearch.BlockingConfidence
+  fullName: Google.GenAI.Types.GoogleSearch.BlockingConfidence
+  nameWithType: GoogleSearch.BlockingConfidence
+- uid: Google.GenAI.Types.GoogleSearch.BlockingConfidence*
+  name: BlockingConfidence
+  href: api/Google.GenAI.Types.GoogleSearch.html#Google_GenAI_Types_GoogleSearch_BlockingConfidence_
+  commentId: Overload:Google.GenAI.Types.GoogleSearch.BlockingConfidence
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GoogleSearch.BlockingConfidence
+  nameWithType: GoogleSearch.BlockingConfidence
 - uid: Google.GenAI.Types.GoogleSearch.ExcludeDomains
   name: ExcludeDomains
   href: api/Google.GenAI.Types.GoogleSearch.html#Google_GenAI_Types_GoogleSearch_ExcludeDomains
@@ -9843,6 +9869,54 @@ references:
   commentId: F:Google.GenAI.Types.PersonGeneration.DONT_ALLOW
   fullName: Google.GenAI.Types.PersonGeneration.DONT_ALLOW
   nameWithType: PersonGeneration.DONT_ALLOW
+- uid: Google.GenAI.Types.PhishBlockThreshold
+  name: PhishBlockThreshold
+  href: api/Google.GenAI.Types.PhishBlockThreshold.html
+  commentId: T:Google.GenAI.Types.PhishBlockThreshold
+  fullName: Google.GenAI.Types.PhishBlockThreshold
+  nameWithType: PhishBlockThreshold
+- uid: Google.GenAI.Types.PhishBlockThreshold.BLOCK_HIGHER_AND_ABOVE
+  name: BLOCK_HIGHER_AND_ABOVE
+  href: api/Google.GenAI.Types.PhishBlockThreshold.html#Google_GenAI_Types_PhishBlockThreshold_BLOCK_HIGHER_AND_ABOVE
+  commentId: F:Google.GenAI.Types.PhishBlockThreshold.BLOCK_HIGHER_AND_ABOVE
+  fullName: Google.GenAI.Types.PhishBlockThreshold.BLOCK_HIGHER_AND_ABOVE
+  nameWithType: PhishBlockThreshold.BLOCK_HIGHER_AND_ABOVE
+- uid: Google.GenAI.Types.PhishBlockThreshold.BLOCK_HIGH_AND_ABOVE
+  name: BLOCK_HIGH_AND_ABOVE
+  href: api/Google.GenAI.Types.PhishBlockThreshold.html#Google_GenAI_Types_PhishBlockThreshold_BLOCK_HIGH_AND_ABOVE
+  commentId: F:Google.GenAI.Types.PhishBlockThreshold.BLOCK_HIGH_AND_ABOVE
+  fullName: Google.GenAI.Types.PhishBlockThreshold.BLOCK_HIGH_AND_ABOVE
+  nameWithType: PhishBlockThreshold.BLOCK_HIGH_AND_ABOVE
+- uid: Google.GenAI.Types.PhishBlockThreshold.BLOCK_LOW_AND_ABOVE
+  name: BLOCK_LOW_AND_ABOVE
+  href: api/Google.GenAI.Types.PhishBlockThreshold.html#Google_GenAI_Types_PhishBlockThreshold_BLOCK_LOW_AND_ABOVE
+  commentId: F:Google.GenAI.Types.PhishBlockThreshold.BLOCK_LOW_AND_ABOVE
+  fullName: Google.GenAI.Types.PhishBlockThreshold.BLOCK_LOW_AND_ABOVE
+  nameWithType: PhishBlockThreshold.BLOCK_LOW_AND_ABOVE
+- uid: Google.GenAI.Types.PhishBlockThreshold.BLOCK_MEDIUM_AND_ABOVE
+  name: BLOCK_MEDIUM_AND_ABOVE
+  href: api/Google.GenAI.Types.PhishBlockThreshold.html#Google_GenAI_Types_PhishBlockThreshold_BLOCK_MEDIUM_AND_ABOVE
+  commentId: F:Google.GenAI.Types.PhishBlockThreshold.BLOCK_MEDIUM_AND_ABOVE
+  fullName: Google.GenAI.Types.PhishBlockThreshold.BLOCK_MEDIUM_AND_ABOVE
+  nameWithType: PhishBlockThreshold.BLOCK_MEDIUM_AND_ABOVE
+- uid: Google.GenAI.Types.PhishBlockThreshold.BLOCK_ONLY_EXTREMELY_HIGH
+  name: BLOCK_ONLY_EXTREMELY_HIGH
+  href: api/Google.GenAI.Types.PhishBlockThreshold.html#Google_GenAI_Types_PhishBlockThreshold_BLOCK_ONLY_EXTREMELY_HIGH
+  commentId: F:Google.GenAI.Types.PhishBlockThreshold.BLOCK_ONLY_EXTREMELY_HIGH
+  fullName: Google.GenAI.Types.PhishBlockThreshold.BLOCK_ONLY_EXTREMELY_HIGH
+  nameWithType: PhishBlockThreshold.BLOCK_ONLY_EXTREMELY_HIGH
+- uid: Google.GenAI.Types.PhishBlockThreshold.BLOCK_VERY_HIGH_AND_ABOVE
+  name: BLOCK_VERY_HIGH_AND_ABOVE
+  href: api/Google.GenAI.Types.PhishBlockThreshold.html#Google_GenAI_Types_PhishBlockThreshold_BLOCK_VERY_HIGH_AND_ABOVE
+  commentId: F:Google.GenAI.Types.PhishBlockThreshold.BLOCK_VERY_HIGH_AND_ABOVE
+  fullName: Google.GenAI.Types.PhishBlockThreshold.BLOCK_VERY_HIGH_AND_ABOVE
+  nameWithType: PhishBlockThreshold.BLOCK_VERY_HIGH_AND_ABOVE
+- uid: Google.GenAI.Types.PhishBlockThreshold.PHISH_BLOCK_THRESHOLD_UNSPECIFIED
+  name: PHISH_BLOCK_THRESHOLD_UNSPECIFIED
+  href: api/Google.GenAI.Types.PhishBlockThreshold.html#Google_GenAI_Types_PhishBlockThreshold_PHISH_BLOCK_THRESHOLD_UNSPECIFIED
+  commentId: F:Google.GenAI.Types.PhishBlockThreshold.PHISH_BLOCK_THRESHOLD_UNSPECIFIED
+  fullName: Google.GenAI.Types.PhishBlockThreshold.PHISH_BLOCK_THRESHOLD_UNSPECIFIED
+  nameWithType: PhishBlockThreshold.PHISH_BLOCK_THRESHOLD_UNSPECIFIED
 - uid: Google.GenAI.Types.PrebuiltVoiceConfig
   name: PrebuiltVoiceConfig
   href: api/Google.GenAI.Types.PrebuiltVoiceConfig.html
