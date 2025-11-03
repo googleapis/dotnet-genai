@@ -1323,6 +1323,19 @@ references:
   commentId: T:Google.GenAI.Types.ApiKeyConfig
   fullName: Google.GenAI.Types.ApiKeyConfig
   nameWithType: ApiKeyConfig
+- uid: Google.GenAI.Types.ApiKeyConfig.ApiKeySecret
+  name: ApiKeySecret
+  href: api/Google.GenAI.Types.ApiKeyConfig.html#Google_GenAI_Types_ApiKeyConfig_ApiKeySecret
+  commentId: P:Google.GenAI.Types.ApiKeyConfig.ApiKeySecret
+  fullName: Google.GenAI.Types.ApiKeyConfig.ApiKeySecret
+  nameWithType: ApiKeyConfig.ApiKeySecret
+- uid: Google.GenAI.Types.ApiKeyConfig.ApiKeySecret*
+  name: ApiKeySecret
+  href: api/Google.GenAI.Types.ApiKeyConfig.html#Google_GenAI_Types_ApiKeyConfig_ApiKeySecret_
+  commentId: Overload:Google.GenAI.Types.ApiKeyConfig.ApiKeySecret
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ApiKeyConfig.ApiKeySecret
+  nameWithType: ApiKeyConfig.ApiKeySecret
 - uid: Google.GenAI.Types.ApiKeyConfig.ApiKeyString
   name: ApiKeyString
   href: api/Google.GenAI.Types.ApiKeyConfig.html#Google_GenAI_Types_ApiKeyConfig_ApiKeyString
@@ -1352,6 +1365,32 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ApiKeyConfig.FromJson
   nameWithType: ApiKeyConfig.FromJson
+- uid: Google.GenAI.Types.ApiKeyConfig.HttpElementLocation
+  name: HttpElementLocation
+  href: api/Google.GenAI.Types.ApiKeyConfig.html#Google_GenAI_Types_ApiKeyConfig_HttpElementLocation
+  commentId: P:Google.GenAI.Types.ApiKeyConfig.HttpElementLocation
+  fullName: Google.GenAI.Types.ApiKeyConfig.HttpElementLocation
+  nameWithType: ApiKeyConfig.HttpElementLocation
+- uid: Google.GenAI.Types.ApiKeyConfig.HttpElementLocation*
+  name: HttpElementLocation
+  href: api/Google.GenAI.Types.ApiKeyConfig.html#Google_GenAI_Types_ApiKeyConfig_HttpElementLocation_
+  commentId: Overload:Google.GenAI.Types.ApiKeyConfig.HttpElementLocation
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ApiKeyConfig.HttpElementLocation
+  nameWithType: ApiKeyConfig.HttpElementLocation
+- uid: Google.GenAI.Types.ApiKeyConfig.Name
+  name: Name
+  href: api/Google.GenAI.Types.ApiKeyConfig.html#Google_GenAI_Types_ApiKeyConfig_Name
+  commentId: P:Google.GenAI.Types.ApiKeyConfig.Name
+  fullName: Google.GenAI.Types.ApiKeyConfig.Name
+  nameWithType: ApiKeyConfig.Name
+- uid: Google.GenAI.Types.ApiKeyConfig.Name*
+  name: Name
+  href: api/Google.GenAI.Types.ApiKeyConfig.html#Google_GenAI_Types_ApiKeyConfig_Name_
+  commentId: Overload:Google.GenAI.Types.ApiKeyConfig.Name
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ApiKeyConfig.Name
+  nameWithType: ApiKeyConfig.Name
 - uid: Google.GenAI.Types.ApiSpec
   name: ApiSpec
   href: api/Google.GenAI.Types.ApiSpec.html
@@ -7201,6 +7240,48 @@ references:
   commentId: F:Google.GenAI.Types.HarmSeverity.HARM_SEVERITY_UNSPECIFIED
   fullName: Google.GenAI.Types.HarmSeverity.HARM_SEVERITY_UNSPECIFIED
   nameWithType: HarmSeverity.HARM_SEVERITY_UNSPECIFIED
+- uid: Google.GenAI.Types.HttpElementLocation
+  name: HttpElementLocation
+  href: api/Google.GenAI.Types.HttpElementLocation.html
+  commentId: T:Google.GenAI.Types.HttpElementLocation
+  fullName: Google.GenAI.Types.HttpElementLocation
+  nameWithType: HttpElementLocation
+- uid: Google.GenAI.Types.HttpElementLocation.HTTP_IN_BODY
+  name: HTTP_IN_BODY
+  href: api/Google.GenAI.Types.HttpElementLocation.html#Google_GenAI_Types_HttpElementLocation_HTTP_IN_BODY
+  commentId: F:Google.GenAI.Types.HttpElementLocation.HTTP_IN_BODY
+  fullName: Google.GenAI.Types.HttpElementLocation.HTTP_IN_BODY
+  nameWithType: HttpElementLocation.HTTP_IN_BODY
+- uid: Google.GenAI.Types.HttpElementLocation.HTTP_IN_COOKIE
+  name: HTTP_IN_COOKIE
+  href: api/Google.GenAI.Types.HttpElementLocation.html#Google_GenAI_Types_HttpElementLocation_HTTP_IN_COOKIE
+  commentId: F:Google.GenAI.Types.HttpElementLocation.HTTP_IN_COOKIE
+  fullName: Google.GenAI.Types.HttpElementLocation.HTTP_IN_COOKIE
+  nameWithType: HttpElementLocation.HTTP_IN_COOKIE
+- uid: Google.GenAI.Types.HttpElementLocation.HTTP_IN_HEADER
+  name: HTTP_IN_HEADER
+  href: api/Google.GenAI.Types.HttpElementLocation.html#Google_GenAI_Types_HttpElementLocation_HTTP_IN_HEADER
+  commentId: F:Google.GenAI.Types.HttpElementLocation.HTTP_IN_HEADER
+  fullName: Google.GenAI.Types.HttpElementLocation.HTTP_IN_HEADER
+  nameWithType: HttpElementLocation.HTTP_IN_HEADER
+- uid: Google.GenAI.Types.HttpElementLocation.HTTP_IN_PATH
+  name: HTTP_IN_PATH
+  href: api/Google.GenAI.Types.HttpElementLocation.html#Google_GenAI_Types_HttpElementLocation_HTTP_IN_PATH
+  commentId: F:Google.GenAI.Types.HttpElementLocation.HTTP_IN_PATH
+  fullName: Google.GenAI.Types.HttpElementLocation.HTTP_IN_PATH
+  nameWithType: HttpElementLocation.HTTP_IN_PATH
+- uid: Google.GenAI.Types.HttpElementLocation.HTTP_IN_QUERY
+  name: HTTP_IN_QUERY
+  href: api/Google.GenAI.Types.HttpElementLocation.html#Google_GenAI_Types_HttpElementLocation_HTTP_IN_QUERY
+  commentId: F:Google.GenAI.Types.HttpElementLocation.HTTP_IN_QUERY
+  fullName: Google.GenAI.Types.HttpElementLocation.HTTP_IN_QUERY
+  nameWithType: HttpElementLocation.HTTP_IN_QUERY
+- uid: Google.GenAI.Types.HttpElementLocation.HTTP_IN_UNSPECIFIED
+  name: HTTP_IN_UNSPECIFIED
+  href: api/Google.GenAI.Types.HttpElementLocation.html#Google_GenAI_Types_HttpElementLocation_HTTP_IN_UNSPECIFIED
+  commentId: F:Google.GenAI.Types.HttpElementLocation.HTTP_IN_UNSPECIFIED
+  fullName: Google.GenAI.Types.HttpElementLocation.HTTP_IN_UNSPECIFIED
+  nameWithType: HttpElementLocation.HTTP_IN_UNSPECIFIED
 - uid: Google.GenAI.Types.HttpOptions
   name: HttpOptions
   href: api/Google.GenAI.Types.HttpOptions.html

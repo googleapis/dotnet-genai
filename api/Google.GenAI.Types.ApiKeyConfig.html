@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ApiKeyConfig | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Config for authentication with API key.">
+      <meta name="description" content="Config for authentication with API key. This data type is not supported in Gemini API.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -93,7 +93,7 @@ Class ApiKeyConfig  <a class="header-action link-secondary" title="View source" 
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Config for authentication with API key.</p>
+  <div class="markdown summary"><p>Config for authentication with API key. This data type is not supported in Gemini API.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -155,14 +155,54 @@ Class ApiKeyConfig  <a class="header-action link-secondary" title="View source" 
 </h2>
 
 
+  <a id="Google_GenAI_Types_ApiKeyConfig_ApiKeySecret_" data-uid="Google.GenAI.Types.ApiKeyConfig.ApiKeySecret*"></a>
+
+  <h3 id="Google_GenAI_Types_ApiKeyConfig_ApiKeySecret" data-uid="Google.GenAI.Types.ApiKeyConfig.ApiKeySecret">
+  ApiKeySecret
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ApiKeyConfig.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional. The name of the SecretManager secret version resource storing the API key. Format:
+<code>projects/{project}/secrets/{secrete}/versions/{version}</code> - If both <code>api_key_secret</code> and
+<code>api_key_string</code> are specified, this field takes precedence over <code>api_key_string</code>. - If
+specified, the <code>secretmanager.versions.access</code> permission should be granted to Vertex AI
+Extension Service Agent
+(<a href="https://cloud.google.com/vertex-ai/docs/general/access-control#service-agents">https://cloud.google.com/vertex-ai/docs/general/access-control#service-agents</a>) on the
+specified resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;apiKeySecret&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public string? ApiKeySecret { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_ApiKeyConfig_ApiKeyString_" data-uid="Google.GenAI.Types.ApiKeyConfig.ApiKeyString*"></a>
 
   <h3 id="Google_GenAI_Types_ApiKeyConfig_ApiKeyString" data-uid="Google.GenAI.Types.ApiKeyConfig.ApiKeyString">
   ApiKeyString
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ApiKeyConfig.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ApiKeyConfig.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The API key to be used in the request directly.</p>
+  <div class="markdown level1 summary"><p>Optional. The API key to be used in the request directly.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -170,6 +210,75 @@ Class ApiKeyConfig  <a class="header-action link-secondary" title="View source" 
     <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;apiKeyString&quot;)]
 [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
 public string? ApiKeyString { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ApiKeyConfig_HttpElementLocation_" data-uid="Google.GenAI.Types.ApiKeyConfig.HttpElementLocation*"></a>
+
+  <h3 id="Google_GenAI_Types_ApiKeyConfig_HttpElementLocation" data-uid="Google.GenAI.Types.ApiKeyConfig.HttpElementLocation">
+  HttpElementLocation
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ApiKeyConfig.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional. The location of the API key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;httpElementLocation&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public HttpElementLocation? HttpElementLocation { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HttpElementLocation.html">HttpElementLocation</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ApiKeyConfig_Name_" data-uid="Google.GenAI.Types.ApiKeyConfig.Name*"></a>
+
+  <h3 id="Google_GenAI_Types_ApiKeyConfig_Name" data-uid="Google.GenAI.Types.ApiKeyConfig.Name">
+  Name
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ApiKeyConfig.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional. The parameter name of the API key. E.g. If the API request is
+&quot;https://example.com/act?api_key=&quot;, &quot;api_key&quot; would be the parameter name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;name&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public string? Name { get; set; }</code></pre>
   </div>
 
 
@@ -197,7 +306,7 @@ public string? ApiKeyString { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_ApiKeyConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.ApiKeyConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ApiKeyConfig.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ApiKeyConfig.cs/#L80"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a ApiKeyConfig object.</p>

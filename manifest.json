@@ -276,7 +276,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ApiKeyConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ApiKeyConfig.yml\" sourcestartlinenumber=\"1\">Config for authentication with API key.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ApiKeyConfig.yml\" sourcestartlinenumber=\"1\">Config for authentication with API key. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -318,7 +318,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.AuthConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.AuthConfig.yml\" sourcestartlinenumber=\"1\">Auth configuration to run the extension.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.AuthConfig.yml\" sourcestartlinenumber=\"1\">Auth configuration to run the extension. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1214,7 +1214,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GoogleMaps",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GoogleMaps.yml\" sourcestartlinenumber=\"1\">Tool to support Google Maps in Model.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GoogleMaps.yml\" sourcestartlinenumber=\"1\">Tool to retrieve public maps data for grounding, powered by Google.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1467,6 +1467,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.HarmSeverity",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.HarmSeverity.yml\" sourcestartlinenumber=\"1\">Output only. Harm severity levels in the content. This enum is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.HttpElementLocation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.HttpElementLocation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.HttpElementLocation",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.HttpElementLocation.yml\" sourcestartlinenumber=\"1\">The location of the API key. This enum is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
