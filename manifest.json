@@ -1074,7 +1074,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GenerateContentResponseUsageMetadata",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerateContentResponseUsageMetadata.yml\" sourcestartlinenumber=\"1\">Usage metadata about response(s). This data type is not supported in Gemini API.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerateContentResponseUsageMetadata.yml\" sourcestartlinenumber=\"1\">Usage metadata about the content generation request and response. This message provides a\ndetailed breakdown of token usage and other relevant metrics. This data type is not supported\nin Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2642,7 +2642,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.SpeakerVoiceConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SpeakerVoiceConfig.yml\" sourcestartlinenumber=\"1\">The configuration for a single speaker in a multi speaker setup. This data type is not\nsupported in Vertex AI.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SpeakerVoiceConfig.yml\" sourcestartlinenumber=\"1\">Configuration for a single speaker in a multi speaker setup.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2838,7 +2838,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.TrafficType",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.TrafficType.yml\" sourcestartlinenumber=\"1\">Output only. Traffic type. This shows whether a request consumes Pay-As-You-Go or Provisioned\nThroughput quota. This enum is not supported in Gemini API.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.TrafficType.yml\" sourcestartlinenumber=\"1\">Output only. The traffic type for this request. This enum is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
