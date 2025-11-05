@@ -7474,6 +7474,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ImageConfig.FromJson
   nameWithType: ImageConfig.FromJson
+- uid: Google.GenAI.Types.ImageConfig.ImageSize
+  name: ImageSize
+  href: api/Google.GenAI.Types.ImageConfig.html#Google_GenAI_Types_ImageConfig_ImageSize
+  commentId: P:Google.GenAI.Types.ImageConfig.ImageSize
+  fullName: Google.GenAI.Types.ImageConfig.ImageSize
+  nameWithType: ImageConfig.ImageSize
+- uid: Google.GenAI.Types.ImageConfig.ImageSize*
+  name: ImageSize
+  href: api/Google.GenAI.Types.ImageConfig.html#Google_GenAI_Types_ImageConfig_ImageSize_
+  commentId: Overload:Google.GenAI.Types.ImageConfig.ImageSize
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageConfig.ImageSize
+  nameWithType: ImageConfig.ImageSize
 - uid: Google.GenAI.Types.ImagePromptLanguage
   name: ImagePromptLanguage
   href: api/Google.GenAI.Types.ImagePromptLanguage.html
