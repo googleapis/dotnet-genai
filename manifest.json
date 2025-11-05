@@ -1554,34 +1554,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.ImportFileOperation.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.ImportFileOperation.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.ImportFileOperation",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ImportFileOperation.yml\" sourcestartlinenumber=\"1\">Long-running operation for importing a file to a FileSearchStore.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.ImportFileResponse.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.ImportFileResponse.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.ImportFileResponse",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ImportFileResponse.yml\" sourcestartlinenumber=\"1\">Response for ImportFile to import a File API file with a file search store.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.InlinedEmbedContentResponse.yml",
       "output": {
         ".html": {
@@ -2937,34 +2909,6 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.UploadFileConfig",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.UploadFileConfig.yml\" sourcestartlinenumber=\"1\">Used to override the default configuration.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.UploadToFileSearchStoreOperation.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.UploadToFileSearchStoreOperation.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.UploadToFileSearchStoreOperation",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.UploadToFileSearchStoreOperation.yml\" sourcestartlinenumber=\"1\">Long-running operation for uploading a file to a FileSearchStore.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.UploadToFileSearchStoreResponse.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.UploadToFileSearchStoreResponse.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.UploadToFileSearchStoreResponse",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.UploadToFileSearchStoreResponse.yml\" sourcestartlinenumber=\"1\">The response when long-running operation for uploading a file to a FileSearchStore complete.</p>\n"
     },
     {
       "type": "ManagedReference",
