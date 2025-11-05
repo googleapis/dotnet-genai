@@ -1,5 +1,21 @@
 # Changelog
 
+## Version 0.4.0, released 2025-11-05
+
+
+### New features
+
+* Add FileSearch tool and associated FileSearchStore management APIs ([9869797](https://github.com/googleapis/dotnet-genai/commit/98697979ae6120f6ede560da21c9e5c6c7105648))
+* Add RecontextImage support in Dotnet SDK ([f314213](https://github.com/googleapis/dotnet-genai/commit/f314213803c69a68eb63984883a51373e6501a5b))
+* Add safety_filter_level and person_generation for Imagen upscaling ([299c8d3](https://github.com/googleapis/dotnet-genai/commit/299c8d390fa2b41ac0e67af65186b723e2406f06))
+* Added phish filtering feature. ([deaf715](https://github.com/googleapis/dotnet-genai/commit/deaf715682d73a126e681163ca2df5ab1480532a))
+* Auto-detect MIME type in Image.FromFile in Dotnet SDK ([8d0b59e](https://github.com/googleapis/dotnet-genai/commit/8d0b59ea127a56c1f01bbb4d882e910744729f84))
+
+
+### Documentation improvements
+
+* Add docstring for enum classes that are not supported in Gemini or Vertex API ([91da8bf](https://github.com/googleapis/dotnet-genai/commit/91da8bf2f93fdc10f8e6c4a5129ac1fff3bf9bf5))
+
 ## Version 0.3.0, released 2025-10-24
 
 
