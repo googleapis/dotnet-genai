@@ -1,0 +1,164 @@
+{
+  "recordID": "EmbedContentTest.EmbedContentNewApiTextOnlyVertexTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-embedding-2-exp-11-2025:embedContent",
+        "request": "POST /v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-embedding-2-exp-11-2025:embedContent HTTP/1.1",
+        "headers": {
+          "Content-Length": "80",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test-Name": "EmbedContentTest.EmbedContentNewApiTextOnlyVertexTest"
+        },
+        "bodySegments": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "What is your name?"
+                }
+              ]
+            },
+            "outputDimensionality": 100
+          }
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "us-central1-aiplatform.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "7ab0ca799d019be92da346007c3dba0e9da8c6fc67a9931662ff751401c8959a",
+      "response": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=UTF-8",
+          "Date": "Tue, 09 Dec 2025 01:32:47 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "embedding": {
+              "values": [
+                -0.0142773045,
+                0.10085072,
+                0.113331765,
+                -0.040434305,
+                -0.090063736,
+                -0.028024798,
+                0.0414986,
+                0.019308329,
+                0.0038544661,
+                -0.25349662,
+                -0.018013166,
+                -0.067063875,
+                -0.024038592,
+                -0.17355868,
+                0.065338835,
+                -0.11130675,
+                0.18380874,
+                -0.050831083,
+                0.055965718,
+                -0.05774237,
+                -0.13679327,
+                -0.08915446,
+                0.07687315,
+                0.08014607,
+                -0.029194942,
+                0.050007608,
+                0.13249569,
+                -0.0031693575,
+                -0.11604035,
+                0.6006444,
+                0.04124148,
+                -0.06379462,
+                0.009718732,
+                -0.059368365,
+                -0.089108385,
+                0.12761073,
+                -0.097621456,
+                -0.030898891,
+                0.061762486,
+                0.01698628,
+                -0.034178726,
+                0.10110029,
+                -0.09705563,
+                0.045148335,
+                0.053046424,
+                -0.079532586,
+                0.053362064,
+                -0.103914715,
+                -0.017054116,
+                -0.010946492,
+                0.0049979766,
+                -0.07303952,
+                0.011804065,
+                -0.060482502,
+                -0.12655258,
+                0.016023204,
+                0.1219595,
+                0.16617934,
+                0.005434563,
+                0.03423701,
+                -0.060730536,
+                -0.004184466,
+                -0.03749458,
+                0.047950976,
+                -0.0069331126,
+                0.10610594,
+                -0.06968449,
+                0.029484766,
+                0.09571819,
+                -0.0732119,
+                0.0097264815,
+                -0.03295211,
+                0.0037376378,
+                0.048622306,
+                0.046534266,
+                -0.12377986,
+                -0.1003298,
+                -0.019139126,
+                0.09548208,
+                0.044645246,
+                0.011020286,
+                -0.006690465,
+                -0.13432033,
+                -0.06148552,
+                0.069057204,
+                -0.036015507,
+                -0.08588641,
+                0.10927227,
+                -0.14228685,
+                0.057605945,
+                -0.021250825,
+                0.091744,
+                -0.054882918,
+                0.09714459,
+                -0.109336376,
+                -0.054740656,
+                -0.04365297,
+                0.08188144,
+                0.028921498,
+                0.095610686
+              ]
+            },
+            "usageMetadata": {
+              "promptTokenCount": 12,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 12
+                }
+              ],
+              "totalTokenCount": 12
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

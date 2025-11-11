@@ -546,6 +546,14 @@ namespace Google.GenAI
       return name;
     }
 
+    internal static bool TIsVertexEmbedContentModel(string model)
+    {
+        // Gemini Embeddings except gemini-embedding-001.
+        return (model.Contains("gemini") && model != "gemini-embedding-001")
+            // Open-source MaaS embedding models.
+            || model.Contains("maas");
+    }
+
     /// <summary>Formats a resource name given the resource name and resource prefix.</summary>
     internal static string GetResourceName(
         ApiClient apiClient, string resourceName, string resourcePrefix)

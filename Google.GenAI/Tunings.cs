@@ -53,8 +53,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode CancelTuningJobResponseFromMldev(JsonNode fromObject,
-                                                       JsonObject parentObject) {
+    internal JsonNode CancelTuningJobResponseFromMldev(JsonNode fromObject, JsonObject parentObject,
+                                                       JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }) != null) {
@@ -67,7 +67,8 @@ namespace Google.GenAI {
     }
 
     internal JsonNode CancelTuningJobResponseFromVertex(JsonNode fromObject,
-                                                        JsonObject parentObject) {
+                                                        JsonObject parentObject,
+                                                        JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }) != null) {
@@ -358,7 +359,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode EvaluationConfigFromVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode EvaluationConfigFromVertex(JsonNode fromObject, JsonObject parentObject,
+                                                 JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       return toObject;
@@ -467,8 +469,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode ListTuningJobsResponseFromMldev(JsonNode fromObject,
-                                                      JsonObject parentObject) {
+    internal JsonNode ListTuningJobsResponseFromMldev(JsonNode fromObject, JsonObject parentObject,
+                                                      JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }) != null) {
@@ -488,8 +490,8 @@ namespace Google.GenAI {
         JsonArray result = new JsonArray();
 
         foreach (var record in keyArray) {
-          result.Add(
-              TuningJobFromMldev(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
+          result.Add(TuningJobFromMldev(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject,
+                                        rootObject));
         }
         Common.SetValueByPath(toObject, new string[] { "tuningJobs" }, result);
       }
@@ -497,8 +499,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode ListTuningJobsResponseFromVertex(JsonNode fromObject,
-                                                       JsonObject parentObject) {
+    internal JsonNode ListTuningJobsResponseFromVertex(JsonNode fromObject, JsonObject parentObject,
+                                                       JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }) != null) {
@@ -518,8 +520,8 @@ namespace Google.GenAI {
         JsonArray result = new JsonArray();
 
         foreach (var record in keyArray) {
-          result.Add(
-              TuningJobFromVertex(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
+          result.Add(TuningJobFromVertex(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject,
+                                         rootObject));
         }
         Common.SetValueByPath(toObject, new string[] { "tuningJobs" }, result);
       }
@@ -527,7 +529,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode TunedModelFromMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode TunedModelFromMldev(JsonNode fromObject, JsonObject parentObject,
+                                          JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "name" }) != null) {
@@ -614,7 +617,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode TuningJobFromMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode TuningJobFromMldev(JsonNode fromObject, JsonObject parentObject,
+                                         JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }) != null) {
@@ -672,13 +676,14 @@ namespace Google.GenAI {
             toObject, new string[] { "tunedModel" },
             TunedModelFromMldev(JsonNode.Parse(JsonSerializer.Serialize(
                                     Common.GetValueByPath(fromObject, new string[] { "_self" }))),
-                                toObject));
+                                toObject, rootObject));
       }
 
       return toObject;
     }
 
-    internal JsonNode TuningJobFromVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode TuningJobFromVertex(JsonNode fromObject, JsonObject parentObject,
+                                          JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }) != null) {
@@ -818,7 +823,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode TuningOperationFromMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode TuningOperationFromMldev(JsonNode fromObject, JsonObject parentObject,
+                                               JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }) != null) {
@@ -917,11 +923,11 @@ namespace Google.GenAI {
       JsonNode responseNode = httpContentNode;
 
       if (this._apiClient.VertexAI) {
-        responseNode = TuningJobFromVertex(httpContentNode, new JsonObject());
+        responseNode = TuningJobFromVertex(httpContentNode, new JsonObject(), parameterNode);
       }
 
       if (!this._apiClient.VertexAI) {
-        responseNode = TuningJobFromMldev(httpContentNode, new JsonObject());
+        responseNode = TuningJobFromMldev(httpContentNode, new JsonObject(), parameterNode);
       }
 
       return JsonSerializer.Deserialize<TuningJob>(responseNode.ToString()) ??
@@ -970,11 +976,13 @@ namespace Google.GenAI {
       JsonNode responseNode = httpContentNode;
 
       if (this._apiClient.VertexAI) {
-        responseNode = ListTuningJobsResponseFromVertex(httpContentNode, new JsonObject());
+        responseNode =
+            ListTuningJobsResponseFromVertex(httpContentNode, new JsonObject(), parameterNode);
       }
 
       if (!this._apiClient.VertexAI) {
-        responseNode = ListTuningJobsResponseFromMldev(httpContentNode, new JsonObject());
+        responseNode =
+            ListTuningJobsResponseFromMldev(httpContentNode, new JsonObject(), parameterNode);
       }
 
       return JsonSerializer.Deserialize<ListTuningJobsResponse>(responseNode.ToString()) ??
@@ -1035,11 +1043,13 @@ namespace Google.GenAI {
       JsonNode responseNode = httpContentNode;
 
       if (this._apiClient.VertexAI) {
-        responseNode = CancelTuningJobResponseFromVertex(httpContentNode, new JsonObject());
+        responseNode =
+            CancelTuningJobResponseFromVertex(httpContentNode, new JsonObject(), parameterNode);
       }
 
       if (!this._apiClient.VertexAI) {
-        responseNode = CancelTuningJobResponseFromMldev(httpContentNode, new JsonObject());
+        responseNode =
+            CancelTuningJobResponseFromMldev(httpContentNode, new JsonObject(), parameterNode);
       }
 
       return JsonSerializer.Deserialize<CancelTuningJobResponse>(responseNode.ToString()) ??
@@ -1101,7 +1111,7 @@ namespace Google.GenAI {
       JsonNode responseNode = httpContentNode;
 
       if (this._apiClient.VertexAI) {
-        responseNode = TuningJobFromVertex(httpContentNode, new JsonObject());
+        responseNode = TuningJobFromVertex(httpContentNode, new JsonObject(), parameterNode);
       }
 
       if (!this._apiClient.VertexAI) {

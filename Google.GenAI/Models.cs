@@ -33,7 +33,8 @@ namespace Google.GenAI {
   public sealed class Models {
     private readonly ApiClient _apiClient;
 
-    internal JsonNode BlobToMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode BlobToMldev(JsonNode fromObject, JsonObject parentObject,
+                                  JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "data" }) != null) {
@@ -53,7 +54,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode CandidateFromMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode CandidateFromMldev(JsonNode fromObject, JsonObject parentObject,
+                                         JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "content" }) != null) {
@@ -66,7 +68,7 @@ namespace Google.GenAI {
             toObject, new string[] { "citationMetadata" },
             CitationMetadataFromMldev(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                           fromObject, new string[] { "citationMetadata" }))),
-                                      toObject));
+                                      toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "tokenCount" }) != null) {
@@ -114,7 +116,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode CitationMetadataFromMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode CitationMetadataFromMldev(JsonNode fromObject, JsonObject parentObject,
+                                                JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "citationSources" }) != null) {
@@ -127,7 +130,8 @@ namespace Google.GenAI {
     }
 
     internal JsonNode ComputeTokensParametersToVertex(ApiClient apiClient, JsonNode fromObject,
-                                                      JsonObject parentObject) {
+                                                      JsonObject parentObject,
+                                                      JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "model" }) != null) {
@@ -146,8 +150,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode ComputeTokensResponseFromVertex(JsonNode fromObject,
-                                                      JsonObject parentObject) {
+    internal JsonNode ComputeTokensResponseFromVertex(JsonNode fromObject, JsonObject parentObject,
+                                                      JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }) != null) {
@@ -164,7 +168,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode ContentEmbeddingFromVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode ContentEmbeddingFromVertex(JsonNode fromObject, JsonObject parentObject,
+                                                 JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "values" }) != null) {
@@ -177,14 +182,15 @@ namespace Google.GenAI {
                               ContentEmbeddingStatisticsFromVertex(
                                   JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                       fromObject, new string[] { "statistics" }))),
-                                  toObject));
+                                  toObject, rootObject));
       }
 
       return toObject;
     }
 
     internal JsonNode ContentEmbeddingStatisticsFromVertex(JsonNode fromObject,
-                                                           JsonObject parentObject) {
+                                                           JsonObject parentObject,
+                                                           JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "truncated" }) != null) {
@@ -200,7 +206,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode ContentToMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode ContentToMldev(JsonNode fromObject, JsonObject parentObject,
+                                     JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "parts" }) != null) {
@@ -208,7 +215,8 @@ namespace Google.GenAI {
         JsonArray result = new JsonArray();
 
         foreach (var record in keyArray) {
-          result.Add(PartToMldev(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
+          result.Add(
+              PartToMldev(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject, rootObject));
         }
         Common.SetValueByPath(toObject, new string[] { "parts" }, result);
       }
@@ -221,7 +229,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode ControlReferenceConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode ControlReferenceConfigToVertex(JsonNode fromObject, JsonObject parentObject,
+                                                     JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "controlType" }) != null) {
@@ -239,7 +248,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode CountTokensConfigToMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode CountTokensConfigToMldev(JsonNode fromObject, JsonObject parentObject,
+                                               JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "systemInstruction" }))) {
@@ -259,7 +269,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode CountTokensConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode CountTokensConfigToVertex(JsonNode fromObject, JsonObject parentObject,
+                                                JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "systemInstruction" }) != null) {
@@ -273,7 +284,8 @@ namespace Google.GenAI {
         JsonArray result = new JsonArray();
 
         foreach (var record in keyArray) {
-          result.Add(ToolToVertex(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
+          result.Add(
+              ToolToVertex(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject, rootObject));
         }
         Common.SetValueByPath(parentObject, new string[] { "tools" }, result);
       }
@@ -283,14 +295,14 @@ namespace Google.GenAI {
             parentObject, new string[] { "generationConfig" },
             GenerationConfigToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                          fromObject, new string[] { "generationConfig" }))),
-                                     toObject));
+                                     toObject, rootObject));
       }
 
       return toObject;
     }
 
     internal JsonNode CountTokensParametersToMldev(ApiClient apiClient, JsonNode fromObject,
-                                                   JsonObject parentObject) {
+                                                   JsonObject parentObject, JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "model" }) != null) {
@@ -306,7 +318,8 @@ namespace Google.GenAI {
         JsonArray result = new JsonArray();
 
         foreach (var record in keyList) {
-          result.Add(ContentToMldev(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
+          result.Add(ContentToMldev(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject,
+                                    rootObject));
         }
         Common.SetValueByPath(toObject, new string[] { "contents" }, result);
       }
@@ -314,14 +327,14 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "config" }) != null) {
         _ = CountTokensConfigToMldev(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                          fromObject, new string[] { "config" }))),
-                                     toObject);
+                                     toObject, rootObject);
       }
 
       return toObject;
     }
 
     internal JsonNode CountTokensParametersToVertex(ApiClient apiClient, JsonNode fromObject,
-                                                    JsonObject parentObject) {
+                                                    JsonObject parentObject, JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "model" }) != null) {
@@ -340,13 +353,14 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "config" }) != null) {
         _ = CountTokensConfigToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                           fromObject, new string[] { "config" }))),
-                                      toObject);
+                                      toObject, rootObject);
       }
 
       return toObject;
     }
 
-    internal JsonNode CountTokensResponseFromMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode CountTokensResponseFromMldev(JsonNode fromObject, JsonObject parentObject,
+                                                   JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }) != null) {
@@ -369,7 +383,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode CountTokensResponseFromVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode CountTokensResponseFromVertex(JsonNode fromObject, JsonObject parentObject,
+                                                    JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }) != null) {
@@ -387,7 +402,7 @@ namespace Google.GenAI {
     }
 
     internal JsonNode DeleteModelParametersToMldev(ApiClient apiClient, JsonNode fromObject,
-                                                   JsonObject parentObject) {
+                                                   JsonObject parentObject, JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "model" }) != null) {
@@ -401,7 +416,7 @@ namespace Google.GenAI {
     }
 
     internal JsonNode DeleteModelParametersToVertex(ApiClient apiClient, JsonNode fromObject,
-                                                    JsonObject parentObject) {
+                                                    JsonObject parentObject, JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "model" }) != null) {
@@ -414,7 +429,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode DeleteModelResponseFromMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode DeleteModelResponseFromMldev(JsonNode fromObject, JsonObject parentObject,
+                                                   JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }) != null) {
@@ -426,7 +442,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode DeleteModelResponseFromVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode DeleteModelResponseFromVertex(JsonNode fromObject, JsonObject parentObject,
+                                                    JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }) != null) {
@@ -438,7 +455,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode EditImageConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode EditImageConfigToVertex(JsonNode fromObject, JsonObject parentObject,
+                                              JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "outputGcsUri" }) != null) {
@@ -537,7 +555,7 @@ namespace Google.GenAI {
     }
 
     internal JsonNode EditImageParametersToVertex(ApiClient apiClient, JsonNode fromObject,
-                                                  JsonObject parentObject) {
+                                                  JsonObject parentObject, JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "model" }) != null) {
@@ -559,7 +577,7 @@ namespace Google.GenAI {
 
         foreach (var record in keyArray) {
           result.Add(ReferenceImageAPIToVertex(JsonNode.Parse(JsonSerializer.Serialize(record)),
-                                               toObject));
+                                               toObject, rootObject));
         }
         Common.SetValueByPath(toObject, new string[] { "instances[0]", "referenceImages" }, result);
       }
@@ -567,13 +585,14 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "config" }) != null) {
         _ = EditImageConfigToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                         fromObject, new string[] { "config" }))),
-                                    toObject);
+                                    toObject, rootObject);
       }
 
       return toObject;
     }
 
-    internal JsonNode EditImageResponseFromVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode EditImageResponseFromVertex(JsonNode fromObject, JsonObject parentObject,
+                                                  JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }) != null) {
@@ -588,8 +607,8 @@ namespace Google.GenAI {
         JsonArray result = new JsonArray();
 
         foreach (var record in keyArray) {
-          result.Add(
-              GeneratedImageFromVertex(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
+          result.Add(GeneratedImageFromVertex(JsonNode.Parse(JsonSerializer.Serialize(record)),
+                                              toObject, rootObject));
         }
         Common.SetValueByPath(toObject, new string[] { "generatedImages" }, result);
       }
@@ -597,7 +616,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode EmbedContentConfigToMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode EmbedContentConfigToMldev(JsonNode fromObject, JsonObject parentObject,
+                                                JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "taskType" }) != null) {
@@ -627,40 +647,96 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode EmbedContentConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode EmbedContentConfigToVertex(JsonNode fromObject, JsonObject parentObject,
+                                                 JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
-      if (Common.GetValueByPath(fromObject, new string[] { "taskType" }) != null) {
-        Common.SetValueByPath(parentObject, new string[] { "instances[]", "task_type" },
-                              Common.GetValueByPath(fromObject, new string[] { "taskType" }));
+      JsonNode discriminatorTaskType =
+          Common.GetValueByPath(rootObject, new string[] { "embeddingApiType" });
+      string discriminatorValueTaskType =
+          discriminatorTaskType == null ? "PREDICT" : discriminatorTaskType.GetValue<string>();
+      if (discriminatorValueTaskType == "PREDICT") {
+        if (Common.GetValueByPath(fromObject, new string[] { "taskType" }) != null) {
+          Common.SetValueByPath(parentObject, new string[] { "instances[]", "task_type" },
+                                Common.GetValueByPath(fromObject, new string[] { "taskType" }));
+        }
+      } else if (discriminatorValueTaskType == "EMBED_CONTENT") {
+        if (Common.GetValueByPath(fromObject, new string[] { "taskType" }) != null) {
+          Common.SetValueByPath(parentObject, new string[] { "taskType" },
+                                Common.GetValueByPath(fromObject, new string[] { "taskType" }));
+        }
       }
 
-      if (Common.GetValueByPath(fromObject, new string[] { "title" }) != null) {
-        Common.SetValueByPath(parentObject, new string[] { "instances[]", "title" },
-                              Common.GetValueByPath(fromObject, new string[] { "title" }));
+      JsonNode discriminatorTitle =
+          Common.GetValueByPath(rootObject, new string[] { "embeddingApiType" });
+      string discriminatorValueTitle =
+          discriminatorTitle == null ? "PREDICT" : discriminatorTitle.GetValue<string>();
+      if (discriminatorValueTitle == "PREDICT") {
+        if (Common.GetValueByPath(fromObject, new string[] { "title" }) != null) {
+          Common.SetValueByPath(parentObject, new string[] { "instances[]", "title" },
+                                Common.GetValueByPath(fromObject, new string[] { "title" }));
+        }
+      } else if (discriminatorValueTitle == "EMBED_CONTENT") {
+        if (Common.GetValueByPath(fromObject, new string[] { "title" }) != null) {
+          Common.SetValueByPath(parentObject, new string[] { "title" },
+                                Common.GetValueByPath(fromObject, new string[] { "title" }));
+        }
       }
 
-      if (Common.GetValueByPath(fromObject, new string[] { "outputDimensionality" }) != null) {
-        Common.SetValueByPath(
-            parentObject, new string[] { "parameters", "outputDimensionality" },
-            Common.GetValueByPath(fromObject, new string[] { "outputDimensionality" }));
+      JsonNode discriminatorOutputDimensionality =
+          Common.GetValueByPath(rootObject, new string[] { "embeddingApiType" });
+      string discriminatorValueOutputDimensionality =
+          discriminatorOutputDimensionality == null
+              ? "PREDICT"
+              : discriminatorOutputDimensionality.GetValue<string>();
+      if (discriminatorValueOutputDimensionality == "PREDICT") {
+        if (Common.GetValueByPath(fromObject, new string[] { "outputDimensionality" }) != null) {
+          Common.SetValueByPath(
+              parentObject, new string[] { "parameters", "outputDimensionality" },
+              Common.GetValueByPath(fromObject, new string[] { "outputDimensionality" }));
+        }
+      } else if (discriminatorValueOutputDimensionality == "EMBED_CONTENT") {
+        if (Common.GetValueByPath(fromObject, new string[] { "outputDimensionality" }) != null) {
+          Common.SetValueByPath(
+              parentObject, new string[] { "outputDimensionality" },
+              Common.GetValueByPath(fromObject, new string[] { "outputDimensionality" }));
+        }
       }
 
-      if (Common.GetValueByPath(fromObject, new string[] { "mimeType" }) != null) {
-        Common.SetValueByPath(parentObject, new string[] { "instances[]", "mimeType" },
-                              Common.GetValueByPath(fromObject, new string[] { "mimeType" }));
+      JsonNode discriminatorMimeType =
+          Common.GetValueByPath(rootObject, new string[] { "embeddingApiType" });
+      string discriminatorValueMimeType =
+          discriminatorMimeType == null ? "PREDICT" : discriminatorMimeType.GetValue<string>();
+      if (discriminatorValueMimeType == "PREDICT") {
+        if (Common.GetValueByPath(fromObject, new string[] { "mimeType" }) != null) {
+          Common.SetValueByPath(parentObject, new string[] { "instances[]", "mimeType" },
+                                Common.GetValueByPath(fromObject, new string[] { "mimeType" }));
+        }
       }
 
-      if (Common.GetValueByPath(fromObject, new string[] { "autoTruncate" }) != null) {
-        Common.SetValueByPath(parentObject, new string[] { "parameters", "autoTruncate" },
-                              Common.GetValueByPath(fromObject, new string[] { "autoTruncate" }));
+      JsonNode discriminatorAutoTruncate =
+          Common.GetValueByPath(rootObject, new string[] { "embeddingApiType" });
+      string discriminatorValueAutoTruncate = discriminatorAutoTruncate == null
+                                                  ? "PREDICT"
+                                                  : discriminatorAutoTruncate.GetValue<string>();
+      if (discriminatorValueAutoTruncate == "PREDICT") {
+        if (Common.GetValueByPath(fromObject, new string[] { "autoTruncate" }) != null) {
+          Common.SetValueByPath(parentObject, new string[] { "parameters", "autoTruncate" },
+                                Common.GetValueByPath(fromObject, new string[] { "autoTruncate" }));
+        }
+      } else if (discriminatorValueAutoTruncate == "EMBED_CONTENT") {
+        if (Common.GetValueByPath(fromObject, new string[] { "autoTruncate" }) != null) {
+          Common.SetValueByPath(parentObject, new string[] { "autoTruncate" },
+                                Common.GetValueByPath(fromObject, new string[] { "autoTruncate" }));
+        }
       }
 
       return toObject;
     }
 
-    internal JsonNode EmbedContentParametersToMldev(ApiClient apiClient, JsonNode fromObject,
-                                                    JsonObject parentObject) {
+    internal JsonNode EmbedContentParametersPrivateToMldev(ApiClient apiClient, JsonNode fromObject,
+                                                           JsonObject parentObject,
+                                                           JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "model" }) != null) {
@@ -677,10 +753,16 @@ namespace Google.GenAI {
                 this._apiClient, Common.GetValueByPath(fromObject, new string[] { "contents" })));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "content" }) != null) {
+        _ = ContentToMldev(JsonNode.Parse(JsonSerializer.Serialize(Transformers.TContent(
+                               Common.GetValueByPath(fromObject, new string[] { "content" })))),
+                           toObject, rootObject);
+      }
+
       if (Common.GetValueByPath(fromObject, new string[] { "config" }) != null) {
         _ = EmbedContentConfigToMldev(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                           fromObject, new string[] { "config" }))),
-                                      toObject);
+                                      toObject, rootObject);
       }
 
       Common.SetValueByPath(
@@ -691,8 +773,10 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode EmbedContentParametersToVertex(ApiClient apiClient, JsonNode fromObject,
-                                                     JsonObject parentObject) {
+    internal JsonNode EmbedContentParametersPrivateToVertex(ApiClient apiClient,
+                                                            JsonNode fromObject,
+                                                            JsonObject parentObject,
+                                                            JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "model" }) != null) {
@@ -702,24 +786,43 @@ namespace Google.GenAI {
                                 Common.GetValueByPath(fromObject, new string[] { "model" })));
       }
 
-      if (Common.GetValueByPath(fromObject, new string[] { "contents" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "instances[]", "content" },
-            Transformers.TContentsForEmbed(
-                this._apiClient, Common.GetValueByPath(fromObject, new string[] { "contents" })));
+      JsonNode discriminatorContents =
+          Common.GetValueByPath(rootObject, new string[] { "embeddingApiType" });
+      string discriminatorValueContents =
+          discriminatorContents == null ? "PREDICT" : discriminatorContents.GetValue<string>();
+      if (discriminatorValueContents == "PREDICT") {
+        if (Common.GetValueByPath(fromObject, new string[] { "contents" }) != null) {
+          Common.SetValueByPath(
+              toObject, new string[] { "instances[]", "content" },
+              Transformers.TContentsForEmbed(
+                  this._apiClient, Common.GetValueByPath(fromObject, new string[] { "contents" })));
+        }
+      }
+
+      JsonNode discriminatorContent =
+          Common.GetValueByPath(rootObject, new string[] { "embeddingApiType" });
+      string discriminatorValueContent =
+          discriminatorContent == null ? "PREDICT" : discriminatorContent.GetValue<string>();
+      if (discriminatorValueContent == "EMBED_CONTENT") {
+        if (Common.GetValueByPath(fromObject, new string[] { "content" }) != null) {
+          Common.SetValueByPath(
+              toObject, new string[] { "content" },
+              Transformers.TContent(Common.GetValueByPath(fromObject, new string[] { "content" })));
+        }
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "config" }) != null) {
         _ = EmbedContentConfigToVertex(
             JsonNode.Parse(JsonSerializer.Serialize(
                 Common.GetValueByPath(fromObject, new string[] { "config" }))),
-            toObject);
+            toObject, rootObject);
       }
 
       return toObject;
     }
 
-    internal JsonNode EmbedContentResponseFromMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode EmbedContentResponseFromMldev(JsonNode fromObject, JsonObject parentObject,
+                                                    JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }) != null) {
@@ -741,7 +844,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode EmbedContentResponseFromVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode EmbedContentResponseFromVertex(JsonNode fromObject, JsonObject parentObject,
+                                                     JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }) != null) {
@@ -758,7 +862,7 @@ namespace Google.GenAI {
 
         foreach (var record in keyArray) {
           result.Add(ContentEmbeddingFromVertex(JsonNode.Parse(JsonSerializer.Serialize(record)),
-                                                toObject));
+                                                toObject, rootObject));
         }
         Common.SetValueByPath(toObject, new string[] { "embeddings" }, result);
       }
@@ -768,10 +872,36 @@ namespace Google.GenAI {
                               Common.GetValueByPath(fromObject, new string[] { "metadata" }));
       }
 
+      if (rootObject != null &&
+          Common.GetValueByPath(rootObject, new string[] { "embeddingApiType" }) != null &&
+          Common.GetValueByPath(rootObject, new string[] { "embeddingApiType" })
+                  .GetValue<string>() == "EMBED_CONTENT") {
+        JsonNode? embedding_node = Common.GetValueByPath(fromObject, new string[] { "embedding" });
+        if (embedding_node != null) {
+          JsonNode embedding = JsonNode.Parse(embedding_node.ToJsonString());
+          JsonNode usageMetadata =
+              Common.GetValueByPath(fromObject, new string[] { "usageMetadata" });
+          JsonNode truncated = Common.GetValueByPath(fromObject, new string[] { "truncated" });
+          JsonObject stats = new JsonObject();
+          if (usageMetadata != null && usageMetadata["promptTokenCount"] != null) {
+            stats.Add("token_count",
+                      JsonNode.Parse(usageMetadata["promptTokenCount"].ToJsonString()));
+          }
+          if (truncated != null) {
+            stats.Add("truncated", JsonNode.Parse(truncated.ToJsonString()));
+          }
+          ((JsonObject)embedding).Add("statistics", stats);
+          JsonArray embeddings = new JsonArray();
+          embeddings.Add(embedding);
+          Common.SetValueByPath(toObject, new string[] { "embeddings" }, embeddings);
+        }
+      }
+
       return toObject;
     }
 
-    internal JsonNode EndpointFromVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode EndpointFromVertex(JsonNode fromObject, JsonObject parentObject,
+                                         JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "endpoint" }) != null) {
@@ -788,7 +918,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode FileDataToMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode FileDataToMldev(JsonNode fromObject, JsonObject parentObject,
+                                      JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "displayName" }))) {
@@ -808,7 +939,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode FileSearchToMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode FileSearchToMldev(JsonNode fromObject, JsonObject parentObject,
+                                        JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "" }))) {
@@ -822,7 +954,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode FunctionCallToMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode FunctionCallToMldev(JsonNode fromObject, JsonObject parentObject,
+                                          JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "id" }) != null) {
@@ -851,7 +984,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode FunctionCallingConfigToMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode FunctionCallingConfigToMldev(JsonNode fromObject, JsonObject parentObject,
+                                                   JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "mode" }) != null) {
@@ -874,7 +1008,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode FunctionDeclarationToVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode FunctionDeclarationToVertex(JsonNode fromObject, JsonObject parentObject,
+                                                  JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "behavior" }))) {
@@ -917,7 +1052,7 @@ namespace Google.GenAI {
     }
 
     internal JsonNode GenerateContentConfigToMldev(ApiClient apiClient, JsonNode fromObject,
-                                                   JsonObject parentObject) {
+                                                   JsonObject parentObject, JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "systemInstruction" }) != null) {
@@ -926,7 +1061,7 @@ namespace Google.GenAI {
             ContentToMldev(
                 JsonNode.Parse(JsonSerializer.Serialize(Transformers.TContent(
                     Common.GetValueByPath(fromObject, new string[] { "systemInstruction" })))),
-                toObject));
+                toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "temperature" }) != null) {
@@ -1022,8 +1157,8 @@ namespace Google.GenAI {
         JsonArray result = new JsonArray();
 
         foreach (var record in keyArray) {
-          result.Add(
-              SafetySettingToMldev(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
+          result.Add(SafetySettingToMldev(JsonNode.Parse(JsonSerializer.Serialize(record)),
+                                          toObject, rootObject));
         }
         Common.SetValueByPath(parentObject, new string[] { "safetySettings" }, result);
       }
@@ -1034,8 +1169,9 @@ namespace Google.GenAI {
         JsonArray result = new JsonArray();
 
         foreach (var record in keyList) {
-          result.Add(ToolToMldev(
-              JsonNode.Parse(JsonSerializer.Serialize(Transformers.TTool(record))), toObject));
+          result.Add(
+              ToolToMldev(JsonNode.Parse(JsonSerializer.Serialize(Transformers.TTool(record))),
+                          toObject, rootObject));
         }
         Common.SetValueByPath(parentObject, new string[] { "tools" }, result);
       }
@@ -1045,7 +1181,7 @@ namespace Google.GenAI {
             parentObject, new string[] { "toolConfig" },
             ToolConfigToMldev(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                   fromObject, new string[] { "toolConfig" }))),
-                              toObject));
+                              toObject, rootObject));
       }
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "labels" }))) {
@@ -1092,7 +1228,7 @@ namespace Google.GenAI {
             toObject, new string[] { "imageConfig" },
             ImageConfigToMldev(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                    fromObject, new string[] { "imageConfig" }))),
-                               toObject));
+                               toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "enableEnhancedCivicAnswers" }) !=
@@ -1106,7 +1242,7 @@ namespace Google.GenAI {
     }
 
     internal JsonNode GenerateContentConfigToVertex(ApiClient apiClient, JsonNode fromObject,
-                                                    JsonObject parentObject) {
+                                                    JsonObject parentObject, JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "systemInstruction" }) != null) {
@@ -1214,8 +1350,9 @@ namespace Google.GenAI {
         JsonArray result = new JsonArray();
 
         foreach (var record in keyList) {
-          result.Add(ToolToVertex(
-              JsonNode.Parse(JsonSerializer.Serialize(Transformers.TTool(record))), toObject));
+          result.Add(
+              ToolToVertex(JsonNode.Parse(JsonSerializer.Serialize(Transformers.TTool(record))),
+                           toObject, rootObject));
         }
         Common.SetValueByPath(parentObject, new string[] { "tools" }, result);
       }
@@ -1256,7 +1393,7 @@ namespace Google.GenAI {
             SpeechConfigToVertex(
                 JsonNode.Parse(JsonSerializer.Serialize(Transformers.TSpeechConfig(
                     Common.GetValueByPath(fromObject, new string[] { "speechConfig" })))),
-                toObject));
+                toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "audioTimestamp" }) != null) {
@@ -1274,7 +1411,7 @@ namespace Google.GenAI {
             toObject, new string[] { "imageConfig" },
             ImageConfigToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                     fromObject, new string[] { "imageConfig" }))),
-                                toObject));
+                                toObject, rootObject));
       }
 
       if (!Common.IsZero(
@@ -1287,7 +1424,8 @@ namespace Google.GenAI {
     }
 
     internal JsonNode GenerateContentParametersToMldev(ApiClient apiClient, JsonNode fromObject,
-                                                       JsonObject parentObject) {
+                                                       JsonObject parentObject,
+                                                       JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "model" }) != null) {
@@ -1303,7 +1441,8 @@ namespace Google.GenAI {
         JsonArray result = new JsonArray();
 
         foreach (var record in keyList) {
-          result.Add(ContentToMldev(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
+          result.Add(ContentToMldev(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject,
+                                    rootObject));
         }
         Common.SetValueByPath(toObject, new string[] { "contents" }, result);
       }
@@ -1314,14 +1453,15 @@ namespace Google.GenAI {
                                   apiClient,
                                   JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                       fromObject, new string[] { "config" }))),
-                                  toObject));
+                                  toObject, rootObject));
       }
 
       return toObject;
     }
 
     internal JsonNode GenerateContentParametersToVertex(ApiClient apiClient, JsonNode fromObject,
-                                                        JsonObject parentObject) {
+                                                        JsonObject parentObject,
+                                                        JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "model" }) != null) {
@@ -1343,14 +1483,14 @@ namespace Google.GenAI {
                                   apiClient,
                                   JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                       fromObject, new string[] { "config" }))),
-                                  toObject));
+                                  toObject, rootObject));
       }
 
       return toObject;
     }
 
-    internal JsonNode GenerateContentResponseFromMldev(JsonNode fromObject,
-                                                       JsonObject parentObject) {
+    internal JsonNode GenerateContentResponseFromMldev(JsonNode fromObject, JsonObject parentObject,
+                                                       JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }) != null) {
@@ -1365,8 +1505,8 @@ namespace Google.GenAI {
         JsonArray result = new JsonArray();
 
         foreach (var record in keyArray) {
-          result.Add(
-              CandidateFromMldev(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
+          result.Add(CandidateFromMldev(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject,
+                                        rootObject));
         }
         Common.SetValueByPath(toObject, new string[] { "candidates" }, result);
       }
@@ -1395,7 +1535,8 @@ namespace Google.GenAI {
     }
 
     internal JsonNode GenerateContentResponseFromVertex(JsonNode fromObject,
-                                                        JsonObject parentObject) {
+                                                        JsonObject parentObject,
+                                                        JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }) != null) {
@@ -1437,7 +1578,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode GenerateImagesConfigToMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode GenerateImagesConfigToMldev(JsonNode fromObject, JsonObject parentObject,
+                                                  JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "outputGcsUri" }))) {
@@ -1528,7 +1670,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode GenerateImagesConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode GenerateImagesConfigToVertex(JsonNode fromObject, JsonObject parentObject,
+                                                   JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "outputGcsUri" }) != null) {
@@ -1626,7 +1769,8 @@ namespace Google.GenAI {
     }
 
     internal JsonNode GenerateImagesParametersToMldev(ApiClient apiClient, JsonNode fromObject,
-                                                      JsonObject parentObject) {
+                                                      JsonObject parentObject,
+                                                      JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "model" }) != null) {
@@ -1645,14 +1789,15 @@ namespace Google.GenAI {
         _ = GenerateImagesConfigToMldev(
             JsonNode.Parse(JsonSerializer.Serialize(
                 Common.GetValueByPath(fromObject, new string[] { "config" }))),
-            toObject);
+            toObject, rootObject);
       }
 
       return toObject;
     }
 
     internal JsonNode GenerateImagesParametersToVertex(ApiClient apiClient, JsonNode fromObject,
-                                                       JsonObject parentObject) {
+                                                       JsonObject parentObject,
+                                                       JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "model" }) != null) {
@@ -1671,14 +1816,14 @@ namespace Google.GenAI {
         _ = GenerateImagesConfigToVertex(
             JsonNode.Parse(JsonSerializer.Serialize(
                 Common.GetValueByPath(fromObject, new string[] { "config" }))),
-            toObject);
+            toObject, rootObject);
       }
 
       return toObject;
     }
 
-    internal JsonNode GenerateImagesResponseFromMldev(JsonNode fromObject,
-                                                      JsonObject parentObject) {
+    internal JsonNode GenerateImagesResponseFromMldev(JsonNode fromObject, JsonObject parentObject,
+                                                      JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }) != null) {
@@ -1693,8 +1838,8 @@ namespace Google.GenAI {
         JsonArray result = new JsonArray();
 
         foreach (var record in keyArray) {
-          result.Add(
-              GeneratedImageFromMldev(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
+          result.Add(GeneratedImageFromMldev(JsonNode.Parse(JsonSerializer.Serialize(record)),
+                                             toObject, rootObject));
         }
         Common.SetValueByPath(toObject, new string[] { "generatedImages" }, result);
       }
@@ -1706,14 +1851,14 @@ namespace Google.GenAI {
             SafetyAttributesFromMldev(
                 JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                     fromObject, new string[] { "positivePromptSafetyAttributes" }))),
-                toObject));
+                toObject, rootObject));
       }
 
       return toObject;
     }
 
-    internal JsonNode GenerateImagesResponseFromVertex(JsonNode fromObject,
-                                                       JsonObject parentObject) {
+    internal JsonNode GenerateImagesResponseFromVertex(JsonNode fromObject, JsonObject parentObject,
+                                                       JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }) != null) {
@@ -1728,8 +1873,8 @@ namespace Google.GenAI {
         JsonArray result = new JsonArray();
 
         foreach (var record in keyArray) {
-          result.Add(
-              GeneratedImageFromVertex(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
+          result.Add(GeneratedImageFromVertex(JsonNode.Parse(JsonSerializer.Serialize(record)),
+                                              toObject, rootObject));
         }
         Common.SetValueByPath(toObject, new string[] { "generatedImages" }, result);
       }
@@ -1741,13 +1886,14 @@ namespace Google.GenAI {
             SafetyAttributesFromVertex(
                 JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                     fromObject, new string[] { "positivePromptSafetyAttributes" }))),
-                toObject));
+                toObject, rootObject));
       }
 
       return toObject;
     }
 
-    internal JsonNode GenerateVideosConfigToMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode GenerateVideosConfigToMldev(JsonNode fromObject, JsonObject parentObject,
+                                                  JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "numberOfVideos" }) != null) {
@@ -1812,7 +1958,7 @@ namespace Google.GenAI {
             parentObject, new string[] { "instances[0]", "lastFrame" },
             ImageToMldev(JsonNode.Parse(JsonSerializer.Serialize(
                              Common.GetValueByPath(fromObject, new string[] { "lastFrame" }))),
-                         toObject));
+                         toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "referenceImages" }) != null) {
@@ -1822,7 +1968,7 @@ namespace Google.GenAI {
 
         foreach (var record in keyArray) {
           result.Add(VideoGenerationReferenceImageToMldev(
-              JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
+              JsonNode.Parse(JsonSerializer.Serialize(record)), toObject, rootObject));
         }
         Common.SetValueByPath(parentObject, new string[] { "instances[0]", "referenceImages" },
                               result);
@@ -1841,7 +1987,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode GenerateVideosConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode GenerateVideosConfigToVertex(JsonNode fromObject, JsonObject parentObject,
+                                                   JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "numberOfVideos" }) != null) {
@@ -1911,7 +2058,7 @@ namespace Google.GenAI {
             parentObject, new string[] { "instances[0]", "lastFrame" },
             ImageToVertex(JsonNode.Parse(JsonSerializer.Serialize(
                               Common.GetValueByPath(fromObject, new string[] { "lastFrame" }))),
-                          toObject));
+                          toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "referenceImages" }) != null) {
@@ -1921,7 +2068,7 @@ namespace Google.GenAI {
 
         foreach (var record in keyArray) {
           result.Add(VideoGenerationReferenceImageToVertex(
-              JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
+              JsonNode.Parse(JsonSerializer.Serialize(record)), toObject, rootObject));
         }
         Common.SetValueByPath(parentObject, new string[] { "instances[0]", "referenceImages" },
                               result);
@@ -1932,7 +2079,7 @@ namespace Google.GenAI {
                               VideoGenerationMaskToVertex(
                                   JsonNode.Parse(JsonSerializer.Serialize(
                                       Common.GetValueByPath(fromObject, new string[] { "mask" }))),
-                                  toObject));
+                                  toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "compressionQuality" }) != null) {
@@ -1944,8 +2091,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode GenerateVideosOperationFromMldev(JsonNode fromObject,
-                                                       JsonObject parentObject) {
+    internal JsonNode GenerateVideosOperationFromMldev(JsonNode fromObject, JsonObject parentObject,
+                                                       JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "name" }) != null) {
@@ -1975,14 +2122,15 @@ namespace Google.GenAI {
             GenerateVideosResponseFromMldev(
                 JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                     fromObject, new string[] { "response", "generateVideoResponse" }))),
-                toObject));
+                toObject, rootObject));
       }
 
       return toObject;
     }
 
     internal JsonNode GenerateVideosOperationFromVertex(JsonNode fromObject,
-                                                        JsonObject parentObject) {
+                                                        JsonObject parentObject,
+                                                        JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "name" }) != null) {
@@ -2010,14 +2158,15 @@ namespace Google.GenAI {
                               GenerateVideosResponseFromVertex(
                                   JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                       fromObject, new string[] { "response" }))),
-                                  toObject));
+                                  toObject, rootObject));
       }
 
       return toObject;
     }
 
     internal JsonNode GenerateVideosParametersToMldev(ApiClient apiClient, JsonNode fromObject,
-                                                      JsonObject parentObject) {
+                                                      JsonObject parentObject,
+                                                      JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "model" }) != null) {
@@ -2037,7 +2186,7 @@ namespace Google.GenAI {
             toObject, new string[] { "instances[0]", "image" },
             ImageToMldev(JsonNode.Parse(JsonSerializer.Serialize(
                              Common.GetValueByPath(fromObject, new string[] { "image" }))),
-                         toObject));
+                         toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "video" }) != null) {
@@ -2045,28 +2194,29 @@ namespace Google.GenAI {
             toObject, new string[] { "instances[0]", "video" },
             VideoToMldev(JsonNode.Parse(JsonSerializer.Serialize(
                              Common.GetValueByPath(fromObject, new string[] { "video" }))),
-                         toObject));
+                         toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "source" }) != null) {
         _ = GenerateVideosSourceToMldev(
             JsonNode.Parse(JsonSerializer.Serialize(
                 Common.GetValueByPath(fromObject, new string[] { "source" }))),
-            toObject);
+            toObject, rootObject);
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "config" }) != null) {
         _ = GenerateVideosConfigToMldev(
             JsonNode.Parse(JsonSerializer.Serialize(
                 Common.GetValueByPath(fromObject, new string[] { "config" }))),
-            toObject);
+            toObject, rootObject);
       }
 
       return toObject;
     }
 
     internal JsonNode GenerateVideosParametersToVertex(ApiClient apiClient, JsonNode fromObject,
-                                                       JsonObject parentObject) {
+                                                       JsonObject parentObject,
+                                                       JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "model" }) != null) {
@@ -2086,7 +2236,7 @@ namespace Google.GenAI {
             toObject, new string[] { "instances[0]", "image" },
             ImageToVertex(JsonNode.Parse(JsonSerializer.Serialize(
                               Common.GetValueByPath(fromObject, new string[] { "image" }))),
-                          toObject));
+                          toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "video" }) != null) {
@@ -2094,28 +2244,28 @@ namespace Google.GenAI {
             toObject, new string[] { "instances[0]", "video" },
             VideoToVertex(JsonNode.Parse(JsonSerializer.Serialize(
                               Common.GetValueByPath(fromObject, new string[] { "video" }))),
-                          toObject));
+                          toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "source" }) != null) {
         _ = GenerateVideosSourceToVertex(
             JsonNode.Parse(JsonSerializer.Serialize(
                 Common.GetValueByPath(fromObject, new string[] { "source" }))),
-            toObject);
+            toObject, rootObject);
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "config" }) != null) {
         _ = GenerateVideosConfigToVertex(
             JsonNode.Parse(JsonSerializer.Serialize(
                 Common.GetValueByPath(fromObject, new string[] { "config" }))),
-            toObject);
+            toObject, rootObject);
       }
 
       return toObject;
     }
 
-    internal JsonNode GenerateVideosResponseFromMldev(JsonNode fromObject,
-                                                      JsonObject parentObject) {
+    internal JsonNode GenerateVideosResponseFromMldev(JsonNode fromObject, JsonObject parentObject,
+                                                      JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "generatedSamples" }) != null) {
@@ -2124,8 +2274,8 @@ namespace Google.GenAI {
         JsonArray result = new JsonArray();
 
         foreach (var record in keyArray) {
-          result.Add(
-              GeneratedVideoFromMldev(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
+          result.Add(GeneratedVideoFromMldev(JsonNode.Parse(JsonSerializer.Serialize(record)),
+                                             toObject, rootObject));
         }
         Common.SetValueByPath(toObject, new string[] { "generatedVideos" }, result);
       }
@@ -2145,8 +2295,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode GenerateVideosResponseFromVertex(JsonNode fromObject,
-                                                       JsonObject parentObject) {
+    internal JsonNode GenerateVideosResponseFromVertex(JsonNode fromObject, JsonObject parentObject,
+                                                       JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "videos" }) != null) {
@@ -2155,8 +2305,8 @@ namespace Google.GenAI {
         JsonArray result = new JsonArray();
 
         foreach (var record in keyArray) {
-          result.Add(
-              GeneratedVideoFromVertex(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
+          result.Add(GeneratedVideoFromVertex(JsonNode.Parse(JsonSerializer.Serialize(record)),
+                                              toObject, rootObject));
         }
         Common.SetValueByPath(toObject, new string[] { "generatedVideos" }, result);
       }
@@ -2176,7 +2326,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode GenerateVideosSourceToMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode GenerateVideosSourceToMldev(JsonNode fromObject, JsonObject parentObject,
+                                                  JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "prompt" }) != null) {
@@ -2189,7 +2340,7 @@ namespace Google.GenAI {
             parentObject, new string[] { "instances[0]", "image" },
             ImageToMldev(JsonNode.Parse(JsonSerializer.Serialize(
                              Common.GetValueByPath(fromObject, new string[] { "image" }))),
-                         toObject));
+                         toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "video" }) != null) {
@@ -2197,13 +2348,14 @@ namespace Google.GenAI {
             parentObject, new string[] { "instances[0]", "video" },
             VideoToMldev(JsonNode.Parse(JsonSerializer.Serialize(
                              Common.GetValueByPath(fromObject, new string[] { "video" }))),
-                         toObject));
+                         toObject, rootObject));
       }
 
       return toObject;
     }
 
-    internal JsonNode GenerateVideosSourceToVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode GenerateVideosSourceToVertex(JsonNode fromObject, JsonObject parentObject,
+                                                   JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "prompt" }) != null) {
@@ -2216,7 +2368,7 @@ namespace Google.GenAI {
             parentObject, new string[] { "instances[0]", "image" },
             ImageToVertex(JsonNode.Parse(JsonSerializer.Serialize(
                               Common.GetValueByPath(fromObject, new string[] { "image" }))),
-                          toObject));
+                          toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "video" }) != null) {
@@ -2224,13 +2376,14 @@ namespace Google.GenAI {
             parentObject, new string[] { "instances[0]", "video" },
             VideoToVertex(JsonNode.Parse(JsonSerializer.Serialize(
                               Common.GetValueByPath(fromObject, new string[] { "video" }))),
-                          toObject));
+                          toObject, rootObject));
       }
 
       return toObject;
     }
 
-    internal JsonNode GeneratedImageFromMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode GeneratedImageFromMldev(JsonNode fromObject, JsonObject parentObject,
+                                              JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "_self" }) != null) {
@@ -2238,7 +2391,7 @@ namespace Google.GenAI {
             toObject, new string[] { "image" },
             ImageFromMldev(JsonNode.Parse(JsonSerializer.Serialize(
                                Common.GetValueByPath(fromObject, new string[] { "_self" }))),
-                           toObject));
+                           toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "raiFilteredReason" }) != null) {
@@ -2252,13 +2405,14 @@ namespace Google.GenAI {
             toObject, new string[] { "safetyAttributes" },
             SafetyAttributesFromMldev(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                           fromObject, new string[] { "_self" }))),
-                                      toObject));
+                                      toObject, rootObject));
       }
 
       return toObject;
     }
 
-    internal JsonNode GeneratedImageFromVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode GeneratedImageFromVertex(JsonNode fromObject, JsonObject parentObject,
+                                               JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "_self" }) != null) {
@@ -2266,7 +2420,7 @@ namespace Google.GenAI {
             toObject, new string[] { "image" },
             ImageFromVertex(JsonNode.Parse(JsonSerializer.Serialize(
                                 Common.GetValueByPath(fromObject, new string[] { "_self" }))),
-                            toObject));
+                            toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "raiFilteredReason" }) != null) {
@@ -2280,7 +2434,7 @@ namespace Google.GenAI {
                               SafetyAttributesFromVertex(
                                   JsonNode.Parse(JsonSerializer.Serialize(
                                       Common.GetValueByPath(fromObject, new string[] { "_self" }))),
-                                  toObject));
+                                  toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "prompt" }) != null) {
@@ -2291,7 +2445,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode GeneratedImageMaskFromVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode GeneratedImageMaskFromVertex(JsonNode fromObject, JsonObject parentObject,
+                                                   JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "_self" }) != null) {
@@ -2299,7 +2454,7 @@ namespace Google.GenAI {
             toObject, new string[] { "mask" },
             ImageFromVertex(JsonNode.Parse(JsonSerializer.Serialize(
                                 Common.GetValueByPath(fromObject, new string[] { "_self" }))),
-                            toObject));
+                            toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "labels" }) != null) {
@@ -2310,7 +2465,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode GeneratedVideoFromMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode GeneratedVideoFromMldev(JsonNode fromObject, JsonObject parentObject,
+                                              JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "video" }) != null) {
@@ -2318,13 +2474,14 @@ namespace Google.GenAI {
             toObject, new string[] { "video" },
             VideoFromMldev(JsonNode.Parse(JsonSerializer.Serialize(
                                Common.GetValueByPath(fromObject, new string[] { "video" }))),
-                           toObject));
+                           toObject, rootObject));
       }
 
       return toObject;
     }
 
-    internal JsonNode GeneratedVideoFromVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode GeneratedVideoFromVertex(JsonNode fromObject, JsonObject parentObject,
+                                               JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "_self" }) != null) {
@@ -2332,13 +2489,14 @@ namespace Google.GenAI {
             toObject, new string[] { "video" },
             VideoFromVertex(JsonNode.Parse(JsonSerializer.Serialize(
                                 Common.GetValueByPath(fromObject, new string[] { "_self" }))),
-                            toObject));
+                            toObject, rootObject));
       }
 
       return toObject;
     }
 
-    internal JsonNode GenerationConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode GenerationConfigToVertex(JsonNode fromObject, JsonObject parentObject,
+                                               JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "modelSelectionConfig" }) != null) {
@@ -2436,7 +2594,7 @@ namespace Google.GenAI {
             toObject, new string[] { "speechConfig" },
             SpeechConfigToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                      fromObject, new string[] { "speechConfig" }))),
-                                 toObject));
+                                 toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "stopSequences" }) != null) {
@@ -2474,7 +2632,7 @@ namespace Google.GenAI {
     }
 
     internal JsonNode GetModelParametersToMldev(ApiClient apiClient, JsonNode fromObject,
-                                                JsonObject parentObject) {
+                                                JsonObject parentObject, JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "model" }) != null) {
@@ -2488,7 +2646,7 @@ namespace Google.GenAI {
     }
 
     internal JsonNode GetModelParametersToVertex(ApiClient apiClient, JsonNode fromObject,
-                                                 JsonObject parentObject) {
+                                                 JsonObject parentObject, JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "model" }) != null) {
@@ -2501,7 +2659,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode GoogleMapsToMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode GoogleMapsToMldev(JsonNode fromObject, JsonObject parentObject,
+                                        JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "authConfig" }))) {
@@ -2516,7 +2675,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode GoogleSearchToMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode GoogleSearchToMldev(JsonNode fromObject, JsonObject parentObject,
+                                          JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "excludeDomains" }))) {
@@ -2538,7 +2698,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode ImageConfigToMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode ImageConfigToMldev(JsonNode fromObject, JsonObject parentObject,
+                                         JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "aspectRatio" }) != null) {
@@ -2564,7 +2725,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode ImageConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode ImageConfigToVertex(JsonNode fromObject, JsonObject parentObject,
+                                          JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "aspectRatio" }) != null) {
@@ -2591,7 +2753,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode ImageFromMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode ImageFromMldev(JsonNode fromObject, JsonObject parentObject,
+                                     JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "bytesBase64Encoded" }) != null) {
@@ -2608,7 +2771,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode ImageFromVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode ImageFromVertex(JsonNode fromObject, JsonObject parentObject,
+                                      JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "gcsUri" }) != null) {
@@ -2630,7 +2794,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode ImageToMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode ImageToMldev(JsonNode fromObject, JsonObject parentObject,
+                                   JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "gcsUri" }))) {
@@ -2651,7 +2816,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode ImageToVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode ImageToVertex(JsonNode fromObject, JsonObject parentObject,
+                                    JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "gcsUri" }) != null) {
@@ -2674,7 +2840,7 @@ namespace Google.GenAI {
     }
 
     internal JsonNode ListModelsConfigToMldev(ApiClient apiClient, JsonNode fromObject,
-                                              JsonObject parentObject) {
+                                              JsonObject parentObject, JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "pageSize" }) != null) {
@@ -2703,7 +2869,7 @@ namespace Google.GenAI {
     }
 
     internal JsonNode ListModelsConfigToVertex(ApiClient apiClient, JsonNode fromObject,
-                                               JsonObject parentObject) {
+                                               JsonObject parentObject, JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "pageSize" }) != null) {
@@ -2732,34 +2898,35 @@ namespace Google.GenAI {
     }
 
     internal JsonNode ListModelsParametersToMldev(ApiClient apiClient, JsonNode fromObject,
-                                                  JsonObject parentObject) {
+                                                  JsonObject parentObject, JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "config" }) != null) {
         _ = ListModelsConfigToMldev(apiClient,
                                     JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                         fromObject, new string[] { "config" }))),
-                                    toObject);
+                                    toObject, rootObject);
       }
 
       return toObject;
     }
 
     internal JsonNode ListModelsParametersToVertex(ApiClient apiClient, JsonNode fromObject,
-                                                   JsonObject parentObject) {
+                                                   JsonObject parentObject, JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "config" }) != null) {
         _ = ListModelsConfigToVertex(apiClient,
                                      JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                          fromObject, new string[] { "config" }))),
-                                     toObject);
+                                     toObject, rootObject);
       }
 
       return toObject;
     }
 
-    internal JsonNode ListModelsResponseFromMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode ListModelsResponseFromMldev(JsonNode fromObject, JsonObject parentObject,
+                                                  JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }) != null) {
@@ -2779,7 +2946,8 @@ namespace Google.GenAI {
         JsonArray result = new JsonArray();
 
         foreach (var record in keyArray) {
-          result.Add(ModelFromMldev(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
+          result.Add(ModelFromMldev(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject,
+                                    rootObject));
         }
         Common.SetValueByPath(toObject, new string[] { "models" }, result);
       }
@@ -2787,7 +2955,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode ListModelsResponseFromVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode ListModelsResponseFromVertex(JsonNode fromObject, JsonObject parentObject,
+                                                   JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }) != null) {
@@ -2807,7 +2976,8 @@ namespace Google.GenAI {
         JsonArray result = new JsonArray();
 
         foreach (var record in keyArray) {
-          result.Add(ModelFromVertex(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
+          result.Add(ModelFromVertex(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject,
+                                     rootObject));
         }
         Common.SetValueByPath(toObject, new string[] { "models" }, result);
       }
@@ -2815,7 +2985,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode MaskReferenceConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode MaskReferenceConfigToVertex(JsonNode fromObject, JsonObject parentObject,
+                                                  JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "maskMode" }) != null) {
@@ -2837,7 +3008,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode ModelFromMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode ModelFromMldev(JsonNode fromObject, JsonObject parentObject,
+                                     JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "name" }) != null) {
@@ -2912,7 +3084,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode ModelFromVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode ModelFromVertex(JsonNode fromObject, JsonObject parentObject,
+                                      JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "name" }) != null) {
@@ -2941,8 +3114,8 @@ namespace Google.GenAI {
         JsonArray result = new JsonArray();
 
         foreach (var record in keyArray) {
-          result.Add(
-              EndpointFromVertex(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
+          result.Add(EndpointFromVertex(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject,
+                                        rootObject));
         }
         Common.SetValueByPath(toObject, new string[] { "endpoints" }, result);
       }
@@ -2957,7 +3130,7 @@ namespace Google.GenAI {
             toObject, new string[] { "tunedModelInfo" },
             TunedModelInfoFromVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                          fromObject, new string[] { "_self" }))),
-                                     toObject));
+                                     toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "defaultCheckpointId" }) != null) {
@@ -2974,7 +3147,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode PartToMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode PartToMldev(JsonNode fromObject, JsonObject parentObject,
+                                  JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "mediaResolution" }) != null) {
@@ -2999,7 +3173,7 @@ namespace Google.GenAI {
             toObject, new string[] { "fileData" },
             FileDataToMldev(JsonNode.Parse(JsonSerializer.Serialize(
                                 Common.GetValueByPath(fromObject, new string[] { "fileData" }))),
-                            toObject));
+                            toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "functionCall" }) != null) {
@@ -3007,7 +3181,7 @@ namespace Google.GenAI {
             toObject, new string[] { "functionCall" },
             FunctionCallToMldev(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                     fromObject, new string[] { "functionCall" }))),
-                                toObject));
+                                toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "functionResponse" }) != null) {
@@ -3021,7 +3195,7 @@ namespace Google.GenAI {
             toObject, new string[] { "inlineData" },
             BlobToMldev(JsonNode.Parse(JsonSerializer.Serialize(
                             Common.GetValueByPath(fromObject, new string[] { "inlineData" }))),
-                        toObject));
+                        toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "text" }) != null) {
@@ -3048,7 +3222,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode ProductImageToVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode ProductImageToVertex(JsonNode fromObject, JsonObject parentObject,
+                                           JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "productImage" }) != null) {
@@ -3056,13 +3231,14 @@ namespace Google.GenAI {
             toObject, new string[] { "image" },
             ImageToVertex(JsonNode.Parse(JsonSerializer.Serialize(
                               Common.GetValueByPath(fromObject, new string[] { "productImage" }))),
-                          toObject));
+                          toObject, rootObject));
       }
 
       return toObject;
     }
 
-    internal JsonNode RecontextImageConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode RecontextImageConfigToVertex(JsonNode fromObject, JsonObject parentObject,
+                                                   JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "numberOfImages" }) != null) {
@@ -3128,7 +3304,8 @@ namespace Google.GenAI {
     }
 
     internal JsonNode RecontextImageParametersToVertex(ApiClient apiClient, JsonNode fromObject,
-                                                       JsonObject parentObject) {
+                                                       JsonObject parentObject,
+                                                       JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "model" }) != null) {
@@ -3142,21 +3319,21 @@ namespace Google.GenAI {
         _ = RecontextImageSourceToVertex(
             JsonNode.Parse(JsonSerializer.Serialize(
                 Common.GetValueByPath(fromObject, new string[] { "source" }))),
-            toObject);
+            toObject, rootObject);
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "config" }) != null) {
         _ = RecontextImageConfigToVertex(
             JsonNode.Parse(JsonSerializer.Serialize(
                 Common.GetValueByPath(fromObject, new string[] { "config" }))),
-            toObject);
+            toObject, rootObject);
       }
 
       return toObject;
     }
 
-    internal JsonNode RecontextImageResponseFromVertex(JsonNode fromObject,
-                                                       JsonObject parentObject) {
+    internal JsonNode RecontextImageResponseFromVertex(JsonNode fromObject, JsonObject parentObject,
+                                                       JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "predictions" }) != null) {
@@ -3165,8 +3342,8 @@ namespace Google.GenAI {
         JsonArray result = new JsonArray();
 
         foreach (var record in keyArray) {
-          result.Add(
-              GeneratedImageFromVertex(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
+          result.Add(GeneratedImageFromVertex(JsonNode.Parse(JsonSerializer.Serialize(record)),
+                                              toObject, rootObject));
         }
         Common.SetValueByPath(toObject, new string[] { "generatedImages" }, result);
       }
@@ -3174,7 +3351,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode RecontextImageSourceToVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode RecontextImageSourceToVertex(JsonNode fromObject, JsonObject parentObject,
+                                                   JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "prompt" }) != null) {
@@ -3187,7 +3365,7 @@ namespace Google.GenAI {
             parentObject, new string[] { "instances[0]", "personImage", "image" },
             ImageToVertex(JsonNode.Parse(JsonSerializer.Serialize(
                               Common.GetValueByPath(fromObject, new string[] { "personImage" }))),
-                          toObject));
+                          toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "productImages" }) != null) {
@@ -3196,8 +3374,8 @@ namespace Google.GenAI {
         JsonArray result = new JsonArray();
 
         foreach (var record in keyArray) {
-          result.Add(
-              ProductImageToVertex(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
+          result.Add(ProductImageToVertex(JsonNode.Parse(JsonSerializer.Serialize(record)),
+                                          toObject, rootObject));
         }
         Common.SetValueByPath(parentObject, new string[] { "instances[0]", "productImages" },
                               result);
@@ -3206,7 +3384,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode ReferenceImageAPIToVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode ReferenceImageAPIToVertex(JsonNode fromObject, JsonObject parentObject,
+                                                JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "referenceImage" }) != null) {
@@ -3214,7 +3393,7 @@ namespace Google.GenAI {
             toObject, new string[] { "referenceImage" },
             ImageToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                               fromObject, new string[] { "referenceImage" }))),
-                          toObject));
+                          toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "referenceId" }) != null) {
@@ -3232,7 +3411,7 @@ namespace Google.GenAI {
                               MaskReferenceConfigToVertex(
                                   JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                       fromObject, new string[] { "maskImageConfig" }))),
-                                  toObject));
+                                  toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "controlImageConfig" }) != null) {
@@ -3240,7 +3419,7 @@ namespace Google.GenAI {
                               ControlReferenceConfigToVertex(
                                   JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                       fromObject, new string[] { "controlImageConfig" }))),
-                                  toObject));
+                                  toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "styleImageConfig" }) != null) {
@@ -3258,7 +3437,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode SafetyAttributesFromMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode SafetyAttributesFromMldev(JsonNode fromObject, JsonObject parentObject,
+                                                JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "safetyAttributes", "categories" }) !=
@@ -3283,7 +3463,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode SafetyAttributesFromVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode SafetyAttributesFromVertex(JsonNode fromObject, JsonObject parentObject,
+                                                 JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "safetyAttributes", "categories" }) !=
@@ -3308,7 +3489,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode SafetySettingToMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode SafetySettingToMldev(JsonNode fromObject, JsonObject parentObject,
+                                           JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "category" }) != null) {
@@ -3328,7 +3510,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode ScribbleImageToVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode ScribbleImageToVertex(JsonNode fromObject, JsonObject parentObject,
+                                            JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "image" }) != null) {
@@ -3336,13 +3519,14 @@ namespace Google.GenAI {
             toObject, new string[] { "image" },
             ImageToVertex(JsonNode.Parse(JsonSerializer.Serialize(
                               Common.GetValueByPath(fromObject, new string[] { "image" }))),
-                          toObject));
+                          toObject, rootObject));
       }
 
       return toObject;
     }
 
-    internal JsonNode SegmentImageConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode SegmentImageConfigToVertex(JsonNode fromObject, JsonObject parentObject,
+                                                 JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "mode" }) != null) {
@@ -3381,7 +3565,7 @@ namespace Google.GenAI {
     }
 
     internal JsonNode SegmentImageParametersToVertex(ApiClient apiClient, JsonNode fromObject,
-                                                     JsonObject parentObject) {
+                                                     JsonObject parentObject, JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "model" }) != null) {
@@ -3395,20 +3579,21 @@ namespace Google.GenAI {
         _ = SegmentImageSourceToVertex(
             JsonNode.Parse(JsonSerializer.Serialize(
                 Common.GetValueByPath(fromObject, new string[] { "source" }))),
-            toObject);
+            toObject, rootObject);
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "config" }) != null) {
         _ = SegmentImageConfigToVertex(
             JsonNode.Parse(JsonSerializer.Serialize(
                 Common.GetValueByPath(fromObject, new string[] { "config" }))),
-            toObject);
+            toObject, rootObject);
       }
 
       return toObject;
     }
 
-    internal JsonNode SegmentImageResponseFromVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode SegmentImageResponseFromVertex(JsonNode fromObject, JsonObject parentObject,
+                                                     JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "predictions" }) != null) {
@@ -3418,7 +3603,7 @@ namespace Google.GenAI {
 
         foreach (var record in keyArray) {
           result.Add(GeneratedImageMaskFromVertex(JsonNode.Parse(JsonSerializer.Serialize(record)),
-                                                  toObject));
+                                                  toObject, rootObject));
         }
         Common.SetValueByPath(toObject, new string[] { "generatedMasks" }, result);
       }
@@ -3426,7 +3611,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode SegmentImageSourceToVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode SegmentImageSourceToVertex(JsonNode fromObject, JsonObject parentObject,
+                                                 JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "prompt" }) != null) {
@@ -3439,7 +3625,7 @@ namespace Google.GenAI {
             parentObject, new string[] { "instances[0]", "image" },
             ImageToVertex(JsonNode.Parse(JsonSerializer.Serialize(
                               Common.GetValueByPath(fromObject, new string[] { "image" }))),
-                          toObject));
+                          toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "scribbleImage" }) != null) {
@@ -3447,13 +3633,14 @@ namespace Google.GenAI {
             parentObject, new string[] { "instances[0]", "scribble" },
             ScribbleImageToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                       fromObject, new string[] { "scribbleImage" }))),
-                                  toObject));
+                                  toObject, rootObject));
       }
 
       return toObject;
     }
 
-    internal JsonNode SpeechConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode SpeechConfigToVertex(JsonNode fromObject, JsonObject parentObject,
+                                           JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "voiceConfig" }) != null) {
@@ -3475,7 +3662,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode ToolConfigToMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode ToolConfigToMldev(JsonNode fromObject, JsonObject parentObject,
+                                        JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "functionCallingConfig" }) != null) {
@@ -3483,7 +3671,7 @@ namespace Google.GenAI {
                               FunctionCallingConfigToMldev(
                                   JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                       fromObject, new string[] { "functionCallingConfig" }))),
-                                  toObject));
+                                  toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "retrievalConfig" }) != null) {
@@ -3495,7 +3683,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode ToolToMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode ToolToMldev(JsonNode fromObject, JsonObject parentObject,
+                                  JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "functionDeclarations" }) != null) {
@@ -3535,7 +3724,7 @@ namespace Google.GenAI {
             toObject, new string[] { "googleMaps" },
             GoogleMapsToMldev(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                   fromObject, new string[] { "googleMaps" }))),
-                              toObject));
+                              toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "googleSearch" }) != null) {
@@ -3543,7 +3732,7 @@ namespace Google.GenAI {
             toObject, new string[] { "googleSearch" },
             GoogleSearchToMldev(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                     fromObject, new string[] { "googleSearch" }))),
-                                toObject));
+                                toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "urlContext" }) != null) {
@@ -3554,7 +3743,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode ToolToVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode ToolToVertex(JsonNode fromObject, JsonObject parentObject,
+                                   JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "functionDeclarations" }) != null) {
@@ -3564,7 +3754,7 @@ namespace Google.GenAI {
 
         foreach (var record in keyArray) {
           result.Add(FunctionDeclarationToVertex(JsonNode.Parse(JsonSerializer.Serialize(record)),
-                                                 toObject));
+                                                 toObject, rootObject));
         }
         Common.SetValueByPath(toObject, new string[] { "functionDeclarations" }, result);
       }
@@ -3614,7 +3804,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode TunedModelInfoFromVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode TunedModelInfoFromVertex(JsonNode fromObject, JsonObject parentObject,
+                                               JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(
@@ -3639,7 +3830,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode UpdateModelConfigToMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode UpdateModelConfigToMldev(JsonNode fromObject, JsonObject parentObject,
+                                               JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "displayName" }) != null) {
@@ -3661,7 +3853,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode UpdateModelConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode UpdateModelConfigToVertex(JsonNode fromObject, JsonObject parentObject,
+                                                JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "displayName" }) != null) {
@@ -3684,7 +3877,7 @@ namespace Google.GenAI {
     }
 
     internal JsonNode UpdateModelParametersToMldev(ApiClient apiClient, JsonNode fromObject,
-                                                   JsonObject parentObject) {
+                                                   JsonObject parentObject, JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "model" }) != null) {
@@ -3697,14 +3890,14 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "config" }) != null) {
         _ = UpdateModelConfigToMldev(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                          fromObject, new string[] { "config" }))),
-                                     toObject);
+                                     toObject, rootObject);
       }
 
       return toObject;
     }
 
     internal JsonNode UpdateModelParametersToVertex(ApiClient apiClient, JsonNode fromObject,
-                                                    JsonObject parentObject) {
+                                                    JsonObject parentObject, JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "model" }) != null) {
@@ -3717,13 +3910,14 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "config" }) != null) {
         _ = UpdateModelConfigToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                           fromObject, new string[] { "config" }))),
-                                      toObject);
+                                      toObject, rootObject);
       }
 
       return toObject;
     }
 
-    internal JsonNode UpscaleImageAPIConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode UpscaleImageAPIConfigToVertex(JsonNode fromObject, JsonObject parentObject,
+                                                    JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "outputGcsUri" }) != null) {
@@ -3792,7 +3986,8 @@ namespace Google.GenAI {
     }
 
     internal JsonNode UpscaleImageAPIParametersToVertex(ApiClient apiClient, JsonNode fromObject,
-                                                        JsonObject parentObject) {
+                                                        JsonObject parentObject,
+                                                        JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "model" }) != null) {
@@ -3807,7 +4002,7 @@ namespace Google.GenAI {
             toObject, new string[] { "instances[0]", "image" },
             ImageToVertex(JsonNode.Parse(JsonSerializer.Serialize(
                               Common.GetValueByPath(fromObject, new string[] { "image" }))),
-                          toObject));
+                          toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "upscaleFactor" }) != null) {
@@ -3820,13 +4015,14 @@ namespace Google.GenAI {
         _ = UpscaleImageAPIConfigToVertex(
             JsonNode.Parse(JsonSerializer.Serialize(
                 Common.GetValueByPath(fromObject, new string[] { "config" }))),
-            toObject);
+            toObject, rootObject);
       }
 
       return toObject;
     }
 
-    internal JsonNode UpscaleImageResponseFromVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode UpscaleImageResponseFromVertex(JsonNode fromObject, JsonObject parentObject,
+                                                     JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }) != null) {
@@ -3841,8 +4037,8 @@ namespace Google.GenAI {
         JsonArray result = new JsonArray();
 
         foreach (var record in keyArray) {
-          result.Add(
-              GeneratedImageFromVertex(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
+          result.Add(GeneratedImageFromVertex(JsonNode.Parse(JsonSerializer.Serialize(record)),
+                                              toObject, rootObject));
         }
         Common.SetValueByPath(toObject, new string[] { "generatedImages" }, result);
       }
@@ -3850,7 +4046,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode VideoFromMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode VideoFromMldev(JsonNode fromObject, JsonObject parentObject,
+                                     JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "uri" }) != null) {
@@ -3872,7 +4069,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode VideoFromVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode VideoFromVertex(JsonNode fromObject, JsonObject parentObject,
+                                      JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "gcsUri" }) != null) {
@@ -3894,7 +4092,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode VideoGenerationMaskToVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode VideoGenerationMaskToVertex(JsonNode fromObject, JsonObject parentObject,
+                                                  JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "image" }) != null) {
@@ -3902,7 +4101,7 @@ namespace Google.GenAI {
             toObject, new string[] { "_self" },
             ImageToVertex(JsonNode.Parse(JsonSerializer.Serialize(
                               Common.GetValueByPath(fromObject, new string[] { "image" }))),
-                          toObject));
+                          toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "maskMode" }) != null) {
@@ -3914,7 +4113,8 @@ namespace Google.GenAI {
     }
 
     internal JsonNode VideoGenerationReferenceImageToMldev(JsonNode fromObject,
-                                                           JsonObject parentObject) {
+                                                           JsonObject parentObject,
+                                                           JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "image" }) != null) {
@@ -3922,7 +4122,7 @@ namespace Google.GenAI {
             toObject, new string[] { "image" },
             ImageToMldev(JsonNode.Parse(JsonSerializer.Serialize(
                              Common.GetValueByPath(fromObject, new string[] { "image" }))),
-                         toObject));
+                         toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "referenceType" }) != null) {
@@ -3934,7 +4134,8 @@ namespace Google.GenAI {
     }
 
     internal JsonNode VideoGenerationReferenceImageToVertex(JsonNode fromObject,
-                                                            JsonObject parentObject) {
+                                                            JsonObject parentObject,
+                                                            JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "image" }) != null) {
@@ -3942,7 +4143,7 @@ namespace Google.GenAI {
             toObject, new string[] { "image" },
             ImageToVertex(JsonNode.Parse(JsonSerializer.Serialize(
                               Common.GetValueByPath(fromObject, new string[] { "image" }))),
-                          toObject));
+                          toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "referenceType" }) != null) {
@@ -3953,7 +4154,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode VideoToMldev(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode VideoToMldev(JsonNode fromObject, JsonObject parentObject,
+                                   JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "uri" }) != null) {
@@ -3975,7 +4177,8 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode VideoToVertex(JsonNode fromObject, JsonObject parentObject) {
+    internal JsonNode VideoToVertex(JsonNode fromObject, JsonObject parentObject,
+                                    JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "uri" }) != null) {
@@ -4023,10 +4226,12 @@ namespace Google.GenAI {
       JsonNode body;
       string path;
       if (this._apiClient.VertexAI) {
-        body = GenerateContentParametersToVertex(this._apiClient, parameterNode, new JsonObject());
+        body = GenerateContentParametersToVertex(this._apiClient, parameterNode, new JsonObject(),
+                                                 parameterNode);
         path = Common.FormatMap("{model}:generateContent", body["_url"]);
       } else {
-        body = GenerateContentParametersToMldev(this._apiClient, parameterNode, new JsonObject());
+        body = GenerateContentParametersToMldev(this._apiClient, parameterNode, new JsonObject(),
+                                                parameterNode);
         path = Common.FormatMap("{model}:generateContent", body["_url"]);
       }
       JsonObject? bodyObj = body?.AsObject();
@@ -4050,11 +4255,13 @@ namespace Google.GenAI {
       JsonNode responseNode = httpContentNode;
 
       if (this._apiClient.VertexAI) {
-        responseNode = GenerateContentResponseFromVertex(httpContentNode, new JsonObject());
+        responseNode =
+            GenerateContentResponseFromVertex(httpContentNode, new JsonObject(), parameterNode);
       }
 
       if (!this._apiClient.VertexAI) {
-        responseNode = GenerateContentResponseFromMldev(httpContentNode, new JsonObject());
+        responseNode =
+            GenerateContentResponseFromMldev(httpContentNode, new JsonObject(), parameterNode);
       }
 
       return JsonSerializer.Deserialize<GenerateContentResponse>(responseNode.ToString()) ??
@@ -4084,10 +4291,12 @@ namespace Google.GenAI {
       JsonNode body;
       string path;
       if (this._apiClient.VertexAI) {
-        body = GenerateContentParametersToVertex(this._apiClient, parameterNode, new JsonObject());
+        body = GenerateContentParametersToVertex(this._apiClient, parameterNode, new JsonObject(),
+                                                 parameterNode);
         path = Common.FormatMap("{model}:streamGenerateContent?alt=sse", body["_url"]);
       } else {
-        body = GenerateContentParametersToMldev(this._apiClient, parameterNode, new JsonObject());
+        body = GenerateContentParametersToMldev(this._apiClient, parameterNode, new JsonObject(),
+                                                parameterNode);
         path = Common.FormatMap("{model}:streamGenerateContent?alt=sse", body["_url"]);
       }
       JsonObject? bodyObj = body?.AsObject();
@@ -4109,9 +4318,11 @@ namespace Google.GenAI {
           continue;
         JsonNode responseNode;
         if (this._apiClient.VertexAI) {
-          responseNode = GenerateContentResponseFromVertex(chunkNode, new JsonObject());
+          responseNode =
+              GenerateContentResponseFromVertex(chunkNode, new JsonObject(), parameterNode);
         } else {
-          responseNode = GenerateContentResponseFromMldev(chunkNode, new JsonObject());
+          responseNode =
+              GenerateContentResponseFromMldev(chunkNode, new JsonObject(), parameterNode);
         }
         var chunkResponse =
             JsonSerializer.Deserialize<GenerateContentResponse>(responseNode.ToString());
@@ -4130,9 +4341,10 @@ namespace Google.GenAI {
     /// operation. The task result contains a <see cref="EmbedContentResponse"/> instance with
     /// embeddings and other metadata.</returns>
 
-    public async Task<EmbedContentResponse> EmbedContentAsync(string model, List<Content> contents,
-                                                              EmbedContentConfig? config = null) {
-      EmbedContentParameters parameter = new EmbedContentParameters();
+    private async Task<EmbedContentResponse> PrivateEmbedContentAsync(
+        string model, List<Content>? contents, Content? content, EmbeddingApiType? embeddingApiType,
+        EmbedContentConfig? config) {
+      EmbedContentParametersPrivate parameter = new EmbedContentParametersPrivate();
 
       if (!Common.IsZero(model)) {
         parameter.Model = model;
@@ -4140,22 +4352,35 @@ namespace Google.GenAI {
       if (!Common.IsZero(contents)) {
         parameter.Contents = contents;
       }
+      if (!Common.IsZero(content)) {
+        parameter.Content = content;
+      }
+      if (!Common.IsZero(embeddingApiType)) {
+        parameter.EmbeddingApiType = embeddingApiType;
+      }
       if (!Common.IsZero(config)) {
         parameter.Config = config;
       }
       string jsonString = JsonSerializer.Serialize(parameter);
       JsonNode? parameterNode = JsonNode.Parse(jsonString);
       if (parameterNode == null) {
-        throw new NotSupportedException("Failed to parse EmbedContentParameters to JsonNode.");
+        throw new NotSupportedException(
+            "Failed to parse EmbedContentParametersPrivate to JsonNode.");
       }
 
       JsonNode body;
       string path;
       if (this._apiClient.VertexAI) {
-        body = EmbedContentParametersToVertex(this._apiClient, parameterNode, new JsonObject());
-        path = Common.FormatMap("{model}:predict", body["_url"]);
+        body = EmbedContentParametersPrivateToVertex(this._apiClient, parameterNode,
+                                                     new JsonObject(), parameterNode);
+        string endpointUrl =
+            Transformers.TIsVertexEmbedContentModel(parameterNode["model"].ToString())
+                ? "{model}:embedContent"
+                : "{model}:predict";
+        path = Common.FormatMap(endpointUrl, body["_url"]);
       } else {
-        body = EmbedContentParametersToMldev(this._apiClient, parameterNode, new JsonObject());
+        body = EmbedContentParametersPrivateToMldev(this._apiClient, parameterNode,
+                                                    new JsonObject(), parameterNode);
         path = Common.FormatMap("{model}:batchEmbedContents", body["_url"]);
       }
       JsonObject? bodyObj = body?.AsObject();
@@ -4179,11 +4404,13 @@ namespace Google.GenAI {
       JsonNode responseNode = httpContentNode;
 
       if (this._apiClient.VertexAI) {
-        responseNode = EmbedContentResponseFromVertex(httpContentNode, new JsonObject());
+        responseNode =
+            EmbedContentResponseFromVertex(httpContentNode, new JsonObject(), parameterNode);
       }
 
       if (!this._apiClient.VertexAI) {
-        responseNode = EmbedContentResponseFromMldev(httpContentNode, new JsonObject());
+        responseNode =
+            EmbedContentResponseFromMldev(httpContentNode, new JsonObject(), parameterNode);
       }
 
       return JsonSerializer.Deserialize<EmbedContentResponse>(responseNode.ToString()) ??
@@ -4213,10 +4440,12 @@ namespace Google.GenAI {
       JsonNode body;
       string path;
       if (this._apiClient.VertexAI) {
-        body = GenerateImagesParametersToVertex(this._apiClient, parameterNode, new JsonObject());
+        body = GenerateImagesParametersToVertex(this._apiClient, parameterNode, new JsonObject(),
+                                                parameterNode);
         path = Common.FormatMap("{model}:predict", body["_url"]);
       } else {
-        body = GenerateImagesParametersToMldev(this._apiClient, parameterNode, new JsonObject());
+        body = GenerateImagesParametersToMldev(this._apiClient, parameterNode, new JsonObject(),
+                                               parameterNode);
         path = Common.FormatMap("{model}:predict", body["_url"]);
       }
       JsonObject? bodyObj = body?.AsObject();
@@ -4240,11 +4469,13 @@ namespace Google.GenAI {
       JsonNode responseNode = httpContentNode;
 
       if (this._apiClient.VertexAI) {
-        responseNode = GenerateImagesResponseFromVertex(httpContentNode, new JsonObject());
+        responseNode =
+            GenerateImagesResponseFromVertex(httpContentNode, new JsonObject(), parameterNode);
       }
 
       if (!this._apiClient.VertexAI) {
-        responseNode = GenerateImagesResponseFromMldev(httpContentNode, new JsonObject());
+        responseNode =
+            GenerateImagesResponseFromMldev(httpContentNode, new JsonObject(), parameterNode);
       }
 
       return JsonSerializer.Deserialize<GenerateImagesResponse>(responseNode.ToString()) ??
@@ -4278,7 +4509,8 @@ namespace Google.GenAI {
       JsonNode body;
       string path;
       if (this._apiClient.VertexAI) {
-        body = EditImageParametersToVertex(this._apiClient, parameterNode, new JsonObject());
+        body = EditImageParametersToVertex(this._apiClient, parameterNode, new JsonObject(),
+                                           parameterNode);
         path = Common.FormatMap("{model}:predict", body["_url"]);
       } else {
         throw new NotSupportedException("This method is only supported in the Vertex AI client.");
@@ -4304,7 +4536,8 @@ namespace Google.GenAI {
       JsonNode responseNode = httpContentNode;
 
       if (this._apiClient.VertexAI) {
-        responseNode = EditImageResponseFromVertex(httpContentNode, new JsonObject());
+        responseNode =
+            EditImageResponseFromVertex(httpContentNode, new JsonObject(), parameterNode);
       }
 
       if (!this._apiClient.VertexAI) {
@@ -4340,7 +4573,8 @@ namespace Google.GenAI {
       JsonNode body;
       string path;
       if (this._apiClient.VertexAI) {
-        body = UpscaleImageAPIParametersToVertex(this._apiClient, parameterNode, new JsonObject());
+        body = UpscaleImageAPIParametersToVertex(this._apiClient, parameterNode, new JsonObject(),
+                                                 parameterNode);
         path = Common.FormatMap("{model}:predict", body["_url"]);
       } else {
         throw new NotSupportedException("This method is only supported in the Vertex AI client.");
@@ -4366,7 +4600,8 @@ namespace Google.GenAI {
       JsonNode responseNode = httpContentNode;
 
       if (this._apiClient.VertexAI) {
-        responseNode = UpscaleImageResponseFromVertex(httpContentNode, new JsonObject());
+        responseNode =
+            UpscaleImageResponseFromVertex(httpContentNode, new JsonObject(), parameterNode);
       }
 
       if (!this._apiClient.VertexAI) {
@@ -4400,7 +4635,8 @@ namespace Google.GenAI {
       JsonNode body;
       string path;
       if (this._apiClient.VertexAI) {
-        body = RecontextImageParametersToVertex(this._apiClient, parameterNode, new JsonObject());
+        body = RecontextImageParametersToVertex(this._apiClient, parameterNode, new JsonObject(),
+                                                parameterNode);
         path = Common.FormatMap("{model}:predict", body["_url"]);
       } else {
         throw new NotSupportedException("This method is only supported in the Vertex AI client.");
@@ -4426,7 +4662,8 @@ namespace Google.GenAI {
       JsonNode responseNode = httpContentNode;
 
       if (this._apiClient.VertexAI) {
-        responseNode = RecontextImageResponseFromVertex(httpContentNode, new JsonObject());
+        responseNode =
+            RecontextImageResponseFromVertex(httpContentNode, new JsonObject(), parameterNode);
       }
 
       if (!this._apiClient.VertexAI) {
@@ -4461,7 +4698,8 @@ namespace Google.GenAI {
       JsonNode body;
       string path;
       if (this._apiClient.VertexAI) {
-        body = SegmentImageParametersToVertex(this._apiClient, parameterNode, new JsonObject());
+        body = SegmentImageParametersToVertex(this._apiClient, parameterNode, new JsonObject(),
+                                              parameterNode);
         path = Common.FormatMap("{model}:predict", body["_url"]);
       } else {
         throw new NotSupportedException("This method is only supported in the Vertex AI client.");
@@ -4487,7 +4725,8 @@ namespace Google.GenAI {
       JsonNode responseNode = httpContentNode;
 
       if (this._apiClient.VertexAI) {
-        responseNode = SegmentImageResponseFromVertex(httpContentNode, new JsonObject());
+        responseNode =
+            SegmentImageResponseFromVertex(httpContentNode, new JsonObject(), parameterNode);
       }
 
       if (!this._apiClient.VertexAI) {
@@ -4521,10 +4760,12 @@ namespace Google.GenAI {
       JsonNode body;
       string path;
       if (this._apiClient.VertexAI) {
-        body = GetModelParametersToVertex(this._apiClient, parameterNode, new JsonObject());
+        body = GetModelParametersToVertex(this._apiClient, parameterNode, new JsonObject(),
+                                          parameterNode);
         path = Common.FormatMap("{name}", body["_url"]);
       } else {
-        body = GetModelParametersToMldev(this._apiClient, parameterNode, new JsonObject());
+        body = GetModelParametersToMldev(this._apiClient, parameterNode, new JsonObject(),
+                                         parameterNode);
         path = Common.FormatMap("{name}", body["_url"]);
       }
       JsonObject? bodyObj = body?.AsObject();
@@ -4548,11 +4789,11 @@ namespace Google.GenAI {
       JsonNode responseNode = httpContentNode;
 
       if (this._apiClient.VertexAI) {
-        responseNode = ModelFromVertex(httpContentNode, new JsonObject());
+        responseNode = ModelFromVertex(httpContentNode, new JsonObject(), parameterNode);
       }
 
       if (!this._apiClient.VertexAI) {
-        responseNode = ModelFromMldev(httpContentNode, new JsonObject());
+        responseNode = ModelFromMldev(httpContentNode, new JsonObject(), parameterNode);
       }
 
       return JsonSerializer.Deserialize<Model>(responseNode.ToString()) ??
@@ -4574,10 +4815,12 @@ namespace Google.GenAI {
       JsonNode body;
       string path;
       if (this._apiClient.VertexAI) {
-        body = ListModelsParametersToVertex(this._apiClient, parameterNode, new JsonObject());
+        body = ListModelsParametersToVertex(this._apiClient, parameterNode, new JsonObject(),
+                                            parameterNode);
         path = Common.FormatMap("{models_url}", body["_url"]);
       } else {
-        body = ListModelsParametersToMldev(this._apiClient, parameterNode, new JsonObject());
+        body = ListModelsParametersToMldev(this._apiClient, parameterNode, new JsonObject(),
+                                           parameterNode);
         path = Common.FormatMap("{models_url}", body["_url"]);
       }
       JsonObject? bodyObj = body?.AsObject();
@@ -4601,11 +4844,13 @@ namespace Google.GenAI {
       JsonNode responseNode = httpContentNode;
 
       if (this._apiClient.VertexAI) {
-        responseNode = ListModelsResponseFromVertex(httpContentNode, new JsonObject());
+        responseNode =
+            ListModelsResponseFromVertex(httpContentNode, new JsonObject(), parameterNode);
       }
 
       if (!this._apiClient.VertexAI) {
-        responseNode = ListModelsResponseFromMldev(httpContentNode, new JsonObject());
+        responseNode =
+            ListModelsResponseFromMldev(httpContentNode, new JsonObject(), parameterNode);
       }
 
       return JsonSerializer.Deserialize<ListModelsResponse>(responseNode.ToString()) ??
@@ -4638,10 +4883,12 @@ namespace Google.GenAI {
       JsonNode body;
       string path;
       if (this._apiClient.VertexAI) {
-        body = UpdateModelParametersToVertex(this._apiClient, parameterNode, new JsonObject());
+        body = UpdateModelParametersToVertex(this._apiClient, parameterNode, new JsonObject(),
+                                             parameterNode);
         path = Common.FormatMap("{model}", body["_url"]);
       } else {
-        body = UpdateModelParametersToMldev(this._apiClient, parameterNode, new JsonObject());
+        body = UpdateModelParametersToMldev(this._apiClient, parameterNode, new JsonObject(),
+                                            parameterNode);
         path = Common.FormatMap("{name}", body["_url"]);
       }
       JsonObject? bodyObj = body?.AsObject();
@@ -4665,11 +4912,11 @@ namespace Google.GenAI {
       JsonNode responseNode = httpContentNode;
 
       if (this._apiClient.VertexAI) {
-        responseNode = ModelFromVertex(httpContentNode, new JsonObject());
+        responseNode = ModelFromVertex(httpContentNode, new JsonObject(), parameterNode);
       }
 
       if (!this._apiClient.VertexAI) {
-        responseNode = ModelFromMldev(httpContentNode, new JsonObject());
+        responseNode = ModelFromMldev(httpContentNode, new JsonObject(), parameterNode);
       }
 
       return JsonSerializer.Deserialize<Model>(responseNode.ToString()) ??
@@ -4699,10 +4946,12 @@ namespace Google.GenAI {
       JsonNode body;
       string path;
       if (this._apiClient.VertexAI) {
-        body = DeleteModelParametersToVertex(this._apiClient, parameterNode, new JsonObject());
+        body = DeleteModelParametersToVertex(this._apiClient, parameterNode, new JsonObject(),
+                                             parameterNode);
         path = Common.FormatMap("{name}", body["_url"]);
       } else {
-        body = DeleteModelParametersToMldev(this._apiClient, parameterNode, new JsonObject());
+        body = DeleteModelParametersToMldev(this._apiClient, parameterNode, new JsonObject(),
+                                            parameterNode);
         path = Common.FormatMap("{name}", body["_url"]);
       }
       JsonObject? bodyObj = body?.AsObject();
@@ -4726,11 +4975,13 @@ namespace Google.GenAI {
       JsonNode responseNode = httpContentNode;
 
       if (this._apiClient.VertexAI) {
-        responseNode = DeleteModelResponseFromVertex(httpContentNode, new JsonObject());
+        responseNode =
+            DeleteModelResponseFromVertex(httpContentNode, new JsonObject(), parameterNode);
       }
 
       if (!this._apiClient.VertexAI) {
-        responseNode = DeleteModelResponseFromMldev(httpContentNode, new JsonObject());
+        responseNode =
+            DeleteModelResponseFromMldev(httpContentNode, new JsonObject(), parameterNode);
       }
 
       return JsonSerializer.Deserialize<DeleteModelResponse>(responseNode.ToString()) ??
@@ -4771,10 +5022,12 @@ namespace Google.GenAI {
       JsonNode body;
       string path;
       if (this._apiClient.VertexAI) {
-        body = CountTokensParametersToVertex(this._apiClient, parameterNode, new JsonObject());
+        body = CountTokensParametersToVertex(this._apiClient, parameterNode, new JsonObject(),
+                                             parameterNode);
         path = Common.FormatMap("{model}:countTokens", body["_url"]);
       } else {
-        body = CountTokensParametersToMldev(this._apiClient, parameterNode, new JsonObject());
+        body = CountTokensParametersToMldev(this._apiClient, parameterNode, new JsonObject(),
+                                            parameterNode);
         path = Common.FormatMap("{model}:countTokens", body["_url"]);
       }
       JsonObject? bodyObj = body?.AsObject();
@@ -4798,11 +5051,13 @@ namespace Google.GenAI {
       JsonNode responseNode = httpContentNode;
 
       if (this._apiClient.VertexAI) {
-        responseNode = CountTokensResponseFromVertex(httpContentNode, new JsonObject());
+        responseNode =
+            CountTokensResponseFromVertex(httpContentNode, new JsonObject(), parameterNode);
       }
 
       if (!this._apiClient.VertexAI) {
-        responseNode = CountTokensResponseFromMldev(httpContentNode, new JsonObject());
+        responseNode =
+            CountTokensResponseFromMldev(httpContentNode, new JsonObject(), parameterNode);
       }
 
       return JsonSerializer.Deserialize<CountTokensResponse>(responseNode.ToString()) ??
@@ -4843,7 +5098,8 @@ namespace Google.GenAI {
       JsonNode body;
       string path;
       if (this._apiClient.VertexAI) {
-        body = ComputeTokensParametersToVertex(this._apiClient, parameterNode, new JsonObject());
+        body = ComputeTokensParametersToVertex(this._apiClient, parameterNode, new JsonObject(),
+                                               parameterNode);
         path = Common.FormatMap("{model}:computeTokens", body["_url"]);
       } else {
         throw new NotSupportedException("This method is only supported in the Vertex AI client.");
@@ -4869,7 +5125,8 @@ namespace Google.GenAI {
       JsonNode responseNode = httpContentNode;
 
       if (this._apiClient.VertexAI) {
-        responseNode = ComputeTokensResponseFromVertex(httpContentNode, new JsonObject());
+        responseNode =
+            ComputeTokensResponseFromVertex(httpContentNode, new JsonObject(), parameterNode);
       }
 
       if (!this._apiClient.VertexAI) {
@@ -4913,10 +5170,12 @@ namespace Google.GenAI {
       JsonNode body;
       string path;
       if (this._apiClient.VertexAI) {
-        body = GenerateVideosParametersToVertex(this._apiClient, parameterNode, new JsonObject());
+        body = GenerateVideosParametersToVertex(this._apiClient, parameterNode, new JsonObject(),
+                                                parameterNode);
         path = Common.FormatMap("{model}:predictLongRunning", body["_url"]);
       } else {
-        body = GenerateVideosParametersToMldev(this._apiClient, parameterNode, new JsonObject());
+        body = GenerateVideosParametersToMldev(this._apiClient, parameterNode, new JsonObject(),
+                                               parameterNode);
         path = Common.FormatMap("{model}:predictLongRunning", body["_url"]);
       }
       JsonObject? bodyObj = body?.AsObject();
@@ -4940,11 +5199,13 @@ namespace Google.GenAI {
       JsonNode responseNode = httpContentNode;
 
       if (this._apiClient.VertexAI) {
-        responseNode = GenerateVideosOperationFromVertex(httpContentNode, new JsonObject());
+        responseNode =
+            GenerateVideosOperationFromVertex(httpContentNode, new JsonObject(), parameterNode);
       }
 
       if (!this._apiClient.VertexAI) {
-        responseNode = GenerateVideosOperationFromMldev(httpContentNode, new JsonObject());
+        responseNode =
+            GenerateVideosOperationFromMldev(httpContentNode, new JsonObject(), parameterNode);
       }
 
       return JsonSerializer.Deserialize<GenerateVideosOperation>(responseNode.ToString()) ??
@@ -5215,7 +5476,7 @@ namespace Google.GenAI {
     }
 
     /// <summary>
-    /// Calculates embeddings for the given content. Only text is supported.
+    /// Calculates embeddings for the given content.
     /// </summary>
     /// <param name="model">The model to use.</param>
     /// <param name="contents">The content to embed.</param>
@@ -5245,6 +5506,32 @@ namespace Google.GenAI {
     public async Task<GenerateVideosOperation> GenerateVideosAsync(
         String model, GenerateVideosSource source, GenerateVideosConfig? config = null) {
       return await PrivateGenerateVideosAsync(model, null, null, null, source, config);
+    }
+
+    /// <summary>
+    /// Calculates embeddings for the given content.
+    /// </summary>
+    /// <param name="model">The model to use.</param>
+    /// <param name="contents">The content to embed.</param>
+    /// <param name="config">Optional configuration for embeddings.</param>
+    /// <returns>A <see cref="Task{EmbedContentResponse}"/> that represents the asynchronous
+    /// operation.</returns>
+    public async Task<EmbedContentResponse> EmbedContentAsync(string model, List<Content> contents,
+                                                              EmbedContentConfig? config = null) {
+      if (!_apiClient.VertexAI) {
+        return await PrivateEmbedContentAsync(model, contents, null, null, config);
+      }
+      if (Transformers.TIsVertexEmbedContentModel(model)) {
+        if (contents.Count > 1) {
+          throw new ArgumentException(
+              "The embedContent API for this model only supports one content at a time.");
+        }
+        return await PrivateEmbedContentAsync(model, contents, contents[0],
+                                              EmbeddingApiType.EMBED_CONTENT, config);
+      } else {
+        return await PrivateEmbedContentAsync(model, contents, null, EmbeddingApiType.PREDICT,
+                                              config);
+      }
     }
   }
 }

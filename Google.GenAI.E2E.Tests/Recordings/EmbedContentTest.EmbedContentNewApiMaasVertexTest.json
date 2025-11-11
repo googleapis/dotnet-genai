@@ -1,0 +1,176 @@
+{
+  "recordID": "EmbedContentTest.EmbedContentNewApiMaasVertexTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1beta1/projects/REDACTED/locations/us-central1/publishers/intfloat/models/multilingual-e5-large-instruct-maas:embedContent",
+        "request": "POST /v1beta1/projects/REDACTED/locations/us-central1/publishers/intfloat/models/multilingual-e5-large-instruct-maas:embedContent HTTP/1.1",
+        "headers": {
+          "Content-Length": "80",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test-Name": "EmbedContentTest.EmbedContentNewApiMaasVertexTest"
+        },
+        "bodySegments": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "What is your name?"
+                }
+              ]
+            },
+            "outputDimensionality": 100
+          }
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "us-central1-aiplatform.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "4fff14b022d83e3bc0934ac264e0a17b9c9680298560a25b5ab1de8571faed9b",
+      "response": {
+        "statusCode": 200,
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "application/json; charset=UTF-8",
+          "Date": "Tue, 09 Dec 2025 01:33:01 GMT",
+          "Internal-Input-Tokens": "7",
+          "Internal-Output-Tokens": "0",
+          "Server": "scaffolding on HTTPServer2",
+          "Vary": "origin, access-control-request-method, access-control-request-headers, X-Origin, Referer",
+          "X-Compute-Characters": "18",
+          "X-Compute-Time": "5",
+          "X-Compute-Tokens": "7",
+          "X-Compute-Type": "gpu+optimized",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Inference-Time": "4",
+          "X-Queue-Time": "0",
+          "X-Tokenization-Time": "0",
+          "X-Total-Time": "5",
+          "X-Vertex-Ai-Internal-Prediction-Backend": "harpoon",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "embedding": {
+              "values": [
+                0.053552467,
+                0.0569362,
+                -0.08680254,
+                -0.09619869,
+                0.062025785,
+                -0.07399469,
+                -0.028440136,
+                0.07198123,
+                0.054950707,
+                -0.11946535,
+                0.0844535,
+                0.10044933,
+                -0.14150156,
+                -0.08876007,
+                -0.083334915,
+                -0.114990994,
+                -0.10906247,
+                0.031012893,
+                -0.047372263,
+                -0.008920751,
+                0.07198123,
+                0.012444307,
+                -0.013884491,
+                -0.06515783,
+                0.055090528,
+                0.013562897,
+                -0.08831263,
+                -0.13479003,
+                -0.15112144,
+                -0.11129965,
+                -0.020232486,
+                0.10615414,
+                -0.09720542,
+                -0.07019149,
+                -0.02150488,
+                0.15391791,
+                0.12427528,
+                0.10223907,
+                -0.045582518,
+                0.122373685,
+                -0.092675135,
+                0.103805095,
+                0.02002275,
+                -0.034089014,
+                -0.046477392,
+                0.07388283,
+                0.06694758,
+                0.01559034,
+                -0.02579747,
+                0.20190538,
+                0.1719272,
+                0.14306758,
+                -0.055789646,
+                -0.06157835,
+                -0.12494644,
+                0.10084084,
+                -0.08931936,
+                -0.008634112,
+                -0.09407337,
+                -0.03713717,
+                -0.029726515,
+                -0.054838847,
+                0.044967294,
+                -0.055957437,
+                -0.09362593,
+                0.24474737,
+                0.09737321,
+                0.07030334,
+                -0.16969001,
+                0.06644421,
+                -0.08244004,
+                0.08590767,
+                -0.12461086,
+                -0.04191914,
+                -0.085068725,
+                -0.053356715,
+                0.19116694,
+                0.004600199,
+                0.015939899,
+                -0.06286473,
+                0.2765153,
+                0.15470092,
+                -0.0016918665,
+                -0.056293014,
+                0.11392833,
+                0.18725187,
+                0.17159162,
+                0.1732695,
+                0.115997724,
+                0.10112049,
+                -0.010172172,
+                0.101344205,
+                0.009878543,
+                -0.08473315,
+                -0.099778175,
+                -0.096757986,
+                0.038283724,
+                0.10430846,
+                -0.15056214,
+                -0.08115366
+              ]
+            },
+            "usageMetadata": {
+              "promptTokenCount": 7,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 7
+                }
+              ],
+              "totalTokenCount": 7
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

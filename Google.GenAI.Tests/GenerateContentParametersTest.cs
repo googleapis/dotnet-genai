@@ -32,7 +32,7 @@ namespace Google.GenAI.Tests {
       GenerateContentParameters? contentParams = GenerateContentParameters.FromJson(body);
       Assert.IsNotNull(contentParams);
 
-      var result = models.GenerateContentParametersToVertex(client, JsonObject.Parse(body), null);
+      var result = models.GenerateContentParametersToVertex(client, JsonObject.Parse(body), null, null);
       Assert.IsNotNull(result);
     }
   }

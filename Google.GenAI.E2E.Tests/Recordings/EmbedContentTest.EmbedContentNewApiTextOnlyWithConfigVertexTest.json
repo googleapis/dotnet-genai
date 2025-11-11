@@ -1,0 +1,78 @@
+{
+  "recordID": "EmbedContentTest.EmbedContentNewApiTextOnlyWithConfigVertexTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-embedding-2-exp-11-2025:embedContent",
+        "request": "POST /v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-embedding-2-exp-11-2025:embedContent HTTP/1.1",
+        "headers": {
+          "Content-Length": "152",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test": "headers",
+          "Test-Name": "EmbedContentTest.EmbedContentNewApiTextOnlyWithConfigVertexTest"
+        },
+        "bodySegments": [
+          {
+            "autoTruncate": true,
+            "content": {
+              "parts": [
+                {
+                  "text": "What is your name?"
+                }
+              ]
+            },
+            "outputDimensionality": 10,
+            "taskType": "RETRIEVAL_DOCUMENT",
+            "title": "test_title"
+          }
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "us-central1-aiplatform.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "04f008a5761ed6e074c57ba1330b2c0c728bd2052bb9bede0e2e2e3659a3a4a0",
+      "response": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=UTF-8",
+          "Date": "Tue, 09 Dec 2025 00:42:47 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "embedding": {
+              "values": [
+                -0.09408051,
+                -0.22214933,
+                0.4618354,
+                0.15021776,
+                0.005017484,
+                -0.17563783,
+                -0.13656189,
+                0.2586441,
+                0.24553321,
+                -0.72748536
+              ]
+            },
+            "usageMetadata": {
+              "promptTokenCount": 13,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 13
+                }
+              ],
+              "totalTokenCount": 13
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
