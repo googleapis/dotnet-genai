@@ -45,6 +45,17 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Optional. Display name of the file. Used to provide a label or filename to distinguish
+    /// files.
+    /// </summary>
+    [JsonPropertyName("displayName")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string
+        ? DisplayName {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a FunctionResponseFileData object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
