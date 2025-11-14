@@ -23,20 +23,21 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// The configuration for routing the request to a specific model. This data type is not supported
-  /// in Gemini API.
+  /// The configuration for routing the request to a specific model. This can be used to control
+  /// which model is used for the generation, either automatically or by specifying a model name.
+  /// This data type is not supported in Gemini API.
   /// </summary>
 
   public record GenerationConfigRoutingConfig {
     /// <summary>
-    /// Automated routing.
+    /// In this mode, the model is selected automatically based on the content of the request.
     /// </summary>
     [JsonPropertyName("autoMode")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public GenerationConfigRoutingConfigAutoRoutingMode ? AutoMode { get; set; }
 
     /// <summary>
-    /// Manual routing.
+    /// In this mode, the model is specified manually.
     /// </summary>
     [JsonPropertyName("manualMode")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

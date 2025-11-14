@@ -23,19 +23,19 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Source attributions for content. This data type is not supported in Gemini API.
+  /// A citation for a piece of generatedcontent. This data type is not supported in Gemini API.
   /// </summary>
 
   public record Citation {
     /// <summary>
-    /// Output only. End index into the content.
+    /// Output only. The end index of the citation in the content.
     /// </summary>
     [JsonPropertyName("endIndex")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int ? EndIndex { get; set; }
 
     /// <summary>
-    /// Output only. License of the attribution.
+    /// Output only. The license of the source of the citation.
     /// </summary>
     [JsonPropertyName("license")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -45,7 +45,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Output only. Publication date of the attribution.
+    /// Output only. The publication date of the source of the citation.
     /// </summary>
     [JsonPropertyName("publicationDate")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -55,7 +55,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Output only. Start index into the content.
+    /// Output only. The start index of the citation in the content.
     /// </summary>
     [JsonPropertyName("startIndex")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -65,7 +65,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Output only. Title of the attribution.
+    /// Output only. The title of the source of the citation.
     /// </summary>
     [JsonPropertyName("title")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -75,7 +75,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Output only. Url reference of the attribution.
+    /// Output only. The URI of the source of the citation.
     /// </summary>
     [JsonPropertyName("uri")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

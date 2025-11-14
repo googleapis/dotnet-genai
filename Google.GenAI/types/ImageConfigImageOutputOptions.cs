@@ -23,51 +23,38 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// A `Web` chunk is a piece of evidence that comes from a web page. It contains the URI of the
-  /// web page, the title of the page, and the domain of the page. This is used to provide the user
-  /// with a link to the source of the information.
+  /// The image output format for generated images. This data type is not supported in Gemini API.
   /// </summary>
 
-  public record GroundingChunkWeb {
+  public record ImageConfigImageOutputOptions {
     /// <summary>
-    /// The domain of the web page that contains the evidence. This can be used to filter out
-    /// low-quality sources. This field is not supported in Gemini API.
+    /// Optional. The compression quality of the output image.
     /// </summary>
-    [JsonPropertyName("domain")]
+    [JsonPropertyName("compressionQuality")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? Domain { get; set; }
+    public int ? CompressionQuality { get; set; }
 
     /// <summary>
-    /// The title of the web page that contains the evidence.
+    /// Optional. The image format that the output should be saved as.
     /// </summary>
-    [JsonPropertyName("title")]
+    [JsonPropertyName("mimeType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Title {
+        ? MimeType {
             get; set;
           }
 
     /// <summary>
-    /// The URI of the web page that contains the evidence.
-    /// </summary>
-    [JsonPropertyName("uri")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string
-        ? Uri {
-            get; set;
-          }
-
-    /// <summary>
-    /// Deserializes a JSON string to a GroundingChunkWeb object.
+    /// Deserializes a JSON string to a ImageConfigImageOutputOptions object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized GroundingChunkWeb object, or null if deserialization
+    /// <returns>The deserialized ImageConfigImageOutputOptions object, or null if deserialization
     /// fails.</returns>
-    public static GroundingChunkWeb
+    public static ImageConfigImageOutputOptions
         ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<GroundingChunkWeb>(jsonString, options);
+        return JsonSerializer.Deserialize<ImageConfigImageOutputOptions>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;

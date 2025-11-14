@@ -23,51 +23,49 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// A `Web` chunk is a piece of evidence that comes from a web page. It contains the URI of the
-  /// web page, the title of the page, and the domain of the page. This is used to provide the user
-  /// with a link to the source of the information.
+  /// The FileSearch tool that retrieves knowledge from Semantic Retrieval corpora. Files are
+  /// imported to Semantic Retrieval corpora using the ImportFile API. This data type is not
+  /// supported in Vertex AI.
   /// </summary>
 
-  public record GroundingChunkWeb {
+  public record FileSearch {
     /// <summary>
-    /// The domain of the web page that contains the evidence. This can be used to filter out
-    /// low-quality sources. This field is not supported in Gemini API.
+    /// The names of the file_search_stores to retrieve from. Example:
+    /// `fileSearchStores/my-file-search-store-123`
     /// </summary>
-    [JsonPropertyName("domain")]
+    [JsonPropertyName("fileSearchStoreNames")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? Domain { get; set; }
+    public List<string> ? FileSearchStoreNames { get; set; }
 
     /// <summary>
-    /// The title of the web page that contains the evidence.
+    /// Optional. Metadata filter to apply to the semantic retrieval documents and chunks.
     /// </summary>
-    [JsonPropertyName("title")]
+    [JsonPropertyName("metadataFilter")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Title {
+        ? MetadataFilter {
             get; set;
           }
 
     /// <summary>
-    /// The URI of the web page that contains the evidence.
+    /// Optional. The number of semantic retrieval chunks to retrieve.
     /// </summary>
-    [JsonPropertyName("uri")]
+    [JsonPropertyName("topK")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string
-        ? Uri {
+    public int
+        ? TopK {
             get; set;
           }
 
     /// <summary>
-    /// Deserializes a JSON string to a GroundingChunkWeb object.
+    /// Deserializes a JSON string to a FileSearch object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized GroundingChunkWeb object, or null if deserialization
-    /// fails.</returns>
-    public static GroundingChunkWeb
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
+    /// <returns>The deserialized FileSearch object, or null if deserialization fails.</returns>
+    public static FileSearch ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<GroundingChunkWeb>(jsonString, options);
+        return JsonSerializer.Deserialize<FileSearch>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;

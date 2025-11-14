@@ -20,7 +20,7 @@ using System.Text.Json.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Status of the url retrieval.
+  /// The status of the URL retrieval.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum UrlRetrievalStatus {
@@ -30,12 +30,12 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("URL_RETRIEVAL_STATUS_UNSPECIFIED")] URL_RETRIEVAL_STATUS_UNSPECIFIED,
 
     /// <summary>
-    /// Url retrieval is successful.
+    /// The URL was retrieved successfully.
     /// </summary>
     [JsonPropertyName("URL_RETRIEVAL_STATUS_SUCCESS")] URL_RETRIEVAL_STATUS_SUCCESS,
 
     /// <summary>
-    /// Url retrieval is failed due to error.
+    /// The URL retrieval failed.
     /// </summary>
     [JsonPropertyName("URL_RETRIEVAL_STATUS_ERROR")] URL_RETRIEVAL_STATUS_ERROR,
 

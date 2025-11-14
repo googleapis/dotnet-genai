@@ -20,8 +20,8 @@ using System.Text.Json.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Specify if the threshold is used for probability or severity score. If not specified, the
-  /// threshold is used for probability score. This enum is not supported in Gemini API.
+  /// The method for blocking content. If not specified, the default behavior is to use the
+  /// probability score. This enum is not supported in Gemini API.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum HarmBlockMethod {

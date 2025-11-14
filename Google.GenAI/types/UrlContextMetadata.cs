@@ -23,12 +23,13 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Metadata related to url context retrieval tool.
+  /// Metadata returned when the model uses the `url_context` tool to get information from a
+  /// user-provided URL.
   /// </summary>
 
   public record UrlContextMetadata {
     /// <summary>
-    /// Output only. List of url context.
+    /// Output only. A list of URL metadata, with one entry for each URL retrieved by the tool.
     /// </summary>
     [JsonPropertyName("urlMetadata")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
