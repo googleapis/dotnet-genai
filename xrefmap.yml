@@ -7500,6 +7500,32 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ImageConfig.ImageSize
   nameWithType: ImageConfig.ImageSize
+- uid: Google.GenAI.Types.ImageConfig.OutputCompressionQuality
+  name: OutputCompressionQuality
+  href: api/Google.GenAI.Types.ImageConfig.html#Google_GenAI_Types_ImageConfig_OutputCompressionQuality
+  commentId: P:Google.GenAI.Types.ImageConfig.OutputCompressionQuality
+  fullName: Google.GenAI.Types.ImageConfig.OutputCompressionQuality
+  nameWithType: ImageConfig.OutputCompressionQuality
+- uid: Google.GenAI.Types.ImageConfig.OutputCompressionQuality*
+  name: OutputCompressionQuality
+  href: api/Google.GenAI.Types.ImageConfig.html#Google_GenAI_Types_ImageConfig_OutputCompressionQuality_
+  commentId: Overload:Google.GenAI.Types.ImageConfig.OutputCompressionQuality
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageConfig.OutputCompressionQuality
+  nameWithType: ImageConfig.OutputCompressionQuality
+- uid: Google.GenAI.Types.ImageConfig.OutputMimeType
+  name: OutputMimeType
+  href: api/Google.GenAI.Types.ImageConfig.html#Google_GenAI_Types_ImageConfig_OutputMimeType
+  commentId: P:Google.GenAI.Types.ImageConfig.OutputMimeType
+  fullName: Google.GenAI.Types.ImageConfig.OutputMimeType
+  nameWithType: ImageConfig.OutputMimeType
+- uid: Google.GenAI.Types.ImageConfig.OutputMimeType*
+  name: OutputMimeType
+  href: api/Google.GenAI.Types.ImageConfig.html#Google_GenAI_Types_ImageConfig_OutputMimeType_
+  commentId: Overload:Google.GenAI.Types.ImageConfig.OutputMimeType
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageConfig.OutputMimeType
+  nameWithType: ImageConfig.OutputMimeType
 - uid: Google.GenAI.Types.ImagePromptLanguage
   name: ImagePromptLanguage
   href: api/Google.GenAI.Types.ImagePromptLanguage.html
