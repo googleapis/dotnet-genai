@@ -4353,6 +4353,19 @@ references:
   commentId: T:Google.GenAI.Types.FunctionResponseFileData
   fullName: Google.GenAI.Types.FunctionResponseFileData
   nameWithType: FunctionResponseFileData
+- uid: Google.GenAI.Types.FunctionResponseFileData.DisplayName
+  name: DisplayName
+  href: api/Google.GenAI.Types.FunctionResponseFileData.html#Google_GenAI_Types_FunctionResponseFileData_DisplayName
+  commentId: P:Google.GenAI.Types.FunctionResponseFileData.DisplayName
+  fullName: Google.GenAI.Types.FunctionResponseFileData.DisplayName
+  nameWithType: FunctionResponseFileData.DisplayName
+- uid: Google.GenAI.Types.FunctionResponseFileData.DisplayName*
+  name: DisplayName
+  href: api/Google.GenAI.Types.FunctionResponseFileData.html#Google_GenAI_Types_FunctionResponseFileData_DisplayName_
+  commentId: Overload:Google.GenAI.Types.FunctionResponseFileData.DisplayName
+  isSpec: "True"
+  fullName: Google.GenAI.Types.FunctionResponseFileData.DisplayName
+  nameWithType: FunctionResponseFileData.DisplayName
 - uid: Google.GenAI.Types.FunctionResponseFileData.FileUri
   name: FileUri
   href: api/Google.GenAI.Types.FunctionResponseFileData.html#Google_GenAI_Types_FunctionResponseFileData_FileUri
