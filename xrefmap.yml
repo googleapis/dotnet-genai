@@ -10113,6 +10113,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Part.InlineData
   nameWithType: Part.InlineData
+- uid: Google.GenAI.Types.Part.MediaResolution
+  name: MediaResolution
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_MediaResolution
+  commentId: P:Google.GenAI.Types.Part.MediaResolution
+  fullName: Google.GenAI.Types.Part.MediaResolution
+  nameWithType: Part.MediaResolution
+- uid: Google.GenAI.Types.Part.MediaResolution*
+  name: MediaResolution
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_MediaResolution_
+  commentId: Overload:Google.GenAI.Types.Part.MediaResolution
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Part.MediaResolution
+  nameWithType: Part.MediaResolution
 - uid: Google.GenAI.Types.Part.Text
   name: Text
   href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_Text
@@ -10165,6 +10178,84 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Part.VideoMetadata
   nameWithType: Part.VideoMetadata
+- uid: Google.GenAI.Types.PartMediaResolution
+  name: PartMediaResolution
+  href: api/Google.GenAI.Types.PartMediaResolution.html
+  commentId: T:Google.GenAI.Types.PartMediaResolution
+  fullName: Google.GenAI.Types.PartMediaResolution
+  nameWithType: PartMediaResolution
+- uid: Google.GenAI.Types.PartMediaResolution.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.PartMediaResolution.html#Google_GenAI_Types_PartMediaResolution_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.PartMediaResolution.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.PartMediaResolution.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.PartMediaResolution.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: PartMediaResolution.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: PartMediaResolution.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.PartMediaResolution.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.PartMediaResolution.html#Google_GenAI_Types_PartMediaResolution_FromJson_
+  commentId: Overload:Google.GenAI.Types.PartMediaResolution.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.PartMediaResolution.FromJson
+  nameWithType: PartMediaResolution.FromJson
+- uid: Google.GenAI.Types.PartMediaResolution.Level
+  name: Level
+  href: api/Google.GenAI.Types.PartMediaResolution.html#Google_GenAI_Types_PartMediaResolution_Level
+  commentId: P:Google.GenAI.Types.PartMediaResolution.Level
+  fullName: Google.GenAI.Types.PartMediaResolution.Level
+  nameWithType: PartMediaResolution.Level
+- uid: Google.GenAI.Types.PartMediaResolution.Level*
+  name: Level
+  href: api/Google.GenAI.Types.PartMediaResolution.html#Google_GenAI_Types_PartMediaResolution_Level_
+  commentId: Overload:Google.GenAI.Types.PartMediaResolution.Level
+  isSpec: "True"
+  fullName: Google.GenAI.Types.PartMediaResolution.Level
+  nameWithType: PartMediaResolution.Level
+- uid: Google.GenAI.Types.PartMediaResolution.NumTokens
+  name: NumTokens
+  href: api/Google.GenAI.Types.PartMediaResolution.html#Google_GenAI_Types_PartMediaResolution_NumTokens
+  commentId: P:Google.GenAI.Types.PartMediaResolution.NumTokens
+  fullName: Google.GenAI.Types.PartMediaResolution.NumTokens
+  nameWithType: PartMediaResolution.NumTokens
+- uid: Google.GenAI.Types.PartMediaResolution.NumTokens*
+  name: NumTokens
+  href: api/Google.GenAI.Types.PartMediaResolution.html#Google_GenAI_Types_PartMediaResolution_NumTokens_
+  commentId: Overload:Google.GenAI.Types.PartMediaResolution.NumTokens
+  isSpec: "True"
+  fullName: Google.GenAI.Types.PartMediaResolution.NumTokens
+  nameWithType: PartMediaResolution.NumTokens
+- uid: Google.GenAI.Types.PartMediaResolutionLevel
+  name: PartMediaResolutionLevel
+  href: api/Google.GenAI.Types.PartMediaResolutionLevel.html
+  commentId: T:Google.GenAI.Types.PartMediaResolutionLevel
+  fullName: Google.GenAI.Types.PartMediaResolutionLevel
+  nameWithType: PartMediaResolutionLevel
+- uid: Google.GenAI.Types.PartMediaResolutionLevel.MEDIA_RESOLUTION_HIGH
+  name: MEDIA_RESOLUTION_HIGH
+  href: api/Google.GenAI.Types.PartMediaResolutionLevel.html#Google_GenAI_Types_PartMediaResolutionLevel_MEDIA_RESOLUTION_HIGH
+  commentId: F:Google.GenAI.Types.PartMediaResolutionLevel.MEDIA_RESOLUTION_HIGH
+  fullName: Google.GenAI.Types.PartMediaResolutionLevel.MEDIA_RESOLUTION_HIGH
+  nameWithType: PartMediaResolutionLevel.MEDIA_RESOLUTION_HIGH
+- uid: Google.GenAI.Types.PartMediaResolutionLevel.MEDIA_RESOLUTION_LOW
+  name: MEDIA_RESOLUTION_LOW
+  href: api/Google.GenAI.Types.PartMediaResolutionLevel.html#Google_GenAI_Types_PartMediaResolutionLevel_MEDIA_RESOLUTION_LOW
+  commentId: F:Google.GenAI.Types.PartMediaResolutionLevel.MEDIA_RESOLUTION_LOW
+  fullName: Google.GenAI.Types.PartMediaResolutionLevel.MEDIA_RESOLUTION_LOW
+  nameWithType: PartMediaResolutionLevel.MEDIA_RESOLUTION_LOW
+- uid: Google.GenAI.Types.PartMediaResolutionLevel.MEDIA_RESOLUTION_MEDIUM
+  name: MEDIA_RESOLUTION_MEDIUM
+  href: api/Google.GenAI.Types.PartMediaResolutionLevel.html#Google_GenAI_Types_PartMediaResolutionLevel_MEDIA_RESOLUTION_MEDIUM
+  commentId: F:Google.GenAI.Types.PartMediaResolutionLevel.MEDIA_RESOLUTION_MEDIUM
+  fullName: Google.GenAI.Types.PartMediaResolutionLevel.MEDIA_RESOLUTION_MEDIUM
+  nameWithType: PartMediaResolutionLevel.MEDIA_RESOLUTION_MEDIUM
+- uid: Google.GenAI.Types.PartMediaResolutionLevel.MEDIA_RESOLUTION_UNSPECIFIED
+  name: MEDIA_RESOLUTION_UNSPECIFIED
+  href: api/Google.GenAI.Types.PartMediaResolutionLevel.html#Google_GenAI_Types_PartMediaResolutionLevel_MEDIA_RESOLUTION_UNSPECIFIED
+  commentId: F:Google.GenAI.Types.PartMediaResolutionLevel.MEDIA_RESOLUTION_UNSPECIFIED
+  fullName: Google.GenAI.Types.PartMediaResolutionLevel.MEDIA_RESOLUTION_UNSPECIFIED
+  nameWithType: PartMediaResolutionLevel.MEDIA_RESOLUTION_UNSPECIFIED
 - uid: Google.GenAI.Types.PartialArg
   name: PartialArg
   href: api/Google.GenAI.Types.PartialArg.html
@@ -13410,6 +13501,43 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ThinkingConfig.ThinkingBudget
   nameWithType: ThinkingConfig.ThinkingBudget
+- uid: Google.GenAI.Types.ThinkingConfig.ThinkingLevel
+  name: ThinkingLevel
+  href: api/Google.GenAI.Types.ThinkingConfig.html#Google_GenAI_Types_ThinkingConfig_ThinkingLevel
+  commentId: P:Google.GenAI.Types.ThinkingConfig.ThinkingLevel
+  fullName: Google.GenAI.Types.ThinkingConfig.ThinkingLevel
+  nameWithType: ThinkingConfig.ThinkingLevel
+- uid: Google.GenAI.Types.ThinkingConfig.ThinkingLevel*
+  name: ThinkingLevel
+  href: api/Google.GenAI.Types.ThinkingConfig.html#Google_GenAI_Types_ThinkingConfig_ThinkingLevel_
+  commentId: Overload:Google.GenAI.Types.ThinkingConfig.ThinkingLevel
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ThinkingConfig.ThinkingLevel
+  nameWithType: ThinkingConfig.ThinkingLevel
+- uid: Google.GenAI.Types.ThinkingLevel
+  name: ThinkingLevel
+  href: api/Google.GenAI.Types.ThinkingLevel.html
+  commentId: T:Google.GenAI.Types.ThinkingLevel
+  fullName: Google.GenAI.Types.ThinkingLevel
+  nameWithType: ThinkingLevel
+- uid: Google.GenAI.Types.ThinkingLevel.HIGH
+  name: HIGH
+  href: api/Google.GenAI.Types.ThinkingLevel.html#Google_GenAI_Types_ThinkingLevel_HIGH
+  commentId: F:Google.GenAI.Types.ThinkingLevel.HIGH
+  fullName: Google.GenAI.Types.ThinkingLevel.HIGH
+  nameWithType: ThinkingLevel.HIGH
+- uid: Google.GenAI.Types.ThinkingLevel.LOW
+  name: LOW
+  href: api/Google.GenAI.Types.ThinkingLevel.html#Google_GenAI_Types_ThinkingLevel_LOW
+  commentId: F:Google.GenAI.Types.ThinkingLevel.LOW
+  fullName: Google.GenAI.Types.ThinkingLevel.LOW
+  nameWithType: ThinkingLevel.LOW
+- uid: Google.GenAI.Types.ThinkingLevel.THINKING_LEVEL_UNSPECIFIED
+  name: THINKING_LEVEL_UNSPECIFIED
+  href: api/Google.GenAI.Types.ThinkingLevel.html#Google_GenAI_Types_ThinkingLevel_THINKING_LEVEL_UNSPECIFIED
+  commentId: F:Google.GenAI.Types.ThinkingLevel.THINKING_LEVEL_UNSPECIFIED
+  fullName: Google.GenAI.Types.ThinkingLevel.THINKING_LEVEL_UNSPECIFIED
+  nameWithType: ThinkingLevel.THINKING_LEVEL_UNSPECIFIED
 - uid: Google.GenAI.Types.Tool
   name: Tool
   href: api/Google.GenAI.Types.Tool.html

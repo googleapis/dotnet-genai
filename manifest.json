@@ -2100,6 +2100,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.PartMediaResolution.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.PartMediaResolution.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.PartMediaResolution",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.PartMediaResolution.yml\" sourcestartlinenumber=\"1\">Media resolution for the input media.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.PartMediaResolutionLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.PartMediaResolutionLevel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.PartMediaResolutionLevel",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.PartMediaResolutionLevel.yml\" sourcestartlinenumber=\"1\">The tokenization quality used for given media.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.PartialArg.yml",
       "output": {
         ".html": {
@@ -2825,6 +2853,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ThinkingConfig",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ThinkingConfig.yml\" sourcestartlinenumber=\"1\">The thinking features configuration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ThinkingLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ThinkingLevel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ThinkingLevel",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ThinkingLevel.yml\" sourcestartlinenumber=\"1\">The level of thoughts tokens that the model should generate.</p>\n"
     },
     {
       "type": "ManagedReference",
