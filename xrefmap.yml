@@ -3989,6 +3989,32 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.FunctionCall.Name
   nameWithType: FunctionCall.Name
+- uid: Google.GenAI.Types.FunctionCall.PartialArgs
+  name: PartialArgs
+  href: api/Google.GenAI.Types.FunctionCall.html#Google_GenAI_Types_FunctionCall_PartialArgs
+  commentId: P:Google.GenAI.Types.FunctionCall.PartialArgs
+  fullName: Google.GenAI.Types.FunctionCall.PartialArgs
+  nameWithType: FunctionCall.PartialArgs
+- uid: Google.GenAI.Types.FunctionCall.PartialArgs*
+  name: PartialArgs
+  href: api/Google.GenAI.Types.FunctionCall.html#Google_GenAI_Types_FunctionCall_PartialArgs_
+  commentId: Overload:Google.GenAI.Types.FunctionCall.PartialArgs
+  isSpec: "True"
+  fullName: Google.GenAI.Types.FunctionCall.PartialArgs
+  nameWithType: FunctionCall.PartialArgs
+- uid: Google.GenAI.Types.FunctionCall.WillContinue
+  name: WillContinue
+  href: api/Google.GenAI.Types.FunctionCall.html#Google_GenAI_Types_FunctionCall_WillContinue
+  commentId: P:Google.GenAI.Types.FunctionCall.WillContinue
+  fullName: Google.GenAI.Types.FunctionCall.WillContinue
+  nameWithType: FunctionCall.WillContinue
+- uid: Google.GenAI.Types.FunctionCall.WillContinue*
+  name: WillContinue
+  href: api/Google.GenAI.Types.FunctionCall.html#Google_GenAI_Types_FunctionCall_WillContinue_
+  commentId: Overload:Google.GenAI.Types.FunctionCall.WillContinue
+  isSpec: "True"
+  fullName: Google.GenAI.Types.FunctionCall.WillContinue
+  nameWithType: FunctionCall.WillContinue
 - uid: Google.GenAI.Types.FunctionCallingConfig
   name: FunctionCallingConfig
   href: api/Google.GenAI.Types.FunctionCallingConfig.html
@@ -4037,6 +4063,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.FunctionCallingConfig.Mode
   nameWithType: FunctionCallingConfig.Mode
+- uid: Google.GenAI.Types.FunctionCallingConfig.StreamFunctionCallArguments
+  name: StreamFunctionCallArguments
+  href: api/Google.GenAI.Types.FunctionCallingConfig.html#Google_GenAI_Types_FunctionCallingConfig_StreamFunctionCallArguments
+  commentId: P:Google.GenAI.Types.FunctionCallingConfig.StreamFunctionCallArguments
+  fullName: Google.GenAI.Types.FunctionCallingConfig.StreamFunctionCallArguments
+  nameWithType: FunctionCallingConfig.StreamFunctionCallArguments
+- uid: Google.GenAI.Types.FunctionCallingConfig.StreamFunctionCallArguments*
+  name: StreamFunctionCallArguments
+  href: api/Google.GenAI.Types.FunctionCallingConfig.html#Google_GenAI_Types_FunctionCallingConfig_StreamFunctionCallArguments_
+  commentId: Overload:Google.GenAI.Types.FunctionCallingConfig.StreamFunctionCallArguments
+  isSpec: "True"
+  fullName: Google.GenAI.Types.FunctionCallingConfig.StreamFunctionCallArguments
+  nameWithType: FunctionCallingConfig.StreamFunctionCallArguments
 - uid: Google.GenAI.Types.FunctionCallingConfigMode
   name: FunctionCallingConfigMode
   href: api/Google.GenAI.Types.FunctionCallingConfigMode.html
@@ -10126,6 +10165,106 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Part.VideoMetadata
   nameWithType: Part.VideoMetadata
+- uid: Google.GenAI.Types.PartialArg
+  name: PartialArg
+  href: api/Google.GenAI.Types.PartialArg.html
+  commentId: T:Google.GenAI.Types.PartialArg
+  fullName: Google.GenAI.Types.PartialArg
+  nameWithType: PartialArg
+- uid: Google.GenAI.Types.PartialArg.BoolValue
+  name: BoolValue
+  href: api/Google.GenAI.Types.PartialArg.html#Google_GenAI_Types_PartialArg_BoolValue
+  commentId: P:Google.GenAI.Types.PartialArg.BoolValue
+  fullName: Google.GenAI.Types.PartialArg.BoolValue
+  nameWithType: PartialArg.BoolValue
+- uid: Google.GenAI.Types.PartialArg.BoolValue*
+  name: BoolValue
+  href: api/Google.GenAI.Types.PartialArg.html#Google_GenAI_Types_PartialArg_BoolValue_
+  commentId: Overload:Google.GenAI.Types.PartialArg.BoolValue
+  isSpec: "True"
+  fullName: Google.GenAI.Types.PartialArg.BoolValue
+  nameWithType: PartialArg.BoolValue
+- uid: Google.GenAI.Types.PartialArg.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.PartialArg.html#Google_GenAI_Types_PartialArg_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.PartialArg.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.PartialArg.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.PartialArg.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: PartialArg.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: PartialArg.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.PartialArg.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.PartialArg.html#Google_GenAI_Types_PartialArg_FromJson_
+  commentId: Overload:Google.GenAI.Types.PartialArg.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.PartialArg.FromJson
+  nameWithType: PartialArg.FromJson
+- uid: Google.GenAI.Types.PartialArg.JsonPath
+  name: JsonPath
+  href: api/Google.GenAI.Types.PartialArg.html#Google_GenAI_Types_PartialArg_JsonPath
+  commentId: P:Google.GenAI.Types.PartialArg.JsonPath
+  fullName: Google.GenAI.Types.PartialArg.JsonPath
+  nameWithType: PartialArg.JsonPath
+- uid: Google.GenAI.Types.PartialArg.JsonPath*
+  name: JsonPath
+  href: api/Google.GenAI.Types.PartialArg.html#Google_GenAI_Types_PartialArg_JsonPath_
+  commentId: Overload:Google.GenAI.Types.PartialArg.JsonPath
+  isSpec: "True"
+  fullName: Google.GenAI.Types.PartialArg.JsonPath
+  nameWithType: PartialArg.JsonPath
+- uid: Google.GenAI.Types.PartialArg.NullValue
+  name: NullValue
+  href: api/Google.GenAI.Types.PartialArg.html#Google_GenAI_Types_PartialArg_NullValue
+  commentId: P:Google.GenAI.Types.PartialArg.NullValue
+  fullName: Google.GenAI.Types.PartialArg.NullValue
+  nameWithType: PartialArg.NullValue
+- uid: Google.GenAI.Types.PartialArg.NullValue*
+  name: NullValue
+  href: api/Google.GenAI.Types.PartialArg.html#Google_GenAI_Types_PartialArg_NullValue_
+  commentId: Overload:Google.GenAI.Types.PartialArg.NullValue
+  isSpec: "True"
+  fullName: Google.GenAI.Types.PartialArg.NullValue
+  nameWithType: PartialArg.NullValue
+- uid: Google.GenAI.Types.PartialArg.NumberValue
+  name: NumberValue
+  href: api/Google.GenAI.Types.PartialArg.html#Google_GenAI_Types_PartialArg_NumberValue
+  commentId: P:Google.GenAI.Types.PartialArg.NumberValue
+  fullName: Google.GenAI.Types.PartialArg.NumberValue
+  nameWithType: PartialArg.NumberValue
+- uid: Google.GenAI.Types.PartialArg.NumberValue*
+  name: NumberValue
+  href: api/Google.GenAI.Types.PartialArg.html#Google_GenAI_Types_PartialArg_NumberValue_
+  commentId: Overload:Google.GenAI.Types.PartialArg.NumberValue
+  isSpec: "True"
+  fullName: Google.GenAI.Types.PartialArg.NumberValue
+  nameWithType: PartialArg.NumberValue
+- uid: Google.GenAI.Types.PartialArg.StringValue
+  name: StringValue
+  href: api/Google.GenAI.Types.PartialArg.html#Google_GenAI_Types_PartialArg_StringValue
+  commentId: P:Google.GenAI.Types.PartialArg.StringValue
+  fullName: Google.GenAI.Types.PartialArg.StringValue
+  nameWithType: PartialArg.StringValue
+- uid: Google.GenAI.Types.PartialArg.StringValue*
+  name: StringValue
+  href: api/Google.GenAI.Types.PartialArg.html#Google_GenAI_Types_PartialArg_StringValue_
+  commentId: Overload:Google.GenAI.Types.PartialArg.StringValue
+  isSpec: "True"
+  fullName: Google.GenAI.Types.PartialArg.StringValue
+  nameWithType: PartialArg.StringValue
+- uid: Google.GenAI.Types.PartialArg.WillContinue
+  name: WillContinue
+  href: api/Google.GenAI.Types.PartialArg.html#Google_GenAI_Types_PartialArg_WillContinue
+  commentId: P:Google.GenAI.Types.PartialArg.WillContinue
+  fullName: Google.GenAI.Types.PartialArg.WillContinue
+  nameWithType: PartialArg.WillContinue
+- uid: Google.GenAI.Types.PartialArg.WillContinue*
+  name: WillContinue
+  href: api/Google.GenAI.Types.PartialArg.html#Google_GenAI_Types_PartialArg_WillContinue_
+  commentId: Overload:Google.GenAI.Types.PartialArg.WillContinue
+  isSpec: "True"
+  fullName: Google.GenAI.Types.PartialArg.WillContinue
+  nameWithType: PartialArg.WillContinue
 - uid: Google.GenAI.Types.PersonGeneration
   name: PersonGeneration
   href: api/Google.GenAI.Types.PersonGeneration.html
