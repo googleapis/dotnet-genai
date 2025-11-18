@@ -18,12 +18,14 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Status of the url retrieval.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum UrlRetrievalStatus {
+  public enum UrlRetrievalStatus
+  {
     /// <summary>
     /// Default value. This value is unused.
     /// </summary>

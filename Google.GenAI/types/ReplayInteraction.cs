@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Represents a single interaction, request and response in a replay.
   /// </summary>
 
-  public record ReplayInteraction {
+  public record ReplayInteraction
+  {
     /// <summary>
     ///
     /// </summary>
     [JsonPropertyName("request")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public ReplayRequest ? Request { get; set; }
+    public ReplayRequest? Request { get; set; }
 
     /// <summary>
     ///
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("response")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public ReplayResponse
-        ? Response {
-            get; set;
-          }
+        ? Response
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a ReplayInteraction object.
@@ -52,10 +55,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized ReplayInteraction object, or null if deserialization
     /// fails.</returns>
     public static ReplayInteraction
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<ReplayInteraction>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

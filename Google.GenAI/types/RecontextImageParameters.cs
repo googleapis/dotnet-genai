@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// The parameters for recontextualizing an image.
   /// </summary>
 
-  internal record RecontextImageParameters {
+  internal record RecontextImageParameters
+  {
     /// <summary>
     /// ID of the model to use. For a list of models, see Google models
     /// (https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models).
     /// </summary>
     [JsonPropertyName("model")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? Model { get; set; }
+    public string? Model { get; set; }
 
     /// <summary>
     /// A set of source input(s) for image recontextualization.
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("source")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public RecontextImageSource
-        ? Source {
-            get; set;
-          }
+        ? Source
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Configuration for image recontextualization.
@@ -51,9 +54,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("config")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public RecontextImageConfig
-        ? Config {
-            get; set;
-          }
+        ? Config
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a RecontextImageParameters object.
@@ -63,10 +67,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized RecontextImageParameters object, or null if deserialization
     /// fails.</returns>
     public static RecontextImageParameters
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<RecontextImageParameters>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

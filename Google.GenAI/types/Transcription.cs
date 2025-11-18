@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Audio transcription in Server Conent.
   /// </summary>
 
-  public record Transcription {
+  public record Transcription
+  {
     /// <summary>
     /// Transcription text.
     /// </summary>
     [JsonPropertyName("text")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? Text { get; set; }
+    public string? Text { get; set; }
 
     /// <summary>
     /// The bool indicates the end of the transcription.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("finished")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
-        ? Finished {
-            get; set;
-          }
+        ? Finished
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a Transcription object.
@@ -51,10 +54,14 @@ namespace Google.GenAI.Types {
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized Transcription object, or null if deserialization fails.</returns>
     public static Transcription
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<Transcription>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

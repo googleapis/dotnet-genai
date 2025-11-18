@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Represents where the chunk starts and ends in the document. This data type is not supported in
   /// Gemini API.
   /// </summary>
 
-  public record RagChunkPageSpan {
+  public record RagChunkPageSpan
+  {
     /// <summary>
     /// Page where chunk starts in the document. Inclusive. 1-indexed.
     /// </summary>
     [JsonPropertyName("firstPage")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public int ? FirstPage { get; set; }
+    public int? FirstPage { get; set; }
 
     /// <summary>
     /// Page where chunk ends in the document. Inclusive. 1-indexed.
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("lastPage")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? LastPage {
-            get; set;
-          }
+        ? LastPage
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a RagChunkPageSpan object.
@@ -53,10 +56,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized RagChunkPageSpan object, or null if deserialization
     /// fails.</returns>
     public static RagChunkPageSpan
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<RagChunkPageSpan>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

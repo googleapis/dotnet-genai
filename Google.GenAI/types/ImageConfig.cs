@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// The image generation configuration to be used in GenerateContentConfig.
   /// </summary>
 
-  public record ImageConfig {
+  public record ImageConfig
+  {
     /// <summary>
     /// Aspect ratio of the generated images. Supported values are "1:1", "2:3", "3:2", "3:4",
     /// "4:3", "9:16", "16:9", and "21:9".
     /// </summary>
     [JsonPropertyName("aspectRatio")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? AspectRatio { get; set; }
+    public string? AspectRatio { get; set; }
 
     /// <summary>
     /// Optional. Specifies the size of generated images. Supported values are `1K`, `2K`, `4K`. If
@@ -42,9 +44,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("imageSize")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? ImageSize {
-            get; set;
-          }
+        ? ImageSize
+    {
+      get; set;
+    }
 
     /// <summary>
     /// MIME type of the generated image. This field is not supported in Gemini API.
@@ -52,9 +55,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("outputMimeType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? OutputMimeType {
-            get; set;
-          }
+        ? OutputMimeType
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Compression quality of the generated image (for ``image/jpeg`` only). This field is not
@@ -63,9 +67,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("outputCompressionQuality")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? OutputCompressionQuality {
-            get; set;
-          }
+        ? OutputCompressionQuality
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a ImageConfig object.
@@ -73,10 +78,14 @@ namespace Google.GenAI.Types {
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized ImageConfig object, or null if deserialization fails.</returns>
-    public static ImageConfig ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+    public static ImageConfig? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<ImageConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Content filter results for a prompt sent in the request. Note: This is sent only in the first
   /// stream chunk and only if no candidates were generated due to content violations.
   /// </summary>
 
-  public record GenerateContentResponsePromptFeedback {
+  public record GenerateContentResponsePromptFeedback
+  {
     /// <summary>
     /// Output only. The reason why the prompt was blocked.
     /// </summary>
     [JsonPropertyName("blockReason")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public BlockedReason ? BlockReason { get; set; }
+    public BlockedReason? BlockReason { get; set; }
 
     /// <summary>
     /// Output only. A readable message that explains the reason why the prompt was blocked. This
@@ -42,9 +44,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("blockReasonMessage")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? BlockReasonMessage {
-            get; set;
-          }
+        ? BlockReasonMessage
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Output only. A list of safety ratings for the prompt. There is one rating per category.
@@ -52,9 +55,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("safetyRatings")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<SafetyRating>
-        ? SafetyRatings {
-            get; set;
-          }
+        ? SafetyRatings
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a GenerateContentResponsePromptFeedback object.
@@ -64,11 +68,15 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized GenerateContentResponsePromptFeedback object, or null if
     /// deserialization fails.</returns>
     public static GenerateContentResponsePromptFeedback
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<GenerateContentResponsePromptFeedback>(jsonString,
                                                                                  options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

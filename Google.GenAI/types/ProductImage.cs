@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// An image of the product.
   /// </summary>
 
-  public record ProductImage {
+  public record ProductImage
+  {
     /// <summary>
     /// An image of the product to be recontextualized.
     /// </summary>
     [JsonPropertyName("productImage")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public Image ? ProductImageField { get; set; }
+    public Image? ProductImageField { get; set; }
 
     /// <summary>
     /// Deserializes a JSON string to a ProductImage object.
@@ -41,10 +43,14 @@ namespace Google.GenAI.Types {
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized ProductImage object, or null if deserialization fails.</returns>
     public static ProductImage
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<ProductImage>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

@@ -18,12 +18,14 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// The level of thoughts tokens that the model should generate.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum ThinkingLevel {
+  public enum ThinkingLevel
+  {
     /// <summary>
     /// Default value.
     /// </summary>

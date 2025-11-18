@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Chunk from context retrieved by the retrieval tools. This data type is not supported in Gemini
   /// API.
   /// </summary>
 
-  public record GroundingChunkRetrievedContext {
+  public record GroundingChunkRetrievedContext
+  {
     /// <summary>
     /// Output only. The full document name for the referenced Vertex AI Search document.
     /// </summary>
     [JsonPropertyName("documentName")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? DocumentName { get; set; }
+    public string? DocumentName { get; set; }
 
     /// <summary>
     /// Additional context for the RAG retrieval result. This is only populated when using the RAG
@@ -42,9 +44,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("ragChunk")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public RagChunk
-        ? RagChunk {
-            get; set;
-          }
+        ? RagChunk
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Text of the attribution.
@@ -52,9 +55,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("text")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Text {
-            get; set;
-          }
+        ? Text
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Title of the attribution.
@@ -62,9 +66,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("title")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Title {
-            get; set;
-          }
+        ? Title
+    {
+      get; set;
+    }
 
     /// <summary>
     /// URI reference of the attribution.
@@ -72,9 +77,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("uri")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Uri {
-            get; set;
-          }
+        ? Uri
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a GroundingChunkRetrievedContext object.
@@ -84,10 +90,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized GroundingChunkRetrievedContext object, or null if deserialization
     /// fails.</returns>
     public static GroundingChunkRetrievedContext
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<GroundingChunkRetrievedContext>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

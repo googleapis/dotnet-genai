@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Partial argument value of the function call. This data type is not supported in Gemini API.
   /// </summary>
 
-  public record PartialArg {
+  public record PartialArg
+  {
     /// <summary>
     /// Optional. Represents a null value.
     /// </summary>
     [JsonPropertyName("nullValue")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? NullValue { get; set; }
+    public string? NullValue { get; set; }
 
     /// <summary>
     /// Optional. Represents a double value.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("numberValue")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
-        ? NumberValue {
-            get; set;
-          }
+        ? NumberValue
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Represents a string value.
@@ -50,9 +53,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("stringValue")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? StringValue {
-            get; set;
-          }
+        ? StringValue
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Represents a boolean value.
@@ -60,9 +64,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("boolValue")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
-        ? BoolValue {
-            get; set;
-          }
+        ? BoolValue
+    {
+      get; set;
+    }
 
     /// <summary>
     /// A JSON Path (RFC 9535) to the argument being streamed.
@@ -71,9 +76,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("jsonPath")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? JsonPath {
-            get; set;
-          }
+        ? JsonPath
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Whether this is not the last part of the same json_path. If true, another
@@ -82,9 +88,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("willContinue")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
-        ? WillContinue {
-            get; set;
-          }
+        ? WillContinue
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a PartialArg object.
@@ -92,10 +99,14 @@ namespace Google.GenAI.Types {
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized PartialArg object, or null if deserialization fails.</returns>
-    public static PartialArg ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+    public static PartialArg? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<PartialArg>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

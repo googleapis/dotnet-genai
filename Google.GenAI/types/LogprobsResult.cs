@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Logprobs Result
   /// </summary>
 
-  public record LogprobsResult {
+  public record LogprobsResult
+  {
     /// <summary>
     /// Length = total number of decoding steps. The chosen candidates may or may not be in
     /// top_candidates.
     /// </summary>
     [JsonPropertyName("chosenCandidates")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<LogprobsResultCandidate> ? ChosenCandidates { get; set; }
+    public List<LogprobsResultCandidate>? ChosenCandidates { get; set; }
 
     /// <summary>
     /// Length = total number of decoding steps.
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("topCandidates")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<LogprobsResultTopCandidates>
-        ? TopCandidates {
-            get; set;
-          }
+        ? TopCandidates
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a LogprobsResult object.
@@ -52,10 +55,14 @@ namespace Google.GenAI.Types {
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized LogprobsResult object, or null if deserialization fails.</returns>
     public static LogprobsResult
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<LogprobsResult>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

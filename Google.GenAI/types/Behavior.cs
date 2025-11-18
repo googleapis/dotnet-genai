@@ -18,12 +18,14 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Defines the function behavior. Defaults to `BLOCKING`.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum Behavior {
+  public enum Behavior
+  {
     /// <summary>
     /// This value is unused.
     /// </summary>

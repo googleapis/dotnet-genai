@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Configures automatic detection of activity.
   /// </summary>
 
-  public record AutomaticActivityDetection {
+  public record AutomaticActivityDetection
+  {
     /// <summary>
     /// If enabled, detected voice and text input count as activity. If disabled, the client must
     /// send activity signals.
     /// </summary>
     [JsonPropertyName("disabled")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public bool ? Disabled { get; set; }
+    public bool? Disabled { get; set; }
 
     /// <summary>
     /// Determines how likely speech is to be detected.
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("startOfSpeechSensitivity")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public StartSensitivity
-        ? StartOfSpeechSensitivity {
-            get; set;
-          }
+        ? StartOfSpeechSensitivity
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Determines how likely detected speech is ended.
@@ -51,9 +54,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("endOfSpeechSensitivity")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public EndSensitivity
-        ? EndOfSpeechSensitivity {
-            get; set;
-          }
+        ? EndOfSpeechSensitivity
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The required duration of detected speech before start-of-speech is committed. The lower this
@@ -63,9 +67,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("prefixPaddingMs")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? PrefixPaddingMs {
-            get; set;
-          }
+        ? PrefixPaddingMs
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The required duration of detected non-speech (e.g. silence) before end-of-speech is
@@ -75,9 +80,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("silenceDurationMs")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? SilenceDurationMs {
-            get; set;
-          }
+        ? SilenceDurationMs
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a AutomaticActivityDetection object.
@@ -87,10 +93,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized AutomaticActivityDetection object, or null if deserialization
     /// fails.</returns>
     public static AutomaticActivityDetection
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<AutomaticActivityDetection>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

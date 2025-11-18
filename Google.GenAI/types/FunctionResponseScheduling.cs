@@ -18,12 +18,14 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Specifies how the response should be scheduled in the conversation.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum FunctionResponseScheduling {
+  public enum FunctionResponseScheduling
+  {
     /// <summary>
     /// This value is unused.
     /// </summary>

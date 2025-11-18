@@ -18,12 +18,14 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Enum representing the editing mode.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum EditMode {
+  public enum EditMode
+  {
     /// <summary>
     ///
     /// </summary>

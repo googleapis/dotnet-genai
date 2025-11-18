@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Used to override the default configuration.
   /// </summary>
 
-  public record DownloadFileConfig {
+  public record DownloadFileConfig
+  {
     /// <summary>
     /// Used to override HTTP request options.
     /// </summary>
     [JsonPropertyName("httpOptions")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public HttpOptions ? HttpOptions { get; set; }
+    public HttpOptions? HttpOptions { get; set; }
 
     /// <summary>
     /// Deserializes a JSON string to a DownloadFileConfig object.
@@ -42,10 +44,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized DownloadFileConfig object, or null if deserialization
     /// fails.</returns>
     public static DownloadFileConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<DownloadFileConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

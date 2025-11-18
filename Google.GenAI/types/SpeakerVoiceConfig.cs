@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Configuration for a single speaker in a multi speaker setup.
   /// </summary>
 
-  public record SpeakerVoiceConfig {
+  public record SpeakerVoiceConfig
+  {
     /// <summary>
     /// The name of the speaker. This should be the same as the speaker name used in the prompt.
     /// </summary>
     [JsonPropertyName("speaker")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? Speaker { get; set; }
+    public string? Speaker { get; set; }
 
     /// <summary>
     /// The configuration for the voice of this speaker.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("voiceConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public VoiceConfig
-        ? VoiceConfig {
-            get; set;
-          }
+        ? VoiceConfig
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a SpeakerVoiceConfig object.
@@ -52,10 +55,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized SpeakerVoiceConfig object, or null if deserialization
     /// fails.</returns>
     public static SpeakerVoiceConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<SpeakerVoiceConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

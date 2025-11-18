@@ -21,12 +21,14 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Long-running operation for uploading a file to a FileSearchStore.
   /// </summary>
 
-  public record UploadToFileSearchStoreOperation {
+  public record UploadToFileSearchStoreOperation
+  {
     /// <summary>
     /// The server-assigned name, which is only unique within the same service that originally
     /// returns it. If you use the default HTTP mapping, the `name` should be a resource name ending
@@ -34,7 +36,7 @@ namespace Google.GenAI.Types {
     /// </summary>
     [JsonPropertyName("name")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? Name { get; set; }
+    public string? Name { get; set; }
 
     /// <summary>
     /// Service-specific metadata associated with the operation. It typically contains progress
@@ -45,9 +47,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("metadata")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Dictionary<string, object>
-        ? Metadata {
-            get; set;
-          }
+        ? Metadata
+    {
+      get; set;
+    }
 
     /// <summary>
     /// If the value is `false`, it means the operation is still in progress. If `true`, the
@@ -56,9 +59,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("done")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
-        ? Done {
-            get; set;
-          }
+        ? Done
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The error result of the operation in case of failure or cancellation.
@@ -66,9 +70,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("error")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Dictionary<string, object>
-        ? Error {
-            get; set;
-          }
+        ? Error
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The result of the UploadToFileSearchStore operation, available when the operation is done.
@@ -76,9 +81,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("response")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public UploadToFileSearchStoreResponse
-        ? Response {
-            get; set;
-          }
+        ? Response
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a UploadToFileSearchStoreOperation object.
@@ -88,10 +94,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized UploadToFileSearchStoreOperation object, or null if
     /// deserialization fails.</returns>
     public static UploadToFileSearchStoreOperation
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<UploadToFileSearchStoreOperation>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

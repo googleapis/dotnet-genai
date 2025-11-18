@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Represents token counting info for a single modality.
   /// </summary>
 
-  public record ModalityTokenCount {
+  public record ModalityTokenCount
+  {
     /// <summary>
     /// The modality associated with this token count.
     /// </summary>
     [JsonPropertyName("modality")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public MediaModality ? Modality { get; set; }
+    public MediaModality? Modality { get; set; }
 
     /// <summary>
     /// Number of tokens.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("tokenCount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? TokenCount {
-            get; set;
-          }
+        ? TokenCount
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a ModalityTokenCount object.
@@ -52,10 +55,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized ModalityTokenCount object, or null if deserialization
     /// fails.</returns>
     public static ModalityTokenCount
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<ModalityTokenCount>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

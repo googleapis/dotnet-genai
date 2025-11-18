@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Parameters for sending client content to the live API.
   /// </summary>
 
-  public record LiveSendClientContentParameters {
+  public record LiveSendClientContentParameters
+  {
     /// <summary>
     /// Client content to send to the session.
     /// </summary>
     [JsonPropertyName("turns")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<Content> ? Turns { get; set; }
+    public List<Content>? Turns { get; set; }
 
     /// <summary>
     /// If true, indicates that the server content generation should start with the currently
@@ -42,9 +44,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("turnComplete")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
-        ? TurnComplete {
-            get; set;
-          }
+        ? TurnComplete
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a LiveSendClientContentParameters object.
@@ -54,10 +57,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized LiveSendClientContentParameters object, or null if deserialization
     /// fails.</returns>
     public static LiveSendClientContentParameters
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<LiveSendClientContentParameters>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

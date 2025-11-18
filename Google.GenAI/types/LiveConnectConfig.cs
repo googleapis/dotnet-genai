@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Session config for the API connection.
   /// </summary>
 
-  public record LiveConnectConfig {
+  public record LiveConnectConfig
+  {
     /// <summary>
     /// Used to override HTTP request options.
     /// </summary>
     [JsonPropertyName("httpOptions")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public HttpOptions ? HttpOptions { get; set; }
+    public HttpOptions? HttpOptions { get; set; }
 
     /// <summary>
     /// The generation configuration for the session.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("generationConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public GenerationConfig
-        ? GenerationConfig {
-            get; set;
-          }
+        ? GenerationConfig
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The requested modalities of the response. Represents the set of modalities that the model
@@ -51,9 +54,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("responseModalities")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<Modality>
-        ? ResponseModalities {
-            get; set;
-          }
+        ? ResponseModalities
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Value that controls the degree of randomness in token selection. Lower temperatures are good
@@ -63,9 +67,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("temperature")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
-        ? Temperature {
-            get; set;
-          }
+        ? Temperature
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Tokens are selected from the most to least probable until the sum of their probabilities
@@ -75,9 +80,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("topP")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
-        ? TopP {
-            get; set;
-          }
+        ? TopP
+    {
+      get; set;
+    }
 
     /// <summary>
     /// For each token selection step, the ``top_k`` tokens with the highest probabilities are
@@ -88,9 +94,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("topK")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
-        ? TopK {
-            get; set;
-          }
+        ? TopK
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Maximum number of tokens that can be generated in the response.
@@ -98,9 +105,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("maxOutputTokens")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? MaxOutputTokens {
-            get; set;
-          }
+        ? MaxOutputTokens
+    {
+      get; set;
+    }
 
     /// <summary>
     /// If specified, the media resolution specified will be used.
@@ -108,9 +116,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("mediaResolution")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public MediaResolution
-        ? MediaResolution {
-            get; set;
-          }
+        ? MediaResolution
+    {
+      get; set;
+    }
 
     /// <summary>
     /// When ``seed`` is fixed to a specific number, the model makes a best effort to provide the
@@ -119,9 +128,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("seed")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? Seed {
-            get; set;
-          }
+        ? Seed
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The speech generation configuration.
@@ -129,9 +139,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("speechConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public SpeechConfig
-        ? SpeechConfig {
-            get; set;
-          }
+        ? SpeechConfig
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Config for thinking features. An error will be returned if this field is set for models that
@@ -140,9 +151,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("thinkingConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public ThinkingConfig
-        ? ThinkingConfig {
-            get; set;
-          }
+        ? ThinkingConfig
+    {
+      get; set;
+    }
 
     /// <summary>
     /// If enabled, the model will detect emotions and adapt its responses accordingly.
@@ -150,9 +162,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("enableAffectiveDialog")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
-        ? EnableAffectiveDialog {
-            get; set;
-          }
+        ? EnableAffectiveDialog
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The user provided system instructions for the model. Note: only text should be used in parts
@@ -161,9 +174,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("systemInstruction")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Content
-        ? SystemInstruction {
-            get; set;
-          }
+        ? SystemInstruction
+    {
+      get; set;
+    }
 
     /// <summary>
     /// A list of `Tools` the model may use to generate the next response.  A `Tool` is a piece of
@@ -173,9 +187,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("tools")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<Tool>
-        ? Tools {
-            get; set;
-          }
+        ? Tools
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Configures session resumption mechanism.  If included the server will send
@@ -184,9 +199,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("sessionResumption")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public SessionResumptionConfig
-        ? SessionResumption {
-            get; set;
-          }
+        ? SessionResumption
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The transcription of the input aligns with the input audio language.
@@ -194,9 +210,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("inputAudioTranscription")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public AudioTranscriptionConfig
-        ? InputAudioTranscription {
-            get; set;
-          }
+        ? InputAudioTranscription
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The transcription of the output aligns with the language code specified for the output
@@ -205,9 +222,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("outputAudioTranscription")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public AudioTranscriptionConfig
-        ? OutputAudioTranscription {
-            get; set;
-          }
+        ? OutputAudioTranscription
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Configures the realtime input behavior in BidiGenerateContent.
@@ -215,9 +233,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("realtimeInputConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public RealtimeInputConfig
-        ? RealtimeInputConfig {
-            get; set;
-          }
+        ? RealtimeInputConfig
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Configures context window compression mechanism.  If included, server will compress context
@@ -226,9 +245,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("contextWindowCompression")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public ContextWindowCompressionConfig
-        ? ContextWindowCompression {
-            get; set;
-          }
+        ? ContextWindowCompression
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Configures the proactivity of the model. This allows the model to respond proactively to the
@@ -237,9 +257,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("proactivity")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public ProactivityConfig
-        ? Proactivity {
-            get; set;
-          }
+        ? Proactivity
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a LiveConnectConfig object.
@@ -249,10 +270,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized LiveConnectConfig object, or null if deserialization
     /// fails.</returns>
     public static LiveConnectConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<LiveConnectConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

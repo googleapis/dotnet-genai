@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Candidate for the logprobs token and score.
   /// </summary>
 
-  public record LogprobsResultCandidate {
+  public record LogprobsResultCandidate
+  {
     /// <summary>
     /// The candidate's log probability.
     /// </summary>
     [JsonPropertyName("logProbability")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public double ? LogProbability { get; set; }
+    public double? LogProbability { get; set; }
 
     /// <summary>
     /// The candidate's token string value.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("token")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Token {
-            get; set;
-          }
+        ? Token
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The candidate's token id value.
@@ -50,9 +53,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("tokenId")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? TokenId {
-            get; set;
-          }
+        ? TokenId
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a LogprobsResultCandidate object.
@@ -62,10 +66,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized LogprobsResultCandidate object, or null if deserialization
     /// fails.</returns>
     public static LogprobsResultCandidate
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<LogprobsResultCandidate>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

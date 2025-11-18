@@ -21,13 +21,15 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// The search parameters to use for SIMPLE_SEARCH spec. This data type is not supported in Gemini
   /// API.
   /// </summary>
 
-  public record ExternalApiSimpleSearchParams {
+  public record ExternalApiSimpleSearchParams
+  {
     /// <summary>
     /// Deserializes a JSON string to a ExternalApiSimpleSearchParams object.
     /// </summary>
@@ -36,10 +38,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized ExternalApiSimpleSearchParams object, or null if deserialization
     /// fails.</returns>
     public static ExternalApiSimpleSearchParams
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<ExternalApiSimpleSearchParams>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

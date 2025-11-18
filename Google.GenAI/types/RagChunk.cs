@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// A RagChunk includes the content of a chunk of a RagFile, and associated metadata. This data
   /// type is not supported in Gemini API.
   /// </summary>
 
-  public record RagChunk {
+  public record RagChunk
+  {
     /// <summary>
     /// If populated, represents where the chunk starts and ends in the document.
     /// </summary>
     [JsonPropertyName("pageSpan")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public RagChunkPageSpan ? PageSpan { get; set; }
+    public RagChunkPageSpan? PageSpan { get; set; }
 
     /// <summary>
     /// The content of the chunk.
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("text")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Text {
-            get; set;
-          }
+        ? Text
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a RagChunk object.
@@ -51,10 +54,14 @@ namespace Google.GenAI.Types {
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized RagChunk object, or null if deserialization fails.</returns>
-    public static RagChunk ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+    public static RagChunk? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<RagChunk>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

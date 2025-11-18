@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Content blob.
   /// </summary>
 
-  public record Blob {
+  public record Blob
+  {
     /// <summary>
     /// Raw bytes.
     /// </summary>
     [JsonPropertyName("data")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public byte[] ? Data { get; set; }
+    public byte[]? Data { get; set; }
 
     /// <summary>
     /// Optional. Display name of the blob. Used to provide a label or filename to distinguish
@@ -43,9 +45,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("displayName")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? DisplayName {
-            get; set;
-          }
+        ? DisplayName
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The IANA standard MIME type of the source data.
@@ -53,9 +56,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("mimeType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? MimeType {
-            get; set;
-          }
+        ? MimeType
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a Blob object.
@@ -63,10 +67,14 @@ namespace Google.GenAI.Types {
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized Blob object, or null if deserialization fails.</returns>
-    public static Blob ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+    public static Blob? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<Blob>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

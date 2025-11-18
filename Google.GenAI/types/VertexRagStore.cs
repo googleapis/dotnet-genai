@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Retrieve from Vertex RAG Store for grounding. This data type is not supported in Gemini API.
   /// </summary>
 
-  public record VertexRagStore {
+  public record VertexRagStore
+  {
     /// <summary>
     /// Optional. Deprecated. Please use rag_resources instead.
     /// </summary>
     [JsonPropertyName("ragCorpora")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<string> ? RagCorpora { get; set; }
+    public List<string>? RagCorpora { get; set; }
 
     /// <summary>
     /// Optional. The representation of the rag source. It can be used to specify corpus only or
@@ -42,9 +44,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("ragResources")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<VertexRagStoreRagResource>
-        ? RagResources {
-            get; set;
-          }
+        ? RagResources
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. The retrieval config for the Rag query.
@@ -52,9 +55,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("ragRetrievalConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public RagRetrievalConfig
-        ? RagRetrievalConfig {
-            get; set;
-          }
+        ? RagRetrievalConfig
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Number of top k results to return from the selected corpora.
@@ -62,9 +66,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("similarityTopK")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? SimilarityTopK {
-            get; set;
-          }
+        ? SimilarityTopK
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Currently only supported for Gemini Multimodal Live API. In Gemini Multimodal Live
@@ -75,9 +80,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("storeContext")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
-        ? StoreContext {
-            get; set;
-          }
+        ? StoreContext
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Only return results with vector distance smaller than the threshold.
@@ -85,9 +91,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("vectorDistanceThreshold")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
-        ? VectorDistanceThreshold {
-            get; set;
-          }
+        ? VectorDistanceThreshold
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a VertexRagStore object.
@@ -96,10 +103,14 @@ namespace Google.GenAI.Types {
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized VertexRagStore object, or null if deserialization fails.</returns>
     public static VertexRagStore
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<VertexRagStore>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

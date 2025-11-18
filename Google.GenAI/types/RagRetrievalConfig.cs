@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Specifies the context retrieval config. This data type is not supported in Gemini API.
   /// </summary>
 
-  public record RagRetrievalConfig {
+  public record RagRetrievalConfig
+  {
     /// <summary>
     /// Optional. Config for filters.
     /// </summary>
     [JsonPropertyName("filter")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public RagRetrievalConfigFilter ? Filter { get; set; }
+    public RagRetrievalConfigFilter? Filter { get; set; }
 
     /// <summary>
     /// Optional. Config for Hybrid Search.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("hybridSearch")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public RagRetrievalConfigHybridSearch
-        ? HybridSearch {
-            get; set;
-          }
+        ? HybridSearch
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Config for ranking and reranking.
@@ -50,9 +53,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("ranking")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public RagRetrievalConfigRanking
-        ? Ranking {
-            get; set;
-          }
+        ? Ranking
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. The number of contexts to retrieve.
@@ -60,9 +64,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("topK")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? TopK {
-            get; set;
-          }
+        ? TopK
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a RagRetrievalConfig object.
@@ -72,10 +77,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized RagRetrievalConfig object, or null if deserialization
     /// fails.</returns>
     public static RagRetrievalConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<RagRetrievalConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

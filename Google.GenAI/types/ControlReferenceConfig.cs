@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Configuration for a Control reference image.
   /// </summary>
 
-  public record ControlReferenceConfig {
+  public record ControlReferenceConfig
+  {
     /// <summary>
     /// The type of control reference image to use.
     /// </summary>
     [JsonPropertyName("controlType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public ControlReferenceType ? ControlType { get; set; }
+    public ControlReferenceType? ControlType { get; set; }
 
     /// <summary>
     /// Defaults to False. When set to True, the control image will be computed by the model based
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("enableControlImageComputation")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
-        ? EnableControlImageComputation {
-            get; set;
-          }
+        ? EnableControlImageComputation
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a ControlReferenceConfig object.
@@ -53,10 +56,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized ControlReferenceConfig object, or null if deserialization
     /// fails.</returns>
     public static ControlReferenceConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<ControlReferenceConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

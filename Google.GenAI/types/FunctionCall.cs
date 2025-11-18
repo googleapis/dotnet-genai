@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// A function call.
   /// </summary>
 
-  public record FunctionCall {
+  public record FunctionCall
+  {
     /// <summary>
     /// The unique id of the function call. If populated, the client to execute the `function_call`
     /// and return the response with the matching `id`.
     /// </summary>
     [JsonPropertyName("id")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? Id { get; set; }
+    public string? Id { get; set; }
 
     /// <summary>
     /// Optional. The function parameters and values in JSON object format. See
@@ -42,9 +44,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("args")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Dictionary<string, object>
-        ? Args {
-            get; set;
-          }
+        ? Args
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. The name of the function to call. Matches [FunctionDeclaration.name].
@@ -52,9 +55,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("name")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Name {
-            get; set;
-          }
+        ? Name
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. The partial argument value of the function call. If provided, represents the
@@ -63,9 +67,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("partialArgs")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<PartialArg>
-        ? PartialArgs {
-            get; set;
-          }
+        ? PartialArgs
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Whether this is the last part of the FunctionCall. If true, another partial
@@ -75,9 +80,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("willContinue")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
-        ? WillContinue {
-            get; set;
-          }
+        ? WillContinue
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a FunctionCall object.
@@ -86,10 +92,14 @@ namespace Google.GenAI.Types {
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized FunctionCall object, or null if deserialization fails.</returns>
     public static FunctionCall
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<FunctionCall>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

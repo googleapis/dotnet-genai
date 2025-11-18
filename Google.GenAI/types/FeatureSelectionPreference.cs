@@ -18,17 +18,20 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Options for feature selection preference.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum FeatureSelectionPreference {
+  public enum FeatureSelectionPreference
+  {
     /// <summary>
     ///
     /// </summary>
     [JsonPropertyName(
-        "FEATURE_SELECTION_PREFERENCE_UNSPECIFIED")] FEATURE_SELECTION_PREFERENCE_UNSPECIFIED,
+        "FEATURE_SELECTION_PREFERENCE_UNSPECIFIED")]
+    FEATURE_SELECTION_PREFERENCE_UNSPECIFIED,
 
     /// <summary>
     ///

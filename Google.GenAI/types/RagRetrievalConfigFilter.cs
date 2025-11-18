@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Config for filters. This data type is not supported in Gemini API.
   /// </summary>
 
-  public record RagRetrievalConfigFilter {
+  public record RagRetrievalConfigFilter
+  {
     /// <summary>
     /// Optional. String for metadata filtering.
     /// </summary>
     [JsonPropertyName("metadataFilter")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? MetadataFilter { get; set; }
+    public string? MetadataFilter { get; set; }
 
     /// <summary>
     /// Optional. Only returns contexts with vector distance smaller than the threshold.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("vectorDistanceThreshold")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
-        ? VectorDistanceThreshold {
-            get; set;
-          }
+        ? VectorDistanceThreshold
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Only returns contexts with vector similarity larger than the threshold.
@@ -50,9 +53,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("vectorSimilarityThreshold")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
-        ? VectorSimilarityThreshold {
-            get; set;
-          }
+        ? VectorSimilarityThreshold
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a RagRetrievalConfigFilter object.
@@ -62,10 +66,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized RagRetrievalConfigFilter object, or null if deserialization
     /// fails.</returns>
     public static RagRetrievalConfigFilter
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<RagRetrievalConfigFilter>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

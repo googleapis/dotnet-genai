@@ -21,7 +21,8 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// A mask reference image.  This encapsulates either a mask image provided by the user and
   /// configs for the user provided mask, or only config parameters for the model to generate a
@@ -29,13 +30,14 @@ namespace Google.GenAI.Types {
   /// If the user provides a mask image, the mask must be in the same dimensions as the raw image.
   /// </summary>
 
-  public record MaskReferenceImage : IReferenceImageInternal {
+  public record MaskReferenceImage : IReferenceImageInternal
+  {
     /// <summary>
     /// The reference image for the editing operation.
     /// </summary>
     [JsonPropertyName("referenceImage")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public Image ? ReferenceImage { get; set; }
+    public Image? ReferenceImage { get; set; }
 
     /// <summary>
     /// The id of the reference image.
@@ -43,9 +45,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("referenceId")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? ReferenceId {
-            get; set;
-          }
+        ? ReferenceId
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The type of the reference image. Only set by the SDK.
@@ -53,9 +56,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("referenceType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? ReferenceType {
-            get; set;
-          }
+        ? ReferenceType
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Configuration for the mask reference image.
@@ -63,9 +67,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("config")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public MaskReferenceConfig
-        ? Config {
-            get; set;
-          }
+        ? Config
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a MaskReferenceImage object.
@@ -75,19 +80,28 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized MaskReferenceImage object, or null if deserialization
     /// fails.</returns>
     public static MaskReferenceImage
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<MaskReferenceImage>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }
     }
 
-    ReferenceImageAPI IReferenceImageInternal.ToReferenceImageAPI() {
-      return new ReferenceImageAPI { ReferenceImage = this.ReferenceImage,
-                                     ReferenceId = this.ReferenceId, MaskImageConfig = this.Config,
-                                     ReferenceType = "REFERENCE_TYPE_MASK" };
+    ReferenceImageAPI IReferenceImageInternal.ToReferenceImageAPI()
+    {
+      return new ReferenceImageAPI
+      {
+        ReferenceImage = this.ReferenceImage,
+        ReferenceId = this.ReferenceId,
+        MaskImageConfig = this.Config,
+        ReferenceType = "REFERENCE_TYPE_MASK"
+      };
     }
   }
 }

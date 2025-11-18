@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// The embedding generated from an input content.
   /// </summary>
 
-  public record ContentEmbedding {
+  public record ContentEmbedding
+  {
     /// <summary>
     /// A list of floats representing an embedding.
     /// </summary>
     [JsonPropertyName("values")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<double> ? Values { get; set; }
+    public List<double>? Values { get; set; }
 
     /// <summary>
     /// Vertex API only. Statistics of the input text associated with this embedding.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("statistics")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public ContentEmbeddingStatistics
-        ? Statistics {
-            get; set;
-          }
+        ? Statistics
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a ContentEmbedding object.
@@ -52,10 +55,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized ContentEmbedding object, or null if deserialization
     /// fails.</returns>
     public static ContentEmbedding
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<ContentEmbedding>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

@@ -21,20 +21,22 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// When manual routing is set, the specified model will be used directly. This data type is not
   /// supported in Gemini API.
   /// </summary>
 
-  public record GenerationConfigRoutingConfigManualRoutingMode {
+  public record GenerationConfigRoutingConfigManualRoutingMode
+  {
     /// <summary>
     /// The model name to use. Only the public LLM models are accepted. See Supported models
     /// (https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/inference#supported-models).
     /// </summary>
     [JsonPropertyName("modelName")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? ModelName { get; set; }
+    public string? ModelName { get; set; }
 
     /// <summary>
     /// Deserializes a JSON string to a GenerationConfigRoutingConfigManualRoutingMode object.
@@ -44,11 +46,15 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized GenerationConfigRoutingConfigManualRoutingMode object, or null if
     /// deserialization fails.</returns>
     public static GenerationConfigRoutingConfigManualRoutingMode
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<GenerationConfigRoutingConfigManualRoutingMode>(
             jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

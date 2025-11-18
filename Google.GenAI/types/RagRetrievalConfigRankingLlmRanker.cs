@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Config for LlmRanker. This data type is not supported in Gemini API.
   /// </summary>
 
-  public record RagRetrievalConfigRankingLlmRanker {
+  public record RagRetrievalConfigRankingLlmRanker
+  {
     /// <summary>
     /// Optional. The model name used for ranking. See Supported models
     /// (https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/inference#supported-models).
     /// </summary>
     [JsonPropertyName("modelName")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? ModelName { get; set; }
+    public string? ModelName { get; set; }
 
     /// <summary>
     /// Deserializes a JSON string to a RagRetrievalConfigRankingLlmRanker object.
@@ -43,10 +45,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized RagRetrievalConfigRankingLlmRanker object, or null if
     /// deserialization fails.</returns>
     public static RagRetrievalConfigRankingLlmRanker
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<RagRetrievalConfigRankingLlmRanker>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

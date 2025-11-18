@@ -21,7 +21,8 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Notification for the client that a previously issued `ToolCallMessage` with the specified
   /// `id`s should have been not executed and should be cancelled.  If there were side-effects to
@@ -29,13 +30,14 @@ namespace Google.GenAI.Types {
   /// cases where the clients interrupt server turns.
   /// </summary>
 
-  public record LiveServerToolCallCancellation {
+  public record LiveServerToolCallCancellation
+  {
     /// <summary>
     /// The ids of the tool calls to be cancelled.
     /// </summary>
     [JsonPropertyName("ids")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<string> ? Ids { get; set; }
+    public List<string>? Ids { get; set; }
 
     /// <summary>
     /// Deserializes a JSON string to a LiveServerToolCallCancellation object.
@@ -45,10 +47,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized LiveServerToolCallCancellation object, or null if deserialization
     /// fails.</returns>
     public static LiveServerToolCallCancellation
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<LiveServerToolCallCancellation>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

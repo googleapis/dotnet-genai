@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Result of executing the [ExecutableCode]. Only generated when using the [CodeExecution] tool,
   /// and always follows a `part` containing the [ExecutableCode].
   /// </summary>
 
-  public record CodeExecutionResult {
+  public record CodeExecutionResult
+  {
     /// <summary>
     /// Outcome of the code execution.
     /// </summary>
     [JsonPropertyName("outcome")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public Outcome ? Outcome { get; set; }
+    public Outcome? Outcome { get; set; }
 
     /// <summary>
     /// Optional. Contains stdout when code execution is successful, stderr or other description
@@ -42,9 +44,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("output")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Output {
-            get; set;
-          }
+        ? Output
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a CodeExecutionResult object.
@@ -54,10 +57,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized CodeExecutionResult object, or null if deserialization
     /// fails.</returns>
     public static CodeExecutionResult
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<CodeExecutionResult>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Parameters for the request to edit an image.
   /// </summary>
 
-  internal record EditImageParameters {
+  internal record EditImageParameters
+  {
     /// <summary>
     /// The model to use.
     /// </summary>
     [JsonPropertyName("model")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? Model { get; set; }
+    public string? Model { get; set; }
 
     /// <summary>
     /// A text description of the edit to apply to the image.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("prompt")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Prompt {
-            get; set;
-          }
+        ? Prompt
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The reference images for editing.
@@ -50,9 +53,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("referenceImages")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<ReferenceImageAPI>
-        ? ReferenceImages {
-            get; set;
-          }
+        ? ReferenceImages
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Configuration for editing.
@@ -60,9 +64,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("config")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public EditImageConfig
-        ? Config {
-            get; set;
-          }
+        ? Config
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a EditImageParameters object.
@@ -72,10 +77,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized EditImageParameters object, or null if deserialization
     /// fails.</returns>
     public static EditImageParameters
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<EditImageParameters>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

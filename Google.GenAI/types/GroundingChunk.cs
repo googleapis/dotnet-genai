@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Grounding chunk.
   /// </summary>
 
-  public record GroundingChunk {
+  public record GroundingChunk
+  {
     /// <summary>
     /// Grounding chunk from Google Maps. This field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("maps")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public GroundingChunkMaps ? Maps { get; set; }
+    public GroundingChunkMaps? Maps { get; set; }
 
     /// <summary>
     /// Grounding chunk from context retrieved by the retrieval tools. This field is not supported
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("retrievedContext")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public GroundingChunkRetrievedContext
-        ? RetrievedContext {
-            get; set;
-          }
+        ? RetrievedContext
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Grounding chunk from the web.
@@ -51,9 +54,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("web")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public GroundingChunkWeb
-        ? Web {
-            get; set;
-          }
+        ? Web
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a GroundingChunk object.
@@ -62,10 +66,14 @@ namespace Google.GenAI.Types {
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized GroundingChunk object, or null if deserialization fails.</returns>
     public static GroundingChunk
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<GroundingChunk>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

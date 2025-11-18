@@ -16,12 +16,14 @@
 
 using Google.Apis.Auth.OAuth2;
 
-namespace Google.GenAI {
+namespace Google.GenAI
+{
   /// <summary>
   /// Client for making synchronous requests.
   /// Using this client to make a request to Gemini Developer API or Vertex AI API.
   /// </summary>
-  public sealed class Client : IDisposable, IAsyncDisposable {
+  public sealed class Client : IDisposable, IAsyncDisposable
+  {
     private static string? geminiBaseUrl = null;
     private static string? vertexBaseUrl = null;
     internal readonly ApiClient _apiClient;
@@ -49,11 +51,15 @@ namespace Google.GenAI {
     /// project/location and API key are set together.</exception>
     public Client(bool? vertexAI = null, string? apiKey = null, ICredential? credential = null,
                   string? project = null, string? location = null,
-                  Types.HttpOptions? httpOptions = null) {
+                  Types.HttpOptions? httpOptions = null)
+    {
       bool resolvedVertexAI;
-      if (vertexAI.HasValue) {
+      if (vertexAI.HasValue)
+      {
         resolvedVertexAI = vertexAI.Value;
-      } else {
+      }
+      else
+      {
         string? vertexAIEnv = Environment.GetEnvironmentVariable("GOOGLE_GENAI_USE_VERTEXAI");
         resolvedVertexAI = vertexAIEnv != null && vertexAIEnv.ToLower() == "true";
       }
@@ -63,7 +69,8 @@ namespace Google.GenAI {
       project = project ?? projectEnv;
       location = location ?? locationEnv;
       apiKey = apiKey ?? apiKeyEnv;
-      if (project != null || location != null) {
+      if (project != null || location != null)
+      {
         if (apiKey != null && projectEnv == null && apiKeyEnv == null)
           throw new ArgumentException(
               "Project/location and API key are mutually exclusive in the client initializer.");
@@ -86,7 +93,8 @@ namespace Google.GenAI {
       Models = new Models(_apiClient);
     }
 
-    static string? inferBaseUrl(bool vertexAI, Types.HttpOptions? httpOptions) {
+    static string? inferBaseUrl(bool vertexAI, Types.HttpOptions? httpOptions)
+    {
       if (httpOptions?.BaseUrl != null)
         return httpOptions.BaseUrl;
       if (vertexAI)
@@ -95,7 +103,8 @@ namespace Google.GenAI {
         return geminiBaseUrl ?? Environment.GetEnvironmentVariable("GOOGLE_GEMINI_BASE_URL");
     }
 
-    public static void setDefaultBaseUrl(string? vertexBaseUrl, string? geminiBaseUrl) {
+    public static void setDefaultBaseUrl(string? vertexBaseUrl, string? geminiBaseUrl)
+    {
       Client.vertexBaseUrl = vertexBaseUrl;
       Client.geminiBaseUrl = geminiBaseUrl;
     }
@@ -105,21 +114,21 @@ namespace Google.GenAI {
     /// </summary>
     public void Dispose()
     {
-        Dispose(true);
-        GC.SuppressFinalize(this);
+      Dispose(true);
+      GC.SuppressFinalize(this);
     }
 
     private void Dispose(bool disposing)
     {
-        if (Interlocked.CompareExchange(ref _disposed, 1, 0) != 0)
-        {
-            return;
-        }
+      if (Interlocked.CompareExchange(ref _disposed, 1, 0) != 0)
+      {
+        return;
+      }
 
-        if (disposing)
-        {
-            _apiClient.Dispose();
-        }
+      if (disposing)
+      {
+        _apiClient.Dispose();
+      }
     }
 
     /// <summary>
@@ -128,12 +137,12 @@ namespace Google.GenAI {
     /// <returns>A <see cref="ValueTask"/> that represents the asynchronous dispose operation.</returns>
     public async ValueTask DisposeAsync()
     {
-        if (Interlocked.CompareExchange(ref _disposed, 1, 0) != 0)
-        {
-            return;
-        }
-        await _apiClient.DisposeAsync();
-        GC.SuppressFinalize(this);
+      if (Interlocked.CompareExchange(ref _disposed, 1, 0) != 0)
+      {
+        return;
+      }
+      await _apiClient.DisposeAsync();
+      GC.SuppressFinalize(this);
     }
   }
 }

@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Request for the client to execute the `function_calls` and return the responses with the
   /// matching `id`s.
   /// </summary>
 
-  public record LiveServerToolCall {
+  public record LiveServerToolCall
+  {
     /// <summary>
     /// The function call to be executed.
     /// </summary>
     [JsonPropertyName("functionCalls")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<FunctionCall> ? FunctionCalls { get; set; }
+    public List<FunctionCall>? FunctionCalls { get; set; }
 
     /// <summary>
     /// Deserializes a JSON string to a LiveServerToolCall object.
@@ -43,10 +45,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized LiveServerToolCall object, or null if deserialization
     /// fails.</returns>
     public static LiveServerToolCall
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<LiveServerToolCall>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

@@ -21,7 +21,8 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Represents a time interval, encoded as a Timestamp start (inclusive) and a Timestamp end
   /// (exclusive). The start must be less than or equal to the end. When the start equals the end,
@@ -29,14 +30,15 @@ namespace Google.GenAI.Types {
   /// matches any time.
   /// </summary>
 
-  public record Interval {
+  public record Interval
+  {
     /// <summary>
     /// Optional. Exclusive end of the interval. If specified, a Timestamp matching this interval
     /// will have to be before the end.
     /// </summary>
     [JsonPropertyName("endTime")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public DateTime ? EndTime { get; set; }
+    public DateTime? EndTime { get; set; }
 
     /// <summary>
     /// Optional. Inclusive start of the interval. If specified, a Timestamp matching this interval
@@ -45,9 +47,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("startTime")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public DateTime
-        ? StartTime {
-            get; set;
-          }
+        ? StartTime
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a Interval object.
@@ -55,10 +58,14 @@ namespace Google.GenAI.Types {
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized Interval object, or null if deserialization fails.</returns>
-    public static Interval ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+    public static Interval? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<Interval>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

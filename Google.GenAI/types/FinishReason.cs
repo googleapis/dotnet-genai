@@ -18,13 +18,15 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Output only. The reason why the model stopped generating tokens.  If empty, the model has not
   /// stopped generating the tokens.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum FinishReason {
+  public enum FinishReason
+  {
     /// <summary>
     /// The finish reason is unspecified.
     /// </summary>

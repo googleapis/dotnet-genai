@@ -21,7 +21,8 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Represents a whole or partial calendar date, such as a birthday. The time of day and time zone
   /// are either specified elsewhere or are insignificant. The date is relative to the Gregorian
@@ -32,14 +33,15 @@ namespace Google.GenAI.Types {
   /// google.protobuf.Timestamp. This data type is not supported in Gemini API.
   /// </summary>
 
-  public record GoogleTypeDate {
+  public record GoogleTypeDate
+  {
     /// <summary>
     /// Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
     /// year by itself or a year and month where the day isn't significant.
     /// </summary>
     [JsonPropertyName("day")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public int ? Day { get; set; }
+    public int? Day { get; set; }
 
     /// <summary>
     /// Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
@@ -47,9 +49,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("month")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? Month {
-            get; set;
-          }
+        ? Month
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
@@ -57,9 +60,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("year")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? Year {
-            get; set;
-          }
+        ? Year
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a GoogleTypeDate object.
@@ -68,10 +72,14 @@ namespace Google.GenAI.Types {
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized GoogleTypeDate object, or null if deserialization fails.</returns>
     public static GoogleTypeDate
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<GoogleTypeDate>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

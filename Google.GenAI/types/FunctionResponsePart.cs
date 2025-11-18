@@ -21,7 +21,8 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// A datatype containing media that is part of a `FunctionResponse` message.  A
   /// `FunctionResponsePart` consists of data which has an associated datatype. A
@@ -31,13 +32,14 @@ namespace Google.GenAI.Types {
   /// bytes.
   /// </summary>
 
-  public record FunctionResponsePart {
+  public record FunctionResponsePart
+  {
     /// <summary>
     /// Optional. Inline media bytes.
     /// </summary>
     [JsonPropertyName("inlineData")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public FunctionResponseBlob ? InlineData { get; set; }
+    public FunctionResponseBlob? InlineData { get; set; }
 
     /// <summary>
     /// Optional. URI based data.
@@ -45,9 +47,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("fileData")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public FunctionResponseFileData
-        ? FileData {
-            get; set;
-          }
+        ? FileData
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a FunctionResponsePart object.
@@ -57,10 +60,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized FunctionResponsePart object, or null if deserialization
     /// fails.</returns>
     public static FunctionResponsePart
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<FunctionResponsePart>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Chunk from the web.
   /// </summary>
 
-  public record GroundingChunkWeb {
+  public record GroundingChunkWeb
+  {
     /// <summary>
     /// Domain of the (original) URI. This field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("domain")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? Domain { get; set; }
+    public string? Domain { get; set; }
 
     /// <summary>
     /// Title of the chunk.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("title")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Title {
-            get; set;
-          }
+        ? Title
+    {
+      get; set;
+    }
 
     /// <summary>
     /// URI reference of the chunk.
@@ -50,9 +53,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("uri")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Uri {
-            get; set;
-          }
+        ? Uri
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a GroundingChunkWeb object.
@@ -62,10 +66,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized GroundingChunkWeb object, or null if deserialization
     /// fails.</returns>
     public static GroundingChunkWeb
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<GroundingChunkWeb>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

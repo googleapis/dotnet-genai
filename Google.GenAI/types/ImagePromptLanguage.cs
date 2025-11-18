@@ -18,12 +18,14 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Enum that specifies the language of the text in the prompt.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum ImagePromptLanguage {
+  public enum ImagePromptLanguage
+  {
     /// <summary>
     /// Auto-detect the language.
     /// </summary>

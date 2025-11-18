@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Retrieval config.
   /// </summary>
 
-  public record RetrievalConfig {
+  public record RetrievalConfig
+  {
     /// <summary>
     /// Optional. The location of the user.
     /// </summary>
     [JsonPropertyName("latLng")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public LatLng ? LatLng { get; set; }
+    public LatLng? LatLng { get; set; }
 
     /// <summary>
     /// The language code of the user.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("languageCode")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? LanguageCode {
-            get; set;
-          }
+        ? LanguageCode
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a RetrievalConfig object.
@@ -52,10 +55,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized RetrievalConfig object, or null if deserialization
     /// fails.</returns>
     public static RetrievalConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<RetrievalConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

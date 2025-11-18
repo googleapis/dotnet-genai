@@ -18,12 +18,14 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// The tokenization quality used for given media.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum PartMediaResolutionLevel {
+  public enum PartMediaResolutionLevel
+  {
     /// <summary>
     /// Media resolution has not been set.
     /// </summary>

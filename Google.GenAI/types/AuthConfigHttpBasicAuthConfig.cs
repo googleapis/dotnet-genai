@@ -21,12 +21,14 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Config for HTTP Basic Authentication. This data type is not supported in Gemini API.
   /// </summary>
 
-  public record AuthConfigHttpBasicAuthConfig {
+  public record AuthConfigHttpBasicAuthConfig
+  {
     /// <summary>
     /// The name of the SecretManager secret version resource storing the base64 encoded
     /// credentials. Format: `projects/{project}/secrets/{secrete}/versions/{version}` - If
@@ -37,7 +39,7 @@ namespace Google.GenAI.Types {
     /// </summary>
     [JsonPropertyName("credentialSecret")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? CredentialSecret { get; set; }
+    public string? CredentialSecret { get; set; }
 
     /// <summary>
     /// Deserializes a JSON string to a AuthConfigHttpBasicAuthConfig object.
@@ -47,10 +49,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized AuthConfigHttpBasicAuthConfig object, or null if deserialization
     /// fails.</returns>
     public static AuthConfigHttpBasicAuthConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<AuthConfigHttpBasicAuthConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

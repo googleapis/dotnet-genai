@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Safety attributes of a GeneratedImage or the user-provided prompt.
   /// </summary>
 
-  public record SafetyAttributes {
+  public record SafetyAttributes
+  {
     /// <summary>
     /// List of RAI categories.
     /// </summary>
     [JsonPropertyName("categories")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<string> ? Categories { get; set; }
+    public List<string>? Categories { get; set; }
 
     /// <summary>
     /// List of scores of each categories.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("scores")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<double>
-        ? Scores {
-            get; set;
-          }
+        ? Scores
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Internal use only.
@@ -50,9 +53,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("contentType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? ContentType {
-            get; set;
-          }
+        ? ContentType
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a SafetyAttributes object.
@@ -62,10 +66,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized SafetyAttributes object, or null if deserialization
     /// fails.</returns>
     public static SafetyAttributes
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<SafetyAttributes>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

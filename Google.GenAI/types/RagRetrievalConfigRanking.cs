@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Config for ranking and reranking. This data type is not supported in Gemini API.
   /// </summary>
 
-  public record RagRetrievalConfigRanking {
+  public record RagRetrievalConfigRanking
+  {
     /// <summary>
     /// Optional. Config for LlmRanker.
     /// </summary>
     [JsonPropertyName("llmRanker")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public RagRetrievalConfigRankingLlmRanker ? LlmRanker { get; set; }
+    public RagRetrievalConfigRankingLlmRanker? LlmRanker { get; set; }
 
     /// <summary>
     /// Optional. Config for Rank Service.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("rankService")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public RagRetrievalConfigRankingRankService
-        ? RankService {
-            get; set;
-          }
+        ? RankService
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a RagRetrievalConfigRanking object.
@@ -52,10 +55,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized RagRetrievalConfigRanking object, or null if deserialization
     /// fails.</returns>
     public static RagRetrievalConfigRanking
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<RagRetrievalConfigRanking>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

@@ -21,20 +21,22 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// A raw reference image.  A raw reference image represents the base image to edit, provided by
   /// the user. It can optionally be provided in addition to a mask reference image or a style
   /// reference image.
   /// </summary>
 
-  public record RawReferenceImage : IReferenceImageInternal {
+  public record RawReferenceImage : IReferenceImageInternal
+  {
     /// <summary>
     /// The reference image for the editing operation.
     /// </summary>
     [JsonPropertyName("referenceImage")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public Image ? ReferenceImage { get; set; }
+    public Image? ReferenceImage { get; set; }
 
     /// <summary>
     /// The id of the reference image.
@@ -42,9 +44,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("referenceId")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? ReferenceId {
-            get; set;
-          }
+        ? ReferenceId
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The type of the reference image. Only set by the SDK.
@@ -52,9 +55,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("referenceType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? ReferenceType {
-            get; set;
-          }
+        ? ReferenceType
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a RawReferenceImage object.
@@ -64,19 +68,27 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized RawReferenceImage object, or null if deserialization
     /// fails.</returns>
     public static RawReferenceImage
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<RawReferenceImage>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }
     }
 
-    ReferenceImageAPI IReferenceImageInternal.ToReferenceImageAPI() {
-      return new ReferenceImageAPI { ReferenceImage = this.ReferenceImage,
-                                     ReferenceId = this.ReferenceId,
-                                     ReferenceType = "REFERENCE_TYPE_RAW" };
+    ReferenceImageAPI IReferenceImageInternal.ToReferenceImageAPI()
+    {
+      return new ReferenceImageAPI
+      {
+        ReferenceImage = this.ReferenceImage,
+        ReferenceId = this.ReferenceId,
+        ReferenceType = "REFERENCE_TYPE_RAW"
+      };
     }
   }
 }

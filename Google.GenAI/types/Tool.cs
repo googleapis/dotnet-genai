@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Tool details of a tool that the model may use to generate a response.
   /// </summary>
 
-  public record Tool {
+  public record Tool
+  {
     /// <summary>
     /// List of function declarations that the tool supports.
     /// </summary>
     [JsonPropertyName("functionDeclarations")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<FunctionDeclaration> ? FunctionDeclarations { get; set; }
+    public List<FunctionDeclaration>? FunctionDeclarations { get; set; }
 
     /// <summary>
     /// Optional. Retrieval tool type. System will always execute the provided retrieval tool(s) to
@@ -42,9 +44,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("retrieval")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Retrieval
-        ? Retrieval {
-            get; set;
-          }
+        ? Retrieval
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Specialized retrieval tool that is powered by Google Search.
@@ -52,9 +55,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("googleSearchRetrieval")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public GoogleSearchRetrieval
-        ? GoogleSearchRetrieval {
-            get; set;
-          }
+        ? GoogleSearchRetrieval
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Tool to support the model interacting directly with the computer. If enabled, it
@@ -63,9 +67,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("computerUse")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public ComputerUse
-        ? ComputerUse {
-            get; set;
-          }
+        ? ComputerUse
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. CodeExecution tool type. Enables the model to execute code as part of generation.
@@ -73,9 +78,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("codeExecution")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public ToolCodeExecution
-        ? CodeExecution {
-            get; set;
-          }
+        ? CodeExecution
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Tool to support searching public web data, powered by Vertex AI Search and Sec4
@@ -84,9 +90,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("enterpriseWebSearch")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public EnterpriseWebSearch
-        ? EnterpriseWebSearch {
-            get; set;
-          }
+        ? EnterpriseWebSearch
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. GoogleMaps tool type. Tool to support Google Maps in Model.
@@ -94,9 +101,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("googleMaps")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public GoogleMaps
-        ? GoogleMaps {
-            get; set;
-          }
+        ? GoogleMaps
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. GoogleSearch tool type. Tool to support Google Search in Model. Powered by Google.
@@ -104,9 +112,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("googleSearch")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public GoogleSearch
-        ? GoogleSearch {
-            get; set;
-          }
+        ? GoogleSearch
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Tool to support URL context retrieval.
@@ -114,9 +123,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("urlContext")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public UrlContext
-        ? UrlContext {
-            get; set;
-          }
+        ? UrlContext
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a Tool object.
@@ -124,10 +134,14 @@ namespace Google.GenAI.Types {
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized Tool object, or null if deserialization fails.</returns>
-    public static Tool ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+    public static Tool? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<Tool>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

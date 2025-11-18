@@ -21,21 +21,23 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Usage metadata about the content generation request and response. This message provides a
   /// detailed breakdown of token usage and other relevant metrics. This data type is not supported
   /// in Gemini API.
   /// </summary>
 
-  public record GenerateContentResponseUsageMetadata {
+  public record GenerateContentResponseUsageMetadata
+  {
     /// <summary>
     /// Output only. A detailed breakdown of the token count for each modality in the cached
     /// content.
     /// </summary>
     [JsonPropertyName("cacheTokensDetails")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<ModalityTokenCount> ? CacheTokensDetails { get; set; }
+    public List<ModalityTokenCount>? CacheTokensDetails { get; set; }
 
     /// <summary>
     /// Output only. The number of tokens in the cached content that was used for this request.
@@ -43,9 +45,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("cachedContentTokenCount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? CachedContentTokenCount {
-            get; set;
-          }
+        ? CachedContentTokenCount
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The total number of tokens in the generated candidates.
@@ -53,9 +56,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("candidatesTokenCount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? CandidatesTokenCount {
-            get; set;
-          }
+        ? CandidatesTokenCount
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Output only. A detailed breakdown of the token count for each modality in the generated
@@ -64,9 +68,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("candidatesTokensDetails")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<ModalityTokenCount>
-        ? CandidatesTokensDetails {
-            get; set;
-          }
+        ? CandidatesTokensDetails
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The total number of tokens in the prompt. This includes any text, images, or other media
@@ -76,9 +81,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("promptTokenCount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? PromptTokenCount {
-            get; set;
-          }
+        ? PromptTokenCount
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Output only. A detailed breakdown of the token count for each modality in the prompt.
@@ -86,9 +92,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("promptTokensDetails")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<ModalityTokenCount>
-        ? PromptTokensDetails {
-            get; set;
-          }
+        ? PromptTokensDetails
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Output only. The number of tokens that were part of the model's generated "thoughts" output,
@@ -97,9 +104,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("thoughtsTokenCount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? ThoughtsTokenCount {
-            get; set;
-          }
+        ? ThoughtsTokenCount
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Output only. The number of tokens in the results from tool executions, which are provided
@@ -108,9 +116,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("toolUsePromptTokenCount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? ToolUsePromptTokenCount {
-            get; set;
-          }
+        ? ToolUsePromptTokenCount
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Output only. A detailed breakdown by modality of the token counts from the results of tool
@@ -119,9 +128,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("toolUsePromptTokensDetails")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<ModalityTokenCount>
-        ? ToolUsePromptTokensDetails {
-            get; set;
-          }
+        ? ToolUsePromptTokensDetails
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The total number of tokens for the entire request. This is the sum of `prompt_token_count`,
@@ -130,9 +140,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("totalTokenCount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? TotalTokenCount {
-            get; set;
-          }
+        ? TotalTokenCount
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Output only. The traffic type for this request.
@@ -140,9 +151,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("trafficType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public TrafficType
-        ? TrafficType {
-            get; set;
-          }
+        ? TrafficType
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a GenerateContentResponseUsageMetadata object.
@@ -152,11 +164,15 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized GenerateContentResponseUsageMetadata object, or null if
     /// deserialization fails.</returns>
     public static GenerateContentResponseUsageMetadata
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<GenerateContentResponseUsageMetadata>(jsonString,
                                                                                 options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

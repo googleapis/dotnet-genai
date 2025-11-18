@@ -21,12 +21,14 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// URI based data.
   /// </summary>
 
-  public record FileData {
+  public record FileData
+  {
     /// <summary>
     /// Optional. Display name of the file data. Used to provide a label or filename to distinguish
     /// file datas. This field is only returned in PromptMessage for prompt management. It is
@@ -36,7 +38,7 @@ namespace Google.GenAI.Types {
     /// </summary>
     [JsonPropertyName("displayName")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? DisplayName { get; set; }
+    public string? DisplayName { get; set; }
 
     /// <summary>
     /// URI.
@@ -44,9 +46,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("fileUri")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? FileUri {
-            get; set;
-          }
+        ? FileUri
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The IANA standard MIME type of the source data.
@@ -54,9 +57,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("mimeType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? MimeType {
-            get; set;
-          }
+        ? MimeType
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a FileData object.
@@ -64,10 +68,14 @@ namespace Google.GenAI.Types {
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized FileData object, or null if deserialization fails.</returns>
-    public static FileData ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+    public static FileData? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<FileData>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

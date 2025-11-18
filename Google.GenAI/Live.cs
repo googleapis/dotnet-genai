@@ -111,20 +111,20 @@ namespace Google.GenAI
         var baseUri = new Uri(baseUrl);
         var uriBuilder = new UriBuilder(baseUri)
         {
-            Scheme = baseUri.Scheme == "http" ? "ws" : "wss"
+          Scheme = baseUri.Scheme == "http" ? "ws" : "wss"
         };
 
         string wsBaseUrl = uriBuilder.Uri.ToString().TrimEnd('/');
 
         if (_apiClient.VertexAI)
         {
-            string apiVersion = _apiClient.HttpOptions?.ApiVersion ?? "v1beta1";
-            return new Uri($"{wsBaseUrl}/ws/google.cloud.aiplatform.{apiVersion}.LlmBidiService/BidiGenerateContent");
+          string apiVersion = _apiClient.HttpOptions?.ApiVersion ?? "v1beta1";
+          return new Uri($"{wsBaseUrl}/ws/google.cloud.aiplatform.{apiVersion}.LlmBidiService/BidiGenerateContent");
         }
         else
         {
-            string apiVersion = _apiClient.HttpOptions?.ApiVersion ?? "v1beta";
-            return new Uri($"{wsBaseUrl}/ws/google.ai.generativelanguage.{apiVersion}.GenerativeService.BidiGenerateContent");
+          string apiVersion = _apiClient.HttpOptions?.ApiVersion ?? "v1beta";
+          return new Uri($"{wsBaseUrl}/ws/google.ai.generativelanguage.{apiVersion}.GenerativeService.BidiGenerateContent");
         }
       }
       catch (UriFormatException e)

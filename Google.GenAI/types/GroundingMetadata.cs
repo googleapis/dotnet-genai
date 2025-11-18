@@ -21,12 +21,14 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Metadata returned to client when grounding is enabled.
   /// </summary>
 
-  public record GroundingMetadata {
+  public record GroundingMetadata
+  {
     /// <summary>
     /// Optional. Output only. Resource name of the Google Maps widget context token to be used with
     /// the PlacesContextElement widget to render contextual data. This is populated only for Google
@@ -34,7 +36,7 @@ namespace Google.GenAI.Types {
     /// </summary>
     [JsonPropertyName("googleMapsWidgetContextToken")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? GoogleMapsWidgetContextToken { get; set; }
+    public string? GoogleMapsWidgetContextToken { get; set; }
 
     /// <summary>
     /// List of supporting references retrieved from specified grounding source.
@@ -42,9 +44,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("groundingChunks")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<GroundingChunk>
-        ? GroundingChunks {
-            get; set;
-          }
+        ? GroundingChunks
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. List of grounding support.
@@ -52,9 +55,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("groundingSupports")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<GroundingSupport>
-        ? GroundingSupports {
-            get; set;
-          }
+        ? GroundingSupports
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Output only. Retrieval metadata.
@@ -62,9 +66,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("retrievalMetadata")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public RetrievalMetadata
-        ? RetrievalMetadata {
-            get; set;
-          }
+        ? RetrievalMetadata
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Queries executed by the retrieval tools. This field is not supported in Gemini
@@ -73,9 +78,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("retrievalQueries")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<string>
-        ? RetrievalQueries {
-            get; set;
-          }
+        ? RetrievalQueries
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Google search entry for the following-up web searches.
@@ -83,9 +89,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("searchEntryPoint")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public SearchEntryPoint
-        ? SearchEntryPoint {
-            get; set;
-          }
+        ? SearchEntryPoint
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Output only. List of source flagging uris. This is currently populated only for
@@ -94,9 +101,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("sourceFlaggingUris")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<GroundingMetadataSourceFlaggingUri>
-        ? SourceFlaggingUris {
-            get; set;
-          }
+        ? SourceFlaggingUris
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Web search queries for the following-up web search.
@@ -104,9 +112,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("webSearchQueries")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<string>
-        ? WebSearchQueries {
-            get; set;
-          }
+        ? WebSearchQueries
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a GroundingMetadata object.
@@ -116,10 +125,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized GroundingMetadata object, or null if deserialization
     /// fails.</returns>
     public static GroundingMetadata
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<GroundingMetadata>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

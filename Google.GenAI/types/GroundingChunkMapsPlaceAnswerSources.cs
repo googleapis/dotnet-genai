@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Sources used to generate the place answer. This data type is not supported in Gemini API.
   /// </summary>
 
-  public record GroundingChunkMapsPlaceAnswerSources {
+  public record GroundingChunkMapsPlaceAnswerSources
+  {
     /// <summary>
     /// A link where users can flag a problem with the generated answer.
     /// </summary>
     [JsonPropertyName("flagContentUri")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? FlagContentUri { get; set; }
+    public string? FlagContentUri { get; set; }
 
     /// <summary>
     /// Snippets of reviews that are used to generate the answer.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("reviewSnippets")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<GroundingChunkMapsPlaceAnswerSourcesReviewSnippet>
-        ? ReviewSnippets {
-            get; set;
-          }
+        ? ReviewSnippets
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a GroundingChunkMapsPlaceAnswerSources object.
@@ -52,11 +55,15 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized GroundingChunkMapsPlaceAnswerSources object, or null if
     /// deserialization fails.</returns>
     public static GroundingChunkMapsPlaceAnswerSources
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<GroundingChunkMapsPlaceAnswerSources>(jsonString,
                                                                                 options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

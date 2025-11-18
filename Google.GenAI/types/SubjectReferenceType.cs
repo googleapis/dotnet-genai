@@ -18,12 +18,14 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Enum representing the subject type of a subject reference image.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum SubjectReferenceType {
+  public enum SubjectReferenceType
+  {
     /// <summary>
     ///
     /// </summary>

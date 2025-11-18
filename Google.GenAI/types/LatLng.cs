@@ -21,7 +21,8 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// An object that represents a latitude/longitude pair.  This is expressed as a pair of doubles
   /// to represent degrees latitude and degrees longitude. Unless specified otherwise, this object
@@ -30,13 +31,14 @@ namespace Google.GenAI.Types {
   /// standard&lt;/a&gt;. Values must be within normalized ranges.
   /// </summary>
 
-  public record LatLng {
+  public record LatLng
+  {
     /// <summary>
     /// The latitude in degrees. It must be in the range [-90.0, +90.0].
     /// </summary>
     [JsonPropertyName("latitude")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public double ? Latitude { get; set; }
+    public double? Latitude { get; set; }
 
     /// <summary>
     /// The longitude in degrees. It must be in the range [-180.0, +180.0]
@@ -44,9 +46,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("longitude")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
-        ? Longitude {
-            get; set;
-          }
+        ? Longitude
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a LatLng object.
@@ -54,10 +57,14 @@ namespace Google.GenAI.Types {
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized LatLng object, or null if deserialization fails.</returns>
-    public static LatLng ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+    public static LatLng? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<LatLng>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

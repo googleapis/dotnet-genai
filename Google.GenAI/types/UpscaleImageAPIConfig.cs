@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Internal API config for UpscaleImage.  These fields require default values sent to the API
   /// which are not intended to be modifiable or exposed to users in the SDK method.
   /// </summary>
 
-  internal record UpscaleImageAPIConfig {
+  internal record UpscaleImageAPIConfig
+  {
     /// <summary>
     /// Used to override HTTP request options.
     /// </summary>
     [JsonPropertyName("httpOptions")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public HttpOptions ? HttpOptions { get; set; }
+    public HttpOptions? HttpOptions { get; set; }
 
     /// <summary>
     /// Cloud Storage URI used to store the generated images.
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("outputGcsUri")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? OutputGcsUri {
-            get; set;
-          }
+        ? OutputGcsUri
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Filter level for safety filtering.
@@ -51,9 +54,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("safetyFilterLevel")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public SafetyFilterLevel
-        ? SafetyFilterLevel {
-            get; set;
-          }
+        ? SafetyFilterLevel
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Allows generation of people by the model.
@@ -61,9 +65,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("personGeneration")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public PersonGeneration
-        ? PersonGeneration {
-            get; set;
-          }
+        ? PersonGeneration
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Whether to include a reason for filtered-out images in the response.
@@ -71,9 +76,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("includeRaiReason")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
-        ? IncludeRaiReason {
-            get; set;
-          }
+        ? IncludeRaiReason
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The image format that the output should be saved as.
@@ -81,9 +87,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("outputMimeType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? OutputMimeType {
-            get; set;
-          }
+        ? OutputMimeType
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The level of compression. Only applicable if the ``output_mime_type`` is ``image/jpeg``.
@@ -91,9 +98,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("outputCompressionQuality")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? OutputCompressionQuality {
-            get; set;
-          }
+        ? OutputCompressionQuality
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Whether to add an image enhancing step before upscaling. It is expected to suppress the
@@ -102,9 +110,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("enhanceInputImage")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
-        ? EnhanceInputImage {
-            get; set;
-          }
+        ? EnhanceInputImage
+    {
+      get; set;
+    }
 
     /// <summary>
     /// With a higher image preservation factor, the original image pixels are more respected. With
@@ -114,9 +123,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("imagePreservationFactor")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
-        ? ImagePreservationFactor {
-            get; set;
-          }
+        ? ImagePreservationFactor
+    {
+      get; set;
+    }
 
     /// <summary>
     /// User specified labels to track billing usage.
@@ -124,9 +134,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("labels")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Dictionary<string, string>
-        ? Labels {
-            get; set;
-          }
+        ? Labels
+    {
+      get; set;
+    }
 
     /// <summary>
     ///
@@ -134,9 +145,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("numberOfImages")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? NumberOfImages {
-            get; set;
-          }
+        ? NumberOfImages
+    {
+      get; set;
+    }
 
     /// <summary>
     ///
@@ -144,9 +156,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("mode")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Mode {
-            get; set;
-          }
+        ? Mode
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a UpscaleImageAPIConfig object.
@@ -156,10 +169,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized UpscaleImageAPIConfig object, or null if deserialization
     /// fails.</returns>
     public static UpscaleImageAPIConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<UpscaleImageAPIConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

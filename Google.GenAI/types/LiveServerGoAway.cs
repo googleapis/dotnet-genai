@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Server will not be able to service client soon.
   /// </summary>
 
-  public record LiveServerGoAway {
+  public record LiveServerGoAway
+  {
     /// <summary>
     /// The remaining time before the connection will be terminated as ABORTED. The minimal time
     /// returned here is specified differently together with the rate limits for a given model.
     /// </summary>
     [JsonPropertyName("timeLeft")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? TimeLeft { get; set; }
+    public string? TimeLeft { get; set; }
 
     /// <summary>
     /// Deserializes a JSON string to a LiveServerGoAway object.
@@ -43,10 +45,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized LiveServerGoAway object, or null if deserialization
     /// fails.</returns>
     public static LiveServerGoAway
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<LiveServerGoAway>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

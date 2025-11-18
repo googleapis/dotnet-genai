@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// A set of source input(s) for image recontextualization.
   /// </summary>
 
-  public record RecontextImageSource {
+  public record RecontextImageSource
+  {
     /// <summary>
     /// A text prompt for guiding the model during image recontextualization. Not supported for
     /// Virtual Try-On.
     /// </summary>
     [JsonPropertyName("prompt")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? Prompt { get; set; }
+    public string? Prompt { get; set; }
 
     /// <summary>
     /// Image of the person or subject who will be wearing the product(s).
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("personImage")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Image
-        ? PersonImage {
-            get; set;
-          }
+        ? PersonImage
+    {
+      get; set;
+    }
 
     /// <summary>
     /// A list of product images.
@@ -51,9 +54,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("productImages")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<ProductImage>
-        ? ProductImages {
-            get; set;
-          }
+        ? ProductImages
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a RecontextImageSource object.
@@ -63,10 +67,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized RecontextImageSource object, or null if deserialization
     /// fails.</returns>
     public static RecontextImageSource
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<RecontextImageSource>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

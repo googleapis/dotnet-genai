@@ -21,20 +21,22 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Retrieve from data source powered by external API for grounding. The external API is not owned
   /// by Google, but need to follow the pre-defined API spec. This data type is not supported in
   /// Gemini API.
   /// </summary>
 
-  public record ExternalApi {
+  public record ExternalApi
+  {
     /// <summary>
     /// The authentication config to access the API. Deprecated. Please use auth_config instead.
     /// </summary>
     [JsonPropertyName("apiAuth")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public ApiAuth ? ApiAuth { get; set; }
+    public ApiAuth? ApiAuth { get; set; }
 
     /// <summary>
     /// The API spec that the external API implements.
@@ -42,9 +44,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("apiSpec")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public ApiSpec
-        ? ApiSpec {
-            get; set;
-          }
+        ? ApiSpec
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The authentication config to access the API.
@@ -52,9 +55,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("authConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public AuthConfig
-        ? AuthConfig {
-            get; set;
-          }
+        ? AuthConfig
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Parameters for the elastic search API.
@@ -62,9 +66,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("elasticSearchParams")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public ExternalApiElasticSearchParams
-        ? ElasticSearchParams {
-            get; set;
-          }
+        ? ElasticSearchParams
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The endpoint of the external API. The system will call the API at this endpoint to retrieve
@@ -73,9 +78,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("endpoint")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Endpoint {
-            get; set;
-          }
+        ? Endpoint
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Parameters for the simple search API.
@@ -83,9 +89,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("simpleSearchParams")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public ExternalApiSimpleSearchParams
-        ? SimpleSearchParams {
-            get; set;
-          }
+        ? SimpleSearchParams
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a ExternalApi object.
@@ -93,10 +100,14 @@ namespace Google.GenAI.Types {
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized ExternalApi object, or null if deserialization fails.</returns>
-    public static ExternalApi ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+    public static ExternalApi? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<ExternalApi>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

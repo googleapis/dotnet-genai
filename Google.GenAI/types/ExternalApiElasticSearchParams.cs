@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// The search parameters to use for the ELASTIC_SEARCH spec. This data type is not supported in
   /// Gemini API.
   /// </summary>
 
-  public record ExternalApiElasticSearchParams {
+  public record ExternalApiElasticSearchParams
+  {
     /// <summary>
     /// The ElasticSearch index to use.
     /// </summary>
     [JsonPropertyName("index")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? Index { get; set; }
+    public string? Index { get; set; }
 
     /// <summary>
     /// Optional. Number of hits (chunks) to request. When specified, it is passed to Elasticsearch
@@ -42,9 +44,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("numHits")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? NumHits {
-            get; set;
-          }
+        ? NumHits
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The ElasticSearch search template to use.
@@ -52,9 +55,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("searchTemplate")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? SearchTemplate {
-            get; set;
-          }
+        ? SearchTemplate
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a ExternalApiElasticSearchParams object.
@@ -64,10 +68,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized ExternalApiElasticSearchParams object, or null if deserialization
     /// fails.</returns>
     public static ExternalApiElasticSearchParams
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<ExternalApiElasticSearchParams>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

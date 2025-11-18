@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Citation information when the model quotes another source.
   /// </summary>
 
-  public record CitationMetadata {
+  public record CitationMetadata
+  {
     /// <summary>
     /// Contains citation information when the model directly quotes, at length, from another
     /// source. Can include traditional websites and code repositories.
     /// </summary>
     [JsonPropertyName("citations")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<Citation> ? Citations { get; set; }
+    public List<Citation>? Citations { get; set; }
 
     /// <summary>
     /// Deserializes a JSON string to a CitationMetadata object.
@@ -43,10 +45,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized CitationMetadata object, or null if deserialization
     /// fails.</returns>
     public static CitationMetadata
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<CitationMetadata>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

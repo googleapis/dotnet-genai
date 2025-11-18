@@ -18,12 +18,14 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Enum representing the control type of a control reference image.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum ControlReferenceType {
+  public enum ControlReferenceType
+  {
     /// <summary>
     ///
     /// </summary>

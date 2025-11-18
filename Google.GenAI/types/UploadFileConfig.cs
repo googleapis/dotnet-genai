@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Used to override the default configuration.
   /// </summary>
 
-  public record UploadFileConfig {
+  public record UploadFileConfig
+  {
     /// <summary>
     /// Used to override HTTP request options.
     /// </summary>
     [JsonPropertyName("httpOptions")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public HttpOptions ? HttpOptions { get; set; }
+    public HttpOptions? HttpOptions { get; set; }
 
     /// <summary>
     /// The name of the file in the destination (e.g., 'files/sample-image'. If not provided one
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("name")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Name {
-            get; set;
-          }
+        ? Name
+    {
+      get; set;
+    }
 
     /// <summary>
     /// mime_type: The MIME type of the file. If not provided, it will be inferred from the file
@@ -52,9 +55,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("mimeType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? MimeType {
-            get; set;
-          }
+        ? MimeType
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional display name of the file.
@@ -62,9 +66,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("displayName")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? DisplayName {
-            get; set;
-          }
+        ? DisplayName
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a UploadFileConfig object.
@@ -74,10 +79,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized UploadFileConfig object, or null if deserialization
     /// fails.</returns>
     public static UploadFileConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<UploadFileConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

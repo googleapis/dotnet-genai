@@ -18,12 +18,14 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Programming language of the `code`.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum Language {
+  public enum Language
+  {
     /// <summary>
     /// Unspecified language. This value should not be used.
     /// </summary>

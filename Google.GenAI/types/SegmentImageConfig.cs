@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Configuration for segmenting an image.
   /// </summary>
 
-  public record SegmentImageConfig {
+  public record SegmentImageConfig
+  {
     /// <summary>
     /// Used to override HTTP request options.
     /// </summary>
     [JsonPropertyName("httpOptions")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public HttpOptions ? HttpOptions { get; set; }
+    public HttpOptions? HttpOptions { get; set; }
 
     /// <summary>
     /// The segmentation mode to use.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("mode")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public SegmentMode
-        ? Mode {
-            get; set;
-          }
+        ? Mode
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The maximum number of predictions to return up to, by top confidence score.
@@ -50,9 +53,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("maxPredictions")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? MaxPredictions {
-            get; set;
-          }
+        ? MaxPredictions
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The confidence score threshold for the detections as a decimal value. Only predictions with
@@ -61,9 +65,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("confidenceThreshold")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
-        ? ConfidenceThreshold {
-            get; set;
-          }
+        ? ConfidenceThreshold
+    {
+      get; set;
+    }
 
     /// <summary>
     /// A decimal value representing how much dilation to apply to the masks. 0 for no dilation. 1.0
@@ -72,9 +77,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("maskDilation")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
-        ? MaskDilation {
-            get; set;
-          }
+        ? MaskDilation
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The binary color threshold to apply to the masks. The threshold can be set to a decimal
@@ -83,9 +89,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("binaryColorThreshold")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
-        ? BinaryColorThreshold {
-            get; set;
-          }
+        ? BinaryColorThreshold
+    {
+      get; set;
+    }
 
     /// <summary>
     /// User specified labels to track billing usage.
@@ -93,9 +100,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("labels")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Dictionary<string, string>
-        ? Labels {
-            get; set;
-          }
+        ? Labels
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a SegmentImageConfig object.
@@ -105,10 +113,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized SegmentImageConfig object, or null if deserialization
     /// fails.</returns>
     public static SegmentImageConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<SegmentImageConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

@@ -21,21 +21,23 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Schema is used to define the format of input/output data.  Represents a select subset of an
   /// OpenAPI 3.0 schema object (https://spec.openapis.org/oas/v3.0.3#schema-object). More fields
   /// may be added in the future as needed.
   /// </summary>
 
-  public record Schema {
+  public record Schema
+  {
     /// <summary>
     /// Optional. Can either be a boolean or an object; controls the presence of additional
     /// properties.
     /// </summary>
     [JsonPropertyName("additionalProperties")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public object ? AdditionalProperties { get; set; }
+    public object? AdditionalProperties { get; set; }
 
     /// <summary>
     /// Optional. A map of definitions for use by `ref` Only allowed at the root of the schema.
@@ -43,9 +45,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("defs")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Dictionary<string, Schema>
-        ? Defs {
-            get; set;
-          }
+        ? Defs
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Allows indirect references between schema nodes. The value should be a valid
@@ -58,9 +61,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("ref")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Ref {
-            get; set;
-          }
+        ? Ref
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. The value should be validated against any (one or more) of the subschemas in the
@@ -69,9 +73,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("anyOf")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<Schema>
-        ? AnyOf {
-            get; set;
-          }
+        ? AnyOf
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Default value of the data.
@@ -79,9 +84,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("default")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public object
-        ? Default {
-            get; set;
-          }
+        ? Default
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. The description of the data.
@@ -89,9 +95,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("description")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Description {
-            get; set;
-          }
+        ? Description
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Possible values of the element of primitive type with enum format. Examples: 1. We
@@ -102,9 +109,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("enum")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<string>
-        ? Enum {
-            get; set;
-          }
+        ? Enum
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Example of the object. Will only populated when the object is the root.
@@ -112,9 +120,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("example")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public object
-        ? Example {
-            get; set;
-          }
+        ? Example
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. The format of the data. Supported formats: for NUMBER type: "float", "double" for
@@ -123,9 +132,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("format")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Format {
-            get; set;
-          }
+        ? Format
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. SCHEMA FIELDS FOR TYPE ARRAY Schema of the elements of Type.ARRAY.
@@ -133,9 +143,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("items")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Schema
-        ? Items {
-            get; set;
-          }
+        ? Items
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Maximum number of the elements for Type.ARRAY.
@@ -144,9 +155,10 @@ namespace Google.GenAI.Types {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonConverter(typeof(StringToNullableLongConverter))]
     public long
-        ? MaxItems {
-            get; set;
-          }
+        ? MaxItems
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Maximum length of the Type.STRING
@@ -155,9 +167,10 @@ namespace Google.GenAI.Types {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonConverter(typeof(StringToNullableLongConverter))]
     public long
-        ? MaxLength {
-            get; set;
-          }
+        ? MaxLength
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Maximum number of the properties for Type.OBJECT.
@@ -166,9 +179,10 @@ namespace Google.GenAI.Types {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonConverter(typeof(StringToNullableLongConverter))]
     public long
-        ? MaxProperties {
-            get; set;
-          }
+        ? MaxProperties
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Maximum value of the Type.INTEGER and Type.NUMBER
@@ -176,9 +190,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("maximum")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
-        ? Maximum {
-            get; set;
-          }
+        ? Maximum
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Minimum number of the elements for Type.ARRAY.
@@ -187,9 +202,10 @@ namespace Google.GenAI.Types {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonConverter(typeof(StringToNullableLongConverter))]
     public long
-        ? MinItems {
-            get; set;
-          }
+        ? MinItems
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. SCHEMA FIELDS FOR TYPE STRING Minimum length of the Type.STRING
@@ -198,9 +214,10 @@ namespace Google.GenAI.Types {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonConverter(typeof(StringToNullableLongConverter))]
     public long
-        ? MinLength {
-            get; set;
-          }
+        ? MinLength
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Minimum number of the properties for Type.OBJECT.
@@ -209,9 +226,10 @@ namespace Google.GenAI.Types {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonConverter(typeof(StringToNullableLongConverter))]
     public long
-        ? MinProperties {
-            get; set;
-          }
+        ? MinProperties
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. SCHEMA FIELDS FOR TYPE INTEGER and NUMBER Minimum value of the Type.INTEGER and
@@ -220,9 +238,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("minimum")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
-        ? Minimum {
-            get; set;
-          }
+        ? Minimum
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Indicates if the value may be null.
@@ -230,9 +249,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("nullable")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
-        ? Nullable {
-            get; set;
-          }
+        ? Nullable
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Pattern of the Type.STRING to restrict a string to a regular expression.
@@ -240,9 +260,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("pattern")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Pattern {
-            get; set;
-          }
+        ? Pattern
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. SCHEMA FIELDS FOR TYPE OBJECT Properties of Type.OBJECT.
@@ -250,9 +271,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("properties")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Dictionary<string, Schema>
-        ? Properties {
-            get; set;
-          }
+        ? Properties
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. The order of the properties. Not a standard field in open api spec. Only used to
@@ -261,9 +283,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("propertyOrdering")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<string>
-        ? PropertyOrdering {
-            get; set;
-          }
+        ? PropertyOrdering
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Required properties of Type.OBJECT.
@@ -271,9 +294,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("required")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<string>
-        ? Required {
-            get; set;
-          }
+        ? Required
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. The title of the Schema.
@@ -281,9 +305,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("title")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Title {
-            get; set;
-          }
+        ? Title
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. The type of the data.
@@ -291,9 +316,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("type")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Type
-        ? Type {
-            get; set;
-          }
+        ? Type
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a Schema object.
@@ -301,10 +327,14 @@ namespace Google.GenAI.Types {
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized Schema object, or null if deserialization fails.</returns>
-    public static Schema ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+    public static Schema? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<Schema>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

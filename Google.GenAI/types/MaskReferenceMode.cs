@@ -18,12 +18,14 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Enum representing the mask mode of a mask reference image.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum MaskReferenceMode {
+  public enum MaskReferenceMode
+  {
     /// <summary>
     ///
     /// </summary>

@@ -21,20 +21,22 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// A content reference image.  A content reference image represents a subject to reference (ex.
   /// person, product, animal) provided by the user. It can optionally be provided in addition to a
   /// style reference image (ex. background, style reference).
   /// </summary>
 
-  public record ContentReferenceImage : IReferenceImageInternal {
+  public record ContentReferenceImage : IReferenceImageInternal
+  {
     /// <summary>
     /// The reference image for the editing operation.
     /// </summary>
     [JsonPropertyName("referenceImage")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public Image ? ReferenceImage { get; set; }
+    public Image? ReferenceImage { get; set; }
 
     /// <summary>
     /// The id of the reference image.
@@ -42,9 +44,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("referenceId")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? ReferenceId {
-            get; set;
-          }
+        ? ReferenceId
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The type of the reference image. Only set by the SDK.
@@ -52,9 +55,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("referenceType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? ReferenceType {
-            get; set;
-          }
+        ? ReferenceType
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a ContentReferenceImage object.
@@ -64,19 +68,27 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized ContentReferenceImage object, or null if deserialization
     /// fails.</returns>
     public static ContentReferenceImage
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<ContentReferenceImage>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }
     }
 
-    ReferenceImageAPI IReferenceImageInternal.ToReferenceImageAPI() {
-      return new ReferenceImageAPI { ReferenceImage = this.ReferenceImage,
-                                     ReferenceId = this.ReferenceId,
-                                     ReferenceType = "REFERENCE_TYPE_CONTENT" };
+    ReferenceImageAPI IReferenceImageInternal.ToReferenceImageAPI()
+    {
+      return new ReferenceImageAPI
+      {
+        ReferenceImage = this.ReferenceImage,
+        ReferenceId = this.ReferenceId,
+        ReferenceType = "REFERENCE_TYPE_CONTENT"
+      };
     }
   }
 }

@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// API parameters for UpscaleImage.
   /// </summary>
 
-  internal record UpscaleImageAPIParameters {
+  internal record UpscaleImageAPIParameters
+  {
     /// <summary>
     /// The model to use.
     /// </summary>
     [JsonPropertyName("model")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? Model { get; set; }
+    public string? Model { get; set; }
 
     /// <summary>
     /// The input image to upscale.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("image")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Image
-        ? Image {
-            get; set;
-          }
+        ? Image
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The factor to upscale the image (x2 or x4).
@@ -50,9 +53,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("upscaleFactor")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? UpscaleFactor {
-            get; set;
-          }
+        ? UpscaleFactor
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Configuration for upscaling.
@@ -60,9 +64,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("config")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public UpscaleImageAPIConfig
-        ? Config {
-            get; set;
-          }
+        ? Config
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a UpscaleImageAPIParameters object.
@@ -72,10 +77,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized UpscaleImageAPIParameters object, or null if deserialization
     /// fails.</returns>
     public static UpscaleImageAPIParameters
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<UpscaleImageAPIParameters>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

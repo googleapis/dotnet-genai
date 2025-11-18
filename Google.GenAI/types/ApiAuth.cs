@@ -21,20 +21,22 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// The generic reusable api auth config. Deprecated. Please use AuthConfig
   /// (google/cloud/aiplatform/master/auth.proto) instead. This data type is not supported in Gemini
   /// API.
   /// </summary>
 
-  public record ApiAuth {
+  public record ApiAuth
+  {
     /// <summary>
     /// The API secret.
     /// </summary>
     [JsonPropertyName("apiKeyConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public ApiAuthApiKeyConfig ? ApiKeyConfig { get; set; }
+    public ApiAuthApiKeyConfig? ApiKeyConfig { get; set; }
 
     /// <summary>
     /// Deserializes a JSON string to a ApiAuth object.
@@ -42,10 +44,14 @@ namespace Google.GenAI.Types {
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized ApiAuth object, or null if deserialization fails.</returns>
-    public static ApiAuth ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+    public static ApiAuth? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<ApiAuth>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

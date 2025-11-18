@@ -21,12 +21,14 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Config for Hybrid Search. This data type is not supported in Gemini API.
   /// </summary>
 
-  public record RagRetrievalConfigHybridSearch {
+  public record RagRetrievalConfigHybridSearch
+  {
     /// <summary>
     /// Optional. Alpha value controls the weight between dense and sparse vector search results.
     /// The range is [0, 1], while 0 means sparse vector search only and 1 means dense vector search
@@ -34,7 +36,7 @@ namespace Google.GenAI.Types {
     /// </summary>
     [JsonPropertyName("alpha")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public double ? Alpha { get; set; }
+    public double? Alpha { get; set; }
 
     /// <summary>
     /// Deserializes a JSON string to a RagRetrievalConfigHybridSearch object.
@@ -44,10 +46,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized RagRetrievalConfigHybridSearch object, or null if deserialization
     /// fails.</returns>
     public static RagRetrievalConfigHybridSearch
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<RagRetrievalConfigHybridSearch>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

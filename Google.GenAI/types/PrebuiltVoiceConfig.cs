@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// The configuration for the prebuilt speaker to use.
   /// </summary>
 
-  public record PrebuiltVoiceConfig {
+  public record PrebuiltVoiceConfig
+  {
     /// <summary>
     /// The name of the preset voice to use.
     /// </summary>
     [JsonPropertyName("voiceName")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? VoiceName { get; set; }
+    public string? VoiceName { get; set; }
 
     /// <summary>
     /// Deserializes a JSON string to a PrebuiltVoiceConfig object.
@@ -42,10 +44,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized PrebuiltVoiceConfig object, or null if deserialization
     /// fails.</returns>
     public static PrebuiltVoiceConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<PrebuiltVoiceConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

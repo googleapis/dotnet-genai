@@ -18,12 +18,14 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// The environment being operated.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum Environment {
+  public enum Environment
+  {
     /// <summary>
     /// Defaults to browser.
     /// </summary>

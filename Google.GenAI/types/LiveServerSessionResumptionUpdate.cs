@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Update of the session resumption state.  Only sent if `session_resumption` was set in the
   /// connection config.
   /// </summary>
 
-  public record LiveServerSessionResumptionUpdate {
+  public record LiveServerSessionResumptionUpdate
+  {
     /// <summary>
     /// New handle that represents state that can be resumed. Empty if `resumable`=false.
     /// </summary>
     [JsonPropertyName("newHandle")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? NewHandle { get; set; }
+    public string? NewHandle { get; set; }
 
     /// <summary>
     /// True if session can be resumed at this point. It might be not possible to resume session at
@@ -44,9 +46,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("resumable")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
-        ? Resumable {
-            get; set;
-          }
+        ? Resumable
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Index of last message sent by client that is included in state represented by this
@@ -63,9 +66,10 @@ namespace Google.GenAI.Types {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonConverter(typeof(StringToNullableLongConverter))]
     public long
-        ? LastConsumedClientMessageIndex {
-            get; set;
-          }
+        ? LastConsumedClientMessageIndex
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a LiveServerSessionResumptionUpdate object.
@@ -75,10 +79,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized LiveServerSessionResumptionUpdate object, or null if
     /// deserialization fails.</returns>
     public static LiveServerSessionResumptionUpdate
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<LiveServerSessionResumptionUpdate>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

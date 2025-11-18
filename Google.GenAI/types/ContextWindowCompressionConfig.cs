@@ -21,20 +21,22 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Enables context window compression -- mechanism managing model context window so it does not
   /// exceed given length.
   /// </summary>
 
-  public record ContextWindowCompressionConfig {
+  public record ContextWindowCompressionConfig
+  {
     /// <summary>
     /// Number of tokens (before running turn) that triggers context window compression mechanism.
     /// </summary>
     [JsonPropertyName("triggerTokens")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonConverter(typeof(StringToNullableLongConverter))]
-    public long ? TriggerTokens { get; set; }
+    public long? TriggerTokens { get; set; }
 
     /// <summary>
     /// Sliding window compression mechanism.
@@ -42,9 +44,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("slidingWindow")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public SlidingWindow
-        ? SlidingWindow {
-            get; set;
-          }
+        ? SlidingWindow
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a ContextWindowCompressionConfig object.
@@ -54,10 +57,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized ContextWindowCompressionConfig object, or null if deserialization
     /// fails.</returns>
     public static ContextWindowCompressionConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<ContextWindowCompressionConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

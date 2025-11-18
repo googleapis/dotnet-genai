@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Response message for PredictionService.GenerateContent.
   /// </summary>
 
-  public record GenerateContentResponse {
+  public record GenerateContentResponse
+  {
     /// <summary>
     /// Response variations returned by the model.
     /// </summary>
     [JsonPropertyName("candidates")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<Candidate> ? Candidates { get; set; }
+    public List<Candidate>? Candidates { get; set; }
 
     /// <summary>
     /// Timestamp when the request is made to the server.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("createTime")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public DateTime
-        ? CreateTime {
-            get; set;
-          }
+        ? CreateTime
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Output only. The model version used to generate the response.
@@ -50,9 +53,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("modelVersion")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? ModelVersion {
-            get; set;
-          }
+        ? ModelVersion
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Output only. Content filter results for a prompt sent in the request. Note: Sent only in the
@@ -62,9 +66,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("promptFeedback")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public GenerateContentResponsePromptFeedback
-        ? PromptFeedback {
-            get; set;
-          }
+        ? PromptFeedback
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Output only. response_id is used to identify each response. It is the encoding of the
@@ -73,9 +78,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("responseId")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? ResponseId {
-            get; set;
-          }
+        ? ResponseId
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Usage metadata about the response(s).
@@ -83,9 +89,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("usageMetadata")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public GenerateContentResponseUsageMetadata
-        ? UsageMetadata {
-            get; set;
-          }
+        ? UsageMetadata
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a GenerateContentResponse object.
@@ -95,10 +102,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized GenerateContentResponse object, or null if deserialization
     /// fails.</returns>
     public static GenerateContentResponse
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<GenerateContentResponse>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

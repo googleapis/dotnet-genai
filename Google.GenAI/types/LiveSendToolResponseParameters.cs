@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Parameters for sending tool responses to the live API.
   /// </summary>
 
-  public record LiveSendToolResponseParameters {
+  public record LiveSendToolResponseParameters
+  {
     /// <summary>
     /// Tool responses to send to the session.
     /// </summary>
     [JsonPropertyName("functionResponses")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<FunctionResponse> ? FunctionResponses { get; set; }
+    public List<FunctionResponse>? FunctionResponses { get; set; }
 
     /// <summary>
     /// Deserializes a JSON string to a LiveSendToolResponseParameters object.
@@ -42,10 +44,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized LiveSendToolResponseParameters object, or null if deserialization
     /// fails.</returns>
     public static LiveSendToolResponseParameters
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<LiveSendToolResponseParameters>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

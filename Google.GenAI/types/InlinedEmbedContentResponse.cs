@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Config for `inlined_embedding_responses` parameter.
   /// </summary>
 
-  public record InlinedEmbedContentResponse {
+  public record InlinedEmbedContentResponse
+  {
     /// <summary>
     /// The response to the request.
     /// </summary>
     [JsonPropertyName("response")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public SingleEmbedContentResponse ? Response { get; set; }
+    public SingleEmbedContentResponse? Response { get; set; }
 
     /// <summary>
     /// The error encountered while processing the request.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("error")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public JobError
-        ? Error {
-            get; set;
-          }
+        ? Error
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a InlinedEmbedContentResponse object.
@@ -52,10 +55,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized InlinedEmbedContentResponse object, or null if deserialization
     /// fails.</returns>
     public static InlinedEmbedContentResponse
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<InlinedEmbedContentResponse>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

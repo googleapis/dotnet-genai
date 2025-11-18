@@ -18,12 +18,14 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Enum that controls the safety filter level for objectionable content.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum SafetyFilterLevel {
+  public enum SafetyFilterLevel
+  {
     /// <summary>
     ///
     /// </summary>

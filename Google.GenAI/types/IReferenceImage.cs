@@ -21,15 +21,16 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// The interface for ReferenceImage.
   /// </summary>
 
-  public interface IReferenceImage {}
+  public interface IReferenceImage { }
 
   internal interface IReferenceImageInternal : IReferenceImage
   {
-      ReferenceImageAPI ToReferenceImageAPI();
+    ReferenceImageAPI ToReferenceImageAPI();
   }
 }

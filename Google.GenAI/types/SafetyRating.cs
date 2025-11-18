@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Safety rating corresponding to the generated content.
   /// </summary>
 
-  public record SafetyRating {
+  public record SafetyRating
+  {
     /// <summary>
     /// Output only. Indicates whether the content was filtered out because of this rating.
     /// </summary>
     [JsonPropertyName("blocked")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public bool ? Blocked { get; set; }
+    public bool? Blocked { get; set; }
 
     /// <summary>
     /// Output only. Harm category.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("category")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public HarmCategory
-        ? Category {
-            get; set;
-          }
+        ? Category
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Output only. The overwritten threshold for the safety category of Gemini 2.0 image out. If
@@ -52,9 +55,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("overwrittenThreshold")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public HarmBlockThreshold
-        ? OverwrittenThreshold {
-            get; set;
-          }
+        ? OverwrittenThreshold
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Output only. Harm probability levels in the content.
@@ -62,9 +66,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("probability")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public HarmProbability
-        ? Probability {
-            get; set;
-          }
+        ? Probability
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Output only. Harm probability score. This field is not supported in Gemini API.
@@ -72,9 +77,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("probabilityScore")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
-        ? ProbabilityScore {
-            get; set;
-          }
+        ? ProbabilityScore
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Output only. Harm severity levels in the content. This field is not supported in Gemini API.
@@ -82,9 +88,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("severity")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public HarmSeverity
-        ? Severity {
-            get; set;
-          }
+        ? Severity
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Output only. Harm severity score. This field is not supported in Gemini API.
@@ -92,9 +99,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("severityScore")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
-        ? SeverityScore {
-            get; set;
-          }
+        ? SeverityScore
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a SafetyRating object.
@@ -103,10 +111,14 @@ namespace Google.GenAI.Types {
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized SafetyRating object, or null if deserialization fails.</returns>
     public static SafetyRating
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<SafetyRating>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

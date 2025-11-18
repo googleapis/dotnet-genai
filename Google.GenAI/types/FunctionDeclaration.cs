@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Defines a function that the model can generate JSON inputs for.  The inputs are based on
   /// OpenAPI 3.0 specifications (https://spec.openapis.org/oas/v3.0.3).
   /// </summary>
 
-  public record FunctionDeclaration {
+  public record FunctionDeclaration
+  {
     /// <summary>
     /// Defines the function behavior.
     /// </summary>
     [JsonPropertyName("behavior")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public Behavior ? Behavior { get; set; }
+    public Behavior? Behavior { get; set; }
 
     /// <summary>
     /// Optional. Description and purpose of the function. Model uses it to decide how and whether
@@ -42,9 +44,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("description")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Description {
-            get; set;
-          }
+        ? Description
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The name of the function to call. Must start with a letter or an underscore. Must be a-z,
@@ -53,9 +56,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("name")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Name {
-            get; set;
-          }
+        ? Name
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Describes the parameters to this function in JSON Schema Object format. Reflects
@@ -69,9 +73,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("parameters")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Schema
-        ? Parameters {
-            get; set;
-          }
+        ? Parameters
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Describes the parameters to the function in JSON Schema format. The schema must
@@ -83,9 +88,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("parametersJsonSchema")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public object
-        ? ParametersJsonSchema {
-            get; set;
-          }
+        ? ParametersJsonSchema
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Describes the output from this function in JSON Schema format. Reflects the Open
@@ -95,9 +101,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("response")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Schema
-        ? Response {
-            get; set;
-          }
+        ? Response
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Describes the output from this function in JSON Schema format. The value specified
@@ -107,9 +114,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("responseJsonSchema")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public object
-        ? ResponseJsonSchema {
-            get; set;
-          }
+        ? ResponseJsonSchema
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a FunctionDeclaration object.
@@ -119,10 +127,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized FunctionDeclaration object, or null if deserialization
     /// fails.</returns>
     public static FunctionDeclaration
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<FunctionDeclaration>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Function calling config.
   /// </summary>
 
-  public record FunctionCallingConfig {
+  public record FunctionCallingConfig
+  {
     /// <summary>
     /// Optional. Function calling mode.
     /// </summary>
     [JsonPropertyName("mode")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public FunctionCallingConfigMode ? Mode { get; set; }
+    public FunctionCallingConfigMode? Mode { get; set; }
 
     /// <summary>
     /// Optional. Function names to call. Only set when the Mode is ANY. Function names should match
@@ -42,9 +44,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("allowedFunctionNames")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<string>
-        ? AllowedFunctionNames {
-            get; set;
-          }
+        ? AllowedFunctionNames
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. When set to true, arguments of a single function call will be streamed out in
@@ -54,9 +57,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("streamFunctionCallArguments")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
-        ? StreamFunctionCallArguments {
-            get; set;
-          }
+        ? StreamFunctionCallArguments
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a FunctionCallingConfig object.
@@ -66,10 +70,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized FunctionCallingConfig object, or null if deserialization
     /// fails.</returns>
     public static FunctionCallingConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<FunctionCallingConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

@@ -21,15 +21,17 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
 
-  public record TestTableItem {
+  public record TestTableItem
+  {
     /// <summary>
     /// The name of the test. This is used to derive the replay id.
     /// </summary>
     [JsonPropertyName("name")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? Name { get; set; }
+    public string? Name { get; set; }
 
     /// <summary>
     /// The parameters to the test. Use pydantic models.
@@ -37,9 +39,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("parameters")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Dictionary<string, object>
-        ? Parameters {
-            get; set;
-          }
+        ? Parameters
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Expects an exception for MLDev matching the string.
@@ -47,9 +50,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("exceptionIfMldev")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? ExceptionIfMldev {
-            get; set;
-          }
+        ? ExceptionIfMldev
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Expects an exception for Vertex matching the string.
@@ -57,9 +61,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("exceptionIfVertex")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? ExceptionIfVertex {
-            get; set;
-          }
+        ? ExceptionIfVertex
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Use if you don't want to use the default replay id which is derived from the test name.
@@ -67,9 +72,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("overrideReplayId")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? OverrideReplayId {
-            get; set;
-          }
+        ? OverrideReplayId
+    {
+      get; set;
+    }
 
     /// <summary>
     /// True if the parameters contain an unsupported union type. This test will be skipped for
@@ -78,9 +84,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("hasUnion")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
-        ? HasUnion {
-            get; set;
-          }
+        ? HasUnion
+    {
+      get; set;
+    }
 
     /// <summary>
     /// When set to a reason string, this test will be skipped in the API mode. Use this flag for
@@ -89,9 +96,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("skipInApiMode")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? SkipInApiMode {
-            get; set;
-          }
+        ? SkipInApiMode
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Keys to ignore when comparing the request and response. This is useful for tests that are
@@ -100,9 +108,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("ignoreKeys")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<string>
-        ? IgnoreKeys {
-            get; set;
-          }
+        ? IgnoreKeys
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a TestTableItem object.
@@ -111,10 +120,14 @@ namespace Google.GenAI.Types {
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized TestTableItem object, or null if deserialization fails.</returns>
     public static TestTableItem
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<TestTableItem>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

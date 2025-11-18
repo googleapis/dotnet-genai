@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Message contains configuration that will apply for the duration of the streaming session.
   /// </summary>
 
-  public record LiveClientSetup {
+  public record LiveClientSetup
+  {
     /// <summary>
     /// The fully qualified name of the publisher model or tuned model endpoint to use.
     /// </summary>
     [JsonPropertyName("model")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? Model { get; set; }
+    public string? Model { get; set; }
 
     /// <summary>
     /// The generation configuration for the session. Note: only a subset of fields are supported.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("generationConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public GenerationConfig
-        ? GenerationConfig {
-            get; set;
-          }
+        ? GenerationConfig
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The user provided system instructions for the model. Note: only text should be used in parts
@@ -51,9 +54,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("systemInstruction")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Content
-        ? SystemInstruction {
-            get; set;
-          }
+        ? SystemInstruction
+    {
+      get; set;
+    }
 
     /// <summary>
     /// A list of `Tools` the model may use to generate the next response.  A `Tool` is a piece of
@@ -63,9 +67,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("tools")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<Tool>
-        ? Tools {
-            get; set;
-          }
+        ? Tools
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Configures the realtime input behavior in BidiGenerateContent.
@@ -73,9 +78,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("realtimeInputConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public RealtimeInputConfig
-        ? RealtimeInputConfig {
-            get; set;
-          }
+        ? RealtimeInputConfig
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Configures session resumption mechanism.  If included server will send
@@ -84,9 +90,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("sessionResumption")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public SessionResumptionConfig
-        ? SessionResumption {
-            get; set;
-          }
+        ? SessionResumption
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Configures context window compression mechanism.  If included, server will compress context
@@ -95,9 +102,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("contextWindowCompression")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public ContextWindowCompressionConfig
-        ? ContextWindowCompression {
-            get; set;
-          }
+        ? ContextWindowCompression
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The transcription of the input aligns with the input audio language.
@@ -105,9 +113,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("inputAudioTranscription")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public AudioTranscriptionConfig
-        ? InputAudioTranscription {
-            get; set;
-          }
+        ? InputAudioTranscription
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The transcription of the output aligns with the language code specified for the output
@@ -116,9 +125,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("outputAudioTranscription")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public AudioTranscriptionConfig
-        ? OutputAudioTranscription {
-            get; set;
-          }
+        ? OutputAudioTranscription
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Configures the proactivity of the model. This allows the model to respond proactively to the
@@ -127,9 +137,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("proactivity")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public ProactivityConfig
-        ? Proactivity {
-            get; set;
-          }
+        ? Proactivity
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a LiveClientSetup object.
@@ -139,10 +150,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized LiveClientSetup object, or null if deserialization
     /// fails.</returns>
     public static LiveClientSetup
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<LiveClientSetup>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

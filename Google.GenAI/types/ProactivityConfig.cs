@@ -21,12 +21,14 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Config for proactivity features.
   /// </summary>
 
-  public record ProactivityConfig {
+  public record ProactivityConfig
+  {
     /// <summary>
     /// If enabled, the model can reject responding to the last prompt. For example, this allows the
     /// model to ignore out of context speech or to stay silent if the user did not make a request,
@@ -34,7 +36,7 @@ namespace Google.GenAI.Types {
     /// </summary>
     [JsonPropertyName("proactiveAudio")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public bool ? ProactiveAudio { get; set; }
+    public bool? ProactiveAudio { get; set; }
 
     /// <summary>
     /// Deserializes a JSON string to a ProactivityConfig object.
@@ -44,10 +46,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized ProactivityConfig object, or null if deserialization
     /// fails.</returns>
     public static ProactivityConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<ProactivityConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

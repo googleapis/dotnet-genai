@@ -21,7 +21,8 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Client generated response to a `ToolCall` received from the server.  Individual
   /// `FunctionResponse` objects are matched to the respective `FunctionCall` objects by the `id`
@@ -30,13 +31,14 @@ namespace Google.GenAI.Types {
   /// calling happens over this dedicated set of messages.
   /// </summary>
 
-  public record LiveClientToolResponse {
+  public record LiveClientToolResponse
+  {
     /// <summary>
     /// The response to the function calls.
     /// </summary>
     [JsonPropertyName("functionResponses")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<FunctionResponse> ? FunctionResponses { get; set; }
+    public List<FunctionResponse>? FunctionResponses { get; set; }
 
     /// <summary>
     /// Deserializes a JSON string to a LiveClientToolResponse object.
@@ -46,10 +48,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized LiveClientToolResponse object, or null if deserialization
     /// fails.</returns>
     public static LiveClientToolResponse
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<LiveClientToolResponse>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Sent in response to a `LiveGenerateContentSetup` message from the client.
   /// </summary>
 
-  public record LiveServerSetupComplete {
+  public record LiveServerSetupComplete
+  {
     /// <summary>
     /// The session id of the live session.
     /// </summary>
     [JsonPropertyName("sessionId")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? SessionId { get; set; }
+    public string? SessionId { get; set; }
 
     /// <summary>
     /// Deserializes a JSON string to a LiveServerSetupComplete object.
@@ -42,10 +44,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized LiveServerSetupComplete object, or null if deserialization
     /// fails.</returns>
     public static LiveServerSetupComplete
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<LiveServerSetupComplete>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

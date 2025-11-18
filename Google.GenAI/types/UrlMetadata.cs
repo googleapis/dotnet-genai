@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Context of the a single url retrieval.
   /// </summary>
 
-  public record UrlMetadata {
+  public record UrlMetadata
+  {
     /// <summary>
     /// Retrieved url by the tool.
     /// </summary>
     [JsonPropertyName("retrievedUrl")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? RetrievedUrl { get; set; }
+    public string? RetrievedUrl { get; set; }
 
     /// <summary>
     /// Status of the url retrieval.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("urlRetrievalStatus")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public UrlRetrievalStatus
-        ? UrlRetrievalStatus {
-            get; set;
-          }
+        ? UrlRetrievalStatus
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a UrlMetadata object.
@@ -50,10 +53,14 @@ namespace Google.GenAI.Types {
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized UrlMetadata object, or null if deserialization fails.</returns>
-    public static UrlMetadata ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+    public static UrlMetadata? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<UrlMetadata>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

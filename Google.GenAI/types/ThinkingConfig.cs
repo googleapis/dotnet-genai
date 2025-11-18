@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// The thinking features configuration.
   /// </summary>
 
-  public record ThinkingConfig {
+  public record ThinkingConfig
+  {
     /// <summary>
     /// Indicates whether to include thoughts in the response. If true, thoughts are returned only
     /// if the model supports thought and thoughts are available.
     /// </summary>
     [JsonPropertyName("includeThoughts")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public bool ? IncludeThoughts { get; set; }
+    public bool? IncludeThoughts { get; set; }
 
     /// <summary>
     /// Indicates the thinking budget in tokens. 0 is DISABLED. -1 is AUTOMATIC. The default values
@@ -42,9 +44,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("thinkingBudget")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? ThinkingBudget {
-            get; set;
-          }
+        ? ThinkingBudget
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. The level of thoughts tokens that the model should generate.
@@ -52,9 +55,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("thinkingLevel")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public ThinkingLevel
-        ? ThinkingLevel {
-            get; set;
-          }
+        ? ThinkingLevel
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a ThinkingConfig object.
@@ -63,10 +67,14 @@ namespace Google.GenAI.Types {
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized ThinkingConfig object, or null if deserialization fails.</returns>
     public static ThinkingConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<ThinkingConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

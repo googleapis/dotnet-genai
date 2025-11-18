@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Contains the multi-part content of a message.
   /// </summary>
 
-  public record Content {
+  public record Content
+  {
     /// <summary>
     /// List of parts that constitute a single message. Each part may have a different IANA MIME
     /// type.
     /// </summary>
     [JsonPropertyName("parts")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<Part> ? Parts { get; set; }
+    public List<Part>? Parts { get; set; }
 
     /// <summary>
     /// Optional. The producer of the content. Must be either 'user' or 'model'. Useful to set for
@@ -42,9 +44,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("role")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Role {
-            get; set;
-          }
+        ? Role
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a Content object.
@@ -52,10 +55,14 @@ namespace Google.GenAI.Types {
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized Content object, or null if deserialization fails.</returns>
-    public static Content ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+    public static Content? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<Content>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

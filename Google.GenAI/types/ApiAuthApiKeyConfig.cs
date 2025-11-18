@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// The API secret. This data type is not supported in Gemini API.
   /// </summary>
 
-  public record ApiAuthApiKeyConfig {
+  public record ApiAuthApiKeyConfig
+  {
     /// <summary>
     /// The SecretManager secret version resource name storing API key. e.g.
     /// projects/{project}/secrets/{secret}/versions/{version}
     /// </summary>
     [JsonPropertyName("apiKeySecretVersion")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? ApiKeySecretVersion { get; set; }
+    public string? ApiKeySecretVersion { get; set; }
 
     /// <summary>
     /// The API key string. Either this or `api_key_secret_version` must be set.
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("apiKeyString")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? ApiKeyString {
-            get; set;
-          }
+        ? ApiKeyString
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a ApiAuthApiKeyConfig object.
@@ -53,10 +56,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized ApiAuthApiKeyConfig object, or null if deserialization
     /// fails.</returns>
     public static ApiAuthApiKeyConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<ApiAuthApiKeyConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

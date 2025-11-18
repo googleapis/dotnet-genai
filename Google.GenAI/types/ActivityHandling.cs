@@ -18,12 +18,14 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// The different ways of handling user activity.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum ActivityHandling {
+  public enum ActivityHandling
+  {
     /// <summary>
     /// If unspecified, the default behavior is `START_OF_ACTIVITY_INTERRUPTS`.
     /// </summary>

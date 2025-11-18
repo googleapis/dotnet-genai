@@ -21,15 +21,17 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
 
-  public record TestTableFile {
+  public record TestTableFile
+  {
     /// <summary>
     ///
     /// </summary>
     [JsonPropertyName("comment")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? Comment { get; set; }
+    public string? Comment { get; set; }
 
     /// <summary>
     ///
@@ -37,9 +39,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("testMethod")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? TestMethod {
-            get; set;
-          }
+        ? TestMethod
+    {
+      get; set;
+    }
 
     /// <summary>
     ///
@@ -47,9 +50,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("parameterNames")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<string>
-        ? ParameterNames {
-            get; set;
-          }
+        ? ParameterNames
+    {
+      get; set;
+    }
 
     /// <summary>
     ///
@@ -57,9 +61,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("testTable")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<TestTableItem>
-        ? TestTable {
-            get; set;
-          }
+        ? TestTable
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a TestTableFile object.
@@ -68,10 +73,14 @@ namespace Google.GenAI.Types {
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized TestTableFile object, or null if deserialization fails.</returns>
     public static TestTableFile
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<TestTableFile>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

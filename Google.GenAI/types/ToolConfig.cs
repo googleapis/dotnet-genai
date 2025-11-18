@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Tool config.  This config is shared for all tools provided in the request.
   /// </summary>
 
-  public record ToolConfig {
+  public record ToolConfig
+  {
     /// <summary>
     /// Optional. Function calling config.
     /// </summary>
     [JsonPropertyName("functionCallingConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public FunctionCallingConfig ? FunctionCallingConfig { get; set; }
+    public FunctionCallingConfig? FunctionCallingConfig { get; set; }
 
     /// <summary>
     /// Optional. Retrieval config.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("retrievalConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public RetrievalConfig
-        ? RetrievalConfig {
-            get; set;
-          }
+        ? RetrievalConfig
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a ToolConfig object.
@@ -50,10 +53,14 @@ namespace Google.GenAI.Types {
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized ToolConfig object, or null if deserialization fails.</returns>
-    public static ToolConfig ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+    public static ToolConfig? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<ToolConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

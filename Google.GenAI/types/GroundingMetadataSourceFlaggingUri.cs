@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Source content flagging uri for a place or review. This is currently populated only for Google
   /// Maps grounding. This data type is not supported in Gemini API.
   /// </summary>
 
-  public record GroundingMetadataSourceFlaggingUri {
+  public record GroundingMetadataSourceFlaggingUri
+  {
     /// <summary>
     /// A link where users can flag a problem with the source (place or review).
     /// </summary>
     [JsonPropertyName("flagContentUri")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? FlagContentUri { get; set; }
+    public string? FlagContentUri { get; set; }
 
     /// <summary>
     /// Id of the place or review.
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("sourceId")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? SourceId {
-            get; set;
-          }
+        ? SourceId
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a GroundingMetadataSourceFlaggingUri object.
@@ -53,10 +56,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized GroundingMetadataSourceFlaggingUri object, or null if
     /// deserialization fails.</returns>
     public static GroundingMetadataSourceFlaggingUri
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<GroundingMetadataSourceFlaggingUri>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

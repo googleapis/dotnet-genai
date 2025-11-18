@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Config for user oauth. This data type is not supported in Gemini API.
   /// </summary>
 
-  public record AuthConfigOauthConfig {
+  public record AuthConfigOauthConfig
+  {
     /// <summary>
     /// Access token for extension endpoint. Only used to propagate token from
     /// [[ExecuteExtensionRequest.runtime_auth_config]] at request time.
     /// </summary>
     [JsonPropertyName("accessToken")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? AccessToken { get; set; }
+    public string? AccessToken { get; set; }
 
     /// <summary>
     /// The service account used to generate access tokens for executing the Extension. - If the
@@ -45,9 +47,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("serviceAccount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? ServiceAccount {
-            get; set;
-          }
+        ? ServiceAccount
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a AuthConfigOauthConfig object.
@@ -57,10 +60,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized AuthConfigOauthConfig object, or null if deserialization
     /// fails.</returns>
     public static AuthConfigOauthConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<AuthConfigOauthConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

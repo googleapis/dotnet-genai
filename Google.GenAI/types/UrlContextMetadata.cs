@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Metadata related to url context retrieval tool.
   /// </summary>
 
-  public record UrlContextMetadata {
+  public record UrlContextMetadata
+  {
     /// <summary>
     /// Output only. List of url context.
     /// </summary>
     [JsonPropertyName("urlMetadata")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<UrlMetadata> ? UrlMetadata { get; set; }
+    public List<UrlMetadata>? UrlMetadata { get; set; }
 
     /// <summary>
     /// Deserializes a JSON string to a UrlContextMetadata object.
@@ -42,10 +44,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized UrlContextMetadata object, or null if deserialization
     /// fails.</returns>
     public static UrlContextMetadata
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<UrlContextMetadata>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

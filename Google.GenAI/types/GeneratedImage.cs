@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// An output image.
   /// </summary>
 
-  public record GeneratedImage {
+  public record GeneratedImage
+  {
     /// <summary>
     /// The output image data.
     /// </summary>
     [JsonPropertyName("image")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public Image ? Image { get; set; }
+    public Image? Image { get; set; }
 
     /// <summary>
     /// Responsible AI filter reason if the image is filtered out of the response.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("raiFilteredReason")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? RaiFilteredReason {
-            get; set;
-          }
+        ? RaiFilteredReason
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Safety attributes of the image. Lists of RAI categories and their scores of each content.
@@ -50,9 +53,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("safetyAttributes")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public SafetyAttributes
-        ? SafetyAttributes {
-            get; set;
-          }
+        ? SafetyAttributes
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The rewritten prompt used for the image generation if the prompt enhancer is enabled.
@@ -60,9 +64,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("enhancedPrompt")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? EnhancedPrompt {
-            get; set;
-          }
+        ? EnhancedPrompt
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a GeneratedImage object.
@@ -71,10 +76,14 @@ namespace Google.GenAI.Types {
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized GeneratedImage object, or null if deserialization fails.</returns>
     public static GeneratedImage
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<GeneratedImage>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

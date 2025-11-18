@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// The configuration for routing the request to a specific model. This data type is not supported
   /// in Gemini API.
   /// </summary>
 
-  public record GenerationConfigRoutingConfig {
+  public record GenerationConfigRoutingConfig
+  {
     /// <summary>
     /// Automated routing.
     /// </summary>
     [JsonPropertyName("autoMode")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public GenerationConfigRoutingConfigAutoRoutingMode ? AutoMode { get; set; }
+    public GenerationConfigRoutingConfigAutoRoutingMode? AutoMode { get; set; }
 
     /// <summary>
     /// Manual routing.
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("manualMode")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public GenerationConfigRoutingConfigManualRoutingMode
-        ? ManualMode {
-            get; set;
-          }
+        ? ManualMode
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a GenerationConfigRoutingConfig object.
@@ -53,10 +56,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized GenerationConfigRoutingConfig object, or null if deserialization
     /// fails.</returns>
     public static GenerationConfigRoutingConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<GenerationConfigRoutingConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

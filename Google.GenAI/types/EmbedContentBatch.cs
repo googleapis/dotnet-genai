@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Parameters for the embed_content method.
   /// </summary>
 
-  public record EmbedContentBatch {
+  public record EmbedContentBatch
+  {
     /// <summary>
     /// The content to embed. Only the `parts.text` fields will be counted.
     /// </summary>
     [JsonPropertyName("contents")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<Content> ? Contents { get; set; }
+    public List<Content>? Contents { get; set; }
 
     /// <summary>
     /// Configuration that contains optional parameters.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("config")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public EmbedContentConfig
-        ? Config {
-            get; set;
-          }
+        ? Config
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a EmbedContentBatch object.
@@ -52,10 +55,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized EmbedContentBatch object, or null if deserialization
     /// fails.</returns>
     public static EmbedContentBatch
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<EmbedContentBatch>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

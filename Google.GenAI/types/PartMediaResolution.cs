@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Media resolution for the input media.
   /// </summary>
 
-  public record PartMediaResolution {
+  public record PartMediaResolution
+  {
     /// <summary>
     /// The tokenization quality used for given media.
     /// </summary>
     [JsonPropertyName("level")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public PartMediaResolutionLevel ? Level { get; set; }
+    public PartMediaResolutionLevel? Level { get; set; }
 
     /// <summary>
     /// Specifies the required sequence length for media tokenization.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("numTokens")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? NumTokens {
-            get; set;
-          }
+        ? NumTokens
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a PartMediaResolution object.
@@ -52,10 +55,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized PartMediaResolution object, or null if deserialization
     /// fails.</returns>
     public static PartMediaResolution
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<PartMediaResolution>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

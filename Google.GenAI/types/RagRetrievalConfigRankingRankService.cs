@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Config for Rank Service. This data type is not supported in Gemini API.
   /// </summary>
 
-  public record RagRetrievalConfigRankingRankService {
+  public record RagRetrievalConfigRankingRankService
+  {
     /// <summary>
     /// Optional. The model name of the rank service. Format: `semantic-ranker-512@latest`
     /// </summary>
     [JsonPropertyName("modelName")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? ModelName { get; set; }
+    public string? ModelName { get; set; }
 
     /// <summary>
     /// Deserializes a JSON string to a RagRetrievalConfigRankingRankService object.
@@ -42,11 +44,15 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized RagRetrievalConfigRankingRankService object, or null if
     /// deserialization fails.</returns>
     public static RagRetrievalConfigRankingRankService
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<RagRetrievalConfigRankingRankService>(jsonString,
                                                                                 options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

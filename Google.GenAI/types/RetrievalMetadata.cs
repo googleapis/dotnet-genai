@@ -21,12 +21,14 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Metadata related to retrieval in the grounding flow.
   /// </summary>
 
-  public record RetrievalMetadata {
+  public record RetrievalMetadata
+  {
     /// <summary>
     /// Optional. Score indicating how likely information from Google Search could help answer the
     /// prompt. The score is in the range `[0, 1]`, where 0 is the least likely and 1 is the most
@@ -35,7 +37,7 @@ namespace Google.GenAI.Types {
     /// </summary>
     [JsonPropertyName("googleSearchDynamicRetrievalScore")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public double ? GoogleSearchDynamicRetrievalScore { get; set; }
+    public double? GoogleSearchDynamicRetrievalScore { get; set; }
 
     /// <summary>
     /// Deserializes a JSON string to a RetrievalMetadata object.
@@ -45,10 +47,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized RetrievalMetadata object, or null if deserialization
     /// fails.</returns>
     public static RetrievalMetadata
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<RetrievalMetadata>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

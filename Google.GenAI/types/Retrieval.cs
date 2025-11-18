@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Defines a retrieval tool that model can call to access external knowledge. This data type is
   /// not supported in Gemini API.
   /// </summary>
 
-  public record Retrieval {
+  public record Retrieval
+  {
     /// <summary>
     /// Optional. Deprecated. This option is no longer supported.
     /// </summary>
     [JsonPropertyName("disableAttribution")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public bool ? DisableAttribution { get; set; }
+    public bool? DisableAttribution { get; set; }
 
     /// <summary>
     /// Use data source powered by external API for grounding.
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("externalApi")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public ExternalApi
-        ? ExternalApi {
-            get; set;
-          }
+        ? ExternalApi
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Set to use data source powered by Vertex AI Search.
@@ -51,9 +54,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("vertexAiSearch")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public VertexAISearch
-        ? VertexAiSearch {
-            get; set;
-          }
+        ? VertexAiSearch
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Set to use data source powered by Vertex RAG store. User data is uploaded via the
@@ -62,9 +66,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("vertexRagStore")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public VertexRagStore
-        ? VertexRagStore {
-            get; set;
-          }
+        ? VertexRagStore
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a Retrieval object.
@@ -72,10 +77,14 @@ namespace Google.GenAI.Types {
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized Retrieval object, or null if deserialization fails.</returns>
-    public static Retrieval ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+    public static Retrieval? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<Retrieval>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

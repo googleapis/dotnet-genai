@@ -18,13 +18,15 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Sites with confidence level chosen &amp; above this value will be blocked from the search
   /// results. This enum is not supported in Gemini API.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum PhishBlockThreshold {
+  public enum PhishBlockThreshold
+  {
     /// <summary>
     /// Defaults to unspecified.
     /// </summary>

@@ -21,12 +21,14 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// The audio transcription configuration in Setup.
   /// </summary>
 
-  public record AudioTranscriptionConfig {
+  public record AudioTranscriptionConfig
+  {
     /// <summary>
     /// Deserializes a JSON string to a AudioTranscriptionConfig object.
     /// </summary>
@@ -35,10 +37,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized AudioTranscriptionConfig object, or null if deserialization
     /// fails.</returns>
     public static AudioTranscriptionConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<AudioTranscriptionConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

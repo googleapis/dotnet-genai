@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Optional parameters for the embed_content method.
   /// </summary>
 
-  public record EmbedContentConfig {
+  public record EmbedContentConfig
+  {
     /// <summary>
     /// Used to override HTTP request options.
     /// </summary>
     [JsonPropertyName("httpOptions")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public HttpOptions ? HttpOptions { get; set; }
+    public HttpOptions? HttpOptions { get; set; }
 
     /// <summary>
     /// Type of task for which the embedding will be used.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("taskType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? TaskType {
-            get; set;
-          }
+        ? TaskType
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Title for the text. Only applicable when TaskType is `RETRIEVAL_DOCUMENT`.
@@ -50,9 +53,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("title")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Title {
-            get; set;
-          }
+        ? Title
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Reduced dimension for the output embedding. If set, excessive values in the output embedding
@@ -62,9 +66,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("outputDimensionality")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? OutputDimensionality {
-            get; set;
-          }
+        ? OutputDimensionality
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Vertex API only. The MIME type of the input.
@@ -72,9 +77,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("mimeType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? MimeType {
-            get; set;
-          }
+        ? MimeType
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Vertex API only. Whether to silently truncate inputs longer than the max sequence length. If
@@ -84,9 +90,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("autoTruncate")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
-        ? AutoTruncate {
-            get; set;
-          }
+        ? AutoTruncate
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a EmbedContentConfig object.
@@ -96,10 +103,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized EmbedContentConfig object, or null if deserialization
     /// fails.</returns>
     public static EmbedContentConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<EmbedContentConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

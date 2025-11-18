@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Configuration for a Mask reference image.
   /// </summary>
 
-  public record MaskReferenceConfig {
+  public record MaskReferenceConfig
+  {
     /// <summary>
     /// Prompts the model to generate a mask instead of you needing to provide one (unless
     /// MASK_MODE_USER_PROVIDED is used).
     /// </summary>
     [JsonPropertyName("maskMode")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public MaskReferenceMode ? MaskMode { get; set; }
+    public MaskReferenceMode? MaskMode { get; set; }
 
     /// <summary>
     /// A list of up to 5 class ids to use for semantic segmentation. Automatically creates an image
@@ -42,9 +44,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("segmentationClasses")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<int>
-        ? SegmentationClasses {
-            get; set;
-          }
+        ? SegmentationClasses
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Dilation percentage of the mask provided. Float between 0 and 1.
@@ -52,9 +55,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("maskDilation")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
-        ? MaskDilation {
-            get; set;
-          }
+        ? MaskDilation
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a MaskReferenceConfig object.
@@ -64,10 +68,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized MaskReferenceConfig object, or null if deserialization
     /// fails.</returns>
     public static MaskReferenceConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<MaskReferenceConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

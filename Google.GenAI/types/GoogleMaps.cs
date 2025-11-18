@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Tool to retrieve public maps data for grounding, powered by Google.
   /// </summary>
 
-  public record GoogleMaps {
+  public record GoogleMaps
+  {
     /// <summary>
     /// The authentication config to access the API. Only API key is supported. This field is not
     /// supported in Gemini API.
     /// </summary>
     [JsonPropertyName("authConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public AuthConfig ? AuthConfig { get; set; }
+    public AuthConfig? AuthConfig { get; set; }
 
     /// <summary>
     /// Optional. If true, include the widget context token in the response.
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("enableWidget")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
-        ? EnableWidget {
-            get; set;
-          }
+        ? EnableWidget
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a GoogleMaps object.
@@ -51,10 +54,14 @@ namespace Google.GenAI.Types {
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized GoogleMaps object, or null if deserialization fails.</returns>
-    public static GoogleMaps ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+    public static GoogleMaps? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<GoogleMaps>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

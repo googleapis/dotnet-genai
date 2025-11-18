@@ -18,12 +18,14 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Server content modalities.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum Modality {
+  public enum Modality
+  {
     /// <summary>
     /// The modality is unspecified.
     /// </summary>

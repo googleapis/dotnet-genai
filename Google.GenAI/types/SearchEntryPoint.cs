@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Google search entry point.
   /// </summary>
 
-  public record SearchEntryPoint {
+  public record SearchEntryPoint
+  {
     /// <summary>
     /// Optional. Web content snippet that can be embedded in a web page or an app webview.
     /// </summary>
     [JsonPropertyName("renderedContent")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? RenderedContent { get; set; }
+    public string? RenderedContent { get; set; }
 
     /// <summary>
     /// Optional. Base64 encoded JSON representing array of tuple.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("sdkBlob")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public byte[]
-        ? SdkBlob {
-            get; set;
-          }
+        ? SdkBlob
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a SearchEntryPoint object.
@@ -52,10 +55,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized SearchEntryPoint object, or null if deserialization
     /// fails.</returns>
     public static SearchEntryPoint
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<SearchEntryPoint>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

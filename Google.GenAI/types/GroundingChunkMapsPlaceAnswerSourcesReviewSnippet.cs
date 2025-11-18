@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Encapsulates a review snippet. This data type is not supported in Gemini API.
   /// </summary>
 
-  public record GroundingChunkMapsPlaceAnswerSourcesReviewSnippet {
+  public record GroundingChunkMapsPlaceAnswerSourcesReviewSnippet
+  {
     /// <summary>
     /// This review's author.
     /// </summary>
     [JsonPropertyName("authorAttribution")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public GroundingChunkMapsPlaceAnswerSourcesAuthorAttribution ? AuthorAttribution { get; set; }
+    public GroundingChunkMapsPlaceAnswerSourcesAuthorAttribution? AuthorAttribution { get; set; }
 
     /// <summary>
     /// A link where users can flag a problem with the review.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("flagContentUri")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? FlagContentUri {
-            get; set;
-          }
+        ? FlagContentUri
+    {
+      get; set;
+    }
 
     /// <summary>
     /// A link to show the review on Google Maps.
@@ -50,9 +53,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("googleMapsUri")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? GoogleMapsUri {
-            get; set;
-          }
+        ? GoogleMapsUri
+    {
+      get; set;
+    }
 
     /// <summary>
     /// A string of formatted recent time, expressing the review time relative to the current time
@@ -61,9 +65,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("relativePublishTimeDescription")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? RelativePublishTimeDescription {
-            get; set;
-          }
+        ? RelativePublishTimeDescription
+    {
+      get; set;
+    }
 
     /// <summary>
     /// A reference representing this place review which may be used to look up this place review
@@ -72,9 +77,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("review")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Review {
-            get; set;
-          }
+        ? Review
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Id of the review referencing the place.
@@ -82,9 +88,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("reviewId")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? ReviewId {
-            get; set;
-          }
+        ? ReviewId
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Title of the review.
@@ -92,9 +99,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("title")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Title {
-            get; set;
-          }
+        ? Title
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a GroundingChunkMapsPlaceAnswerSourcesReviewSnippet object.
@@ -104,11 +112,15 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized GroundingChunkMapsPlaceAnswerSourcesReviewSnippet object, or null
     /// if deserialization fails.</returns>
     public static GroundingChunkMapsPlaceAnswerSourcesReviewSnippet
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<GroundingChunkMapsPlaceAnswerSourcesReviewSnippet>(
             jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

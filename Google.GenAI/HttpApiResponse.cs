@@ -56,7 +56,7 @@ namespace Google.GenAI
     /// </summary>
     protected override void DisposeManagedResources()
     {
-        _response?.Dispose();
+      _response?.Dispose();
     }
   }
 }

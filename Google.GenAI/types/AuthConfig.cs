@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Auth configuration to run the extension. This data type is not supported in Gemini API.
   /// </summary>
 
-  public record AuthConfig {
+  public record AuthConfig
+  {
     /// <summary>
     /// Config for API key auth.
     /// </summary>
     [JsonPropertyName("apiKeyConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public ApiKeyConfig ? ApiKeyConfig { get; set; }
+    public ApiKeyConfig? ApiKeyConfig { get; set; }
 
     /// <summary>
     /// Type of auth scheme.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("authType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public AuthType
-        ? AuthType {
-            get; set;
-          }
+        ? AuthType
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Config for Google Service Account auth.
@@ -50,9 +53,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("googleServiceAccountConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public AuthConfigGoogleServiceAccountConfig
-        ? GoogleServiceAccountConfig {
-            get; set;
-          }
+        ? GoogleServiceAccountConfig
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Config for HTTP Basic auth.
@@ -60,9 +64,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("httpBasicAuthConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public AuthConfigHttpBasicAuthConfig
-        ? HttpBasicAuthConfig {
-            get; set;
-          }
+        ? HttpBasicAuthConfig
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Config for user oauth.
@@ -70,9 +75,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("oauthConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public AuthConfigOauthConfig
-        ? OauthConfig {
-            get; set;
-          }
+        ? OauthConfig
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Config for user OIDC auth.
@@ -80,9 +86,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("oidcConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public AuthConfigOidcConfig
-        ? OidcConfig {
-            get; set;
-          }
+        ? OidcConfig
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a AuthConfig object.
@@ -90,10 +97,14 @@ namespace Google.GenAI.Types {
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized AuthConfig object, or null if deserialization fails.</returns>
-    public static AuthConfig ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+    public static AuthConfig? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<AuthConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

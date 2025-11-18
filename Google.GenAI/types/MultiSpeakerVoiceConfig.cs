@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// The configuration for the multi-speaker setup. This data type is not supported in Vertex AI.
   /// </summary>
 
-  public record MultiSpeakerVoiceConfig {
+  public record MultiSpeakerVoiceConfig
+  {
     /// <summary>
     /// All the enabled speaker voices.
     /// </summary>
     [JsonPropertyName("speakerVoiceConfigs")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<SpeakerVoiceConfig> ? SpeakerVoiceConfigs { get; set; }
+    public List<SpeakerVoiceConfig>? SpeakerVoiceConfigs { get; set; }
 
     /// <summary>
     /// Deserializes a JSON string to a MultiSpeakerVoiceConfig object.
@@ -42,10 +44,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized MultiSpeakerVoiceConfig object, or null if deserialization
     /// fails.</returns>
     public static MultiSpeakerVoiceConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<MultiSpeakerVoiceConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

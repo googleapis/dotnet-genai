@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Metadata describes the input video content.
   /// </summary>
 
-  public record VideoMetadata {
+  public record VideoMetadata
+  {
     /// <summary>
     /// Optional. The end offset of the video.
     /// </summary>
     [JsonPropertyName("endOffset")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? EndOffset { get; set; }
+    public string? EndOffset { get; set; }
 
     /// <summary>
     /// Optional. The frame rate of the video sent to the model. If not specified, the default value
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("fps")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
-        ? Fps {
-            get; set;
-          }
+        ? Fps
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. The start offset of the video.
@@ -51,9 +54,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("startOffset")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? StartOffset {
-            get; set;
-          }
+        ? StartOffset
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a VideoMetadata object.
@@ -62,10 +66,14 @@ namespace Google.GenAI.Types {
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized VideoMetadata object, or null if deserialization fails.</returns>
     public static VideoMetadata
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<VideoMetadata>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

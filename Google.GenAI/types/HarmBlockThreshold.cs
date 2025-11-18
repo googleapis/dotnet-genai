@@ -18,12 +18,14 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// The harm block threshold.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum HarmBlockThreshold {
+  public enum HarmBlockThreshold
+  {
     /// <summary>
     /// Unspecified harm block threshold.
     /// </summary>

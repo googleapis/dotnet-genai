@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Safety settings.
   /// </summary>
 
-  public record SafetySetting {
+  public record SafetySetting
+  {
     /// <summary>
     /// Harm category.
     /// </summary>
     [JsonPropertyName("category")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public HarmCategory ? Category { get; set; }
+    public HarmCategory? Category { get; set; }
 
     /// <summary>
     /// Optional. Specify if the threshold is used for probability or severity score. If not
@@ -42,9 +44,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("method")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public HarmBlockMethod
-        ? Method {
-            get; set;
-          }
+        ? Method
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The harm block threshold.
@@ -52,9 +55,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("threshold")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public HarmBlockThreshold
-        ? Threshold {
-            get; set;
-          }
+        ? Threshold
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a SafetySetting object.
@@ -63,10 +67,14 @@ namespace Google.GenAI.Types {
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized SafetySetting object, or null if deserialization fails.</returns>
     public static SafetySetting
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<SafetySetting>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

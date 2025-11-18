@@ -21,20 +21,22 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Marks the end of user activity.  This can only be sent if automatic (i.e. server-side)
   /// activity detection is disabled.
   /// </summary>
 
-  public record RealtimeInputConfig {
+  public record RealtimeInputConfig
+  {
     /// <summary>
     /// If not set, automatic activity detection is enabled by default. If automatic voice detection
     /// is disabled, the client must send activity signals.
     /// </summary>
     [JsonPropertyName("automaticActivityDetection")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public AutomaticActivityDetection ? AutomaticActivityDetection { get; set; }
+    public AutomaticActivityDetection? AutomaticActivityDetection { get; set; }
 
     /// <summary>
     /// Defines what effect activity has.
@@ -42,9 +44,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("activityHandling")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public ActivityHandling
-        ? ActivityHandling {
-            get; set;
-          }
+        ? ActivityHandling
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Defines which input is included in the user's turn.
@@ -52,9 +55,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("turnCoverage")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public TurnCoverage
-        ? TurnCoverage {
-            get; set;
-          }
+        ? TurnCoverage
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a RealtimeInputConfig object.
@@ -64,10 +68,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized RealtimeInputConfig object, or null if deserialization
     /// fails.</returns>
     public static RealtimeInputConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<RealtimeInputConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

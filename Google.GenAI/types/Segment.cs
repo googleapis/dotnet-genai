@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Segment of the content.
   /// </summary>
 
-  public record Segment {
+  public record Segment
+  {
     /// <summary>
     /// Output only. End index in the given Part, measured in bytes. Offset from the start of the
     /// Part, exclusive, starting at zero.
     /// </summary>
     [JsonPropertyName("endIndex")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public int ? EndIndex { get; set; }
+    public int? EndIndex { get; set; }
 
     /// <summary>
     /// Output only. The index of a Part object within its parent Content object.
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("partIndex")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? PartIndex {
-            get; set;
-          }
+        ? PartIndex
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Output only. Start index in the given Part, measured in bytes. Offset from the start of the
@@ -52,9 +55,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("startIndex")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? StartIndex {
-            get; set;
-          }
+        ? StartIndex
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Output only. The text corresponding to the segment from the response.
@@ -62,9 +66,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("text")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Text {
-            get; set;
-          }
+        ? Text
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a Segment object.
@@ -72,10 +77,14 @@ namespace Google.GenAI.Types {
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized Segment object, or null if deserialization fails.</returns>
-    public static Segment ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+    public static Segment? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<Segment>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

@@ -21,21 +21,23 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Configuration of session resumption mechanism.  Included in
   /// `LiveConnectConfig.session_resumption`. If included server will send
   /// `LiveServerSessionResumptionUpdate` messages.
   /// </summary>
 
-  public record SessionResumptionConfig {
+  public record SessionResumptionConfig
+  {
     /// <summary>
     /// Session resumption handle of previous session (session to restore).  If not present new
     /// session will be started.
     /// </summary>
     [JsonPropertyName("handle")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? Handle { get; set; }
+    public string? Handle { get; set; }
 
     /// <summary>
     /// If set the server will send `last_consumed_client_message_index` in the
@@ -44,9 +46,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("transparent")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
-        ? Transparent {
-            get; set;
-          }
+        ? Transparent
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a SessionResumptionConfig object.
@@ -56,10 +59,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized SessionResumptionConfig object, or null if deserialization
     /// fails.</returns>
     public static SessionResumptionConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<SessionResumptionConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

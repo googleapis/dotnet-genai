@@ -18,12 +18,14 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Outcome of the code execution.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum Outcome {
+  public enum Outcome
+  {
     /// <summary>
     /// Unspecified status. This value should not be used.
     /// </summary>

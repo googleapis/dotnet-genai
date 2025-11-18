@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Config for user OIDC auth. This data type is not supported in Gemini API.
   /// </summary>
 
-  public record AuthConfigOidcConfig {
+  public record AuthConfigOidcConfig
+  {
     /// <summary>
     /// OpenID Connect formatted ID token for extension endpoint. Only used to propagate token from
     /// [[ExecuteExtensionRequest.runtime_auth_config]] at request time.
     /// </summary>
     [JsonPropertyName("idToken")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? IdToken { get; set; }
+    public string? IdToken { get; set; }
 
     /// <summary>
     /// The service account used to generate an OpenID Connect (OIDC)-compatible JWT token signed by
@@ -47,9 +49,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("serviceAccount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? ServiceAccount {
-            get; set;
-          }
+        ? ServiceAccount
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a AuthConfigOidcConfig object.
@@ -59,10 +62,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized AuthConfigOidcConfig object, or null if deserialization
     /// fails.</returns>
     public static AuthConfigOidcConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<AuthConfigOidcConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

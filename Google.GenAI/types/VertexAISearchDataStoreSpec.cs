@@ -21,7 +21,8 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Define data stores within engine to filter on in a search call and configurations for those
   /// data stores. For more information, see
@@ -29,14 +30,15 @@ namespace Google.GenAI.Types {
   /// This data type is not supported in Gemini API.
   /// </summary>
 
-  public record VertexAISearchDataStoreSpec {
+  public record VertexAISearchDataStoreSpec
+  {
     /// <summary>
     /// Full resource name of DataStore, such as Format:
     /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore}`
     /// </summary>
     [JsonPropertyName("dataStore")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? DataStore { get; set; }
+    public string? DataStore { get; set; }
 
     /// <summary>
     /// Optional. Filter specification to filter documents in the data store specified by data_store
@@ -46,9 +48,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("filter")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Filter {
-            get; set;
-          }
+        ? Filter
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a VertexAISearchDataStoreSpec object.
@@ -58,10 +61,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized VertexAISearchDataStoreSpec object, or null if deserialization
     /// fails.</returns>
     public static VertexAISearchDataStoreSpec
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<VertexAISearchDataStoreSpec>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

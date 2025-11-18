@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Author attribution for a photo or review. This data type is not supported in Gemini API.
   /// </summary>
 
-  public record GroundingChunkMapsPlaceAnswerSourcesAuthorAttribution {
+  public record GroundingChunkMapsPlaceAnswerSourcesAuthorAttribution
+  {
     /// <summary>
     /// Name of the author of the Photo or Review.
     /// </summary>
     [JsonPropertyName("displayName")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? DisplayName { get; set; }
+    public string? DisplayName { get; set; }
 
     /// <summary>
     /// Profile photo URI of the author of the Photo or Review.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("photoUri")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? PhotoUri {
-            get; set;
-          }
+        ? PhotoUri
+    {
+      get; set;
+    }
 
     /// <summary>
     /// URI of the author of the Photo or Review.
@@ -50,9 +53,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("uri")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Uri {
-            get; set;
-          }
+        ? Uri
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a GroundingChunkMapsPlaceAnswerSourcesAuthorAttribution
@@ -63,11 +67,15 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized GroundingChunkMapsPlaceAnswerSourcesAuthorAttribution object, or
     /// null if deserialization fails.</returns>
     public static GroundingChunkMapsPlaceAnswerSourcesAuthorAttribution
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<GroundingChunkMapsPlaceAnswerSourcesAuthorAttribution>(
             jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

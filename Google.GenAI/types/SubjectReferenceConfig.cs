@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Configuration for a Subject reference image.
   /// </summary>
 
-  public record SubjectReferenceConfig {
+  public record SubjectReferenceConfig
+  {
     /// <summary>
     /// The subject type of a subject reference image.
     /// </summary>
     [JsonPropertyName("subjectType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public SubjectReferenceType ? SubjectType { get; set; }
+    public SubjectReferenceType? SubjectType { get; set; }
 
     /// <summary>
     /// Subject description for the image.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("subjectDescription")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? SubjectDescription {
-            get; set;
-          }
+        ? SubjectDescription
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a SubjectReferenceConfig object.
@@ -52,10 +55,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized SubjectReferenceConfig object, or null if deserialization
     /// fails.</returns>
     public static SubjectReferenceConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<SubjectReferenceConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

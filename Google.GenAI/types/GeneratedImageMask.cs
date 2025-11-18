@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// A generated image mask.
   /// </summary>
 
-  public record GeneratedImageMask {
+  public record GeneratedImageMask
+  {
     /// <summary>
     /// The generated image mask.
     /// </summary>
     [JsonPropertyName("mask")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public Image ? Mask { get; set; }
+    public Image? Mask { get; set; }
 
     /// <summary>
     /// The detected entities on the segmented area.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("labels")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<EntityLabel>
-        ? Labels {
-            get; set;
-          }
+        ? Labels
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a GeneratedImageMask object.
@@ -52,10 +55,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized GeneratedImageMask object, or null if deserialization
     /// fails.</returns>
     public static GeneratedImageMask
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<GeneratedImageMask>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Configuration for editing an image.
   /// </summary>
 
-  public record EditImageConfig {
+  public record EditImageConfig
+  {
     /// <summary>
     /// Used to override HTTP request options.
     /// </summary>
     [JsonPropertyName("httpOptions")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public HttpOptions ? HttpOptions { get; set; }
+    public HttpOptions? HttpOptions { get; set; }
 
     /// <summary>
     /// Cloud Storage URI used to store the generated images.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("outputGcsUri")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? OutputGcsUri {
-            get; set;
-          }
+        ? OutputGcsUri
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Description of what to discourage in the generated images.
@@ -50,9 +53,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("negativePrompt")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? NegativePrompt {
-            get; set;
-          }
+        ? NegativePrompt
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Number of images to generate.
@@ -60,9 +64,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("numberOfImages")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? NumberOfImages {
-            get; set;
-          }
+        ? NumberOfImages
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Aspect ratio of the generated images. Supported values are "1:1", "3:4", "4:3", "9:16", and
@@ -71,9 +76,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("aspectRatio")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? AspectRatio {
-            get; set;
-          }
+        ? AspectRatio
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Controls how much the model adheres to the text prompt. Large values increase output and
@@ -82,9 +88,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("guidanceScale")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
-        ? GuidanceScale {
-            get; set;
-          }
+        ? GuidanceScale
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Random seed for image generation. This is not available when ``add_watermark`` is set to
@@ -93,9 +100,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("seed")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? Seed {
-            get; set;
-          }
+        ? Seed
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Filter level for safety filtering.
@@ -103,9 +111,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("safetyFilterLevel")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public SafetyFilterLevel
-        ? SafetyFilterLevel {
-            get; set;
-          }
+        ? SafetyFilterLevel
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Allows generation of people by the model.
@@ -113,9 +122,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("personGeneration")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public PersonGeneration
-        ? PersonGeneration {
-            get; set;
-          }
+        ? PersonGeneration
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Whether to report the safety scores of each generated image and the positive prompt in the
@@ -124,9 +134,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("includeSafetyAttributes")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
-        ? IncludeSafetyAttributes {
-            get; set;
-          }
+        ? IncludeSafetyAttributes
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Whether to include the Responsible AI filter reason if the image is filtered out of the
@@ -135,9 +146,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("includeRaiReason")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
-        ? IncludeRaiReason {
-            get; set;
-          }
+        ? IncludeRaiReason
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Language of the text in the prompt.
@@ -145,9 +157,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("language")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public ImagePromptLanguage
-        ? Language {
-            get; set;
-          }
+        ? Language
+    {
+      get; set;
+    }
 
     /// <summary>
     /// MIME type of the generated image.
@@ -155,9 +168,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("outputMimeType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? OutputMimeType {
-            get; set;
-          }
+        ? OutputMimeType
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Compression quality of the generated image (for ``image/jpeg`` only).
@@ -165,9 +179,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("outputCompressionQuality")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? OutputCompressionQuality {
-            get; set;
-          }
+        ? OutputCompressionQuality
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Whether to add a watermark to the generated images.
@@ -175,9 +190,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("addWatermark")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
-        ? AddWatermark {
-            get; set;
-          }
+        ? AddWatermark
+    {
+      get; set;
+    }
 
     /// <summary>
     /// User specified labels to track billing usage.
@@ -185,9 +201,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("labels")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Dictionary<string, string>
-        ? Labels {
-            get; set;
-          }
+        ? Labels
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Describes the editing mode for the request.
@@ -195,9 +212,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("editMode")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public EditMode
-        ? EditMode {
-            get; set;
-          }
+        ? EditMode
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The number of sampling steps. A higher value has better image quality, while a lower value
@@ -206,9 +224,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("baseSteps")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? BaseSteps {
-            get; set;
-          }
+        ? BaseSteps
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a EditImageConfig object.
@@ -218,10 +237,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized EditImageConfig object, or null if deserialization
     /// fails.</returns>
     public static EditImageConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<EditImageConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

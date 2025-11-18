@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// An image mask representing a brush scribble.
   /// </summary>
 
-  public record ScribbleImage {
+  public record ScribbleImage
+  {
     /// <summary>
     /// The brush scribble to guide segmentation. Valid for the interactive mode.
     /// </summary>
     [JsonPropertyName("image")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public Image ? Image { get; set; }
+    public Image? Image { get; set; }
 
     /// <summary>
     /// Deserializes a JSON string to a ScribbleImage object.
@@ -41,10 +43,14 @@ namespace Google.GenAI.Types {
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized ScribbleImage object, or null if deserialization fails.</returns>
     public static ScribbleImage
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<ScribbleImage>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

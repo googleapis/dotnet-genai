@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// The speech generation config.
   /// </summary>
 
-  public record SpeechConfig {
+  public record SpeechConfig
+  {
     /// <summary>
     /// Optional. Language code (ISO 639. e.g. en-US) for the speech synthesization.
     /// </summary>
     [JsonPropertyName("languageCode")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? LanguageCode { get; set; }
+    public string? LanguageCode { get; set; }
 
     /// <summary>
     /// The configuration for the speaker to use.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("voiceConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public VoiceConfig
-        ? VoiceConfig {
-            get; set;
-          }
+        ? VoiceConfig
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. The configuration for the multi-speaker setup. It is mutually exclusive with the
@@ -51,9 +54,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("multiSpeakerVoiceConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public MultiSpeakerVoiceConfig
-        ? MultiSpeakerVoiceConfig {
-            get; set;
-          }
+        ? MultiSpeakerVoiceConfig
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a SpeechConfig object.
@@ -62,10 +66,14 @@ namespace Google.GenAI.Types {
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized SpeechConfig object, or null if deserialization fails.</returns>
     public static SpeechConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<SpeechConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

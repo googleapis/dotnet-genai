@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Parameters for connecting to the live API.
   /// </summary>
 
-  public record LiveConnectParameters {
+  public record LiveConnectParameters
+  {
     /// <summary>
     /// ID of the model to use. For a list of models, see Google models
     /// (https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models).
     /// </summary>
     [JsonPropertyName("model")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? Model { get; set; }
+    public string? Model { get; set; }
 
     /// <summary>
     /// callbacks
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("callbacks")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public object
-        ? Callbacks {
-            get; set;
-          }
+        ? Callbacks
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional configuration parameters for the request.
@@ -51,9 +54,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("config")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public LiveConnectConfig
-        ? Config {
-            get; set;
-          }
+        ? Config
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a LiveConnectParameters object.
@@ -63,10 +67,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized LiveConnectParameters object, or null if deserialization
     /// fails.</returns>
     public static LiveConnectParameters
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<LiveConnectParameters>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

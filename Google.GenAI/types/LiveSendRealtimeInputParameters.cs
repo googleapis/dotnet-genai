@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Parameters for sending realtime input to the live API.
   /// </summary>
 
-  public record LiveSendRealtimeInputParameters {
+  public record LiveSendRealtimeInputParameters
+  {
     /// <summary>
     /// Realtime input to send to the session.
     /// </summary>
     [JsonPropertyName("media")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public Blob ? Media { get; set; }
+    public Blob? Media { get; set; }
 
     /// <summary>
     /// The realtime audio input stream.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("audio")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Blob
-        ? Audio {
-            get; set;
-          }
+        ? Audio
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Indicates that the audio stream has ended, e.g. because the microphone was turned off.  This
@@ -52,9 +55,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("audioStreamEnd")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
-        ? AudioStreamEnd {
-            get; set;
-          }
+        ? AudioStreamEnd
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The realtime video input stream.
@@ -62,9 +66,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("video")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Blob
-        ? Video {
-            get; set;
-          }
+        ? Video
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The realtime text input stream.
@@ -72,9 +77,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("text")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Text {
-            get; set;
-          }
+        ? Text
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Marks the start of user activity.
@@ -82,9 +88,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("activityStart")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public ActivityStart
-        ? ActivityStart {
-            get; set;
-          }
+        ? ActivityStart
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Marks the end of user activity.
@@ -92,9 +99,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("activityEnd")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public ActivityEnd
-        ? ActivityEnd {
-            get; set;
-          }
+        ? ActivityEnd
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a LiveSendRealtimeInputParameters object.
@@ -104,10 +112,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized LiveSendRealtimeInputParameters object, or null if deserialization
     /// fails.</returns>
     public static LiveSendRealtimeInputParameters
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<LiveSendRealtimeInputParameters>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

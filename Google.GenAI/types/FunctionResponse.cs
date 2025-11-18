@@ -21,12 +21,14 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// A function response.
   /// </summary>
 
-  public record FunctionResponse {
+  public record FunctionResponse
+  {
     /// <summary>
     /// Signals that function call continues, and more responses will be returned, turning the
     /// function call into a generator. Is only applicable to NON_BLOCKING function calls (see
@@ -38,7 +40,7 @@ namespace Google.GenAI.Types {
     /// </summary>
     [JsonPropertyName("willContinue")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public bool ? WillContinue { get; set; }
+    public bool? WillContinue { get; set; }
 
     /// <summary>
     /// Specifies how the response should be scheduled in the conversation. Only applicable to
@@ -47,9 +49,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("scheduling")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public FunctionResponseScheduling
-        ? Scheduling {
-            get; set;
-          }
+        ? Scheduling
+    {
+      get; set;
+    }
 
     /// <summary>
     /// List of parts that constitute a function response. Each part may have a different IANA MIME
@@ -58,9 +61,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("parts")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<FunctionResponsePart>
-        ? Parts {
-            get; set;
-          }
+        ? Parts
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. The id of the function call this response is for. Populated by the client to match
@@ -69,9 +73,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("id")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Id {
-            get; set;
-          }
+        ? Id
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The name of the function to call. Matches [FunctionDeclaration.name] and
@@ -80,9 +85,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("name")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Name {
-            get; set;
-          }
+        ? Name
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The function response in JSON object format. Use "output" key to specify function output and
@@ -92,9 +98,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("response")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Dictionary<string, object>
-        ? Response {
-            get; set;
-          }
+        ? Response
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a FunctionResponse object.
@@ -104,10 +111,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized FunctionResponse object, or null if deserialization
     /// fails.</returns>
     public static FunctionResponse
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<FunctionResponse>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

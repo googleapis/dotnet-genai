@@ -18,12 +18,14 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// The location of the API key. This enum is not supported in Gemini API.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum HttpElementLocation {
+  public enum HttpElementLocation
+  {
     /// <summary>
     ///
     /// </summary>

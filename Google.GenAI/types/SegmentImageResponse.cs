@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// The output images response.
   /// </summary>
 
-  public record SegmentImageResponse {
+  public record SegmentImageResponse
+  {
     /// <summary>
     /// List of generated image masks.
     /// </summary>
     [JsonPropertyName("generatedMasks")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<GeneratedImageMask> ? GeneratedMasks { get; set; }
+    public List<GeneratedImageMask>? GeneratedMasks { get; set; }
 
     /// <summary>
     /// Deserializes a JSON string to a SegmentImageResponse object.
@@ -42,10 +44,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized SegmentImageResponse object, or null if deserialization
     /// fails.</returns>
     public static SegmentImageResponse
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<SegmentImageResponse>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

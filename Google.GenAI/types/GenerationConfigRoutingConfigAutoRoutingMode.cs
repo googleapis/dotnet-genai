@@ -21,20 +21,22 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// When automated routing is specified, the routing will be determined by the pretrained routing
   /// model and customer provided model routing preference. This data type is not supported in
   /// Gemini API.
   /// </summary>
 
-  public record GenerationConfigRoutingConfigAutoRoutingMode {
+  public record GenerationConfigRoutingConfigAutoRoutingMode
+  {
     /// <summary>
     /// The model routing preference.
     /// </summary>
     [JsonPropertyName("modelRoutingPreference")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? ModelRoutingPreference { get; set; }
+    public string? ModelRoutingPreference { get; set; }
 
     /// <summary>
     /// Deserializes a JSON string to a GenerationConfigRoutingConfigAutoRoutingMode object.
@@ -44,11 +46,15 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized GenerationConfigRoutingConfigAutoRoutingMode object, or null if
     /// deserialization fails.</returns>
     public static GenerationConfigRoutingConfigAutoRoutingMode
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<GenerationConfigRoutingConfigAutoRoutingMode>(jsonString,
                                                                                         options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

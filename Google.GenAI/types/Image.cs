@@ -23,19 +23,21 @@ using Google.GenAI.Serialization;
 
 using System.IO;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// An image.
   /// </summary>
 
-  public record Image {
+  public record Image
+  {
     /// <summary>
     /// The Cloud Storage URI of the image. ``Image`` can contain a value for this field or the
     /// ``image_bytes`` field but not both.
     /// </summary>
     [JsonPropertyName("gcsUri")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? GcsUri { get; set; }
+    public string? GcsUri { get; set; }
 
     /// <summary>
     /// The image bytes data. ``Image`` can contain a value for this field or the ``gcs_uri`` field
@@ -44,9 +46,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("imageBytes")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public byte[]
-        ? ImageBytes {
-            get; set;
-          }
+        ? ImageBytes
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The MIME type of the image.
@@ -54,9 +57,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("mimeType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? MimeType {
-            get; set;
-          }
+        ? MimeType
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a Image object.
@@ -64,26 +68,36 @@ namespace Google.GenAI.Types {
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized Image object, or null if deserialization fails.</returns>
-    public static Image ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+    public static Image? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<Image>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }
     }
 
-    public static Image FromFile(string location, string? mimeType = null) {
-      if (mimeType == null && MimeTypes.TryGetMimeType(location, out var mimeTypeInferred)) {
+    public static Image FromFile(string location, string? mimeType = null)
+    {
+      if (mimeType == null && MimeTypes.TryGetMimeType(location, out var mimeTypeInferred))
+      {
         mimeType = mimeTypeInferred;
       }
 
-      try {
-        return new Image {
+      try
+      {
+        return new Image
+        {
           ImageBytes = File.ReadAllBytes(location),
           MimeType = mimeType,
         };
-      } catch (IOException e) {
+      }
+      catch (IOException e)
+      {
         throw new IOException($"Failed to read image from file: {location}", e);
       }
     }

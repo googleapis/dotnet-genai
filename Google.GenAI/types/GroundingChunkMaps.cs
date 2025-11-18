@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Chunk from Google Maps. This data type is not supported in Gemini API.
   /// </summary>
 
-  public record GroundingChunkMaps {
+  public record GroundingChunkMaps
+  {
     /// <summary>
     /// Sources used to generate the place answer. This includes review snippets and photos that
     /// were used to generate the answer, as well as uris to flag content.
     /// </summary>
     [JsonPropertyName("placeAnswerSources")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public GroundingChunkMapsPlaceAnswerSources ? PlaceAnswerSources { get; set; }
+    public GroundingChunkMapsPlaceAnswerSources? PlaceAnswerSources { get; set; }
 
     /// <summary>
     /// This Place's resource name, in `places/{place_id}` format. Can be used to look up the Place.
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("placeId")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? PlaceId {
-            get; set;
-          }
+        ? PlaceId
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Text of the place answer.
@@ -51,9 +54,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("text")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Text {
-            get; set;
-          }
+        ? Text
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Title of the place.
@@ -61,9 +65,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("title")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Title {
-            get; set;
-          }
+        ? Title
+    {
+      get; set;
+    }
 
     /// <summary>
     /// URI reference of the place.
@@ -71,9 +76,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("uri")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Uri {
-            get; set;
-          }
+        ? Uri
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a GroundingChunkMaps object.
@@ -83,10 +89,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized GroundingChunkMaps object, or null if deserialization
     /// fails.</returns>
     public static GroundingChunkMaps
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<GroundingChunkMaps>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

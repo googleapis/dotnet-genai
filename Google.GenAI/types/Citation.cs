@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Source attributions for content. This data type is not supported in Gemini API.
   /// </summary>
 
-  public record Citation {
+  public record Citation
+  {
     /// <summary>
     /// Output only. End index into the content.
     /// </summary>
     [JsonPropertyName("endIndex")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public int ? EndIndex { get; set; }
+    public int? EndIndex { get; set; }
 
     /// <summary>
     /// Output only. License of the attribution.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("license")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? License {
-            get; set;
-          }
+        ? License
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Output only. Publication date of the attribution.
@@ -50,9 +53,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("publicationDate")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public GoogleTypeDate
-        ? PublicationDate {
-            get; set;
-          }
+        ? PublicationDate
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Output only. Start index into the content.
@@ -60,9 +64,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("startIndex")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? StartIndex {
-            get; set;
-          }
+        ? StartIndex
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Output only. Title of the attribution.
@@ -70,9 +75,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("title")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Title {
-            get; set;
-          }
+        ? Title
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Output only. Url reference of the attribution.
@@ -80,9 +86,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("uri")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Uri {
-            get; set;
-          }
+        ? Uri
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a Citation object.
@@ -90,10 +97,14 @@ namespace Google.GenAI.Types {
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized Citation object, or null if deserialization fails.</returns>
-    public static Citation ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+    public static Citation? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<Citation>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

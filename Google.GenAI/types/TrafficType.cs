@@ -18,12 +18,14 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Output only. The traffic type for this request. This enum is not supported in Gemini API.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum TrafficType {
+  public enum TrafficType
+  {
     /// <summary>
     /// Unspecified request traffic type.
     /// </summary>

@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// The response when long-running operation for uploading a file to a FileSearchStore complete.
   /// </summary>
 
-  public record UploadToFileSearchStoreResponse {
+  public record UploadToFileSearchStoreResponse
+  {
     /// <summary>
     /// The name of the FileSearchStore containing Documents.
     /// </summary>
     [JsonPropertyName("parent")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? Parent { get; set; }
+    public string? Parent { get; set; }
 
     /// <summary>
     /// The identifier for the Document imported.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("documentName")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? DocumentName {
-            get; set;
-          }
+        ? DocumentName
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a UploadToFileSearchStoreResponse object.
@@ -52,10 +55,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized UploadToFileSearchStoreResponse object, or null if deserialization
     /// fails.</returns>
     public static UploadToFileSearchStoreResponse
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<UploadToFileSearchStoreResponse>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

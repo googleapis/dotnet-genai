@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// The definition of the Rag resource. This data type is not supported in Gemini API.
   /// </summary>
 
-  public record VertexRagStoreRagResource {
+  public record VertexRagStoreRagResource
+  {
     /// <summary>
     /// Optional. RagCorpora resource name. Format:
     /// `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}`
     /// </summary>
     [JsonPropertyName("ragCorpus")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? RagCorpus { get; set; }
+    public string? RagCorpus { get; set; }
 
     /// <summary>
     /// Optional. rag_file_id. The files should be in the same rag_corpus set in rag_corpus field.
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("ragFileIds")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<string>
-        ? RagFileIds {
-            get; set;
-          }
+        ? RagFileIds
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a VertexRagStoreRagResource object.
@@ -53,10 +56,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized VertexRagStoreRagResource object, or null if deserialization
     /// fails.</returns>
     public static VertexRagStoreRagResource
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<VertexRagStoreRagResource>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

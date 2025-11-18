@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// An entity representing the segmented area.
   /// </summary>
 
-  public record EntityLabel {
+  public record EntityLabel
+  {
     /// <summary>
     /// The label of the segmented entity.
     /// </summary>
     [JsonPropertyName("label")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? Label { get; set; }
+    public string? Label { get; set; }
 
     /// <summary>
     /// The confidence score of the detected label.
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonConverter(typeof(StringToNullableDoubleConverter))]
     public double
-        ? Score {
-            get; set;
-          }
+        ? Score
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a EntityLabel object.
@@ -51,10 +54,14 @@ namespace Google.GenAI.Types {
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized EntityLabel object, or null if deserialization fails.</returns>
-    public static EntityLabel ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+    public static EntityLabel? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<EntityLabel>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

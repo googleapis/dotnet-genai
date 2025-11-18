@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// GoogleSearch tool type. Tool to support Google Search in Model. Powered by Google.
   /// </summary>
 
-  public record GoogleSearch {
+  public record GoogleSearch
+  {
     /// <summary>
     /// Optional. List of domains to be excluded from the search results. The default limit is 2000
     /// domains. Example: ["amazon.com", "facebook.com"]. This field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("excludeDomains")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<string> ? ExcludeDomains { get; set; }
+    public List<string>? ExcludeDomains { get; set; }
 
     /// <summary>
     /// Optional. Sites with confidence level chosen &amp; above this value will be blocked from the
@@ -42,9 +44,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("blockingConfidence")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public PhishBlockThreshold
-        ? BlockingConfidence {
-            get; set;
-          }
+        ? BlockingConfidence
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Filter search results to a specific time range. If customers set a start time,
@@ -53,9 +56,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("timeRangeFilter")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Interval
-        ? TimeRangeFilter {
-            get; set;
-          }
+        ? TimeRangeFilter
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a GoogleSearch object.
@@ -64,10 +68,14 @@ namespace Google.GenAI.Types {
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized GoogleSearch object, or null if deserialization fails.</returns>
     public static GoogleSearch
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<GoogleSearch>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

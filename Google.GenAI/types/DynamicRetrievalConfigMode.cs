@@ -18,12 +18,14 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Config for the dynamic retrieval config mode.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum DynamicRetrievalConfigMode {
+  public enum DynamicRetrievalConfigMode
+  {
     /// <summary>
     /// Always trigger retrieval.
     /// </summary>

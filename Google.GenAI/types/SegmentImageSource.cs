@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// A set of source input(s) for image segmentation.
   /// </summary>
 
-  public record SegmentImageSource {
+  public record SegmentImageSource
+  {
     /// <summary>
     /// A text prompt for guiding the model during image segmentation. Required for prompt mode and
     /// semantic mode, disallowed for other modes.
     /// </summary>
     [JsonPropertyName("prompt")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? Prompt { get; set; }
+    public string? Prompt { get; set; }
 
     /// <summary>
     /// The image to be segmented.
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("image")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Image
-        ? Image {
-            get; set;
-          }
+        ? Image
+    {
+      get; set;
+    }
 
     /// <summary>
     /// The brush scribble to guide segmentation. Required for the interactive mode, disallowed for
@@ -52,9 +55,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("scribbleImage")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public ScribbleImage
-        ? ScribbleImage {
-            get; set;
-          }
+        ? ScribbleImage
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a SegmentImageSource object.
@@ -64,10 +68,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized SegmentImageSource object, or null if deserialization
     /// fails.</returns>
     public static SegmentImageSource
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<SegmentImageSource>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

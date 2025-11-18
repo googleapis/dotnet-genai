@@ -18,12 +18,14 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Enum that controls the generation of people.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum PersonGeneration {
+  public enum PersonGeneration
+  {
     /// <summary>
     /// Block generation of images of people.
     /// </summary>

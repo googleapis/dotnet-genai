@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// HTTP options to be used in each of the requests.
   /// </summary>
 
-  public record HttpOptions {
+  public record HttpOptions
+  {
     /// <summary>
     /// The base URL for the AI platform service endpoint.
     /// </summary>
     [JsonPropertyName("baseUrl")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? BaseUrl { get; set; }
+    public string? BaseUrl { get; set; }
 
     /// <summary>
     /// Specifies the version of the API to use.
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("apiVersion")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? ApiVersion {
-            get; set;
-          }
+        ? ApiVersion
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Additional HTTP headers to be sent with the request.
@@ -50,9 +53,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("headers")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Dictionary<string, string>
-        ? Headers {
-            get; set;
-          }
+        ? Headers
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Timeout for the request in milliseconds.
@@ -60,9 +64,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("timeout")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? Timeout {
-            get; set;
-          }
+        ? Timeout
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a HttpOptions object.
@@ -70,10 +75,14 @@ namespace Google.GenAI.Types {
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized HttpOptions object, or null if deserialization fails.</returns>
-    public static HttpOptions ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+    public static HttpOptions? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<HttpOptions>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

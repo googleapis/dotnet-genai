@@ -21,20 +21,22 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Tool to search public web data, powered by Vertex AI Search and Sec4 compliance. This data
   /// type is not supported in Gemini API.
   /// </summary>
 
-  public record EnterpriseWebSearch {
+  public record EnterpriseWebSearch
+  {
     /// <summary>
     /// Optional. List of domains to be excluded from the search results. The default limit is 2000
     /// domains.
     /// </summary>
     [JsonPropertyName("excludeDomains")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<string> ? ExcludeDomains { get; set; }
+    public List<string>? ExcludeDomains { get; set; }
 
     /// <summary>
     /// Optional. Sites with confidence level chosen &amp; above this value will be blocked from the
@@ -43,9 +45,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("blockingConfidence")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public PhishBlockThreshold
-        ? BlockingConfidence {
-            get; set;
-          }
+        ? BlockingConfidence
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a EnterpriseWebSearch object.
@@ -55,10 +58,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized EnterpriseWebSearch object, or null if deserialization
     /// fails.</returns>
     public static EnterpriseWebSearch
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<EnterpriseWebSearch>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

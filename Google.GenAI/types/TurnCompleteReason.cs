@@ -18,12 +18,14 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// The reason why the turn is complete.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum TurnCompleteReason {
+  public enum TurnCompleteReason
+  {
     /// <summary>
     /// Default value. Reason is unspecified.
     /// </summary>

@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Configuration for a Style reference image.
   /// </summary>
 
-  public record StyleReferenceConfig {
+  public record StyleReferenceConfig
+  {
     /// <summary>
     /// A text description of the style to use for the generated image.
     /// </summary>
     [JsonPropertyName("styleDescription")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? StyleDescription { get; set; }
+    public string? StyleDescription { get; set; }
 
     /// <summary>
     /// Deserializes a JSON string to a StyleReferenceConfig object.
@@ -42,10 +44,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized StyleReferenceConfig object, or null if deserialization
     /// fails.</returns>
     public static StyleReferenceConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<StyleReferenceConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

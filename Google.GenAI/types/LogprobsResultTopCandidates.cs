@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Candidates with top log probabilities at each decoding step.
   /// </summary>
 
-  public record LogprobsResultTopCandidates {
+  public record LogprobsResultTopCandidates
+  {
     /// <summary>
     /// Sorted by log probability in descending order.
     /// </summary>
     [JsonPropertyName("candidates")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<LogprobsResultCandidate> ? Candidates { get; set; }
+    public List<LogprobsResultCandidate>? Candidates { get; set; }
 
     /// <summary>
     /// Deserializes a JSON string to a LogprobsResultTopCandidates object.
@@ -42,10 +44,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized LogprobsResultTopCandidates object, or null if deserialization
     /// fails.</returns>
     public static LogprobsResultTopCandidates
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<LogprobsResultTopCandidates>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Usage metadata about response(s).
   /// </summary>
 
-  public record UsageMetadata {
+  public record UsageMetadata
+  {
     /// <summary>
     /// Number of tokens in the prompt. When `cached_content` is set, this is still the total
     /// effective prompt size meaning this includes the number of tokens in the cached content.
     /// </summary>
     [JsonPropertyName("promptTokenCount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public int ? PromptTokenCount { get; set; }
+    public int? PromptTokenCount { get; set; }
 
     /// <summary>
     /// Number of tokens in the cached part of the prompt (the cached content).
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("cachedContentTokenCount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? CachedContentTokenCount {
-            get; set;
-          }
+        ? CachedContentTokenCount
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Total number of tokens across all the generated response candidates.
@@ -51,9 +54,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("responseTokenCount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? ResponseTokenCount {
-            get; set;
-          }
+        ? ResponseTokenCount
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Number of tokens present in tool-use prompt(s).
@@ -61,9 +65,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("toolUsePromptTokenCount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? ToolUsePromptTokenCount {
-            get; set;
-          }
+        ? ToolUsePromptTokenCount
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Number of tokens of thoughts for thinking models.
@@ -71,9 +76,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("thoughtsTokenCount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? ThoughtsTokenCount {
-            get; set;
-          }
+        ? ThoughtsTokenCount
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Total token count for prompt, response candidates, and tool-use prompts(if present).
@@ -81,9 +87,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("totalTokenCount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? TotalTokenCount {
-            get; set;
-          }
+        ? TotalTokenCount
+    {
+      get; set;
+    }
 
     /// <summary>
     /// List of modalities that were processed in the request input.
@@ -91,9 +98,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("promptTokensDetails")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<ModalityTokenCount>
-        ? PromptTokensDetails {
-            get; set;
-          }
+        ? PromptTokensDetails
+    {
+      get; set;
+    }
 
     /// <summary>
     /// List of modalities that were processed in the cache input.
@@ -101,9 +109,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("cacheTokensDetails")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<ModalityTokenCount>
-        ? CacheTokensDetails {
-            get; set;
-          }
+        ? CacheTokensDetails
+    {
+      get; set;
+    }
 
     /// <summary>
     /// List of modalities that were returned in the response.
@@ -111,9 +120,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("responseTokensDetails")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<ModalityTokenCount>
-        ? ResponseTokensDetails {
-            get; set;
-          }
+        ? ResponseTokensDetails
+    {
+      get; set;
+    }
 
     /// <summary>
     /// List of modalities that were processed in the tool-use prompt.
@@ -121,9 +131,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("toolUsePromptTokensDetails")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<ModalityTokenCount>
-        ? ToolUsePromptTokensDetails {
-            get; set;
-          }
+        ? ToolUsePromptTokensDetails
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Traffic type. This shows whether a request consumes Pay-As-You-Go or Provisioned Throughput
@@ -132,9 +143,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("trafficType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public TrafficType
-        ? TrafficType {
-            get; set;
-          }
+        ? TrafficType
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a UsageMetadata object.
@@ -143,10 +155,14 @@ namespace Google.GenAI.Types {
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized UsageMetadata object, or null if deserialization fails.</returns>
     public static UsageMetadata
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<UsageMetadata>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

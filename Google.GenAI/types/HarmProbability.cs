@@ -18,12 +18,14 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Output only. Harm probability levels in the content.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum HarmProbability {
+  public enum HarmProbability
+  {
     /// <summary>
     /// Harm probability unspecified.
     /// </summary>

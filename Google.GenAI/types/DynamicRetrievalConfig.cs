@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Describes the options to customize dynamic retrieval.
   /// </summary>
 
-  public record DynamicRetrievalConfig {
+  public record DynamicRetrievalConfig
+  {
     /// <summary>
     /// The mode of the predictor to be used in dynamic retrieval.
     /// </summary>
     [JsonPropertyName("mode")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public DynamicRetrievalConfigMode ? Mode { get; set; }
+    public DynamicRetrievalConfigMode? Mode { get; set; }
 
     /// <summary>
     /// Optional. The threshold to be used in dynamic retrieval. If not set, a system default value
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("dynamicThreshold")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
-        ? DynamicThreshold {
-            get; set;
-          }
+        ? DynamicThreshold
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a DynamicRetrievalConfig object.
@@ -53,10 +56,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized DynamicRetrievalConfig object, or null if deserialization
     /// fails.</returns>
     public static DynamicRetrievalConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<DynamicRetrievalConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

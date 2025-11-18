@@ -21,12 +21,14 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Grounding support.
   /// </summary>
 
-  public record GroundingSupport {
+  public record GroundingSupport
+  {
     /// <summary>
     /// Confidence score of the support references. Ranges from 0 to 1. 1 is the most confident. For
     /// Gemini 2.0 and before, this list must have the same size as the grounding_chunk_indices. For
@@ -34,7 +36,7 @@ namespace Google.GenAI.Types {
     /// </summary>
     [JsonPropertyName("confidenceScores")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<double> ? ConfidenceScores { get; set; }
+    public List<double>? ConfidenceScores { get; set; }
 
     /// <summary>
     /// A list of indices (into 'grounding_chunk') specifying the citations associated with the
@@ -44,9 +46,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("groundingChunkIndices")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<int>
-        ? GroundingChunkIndices {
-            get; set;
-          }
+        ? GroundingChunkIndices
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Segment of the content this support belongs to.
@@ -54,9 +57,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("segment")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Segment
-        ? Segment {
-            get; set;
-          }
+        ? Segment
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a GroundingSupport object.
@@ -66,10 +70,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized GroundingSupport object, or null if deserialization
     /// fails.</returns>
     public static GroundingSupport
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<GroundingSupport>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

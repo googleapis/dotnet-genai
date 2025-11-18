@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// The output images response.
   /// </summary>
 
-  public record GenerateImagesResponse {
+  public record GenerateImagesResponse
+  {
     /// <summary>
     /// List of generated images.
     /// </summary>
     [JsonPropertyName("generatedImages")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<GeneratedImage> ? GeneratedImages { get; set; }
+    public List<GeneratedImage>? GeneratedImages { get; set; }
 
     /// <summary>
     /// Safety attributes of the positive prompt. Only populated if ``include_safety_attributes`` is
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("positivePromptSafetyAttributes")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public SafetyAttributes
-        ? PositivePromptSafetyAttributes {
-            get; set;
-          }
+        ? PositivePromptSafetyAttributes
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a GenerateImagesResponse object.
@@ -53,10 +56,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized GenerateImagesResponse object, or null if deserialization
     /// fails.</returns>
     public static GenerateImagesResponse
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<GenerateImagesResponse>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

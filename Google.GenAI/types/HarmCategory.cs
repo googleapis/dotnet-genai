@@ -18,12 +18,14 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Harm category.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum HarmCategory {
+  public enum HarmCategory
+  {
     /// <summary>
     /// The harm category is unspecified.
     /// </summary>
@@ -64,7 +66,8 @@ namespace Google.GenAI.Types {
     /// API.
     /// </summary>
     [JsonPropertyName(
-        "HARM_CATEGORY_IMAGE_DANGEROUS_CONTENT")] HARM_CATEGORY_IMAGE_DANGEROUS_CONTENT,
+        "HARM_CATEGORY_IMAGE_DANGEROUS_CONTENT")]
+    HARM_CATEGORY_IMAGE_DANGEROUS_CONTENT,
 
     /// <summary>
     /// The harm category is image harassment. This enum value is not supported in Gemini API.
@@ -76,7 +79,8 @@ namespace Google.GenAI.Types {
     /// Gemini API.
     /// </summary>
     [JsonPropertyName(
-        "HARM_CATEGORY_IMAGE_SEXUALLY_EXPLICIT")] HARM_CATEGORY_IMAGE_SEXUALLY_EXPLICIT,
+        "HARM_CATEGORY_IMAGE_SEXUALLY_EXPLICIT")]
+    HARM_CATEGORY_IMAGE_SEXUALLY_EXPLICIT,
 
     /// <summary>
     /// The harm category is for jailbreak prompts. This enum value is not supported in Gemini API.

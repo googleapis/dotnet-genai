@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Represents a single response in a replay.
   /// </summary>
 
-  public record ReplayResponse {
+  public record ReplayResponse
+  {
     /// <summary>
     ///
     /// </summary>
     [JsonPropertyName("statusCode")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public int ? StatusCode { get; set; }
+    public int? StatusCode { get; set; }
 
     /// <summary>
     ///
@@ -40,9 +42,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("headers")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Dictionary<string, string>
-        ? Headers {
-            get; set;
-          }
+        ? Headers
+    {
+      get; set;
+    }
 
     /// <summary>
     ///
@@ -50,9 +53,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("bodySegments")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<Dictionary<string, object>>
-        ? BodySegments {
-            get; set;
-          }
+        ? BodySegments
+    {
+      get; set;
+    }
 
     /// <summary>
     ///
@@ -60,9 +64,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("sdkResponseSegments")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<Dictionary<string, object>>
-        ? SdkResponseSegments {
-            get; set;
-          }
+        ? SdkResponseSegments
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a ReplayResponse object.
@@ -71,10 +76,14 @@ namespace Google.GenAI.Types {
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized ReplayResponse object, or null if deserialization fails.</returns>
     public static ReplayResponse
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<ReplayResponse>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

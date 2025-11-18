@@ -21,12 +21,14 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Config for authentication with API key. This data type is not supported in Gemini API.
   /// </summary>
 
-  public record ApiKeyConfig {
+  public record ApiKeyConfig
+  {
     /// <summary>
     /// Optional. The name of the SecretManager secret version resource storing the API key. Format:
     /// `projects/{project}/secrets/{secrete}/versions/{version}` - If both `api_key_secret` and
@@ -38,7 +40,7 @@ namespace Google.GenAI.Types {
     /// </summary>
     [JsonPropertyName("apiKeySecret")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? ApiKeySecret { get; set; }
+    public string? ApiKeySecret { get; set; }
 
     /// <summary>
     /// Optional. The API key to be used in the request directly.
@@ -46,9 +48,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("apiKeyString")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? ApiKeyString {
-            get; set;
-          }
+        ? ApiKeyString
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. The location of the API key.
@@ -56,9 +59,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("httpElementLocation")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public HttpElementLocation
-        ? HttpElementLocation {
-            get; set;
-          }
+        ? HttpElementLocation
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. The parameter name of the API key. E.g. If the API request is
@@ -67,9 +71,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("name")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Name {
-            get; set;
-          }
+        ? Name
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a ApiKeyConfig object.
@@ -78,10 +83,14 @@ namespace Google.GenAI.Types {
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized ApiKeyConfig object, or null if deserialization fails.</returns>
     public static ApiKeyConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<ApiKeyConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

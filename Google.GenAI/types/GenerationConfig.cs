@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Generation config.
   /// </summary>
 
-  public record GenerationConfig {
+  public record GenerationConfig
+  {
     /// <summary>
     /// Optional. Config for model selection.
     /// </summary>
     [JsonPropertyName("modelSelectionConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public ModelSelectionConfig ? ModelSelectionConfig { get; set; }
+    public ModelSelectionConfig? ModelSelectionConfig { get; set; }
 
     /// <summary>
     /// Output schema of the generated response. This is an alternative to `response_schema` that
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("responseJsonSchema")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public object
-        ? ResponseJsonSchema {
-            get; set;
-          }
+        ? ResponseJsonSchema
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. If enabled, audio timestamp will be included in the request to the model. This
@@ -52,9 +55,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("audioTimestamp")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
-        ? AudioTimestamp {
-            get; set;
-          }
+        ? AudioTimestamp
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Number of candidates to generate.
@@ -62,9 +66,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("candidateCount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? CandidateCount {
-            get; set;
-          }
+        ? CandidateCount
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. If enabled, the model will detect emotions and adapt its responses accordingly.
@@ -73,9 +78,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("enableAffectiveDialog")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
-        ? EnableAffectiveDialog {
-            get; set;
-          }
+        ? EnableAffectiveDialog
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Frequency penalties.
@@ -83,9 +89,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("frequencyPenalty")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
-        ? FrequencyPenalty {
-            get; set;
-          }
+        ? FrequencyPenalty
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Logit probabilities.
@@ -93,9 +100,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("logprobs")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? Logprobs {
-            get; set;
-          }
+        ? Logprobs
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. The maximum number of output tokens to generate per message.
@@ -103,9 +111,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("maxOutputTokens")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? MaxOutputTokens {
-            get; set;
-          }
+        ? MaxOutputTokens
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. If specified, the media resolution specified will be used.
@@ -113,9 +122,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("mediaResolution")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public MediaResolution
-        ? MediaResolution {
-            get; set;
-          }
+        ? MediaResolution
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Positive penalties.
@@ -123,9 +133,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("presencePenalty")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
-        ? PresencePenalty {
-            get; set;
-          }
+        ? PresencePenalty
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. If true, export the logprobs results in response.
@@ -133,9 +144,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("responseLogprobs")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
-        ? ResponseLogprobs {
-            get; set;
-          }
+        ? ResponseLogprobs
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Output response mimetype of the generated candidate text. Supported mimetype: -
@@ -146,9 +158,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("responseMimeType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? ResponseMimeType {
-            get; set;
-          }
+        ? ResponseMimeType
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. The modalities of the response.
@@ -156,9 +169,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("responseModalities")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<Modality>
-        ? ResponseModalities {
-            get; set;
-          }
+        ? ResponseModalities
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. The `Schema` object allows the definition of input and output data types. These
@@ -170,9 +184,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("responseSchema")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Schema
-        ? ResponseSchema {
-            get; set;
-          }
+        ? ResponseSchema
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Routing configuration. This field is not supported in Gemini API.
@@ -180,9 +195,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("routingConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public GenerationConfigRoutingConfig
-        ? RoutingConfig {
-            get; set;
-          }
+        ? RoutingConfig
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Seed.
@@ -190,9 +206,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("seed")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? Seed {
-            get; set;
-          }
+        ? Seed
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. The speech generation config.
@@ -200,9 +217,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("speechConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public SpeechConfig
-        ? SpeechConfig {
-            get; set;
-          }
+        ? SpeechConfig
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Stop sequences.
@@ -210,9 +228,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("stopSequences")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<string>
-        ? StopSequences {
-            get; set;
-          }
+        ? StopSequences
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Controls the randomness of predictions.
@@ -220,9 +239,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("temperature")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
-        ? Temperature {
-            get; set;
-          }
+        ? Temperature
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Config for thinking features. An error will be returned if this field is set for
@@ -231,9 +251,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("thinkingConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public ThinkingConfig
-        ? ThinkingConfig {
-            get; set;
-          }
+        ? ThinkingConfig
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. If specified, top-k sampling will be used.
@@ -241,9 +262,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("topK")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
-        ? TopK {
-            get; set;
-          }
+        ? TopK
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. If specified, nucleus sampling will be used.
@@ -251,9 +273,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("topP")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
-        ? TopP {
-            get; set;
-          }
+        ? TopP
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Enables enhanced civic answers. It may not be available for all models. This field
@@ -262,9 +285,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("enableEnhancedCivicAnswers")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
-        ? EnableEnhancedCivicAnswers {
-            get; set;
-          }
+        ? EnableEnhancedCivicAnswers
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a GenerationConfig object.
@@ -274,10 +298,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized GenerationConfig object, or null if deserialization
     /// fails.</returns>
     public static GenerationConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<GenerationConfig>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

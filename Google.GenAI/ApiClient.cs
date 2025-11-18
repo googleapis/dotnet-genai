@@ -289,9 +289,9 @@ namespace Google.GenAI
     /// <returns>A <see cref="ValueTask"/> that represents the asynchronous dispose operation.</returns>
     public virtual ValueTask DisposeAsync()
     {
-        Dispose();
+      Dispose();
 #if NETSTANDARD2_1
-        return new ValueTask(Task.CompletedTask);
+      return new ValueTask(Task.CompletedTask);
 #else
         return ValueTask.CompletedTask;
 #endif
@@ -299,14 +299,14 @@ namespace Google.GenAI
 
     private static string GetSdkVersion()
     {
-        // This reads AssemblyInformationalVersionAttribute from the assembly,
-        // which is generated during build from the <Version> property.
-        // Google.GenAI.csproj imports ReleaseVersion.xml to set <Version>,
-        // so this effectively reads the version from ReleaseVersion.xml.
-        return typeof(ApiClient)
-            .Assembly
-            .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
-            ?.InformationalVersion ?? "";
+      // This reads AssemblyInformationalVersionAttribute from the assembly,
+      // which is generated during build from the <Version> property.
+      // Google.GenAI.csproj imports ReleaseVersion.xml to set <Version>,
+      // so this effectively reads the version from ReleaseVersion.xml.
+      return typeof(ApiClient)
+          .Assembly
+          .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
+          ?.InformationalVersion ?? "";
     }
   }
 }

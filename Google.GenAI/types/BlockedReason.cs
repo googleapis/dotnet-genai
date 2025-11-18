@@ -18,12 +18,14 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Output only. The reason why the prompt was blocked.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum BlockedReason {
+  public enum BlockedReason
+  {
     /// <summary>
     /// The blocked reason is unspecified.
     /// </summary>

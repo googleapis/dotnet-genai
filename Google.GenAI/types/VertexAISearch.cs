@@ -21,14 +21,16 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Retrieve from Vertex AI Search datastore or engine for grounding. datastore and engine are
   /// mutually exclusive. See https://cloud.google.com/products/agent-builder. This data type is not
   /// supported in Gemini API.
   /// </summary>
 
-  public record VertexAISearch {
+  public record VertexAISearch
+  {
     /// <summary>
     /// Specifications that define the specific DataStores to be searched, along with configurations
     /// for those data stores. This is only considered for Engines with multiple data stores. It
@@ -36,7 +38,7 @@ namespace Google.GenAI.Types {
     /// </summary>
     [JsonPropertyName("dataStoreSpecs")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<VertexAISearchDataStoreSpec> ? DataStoreSpecs { get; set; }
+    public List<VertexAISearchDataStoreSpec>? DataStoreSpecs { get; set; }
 
     /// <summary>
     /// Optional. Fully-qualified Vertex AI Search data store resource ID. Format:
@@ -45,9 +47,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("datastore")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Datastore {
-            get; set;
-          }
+        ? Datastore
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Fully-qualified Vertex AI Search engine resource ID. Format:
@@ -56,9 +59,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("engine")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Engine {
-            get; set;
-          }
+        ? Engine
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Filter strings to be passed to the search API.
@@ -66,9 +70,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("filter")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Filter {
-            get; set;
-          }
+        ? Filter
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Optional. Number of search results to return per query. The default value is 10. The
@@ -77,9 +82,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("maxResults")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? MaxResults {
-            get; set;
-          }
+        ? MaxResults
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a VertexAISearch object.
@@ -88,10 +94,14 @@ namespace Google.GenAI.Types {
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized VertexAISearch object, or null if deserialization fails.</returns>
     public static VertexAISearch
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<VertexAISearch>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

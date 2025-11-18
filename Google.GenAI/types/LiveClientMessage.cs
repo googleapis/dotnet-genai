@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Messages sent by the client in the API call.
   /// </summary>
 
-  public record LiveClientMessage {
+  public record LiveClientMessage
+  {
     /// <summary>
     /// Message to be sent by the system when connecting to the API. SDK users should not send this
     /// message.
     /// </summary>
     [JsonPropertyName("setup")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public LiveClientSetup ? Setup { get; set; }
+    public LiveClientSetup? Setup { get; set; }
 
     /// <summary>
     /// Incremental update of the current conversation delivered from the client.
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("clientContent")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public LiveClientContent
-        ? ClientContent {
-            get; set;
-          }
+        ? ClientContent
+    {
+      get; set;
+    }
 
     /// <summary>
     /// User input that is sent in real time.
@@ -51,9 +54,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("realtimeInput")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public LiveClientRealtimeInput
-        ? RealtimeInput {
-            get; set;
-          }
+        ? RealtimeInput
+    {
+      get; set;
+    }
 
     /// <summary>
     /// This is an alias for `realtime_input` field. Allows the inputs to sendRealtimeInput to be
@@ -63,9 +67,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("realtimeInputParameters")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public LiveSendRealtimeInputParameters
-        ? RealtimeInputParameters {
-            get; set;
-          }
+        ? RealtimeInputParameters
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Response to a `ToolCallMessage` received from the server.
@@ -73,9 +78,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("toolResponse")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public LiveClientToolResponse
-        ? ToolResponse {
-            get; set;
-          }
+        ? ToolResponse
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a LiveClientMessage object.
@@ -85,10 +91,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized LiveClientMessage object, or null if deserialization
     /// fails.</returns>
     public static LiveClientMessage
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<LiveClientMessage>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

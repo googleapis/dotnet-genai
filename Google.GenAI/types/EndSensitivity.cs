@@ -18,12 +18,14 @@
 
 using System.Text.Json.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// End of speech sensitivity.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
-  public enum EndSensitivity {
+  public enum EndSensitivity
+  {
     /// <summary>
     /// The default is END_SENSITIVITY_LOW.
     /// </summary>

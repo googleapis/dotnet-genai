@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Tool to retrieve public web data for grounding, powered by Google.
   /// </summary>
 
-  public record GoogleSearchRetrieval {
+  public record GoogleSearchRetrieval
+  {
     /// <summary>
     /// Specifies the dynamic retrieval configuration for the given source.
     /// </summary>
     [JsonPropertyName("dynamicRetrievalConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public DynamicRetrievalConfig ? DynamicRetrievalConfig { get; set; }
+    public DynamicRetrievalConfig? DynamicRetrievalConfig { get; set; }
 
     /// <summary>
     /// Deserializes a JSON string to a GoogleSearchRetrieval object.
@@ -42,10 +44,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized GoogleSearchRetrieval object, or null if deserialization
     /// fails.</returns>
     public static GoogleSearchRetrieval
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<GoogleSearchRetrieval>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

@@ -21,13 +21,15 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Config for Google Service Account Authentication. This data type is not supported in Gemini
   /// API.
   /// </summary>
 
-  public record AuthConfigGoogleServiceAccountConfig {
+  public record AuthConfigGoogleServiceAccountConfig
+  {
     /// <summary>
     /// Optional. The service account that the extension execution service runs as. - If the service
     /// account is specified, the `iam.serviceAccounts.getAccessToken` permission should be granted
@@ -38,7 +40,7 @@ namespace Google.GenAI.Types {
     /// </summary>
     [JsonPropertyName("serviceAccount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? ServiceAccount { get; set; }
+    public string? ServiceAccount { get; set; }
 
     /// <summary>
     /// Deserializes a JSON string to a AuthConfigGoogleServiceAccountConfig object.
@@ -48,11 +50,15 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized AuthConfigGoogleServiceAccountConfig object, or null if
     /// deserialization fails.</returns>
     public static AuthConfigGoogleServiceAccountConfig
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<AuthConfigGoogleServiceAccountConfig>(jsonString,
                                                                                 options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

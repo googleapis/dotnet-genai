@@ -21,19 +21,21 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Statistics of the input text associated with the result of content embedding.
   /// </summary>
 
-  public record ContentEmbeddingStatistics {
+  public record ContentEmbeddingStatistics
+  {
     /// <summary>
     /// Vertex API only. If the input text was truncated due to having a length longer than the
     /// allowed maximum input.
     /// </summary>
     [JsonPropertyName("truncated")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public bool ? Truncated { get; set; }
+    public bool? Truncated { get; set; }
 
     /// <summary>
     /// Vertex API only. Number of tokens of the input text.
@@ -41,9 +43,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("tokenCount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
-        ? TokenCount {
-            get; set;
-          }
+        ? TokenCount
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a ContentEmbeddingStatistics object.
@@ -53,10 +56,14 @@ namespace Google.GenAI.Types {
     /// <returns>The deserialized ContentEmbeddingStatistics object, or null if deserialization
     /// fails.</returns>
     public static ContentEmbeddingStatistics
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<ContentEmbeddingStatistics>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

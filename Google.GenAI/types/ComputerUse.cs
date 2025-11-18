@@ -21,18 +21,20 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
-namespace Google.GenAI.Types {
+namespace Google.GenAI.Types
+{
   /// <summary>
   /// Tool to support computer use.
   /// </summary>
 
-  public record ComputerUse {
+  public record ComputerUse
+  {
     /// <summary>
     /// The environment being operated.
     /// </summary>
     [JsonPropertyName("environment")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public Environment ? Environment { get; set; }
+    public Environment? Environment { get; set; }
 
     /// <summary>
     /// By default, predefined functions are included in the final model call. Some of them can be
@@ -43,9 +45,10 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("excludedPredefinedFunctions")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<string>
-        ? ExcludedPredefinedFunctions {
-            get; set;
-          }
+        ? ExcludedPredefinedFunctions
+    {
+      get; set;
+    }
 
     /// <summary>
     /// Deserializes a JSON string to a ComputerUse object.
@@ -53,10 +56,14 @@ namespace Google.GenAI.Types {
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
     /// <returns>The deserialized ComputerUse object, or null if deserialization fails.</returns>
-    public static ComputerUse ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
-      try {
+    public static ComputerUse? FromJson(string jsonString, JsonSerializerOptions? options = null)
+    {
+      try
+      {
         return JsonSerializer.Deserialize<ComputerUse>(jsonString, options);
-      } catch (JsonException e) {
+      }
+      catch (JsonException e)
+      {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
       }

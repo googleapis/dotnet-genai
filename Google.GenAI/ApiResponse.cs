@@ -54,17 +54,17 @@ namespace Google.GenAI
     /// resources; false to release only unmanaged resources.</param>
     protected void Dispose(bool disposing)
     {
-        // This atomic check now happens FIRST, guaranteeing it runs only once.
-        if (Interlocked.CompareExchange(ref _disposed, 1, 0) != 0)
-        {
-            return;
-        }
+      // This atomic check now happens FIRST, guaranteeing it runs only once.
+      if (Interlocked.CompareExchange(ref _disposed, 1, 0) != 0)
+      {
+        return;
+      }
 
-        if (disposing)
-        {
-            // This is the new "hook" for derived classes.
-            DisposeManagedResources();
-        }
+      if (disposing)
+      {
+        // This is the new "hook" for derived classes.
+        DisposeManagedResources();
+      }
     }
     protected virtual void DisposeManagedResources() { }
 
@@ -74,9 +74,9 @@ namespace Google.GenAI
     /// <returns>A <see cref="ValueTask"/> that represents the asynchronous dispose operation.</returns>
     public virtual ValueTask DisposeAsync()
     {
-        Dispose();
+      Dispose();
 #if NETSTANDARD2_1
-        return new ValueTask(Task.CompletedTask);
+      return new ValueTask(Task.CompletedTask);
 #else
         return ValueTask.CompletedTask;
 #endif
