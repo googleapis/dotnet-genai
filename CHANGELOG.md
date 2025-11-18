@@ -1,5 +1,17 @@
 # Changelog
 
+## Version 0.6.0, released 2025-11-18
+
+
+### New features
+
+* add display name to FunctionResponseBlob ([4385bf9](https://github.com/googleapis/dotnet-genai/commit/4385bf9b170294ca6a8403f059ff080555277698))
+* add display name to FunctionResponseFileData ([5ad6397](https://github.com/googleapis/dotnet-genai/commit/5ad6397746defd5a19a5c46c804c0fc7a8f2f59f))
+* Add generate_content_config.thinking_level ([1773949](https://github.com/googleapis/dotnet-genai/commit/17739497e3c5ec480e540b665a0bf039d243bcf6))
+* Add image output options to ImageConfig for Vertex ([06bee26](https://github.com/googleapis/dotnet-genai/commit/06bee2636da98d0fdfda539b23253317ec16d379))
+* Add part.media_resolution ([1773949](https://github.com/googleapis/dotnet-genai/commit/17739497e3c5ec480e540b665a0bf039d243bcf6))
+* support Function call argument streaming for all languages ([467fbe4](https://github.com/googleapis/dotnet-genai/commit/467fbe4a12e16866f5544d58582983e25ed1b1e1))
+
 ## Version 0.5.0, released 2025-11-12
 
 
