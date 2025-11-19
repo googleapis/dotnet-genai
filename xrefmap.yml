@@ -870,6 +870,40 @@ references:
   fullName.vb: Google.GenAI.Models.New
   nameWithType: Models.Models
   nameWithType.vb: Models.New
+- uid: Google.GenAI.Models.CountTokensAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.CountTokensConfig)
+  name: CountTokensAsync(string, Content, CountTokensConfig?)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_CountTokensAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_CountTokensConfig_
+  commentId: M:Google.GenAI.Models.CountTokensAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.CountTokensConfig)
+  name.vb: CountTokensAsync(String, Content, CountTokensConfig)
+  fullName: Google.GenAI.Models.CountTokensAsync(string, Google.GenAI.Types.Content, Google.GenAI.Types.CountTokensConfig?)
+  fullName.vb: Google.GenAI.Models.CountTokensAsync(String, Google.GenAI.Types.Content, Google.GenAI.Types.CountTokensConfig)
+  nameWithType: Models.CountTokensAsync(string, Content, CountTokensConfig?)
+  nameWithType.vb: Models.CountTokensAsync(String, Content, CountTokensConfig)
+- uid: Google.GenAI.Models.CountTokensAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.CountTokensConfig)
+  name: CountTokensAsync(string, List<Content>, CountTokensConfig)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_CountTokensAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_CountTokensConfig_
+  commentId: M:Google.GenAI.Models.CountTokensAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.CountTokensConfig)
+  name.vb: CountTokensAsync(String, List(Of Content), CountTokensConfig)
+  fullName: Google.GenAI.Models.CountTokensAsync(string, System.Collections.Generic.List<Google.GenAI.Types.Content>, Google.GenAI.Types.CountTokensConfig)
+  fullName.vb: Google.GenAI.Models.CountTokensAsync(String, System.Collections.Generic.List(Of Google.GenAI.Types.Content), Google.GenAI.Types.CountTokensConfig)
+  nameWithType: Models.CountTokensAsync(string, List<Content>, CountTokensConfig)
+  nameWithType.vb: Models.CountTokensAsync(String, List(Of Content), CountTokensConfig)
+- uid: Google.GenAI.Models.CountTokensAsync(System.String,System.String,Google.GenAI.Types.CountTokensConfig)
+  name: CountTokensAsync(string, string, CountTokensConfig?)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_CountTokensAsync_System_String_System_String_Google_GenAI_Types_CountTokensConfig_
+  commentId: M:Google.GenAI.Models.CountTokensAsync(System.String,System.String,Google.GenAI.Types.CountTokensConfig)
+  name.vb: CountTokensAsync(String, String, CountTokensConfig)
+  fullName: Google.GenAI.Models.CountTokensAsync(string, string, Google.GenAI.Types.CountTokensConfig?)
+  fullName.vb: Google.GenAI.Models.CountTokensAsync(String, String, Google.GenAI.Types.CountTokensConfig)
+  nameWithType: Models.CountTokensAsync(string, string, CountTokensConfig?)
+  nameWithType.vb: Models.CountTokensAsync(String, String, CountTokensConfig)
+- uid: Google.GenAI.Models.CountTokensAsync*
+  name: CountTokensAsync
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_CountTokensAsync_
+  commentId: Overload:Google.GenAI.Models.CountTokensAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Models.CountTokensAsync
+  nameWithType: Models.CountTokensAsync
 - uid: Google.GenAI.Models.EditImageAsync(System.String,System.String,System.Collections.Generic.List{Google.GenAI.Types.IReferenceImage},Google.GenAI.Types.EditImageConfig)
   name: EditImageAsync(string, string, List<IReferenceImage>, EditImageConfig?)
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_EditImageAsync_System_String_System_String_System_Collections_Generic_List_Google_GenAI_Types_IReferenceImage__Google_GenAI_Types_EditImageConfig_
@@ -2778,6 +2812,128 @@ references:
   commentId: F:Google.GenAI.Types.ControlReferenceType.CONTROL_TYPE_SCRIBBLE
   fullName: Google.GenAI.Types.ControlReferenceType.CONTROL_TYPE_SCRIBBLE
   nameWithType: ControlReferenceType.CONTROL_TYPE_SCRIBBLE
+- uid: Google.GenAI.Types.CountTokensConfig
+  name: CountTokensConfig
+  href: api/Google.GenAI.Types.CountTokensConfig.html
+  commentId: T:Google.GenAI.Types.CountTokensConfig
+  fullName: Google.GenAI.Types.CountTokensConfig
+  nameWithType: CountTokensConfig
+- uid: Google.GenAI.Types.CountTokensConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.CountTokensConfig.html#Google_GenAI_Types_CountTokensConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.CountTokensConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.CountTokensConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.CountTokensConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: CountTokensConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: CountTokensConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.CountTokensConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.CountTokensConfig.html#Google_GenAI_Types_CountTokensConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.CountTokensConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CountTokensConfig.FromJson
+  nameWithType: CountTokensConfig.FromJson
+- uid: Google.GenAI.Types.CountTokensConfig.GenerationConfig
+  name: GenerationConfig
+  href: api/Google.GenAI.Types.CountTokensConfig.html#Google_GenAI_Types_CountTokensConfig_GenerationConfig
+  commentId: P:Google.GenAI.Types.CountTokensConfig.GenerationConfig
+  fullName: Google.GenAI.Types.CountTokensConfig.GenerationConfig
+  nameWithType: CountTokensConfig.GenerationConfig
+- uid: Google.GenAI.Types.CountTokensConfig.GenerationConfig*
+  name: GenerationConfig
+  href: api/Google.GenAI.Types.CountTokensConfig.html#Google_GenAI_Types_CountTokensConfig_GenerationConfig_
+  commentId: Overload:Google.GenAI.Types.CountTokensConfig.GenerationConfig
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CountTokensConfig.GenerationConfig
+  nameWithType: CountTokensConfig.GenerationConfig
+- uid: Google.GenAI.Types.CountTokensConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.CountTokensConfig.html#Google_GenAI_Types_CountTokensConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.CountTokensConfig.HttpOptions
+  fullName: Google.GenAI.Types.CountTokensConfig.HttpOptions
+  nameWithType: CountTokensConfig.HttpOptions
+- uid: Google.GenAI.Types.CountTokensConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.CountTokensConfig.html#Google_GenAI_Types_CountTokensConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.CountTokensConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CountTokensConfig.HttpOptions
+  nameWithType: CountTokensConfig.HttpOptions
+- uid: Google.GenAI.Types.CountTokensConfig.SystemInstruction
+  name: SystemInstruction
+  href: api/Google.GenAI.Types.CountTokensConfig.html#Google_GenAI_Types_CountTokensConfig_SystemInstruction
+  commentId: P:Google.GenAI.Types.CountTokensConfig.SystemInstruction
+  fullName: Google.GenAI.Types.CountTokensConfig.SystemInstruction
+  nameWithType: CountTokensConfig.SystemInstruction
+- uid: Google.GenAI.Types.CountTokensConfig.SystemInstruction*
+  name: SystemInstruction
+  href: api/Google.GenAI.Types.CountTokensConfig.html#Google_GenAI_Types_CountTokensConfig_SystemInstruction_
+  commentId: Overload:Google.GenAI.Types.CountTokensConfig.SystemInstruction
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CountTokensConfig.SystemInstruction
+  nameWithType: CountTokensConfig.SystemInstruction
+- uid: Google.GenAI.Types.CountTokensConfig.Tools
+  name: Tools
+  href: api/Google.GenAI.Types.CountTokensConfig.html#Google_GenAI_Types_CountTokensConfig_Tools
+  commentId: P:Google.GenAI.Types.CountTokensConfig.Tools
+  fullName: Google.GenAI.Types.CountTokensConfig.Tools
+  nameWithType: CountTokensConfig.Tools
+- uid: Google.GenAI.Types.CountTokensConfig.Tools*
+  name: Tools
+  href: api/Google.GenAI.Types.CountTokensConfig.html#Google_GenAI_Types_CountTokensConfig_Tools_
+  commentId: Overload:Google.GenAI.Types.CountTokensConfig.Tools
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CountTokensConfig.Tools
+  nameWithType: CountTokensConfig.Tools
+- uid: Google.GenAI.Types.CountTokensResponse
+  name: CountTokensResponse
+  href: api/Google.GenAI.Types.CountTokensResponse.html
+  commentId: T:Google.GenAI.Types.CountTokensResponse
+  fullName: Google.GenAI.Types.CountTokensResponse
+  nameWithType: CountTokensResponse
+- uid: Google.GenAI.Types.CountTokensResponse.CachedContentTokenCount
+  name: CachedContentTokenCount
+  href: api/Google.GenAI.Types.CountTokensResponse.html#Google_GenAI_Types_CountTokensResponse_CachedContentTokenCount
+  commentId: P:Google.GenAI.Types.CountTokensResponse.CachedContentTokenCount
+  fullName: Google.GenAI.Types.CountTokensResponse.CachedContentTokenCount
+  nameWithType: CountTokensResponse.CachedContentTokenCount
+- uid: Google.GenAI.Types.CountTokensResponse.CachedContentTokenCount*
+  name: CachedContentTokenCount
+  href: api/Google.GenAI.Types.CountTokensResponse.html#Google_GenAI_Types_CountTokensResponse_CachedContentTokenCount_
+  commentId: Overload:Google.GenAI.Types.CountTokensResponse.CachedContentTokenCount
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CountTokensResponse.CachedContentTokenCount
+  nameWithType: CountTokensResponse.CachedContentTokenCount
+- uid: Google.GenAI.Types.CountTokensResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.CountTokensResponse.html#Google_GenAI_Types_CountTokensResponse_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.CountTokensResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.CountTokensResponse.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.CountTokensResponse.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: CountTokensResponse.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: CountTokensResponse.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.CountTokensResponse.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.CountTokensResponse.html#Google_GenAI_Types_CountTokensResponse_FromJson_
+  commentId: Overload:Google.GenAI.Types.CountTokensResponse.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CountTokensResponse.FromJson
+  nameWithType: CountTokensResponse.FromJson
+- uid: Google.GenAI.Types.CountTokensResponse.TotalTokens
+  name: TotalTokens
+  href: api/Google.GenAI.Types.CountTokensResponse.html#Google_GenAI_Types_CountTokensResponse_TotalTokens
+  commentId: P:Google.GenAI.Types.CountTokensResponse.TotalTokens
+  fullName: Google.GenAI.Types.CountTokensResponse.TotalTokens
+  nameWithType: CountTokensResponse.TotalTokens
+- uid: Google.GenAI.Types.CountTokensResponse.TotalTokens*
+  name: TotalTokens
+  href: api/Google.GenAI.Types.CountTokensResponse.html#Google_GenAI_Types_CountTokensResponse_TotalTokens_
+  commentId: Overload:Google.GenAI.Types.CountTokensResponse.TotalTokens
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CountTokensResponse.TotalTokens
+  nameWithType: CountTokensResponse.TotalTokens
 - uid: Google.GenAI.Types.DownloadFileConfig
   name: DownloadFileConfig
   href: api/Google.GenAI.Types.DownloadFileConfig.html
