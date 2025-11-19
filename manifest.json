@@ -168,6 +168,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Pager-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Pager-3.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Pager<TItem, TConfig, TResponse>",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Pager-3.yml\" sourcestartlinenumber=\"1\">Pager class for iterating through paginated results.\nSupports asynchronous enumeration via <code>await foreach</code> and explicit page fetching via <code>NextPageAsync()</code>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.ServerError.yml",
       "output": {
         ".html": {
@@ -1551,6 +1565,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.HttpOptions",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.HttpOptions.yml\" sourcestartlinenumber=\"1\">HTTP options to be used in each of the requests.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.HttpResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.HttpResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.HttpResponse",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.HttpResponse.yml\" sourcestartlinenumber=\"1\">A wrapper class for the http response.</p>\n"
     },
     {
       "type": "ManagedReference",

@@ -1086,6 +1086,153 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Models.UpscaleImageAsync
   nameWithType: Models.UpscaleImageAsync
+- uid: Google.GenAI.Pager`3
+  name: Pager<TItem, TConfig, TResponse>
+  href: api/Google.GenAI.Pager-3.html
+  commentId: T:Google.GenAI.Pager`3
+  name.vb: Pager(Of TItem, TConfig, TResponse)
+  fullName: Google.GenAI.Pager<TItem, TConfig, TResponse>
+  fullName.vb: Google.GenAI.Pager(Of TItem, TConfig, TResponse)
+  nameWithType: Pager<TItem, TConfig, TResponse>
+  nameWithType.vb: Pager(Of TItem, TConfig, TResponse)
+- uid: Google.GenAI.Pager`3.#ctor(System.Func{`1,System.Threading.Tasks.Task{`2}},System.Func{`2,System.Collections.Generic.IReadOnlyList{`0}},System.Func{`2,System.String},System.Func{`2,Google.GenAI.Types.HttpResponse},System.Func{`1,System.String,`1},`1,`2,System.Int32)
+  name: Pager(Func<TConfig, Task<TResponse>>, Func<TResponse, IReadOnlyList<TItem>?>, Func<TResponse, string?>, Func<TResponse, HttpResponse?>, Func<TConfig, string, TConfig>, TConfig, TResponse, int)
+  href: api/Google.GenAI.Pager-3.html#Google_GenAI_Pager_3__ctor_System_Func__1_System_Threading_Tasks_Task__2___System_Func__2_System_Collections_Generic_IReadOnlyList__0___System_Func__2_System_String__System_Func__2_Google_GenAI_Types_HttpResponse__System_Func__1_System_String__1___1__2_System_Int32_
+  commentId: M:Google.GenAI.Pager`3.#ctor(System.Func{`1,System.Threading.Tasks.Task{`2}},System.Func{`2,System.Collections.Generic.IReadOnlyList{`0}},System.Func{`2,System.String},System.Func{`2,Google.GenAI.Types.HttpResponse},System.Func{`1,System.String,`1},`1,`2,System.Int32)
+  name.vb: New(Func(Of TConfig, Task(Of TResponse)), Func(Of TResponse, IReadOnlyList(Of TItem)), Func(Of TResponse, String), Func(Of TResponse, HttpResponse), Func(Of TConfig, String, TConfig), TConfig, TResponse, Integer)
+  fullName: Google.GenAI.Pager<TItem, TConfig, TResponse>.Pager(System.Func<TConfig, System.Threading.Tasks.Task<TResponse>>, System.Func<TResponse, System.Collections.Generic.IReadOnlyList<TItem>?>, System.Func<TResponse, string?>, System.Func<TResponse, Google.GenAI.Types.HttpResponse?>, System.Func<TConfig, string, TConfig>, TConfig, TResponse, int)
+  fullName.vb: Google.GenAI.Pager(Of TItem, TConfig, TResponse).New(System.Func(Of TConfig, System.Threading.Tasks.Task(Of TResponse)), System.Func(Of TResponse, System.Collections.Generic.IReadOnlyList(Of TItem)), System.Func(Of TResponse, String), System.Func(Of TResponse, Google.GenAI.Types.HttpResponse), System.Func(Of TConfig, String, TConfig), TConfig, TResponse, Integer)
+  nameWithType: Pager<TItem, TConfig, TResponse>.Pager(Func<TConfig, Task<TResponse>>, Func<TResponse, IReadOnlyList<TItem>?>, Func<TResponse, string?>, Func<TResponse, HttpResponse?>, Func<TConfig, string, TConfig>, TConfig, TResponse, int)
+  nameWithType.vb: Pager(Of TItem, TConfig, TResponse).New(Func(Of TConfig, Task(Of TResponse)), Func(Of TResponse, IReadOnlyList(Of TItem)), Func(Of TResponse, String), Func(Of TResponse, HttpResponse), Func(Of TConfig, String, TConfig), TConfig, TResponse, Integer)
+- uid: Google.GenAI.Pager`3.#ctor*
+  name: Pager
+  href: api/Google.GenAI.Pager-3.html#Google_GenAI_Pager_3__ctor_
+  commentId: Overload:Google.GenAI.Pager`3.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Google.GenAI.Pager<TItem, TConfig, TResponse>.Pager
+  fullName.vb: Google.GenAI.Pager(Of TItem, TConfig, TResponse).New
+  nameWithType: Pager<TItem, TConfig, TResponse>.Pager
+  nameWithType.vb: Pager(Of TItem, TConfig, TResponse).New
+- uid: Google.GenAI.Pager`3.Count
+  name: Count
+  href: api/Google.GenAI.Pager-3.html#Google_GenAI_Pager_3_Count
+  commentId: P:Google.GenAI.Pager`3.Count
+  fullName: Google.GenAI.Pager<TItem, TConfig, TResponse>.Count
+  fullName.vb: Google.GenAI.Pager(Of TItem, TConfig, TResponse).Count
+  nameWithType: Pager<TItem, TConfig, TResponse>.Count
+  nameWithType.vb: Pager(Of TItem, TConfig, TResponse).Count
+- uid: Google.GenAI.Pager`3.Count*
+  name: Count
+  href: api/Google.GenAI.Pager-3.html#Google_GenAI_Pager_3_Count_
+  commentId: Overload:Google.GenAI.Pager`3.Count
+  isSpec: "True"
+  fullName: Google.GenAI.Pager<TItem, TConfig, TResponse>.Count
+  fullName.vb: Google.GenAI.Pager(Of TItem, TConfig, TResponse).Count
+  nameWithType: Pager<TItem, TConfig, TResponse>.Count
+  nameWithType.vb: Pager(Of TItem, TConfig, TResponse).Count
+- uid: Google.GenAI.Pager`3.CurrentPage
+  name: CurrentPage
+  href: api/Google.GenAI.Pager-3.html#Google_GenAI_Pager_3_CurrentPage
+  commentId: P:Google.GenAI.Pager`3.CurrentPage
+  fullName: Google.GenAI.Pager<TItem, TConfig, TResponse>.CurrentPage
+  fullName.vb: Google.GenAI.Pager(Of TItem, TConfig, TResponse).CurrentPage
+  nameWithType: Pager<TItem, TConfig, TResponse>.CurrentPage
+  nameWithType.vb: Pager(Of TItem, TConfig, TResponse).CurrentPage
+- uid: Google.GenAI.Pager`3.CurrentPage*
+  name: CurrentPage
+  href: api/Google.GenAI.Pager-3.html#Google_GenAI_Pager_3_CurrentPage_
+  commentId: Overload:Google.GenAI.Pager`3.CurrentPage
+  isSpec: "True"
+  fullName: Google.GenAI.Pager<TItem, TConfig, TResponse>.CurrentPage
+  fullName.vb: Google.GenAI.Pager(Of TItem, TConfig, TResponse).CurrentPage
+  nameWithType: Pager<TItem, TConfig, TResponse>.CurrentPage
+  nameWithType.vb: Pager(Of TItem, TConfig, TResponse).CurrentPage
+- uid: Google.GenAI.Pager`3.GetAsyncEnumerator(System.Threading.CancellationToken)
+  name: GetAsyncEnumerator(CancellationToken)
+  href: api/Google.GenAI.Pager-3.html#Google_GenAI_Pager_3_GetAsyncEnumerator_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Pager`3.GetAsyncEnumerator(System.Threading.CancellationToken)
+  fullName: Google.GenAI.Pager<TItem, TConfig, TResponse>.GetAsyncEnumerator(System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Pager(Of TItem, TConfig, TResponse).GetAsyncEnumerator(System.Threading.CancellationToken)
+  nameWithType: Pager<TItem, TConfig, TResponse>.GetAsyncEnumerator(CancellationToken)
+  nameWithType.vb: Pager(Of TItem, TConfig, TResponse).GetAsyncEnumerator(CancellationToken)
+- uid: Google.GenAI.Pager`3.GetAsyncEnumerator*
+  name: GetAsyncEnumerator
+  href: api/Google.GenAI.Pager-3.html#Google_GenAI_Pager_3_GetAsyncEnumerator_
+  commentId: Overload:Google.GenAI.Pager`3.GetAsyncEnumerator
+  isSpec: "True"
+  fullName: Google.GenAI.Pager<TItem, TConfig, TResponse>.GetAsyncEnumerator
+  fullName.vb: Google.GenAI.Pager(Of TItem, TConfig, TResponse).GetAsyncEnumerator
+  nameWithType: Pager<TItem, TConfig, TResponse>.GetAsyncEnumerator
+  nameWithType.vb: Pager(Of TItem, TConfig, TResponse).GetAsyncEnumerator
+- uid: Google.GenAI.Pager`3.HasMorePages
+  name: HasMorePages
+  href: api/Google.GenAI.Pager-3.html#Google_GenAI_Pager_3_HasMorePages
+  commentId: P:Google.GenAI.Pager`3.HasMorePages
+  fullName: Google.GenAI.Pager<TItem, TConfig, TResponse>.HasMorePages
+  fullName.vb: Google.GenAI.Pager(Of TItem, TConfig, TResponse).HasMorePages
+  nameWithType: Pager<TItem, TConfig, TResponse>.HasMorePages
+  nameWithType.vb: Pager(Of TItem, TConfig, TResponse).HasMorePages
+- uid: Google.GenAI.Pager`3.HasMorePages*
+  name: HasMorePages
+  href: api/Google.GenAI.Pager-3.html#Google_GenAI_Pager_3_HasMorePages_
+  commentId: Overload:Google.GenAI.Pager`3.HasMorePages
+  isSpec: "True"
+  fullName: Google.GenAI.Pager<TItem, TConfig, TResponse>.HasMorePages
+  fullName.vb: Google.GenAI.Pager(Of TItem, TConfig, TResponse).HasMorePages
+  nameWithType: Pager<TItem, TConfig, TResponse>.HasMorePages
+  nameWithType.vb: Pager(Of TItem, TConfig, TResponse).HasMorePages
+- uid: Google.GenAI.Pager`3.NextPageAsync
+  name: NextPageAsync()
+  href: api/Google.GenAI.Pager-3.html#Google_GenAI_Pager_3_NextPageAsync
+  commentId: M:Google.GenAI.Pager`3.NextPageAsync
+  fullName: Google.GenAI.Pager<TItem, TConfig, TResponse>.NextPageAsync()
+  fullName.vb: Google.GenAI.Pager(Of TItem, TConfig, TResponse).NextPageAsync()
+  nameWithType: Pager<TItem, TConfig, TResponse>.NextPageAsync()
+  nameWithType.vb: Pager(Of TItem, TConfig, TResponse).NextPageAsync()
+- uid: Google.GenAI.Pager`3.NextPageAsync*
+  name: NextPageAsync
+  href: api/Google.GenAI.Pager-3.html#Google_GenAI_Pager_3_NextPageAsync_
+  commentId: Overload:Google.GenAI.Pager`3.NextPageAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Pager<TItem, TConfig, TResponse>.NextPageAsync
+  fullName.vb: Google.GenAI.Pager(Of TItem, TConfig, TResponse).NextPageAsync
+  nameWithType: Pager<TItem, TConfig, TResponse>.NextPageAsync
+  nameWithType.vb: Pager(Of TItem, TConfig, TResponse).NextPageAsync
+- uid: Google.GenAI.Pager`3.PageSize
+  name: PageSize
+  href: api/Google.GenAI.Pager-3.html#Google_GenAI_Pager_3_PageSize
+  commentId: P:Google.GenAI.Pager`3.PageSize
+  fullName: Google.GenAI.Pager<TItem, TConfig, TResponse>.PageSize
+  fullName.vb: Google.GenAI.Pager(Of TItem, TConfig, TResponse).PageSize
+  nameWithType: Pager<TItem, TConfig, TResponse>.PageSize
+  nameWithType.vb: Pager(Of TItem, TConfig, TResponse).PageSize
+- uid: Google.GenAI.Pager`3.PageSize*
+  name: PageSize
+  href: api/Google.GenAI.Pager-3.html#Google_GenAI_Pager_3_PageSize_
+  commentId: Overload:Google.GenAI.Pager`3.PageSize
+  isSpec: "True"
+  fullName: Google.GenAI.Pager<TItem, TConfig, TResponse>.PageSize
+  fullName.vb: Google.GenAI.Pager(Of TItem, TConfig, TResponse).PageSize
+  nameWithType: Pager<TItem, TConfig, TResponse>.PageSize
+  nameWithType.vb: Pager(Of TItem, TConfig, TResponse).PageSize
+- uid: Google.GenAI.Pager`3.SdkHttpResponse
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Pager-3.html#Google_GenAI_Pager_3_SdkHttpResponse
+  commentId: P:Google.GenAI.Pager`3.SdkHttpResponse
+  fullName: Google.GenAI.Pager<TItem, TConfig, TResponse>.SdkHttpResponse
+  fullName.vb: Google.GenAI.Pager(Of TItem, TConfig, TResponse).SdkHttpResponse
+  nameWithType: Pager<TItem, TConfig, TResponse>.SdkHttpResponse
+  nameWithType.vb: Pager(Of TItem, TConfig, TResponse).SdkHttpResponse
+- uid: Google.GenAI.Pager`3.SdkHttpResponse*
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Pager-3.html#Google_GenAI_Pager_3_SdkHttpResponse_
+  commentId: Overload:Google.GenAI.Pager`3.SdkHttpResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Pager<TItem, TConfig, TResponse>.SdkHttpResponse
+  fullName.vb: Google.GenAI.Pager(Of TItem, TConfig, TResponse).SdkHttpResponse
+  nameWithType: Pager<TItem, TConfig, TResponse>.SdkHttpResponse
+  nameWithType.vb: Pager(Of TItem, TConfig, TResponse).SdkHttpResponse
 - uid: Google.GenAI.ServerError
   name: ServerError
   href: api/Google.GenAI.ServerError.html
@@ -2450,6 +2597,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ComputeTokensResponse.FromJson
   nameWithType: ComputeTokensResponse.FromJson
+- uid: Google.GenAI.Types.ComputeTokensResponse.SdkHttpResponse
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.ComputeTokensResponse.html#Google_GenAI_Types_ComputeTokensResponse_SdkHttpResponse
+  commentId: P:Google.GenAI.Types.ComputeTokensResponse.SdkHttpResponse
+  fullName: Google.GenAI.Types.ComputeTokensResponse.SdkHttpResponse
+  nameWithType: ComputeTokensResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.ComputeTokensResponse.SdkHttpResponse*
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.ComputeTokensResponse.html#Google_GenAI_Types_ComputeTokensResponse_SdkHttpResponse_
+  commentId: Overload:Google.GenAI.Types.ComputeTokensResponse.SdkHttpResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ComputeTokensResponse.SdkHttpResponse
+  nameWithType: ComputeTokensResponse.SdkHttpResponse
 - uid: Google.GenAI.Types.ComputeTokensResponse.TokensInfo
   name: TokensInfo
   href: api/Google.GenAI.Types.ComputeTokensResponse.html#Google_GenAI_Types_ComputeTokensResponse_TokensInfo
@@ -3025,6 +3185,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CountTokensResponse.FromJson
   nameWithType: CountTokensResponse.FromJson
+- uid: Google.GenAI.Types.CountTokensResponse.SdkHttpResponse
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.CountTokensResponse.html#Google_GenAI_Types_CountTokensResponse_SdkHttpResponse
+  commentId: P:Google.GenAI.Types.CountTokensResponse.SdkHttpResponse
+  fullName: Google.GenAI.Types.CountTokensResponse.SdkHttpResponse
+  nameWithType: CountTokensResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.CountTokensResponse.SdkHttpResponse*
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.CountTokensResponse.html#Google_GenAI_Types_CountTokensResponse_SdkHttpResponse_
+  commentId: Overload:Google.GenAI.Types.CountTokensResponse.SdkHttpResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CountTokensResponse.SdkHttpResponse
+  nameWithType: CountTokensResponse.SdkHttpResponse
 - uid: Google.GenAI.Types.CountTokensResponse.TotalTokens
   name: TotalTokens
   href: api/Google.GenAI.Types.CountTokensResponse.html#Google_GenAI_Types_CountTokensResponse_TotalTokens
@@ -3430,6 +3603,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.EditImageResponse.GeneratedImages
   nameWithType: EditImageResponse.GeneratedImages
+- uid: Google.GenAI.Types.EditImageResponse.SdkHttpResponse
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.EditImageResponse.html#Google_GenAI_Types_EditImageResponse_SdkHttpResponse
+  commentId: P:Google.GenAI.Types.EditImageResponse.SdkHttpResponse
+  fullName: Google.GenAI.Types.EditImageResponse.SdkHttpResponse
+  nameWithType: EditImageResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.EditImageResponse.SdkHttpResponse*
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.EditImageResponse.html#Google_GenAI_Types_EditImageResponse_SdkHttpResponse_
+  commentId: Overload:Google.GenAI.Types.EditImageResponse.SdkHttpResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EditImageResponse.SdkHttpResponse
+  nameWithType: EditImageResponse.SdkHttpResponse
 - uid: Google.GenAI.Types.EditMode
   name: EditMode
   href: api/Google.GenAI.Types.EditMode.html
@@ -5271,6 +5457,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerateContentResponse.ResponseId
   nameWithType: GenerateContentResponse.ResponseId
+- uid: Google.GenAI.Types.GenerateContentResponse.SdkHttpResponse
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.GenerateContentResponse.html#Google_GenAI_Types_GenerateContentResponse_SdkHttpResponse
+  commentId: P:Google.GenAI.Types.GenerateContentResponse.SdkHttpResponse
+  fullName: Google.GenAI.Types.GenerateContentResponse.SdkHttpResponse
+  nameWithType: GenerateContentResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.GenerateContentResponse.SdkHttpResponse*
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.GenerateContentResponse.html#Google_GenAI_Types_GenerateContentResponse_SdkHttpResponse_
+  commentId: Overload:Google.GenAI.Types.GenerateContentResponse.SdkHttpResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateContentResponse.SdkHttpResponse
+  nameWithType: GenerateContentResponse.SdkHttpResponse
 - uid: Google.GenAI.Types.GenerateContentResponse.UsageMetadata
   name: UsageMetadata
   href: api/Google.GenAI.Types.GenerateContentResponse.html#Google_GenAI_Types_GenerateContentResponse_UsageMetadata
@@ -5814,6 +6013,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerateImagesResponse.PositivePromptSafetyAttributes
   nameWithType: GenerateImagesResponse.PositivePromptSafetyAttributes
+- uid: Google.GenAI.Types.GenerateImagesResponse.SdkHttpResponse
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.GenerateImagesResponse.html#Google_GenAI_Types_GenerateImagesResponse_SdkHttpResponse
+  commentId: P:Google.GenAI.Types.GenerateImagesResponse.SdkHttpResponse
+  fullName: Google.GenAI.Types.GenerateImagesResponse.SdkHttpResponse
+  nameWithType: GenerateImagesResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.GenerateImagesResponse.SdkHttpResponse*
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.GenerateImagesResponse.html#Google_GenAI_Types_GenerateImagesResponse_SdkHttpResponse_
+  commentId: Overload:Google.GenAI.Types.GenerateImagesResponse.SdkHttpResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateImagesResponse.SdkHttpResponse
+  nameWithType: GenerateImagesResponse.SdkHttpResponse
 - uid: Google.GenAI.Types.GeneratedImage
   name: GeneratedImage
   href: api/Google.GenAI.Types.GeneratedImage.html
@@ -7681,6 +7893,54 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.HttpOptions.Timeout
   nameWithType: HttpOptions.Timeout
+- uid: Google.GenAI.Types.HttpResponse
+  name: HttpResponse
+  href: api/Google.GenAI.Types.HttpResponse.html
+  commentId: T:Google.GenAI.Types.HttpResponse
+  fullName: Google.GenAI.Types.HttpResponse
+  nameWithType: HttpResponse
+- uid: Google.GenAI.Types.HttpResponse.Body
+  name: Body
+  href: api/Google.GenAI.Types.HttpResponse.html#Google_GenAI_Types_HttpResponse_Body
+  commentId: P:Google.GenAI.Types.HttpResponse.Body
+  fullName: Google.GenAI.Types.HttpResponse.Body
+  nameWithType: HttpResponse.Body
+- uid: Google.GenAI.Types.HttpResponse.Body*
+  name: Body
+  href: api/Google.GenAI.Types.HttpResponse.html#Google_GenAI_Types_HttpResponse_Body_
+  commentId: Overload:Google.GenAI.Types.HttpResponse.Body
+  isSpec: "True"
+  fullName: Google.GenAI.Types.HttpResponse.Body
+  nameWithType: HttpResponse.Body
+- uid: Google.GenAI.Types.HttpResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.HttpResponse.html#Google_GenAI_Types_HttpResponse_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.HttpResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.HttpResponse.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.HttpResponse.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: HttpResponse.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: HttpResponse.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.HttpResponse.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.HttpResponse.html#Google_GenAI_Types_HttpResponse_FromJson_
+  commentId: Overload:Google.GenAI.Types.HttpResponse.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.HttpResponse.FromJson
+  nameWithType: HttpResponse.FromJson
+- uid: Google.GenAI.Types.HttpResponse.Headers
+  name: Headers
+  href: api/Google.GenAI.Types.HttpResponse.html#Google_GenAI_Types_HttpResponse_Headers
+  commentId: P:Google.GenAI.Types.HttpResponse.Headers
+  fullName: Google.GenAI.Types.HttpResponse.Headers
+  nameWithType: HttpResponse.Headers
+- uid: Google.GenAI.Types.HttpResponse.Headers*
+  name: Headers
+  href: api/Google.GenAI.Types.HttpResponse.html#Google_GenAI_Types_HttpResponse_Headers_
+  commentId: Overload:Google.GenAI.Types.HttpResponse.Headers
+  isSpec: "True"
+  fullName: Google.GenAI.Types.HttpResponse.Headers
+  nameWithType: HttpResponse.Headers
 - uid: Google.GenAI.Types.IReferenceImage
   name: IReferenceImage
   href: api/Google.GenAI.Types.IReferenceImage.html
@@ -8027,6 +8287,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ImportFileResponse.Parent
   nameWithType: ImportFileResponse.Parent
+- uid: Google.GenAI.Types.ImportFileResponse.SdkHttpResponse
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.ImportFileResponse.html#Google_GenAI_Types_ImportFileResponse_SdkHttpResponse
+  commentId: P:Google.GenAI.Types.ImportFileResponse.SdkHttpResponse
+  fullName: Google.GenAI.Types.ImportFileResponse.SdkHttpResponse
+  nameWithType: ImportFileResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.ImportFileResponse.SdkHttpResponse*
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.ImportFileResponse.html#Google_GenAI_Types_ImportFileResponse_SdkHttpResponse_
+  commentId: Overload:Google.GenAI.Types.ImportFileResponse.SdkHttpResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImportFileResponse.SdkHttpResponse
+  nameWithType: ImportFileResponse.SdkHttpResponse
 - uid: Google.GenAI.Types.InlinedEmbedContentResponse
   name: InlinedEmbedContentResponse
   href: api/Google.GenAI.Types.InlinedEmbedContentResponse.html
@@ -14457,6 +14730,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.UploadToFileSearchStoreResponse.Parent
   nameWithType: UploadToFileSearchStoreResponse.Parent
+- uid: Google.GenAI.Types.UploadToFileSearchStoreResponse.SdkHttpResponse
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.UploadToFileSearchStoreResponse.html#Google_GenAI_Types_UploadToFileSearchStoreResponse_SdkHttpResponse
+  commentId: P:Google.GenAI.Types.UploadToFileSearchStoreResponse.SdkHttpResponse
+  fullName: Google.GenAI.Types.UploadToFileSearchStoreResponse.SdkHttpResponse
+  nameWithType: UploadToFileSearchStoreResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.UploadToFileSearchStoreResponse.SdkHttpResponse*
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.UploadToFileSearchStoreResponse.html#Google_GenAI_Types_UploadToFileSearchStoreResponse_SdkHttpResponse_
+  commentId: Overload:Google.GenAI.Types.UploadToFileSearchStoreResponse.SdkHttpResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Types.UploadToFileSearchStoreResponse.SdkHttpResponse
+  nameWithType: UploadToFileSearchStoreResponse.SdkHttpResponse
 - uid: Google.GenAI.Types.UpscaleImageConfig
   name: UpscaleImageConfig
   href: api/Google.GenAI.Types.UpscaleImageConfig.html
@@ -14644,6 +14930,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.UpscaleImageResponse.GeneratedImages
   nameWithType: UpscaleImageResponse.GeneratedImages
+- uid: Google.GenAI.Types.UpscaleImageResponse.SdkHttpResponse
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.UpscaleImageResponse.html#Google_GenAI_Types_UpscaleImageResponse_SdkHttpResponse
+  commentId: P:Google.GenAI.Types.UpscaleImageResponse.SdkHttpResponse
+  fullName: Google.GenAI.Types.UpscaleImageResponse.SdkHttpResponse
+  nameWithType: UpscaleImageResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.UpscaleImageResponse.SdkHttpResponse*
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.UpscaleImageResponse.html#Google_GenAI_Types_UpscaleImageResponse_SdkHttpResponse_
+  commentId: Overload:Google.GenAI.Types.UpscaleImageResponse.SdkHttpResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Types.UpscaleImageResponse.SdkHttpResponse
+  nameWithType: UpscaleImageResponse.SdkHttpResponse
 - uid: Google.GenAI.Types.UrlContext
   name: UrlContext
   href: api/Google.GenAI.Types.UrlContext.html
