@@ -151,7 +151,7 @@ instantiated directly, instead it should be accessed through the <a class="xref"
 
   <h3 id="Google_GenAI_Models__ctor_Google_GenAI_ApiClient_" data-uid="Google.GenAI.Models.#ctor(Google.GenAI.ApiClient)">
   Models(ApiClient)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L2525"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L2557"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -182,11 +182,170 @@ instantiated directly, instead it should be accessed through the <a class="xref"
 </h2>
 
 
+  <a id="Google_GenAI_Models_ComputeTokensAsync_" data-uid="Google.GenAI.Models.ComputeTokensAsync*"></a>
+
+  <h3 id="Google_GenAI_Models_ComputeTokensAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_ComputeTokensConfig_" data-uid="Google.GenAI.Models.ComputeTokensAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.ComputeTokensConfig)">
+  ComputeTokensAsync(string, Content, ComputeTokensConfig?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L3299"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Computes the number of tokens for a single content item.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ComputeTokensResponse&gt; ComputeTokensAsync(string model, Content contents, ComputeTokensConfig? config = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>model</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the GenAI model to use for token computation.</p>
+</dd>
+    <dt><code>contents</code> <a class="xref" href="Google.GenAI.Types.Content.html">Content</a></dt>
+    <dd><p>A <a class="xref" href="Google.GenAI.Types.Content.html">Content</a> instance to compute tokens for.</p>
+</dd>
+    <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.ComputeTokensConfig.html">ComputeTokensConfig</a></dt>
+    <dd><p>A <a class="xref" href="Google.GenAI.Types.ComputeTokensConfig.html">ComputeTokensConfig</a> instance that specifies the
+optional configurations.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Google.GenAI.Types.ComputeTokensResponse.html">ComputeTokensResponse</a>&gt;</dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that
+represents the asynchronous operation. The task result contains a <a class="xref" href="Google.GenAI.Types.ComputeTokensResponse.html">ComputeTokensResponse</a> instance with token information.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
+    <dd><p>Thrown when called with a non-Vertex AI client.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Google_GenAI_Models_ComputeTokensAsync_" data-uid="Google.GenAI.Models.ComputeTokensAsync*"></a>
+
+  <h3 id="Google_GenAI_Models_ComputeTokensAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_ComputeTokensConfig_" data-uid="Google.GenAI.Models.ComputeTokensAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.ComputeTokensConfig)">
+  ComputeTokensAsync(string, List&lt;Content&gt;, ComputeTokensConfig)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L3039"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Computes the number of tokens for the given content.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ComputeTokensResponse&gt; ComputeTokensAsync(string model, List&lt;Content&gt; contents, ComputeTokensConfig config)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>model</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the GenAI model to use for token computation.</p>
+</dd>
+    <dt><code>contents</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Google.GenAI.Types.Content.html">Content</a>&gt;</dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List&lt;T&gt;</a> to compute tokens for.</p>
+</dd>
+    <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.ComputeTokensConfig.html">ComputeTokensConfig</a></dt>
+    <dd><p>A <a class="xref" href="Google.GenAI.Types.ComputeTokensConfig.html">ComputeTokensConfig</a> instance that specifies the
+optional configurations.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Google.GenAI.Types.ComputeTokensResponse.html">ComputeTokensResponse</a>&gt;</dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that
+represents the asynchronous operation. The task result contains a <a class="xref" href="Google.GenAI.Types.ComputeTokensResponse.html">ComputeTokensResponse</a> instance with token information.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
+    <dd><p>Thrown when called with a non-Vertex AI client.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Google_GenAI_Models_ComputeTokensAsync_" data-uid="Google.GenAI.Models.ComputeTokensAsync*"></a>
+
+  <h3 id="Google_GenAI_Models_ComputeTokensAsync_System_String_System_String_Google_GenAI_Types_ComputeTokensConfig_" data-uid="Google.GenAI.Models.ComputeTokensAsync(System.String,System.String,Google.GenAI.Types.ComputeTokensConfig)">
+  ComputeTokensAsync(string, string, ComputeTokensConfig?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L3315"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Computes the number of tokens for a text string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ComputeTokensResponse&gt; ComputeTokensAsync(string model, string contents, ComputeTokensConfig? config = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>model</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the GenAI model to use for token computation.</p>
+</dd>
+    <dt><code>contents</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string of text to compute tokens for.</p>
+</dd>
+    <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.ComputeTokensConfig.html">ComputeTokensConfig</a></dt>
+    <dd><p>A <a class="xref" href="Google.GenAI.Types.ComputeTokensConfig.html">ComputeTokensConfig</a> instance that specifies the
+optional configurations.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Google.GenAI.Types.ComputeTokensResponse.html">ComputeTokensResponse</a>&gt;</dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that
+represents the asynchronous operation. The task result contains a <a class="xref" href="Google.GenAI.Types.ComputeTokensResponse.html">ComputeTokensResponse</a> instance with token information.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
+    <dd><p>Thrown when called with a non-Vertex AI client.</p>
+</dd>
+  </dl>
+
+
+
   <a id="Google_GenAI_Models_CountTokensAsync_" data-uid="Google.GenAI.Models.CountTokensAsync*"></a>
 
   <h3 id="Google_GenAI_Models_CountTokensAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_CountTokensConfig_" data-uid="Google.GenAI.Models.CountTokensAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.CountTokensConfig)">
   CountTokensAsync(string, Content, CountTokensConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L3167"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L3267"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Counts the number of tokens in the provided content.</p>
@@ -234,7 +393,7 @@ the total token count and other metadata.</p>
 
   <h3 id="Google_GenAI_Models_CountTokensAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_CountTokensConfig_" data-uid="Google.GenAI.Models.CountTokensAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.CountTokensConfig)">
   CountTokensAsync(string, List&lt;Content&gt;, CountTokensConfig)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L2939"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L2971"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Counts the number of tokens in the provided content.</p>
@@ -282,7 +441,7 @@ the total token count and other metadata.</p>
 
   <h3 id="Google_GenAI_Models_CountTokensAsync_System_String_System_String_Google_GenAI_Types_CountTokensConfig_" data-uid="Google.GenAI.Models.CountTokensAsync(System.String,System.String,Google.GenAI.Types.CountTokensConfig)">
   CountTokensAsync(string, string, CountTokensConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L3183"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L3283"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Counts the number of tokens in the provided content.</p>
@@ -330,7 +489,7 @@ the total token count and other metadata.</p>
 
   <h3 id="Google_GenAI_Models_EditImageAsync_System_String_System_String_System_Collections_Generic_List_Google_GenAI_Types_IReferenceImage__Google_GenAI_Types_EditImageConfig_" data-uid="Google.GenAI.Models.EditImageAsync(System.String,System.String,System.Collections.Generic.List{Google.GenAI.Types.IReferenceImage},Google.GenAI.Types.EditImageConfig)">
   EditImageAsync(string, string, List&lt;IReferenceImage&gt;, EditImageConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L3125"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L3225"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -372,7 +531,7 @@ the total token count and other metadata.</p>
 
   <h3 id="Google_GenAI_Models_GenerateContentAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_GenerateContentConfig_" data-uid="Google.GenAI.Models.GenerateContentAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.GenerateContentConfig)">
   GenerateContentAsync(string, Content, GenerateContentConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L3021"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L3121"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generates content given a GenAI model and a single content item.</p>
@@ -421,7 +580,7 @@ other metadata.</p>
 
   <h3 id="Google_GenAI_Models_GenerateContentAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_GenerateContentConfig_" data-uid="Google.GenAI.Models.GenerateContentAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.GenerateContentConfig)">
   GenerateContentAsync(string, List&lt;Content&gt;, GenerateContentConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L3006"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L3106"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generates content given a GenAI model and a list of content.</p>
@@ -470,7 +629,7 @@ other metadata.</p>
 
   <h3 id="Google_GenAI_Models_GenerateContentAsync_System_String_System_String_Google_GenAI_Types_GenerateContentConfig_" data-uid="Google.GenAI.Models.GenerateContentAsync(System.String,System.String,Google.GenAI.Types.GenerateContentConfig)">
   GenerateContentAsync(string, string, GenerateContentConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L3037"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L3137"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generates content given a GenAI model and a text string.</p>
@@ -518,7 +677,7 @@ metadata.</p>
 
   <h3 id="Google_GenAI_Models_GenerateContentStreamAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_GenerateContentConfig_" data-uid="Google.GenAI.Models.GenerateContentStreamAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.GenerateContentConfig)">
   GenerateContentStreamAsync(string, Content, GenerateContentConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L3066"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L3166"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generates content with streaming responses given a GenAI model and a single content item.</p>
@@ -565,7 +724,7 @@ specifies the optional configurations.</p>
 
   <h3 id="Google_GenAI_Models_GenerateContentStreamAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_GenerateContentConfig_" data-uid="Google.GenAI.Models.GenerateContentStreamAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.GenerateContentConfig)">
   GenerateContentStreamAsync(string, List&lt;Content&gt;, GenerateContentConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L3051"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L3151"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generates content with streaming responses given a GenAI model and a list of content.</p>
@@ -612,7 +771,7 @@ specifies the optional configurations.</p>
 
   <h3 id="Google_GenAI_Models_GenerateContentStreamAsync_System_String_System_String_Google_GenAI_Types_GenerateContentConfig_" data-uid="Google.GenAI.Models.GenerateContentStreamAsync(System.String,System.String,Google.GenAI.Types.GenerateContentConfig)">
   GenerateContentStreamAsync(string, string, GenerateContentConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L3082"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L3182"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generates content with streaming responses given a GenAI model and a text string.</p>
@@ -658,7 +817,7 @@ optional configurations.</p>
 
   <h3 id="Google_GenAI_Models_GenerateImagesAsync_System_String_System_String_Google_GenAI_Types_GenerateImagesConfig_" data-uid="Google.GenAI.Models.GenerateImagesAsync(System.String,System.String,Google.GenAI.Types.GenerateImagesConfig)">
   GenerateImagesAsync(string, string, GenerateImagesConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L3100"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L3200"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generates images given a GenAI model and a prompt.</p>
@@ -706,7 +865,7 @@ metadata.</p>
 
   <h3 id="Google_GenAI_Models_RecontextImageAsync_System_String_Google_GenAI_Types_RecontextImageSource_Google_GenAI_Types_RecontextImageConfig_" data-uid="Google.GenAI.Models.RecontextImageAsync(System.String,Google.GenAI.Types.RecontextImageSource,Google.GenAI.Types.RecontextImageConfig)">
   RecontextImageAsync(string, RecontextImageSource, RecontextImageConfig)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L2814"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L2846"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -746,7 +905,7 @@ metadata.</p>
 
   <h3 id="Google_GenAI_Models_SegmentImageAsync_System_String_Google_GenAI_Types_SegmentImageSource_Google_GenAI_Types_SegmentImageConfig_" data-uid="Google.GenAI.Models.SegmentImageAsync(System.String,Google.GenAI.Types.SegmentImageSource,Google.GenAI.Types.SegmentImageConfig)">
   SegmentImageAsync(string, SegmentImageSource, SegmentImageConfig)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L2871"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L2903"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -786,7 +945,7 @@ metadata.</p>
 
   <h3 id="Google_GenAI_Models_UpscaleImageAsync_System_String_Google_GenAI_Types_Image_System_String_Google_GenAI_Types_UpscaleImageConfig_" data-uid="Google.GenAI.Models.UpscaleImageAsync(System.String,Google.GenAI.Types.Image,System.String,Google.GenAI.Types.UpscaleImageConfig)">
   UpscaleImageAsync(string, Image, string, UpscaleImageConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L3134"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L3234"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

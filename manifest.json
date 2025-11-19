@@ -504,6 +504,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ComputeTokensConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ComputeTokensConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ComputeTokensConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ComputeTokensConfig.yml\" sourcestartlinenumber=\"1\">Optional parameters for computing tokens.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ComputeTokensResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ComputeTokensResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ComputeTokensResponse",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ComputeTokensResponse.yml\" sourcestartlinenumber=\"1\">Response for computing tokens.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.ComputerUse.yml",
       "output": {
         ".html": {
@@ -2895,6 +2923,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ThinkingLevel",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ThinkingLevel.yml\" sourcestartlinenumber=\"1\">The level of thoughts tokens that the model should generate.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.TokensInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.TokensInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.TokensInfo",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.TokensInfo.yml\" sourcestartlinenumber=\"1\">Tokens info with a list of tokens and the corresponding list of token ids.</p>\n"
     },
     {
       "type": "ManagedReference",
