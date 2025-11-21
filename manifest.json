@@ -476,6 +476,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.Checkpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.Checkpoint.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.Checkpoint",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Checkpoint.yml\" sourcestartlinenumber=\"1\">Describes the machine learning model version checkpoint.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.Citation.yml",
       "output": {
         ".html": {
@@ -700,6 +714,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.DeleteModelConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.DeleteModelConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.DeleteModelConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DeleteModelConfig.yml\" sourcestartlinenumber=\"1\">Configuration for deleting a tuned model.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.DeleteModelResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.DeleteModelResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.DeleteModelResponse",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.DownloadFileConfig.yml",
       "output": {
         ".html": {
@@ -812,6 +854,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.EmbedContentMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.EmbedContentMetadata.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.EmbedContentMetadata",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.EmbedContentMetadata.yml\" sourcestartlinenumber=\"1\">Request-level metadata for the Vertex Embed Content API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.EmbedContentResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.EmbedContentResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.EmbedContentResponse",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.EmbedContentResponse.yml\" sourcestartlinenumber=\"1\">Response for the embed_content method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.EndSensitivity.yml",
       "output": {
         ".html": {
@@ -823,6 +893,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.EndSensitivity",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.EndSensitivity.yml\" sourcestartlinenumber=\"1\">End of speech sensitivity.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.Endpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.Endpoint.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.Endpoint",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Endpoint.yml\" sourcestartlinenumber=\"1\">An endpoint where you deploy models.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1271,6 +1355,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GenerationConfigThinkingConfig",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerationConfigThinkingConfig.yml\" sourcestartlinenumber=\"1\">Config for thinking features.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.GetModelConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.GetModelConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.GetModelConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GetModelConfig.yml\" sourcestartlinenumber=\"1\">Optional parameters for models.get method.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2125,6 +2223,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Mode",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Mode.yml\" sourcestartlinenumber=\"1\">The mode of the predictor to be used in dynamic retrieval.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.Model.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.Model.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.Model",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Model.yml\" sourcestartlinenumber=\"1\">A trained machine learning model.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3038,6 +3150,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.TunedModelInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.TunedModelInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.TunedModelInfo",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.TunedModelInfo.yml\" sourcestartlinenumber=\"1\">A tuned machine learning model.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.TurnCompleteReason.yml",
       "output": {
         ".html": {
@@ -3077,6 +3203,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Type",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Type.yml\" sourcestartlinenumber=\"1\">The type of the data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.UpdateModelConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.UpdateModelConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.UpdateModelConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.UpdateModelConfig.yml\" sourcestartlinenumber=\"1\">Configuration for updating a tuned model.</p>\n"
     },
     {
       "type": "ManagedReference",

@@ -447,6 +447,74 @@ public class ComputeTokensExample {
 }
 
 </code></pre>
+<h3 id="embed-content">Embed Content</h3>
+<pre><code class="lang-csharp">using Google.GenAI;
+using Google.GenAI.Types;
+
+public class EmbedContentExample {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client();
+
+    var response = await client.Models.EmbedContentAsync(
+      model: &quot;text-embedding-004&quot;,
+      contents: &quot;What is the capital of France?&quot;
+    );
+
+    Console.WriteLine(response.Embeddings[0].Values);
+  }
+}
+</code></pre>
+<h3 id="get-tuned-model">Get Tuned Model</h3>
+<pre><code class="lang-csharp">using Google.GenAI;
+using Google.GenAI.Types;
+
+public class GetModelExample {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client();
+
+    var response = await client.Models.GetAsync(
+      model: &quot;models/your-tuned-model&quot;
+    );
+
+    Console.WriteLine(response.DisplayName);
+  }
+}
+</code></pre>
+<h3 id="update-tuned-model">Update Tuned Model</h3>
+<pre><code class="lang-csharp">using Google.GenAI;
+using Google.GenAI.Types;
+
+public class UpdateModelExample {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client();
+
+    var response = await client.Models.UpdateAsync(
+      model: &quot;models/your-tuned-model&quot;,
+      config: new UpdateModelConfig { Description = &quot;updated model description&quot; }
+    );
+
+    Console.WriteLine(response.Description);
+  }
+}
+</code></pre>
+<h3 id="delete-tuned-model">Delete Tuned Model</h3>
+<pre><code class="lang-csharp">using Google.GenAI;
+using Google.GenAI.Types;
+
+public class DeleteModelExample {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client();
+
+    await client.Models.DeleteAsync(
+      model: &quot;models/your-tuned-model&quot;
+    );
+  }
+}
+</code></pre>
 
 </article>
 

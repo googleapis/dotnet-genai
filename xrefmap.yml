@@ -880,13 +880,13 @@ references:
   nameWithType: Models.ComputeTokensAsync(string, Content, ComputeTokensConfig?)
   nameWithType.vb: Models.ComputeTokensAsync(String, Content, ComputeTokensConfig)
 - uid: Google.GenAI.Models.ComputeTokensAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.ComputeTokensConfig)
-  name: ComputeTokensAsync(string, List<Content>, ComputeTokensConfig)
+  name: ComputeTokensAsync(string, List<Content>, ComputeTokensConfig?)
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_ComputeTokensAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_ComputeTokensConfig_
   commentId: M:Google.GenAI.Models.ComputeTokensAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.ComputeTokensConfig)
   name.vb: ComputeTokensAsync(String, List(Of Content), ComputeTokensConfig)
-  fullName: Google.GenAI.Models.ComputeTokensAsync(string, System.Collections.Generic.List<Google.GenAI.Types.Content>, Google.GenAI.Types.ComputeTokensConfig)
+  fullName: Google.GenAI.Models.ComputeTokensAsync(string, System.Collections.Generic.List<Google.GenAI.Types.Content>, Google.GenAI.Types.ComputeTokensConfig?)
   fullName.vb: Google.GenAI.Models.ComputeTokensAsync(String, System.Collections.Generic.List(Of Google.GenAI.Types.Content), Google.GenAI.Types.ComputeTokensConfig)
-  nameWithType: Models.ComputeTokensAsync(string, List<Content>, ComputeTokensConfig)
+  nameWithType: Models.ComputeTokensAsync(string, List<Content>, ComputeTokensConfig?)
   nameWithType.vb: Models.ComputeTokensAsync(String, List(Of Content), ComputeTokensConfig)
 - uid: Google.GenAI.Models.ComputeTokensAsync(System.String,System.String,Google.GenAI.Types.ComputeTokensConfig)
   name: ComputeTokensAsync(string, string, ComputeTokensConfig?)
@@ -914,13 +914,13 @@ references:
   nameWithType: Models.CountTokensAsync(string, Content, CountTokensConfig?)
   nameWithType.vb: Models.CountTokensAsync(String, Content, CountTokensConfig)
 - uid: Google.GenAI.Models.CountTokensAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.CountTokensConfig)
-  name: CountTokensAsync(string, List<Content>, CountTokensConfig)
+  name: CountTokensAsync(string, List<Content>, CountTokensConfig?)
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_CountTokensAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_CountTokensConfig_
   commentId: M:Google.GenAI.Models.CountTokensAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.CountTokensConfig)
   name.vb: CountTokensAsync(String, List(Of Content), CountTokensConfig)
-  fullName: Google.GenAI.Models.CountTokensAsync(string, System.Collections.Generic.List<Google.GenAI.Types.Content>, Google.GenAI.Types.CountTokensConfig)
+  fullName: Google.GenAI.Models.CountTokensAsync(string, System.Collections.Generic.List<Google.GenAI.Types.Content>, Google.GenAI.Types.CountTokensConfig?)
   fullName.vb: Google.GenAI.Models.CountTokensAsync(String, System.Collections.Generic.List(Of Google.GenAI.Types.Content), Google.GenAI.Types.CountTokensConfig)
-  nameWithType: Models.CountTokensAsync(string, List<Content>, CountTokensConfig)
+  nameWithType: Models.CountTokensAsync(string, List<Content>, CountTokensConfig?)
   nameWithType.vb: Models.CountTokensAsync(String, List(Of Content), CountTokensConfig)
 - uid: Google.GenAI.Models.CountTokensAsync(System.String,System.String,Google.GenAI.Types.CountTokensConfig)
   name: CountTokensAsync(string, string, CountTokensConfig?)
@@ -938,6 +938,22 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Models.CountTokensAsync
   nameWithType: Models.CountTokensAsync
+- uid: Google.GenAI.Models.DeleteAsync(System.String,Google.GenAI.Types.DeleteModelConfig)
+  name: DeleteAsync(string, DeleteModelConfig?)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_DeleteAsync_System_String_Google_GenAI_Types_DeleteModelConfig_
+  commentId: M:Google.GenAI.Models.DeleteAsync(System.String,Google.GenAI.Types.DeleteModelConfig)
+  name.vb: DeleteAsync(String, DeleteModelConfig)
+  fullName: Google.GenAI.Models.DeleteAsync(string, Google.GenAI.Types.DeleteModelConfig?)
+  fullName.vb: Google.GenAI.Models.DeleteAsync(String, Google.GenAI.Types.DeleteModelConfig)
+  nameWithType: Models.DeleteAsync(string, DeleteModelConfig?)
+  nameWithType.vb: Models.DeleteAsync(String, DeleteModelConfig)
+- uid: Google.GenAI.Models.DeleteAsync*
+  name: DeleteAsync
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_DeleteAsync_
+  commentId: Overload:Google.GenAI.Models.DeleteAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Models.DeleteAsync
+  nameWithType: Models.DeleteAsync
 - uid: Google.GenAI.Models.EditImageAsync(System.String,System.String,System.Collections.Generic.List{Google.GenAI.Types.IReferenceImage},Google.GenAI.Types.EditImageConfig)
   name: EditImageAsync(string, string, List<IReferenceImage>, EditImageConfig?)
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_EditImageAsync_System_String_System_String_System_Collections_Generic_List_Google_GenAI_Types_IReferenceImage__Google_GenAI_Types_EditImageConfig_
@@ -954,6 +970,40 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Models.EditImageAsync
   nameWithType: Models.EditImageAsync
+- uid: Google.GenAI.Models.EmbedContentAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.EmbedContentConfig)
+  name: EmbedContentAsync(string, Content, EmbedContentConfig?)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_EmbedContentAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_EmbedContentConfig_
+  commentId: M:Google.GenAI.Models.EmbedContentAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.EmbedContentConfig)
+  name.vb: EmbedContentAsync(String, Content, EmbedContentConfig)
+  fullName: Google.GenAI.Models.EmbedContentAsync(string, Google.GenAI.Types.Content, Google.GenAI.Types.EmbedContentConfig?)
+  fullName.vb: Google.GenAI.Models.EmbedContentAsync(String, Google.GenAI.Types.Content, Google.GenAI.Types.EmbedContentConfig)
+  nameWithType: Models.EmbedContentAsync(string, Content, EmbedContentConfig?)
+  nameWithType.vb: Models.EmbedContentAsync(String, Content, EmbedContentConfig)
+- uid: Google.GenAI.Models.EmbedContentAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.EmbedContentConfig)
+  name: EmbedContentAsync(string, List<Content>, EmbedContentConfig?)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_EmbedContentAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_EmbedContentConfig_
+  commentId: M:Google.GenAI.Models.EmbedContentAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.EmbedContentConfig)
+  name.vb: EmbedContentAsync(String, List(Of Content), EmbedContentConfig)
+  fullName: Google.GenAI.Models.EmbedContentAsync(string, System.Collections.Generic.List<Google.GenAI.Types.Content>, Google.GenAI.Types.EmbedContentConfig?)
+  fullName.vb: Google.GenAI.Models.EmbedContentAsync(String, System.Collections.Generic.List(Of Google.GenAI.Types.Content), Google.GenAI.Types.EmbedContentConfig)
+  nameWithType: Models.EmbedContentAsync(string, List<Content>, EmbedContentConfig?)
+  nameWithType.vb: Models.EmbedContentAsync(String, List(Of Content), EmbedContentConfig)
+- uid: Google.GenAI.Models.EmbedContentAsync(System.String,System.String,Google.GenAI.Types.EmbedContentConfig)
+  name: EmbedContentAsync(string, string, EmbedContentConfig?)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_EmbedContentAsync_System_String_System_String_Google_GenAI_Types_EmbedContentConfig_
+  commentId: M:Google.GenAI.Models.EmbedContentAsync(System.String,System.String,Google.GenAI.Types.EmbedContentConfig)
+  name.vb: EmbedContentAsync(String, String, EmbedContentConfig)
+  fullName: Google.GenAI.Models.EmbedContentAsync(string, string, Google.GenAI.Types.EmbedContentConfig?)
+  fullName.vb: Google.GenAI.Models.EmbedContentAsync(String, String, Google.GenAI.Types.EmbedContentConfig)
+  nameWithType: Models.EmbedContentAsync(string, string, EmbedContentConfig?)
+  nameWithType.vb: Models.EmbedContentAsync(String, String, EmbedContentConfig)
+- uid: Google.GenAI.Models.EmbedContentAsync*
+  name: EmbedContentAsync
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_EmbedContentAsync_
+  commentId: Overload:Google.GenAI.Models.EmbedContentAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Models.EmbedContentAsync
+  nameWithType: Models.EmbedContentAsync
 - uid: Google.GenAI.Models.GenerateContentAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.GenerateContentConfig)
   name: GenerateContentAsync(string, Content, GenerateContentConfig?)
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_GenerateContentAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_GenerateContentConfig_
@@ -1038,14 +1088,30 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Models.GenerateImagesAsync
   nameWithType: Models.GenerateImagesAsync
+- uid: Google.GenAI.Models.GetAsync(System.String,Google.GenAI.Types.GetModelConfig)
+  name: GetAsync(string, GetModelConfig?)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_GetAsync_System_String_Google_GenAI_Types_GetModelConfig_
+  commentId: M:Google.GenAI.Models.GetAsync(System.String,Google.GenAI.Types.GetModelConfig)
+  name.vb: GetAsync(String, GetModelConfig)
+  fullName: Google.GenAI.Models.GetAsync(string, Google.GenAI.Types.GetModelConfig?)
+  fullName.vb: Google.GenAI.Models.GetAsync(String, Google.GenAI.Types.GetModelConfig)
+  nameWithType: Models.GetAsync(string, GetModelConfig?)
+  nameWithType.vb: Models.GetAsync(String, GetModelConfig)
+- uid: Google.GenAI.Models.GetAsync*
+  name: GetAsync
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_GetAsync_
+  commentId: Overload:Google.GenAI.Models.GetAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Models.GetAsync
+  nameWithType: Models.GetAsync
 - uid: Google.GenAI.Models.RecontextImageAsync(System.String,Google.GenAI.Types.RecontextImageSource,Google.GenAI.Types.RecontextImageConfig)
-  name: RecontextImageAsync(string, RecontextImageSource, RecontextImageConfig)
+  name: RecontextImageAsync(string, RecontextImageSource, RecontextImageConfig?)
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_RecontextImageAsync_System_String_Google_GenAI_Types_RecontextImageSource_Google_GenAI_Types_RecontextImageConfig_
   commentId: M:Google.GenAI.Models.RecontextImageAsync(System.String,Google.GenAI.Types.RecontextImageSource,Google.GenAI.Types.RecontextImageConfig)
   name.vb: RecontextImageAsync(String, RecontextImageSource, RecontextImageConfig)
-  fullName: Google.GenAI.Models.RecontextImageAsync(string, Google.GenAI.Types.RecontextImageSource, Google.GenAI.Types.RecontextImageConfig)
+  fullName: Google.GenAI.Models.RecontextImageAsync(string, Google.GenAI.Types.RecontextImageSource, Google.GenAI.Types.RecontextImageConfig?)
   fullName.vb: Google.GenAI.Models.RecontextImageAsync(String, Google.GenAI.Types.RecontextImageSource, Google.GenAI.Types.RecontextImageConfig)
-  nameWithType: Models.RecontextImageAsync(string, RecontextImageSource, RecontextImageConfig)
+  nameWithType: Models.RecontextImageAsync(string, RecontextImageSource, RecontextImageConfig?)
   nameWithType.vb: Models.RecontextImageAsync(String, RecontextImageSource, RecontextImageConfig)
 - uid: Google.GenAI.Models.RecontextImageAsync*
   name: RecontextImageAsync
@@ -1055,13 +1121,13 @@ references:
   fullName: Google.GenAI.Models.RecontextImageAsync
   nameWithType: Models.RecontextImageAsync
 - uid: Google.GenAI.Models.SegmentImageAsync(System.String,Google.GenAI.Types.SegmentImageSource,Google.GenAI.Types.SegmentImageConfig)
-  name: SegmentImageAsync(string, SegmentImageSource, SegmentImageConfig)
+  name: SegmentImageAsync(string, SegmentImageSource, SegmentImageConfig?)
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_SegmentImageAsync_System_String_Google_GenAI_Types_SegmentImageSource_Google_GenAI_Types_SegmentImageConfig_
   commentId: M:Google.GenAI.Models.SegmentImageAsync(System.String,Google.GenAI.Types.SegmentImageSource,Google.GenAI.Types.SegmentImageConfig)
   name.vb: SegmentImageAsync(String, SegmentImageSource, SegmentImageConfig)
-  fullName: Google.GenAI.Models.SegmentImageAsync(string, Google.GenAI.Types.SegmentImageSource, Google.GenAI.Types.SegmentImageConfig)
+  fullName: Google.GenAI.Models.SegmentImageAsync(string, Google.GenAI.Types.SegmentImageSource, Google.GenAI.Types.SegmentImageConfig?)
   fullName.vb: Google.GenAI.Models.SegmentImageAsync(String, Google.GenAI.Types.SegmentImageSource, Google.GenAI.Types.SegmentImageConfig)
-  nameWithType: Models.SegmentImageAsync(string, SegmentImageSource, SegmentImageConfig)
+  nameWithType: Models.SegmentImageAsync(string, SegmentImageSource, SegmentImageConfig?)
   nameWithType.vb: Models.SegmentImageAsync(String, SegmentImageSource, SegmentImageConfig)
 - uid: Google.GenAI.Models.SegmentImageAsync*
   name: SegmentImageAsync
@@ -1070,6 +1136,22 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Models.SegmentImageAsync
   nameWithType: Models.SegmentImageAsync
+- uid: Google.GenAI.Models.UpdateAsync(System.String,Google.GenAI.Types.UpdateModelConfig)
+  name: UpdateAsync(string, UpdateModelConfig?)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_UpdateAsync_System_String_Google_GenAI_Types_UpdateModelConfig_
+  commentId: M:Google.GenAI.Models.UpdateAsync(System.String,Google.GenAI.Types.UpdateModelConfig)
+  name.vb: UpdateAsync(String, UpdateModelConfig)
+  fullName: Google.GenAI.Models.UpdateAsync(string, Google.GenAI.Types.UpdateModelConfig?)
+  fullName.vb: Google.GenAI.Models.UpdateAsync(String, Google.GenAI.Types.UpdateModelConfig)
+  nameWithType: Models.UpdateAsync(string, UpdateModelConfig?)
+  nameWithType.vb: Models.UpdateAsync(String, UpdateModelConfig)
+- uid: Google.GenAI.Models.UpdateAsync*
+  name: UpdateAsync
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_UpdateAsync_
+  commentId: Overload:Google.GenAI.Models.UpdateAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Models.UpdateAsync
+  nameWithType: Models.UpdateAsync
 - uid: Google.GenAI.Models.UpscaleImageAsync(System.String,Google.GenAI.Types.Image,System.String,Google.GenAI.Types.UpscaleImageConfig)
   name: UpscaleImageAsync(string, Image, string, UpscaleImageConfig?)
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_UpscaleImageAsync_System_String_Google_GenAI_Types_Image_System_String_Google_GenAI_Types_UpscaleImageConfig_
@@ -2357,6 +2439,67 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Candidate.UrlContextMetadata
   nameWithType: Candidate.UrlContextMetadata
+- uid: Google.GenAI.Types.Checkpoint
+  name: Checkpoint
+  href: api/Google.GenAI.Types.Checkpoint.html
+  commentId: T:Google.GenAI.Types.Checkpoint
+  fullName: Google.GenAI.Types.Checkpoint
+  nameWithType: Checkpoint
+- uid: Google.GenAI.Types.Checkpoint.CheckpointId
+  name: CheckpointId
+  href: api/Google.GenAI.Types.Checkpoint.html#Google_GenAI_Types_Checkpoint_CheckpointId
+  commentId: P:Google.GenAI.Types.Checkpoint.CheckpointId
+  fullName: Google.GenAI.Types.Checkpoint.CheckpointId
+  nameWithType: Checkpoint.CheckpointId
+- uid: Google.GenAI.Types.Checkpoint.CheckpointId*
+  name: CheckpointId
+  href: api/Google.GenAI.Types.Checkpoint.html#Google_GenAI_Types_Checkpoint_CheckpointId_
+  commentId: Overload:Google.GenAI.Types.Checkpoint.CheckpointId
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Checkpoint.CheckpointId
+  nameWithType: Checkpoint.CheckpointId
+- uid: Google.GenAI.Types.Checkpoint.Epoch
+  name: Epoch
+  href: api/Google.GenAI.Types.Checkpoint.html#Google_GenAI_Types_Checkpoint_Epoch
+  commentId: P:Google.GenAI.Types.Checkpoint.Epoch
+  fullName: Google.GenAI.Types.Checkpoint.Epoch
+  nameWithType: Checkpoint.Epoch
+- uid: Google.GenAI.Types.Checkpoint.Epoch*
+  name: Epoch
+  href: api/Google.GenAI.Types.Checkpoint.html#Google_GenAI_Types_Checkpoint_Epoch_
+  commentId: Overload:Google.GenAI.Types.Checkpoint.Epoch
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Checkpoint.Epoch
+  nameWithType: Checkpoint.Epoch
+- uid: Google.GenAI.Types.Checkpoint.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.Checkpoint.html#Google_GenAI_Types_Checkpoint_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.Checkpoint.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.Checkpoint.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.Checkpoint.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: Checkpoint.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: Checkpoint.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.Checkpoint.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.Checkpoint.html#Google_GenAI_Types_Checkpoint_FromJson_
+  commentId: Overload:Google.GenAI.Types.Checkpoint.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Checkpoint.FromJson
+  nameWithType: Checkpoint.FromJson
+- uid: Google.GenAI.Types.Checkpoint.Step
+  name: Step
+  href: api/Google.GenAI.Types.Checkpoint.html#Google_GenAI_Types_Checkpoint_Step
+  commentId: P:Google.GenAI.Types.Checkpoint.Step
+  fullName: Google.GenAI.Types.Checkpoint.Step
+  nameWithType: Checkpoint.Step
+- uid: Google.GenAI.Types.Checkpoint.Step*
+  name: Step
+  href: api/Google.GenAI.Types.Checkpoint.html#Google_GenAI_Types_Checkpoint_Step_
+  commentId: Overload:Google.GenAI.Types.Checkpoint.Step
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Checkpoint.Step
+  nameWithType: Checkpoint.Step
 - uid: Google.GenAI.Types.Citation
   name: Citation
   href: api/Google.GenAI.Types.Citation.html
@@ -3211,6 +3354,76 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CountTokensResponse.TotalTokens
   nameWithType: CountTokensResponse.TotalTokens
+- uid: Google.GenAI.Types.DeleteModelConfig
+  name: DeleteModelConfig
+  href: api/Google.GenAI.Types.DeleteModelConfig.html
+  commentId: T:Google.GenAI.Types.DeleteModelConfig
+  fullName: Google.GenAI.Types.DeleteModelConfig
+  nameWithType: DeleteModelConfig
+- uid: Google.GenAI.Types.DeleteModelConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.DeleteModelConfig.html#Google_GenAI_Types_DeleteModelConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.DeleteModelConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.DeleteModelConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.DeleteModelConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: DeleteModelConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: DeleteModelConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.DeleteModelConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.DeleteModelConfig.html#Google_GenAI_Types_DeleteModelConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.DeleteModelConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DeleteModelConfig.FromJson
+  nameWithType: DeleteModelConfig.FromJson
+- uid: Google.GenAI.Types.DeleteModelConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.DeleteModelConfig.html#Google_GenAI_Types_DeleteModelConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.DeleteModelConfig.HttpOptions
+  fullName: Google.GenAI.Types.DeleteModelConfig.HttpOptions
+  nameWithType: DeleteModelConfig.HttpOptions
+- uid: Google.GenAI.Types.DeleteModelConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.DeleteModelConfig.html#Google_GenAI_Types_DeleteModelConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.DeleteModelConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DeleteModelConfig.HttpOptions
+  nameWithType: DeleteModelConfig.HttpOptions
+- uid: Google.GenAI.Types.DeleteModelResponse
+  name: DeleteModelResponse
+  href: api/Google.GenAI.Types.DeleteModelResponse.html
+  commentId: T:Google.GenAI.Types.DeleteModelResponse
+  fullName: Google.GenAI.Types.DeleteModelResponse
+  nameWithType: DeleteModelResponse
+- uid: Google.GenAI.Types.DeleteModelResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.DeleteModelResponse.html#Google_GenAI_Types_DeleteModelResponse_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.DeleteModelResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.DeleteModelResponse.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.DeleteModelResponse.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: DeleteModelResponse.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: DeleteModelResponse.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.DeleteModelResponse.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.DeleteModelResponse.html#Google_GenAI_Types_DeleteModelResponse_FromJson_
+  commentId: Overload:Google.GenAI.Types.DeleteModelResponse.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DeleteModelResponse.FromJson
+  nameWithType: DeleteModelResponse.FromJson
+- uid: Google.GenAI.Types.DeleteModelResponse.SdkHttpResponse
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.DeleteModelResponse.html#Google_GenAI_Types_DeleteModelResponse_SdkHttpResponse
+  commentId: P:Google.GenAI.Types.DeleteModelResponse.SdkHttpResponse
+  fullName: Google.GenAI.Types.DeleteModelResponse.SdkHttpResponse
+  nameWithType: DeleteModelResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.DeleteModelResponse.SdkHttpResponse*
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.DeleteModelResponse.html#Google_GenAI_Types_DeleteModelResponse_SdkHttpResponse_
+  commentId: Overload:Google.GenAI.Types.DeleteModelResponse.SdkHttpResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DeleteModelResponse.SdkHttpResponse
+  nameWithType: DeleteModelResponse.SdkHttpResponse
 - uid: Google.GenAI.Types.DownloadFileConfig
   name: DownloadFileConfig
   href: api/Google.GenAI.Types.DownloadFileConfig.html
@@ -3818,6 +4031,102 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.EmbedContentConfig.Title
   nameWithType: EmbedContentConfig.Title
+- uid: Google.GenAI.Types.EmbedContentMetadata
+  name: EmbedContentMetadata
+  href: api/Google.GenAI.Types.EmbedContentMetadata.html
+  commentId: T:Google.GenAI.Types.EmbedContentMetadata
+  fullName: Google.GenAI.Types.EmbedContentMetadata
+  nameWithType: EmbedContentMetadata
+- uid: Google.GenAI.Types.EmbedContentMetadata.BillableCharacterCount
+  name: BillableCharacterCount
+  href: api/Google.GenAI.Types.EmbedContentMetadata.html#Google_GenAI_Types_EmbedContentMetadata_BillableCharacterCount
+  commentId: P:Google.GenAI.Types.EmbedContentMetadata.BillableCharacterCount
+  fullName: Google.GenAI.Types.EmbedContentMetadata.BillableCharacterCount
+  nameWithType: EmbedContentMetadata.BillableCharacterCount
+- uid: Google.GenAI.Types.EmbedContentMetadata.BillableCharacterCount*
+  name: BillableCharacterCount
+  href: api/Google.GenAI.Types.EmbedContentMetadata.html#Google_GenAI_Types_EmbedContentMetadata_BillableCharacterCount_
+  commentId: Overload:Google.GenAI.Types.EmbedContentMetadata.BillableCharacterCount
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EmbedContentMetadata.BillableCharacterCount
+  nameWithType: EmbedContentMetadata.BillableCharacterCount
+- uid: Google.GenAI.Types.EmbedContentMetadata.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.EmbedContentMetadata.html#Google_GenAI_Types_EmbedContentMetadata_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.EmbedContentMetadata.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.EmbedContentMetadata.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.EmbedContentMetadata.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: EmbedContentMetadata.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: EmbedContentMetadata.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.EmbedContentMetadata.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.EmbedContentMetadata.html#Google_GenAI_Types_EmbedContentMetadata_FromJson_
+  commentId: Overload:Google.GenAI.Types.EmbedContentMetadata.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EmbedContentMetadata.FromJson
+  nameWithType: EmbedContentMetadata.FromJson
+- uid: Google.GenAI.Types.EmbedContentResponse
+  name: EmbedContentResponse
+  href: api/Google.GenAI.Types.EmbedContentResponse.html
+  commentId: T:Google.GenAI.Types.EmbedContentResponse
+  fullName: Google.GenAI.Types.EmbedContentResponse
+  nameWithType: EmbedContentResponse
+- uid: Google.GenAI.Types.EmbedContentResponse.Embeddings
+  name: Embeddings
+  href: api/Google.GenAI.Types.EmbedContentResponse.html#Google_GenAI_Types_EmbedContentResponse_Embeddings
+  commentId: P:Google.GenAI.Types.EmbedContentResponse.Embeddings
+  fullName: Google.GenAI.Types.EmbedContentResponse.Embeddings
+  nameWithType: EmbedContentResponse.Embeddings
+- uid: Google.GenAI.Types.EmbedContentResponse.Embeddings*
+  name: Embeddings
+  href: api/Google.GenAI.Types.EmbedContentResponse.html#Google_GenAI_Types_EmbedContentResponse_Embeddings_
+  commentId: Overload:Google.GenAI.Types.EmbedContentResponse.Embeddings
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EmbedContentResponse.Embeddings
+  nameWithType: EmbedContentResponse.Embeddings
+- uid: Google.GenAI.Types.EmbedContentResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.EmbedContentResponse.html#Google_GenAI_Types_EmbedContentResponse_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.EmbedContentResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.EmbedContentResponse.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.EmbedContentResponse.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: EmbedContentResponse.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: EmbedContentResponse.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.EmbedContentResponse.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.EmbedContentResponse.html#Google_GenAI_Types_EmbedContentResponse_FromJson_
+  commentId: Overload:Google.GenAI.Types.EmbedContentResponse.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EmbedContentResponse.FromJson
+  nameWithType: EmbedContentResponse.FromJson
+- uid: Google.GenAI.Types.EmbedContentResponse.Metadata
+  name: Metadata
+  href: api/Google.GenAI.Types.EmbedContentResponse.html#Google_GenAI_Types_EmbedContentResponse_Metadata
+  commentId: P:Google.GenAI.Types.EmbedContentResponse.Metadata
+  fullName: Google.GenAI.Types.EmbedContentResponse.Metadata
+  nameWithType: EmbedContentResponse.Metadata
+- uid: Google.GenAI.Types.EmbedContentResponse.Metadata*
+  name: Metadata
+  href: api/Google.GenAI.Types.EmbedContentResponse.html#Google_GenAI_Types_EmbedContentResponse_Metadata_
+  commentId: Overload:Google.GenAI.Types.EmbedContentResponse.Metadata
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EmbedContentResponse.Metadata
+  nameWithType: EmbedContentResponse.Metadata
+- uid: Google.GenAI.Types.EmbedContentResponse.SdkHttpResponse
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.EmbedContentResponse.html#Google_GenAI_Types_EmbedContentResponse_SdkHttpResponse
+  commentId: P:Google.GenAI.Types.EmbedContentResponse.SdkHttpResponse
+  fullName: Google.GenAI.Types.EmbedContentResponse.SdkHttpResponse
+  nameWithType: EmbedContentResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.EmbedContentResponse.SdkHttpResponse*
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.EmbedContentResponse.html#Google_GenAI_Types_EmbedContentResponse_SdkHttpResponse_
+  commentId: Overload:Google.GenAI.Types.EmbedContentResponse.SdkHttpResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EmbedContentResponse.SdkHttpResponse
+  nameWithType: EmbedContentResponse.SdkHttpResponse
 - uid: Google.GenAI.Types.EndSensitivity
   name: EndSensitivity
   href: api/Google.GenAI.Types.EndSensitivity.html
@@ -3842,6 +4151,54 @@ references:
   commentId: F:Google.GenAI.Types.EndSensitivity.END_SENSITIVITY_UNSPECIFIED
   fullName: Google.GenAI.Types.EndSensitivity.END_SENSITIVITY_UNSPECIFIED
   nameWithType: EndSensitivity.END_SENSITIVITY_UNSPECIFIED
+- uid: Google.GenAI.Types.Endpoint
+  name: Endpoint
+  href: api/Google.GenAI.Types.Endpoint.html
+  commentId: T:Google.GenAI.Types.Endpoint
+  fullName: Google.GenAI.Types.Endpoint
+  nameWithType: Endpoint
+- uid: Google.GenAI.Types.Endpoint.DeployedModelId
+  name: DeployedModelId
+  href: api/Google.GenAI.Types.Endpoint.html#Google_GenAI_Types_Endpoint_DeployedModelId
+  commentId: P:Google.GenAI.Types.Endpoint.DeployedModelId
+  fullName: Google.GenAI.Types.Endpoint.DeployedModelId
+  nameWithType: Endpoint.DeployedModelId
+- uid: Google.GenAI.Types.Endpoint.DeployedModelId*
+  name: DeployedModelId
+  href: api/Google.GenAI.Types.Endpoint.html#Google_GenAI_Types_Endpoint_DeployedModelId_
+  commentId: Overload:Google.GenAI.Types.Endpoint.DeployedModelId
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Endpoint.DeployedModelId
+  nameWithType: Endpoint.DeployedModelId
+- uid: Google.GenAI.Types.Endpoint.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.Endpoint.html#Google_GenAI_Types_Endpoint_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.Endpoint.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.Endpoint.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.Endpoint.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: Endpoint.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: Endpoint.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.Endpoint.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.Endpoint.html#Google_GenAI_Types_Endpoint_FromJson_
+  commentId: Overload:Google.GenAI.Types.Endpoint.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Endpoint.FromJson
+  nameWithType: Endpoint.FromJson
+- uid: Google.GenAI.Types.Endpoint.Name
+  name: Name
+  href: api/Google.GenAI.Types.Endpoint.html#Google_GenAI_Types_Endpoint_Name
+  commentId: P:Google.GenAI.Types.Endpoint.Name
+  fullName: Google.GenAI.Types.Endpoint.Name
+  nameWithType: Endpoint.Name
+- uid: Google.GenAI.Types.Endpoint.Name*
+  name: Name
+  href: api/Google.GenAI.Types.Endpoint.html#Google_GenAI_Types_Endpoint_Name_
+  commentId: Overload:Google.GenAI.Types.Endpoint.Name
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Endpoint.Name
+  nameWithType: Endpoint.Name
 - uid: Google.GenAI.Types.EnterpriseWebSearch
   name: EnterpriseWebSearch
   href: api/Google.GenAI.Types.EnterpriseWebSearch.html
@@ -6609,6 +6966,41 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerationConfigThinkingConfig.FromJson
   nameWithType: GenerationConfigThinkingConfig.FromJson
+- uid: Google.GenAI.Types.GetModelConfig
+  name: GetModelConfig
+  href: api/Google.GenAI.Types.GetModelConfig.html
+  commentId: T:Google.GenAI.Types.GetModelConfig
+  fullName: Google.GenAI.Types.GetModelConfig
+  nameWithType: GetModelConfig
+- uid: Google.GenAI.Types.GetModelConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.GetModelConfig.html#Google_GenAI_Types_GetModelConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.GetModelConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.GetModelConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.GetModelConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: GetModelConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: GetModelConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.GetModelConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.GetModelConfig.html#Google_GenAI_Types_GetModelConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.GetModelConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GetModelConfig.FromJson
+  nameWithType: GetModelConfig.FromJson
+- uid: Google.GenAI.Types.GetModelConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.GetModelConfig.html#Google_GenAI_Types_GetModelConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.GetModelConfig.HttpOptions
+  fullName: Google.GenAI.Types.GetModelConfig.HttpOptions
+  nameWithType: GetModelConfig.HttpOptions
+- uid: Google.GenAI.Types.GetModelConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.GetModelConfig.html#Google_GenAI_Types_GetModelConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.GetModelConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GetModelConfig.HttpOptions
+  nameWithType: GetModelConfig.HttpOptions
 - uid: Google.GenAI.Types.GoogleMaps
   name: GoogleMaps
   href: api/Google.GenAI.Types.GoogleMaps.html
@@ -10446,6 +10838,249 @@ references:
   commentId: F:Google.GenAI.Types.Mode.MODE_UNSPECIFIED
   fullName: Google.GenAI.Types.Mode.MODE_UNSPECIFIED
   nameWithType: Mode.MODE_UNSPECIFIED
+- uid: Google.GenAI.Types.Model
+  name: Model
+  href: api/Google.GenAI.Types.Model.html
+  commentId: T:Google.GenAI.Types.Model
+  fullName: Google.GenAI.Types.Model
+  nameWithType: Model
+- uid: Google.GenAI.Types.Model.Checkpoints
+  name: Checkpoints
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_Checkpoints
+  commentId: P:Google.GenAI.Types.Model.Checkpoints
+  fullName: Google.GenAI.Types.Model.Checkpoints
+  nameWithType: Model.Checkpoints
+- uid: Google.GenAI.Types.Model.Checkpoints*
+  name: Checkpoints
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_Checkpoints_
+  commentId: Overload:Google.GenAI.Types.Model.Checkpoints
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Model.Checkpoints
+  nameWithType: Model.Checkpoints
+- uid: Google.GenAI.Types.Model.DefaultCheckpointId
+  name: DefaultCheckpointId
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_DefaultCheckpointId
+  commentId: P:Google.GenAI.Types.Model.DefaultCheckpointId
+  fullName: Google.GenAI.Types.Model.DefaultCheckpointId
+  nameWithType: Model.DefaultCheckpointId
+- uid: Google.GenAI.Types.Model.DefaultCheckpointId*
+  name: DefaultCheckpointId
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_DefaultCheckpointId_
+  commentId: Overload:Google.GenAI.Types.Model.DefaultCheckpointId
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Model.DefaultCheckpointId
+  nameWithType: Model.DefaultCheckpointId
+- uid: Google.GenAI.Types.Model.Description
+  name: Description
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_Description
+  commentId: P:Google.GenAI.Types.Model.Description
+  fullName: Google.GenAI.Types.Model.Description
+  nameWithType: Model.Description
+- uid: Google.GenAI.Types.Model.Description*
+  name: Description
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_Description_
+  commentId: Overload:Google.GenAI.Types.Model.Description
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Model.Description
+  nameWithType: Model.Description
+- uid: Google.GenAI.Types.Model.DisplayName
+  name: DisplayName
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_DisplayName
+  commentId: P:Google.GenAI.Types.Model.DisplayName
+  fullName: Google.GenAI.Types.Model.DisplayName
+  nameWithType: Model.DisplayName
+- uid: Google.GenAI.Types.Model.DisplayName*
+  name: DisplayName
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_DisplayName_
+  commentId: Overload:Google.GenAI.Types.Model.DisplayName
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Model.DisplayName
+  nameWithType: Model.DisplayName
+- uid: Google.GenAI.Types.Model.Endpoints
+  name: Endpoints
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_Endpoints
+  commentId: P:Google.GenAI.Types.Model.Endpoints
+  fullName: Google.GenAI.Types.Model.Endpoints
+  nameWithType: Model.Endpoints
+- uid: Google.GenAI.Types.Model.Endpoints*
+  name: Endpoints
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_Endpoints_
+  commentId: Overload:Google.GenAI.Types.Model.Endpoints
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Model.Endpoints
+  nameWithType: Model.Endpoints
+- uid: Google.GenAI.Types.Model.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.Model.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.Model.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.Model.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: Model.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: Model.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.Model.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_FromJson_
+  commentId: Overload:Google.GenAI.Types.Model.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Model.FromJson
+  nameWithType: Model.FromJson
+- uid: Google.GenAI.Types.Model.InputTokenLimit
+  name: InputTokenLimit
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_InputTokenLimit
+  commentId: P:Google.GenAI.Types.Model.InputTokenLimit
+  fullName: Google.GenAI.Types.Model.InputTokenLimit
+  nameWithType: Model.InputTokenLimit
+- uid: Google.GenAI.Types.Model.InputTokenLimit*
+  name: InputTokenLimit
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_InputTokenLimit_
+  commentId: Overload:Google.GenAI.Types.Model.InputTokenLimit
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Model.InputTokenLimit
+  nameWithType: Model.InputTokenLimit
+- uid: Google.GenAI.Types.Model.Labels
+  name: Labels
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_Labels
+  commentId: P:Google.GenAI.Types.Model.Labels
+  fullName: Google.GenAI.Types.Model.Labels
+  nameWithType: Model.Labels
+- uid: Google.GenAI.Types.Model.Labels*
+  name: Labels
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_Labels_
+  commentId: Overload:Google.GenAI.Types.Model.Labels
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Model.Labels
+  nameWithType: Model.Labels
+- uid: Google.GenAI.Types.Model.MaxTemperature
+  name: MaxTemperature
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_MaxTemperature
+  commentId: P:Google.GenAI.Types.Model.MaxTemperature
+  fullName: Google.GenAI.Types.Model.MaxTemperature
+  nameWithType: Model.MaxTemperature
+- uid: Google.GenAI.Types.Model.MaxTemperature*
+  name: MaxTemperature
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_MaxTemperature_
+  commentId: Overload:Google.GenAI.Types.Model.MaxTemperature
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Model.MaxTemperature
+  nameWithType: Model.MaxTemperature
+- uid: Google.GenAI.Types.Model.Name
+  name: Name
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_Name
+  commentId: P:Google.GenAI.Types.Model.Name
+  fullName: Google.GenAI.Types.Model.Name
+  nameWithType: Model.Name
+- uid: Google.GenAI.Types.Model.Name*
+  name: Name
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_Name_
+  commentId: Overload:Google.GenAI.Types.Model.Name
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Model.Name
+  nameWithType: Model.Name
+- uid: Google.GenAI.Types.Model.OutputTokenLimit
+  name: OutputTokenLimit
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_OutputTokenLimit
+  commentId: P:Google.GenAI.Types.Model.OutputTokenLimit
+  fullName: Google.GenAI.Types.Model.OutputTokenLimit
+  nameWithType: Model.OutputTokenLimit
+- uid: Google.GenAI.Types.Model.OutputTokenLimit*
+  name: OutputTokenLimit
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_OutputTokenLimit_
+  commentId: Overload:Google.GenAI.Types.Model.OutputTokenLimit
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Model.OutputTokenLimit
+  nameWithType: Model.OutputTokenLimit
+- uid: Google.GenAI.Types.Model.SupportedActions
+  name: SupportedActions
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_SupportedActions
+  commentId: P:Google.GenAI.Types.Model.SupportedActions
+  fullName: Google.GenAI.Types.Model.SupportedActions
+  nameWithType: Model.SupportedActions
+- uid: Google.GenAI.Types.Model.SupportedActions*
+  name: SupportedActions
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_SupportedActions_
+  commentId: Overload:Google.GenAI.Types.Model.SupportedActions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Model.SupportedActions
+  nameWithType: Model.SupportedActions
+- uid: Google.GenAI.Types.Model.Temperature
+  name: Temperature
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_Temperature
+  commentId: P:Google.GenAI.Types.Model.Temperature
+  fullName: Google.GenAI.Types.Model.Temperature
+  nameWithType: Model.Temperature
+- uid: Google.GenAI.Types.Model.Temperature*
+  name: Temperature
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_Temperature_
+  commentId: Overload:Google.GenAI.Types.Model.Temperature
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Model.Temperature
+  nameWithType: Model.Temperature
+- uid: Google.GenAI.Types.Model.Thinking
+  name: Thinking
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_Thinking
+  commentId: P:Google.GenAI.Types.Model.Thinking
+  fullName: Google.GenAI.Types.Model.Thinking
+  nameWithType: Model.Thinking
+- uid: Google.GenAI.Types.Model.Thinking*
+  name: Thinking
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_Thinking_
+  commentId: Overload:Google.GenAI.Types.Model.Thinking
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Model.Thinking
+  nameWithType: Model.Thinking
+- uid: Google.GenAI.Types.Model.TopK
+  name: TopK
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_TopK
+  commentId: P:Google.GenAI.Types.Model.TopK
+  fullName: Google.GenAI.Types.Model.TopK
+  nameWithType: Model.TopK
+- uid: Google.GenAI.Types.Model.TopK*
+  name: TopK
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_TopK_
+  commentId: Overload:Google.GenAI.Types.Model.TopK
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Model.TopK
+  nameWithType: Model.TopK
+- uid: Google.GenAI.Types.Model.TopP
+  name: TopP
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_TopP
+  commentId: P:Google.GenAI.Types.Model.TopP
+  fullName: Google.GenAI.Types.Model.TopP
+  nameWithType: Model.TopP
+- uid: Google.GenAI.Types.Model.TopP*
+  name: TopP
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_TopP_
+  commentId: Overload:Google.GenAI.Types.Model.TopP
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Model.TopP
+  nameWithType: Model.TopP
+- uid: Google.GenAI.Types.Model.TunedModelInfo
+  name: TunedModelInfo
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_TunedModelInfo
+  commentId: P:Google.GenAI.Types.Model.TunedModelInfo
+  fullName: Google.GenAI.Types.Model.TunedModelInfo
+  nameWithType: Model.TunedModelInfo
+- uid: Google.GenAI.Types.Model.TunedModelInfo*
+  name: TunedModelInfo
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_TunedModelInfo_
+  commentId: Overload:Google.GenAI.Types.Model.TunedModelInfo
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Model.TunedModelInfo
+  nameWithType: Model.TunedModelInfo
+- uid: Google.GenAI.Types.Model.Version
+  name: Version
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_Version
+  commentId: P:Google.GenAI.Types.Model.Version
+  fullName: Google.GenAI.Types.Model.Version
+  nameWithType: Model.Version
+- uid: Google.GenAI.Types.Model.Version*
+  name: Version
+  href: api/Google.GenAI.Types.Model.html#Google_GenAI_Types_Model_Version_
+  commentId: Overload:Google.GenAI.Types.Model.Version
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Model.Version
+  nameWithType: Model.Version
 - uid: Google.GenAI.Types.ModelSelectionConfig
   name: ModelSelectionConfig
   href: api/Google.GenAI.Types.ModelSelectionConfig.html
@@ -14413,6 +15048,67 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Transcription.Text
   nameWithType: Transcription.Text
+- uid: Google.GenAI.Types.TunedModelInfo
+  name: TunedModelInfo
+  href: api/Google.GenAI.Types.TunedModelInfo.html
+  commentId: T:Google.GenAI.Types.TunedModelInfo
+  fullName: Google.GenAI.Types.TunedModelInfo
+  nameWithType: TunedModelInfo
+- uid: Google.GenAI.Types.TunedModelInfo.BaseModel
+  name: BaseModel
+  href: api/Google.GenAI.Types.TunedModelInfo.html#Google_GenAI_Types_TunedModelInfo_BaseModel
+  commentId: P:Google.GenAI.Types.TunedModelInfo.BaseModel
+  fullName: Google.GenAI.Types.TunedModelInfo.BaseModel
+  nameWithType: TunedModelInfo.BaseModel
+- uid: Google.GenAI.Types.TunedModelInfo.BaseModel*
+  name: BaseModel
+  href: api/Google.GenAI.Types.TunedModelInfo.html#Google_GenAI_Types_TunedModelInfo_BaseModel_
+  commentId: Overload:Google.GenAI.Types.TunedModelInfo.BaseModel
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TunedModelInfo.BaseModel
+  nameWithType: TunedModelInfo.BaseModel
+- uid: Google.GenAI.Types.TunedModelInfo.CreateTime
+  name: CreateTime
+  href: api/Google.GenAI.Types.TunedModelInfo.html#Google_GenAI_Types_TunedModelInfo_CreateTime
+  commentId: P:Google.GenAI.Types.TunedModelInfo.CreateTime
+  fullName: Google.GenAI.Types.TunedModelInfo.CreateTime
+  nameWithType: TunedModelInfo.CreateTime
+- uid: Google.GenAI.Types.TunedModelInfo.CreateTime*
+  name: CreateTime
+  href: api/Google.GenAI.Types.TunedModelInfo.html#Google_GenAI_Types_TunedModelInfo_CreateTime_
+  commentId: Overload:Google.GenAI.Types.TunedModelInfo.CreateTime
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TunedModelInfo.CreateTime
+  nameWithType: TunedModelInfo.CreateTime
+- uid: Google.GenAI.Types.TunedModelInfo.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.TunedModelInfo.html#Google_GenAI_Types_TunedModelInfo_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.TunedModelInfo.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.TunedModelInfo.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.TunedModelInfo.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: TunedModelInfo.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: TunedModelInfo.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.TunedModelInfo.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.TunedModelInfo.html#Google_GenAI_Types_TunedModelInfo_FromJson_
+  commentId: Overload:Google.GenAI.Types.TunedModelInfo.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TunedModelInfo.FromJson
+  nameWithType: TunedModelInfo.FromJson
+- uid: Google.GenAI.Types.TunedModelInfo.UpdateTime
+  name: UpdateTime
+  href: api/Google.GenAI.Types.TunedModelInfo.html#Google_GenAI_Types_TunedModelInfo_UpdateTime
+  commentId: P:Google.GenAI.Types.TunedModelInfo.UpdateTime
+  fullName: Google.GenAI.Types.TunedModelInfo.UpdateTime
+  nameWithType: TunedModelInfo.UpdateTime
+- uid: Google.GenAI.Types.TunedModelInfo.UpdateTime*
+  name: UpdateTime
+  href: api/Google.GenAI.Types.TunedModelInfo.html#Google_GenAI_Types_TunedModelInfo_UpdateTime_
+  commentId: Overload:Google.GenAI.Types.TunedModelInfo.UpdateTime
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TunedModelInfo.UpdateTime
+  nameWithType: TunedModelInfo.UpdateTime
 - uid: Google.GenAI.Types.TurnCompleteReason
   name: TurnCompleteReason
   href: api/Google.GenAI.Types.TurnCompleteReason.html
@@ -14521,6 +15217,80 @@ references:
   commentId: F:Google.GenAI.Types.Type.TYPE_UNSPECIFIED
   fullName: Google.GenAI.Types.Type.TYPE_UNSPECIFIED
   nameWithType: Type.TYPE_UNSPECIFIED
+- uid: Google.GenAI.Types.UpdateModelConfig
+  name: UpdateModelConfig
+  href: api/Google.GenAI.Types.UpdateModelConfig.html
+  commentId: T:Google.GenAI.Types.UpdateModelConfig
+  fullName: Google.GenAI.Types.UpdateModelConfig
+  nameWithType: UpdateModelConfig
+- uid: Google.GenAI.Types.UpdateModelConfig.DefaultCheckpointId
+  name: DefaultCheckpointId
+  href: api/Google.GenAI.Types.UpdateModelConfig.html#Google_GenAI_Types_UpdateModelConfig_DefaultCheckpointId
+  commentId: P:Google.GenAI.Types.UpdateModelConfig.DefaultCheckpointId
+  fullName: Google.GenAI.Types.UpdateModelConfig.DefaultCheckpointId
+  nameWithType: UpdateModelConfig.DefaultCheckpointId
+- uid: Google.GenAI.Types.UpdateModelConfig.DefaultCheckpointId*
+  name: DefaultCheckpointId
+  href: api/Google.GenAI.Types.UpdateModelConfig.html#Google_GenAI_Types_UpdateModelConfig_DefaultCheckpointId_
+  commentId: Overload:Google.GenAI.Types.UpdateModelConfig.DefaultCheckpointId
+  isSpec: "True"
+  fullName: Google.GenAI.Types.UpdateModelConfig.DefaultCheckpointId
+  nameWithType: UpdateModelConfig.DefaultCheckpointId
+- uid: Google.GenAI.Types.UpdateModelConfig.Description
+  name: Description
+  href: api/Google.GenAI.Types.UpdateModelConfig.html#Google_GenAI_Types_UpdateModelConfig_Description
+  commentId: P:Google.GenAI.Types.UpdateModelConfig.Description
+  fullName: Google.GenAI.Types.UpdateModelConfig.Description
+  nameWithType: UpdateModelConfig.Description
+- uid: Google.GenAI.Types.UpdateModelConfig.Description*
+  name: Description
+  href: api/Google.GenAI.Types.UpdateModelConfig.html#Google_GenAI_Types_UpdateModelConfig_Description_
+  commentId: Overload:Google.GenAI.Types.UpdateModelConfig.Description
+  isSpec: "True"
+  fullName: Google.GenAI.Types.UpdateModelConfig.Description
+  nameWithType: UpdateModelConfig.Description
+- uid: Google.GenAI.Types.UpdateModelConfig.DisplayName
+  name: DisplayName
+  href: api/Google.GenAI.Types.UpdateModelConfig.html#Google_GenAI_Types_UpdateModelConfig_DisplayName
+  commentId: P:Google.GenAI.Types.UpdateModelConfig.DisplayName
+  fullName: Google.GenAI.Types.UpdateModelConfig.DisplayName
+  nameWithType: UpdateModelConfig.DisplayName
+- uid: Google.GenAI.Types.UpdateModelConfig.DisplayName*
+  name: DisplayName
+  href: api/Google.GenAI.Types.UpdateModelConfig.html#Google_GenAI_Types_UpdateModelConfig_DisplayName_
+  commentId: Overload:Google.GenAI.Types.UpdateModelConfig.DisplayName
+  isSpec: "True"
+  fullName: Google.GenAI.Types.UpdateModelConfig.DisplayName
+  nameWithType: UpdateModelConfig.DisplayName
+- uid: Google.GenAI.Types.UpdateModelConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.UpdateModelConfig.html#Google_GenAI_Types_UpdateModelConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.UpdateModelConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.UpdateModelConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.UpdateModelConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: UpdateModelConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: UpdateModelConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.UpdateModelConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.UpdateModelConfig.html#Google_GenAI_Types_UpdateModelConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.UpdateModelConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.UpdateModelConfig.FromJson
+  nameWithType: UpdateModelConfig.FromJson
+- uid: Google.GenAI.Types.UpdateModelConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.UpdateModelConfig.html#Google_GenAI_Types_UpdateModelConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.UpdateModelConfig.HttpOptions
+  fullName: Google.GenAI.Types.UpdateModelConfig.HttpOptions
+  nameWithType: UpdateModelConfig.HttpOptions
+- uid: Google.GenAI.Types.UpdateModelConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.UpdateModelConfig.html#Google_GenAI_Types_UpdateModelConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.UpdateModelConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.UpdateModelConfig.HttpOptions
+  nameWithType: UpdateModelConfig.HttpOptions
 - uid: Google.GenAI.Types.UploadFileConfig
   name: UploadFileConfig
   href: api/Google.GenAI.Types.UploadFileConfig.html
