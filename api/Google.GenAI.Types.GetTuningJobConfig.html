@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class Common | Google GenAI .NET SDK </title>
+      <title>Class GetTuningJobConfig | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class Common | Google GenAI .NET SDK ">
+      <meta name="title" content="Class GetTuningJobConfig | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Common utility methods for the GenAI SDK to work with JSON.">
+      <meta name="description" content="Optional parameters for tunings.get method.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/googleapis/dotnet-genai/new/main/apiSpec/new?filename=Google_GenAI_Common.md&amp;value=---%0Auid%3A%20Google.GenAI.Common%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/googleapis/dotnet-genai/new/main/apiSpec/new?filename=Google_GenAI_Types_GetTuningJobConfig.md&amp;value=---%0Auid%3A%20Google.GenAI.Types.GetTuningJobConfig%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -80,25 +80,25 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Google.GenAI.Common">
+        <article data-uid="Google.GenAI.Types.GetTuningJobConfig">
 
 
 
-  <h1 id="Google_GenAI_Common" data-uid="Google.GenAI.Common" class="text-break">
-Class Common  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Common.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  <h1 id="Google_GenAI_Types_GetTuningJobConfig" data-uid="Google.GenAI.Types.GetTuningJobConfig" class="text-break">
+Class GetTuningJobConfig  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GetTuningJobConfig.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="Google.html">Google</a>.<a class="xref" href="Google.GenAI.html">GenAI</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Google.html">Google</a>.<a class="xref" href="Google.GenAI.html">GenAI</a>.<a class="xref" href="Google.GenAI.Types.html">Types</a></dd></dl>
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Common utility methods for the GenAI SDK to work with JSON.</p>
+  <div class="markdown summary"><p>Optional parameters for tunings.get method.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class Common</code></pre>
+    <pre><code class="lang-csharp hljs">public record GetTuningJobConfig : IEquatable&lt;GetTuningJobConfig&gt;</code></pre>
   </div>
 
 
@@ -108,10 +108,16 @@ Class Common  <a class="header-action link-secondary" title="View source" href="
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">Common</span></div>
+      <div><span class="xref">GetTuningJobConfig</span></div>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.GetTuningJobConfig.html">GetTuningJobConfig</a>&gt;</div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -145,76 +151,80 @@ Class Common  <a class="header-action link-secondary" title="View source" href="
 
 
 
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_GetTuningJobConfig_HttpOptions_" data-uid="Google.GenAI.Types.GetTuningJobConfig.HttpOptions*"></a>
+
+  <h3 id="Google_GenAI_Types_GetTuningJobConfig_HttpOptions" data-uid="Google.GenAI.Types.GetTuningJobConfig.HttpOptions">
+  HttpOptions
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GetTuningJobConfig.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Used to override HTTP request options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;httpOptions&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public HttpOptions? HttpOptions { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HttpOptions.html">HttpOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
 
-  <a id="Google_GenAI_Common_GetValueByPath_" data-uid="Google.GenAI.Common.GetValueByPath*"></a>
+  <a id="Google_GenAI_Types_GetTuningJobConfig_FromJson_" data-uid="Google.GenAI.Types.GetTuningJobConfig.FromJson*"></a>
 
-  <h3 id="Google_GenAI_Common_GetValueByPath_System_Text_Json_Nodes_JsonNode_System_String___" data-uid="Google.GenAI.Common.GetValueByPath(System.Text.Json.Nodes.JsonNode,System.String[])">
-  GetValueByPath(JsonNode, string[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Common.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Types_GetTuningJobConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.GetTuningJobConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
+  FromJson(string, JsonSerializerOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GetTuningJobConfig.cs/#L44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the value of an object by a path.</p>
-<p>Common.GetValueByPath(containerJsonNode, new string[]{"secondMember", "childMember"})</p>
+  <div class="markdown level1 summary"><p>Deserializes a JSON string to a GetTuningJobConfig object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static JsonNode? GetValueByPath(JsonNode obj, string[] keys)</code></pre>
+    <pre><code class="lang-csharp hljs">public static GetTuningJobConfig? FromJson(string jsonString, JsonSerializerOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonnode">JsonNode</a></dt>
-    <dd></dd>
-    <dt><code>keys</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
-    <dd></dd>
+    <dt><code>jsonString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The JSON string to deserialize.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions">JsonSerializerOptions</a></dt>
+    <dd><p>Optional JsonSerializerOptions.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonnode">JsonNode</a></dt>
-    <dd></dd>
+    <dt><a class="xref" href="Google.GenAI.Types.GetTuningJobConfig.html">GetTuningJobConfig</a></dt>
+    <dd><p>The deserialized GetTuningJobConfig object, or null if deserialization
+fails.</p>
+</dd>
   </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Google_GenAI_Common_SetValueByPath_" data-uid="Google.GenAI.Common.SetValueByPath*"></a>
-
-  <h3 id="Google_GenAI_Common_SetValueByPath_System_Text_Json_Nodes_JsonObject_System_String___System_Object_" data-uid="Google.GenAI.Common.SetValueByPath(System.Text.Json.Nodes.JsonObject,System.String[],System.Object)">
-  SetValueByPath(JsonObject, string[], object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Common.cs/#L35"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Sets the value of an object by a path.</p>
-<p>Common.SetValueByPath(containerJsonObject, new string[]{"secondMember", "childMember"}, 42);</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void SetValueByPath(JsonObject jsonObject, string[] path, object value)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>jsonObject</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.nodes.jsonobject">JsonObject</a></dt>
-    <dd></dd>
-    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
-    <dd></dd>
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd></dd>
-  </dl>
-
 
 
 
@@ -230,7 +240,7 @@ Class Common  <a class="header-action link-secondary" title="View source" href="
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Common.cs/#L27" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GetTuningJobConfig.cs/#L29" class="edit-link">Edit this page</a>
         </div>
 
 
