@@ -56,6 +56,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Caches.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Caches.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Caches",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Client.yml",
       "output": {
         ".html": {
@@ -490,6 +504,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.CachedContent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.CachedContent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.CachedContent",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CachedContent.yml\" sourcestartlinenumber=\"1\">A resource used in LLM queries for users to explicitly specify what to cache.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.CachedContentUsageMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.CachedContentUsageMetadata.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.CachedContentUsageMetadata",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CachedContentUsageMetadata.yml\" sourcestartlinenumber=\"1\">Metadata on the usage of the cached content.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.Candidate.yml",
       "output": {
         ".html": {
@@ -742,6 +784,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.CreateCachedContentConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.CreateCachedContentConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.CreateCachedContentConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CreateCachedContentConfig.yml\" sourcestartlinenumber=\"1\">Optional configuration for cached content creation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.CreateTuningJobConfig.yml",
       "output": {
         ".html": {
@@ -795,6 +851,34 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.DatasetStats",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DatasetStats.yml\" sourcestartlinenumber=\"1\">Statistics computed over a tuning dataset. This data type is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.DeleteCachedContentConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.DeleteCachedContentConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.DeleteCachedContentConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DeleteCachedContentConfig.yml\" sourcestartlinenumber=\"1\">Optional parameters for caches.delete method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.DeleteCachedContentResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.DeleteCachedContentResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.DeleteCachedContentResponse",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DeleteCachedContentResponse.yml\" sourcestartlinenumber=\"1\">Empty response for caches.delete method.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1498,6 +1582,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.GetCachedContentConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.GetCachedContentConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.GetCachedContentConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GetCachedContentConfig.yml\" sourcestartlinenumber=\"1\">Optional parameters for caches.get method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.GetModelConfig.yml",
       "output": {
         ".html": {
@@ -2013,6 +2111,34 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.LatLng",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LatLng.yml\" sourcestartlinenumber=\"1\">An object that represents a latitude/longitude pair.  This is expressed as a pair of doubles\nto represent degrees latitude and degrees longitude. Unless specified otherwise, this object\nmust conform to the &lt;a\nhref=&quot;https://en.wikipedia.org/wiki/World_Geodetic_System#1984_version&quot;&gt; WGS84\nstandard&lt;/a&gt;. Values must be within normalized ranges.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ListCachedContentsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ListCachedContentsConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ListCachedContentsConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ListCachedContentsConfig.yml\" sourcestartlinenumber=\"1\">Config for caches.list method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ListCachedContentsResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ListCachedContentsResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ListCachedContentsResponse",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -3679,6 +3805,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Type",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Type.yml\" sourcestartlinenumber=\"1\">The type of the data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.UpdateCachedContentConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.UpdateCachedContentConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.UpdateCachedContentConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.UpdateCachedContentConfig.yml\" sourcestartlinenumber=\"1\">Optional parameters for caches.update method.</p>\n"
     },
     {
       "type": "ManagedReference",

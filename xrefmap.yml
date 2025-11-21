@@ -398,6 +398,111 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.AsyncSession.SendToolResponseAsync
   nameWithType: AsyncSession.SendToolResponseAsync
+- uid: Google.GenAI.Caches
+  name: Caches
+  href: api/Google.GenAI.Caches.html
+  commentId: T:Google.GenAI.Caches
+  fullName: Google.GenAI.Caches
+  nameWithType: Caches
+- uid: Google.GenAI.Caches.#ctor(Google.GenAI.ApiClient)
+  name: Caches(ApiClient)
+  href: api/Google.GenAI.Caches.html#Google_GenAI_Caches__ctor_Google_GenAI_ApiClient_
+  commentId: M:Google.GenAI.Caches.#ctor(Google.GenAI.ApiClient)
+  name.vb: New(ApiClient)
+  fullName: Google.GenAI.Caches.Caches(Google.GenAI.ApiClient)
+  fullName.vb: Google.GenAI.Caches.New(Google.GenAI.ApiClient)
+  nameWithType: Caches.Caches(ApiClient)
+  nameWithType.vb: Caches.New(ApiClient)
+- uid: Google.GenAI.Caches.#ctor*
+  name: Caches
+  href: api/Google.GenAI.Caches.html#Google_GenAI_Caches__ctor_
+  commentId: Overload:Google.GenAI.Caches.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Google.GenAI.Caches.Caches
+  fullName.vb: Google.GenAI.Caches.New
+  nameWithType: Caches.Caches
+  nameWithType.vb: Caches.New
+- uid: Google.GenAI.Caches.CreateAsync(System.String,Google.GenAI.Types.CreateCachedContentConfig)
+  name: CreateAsync(string, CreateCachedContentConfig?)
+  href: api/Google.GenAI.Caches.html#Google_GenAI_Caches_CreateAsync_System_String_Google_GenAI_Types_CreateCachedContentConfig_
+  commentId: M:Google.GenAI.Caches.CreateAsync(System.String,Google.GenAI.Types.CreateCachedContentConfig)
+  name.vb: CreateAsync(String, CreateCachedContentConfig)
+  fullName: Google.GenAI.Caches.CreateAsync(string, Google.GenAI.Types.CreateCachedContentConfig?)
+  fullName.vb: Google.GenAI.Caches.CreateAsync(String, Google.GenAI.Types.CreateCachedContentConfig)
+  nameWithType: Caches.CreateAsync(string, CreateCachedContentConfig?)
+  nameWithType.vb: Caches.CreateAsync(String, CreateCachedContentConfig)
+- uid: Google.GenAI.Caches.CreateAsync*
+  name: CreateAsync
+  href: api/Google.GenAI.Caches.html#Google_GenAI_Caches_CreateAsync_
+  commentId: Overload:Google.GenAI.Caches.CreateAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Caches.CreateAsync
+  nameWithType: Caches.CreateAsync
+- uid: Google.GenAI.Caches.DeleteAsync(System.String,Google.GenAI.Types.DeleteCachedContentConfig)
+  name: DeleteAsync(string, DeleteCachedContentConfig?)
+  href: api/Google.GenAI.Caches.html#Google_GenAI_Caches_DeleteAsync_System_String_Google_GenAI_Types_DeleteCachedContentConfig_
+  commentId: M:Google.GenAI.Caches.DeleteAsync(System.String,Google.GenAI.Types.DeleteCachedContentConfig)
+  name.vb: DeleteAsync(String, DeleteCachedContentConfig)
+  fullName: Google.GenAI.Caches.DeleteAsync(string, Google.GenAI.Types.DeleteCachedContentConfig?)
+  fullName.vb: Google.GenAI.Caches.DeleteAsync(String, Google.GenAI.Types.DeleteCachedContentConfig)
+  nameWithType: Caches.DeleteAsync(string, DeleteCachedContentConfig?)
+  nameWithType.vb: Caches.DeleteAsync(String, DeleteCachedContentConfig)
+- uid: Google.GenAI.Caches.DeleteAsync*
+  name: DeleteAsync
+  href: api/Google.GenAI.Caches.html#Google_GenAI_Caches_DeleteAsync_
+  commentId: Overload:Google.GenAI.Caches.DeleteAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Caches.DeleteAsync
+  nameWithType: Caches.DeleteAsync
+- uid: Google.GenAI.Caches.GetAsync(System.String,Google.GenAI.Types.GetCachedContentConfig)
+  name: GetAsync(string, GetCachedContentConfig?)
+  href: api/Google.GenAI.Caches.html#Google_GenAI_Caches_GetAsync_System_String_Google_GenAI_Types_GetCachedContentConfig_
+  commentId: M:Google.GenAI.Caches.GetAsync(System.String,Google.GenAI.Types.GetCachedContentConfig)
+  name.vb: GetAsync(String, GetCachedContentConfig)
+  fullName: Google.GenAI.Caches.GetAsync(string, Google.GenAI.Types.GetCachedContentConfig?)
+  fullName.vb: Google.GenAI.Caches.GetAsync(String, Google.GenAI.Types.GetCachedContentConfig)
+  nameWithType: Caches.GetAsync(string, GetCachedContentConfig?)
+  nameWithType.vb: Caches.GetAsync(String, GetCachedContentConfig)
+- uid: Google.GenAI.Caches.GetAsync*
+  name: GetAsync
+  href: api/Google.GenAI.Caches.html#Google_GenAI_Caches_GetAsync_
+  commentId: Overload:Google.GenAI.Caches.GetAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Caches.GetAsync
+  nameWithType: Caches.GetAsync
+- uid: Google.GenAI.Caches.ListAsync(Google.GenAI.Types.ListCachedContentsConfig)
+  name: ListAsync(ListCachedContentsConfig?)
+  href: api/Google.GenAI.Caches.html#Google_GenAI_Caches_ListAsync_Google_GenAI_Types_ListCachedContentsConfig_
+  commentId: M:Google.GenAI.Caches.ListAsync(Google.GenAI.Types.ListCachedContentsConfig)
+  name.vb: ListAsync(ListCachedContentsConfig)
+  fullName: Google.GenAI.Caches.ListAsync(Google.GenAI.Types.ListCachedContentsConfig?)
+  fullName.vb: Google.GenAI.Caches.ListAsync(Google.GenAI.Types.ListCachedContentsConfig)
+  nameWithType: Caches.ListAsync(ListCachedContentsConfig?)
+  nameWithType.vb: Caches.ListAsync(ListCachedContentsConfig)
+- uid: Google.GenAI.Caches.ListAsync*
+  name: ListAsync
+  href: api/Google.GenAI.Caches.html#Google_GenAI_Caches_ListAsync_
+  commentId: Overload:Google.GenAI.Caches.ListAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Caches.ListAsync
+  nameWithType: Caches.ListAsync
+- uid: Google.GenAI.Caches.UpdateAsync(System.String,Google.GenAI.Types.UpdateCachedContentConfig)
+  name: UpdateAsync(string, UpdateCachedContentConfig?)
+  href: api/Google.GenAI.Caches.html#Google_GenAI_Caches_UpdateAsync_System_String_Google_GenAI_Types_UpdateCachedContentConfig_
+  commentId: M:Google.GenAI.Caches.UpdateAsync(System.String,Google.GenAI.Types.UpdateCachedContentConfig)
+  name.vb: UpdateAsync(String, UpdateCachedContentConfig)
+  fullName: Google.GenAI.Caches.UpdateAsync(string, Google.GenAI.Types.UpdateCachedContentConfig?)
+  fullName.vb: Google.GenAI.Caches.UpdateAsync(String, Google.GenAI.Types.UpdateCachedContentConfig)
+  nameWithType: Caches.UpdateAsync(string, UpdateCachedContentConfig?)
+  nameWithType.vb: Caches.UpdateAsync(String, UpdateCachedContentConfig)
+- uid: Google.GenAI.Caches.UpdateAsync*
+  name: UpdateAsync
+  href: api/Google.GenAI.Caches.html#Google_GenAI_Caches_UpdateAsync_
+  commentId: Overload:Google.GenAI.Caches.UpdateAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Caches.UpdateAsync
+  nameWithType: Caches.UpdateAsync
 - uid: Google.GenAI.Client
   name: Client
   href: api/Google.GenAI.Client.html
@@ -423,6 +528,19 @@ references:
   fullName.vb: Google.GenAI.Client.New
   nameWithType: Client.Client
   nameWithType.vb: Client.New
+- uid: Google.GenAI.Client.Caches
+  name: Caches
+  href: api/Google.GenAI.Client.html#Google_GenAI_Client_Caches
+  commentId: P:Google.GenAI.Client.Caches
+  fullName: Google.GenAI.Client.Caches
+  nameWithType: Client.Caches
+- uid: Google.GenAI.Client.Caches*
+  name: Caches
+  href: api/Google.GenAI.Client.html#Google_GenAI_Client_Caches_
+  commentId: Overload:Google.GenAI.Client.Caches
+  isSpec: "True"
+  fullName: Google.GenAI.Client.Caches
+  nameWithType: Client.Caches
 - uid: Google.GenAI.Client.Dispose
   name: Dispose()
   href: api/Google.GenAI.Client.html#Google_GenAI_Client_Dispose
@@ -2392,6 +2510,206 @@ references:
   commentId: F:Google.GenAI.Types.BlockedReason.SAFETY
   fullName: Google.GenAI.Types.BlockedReason.SAFETY
   nameWithType: BlockedReason.SAFETY
+- uid: Google.GenAI.Types.CachedContent
+  name: CachedContent
+  href: api/Google.GenAI.Types.CachedContent.html
+  commentId: T:Google.GenAI.Types.CachedContent
+  fullName: Google.GenAI.Types.CachedContent
+  nameWithType: CachedContent
+- uid: Google.GenAI.Types.CachedContent.CreateTime
+  name: CreateTime
+  href: api/Google.GenAI.Types.CachedContent.html#Google_GenAI_Types_CachedContent_CreateTime
+  commentId: P:Google.GenAI.Types.CachedContent.CreateTime
+  fullName: Google.GenAI.Types.CachedContent.CreateTime
+  nameWithType: CachedContent.CreateTime
+- uid: Google.GenAI.Types.CachedContent.CreateTime*
+  name: CreateTime
+  href: api/Google.GenAI.Types.CachedContent.html#Google_GenAI_Types_CachedContent_CreateTime_
+  commentId: Overload:Google.GenAI.Types.CachedContent.CreateTime
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CachedContent.CreateTime
+  nameWithType: CachedContent.CreateTime
+- uid: Google.GenAI.Types.CachedContent.DisplayName
+  name: DisplayName
+  href: api/Google.GenAI.Types.CachedContent.html#Google_GenAI_Types_CachedContent_DisplayName
+  commentId: P:Google.GenAI.Types.CachedContent.DisplayName
+  fullName: Google.GenAI.Types.CachedContent.DisplayName
+  nameWithType: CachedContent.DisplayName
+- uid: Google.GenAI.Types.CachedContent.DisplayName*
+  name: DisplayName
+  href: api/Google.GenAI.Types.CachedContent.html#Google_GenAI_Types_CachedContent_DisplayName_
+  commentId: Overload:Google.GenAI.Types.CachedContent.DisplayName
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CachedContent.DisplayName
+  nameWithType: CachedContent.DisplayName
+- uid: Google.GenAI.Types.CachedContent.ExpireTime
+  name: ExpireTime
+  href: api/Google.GenAI.Types.CachedContent.html#Google_GenAI_Types_CachedContent_ExpireTime
+  commentId: P:Google.GenAI.Types.CachedContent.ExpireTime
+  fullName: Google.GenAI.Types.CachedContent.ExpireTime
+  nameWithType: CachedContent.ExpireTime
+- uid: Google.GenAI.Types.CachedContent.ExpireTime*
+  name: ExpireTime
+  href: api/Google.GenAI.Types.CachedContent.html#Google_GenAI_Types_CachedContent_ExpireTime_
+  commentId: Overload:Google.GenAI.Types.CachedContent.ExpireTime
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CachedContent.ExpireTime
+  nameWithType: CachedContent.ExpireTime
+- uid: Google.GenAI.Types.CachedContent.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.CachedContent.html#Google_GenAI_Types_CachedContent_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.CachedContent.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.CachedContent.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.CachedContent.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: CachedContent.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: CachedContent.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.CachedContent.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.CachedContent.html#Google_GenAI_Types_CachedContent_FromJson_
+  commentId: Overload:Google.GenAI.Types.CachedContent.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CachedContent.FromJson
+  nameWithType: CachedContent.FromJson
+- uid: Google.GenAI.Types.CachedContent.Model
+  name: Model
+  href: api/Google.GenAI.Types.CachedContent.html#Google_GenAI_Types_CachedContent_Model
+  commentId: P:Google.GenAI.Types.CachedContent.Model
+  fullName: Google.GenAI.Types.CachedContent.Model
+  nameWithType: CachedContent.Model
+- uid: Google.GenAI.Types.CachedContent.Model*
+  name: Model
+  href: api/Google.GenAI.Types.CachedContent.html#Google_GenAI_Types_CachedContent_Model_
+  commentId: Overload:Google.GenAI.Types.CachedContent.Model
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CachedContent.Model
+  nameWithType: CachedContent.Model
+- uid: Google.GenAI.Types.CachedContent.Name
+  name: Name
+  href: api/Google.GenAI.Types.CachedContent.html#Google_GenAI_Types_CachedContent_Name
+  commentId: P:Google.GenAI.Types.CachedContent.Name
+  fullName: Google.GenAI.Types.CachedContent.Name
+  nameWithType: CachedContent.Name
+- uid: Google.GenAI.Types.CachedContent.Name*
+  name: Name
+  href: api/Google.GenAI.Types.CachedContent.html#Google_GenAI_Types_CachedContent_Name_
+  commentId: Overload:Google.GenAI.Types.CachedContent.Name
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CachedContent.Name
+  nameWithType: CachedContent.Name
+- uid: Google.GenAI.Types.CachedContent.UpdateTime
+  name: UpdateTime
+  href: api/Google.GenAI.Types.CachedContent.html#Google_GenAI_Types_CachedContent_UpdateTime
+  commentId: P:Google.GenAI.Types.CachedContent.UpdateTime
+  fullName: Google.GenAI.Types.CachedContent.UpdateTime
+  nameWithType: CachedContent.UpdateTime
+- uid: Google.GenAI.Types.CachedContent.UpdateTime*
+  name: UpdateTime
+  href: api/Google.GenAI.Types.CachedContent.html#Google_GenAI_Types_CachedContent_UpdateTime_
+  commentId: Overload:Google.GenAI.Types.CachedContent.UpdateTime
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CachedContent.UpdateTime
+  nameWithType: CachedContent.UpdateTime
+- uid: Google.GenAI.Types.CachedContent.UsageMetadata
+  name: UsageMetadata
+  href: api/Google.GenAI.Types.CachedContent.html#Google_GenAI_Types_CachedContent_UsageMetadata
+  commentId: P:Google.GenAI.Types.CachedContent.UsageMetadata
+  fullName: Google.GenAI.Types.CachedContent.UsageMetadata
+  nameWithType: CachedContent.UsageMetadata
+- uid: Google.GenAI.Types.CachedContent.UsageMetadata*
+  name: UsageMetadata
+  href: api/Google.GenAI.Types.CachedContent.html#Google_GenAI_Types_CachedContent_UsageMetadata_
+  commentId: Overload:Google.GenAI.Types.CachedContent.UsageMetadata
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CachedContent.UsageMetadata
+  nameWithType: CachedContent.UsageMetadata
+- uid: Google.GenAI.Types.CachedContentUsageMetadata
+  name: CachedContentUsageMetadata
+  href: api/Google.GenAI.Types.CachedContentUsageMetadata.html
+  commentId: T:Google.GenAI.Types.CachedContentUsageMetadata
+  fullName: Google.GenAI.Types.CachedContentUsageMetadata
+  nameWithType: CachedContentUsageMetadata
+- uid: Google.GenAI.Types.CachedContentUsageMetadata.AudioDurationSeconds
+  name: AudioDurationSeconds
+  href: api/Google.GenAI.Types.CachedContentUsageMetadata.html#Google_GenAI_Types_CachedContentUsageMetadata_AudioDurationSeconds
+  commentId: P:Google.GenAI.Types.CachedContentUsageMetadata.AudioDurationSeconds
+  fullName: Google.GenAI.Types.CachedContentUsageMetadata.AudioDurationSeconds
+  nameWithType: CachedContentUsageMetadata.AudioDurationSeconds
+- uid: Google.GenAI.Types.CachedContentUsageMetadata.AudioDurationSeconds*
+  name: AudioDurationSeconds
+  href: api/Google.GenAI.Types.CachedContentUsageMetadata.html#Google_GenAI_Types_CachedContentUsageMetadata_AudioDurationSeconds_
+  commentId: Overload:Google.GenAI.Types.CachedContentUsageMetadata.AudioDurationSeconds
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CachedContentUsageMetadata.AudioDurationSeconds
+  nameWithType: CachedContentUsageMetadata.AudioDurationSeconds
+- uid: Google.GenAI.Types.CachedContentUsageMetadata.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.CachedContentUsageMetadata.html#Google_GenAI_Types_CachedContentUsageMetadata_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.CachedContentUsageMetadata.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.CachedContentUsageMetadata.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.CachedContentUsageMetadata.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: CachedContentUsageMetadata.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: CachedContentUsageMetadata.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.CachedContentUsageMetadata.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.CachedContentUsageMetadata.html#Google_GenAI_Types_CachedContentUsageMetadata_FromJson_
+  commentId: Overload:Google.GenAI.Types.CachedContentUsageMetadata.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CachedContentUsageMetadata.FromJson
+  nameWithType: CachedContentUsageMetadata.FromJson
+- uid: Google.GenAI.Types.CachedContentUsageMetadata.ImageCount
+  name: ImageCount
+  href: api/Google.GenAI.Types.CachedContentUsageMetadata.html#Google_GenAI_Types_CachedContentUsageMetadata_ImageCount
+  commentId: P:Google.GenAI.Types.CachedContentUsageMetadata.ImageCount
+  fullName: Google.GenAI.Types.CachedContentUsageMetadata.ImageCount
+  nameWithType: CachedContentUsageMetadata.ImageCount
+- uid: Google.GenAI.Types.CachedContentUsageMetadata.ImageCount*
+  name: ImageCount
+  href: api/Google.GenAI.Types.CachedContentUsageMetadata.html#Google_GenAI_Types_CachedContentUsageMetadata_ImageCount_
+  commentId: Overload:Google.GenAI.Types.CachedContentUsageMetadata.ImageCount
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CachedContentUsageMetadata.ImageCount
+  nameWithType: CachedContentUsageMetadata.ImageCount
+- uid: Google.GenAI.Types.CachedContentUsageMetadata.TextCount
+  name: TextCount
+  href: api/Google.GenAI.Types.CachedContentUsageMetadata.html#Google_GenAI_Types_CachedContentUsageMetadata_TextCount
+  commentId: P:Google.GenAI.Types.CachedContentUsageMetadata.TextCount
+  fullName: Google.GenAI.Types.CachedContentUsageMetadata.TextCount
+  nameWithType: CachedContentUsageMetadata.TextCount
+- uid: Google.GenAI.Types.CachedContentUsageMetadata.TextCount*
+  name: TextCount
+  href: api/Google.GenAI.Types.CachedContentUsageMetadata.html#Google_GenAI_Types_CachedContentUsageMetadata_TextCount_
+  commentId: Overload:Google.GenAI.Types.CachedContentUsageMetadata.TextCount
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CachedContentUsageMetadata.TextCount
+  nameWithType: CachedContentUsageMetadata.TextCount
+- uid: Google.GenAI.Types.CachedContentUsageMetadata.TotalTokenCount
+  name: TotalTokenCount
+  href: api/Google.GenAI.Types.CachedContentUsageMetadata.html#Google_GenAI_Types_CachedContentUsageMetadata_TotalTokenCount
+  commentId: P:Google.GenAI.Types.CachedContentUsageMetadata.TotalTokenCount
+  fullName: Google.GenAI.Types.CachedContentUsageMetadata.TotalTokenCount
+  nameWithType: CachedContentUsageMetadata.TotalTokenCount
+- uid: Google.GenAI.Types.CachedContentUsageMetadata.TotalTokenCount*
+  name: TotalTokenCount
+  href: api/Google.GenAI.Types.CachedContentUsageMetadata.html#Google_GenAI_Types_CachedContentUsageMetadata_TotalTokenCount_
+  commentId: Overload:Google.GenAI.Types.CachedContentUsageMetadata.TotalTokenCount
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CachedContentUsageMetadata.TotalTokenCount
+  nameWithType: CachedContentUsageMetadata.TotalTokenCount
+- uid: Google.GenAI.Types.CachedContentUsageMetadata.VideoDurationSeconds
+  name: VideoDurationSeconds
+  href: api/Google.GenAI.Types.CachedContentUsageMetadata.html#Google_GenAI_Types_CachedContentUsageMetadata_VideoDurationSeconds
+  commentId: P:Google.GenAI.Types.CachedContentUsageMetadata.VideoDurationSeconds
+  fullName: Google.GenAI.Types.CachedContentUsageMetadata.VideoDurationSeconds
+  nameWithType: CachedContentUsageMetadata.VideoDurationSeconds
+- uid: Google.GenAI.Types.CachedContentUsageMetadata.VideoDurationSeconds*
+  name: VideoDurationSeconds
+  href: api/Google.GenAI.Types.CachedContentUsageMetadata.html#Google_GenAI_Types_CachedContentUsageMetadata_VideoDurationSeconds_
+  commentId: Overload:Google.GenAI.Types.CachedContentUsageMetadata.VideoDurationSeconds
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CachedContentUsageMetadata.VideoDurationSeconds
+  nameWithType: CachedContentUsageMetadata.VideoDurationSeconds
 - uid: Google.GenAI.Types.Candidate
   name: Candidate
   href: api/Google.GenAI.Types.Candidate.html
@@ -3472,6 +3790,145 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CountTokensResponse.TotalTokens
   nameWithType: CountTokensResponse.TotalTokens
+- uid: Google.GenAI.Types.CreateCachedContentConfig
+  name: CreateCachedContentConfig
+  href: api/Google.GenAI.Types.CreateCachedContentConfig.html
+  commentId: T:Google.GenAI.Types.CreateCachedContentConfig
+  fullName: Google.GenAI.Types.CreateCachedContentConfig
+  nameWithType: CreateCachedContentConfig
+- uid: Google.GenAI.Types.CreateCachedContentConfig.Contents
+  name: Contents
+  href: api/Google.GenAI.Types.CreateCachedContentConfig.html#Google_GenAI_Types_CreateCachedContentConfig_Contents
+  commentId: P:Google.GenAI.Types.CreateCachedContentConfig.Contents
+  fullName: Google.GenAI.Types.CreateCachedContentConfig.Contents
+  nameWithType: CreateCachedContentConfig.Contents
+- uid: Google.GenAI.Types.CreateCachedContentConfig.Contents*
+  name: Contents
+  href: api/Google.GenAI.Types.CreateCachedContentConfig.html#Google_GenAI_Types_CreateCachedContentConfig_Contents_
+  commentId: Overload:Google.GenAI.Types.CreateCachedContentConfig.Contents
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateCachedContentConfig.Contents
+  nameWithType: CreateCachedContentConfig.Contents
+- uid: Google.GenAI.Types.CreateCachedContentConfig.DisplayName
+  name: DisplayName
+  href: api/Google.GenAI.Types.CreateCachedContentConfig.html#Google_GenAI_Types_CreateCachedContentConfig_DisplayName
+  commentId: P:Google.GenAI.Types.CreateCachedContentConfig.DisplayName
+  fullName: Google.GenAI.Types.CreateCachedContentConfig.DisplayName
+  nameWithType: CreateCachedContentConfig.DisplayName
+- uid: Google.GenAI.Types.CreateCachedContentConfig.DisplayName*
+  name: DisplayName
+  href: api/Google.GenAI.Types.CreateCachedContentConfig.html#Google_GenAI_Types_CreateCachedContentConfig_DisplayName_
+  commentId: Overload:Google.GenAI.Types.CreateCachedContentConfig.DisplayName
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateCachedContentConfig.DisplayName
+  nameWithType: CreateCachedContentConfig.DisplayName
+- uid: Google.GenAI.Types.CreateCachedContentConfig.ExpireTime
+  name: ExpireTime
+  href: api/Google.GenAI.Types.CreateCachedContentConfig.html#Google_GenAI_Types_CreateCachedContentConfig_ExpireTime
+  commentId: P:Google.GenAI.Types.CreateCachedContentConfig.ExpireTime
+  fullName: Google.GenAI.Types.CreateCachedContentConfig.ExpireTime
+  nameWithType: CreateCachedContentConfig.ExpireTime
+- uid: Google.GenAI.Types.CreateCachedContentConfig.ExpireTime*
+  name: ExpireTime
+  href: api/Google.GenAI.Types.CreateCachedContentConfig.html#Google_GenAI_Types_CreateCachedContentConfig_ExpireTime_
+  commentId: Overload:Google.GenAI.Types.CreateCachedContentConfig.ExpireTime
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateCachedContentConfig.ExpireTime
+  nameWithType: CreateCachedContentConfig.ExpireTime
+- uid: Google.GenAI.Types.CreateCachedContentConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.CreateCachedContentConfig.html#Google_GenAI_Types_CreateCachedContentConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.CreateCachedContentConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.CreateCachedContentConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.CreateCachedContentConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: CreateCachedContentConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: CreateCachedContentConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.CreateCachedContentConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.CreateCachedContentConfig.html#Google_GenAI_Types_CreateCachedContentConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.CreateCachedContentConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateCachedContentConfig.FromJson
+  nameWithType: CreateCachedContentConfig.FromJson
+- uid: Google.GenAI.Types.CreateCachedContentConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.CreateCachedContentConfig.html#Google_GenAI_Types_CreateCachedContentConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.CreateCachedContentConfig.HttpOptions
+  fullName: Google.GenAI.Types.CreateCachedContentConfig.HttpOptions
+  nameWithType: CreateCachedContentConfig.HttpOptions
+- uid: Google.GenAI.Types.CreateCachedContentConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.CreateCachedContentConfig.html#Google_GenAI_Types_CreateCachedContentConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.CreateCachedContentConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateCachedContentConfig.HttpOptions
+  nameWithType: CreateCachedContentConfig.HttpOptions
+- uid: Google.GenAI.Types.CreateCachedContentConfig.KmsKeyName
+  name: KmsKeyName
+  href: api/Google.GenAI.Types.CreateCachedContentConfig.html#Google_GenAI_Types_CreateCachedContentConfig_KmsKeyName
+  commentId: P:Google.GenAI.Types.CreateCachedContentConfig.KmsKeyName
+  fullName: Google.GenAI.Types.CreateCachedContentConfig.KmsKeyName
+  nameWithType: CreateCachedContentConfig.KmsKeyName
+- uid: Google.GenAI.Types.CreateCachedContentConfig.KmsKeyName*
+  name: KmsKeyName
+  href: api/Google.GenAI.Types.CreateCachedContentConfig.html#Google_GenAI_Types_CreateCachedContentConfig_KmsKeyName_
+  commentId: Overload:Google.GenAI.Types.CreateCachedContentConfig.KmsKeyName
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateCachedContentConfig.KmsKeyName
+  nameWithType: CreateCachedContentConfig.KmsKeyName
+- uid: Google.GenAI.Types.CreateCachedContentConfig.SystemInstruction
+  name: SystemInstruction
+  href: api/Google.GenAI.Types.CreateCachedContentConfig.html#Google_GenAI_Types_CreateCachedContentConfig_SystemInstruction
+  commentId: P:Google.GenAI.Types.CreateCachedContentConfig.SystemInstruction
+  fullName: Google.GenAI.Types.CreateCachedContentConfig.SystemInstruction
+  nameWithType: CreateCachedContentConfig.SystemInstruction
+- uid: Google.GenAI.Types.CreateCachedContentConfig.SystemInstruction*
+  name: SystemInstruction
+  href: api/Google.GenAI.Types.CreateCachedContentConfig.html#Google_GenAI_Types_CreateCachedContentConfig_SystemInstruction_
+  commentId: Overload:Google.GenAI.Types.CreateCachedContentConfig.SystemInstruction
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateCachedContentConfig.SystemInstruction
+  nameWithType: CreateCachedContentConfig.SystemInstruction
+- uid: Google.GenAI.Types.CreateCachedContentConfig.ToolConfig
+  name: ToolConfig
+  href: api/Google.GenAI.Types.CreateCachedContentConfig.html#Google_GenAI_Types_CreateCachedContentConfig_ToolConfig
+  commentId: P:Google.GenAI.Types.CreateCachedContentConfig.ToolConfig
+  fullName: Google.GenAI.Types.CreateCachedContentConfig.ToolConfig
+  nameWithType: CreateCachedContentConfig.ToolConfig
+- uid: Google.GenAI.Types.CreateCachedContentConfig.ToolConfig*
+  name: ToolConfig
+  href: api/Google.GenAI.Types.CreateCachedContentConfig.html#Google_GenAI_Types_CreateCachedContentConfig_ToolConfig_
+  commentId: Overload:Google.GenAI.Types.CreateCachedContentConfig.ToolConfig
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateCachedContentConfig.ToolConfig
+  nameWithType: CreateCachedContentConfig.ToolConfig
+- uid: Google.GenAI.Types.CreateCachedContentConfig.Tools
+  name: Tools
+  href: api/Google.GenAI.Types.CreateCachedContentConfig.html#Google_GenAI_Types_CreateCachedContentConfig_Tools
+  commentId: P:Google.GenAI.Types.CreateCachedContentConfig.Tools
+  fullName: Google.GenAI.Types.CreateCachedContentConfig.Tools
+  nameWithType: CreateCachedContentConfig.Tools
+- uid: Google.GenAI.Types.CreateCachedContentConfig.Tools*
+  name: Tools
+  href: api/Google.GenAI.Types.CreateCachedContentConfig.html#Google_GenAI_Types_CreateCachedContentConfig_Tools_
+  commentId: Overload:Google.GenAI.Types.CreateCachedContentConfig.Tools
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateCachedContentConfig.Tools
+  nameWithType: CreateCachedContentConfig.Tools
+- uid: Google.GenAI.Types.CreateCachedContentConfig.Ttl
+  name: Ttl
+  href: api/Google.GenAI.Types.CreateCachedContentConfig.html#Google_GenAI_Types_CreateCachedContentConfig_Ttl
+  commentId: P:Google.GenAI.Types.CreateCachedContentConfig.Ttl
+  fullName: Google.GenAI.Types.CreateCachedContentConfig.Ttl
+  nameWithType: CreateCachedContentConfig.Ttl
+- uid: Google.GenAI.Types.CreateCachedContentConfig.Ttl*
+  name: Ttl
+  href: api/Google.GenAI.Types.CreateCachedContentConfig.html#Google_GenAI_Types_CreateCachedContentConfig_Ttl_
+  commentId: Overload:Google.GenAI.Types.CreateCachedContentConfig.Ttl
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateCachedContentConfig.Ttl
+  nameWithType: CreateCachedContentConfig.Ttl
 - uid: Google.GenAI.Types.CreateTuningJobConfig
   name: CreateTuningJobConfig
   href: api/Google.GenAI.Types.CreateTuningJobConfig.html
@@ -3989,6 +4446,76 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.DatasetStats.UserOutputTokenDistribution
   nameWithType: DatasetStats.UserOutputTokenDistribution
+- uid: Google.GenAI.Types.DeleteCachedContentConfig
+  name: DeleteCachedContentConfig
+  href: api/Google.GenAI.Types.DeleteCachedContentConfig.html
+  commentId: T:Google.GenAI.Types.DeleteCachedContentConfig
+  fullName: Google.GenAI.Types.DeleteCachedContentConfig
+  nameWithType: DeleteCachedContentConfig
+- uid: Google.GenAI.Types.DeleteCachedContentConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.DeleteCachedContentConfig.html#Google_GenAI_Types_DeleteCachedContentConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.DeleteCachedContentConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.DeleteCachedContentConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.DeleteCachedContentConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: DeleteCachedContentConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: DeleteCachedContentConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.DeleteCachedContentConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.DeleteCachedContentConfig.html#Google_GenAI_Types_DeleteCachedContentConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.DeleteCachedContentConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DeleteCachedContentConfig.FromJson
+  nameWithType: DeleteCachedContentConfig.FromJson
+- uid: Google.GenAI.Types.DeleteCachedContentConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.DeleteCachedContentConfig.html#Google_GenAI_Types_DeleteCachedContentConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.DeleteCachedContentConfig.HttpOptions
+  fullName: Google.GenAI.Types.DeleteCachedContentConfig.HttpOptions
+  nameWithType: DeleteCachedContentConfig.HttpOptions
+- uid: Google.GenAI.Types.DeleteCachedContentConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.DeleteCachedContentConfig.html#Google_GenAI_Types_DeleteCachedContentConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.DeleteCachedContentConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DeleteCachedContentConfig.HttpOptions
+  nameWithType: DeleteCachedContentConfig.HttpOptions
+- uid: Google.GenAI.Types.DeleteCachedContentResponse
+  name: DeleteCachedContentResponse
+  href: api/Google.GenAI.Types.DeleteCachedContentResponse.html
+  commentId: T:Google.GenAI.Types.DeleteCachedContentResponse
+  fullName: Google.GenAI.Types.DeleteCachedContentResponse
+  nameWithType: DeleteCachedContentResponse
+- uid: Google.GenAI.Types.DeleteCachedContentResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.DeleteCachedContentResponse.html#Google_GenAI_Types_DeleteCachedContentResponse_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.DeleteCachedContentResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.DeleteCachedContentResponse.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.DeleteCachedContentResponse.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: DeleteCachedContentResponse.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: DeleteCachedContentResponse.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.DeleteCachedContentResponse.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.DeleteCachedContentResponse.html#Google_GenAI_Types_DeleteCachedContentResponse_FromJson_
+  commentId: Overload:Google.GenAI.Types.DeleteCachedContentResponse.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DeleteCachedContentResponse.FromJson
+  nameWithType: DeleteCachedContentResponse.FromJson
+- uid: Google.GenAI.Types.DeleteCachedContentResponse.SdkHttpResponse
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.DeleteCachedContentResponse.html#Google_GenAI_Types_DeleteCachedContentResponse_SdkHttpResponse
+  commentId: P:Google.GenAI.Types.DeleteCachedContentResponse.SdkHttpResponse
+  fullName: Google.GenAI.Types.DeleteCachedContentResponse.SdkHttpResponse
+  nameWithType: DeleteCachedContentResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.DeleteCachedContentResponse.SdkHttpResponse*
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.DeleteCachedContentResponse.html#Google_GenAI_Types_DeleteCachedContentResponse_SdkHttpResponse_
+  commentId: Overload:Google.GenAI.Types.DeleteCachedContentResponse.SdkHttpResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DeleteCachedContentResponse.SdkHttpResponse
+  nameWithType: DeleteCachedContentResponse.SdkHttpResponse
 - uid: Google.GenAI.Types.DeleteModelConfig
   name: DeleteModelConfig
   href: api/Google.GenAI.Types.DeleteModelConfig.html
@@ -7767,6 +8294,41 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerationConfigThinkingConfig.FromJson
   nameWithType: GenerationConfigThinkingConfig.FromJson
+- uid: Google.GenAI.Types.GetCachedContentConfig
+  name: GetCachedContentConfig
+  href: api/Google.GenAI.Types.GetCachedContentConfig.html
+  commentId: T:Google.GenAI.Types.GetCachedContentConfig
+  fullName: Google.GenAI.Types.GetCachedContentConfig
+  nameWithType: GetCachedContentConfig
+- uid: Google.GenAI.Types.GetCachedContentConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.GetCachedContentConfig.html#Google_GenAI_Types_GetCachedContentConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.GetCachedContentConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.GetCachedContentConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.GetCachedContentConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: GetCachedContentConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: GetCachedContentConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.GetCachedContentConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.GetCachedContentConfig.html#Google_GenAI_Types_GetCachedContentConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.GetCachedContentConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GetCachedContentConfig.FromJson
+  nameWithType: GetCachedContentConfig.FromJson
+- uid: Google.GenAI.Types.GetCachedContentConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.GetCachedContentConfig.html#Google_GenAI_Types_GetCachedContentConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.GetCachedContentConfig.HttpOptions
+  fullName: Google.GenAI.Types.GetCachedContentConfig.HttpOptions
+  nameWithType: GetCachedContentConfig.HttpOptions
+- uid: Google.GenAI.Types.GetCachedContentConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.GetCachedContentConfig.html#Google_GenAI_Types_GetCachedContentConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.GetCachedContentConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GetCachedContentConfig.HttpOptions
+  nameWithType: GetCachedContentConfig.HttpOptions
 - uid: Google.GenAI.Types.GetModelConfig
   name: GetModelConfig
   href: api/Google.GenAI.Types.GetModelConfig.html
@@ -9890,6 +10452,128 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.LatLng.Longitude
   nameWithType: LatLng.Longitude
+- uid: Google.GenAI.Types.ListCachedContentsConfig
+  name: ListCachedContentsConfig
+  href: api/Google.GenAI.Types.ListCachedContentsConfig.html
+  commentId: T:Google.GenAI.Types.ListCachedContentsConfig
+  fullName: Google.GenAI.Types.ListCachedContentsConfig
+  nameWithType: ListCachedContentsConfig
+- uid: Google.GenAI.Types.ListCachedContentsConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ListCachedContentsConfig.html#Google_GenAI_Types_ListCachedContentsConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ListCachedContentsConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ListCachedContentsConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ListCachedContentsConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ListCachedContentsConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ListCachedContentsConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ListCachedContentsConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ListCachedContentsConfig.html#Google_GenAI_Types_ListCachedContentsConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.ListCachedContentsConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListCachedContentsConfig.FromJson
+  nameWithType: ListCachedContentsConfig.FromJson
+- uid: Google.GenAI.Types.ListCachedContentsConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.ListCachedContentsConfig.html#Google_GenAI_Types_ListCachedContentsConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.ListCachedContentsConfig.HttpOptions
+  fullName: Google.GenAI.Types.ListCachedContentsConfig.HttpOptions
+  nameWithType: ListCachedContentsConfig.HttpOptions
+- uid: Google.GenAI.Types.ListCachedContentsConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.ListCachedContentsConfig.html#Google_GenAI_Types_ListCachedContentsConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.ListCachedContentsConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListCachedContentsConfig.HttpOptions
+  nameWithType: ListCachedContentsConfig.HttpOptions
+- uid: Google.GenAI.Types.ListCachedContentsConfig.PageSize
+  name: PageSize
+  href: api/Google.GenAI.Types.ListCachedContentsConfig.html#Google_GenAI_Types_ListCachedContentsConfig_PageSize
+  commentId: P:Google.GenAI.Types.ListCachedContentsConfig.PageSize
+  fullName: Google.GenAI.Types.ListCachedContentsConfig.PageSize
+  nameWithType: ListCachedContentsConfig.PageSize
+- uid: Google.GenAI.Types.ListCachedContentsConfig.PageSize*
+  name: PageSize
+  href: api/Google.GenAI.Types.ListCachedContentsConfig.html#Google_GenAI_Types_ListCachedContentsConfig_PageSize_
+  commentId: Overload:Google.GenAI.Types.ListCachedContentsConfig.PageSize
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListCachedContentsConfig.PageSize
+  nameWithType: ListCachedContentsConfig.PageSize
+- uid: Google.GenAI.Types.ListCachedContentsConfig.PageToken
+  name: PageToken
+  href: api/Google.GenAI.Types.ListCachedContentsConfig.html#Google_GenAI_Types_ListCachedContentsConfig_PageToken
+  commentId: P:Google.GenAI.Types.ListCachedContentsConfig.PageToken
+  fullName: Google.GenAI.Types.ListCachedContentsConfig.PageToken
+  nameWithType: ListCachedContentsConfig.PageToken
+- uid: Google.GenAI.Types.ListCachedContentsConfig.PageToken*
+  name: PageToken
+  href: api/Google.GenAI.Types.ListCachedContentsConfig.html#Google_GenAI_Types_ListCachedContentsConfig_PageToken_
+  commentId: Overload:Google.GenAI.Types.ListCachedContentsConfig.PageToken
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListCachedContentsConfig.PageToken
+  nameWithType: ListCachedContentsConfig.PageToken
+- uid: Google.GenAI.Types.ListCachedContentsResponse
+  name: ListCachedContentsResponse
+  href: api/Google.GenAI.Types.ListCachedContentsResponse.html
+  commentId: T:Google.GenAI.Types.ListCachedContentsResponse
+  fullName: Google.GenAI.Types.ListCachedContentsResponse
+  nameWithType: ListCachedContentsResponse
+- uid: Google.GenAI.Types.ListCachedContentsResponse.CachedContents
+  name: CachedContents
+  href: api/Google.GenAI.Types.ListCachedContentsResponse.html#Google_GenAI_Types_ListCachedContentsResponse_CachedContents
+  commentId: P:Google.GenAI.Types.ListCachedContentsResponse.CachedContents
+  fullName: Google.GenAI.Types.ListCachedContentsResponse.CachedContents
+  nameWithType: ListCachedContentsResponse.CachedContents
+- uid: Google.GenAI.Types.ListCachedContentsResponse.CachedContents*
+  name: CachedContents
+  href: api/Google.GenAI.Types.ListCachedContentsResponse.html#Google_GenAI_Types_ListCachedContentsResponse_CachedContents_
+  commentId: Overload:Google.GenAI.Types.ListCachedContentsResponse.CachedContents
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListCachedContentsResponse.CachedContents
+  nameWithType: ListCachedContentsResponse.CachedContents
+- uid: Google.GenAI.Types.ListCachedContentsResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ListCachedContentsResponse.html#Google_GenAI_Types_ListCachedContentsResponse_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ListCachedContentsResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ListCachedContentsResponse.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ListCachedContentsResponse.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ListCachedContentsResponse.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ListCachedContentsResponse.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ListCachedContentsResponse.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ListCachedContentsResponse.html#Google_GenAI_Types_ListCachedContentsResponse_FromJson_
+  commentId: Overload:Google.GenAI.Types.ListCachedContentsResponse.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListCachedContentsResponse.FromJson
+  nameWithType: ListCachedContentsResponse.FromJson
+- uid: Google.GenAI.Types.ListCachedContentsResponse.NextPageToken
+  name: NextPageToken
+  href: api/Google.GenAI.Types.ListCachedContentsResponse.html#Google_GenAI_Types_ListCachedContentsResponse_NextPageToken
+  commentId: P:Google.GenAI.Types.ListCachedContentsResponse.NextPageToken
+  fullName: Google.GenAI.Types.ListCachedContentsResponse.NextPageToken
+  nameWithType: ListCachedContentsResponse.NextPageToken
+- uid: Google.GenAI.Types.ListCachedContentsResponse.NextPageToken*
+  name: NextPageToken
+  href: api/Google.GenAI.Types.ListCachedContentsResponse.html#Google_GenAI_Types_ListCachedContentsResponse_NextPageToken_
+  commentId: Overload:Google.GenAI.Types.ListCachedContentsResponse.NextPageToken
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListCachedContentsResponse.NextPageToken
+  nameWithType: ListCachedContentsResponse.NextPageToken
+- uid: Google.GenAI.Types.ListCachedContentsResponse.SdkHttpResponse
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.ListCachedContentsResponse.html#Google_GenAI_Types_ListCachedContentsResponse_SdkHttpResponse
+  commentId: P:Google.GenAI.Types.ListCachedContentsResponse.SdkHttpResponse
+  fullName: Google.GenAI.Types.ListCachedContentsResponse.SdkHttpResponse
+  nameWithType: ListCachedContentsResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.ListCachedContentsResponse.SdkHttpResponse*
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.ListCachedContentsResponse.html#Google_GenAI_Types_ListCachedContentsResponse_SdkHttpResponse_
+  commentId: Overload:Google.GenAI.Types.ListCachedContentsResponse.SdkHttpResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListCachedContentsResponse.SdkHttpResponse
+  nameWithType: ListCachedContentsResponse.SdkHttpResponse
 - uid: Google.GenAI.Types.LiveClientContent
   name: LiveClientContent
   href: api/Google.GenAI.Types.LiveClientContent.html
@@ -17999,6 +18683,67 @@ references:
   commentId: F:Google.GenAI.Types.Type.TYPE_UNSPECIFIED
   fullName: Google.GenAI.Types.Type.TYPE_UNSPECIFIED
   nameWithType: Type.TYPE_UNSPECIFIED
+- uid: Google.GenAI.Types.UpdateCachedContentConfig
+  name: UpdateCachedContentConfig
+  href: api/Google.GenAI.Types.UpdateCachedContentConfig.html
+  commentId: T:Google.GenAI.Types.UpdateCachedContentConfig
+  fullName: Google.GenAI.Types.UpdateCachedContentConfig
+  nameWithType: UpdateCachedContentConfig
+- uid: Google.GenAI.Types.UpdateCachedContentConfig.ExpireTime
+  name: ExpireTime
+  href: api/Google.GenAI.Types.UpdateCachedContentConfig.html#Google_GenAI_Types_UpdateCachedContentConfig_ExpireTime
+  commentId: P:Google.GenAI.Types.UpdateCachedContentConfig.ExpireTime
+  fullName: Google.GenAI.Types.UpdateCachedContentConfig.ExpireTime
+  nameWithType: UpdateCachedContentConfig.ExpireTime
+- uid: Google.GenAI.Types.UpdateCachedContentConfig.ExpireTime*
+  name: ExpireTime
+  href: api/Google.GenAI.Types.UpdateCachedContentConfig.html#Google_GenAI_Types_UpdateCachedContentConfig_ExpireTime_
+  commentId: Overload:Google.GenAI.Types.UpdateCachedContentConfig.ExpireTime
+  isSpec: "True"
+  fullName: Google.GenAI.Types.UpdateCachedContentConfig.ExpireTime
+  nameWithType: UpdateCachedContentConfig.ExpireTime
+- uid: Google.GenAI.Types.UpdateCachedContentConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.UpdateCachedContentConfig.html#Google_GenAI_Types_UpdateCachedContentConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.UpdateCachedContentConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.UpdateCachedContentConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.UpdateCachedContentConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: UpdateCachedContentConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: UpdateCachedContentConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.UpdateCachedContentConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.UpdateCachedContentConfig.html#Google_GenAI_Types_UpdateCachedContentConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.UpdateCachedContentConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.UpdateCachedContentConfig.FromJson
+  nameWithType: UpdateCachedContentConfig.FromJson
+- uid: Google.GenAI.Types.UpdateCachedContentConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.UpdateCachedContentConfig.html#Google_GenAI_Types_UpdateCachedContentConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.UpdateCachedContentConfig.HttpOptions
+  fullName: Google.GenAI.Types.UpdateCachedContentConfig.HttpOptions
+  nameWithType: UpdateCachedContentConfig.HttpOptions
+- uid: Google.GenAI.Types.UpdateCachedContentConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.UpdateCachedContentConfig.html#Google_GenAI_Types_UpdateCachedContentConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.UpdateCachedContentConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.UpdateCachedContentConfig.HttpOptions
+  nameWithType: UpdateCachedContentConfig.HttpOptions
+- uid: Google.GenAI.Types.UpdateCachedContentConfig.Ttl
+  name: Ttl
+  href: api/Google.GenAI.Types.UpdateCachedContentConfig.html#Google_GenAI_Types_UpdateCachedContentConfig_Ttl
+  commentId: P:Google.GenAI.Types.UpdateCachedContentConfig.Ttl
+  fullName: Google.GenAI.Types.UpdateCachedContentConfig.Ttl
+  nameWithType: UpdateCachedContentConfig.Ttl
+- uid: Google.GenAI.Types.UpdateCachedContentConfig.Ttl*
+  name: Ttl
+  href: api/Google.GenAI.Types.UpdateCachedContentConfig.html#Google_GenAI_Types_UpdateCachedContentConfig_Ttl_
+  commentId: Overload:Google.GenAI.Types.UpdateCachedContentConfig.Ttl
+  isSpec: "True"
+  fullName: Google.GenAI.Types.UpdateCachedContentConfig.Ttl
+  nameWithType: UpdateCachedContentConfig.Ttl
 - uid: Google.GenAI.Types.UpdateModelConfig
   name: UpdateModelConfig
   href: api/Google.GenAI.Types.UpdateModelConfig.html
