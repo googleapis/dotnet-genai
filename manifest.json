@@ -2142,6 +2142,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ListTuningJobsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ListTuningJobsConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ListTuningJobsConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ListTuningJobsConfig.yml\" sourcestartlinenumber=\"1\">Configuration for the list tuning jobs method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ListTuningJobsResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ListTuningJobsResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ListTuningJobsResponse",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ListTuningJobsResponse.yml\" sourcestartlinenumber=\"1\">Response for the list tuning jobs method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.LiveClientContent.yml",
       "output": {
         ".html": {

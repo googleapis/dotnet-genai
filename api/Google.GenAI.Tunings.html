@@ -149,7 +149,7 @@ Class Tunings  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Google_GenAI_Tunings__ctor_Google_GenAI_ApiClient_" data-uid="Google.GenAI.Tunings.#ctor(Google.GenAI.ApiClient)">
   Tunings(ApiClient)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Tunings.cs/#L688"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Tunings.cs/#L820"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -184,7 +184,7 @@ Class Tunings  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Google_GenAI_Tunings_GetAsync_System_String_Google_GenAI_Types_GetTuningJobConfig_" data-uid="Google.GenAI.Tunings.GetAsync(System.String,Google.GenAI.Types.GetTuningJobConfig)">
   GetAsync(string, GetTuningJobConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Tunings.cs/#L875"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Tunings.cs/#L1081"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Makes an API request to get a tuning job.</p>
@@ -223,11 +223,53 @@ request.</p>
 
 
 
+  <a id="Google_GenAI_Tunings_ListAsync_" data-uid="Google.GenAI.Tunings.ListAsync*"></a>
+
+  <h3 id="Google_GenAI_Tunings_ListAsync_Google_GenAI_Types_ListTuningJobsConfig_" data-uid="Google.GenAI.Tunings.ListAsync(Google.GenAI.Types.ListTuningJobsConfig)">
+  ListAsync(ListTuningJobsConfig?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Tunings.cs/#L1059"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lists tuning jobs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Pager&lt;TuningJob, ListTuningJobsConfig, ListTuningJobsResponse&gt;&gt; ListAsync(ListTuningJobsConfig? config = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.ListTuningJobsConfig.html">ListTuningJobsConfig</a></dt>
+    <dd><p>A <a class="xref" href="Google.GenAI.Types.ListTuningJobsConfig.html">ListTuningJobsConfig</a> instance that specifies the
+optional configuration for the list request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Google.GenAI.Pager-3.html">Pager</a>&lt;<a class="xref" href="Google.GenAI.Types.TuningJob.html">TuningJob</a>, <a class="xref" href="Google.GenAI.Types.ListTuningJobsConfig.html">ListTuningJobsConfig</a>, <a class="xref" href="Google.GenAI.Types.ListTuningJobsResponse.html">ListTuningJobsResponse</a>&gt;&gt;</dt>
+    <dd><p>A Pager object that contains
+one page of tuning jobs. When iterating over the pager, it automatically fetches the next
+page if there are more.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Tunings_TuneAsync_" data-uid="Google.GenAI.Tunings.TuneAsync*"></a>
 
   <h3 id="Google_GenAI_Tunings_TuneAsync_System_String_Google_GenAI_Types_TuningDataset_Google_GenAI_Types_CreateTuningJobConfig_" data-uid="Google.GenAI.Tunings.TuneAsync(System.String,Google.GenAI.Types.TuningDataset,Google.GenAI.Types.CreateTuningJobConfig)">
   TuneAsync(string, TuningDataset, CreateTuningJobConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Tunings.cs/#L886"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Tunings.cs/#L1092"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Makes an API request to create a supervised fine-tuning job.</p>
