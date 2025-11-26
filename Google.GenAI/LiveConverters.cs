@@ -186,12 +186,6 @@ namespace Google.GenAI {
             Common.GetValueByPath(fromObject, new string[] { "modelSelectionConfig" }));
       }
 
-      if (Common.GetValueByPath(fromObject, new string[] { "responseJsonSchema" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "responseJsonSchema" },
-            Common.GetValueByPath(fromObject, new string[] { "responseJsonSchema" }));
-      }
-
       if (Common.GetValueByPath(fromObject, new string[] { "audioTimestamp" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "audioTimestamp" },
                               Common.GetValueByPath(fromObject, new string[] { "audioTimestamp" }));
@@ -235,6 +229,12 @@ namespace Google.GenAI {
         Common.SetValueByPath(
             toObject, new string[] { "presencePenalty" },
             Common.GetValueByPath(fromObject, new string[] { "presencePenalty" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "responseJsonSchema" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "responseJsonSchema" },
+            Common.GetValueByPath(fromObject, new string[] { "responseJsonSchema" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "responseLogprobs" }) != null) {

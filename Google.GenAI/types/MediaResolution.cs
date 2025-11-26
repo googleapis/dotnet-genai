@@ -20,12 +20,12 @@ using System.Text.Json.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// The media resolution to use.
+  /// If specified, the media resolution specified will be used.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum MediaResolution {
     /// <summary>
-    /// Media resolution has not been set
+    /// Media resolution has not been set.
     /// </summary>
     [JsonPropertyName("MEDIA_RESOLUTION_UNSPECIFIED")] MEDIA_RESOLUTION_UNSPECIFIED,
 

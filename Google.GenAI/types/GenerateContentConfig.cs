@@ -30,62 +30,25 @@ namespace Google.GenAI.Types {
 
   public record GenerateContentConfig {
     /// <summary>
-    /// Used to override HTTP request options.
+    /// Optional. Config for model selection.
     /// </summary>
-    [JsonPropertyName("httpOptions")]
+    [JsonPropertyName("modelSelectionConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public HttpOptions ? HttpOptions { get; set; }
+    public ModelSelectionConfig ? ModelSelectionConfig { get; set; }
 
     /// <summary>
-    /// Instructions for the model to steer it toward better performance. For example, "Answer as
-    /// concisely as possible" or "Don't use technical terms in your response".
+    /// Optional. If enabled, audio timestamp will be included in the request to the model. This
+    /// field is not supported in Gemini API.
     /// </summary>
-    [JsonPropertyName("systemInstruction")]
+    [JsonPropertyName("audioTimestamp")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public Content
-        ? SystemInstruction {
+    public bool
+        ? AudioTimestamp {
             get; set;
           }
 
     /// <summary>
-    /// Value that controls the degree of randomness in token selection. Lower temperatures are good
-    /// for prompts that require a less open-ended or creative response, while higher temperatures
-    /// can lead to more diverse or creative results.
-    /// </summary>
-    [JsonPropertyName("temperature")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public double
-        ? Temperature {
-            get; set;
-          }
-
-    /// <summary>
-    /// Tokens are selected from the most to least probable until the sum of their probabilities
-    /// equals this value. Use a lower value for less random responses and a higher value for more
-    /// random responses.
-    /// </summary>
-    [JsonPropertyName("topP")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public double
-        ? TopP {
-            get; set;
-          }
-
-    /// <summary>
-    /// For each token selection step, the ``top_k`` tokens with the highest probabilities are
-    /// sampled. Then tokens are further filtered based on ``top_p`` with the final token selected
-    /// using temperature sampling. Use a lower number for less random responses and a higher number
-    /// for more random responses.
-    /// </summary>
-    [JsonPropertyName("topK")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public double
-        ? TopK {
-            get; set;
-          }
-
-    /// <summary>
-    /// Number of response variations to return.
+    /// Optional. Number of candidates to generate.
     /// </summary>
     [JsonPropertyName("candidateCount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -95,61 +58,18 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Maximum number of tokens that can be generated in the response.
+    /// Optional. If enabled, the model will detect emotions and adapt its responses accordingly.
+    /// This field is not supported in Gemini API.
     /// </summary>
-    [JsonPropertyName("maxOutputTokens")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public int
-        ? MaxOutputTokens {
-            get; set;
-          }
-
-    /// <summary>
-    /// List of strings that tells the model to stop generating text if one of the strings is
-    /// encountered in the response.
-    /// </summary>
-    [JsonPropertyName("stopSequences")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<string>
-        ? StopSequences {
-            get; set;
-          }
-
-    /// <summary>
-    /// Whether to return the log probabilities of the tokens that were chosen by the model at each
-    /// step.
-    /// </summary>
-    [JsonPropertyName("responseLogprobs")]
+    [JsonPropertyName("enableAffectiveDialog")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
-        ? ResponseLogprobs {
+        ? EnableAffectiveDialog {
             get; set;
           }
 
     /// <summary>
-    /// Number of top candidate tokens to return the log probabilities for at each generation step.
-    /// </summary>
-    [JsonPropertyName("logprobs")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public int
-        ? Logprobs {
-            get; set;
-          }
-
-    /// <summary>
-    /// Positive values penalize tokens that already appear in the generated text, increasing the
-    /// probability of generating more diverse content.
-    /// </summary>
-    [JsonPropertyName("presencePenalty")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public double
-        ? PresencePenalty {
-            get; set;
-          }
-
-    /// <summary>
-    /// Positive values penalize tokens that repeatedly appear in the generated text, increasing the
-    /// probability of generating more diverse content.
+    /// Optional. Frequency penalties.
     /// </summary>
     [JsonPropertyName("frequencyPenalty")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -159,41 +79,42 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// When ``seed`` is fixed to a specific number, the model makes a best effort to provide the
-    /// same response for repeated requests. By default, a random number is used.
+    /// Optional. Logit probabilities.
     /// </summary>
-    [JsonPropertyName("seed")]
+    [JsonPropertyName("logprobs")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public int
-        ? Seed {
+        ? Logprobs {
             get; set;
           }
 
     /// <summary>
-    /// Output response mimetype of the generated candidate text. Supported mimetype:  -
-    /// `text/plain`: (default) Text output.  - `application/json`: JSON response in the candidates.
-    /// The model needs to be prompted to output the appropriate response type, otherwise the
-    /// behavior is undefined. This is a preview feature.
+    /// Optional. The maximum number of output tokens to generate per message.
     /// </summary>
-    [JsonPropertyName("responseMimeType")]
+    [JsonPropertyName("maxOutputTokens")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string
-        ? ResponseMimeType {
+    public int
+        ? MaxOutputTokens {
             get; set;
           }
 
     /// <summary>
-    /// The `Schema` object allows the definition of input and output data types. These types can be
-    /// objects, but also primitives and arrays. Represents a select subset of an OpenAPI 3.0 schema
-    /// object (https://spec.openapis.org/oas/v3.0.3#schema). If set, a compatible
-    /// response_mime_type must also be set. Compatible mimetypes: `application/json`: Schema for
-    /// JSON response.  If `response_schema` doesn't process your schema correctly, try using
-    /// `response_json_schema` instead.
+    /// Optional. If specified, the media resolution specified will be used.
     /// </summary>
-    [JsonPropertyName("responseSchema")]
+    [JsonPropertyName("mediaResolution")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public Schema
-        ? ResponseSchema {
+    public MediaResolution
+        ? MediaResolution {
+            get; set;
+          }
+
+    /// <summary>
+    /// Optional. Positive penalties.
+    /// </summary>
+    [JsonPropertyName("presencePenalty")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public double
+        ? PresencePenalty {
             get; set;
           }
 
@@ -219,7 +140,54 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Configuration for model router requests.
+    /// Optional. If true, export the logprobs results in response.
+    /// </summary>
+    [JsonPropertyName("responseLogprobs")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public bool
+        ? ResponseLogprobs {
+            get; set;
+          }
+
+    /// <summary>
+    /// Optional. Output response mimetype of the generated candidate text. Supported mimetype: -
+    /// `text/plain`: (default) Text output. - `application/json`: JSON response in the candidates.
+    /// The model needs to be prompted to output the appropriate response type, otherwise the
+    /// behavior is undefined. This is a preview feature.
+    /// </summary>
+    [JsonPropertyName("responseMimeType")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string
+        ? ResponseMimeType {
+            get; set;
+          }
+
+    /// <summary>
+    /// Optional. The modalities of the response.
+    /// </summary>
+    [JsonPropertyName("responseModalities")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public List<string>
+        ? ResponseModalities {
+            get; set;
+          }
+
+    /// <summary>
+    /// Optional. The `Schema` object allows the definition of input and output data types. These
+    /// types can be objects, but also primitives and arrays. Represents a select subset of an
+    /// OpenAPI 3.0 schema object (https://spec.openapis.org/oas/v3.0.3#schema). If set, a
+    /// compatible response_mime_type must also be set. Compatible mimetypes: `application/json`:
+    /// Schema for JSON response.
+    /// </summary>
+    [JsonPropertyName("responseSchema")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public Schema
+        ? ResponseSchema {
+            get; set;
+          }
+
+    /// <summary>
+    /// Optional. Routing configuration. This field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("routingConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -229,12 +197,105 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Configuration for model selection.
+    /// Optional. Seed.
     /// </summary>
-    [JsonPropertyName("modelSelectionConfig")]
+    [JsonPropertyName("seed")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public ModelSelectionConfig
-        ? ModelSelectionConfig {
+    public int
+        ? Seed {
+            get; set;
+          }
+
+    /// <summary>
+    /// Optional. The speech generation config.
+    /// </summary>
+    [JsonPropertyName("speechConfig")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public SpeechConfig
+        ? SpeechConfig {
+            get; set;
+          }
+
+    /// <summary>
+    /// Optional. Stop sequences.
+    /// </summary>
+    [JsonPropertyName("stopSequences")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public List<string>
+        ? StopSequences {
+            get; set;
+          }
+
+    /// <summary>
+    /// Optional. Controls the randomness of predictions.
+    /// </summary>
+    [JsonPropertyName("temperature")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public double
+        ? Temperature {
+            get; set;
+          }
+
+    /// <summary>
+    /// Optional. Config for thinking features. An error will be returned if this field is set for
+    /// models that don't support thinking.
+    /// </summary>
+    [JsonPropertyName("thinkingConfig")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public ThinkingConfig
+        ? ThinkingConfig {
+            get; set;
+          }
+
+    /// <summary>
+    /// Optional. If specified, top-k sampling will be used.
+    /// </summary>
+    [JsonPropertyName("topK")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public double
+        ? TopK {
+            get; set;
+          }
+
+    /// <summary>
+    /// Optional. If specified, nucleus sampling will be used.
+    /// </summary>
+    [JsonPropertyName("topP")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public double
+        ? TopP {
+            get; set;
+          }
+
+    /// <summary>
+    /// Optional. Enables enhanced civic answers. It may not be available for all models. This field
+    /// is not supported in Vertex AI.
+    /// </summary>
+    [JsonPropertyName("enableEnhancedCivicAnswers")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public bool
+        ? EnableEnhancedCivicAnswers {
+            get; set;
+          }
+
+    /// <summary>
+    /// Used to override HTTP request options.
+    /// </summary>
+    [JsonPropertyName("httpOptions")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public HttpOptions
+        ? HttpOptions {
+            get; set;
+          }
+
+    /// <summary>
+    /// Instructions for the model to steer it toward better performance. For example, "Answer as
+    /// concisely as possible" or "Don't use technical terms in your response".
+    /// </summary>
+    [JsonPropertyName("systemInstruction")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public Content
+        ? SystemInstruction {
             get; set;
           }
 
@@ -290,74 +351,12 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// The requested modalities of the response. Represents the set of modalities that the model
-    /// can return.
-    /// </summary>
-    [JsonPropertyName("responseModalities")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<string>
-        ? ResponseModalities {
-            get; set;
-          }
-
-    /// <summary>
-    /// If specified, the media resolution specified will be used.
-    /// </summary>
-    [JsonPropertyName("mediaResolution")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public MediaResolution
-        ? MediaResolution {
-            get; set;
-          }
-
-    /// <summary>
-    /// The speech generation configuration.
-    /// </summary>
-    [JsonPropertyName("speechConfig")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public SpeechConfig
-        ? SpeechConfig {
-            get; set;
-          }
-
-    /// <summary>
-    /// If enabled, audio timestamp will be included in the request to the model.
-    /// </summary>
-    [JsonPropertyName("audioTimestamp")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public bool
-        ? AudioTimestamp {
-            get; set;
-          }
-
-    /// <summary>
-    /// The thinking features configuration.
-    /// </summary>
-    [JsonPropertyName("thinkingConfig")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public ThinkingConfig
-        ? ThinkingConfig {
-            get; set;
-          }
-
-    /// <summary>
     /// The image generation configuration.
     /// </summary>
     [JsonPropertyName("imageConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public ImageConfig
         ? ImageConfig {
-            get; set;
-          }
-
-    /// <summary>
-    /// Enables enhanced civic answers. It may not be available for all models. This field is not
-    /// supported in Vertex AI.
-    /// </summary>
-    [JsonPropertyName("enableEnhancedCivicAnswers")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public bool
-        ? EnableEnhancedCivicAnswers {
             get; set;
           }
 

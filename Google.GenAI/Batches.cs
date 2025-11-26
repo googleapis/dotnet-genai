@@ -878,28 +878,14 @@ namespace Google.GenAI {
                                                    JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
-      if (Common.GetValueByPath(fromObject, new string[] { "systemInstruction" }) != null) {
-        Common.SetValueByPath(
-            parentObject, new string[] { "systemInstruction" },
-            ContentToMldev(
-                JsonNode.Parse(JsonSerializer.Serialize(Transformers.TContent(
-                    Common.GetValueByPath(fromObject, new string[] { "systemInstruction" })))),
-                toObject));
+      if (!Common.IsZero(
+              Common.GetValueByPath(fromObject, new string[] { "modelSelectionConfig" }))) {
+        throw new NotSupportedException(
+            "modelSelectionConfig parameter is not supported in Gemini API.");
       }
 
-      if (Common.GetValueByPath(fromObject, new string[] { "temperature" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "temperature" },
-                              Common.GetValueByPath(fromObject, new string[] { "temperature" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "topP" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "topP" },
-                              Common.GetValueByPath(fromObject, new string[] { "topP" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "topK" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "topK" },
-                              Common.GetValueByPath(fromObject, new string[] { "topK" }));
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "audioTimestamp" }))) {
+        throw new NotSupportedException("audioTimestamp parameter is not supported in Gemini API.");
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "candidateCount" }) != null) {
@@ -907,32 +893,10 @@ namespace Google.GenAI {
                               Common.GetValueByPath(fromObject, new string[] { "candidateCount" }));
       }
 
-      if (Common.GetValueByPath(fromObject, new string[] { "maxOutputTokens" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "maxOutputTokens" },
-            Common.GetValueByPath(fromObject, new string[] { "maxOutputTokens" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "stopSequences" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "stopSequences" },
-                              Common.GetValueByPath(fromObject, new string[] { "stopSequences" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "responseLogprobs" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "responseLogprobs" },
-            Common.GetValueByPath(fromObject, new string[] { "responseLogprobs" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "logprobs" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "logprobs" },
-                              Common.GetValueByPath(fromObject, new string[] { "logprobs" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "presencePenalty" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "presencePenalty" },
-            Common.GetValueByPath(fromObject, new string[] { "presencePenalty" }));
+      if (!Common.IsZero(
+              Common.GetValueByPath(fromObject, new string[] { "enableAffectiveDialog" }))) {
+        throw new NotSupportedException(
+            "enableAffectiveDialog parameter is not supported in Gemini API.");
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "frequencyPenalty" }) != null) {
@@ -941,21 +905,27 @@ namespace Google.GenAI {
             Common.GetValueByPath(fromObject, new string[] { "frequencyPenalty" }));
       }
 
-      if (Common.GetValueByPath(fromObject, new string[] { "seed" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "seed" },
-                              Common.GetValueByPath(fromObject, new string[] { "seed" }));
+      if (Common.GetValueByPath(fromObject, new string[] { "logprobs" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "logprobs" },
+                              Common.GetValueByPath(fromObject, new string[] { "logprobs" }));
       }
 
-      if (Common.GetValueByPath(fromObject, new string[] { "responseMimeType" }) != null) {
+      if (Common.GetValueByPath(fromObject, new string[] { "maxOutputTokens" }) != null) {
         Common.SetValueByPath(
-            toObject, new string[] { "responseMimeType" },
-            Common.GetValueByPath(fromObject, new string[] { "responseMimeType" }));
+            toObject, new string[] { "maxOutputTokens" },
+            Common.GetValueByPath(fromObject, new string[] { "maxOutputTokens" }));
       }
 
-      if (Common.GetValueByPath(fromObject, new string[] { "responseSchema" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "responseSchema" },
-                              Transformers.TSchema(Common.GetValueByPath(
-                                  fromObject, new string[] { "responseSchema" })));
+      if (Common.GetValueByPath(fromObject, new string[] { "mediaResolution" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "mediaResolution" },
+            Common.GetValueByPath(fromObject, new string[] { "mediaResolution" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "presencePenalty" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "presencePenalty" },
+            Common.GetValueByPath(fromObject, new string[] { "presencePenalty" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "responseJsonSchema" }) != null) {
@@ -964,14 +934,84 @@ namespace Google.GenAI {
             Common.GetValueByPath(fromObject, new string[] { "responseJsonSchema" }));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "responseLogprobs" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "responseLogprobs" },
+            Common.GetValueByPath(fromObject, new string[] { "responseLogprobs" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "responseMimeType" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "responseMimeType" },
+            Common.GetValueByPath(fromObject, new string[] { "responseMimeType" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "responseModalities" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "responseModalities" },
+            Common.GetValueByPath(fromObject, new string[] { "responseModalities" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "responseSchema" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "responseSchema" },
+                              Transformers.TSchema(Common.GetValueByPath(
+                                  fromObject, new string[] { "responseSchema" })));
+      }
+
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "routingConfig" }))) {
         throw new NotSupportedException("routingConfig parameter is not supported in Gemini API.");
       }
 
-      if (!Common.IsZero(
-              Common.GetValueByPath(fromObject, new string[] { "modelSelectionConfig" }))) {
-        throw new NotSupportedException(
-            "modelSelectionConfig parameter is not supported in Gemini API.");
+      if (Common.GetValueByPath(fromObject, new string[] { "seed" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "seed" },
+                              Common.GetValueByPath(fromObject, new string[] { "seed" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "speechConfig" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "speechConfig" },
+                              Transformers.TSpeechConfig(Common.GetValueByPath(
+                                  fromObject, new string[] { "speechConfig" })));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "stopSequences" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "stopSequences" },
+                              Common.GetValueByPath(fromObject, new string[] { "stopSequences" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "temperature" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "temperature" },
+                              Common.GetValueByPath(fromObject, new string[] { "temperature" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "thinkingConfig" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "thinkingConfig" },
+                              Common.GetValueByPath(fromObject, new string[] { "thinkingConfig" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "topK" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "topK" },
+                              Common.GetValueByPath(fromObject, new string[] { "topK" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "topP" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "topP" },
+                              Common.GetValueByPath(fromObject, new string[] { "topP" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "enableEnhancedCivicAnswers" }) !=
+          null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "enableEnhancedCivicAnswers" },
+            Common.GetValueByPath(fromObject, new string[] { "enableEnhancedCivicAnswers" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "systemInstruction" }) != null) {
+        Common.SetValueByPath(
+            parentObject, new string[] { "systemInstruction" },
+            ContentToMldev(
+                JsonNode.Parse(JsonSerializer.Serialize(Transformers.TContent(
+                    Common.GetValueByPath(fromObject, new string[] { "systemInstruction" })))),
+                toObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "safetySettings" }) != null) {
@@ -1018,46 +1058,12 @@ namespace Google.GenAI {
                 Common.GetValueByPath(fromObject, new string[] { "cachedContent" })));
       }
 
-      if (Common.GetValueByPath(fromObject, new string[] { "responseModalities" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "responseModalities" },
-            Common.GetValueByPath(fromObject, new string[] { "responseModalities" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "mediaResolution" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "mediaResolution" },
-            Common.GetValueByPath(fromObject, new string[] { "mediaResolution" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "speechConfig" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "speechConfig" },
-                              Transformers.TSpeechConfig(Common.GetValueByPath(
-                                  fromObject, new string[] { "speechConfig" })));
-      }
-
-      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "audioTimestamp" }))) {
-        throw new NotSupportedException("audioTimestamp parameter is not supported in Gemini API.");
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "thinkingConfig" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "thinkingConfig" },
-                              Common.GetValueByPath(fromObject, new string[] { "thinkingConfig" }));
-      }
-
       if (Common.GetValueByPath(fromObject, new string[] { "imageConfig" }) != null) {
         Common.SetValueByPath(
             toObject, new string[] { "imageConfig" },
             ImageConfigToMldev(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                    fromObject, new string[] { "imageConfig" }))),
                                toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "enableEnhancedCivicAnswers" }) !=
-          null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "enableEnhancedCivicAnswers" },
-            Common.GetValueByPath(fromObject, new string[] { "enableEnhancedCivicAnswers" }));
       }
 
       return toObject;
