@@ -56,6 +56,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Batches.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Batches.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Batches",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Caches.yml",
       "output": {
         ".html": {
@@ -462,6 +476,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.BatchJob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.BatchJob.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.BatchJob",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.BatchJob.yml\" sourcestartlinenumber=\"1\">Config for batches.create return value.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.BatchJobDestination.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.BatchJobDestination.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.BatchJobDestination",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.BatchJobDestination.yml\" sourcestartlinenumber=\"1\">Config for <code sourcefile=\"api/Google.GenAI.Types.BatchJobDestination.yml\" sourcestartlinenumber=\"1\">des</code> parameter.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.BatchJobSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.BatchJobSource.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.BatchJobSource",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.BatchJobSource.yml\" sourcestartlinenumber=\"1\">Config for <code sourcefile=\"api/Google.GenAI.Types.BatchJobSource.yml\" sourcestartlinenumber=\"1\">src</code> parameter.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.Behavior.yml",
       "output": {
         ".html": {
@@ -532,6 +588,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.CancelBatchJobConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.CancelBatchJobConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.CancelBatchJobConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CancelBatchJobConfig.yml\" sourcestartlinenumber=\"1\">Optional parameters.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.Candidate.yml",
       "output": {
         ".html": {
@@ -599,6 +669,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.CodeExecutionResult",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CodeExecutionResult.yml\" sourcestartlinenumber=\"1\">Result of executing the [ExecutableCode]. Only generated when using the [CodeExecution] tool,\nand always follows a <code sourcefile=\"api/Google.GenAI.Types.CodeExecutionResult.yml\" sourcestartlinenumber=\"2\">part</code> containing the [ExecutableCode].</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.CompletionStats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.CompletionStats.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.CompletionStats",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CompletionStats.yml\" sourcestartlinenumber=\"1\">Success and error statistics of processing multiple entities (for example, DataItems or\nstructured data rows) in batch. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -784,6 +868,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.CreateBatchJobConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.CreateBatchJobConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.CreateBatchJobConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CreateBatchJobConfig.yml\" sourcestartlinenumber=\"1\">Config for optional parameters.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.CreateCachedContentConfig.yml",
       "output": {
         ".html": {
@@ -795,6 +893,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.CreateCachedContentConfig",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CreateCachedContentConfig.yml\" sourcestartlinenumber=\"1\">Optional configuration for cached content creation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.CreateEmbeddingsBatchJobConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.yml\" sourcestartlinenumber=\"1\">Config for optional parameters.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -854,6 +966,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.DeleteBatchJobConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.DeleteBatchJobConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.DeleteBatchJobConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DeleteBatchJobConfig.yml\" sourcestartlinenumber=\"1\">Optional parameters for models.get method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.DeleteCachedContentConfig.yml",
       "output": {
         ".html": {
@@ -907,6 +1033,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.DeleteModelResponse",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.DeleteResourceJob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.DeleteResourceJob.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.DeleteResourceJob",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DeleteResourceJob.yml\" sourcestartlinenumber=\"1\">The return value of delete operation.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1061,6 +1201,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.EmbedContentResponse",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.EmbedContentResponse.yml\" sourcestartlinenumber=\"1\">Response for the embed_content method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.EmbeddingsBatchJobSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.EmbeddingsBatchJobSource.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.EmbeddingsBatchJobSource",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1582,6 +1736,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.GetBatchJobConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.GetBatchJobConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.GetBatchJobConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GetBatchJobConfig.yml\" sourcestartlinenumber=\"1\">Optional parameters.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.GetCachedContentConfig.yml",
       "output": {
         ".html": {
@@ -2044,6 +2212,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.InlinedRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.InlinedRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.InlinedRequest",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.InlinedRequest.yml\" sourcestartlinenumber=\"1\">Config for inlined request.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.InlinedResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.InlinedResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.InlinedResponse",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.InlinedResponse.yml\" sourcestartlinenumber=\"1\">Config for <code sourcefile=\"api/Google.GenAI.Types.InlinedResponse.yml\" sourcestartlinenumber=\"1\">inlined_responses</code> parameter.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.Interval.yml",
       "output": {
         ".html": {
@@ -2082,7 +2278,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.JobState",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.JobState.yml\" sourcestartlinenumber=\"1\">Output only. The detailed state of the job. This enum is not supported in Gemini API.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.JobState.yml\" sourcestartlinenumber=\"1\">Job state.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2111,6 +2307,34 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.LatLng",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LatLng.yml\" sourcestartlinenumber=\"1\">An object that represents a latitude/longitude pair.  This is expressed as a pair of doubles\nto represent degrees latitude and degrees longitude. Unless specified otherwise, this object\nmust conform to the &lt;a\nhref=&quot;https://en.wikipedia.org/wiki/World_Geodetic_System#1984_version&quot;&gt; WGS84\nstandard&lt;/a&gt;. Values must be within normalized ranges.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ListBatchJobsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ListBatchJobsConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ListBatchJobsConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ListBatchJobsConfig.yml\" sourcestartlinenumber=\"1\">Config for optional parameters.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ListBatchJobsResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ListBatchJobsResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ListBatchJobsResponse",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ListBatchJobsResponse.yml\" sourcestartlinenumber=\"1\">Config for batches.list return value.</p>\n"
     },
     {
       "type": "ManagedReference",

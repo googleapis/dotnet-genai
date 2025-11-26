@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Enum JobState | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Output only. The detailed state of the job. This enum is not supported in Gemini API.">
+      <meta name="description" content="Job state.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -94,7 +94,7 @@ Enum JobState  <a class="header-action link-secondary" title="View source" href=
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Output only. The detailed state of the job. This enum is not supported in Gemini API.</p>
+  <div class="markdown summary"><p>Job state.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -173,8 +173,8 @@ JOB_STATE_UNSPECIFIED = 0</code></dt>
     <dt id="Google_GenAI_Types_JobState_JOB_STATE_UPDATING"><code>[JsonPropertyName(&quot;JOB_STATE_UPDATING&quot;)]
 JOB_STATE_UPDATING = 10</code></dt>
   
-  <dd><p>The job is being updated. Only jobs in the <code>RUNNING</code> state can be updated. After updating,
-the job goes back to the <code>RUNNING</code> state.</p>
+  <dd><p>The job is being updated. Only jobs in the <code>JOB_STATE_RUNNING</code> state can be updated. After
+updating, the job goes back to the <code>JOB_STATE_RUNNING</code> state.</p>
 </dd>
   </dl>
 

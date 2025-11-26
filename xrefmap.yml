@@ -398,6 +398,127 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.AsyncSession.SendToolResponseAsync
   nameWithType: AsyncSession.SendToolResponseAsync
+- uid: Google.GenAI.Batches
+  name: Batches
+  href: api/Google.GenAI.Batches.html
+  commentId: T:Google.GenAI.Batches
+  fullName: Google.GenAI.Batches
+  nameWithType: Batches
+- uid: Google.GenAI.Batches.#ctor(Google.GenAI.ApiClient)
+  name: Batches(ApiClient)
+  href: api/Google.GenAI.Batches.html#Google_GenAI_Batches__ctor_Google_GenAI_ApiClient_
+  commentId: M:Google.GenAI.Batches.#ctor(Google.GenAI.ApiClient)
+  name.vb: New(ApiClient)
+  fullName: Google.GenAI.Batches.Batches(Google.GenAI.ApiClient)
+  fullName.vb: Google.GenAI.Batches.New(Google.GenAI.ApiClient)
+  nameWithType: Batches.Batches(ApiClient)
+  nameWithType.vb: Batches.New(ApiClient)
+- uid: Google.GenAI.Batches.#ctor*
+  name: Batches
+  href: api/Google.GenAI.Batches.html#Google_GenAI_Batches__ctor_
+  commentId: Overload:Google.GenAI.Batches.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Google.GenAI.Batches.Batches
+  fullName.vb: Google.GenAI.Batches.New
+  nameWithType: Batches.Batches
+  nameWithType.vb: Batches.New
+- uid: Google.GenAI.Batches.CancelAsync(System.String,Google.GenAI.Types.CancelBatchJobConfig)
+  name: CancelAsync(string, CancelBatchJobConfig?)
+  href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_CancelAsync_System_String_Google_GenAI_Types_CancelBatchJobConfig_
+  commentId: M:Google.GenAI.Batches.CancelAsync(System.String,Google.GenAI.Types.CancelBatchJobConfig)
+  name.vb: CancelAsync(String, CancelBatchJobConfig)
+  fullName: Google.GenAI.Batches.CancelAsync(string, Google.GenAI.Types.CancelBatchJobConfig?)
+  fullName.vb: Google.GenAI.Batches.CancelAsync(String, Google.GenAI.Types.CancelBatchJobConfig)
+  nameWithType: Batches.CancelAsync(string, CancelBatchJobConfig?)
+  nameWithType.vb: Batches.CancelAsync(String, CancelBatchJobConfig)
+- uid: Google.GenAI.Batches.CancelAsync*
+  name: CancelAsync
+  href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_CancelAsync_
+  commentId: Overload:Google.GenAI.Batches.CancelAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Batches.CancelAsync
+  nameWithType: Batches.CancelAsync
+- uid: Google.GenAI.Batches.CreateAsync(System.String,Google.GenAI.Types.BatchJobSource,Google.GenAI.Types.CreateBatchJobConfig)
+  name: CreateAsync(string, BatchJobSource, CreateBatchJobConfig)
+  href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_CreateAsync_System_String_Google_GenAI_Types_BatchJobSource_Google_GenAI_Types_CreateBatchJobConfig_
+  commentId: M:Google.GenAI.Batches.CreateAsync(System.String,Google.GenAI.Types.BatchJobSource,Google.GenAI.Types.CreateBatchJobConfig)
+  name.vb: CreateAsync(String, BatchJobSource, CreateBatchJobConfig)
+  fullName: Google.GenAI.Batches.CreateAsync(string, Google.GenAI.Types.BatchJobSource, Google.GenAI.Types.CreateBatchJobConfig)
+  fullName.vb: Google.GenAI.Batches.CreateAsync(String, Google.GenAI.Types.BatchJobSource, Google.GenAI.Types.CreateBatchJobConfig)
+  nameWithType: Batches.CreateAsync(string, BatchJobSource, CreateBatchJobConfig)
+  nameWithType.vb: Batches.CreateAsync(String, BatchJobSource, CreateBatchJobConfig)
+- uid: Google.GenAI.Batches.CreateAsync*
+  name: CreateAsync
+  href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_CreateAsync_
+  commentId: Overload:Google.GenAI.Batches.CreateAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Batches.CreateAsync
+  nameWithType: Batches.CreateAsync
+- uid: Google.GenAI.Batches.CreateEmbeddingsAsync(System.String,Google.GenAI.Types.EmbeddingsBatchJobSource,Google.GenAI.Types.CreateEmbeddingsBatchJobConfig)
+  name: CreateEmbeddingsAsync(string, EmbeddingsBatchJobSource, CreateEmbeddingsBatchJobConfig)
+  href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_CreateEmbeddingsAsync_System_String_Google_GenAI_Types_EmbeddingsBatchJobSource_Google_GenAI_Types_CreateEmbeddingsBatchJobConfig_
+  commentId: M:Google.GenAI.Batches.CreateEmbeddingsAsync(System.String,Google.GenAI.Types.EmbeddingsBatchJobSource,Google.GenAI.Types.CreateEmbeddingsBatchJobConfig)
+  name.vb: CreateEmbeddingsAsync(String, EmbeddingsBatchJobSource, CreateEmbeddingsBatchJobConfig)
+  fullName: Google.GenAI.Batches.CreateEmbeddingsAsync(string, Google.GenAI.Types.EmbeddingsBatchJobSource, Google.GenAI.Types.CreateEmbeddingsBatchJobConfig)
+  fullName.vb: Google.GenAI.Batches.CreateEmbeddingsAsync(String, Google.GenAI.Types.EmbeddingsBatchJobSource, Google.GenAI.Types.CreateEmbeddingsBatchJobConfig)
+  nameWithType: Batches.CreateEmbeddingsAsync(string, EmbeddingsBatchJobSource, CreateEmbeddingsBatchJobConfig)
+  nameWithType.vb: Batches.CreateEmbeddingsAsync(String, EmbeddingsBatchJobSource, CreateEmbeddingsBatchJobConfig)
+- uid: Google.GenAI.Batches.CreateEmbeddingsAsync*
+  name: CreateEmbeddingsAsync
+  href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_CreateEmbeddingsAsync_
+  commentId: Overload:Google.GenAI.Batches.CreateEmbeddingsAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Batches.CreateEmbeddingsAsync
+  nameWithType: Batches.CreateEmbeddingsAsync
+- uid: Google.GenAI.Batches.DeleteAsync(System.String,Google.GenAI.Types.DeleteBatchJobConfig)
+  name: DeleteAsync(string, DeleteBatchJobConfig?)
+  href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_DeleteAsync_System_String_Google_GenAI_Types_DeleteBatchJobConfig_
+  commentId: M:Google.GenAI.Batches.DeleteAsync(System.String,Google.GenAI.Types.DeleteBatchJobConfig)
+  name.vb: DeleteAsync(String, DeleteBatchJobConfig)
+  fullName: Google.GenAI.Batches.DeleteAsync(string, Google.GenAI.Types.DeleteBatchJobConfig?)
+  fullName.vb: Google.GenAI.Batches.DeleteAsync(String, Google.GenAI.Types.DeleteBatchJobConfig)
+  nameWithType: Batches.DeleteAsync(string, DeleteBatchJobConfig?)
+  nameWithType.vb: Batches.DeleteAsync(String, DeleteBatchJobConfig)
+- uid: Google.GenAI.Batches.DeleteAsync*
+  name: DeleteAsync
+  href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_DeleteAsync_
+  commentId: Overload:Google.GenAI.Batches.DeleteAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Batches.DeleteAsync
+  nameWithType: Batches.DeleteAsync
+- uid: Google.GenAI.Batches.GetAsync(System.String,Google.GenAI.Types.GetBatchJobConfig)
+  name: GetAsync(string, GetBatchJobConfig?)
+  href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_GetAsync_System_String_Google_GenAI_Types_GetBatchJobConfig_
+  commentId: M:Google.GenAI.Batches.GetAsync(System.String,Google.GenAI.Types.GetBatchJobConfig)
+  name.vb: GetAsync(String, GetBatchJobConfig)
+  fullName: Google.GenAI.Batches.GetAsync(string, Google.GenAI.Types.GetBatchJobConfig?)
+  fullName.vb: Google.GenAI.Batches.GetAsync(String, Google.GenAI.Types.GetBatchJobConfig)
+  nameWithType: Batches.GetAsync(string, GetBatchJobConfig?)
+  nameWithType.vb: Batches.GetAsync(String, GetBatchJobConfig)
+- uid: Google.GenAI.Batches.GetAsync*
+  name: GetAsync
+  href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_GetAsync_
+  commentId: Overload:Google.GenAI.Batches.GetAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Batches.GetAsync
+  nameWithType: Batches.GetAsync
+- uid: Google.GenAI.Batches.ListAsync(Google.GenAI.Types.ListBatchJobsConfig)
+  name: ListAsync(ListBatchJobsConfig?)
+  href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_ListAsync_Google_GenAI_Types_ListBatchJobsConfig_
+  commentId: M:Google.GenAI.Batches.ListAsync(Google.GenAI.Types.ListBatchJobsConfig)
+  name.vb: ListAsync(ListBatchJobsConfig)
+  fullName: Google.GenAI.Batches.ListAsync(Google.GenAI.Types.ListBatchJobsConfig?)
+  fullName.vb: Google.GenAI.Batches.ListAsync(Google.GenAI.Types.ListBatchJobsConfig)
+  nameWithType: Batches.ListAsync(ListBatchJobsConfig?)
+  nameWithType.vb: Batches.ListAsync(ListBatchJobsConfig)
+- uid: Google.GenAI.Batches.ListAsync*
+  name: ListAsync
+  href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_ListAsync_
+  commentId: Overload:Google.GenAI.Batches.ListAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Batches.ListAsync
+  nameWithType: Batches.ListAsync
 - uid: Google.GenAI.Caches
   name: Caches
   href: api/Google.GenAI.Caches.html
@@ -528,6 +649,19 @@ references:
   fullName.vb: Google.GenAI.Client.New
   nameWithType: Client.Client
   nameWithType.vb: Client.New
+- uid: Google.GenAI.Client.Batches
+  name: Batches
+  href: api/Google.GenAI.Client.html#Google_GenAI_Client_Batches
+  commentId: P:Google.GenAI.Client.Batches
+  fullName: Google.GenAI.Client.Batches
+  nameWithType: Client.Batches
+- uid: Google.GenAI.Client.Batches*
+  name: Batches
+  href: api/Google.GenAI.Client.html#Google_GenAI_Client_Batches_
+  commentId: Overload:Google.GenAI.Client.Batches
+  isSpec: "True"
+  fullName: Google.GenAI.Client.Batches
+  nameWithType: Client.Batches
 - uid: Google.GenAI.Client.Caches
   name: Caches
   href: api/Google.GenAI.Client.html#Google_GenAI_Client_Caches
@@ -722,6 +856,22 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Common.GetValueByPath
   nameWithType: Common.GetValueByPath
+- uid: Google.GenAI.Common.MoveValueByPath(System.Text.Json.Nodes.JsonNode,System.Collections.Generic.IDictionary{System.String,System.String})
+  name: MoveValueByPath(JsonNode, IDictionary<string, string>)
+  href: api/Google.GenAI.Common.html#Google_GenAI_Common_MoveValueByPath_System_Text_Json_Nodes_JsonNode_System_Collections_Generic_IDictionary_System_String_System_String__
+  commentId: M:Google.GenAI.Common.MoveValueByPath(System.Text.Json.Nodes.JsonNode,System.Collections.Generic.IDictionary{System.String,System.String})
+  name.vb: MoveValueByPath(JsonNode, IDictionary(Of String, String))
+  fullName: Google.GenAI.Common.MoveValueByPath(System.Text.Json.Nodes.JsonNode, System.Collections.Generic.IDictionary<string, string>)
+  fullName.vb: Google.GenAI.Common.MoveValueByPath(System.Text.Json.Nodes.JsonNode, System.Collections.Generic.IDictionary(Of String, String))
+  nameWithType: Common.MoveValueByPath(JsonNode, IDictionary<string, string>)
+  nameWithType.vb: Common.MoveValueByPath(JsonNode, IDictionary(Of String, String))
+- uid: Google.GenAI.Common.MoveValueByPath*
+  name: MoveValueByPath
+  href: api/Google.GenAI.Common.html#Google_GenAI_Common_MoveValueByPath_
+  commentId: Overload:Google.GenAI.Common.MoveValueByPath
+  isSpec: "True"
+  fullName: Google.GenAI.Common.MoveValueByPath
+  nameWithType: Common.MoveValueByPath
 - uid: Google.GenAI.Common.SetValueByPath(System.Text.Json.Nodes.JsonObject,System.String[],System.Object)
   name: SetValueByPath(JsonObject, string[], object)
   href: api/Google.GenAI.Common.html#Google_GenAI_Common_SetValueByPath_System_Text_Json_Nodes_JsonObject_System_String___System_Object_
@@ -2387,6 +2537,371 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.AutomaticActivityDetection.StartOfSpeechSensitivity
   nameWithType: AutomaticActivityDetection.StartOfSpeechSensitivity
+- uid: Google.GenAI.Types.BatchJob
+  name: BatchJob
+  href: api/Google.GenAI.Types.BatchJob.html
+  commentId: T:Google.GenAI.Types.BatchJob
+  fullName: Google.GenAI.Types.BatchJob
+  nameWithType: BatchJob
+- uid: Google.GenAI.Types.BatchJob.CompletionStats
+  name: CompletionStats
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_CompletionStats
+  commentId: P:Google.GenAI.Types.BatchJob.CompletionStats
+  fullName: Google.GenAI.Types.BatchJob.CompletionStats
+  nameWithType: BatchJob.CompletionStats
+- uid: Google.GenAI.Types.BatchJob.CompletionStats*
+  name: CompletionStats
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_CompletionStats_
+  commentId: Overload:Google.GenAI.Types.BatchJob.CompletionStats
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJob.CompletionStats
+  nameWithType: BatchJob.CompletionStats
+- uid: Google.GenAI.Types.BatchJob.CreateTime
+  name: CreateTime
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_CreateTime
+  commentId: P:Google.GenAI.Types.BatchJob.CreateTime
+  fullName: Google.GenAI.Types.BatchJob.CreateTime
+  nameWithType: BatchJob.CreateTime
+- uid: Google.GenAI.Types.BatchJob.CreateTime*
+  name: CreateTime
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_CreateTime_
+  commentId: Overload:Google.GenAI.Types.BatchJob.CreateTime
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJob.CreateTime
+  nameWithType: BatchJob.CreateTime
+- uid: Google.GenAI.Types.BatchJob.Dest
+  name: Dest
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_Dest
+  commentId: P:Google.GenAI.Types.BatchJob.Dest
+  fullName: Google.GenAI.Types.BatchJob.Dest
+  nameWithType: BatchJob.Dest
+- uid: Google.GenAI.Types.BatchJob.Dest*
+  name: Dest
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_Dest_
+  commentId: Overload:Google.GenAI.Types.BatchJob.Dest
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJob.Dest
+  nameWithType: BatchJob.Dest
+- uid: Google.GenAI.Types.BatchJob.DisplayName
+  name: DisplayName
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_DisplayName
+  commentId: P:Google.GenAI.Types.BatchJob.DisplayName
+  fullName: Google.GenAI.Types.BatchJob.DisplayName
+  nameWithType: BatchJob.DisplayName
+- uid: Google.GenAI.Types.BatchJob.DisplayName*
+  name: DisplayName
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_DisplayName_
+  commentId: Overload:Google.GenAI.Types.BatchJob.DisplayName
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJob.DisplayName
+  nameWithType: BatchJob.DisplayName
+- uid: Google.GenAI.Types.BatchJob.EndTime
+  name: EndTime
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_EndTime
+  commentId: P:Google.GenAI.Types.BatchJob.EndTime
+  fullName: Google.GenAI.Types.BatchJob.EndTime
+  nameWithType: BatchJob.EndTime
+- uid: Google.GenAI.Types.BatchJob.EndTime*
+  name: EndTime
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_EndTime_
+  commentId: Overload:Google.GenAI.Types.BatchJob.EndTime
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJob.EndTime
+  nameWithType: BatchJob.EndTime
+- uid: Google.GenAI.Types.BatchJob.Error
+  name: Error
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_Error
+  commentId: P:Google.GenAI.Types.BatchJob.Error
+  fullName: Google.GenAI.Types.BatchJob.Error
+  nameWithType: BatchJob.Error
+- uid: Google.GenAI.Types.BatchJob.Error*
+  name: Error
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_Error_
+  commentId: Overload:Google.GenAI.Types.BatchJob.Error
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJob.Error
+  nameWithType: BatchJob.Error
+- uid: Google.GenAI.Types.BatchJob.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.BatchJob.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.BatchJob.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.BatchJob.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: BatchJob.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: BatchJob.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.BatchJob.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_FromJson_
+  commentId: Overload:Google.GenAI.Types.BatchJob.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJob.FromJson
+  nameWithType: BatchJob.FromJson
+- uid: Google.GenAI.Types.BatchJob.Model
+  name: Model
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_Model
+  commentId: P:Google.GenAI.Types.BatchJob.Model
+  fullName: Google.GenAI.Types.BatchJob.Model
+  nameWithType: BatchJob.Model
+- uid: Google.GenAI.Types.BatchJob.Model*
+  name: Model
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_Model_
+  commentId: Overload:Google.GenAI.Types.BatchJob.Model
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJob.Model
+  nameWithType: BatchJob.Model
+- uid: Google.GenAI.Types.BatchJob.Name
+  name: Name
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_Name
+  commentId: P:Google.GenAI.Types.BatchJob.Name
+  fullName: Google.GenAI.Types.BatchJob.Name
+  nameWithType: BatchJob.Name
+- uid: Google.GenAI.Types.BatchJob.Name*
+  name: Name
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_Name_
+  commentId: Overload:Google.GenAI.Types.BatchJob.Name
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJob.Name
+  nameWithType: BatchJob.Name
+- uid: Google.GenAI.Types.BatchJob.Src
+  name: Src
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_Src
+  commentId: P:Google.GenAI.Types.BatchJob.Src
+  fullName: Google.GenAI.Types.BatchJob.Src
+  nameWithType: BatchJob.Src
+- uid: Google.GenAI.Types.BatchJob.Src*
+  name: Src
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_Src_
+  commentId: Overload:Google.GenAI.Types.BatchJob.Src
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJob.Src
+  nameWithType: BatchJob.Src
+- uid: Google.GenAI.Types.BatchJob.StartTime
+  name: StartTime
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_StartTime
+  commentId: P:Google.GenAI.Types.BatchJob.StartTime
+  fullName: Google.GenAI.Types.BatchJob.StartTime
+  nameWithType: BatchJob.StartTime
+- uid: Google.GenAI.Types.BatchJob.StartTime*
+  name: StartTime
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_StartTime_
+  commentId: Overload:Google.GenAI.Types.BatchJob.StartTime
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJob.StartTime
+  nameWithType: BatchJob.StartTime
+- uid: Google.GenAI.Types.BatchJob.State
+  name: State
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_State
+  commentId: P:Google.GenAI.Types.BatchJob.State
+  fullName: Google.GenAI.Types.BatchJob.State
+  nameWithType: BatchJob.State
+- uid: Google.GenAI.Types.BatchJob.State*
+  name: State
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_State_
+  commentId: Overload:Google.GenAI.Types.BatchJob.State
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJob.State
+  nameWithType: BatchJob.State
+- uid: Google.GenAI.Types.BatchJob.UpdateTime
+  name: UpdateTime
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_UpdateTime
+  commentId: P:Google.GenAI.Types.BatchJob.UpdateTime
+  fullName: Google.GenAI.Types.BatchJob.UpdateTime
+  nameWithType: BatchJob.UpdateTime
+- uid: Google.GenAI.Types.BatchJob.UpdateTime*
+  name: UpdateTime
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_UpdateTime_
+  commentId: Overload:Google.GenAI.Types.BatchJob.UpdateTime
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJob.UpdateTime
+  nameWithType: BatchJob.UpdateTime
+- uid: Google.GenAI.Types.BatchJobDestination
+  name: BatchJobDestination
+  href: api/Google.GenAI.Types.BatchJobDestination.html
+  commentId: T:Google.GenAI.Types.BatchJobDestination
+  fullName: Google.GenAI.Types.BatchJobDestination
+  nameWithType: BatchJobDestination
+- uid: Google.GenAI.Types.BatchJobDestination.BigqueryUri
+  name: BigqueryUri
+  href: api/Google.GenAI.Types.BatchJobDestination.html#Google_GenAI_Types_BatchJobDestination_BigqueryUri
+  commentId: P:Google.GenAI.Types.BatchJobDestination.BigqueryUri
+  fullName: Google.GenAI.Types.BatchJobDestination.BigqueryUri
+  nameWithType: BatchJobDestination.BigqueryUri
+- uid: Google.GenAI.Types.BatchJobDestination.BigqueryUri*
+  name: BigqueryUri
+  href: api/Google.GenAI.Types.BatchJobDestination.html#Google_GenAI_Types_BatchJobDestination_BigqueryUri_
+  commentId: Overload:Google.GenAI.Types.BatchJobDestination.BigqueryUri
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJobDestination.BigqueryUri
+  nameWithType: BatchJobDestination.BigqueryUri
+- uid: Google.GenAI.Types.BatchJobDestination.FileName
+  name: FileName
+  href: api/Google.GenAI.Types.BatchJobDestination.html#Google_GenAI_Types_BatchJobDestination_FileName
+  commentId: P:Google.GenAI.Types.BatchJobDestination.FileName
+  fullName: Google.GenAI.Types.BatchJobDestination.FileName
+  nameWithType: BatchJobDestination.FileName
+- uid: Google.GenAI.Types.BatchJobDestination.FileName*
+  name: FileName
+  href: api/Google.GenAI.Types.BatchJobDestination.html#Google_GenAI_Types_BatchJobDestination_FileName_
+  commentId: Overload:Google.GenAI.Types.BatchJobDestination.FileName
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJobDestination.FileName
+  nameWithType: BatchJobDestination.FileName
+- uid: Google.GenAI.Types.BatchJobDestination.Format
+  name: Format
+  href: api/Google.GenAI.Types.BatchJobDestination.html#Google_GenAI_Types_BatchJobDestination_Format
+  commentId: P:Google.GenAI.Types.BatchJobDestination.Format
+  fullName: Google.GenAI.Types.BatchJobDestination.Format
+  nameWithType: BatchJobDestination.Format
+- uid: Google.GenAI.Types.BatchJobDestination.Format*
+  name: Format
+  href: api/Google.GenAI.Types.BatchJobDestination.html#Google_GenAI_Types_BatchJobDestination_Format_
+  commentId: Overload:Google.GenAI.Types.BatchJobDestination.Format
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJobDestination.Format
+  nameWithType: BatchJobDestination.Format
+- uid: Google.GenAI.Types.BatchJobDestination.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.BatchJobDestination.html#Google_GenAI_Types_BatchJobDestination_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.BatchJobDestination.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.BatchJobDestination.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.BatchJobDestination.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: BatchJobDestination.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: BatchJobDestination.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.BatchJobDestination.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.BatchJobDestination.html#Google_GenAI_Types_BatchJobDestination_FromJson_
+  commentId: Overload:Google.GenAI.Types.BatchJobDestination.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJobDestination.FromJson
+  nameWithType: BatchJobDestination.FromJson
+- uid: Google.GenAI.Types.BatchJobDestination.GcsUri
+  name: GcsUri
+  href: api/Google.GenAI.Types.BatchJobDestination.html#Google_GenAI_Types_BatchJobDestination_GcsUri
+  commentId: P:Google.GenAI.Types.BatchJobDestination.GcsUri
+  fullName: Google.GenAI.Types.BatchJobDestination.GcsUri
+  nameWithType: BatchJobDestination.GcsUri
+- uid: Google.GenAI.Types.BatchJobDestination.GcsUri*
+  name: GcsUri
+  href: api/Google.GenAI.Types.BatchJobDestination.html#Google_GenAI_Types_BatchJobDestination_GcsUri_
+  commentId: Overload:Google.GenAI.Types.BatchJobDestination.GcsUri
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJobDestination.GcsUri
+  nameWithType: BatchJobDestination.GcsUri
+- uid: Google.GenAI.Types.BatchJobDestination.InlinedEmbedContentResponses
+  name: InlinedEmbedContentResponses
+  href: api/Google.GenAI.Types.BatchJobDestination.html#Google_GenAI_Types_BatchJobDestination_InlinedEmbedContentResponses
+  commentId: P:Google.GenAI.Types.BatchJobDestination.InlinedEmbedContentResponses
+  fullName: Google.GenAI.Types.BatchJobDestination.InlinedEmbedContentResponses
+  nameWithType: BatchJobDestination.InlinedEmbedContentResponses
+- uid: Google.GenAI.Types.BatchJobDestination.InlinedEmbedContentResponses*
+  name: InlinedEmbedContentResponses
+  href: api/Google.GenAI.Types.BatchJobDestination.html#Google_GenAI_Types_BatchJobDestination_InlinedEmbedContentResponses_
+  commentId: Overload:Google.GenAI.Types.BatchJobDestination.InlinedEmbedContentResponses
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJobDestination.InlinedEmbedContentResponses
+  nameWithType: BatchJobDestination.InlinedEmbedContentResponses
+- uid: Google.GenAI.Types.BatchJobDestination.InlinedResponses
+  name: InlinedResponses
+  href: api/Google.GenAI.Types.BatchJobDestination.html#Google_GenAI_Types_BatchJobDestination_InlinedResponses
+  commentId: P:Google.GenAI.Types.BatchJobDestination.InlinedResponses
+  fullName: Google.GenAI.Types.BatchJobDestination.InlinedResponses
+  nameWithType: BatchJobDestination.InlinedResponses
+- uid: Google.GenAI.Types.BatchJobDestination.InlinedResponses*
+  name: InlinedResponses
+  href: api/Google.GenAI.Types.BatchJobDestination.html#Google_GenAI_Types_BatchJobDestination_InlinedResponses_
+  commentId: Overload:Google.GenAI.Types.BatchJobDestination.InlinedResponses
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJobDestination.InlinedResponses
+  nameWithType: BatchJobDestination.InlinedResponses
+- uid: Google.GenAI.Types.BatchJobSource
+  name: BatchJobSource
+  href: api/Google.GenAI.Types.BatchJobSource.html
+  commentId: T:Google.GenAI.Types.BatchJobSource
+  fullName: Google.GenAI.Types.BatchJobSource
+  nameWithType: BatchJobSource
+- uid: Google.GenAI.Types.BatchJobSource.BigqueryUri
+  name: BigqueryUri
+  href: api/Google.GenAI.Types.BatchJobSource.html#Google_GenAI_Types_BatchJobSource_BigqueryUri
+  commentId: P:Google.GenAI.Types.BatchJobSource.BigqueryUri
+  fullName: Google.GenAI.Types.BatchJobSource.BigqueryUri
+  nameWithType: BatchJobSource.BigqueryUri
+- uid: Google.GenAI.Types.BatchJobSource.BigqueryUri*
+  name: BigqueryUri
+  href: api/Google.GenAI.Types.BatchJobSource.html#Google_GenAI_Types_BatchJobSource_BigqueryUri_
+  commentId: Overload:Google.GenAI.Types.BatchJobSource.BigqueryUri
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJobSource.BigqueryUri
+  nameWithType: BatchJobSource.BigqueryUri
+- uid: Google.GenAI.Types.BatchJobSource.FileName
+  name: FileName
+  href: api/Google.GenAI.Types.BatchJobSource.html#Google_GenAI_Types_BatchJobSource_FileName
+  commentId: P:Google.GenAI.Types.BatchJobSource.FileName
+  fullName: Google.GenAI.Types.BatchJobSource.FileName
+  nameWithType: BatchJobSource.FileName
+- uid: Google.GenAI.Types.BatchJobSource.FileName*
+  name: FileName
+  href: api/Google.GenAI.Types.BatchJobSource.html#Google_GenAI_Types_BatchJobSource_FileName_
+  commentId: Overload:Google.GenAI.Types.BatchJobSource.FileName
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJobSource.FileName
+  nameWithType: BatchJobSource.FileName
+- uid: Google.GenAI.Types.BatchJobSource.Format
+  name: Format
+  href: api/Google.GenAI.Types.BatchJobSource.html#Google_GenAI_Types_BatchJobSource_Format
+  commentId: P:Google.GenAI.Types.BatchJobSource.Format
+  fullName: Google.GenAI.Types.BatchJobSource.Format
+  nameWithType: BatchJobSource.Format
+- uid: Google.GenAI.Types.BatchJobSource.Format*
+  name: Format
+  href: api/Google.GenAI.Types.BatchJobSource.html#Google_GenAI_Types_BatchJobSource_Format_
+  commentId: Overload:Google.GenAI.Types.BatchJobSource.Format
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJobSource.Format
+  nameWithType: BatchJobSource.Format
+- uid: Google.GenAI.Types.BatchJobSource.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.BatchJobSource.html#Google_GenAI_Types_BatchJobSource_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.BatchJobSource.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.BatchJobSource.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.BatchJobSource.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: BatchJobSource.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: BatchJobSource.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.BatchJobSource.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.BatchJobSource.html#Google_GenAI_Types_BatchJobSource_FromJson_
+  commentId: Overload:Google.GenAI.Types.BatchJobSource.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJobSource.FromJson
+  nameWithType: BatchJobSource.FromJson
+- uid: Google.GenAI.Types.BatchJobSource.GcsUri
+  name: GcsUri
+  href: api/Google.GenAI.Types.BatchJobSource.html#Google_GenAI_Types_BatchJobSource_GcsUri
+  commentId: P:Google.GenAI.Types.BatchJobSource.GcsUri
+  fullName: Google.GenAI.Types.BatchJobSource.GcsUri
+  nameWithType: BatchJobSource.GcsUri
+- uid: Google.GenAI.Types.BatchJobSource.GcsUri*
+  name: GcsUri
+  href: api/Google.GenAI.Types.BatchJobSource.html#Google_GenAI_Types_BatchJobSource_GcsUri_
+  commentId: Overload:Google.GenAI.Types.BatchJobSource.GcsUri
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJobSource.GcsUri
+  nameWithType: BatchJobSource.GcsUri
+- uid: Google.GenAI.Types.BatchJobSource.InlinedRequests
+  name: InlinedRequests
+  href: api/Google.GenAI.Types.BatchJobSource.html#Google_GenAI_Types_BatchJobSource_InlinedRequests
+  commentId: P:Google.GenAI.Types.BatchJobSource.InlinedRequests
+  fullName: Google.GenAI.Types.BatchJobSource.InlinedRequests
+  nameWithType: BatchJobSource.InlinedRequests
+- uid: Google.GenAI.Types.BatchJobSource.InlinedRequests*
+  name: InlinedRequests
+  href: api/Google.GenAI.Types.BatchJobSource.html#Google_GenAI_Types_BatchJobSource_InlinedRequests_
+  commentId: Overload:Google.GenAI.Types.BatchJobSource.InlinedRequests
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJobSource.InlinedRequests
+  nameWithType: BatchJobSource.InlinedRequests
 - uid: Google.GenAI.Types.Behavior
   name: Behavior
   href: api/Google.GenAI.Types.Behavior.html
@@ -2726,6 +3241,41 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CachedContentUsageMetadata.VideoDurationSeconds
   nameWithType: CachedContentUsageMetadata.VideoDurationSeconds
+- uid: Google.GenAI.Types.CancelBatchJobConfig
+  name: CancelBatchJobConfig
+  href: api/Google.GenAI.Types.CancelBatchJobConfig.html
+  commentId: T:Google.GenAI.Types.CancelBatchJobConfig
+  fullName: Google.GenAI.Types.CancelBatchJobConfig
+  nameWithType: CancelBatchJobConfig
+- uid: Google.GenAI.Types.CancelBatchJobConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.CancelBatchJobConfig.html#Google_GenAI_Types_CancelBatchJobConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.CancelBatchJobConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.CancelBatchJobConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.CancelBatchJobConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: CancelBatchJobConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: CancelBatchJobConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.CancelBatchJobConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.CancelBatchJobConfig.html#Google_GenAI_Types_CancelBatchJobConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.CancelBatchJobConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CancelBatchJobConfig.FromJson
+  nameWithType: CancelBatchJobConfig.FromJson
+- uid: Google.GenAI.Types.CancelBatchJobConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.CancelBatchJobConfig.html#Google_GenAI_Types_CancelBatchJobConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.CancelBatchJobConfig.HttpOptions
+  fullName: Google.GenAI.Types.CancelBatchJobConfig.HttpOptions
+  nameWithType: CancelBatchJobConfig.HttpOptions
+- uid: Google.GenAI.Types.CancelBatchJobConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.CancelBatchJobConfig.html#Google_GenAI_Types_CancelBatchJobConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.CancelBatchJobConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CancelBatchJobConfig.HttpOptions
+  nameWithType: CancelBatchJobConfig.HttpOptions
 - uid: Google.GenAI.Types.Candidate
   name: Candidate
   href: api/Google.GenAI.Types.Candidate.html
@@ -3135,6 +3685,80 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CodeExecutionResult.Output
   nameWithType: CodeExecutionResult.Output
+- uid: Google.GenAI.Types.CompletionStats
+  name: CompletionStats
+  href: api/Google.GenAI.Types.CompletionStats.html
+  commentId: T:Google.GenAI.Types.CompletionStats
+  fullName: Google.GenAI.Types.CompletionStats
+  nameWithType: CompletionStats
+- uid: Google.GenAI.Types.CompletionStats.FailedCount
+  name: FailedCount
+  href: api/Google.GenAI.Types.CompletionStats.html#Google_GenAI_Types_CompletionStats_FailedCount
+  commentId: P:Google.GenAI.Types.CompletionStats.FailedCount
+  fullName: Google.GenAI.Types.CompletionStats.FailedCount
+  nameWithType: CompletionStats.FailedCount
+- uid: Google.GenAI.Types.CompletionStats.FailedCount*
+  name: FailedCount
+  href: api/Google.GenAI.Types.CompletionStats.html#Google_GenAI_Types_CompletionStats_FailedCount_
+  commentId: Overload:Google.GenAI.Types.CompletionStats.FailedCount
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CompletionStats.FailedCount
+  nameWithType: CompletionStats.FailedCount
+- uid: Google.GenAI.Types.CompletionStats.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.CompletionStats.html#Google_GenAI_Types_CompletionStats_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.CompletionStats.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.CompletionStats.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.CompletionStats.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: CompletionStats.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: CompletionStats.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.CompletionStats.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.CompletionStats.html#Google_GenAI_Types_CompletionStats_FromJson_
+  commentId: Overload:Google.GenAI.Types.CompletionStats.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CompletionStats.FromJson
+  nameWithType: CompletionStats.FromJson
+- uid: Google.GenAI.Types.CompletionStats.IncompleteCount
+  name: IncompleteCount
+  href: api/Google.GenAI.Types.CompletionStats.html#Google_GenAI_Types_CompletionStats_IncompleteCount
+  commentId: P:Google.GenAI.Types.CompletionStats.IncompleteCount
+  fullName: Google.GenAI.Types.CompletionStats.IncompleteCount
+  nameWithType: CompletionStats.IncompleteCount
+- uid: Google.GenAI.Types.CompletionStats.IncompleteCount*
+  name: IncompleteCount
+  href: api/Google.GenAI.Types.CompletionStats.html#Google_GenAI_Types_CompletionStats_IncompleteCount_
+  commentId: Overload:Google.GenAI.Types.CompletionStats.IncompleteCount
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CompletionStats.IncompleteCount
+  nameWithType: CompletionStats.IncompleteCount
+- uid: Google.GenAI.Types.CompletionStats.SuccessfulCount
+  name: SuccessfulCount
+  href: api/Google.GenAI.Types.CompletionStats.html#Google_GenAI_Types_CompletionStats_SuccessfulCount
+  commentId: P:Google.GenAI.Types.CompletionStats.SuccessfulCount
+  fullName: Google.GenAI.Types.CompletionStats.SuccessfulCount
+  nameWithType: CompletionStats.SuccessfulCount
+- uid: Google.GenAI.Types.CompletionStats.SuccessfulCount*
+  name: SuccessfulCount
+  href: api/Google.GenAI.Types.CompletionStats.html#Google_GenAI_Types_CompletionStats_SuccessfulCount_
+  commentId: Overload:Google.GenAI.Types.CompletionStats.SuccessfulCount
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CompletionStats.SuccessfulCount
+  nameWithType: CompletionStats.SuccessfulCount
+- uid: Google.GenAI.Types.CompletionStats.SuccessfulForecastPointCount
+  name: SuccessfulForecastPointCount
+  href: api/Google.GenAI.Types.CompletionStats.html#Google_GenAI_Types_CompletionStats_SuccessfulForecastPointCount
+  commentId: P:Google.GenAI.Types.CompletionStats.SuccessfulForecastPointCount
+  fullName: Google.GenAI.Types.CompletionStats.SuccessfulForecastPointCount
+  nameWithType: CompletionStats.SuccessfulForecastPointCount
+- uid: Google.GenAI.Types.CompletionStats.SuccessfulForecastPointCount*
+  name: SuccessfulForecastPointCount
+  href: api/Google.GenAI.Types.CompletionStats.html#Google_GenAI_Types_CompletionStats_SuccessfulForecastPointCount_
+  commentId: Overload:Google.GenAI.Types.CompletionStats.SuccessfulForecastPointCount
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CompletionStats.SuccessfulForecastPointCount
+  nameWithType: CompletionStats.SuccessfulForecastPointCount
 - uid: Google.GenAI.Types.ComputeTokensConfig
   name: ComputeTokensConfig
   href: api/Google.GenAI.Types.ComputeTokensConfig.html
@@ -3806,6 +4430,67 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CountTokensResponse.TotalTokens
   nameWithType: CountTokensResponse.TotalTokens
+- uid: Google.GenAI.Types.CreateBatchJobConfig
+  name: CreateBatchJobConfig
+  href: api/Google.GenAI.Types.CreateBatchJobConfig.html
+  commentId: T:Google.GenAI.Types.CreateBatchJobConfig
+  fullName: Google.GenAI.Types.CreateBatchJobConfig
+  nameWithType: CreateBatchJobConfig
+- uid: Google.GenAI.Types.CreateBatchJobConfig.Dest
+  name: Dest
+  href: api/Google.GenAI.Types.CreateBatchJobConfig.html#Google_GenAI_Types_CreateBatchJobConfig_Dest
+  commentId: P:Google.GenAI.Types.CreateBatchJobConfig.Dest
+  fullName: Google.GenAI.Types.CreateBatchJobConfig.Dest
+  nameWithType: CreateBatchJobConfig.Dest
+- uid: Google.GenAI.Types.CreateBatchJobConfig.Dest*
+  name: Dest
+  href: api/Google.GenAI.Types.CreateBatchJobConfig.html#Google_GenAI_Types_CreateBatchJobConfig_Dest_
+  commentId: Overload:Google.GenAI.Types.CreateBatchJobConfig.Dest
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateBatchJobConfig.Dest
+  nameWithType: CreateBatchJobConfig.Dest
+- uid: Google.GenAI.Types.CreateBatchJobConfig.DisplayName
+  name: DisplayName
+  href: api/Google.GenAI.Types.CreateBatchJobConfig.html#Google_GenAI_Types_CreateBatchJobConfig_DisplayName
+  commentId: P:Google.GenAI.Types.CreateBatchJobConfig.DisplayName
+  fullName: Google.GenAI.Types.CreateBatchJobConfig.DisplayName
+  nameWithType: CreateBatchJobConfig.DisplayName
+- uid: Google.GenAI.Types.CreateBatchJobConfig.DisplayName*
+  name: DisplayName
+  href: api/Google.GenAI.Types.CreateBatchJobConfig.html#Google_GenAI_Types_CreateBatchJobConfig_DisplayName_
+  commentId: Overload:Google.GenAI.Types.CreateBatchJobConfig.DisplayName
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateBatchJobConfig.DisplayName
+  nameWithType: CreateBatchJobConfig.DisplayName
+- uid: Google.GenAI.Types.CreateBatchJobConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.CreateBatchJobConfig.html#Google_GenAI_Types_CreateBatchJobConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.CreateBatchJobConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.CreateBatchJobConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.CreateBatchJobConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: CreateBatchJobConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: CreateBatchJobConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.CreateBatchJobConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.CreateBatchJobConfig.html#Google_GenAI_Types_CreateBatchJobConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.CreateBatchJobConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateBatchJobConfig.FromJson
+  nameWithType: CreateBatchJobConfig.FromJson
+- uid: Google.GenAI.Types.CreateBatchJobConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.CreateBatchJobConfig.html#Google_GenAI_Types_CreateBatchJobConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.CreateBatchJobConfig.HttpOptions
+  fullName: Google.GenAI.Types.CreateBatchJobConfig.HttpOptions
+  nameWithType: CreateBatchJobConfig.HttpOptions
+- uid: Google.GenAI.Types.CreateBatchJobConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.CreateBatchJobConfig.html#Google_GenAI_Types_CreateBatchJobConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.CreateBatchJobConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateBatchJobConfig.HttpOptions
+  nameWithType: CreateBatchJobConfig.HttpOptions
 - uid: Google.GenAI.Types.CreateCachedContentConfig
   name: CreateCachedContentConfig
   href: api/Google.GenAI.Types.CreateCachedContentConfig.html
@@ -3945,6 +4630,54 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CreateCachedContentConfig.Ttl
   nameWithType: CreateCachedContentConfig.Ttl
+- uid: Google.GenAI.Types.CreateEmbeddingsBatchJobConfig
+  name: CreateEmbeddingsBatchJobConfig
+  href: api/Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.html
+  commentId: T:Google.GenAI.Types.CreateEmbeddingsBatchJobConfig
+  fullName: Google.GenAI.Types.CreateEmbeddingsBatchJobConfig
+  nameWithType: CreateEmbeddingsBatchJobConfig
+- uid: Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.DisplayName
+  name: DisplayName
+  href: api/Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.html#Google_GenAI_Types_CreateEmbeddingsBatchJobConfig_DisplayName
+  commentId: P:Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.DisplayName
+  fullName: Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.DisplayName
+  nameWithType: CreateEmbeddingsBatchJobConfig.DisplayName
+- uid: Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.DisplayName*
+  name: DisplayName
+  href: api/Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.html#Google_GenAI_Types_CreateEmbeddingsBatchJobConfig_DisplayName_
+  commentId: Overload:Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.DisplayName
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.DisplayName
+  nameWithType: CreateEmbeddingsBatchJobConfig.DisplayName
+- uid: Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.html#Google_GenAI_Types_CreateEmbeddingsBatchJobConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: CreateEmbeddingsBatchJobConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: CreateEmbeddingsBatchJobConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.html#Google_GenAI_Types_CreateEmbeddingsBatchJobConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.FromJson
+  nameWithType: CreateEmbeddingsBatchJobConfig.FromJson
+- uid: Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.html#Google_GenAI_Types_CreateEmbeddingsBatchJobConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.HttpOptions
+  fullName: Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.HttpOptions
+  nameWithType: CreateEmbeddingsBatchJobConfig.HttpOptions
+- uid: Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.html#Google_GenAI_Types_CreateEmbeddingsBatchJobConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.HttpOptions
+  nameWithType: CreateEmbeddingsBatchJobConfig.HttpOptions
 - uid: Google.GenAI.Types.CreateTuningJobConfig
   name: CreateTuningJobConfig
   href: api/Google.GenAI.Types.CreateTuningJobConfig.html
@@ -4462,6 +5195,41 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.DatasetStats.UserOutputTokenDistribution
   nameWithType: DatasetStats.UserOutputTokenDistribution
+- uid: Google.GenAI.Types.DeleteBatchJobConfig
+  name: DeleteBatchJobConfig
+  href: api/Google.GenAI.Types.DeleteBatchJobConfig.html
+  commentId: T:Google.GenAI.Types.DeleteBatchJobConfig
+  fullName: Google.GenAI.Types.DeleteBatchJobConfig
+  nameWithType: DeleteBatchJobConfig
+- uid: Google.GenAI.Types.DeleteBatchJobConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.DeleteBatchJobConfig.html#Google_GenAI_Types_DeleteBatchJobConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.DeleteBatchJobConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.DeleteBatchJobConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.DeleteBatchJobConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: DeleteBatchJobConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: DeleteBatchJobConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.DeleteBatchJobConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.DeleteBatchJobConfig.html#Google_GenAI_Types_DeleteBatchJobConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.DeleteBatchJobConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DeleteBatchJobConfig.FromJson
+  nameWithType: DeleteBatchJobConfig.FromJson
+- uid: Google.GenAI.Types.DeleteBatchJobConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.DeleteBatchJobConfig.html#Google_GenAI_Types_DeleteBatchJobConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.DeleteBatchJobConfig.HttpOptions
+  fullName: Google.GenAI.Types.DeleteBatchJobConfig.HttpOptions
+  nameWithType: DeleteBatchJobConfig.HttpOptions
+- uid: Google.GenAI.Types.DeleteBatchJobConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.DeleteBatchJobConfig.html#Google_GenAI_Types_DeleteBatchJobConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.DeleteBatchJobConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DeleteBatchJobConfig.HttpOptions
+  nameWithType: DeleteBatchJobConfig.HttpOptions
 - uid: Google.GenAI.Types.DeleteCachedContentConfig
   name: DeleteCachedContentConfig
   href: api/Google.GenAI.Types.DeleteCachedContentConfig.html
@@ -4602,6 +5370,80 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.DeleteModelResponse.SdkHttpResponse
   nameWithType: DeleteModelResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.DeleteResourceJob
+  name: DeleteResourceJob
+  href: api/Google.GenAI.Types.DeleteResourceJob.html
+  commentId: T:Google.GenAI.Types.DeleteResourceJob
+  fullName: Google.GenAI.Types.DeleteResourceJob
+  nameWithType: DeleteResourceJob
+- uid: Google.GenAI.Types.DeleteResourceJob.Done
+  name: Done
+  href: api/Google.GenAI.Types.DeleteResourceJob.html#Google_GenAI_Types_DeleteResourceJob_Done
+  commentId: P:Google.GenAI.Types.DeleteResourceJob.Done
+  fullName: Google.GenAI.Types.DeleteResourceJob.Done
+  nameWithType: DeleteResourceJob.Done
+- uid: Google.GenAI.Types.DeleteResourceJob.Done*
+  name: Done
+  href: api/Google.GenAI.Types.DeleteResourceJob.html#Google_GenAI_Types_DeleteResourceJob_Done_
+  commentId: Overload:Google.GenAI.Types.DeleteResourceJob.Done
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DeleteResourceJob.Done
+  nameWithType: DeleteResourceJob.Done
+- uid: Google.GenAI.Types.DeleteResourceJob.Error
+  name: Error
+  href: api/Google.GenAI.Types.DeleteResourceJob.html#Google_GenAI_Types_DeleteResourceJob_Error
+  commentId: P:Google.GenAI.Types.DeleteResourceJob.Error
+  fullName: Google.GenAI.Types.DeleteResourceJob.Error
+  nameWithType: DeleteResourceJob.Error
+- uid: Google.GenAI.Types.DeleteResourceJob.Error*
+  name: Error
+  href: api/Google.GenAI.Types.DeleteResourceJob.html#Google_GenAI_Types_DeleteResourceJob_Error_
+  commentId: Overload:Google.GenAI.Types.DeleteResourceJob.Error
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DeleteResourceJob.Error
+  nameWithType: DeleteResourceJob.Error
+- uid: Google.GenAI.Types.DeleteResourceJob.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.DeleteResourceJob.html#Google_GenAI_Types_DeleteResourceJob_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.DeleteResourceJob.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.DeleteResourceJob.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.DeleteResourceJob.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: DeleteResourceJob.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: DeleteResourceJob.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.DeleteResourceJob.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.DeleteResourceJob.html#Google_GenAI_Types_DeleteResourceJob_FromJson_
+  commentId: Overload:Google.GenAI.Types.DeleteResourceJob.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DeleteResourceJob.FromJson
+  nameWithType: DeleteResourceJob.FromJson
+- uid: Google.GenAI.Types.DeleteResourceJob.Name
+  name: Name
+  href: api/Google.GenAI.Types.DeleteResourceJob.html#Google_GenAI_Types_DeleteResourceJob_Name
+  commentId: P:Google.GenAI.Types.DeleteResourceJob.Name
+  fullName: Google.GenAI.Types.DeleteResourceJob.Name
+  nameWithType: DeleteResourceJob.Name
+- uid: Google.GenAI.Types.DeleteResourceJob.Name*
+  name: Name
+  href: api/Google.GenAI.Types.DeleteResourceJob.html#Google_GenAI_Types_DeleteResourceJob_Name_
+  commentId: Overload:Google.GenAI.Types.DeleteResourceJob.Name
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DeleteResourceJob.Name
+  nameWithType: DeleteResourceJob.Name
+- uid: Google.GenAI.Types.DeleteResourceJob.SdkHttpResponse
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.DeleteResourceJob.html#Google_GenAI_Types_DeleteResourceJob_SdkHttpResponse
+  commentId: P:Google.GenAI.Types.DeleteResourceJob.SdkHttpResponse
+  fullName: Google.GenAI.Types.DeleteResourceJob.SdkHttpResponse
+  nameWithType: DeleteResourceJob.SdkHttpResponse
+- uid: Google.GenAI.Types.DeleteResourceJob.SdkHttpResponse*
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.DeleteResourceJob.html#Google_GenAI_Types_DeleteResourceJob_SdkHttpResponse_
+  commentId: Overload:Google.GenAI.Types.DeleteResourceJob.SdkHttpResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DeleteResourceJob.SdkHttpResponse
+  nameWithType: DeleteResourceJob.SdkHttpResponse
 - uid: Google.GenAI.Types.DistillationDataStats
   name: DistillationDataStats
   href: api/Google.GenAI.Types.DistillationDataStats.html
@@ -5340,6 +6182,54 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.EmbedContentResponse.SdkHttpResponse
   nameWithType: EmbedContentResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.EmbeddingsBatchJobSource
+  name: EmbeddingsBatchJobSource
+  href: api/Google.GenAI.Types.EmbeddingsBatchJobSource.html
+  commentId: T:Google.GenAI.Types.EmbeddingsBatchJobSource
+  fullName: Google.GenAI.Types.EmbeddingsBatchJobSource
+  nameWithType: EmbeddingsBatchJobSource
+- uid: Google.GenAI.Types.EmbeddingsBatchJobSource.FileName
+  name: FileName
+  href: api/Google.GenAI.Types.EmbeddingsBatchJobSource.html#Google_GenAI_Types_EmbeddingsBatchJobSource_FileName
+  commentId: P:Google.GenAI.Types.EmbeddingsBatchJobSource.FileName
+  fullName: Google.GenAI.Types.EmbeddingsBatchJobSource.FileName
+  nameWithType: EmbeddingsBatchJobSource.FileName
+- uid: Google.GenAI.Types.EmbeddingsBatchJobSource.FileName*
+  name: FileName
+  href: api/Google.GenAI.Types.EmbeddingsBatchJobSource.html#Google_GenAI_Types_EmbeddingsBatchJobSource_FileName_
+  commentId: Overload:Google.GenAI.Types.EmbeddingsBatchJobSource.FileName
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EmbeddingsBatchJobSource.FileName
+  nameWithType: EmbeddingsBatchJobSource.FileName
+- uid: Google.GenAI.Types.EmbeddingsBatchJobSource.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.EmbeddingsBatchJobSource.html#Google_GenAI_Types_EmbeddingsBatchJobSource_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.EmbeddingsBatchJobSource.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.EmbeddingsBatchJobSource.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.EmbeddingsBatchJobSource.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: EmbeddingsBatchJobSource.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: EmbeddingsBatchJobSource.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.EmbeddingsBatchJobSource.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.EmbeddingsBatchJobSource.html#Google_GenAI_Types_EmbeddingsBatchJobSource_FromJson_
+  commentId: Overload:Google.GenAI.Types.EmbeddingsBatchJobSource.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EmbeddingsBatchJobSource.FromJson
+  nameWithType: EmbeddingsBatchJobSource.FromJson
+- uid: Google.GenAI.Types.EmbeddingsBatchJobSource.InlinedRequests
+  name: InlinedRequests
+  href: api/Google.GenAI.Types.EmbeddingsBatchJobSource.html#Google_GenAI_Types_EmbeddingsBatchJobSource_InlinedRequests
+  commentId: P:Google.GenAI.Types.EmbeddingsBatchJobSource.InlinedRequests
+  fullName: Google.GenAI.Types.EmbeddingsBatchJobSource.InlinedRequests
+  nameWithType: EmbeddingsBatchJobSource.InlinedRequests
+- uid: Google.GenAI.Types.EmbeddingsBatchJobSource.InlinedRequests*
+  name: InlinedRequests
+  href: api/Google.GenAI.Types.EmbeddingsBatchJobSource.html#Google_GenAI_Types_EmbeddingsBatchJobSource_InlinedRequests_
+  commentId: Overload:Google.GenAI.Types.EmbeddingsBatchJobSource.InlinedRequests
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EmbeddingsBatchJobSource.InlinedRequests
+  nameWithType: EmbeddingsBatchJobSource.InlinedRequests
 - uid: Google.GenAI.Types.EncryptionSpec
   name: EncryptionSpec
   href: api/Google.GenAI.Types.EncryptionSpec.html
@@ -8310,6 +9200,41 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerationConfigThinkingConfig.FromJson
   nameWithType: GenerationConfigThinkingConfig.FromJson
+- uid: Google.GenAI.Types.GetBatchJobConfig
+  name: GetBatchJobConfig
+  href: api/Google.GenAI.Types.GetBatchJobConfig.html
+  commentId: T:Google.GenAI.Types.GetBatchJobConfig
+  fullName: Google.GenAI.Types.GetBatchJobConfig
+  nameWithType: GetBatchJobConfig
+- uid: Google.GenAI.Types.GetBatchJobConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.GetBatchJobConfig.html#Google_GenAI_Types_GetBatchJobConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.GetBatchJobConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.GetBatchJobConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.GetBatchJobConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: GetBatchJobConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: GetBatchJobConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.GetBatchJobConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.GetBatchJobConfig.html#Google_GenAI_Types_GetBatchJobConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.GetBatchJobConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GetBatchJobConfig.FromJson
+  nameWithType: GetBatchJobConfig.FromJson
+- uid: Google.GenAI.Types.GetBatchJobConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.GetBatchJobConfig.html#Google_GenAI_Types_GetBatchJobConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.GetBatchJobConfig.HttpOptions
+  fullName: Google.GenAI.Types.GetBatchJobConfig.HttpOptions
+  nameWithType: GetBatchJobConfig.HttpOptions
+- uid: Google.GenAI.Types.GetBatchJobConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.GetBatchJobConfig.html#Google_GenAI_Types_GetBatchJobConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.GetBatchJobConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GetBatchJobConfig.HttpOptions
+  nameWithType: GetBatchJobConfig.HttpOptions
 - uid: Google.GenAI.Types.GetCachedContentConfig
   name: GetCachedContentConfig
   href: api/Google.GenAI.Types.GetCachedContentConfig.html
@@ -10215,6 +11140,128 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.InlinedEmbedContentResponse.Response
   nameWithType: InlinedEmbedContentResponse.Response
+- uid: Google.GenAI.Types.InlinedRequest
+  name: InlinedRequest
+  href: api/Google.GenAI.Types.InlinedRequest.html
+  commentId: T:Google.GenAI.Types.InlinedRequest
+  fullName: Google.GenAI.Types.InlinedRequest
+  nameWithType: InlinedRequest
+- uid: Google.GenAI.Types.InlinedRequest.Config
+  name: Config
+  href: api/Google.GenAI.Types.InlinedRequest.html#Google_GenAI_Types_InlinedRequest_Config
+  commentId: P:Google.GenAI.Types.InlinedRequest.Config
+  fullName: Google.GenAI.Types.InlinedRequest.Config
+  nameWithType: InlinedRequest.Config
+- uid: Google.GenAI.Types.InlinedRequest.Config*
+  name: Config
+  href: api/Google.GenAI.Types.InlinedRequest.html#Google_GenAI_Types_InlinedRequest_Config_
+  commentId: Overload:Google.GenAI.Types.InlinedRequest.Config
+  isSpec: "True"
+  fullName: Google.GenAI.Types.InlinedRequest.Config
+  nameWithType: InlinedRequest.Config
+- uid: Google.GenAI.Types.InlinedRequest.Contents
+  name: Contents
+  href: api/Google.GenAI.Types.InlinedRequest.html#Google_GenAI_Types_InlinedRequest_Contents
+  commentId: P:Google.GenAI.Types.InlinedRequest.Contents
+  fullName: Google.GenAI.Types.InlinedRequest.Contents
+  nameWithType: InlinedRequest.Contents
+- uid: Google.GenAI.Types.InlinedRequest.Contents*
+  name: Contents
+  href: api/Google.GenAI.Types.InlinedRequest.html#Google_GenAI_Types_InlinedRequest_Contents_
+  commentId: Overload:Google.GenAI.Types.InlinedRequest.Contents
+  isSpec: "True"
+  fullName: Google.GenAI.Types.InlinedRequest.Contents
+  nameWithType: InlinedRequest.Contents
+- uid: Google.GenAI.Types.InlinedRequest.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.InlinedRequest.html#Google_GenAI_Types_InlinedRequest_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.InlinedRequest.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.InlinedRequest.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.InlinedRequest.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: InlinedRequest.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: InlinedRequest.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.InlinedRequest.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.InlinedRequest.html#Google_GenAI_Types_InlinedRequest_FromJson_
+  commentId: Overload:Google.GenAI.Types.InlinedRequest.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.InlinedRequest.FromJson
+  nameWithType: InlinedRequest.FromJson
+- uid: Google.GenAI.Types.InlinedRequest.Metadata
+  name: Metadata
+  href: api/Google.GenAI.Types.InlinedRequest.html#Google_GenAI_Types_InlinedRequest_Metadata
+  commentId: P:Google.GenAI.Types.InlinedRequest.Metadata
+  fullName: Google.GenAI.Types.InlinedRequest.Metadata
+  nameWithType: InlinedRequest.Metadata
+- uid: Google.GenAI.Types.InlinedRequest.Metadata*
+  name: Metadata
+  href: api/Google.GenAI.Types.InlinedRequest.html#Google_GenAI_Types_InlinedRequest_Metadata_
+  commentId: Overload:Google.GenAI.Types.InlinedRequest.Metadata
+  isSpec: "True"
+  fullName: Google.GenAI.Types.InlinedRequest.Metadata
+  nameWithType: InlinedRequest.Metadata
+- uid: Google.GenAI.Types.InlinedRequest.Model
+  name: Model
+  href: api/Google.GenAI.Types.InlinedRequest.html#Google_GenAI_Types_InlinedRequest_Model
+  commentId: P:Google.GenAI.Types.InlinedRequest.Model
+  fullName: Google.GenAI.Types.InlinedRequest.Model
+  nameWithType: InlinedRequest.Model
+- uid: Google.GenAI.Types.InlinedRequest.Model*
+  name: Model
+  href: api/Google.GenAI.Types.InlinedRequest.html#Google_GenAI_Types_InlinedRequest_Model_
+  commentId: Overload:Google.GenAI.Types.InlinedRequest.Model
+  isSpec: "True"
+  fullName: Google.GenAI.Types.InlinedRequest.Model
+  nameWithType: InlinedRequest.Model
+- uid: Google.GenAI.Types.InlinedResponse
+  name: InlinedResponse
+  href: api/Google.GenAI.Types.InlinedResponse.html
+  commentId: T:Google.GenAI.Types.InlinedResponse
+  fullName: Google.GenAI.Types.InlinedResponse
+  nameWithType: InlinedResponse
+- uid: Google.GenAI.Types.InlinedResponse.Error
+  name: Error
+  href: api/Google.GenAI.Types.InlinedResponse.html#Google_GenAI_Types_InlinedResponse_Error
+  commentId: P:Google.GenAI.Types.InlinedResponse.Error
+  fullName: Google.GenAI.Types.InlinedResponse.Error
+  nameWithType: InlinedResponse.Error
+- uid: Google.GenAI.Types.InlinedResponse.Error*
+  name: Error
+  href: api/Google.GenAI.Types.InlinedResponse.html#Google_GenAI_Types_InlinedResponse_Error_
+  commentId: Overload:Google.GenAI.Types.InlinedResponse.Error
+  isSpec: "True"
+  fullName: Google.GenAI.Types.InlinedResponse.Error
+  nameWithType: InlinedResponse.Error
+- uid: Google.GenAI.Types.InlinedResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.InlinedResponse.html#Google_GenAI_Types_InlinedResponse_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.InlinedResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.InlinedResponse.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.InlinedResponse.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: InlinedResponse.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: InlinedResponse.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.InlinedResponse.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.InlinedResponse.html#Google_GenAI_Types_InlinedResponse_FromJson_
+  commentId: Overload:Google.GenAI.Types.InlinedResponse.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.InlinedResponse.FromJson
+  nameWithType: InlinedResponse.FromJson
+- uid: Google.GenAI.Types.InlinedResponse.Response
+  name: Response
+  href: api/Google.GenAI.Types.InlinedResponse.html#Google_GenAI_Types_InlinedResponse_Response
+  commentId: P:Google.GenAI.Types.InlinedResponse.Response
+  fullName: Google.GenAI.Types.InlinedResponse.Response
+  nameWithType: InlinedResponse.Response
+- uid: Google.GenAI.Types.InlinedResponse.Response*
+  name: Response
+  href: api/Google.GenAI.Types.InlinedResponse.html#Google_GenAI_Types_InlinedResponse_Response_
+  commentId: Overload:Google.GenAI.Types.InlinedResponse.Response
+  isSpec: "True"
+  fullName: Google.GenAI.Types.InlinedResponse.Response
+  nameWithType: InlinedResponse.Response
 - uid: Google.GenAI.Types.Interval
   name: Interval
   href: api/Google.GenAI.Types.Interval.html
@@ -10468,6 +11515,141 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.LatLng.Longitude
   nameWithType: LatLng.Longitude
+- uid: Google.GenAI.Types.ListBatchJobsConfig
+  name: ListBatchJobsConfig
+  href: api/Google.GenAI.Types.ListBatchJobsConfig.html
+  commentId: T:Google.GenAI.Types.ListBatchJobsConfig
+  fullName: Google.GenAI.Types.ListBatchJobsConfig
+  nameWithType: ListBatchJobsConfig
+- uid: Google.GenAI.Types.ListBatchJobsConfig.Filter
+  name: Filter
+  href: api/Google.GenAI.Types.ListBatchJobsConfig.html#Google_GenAI_Types_ListBatchJobsConfig_Filter
+  commentId: P:Google.GenAI.Types.ListBatchJobsConfig.Filter
+  fullName: Google.GenAI.Types.ListBatchJobsConfig.Filter
+  nameWithType: ListBatchJobsConfig.Filter
+- uid: Google.GenAI.Types.ListBatchJobsConfig.Filter*
+  name: Filter
+  href: api/Google.GenAI.Types.ListBatchJobsConfig.html#Google_GenAI_Types_ListBatchJobsConfig_Filter_
+  commentId: Overload:Google.GenAI.Types.ListBatchJobsConfig.Filter
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListBatchJobsConfig.Filter
+  nameWithType: ListBatchJobsConfig.Filter
+- uid: Google.GenAI.Types.ListBatchJobsConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ListBatchJobsConfig.html#Google_GenAI_Types_ListBatchJobsConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ListBatchJobsConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ListBatchJobsConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ListBatchJobsConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ListBatchJobsConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ListBatchJobsConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ListBatchJobsConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ListBatchJobsConfig.html#Google_GenAI_Types_ListBatchJobsConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.ListBatchJobsConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListBatchJobsConfig.FromJson
+  nameWithType: ListBatchJobsConfig.FromJson
+- uid: Google.GenAI.Types.ListBatchJobsConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.ListBatchJobsConfig.html#Google_GenAI_Types_ListBatchJobsConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.ListBatchJobsConfig.HttpOptions
+  fullName: Google.GenAI.Types.ListBatchJobsConfig.HttpOptions
+  nameWithType: ListBatchJobsConfig.HttpOptions
+- uid: Google.GenAI.Types.ListBatchJobsConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.ListBatchJobsConfig.html#Google_GenAI_Types_ListBatchJobsConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.ListBatchJobsConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListBatchJobsConfig.HttpOptions
+  nameWithType: ListBatchJobsConfig.HttpOptions
+- uid: Google.GenAI.Types.ListBatchJobsConfig.PageSize
+  name: PageSize
+  href: api/Google.GenAI.Types.ListBatchJobsConfig.html#Google_GenAI_Types_ListBatchJobsConfig_PageSize
+  commentId: P:Google.GenAI.Types.ListBatchJobsConfig.PageSize
+  fullName: Google.GenAI.Types.ListBatchJobsConfig.PageSize
+  nameWithType: ListBatchJobsConfig.PageSize
+- uid: Google.GenAI.Types.ListBatchJobsConfig.PageSize*
+  name: PageSize
+  href: api/Google.GenAI.Types.ListBatchJobsConfig.html#Google_GenAI_Types_ListBatchJobsConfig_PageSize_
+  commentId: Overload:Google.GenAI.Types.ListBatchJobsConfig.PageSize
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListBatchJobsConfig.PageSize
+  nameWithType: ListBatchJobsConfig.PageSize
+- uid: Google.GenAI.Types.ListBatchJobsConfig.PageToken
+  name: PageToken
+  href: api/Google.GenAI.Types.ListBatchJobsConfig.html#Google_GenAI_Types_ListBatchJobsConfig_PageToken
+  commentId: P:Google.GenAI.Types.ListBatchJobsConfig.PageToken
+  fullName: Google.GenAI.Types.ListBatchJobsConfig.PageToken
+  nameWithType: ListBatchJobsConfig.PageToken
+- uid: Google.GenAI.Types.ListBatchJobsConfig.PageToken*
+  name: PageToken
+  href: api/Google.GenAI.Types.ListBatchJobsConfig.html#Google_GenAI_Types_ListBatchJobsConfig_PageToken_
+  commentId: Overload:Google.GenAI.Types.ListBatchJobsConfig.PageToken
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListBatchJobsConfig.PageToken
+  nameWithType: ListBatchJobsConfig.PageToken
+- uid: Google.GenAI.Types.ListBatchJobsResponse
+  name: ListBatchJobsResponse
+  href: api/Google.GenAI.Types.ListBatchJobsResponse.html
+  commentId: T:Google.GenAI.Types.ListBatchJobsResponse
+  fullName: Google.GenAI.Types.ListBatchJobsResponse
+  nameWithType: ListBatchJobsResponse
+- uid: Google.GenAI.Types.ListBatchJobsResponse.BatchJobs
+  name: BatchJobs
+  href: api/Google.GenAI.Types.ListBatchJobsResponse.html#Google_GenAI_Types_ListBatchJobsResponse_BatchJobs
+  commentId: P:Google.GenAI.Types.ListBatchJobsResponse.BatchJobs
+  fullName: Google.GenAI.Types.ListBatchJobsResponse.BatchJobs
+  nameWithType: ListBatchJobsResponse.BatchJobs
+- uid: Google.GenAI.Types.ListBatchJobsResponse.BatchJobs*
+  name: BatchJobs
+  href: api/Google.GenAI.Types.ListBatchJobsResponse.html#Google_GenAI_Types_ListBatchJobsResponse_BatchJobs_
+  commentId: Overload:Google.GenAI.Types.ListBatchJobsResponse.BatchJobs
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListBatchJobsResponse.BatchJobs
+  nameWithType: ListBatchJobsResponse.BatchJobs
+- uid: Google.GenAI.Types.ListBatchJobsResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ListBatchJobsResponse.html#Google_GenAI_Types_ListBatchJobsResponse_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ListBatchJobsResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ListBatchJobsResponse.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ListBatchJobsResponse.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ListBatchJobsResponse.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ListBatchJobsResponse.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ListBatchJobsResponse.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ListBatchJobsResponse.html#Google_GenAI_Types_ListBatchJobsResponse_FromJson_
+  commentId: Overload:Google.GenAI.Types.ListBatchJobsResponse.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListBatchJobsResponse.FromJson
+  nameWithType: ListBatchJobsResponse.FromJson
+- uid: Google.GenAI.Types.ListBatchJobsResponse.NextPageToken
+  name: NextPageToken
+  href: api/Google.GenAI.Types.ListBatchJobsResponse.html#Google_GenAI_Types_ListBatchJobsResponse_NextPageToken
+  commentId: P:Google.GenAI.Types.ListBatchJobsResponse.NextPageToken
+  fullName: Google.GenAI.Types.ListBatchJobsResponse.NextPageToken
+  nameWithType: ListBatchJobsResponse.NextPageToken
+- uid: Google.GenAI.Types.ListBatchJobsResponse.NextPageToken*
+  name: NextPageToken
+  href: api/Google.GenAI.Types.ListBatchJobsResponse.html#Google_GenAI_Types_ListBatchJobsResponse_NextPageToken_
+  commentId: Overload:Google.GenAI.Types.ListBatchJobsResponse.NextPageToken
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListBatchJobsResponse.NextPageToken
+  nameWithType: ListBatchJobsResponse.NextPageToken
+- uid: Google.GenAI.Types.ListBatchJobsResponse.SdkHttpResponse
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.ListBatchJobsResponse.html#Google_GenAI_Types_ListBatchJobsResponse_SdkHttpResponse
+  commentId: P:Google.GenAI.Types.ListBatchJobsResponse.SdkHttpResponse
+  fullName: Google.GenAI.Types.ListBatchJobsResponse.SdkHttpResponse
+  nameWithType: ListBatchJobsResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.ListBatchJobsResponse.SdkHttpResponse*
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.ListBatchJobsResponse.html#Google_GenAI_Types_ListBatchJobsResponse_SdkHttpResponse_
+  commentId: Overload:Google.GenAI.Types.ListBatchJobsResponse.SdkHttpResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListBatchJobsResponse.SdkHttpResponse
+  nameWithType: ListBatchJobsResponse.SdkHttpResponse
 - uid: Google.GenAI.Types.ListCachedContentsConfig
   name: ListCachedContentsConfig
   href: api/Google.GenAI.Types.ListCachedContentsConfig.html
