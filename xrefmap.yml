@@ -1779,6 +1779,22 @@ references:
   fullName.vb: Google.GenAI.Tunings.New
   nameWithType: Tunings.Tunings
   nameWithType.vb: Tunings.New
+- uid: Google.GenAI.Tunings.CancelAsync(System.String,Google.GenAI.Types.CancelTuningJobConfig)
+  name: CancelAsync(string, CancelTuningJobConfig?)
+  href: api/Google.GenAI.Tunings.html#Google_GenAI_Tunings_CancelAsync_System_String_Google_GenAI_Types_CancelTuningJobConfig_
+  commentId: M:Google.GenAI.Tunings.CancelAsync(System.String,Google.GenAI.Types.CancelTuningJobConfig)
+  name.vb: CancelAsync(String, CancelTuningJobConfig)
+  fullName: Google.GenAI.Tunings.CancelAsync(string, Google.GenAI.Types.CancelTuningJobConfig?)
+  fullName.vb: Google.GenAI.Tunings.CancelAsync(String, Google.GenAI.Types.CancelTuningJobConfig)
+  nameWithType: Tunings.CancelAsync(string, CancelTuningJobConfig?)
+  nameWithType.vb: Tunings.CancelAsync(String, CancelTuningJobConfig)
+- uid: Google.GenAI.Tunings.CancelAsync*
+  name: CancelAsync
+  href: api/Google.GenAI.Tunings.html#Google_GenAI_Tunings_CancelAsync_
+  commentId: Overload:Google.GenAI.Tunings.CancelAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Tunings.CancelAsync
+  nameWithType: Tunings.CancelAsync
 - uid: Google.GenAI.Tunings.GetAsync(System.String,Google.GenAI.Types.GetTuningJobConfig)
   name: GetAsync(string, GetTuningJobConfig?)
   href: api/Google.GenAI.Tunings.html#Google_GenAI_Tunings_GetAsync_System_String_Google_GenAI_Types_GetTuningJobConfig_
@@ -3292,6 +3308,76 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CancelBatchJobConfig.HttpOptions
   nameWithType: CancelBatchJobConfig.HttpOptions
+- uid: Google.GenAI.Types.CancelTuningJobConfig
+  name: CancelTuningJobConfig
+  href: api/Google.GenAI.Types.CancelTuningJobConfig.html
+  commentId: T:Google.GenAI.Types.CancelTuningJobConfig
+  fullName: Google.GenAI.Types.CancelTuningJobConfig
+  nameWithType: CancelTuningJobConfig
+- uid: Google.GenAI.Types.CancelTuningJobConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.CancelTuningJobConfig.html#Google_GenAI_Types_CancelTuningJobConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.CancelTuningJobConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.CancelTuningJobConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.CancelTuningJobConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: CancelTuningJobConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: CancelTuningJobConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.CancelTuningJobConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.CancelTuningJobConfig.html#Google_GenAI_Types_CancelTuningJobConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.CancelTuningJobConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CancelTuningJobConfig.FromJson
+  nameWithType: CancelTuningJobConfig.FromJson
+- uid: Google.GenAI.Types.CancelTuningJobConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.CancelTuningJobConfig.html#Google_GenAI_Types_CancelTuningJobConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.CancelTuningJobConfig.HttpOptions
+  fullName: Google.GenAI.Types.CancelTuningJobConfig.HttpOptions
+  nameWithType: CancelTuningJobConfig.HttpOptions
+- uid: Google.GenAI.Types.CancelTuningJobConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.CancelTuningJobConfig.html#Google_GenAI_Types_CancelTuningJobConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.CancelTuningJobConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CancelTuningJobConfig.HttpOptions
+  nameWithType: CancelTuningJobConfig.HttpOptions
+- uid: Google.GenAI.Types.CancelTuningJobResponse
+  name: CancelTuningJobResponse
+  href: api/Google.GenAI.Types.CancelTuningJobResponse.html
+  commentId: T:Google.GenAI.Types.CancelTuningJobResponse
+  fullName: Google.GenAI.Types.CancelTuningJobResponse
+  nameWithType: CancelTuningJobResponse
+- uid: Google.GenAI.Types.CancelTuningJobResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.CancelTuningJobResponse.html#Google_GenAI_Types_CancelTuningJobResponse_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.CancelTuningJobResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.CancelTuningJobResponse.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.CancelTuningJobResponse.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: CancelTuningJobResponse.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: CancelTuningJobResponse.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.CancelTuningJobResponse.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.CancelTuningJobResponse.html#Google_GenAI_Types_CancelTuningJobResponse_FromJson_
+  commentId: Overload:Google.GenAI.Types.CancelTuningJobResponse.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CancelTuningJobResponse.FromJson
+  nameWithType: CancelTuningJobResponse.FromJson
+- uid: Google.GenAI.Types.CancelTuningJobResponse.SdkHttpResponse
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.CancelTuningJobResponse.html#Google_GenAI_Types_CancelTuningJobResponse_SdkHttpResponse
+  commentId: P:Google.GenAI.Types.CancelTuningJobResponse.SdkHttpResponse
+  fullName: Google.GenAI.Types.CancelTuningJobResponse.SdkHttpResponse
+  nameWithType: CancelTuningJobResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.CancelTuningJobResponse.SdkHttpResponse*
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.CancelTuningJobResponse.html#Google_GenAI_Types_CancelTuningJobResponse_SdkHttpResponse_
+  commentId: Overload:Google.GenAI.Types.CancelTuningJobResponse.SdkHttpResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CancelTuningJobResponse.SdkHttpResponse
+  nameWithType: CancelTuningJobResponse.SdkHttpResponse
 - uid: Google.GenAI.Types.Candidate
   name: Candidate
   href: api/Google.GenAI.Types.Candidate.html
