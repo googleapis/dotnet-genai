@@ -474,11 +474,15 @@ public class GetModelExample {
     // assuming credentials are set up in environment variables as instructed above.
     var client = new Client();
 
-    var response = await client.Models.GetAsync(
-      model: &quot;models/your-tuned-model&quot;
+    // get a base model
+    var baseModelResponse = await client.Models.GetAsync(
+      model: &quot;gemini-2.5-flash&quot;
     );
 
-    Console.WriteLine(response.DisplayName);
+    // get a tuned model
+    var tunedModelResponse = await client.Models.GetAsync(
+      model: &quot;models/your-tuned-model&quot;
+    );
   }
 }
 </code></pre>
@@ -512,6 +516,35 @@ public class DeleteModelExample {
     await client.Models.DeleteAsync(
       model: &quot;models/your-tuned-model&quot;
     );
+  }
+}
+</code></pre>
+<h3 id="list-models">List Models</h3>
+<p>The <code>ListAsync</code> method returns a <code>Pager</code> object that allows you to iterate through pages of models. If <code>QueryBase</code> is set to <code>true</code> (the default) in <code>ListModelsConfig</code>, it lists base models; otherwise, it lists tuned models.</p>
+<pre><code class="lang-csharp">using Google.GenAI;
+using Google.GenAI.Types;
+
+public class ListModelsExample {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client();
+
+    // List base models with default settings
+    Console.WriteLine(&quot;Base Models:&quot;);
+    var pager = await client.Models.ListAsync();
+    await foreach(var model in pager)
+    {
+        Console.WriteLine(model.Name);
+    }
+
+    // List tuned models with a page size of 10
+    Console.WriteLine(&quot;Tuned Models:&quot;);
+    var config = new ListModelsConfig { QueryBase = false, PageSize = 10 };
+    var tunedModelsPager = await client.Models.ListAsync(config);
+    await foreach(var model in tunedModelsPager)
+    {
+        Console.WriteLine(model.Name);
+    }
   }
 }
 </code></pre>

@@ -1385,6 +1385,22 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Models.GetAsync
   nameWithType: Models.GetAsync
+- uid: Google.GenAI.Models.ListAsync(Google.GenAI.Types.ListModelsConfig)
+  name: ListAsync(ListModelsConfig?)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_ListAsync_Google_GenAI_Types_ListModelsConfig_
+  commentId: M:Google.GenAI.Models.ListAsync(Google.GenAI.Types.ListModelsConfig)
+  name.vb: ListAsync(ListModelsConfig)
+  fullName: Google.GenAI.Models.ListAsync(Google.GenAI.Types.ListModelsConfig?)
+  fullName.vb: Google.GenAI.Models.ListAsync(Google.GenAI.Types.ListModelsConfig)
+  nameWithType: Models.ListAsync(ListModelsConfig?)
+  nameWithType.vb: Models.ListAsync(ListModelsConfig)
+- uid: Google.GenAI.Models.ListAsync*
+  name: ListAsync
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_ListAsync_
+  commentId: Overload:Google.GenAI.Models.ListAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Models.ListAsync
+  nameWithType: Models.ListAsync
 - uid: Google.GenAI.Models.RecontextImageAsync(System.String,Google.GenAI.Types.RecontextImageSource,Google.GenAI.Types.RecontextImageConfig)
   name: RecontextImageAsync(string, RecontextImageSource, RecontextImageConfig?)
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_RecontextImageAsync_System_String_Google_GenAI_Types_RecontextImageSource_Google_GenAI_Types_RecontextImageConfig_
@@ -11772,6 +11788,154 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ListCachedContentsResponse.SdkHttpResponse
   nameWithType: ListCachedContentsResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.ListModelsConfig
+  name: ListModelsConfig
+  href: api/Google.GenAI.Types.ListModelsConfig.html
+  commentId: T:Google.GenAI.Types.ListModelsConfig
+  fullName: Google.GenAI.Types.ListModelsConfig
+  nameWithType: ListModelsConfig
+- uid: Google.GenAI.Types.ListModelsConfig.Filter
+  name: Filter
+  href: api/Google.GenAI.Types.ListModelsConfig.html#Google_GenAI_Types_ListModelsConfig_Filter
+  commentId: P:Google.GenAI.Types.ListModelsConfig.Filter
+  fullName: Google.GenAI.Types.ListModelsConfig.Filter
+  nameWithType: ListModelsConfig.Filter
+- uid: Google.GenAI.Types.ListModelsConfig.Filter*
+  name: Filter
+  href: api/Google.GenAI.Types.ListModelsConfig.html#Google_GenAI_Types_ListModelsConfig_Filter_
+  commentId: Overload:Google.GenAI.Types.ListModelsConfig.Filter
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListModelsConfig.Filter
+  nameWithType: ListModelsConfig.Filter
+- uid: Google.GenAI.Types.ListModelsConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ListModelsConfig.html#Google_GenAI_Types_ListModelsConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ListModelsConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ListModelsConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ListModelsConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ListModelsConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ListModelsConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ListModelsConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ListModelsConfig.html#Google_GenAI_Types_ListModelsConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.ListModelsConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListModelsConfig.FromJson
+  nameWithType: ListModelsConfig.FromJson
+- uid: Google.GenAI.Types.ListModelsConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.ListModelsConfig.html#Google_GenAI_Types_ListModelsConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.ListModelsConfig.HttpOptions
+  fullName: Google.GenAI.Types.ListModelsConfig.HttpOptions
+  nameWithType: ListModelsConfig.HttpOptions
+- uid: Google.GenAI.Types.ListModelsConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.ListModelsConfig.html#Google_GenAI_Types_ListModelsConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.ListModelsConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListModelsConfig.HttpOptions
+  nameWithType: ListModelsConfig.HttpOptions
+- uid: Google.GenAI.Types.ListModelsConfig.PageSize
+  name: PageSize
+  href: api/Google.GenAI.Types.ListModelsConfig.html#Google_GenAI_Types_ListModelsConfig_PageSize
+  commentId: P:Google.GenAI.Types.ListModelsConfig.PageSize
+  fullName: Google.GenAI.Types.ListModelsConfig.PageSize
+  nameWithType: ListModelsConfig.PageSize
+- uid: Google.GenAI.Types.ListModelsConfig.PageSize*
+  name: PageSize
+  href: api/Google.GenAI.Types.ListModelsConfig.html#Google_GenAI_Types_ListModelsConfig_PageSize_
+  commentId: Overload:Google.GenAI.Types.ListModelsConfig.PageSize
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListModelsConfig.PageSize
+  nameWithType: ListModelsConfig.PageSize
+- uid: Google.GenAI.Types.ListModelsConfig.PageToken
+  name: PageToken
+  href: api/Google.GenAI.Types.ListModelsConfig.html#Google_GenAI_Types_ListModelsConfig_PageToken
+  commentId: P:Google.GenAI.Types.ListModelsConfig.PageToken
+  fullName: Google.GenAI.Types.ListModelsConfig.PageToken
+  nameWithType: ListModelsConfig.PageToken
+- uid: Google.GenAI.Types.ListModelsConfig.PageToken*
+  name: PageToken
+  href: api/Google.GenAI.Types.ListModelsConfig.html#Google_GenAI_Types_ListModelsConfig_PageToken_
+  commentId: Overload:Google.GenAI.Types.ListModelsConfig.PageToken
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListModelsConfig.PageToken
+  nameWithType: ListModelsConfig.PageToken
+- uid: Google.GenAI.Types.ListModelsConfig.QueryBase
+  name: QueryBase
+  href: api/Google.GenAI.Types.ListModelsConfig.html#Google_GenAI_Types_ListModelsConfig_QueryBase
+  commentId: P:Google.GenAI.Types.ListModelsConfig.QueryBase
+  fullName: Google.GenAI.Types.ListModelsConfig.QueryBase
+  nameWithType: ListModelsConfig.QueryBase
+- uid: Google.GenAI.Types.ListModelsConfig.QueryBase*
+  name: QueryBase
+  href: api/Google.GenAI.Types.ListModelsConfig.html#Google_GenAI_Types_ListModelsConfig_QueryBase_
+  commentId: Overload:Google.GenAI.Types.ListModelsConfig.QueryBase
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListModelsConfig.QueryBase
+  nameWithType: ListModelsConfig.QueryBase
+- uid: Google.GenAI.Types.ListModelsResponse
+  name: ListModelsResponse
+  href: api/Google.GenAI.Types.ListModelsResponse.html
+  commentId: T:Google.GenAI.Types.ListModelsResponse
+  fullName: Google.GenAI.Types.ListModelsResponse
+  nameWithType: ListModelsResponse
+- uid: Google.GenAI.Types.ListModelsResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ListModelsResponse.html#Google_GenAI_Types_ListModelsResponse_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ListModelsResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ListModelsResponse.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ListModelsResponse.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ListModelsResponse.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ListModelsResponse.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ListModelsResponse.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ListModelsResponse.html#Google_GenAI_Types_ListModelsResponse_FromJson_
+  commentId: Overload:Google.GenAI.Types.ListModelsResponse.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListModelsResponse.FromJson
+  nameWithType: ListModelsResponse.FromJson
+- uid: Google.GenAI.Types.ListModelsResponse.Models
+  name: Models
+  href: api/Google.GenAI.Types.ListModelsResponse.html#Google_GenAI_Types_ListModelsResponse_Models
+  commentId: P:Google.GenAI.Types.ListModelsResponse.Models
+  fullName: Google.GenAI.Types.ListModelsResponse.Models
+  nameWithType: ListModelsResponse.Models
+- uid: Google.GenAI.Types.ListModelsResponse.Models*
+  name: Models
+  href: api/Google.GenAI.Types.ListModelsResponse.html#Google_GenAI_Types_ListModelsResponse_Models_
+  commentId: Overload:Google.GenAI.Types.ListModelsResponse.Models
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListModelsResponse.Models
+  nameWithType: ListModelsResponse.Models
+- uid: Google.GenAI.Types.ListModelsResponse.NextPageToken
+  name: NextPageToken
+  href: api/Google.GenAI.Types.ListModelsResponse.html#Google_GenAI_Types_ListModelsResponse_NextPageToken
+  commentId: P:Google.GenAI.Types.ListModelsResponse.NextPageToken
+  fullName: Google.GenAI.Types.ListModelsResponse.NextPageToken
+  nameWithType: ListModelsResponse.NextPageToken
+- uid: Google.GenAI.Types.ListModelsResponse.NextPageToken*
+  name: NextPageToken
+  href: api/Google.GenAI.Types.ListModelsResponse.html#Google_GenAI_Types_ListModelsResponse_NextPageToken_
+  commentId: Overload:Google.GenAI.Types.ListModelsResponse.NextPageToken
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListModelsResponse.NextPageToken
+  nameWithType: ListModelsResponse.NextPageToken
+- uid: Google.GenAI.Types.ListModelsResponse.SdkHttpResponse
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.ListModelsResponse.html#Google_GenAI_Types_ListModelsResponse_SdkHttpResponse
+  commentId: P:Google.GenAI.Types.ListModelsResponse.SdkHttpResponse
+  fullName: Google.GenAI.Types.ListModelsResponse.SdkHttpResponse
+  nameWithType: ListModelsResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.ListModelsResponse.SdkHttpResponse*
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.ListModelsResponse.html#Google_GenAI_Types_ListModelsResponse_SdkHttpResponse_
+  commentId: Overload:Google.GenAI.Types.ListModelsResponse.SdkHttpResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListModelsResponse.SdkHttpResponse
+  nameWithType: ListModelsResponse.SdkHttpResponse
 - uid: Google.GenAI.Types.ListTuningJobsConfig
   name: ListTuningJobsConfig
   href: api/Google.GenAI.Types.ListTuningJobsConfig.html

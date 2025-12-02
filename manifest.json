@@ -2366,6 +2366,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ListModelsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ListModelsConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ListModelsConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ListModelsResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ListModelsResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ListModelsResponse",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.ListTuningJobsConfig.yml",
       "output": {
         ".html": {
