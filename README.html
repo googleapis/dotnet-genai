@@ -1280,6 +1280,84 @@ public class ListTuningJobs {
     }
 }
 </code></pre>
+<h2 id="files-gemini-api-only">Files (Gemini API only)</h2>
+<p>The Files feature are only supported for the Gemini API.</p>
+<h3 id="upload-file">Upload File</h3>
+<pre><code class="lang-csharp">using Google.GenAI;
+using Google.GenAI.Types;
+
+public class Files {
+  public static async Task Main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client(vertexAI: false);
+
+    // uploading from local file path
+    var uploadResponse1 = await client.Files.UploadAsync(filtePath: &quot;path/to/your/file.png&quot;);
+    Console.WriteLine($&quot;Gemini API Files Upload Response: {uploadResponse1}&quot;);
+
+    // uploading from bytes
+    // using this fileBytes variable for demo purpose only
+    byte[] fileBytes = await System.IO.File.ReadAllBytesAsync(&quot;path/to/your/file.png&quot;);
+    var uploadResponse2 = await geminiClient.Files.UploadAsync(
+          bytes: fileBytes,
+          fileName: &quot;file.png&quot;
+      );
+      Console.WriteLine($&quot;Gemini API Files Upload Response: {uploadResponse2}&quot;);
+  }
+}
+</code></pre>
+<h3 id="get-file">Get File</h3>
+<pre><code class="lang-csharp">using Google.GenAI;
+using Google.GenAI.Types;
+
+public class Files {
+  public static async Task Main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client(vertexAI: false);
+
+    // usually, pattern is similar to this example &quot;files/s0pa54alni6w&quot;
+    string fileName = &quot;files/randomID&quot;;
+    var getResponse = await client.Files.GetAsync(name: fileName);
+    Console.WriteLine($&quot;Gemini API Files Get Response: {getResponse}&quot;);
+
+  }
+}
+</code></pre>
+<h3 id="delete-file">Delete File</h3>
+<pre><code class="lang-csharp">using Google.GenAI;
+using Google.GenAI.Types;
+
+public class Files {
+  public static async Task Main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client(vertexAI: false);
+
+    // usually, pattern is similar to this example &quot;files/s0pa54alni6w&quot;
+    string fileName = &quot;files/randomID&quot;;
+    var deleteResponse = await client.Files.DeleteAsync(name: fileName);
+    Console.WriteLine($&quot;Gemini API Files Delete Response: {deleteResponse}&quot;);
+
+  }
+}
+</code></pre>
+<h3 id="list-file">List File</h3>
+<pre><code class="lang-csharp">using Google.GenAI;
+using Google.GenAI.Types;
+
+public class Files {
+  public static async Task Main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client(vertexAI: false);
+
+    var pager = await client.Files.ListAsync();
+    await foreach(var page in pager) {
+      Console.WriteLine($&quot;Gemini API Files List Response page: {page}&quot;);
+    }
+
+  }
+}
+
+</code></pre>
 
 </article>
 

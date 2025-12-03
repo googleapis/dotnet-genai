@@ -126,6 +126,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Files.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Files.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Files",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.HttpApiClient.yml",
       "output": {
         ".html": {
@@ -952,6 +966,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.CreateFileConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.CreateFileConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.CreateFileConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CreateFileConfig.yml\" sourcestartlinenumber=\"1\">Used to override the default configuration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.CreateFileResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.CreateFileResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.CreateFileResponse",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CreateFileResponse.yml\" sourcestartlinenumber=\"1\">Response for the create file method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.CreateTuningJobConfig.yml",
       "output": {
         ".html": {
@@ -1047,6 +1089,34 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.DeleteCachedContentResponse",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DeleteCachedContentResponse.yml\" sourcestartlinenumber=\"1\">Empty response for caches.delete method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.DeleteFileConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.DeleteFileConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.DeleteFileConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DeleteFileConfig.yml\" sourcestartlinenumber=\"1\">Used to override the default configuration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.DeleteFileResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.DeleteFileResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.DeleteFileResponse",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DeleteFileResponse.yml\" sourcestartlinenumber=\"1\">Response for the delete file method.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1428,6 +1498,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.File.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.File.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.File",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.File.yml\" sourcestartlinenumber=\"1\">A file uploaded to the API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.FileData.yml",
       "output": {
         ".html": {
@@ -1439,6 +1523,48 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.FileData",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FileData.yml\" sourcestartlinenumber=\"1\">URI based data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.FileSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.FileSource.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.FileSource",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FileSource.yml\" sourcestartlinenumber=\"1\">Source of the File.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.FileState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.FileState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.FileState",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FileState.yml\" sourcestartlinenumber=\"1\">State for the lifecycle of a File.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.FileStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.FileStatus.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.FileStatus",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FileStatus.yml\" sourcestartlinenumber=\"1\">Status of a File that uses a common error model.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1887,6 +2013,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GetCachedContentConfig",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GetCachedContentConfig.yml\" sourcestartlinenumber=\"1\">Optional parameters for caches.get method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.GetFileConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.GetFileConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.GetFileConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GetFileConfig.yml\" sourcestartlinenumber=\"1\">Used to override the default configuration.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2503,6 +2643,34 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ListCachedContentsResponse",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ListFilesConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ListFilesConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ListFilesConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ListFilesConfig.yml\" sourcestartlinenumber=\"1\">Used to override the default configuration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ListFilesResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ListFilesResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ListFilesResponse",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ListFilesResponse.yml\" sourcestartlinenumber=\"1\">Response for the list files method.</p>\n"
     },
     {
       "type": "ManagedReference",

@@ -701,6 +701,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Client.DisposeAsync
   nameWithType: Client.DisposeAsync
+- uid: Google.GenAI.Client.Files
+  name: Files
+  href: api/Google.GenAI.Client.html#Google_GenAI_Client_Files
+  commentId: P:Google.GenAI.Client.Files
+  fullName: Google.GenAI.Client.Files
+  nameWithType: Client.Files
+- uid: Google.GenAI.Client.Files*
+  name: Files
+  href: api/Google.GenAI.Client.html#Google_GenAI_Client_Files_
+  commentId: Overload:Google.GenAI.Client.Files
+  isSpec: "True"
+  fullName: Google.GenAI.Client.Files
+  nameWithType: Client.Files
 - uid: Google.GenAI.Client.Live
   name: Live
   href: api/Google.GenAI.Client.html#Google_GenAI_Client_Live
@@ -901,6 +914,163 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Common.SetValueByPath
   nameWithType: Common.SetValueByPath
+- uid: Google.GenAI.Files
+  name: Files
+  href: api/Google.GenAI.Files.html
+  commentId: T:Google.GenAI.Files
+  fullName: Google.GenAI.Files
+  nameWithType: Files
+- uid: Google.GenAI.Files.#ctor(Google.GenAI.ApiClient)
+  name: Files(ApiClient)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files__ctor_Google_GenAI_ApiClient_
+  commentId: M:Google.GenAI.Files.#ctor(Google.GenAI.ApiClient)
+  name.vb: New(ApiClient)
+  fullName: Google.GenAI.Files.Files(Google.GenAI.ApiClient)
+  fullName.vb: Google.GenAI.Files.New(Google.GenAI.ApiClient)
+  nameWithType: Files.Files(ApiClient)
+  nameWithType.vb: Files.New(ApiClient)
+- uid: Google.GenAI.Files.#ctor*
+  name: Files
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files__ctor_
+  commentId: Overload:Google.GenAI.Files.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Google.GenAI.Files.Files
+  fullName.vb: Google.GenAI.Files.New
+  nameWithType: Files.Files
+  nameWithType.vb: Files.New
+- uid: Google.GenAI.Files.DeleteAsync(System.String,Google.GenAI.Types.DeleteFileConfig)
+  name: DeleteAsync(string, DeleteFileConfig?)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DeleteAsync_System_String_Google_GenAI_Types_DeleteFileConfig_
+  commentId: M:Google.GenAI.Files.DeleteAsync(System.String,Google.GenAI.Types.DeleteFileConfig)
+  name.vb: DeleteAsync(String, DeleteFileConfig)
+  fullName: Google.GenAI.Files.DeleteAsync(string, Google.GenAI.Types.DeleteFileConfig?)
+  fullName.vb: Google.GenAI.Files.DeleteAsync(String, Google.GenAI.Types.DeleteFileConfig)
+  nameWithType: Files.DeleteAsync(string, DeleteFileConfig?)
+  nameWithType.vb: Files.DeleteAsync(String, DeleteFileConfig)
+- uid: Google.GenAI.Files.DeleteAsync*
+  name: DeleteAsync
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DeleteAsync_
+  commentId: Overload:Google.GenAI.Files.DeleteAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Files.DeleteAsync
+  nameWithType: Files.DeleteAsync
+- uid: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.File,Google.GenAI.Types.DownloadFileConfig)
+  name: DownloadAsync(File, DownloadFileConfig?)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadAsync_Google_GenAI_Types_File_Google_GenAI_Types_DownloadFileConfig_
+  commentId: M:Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.File,Google.GenAI.Types.DownloadFileConfig)
+  name.vb: DownloadAsync(File, DownloadFileConfig)
+  fullName: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.File, Google.GenAI.Types.DownloadFileConfig?)
+  fullName.vb: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.File, Google.GenAI.Types.DownloadFileConfig)
+  nameWithType: Files.DownloadAsync(File, DownloadFileConfig?)
+  nameWithType.vb: Files.DownloadAsync(File, DownloadFileConfig)
+- uid: Google.GenAI.Files.DownloadAsync(System.String,Google.GenAI.Types.DownloadFileConfig)
+  name: DownloadAsync(string, DownloadFileConfig?)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadAsync_System_String_Google_GenAI_Types_DownloadFileConfig_
+  commentId: M:Google.GenAI.Files.DownloadAsync(System.String,Google.GenAI.Types.DownloadFileConfig)
+  name.vb: DownloadAsync(String, DownloadFileConfig)
+  fullName: Google.GenAI.Files.DownloadAsync(string, Google.GenAI.Types.DownloadFileConfig?)
+  fullName.vb: Google.GenAI.Files.DownloadAsync(String, Google.GenAI.Types.DownloadFileConfig)
+  nameWithType: Files.DownloadAsync(string, DownloadFileConfig?)
+  nameWithType.vb: Files.DownloadAsync(String, DownloadFileConfig)
+- uid: Google.GenAI.Files.DownloadAsync*
+  name: DownloadAsync
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadAsync_
+  commentId: Overload:Google.GenAI.Files.DownloadAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Files.DownloadAsync
+  nameWithType: Files.DownloadAsync
+- uid: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.File,System.String,Google.GenAI.Types.DownloadFileConfig)
+  name: DownloadToFileAsync(File, string, DownloadFileConfig?)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadToFileAsync_Google_GenAI_Types_File_System_String_Google_GenAI_Types_DownloadFileConfig_
+  commentId: M:Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.File,System.String,Google.GenAI.Types.DownloadFileConfig)
+  name.vb: DownloadToFileAsync(File, String, DownloadFileConfig)
+  fullName: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.File, string, Google.GenAI.Types.DownloadFileConfig?)
+  fullName.vb: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.File, String, Google.GenAI.Types.DownloadFileConfig)
+  nameWithType: Files.DownloadToFileAsync(File, string, DownloadFileConfig?)
+  nameWithType.vb: Files.DownloadToFileAsync(File, String, DownloadFileConfig)
+- uid: Google.GenAI.Files.DownloadToFileAsync(System.String,System.String,Google.GenAI.Types.DownloadFileConfig)
+  name: DownloadToFileAsync(string, string, DownloadFileConfig?)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadToFileAsync_System_String_System_String_Google_GenAI_Types_DownloadFileConfig_
+  commentId: M:Google.GenAI.Files.DownloadToFileAsync(System.String,System.String,Google.GenAI.Types.DownloadFileConfig)
+  name.vb: DownloadToFileAsync(String, String, DownloadFileConfig)
+  fullName: Google.GenAI.Files.DownloadToFileAsync(string, string, Google.GenAI.Types.DownloadFileConfig?)
+  fullName.vb: Google.GenAI.Files.DownloadToFileAsync(String, String, Google.GenAI.Types.DownloadFileConfig)
+  nameWithType: Files.DownloadToFileAsync(string, string, DownloadFileConfig?)
+  nameWithType.vb: Files.DownloadToFileAsync(String, String, DownloadFileConfig)
+- uid: Google.GenAI.Files.DownloadToFileAsync*
+  name: DownloadToFileAsync
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadToFileAsync_
+  commentId: Overload:Google.GenAI.Files.DownloadToFileAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Files.DownloadToFileAsync
+  nameWithType: Files.DownloadToFileAsync
+- uid: Google.GenAI.Files.GetAsync(System.String,Google.GenAI.Types.GetFileConfig)
+  name: GetAsync(string, GetFileConfig?)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_GetAsync_System_String_Google_GenAI_Types_GetFileConfig_
+  commentId: M:Google.GenAI.Files.GetAsync(System.String,Google.GenAI.Types.GetFileConfig)
+  name.vb: GetAsync(String, GetFileConfig)
+  fullName: Google.GenAI.Files.GetAsync(string, Google.GenAI.Types.GetFileConfig?)
+  fullName.vb: Google.GenAI.Files.GetAsync(String, Google.GenAI.Types.GetFileConfig)
+  nameWithType: Files.GetAsync(string, GetFileConfig?)
+  nameWithType.vb: Files.GetAsync(String, GetFileConfig)
+- uid: Google.GenAI.Files.GetAsync*
+  name: GetAsync
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_GetAsync_
+  commentId: Overload:Google.GenAI.Files.GetAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Files.GetAsync
+  nameWithType: Files.GetAsync
+- uid: Google.GenAI.Files.ListAsync(Google.GenAI.Types.ListFilesConfig)
+  name: ListAsync(ListFilesConfig?)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_ListAsync_Google_GenAI_Types_ListFilesConfig_
+  commentId: M:Google.GenAI.Files.ListAsync(Google.GenAI.Types.ListFilesConfig)
+  name.vb: ListAsync(ListFilesConfig)
+  fullName: Google.GenAI.Files.ListAsync(Google.GenAI.Types.ListFilesConfig?)
+  fullName.vb: Google.GenAI.Files.ListAsync(Google.GenAI.Types.ListFilesConfig)
+  nameWithType: Files.ListAsync(ListFilesConfig?)
+  nameWithType.vb: Files.ListAsync(ListFilesConfig)
+- uid: Google.GenAI.Files.ListAsync*
+  name: ListAsync
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_ListAsync_
+  commentId: Overload:Google.GenAI.Files.ListAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Files.ListAsync
+  nameWithType: Files.ListAsync
+- uid: Google.GenAI.Files.UploadAsync(System.Byte[],System.String,Google.GenAI.Types.UploadFileConfig)
+  name: UploadAsync(byte[], string?, UploadFileConfig?)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_UploadAsync_System_Byte___System_String_Google_GenAI_Types_UploadFileConfig_
+  commentId: M:Google.GenAI.Files.UploadAsync(System.Byte[],System.String,Google.GenAI.Types.UploadFileConfig)
+  name.vb: UploadAsync(Byte(), String, UploadFileConfig)
+  fullName: Google.GenAI.Files.UploadAsync(byte[], string?, Google.GenAI.Types.UploadFileConfig?)
+  fullName.vb: Google.GenAI.Files.UploadAsync(Byte(), String, Google.GenAI.Types.UploadFileConfig)
+  nameWithType: Files.UploadAsync(byte[], string?, UploadFileConfig?)
+  nameWithType.vb: Files.UploadAsync(Byte(), String, UploadFileConfig)
+- uid: Google.GenAI.Files.UploadAsync(System.IO.Stream,System.Int64,System.String,System.String,Google.GenAI.Types.UploadFileConfig)
+  name: UploadAsync(Stream, long, string?, string?, UploadFileConfig?)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_UploadAsync_System_IO_Stream_System_Int64_System_String_System_String_Google_GenAI_Types_UploadFileConfig_
+  commentId: M:Google.GenAI.Files.UploadAsync(System.IO.Stream,System.Int64,System.String,System.String,Google.GenAI.Types.UploadFileConfig)
+  name.vb: UploadAsync(Stream, Long, String, String, UploadFileConfig)
+  fullName: Google.GenAI.Files.UploadAsync(System.IO.Stream, long, string?, string?, Google.GenAI.Types.UploadFileConfig?)
+  fullName.vb: Google.GenAI.Files.UploadAsync(System.IO.Stream, Long, String, String, Google.GenAI.Types.UploadFileConfig)
+  nameWithType: Files.UploadAsync(Stream, long, string?, string?, UploadFileConfig?)
+  nameWithType.vb: Files.UploadAsync(Stream, Long, String, String, UploadFileConfig)
+- uid: Google.GenAI.Files.UploadAsync(System.String,Google.GenAI.Types.UploadFileConfig)
+  name: UploadAsync(string, UploadFileConfig?)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_UploadAsync_System_String_Google_GenAI_Types_UploadFileConfig_
+  commentId: M:Google.GenAI.Files.UploadAsync(System.String,Google.GenAI.Types.UploadFileConfig)
+  name.vb: UploadAsync(String, UploadFileConfig)
+  fullName: Google.GenAI.Files.UploadAsync(string, Google.GenAI.Types.UploadFileConfig?)
+  fullName.vb: Google.GenAI.Files.UploadAsync(String, Google.GenAI.Types.UploadFileConfig)
+  nameWithType: Files.UploadAsync(string, UploadFileConfig?)
+  nameWithType.vb: Files.UploadAsync(String, UploadFileConfig)
+- uid: Google.GenAI.Files.UploadAsync*
+  name: UploadAsync
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_UploadAsync_
+  commentId: Overload:Google.GenAI.Files.UploadAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Files.UploadAsync
+  nameWithType: Files.UploadAsync
 - uid: Google.GenAI.HttpApiClient
   name: HttpApiClient
   href: api/Google.GenAI.HttpApiClient.html
@@ -4850,6 +5020,89 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.HttpOptions
   nameWithType: CreateEmbeddingsBatchJobConfig.HttpOptions
+- uid: Google.GenAI.Types.CreateFileConfig
+  name: CreateFileConfig
+  href: api/Google.GenAI.Types.CreateFileConfig.html
+  commentId: T:Google.GenAI.Types.CreateFileConfig
+  fullName: Google.GenAI.Types.CreateFileConfig
+  nameWithType: CreateFileConfig
+- uid: Google.GenAI.Types.CreateFileConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.CreateFileConfig.html#Google_GenAI_Types_CreateFileConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.CreateFileConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.CreateFileConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.CreateFileConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: CreateFileConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: CreateFileConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.CreateFileConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.CreateFileConfig.html#Google_GenAI_Types_CreateFileConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.CreateFileConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateFileConfig.FromJson
+  nameWithType: CreateFileConfig.FromJson
+- uid: Google.GenAI.Types.CreateFileConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.CreateFileConfig.html#Google_GenAI_Types_CreateFileConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.CreateFileConfig.HttpOptions
+  fullName: Google.GenAI.Types.CreateFileConfig.HttpOptions
+  nameWithType: CreateFileConfig.HttpOptions
+- uid: Google.GenAI.Types.CreateFileConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.CreateFileConfig.html#Google_GenAI_Types_CreateFileConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.CreateFileConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateFileConfig.HttpOptions
+  nameWithType: CreateFileConfig.HttpOptions
+- uid: Google.GenAI.Types.CreateFileConfig.ShouldReturnHttpResponse
+  name: ShouldReturnHttpResponse
+  href: api/Google.GenAI.Types.CreateFileConfig.html#Google_GenAI_Types_CreateFileConfig_ShouldReturnHttpResponse
+  commentId: P:Google.GenAI.Types.CreateFileConfig.ShouldReturnHttpResponse
+  fullName: Google.GenAI.Types.CreateFileConfig.ShouldReturnHttpResponse
+  nameWithType: CreateFileConfig.ShouldReturnHttpResponse
+- uid: Google.GenAI.Types.CreateFileConfig.ShouldReturnHttpResponse*
+  name: ShouldReturnHttpResponse
+  href: api/Google.GenAI.Types.CreateFileConfig.html#Google_GenAI_Types_CreateFileConfig_ShouldReturnHttpResponse_
+  commentId: Overload:Google.GenAI.Types.CreateFileConfig.ShouldReturnHttpResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateFileConfig.ShouldReturnHttpResponse
+  nameWithType: CreateFileConfig.ShouldReturnHttpResponse
+- uid: Google.GenAI.Types.CreateFileResponse
+  name: CreateFileResponse
+  href: api/Google.GenAI.Types.CreateFileResponse.html
+  commentId: T:Google.GenAI.Types.CreateFileResponse
+  fullName: Google.GenAI.Types.CreateFileResponse
+  nameWithType: CreateFileResponse
+- uid: Google.GenAI.Types.CreateFileResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.CreateFileResponse.html#Google_GenAI_Types_CreateFileResponse_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.CreateFileResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.CreateFileResponse.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.CreateFileResponse.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: CreateFileResponse.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: CreateFileResponse.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.CreateFileResponse.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.CreateFileResponse.html#Google_GenAI_Types_CreateFileResponse_FromJson_
+  commentId: Overload:Google.GenAI.Types.CreateFileResponse.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateFileResponse.FromJson
+  nameWithType: CreateFileResponse.FromJson
+- uid: Google.GenAI.Types.CreateFileResponse.SdkHttpResponse
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.CreateFileResponse.html#Google_GenAI_Types_CreateFileResponse_SdkHttpResponse
+  commentId: P:Google.GenAI.Types.CreateFileResponse.SdkHttpResponse
+  fullName: Google.GenAI.Types.CreateFileResponse.SdkHttpResponse
+  nameWithType: CreateFileResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.CreateFileResponse.SdkHttpResponse*
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.CreateFileResponse.html#Google_GenAI_Types_CreateFileResponse_SdkHttpResponse_
+  commentId: Overload:Google.GenAI.Types.CreateFileResponse.SdkHttpResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateFileResponse.SdkHttpResponse
+  nameWithType: CreateFileResponse.SdkHttpResponse
 - uid: Google.GenAI.Types.CreateTuningJobConfig
   name: CreateTuningJobConfig
   href: api/Google.GenAI.Types.CreateTuningJobConfig.html
@@ -5472,6 +5725,76 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.DeleteCachedContentResponse.SdkHttpResponse
   nameWithType: DeleteCachedContentResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.DeleteFileConfig
+  name: DeleteFileConfig
+  href: api/Google.GenAI.Types.DeleteFileConfig.html
+  commentId: T:Google.GenAI.Types.DeleteFileConfig
+  fullName: Google.GenAI.Types.DeleteFileConfig
+  nameWithType: DeleteFileConfig
+- uid: Google.GenAI.Types.DeleteFileConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.DeleteFileConfig.html#Google_GenAI_Types_DeleteFileConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.DeleteFileConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.DeleteFileConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.DeleteFileConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: DeleteFileConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: DeleteFileConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.DeleteFileConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.DeleteFileConfig.html#Google_GenAI_Types_DeleteFileConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.DeleteFileConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DeleteFileConfig.FromJson
+  nameWithType: DeleteFileConfig.FromJson
+- uid: Google.GenAI.Types.DeleteFileConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.DeleteFileConfig.html#Google_GenAI_Types_DeleteFileConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.DeleteFileConfig.HttpOptions
+  fullName: Google.GenAI.Types.DeleteFileConfig.HttpOptions
+  nameWithType: DeleteFileConfig.HttpOptions
+- uid: Google.GenAI.Types.DeleteFileConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.DeleteFileConfig.html#Google_GenAI_Types_DeleteFileConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.DeleteFileConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DeleteFileConfig.HttpOptions
+  nameWithType: DeleteFileConfig.HttpOptions
+- uid: Google.GenAI.Types.DeleteFileResponse
+  name: DeleteFileResponse
+  href: api/Google.GenAI.Types.DeleteFileResponse.html
+  commentId: T:Google.GenAI.Types.DeleteFileResponse
+  fullName: Google.GenAI.Types.DeleteFileResponse
+  nameWithType: DeleteFileResponse
+- uid: Google.GenAI.Types.DeleteFileResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.DeleteFileResponse.html#Google_GenAI_Types_DeleteFileResponse_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.DeleteFileResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.DeleteFileResponse.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.DeleteFileResponse.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: DeleteFileResponse.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: DeleteFileResponse.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.DeleteFileResponse.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.DeleteFileResponse.html#Google_GenAI_Types_DeleteFileResponse_FromJson_
+  commentId: Overload:Google.GenAI.Types.DeleteFileResponse.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DeleteFileResponse.FromJson
+  nameWithType: DeleteFileResponse.FromJson
+- uid: Google.GenAI.Types.DeleteFileResponse.SdkHttpResponse
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.DeleteFileResponse.html#Google_GenAI_Types_DeleteFileResponse_SdkHttpResponse
+  commentId: P:Google.GenAI.Types.DeleteFileResponse.SdkHttpResponse
+  fullName: Google.GenAI.Types.DeleteFileResponse.SdkHttpResponse
+  nameWithType: DeleteFileResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.DeleteFileResponse.SdkHttpResponse*
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.DeleteFileResponse.html#Google_GenAI_Types_DeleteFileResponse_SdkHttpResponse_
+  commentId: Overload:Google.GenAI.Types.DeleteFileResponse.SdkHttpResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DeleteFileResponse.SdkHttpResponse
+  nameWithType: DeleteFileResponse.SdkHttpResponse
 - uid: Google.GenAI.Types.DeleteModelConfig
   name: DeleteModelConfig
   href: api/Google.GenAI.Types.DeleteModelConfig.html
@@ -6919,6 +7242,210 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.FetchPredictOperationConfig.HttpOptions
   nameWithType: FetchPredictOperationConfig.HttpOptions
+- uid: Google.GenAI.Types.File
+  name: File
+  href: api/Google.GenAI.Types.File.html
+  commentId: T:Google.GenAI.Types.File
+  fullName: Google.GenAI.Types.File
+  nameWithType: File
+- uid: Google.GenAI.Types.File.CreateTime
+  name: CreateTime
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_CreateTime
+  commentId: P:Google.GenAI.Types.File.CreateTime
+  fullName: Google.GenAI.Types.File.CreateTime
+  nameWithType: File.CreateTime
+- uid: Google.GenAI.Types.File.CreateTime*
+  name: CreateTime
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_CreateTime_
+  commentId: Overload:Google.GenAI.Types.File.CreateTime
+  isSpec: "True"
+  fullName: Google.GenAI.Types.File.CreateTime
+  nameWithType: File.CreateTime
+- uid: Google.GenAI.Types.File.DisplayName
+  name: DisplayName
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_DisplayName
+  commentId: P:Google.GenAI.Types.File.DisplayName
+  fullName: Google.GenAI.Types.File.DisplayName
+  nameWithType: File.DisplayName
+- uid: Google.GenAI.Types.File.DisplayName*
+  name: DisplayName
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_DisplayName_
+  commentId: Overload:Google.GenAI.Types.File.DisplayName
+  isSpec: "True"
+  fullName: Google.GenAI.Types.File.DisplayName
+  nameWithType: File.DisplayName
+- uid: Google.GenAI.Types.File.DownloadUri
+  name: DownloadUri
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_DownloadUri
+  commentId: P:Google.GenAI.Types.File.DownloadUri
+  fullName: Google.GenAI.Types.File.DownloadUri
+  nameWithType: File.DownloadUri
+- uid: Google.GenAI.Types.File.DownloadUri*
+  name: DownloadUri
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_DownloadUri_
+  commentId: Overload:Google.GenAI.Types.File.DownloadUri
+  isSpec: "True"
+  fullName: Google.GenAI.Types.File.DownloadUri
+  nameWithType: File.DownloadUri
+- uid: Google.GenAI.Types.File.Error
+  name: Error
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_Error
+  commentId: P:Google.GenAI.Types.File.Error
+  fullName: Google.GenAI.Types.File.Error
+  nameWithType: File.Error
+- uid: Google.GenAI.Types.File.Error*
+  name: Error
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_Error_
+  commentId: Overload:Google.GenAI.Types.File.Error
+  isSpec: "True"
+  fullName: Google.GenAI.Types.File.Error
+  nameWithType: File.Error
+- uid: Google.GenAI.Types.File.ExpirationTime
+  name: ExpirationTime
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_ExpirationTime
+  commentId: P:Google.GenAI.Types.File.ExpirationTime
+  fullName: Google.GenAI.Types.File.ExpirationTime
+  nameWithType: File.ExpirationTime
+- uid: Google.GenAI.Types.File.ExpirationTime*
+  name: ExpirationTime
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_ExpirationTime_
+  commentId: Overload:Google.GenAI.Types.File.ExpirationTime
+  isSpec: "True"
+  fullName: Google.GenAI.Types.File.ExpirationTime
+  nameWithType: File.ExpirationTime
+- uid: Google.GenAI.Types.File.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.File.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.File.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.File.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: File.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: File.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.File.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_FromJson_
+  commentId: Overload:Google.GenAI.Types.File.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.File.FromJson
+  nameWithType: File.FromJson
+- uid: Google.GenAI.Types.File.MimeType
+  name: MimeType
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_MimeType
+  commentId: P:Google.GenAI.Types.File.MimeType
+  fullName: Google.GenAI.Types.File.MimeType
+  nameWithType: File.MimeType
+- uid: Google.GenAI.Types.File.MimeType*
+  name: MimeType
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_MimeType_
+  commentId: Overload:Google.GenAI.Types.File.MimeType
+  isSpec: "True"
+  fullName: Google.GenAI.Types.File.MimeType
+  nameWithType: File.MimeType
+- uid: Google.GenAI.Types.File.Name
+  name: Name
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_Name
+  commentId: P:Google.GenAI.Types.File.Name
+  fullName: Google.GenAI.Types.File.Name
+  nameWithType: File.Name
+- uid: Google.GenAI.Types.File.Name*
+  name: Name
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_Name_
+  commentId: Overload:Google.GenAI.Types.File.Name
+  isSpec: "True"
+  fullName: Google.GenAI.Types.File.Name
+  nameWithType: File.Name
+- uid: Google.GenAI.Types.File.Sha256Hash
+  name: Sha256Hash
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_Sha256Hash
+  commentId: P:Google.GenAI.Types.File.Sha256Hash
+  fullName: Google.GenAI.Types.File.Sha256Hash
+  nameWithType: File.Sha256Hash
+- uid: Google.GenAI.Types.File.Sha256Hash*
+  name: Sha256Hash
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_Sha256Hash_
+  commentId: Overload:Google.GenAI.Types.File.Sha256Hash
+  isSpec: "True"
+  fullName: Google.GenAI.Types.File.Sha256Hash
+  nameWithType: File.Sha256Hash
+- uid: Google.GenAI.Types.File.SizeBytes
+  name: SizeBytes
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_SizeBytes
+  commentId: P:Google.GenAI.Types.File.SizeBytes
+  fullName: Google.GenAI.Types.File.SizeBytes
+  nameWithType: File.SizeBytes
+- uid: Google.GenAI.Types.File.SizeBytes*
+  name: SizeBytes
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_SizeBytes_
+  commentId: Overload:Google.GenAI.Types.File.SizeBytes
+  isSpec: "True"
+  fullName: Google.GenAI.Types.File.SizeBytes
+  nameWithType: File.SizeBytes
+- uid: Google.GenAI.Types.File.Source
+  name: Source
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_Source
+  commentId: P:Google.GenAI.Types.File.Source
+  fullName: Google.GenAI.Types.File.Source
+  nameWithType: File.Source
+- uid: Google.GenAI.Types.File.Source*
+  name: Source
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_Source_
+  commentId: Overload:Google.GenAI.Types.File.Source
+  isSpec: "True"
+  fullName: Google.GenAI.Types.File.Source
+  nameWithType: File.Source
+- uid: Google.GenAI.Types.File.State
+  name: State
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_State
+  commentId: P:Google.GenAI.Types.File.State
+  fullName: Google.GenAI.Types.File.State
+  nameWithType: File.State
+- uid: Google.GenAI.Types.File.State*
+  name: State
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_State_
+  commentId: Overload:Google.GenAI.Types.File.State
+  isSpec: "True"
+  fullName: Google.GenAI.Types.File.State
+  nameWithType: File.State
+- uid: Google.GenAI.Types.File.UpdateTime
+  name: UpdateTime
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_UpdateTime
+  commentId: P:Google.GenAI.Types.File.UpdateTime
+  fullName: Google.GenAI.Types.File.UpdateTime
+  nameWithType: File.UpdateTime
+- uid: Google.GenAI.Types.File.UpdateTime*
+  name: UpdateTime
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_UpdateTime_
+  commentId: Overload:Google.GenAI.Types.File.UpdateTime
+  isSpec: "True"
+  fullName: Google.GenAI.Types.File.UpdateTime
+  nameWithType: File.UpdateTime
+- uid: Google.GenAI.Types.File.Uri
+  name: Uri
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_Uri
+  commentId: P:Google.GenAI.Types.File.Uri
+  fullName: Google.GenAI.Types.File.Uri
+  nameWithType: File.Uri
+- uid: Google.GenAI.Types.File.Uri*
+  name: Uri
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_Uri_
+  commentId: Overload:Google.GenAI.Types.File.Uri
+  isSpec: "True"
+  fullName: Google.GenAI.Types.File.Uri
+  nameWithType: File.Uri
+- uid: Google.GenAI.Types.File.VideoMetadata
+  name: VideoMetadata
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_VideoMetadata
+  commentId: P:Google.GenAI.Types.File.VideoMetadata
+  fullName: Google.GenAI.Types.File.VideoMetadata
+  nameWithType: File.VideoMetadata
+- uid: Google.GenAI.Types.File.VideoMetadata*
+  name: VideoMetadata
+  href: api/Google.GenAI.Types.File.html#Google_GenAI_Types_File_VideoMetadata_
+  commentId: Overload:Google.GenAI.Types.File.VideoMetadata
+  isSpec: "True"
+  fullName: Google.GenAI.Types.File.VideoMetadata
+  nameWithType: File.VideoMetadata
 - uid: Google.GenAI.Types.FileData
   name: FileData
   href: api/Google.GenAI.Types.FileData.html
@@ -6980,6 +7507,121 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.FileData.MimeType
   nameWithType: FileData.MimeType
+- uid: Google.GenAI.Types.FileSource
+  name: FileSource
+  href: api/Google.GenAI.Types.FileSource.html
+  commentId: T:Google.GenAI.Types.FileSource
+  fullName: Google.GenAI.Types.FileSource
+  nameWithType: FileSource
+- uid: Google.GenAI.Types.FileSource.GENERATED
+  name: GENERATED
+  href: api/Google.GenAI.Types.FileSource.html#Google_GenAI_Types_FileSource_GENERATED
+  commentId: F:Google.GenAI.Types.FileSource.GENERATED
+  fullName: Google.GenAI.Types.FileSource.GENERATED
+  nameWithType: FileSource.GENERATED
+- uid: Google.GenAI.Types.FileSource.SOURCE_UNSPECIFIED
+  name: SOURCE_UNSPECIFIED
+  href: api/Google.GenAI.Types.FileSource.html#Google_GenAI_Types_FileSource_SOURCE_UNSPECIFIED
+  commentId: F:Google.GenAI.Types.FileSource.SOURCE_UNSPECIFIED
+  fullName: Google.GenAI.Types.FileSource.SOURCE_UNSPECIFIED
+  nameWithType: FileSource.SOURCE_UNSPECIFIED
+- uid: Google.GenAI.Types.FileSource.UPLOADED
+  name: UPLOADED
+  href: api/Google.GenAI.Types.FileSource.html#Google_GenAI_Types_FileSource_UPLOADED
+  commentId: F:Google.GenAI.Types.FileSource.UPLOADED
+  fullName: Google.GenAI.Types.FileSource.UPLOADED
+  nameWithType: FileSource.UPLOADED
+- uid: Google.GenAI.Types.FileState
+  name: FileState
+  href: api/Google.GenAI.Types.FileState.html
+  commentId: T:Google.GenAI.Types.FileState
+  fullName: Google.GenAI.Types.FileState
+  nameWithType: FileState
+- uid: Google.GenAI.Types.FileState.ACTIVE
+  name: ACTIVE
+  href: api/Google.GenAI.Types.FileState.html#Google_GenAI_Types_FileState_ACTIVE
+  commentId: F:Google.GenAI.Types.FileState.ACTIVE
+  fullName: Google.GenAI.Types.FileState.ACTIVE
+  nameWithType: FileState.ACTIVE
+- uid: Google.GenAI.Types.FileState.FAILED
+  name: FAILED
+  href: api/Google.GenAI.Types.FileState.html#Google_GenAI_Types_FileState_FAILED
+  commentId: F:Google.GenAI.Types.FileState.FAILED
+  fullName: Google.GenAI.Types.FileState.FAILED
+  nameWithType: FileState.FAILED
+- uid: Google.GenAI.Types.FileState.PROCESSING
+  name: PROCESSING
+  href: api/Google.GenAI.Types.FileState.html#Google_GenAI_Types_FileState_PROCESSING
+  commentId: F:Google.GenAI.Types.FileState.PROCESSING
+  fullName: Google.GenAI.Types.FileState.PROCESSING
+  nameWithType: FileState.PROCESSING
+- uid: Google.GenAI.Types.FileState.STATE_UNSPECIFIED
+  name: STATE_UNSPECIFIED
+  href: api/Google.GenAI.Types.FileState.html#Google_GenAI_Types_FileState_STATE_UNSPECIFIED
+  commentId: F:Google.GenAI.Types.FileState.STATE_UNSPECIFIED
+  fullName: Google.GenAI.Types.FileState.STATE_UNSPECIFIED
+  nameWithType: FileState.STATE_UNSPECIFIED
+- uid: Google.GenAI.Types.FileStatus
+  name: FileStatus
+  href: api/Google.GenAI.Types.FileStatus.html
+  commentId: T:Google.GenAI.Types.FileStatus
+  fullName: Google.GenAI.Types.FileStatus
+  nameWithType: FileStatus
+- uid: Google.GenAI.Types.FileStatus.Code
+  name: Code
+  href: api/Google.GenAI.Types.FileStatus.html#Google_GenAI_Types_FileStatus_Code
+  commentId: P:Google.GenAI.Types.FileStatus.Code
+  fullName: Google.GenAI.Types.FileStatus.Code
+  nameWithType: FileStatus.Code
+- uid: Google.GenAI.Types.FileStatus.Code*
+  name: Code
+  href: api/Google.GenAI.Types.FileStatus.html#Google_GenAI_Types_FileStatus_Code_
+  commentId: Overload:Google.GenAI.Types.FileStatus.Code
+  isSpec: "True"
+  fullName: Google.GenAI.Types.FileStatus.Code
+  nameWithType: FileStatus.Code
+- uid: Google.GenAI.Types.FileStatus.Details
+  name: Details
+  href: api/Google.GenAI.Types.FileStatus.html#Google_GenAI_Types_FileStatus_Details
+  commentId: P:Google.GenAI.Types.FileStatus.Details
+  fullName: Google.GenAI.Types.FileStatus.Details
+  nameWithType: FileStatus.Details
+- uid: Google.GenAI.Types.FileStatus.Details*
+  name: Details
+  href: api/Google.GenAI.Types.FileStatus.html#Google_GenAI_Types_FileStatus_Details_
+  commentId: Overload:Google.GenAI.Types.FileStatus.Details
+  isSpec: "True"
+  fullName: Google.GenAI.Types.FileStatus.Details
+  nameWithType: FileStatus.Details
+- uid: Google.GenAI.Types.FileStatus.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.FileStatus.html#Google_GenAI_Types_FileStatus_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.FileStatus.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.FileStatus.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.FileStatus.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: FileStatus.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: FileStatus.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.FileStatus.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.FileStatus.html#Google_GenAI_Types_FileStatus_FromJson_
+  commentId: Overload:Google.GenAI.Types.FileStatus.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.FileStatus.FromJson
+  nameWithType: FileStatus.FromJson
+- uid: Google.GenAI.Types.FileStatus.Message
+  name: Message
+  href: api/Google.GenAI.Types.FileStatus.html#Google_GenAI_Types_FileStatus_Message
+  commentId: P:Google.GenAI.Types.FileStatus.Message
+  fullName: Google.GenAI.Types.FileStatus.Message
+  nameWithType: FileStatus.Message
+- uid: Google.GenAI.Types.FileStatus.Message*
+  name: Message
+  href: api/Google.GenAI.Types.FileStatus.html#Google_GenAI_Types_FileStatus_Message_
+  commentId: Overload:Google.GenAI.Types.FileStatus.Message
+  isSpec: "True"
+  fullName: Google.GenAI.Types.FileStatus.Message
+  nameWithType: FileStatus.Message
 - uid: Google.GenAI.Types.FinishReason
   name: FinishReason
   href: api/Google.GenAI.Types.FinishReason.html
@@ -9928,6 +10570,41 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GetCachedContentConfig.HttpOptions
   nameWithType: GetCachedContentConfig.HttpOptions
+- uid: Google.GenAI.Types.GetFileConfig
+  name: GetFileConfig
+  href: api/Google.GenAI.Types.GetFileConfig.html
+  commentId: T:Google.GenAI.Types.GetFileConfig
+  fullName: Google.GenAI.Types.GetFileConfig
+  nameWithType: GetFileConfig
+- uid: Google.GenAI.Types.GetFileConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.GetFileConfig.html#Google_GenAI_Types_GetFileConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.GetFileConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.GetFileConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.GetFileConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: GetFileConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: GetFileConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.GetFileConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.GetFileConfig.html#Google_GenAI_Types_GetFileConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.GetFileConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GetFileConfig.FromJson
+  nameWithType: GetFileConfig.FromJson
+- uid: Google.GenAI.Types.GetFileConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.GetFileConfig.html#Google_GenAI_Types_GetFileConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.GetFileConfig.HttpOptions
+  fullName: Google.GenAI.Types.GetFileConfig.HttpOptions
+  nameWithType: GetFileConfig.HttpOptions
+- uid: Google.GenAI.Types.GetFileConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.GetFileConfig.html#Google_GenAI_Types_GetFileConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.GetFileConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GetFileConfig.HttpOptions
+  nameWithType: GetFileConfig.HttpOptions
 - uid: Google.GenAI.Types.GetModelConfig
   name: GetModelConfig
   href: api/Google.GenAI.Types.GetModelConfig.html
@@ -12465,6 +13142,128 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ListCachedContentsResponse.SdkHttpResponse
   nameWithType: ListCachedContentsResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.ListFilesConfig
+  name: ListFilesConfig
+  href: api/Google.GenAI.Types.ListFilesConfig.html
+  commentId: T:Google.GenAI.Types.ListFilesConfig
+  fullName: Google.GenAI.Types.ListFilesConfig
+  nameWithType: ListFilesConfig
+- uid: Google.GenAI.Types.ListFilesConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ListFilesConfig.html#Google_GenAI_Types_ListFilesConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ListFilesConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ListFilesConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ListFilesConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ListFilesConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ListFilesConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ListFilesConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ListFilesConfig.html#Google_GenAI_Types_ListFilesConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.ListFilesConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListFilesConfig.FromJson
+  nameWithType: ListFilesConfig.FromJson
+- uid: Google.GenAI.Types.ListFilesConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.ListFilesConfig.html#Google_GenAI_Types_ListFilesConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.ListFilesConfig.HttpOptions
+  fullName: Google.GenAI.Types.ListFilesConfig.HttpOptions
+  nameWithType: ListFilesConfig.HttpOptions
+- uid: Google.GenAI.Types.ListFilesConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.ListFilesConfig.html#Google_GenAI_Types_ListFilesConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.ListFilesConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListFilesConfig.HttpOptions
+  nameWithType: ListFilesConfig.HttpOptions
+- uid: Google.GenAI.Types.ListFilesConfig.PageSize
+  name: PageSize
+  href: api/Google.GenAI.Types.ListFilesConfig.html#Google_GenAI_Types_ListFilesConfig_PageSize
+  commentId: P:Google.GenAI.Types.ListFilesConfig.PageSize
+  fullName: Google.GenAI.Types.ListFilesConfig.PageSize
+  nameWithType: ListFilesConfig.PageSize
+- uid: Google.GenAI.Types.ListFilesConfig.PageSize*
+  name: PageSize
+  href: api/Google.GenAI.Types.ListFilesConfig.html#Google_GenAI_Types_ListFilesConfig_PageSize_
+  commentId: Overload:Google.GenAI.Types.ListFilesConfig.PageSize
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListFilesConfig.PageSize
+  nameWithType: ListFilesConfig.PageSize
+- uid: Google.GenAI.Types.ListFilesConfig.PageToken
+  name: PageToken
+  href: api/Google.GenAI.Types.ListFilesConfig.html#Google_GenAI_Types_ListFilesConfig_PageToken
+  commentId: P:Google.GenAI.Types.ListFilesConfig.PageToken
+  fullName: Google.GenAI.Types.ListFilesConfig.PageToken
+  nameWithType: ListFilesConfig.PageToken
+- uid: Google.GenAI.Types.ListFilesConfig.PageToken*
+  name: PageToken
+  href: api/Google.GenAI.Types.ListFilesConfig.html#Google_GenAI_Types_ListFilesConfig_PageToken_
+  commentId: Overload:Google.GenAI.Types.ListFilesConfig.PageToken
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListFilesConfig.PageToken
+  nameWithType: ListFilesConfig.PageToken
+- uid: Google.GenAI.Types.ListFilesResponse
+  name: ListFilesResponse
+  href: api/Google.GenAI.Types.ListFilesResponse.html
+  commentId: T:Google.GenAI.Types.ListFilesResponse
+  fullName: Google.GenAI.Types.ListFilesResponse
+  nameWithType: ListFilesResponse
+- uid: Google.GenAI.Types.ListFilesResponse.Files
+  name: Files
+  href: api/Google.GenAI.Types.ListFilesResponse.html#Google_GenAI_Types_ListFilesResponse_Files
+  commentId: P:Google.GenAI.Types.ListFilesResponse.Files
+  fullName: Google.GenAI.Types.ListFilesResponse.Files
+  nameWithType: ListFilesResponse.Files
+- uid: Google.GenAI.Types.ListFilesResponse.Files*
+  name: Files
+  href: api/Google.GenAI.Types.ListFilesResponse.html#Google_GenAI_Types_ListFilesResponse_Files_
+  commentId: Overload:Google.GenAI.Types.ListFilesResponse.Files
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListFilesResponse.Files
+  nameWithType: ListFilesResponse.Files
+- uid: Google.GenAI.Types.ListFilesResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ListFilesResponse.html#Google_GenAI_Types_ListFilesResponse_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ListFilesResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ListFilesResponse.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ListFilesResponse.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ListFilesResponse.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ListFilesResponse.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ListFilesResponse.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ListFilesResponse.html#Google_GenAI_Types_ListFilesResponse_FromJson_
+  commentId: Overload:Google.GenAI.Types.ListFilesResponse.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListFilesResponse.FromJson
+  nameWithType: ListFilesResponse.FromJson
+- uid: Google.GenAI.Types.ListFilesResponse.NextPageToken
+  name: NextPageToken
+  href: api/Google.GenAI.Types.ListFilesResponse.html#Google_GenAI_Types_ListFilesResponse_NextPageToken
+  commentId: P:Google.GenAI.Types.ListFilesResponse.NextPageToken
+  fullName: Google.GenAI.Types.ListFilesResponse.NextPageToken
+  nameWithType: ListFilesResponse.NextPageToken
+- uid: Google.GenAI.Types.ListFilesResponse.NextPageToken*
+  name: NextPageToken
+  href: api/Google.GenAI.Types.ListFilesResponse.html#Google_GenAI_Types_ListFilesResponse_NextPageToken_
+  commentId: Overload:Google.GenAI.Types.ListFilesResponse.NextPageToken
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListFilesResponse.NextPageToken
+  nameWithType: ListFilesResponse.NextPageToken
+- uid: Google.GenAI.Types.ListFilesResponse.SdkHttpResponse
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.ListFilesResponse.html#Google_GenAI_Types_ListFilesResponse_SdkHttpResponse
+  commentId: P:Google.GenAI.Types.ListFilesResponse.SdkHttpResponse
+  fullName: Google.GenAI.Types.ListFilesResponse.SdkHttpResponse
+  nameWithType: ListFilesResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.ListFilesResponse.SdkHttpResponse*
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.ListFilesResponse.html#Google_GenAI_Types_ListFilesResponse_SdkHttpResponse_
+  commentId: Overload:Google.GenAI.Types.ListFilesResponse.SdkHttpResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListFilesResponse.SdkHttpResponse
+  nameWithType: ListFilesResponse.SdkHttpResponse
 - uid: Google.GenAI.Types.ListModelsConfig
   name: ListModelsConfig
   href: api/Google.GenAI.Types.ListModelsConfig.html
