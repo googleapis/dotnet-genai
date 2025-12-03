@@ -196,6 +196,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Operations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Operations.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Operations",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Pager-3.yml",
       "output": {
         ".html": {
@@ -1400,6 +1414,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.FetchPredictOperationConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.FetchPredictOperationConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.FetchPredictOperationConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.FileData.yml",
       "output": {
         ".html": {
@@ -1666,6 +1694,62 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.GenerateVideosConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.GenerateVideosConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.GenerateVideosConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerateVideosConfig.yml\" sourcestartlinenumber=\"1\">Configuration for generating videos.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.GenerateVideosOperation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.GenerateVideosOperation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.GenerateVideosOperation",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerateVideosOperation.yml\" sourcestartlinenumber=\"1\">A video generation operation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.GenerateVideosResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.GenerateVideosResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.GenerateVideosResponse",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerateVideosResponse.yml\" sourcestartlinenumber=\"1\">Response with generated videos.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.GenerateVideosSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.GenerateVideosSource.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.GenerateVideosSource",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerateVideosSource.yml\" sourcestartlinenumber=\"1\">A set of source input(s) for video generation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.GeneratedImage.yml",
       "output": {
         ".html": {
@@ -1691,6 +1775,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GeneratedImageMask",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GeneratedImageMask.yml\" sourcestartlinenumber=\"1\">A generated image mask.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.GeneratedVideo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.GeneratedVideo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.GeneratedVideo",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GeneratedVideo.yml\" sourcestartlinenumber=\"1\">A generated video.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1803,6 +1901,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GetModelConfig",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GetModelConfig.yml\" sourcestartlinenumber=\"1\">Optional parameters for models.get method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.GetOperationConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.GetOperationConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.GetOperationConfig",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -2881,6 +2993,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.MultiSpeakerVoiceConfig",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.MultiSpeakerVoiceConfig.yml\" sourcestartlinenumber=\"1\">The configuration for the multi-speaker setup. This data type is not supported in Vertex AI.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.Operation-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.Operation-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.Operation<TOperation>",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Operation-1.yml\" sourcestartlinenumber=\"1\">An abstract operation.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4365,6 +4491,90 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.VertexRagStoreRagResource",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VertexRagStoreRagResource.yml\" sourcestartlinenumber=\"1\">The definition of the Rag resource. This data type is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.Video.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.Video.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.Video",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Video.yml\" sourcestartlinenumber=\"1\">A generated video.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.VideoCompressionQuality.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.VideoCompressionQuality.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.VideoCompressionQuality",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VideoCompressionQuality.yml\" sourcestartlinenumber=\"1\">Enum that controls the compression quality of the generated videos.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.VideoGenerationMask.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.VideoGenerationMask.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.VideoGenerationMask",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VideoGenerationMask.yml\" sourcestartlinenumber=\"1\">A mask for video generation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.VideoGenerationMaskMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.VideoGenerationMaskMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.VideoGenerationMaskMode",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VideoGenerationMaskMode.yml\" sourcestartlinenumber=\"1\">Enum for the mask mode of a video generation mask.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.VideoGenerationReferenceImage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.VideoGenerationReferenceImage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.VideoGenerationReferenceImage",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VideoGenerationReferenceImage.yml\" sourcestartlinenumber=\"1\">A reference image for video generation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.VideoGenerationReferenceType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.VideoGenerationReferenceType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.VideoGenerationReferenceType",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VideoGenerationReferenceType.yml\" sourcestartlinenumber=\"1\">Enum for the reference type of a video generation reference image.</p>\n"
     },
     {
       "type": "ManagedReference",

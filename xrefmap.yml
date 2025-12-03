@@ -727,6 +727,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Client.Models
   nameWithType: Client.Models
+- uid: Google.GenAI.Client.Operations
+  name: Operations
+  href: api/Google.GenAI.Client.html#Google_GenAI_Client_Operations
+  commentId: P:Google.GenAI.Client.Operations
+  fullName: Google.GenAI.Client.Operations
+  nameWithType: Client.Operations
+- uid: Google.GenAI.Client.Operations*
+  name: Operations
+  href: api/Google.GenAI.Client.html#Google_GenAI_Client_Operations_
+  commentId: Overload:Google.GenAI.Client.Operations
+  isSpec: "True"
+  fullName: Google.GenAI.Client.Operations
+  nameWithType: Client.Operations
 - uid: Google.GenAI.Client.Tunings
   name: Tunings
   href: api/Google.GenAI.Client.html#Google_GenAI_Client_Tunings
@@ -1369,6 +1382,22 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Models.GenerateImagesAsync
   nameWithType: Models.GenerateImagesAsync
+- uid: Google.GenAI.Models.GenerateVideosAsync(System.String,Google.GenAI.Types.GenerateVideosSource,Google.GenAI.Types.GenerateVideosConfig)
+  name: GenerateVideosAsync(string, GenerateVideosSource, GenerateVideosConfig?)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_GenerateVideosAsync_System_String_Google_GenAI_Types_GenerateVideosSource_Google_GenAI_Types_GenerateVideosConfig_
+  commentId: M:Google.GenAI.Models.GenerateVideosAsync(System.String,Google.GenAI.Types.GenerateVideosSource,Google.GenAI.Types.GenerateVideosConfig)
+  name.vb: GenerateVideosAsync(String, GenerateVideosSource, GenerateVideosConfig)
+  fullName: Google.GenAI.Models.GenerateVideosAsync(string, Google.GenAI.Types.GenerateVideosSource, Google.GenAI.Types.GenerateVideosConfig?)
+  fullName.vb: Google.GenAI.Models.GenerateVideosAsync(String, Google.GenAI.Types.GenerateVideosSource, Google.GenAI.Types.GenerateVideosConfig)
+  nameWithType: Models.GenerateVideosAsync(string, GenerateVideosSource, GenerateVideosConfig?)
+  nameWithType.vb: Models.GenerateVideosAsync(String, GenerateVideosSource, GenerateVideosConfig)
+- uid: Google.GenAI.Models.GenerateVideosAsync*
+  name: GenerateVideosAsync
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_GenerateVideosAsync_
+  commentId: Overload:Google.GenAI.Models.GenerateVideosAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Models.GenerateVideosAsync
+  nameWithType: Models.GenerateVideosAsync
 - uid: Google.GenAI.Models.GetAsync(System.String,Google.GenAI.Types.GetModelConfig)
   name: GetAsync(string, GetModelConfig?)
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_GetAsync_System_String_Google_GenAI_Types_GetModelConfig_
@@ -1465,6 +1494,47 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Models.UpscaleImageAsync
   nameWithType: Models.UpscaleImageAsync
+- uid: Google.GenAI.Operations
+  name: Operations
+  href: api/Google.GenAI.Operations.html
+  commentId: T:Google.GenAI.Operations
+  fullName: Google.GenAI.Operations
+  nameWithType: Operations
+- uid: Google.GenAI.Operations.#ctor(Google.GenAI.ApiClient)
+  name: Operations(ApiClient)
+  href: api/Google.GenAI.Operations.html#Google_GenAI_Operations__ctor_Google_GenAI_ApiClient_
+  commentId: M:Google.GenAI.Operations.#ctor(Google.GenAI.ApiClient)
+  name.vb: New(ApiClient)
+  fullName: Google.GenAI.Operations.Operations(Google.GenAI.ApiClient)
+  fullName.vb: Google.GenAI.Operations.New(Google.GenAI.ApiClient)
+  nameWithType: Operations.Operations(ApiClient)
+  nameWithType.vb: Operations.New(ApiClient)
+- uid: Google.GenAI.Operations.#ctor*
+  name: Operations
+  href: api/Google.GenAI.Operations.html#Google_GenAI_Operations__ctor_
+  commentId: Overload:Google.GenAI.Operations.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Google.GenAI.Operations.Operations
+  fullName.vb: Google.GenAI.Operations.New
+  nameWithType: Operations.Operations
+  nameWithType.vb: Operations.New
+- uid: Google.GenAI.Operations.GetAsync*
+  name: GetAsync
+  href: api/Google.GenAI.Operations.html#Google_GenAI_Operations_GetAsync_
+  commentId: Overload:Google.GenAI.Operations.GetAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Operations.GetAsync
+  nameWithType: Operations.GetAsync
+- uid: Google.GenAI.Operations.GetAsync``1(``0,Google.GenAI.Types.GetOperationConfig)
+  name: GetAsync<TOperation>(TOperation, GetOperationConfig?)
+  href: api/Google.GenAI.Operations.html#Google_GenAI_Operations_GetAsync__1___0_Google_GenAI_Types_GetOperationConfig_
+  commentId: M:Google.GenAI.Operations.GetAsync``1(``0,Google.GenAI.Types.GetOperationConfig)
+  name.vb: GetAsync(Of TOperation)(TOperation, GetOperationConfig)
+  fullName: Google.GenAI.Operations.GetAsync<TOperation>(TOperation, Google.GenAI.Types.GetOperationConfig?)
+  fullName.vb: Google.GenAI.Operations.GetAsync(Of TOperation)(TOperation, Google.GenAI.Types.GetOperationConfig)
+  nameWithType: Operations.GetAsync<TOperation>(TOperation, GetOperationConfig?)
+  nameWithType.vb: Operations.GetAsync(Of TOperation)(TOperation, GetOperationConfig)
 - uid: Google.GenAI.Pager`3
   name: Pager<TItem, TConfig, TResponse>
   href: api/Google.GenAI.Pager-3.html
@@ -6814,6 +6884,41 @@ references:
   commentId: F:Google.GenAI.Types.FeatureSelectionPreference.PRIORITIZE_QUALITY
   fullName: Google.GenAI.Types.FeatureSelectionPreference.PRIORITIZE_QUALITY
   nameWithType: FeatureSelectionPreference.PRIORITIZE_QUALITY
+- uid: Google.GenAI.Types.FetchPredictOperationConfig
+  name: FetchPredictOperationConfig
+  href: api/Google.GenAI.Types.FetchPredictOperationConfig.html
+  commentId: T:Google.GenAI.Types.FetchPredictOperationConfig
+  fullName: Google.GenAI.Types.FetchPredictOperationConfig
+  nameWithType: FetchPredictOperationConfig
+- uid: Google.GenAI.Types.FetchPredictOperationConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.FetchPredictOperationConfig.html#Google_GenAI_Types_FetchPredictOperationConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.FetchPredictOperationConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.FetchPredictOperationConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.FetchPredictOperationConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: FetchPredictOperationConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: FetchPredictOperationConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.FetchPredictOperationConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.FetchPredictOperationConfig.html#Google_GenAI_Types_FetchPredictOperationConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.FetchPredictOperationConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.FetchPredictOperationConfig.FromJson
+  nameWithType: FetchPredictOperationConfig.FromJson
+- uid: Google.GenAI.Types.FetchPredictOperationConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.FetchPredictOperationConfig.html#Google_GenAI_Types_FetchPredictOperationConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.FetchPredictOperationConfig.HttpOptions
+  fullName: Google.GenAI.Types.FetchPredictOperationConfig.HttpOptions
+  nameWithType: FetchPredictOperationConfig.HttpOptions
+- uid: Google.GenAI.Types.FetchPredictOperationConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.FetchPredictOperationConfig.html#Google_GenAI_Types_FetchPredictOperationConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.FetchPredictOperationConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.FetchPredictOperationConfig.HttpOptions
+  nameWithType: FetchPredictOperationConfig.HttpOptions
 - uid: Google.GenAI.Types.FileData
   name: FileData
   href: api/Google.GenAI.Types.FileData.html
@@ -8719,6 +8824,422 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerateImagesResponse.SdkHttpResponse
   nameWithType: GenerateImagesResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.GenerateVideosConfig
+  name: GenerateVideosConfig
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html
+  commentId: T:Google.GenAI.Types.GenerateVideosConfig
+  fullName: Google.GenAI.Types.GenerateVideosConfig
+  nameWithType: GenerateVideosConfig
+- uid: Google.GenAI.Types.GenerateVideosConfig.AspectRatio
+  name: AspectRatio
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_AspectRatio
+  commentId: P:Google.GenAI.Types.GenerateVideosConfig.AspectRatio
+  fullName: Google.GenAI.Types.GenerateVideosConfig.AspectRatio
+  nameWithType: GenerateVideosConfig.AspectRatio
+- uid: Google.GenAI.Types.GenerateVideosConfig.AspectRatio*
+  name: AspectRatio
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_AspectRatio_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosConfig.AspectRatio
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosConfig.AspectRatio
+  nameWithType: GenerateVideosConfig.AspectRatio
+- uid: Google.GenAI.Types.GenerateVideosConfig.CompressionQuality
+  name: CompressionQuality
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_CompressionQuality
+  commentId: P:Google.GenAI.Types.GenerateVideosConfig.CompressionQuality
+  fullName: Google.GenAI.Types.GenerateVideosConfig.CompressionQuality
+  nameWithType: GenerateVideosConfig.CompressionQuality
+- uid: Google.GenAI.Types.GenerateVideosConfig.CompressionQuality*
+  name: CompressionQuality
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_CompressionQuality_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosConfig.CompressionQuality
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosConfig.CompressionQuality
+  nameWithType: GenerateVideosConfig.CompressionQuality
+- uid: Google.GenAI.Types.GenerateVideosConfig.DurationSeconds
+  name: DurationSeconds
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_DurationSeconds
+  commentId: P:Google.GenAI.Types.GenerateVideosConfig.DurationSeconds
+  fullName: Google.GenAI.Types.GenerateVideosConfig.DurationSeconds
+  nameWithType: GenerateVideosConfig.DurationSeconds
+- uid: Google.GenAI.Types.GenerateVideosConfig.DurationSeconds*
+  name: DurationSeconds
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_DurationSeconds_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosConfig.DurationSeconds
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosConfig.DurationSeconds
+  nameWithType: GenerateVideosConfig.DurationSeconds
+- uid: Google.GenAI.Types.GenerateVideosConfig.EnhancePrompt
+  name: EnhancePrompt
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_EnhancePrompt
+  commentId: P:Google.GenAI.Types.GenerateVideosConfig.EnhancePrompt
+  fullName: Google.GenAI.Types.GenerateVideosConfig.EnhancePrompt
+  nameWithType: GenerateVideosConfig.EnhancePrompt
+- uid: Google.GenAI.Types.GenerateVideosConfig.EnhancePrompt*
+  name: EnhancePrompt
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_EnhancePrompt_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosConfig.EnhancePrompt
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosConfig.EnhancePrompt
+  nameWithType: GenerateVideosConfig.EnhancePrompt
+- uid: Google.GenAI.Types.GenerateVideosConfig.Fps
+  name: Fps
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_Fps
+  commentId: P:Google.GenAI.Types.GenerateVideosConfig.Fps
+  fullName: Google.GenAI.Types.GenerateVideosConfig.Fps
+  nameWithType: GenerateVideosConfig.Fps
+- uid: Google.GenAI.Types.GenerateVideosConfig.Fps*
+  name: Fps
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_Fps_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosConfig.Fps
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosConfig.Fps
+  nameWithType: GenerateVideosConfig.Fps
+- uid: Google.GenAI.Types.GenerateVideosConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.GenerateVideosConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.GenerateVideosConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.GenerateVideosConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: GenerateVideosConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: GenerateVideosConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.GenerateVideosConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosConfig.FromJson
+  nameWithType: GenerateVideosConfig.FromJson
+- uid: Google.GenAI.Types.GenerateVideosConfig.GenerateAudio
+  name: GenerateAudio
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_GenerateAudio
+  commentId: P:Google.GenAI.Types.GenerateVideosConfig.GenerateAudio
+  fullName: Google.GenAI.Types.GenerateVideosConfig.GenerateAudio
+  nameWithType: GenerateVideosConfig.GenerateAudio
+- uid: Google.GenAI.Types.GenerateVideosConfig.GenerateAudio*
+  name: GenerateAudio
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_GenerateAudio_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosConfig.GenerateAudio
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosConfig.GenerateAudio
+  nameWithType: GenerateVideosConfig.GenerateAudio
+- uid: Google.GenAI.Types.GenerateVideosConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.GenerateVideosConfig.HttpOptions
+  fullName: Google.GenAI.Types.GenerateVideosConfig.HttpOptions
+  nameWithType: GenerateVideosConfig.HttpOptions
+- uid: Google.GenAI.Types.GenerateVideosConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosConfig.HttpOptions
+  nameWithType: GenerateVideosConfig.HttpOptions
+- uid: Google.GenAI.Types.GenerateVideosConfig.LastFrame
+  name: LastFrame
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_LastFrame
+  commentId: P:Google.GenAI.Types.GenerateVideosConfig.LastFrame
+  fullName: Google.GenAI.Types.GenerateVideosConfig.LastFrame
+  nameWithType: GenerateVideosConfig.LastFrame
+- uid: Google.GenAI.Types.GenerateVideosConfig.LastFrame*
+  name: LastFrame
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_LastFrame_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosConfig.LastFrame
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosConfig.LastFrame
+  nameWithType: GenerateVideosConfig.LastFrame
+- uid: Google.GenAI.Types.GenerateVideosConfig.Mask
+  name: Mask
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_Mask
+  commentId: P:Google.GenAI.Types.GenerateVideosConfig.Mask
+  fullName: Google.GenAI.Types.GenerateVideosConfig.Mask
+  nameWithType: GenerateVideosConfig.Mask
+- uid: Google.GenAI.Types.GenerateVideosConfig.Mask*
+  name: Mask
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_Mask_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosConfig.Mask
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosConfig.Mask
+  nameWithType: GenerateVideosConfig.Mask
+- uid: Google.GenAI.Types.GenerateVideosConfig.NegativePrompt
+  name: NegativePrompt
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_NegativePrompt
+  commentId: P:Google.GenAI.Types.GenerateVideosConfig.NegativePrompt
+  fullName: Google.GenAI.Types.GenerateVideosConfig.NegativePrompt
+  nameWithType: GenerateVideosConfig.NegativePrompt
+- uid: Google.GenAI.Types.GenerateVideosConfig.NegativePrompt*
+  name: NegativePrompt
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_NegativePrompt_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosConfig.NegativePrompt
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosConfig.NegativePrompt
+  nameWithType: GenerateVideosConfig.NegativePrompt
+- uid: Google.GenAI.Types.GenerateVideosConfig.NumberOfVideos
+  name: NumberOfVideos
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_NumberOfVideos
+  commentId: P:Google.GenAI.Types.GenerateVideosConfig.NumberOfVideos
+  fullName: Google.GenAI.Types.GenerateVideosConfig.NumberOfVideos
+  nameWithType: GenerateVideosConfig.NumberOfVideos
+- uid: Google.GenAI.Types.GenerateVideosConfig.NumberOfVideos*
+  name: NumberOfVideos
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_NumberOfVideos_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosConfig.NumberOfVideos
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosConfig.NumberOfVideos
+  nameWithType: GenerateVideosConfig.NumberOfVideos
+- uid: Google.GenAI.Types.GenerateVideosConfig.OutputGcsUri
+  name: OutputGcsUri
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_OutputGcsUri
+  commentId: P:Google.GenAI.Types.GenerateVideosConfig.OutputGcsUri
+  fullName: Google.GenAI.Types.GenerateVideosConfig.OutputGcsUri
+  nameWithType: GenerateVideosConfig.OutputGcsUri
+- uid: Google.GenAI.Types.GenerateVideosConfig.OutputGcsUri*
+  name: OutputGcsUri
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_OutputGcsUri_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosConfig.OutputGcsUri
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosConfig.OutputGcsUri
+  nameWithType: GenerateVideosConfig.OutputGcsUri
+- uid: Google.GenAI.Types.GenerateVideosConfig.PersonGeneration
+  name: PersonGeneration
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_PersonGeneration
+  commentId: P:Google.GenAI.Types.GenerateVideosConfig.PersonGeneration
+  fullName: Google.GenAI.Types.GenerateVideosConfig.PersonGeneration
+  nameWithType: GenerateVideosConfig.PersonGeneration
+- uid: Google.GenAI.Types.GenerateVideosConfig.PersonGeneration*
+  name: PersonGeneration
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_PersonGeneration_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosConfig.PersonGeneration
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosConfig.PersonGeneration
+  nameWithType: GenerateVideosConfig.PersonGeneration
+- uid: Google.GenAI.Types.GenerateVideosConfig.PubsubTopic
+  name: PubsubTopic
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_PubsubTopic
+  commentId: P:Google.GenAI.Types.GenerateVideosConfig.PubsubTopic
+  fullName: Google.GenAI.Types.GenerateVideosConfig.PubsubTopic
+  nameWithType: GenerateVideosConfig.PubsubTopic
+- uid: Google.GenAI.Types.GenerateVideosConfig.PubsubTopic*
+  name: PubsubTopic
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_PubsubTopic_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosConfig.PubsubTopic
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosConfig.PubsubTopic
+  nameWithType: GenerateVideosConfig.PubsubTopic
+- uid: Google.GenAI.Types.GenerateVideosConfig.ReferenceImages
+  name: ReferenceImages
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_ReferenceImages
+  commentId: P:Google.GenAI.Types.GenerateVideosConfig.ReferenceImages
+  fullName: Google.GenAI.Types.GenerateVideosConfig.ReferenceImages
+  nameWithType: GenerateVideosConfig.ReferenceImages
+- uid: Google.GenAI.Types.GenerateVideosConfig.ReferenceImages*
+  name: ReferenceImages
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_ReferenceImages_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosConfig.ReferenceImages
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosConfig.ReferenceImages
+  nameWithType: GenerateVideosConfig.ReferenceImages
+- uid: Google.GenAI.Types.GenerateVideosConfig.Resolution
+  name: Resolution
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_Resolution
+  commentId: P:Google.GenAI.Types.GenerateVideosConfig.Resolution
+  fullName: Google.GenAI.Types.GenerateVideosConfig.Resolution
+  nameWithType: GenerateVideosConfig.Resolution
+- uid: Google.GenAI.Types.GenerateVideosConfig.Resolution*
+  name: Resolution
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_Resolution_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosConfig.Resolution
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosConfig.Resolution
+  nameWithType: GenerateVideosConfig.Resolution
+- uid: Google.GenAI.Types.GenerateVideosConfig.Seed
+  name: Seed
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_Seed
+  commentId: P:Google.GenAI.Types.GenerateVideosConfig.Seed
+  fullName: Google.GenAI.Types.GenerateVideosConfig.Seed
+  nameWithType: GenerateVideosConfig.Seed
+- uid: Google.GenAI.Types.GenerateVideosConfig.Seed*
+  name: Seed
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_Seed_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosConfig.Seed
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosConfig.Seed
+  nameWithType: GenerateVideosConfig.Seed
+- uid: Google.GenAI.Types.GenerateVideosOperation
+  name: GenerateVideosOperation
+  href: api/Google.GenAI.Types.GenerateVideosOperation.html
+  commentId: T:Google.GenAI.Types.GenerateVideosOperation
+  fullName: Google.GenAI.Types.GenerateVideosOperation
+  nameWithType: GenerateVideosOperation
+- uid: Google.GenAI.Types.GenerateVideosOperation.FromApiResponse(System.Text.Json.Nodes.JsonNode,System.Boolean)
+  name: FromApiResponse(JsonNode, bool)
+  href: api/Google.GenAI.Types.GenerateVideosOperation.html#Google_GenAI_Types_GenerateVideosOperation_FromApiResponse_System_Text_Json_Nodes_JsonNode_System_Boolean_
+  commentId: M:Google.GenAI.Types.GenerateVideosOperation.FromApiResponse(System.Text.Json.Nodes.JsonNode,System.Boolean)
+  name.vb: FromApiResponse(JsonNode, Boolean)
+  fullName: Google.GenAI.Types.GenerateVideosOperation.FromApiResponse(System.Text.Json.Nodes.JsonNode, bool)
+  fullName.vb: Google.GenAI.Types.GenerateVideosOperation.FromApiResponse(System.Text.Json.Nodes.JsonNode, Boolean)
+  nameWithType: GenerateVideosOperation.FromApiResponse(JsonNode, bool)
+  nameWithType.vb: GenerateVideosOperation.FromApiResponse(JsonNode, Boolean)
+- uid: Google.GenAI.Types.GenerateVideosOperation.FromApiResponse*
+  name: FromApiResponse
+  href: api/Google.GenAI.Types.GenerateVideosOperation.html#Google_GenAI_Types_GenerateVideosOperation_FromApiResponse_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosOperation.FromApiResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosOperation.FromApiResponse
+  nameWithType: GenerateVideosOperation.FromApiResponse
+- uid: Google.GenAI.Types.GenerateVideosOperation.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.GenerateVideosOperation.html#Google_GenAI_Types_GenerateVideosOperation_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.GenerateVideosOperation.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.GenerateVideosOperation.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.GenerateVideosOperation.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: GenerateVideosOperation.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: GenerateVideosOperation.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.GenerateVideosOperation.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.GenerateVideosOperation.html#Google_GenAI_Types_GenerateVideosOperation_FromJson_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosOperation.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosOperation.FromJson
+  nameWithType: GenerateVideosOperation.FromJson
+- uid: Google.GenAI.Types.GenerateVideosOperation.Response
+  name: Response
+  href: api/Google.GenAI.Types.GenerateVideosOperation.html#Google_GenAI_Types_GenerateVideosOperation_Response
+  commentId: P:Google.GenAI.Types.GenerateVideosOperation.Response
+  fullName: Google.GenAI.Types.GenerateVideosOperation.Response
+  nameWithType: GenerateVideosOperation.Response
+- uid: Google.GenAI.Types.GenerateVideosOperation.Response*
+  name: Response
+  href: api/Google.GenAI.Types.GenerateVideosOperation.html#Google_GenAI_Types_GenerateVideosOperation_Response_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosOperation.Response
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosOperation.Response
+  nameWithType: GenerateVideosOperation.Response
+- uid: Google.GenAI.Types.GenerateVideosResponse
+  name: GenerateVideosResponse
+  href: api/Google.GenAI.Types.GenerateVideosResponse.html
+  commentId: T:Google.GenAI.Types.GenerateVideosResponse
+  fullName: Google.GenAI.Types.GenerateVideosResponse
+  nameWithType: GenerateVideosResponse
+- uid: Google.GenAI.Types.GenerateVideosResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.GenerateVideosResponse.html#Google_GenAI_Types_GenerateVideosResponse_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.GenerateVideosResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.GenerateVideosResponse.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.GenerateVideosResponse.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: GenerateVideosResponse.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: GenerateVideosResponse.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.GenerateVideosResponse.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.GenerateVideosResponse.html#Google_GenAI_Types_GenerateVideosResponse_FromJson_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosResponse.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosResponse.FromJson
+  nameWithType: GenerateVideosResponse.FromJson
+- uid: Google.GenAI.Types.GenerateVideosResponse.GeneratedVideos
+  name: GeneratedVideos
+  href: api/Google.GenAI.Types.GenerateVideosResponse.html#Google_GenAI_Types_GenerateVideosResponse_GeneratedVideos
+  commentId: P:Google.GenAI.Types.GenerateVideosResponse.GeneratedVideos
+  fullName: Google.GenAI.Types.GenerateVideosResponse.GeneratedVideos
+  nameWithType: GenerateVideosResponse.GeneratedVideos
+- uid: Google.GenAI.Types.GenerateVideosResponse.GeneratedVideos*
+  name: GeneratedVideos
+  href: api/Google.GenAI.Types.GenerateVideosResponse.html#Google_GenAI_Types_GenerateVideosResponse_GeneratedVideos_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosResponse.GeneratedVideos
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosResponse.GeneratedVideos
+  nameWithType: GenerateVideosResponse.GeneratedVideos
+- uid: Google.GenAI.Types.GenerateVideosResponse.RaiMediaFilteredCount
+  name: RaiMediaFilteredCount
+  href: api/Google.GenAI.Types.GenerateVideosResponse.html#Google_GenAI_Types_GenerateVideosResponse_RaiMediaFilteredCount
+  commentId: P:Google.GenAI.Types.GenerateVideosResponse.RaiMediaFilteredCount
+  fullName: Google.GenAI.Types.GenerateVideosResponse.RaiMediaFilteredCount
+  nameWithType: GenerateVideosResponse.RaiMediaFilteredCount
+- uid: Google.GenAI.Types.GenerateVideosResponse.RaiMediaFilteredCount*
+  name: RaiMediaFilteredCount
+  href: api/Google.GenAI.Types.GenerateVideosResponse.html#Google_GenAI_Types_GenerateVideosResponse_RaiMediaFilteredCount_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosResponse.RaiMediaFilteredCount
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosResponse.RaiMediaFilteredCount
+  nameWithType: GenerateVideosResponse.RaiMediaFilteredCount
+- uid: Google.GenAI.Types.GenerateVideosResponse.RaiMediaFilteredReasons
+  name: RaiMediaFilteredReasons
+  href: api/Google.GenAI.Types.GenerateVideosResponse.html#Google_GenAI_Types_GenerateVideosResponse_RaiMediaFilteredReasons
+  commentId: P:Google.GenAI.Types.GenerateVideosResponse.RaiMediaFilteredReasons
+  fullName: Google.GenAI.Types.GenerateVideosResponse.RaiMediaFilteredReasons
+  nameWithType: GenerateVideosResponse.RaiMediaFilteredReasons
+- uid: Google.GenAI.Types.GenerateVideosResponse.RaiMediaFilteredReasons*
+  name: RaiMediaFilteredReasons
+  href: api/Google.GenAI.Types.GenerateVideosResponse.html#Google_GenAI_Types_GenerateVideosResponse_RaiMediaFilteredReasons_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosResponse.RaiMediaFilteredReasons
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosResponse.RaiMediaFilteredReasons
+  nameWithType: GenerateVideosResponse.RaiMediaFilteredReasons
+- uid: Google.GenAI.Types.GenerateVideosSource
+  name: GenerateVideosSource
+  href: api/Google.GenAI.Types.GenerateVideosSource.html
+  commentId: T:Google.GenAI.Types.GenerateVideosSource
+  fullName: Google.GenAI.Types.GenerateVideosSource
+  nameWithType: GenerateVideosSource
+- uid: Google.GenAI.Types.GenerateVideosSource.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.GenerateVideosSource.html#Google_GenAI_Types_GenerateVideosSource_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.GenerateVideosSource.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.GenerateVideosSource.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.GenerateVideosSource.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: GenerateVideosSource.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: GenerateVideosSource.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.GenerateVideosSource.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.GenerateVideosSource.html#Google_GenAI_Types_GenerateVideosSource_FromJson_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosSource.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosSource.FromJson
+  nameWithType: GenerateVideosSource.FromJson
+- uid: Google.GenAI.Types.GenerateVideosSource.Image
+  name: Image
+  href: api/Google.GenAI.Types.GenerateVideosSource.html#Google_GenAI_Types_GenerateVideosSource_Image
+  commentId: P:Google.GenAI.Types.GenerateVideosSource.Image
+  fullName: Google.GenAI.Types.GenerateVideosSource.Image
+  nameWithType: GenerateVideosSource.Image
+- uid: Google.GenAI.Types.GenerateVideosSource.Image*
+  name: Image
+  href: api/Google.GenAI.Types.GenerateVideosSource.html#Google_GenAI_Types_GenerateVideosSource_Image_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosSource.Image
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosSource.Image
+  nameWithType: GenerateVideosSource.Image
+- uid: Google.GenAI.Types.GenerateVideosSource.Prompt
+  name: Prompt
+  href: api/Google.GenAI.Types.GenerateVideosSource.html#Google_GenAI_Types_GenerateVideosSource_Prompt
+  commentId: P:Google.GenAI.Types.GenerateVideosSource.Prompt
+  fullName: Google.GenAI.Types.GenerateVideosSource.Prompt
+  nameWithType: GenerateVideosSource.Prompt
+- uid: Google.GenAI.Types.GenerateVideosSource.Prompt*
+  name: Prompt
+  href: api/Google.GenAI.Types.GenerateVideosSource.html#Google_GenAI_Types_GenerateVideosSource_Prompt_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosSource.Prompt
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosSource.Prompt
+  nameWithType: GenerateVideosSource.Prompt
+- uid: Google.GenAI.Types.GenerateVideosSource.Video
+  name: Video
+  href: api/Google.GenAI.Types.GenerateVideosSource.html#Google_GenAI_Types_GenerateVideosSource_Video
+  commentId: P:Google.GenAI.Types.GenerateVideosSource.Video
+  fullName: Google.GenAI.Types.GenerateVideosSource.Video
+  nameWithType: GenerateVideosSource.Video
+- uid: Google.GenAI.Types.GenerateVideosSource.Video*
+  name: Video
+  href: api/Google.GenAI.Types.GenerateVideosSource.html#Google_GenAI_Types_GenerateVideosSource_Video_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosSource.Video
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosSource.Video
+  nameWithType: GenerateVideosSource.Video
 - uid: Google.GenAI.Types.GeneratedImage
   name: GeneratedImage
   href: api/Google.GenAI.Types.GeneratedImage.html
@@ -8841,6 +9362,41 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GeneratedImageMask.Mask
   nameWithType: GeneratedImageMask.Mask
+- uid: Google.GenAI.Types.GeneratedVideo
+  name: GeneratedVideo
+  href: api/Google.GenAI.Types.GeneratedVideo.html
+  commentId: T:Google.GenAI.Types.GeneratedVideo
+  fullName: Google.GenAI.Types.GeneratedVideo
+  nameWithType: GeneratedVideo
+- uid: Google.GenAI.Types.GeneratedVideo.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.GeneratedVideo.html#Google_GenAI_Types_GeneratedVideo_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.GeneratedVideo.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.GeneratedVideo.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.GeneratedVideo.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: GeneratedVideo.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: GeneratedVideo.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.GeneratedVideo.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.GeneratedVideo.html#Google_GenAI_Types_GeneratedVideo_FromJson_
+  commentId: Overload:Google.GenAI.Types.GeneratedVideo.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GeneratedVideo.FromJson
+  nameWithType: GeneratedVideo.FromJson
+- uid: Google.GenAI.Types.GeneratedVideo.Video
+  name: Video
+  href: api/Google.GenAI.Types.GeneratedVideo.html#Google_GenAI_Types_GeneratedVideo_Video
+  commentId: P:Google.GenAI.Types.GeneratedVideo.Video
+  fullName: Google.GenAI.Types.GeneratedVideo.Video
+  nameWithType: GeneratedVideo.Video
+- uid: Google.GenAI.Types.GeneratedVideo.Video*
+  name: Video
+  href: api/Google.GenAI.Types.GeneratedVideo.html#Google_GenAI_Types_GeneratedVideo_Video_
+  commentId: Overload:Google.GenAI.Types.GeneratedVideo.Video
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GeneratedVideo.Video
+  nameWithType: GeneratedVideo.Video
 - uid: Google.GenAI.Types.GenerationConfig
   name: GenerationConfig
   href: api/Google.GenAI.Types.GenerationConfig.html
@@ -9407,6 +9963,41 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GetModelConfig.HttpOptions
   nameWithType: GetModelConfig.HttpOptions
+- uid: Google.GenAI.Types.GetOperationConfig
+  name: GetOperationConfig
+  href: api/Google.GenAI.Types.GetOperationConfig.html
+  commentId: T:Google.GenAI.Types.GetOperationConfig
+  fullName: Google.GenAI.Types.GetOperationConfig
+  nameWithType: GetOperationConfig
+- uid: Google.GenAI.Types.GetOperationConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.GetOperationConfig.html#Google_GenAI_Types_GetOperationConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.GetOperationConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.GetOperationConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.GetOperationConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: GetOperationConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: GetOperationConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.GetOperationConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.GetOperationConfig.html#Google_GenAI_Types_GetOperationConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.GetOperationConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GetOperationConfig.FromJson
+  nameWithType: GetOperationConfig.FromJson
+- uid: Google.GenAI.Types.GetOperationConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.GetOperationConfig.html#Google_GenAI_Types_GetOperationConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.GetOperationConfig.HttpOptions
+  fullName: Google.GenAI.Types.GetOperationConfig.HttpOptions
+  nameWithType: GetOperationConfig.HttpOptions
+- uid: Google.GenAI.Types.GetOperationConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.GetOperationConfig.html#Google_GenAI_Types_GetOperationConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.GetOperationConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GetOperationConfig.HttpOptions
+  nameWithType: GetOperationConfig.HttpOptions
 - uid: Google.GenAI.Types.GetTuningJobConfig
   name: GetTuningJobConfig
   href: api/Google.GenAI.Types.GetTuningJobConfig.html
@@ -14393,6 +14984,101 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.MultiSpeakerVoiceConfig.SpeakerVoiceConfigs
   nameWithType: MultiSpeakerVoiceConfig.SpeakerVoiceConfigs
+- uid: Google.GenAI.Types.Operation`1
+  name: Operation<TOperation>
+  href: api/Google.GenAI.Types.Operation-1.html
+  commentId: T:Google.GenAI.Types.Operation`1
+  name.vb: Operation(Of TOperation)
+  fullName: Google.GenAI.Types.Operation<TOperation>
+  fullName.vb: Google.GenAI.Types.Operation(Of TOperation)
+  nameWithType: Operation<TOperation>
+  nameWithType.vb: Operation(Of TOperation)
+- uid: Google.GenAI.Types.Operation`1.Done
+  name: Done
+  href: api/Google.GenAI.Types.Operation-1.html#Google_GenAI_Types_Operation_1_Done
+  commentId: P:Google.GenAI.Types.Operation`1.Done
+  fullName: Google.GenAI.Types.Operation<TOperation>.Done
+  fullName.vb: Google.GenAI.Types.Operation(Of TOperation).Done
+  nameWithType: Operation<TOperation>.Done
+  nameWithType.vb: Operation(Of TOperation).Done
+- uid: Google.GenAI.Types.Operation`1.Done*
+  name: Done
+  href: api/Google.GenAI.Types.Operation-1.html#Google_GenAI_Types_Operation_1_Done_
+  commentId: Overload:Google.GenAI.Types.Operation`1.Done
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Operation<TOperation>.Done
+  fullName.vb: Google.GenAI.Types.Operation(Of TOperation).Done
+  nameWithType: Operation<TOperation>.Done
+  nameWithType.vb: Operation(Of TOperation).Done
+- uid: Google.GenAI.Types.Operation`1.Error
+  name: Error
+  href: api/Google.GenAI.Types.Operation-1.html#Google_GenAI_Types_Operation_1_Error
+  commentId: P:Google.GenAI.Types.Operation`1.Error
+  fullName: Google.GenAI.Types.Operation<TOperation>.Error
+  fullName.vb: Google.GenAI.Types.Operation(Of TOperation).Error
+  nameWithType: Operation<TOperation>.Error
+  nameWithType.vb: Operation(Of TOperation).Error
+- uid: Google.GenAI.Types.Operation`1.Error*
+  name: Error
+  href: api/Google.GenAI.Types.Operation-1.html#Google_GenAI_Types_Operation_1_Error_
+  commentId: Overload:Google.GenAI.Types.Operation`1.Error
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Operation<TOperation>.Error
+  fullName.vb: Google.GenAI.Types.Operation(Of TOperation).Error
+  nameWithType: Operation<TOperation>.Error
+  nameWithType.vb: Operation(Of TOperation).Error
+- uid: Google.GenAI.Types.Operation`1.FromApiResponse(System.Text.Json.Nodes.JsonNode,System.Boolean)
+  name: FromApiResponse(JsonNode, bool)
+  href: api/Google.GenAI.Types.Operation-1.html#Google_GenAI_Types_Operation_1_FromApiResponse_System_Text_Json_Nodes_JsonNode_System_Boolean_
+  commentId: M:Google.GenAI.Types.Operation`1.FromApiResponse(System.Text.Json.Nodes.JsonNode,System.Boolean)
+  name.vb: FromApiResponse(JsonNode, Boolean)
+  fullName: Google.GenAI.Types.Operation<TOperation>.FromApiResponse(System.Text.Json.Nodes.JsonNode, bool)
+  fullName.vb: Google.GenAI.Types.Operation(Of TOperation).FromApiResponse(System.Text.Json.Nodes.JsonNode, Boolean)
+  nameWithType: Operation<TOperation>.FromApiResponse(JsonNode, bool)
+  nameWithType.vb: Operation(Of TOperation).FromApiResponse(JsonNode, Boolean)
+- uid: Google.GenAI.Types.Operation`1.FromApiResponse*
+  name: FromApiResponse
+  href: api/Google.GenAI.Types.Operation-1.html#Google_GenAI_Types_Operation_1_FromApiResponse_
+  commentId: Overload:Google.GenAI.Types.Operation`1.FromApiResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Operation<TOperation>.FromApiResponse
+  fullName.vb: Google.GenAI.Types.Operation(Of TOperation).FromApiResponse
+  nameWithType: Operation<TOperation>.FromApiResponse
+  nameWithType.vb: Operation(Of TOperation).FromApiResponse
+- uid: Google.GenAI.Types.Operation`1.Metadata
+  name: Metadata
+  href: api/Google.GenAI.Types.Operation-1.html#Google_GenAI_Types_Operation_1_Metadata
+  commentId: P:Google.GenAI.Types.Operation`1.Metadata
+  fullName: Google.GenAI.Types.Operation<TOperation>.Metadata
+  fullName.vb: Google.GenAI.Types.Operation(Of TOperation).Metadata
+  nameWithType: Operation<TOperation>.Metadata
+  nameWithType.vb: Operation(Of TOperation).Metadata
+- uid: Google.GenAI.Types.Operation`1.Metadata*
+  name: Metadata
+  href: api/Google.GenAI.Types.Operation-1.html#Google_GenAI_Types_Operation_1_Metadata_
+  commentId: Overload:Google.GenAI.Types.Operation`1.Metadata
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Operation<TOperation>.Metadata
+  fullName.vb: Google.GenAI.Types.Operation(Of TOperation).Metadata
+  nameWithType: Operation<TOperation>.Metadata
+  nameWithType.vb: Operation(Of TOperation).Metadata
+- uid: Google.GenAI.Types.Operation`1.Name
+  name: Name
+  href: api/Google.GenAI.Types.Operation-1.html#Google_GenAI_Types_Operation_1_Name
+  commentId: P:Google.GenAI.Types.Operation`1.Name
+  fullName: Google.GenAI.Types.Operation<TOperation>.Name
+  fullName.vb: Google.GenAI.Types.Operation(Of TOperation).Name
+  nameWithType: Operation<TOperation>.Name
+  nameWithType.vb: Operation(Of TOperation).Name
+- uid: Google.GenAI.Types.Operation`1.Name*
+  name: Name
+  href: api/Google.GenAI.Types.Operation-1.html#Google_GenAI_Types_Operation_1_Name_
+  commentId: Overload:Google.GenAI.Types.Operation`1.Name
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Operation<TOperation>.Name
+  fullName.vb: Google.GenAI.Types.Operation(Of TOperation).Name
+  nameWithType: Operation<TOperation>.Name
+  nameWithType.vb: Operation(Of TOperation).Name
 - uid: Google.GenAI.Types.Outcome
   name: Outcome
   href: api/Google.GenAI.Types.Outcome.html
@@ -21534,6 +22220,229 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.VertexRagStoreRagResource.RagFileIds
   nameWithType: VertexRagStoreRagResource.RagFileIds
+- uid: Google.GenAI.Types.Video
+  name: Video
+  href: api/Google.GenAI.Types.Video.html
+  commentId: T:Google.GenAI.Types.Video
+  fullName: Google.GenAI.Types.Video
+  nameWithType: Video
+- uid: Google.GenAI.Types.Video.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.Video.html#Google_GenAI_Types_Video_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.Video.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.Video.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.Video.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: Video.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: Video.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.Video.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.Video.html#Google_GenAI_Types_Video_FromJson_
+  commentId: Overload:Google.GenAI.Types.Video.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Video.FromJson
+  nameWithType: Video.FromJson
+- uid: Google.GenAI.Types.Video.MimeType
+  name: MimeType
+  href: api/Google.GenAI.Types.Video.html#Google_GenAI_Types_Video_MimeType
+  commentId: P:Google.GenAI.Types.Video.MimeType
+  fullName: Google.GenAI.Types.Video.MimeType
+  nameWithType: Video.MimeType
+- uid: Google.GenAI.Types.Video.MimeType*
+  name: MimeType
+  href: api/Google.GenAI.Types.Video.html#Google_GenAI_Types_Video_MimeType_
+  commentId: Overload:Google.GenAI.Types.Video.MimeType
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Video.MimeType
+  nameWithType: Video.MimeType
+- uid: Google.GenAI.Types.Video.Uri
+  name: Uri
+  href: api/Google.GenAI.Types.Video.html#Google_GenAI_Types_Video_Uri
+  commentId: P:Google.GenAI.Types.Video.Uri
+  fullName: Google.GenAI.Types.Video.Uri
+  nameWithType: Video.Uri
+- uid: Google.GenAI.Types.Video.Uri*
+  name: Uri
+  href: api/Google.GenAI.Types.Video.html#Google_GenAI_Types_Video_Uri_
+  commentId: Overload:Google.GenAI.Types.Video.Uri
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Video.Uri
+  nameWithType: Video.Uri
+- uid: Google.GenAI.Types.Video.VideoBytes
+  name: VideoBytes
+  href: api/Google.GenAI.Types.Video.html#Google_GenAI_Types_Video_VideoBytes
+  commentId: P:Google.GenAI.Types.Video.VideoBytes
+  fullName: Google.GenAI.Types.Video.VideoBytes
+  nameWithType: Video.VideoBytes
+- uid: Google.GenAI.Types.Video.VideoBytes*
+  name: VideoBytes
+  href: api/Google.GenAI.Types.Video.html#Google_GenAI_Types_Video_VideoBytes_
+  commentId: Overload:Google.GenAI.Types.Video.VideoBytes
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Video.VideoBytes
+  nameWithType: Video.VideoBytes
+- uid: Google.GenAI.Types.VideoCompressionQuality
+  name: VideoCompressionQuality
+  href: api/Google.GenAI.Types.VideoCompressionQuality.html
+  commentId: T:Google.GenAI.Types.VideoCompressionQuality
+  fullName: Google.GenAI.Types.VideoCompressionQuality
+  nameWithType: VideoCompressionQuality
+- uid: Google.GenAI.Types.VideoCompressionQuality.LOSSLESS
+  name: LOSSLESS
+  href: api/Google.GenAI.Types.VideoCompressionQuality.html#Google_GenAI_Types_VideoCompressionQuality_LOSSLESS
+  commentId: F:Google.GenAI.Types.VideoCompressionQuality.LOSSLESS
+  fullName: Google.GenAI.Types.VideoCompressionQuality.LOSSLESS
+  nameWithType: VideoCompressionQuality.LOSSLESS
+- uid: Google.GenAI.Types.VideoCompressionQuality.OPTIMIZED
+  name: OPTIMIZED
+  href: api/Google.GenAI.Types.VideoCompressionQuality.html#Google_GenAI_Types_VideoCompressionQuality_OPTIMIZED
+  commentId: F:Google.GenAI.Types.VideoCompressionQuality.OPTIMIZED
+  fullName: Google.GenAI.Types.VideoCompressionQuality.OPTIMIZED
+  nameWithType: VideoCompressionQuality.OPTIMIZED
+- uid: Google.GenAI.Types.VideoGenerationMask
+  name: VideoGenerationMask
+  href: api/Google.GenAI.Types.VideoGenerationMask.html
+  commentId: T:Google.GenAI.Types.VideoGenerationMask
+  fullName: Google.GenAI.Types.VideoGenerationMask
+  nameWithType: VideoGenerationMask
+- uid: Google.GenAI.Types.VideoGenerationMask.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.VideoGenerationMask.html#Google_GenAI_Types_VideoGenerationMask_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.VideoGenerationMask.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.VideoGenerationMask.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.VideoGenerationMask.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: VideoGenerationMask.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: VideoGenerationMask.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.VideoGenerationMask.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.VideoGenerationMask.html#Google_GenAI_Types_VideoGenerationMask_FromJson_
+  commentId: Overload:Google.GenAI.Types.VideoGenerationMask.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VideoGenerationMask.FromJson
+  nameWithType: VideoGenerationMask.FromJson
+- uid: Google.GenAI.Types.VideoGenerationMask.Image
+  name: Image
+  href: api/Google.GenAI.Types.VideoGenerationMask.html#Google_GenAI_Types_VideoGenerationMask_Image
+  commentId: P:Google.GenAI.Types.VideoGenerationMask.Image
+  fullName: Google.GenAI.Types.VideoGenerationMask.Image
+  nameWithType: VideoGenerationMask.Image
+- uid: Google.GenAI.Types.VideoGenerationMask.Image*
+  name: Image
+  href: api/Google.GenAI.Types.VideoGenerationMask.html#Google_GenAI_Types_VideoGenerationMask_Image_
+  commentId: Overload:Google.GenAI.Types.VideoGenerationMask.Image
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VideoGenerationMask.Image
+  nameWithType: VideoGenerationMask.Image
+- uid: Google.GenAI.Types.VideoGenerationMask.MaskMode
+  name: MaskMode
+  href: api/Google.GenAI.Types.VideoGenerationMask.html#Google_GenAI_Types_VideoGenerationMask_MaskMode
+  commentId: P:Google.GenAI.Types.VideoGenerationMask.MaskMode
+  fullName: Google.GenAI.Types.VideoGenerationMask.MaskMode
+  nameWithType: VideoGenerationMask.MaskMode
+- uid: Google.GenAI.Types.VideoGenerationMask.MaskMode*
+  name: MaskMode
+  href: api/Google.GenAI.Types.VideoGenerationMask.html#Google_GenAI_Types_VideoGenerationMask_MaskMode_
+  commentId: Overload:Google.GenAI.Types.VideoGenerationMask.MaskMode
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VideoGenerationMask.MaskMode
+  nameWithType: VideoGenerationMask.MaskMode
+- uid: Google.GenAI.Types.VideoGenerationMaskMode
+  name: VideoGenerationMaskMode
+  href: api/Google.GenAI.Types.VideoGenerationMaskMode.html
+  commentId: T:Google.GenAI.Types.VideoGenerationMaskMode
+  fullName: Google.GenAI.Types.VideoGenerationMaskMode
+  nameWithType: VideoGenerationMaskMode
+- uid: Google.GenAI.Types.VideoGenerationMaskMode.INSERT
+  name: INSERT
+  href: api/Google.GenAI.Types.VideoGenerationMaskMode.html#Google_GenAI_Types_VideoGenerationMaskMode_INSERT
+  commentId: F:Google.GenAI.Types.VideoGenerationMaskMode.INSERT
+  fullName: Google.GenAI.Types.VideoGenerationMaskMode.INSERT
+  nameWithType: VideoGenerationMaskMode.INSERT
+- uid: Google.GenAI.Types.VideoGenerationMaskMode.OUTPAINT
+  name: OUTPAINT
+  href: api/Google.GenAI.Types.VideoGenerationMaskMode.html#Google_GenAI_Types_VideoGenerationMaskMode_OUTPAINT
+  commentId: F:Google.GenAI.Types.VideoGenerationMaskMode.OUTPAINT
+  fullName: Google.GenAI.Types.VideoGenerationMaskMode.OUTPAINT
+  nameWithType: VideoGenerationMaskMode.OUTPAINT
+- uid: Google.GenAI.Types.VideoGenerationMaskMode.REMOVE
+  name: REMOVE
+  href: api/Google.GenAI.Types.VideoGenerationMaskMode.html#Google_GenAI_Types_VideoGenerationMaskMode_REMOVE
+  commentId: F:Google.GenAI.Types.VideoGenerationMaskMode.REMOVE
+  fullName: Google.GenAI.Types.VideoGenerationMaskMode.REMOVE
+  nameWithType: VideoGenerationMaskMode.REMOVE
+- uid: Google.GenAI.Types.VideoGenerationMaskMode.REMOVE_STATIC
+  name: REMOVE_STATIC
+  href: api/Google.GenAI.Types.VideoGenerationMaskMode.html#Google_GenAI_Types_VideoGenerationMaskMode_REMOVE_STATIC
+  commentId: F:Google.GenAI.Types.VideoGenerationMaskMode.REMOVE_STATIC
+  fullName: Google.GenAI.Types.VideoGenerationMaskMode.REMOVE_STATIC
+  nameWithType: VideoGenerationMaskMode.REMOVE_STATIC
+- uid: Google.GenAI.Types.VideoGenerationReferenceImage
+  name: VideoGenerationReferenceImage
+  href: api/Google.GenAI.Types.VideoGenerationReferenceImage.html
+  commentId: T:Google.GenAI.Types.VideoGenerationReferenceImage
+  fullName: Google.GenAI.Types.VideoGenerationReferenceImage
+  nameWithType: VideoGenerationReferenceImage
+- uid: Google.GenAI.Types.VideoGenerationReferenceImage.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.VideoGenerationReferenceImage.html#Google_GenAI_Types_VideoGenerationReferenceImage_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.VideoGenerationReferenceImage.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.VideoGenerationReferenceImage.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.VideoGenerationReferenceImage.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: VideoGenerationReferenceImage.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: VideoGenerationReferenceImage.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.VideoGenerationReferenceImage.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.VideoGenerationReferenceImage.html#Google_GenAI_Types_VideoGenerationReferenceImage_FromJson_
+  commentId: Overload:Google.GenAI.Types.VideoGenerationReferenceImage.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VideoGenerationReferenceImage.FromJson
+  nameWithType: VideoGenerationReferenceImage.FromJson
+- uid: Google.GenAI.Types.VideoGenerationReferenceImage.Image
+  name: Image
+  href: api/Google.GenAI.Types.VideoGenerationReferenceImage.html#Google_GenAI_Types_VideoGenerationReferenceImage_Image
+  commentId: P:Google.GenAI.Types.VideoGenerationReferenceImage.Image
+  fullName: Google.GenAI.Types.VideoGenerationReferenceImage.Image
+  nameWithType: VideoGenerationReferenceImage.Image
+- uid: Google.GenAI.Types.VideoGenerationReferenceImage.Image*
+  name: Image
+  href: api/Google.GenAI.Types.VideoGenerationReferenceImage.html#Google_GenAI_Types_VideoGenerationReferenceImage_Image_
+  commentId: Overload:Google.GenAI.Types.VideoGenerationReferenceImage.Image
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VideoGenerationReferenceImage.Image
+  nameWithType: VideoGenerationReferenceImage.Image
+- uid: Google.GenAI.Types.VideoGenerationReferenceImage.ReferenceType
+  name: ReferenceType
+  href: api/Google.GenAI.Types.VideoGenerationReferenceImage.html#Google_GenAI_Types_VideoGenerationReferenceImage_ReferenceType
+  commentId: P:Google.GenAI.Types.VideoGenerationReferenceImage.ReferenceType
+  fullName: Google.GenAI.Types.VideoGenerationReferenceImage.ReferenceType
+  nameWithType: VideoGenerationReferenceImage.ReferenceType
+- uid: Google.GenAI.Types.VideoGenerationReferenceImage.ReferenceType*
+  name: ReferenceType
+  href: api/Google.GenAI.Types.VideoGenerationReferenceImage.html#Google_GenAI_Types_VideoGenerationReferenceImage_ReferenceType_
+  commentId: Overload:Google.GenAI.Types.VideoGenerationReferenceImage.ReferenceType
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VideoGenerationReferenceImage.ReferenceType
+  nameWithType: VideoGenerationReferenceImage.ReferenceType
+- uid: Google.GenAI.Types.VideoGenerationReferenceType
+  name: VideoGenerationReferenceType
+  href: api/Google.GenAI.Types.VideoGenerationReferenceType.html
+  commentId: T:Google.GenAI.Types.VideoGenerationReferenceType
+  fullName: Google.GenAI.Types.VideoGenerationReferenceType
+  nameWithType: VideoGenerationReferenceType
+- uid: Google.GenAI.Types.VideoGenerationReferenceType.ASSET
+  name: ASSET
+  href: api/Google.GenAI.Types.VideoGenerationReferenceType.html#Google_GenAI_Types_VideoGenerationReferenceType_ASSET
+  commentId: F:Google.GenAI.Types.VideoGenerationReferenceType.ASSET
+  fullName: Google.GenAI.Types.VideoGenerationReferenceType.ASSET
+  nameWithType: VideoGenerationReferenceType.ASSET
+- uid: Google.GenAI.Types.VideoGenerationReferenceType.STYLE
+  name: STYLE
+  href: api/Google.GenAI.Types.VideoGenerationReferenceType.html#Google_GenAI_Types_VideoGenerationReferenceType_STYLE
+  commentId: F:Google.GenAI.Types.VideoGenerationReferenceType.STYLE
+  fullName: Google.GenAI.Types.VideoGenerationReferenceType.STYLE
+  nameWithType: VideoGenerationReferenceType.STYLE
 - uid: Google.GenAI.Types.VideoMetadata
   name: VideoMetadata
   href: api/Google.GenAI.Types.VideoMetadata.html
