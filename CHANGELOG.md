@@ -1,5 +1,34 @@
 # Changelog
 
+## Version 0.7.0, released 2025-12-04
+
+
+### New features
+
+* Add Caches module to Dotnet SDK (create, get, delete, update, list) ([dce6173](https://github.com/googleapis/dotnet-genai/commit/dce61736426d404b28b678ac835174f8c686f717))
+* Add generate_videos Video Generation and generic operations support in Dotnet SDK ([1a18f8c](https://github.com/googleapis/dotnet-genai/commit/1a18f8cacf2a16979e6838a80828b9f138f9d9b0))
+* Add support for models.embed_content(), models.get(), models.update(), and models.delete() in C# SDK ([a3b8c21](https://github.com/googleapis/dotnet-genai/commit/a3b8c21a2bb54de8707e4919834a9ef40984f574))
+* Add support for Tunings.tune() and Tunings.get() in Dotnet SDK ([39b7e6c](https://github.com/googleapis/dotnet-genai/commit/39b7e6c67f770d87bb70219c006e1e7ab078fbfc))
+* create pager ([aa20330](https://github.com/googleapis/dotnet-genai/commit/aa20330772619423aafb2c55d8750b6bf4674c9a))
+* Support Batches module for C# SDK (Create, CreateEmbeddings, Get, Cancel, List, Delete) ([3cb3486](https://github.com/googleapis/dotnet-genai/commit/3cb34867b117c3e1a17878cb99df9c81d8f4e7db))
+* support compute tokens in Models module ([9ec457e](https://github.com/googleapis/dotnet-genai/commit/9ec457e61d833ccecad137f55bd38325c95d0f25))
+* support count tokens feature in Models module ([b9b095c](https://github.com/googleapis/dotnet-genai/commit/b9b095cd11bf4bf33c8fb612288d34cf82021758))
+* support Files List, Get, Upload, Download, Delete ([904b1aa](https://github.com/googleapis/dotnet-genai/commit/904b1aa7b33f694a2d9fda5fee93f36c0f3fa966))
+* Support Models.ListAsync(), quota project authentication, and URL filter handling for list methods ([bec0233](https://github.com/googleapis/dotnet-genai/commit/bec0233baae5e00842af72b904fa459573159aeb))
+* Support the cancel method in the C# SDK Tunings module ([26a0bb3](https://github.com/googleapis/dotnet-genai/commit/26a0bb379b1f43dea93002dad6422ea579ed8820))
+* Support the list method in the Dotnet SDK Tunings module ([2072ba1](https://github.com/googleapis/dotnet-genai/commit/2072ba16730dd47726501b07afccc13049d75447))
+
+
+### Bug fixes
+
+* use timeout cancellation token for live close async ([b385da5](https://github.com/googleapis/dotnet-genai/commit/b385da5a0c86a583c49bbb51f3c6e2da57c06171))
+
+
+### Documentation improvements
+
+* Recommend using response_json_schema in error messages and docstrings. ([fd564bc](https://github.com/googleapis/dotnet-genai/commit/fd564bc963a24440317f40b75a096fb8829022a2))
+* update count tokens example in README ([b333a7c](https://github.com/googleapis/dotnet-genai/commit/b333a7c7c54f0e3fdaf7338ae7f807b955e332b0))
+
 ## Version 0.6.0, released 2025-11-18
 
 
