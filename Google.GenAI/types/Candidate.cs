@@ -76,17 +76,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Output only. Average log probability score of the candidate.
-    /// </summary>
-    [JsonPropertyName("avgLogprobs")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public double
-        ? AvgLogprobs {
-            get; set;
-          }
-
-    /// <summary>
-    /// Output only. Metadata specifies sources used to ground generated content.
+    /// Output only. Grounding metadata for the candidate.  This field is populated for
+    /// `GenerateContent` calls.
     /// </summary>
     [JsonPropertyName("groundingMetadata")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -96,7 +87,20 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Output only. Index of the candidate.
+    /// Output only. The average log probability of the tokens in this candidate. This is a
+    /// length-normalized score that can be used to compare the quality of candidates of different
+    /// lengths. A higher average log probability suggests a more confident and coherent response.
+    /// </summary>
+    [JsonPropertyName("avgLogprobs")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public double
+        ? AvgLogprobs {
+            get; set;
+          }
+
+    /// <summary>
+    /// Output only. The 0-based index of this candidate in the list of generated responses. This is
+    /// useful for distinguishing between multiple candidates when `candidate_count` > 1.
     /// </summary>
     [JsonPropertyName("index")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -106,7 +110,9 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Output only. Log-likelihood scores for the response tokens and top tokens
+    /// Output only. The detailed log probability information for the tokens in this candidate. This
+    /// is useful for debugging, understanding model uncertainty, and identifying potential
+    /// "hallucinations".
     /// </summary>
     [JsonPropertyName("logprobsResult")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -116,7 +122,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Output only. List of ratings for the safety of a response candidate. There is at most one
+    /// Output only. A list of ratings for the safety of a response candidate. There is at most one
     /// rating per category.
     /// </summary>
     [JsonPropertyName("safetyRatings")]
@@ -127,7 +133,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Output only. Metadata related to url context retrieval tool.
+    /// Output only. Metadata returned when the model uses the `url_context` tool to get information
+    /// from a user-provided URL.
     /// </summary>
     [JsonPropertyName("urlContextMetadata")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

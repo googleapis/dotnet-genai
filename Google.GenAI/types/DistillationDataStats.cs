@@ -23,8 +23,8 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Statistics computed for datasets used for distillation. This data type is not supported in
-  /// Gemini API.
+  /// Statistics for distillation prompt dataset. These statistics do not include the responses
+  /// sampled from the teacher model. This data type is not supported in Gemini API.
   /// </summary>
 
   public record DistillationDataStats {

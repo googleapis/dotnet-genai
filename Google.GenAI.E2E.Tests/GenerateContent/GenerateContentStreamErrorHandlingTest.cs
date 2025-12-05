@@ -143,48 +143,6 @@ public class GenerateContentStreamErrorHandlingTest {
   }
 
   [TestMethod]
-  public async Task GenerateContentStreamMultiSpeakerVoiceConfigVertexTest() {
-    var ex =
-        await Assert.ThrowsExceptionAsync<NotSupportedException>(async () => {
-          await foreach (var chunk in vertexClient.Models.GenerateContentStreamAsync(
-                             model: "gemini-2.0-flash-exp",
-                             contents: "Alice says 'Hi', Bob replies with 'what\'s up?'",
-                             config: new GenerateContentConfig {
-                               ResponseModalities = new List<string> { "AUDIO" },
-                               SpeechConfig =
-                                   new SpeechConfig {
-                                     MultiSpeakerVoiceConfig =
-                                         new MultiSpeakerVoiceConfig {
-                                           SpeakerVoiceConfigs =
-                                               new List<SpeakerVoiceConfig> {
-                                                 new SpeakerVoiceConfig {
-                                                   Speaker = "Alice",
-                                                   VoiceConfig =
-                                                       new VoiceConfig {
-                                                         PrebuiltVoiceConfig =
-                                                             new PrebuiltVoiceConfig { VoiceName =
-                                                                                           "leda" }
-                                                       }
-                                                 },
-                                                 new SpeakerVoiceConfig {
-                                                   Speaker = "Bob",
-                                                   VoiceConfig =
-                                                       new VoiceConfig {
-                                                         PrebuiltVoiceConfig =
-                                                             new PrebuiltVoiceConfig { VoiceName =
-                                                                                           "kore" }
-                                                       }
-                                                 }
-                                               }
-                                         }
-                                   }
-                             })) {}
-        });
-
-    Assert.AreEqual(ex.Message, "multiSpeakerVoiceConfig parameter is not supported in Vertex AI.");
-  }
-
-  [TestMethod]
   public async Task GenerateContentStreamLabelsVertexTest() {
     await foreach (var chunk in vertexClient.Models.GenerateContentStreamAsync(
                        model: modelName, contents: "What is the capital of France?",

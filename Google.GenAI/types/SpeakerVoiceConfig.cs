@@ -23,7 +23,7 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Configuration for a single speaker in a multi speaker setup.
+  /// Configuration for a single speaker in a multi-speaker setup.
   /// </summary>
 
   public record SpeakerVoiceConfig {

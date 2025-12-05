@@ -48,7 +48,7 @@ namespace Google.GenAI.Types {
 
     /// <summary>
     /// The name of the function to call. Must start with a letter or an underscore. Must be a-z,
-    /// A-Z, 0-9, or contain underscores, dots and dashes, with a maximum length of 64.
+    /// A-Z, 0-9, or contain underscores, dots, colons and dashes, with a maximum length of 64.
     /// </summary>
     [JsonPropertyName("name")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

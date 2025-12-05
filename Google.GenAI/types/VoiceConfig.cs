@@ -23,16 +23,27 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// The configuration for the voice to use.
+  /// Configuration for a voice.
   /// </summary>
 
   public record VoiceConfig {
     /// <summary>
-    /// The configuration for the prebuilt voice to use.
+    /// The configuration for a prebuilt voice.
     /// </summary>
     [JsonPropertyName("prebuiltVoiceConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public PrebuiltVoiceConfig ? PrebuiltVoiceConfig { get; set; }
+
+    /// <summary>
+    /// Optional. The configuration for a replicated voice. This enables users to replicate a voice
+    /// from an audio sample. This field is not supported in Gemini API.
+    /// </summary>
+    [JsonPropertyName("replicatedVoiceConfig")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public ReplicatedVoiceConfig
+        ? ReplicatedVoiceConfig {
+            get; set;
+          }
 
     /// <summary>
     /// Deserializes a JSON string to a VoiceConfig object.

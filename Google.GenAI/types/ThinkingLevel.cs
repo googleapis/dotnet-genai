@@ -20,12 +20,12 @@ using System.Text.Json.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// The level of thoughts tokens that the model should generate.
+  /// The number of thoughts tokens that the model should generate.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum ThinkingLevel {
     /// <summary>
-    /// Default value.
+    /// Unspecified thinking level.
     /// </summary>
     [JsonPropertyName("THINKING_LEVEL_UNSPECIFIED")] THINKING_LEVEL_UNSPECIFIED,
 

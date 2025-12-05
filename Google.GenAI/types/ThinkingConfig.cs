@@ -47,7 +47,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Optional. The level of thoughts tokens that the model should generate.
+    /// Optional. The number of thoughts tokens that the model should generate.
     /// </summary>
     [JsonPropertyName("thinkingLevel")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

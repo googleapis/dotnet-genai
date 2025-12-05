@@ -28,21 +28,21 @@ namespace Google.GenAI.Types {
 
   public record GoogleSearch {
     /// <summary>
-    /// Optional. List of domains to be excluded from the search results. The default limit is 2000
-    /// domains. Example: ["amazon.com", "facebook.com"]. This field is not supported in Gemini API.
-    /// </summary>
-    [JsonPropertyName("excludeDomains")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<string> ? ExcludeDomains { get; set; }
-
-    /// <summary>
     /// Optional. Sites with confidence level chosen &amp; above this value will be blocked from the
     /// search results. This field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("blockingConfidence")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public PhishBlockThreshold
-        ? BlockingConfidence {
+    public PhishBlockThreshold ? BlockingConfidence { get; set; }
+
+    /// <summary>
+    /// Optional. List of domains to be excluded from the search results. The default limit is 2000
+    /// domains. Example: ["amazon.com", "facebook.com"]. This field is not supported in Gemini API.
+    /// </summary>
+    [JsonPropertyName("excludeDomains")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public List<string>
+        ? ExcludeDomains {
             get; set;
           }
 

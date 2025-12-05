@@ -23,20 +23,20 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Source content flagging uri for a place or review. This is currently populated only for Google
-  /// Maps grounding. This data type is not supported in Gemini API.
+  /// A URI that can be used to flag a place or review for inappropriate content. This is populated
+  /// only when the grounding source is Google Maps. This data type is not supported in Gemini API.
   /// </summary>
 
   public record GroundingMetadataSourceFlaggingUri {
     /// <summary>
-    /// A link where users can flag a problem with the source (place or review).
+    /// The URI that can be used to flag the content.
     /// </summary>
     [JsonPropertyName("flagContentUri")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string ? FlagContentUri { get; set; }
 
     /// <summary>
-    /// Id of the place or review.
+    /// The ID of the place or review.
     /// </summary>
     [JsonPropertyName("sourceId")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

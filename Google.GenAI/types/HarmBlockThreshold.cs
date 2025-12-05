@@ -20,37 +20,38 @@ using System.Text.Json.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// The harm block threshold.
+  /// The threshold for blocking content. If the harm probability exceeds this threshold, the
+  /// content will be blocked.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum HarmBlockThreshold {
     /// <summary>
-    /// Unspecified harm block threshold.
+    /// The harm block threshold is unspecified.
     /// </summary>
     [JsonPropertyName("HARM_BLOCK_THRESHOLD_UNSPECIFIED")] HARM_BLOCK_THRESHOLD_UNSPECIFIED,
 
     /// <summary>
-    /// Block low threshold and above (i.e. block more).
+    /// Block content with a low harm probability or higher.
     /// </summary>
     [JsonPropertyName("BLOCK_LOW_AND_ABOVE")] BLOCK_LOW_AND_ABOVE,
 
     /// <summary>
-    /// Block medium threshold and above.
+    /// Block content with a medium harm probability or higher.
     /// </summary>
     [JsonPropertyName("BLOCK_MEDIUM_AND_ABOVE")] BLOCK_MEDIUM_AND_ABOVE,
 
     /// <summary>
-    /// Block only high threshold (i.e. block less).
+    /// Block content with a high harm probability.
     /// </summary>
     [JsonPropertyName("BLOCK_ONLY_HIGH")] BLOCK_ONLY_HIGH,
 
     /// <summary>
-    /// Block none.
+    /// Do not block any content, regardless of its harm probability.
     /// </summary>
     [JsonPropertyName("BLOCK_NONE")] BLOCK_NONE,
 
     /// <summary>
-    /// Turn off the safety filter.
+    /// Turn off the safety filter entirely.
     /// </summary>
     [JsonPropertyName("OFF")] OFF
   }

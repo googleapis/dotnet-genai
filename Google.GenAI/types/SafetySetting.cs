@@ -23,21 +23,21 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Safety settings.
+  /// A safety setting that affects the safety-blocking behavior. A SafetySetting consists of a harm
+  /// category and a threshold for that category.
   /// </summary>
 
   public record SafetySetting {
     /// <summary>
-    /// Harm category.
+    /// The harm category to be blocked.
     /// </summary>
     [JsonPropertyName("category")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public HarmCategory ? Category { get; set; }
 
     /// <summary>
-    /// Optional. Specify if the threshold is used for probability or severity score. If not
-    /// specified, the threshold is used for probability score. This field is not supported in
-    /// Gemini API.
+    /// Optional. The method for blocking content. If not specified, the default behavior is to use
+    /// the probability score. This field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("method")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -47,7 +47,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// The harm block threshold.
+    /// The threshold for blocking content. If the harm probability exceeds this threshold, the
+    /// content will be blocked.
     /// </summary>
     [JsonPropertyName("threshold")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

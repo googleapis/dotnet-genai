@@ -23,35 +23,35 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// The speech generation config.
+  /// Configuration for speech generation.
   /// </summary>
 
   public record SpeechConfig {
     /// <summary>
-    /// Optional. Language code (ISO 639. e.g. en-US) for the speech synthesization.
+    /// Optional. The language code (ISO 639-1) for the speech synthesis.
     /// </summary>
     [JsonPropertyName("languageCode")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string ? LanguageCode { get; set; }
 
     /// <summary>
-    /// The configuration for the speaker to use.
-    /// </summary>
-    [JsonPropertyName("voiceConfig")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public VoiceConfig
-        ? VoiceConfig {
-            get; set;
-          }
-
-    /// <summary>
-    /// Optional. The configuration for the multi-speaker setup. It is mutually exclusive with the
-    /// voice_config field. This field is not supported in Vertex AI.
+    /// The configuration for a multi-speaker text-to-speech request. This field is mutually
+    /// exclusive with `voice_config`.
     /// </summary>
     [JsonPropertyName("multiSpeakerVoiceConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public MultiSpeakerVoiceConfig
         ? MultiSpeakerVoiceConfig {
+            get; set;
+          }
+
+    /// <summary>
+    /// The configuration for the voice to use.
+    /// </summary>
+    [JsonPropertyName("voiceConfig")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public VoiceConfig
+        ? VoiceConfig {
             get; set;
           }
 

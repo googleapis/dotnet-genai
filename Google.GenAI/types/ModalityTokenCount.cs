@@ -35,7 +35,7 @@ namespace Google.GenAI.Types {
     public MediaModality ? Modality { get; set; }
 
     /// <summary>
-    /// Number of tokens.
+    /// The number of tokens counted for this modality.
     /// </summary>
     [JsonPropertyName("tokenCount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

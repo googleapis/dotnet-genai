@@ -214,12 +214,32 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Output only. Evaluation runs for the Tuning Job.
+    /// </summary>
+    [JsonPropertyName("evaluateDatasetRuns")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public List<EvaluateDatasetRun>
+        ? EvaluateDatasetRuns {
+            get; set;
+          }
+
+    /// <summary>
     /// Output only. The Experiment associated with this TuningJob.
     /// </summary>
     [JsonPropertyName("experiment")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
         ? Experiment {
+            get; set;
+          }
+
+    /// <summary>
+    /// Tuning Spec for Full Fine Tuning.
+    /// </summary>
+    [JsonPropertyName("fullFineTuningSpec")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public FullFineTuningSpec
+        ? FullFineTuningSpec {
             get; set;
           }
 
@@ -283,6 +303,16 @@ namespace Google.GenAI.Types {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
         ? TunedModelDisplayName {
+            get; set;
+          }
+
+    /// <summary>
+    /// Output only. The detail state of the tuning job (while the overall `JobState` is running).
+    /// </summary>
+    [JsonPropertyName("tuningJobState")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public TuningJobState
+        ? TuningJobState {
             get; set;
           }
 

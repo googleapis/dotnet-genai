@@ -20,32 +20,32 @@ using System.Text.Json.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Output only. Harm probability levels in the content.
+  /// Output only. The probability of harm for this category.
   /// </summary>
   [JsonConverter(typeof(JsonStringEnumConverter))]
   public enum HarmProbability {
     /// <summary>
-    /// Harm probability unspecified.
+    /// The harm probability is unspecified.
     /// </summary>
     [JsonPropertyName("HARM_PROBABILITY_UNSPECIFIED")] HARM_PROBABILITY_UNSPECIFIED,
 
     /// <summary>
-    /// Negligible level of harm.
+    /// The harm probability is negligible.
     /// </summary>
     [JsonPropertyName("NEGLIGIBLE")] NEGLIGIBLE,
 
     /// <summary>
-    /// Low level of harm.
+    /// The harm probability is low.
     /// </summary>
     [JsonPropertyName("LOW")] LOW,
 
     /// <summary>
-    /// Medium level of harm.
+    /// The harm probability is medium.
     /// </summary>
     [JsonPropertyName("MEDIUM")] MEDIUM,
 
     /// <summary>
-    /// High level of harm.
+    /// The harm probability is high.
     /// </summary>
     [JsonPropertyName("HIGH")] HIGH
   }

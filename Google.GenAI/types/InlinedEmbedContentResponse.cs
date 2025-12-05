@@ -45,6 +45,16 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Output only. The metadata associated with the request.
+    /// </summary>
+    [JsonPropertyName("metadata")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public Dictionary<string, object>
+        ? Metadata {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a InlinedEmbedContentResponse object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

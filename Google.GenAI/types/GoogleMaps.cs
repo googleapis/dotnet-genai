@@ -23,7 +23,7 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Tool to retrieve public maps data for grounding, powered by Google.
+  /// Tool to retrieve knowledge from Google Maps.
   /// </summary>
 
   public record GoogleMaps {
@@ -36,7 +36,9 @@ namespace Google.GenAI.Types {
     public AuthConfig ? AuthConfig { get; set; }
 
     /// <summary>
-    /// Optional. If true, include the widget context token in the response.
+    /// Optional. Whether to return a widget context token in the GroundingMetadata of the response.
+    /// Developers can use the widget context token to render a Google Maps widget with geospatial
+    /// context related to the places that the model references in the response.
     /// </summary>
     [JsonPropertyName("enableWidget")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

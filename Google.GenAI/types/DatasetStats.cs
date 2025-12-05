@@ -28,12 +28,34 @@ namespace Google.GenAI.Types {
 
   public record DatasetStats {
     /// <summary>
+    /// Output only. A partial sample of the indices (starting from 1) of the dropped examples.
+    /// </summary>
+    [JsonPropertyName("droppedExampleIndices")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    [JsonConverter(typeof(StringToNullableLongListConverter))]
+    public List<long> ? DroppedExampleIndices { get; set; }
+
+    /// <summary>
+    /// Output only. For each index in `dropped_example_indices`, the user-facing reason why the
+    /// example was dropped.
+    /// </summary>
+    [JsonPropertyName("droppedExampleReasons")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public List<string>
+        ? DroppedExampleReasons {
+            get; set;
+          }
+
+    /// <summary>
     /// Output only. Number of billable characters in the tuning dataset.
     /// </summary>
     [JsonPropertyName("totalBillableCharacterCount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     [JsonConverter(typeof(StringToNullableLongConverter))]
-    public long ? TotalBillableCharacterCount { get; set; }
+    public long
+        ? TotalBillableCharacterCount {
+            get; set;
+          }
 
     /// <summary>
     /// Output only. Number of tuning characters in the tuning dataset.

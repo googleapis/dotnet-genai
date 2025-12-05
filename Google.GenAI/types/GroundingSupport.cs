@@ -28,9 +28,8 @@ namespace Google.GenAI.Types {
 
   public record GroundingSupport {
     /// <summary>
-    /// Confidence score of the support references. Ranges from 0 to 1. 1 is the most confident. For
-    /// Gemini 2.0 and before, this list must have the same size as the grounding_chunk_indices. For
-    /// Gemini 2.5 and after, this list will be empty and should be ignored.
+    /// Confidence score of the support references.  Ranges from 0 to 1. 1 is the most confident.
+    /// This list must have the same size as the grounding_chunk_indices.
     /// </summary>
     [JsonPropertyName("confidenceScores")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
