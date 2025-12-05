@@ -155,11 +155,81 @@ Class DatasetStats  <a class="header-action link-secondary" title="View source" 
 </h2>
 
 
+  <a id="Google_GenAI_Types_DatasetStats_DroppedExampleIndices_" data-uid="Google.GenAI.Types.DatasetStats.DroppedExampleIndices*"></a>
+
+  <h3 id="Google_GenAI_Types_DatasetStats_DroppedExampleIndices" data-uid="Google.GenAI.Types.DatasetStats.DroppedExampleIndices">
+  DroppedExampleIndices
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DatasetStats.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Output only. A partial sample of the indices (starting from 1) of the dropped examples.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;droppedExampleIndices&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+[JsonConverter(typeof(StringToNullableLongListConverter))]
+public List&lt;long&gt;? DroppedExampleIndices { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_DatasetStats_DroppedExampleReasons_" data-uid="Google.GenAI.Types.DatasetStats.DroppedExampleReasons*"></a>
+
+  <h3 id="Google_GenAI_Types_DatasetStats_DroppedExampleReasons" data-uid="Google.GenAI.Types.DatasetStats.DroppedExampleReasons">
+  DroppedExampleReasons
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DatasetStats.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Output only. For each index in <code>dropped_example_indices</code>, the user-facing reason why the
+example was dropped.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;droppedExampleReasons&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public List&lt;string&gt;? DroppedExampleReasons { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_DatasetStats_TotalBillableCharacterCount_" data-uid="Google.GenAI.Types.DatasetStats.TotalBillableCharacterCount*"></a>
 
   <h3 id="Google_GenAI_Types_DatasetStats_TotalBillableCharacterCount" data-uid="Google.GenAI.Types.DatasetStats.TotalBillableCharacterCount">
   TotalBillableCharacterCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DatasetStats.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DatasetStats.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Output only. Number of billable characters in the tuning dataset.</p>
@@ -194,7 +264,7 @@ public long? TotalBillableCharacterCount { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_DatasetStats_TotalTuningCharacterCount" data-uid="Google.GenAI.Types.DatasetStats.TotalTuningCharacterCount">
   TotalTuningCharacterCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DatasetStats.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DatasetStats.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Output only. Number of tuning characters in the tuning dataset.</p>
@@ -229,7 +299,7 @@ public long? TotalTuningCharacterCount { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_DatasetStats_TuningDatasetExampleCount" data-uid="Google.GenAI.Types.DatasetStats.TuningDatasetExampleCount">
   TuningDatasetExampleCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DatasetStats.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DatasetStats.cs/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Output only. Number of examples in the tuning dataset.</p>
@@ -264,7 +334,7 @@ public long? TuningDatasetExampleCount { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_DatasetStats_TuningStepCount" data-uid="Google.GenAI.Types.DatasetStats.TuningStepCount">
   TuningStepCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DatasetStats.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DatasetStats.cs/#L85"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Output only. Number of tuning steps for this Tuning Job.</p>
@@ -299,7 +369,7 @@ public long? TuningStepCount { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_DatasetStats_UserDatasetExamples" data-uid="Google.GenAI.Types.DatasetStats.UserDatasetExamples">
   UserDatasetExamples
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DatasetStats.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DatasetStats.cs/#L96"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Output only. Sample user messages in the training dataset uri.</p>
@@ -333,7 +403,7 @@ public List&lt;Content&gt;? UserDatasetExamples { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_DatasetStats_UserInputTokenDistribution" data-uid="Google.GenAI.Types.DatasetStats.UserInputTokenDistribution">
   UserInputTokenDistribution
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DatasetStats.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DatasetStats.cs/#L106"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Output only. Dataset distributions for the user input tokens.</p>
@@ -367,7 +437,7 @@ public DatasetDistribution? UserInputTokenDistribution { get; set; }</code></pre
 
   <h3 id="Google_GenAI_Types_DatasetStats_UserMessagePerExampleDistribution" data-uid="Google.GenAI.Types.DatasetStats.UserMessagePerExampleDistribution">
   UserMessagePerExampleDistribution
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DatasetStats.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DatasetStats.cs/#L116"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Output only. Dataset distributions for the messages per example.</p>
@@ -401,7 +471,7 @@ public DatasetDistribution? UserMessagePerExampleDistribution { get; set; }</cod
 
   <h3 id="Google_GenAI_Types_DatasetStats_UserOutputTokenDistribution" data-uid="Google.GenAI.Types.DatasetStats.UserOutputTokenDistribution">
   UserOutputTokenDistribution
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DatasetStats.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DatasetStats.cs/#L126"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Output only. Dataset distributions for the user output tokens.</p>
@@ -439,7 +509,7 @@ public DatasetDistribution? UserOutputTokenDistribution { get; set; }</code></pr
 
   <h3 id="Google_GenAI_Types_DatasetStats_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.DatasetStats.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DatasetStats.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DatasetStats.cs/#L139"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a DatasetStats object.</p>
