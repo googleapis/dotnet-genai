@@ -410,6 +410,14 @@ public class SegmentImageSimple {
 }
 </code></pre>
 <h3 id="generate-videos">Generate Videos</h3>
+<p>Generated videos can be either be returned by the API as bytes or a GCS URI for
+Vertex. For Gemini Developer API, only a Files URI can be returned.</p>
+<p>For Gemini, generated videos can be downloaded to a local file as follows:</p>
+<pre><code class="lang-csharp">await client.Files.DownloadToFileAsync(
+    generatedVideo: operation.Response.GeneratedVideos.First(),
+    outputPath: &quot;video.mp4&quot;
+);
+</code></pre>
 <h4 id="generate-videos-from-text">Generate Videos (From Text)</h4>
 <pre><code class="lang-csharp">using System.Threading.Tasks;
 using Google.GenAI;
