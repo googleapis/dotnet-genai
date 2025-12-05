@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class FileData | Google GenAI .NET SDK ">
       
-      <meta name="description" content="URI-based data. A FileData message contains a URI pointing to data of a specific media type. It is used to represent images, audio, and video stored in Google Cloud Storage.">
+      <meta name="description" content="URI based data.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Types_FileData" data-uid="Google.GenAI.Types.FileData" class="text-break">
-Class FileData  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FileData.cs/#L30"><i class="bi bi-code-slash"></i></a>
+Class FileData  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FileData.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,8 +93,7 @@ Class FileData  <a class="header-action link-secondary" title="View source" href
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>URI-based data. A FileData message contains a URI pointing to data of a specific media type.
-It is used to represent images, audio, and video stored in Google Cloud Storage.</p>
+  <div class="markdown summary"><p>URI based data.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -163,10 +162,11 @@ It is used to represent images, audio, and video stored in Google Cloud Storage.
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FileData.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. The display name of the file. Used to provide a label or filename to distinguish
-files. This field is only returned in <code>PromptMessage</code> for prompt management. It is used in
-the Gemini calls only when server side tools (<code>code_execution</code>, <code>google_search</code>, and
-<code>url_context</code>) are enabled. This field is not supported in Gemini API.</p>
+  <div class="markdown level1 summary"><p>Optional. Display name of the file data. Used to provide a label or filename to distinguish
+file datas. This field is only returned in PromptMessage for prompt management. It is
+currently used in the Gemini GenerateContent calls only when server side tools
+(code_execution, google_search, and url_context) are enabled. This field is not supported in
+Gemini API.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -200,7 +200,7 @@ public string? DisplayName { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FileData.cs/#L44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The URI of the file in Google Cloud Storage.</p>
+  <div class="markdown level1 summary"><p>URI.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -311,7 +311,7 @@ public string? MimeType { get; set; }</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FileData.cs/#L30" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FileData.cs/#L29" class="edit-link">Edit this page</a>
         </div>
 
 

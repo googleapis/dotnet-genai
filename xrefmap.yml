@@ -2223,239 +2223,6 @@ references:
   commentId: F:Google.GenAI.Types.AdapterSize.ADAPTER_SIZE_UNSPECIFIED
   fullName: Google.GenAI.Types.AdapterSize.ADAPTER_SIZE_UNSPECIFIED
   nameWithType: AdapterSize.ADAPTER_SIZE_UNSPECIFIED
-- uid: Google.GenAI.Types.AggregationMetric
-  name: AggregationMetric
-  href: api/Google.GenAI.Types.AggregationMetric.html
-  commentId: T:Google.GenAI.Types.AggregationMetric
-  fullName: Google.GenAI.Types.AggregationMetric
-  nameWithType: AggregationMetric
-- uid: Google.GenAI.Types.AggregationMetric.AGGREGATION_METRIC_UNSPECIFIED
-  name: AGGREGATION_METRIC_UNSPECIFIED
-  href: api/Google.GenAI.Types.AggregationMetric.html#Google_GenAI_Types_AggregationMetric_AGGREGATION_METRIC_UNSPECIFIED
-  commentId: F:Google.GenAI.Types.AggregationMetric.AGGREGATION_METRIC_UNSPECIFIED
-  fullName: Google.GenAI.Types.AggregationMetric.AGGREGATION_METRIC_UNSPECIFIED
-  nameWithType: AggregationMetric.AGGREGATION_METRIC_UNSPECIFIED
-- uid: Google.GenAI.Types.AggregationMetric.AVERAGE
-  name: AVERAGE
-  href: api/Google.GenAI.Types.AggregationMetric.html#Google_GenAI_Types_AggregationMetric_AVERAGE
-  commentId: F:Google.GenAI.Types.AggregationMetric.AVERAGE
-  fullName: Google.GenAI.Types.AggregationMetric.AVERAGE
-  nameWithType: AggregationMetric.AVERAGE
-- uid: Google.GenAI.Types.AggregationMetric.MAXIMUM
-  name: MAXIMUM
-  href: api/Google.GenAI.Types.AggregationMetric.html#Google_GenAI_Types_AggregationMetric_MAXIMUM
-  commentId: F:Google.GenAI.Types.AggregationMetric.MAXIMUM
-  fullName: Google.GenAI.Types.AggregationMetric.MAXIMUM
-  nameWithType: AggregationMetric.MAXIMUM
-- uid: Google.GenAI.Types.AggregationMetric.MEDIAN
-  name: MEDIAN
-  href: api/Google.GenAI.Types.AggregationMetric.html#Google_GenAI_Types_AggregationMetric_MEDIAN
-  commentId: F:Google.GenAI.Types.AggregationMetric.MEDIAN
-  fullName: Google.GenAI.Types.AggregationMetric.MEDIAN
-  nameWithType: AggregationMetric.MEDIAN
-- uid: Google.GenAI.Types.AggregationMetric.MINIMUM
-  name: MINIMUM
-  href: api/Google.GenAI.Types.AggregationMetric.html#Google_GenAI_Types_AggregationMetric_MINIMUM
-  commentId: F:Google.GenAI.Types.AggregationMetric.MINIMUM
-  fullName: Google.GenAI.Types.AggregationMetric.MINIMUM
-  nameWithType: AggregationMetric.MINIMUM
-- uid: Google.GenAI.Types.AggregationMetric.MODE
-  name: MODE
-  href: api/Google.GenAI.Types.AggregationMetric.html#Google_GenAI_Types_AggregationMetric_MODE
-  commentId: F:Google.GenAI.Types.AggregationMetric.MODE
-  fullName: Google.GenAI.Types.AggregationMetric.MODE
-  nameWithType: AggregationMetric.MODE
-- uid: Google.GenAI.Types.AggregationMetric.PERCENTILE_P90
-  name: PERCENTILE_P90
-  href: api/Google.GenAI.Types.AggregationMetric.html#Google_GenAI_Types_AggregationMetric_PERCENTILE_P90
-  commentId: F:Google.GenAI.Types.AggregationMetric.PERCENTILE_P90
-  fullName: Google.GenAI.Types.AggregationMetric.PERCENTILE_P90
-  nameWithType: AggregationMetric.PERCENTILE_P90
-- uid: Google.GenAI.Types.AggregationMetric.PERCENTILE_P95
-  name: PERCENTILE_P95
-  href: api/Google.GenAI.Types.AggregationMetric.html#Google_GenAI_Types_AggregationMetric_PERCENTILE_P95
-  commentId: F:Google.GenAI.Types.AggregationMetric.PERCENTILE_P95
-  fullName: Google.GenAI.Types.AggregationMetric.PERCENTILE_P95
-  nameWithType: AggregationMetric.PERCENTILE_P95
-- uid: Google.GenAI.Types.AggregationMetric.PERCENTILE_P99
-  name: PERCENTILE_P99
-  href: api/Google.GenAI.Types.AggregationMetric.html#Google_GenAI_Types_AggregationMetric_PERCENTILE_P99
-  commentId: F:Google.GenAI.Types.AggregationMetric.PERCENTILE_P99
-  fullName: Google.GenAI.Types.AggregationMetric.PERCENTILE_P99
-  nameWithType: AggregationMetric.PERCENTILE_P99
-- uid: Google.GenAI.Types.AggregationMetric.STANDARD_DEVIATION
-  name: STANDARD_DEVIATION
-  href: api/Google.GenAI.Types.AggregationMetric.html#Google_GenAI_Types_AggregationMetric_STANDARD_DEVIATION
-  commentId: F:Google.GenAI.Types.AggregationMetric.STANDARD_DEVIATION
-  fullName: Google.GenAI.Types.AggregationMetric.STANDARD_DEVIATION
-  nameWithType: AggregationMetric.STANDARD_DEVIATION
-- uid: Google.GenAI.Types.AggregationMetric.VARIANCE
-  name: VARIANCE
-  href: api/Google.GenAI.Types.AggregationMetric.html#Google_GenAI_Types_AggregationMetric_VARIANCE
-  commentId: F:Google.GenAI.Types.AggregationMetric.VARIANCE
-  fullName: Google.GenAI.Types.AggregationMetric.VARIANCE
-  nameWithType: AggregationMetric.VARIANCE
-- uid: Google.GenAI.Types.AggregationOutput
-  name: AggregationOutput
-  href: api/Google.GenAI.Types.AggregationOutput.html
-  commentId: T:Google.GenAI.Types.AggregationOutput
-  fullName: Google.GenAI.Types.AggregationOutput
-  nameWithType: AggregationOutput
-- uid: Google.GenAI.Types.AggregationOutput.AggregationResults
-  name: AggregationResults
-  href: api/Google.GenAI.Types.AggregationOutput.html#Google_GenAI_Types_AggregationOutput_AggregationResults
-  commentId: P:Google.GenAI.Types.AggregationOutput.AggregationResults
-  fullName: Google.GenAI.Types.AggregationOutput.AggregationResults
-  nameWithType: AggregationOutput.AggregationResults
-- uid: Google.GenAI.Types.AggregationOutput.AggregationResults*
-  name: AggregationResults
-  href: api/Google.GenAI.Types.AggregationOutput.html#Google_GenAI_Types_AggregationOutput_AggregationResults_
-  commentId: Overload:Google.GenAI.Types.AggregationOutput.AggregationResults
-  isSpec: "True"
-  fullName: Google.GenAI.Types.AggregationOutput.AggregationResults
-  nameWithType: AggregationOutput.AggregationResults
-- uid: Google.GenAI.Types.AggregationOutput.Dataset
-  name: Dataset
-  href: api/Google.GenAI.Types.AggregationOutput.html#Google_GenAI_Types_AggregationOutput_Dataset
-  commentId: P:Google.GenAI.Types.AggregationOutput.Dataset
-  fullName: Google.GenAI.Types.AggregationOutput.Dataset
-  nameWithType: AggregationOutput.Dataset
-- uid: Google.GenAI.Types.AggregationOutput.Dataset*
-  name: Dataset
-  href: api/Google.GenAI.Types.AggregationOutput.html#Google_GenAI_Types_AggregationOutput_Dataset_
-  commentId: Overload:Google.GenAI.Types.AggregationOutput.Dataset
-  isSpec: "True"
-  fullName: Google.GenAI.Types.AggregationOutput.Dataset
-  nameWithType: AggregationOutput.Dataset
-- uid: Google.GenAI.Types.AggregationOutput.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name: FromJson(string, JsonSerializerOptions?)
-  href: api/Google.GenAI.Types.AggregationOutput.html#Google_GenAI_Types_AggregationOutput_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
-  commentId: M:Google.GenAI.Types.AggregationOutput.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name.vb: FromJson(String, JsonSerializerOptions)
-  fullName: Google.GenAI.Types.AggregationOutput.FromJson(string, System.Text.Json.JsonSerializerOptions?)
-  fullName.vb: Google.GenAI.Types.AggregationOutput.FromJson(String, System.Text.Json.JsonSerializerOptions)
-  nameWithType: AggregationOutput.FromJson(string, JsonSerializerOptions?)
-  nameWithType.vb: AggregationOutput.FromJson(String, JsonSerializerOptions)
-- uid: Google.GenAI.Types.AggregationOutput.FromJson*
-  name: FromJson
-  href: api/Google.GenAI.Types.AggregationOutput.html#Google_GenAI_Types_AggregationOutput_FromJson_
-  commentId: Overload:Google.GenAI.Types.AggregationOutput.FromJson
-  isSpec: "True"
-  fullName: Google.GenAI.Types.AggregationOutput.FromJson
-  nameWithType: AggregationOutput.FromJson
-- uid: Google.GenAI.Types.AggregationResult
-  name: AggregationResult
-  href: api/Google.GenAI.Types.AggregationResult.html
-  commentId: T:Google.GenAI.Types.AggregationResult
-  fullName: Google.GenAI.Types.AggregationResult
-  nameWithType: AggregationResult
-- uid: Google.GenAI.Types.AggregationResult.AggregationMetric
-  name: AggregationMetric
-  href: api/Google.GenAI.Types.AggregationResult.html#Google_GenAI_Types_AggregationResult_AggregationMetric
-  commentId: P:Google.GenAI.Types.AggregationResult.AggregationMetric
-  fullName: Google.GenAI.Types.AggregationResult.AggregationMetric
-  nameWithType: AggregationResult.AggregationMetric
-- uid: Google.GenAI.Types.AggregationResult.AggregationMetric*
-  name: AggregationMetric
-  href: api/Google.GenAI.Types.AggregationResult.html#Google_GenAI_Types_AggregationResult_AggregationMetric_
-  commentId: Overload:Google.GenAI.Types.AggregationResult.AggregationMetric
-  isSpec: "True"
-  fullName: Google.GenAI.Types.AggregationResult.AggregationMetric
-  nameWithType: AggregationResult.AggregationMetric
-- uid: Google.GenAI.Types.AggregationResult.BleuMetricValue
-  name: BleuMetricValue
-  href: api/Google.GenAI.Types.AggregationResult.html#Google_GenAI_Types_AggregationResult_BleuMetricValue
-  commentId: P:Google.GenAI.Types.AggregationResult.BleuMetricValue
-  fullName: Google.GenAI.Types.AggregationResult.BleuMetricValue
-  nameWithType: AggregationResult.BleuMetricValue
-- uid: Google.GenAI.Types.AggregationResult.BleuMetricValue*
-  name: BleuMetricValue
-  href: api/Google.GenAI.Types.AggregationResult.html#Google_GenAI_Types_AggregationResult_BleuMetricValue_
-  commentId: Overload:Google.GenAI.Types.AggregationResult.BleuMetricValue
-  isSpec: "True"
-  fullName: Google.GenAI.Types.AggregationResult.BleuMetricValue
-  nameWithType: AggregationResult.BleuMetricValue
-- uid: Google.GenAI.Types.AggregationResult.CustomCodeExecutionResult
-  name: CustomCodeExecutionResult
-  href: api/Google.GenAI.Types.AggregationResult.html#Google_GenAI_Types_AggregationResult_CustomCodeExecutionResult
-  commentId: P:Google.GenAI.Types.AggregationResult.CustomCodeExecutionResult
-  fullName: Google.GenAI.Types.AggregationResult.CustomCodeExecutionResult
-  nameWithType: AggregationResult.CustomCodeExecutionResult
-- uid: Google.GenAI.Types.AggregationResult.CustomCodeExecutionResult*
-  name: CustomCodeExecutionResult
-  href: api/Google.GenAI.Types.AggregationResult.html#Google_GenAI_Types_AggregationResult_CustomCodeExecutionResult_
-  commentId: Overload:Google.GenAI.Types.AggregationResult.CustomCodeExecutionResult
-  isSpec: "True"
-  fullName: Google.GenAI.Types.AggregationResult.CustomCodeExecutionResult
-  nameWithType: AggregationResult.CustomCodeExecutionResult
-- uid: Google.GenAI.Types.AggregationResult.ExactMatchMetricValue
-  name: ExactMatchMetricValue
-  href: api/Google.GenAI.Types.AggregationResult.html#Google_GenAI_Types_AggregationResult_ExactMatchMetricValue
-  commentId: P:Google.GenAI.Types.AggregationResult.ExactMatchMetricValue
-  fullName: Google.GenAI.Types.AggregationResult.ExactMatchMetricValue
-  nameWithType: AggregationResult.ExactMatchMetricValue
-- uid: Google.GenAI.Types.AggregationResult.ExactMatchMetricValue*
-  name: ExactMatchMetricValue
-  href: api/Google.GenAI.Types.AggregationResult.html#Google_GenAI_Types_AggregationResult_ExactMatchMetricValue_
-  commentId: Overload:Google.GenAI.Types.AggregationResult.ExactMatchMetricValue
-  isSpec: "True"
-  fullName: Google.GenAI.Types.AggregationResult.ExactMatchMetricValue
-  nameWithType: AggregationResult.ExactMatchMetricValue
-- uid: Google.GenAI.Types.AggregationResult.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name: FromJson(string, JsonSerializerOptions?)
-  href: api/Google.GenAI.Types.AggregationResult.html#Google_GenAI_Types_AggregationResult_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
-  commentId: M:Google.GenAI.Types.AggregationResult.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name.vb: FromJson(String, JsonSerializerOptions)
-  fullName: Google.GenAI.Types.AggregationResult.FromJson(string, System.Text.Json.JsonSerializerOptions?)
-  fullName.vb: Google.GenAI.Types.AggregationResult.FromJson(String, System.Text.Json.JsonSerializerOptions)
-  nameWithType: AggregationResult.FromJson(string, JsonSerializerOptions?)
-  nameWithType.vb: AggregationResult.FromJson(String, JsonSerializerOptions)
-- uid: Google.GenAI.Types.AggregationResult.FromJson*
-  name: FromJson
-  href: api/Google.GenAI.Types.AggregationResult.html#Google_GenAI_Types_AggregationResult_FromJson_
-  commentId: Overload:Google.GenAI.Types.AggregationResult.FromJson
-  isSpec: "True"
-  fullName: Google.GenAI.Types.AggregationResult.FromJson
-  nameWithType: AggregationResult.FromJson
-- uid: Google.GenAI.Types.AggregationResult.PairwiseMetricResult
-  name: PairwiseMetricResult
-  href: api/Google.GenAI.Types.AggregationResult.html#Google_GenAI_Types_AggregationResult_PairwiseMetricResult
-  commentId: P:Google.GenAI.Types.AggregationResult.PairwiseMetricResult
-  fullName: Google.GenAI.Types.AggregationResult.PairwiseMetricResult
-  nameWithType: AggregationResult.PairwiseMetricResult
-- uid: Google.GenAI.Types.AggregationResult.PairwiseMetricResult*
-  name: PairwiseMetricResult
-  href: api/Google.GenAI.Types.AggregationResult.html#Google_GenAI_Types_AggregationResult_PairwiseMetricResult_
-  commentId: Overload:Google.GenAI.Types.AggregationResult.PairwiseMetricResult
-  isSpec: "True"
-  fullName: Google.GenAI.Types.AggregationResult.PairwiseMetricResult
-  nameWithType: AggregationResult.PairwiseMetricResult
-- uid: Google.GenAI.Types.AggregationResult.PointwiseMetricResult
-  name: PointwiseMetricResult
-  href: api/Google.GenAI.Types.AggregationResult.html#Google_GenAI_Types_AggregationResult_PointwiseMetricResult
-  commentId: P:Google.GenAI.Types.AggregationResult.PointwiseMetricResult
-  fullName: Google.GenAI.Types.AggregationResult.PointwiseMetricResult
-  nameWithType: AggregationResult.PointwiseMetricResult
-- uid: Google.GenAI.Types.AggregationResult.PointwiseMetricResult*
-  name: PointwiseMetricResult
-  href: api/Google.GenAI.Types.AggregationResult.html#Google_GenAI_Types_AggregationResult_PointwiseMetricResult_
-  commentId: Overload:Google.GenAI.Types.AggregationResult.PointwiseMetricResult
-  isSpec: "True"
-  fullName: Google.GenAI.Types.AggregationResult.PointwiseMetricResult
-  nameWithType: AggregationResult.PointwiseMetricResult
-- uid: Google.GenAI.Types.AggregationResult.RougeMetricValue
-  name: RougeMetricValue
-  href: api/Google.GenAI.Types.AggregationResult.html#Google_GenAI_Types_AggregationResult_RougeMetricValue
-  commentId: P:Google.GenAI.Types.AggregationResult.RougeMetricValue
-  fullName: Google.GenAI.Types.AggregationResult.RougeMetricValue
-  nameWithType: AggregationResult.RougeMetricValue
-- uid: Google.GenAI.Types.AggregationResult.RougeMetricValue*
-  name: RougeMetricValue
-  href: api/Google.GenAI.Types.AggregationResult.html#Google_GenAI_Types_AggregationResult_RougeMetricValue_
-  commentId: Overload:Google.GenAI.Types.AggregationResult.RougeMetricValue
-  isSpec: "True"
-  fullName: Google.GenAI.Types.AggregationResult.RougeMetricValue
-  nameWithType: AggregationResult.RougeMetricValue
 - uid: Google.GenAI.Types.ApiAuth
   name: ApiAuth
   href: api/Google.GenAI.Types.ApiAuth.html
@@ -2665,19 +2432,6 @@ references:
   commentId: T:Google.GenAI.Types.AuthConfig
   fullName: Google.GenAI.Types.AuthConfig
   nameWithType: AuthConfig
-- uid: Google.GenAI.Types.AuthConfig.ApiKey
-  name: ApiKey
-  href: api/Google.GenAI.Types.AuthConfig.html#Google_GenAI_Types_AuthConfig_ApiKey
-  commentId: P:Google.GenAI.Types.AuthConfig.ApiKey
-  fullName: Google.GenAI.Types.AuthConfig.ApiKey
-  nameWithType: AuthConfig.ApiKey
-- uid: Google.GenAI.Types.AuthConfig.ApiKey*
-  name: ApiKey
-  href: api/Google.GenAI.Types.AuthConfig.html#Google_GenAI_Types_AuthConfig_ApiKey_
-  commentId: Overload:Google.GenAI.Types.AuthConfig.ApiKey
-  isSpec: "True"
-  fullName: Google.GenAI.Types.AuthConfig.ApiKey
-  nameWithType: AuthConfig.ApiKey
 - uid: Google.GenAI.Types.AuthConfig.ApiKeyConfig
   name: ApiKeyConfig
   href: api/Google.GenAI.Types.AuthConfig.html#Google_GenAI_Types_AuthConfig_ApiKeyConfig
@@ -3462,76 +3216,6 @@ references:
   commentId: F:Google.GenAI.Types.Behavior.UNSPECIFIED
   fullName: Google.GenAI.Types.Behavior.UNSPECIFIED
   nameWithType: Behavior.UNSPECIFIED
-- uid: Google.GenAI.Types.BigQuerySource
-  name: BigQuerySource
-  href: api/Google.GenAI.Types.BigQuerySource.html
-  commentId: T:Google.GenAI.Types.BigQuerySource
-  fullName: Google.GenAI.Types.BigQuerySource
-  nameWithType: BigQuerySource
-- uid: Google.GenAI.Types.BigQuerySource.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name: FromJson(string, JsonSerializerOptions?)
-  href: api/Google.GenAI.Types.BigQuerySource.html#Google_GenAI_Types_BigQuerySource_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
-  commentId: M:Google.GenAI.Types.BigQuerySource.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name.vb: FromJson(String, JsonSerializerOptions)
-  fullName: Google.GenAI.Types.BigQuerySource.FromJson(string, System.Text.Json.JsonSerializerOptions?)
-  fullName.vb: Google.GenAI.Types.BigQuerySource.FromJson(String, System.Text.Json.JsonSerializerOptions)
-  nameWithType: BigQuerySource.FromJson(string, JsonSerializerOptions?)
-  nameWithType.vb: BigQuerySource.FromJson(String, JsonSerializerOptions)
-- uid: Google.GenAI.Types.BigQuerySource.FromJson*
-  name: FromJson
-  href: api/Google.GenAI.Types.BigQuerySource.html#Google_GenAI_Types_BigQuerySource_FromJson_
-  commentId: Overload:Google.GenAI.Types.BigQuerySource.FromJson
-  isSpec: "True"
-  fullName: Google.GenAI.Types.BigQuerySource.FromJson
-  nameWithType: BigQuerySource.FromJson
-- uid: Google.GenAI.Types.BigQuerySource.InputUri
-  name: InputUri
-  href: api/Google.GenAI.Types.BigQuerySource.html#Google_GenAI_Types_BigQuerySource_InputUri
-  commentId: P:Google.GenAI.Types.BigQuerySource.InputUri
-  fullName: Google.GenAI.Types.BigQuerySource.InputUri
-  nameWithType: BigQuerySource.InputUri
-- uid: Google.GenAI.Types.BigQuerySource.InputUri*
-  name: InputUri
-  href: api/Google.GenAI.Types.BigQuerySource.html#Google_GenAI_Types_BigQuerySource_InputUri_
-  commentId: Overload:Google.GenAI.Types.BigQuerySource.InputUri
-  isSpec: "True"
-  fullName: Google.GenAI.Types.BigQuerySource.InputUri
-  nameWithType: BigQuerySource.InputUri
-- uid: Google.GenAI.Types.BleuMetricValue
-  name: BleuMetricValue
-  href: api/Google.GenAI.Types.BleuMetricValue.html
-  commentId: T:Google.GenAI.Types.BleuMetricValue
-  fullName: Google.GenAI.Types.BleuMetricValue
-  nameWithType: BleuMetricValue
-- uid: Google.GenAI.Types.BleuMetricValue.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name: FromJson(string, JsonSerializerOptions?)
-  href: api/Google.GenAI.Types.BleuMetricValue.html#Google_GenAI_Types_BleuMetricValue_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
-  commentId: M:Google.GenAI.Types.BleuMetricValue.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name.vb: FromJson(String, JsonSerializerOptions)
-  fullName: Google.GenAI.Types.BleuMetricValue.FromJson(string, System.Text.Json.JsonSerializerOptions?)
-  fullName.vb: Google.GenAI.Types.BleuMetricValue.FromJson(String, System.Text.Json.JsonSerializerOptions)
-  nameWithType: BleuMetricValue.FromJson(string, JsonSerializerOptions?)
-  nameWithType.vb: BleuMetricValue.FromJson(String, JsonSerializerOptions)
-- uid: Google.GenAI.Types.BleuMetricValue.FromJson*
-  name: FromJson
-  href: api/Google.GenAI.Types.BleuMetricValue.html#Google_GenAI_Types_BleuMetricValue_FromJson_
-  commentId: Overload:Google.GenAI.Types.BleuMetricValue.FromJson
-  isSpec: "True"
-  fullName: Google.GenAI.Types.BleuMetricValue.FromJson
-  nameWithType: BleuMetricValue.FromJson
-- uid: Google.GenAI.Types.BleuMetricValue.Score
-  name: Score
-  href: api/Google.GenAI.Types.BleuMetricValue.html#Google_GenAI_Types_BleuMetricValue_Score
-  commentId: P:Google.GenAI.Types.BleuMetricValue.Score
-  fullName: Google.GenAI.Types.BleuMetricValue.Score
-  nameWithType: BleuMetricValue.Score
-- uid: Google.GenAI.Types.BleuMetricValue.Score*
-  name: Score
-  href: api/Google.GenAI.Types.BleuMetricValue.html#Google_GenAI_Types_BleuMetricValue_Score_
-  commentId: Overload:Google.GenAI.Types.BleuMetricValue.Score
-  isSpec: "True"
-  fullName: Google.GenAI.Types.BleuMetricValue.Score
-  nameWithType: BleuMetricValue.Score
 - uid: Google.GenAI.Types.Blob
   name: Blob
   href: api/Google.GenAI.Types.Blob.html
@@ -5641,76 +5325,6 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CreateTuningJobConfig.ValidationDataset
   nameWithType: CreateTuningJobConfig.ValidationDataset
-- uid: Google.GenAI.Types.CustomCodeExecutionResult
-  name: CustomCodeExecutionResult
-  href: api/Google.GenAI.Types.CustomCodeExecutionResult.html
-  commentId: T:Google.GenAI.Types.CustomCodeExecutionResult
-  fullName: Google.GenAI.Types.CustomCodeExecutionResult
-  nameWithType: CustomCodeExecutionResult
-- uid: Google.GenAI.Types.CustomCodeExecutionResult.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name: FromJson(string, JsonSerializerOptions?)
-  href: api/Google.GenAI.Types.CustomCodeExecutionResult.html#Google_GenAI_Types_CustomCodeExecutionResult_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
-  commentId: M:Google.GenAI.Types.CustomCodeExecutionResult.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name.vb: FromJson(String, JsonSerializerOptions)
-  fullName: Google.GenAI.Types.CustomCodeExecutionResult.FromJson(string, System.Text.Json.JsonSerializerOptions?)
-  fullName.vb: Google.GenAI.Types.CustomCodeExecutionResult.FromJson(String, System.Text.Json.JsonSerializerOptions)
-  nameWithType: CustomCodeExecutionResult.FromJson(string, JsonSerializerOptions?)
-  nameWithType.vb: CustomCodeExecutionResult.FromJson(String, JsonSerializerOptions)
-- uid: Google.GenAI.Types.CustomCodeExecutionResult.FromJson*
-  name: FromJson
-  href: api/Google.GenAI.Types.CustomCodeExecutionResult.html#Google_GenAI_Types_CustomCodeExecutionResult_FromJson_
-  commentId: Overload:Google.GenAI.Types.CustomCodeExecutionResult.FromJson
-  isSpec: "True"
-  fullName: Google.GenAI.Types.CustomCodeExecutionResult.FromJson
-  nameWithType: CustomCodeExecutionResult.FromJson
-- uid: Google.GenAI.Types.CustomCodeExecutionResult.Score
-  name: Score
-  href: api/Google.GenAI.Types.CustomCodeExecutionResult.html#Google_GenAI_Types_CustomCodeExecutionResult_Score
-  commentId: P:Google.GenAI.Types.CustomCodeExecutionResult.Score
-  fullName: Google.GenAI.Types.CustomCodeExecutionResult.Score
-  nameWithType: CustomCodeExecutionResult.Score
-- uid: Google.GenAI.Types.CustomCodeExecutionResult.Score*
-  name: Score
-  href: api/Google.GenAI.Types.CustomCodeExecutionResult.html#Google_GenAI_Types_CustomCodeExecutionResult_Score_
-  commentId: Overload:Google.GenAI.Types.CustomCodeExecutionResult.Score
-  isSpec: "True"
-  fullName: Google.GenAI.Types.CustomCodeExecutionResult.Score
-  nameWithType: CustomCodeExecutionResult.Score
-- uid: Google.GenAI.Types.CustomOutput
-  name: CustomOutput
-  href: api/Google.GenAI.Types.CustomOutput.html
-  commentId: T:Google.GenAI.Types.CustomOutput
-  fullName: Google.GenAI.Types.CustomOutput
-  nameWithType: CustomOutput
-- uid: Google.GenAI.Types.CustomOutput.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name: FromJson(string, JsonSerializerOptions?)
-  href: api/Google.GenAI.Types.CustomOutput.html#Google_GenAI_Types_CustomOutput_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
-  commentId: M:Google.GenAI.Types.CustomOutput.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name.vb: FromJson(String, JsonSerializerOptions)
-  fullName: Google.GenAI.Types.CustomOutput.FromJson(string, System.Text.Json.JsonSerializerOptions?)
-  fullName.vb: Google.GenAI.Types.CustomOutput.FromJson(String, System.Text.Json.JsonSerializerOptions)
-  nameWithType: CustomOutput.FromJson(string, JsonSerializerOptions?)
-  nameWithType.vb: CustomOutput.FromJson(String, JsonSerializerOptions)
-- uid: Google.GenAI.Types.CustomOutput.FromJson*
-  name: FromJson
-  href: api/Google.GenAI.Types.CustomOutput.html#Google_GenAI_Types_CustomOutput_FromJson_
-  commentId: Overload:Google.GenAI.Types.CustomOutput.FromJson
-  isSpec: "True"
-  fullName: Google.GenAI.Types.CustomOutput.FromJson
-  nameWithType: CustomOutput.FromJson
-- uid: Google.GenAI.Types.CustomOutput.RawOutputs
-  name: RawOutputs
-  href: api/Google.GenAI.Types.CustomOutput.html#Google_GenAI_Types_CustomOutput_RawOutputs
-  commentId: P:Google.GenAI.Types.CustomOutput.RawOutputs
-  fullName: Google.GenAI.Types.CustomOutput.RawOutputs
-  nameWithType: CustomOutput.RawOutputs
-- uid: Google.GenAI.Types.CustomOutput.RawOutputs*
-  name: RawOutputs
-  href: api/Google.GenAI.Types.CustomOutput.html#Google_GenAI_Types_CustomOutput_RawOutputs_
-  commentId: Overload:Google.GenAI.Types.CustomOutput.RawOutputs
-  isSpec: "True"
-  fullName: Google.GenAI.Types.CustomOutput.RawOutputs
-  nameWithType: CustomOutput.RawOutputs
 - uid: Google.GenAI.Types.DatasetDistribution
   name: DatasetDistribution
   href: api/Google.GenAI.Types.DatasetDistribution.html
@@ -5904,32 +5518,6 @@ references:
   commentId: T:Google.GenAI.Types.DatasetStats
   fullName: Google.GenAI.Types.DatasetStats
   nameWithType: DatasetStats
-- uid: Google.GenAI.Types.DatasetStats.DroppedExampleIndices
-  name: DroppedExampleIndices
-  href: api/Google.GenAI.Types.DatasetStats.html#Google_GenAI_Types_DatasetStats_DroppedExampleIndices
-  commentId: P:Google.GenAI.Types.DatasetStats.DroppedExampleIndices
-  fullName: Google.GenAI.Types.DatasetStats.DroppedExampleIndices
-  nameWithType: DatasetStats.DroppedExampleIndices
-- uid: Google.GenAI.Types.DatasetStats.DroppedExampleIndices*
-  name: DroppedExampleIndices
-  href: api/Google.GenAI.Types.DatasetStats.html#Google_GenAI_Types_DatasetStats_DroppedExampleIndices_
-  commentId: Overload:Google.GenAI.Types.DatasetStats.DroppedExampleIndices
-  isSpec: "True"
-  fullName: Google.GenAI.Types.DatasetStats.DroppedExampleIndices
-  nameWithType: DatasetStats.DroppedExampleIndices
-- uid: Google.GenAI.Types.DatasetStats.DroppedExampleReasons
-  name: DroppedExampleReasons
-  href: api/Google.GenAI.Types.DatasetStats.html#Google_GenAI_Types_DatasetStats_DroppedExampleReasons
-  commentId: P:Google.GenAI.Types.DatasetStats.DroppedExampleReasons
-  fullName: Google.GenAI.Types.DatasetStats.DroppedExampleReasons
-  nameWithType: DatasetStats.DroppedExampleReasons
-- uid: Google.GenAI.Types.DatasetStats.DroppedExampleReasons*
-  name: DroppedExampleReasons
-  href: api/Google.GenAI.Types.DatasetStats.html#Google_GenAI_Types_DatasetStats_DroppedExampleReasons_
-  commentId: Overload:Google.GenAI.Types.DatasetStats.DroppedExampleReasons
-  isSpec: "True"
-  fullName: Google.GenAI.Types.DatasetStats.DroppedExampleReasons
-  nameWithType: DatasetStats.DroppedExampleReasons
 - uid: Google.GenAI.Types.DatasetStats.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
   name: FromJson(string, JsonSerializerOptions?)
   href: api/Google.GenAI.Types.DatasetStats.html#Google_GenAI_Types_DatasetStats_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
@@ -7376,211 +6964,6 @@ references:
   commentId: F:Google.GenAI.Types.Environment.ENVIRONMENT_UNSPECIFIED
   fullName: Google.GenAI.Types.Environment.ENVIRONMENT_UNSPECIFIED
   nameWithType: Environment.ENVIRONMENT_UNSPECIFIED
-- uid: Google.GenAI.Types.EvaluateDatasetResponse
-  name: EvaluateDatasetResponse
-  href: api/Google.GenAI.Types.EvaluateDatasetResponse.html
-  commentId: T:Google.GenAI.Types.EvaluateDatasetResponse
-  fullName: Google.GenAI.Types.EvaluateDatasetResponse
-  nameWithType: EvaluateDatasetResponse
-- uid: Google.GenAI.Types.EvaluateDatasetResponse.AggregationOutput
-  name: AggregationOutput
-  href: api/Google.GenAI.Types.EvaluateDatasetResponse.html#Google_GenAI_Types_EvaluateDatasetResponse_AggregationOutput
-  commentId: P:Google.GenAI.Types.EvaluateDatasetResponse.AggregationOutput
-  fullName: Google.GenAI.Types.EvaluateDatasetResponse.AggregationOutput
-  nameWithType: EvaluateDatasetResponse.AggregationOutput
-- uid: Google.GenAI.Types.EvaluateDatasetResponse.AggregationOutput*
-  name: AggregationOutput
-  href: api/Google.GenAI.Types.EvaluateDatasetResponse.html#Google_GenAI_Types_EvaluateDatasetResponse_AggregationOutput_
-  commentId: Overload:Google.GenAI.Types.EvaluateDatasetResponse.AggregationOutput
-  isSpec: "True"
-  fullName: Google.GenAI.Types.EvaluateDatasetResponse.AggregationOutput
-  nameWithType: EvaluateDatasetResponse.AggregationOutput
-- uid: Google.GenAI.Types.EvaluateDatasetResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name: FromJson(string, JsonSerializerOptions?)
-  href: api/Google.GenAI.Types.EvaluateDatasetResponse.html#Google_GenAI_Types_EvaluateDatasetResponse_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
-  commentId: M:Google.GenAI.Types.EvaluateDatasetResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name.vb: FromJson(String, JsonSerializerOptions)
-  fullName: Google.GenAI.Types.EvaluateDatasetResponse.FromJson(string, System.Text.Json.JsonSerializerOptions?)
-  fullName.vb: Google.GenAI.Types.EvaluateDatasetResponse.FromJson(String, System.Text.Json.JsonSerializerOptions)
-  nameWithType: EvaluateDatasetResponse.FromJson(string, JsonSerializerOptions?)
-  nameWithType.vb: EvaluateDatasetResponse.FromJson(String, JsonSerializerOptions)
-- uid: Google.GenAI.Types.EvaluateDatasetResponse.FromJson*
-  name: FromJson
-  href: api/Google.GenAI.Types.EvaluateDatasetResponse.html#Google_GenAI_Types_EvaluateDatasetResponse_FromJson_
-  commentId: Overload:Google.GenAI.Types.EvaluateDatasetResponse.FromJson
-  isSpec: "True"
-  fullName: Google.GenAI.Types.EvaluateDatasetResponse.FromJson
-  nameWithType: EvaluateDatasetResponse.FromJson
-- uid: Google.GenAI.Types.EvaluateDatasetResponse.OutputInfo
-  name: OutputInfo
-  href: api/Google.GenAI.Types.EvaluateDatasetResponse.html#Google_GenAI_Types_EvaluateDatasetResponse_OutputInfo
-  commentId: P:Google.GenAI.Types.EvaluateDatasetResponse.OutputInfo
-  fullName: Google.GenAI.Types.EvaluateDatasetResponse.OutputInfo
-  nameWithType: EvaluateDatasetResponse.OutputInfo
-- uid: Google.GenAI.Types.EvaluateDatasetResponse.OutputInfo*
-  name: OutputInfo
-  href: api/Google.GenAI.Types.EvaluateDatasetResponse.html#Google_GenAI_Types_EvaluateDatasetResponse_OutputInfo_
-  commentId: Overload:Google.GenAI.Types.EvaluateDatasetResponse.OutputInfo
-  isSpec: "True"
-  fullName: Google.GenAI.Types.EvaluateDatasetResponse.OutputInfo
-  nameWithType: EvaluateDatasetResponse.OutputInfo
-- uid: Google.GenAI.Types.EvaluateDatasetRun
-  name: EvaluateDatasetRun
-  href: api/Google.GenAI.Types.EvaluateDatasetRun.html
-  commentId: T:Google.GenAI.Types.EvaluateDatasetRun
-  fullName: Google.GenAI.Types.EvaluateDatasetRun
-  nameWithType: EvaluateDatasetRun
-- uid: Google.GenAI.Types.EvaluateDatasetRun.CheckpointId
-  name: CheckpointId
-  href: api/Google.GenAI.Types.EvaluateDatasetRun.html#Google_GenAI_Types_EvaluateDatasetRun_CheckpointId
-  commentId: P:Google.GenAI.Types.EvaluateDatasetRun.CheckpointId
-  fullName: Google.GenAI.Types.EvaluateDatasetRun.CheckpointId
-  nameWithType: EvaluateDatasetRun.CheckpointId
-- uid: Google.GenAI.Types.EvaluateDatasetRun.CheckpointId*
-  name: CheckpointId
-  href: api/Google.GenAI.Types.EvaluateDatasetRun.html#Google_GenAI_Types_EvaluateDatasetRun_CheckpointId_
-  commentId: Overload:Google.GenAI.Types.EvaluateDatasetRun.CheckpointId
-  isSpec: "True"
-  fullName: Google.GenAI.Types.EvaluateDatasetRun.CheckpointId
-  nameWithType: EvaluateDatasetRun.CheckpointId
-- uid: Google.GenAI.Types.EvaluateDatasetRun.Error
-  name: Error
-  href: api/Google.GenAI.Types.EvaluateDatasetRun.html#Google_GenAI_Types_EvaluateDatasetRun_Error
-  commentId: P:Google.GenAI.Types.EvaluateDatasetRun.Error
-  fullName: Google.GenAI.Types.EvaluateDatasetRun.Error
-  nameWithType: EvaluateDatasetRun.Error
-- uid: Google.GenAI.Types.EvaluateDatasetRun.Error*
-  name: Error
-  href: api/Google.GenAI.Types.EvaluateDatasetRun.html#Google_GenAI_Types_EvaluateDatasetRun_Error_
-  commentId: Overload:Google.GenAI.Types.EvaluateDatasetRun.Error
-  isSpec: "True"
-  fullName: Google.GenAI.Types.EvaluateDatasetRun.Error
-  nameWithType: EvaluateDatasetRun.Error
-- uid: Google.GenAI.Types.EvaluateDatasetRun.EvaluateDatasetResponse
-  name: EvaluateDatasetResponse
-  href: api/Google.GenAI.Types.EvaluateDatasetRun.html#Google_GenAI_Types_EvaluateDatasetRun_EvaluateDatasetResponse
-  commentId: P:Google.GenAI.Types.EvaluateDatasetRun.EvaluateDatasetResponse
-  fullName: Google.GenAI.Types.EvaluateDatasetRun.EvaluateDatasetResponse
-  nameWithType: EvaluateDatasetRun.EvaluateDatasetResponse
-- uid: Google.GenAI.Types.EvaluateDatasetRun.EvaluateDatasetResponse*
-  name: EvaluateDatasetResponse
-  href: api/Google.GenAI.Types.EvaluateDatasetRun.html#Google_GenAI_Types_EvaluateDatasetRun_EvaluateDatasetResponse_
-  commentId: Overload:Google.GenAI.Types.EvaluateDatasetRun.EvaluateDatasetResponse
-  isSpec: "True"
-  fullName: Google.GenAI.Types.EvaluateDatasetRun.EvaluateDatasetResponse
-  nameWithType: EvaluateDatasetRun.EvaluateDatasetResponse
-- uid: Google.GenAI.Types.EvaluateDatasetRun.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name: FromJson(string, JsonSerializerOptions?)
-  href: api/Google.GenAI.Types.EvaluateDatasetRun.html#Google_GenAI_Types_EvaluateDatasetRun_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
-  commentId: M:Google.GenAI.Types.EvaluateDatasetRun.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name.vb: FromJson(String, JsonSerializerOptions)
-  fullName: Google.GenAI.Types.EvaluateDatasetRun.FromJson(string, System.Text.Json.JsonSerializerOptions?)
-  fullName.vb: Google.GenAI.Types.EvaluateDatasetRun.FromJson(String, System.Text.Json.JsonSerializerOptions)
-  nameWithType: EvaluateDatasetRun.FromJson(string, JsonSerializerOptions?)
-  nameWithType.vb: EvaluateDatasetRun.FromJson(String, JsonSerializerOptions)
-- uid: Google.GenAI.Types.EvaluateDatasetRun.FromJson*
-  name: FromJson
-  href: api/Google.GenAI.Types.EvaluateDatasetRun.html#Google_GenAI_Types_EvaluateDatasetRun_FromJson_
-  commentId: Overload:Google.GenAI.Types.EvaluateDatasetRun.FromJson
-  isSpec: "True"
-  fullName: Google.GenAI.Types.EvaluateDatasetRun.FromJson
-  nameWithType: EvaluateDatasetRun.FromJson
-- uid: Google.GenAI.Types.EvaluateDatasetRun.OperationName
-  name: OperationName
-  href: api/Google.GenAI.Types.EvaluateDatasetRun.html#Google_GenAI_Types_EvaluateDatasetRun_OperationName
-  commentId: P:Google.GenAI.Types.EvaluateDatasetRun.OperationName
-  fullName: Google.GenAI.Types.EvaluateDatasetRun.OperationName
-  nameWithType: EvaluateDatasetRun.OperationName
-- uid: Google.GenAI.Types.EvaluateDatasetRun.OperationName*
-  name: OperationName
-  href: api/Google.GenAI.Types.EvaluateDatasetRun.html#Google_GenAI_Types_EvaluateDatasetRun_OperationName_
-  commentId: Overload:Google.GenAI.Types.EvaluateDatasetRun.OperationName
-  isSpec: "True"
-  fullName: Google.GenAI.Types.EvaluateDatasetRun.OperationName
-  nameWithType: EvaluateDatasetRun.OperationName
-- uid: Google.GenAI.Types.EvaluationDataset
-  name: EvaluationDataset
-  href: api/Google.GenAI.Types.EvaluationDataset.html
-  commentId: T:Google.GenAI.Types.EvaluationDataset
-  fullName: Google.GenAI.Types.EvaluationDataset
-  nameWithType: EvaluationDataset
-- uid: Google.GenAI.Types.EvaluationDataset.BigquerySource
-  name: BigquerySource
-  href: api/Google.GenAI.Types.EvaluationDataset.html#Google_GenAI_Types_EvaluationDataset_BigquerySource
-  commentId: P:Google.GenAI.Types.EvaluationDataset.BigquerySource
-  fullName: Google.GenAI.Types.EvaluationDataset.BigquerySource
-  nameWithType: EvaluationDataset.BigquerySource
-- uid: Google.GenAI.Types.EvaluationDataset.BigquerySource*
-  name: BigquerySource
-  href: api/Google.GenAI.Types.EvaluationDataset.html#Google_GenAI_Types_EvaluationDataset_BigquerySource_
-  commentId: Overload:Google.GenAI.Types.EvaluationDataset.BigquerySource
-  isSpec: "True"
-  fullName: Google.GenAI.Types.EvaluationDataset.BigquerySource
-  nameWithType: EvaluationDataset.BigquerySource
-- uid: Google.GenAI.Types.EvaluationDataset.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name: FromJson(string, JsonSerializerOptions?)
-  href: api/Google.GenAI.Types.EvaluationDataset.html#Google_GenAI_Types_EvaluationDataset_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
-  commentId: M:Google.GenAI.Types.EvaluationDataset.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name.vb: FromJson(String, JsonSerializerOptions)
-  fullName: Google.GenAI.Types.EvaluationDataset.FromJson(string, System.Text.Json.JsonSerializerOptions?)
-  fullName.vb: Google.GenAI.Types.EvaluationDataset.FromJson(String, System.Text.Json.JsonSerializerOptions)
-  nameWithType: EvaluationDataset.FromJson(string, JsonSerializerOptions?)
-  nameWithType.vb: EvaluationDataset.FromJson(String, JsonSerializerOptions)
-- uid: Google.GenAI.Types.EvaluationDataset.FromJson*
-  name: FromJson
-  href: api/Google.GenAI.Types.EvaluationDataset.html#Google_GenAI_Types_EvaluationDataset_FromJson_
-  commentId: Overload:Google.GenAI.Types.EvaluationDataset.FromJson
-  isSpec: "True"
-  fullName: Google.GenAI.Types.EvaluationDataset.FromJson
-  nameWithType: EvaluationDataset.FromJson
-- uid: Google.GenAI.Types.EvaluationDataset.GcsSource
-  name: GcsSource
-  href: api/Google.GenAI.Types.EvaluationDataset.html#Google_GenAI_Types_EvaluationDataset_GcsSource
-  commentId: P:Google.GenAI.Types.EvaluationDataset.GcsSource
-  fullName: Google.GenAI.Types.EvaluationDataset.GcsSource
-  nameWithType: EvaluationDataset.GcsSource
-- uid: Google.GenAI.Types.EvaluationDataset.GcsSource*
-  name: GcsSource
-  href: api/Google.GenAI.Types.EvaluationDataset.html#Google_GenAI_Types_EvaluationDataset_GcsSource_
-  commentId: Overload:Google.GenAI.Types.EvaluationDataset.GcsSource
-  isSpec: "True"
-  fullName: Google.GenAI.Types.EvaluationDataset.GcsSource
-  nameWithType: EvaluationDataset.GcsSource
-- uid: Google.GenAI.Types.ExactMatchMetricValue
-  name: ExactMatchMetricValue
-  href: api/Google.GenAI.Types.ExactMatchMetricValue.html
-  commentId: T:Google.GenAI.Types.ExactMatchMetricValue
-  fullName: Google.GenAI.Types.ExactMatchMetricValue
-  nameWithType: ExactMatchMetricValue
-- uid: Google.GenAI.Types.ExactMatchMetricValue.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name: FromJson(string, JsonSerializerOptions?)
-  href: api/Google.GenAI.Types.ExactMatchMetricValue.html#Google_GenAI_Types_ExactMatchMetricValue_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
-  commentId: M:Google.GenAI.Types.ExactMatchMetricValue.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name.vb: FromJson(String, JsonSerializerOptions)
-  fullName: Google.GenAI.Types.ExactMatchMetricValue.FromJson(string, System.Text.Json.JsonSerializerOptions?)
-  fullName.vb: Google.GenAI.Types.ExactMatchMetricValue.FromJson(String, System.Text.Json.JsonSerializerOptions)
-  nameWithType: ExactMatchMetricValue.FromJson(string, JsonSerializerOptions?)
-  nameWithType.vb: ExactMatchMetricValue.FromJson(String, JsonSerializerOptions)
-- uid: Google.GenAI.Types.ExactMatchMetricValue.FromJson*
-  name: FromJson
-  href: api/Google.GenAI.Types.ExactMatchMetricValue.html#Google_GenAI_Types_ExactMatchMetricValue_FromJson_
-  commentId: Overload:Google.GenAI.Types.ExactMatchMetricValue.FromJson
-  isSpec: "True"
-  fullName: Google.GenAI.Types.ExactMatchMetricValue.FromJson
-  nameWithType: ExactMatchMetricValue.FromJson
-- uid: Google.GenAI.Types.ExactMatchMetricValue.Score
-  name: Score
-  href: api/Google.GenAI.Types.ExactMatchMetricValue.html#Google_GenAI_Types_ExactMatchMetricValue_Score
-  commentId: P:Google.GenAI.Types.ExactMatchMetricValue.Score
-  fullName: Google.GenAI.Types.ExactMatchMetricValue.Score
-  nameWithType: ExactMatchMetricValue.Score
-- uid: Google.GenAI.Types.ExactMatchMetricValue.Score*
-  name: Score
-  href: api/Google.GenAI.Types.ExactMatchMetricValue.html#Google_GenAI_Types_ExactMatchMetricValue_Score_
-  commentId: Overload:Google.GenAI.Types.ExactMatchMetricValue.Score
-  isSpec: "True"
-  fullName: Google.GenAI.Types.ExactMatchMetricValue.Score
-  nameWithType: ExactMatchMetricValue.Score
 - uid: Google.GenAI.Types.ExecutableCode
   name: ExecutableCode
   href: api/Google.GenAI.Types.ExecutableCode.html
@@ -8142,67 +7525,6 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.FileData.MimeType
   nameWithType: FileData.MimeType
-- uid: Google.GenAI.Types.FileSearch
-  name: FileSearch
-  href: api/Google.GenAI.Types.FileSearch.html
-  commentId: T:Google.GenAI.Types.FileSearch
-  fullName: Google.GenAI.Types.FileSearch
-  nameWithType: FileSearch
-- uid: Google.GenAI.Types.FileSearch.FileSearchStoreNames
-  name: FileSearchStoreNames
-  href: api/Google.GenAI.Types.FileSearch.html#Google_GenAI_Types_FileSearch_FileSearchStoreNames
-  commentId: P:Google.GenAI.Types.FileSearch.FileSearchStoreNames
-  fullName: Google.GenAI.Types.FileSearch.FileSearchStoreNames
-  nameWithType: FileSearch.FileSearchStoreNames
-- uid: Google.GenAI.Types.FileSearch.FileSearchStoreNames*
-  name: FileSearchStoreNames
-  href: api/Google.GenAI.Types.FileSearch.html#Google_GenAI_Types_FileSearch_FileSearchStoreNames_
-  commentId: Overload:Google.GenAI.Types.FileSearch.FileSearchStoreNames
-  isSpec: "True"
-  fullName: Google.GenAI.Types.FileSearch.FileSearchStoreNames
-  nameWithType: FileSearch.FileSearchStoreNames
-- uid: Google.GenAI.Types.FileSearch.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name: FromJson(string, JsonSerializerOptions?)
-  href: api/Google.GenAI.Types.FileSearch.html#Google_GenAI_Types_FileSearch_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
-  commentId: M:Google.GenAI.Types.FileSearch.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name.vb: FromJson(String, JsonSerializerOptions)
-  fullName: Google.GenAI.Types.FileSearch.FromJson(string, System.Text.Json.JsonSerializerOptions?)
-  fullName.vb: Google.GenAI.Types.FileSearch.FromJson(String, System.Text.Json.JsonSerializerOptions)
-  nameWithType: FileSearch.FromJson(string, JsonSerializerOptions?)
-  nameWithType.vb: FileSearch.FromJson(String, JsonSerializerOptions)
-- uid: Google.GenAI.Types.FileSearch.FromJson*
-  name: FromJson
-  href: api/Google.GenAI.Types.FileSearch.html#Google_GenAI_Types_FileSearch_FromJson_
-  commentId: Overload:Google.GenAI.Types.FileSearch.FromJson
-  isSpec: "True"
-  fullName: Google.GenAI.Types.FileSearch.FromJson
-  nameWithType: FileSearch.FromJson
-- uid: Google.GenAI.Types.FileSearch.MetadataFilter
-  name: MetadataFilter
-  href: api/Google.GenAI.Types.FileSearch.html#Google_GenAI_Types_FileSearch_MetadataFilter
-  commentId: P:Google.GenAI.Types.FileSearch.MetadataFilter
-  fullName: Google.GenAI.Types.FileSearch.MetadataFilter
-  nameWithType: FileSearch.MetadataFilter
-- uid: Google.GenAI.Types.FileSearch.MetadataFilter*
-  name: MetadataFilter
-  href: api/Google.GenAI.Types.FileSearch.html#Google_GenAI_Types_FileSearch_MetadataFilter_
-  commentId: Overload:Google.GenAI.Types.FileSearch.MetadataFilter
-  isSpec: "True"
-  fullName: Google.GenAI.Types.FileSearch.MetadataFilter
-  nameWithType: FileSearch.MetadataFilter
-- uid: Google.GenAI.Types.FileSearch.TopK
-  name: TopK
-  href: api/Google.GenAI.Types.FileSearch.html#Google_GenAI_Types_FileSearch_TopK
-  commentId: P:Google.GenAI.Types.FileSearch.TopK
-  fullName: Google.GenAI.Types.FileSearch.TopK
-  nameWithType: FileSearch.TopK
-- uid: Google.GenAI.Types.FileSearch.TopK*
-  name: TopK
-  href: api/Google.GenAI.Types.FileSearch.html#Google_GenAI_Types_FileSearch_TopK_
-  commentId: Overload:Google.GenAI.Types.FileSearch.TopK
-  isSpec: "True"
-  fullName: Google.GenAI.Types.FileSearch.TopK
-  nameWithType: FileSearch.TopK
 - uid: Google.GenAI.Types.FileSource
   name: FileSource
   href: api/Google.GenAI.Types.FileSource.html
@@ -8414,67 +7736,6 @@ references:
   commentId: F:Google.GenAI.Types.FinishReason.UNEXPECTED_TOOL_CALL
   fullName: Google.GenAI.Types.FinishReason.UNEXPECTED_TOOL_CALL
   nameWithType: FinishReason.UNEXPECTED_TOOL_CALL
-- uid: Google.GenAI.Types.FullFineTuningSpec
-  name: FullFineTuningSpec
-  href: api/Google.GenAI.Types.FullFineTuningSpec.html
-  commentId: T:Google.GenAI.Types.FullFineTuningSpec
-  fullName: Google.GenAI.Types.FullFineTuningSpec
-  nameWithType: FullFineTuningSpec
-- uid: Google.GenAI.Types.FullFineTuningSpec.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name: FromJson(string, JsonSerializerOptions?)
-  href: api/Google.GenAI.Types.FullFineTuningSpec.html#Google_GenAI_Types_FullFineTuningSpec_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
-  commentId: M:Google.GenAI.Types.FullFineTuningSpec.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name.vb: FromJson(String, JsonSerializerOptions)
-  fullName: Google.GenAI.Types.FullFineTuningSpec.FromJson(string, System.Text.Json.JsonSerializerOptions?)
-  fullName.vb: Google.GenAI.Types.FullFineTuningSpec.FromJson(String, System.Text.Json.JsonSerializerOptions)
-  nameWithType: FullFineTuningSpec.FromJson(string, JsonSerializerOptions?)
-  nameWithType.vb: FullFineTuningSpec.FromJson(String, JsonSerializerOptions)
-- uid: Google.GenAI.Types.FullFineTuningSpec.FromJson*
-  name: FromJson
-  href: api/Google.GenAI.Types.FullFineTuningSpec.html#Google_GenAI_Types_FullFineTuningSpec_FromJson_
-  commentId: Overload:Google.GenAI.Types.FullFineTuningSpec.FromJson
-  isSpec: "True"
-  fullName: Google.GenAI.Types.FullFineTuningSpec.FromJson
-  nameWithType: FullFineTuningSpec.FromJson
-- uid: Google.GenAI.Types.FullFineTuningSpec.HyperParameters
-  name: HyperParameters
-  href: api/Google.GenAI.Types.FullFineTuningSpec.html#Google_GenAI_Types_FullFineTuningSpec_HyperParameters
-  commentId: P:Google.GenAI.Types.FullFineTuningSpec.HyperParameters
-  fullName: Google.GenAI.Types.FullFineTuningSpec.HyperParameters
-  nameWithType: FullFineTuningSpec.HyperParameters
-- uid: Google.GenAI.Types.FullFineTuningSpec.HyperParameters*
-  name: HyperParameters
-  href: api/Google.GenAI.Types.FullFineTuningSpec.html#Google_GenAI_Types_FullFineTuningSpec_HyperParameters_
-  commentId: Overload:Google.GenAI.Types.FullFineTuningSpec.HyperParameters
-  isSpec: "True"
-  fullName: Google.GenAI.Types.FullFineTuningSpec.HyperParameters
-  nameWithType: FullFineTuningSpec.HyperParameters
-- uid: Google.GenAI.Types.FullFineTuningSpec.TrainingDatasetUri
-  name: TrainingDatasetUri
-  href: api/Google.GenAI.Types.FullFineTuningSpec.html#Google_GenAI_Types_FullFineTuningSpec_TrainingDatasetUri
-  commentId: P:Google.GenAI.Types.FullFineTuningSpec.TrainingDatasetUri
-  fullName: Google.GenAI.Types.FullFineTuningSpec.TrainingDatasetUri
-  nameWithType: FullFineTuningSpec.TrainingDatasetUri
-- uid: Google.GenAI.Types.FullFineTuningSpec.TrainingDatasetUri*
-  name: TrainingDatasetUri
-  href: api/Google.GenAI.Types.FullFineTuningSpec.html#Google_GenAI_Types_FullFineTuningSpec_TrainingDatasetUri_
-  commentId: Overload:Google.GenAI.Types.FullFineTuningSpec.TrainingDatasetUri
-  isSpec: "True"
-  fullName: Google.GenAI.Types.FullFineTuningSpec.TrainingDatasetUri
-  nameWithType: FullFineTuningSpec.TrainingDatasetUri
-- uid: Google.GenAI.Types.FullFineTuningSpec.ValidationDatasetUri
-  name: ValidationDatasetUri
-  href: api/Google.GenAI.Types.FullFineTuningSpec.html#Google_GenAI_Types_FullFineTuningSpec_ValidationDatasetUri
-  commentId: P:Google.GenAI.Types.FullFineTuningSpec.ValidationDatasetUri
-  fullName: Google.GenAI.Types.FullFineTuningSpec.ValidationDatasetUri
-  nameWithType: FullFineTuningSpec.ValidationDatasetUri
-- uid: Google.GenAI.Types.FullFineTuningSpec.ValidationDatasetUri*
-  name: ValidationDatasetUri
-  href: api/Google.GenAI.Types.FullFineTuningSpec.html#Google_GenAI_Types_FullFineTuningSpec_ValidationDatasetUri_
-  commentId: Overload:Google.GenAI.Types.FullFineTuningSpec.ValidationDatasetUri
-  isSpec: "True"
-  fullName: Google.GenAI.Types.FullFineTuningSpec.ValidationDatasetUri
-  nameWithType: FullFineTuningSpec.ValidationDatasetUri
 - uid: Google.GenAI.Types.FunctionCall
   name: FunctionCall
   href: api/Google.GenAI.Types.FunctionCall.html
@@ -9072,41 +8333,6 @@ references:
   commentId: F:Google.GenAI.Types.FunctionResponseScheduling.WHEN_IDLE
   fullName: Google.GenAI.Types.FunctionResponseScheduling.WHEN_IDLE
   nameWithType: FunctionResponseScheduling.WHEN_IDLE
-- uid: Google.GenAI.Types.GcsSource
-  name: GcsSource
-  href: api/Google.GenAI.Types.GcsSource.html
-  commentId: T:Google.GenAI.Types.GcsSource
-  fullName: Google.GenAI.Types.GcsSource
-  nameWithType: GcsSource
-- uid: Google.GenAI.Types.GcsSource.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name: FromJson(string, JsonSerializerOptions?)
-  href: api/Google.GenAI.Types.GcsSource.html#Google_GenAI_Types_GcsSource_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
-  commentId: M:Google.GenAI.Types.GcsSource.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name.vb: FromJson(String, JsonSerializerOptions)
-  fullName: Google.GenAI.Types.GcsSource.FromJson(string, System.Text.Json.JsonSerializerOptions?)
-  fullName.vb: Google.GenAI.Types.GcsSource.FromJson(String, System.Text.Json.JsonSerializerOptions)
-  nameWithType: GcsSource.FromJson(string, JsonSerializerOptions?)
-  nameWithType.vb: GcsSource.FromJson(String, JsonSerializerOptions)
-- uid: Google.GenAI.Types.GcsSource.FromJson*
-  name: FromJson
-  href: api/Google.GenAI.Types.GcsSource.html#Google_GenAI_Types_GcsSource_FromJson_
-  commentId: Overload:Google.GenAI.Types.GcsSource.FromJson
-  isSpec: "True"
-  fullName: Google.GenAI.Types.GcsSource.FromJson
-  nameWithType: GcsSource.FromJson
-- uid: Google.GenAI.Types.GcsSource.Uris
-  name: Uris
-  href: api/Google.GenAI.Types.GcsSource.html#Google_GenAI_Types_GcsSource_Uris
-  commentId: P:Google.GenAI.Types.GcsSource.Uris
-  fullName: Google.GenAI.Types.GcsSource.Uris
-  nameWithType: GcsSource.Uris
-- uid: Google.GenAI.Types.GcsSource.Uris*
-  name: Uris
-  href: api/Google.GenAI.Types.GcsSource.html#Google_GenAI_Types_GcsSource_Uris_
-  commentId: Overload:Google.GenAI.Types.GcsSource.Uris
-  isSpec: "True"
-  fullName: Google.GenAI.Types.GcsSource.Uris
-  nameWithType: GcsSource.Uris
 - uid: Google.GenAI.Types.GeminiPreferenceExample
   name: GeminiPreferenceExample
   href: api/Google.GenAI.Types.GeminiPreferenceExample.html
@@ -11951,19 +11177,6 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSources.FromJson
   nameWithType: GroundingChunkMapsPlaceAnswerSources.FromJson
-- uid: Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSources.ReviewSnippet
-  name: ReviewSnippet
-  href: api/Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSources.html#Google_GenAI_Types_GroundingChunkMapsPlaceAnswerSources_ReviewSnippet
-  commentId: P:Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSources.ReviewSnippet
-  fullName: Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSources.ReviewSnippet
-  nameWithType: GroundingChunkMapsPlaceAnswerSources.ReviewSnippet
-- uid: Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSources.ReviewSnippet*
-  name: ReviewSnippet
-  href: api/Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSources.html#Google_GenAI_Types_GroundingChunkMapsPlaceAnswerSources_ReviewSnippet_
-  commentId: Overload:Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSources.ReviewSnippet
-  isSpec: "True"
-  fullName: Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSources.ReviewSnippet
-  nameWithType: GroundingChunkMapsPlaceAnswerSources.ReviewSnippet
 - uid: Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSources.ReviewSnippets
   name: ReviewSnippets
   href: api/Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSources.html#Google_GenAI_Types_GroundingChunkMapsPlaceAnswerSources_ReviewSnippets
@@ -12170,19 +11383,6 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GroundingChunkRetrievedContext.DocumentName
   nameWithType: GroundingChunkRetrievedContext.DocumentName
-- uid: Google.GenAI.Types.GroundingChunkRetrievedContext.FileSearchStore
-  name: FileSearchStore
-  href: api/Google.GenAI.Types.GroundingChunkRetrievedContext.html#Google_GenAI_Types_GroundingChunkRetrievedContext_FileSearchStore
-  commentId: P:Google.GenAI.Types.GroundingChunkRetrievedContext.FileSearchStore
-  fullName: Google.GenAI.Types.GroundingChunkRetrievedContext.FileSearchStore
-  nameWithType: GroundingChunkRetrievedContext.FileSearchStore
-- uid: Google.GenAI.Types.GroundingChunkRetrievedContext.FileSearchStore*
-  name: FileSearchStore
-  href: api/Google.GenAI.Types.GroundingChunkRetrievedContext.html#Google_GenAI_Types_GroundingChunkRetrievedContext_FileSearchStore_
-  commentId: Overload:Google.GenAI.Types.GroundingChunkRetrievedContext.FileSearchStore
-  isSpec: "True"
-  fullName: Google.GenAI.Types.GroundingChunkRetrievedContext.FileSearchStore
-  nameWithType: GroundingChunkRetrievedContext.FileSearchStore
 - uid: Google.GenAI.Types.GroundingChunkRetrievedContext.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
   name: FromJson(string, JsonSerializerOptions?)
   href: api/Google.GenAI.Types.GroundingChunkRetrievedContext.html#Google_GenAI_Types_GroundingChunkRetrievedContext_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
@@ -13039,19 +12239,6 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ImageConfig.FromJson
   nameWithType: ImageConfig.FromJson
-- uid: Google.GenAI.Types.ImageConfig.ImageOutputOptions
-  name: ImageOutputOptions
-  href: api/Google.GenAI.Types.ImageConfig.html#Google_GenAI_Types_ImageConfig_ImageOutputOptions
-  commentId: P:Google.GenAI.Types.ImageConfig.ImageOutputOptions
-  fullName: Google.GenAI.Types.ImageConfig.ImageOutputOptions
-  nameWithType: ImageConfig.ImageOutputOptions
-- uid: Google.GenAI.Types.ImageConfig.ImageOutputOptions*
-  name: ImageOutputOptions
-  href: api/Google.GenAI.Types.ImageConfig.html#Google_GenAI_Types_ImageConfig_ImageOutputOptions_
-  commentId: Overload:Google.GenAI.Types.ImageConfig.ImageOutputOptions
-  isSpec: "True"
-  fullName: Google.GenAI.Types.ImageConfig.ImageOutputOptions
-  nameWithType: ImageConfig.ImageOutputOptions
 - uid: Google.GenAI.Types.ImageConfig.ImageSize
   name: ImageSize
   href: api/Google.GenAI.Types.ImageConfig.html#Google_GenAI_Types_ImageConfig_ImageSize
@@ -13091,67 +12278,6 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ImageConfig.OutputMimeType
   nameWithType: ImageConfig.OutputMimeType
-- uid: Google.GenAI.Types.ImageConfig.PersonGeneration
-  name: PersonGeneration
-  href: api/Google.GenAI.Types.ImageConfig.html#Google_GenAI_Types_ImageConfig_PersonGeneration
-  commentId: P:Google.GenAI.Types.ImageConfig.PersonGeneration
-  fullName: Google.GenAI.Types.ImageConfig.PersonGeneration
-  nameWithType: ImageConfig.PersonGeneration
-- uid: Google.GenAI.Types.ImageConfig.PersonGeneration*
-  name: PersonGeneration
-  href: api/Google.GenAI.Types.ImageConfig.html#Google_GenAI_Types_ImageConfig_PersonGeneration_
-  commentId: Overload:Google.GenAI.Types.ImageConfig.PersonGeneration
-  isSpec: "True"
-  fullName: Google.GenAI.Types.ImageConfig.PersonGeneration
-  nameWithType: ImageConfig.PersonGeneration
-- uid: Google.GenAI.Types.ImageConfigImageOutputOptions
-  name: ImageConfigImageOutputOptions
-  href: api/Google.GenAI.Types.ImageConfigImageOutputOptions.html
-  commentId: T:Google.GenAI.Types.ImageConfigImageOutputOptions
-  fullName: Google.GenAI.Types.ImageConfigImageOutputOptions
-  nameWithType: ImageConfigImageOutputOptions
-- uid: Google.GenAI.Types.ImageConfigImageOutputOptions.CompressionQuality
-  name: CompressionQuality
-  href: api/Google.GenAI.Types.ImageConfigImageOutputOptions.html#Google_GenAI_Types_ImageConfigImageOutputOptions_CompressionQuality
-  commentId: P:Google.GenAI.Types.ImageConfigImageOutputOptions.CompressionQuality
-  fullName: Google.GenAI.Types.ImageConfigImageOutputOptions.CompressionQuality
-  nameWithType: ImageConfigImageOutputOptions.CompressionQuality
-- uid: Google.GenAI.Types.ImageConfigImageOutputOptions.CompressionQuality*
-  name: CompressionQuality
-  href: api/Google.GenAI.Types.ImageConfigImageOutputOptions.html#Google_GenAI_Types_ImageConfigImageOutputOptions_CompressionQuality_
-  commentId: Overload:Google.GenAI.Types.ImageConfigImageOutputOptions.CompressionQuality
-  isSpec: "True"
-  fullName: Google.GenAI.Types.ImageConfigImageOutputOptions.CompressionQuality
-  nameWithType: ImageConfigImageOutputOptions.CompressionQuality
-- uid: Google.GenAI.Types.ImageConfigImageOutputOptions.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name: FromJson(string, JsonSerializerOptions?)
-  href: api/Google.GenAI.Types.ImageConfigImageOutputOptions.html#Google_GenAI_Types_ImageConfigImageOutputOptions_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
-  commentId: M:Google.GenAI.Types.ImageConfigImageOutputOptions.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name.vb: FromJson(String, JsonSerializerOptions)
-  fullName: Google.GenAI.Types.ImageConfigImageOutputOptions.FromJson(string, System.Text.Json.JsonSerializerOptions?)
-  fullName.vb: Google.GenAI.Types.ImageConfigImageOutputOptions.FromJson(String, System.Text.Json.JsonSerializerOptions)
-  nameWithType: ImageConfigImageOutputOptions.FromJson(string, JsonSerializerOptions?)
-  nameWithType.vb: ImageConfigImageOutputOptions.FromJson(String, JsonSerializerOptions)
-- uid: Google.GenAI.Types.ImageConfigImageOutputOptions.FromJson*
-  name: FromJson
-  href: api/Google.GenAI.Types.ImageConfigImageOutputOptions.html#Google_GenAI_Types_ImageConfigImageOutputOptions_FromJson_
-  commentId: Overload:Google.GenAI.Types.ImageConfigImageOutputOptions.FromJson
-  isSpec: "True"
-  fullName: Google.GenAI.Types.ImageConfigImageOutputOptions.FromJson
-  nameWithType: ImageConfigImageOutputOptions.FromJson
-- uid: Google.GenAI.Types.ImageConfigImageOutputOptions.MimeType
-  name: MimeType
-  href: api/Google.GenAI.Types.ImageConfigImageOutputOptions.html#Google_GenAI_Types_ImageConfigImageOutputOptions_MimeType
-  commentId: P:Google.GenAI.Types.ImageConfigImageOutputOptions.MimeType
-  fullName: Google.GenAI.Types.ImageConfigImageOutputOptions.MimeType
-  nameWithType: ImageConfigImageOutputOptions.MimeType
-- uid: Google.GenAI.Types.ImageConfigImageOutputOptions.MimeType*
-  name: MimeType
-  href: api/Google.GenAI.Types.ImageConfigImageOutputOptions.html#Google_GenAI_Types_ImageConfigImageOutputOptions_MimeType_
-  commentId: Overload:Google.GenAI.Types.ImageConfigImageOutputOptions.MimeType
-  isSpec: "True"
-  fullName: Google.GenAI.Types.ImageConfigImageOutputOptions.MimeType
-  nameWithType: ImageConfigImageOutputOptions.MimeType
 - uid: Google.GenAI.Types.ImagePromptLanguage
   name: ImagePromptLanguage
   href: api/Google.GenAI.Types.ImagePromptLanguage.html
@@ -13389,19 +12515,6 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.InlinedEmbedContentResponse.FromJson
   nameWithType: InlinedEmbedContentResponse.FromJson
-- uid: Google.GenAI.Types.InlinedEmbedContentResponse.Metadata
-  name: Metadata
-  href: api/Google.GenAI.Types.InlinedEmbedContentResponse.html#Google_GenAI_Types_InlinedEmbedContentResponse_Metadata
-  commentId: P:Google.GenAI.Types.InlinedEmbedContentResponse.Metadata
-  fullName: Google.GenAI.Types.InlinedEmbedContentResponse.Metadata
-  nameWithType: InlinedEmbedContentResponse.Metadata
-- uid: Google.GenAI.Types.InlinedEmbedContentResponse.Metadata*
-  name: Metadata
-  href: api/Google.GenAI.Types.InlinedEmbedContentResponse.html#Google_GenAI_Types_InlinedEmbedContentResponse_Metadata_
-  commentId: Overload:Google.GenAI.Types.InlinedEmbedContentResponse.Metadata
-  isSpec: "True"
-  fullName: Google.GenAI.Types.InlinedEmbedContentResponse.Metadata
-  nameWithType: InlinedEmbedContentResponse.Metadata
 - uid: Google.GenAI.Types.InlinedEmbedContentResponse.Response
   name: Response
   href: api/Google.GenAI.Types.InlinedEmbedContentResponse.html#Google_GenAI_Types_InlinedEmbedContentResponse_Response
@@ -15927,19 +15040,6 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.LogprobsResult.FromJson
   nameWithType: LogprobsResult.FromJson
-- uid: Google.GenAI.Types.LogprobsResult.LogProbabilitySum
-  name: LogProbabilitySum
-  href: api/Google.GenAI.Types.LogprobsResult.html#Google_GenAI_Types_LogprobsResult_LogProbabilitySum
-  commentId: P:Google.GenAI.Types.LogprobsResult.LogProbabilitySum
-  fullName: Google.GenAI.Types.LogprobsResult.LogProbabilitySum
-  nameWithType: LogprobsResult.LogProbabilitySum
-- uid: Google.GenAI.Types.LogprobsResult.LogProbabilitySum*
-  name: LogProbabilitySum
-  href: api/Google.GenAI.Types.LogprobsResult.html#Google_GenAI_Types_LogprobsResult_LogProbabilitySum_
-  commentId: Overload:Google.GenAI.Types.LogprobsResult.LogProbabilitySum
-  isSpec: "True"
-  fullName: Google.GenAI.Types.LogprobsResult.LogProbabilitySum
-  nameWithType: LogprobsResult.LogProbabilitySum
 - uid: Google.GenAI.Types.LogprobsResult.TopCandidates
   name: TopCandidates
   href: api/Google.GenAI.Types.LogprobsResult.html#Google_GenAI_Types_LogprobsResult_TopCandidates
@@ -16826,132 +15926,6 @@ references:
   commentId: F:Google.GenAI.Types.Outcome.OUTCOME_UNSPECIFIED
   fullName: Google.GenAI.Types.Outcome.OUTCOME_UNSPECIFIED
   nameWithType: Outcome.OUTCOME_UNSPECIFIED
-- uid: Google.GenAI.Types.OutputInfo
-  name: OutputInfo
-  href: api/Google.GenAI.Types.OutputInfo.html
-  commentId: T:Google.GenAI.Types.OutputInfo
-  fullName: Google.GenAI.Types.OutputInfo
-  nameWithType: OutputInfo
-- uid: Google.GenAI.Types.OutputInfo.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name: FromJson(string, JsonSerializerOptions?)
-  href: api/Google.GenAI.Types.OutputInfo.html#Google_GenAI_Types_OutputInfo_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
-  commentId: M:Google.GenAI.Types.OutputInfo.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name.vb: FromJson(String, JsonSerializerOptions)
-  fullName: Google.GenAI.Types.OutputInfo.FromJson(string, System.Text.Json.JsonSerializerOptions?)
-  fullName.vb: Google.GenAI.Types.OutputInfo.FromJson(String, System.Text.Json.JsonSerializerOptions)
-  nameWithType: OutputInfo.FromJson(string, JsonSerializerOptions?)
-  nameWithType.vb: OutputInfo.FromJson(String, JsonSerializerOptions)
-- uid: Google.GenAI.Types.OutputInfo.FromJson*
-  name: FromJson
-  href: api/Google.GenAI.Types.OutputInfo.html#Google_GenAI_Types_OutputInfo_FromJson_
-  commentId: Overload:Google.GenAI.Types.OutputInfo.FromJson
-  isSpec: "True"
-  fullName: Google.GenAI.Types.OutputInfo.FromJson
-  nameWithType: OutputInfo.FromJson
-- uid: Google.GenAI.Types.OutputInfo.GcsOutputDirectory
-  name: GcsOutputDirectory
-  href: api/Google.GenAI.Types.OutputInfo.html#Google_GenAI_Types_OutputInfo_GcsOutputDirectory
-  commentId: P:Google.GenAI.Types.OutputInfo.GcsOutputDirectory
-  fullName: Google.GenAI.Types.OutputInfo.GcsOutputDirectory
-  nameWithType: OutputInfo.GcsOutputDirectory
-- uid: Google.GenAI.Types.OutputInfo.GcsOutputDirectory*
-  name: GcsOutputDirectory
-  href: api/Google.GenAI.Types.OutputInfo.html#Google_GenAI_Types_OutputInfo_GcsOutputDirectory_
-  commentId: Overload:Google.GenAI.Types.OutputInfo.GcsOutputDirectory
-  isSpec: "True"
-  fullName: Google.GenAI.Types.OutputInfo.GcsOutputDirectory
-  nameWithType: OutputInfo.GcsOutputDirectory
-- uid: Google.GenAI.Types.PairwiseChoice
-  name: PairwiseChoice
-  href: api/Google.GenAI.Types.PairwiseChoice.html
-  commentId: T:Google.GenAI.Types.PairwiseChoice
-  fullName: Google.GenAI.Types.PairwiseChoice
-  nameWithType: PairwiseChoice
-- uid: Google.GenAI.Types.PairwiseChoice.BASELINE
-  name: BASELINE
-  href: api/Google.GenAI.Types.PairwiseChoice.html#Google_GenAI_Types_PairwiseChoice_BASELINE
-  commentId: F:Google.GenAI.Types.PairwiseChoice.BASELINE
-  fullName: Google.GenAI.Types.PairwiseChoice.BASELINE
-  nameWithType: PairwiseChoice.BASELINE
-- uid: Google.GenAI.Types.PairwiseChoice.CANDIDATE
-  name: CANDIDATE
-  href: api/Google.GenAI.Types.PairwiseChoice.html#Google_GenAI_Types_PairwiseChoice_CANDIDATE
-  commentId: F:Google.GenAI.Types.PairwiseChoice.CANDIDATE
-  fullName: Google.GenAI.Types.PairwiseChoice.CANDIDATE
-  nameWithType: PairwiseChoice.CANDIDATE
-- uid: Google.GenAI.Types.PairwiseChoice.PAIRWISE_CHOICE_UNSPECIFIED
-  name: PAIRWISE_CHOICE_UNSPECIFIED
-  href: api/Google.GenAI.Types.PairwiseChoice.html#Google_GenAI_Types_PairwiseChoice_PAIRWISE_CHOICE_UNSPECIFIED
-  commentId: F:Google.GenAI.Types.PairwiseChoice.PAIRWISE_CHOICE_UNSPECIFIED
-  fullName: Google.GenAI.Types.PairwiseChoice.PAIRWISE_CHOICE_UNSPECIFIED
-  nameWithType: PairwiseChoice.PAIRWISE_CHOICE_UNSPECIFIED
-- uid: Google.GenAI.Types.PairwiseChoice.TIE
-  name: TIE
-  href: api/Google.GenAI.Types.PairwiseChoice.html#Google_GenAI_Types_PairwiseChoice_TIE
-  commentId: F:Google.GenAI.Types.PairwiseChoice.TIE
-  fullName: Google.GenAI.Types.PairwiseChoice.TIE
-  nameWithType: PairwiseChoice.TIE
-- uid: Google.GenAI.Types.PairwiseMetricResult
-  name: PairwiseMetricResult
-  href: api/Google.GenAI.Types.PairwiseMetricResult.html
-  commentId: T:Google.GenAI.Types.PairwiseMetricResult
-  fullName: Google.GenAI.Types.PairwiseMetricResult
-  nameWithType: PairwiseMetricResult
-- uid: Google.GenAI.Types.PairwiseMetricResult.CustomOutput
-  name: CustomOutput
-  href: api/Google.GenAI.Types.PairwiseMetricResult.html#Google_GenAI_Types_PairwiseMetricResult_CustomOutput
-  commentId: P:Google.GenAI.Types.PairwiseMetricResult.CustomOutput
-  fullName: Google.GenAI.Types.PairwiseMetricResult.CustomOutput
-  nameWithType: PairwiseMetricResult.CustomOutput
-- uid: Google.GenAI.Types.PairwiseMetricResult.CustomOutput*
-  name: CustomOutput
-  href: api/Google.GenAI.Types.PairwiseMetricResult.html#Google_GenAI_Types_PairwiseMetricResult_CustomOutput_
-  commentId: Overload:Google.GenAI.Types.PairwiseMetricResult.CustomOutput
-  isSpec: "True"
-  fullName: Google.GenAI.Types.PairwiseMetricResult.CustomOutput
-  nameWithType: PairwiseMetricResult.CustomOutput
-- uid: Google.GenAI.Types.PairwiseMetricResult.Explanation
-  name: Explanation
-  href: api/Google.GenAI.Types.PairwiseMetricResult.html#Google_GenAI_Types_PairwiseMetricResult_Explanation
-  commentId: P:Google.GenAI.Types.PairwiseMetricResult.Explanation
-  fullName: Google.GenAI.Types.PairwiseMetricResult.Explanation
-  nameWithType: PairwiseMetricResult.Explanation
-- uid: Google.GenAI.Types.PairwiseMetricResult.Explanation*
-  name: Explanation
-  href: api/Google.GenAI.Types.PairwiseMetricResult.html#Google_GenAI_Types_PairwiseMetricResult_Explanation_
-  commentId: Overload:Google.GenAI.Types.PairwiseMetricResult.Explanation
-  isSpec: "True"
-  fullName: Google.GenAI.Types.PairwiseMetricResult.Explanation
-  nameWithType: PairwiseMetricResult.Explanation
-- uid: Google.GenAI.Types.PairwiseMetricResult.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name: FromJson(string, JsonSerializerOptions?)
-  href: api/Google.GenAI.Types.PairwiseMetricResult.html#Google_GenAI_Types_PairwiseMetricResult_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
-  commentId: M:Google.GenAI.Types.PairwiseMetricResult.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name.vb: FromJson(String, JsonSerializerOptions)
-  fullName: Google.GenAI.Types.PairwiseMetricResult.FromJson(string, System.Text.Json.JsonSerializerOptions?)
-  fullName.vb: Google.GenAI.Types.PairwiseMetricResult.FromJson(String, System.Text.Json.JsonSerializerOptions)
-  nameWithType: PairwiseMetricResult.FromJson(string, JsonSerializerOptions?)
-  nameWithType.vb: PairwiseMetricResult.FromJson(String, JsonSerializerOptions)
-- uid: Google.GenAI.Types.PairwiseMetricResult.FromJson*
-  name: FromJson
-  href: api/Google.GenAI.Types.PairwiseMetricResult.html#Google_GenAI_Types_PairwiseMetricResult_FromJson_
-  commentId: Overload:Google.GenAI.Types.PairwiseMetricResult.FromJson
-  isSpec: "True"
-  fullName: Google.GenAI.Types.PairwiseMetricResult.FromJson
-  nameWithType: PairwiseMetricResult.FromJson
-- uid: Google.GenAI.Types.PairwiseMetricResult.PairwiseChoice
-  name: PairwiseChoice
-  href: api/Google.GenAI.Types.PairwiseMetricResult.html#Google_GenAI_Types_PairwiseMetricResult_PairwiseChoice
-  commentId: P:Google.GenAI.Types.PairwiseMetricResult.PairwiseChoice
-  fullName: Google.GenAI.Types.PairwiseMetricResult.PairwiseChoice
-  nameWithType: PairwiseMetricResult.PairwiseChoice
-- uid: Google.GenAI.Types.PairwiseMetricResult.PairwiseChoice*
-  name: PairwiseChoice
-  href: api/Google.GenAI.Types.PairwiseMetricResult.html#Google_GenAI_Types_PairwiseMetricResult_PairwiseChoice_
-  commentId: Overload:Google.GenAI.Types.PairwiseMetricResult.PairwiseChoice
-  isSpec: "True"
-  fullName: Google.GenAI.Types.PairwiseMetricResult.PairwiseChoice
-  nameWithType: PairwiseMetricResult.PairwiseChoice
 - uid: Google.GenAI.Types.Part
   name: Part
   href: api/Google.GenAI.Types.Part.html
@@ -17065,19 +16039,6 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Part.MediaResolution
   nameWithType: Part.MediaResolution
-- uid: Google.GenAI.Types.Part.PartMetadata
-  name: PartMetadata
-  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_PartMetadata
-  commentId: P:Google.GenAI.Types.Part.PartMetadata
-  fullName: Google.GenAI.Types.Part.PartMetadata
-  nameWithType: Part.PartMetadata
-- uid: Google.GenAI.Types.Part.PartMetadata*
-  name: PartMetadata
-  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_PartMetadata_
-  commentId: Overload:Google.GenAI.Types.Part.PartMetadata
-  isSpec: "True"
-  fullName: Google.GenAI.Types.Part.PartMetadata
-  nameWithType: Part.PartMetadata
 - uid: Google.GenAI.Types.Part.Text
   name: Text
   href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_Text
@@ -17441,67 +16402,6 @@ references:
   commentId: F:Google.GenAI.Types.PhishBlockThreshold.PHISH_BLOCK_THRESHOLD_UNSPECIFIED
   fullName: Google.GenAI.Types.PhishBlockThreshold.PHISH_BLOCK_THRESHOLD_UNSPECIFIED
   nameWithType: PhishBlockThreshold.PHISH_BLOCK_THRESHOLD_UNSPECIFIED
-- uid: Google.GenAI.Types.PointwiseMetricResult
-  name: PointwiseMetricResult
-  href: api/Google.GenAI.Types.PointwiseMetricResult.html
-  commentId: T:Google.GenAI.Types.PointwiseMetricResult
-  fullName: Google.GenAI.Types.PointwiseMetricResult
-  nameWithType: PointwiseMetricResult
-- uid: Google.GenAI.Types.PointwiseMetricResult.CustomOutput
-  name: CustomOutput
-  href: api/Google.GenAI.Types.PointwiseMetricResult.html#Google_GenAI_Types_PointwiseMetricResult_CustomOutput
-  commentId: P:Google.GenAI.Types.PointwiseMetricResult.CustomOutput
-  fullName: Google.GenAI.Types.PointwiseMetricResult.CustomOutput
-  nameWithType: PointwiseMetricResult.CustomOutput
-- uid: Google.GenAI.Types.PointwiseMetricResult.CustomOutput*
-  name: CustomOutput
-  href: api/Google.GenAI.Types.PointwiseMetricResult.html#Google_GenAI_Types_PointwiseMetricResult_CustomOutput_
-  commentId: Overload:Google.GenAI.Types.PointwiseMetricResult.CustomOutput
-  isSpec: "True"
-  fullName: Google.GenAI.Types.PointwiseMetricResult.CustomOutput
-  nameWithType: PointwiseMetricResult.CustomOutput
-- uid: Google.GenAI.Types.PointwiseMetricResult.Explanation
-  name: Explanation
-  href: api/Google.GenAI.Types.PointwiseMetricResult.html#Google_GenAI_Types_PointwiseMetricResult_Explanation
-  commentId: P:Google.GenAI.Types.PointwiseMetricResult.Explanation
-  fullName: Google.GenAI.Types.PointwiseMetricResult.Explanation
-  nameWithType: PointwiseMetricResult.Explanation
-- uid: Google.GenAI.Types.PointwiseMetricResult.Explanation*
-  name: Explanation
-  href: api/Google.GenAI.Types.PointwiseMetricResult.html#Google_GenAI_Types_PointwiseMetricResult_Explanation_
-  commentId: Overload:Google.GenAI.Types.PointwiseMetricResult.Explanation
-  isSpec: "True"
-  fullName: Google.GenAI.Types.PointwiseMetricResult.Explanation
-  nameWithType: PointwiseMetricResult.Explanation
-- uid: Google.GenAI.Types.PointwiseMetricResult.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name: FromJson(string, JsonSerializerOptions?)
-  href: api/Google.GenAI.Types.PointwiseMetricResult.html#Google_GenAI_Types_PointwiseMetricResult_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
-  commentId: M:Google.GenAI.Types.PointwiseMetricResult.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name.vb: FromJson(String, JsonSerializerOptions)
-  fullName: Google.GenAI.Types.PointwiseMetricResult.FromJson(string, System.Text.Json.JsonSerializerOptions?)
-  fullName.vb: Google.GenAI.Types.PointwiseMetricResult.FromJson(String, System.Text.Json.JsonSerializerOptions)
-  nameWithType: PointwiseMetricResult.FromJson(string, JsonSerializerOptions?)
-  nameWithType.vb: PointwiseMetricResult.FromJson(String, JsonSerializerOptions)
-- uid: Google.GenAI.Types.PointwiseMetricResult.FromJson*
-  name: FromJson
-  href: api/Google.GenAI.Types.PointwiseMetricResult.html#Google_GenAI_Types_PointwiseMetricResult_FromJson_
-  commentId: Overload:Google.GenAI.Types.PointwiseMetricResult.FromJson
-  isSpec: "True"
-  fullName: Google.GenAI.Types.PointwiseMetricResult.FromJson
-  nameWithType: PointwiseMetricResult.FromJson
-- uid: Google.GenAI.Types.PointwiseMetricResult.Score
-  name: Score
-  href: api/Google.GenAI.Types.PointwiseMetricResult.html#Google_GenAI_Types_PointwiseMetricResult_Score
-  commentId: P:Google.GenAI.Types.PointwiseMetricResult.Score
-  fullName: Google.GenAI.Types.PointwiseMetricResult.Score
-  nameWithType: PointwiseMetricResult.Score
-- uid: Google.GenAI.Types.PointwiseMetricResult.Score*
-  name: Score
-  href: api/Google.GenAI.Types.PointwiseMetricResult.html#Google_GenAI_Types_PointwiseMetricResult_Score_
-  commentId: Overload:Google.GenAI.Types.PointwiseMetricResult.Score
-  isSpec: "True"
-  fullName: Google.GenAI.Types.PointwiseMetricResult.Score
-  nameWithType: PointwiseMetricResult.Score
 - uid: Google.GenAI.Types.PreTunedModel
   name: PreTunedModel
   href: api/Google.GenAI.Types.PreTunedModel.html
@@ -17604,32 +16504,6 @@ references:
   commentId: T:Google.GenAI.Types.PreferenceOptimizationDataStats
   fullName: Google.GenAI.Types.PreferenceOptimizationDataStats
   nameWithType: PreferenceOptimizationDataStats
-- uid: Google.GenAI.Types.PreferenceOptimizationDataStats.DroppedExampleIndices
-  name: DroppedExampleIndices
-  href: api/Google.GenAI.Types.PreferenceOptimizationDataStats.html#Google_GenAI_Types_PreferenceOptimizationDataStats_DroppedExampleIndices
-  commentId: P:Google.GenAI.Types.PreferenceOptimizationDataStats.DroppedExampleIndices
-  fullName: Google.GenAI.Types.PreferenceOptimizationDataStats.DroppedExampleIndices
-  nameWithType: PreferenceOptimizationDataStats.DroppedExampleIndices
-- uid: Google.GenAI.Types.PreferenceOptimizationDataStats.DroppedExampleIndices*
-  name: DroppedExampleIndices
-  href: api/Google.GenAI.Types.PreferenceOptimizationDataStats.html#Google_GenAI_Types_PreferenceOptimizationDataStats_DroppedExampleIndices_
-  commentId: Overload:Google.GenAI.Types.PreferenceOptimizationDataStats.DroppedExampleIndices
-  isSpec: "True"
-  fullName: Google.GenAI.Types.PreferenceOptimizationDataStats.DroppedExampleIndices
-  nameWithType: PreferenceOptimizationDataStats.DroppedExampleIndices
-- uid: Google.GenAI.Types.PreferenceOptimizationDataStats.DroppedExampleReasons
-  name: DroppedExampleReasons
-  href: api/Google.GenAI.Types.PreferenceOptimizationDataStats.html#Google_GenAI_Types_PreferenceOptimizationDataStats_DroppedExampleReasons
-  commentId: P:Google.GenAI.Types.PreferenceOptimizationDataStats.DroppedExampleReasons
-  fullName: Google.GenAI.Types.PreferenceOptimizationDataStats.DroppedExampleReasons
-  nameWithType: PreferenceOptimizationDataStats.DroppedExampleReasons
-- uid: Google.GenAI.Types.PreferenceOptimizationDataStats.DroppedExampleReasons*
-  name: DroppedExampleReasons
-  href: api/Google.GenAI.Types.PreferenceOptimizationDataStats.html#Google_GenAI_Types_PreferenceOptimizationDataStats_DroppedExampleReasons_
-  commentId: Overload:Google.GenAI.Types.PreferenceOptimizationDataStats.DroppedExampleReasons
-  isSpec: "True"
-  fullName: Google.GenAI.Types.PreferenceOptimizationDataStats.DroppedExampleReasons
-  nameWithType: PreferenceOptimizationDataStats.DroppedExampleReasons
 - uid: Google.GenAI.Types.PreferenceOptimizationDataStats.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
   name: FromJson(string, JsonSerializerOptions?)
   href: api/Google.GenAI.Types.PreferenceOptimizationDataStats.html#Google_GenAI_Types_PreferenceOptimizationDataStats_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
@@ -18352,41 +17226,6 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.RagRetrievalConfigRankingRankService.ModelName
   nameWithType: RagRetrievalConfigRankingRankService.ModelName
-- uid: Google.GenAI.Types.RawOutput
-  name: RawOutput
-  href: api/Google.GenAI.Types.RawOutput.html
-  commentId: T:Google.GenAI.Types.RawOutput
-  fullName: Google.GenAI.Types.RawOutput
-  nameWithType: RawOutput
-- uid: Google.GenAI.Types.RawOutput.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name: FromJson(string, JsonSerializerOptions?)
-  href: api/Google.GenAI.Types.RawOutput.html#Google_GenAI_Types_RawOutput_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
-  commentId: M:Google.GenAI.Types.RawOutput.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name.vb: FromJson(String, JsonSerializerOptions)
-  fullName: Google.GenAI.Types.RawOutput.FromJson(string, System.Text.Json.JsonSerializerOptions?)
-  fullName.vb: Google.GenAI.Types.RawOutput.FromJson(String, System.Text.Json.JsonSerializerOptions)
-  nameWithType: RawOutput.FromJson(string, JsonSerializerOptions?)
-  nameWithType.vb: RawOutput.FromJson(String, JsonSerializerOptions)
-- uid: Google.GenAI.Types.RawOutput.FromJson*
-  name: FromJson
-  href: api/Google.GenAI.Types.RawOutput.html#Google_GenAI_Types_RawOutput_FromJson_
-  commentId: Overload:Google.GenAI.Types.RawOutput.FromJson
-  isSpec: "True"
-  fullName: Google.GenAI.Types.RawOutput.FromJson
-  nameWithType: RawOutput.FromJson
-- uid: Google.GenAI.Types.RawOutput.RawOutputField
-  name: RawOutputField
-  href: api/Google.GenAI.Types.RawOutput.html#Google_GenAI_Types_RawOutput_RawOutputField
-  commentId: P:Google.GenAI.Types.RawOutput.RawOutputField
-  fullName: Google.GenAI.Types.RawOutput.RawOutputField
-  nameWithType: RawOutput.RawOutputField
-- uid: Google.GenAI.Types.RawOutput.RawOutputField*
-  name: RawOutputField
-  href: api/Google.GenAI.Types.RawOutput.html#Google_GenAI_Types_RawOutput_RawOutputField_
-  commentId: Overload:Google.GenAI.Types.RawOutput.RawOutputField
-  isSpec: "True"
-  fullName: Google.GenAI.Types.RawOutput.RawOutputField
-  nameWithType: RawOutput.RawOutputField
 - uid: Google.GenAI.Types.RawReferenceImage
   name: RawReferenceImage
   href: api/Google.GenAI.Types.RawReferenceImage.html
@@ -19027,54 +17866,6 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ReplayResponse.StatusCode
   nameWithType: ReplayResponse.StatusCode
-- uid: Google.GenAI.Types.ReplicatedVoiceConfig
-  name: ReplicatedVoiceConfig
-  href: api/Google.GenAI.Types.ReplicatedVoiceConfig.html
-  commentId: T:Google.GenAI.Types.ReplicatedVoiceConfig
-  fullName: Google.GenAI.Types.ReplicatedVoiceConfig
-  nameWithType: ReplicatedVoiceConfig
-- uid: Google.GenAI.Types.ReplicatedVoiceConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name: FromJson(string, JsonSerializerOptions?)
-  href: api/Google.GenAI.Types.ReplicatedVoiceConfig.html#Google_GenAI_Types_ReplicatedVoiceConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
-  commentId: M:Google.GenAI.Types.ReplicatedVoiceConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name.vb: FromJson(String, JsonSerializerOptions)
-  fullName: Google.GenAI.Types.ReplicatedVoiceConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
-  fullName.vb: Google.GenAI.Types.ReplicatedVoiceConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
-  nameWithType: ReplicatedVoiceConfig.FromJson(string, JsonSerializerOptions?)
-  nameWithType.vb: ReplicatedVoiceConfig.FromJson(String, JsonSerializerOptions)
-- uid: Google.GenAI.Types.ReplicatedVoiceConfig.FromJson*
-  name: FromJson
-  href: api/Google.GenAI.Types.ReplicatedVoiceConfig.html#Google_GenAI_Types_ReplicatedVoiceConfig_FromJson_
-  commentId: Overload:Google.GenAI.Types.ReplicatedVoiceConfig.FromJson
-  isSpec: "True"
-  fullName: Google.GenAI.Types.ReplicatedVoiceConfig.FromJson
-  nameWithType: ReplicatedVoiceConfig.FromJson
-- uid: Google.GenAI.Types.ReplicatedVoiceConfig.MimeType
-  name: MimeType
-  href: api/Google.GenAI.Types.ReplicatedVoiceConfig.html#Google_GenAI_Types_ReplicatedVoiceConfig_MimeType
-  commentId: P:Google.GenAI.Types.ReplicatedVoiceConfig.MimeType
-  fullName: Google.GenAI.Types.ReplicatedVoiceConfig.MimeType
-  nameWithType: ReplicatedVoiceConfig.MimeType
-- uid: Google.GenAI.Types.ReplicatedVoiceConfig.MimeType*
-  name: MimeType
-  href: api/Google.GenAI.Types.ReplicatedVoiceConfig.html#Google_GenAI_Types_ReplicatedVoiceConfig_MimeType_
-  commentId: Overload:Google.GenAI.Types.ReplicatedVoiceConfig.MimeType
-  isSpec: "True"
-  fullName: Google.GenAI.Types.ReplicatedVoiceConfig.MimeType
-  nameWithType: ReplicatedVoiceConfig.MimeType
-- uid: Google.GenAI.Types.ReplicatedVoiceConfig.VoiceSampleAudio
-  name: VoiceSampleAudio
-  href: api/Google.GenAI.Types.ReplicatedVoiceConfig.html#Google_GenAI_Types_ReplicatedVoiceConfig_VoiceSampleAudio
-  commentId: P:Google.GenAI.Types.ReplicatedVoiceConfig.VoiceSampleAudio
-  fullName: Google.GenAI.Types.ReplicatedVoiceConfig.VoiceSampleAudio
-  nameWithType: ReplicatedVoiceConfig.VoiceSampleAudio
-- uid: Google.GenAI.Types.ReplicatedVoiceConfig.VoiceSampleAudio*
-  name: VoiceSampleAudio
-  href: api/Google.GenAI.Types.ReplicatedVoiceConfig.html#Google_GenAI_Types_ReplicatedVoiceConfig_VoiceSampleAudio_
-  commentId: Overload:Google.GenAI.Types.ReplicatedVoiceConfig.VoiceSampleAudio
-  isSpec: "True"
-  fullName: Google.GenAI.Types.ReplicatedVoiceConfig.VoiceSampleAudio
-  nameWithType: ReplicatedVoiceConfig.VoiceSampleAudio
 - uid: Google.GenAI.Types.Retrieval
   name: Retrieval
   href: api/Google.GenAI.Types.Retrieval.html
@@ -19232,41 +18023,6 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.RetrievalMetadata.GoogleSearchDynamicRetrievalScore
   nameWithType: RetrievalMetadata.GoogleSearchDynamicRetrievalScore
-- uid: Google.GenAI.Types.RougeMetricValue
-  name: RougeMetricValue
-  href: api/Google.GenAI.Types.RougeMetricValue.html
-  commentId: T:Google.GenAI.Types.RougeMetricValue
-  fullName: Google.GenAI.Types.RougeMetricValue
-  nameWithType: RougeMetricValue
-- uid: Google.GenAI.Types.RougeMetricValue.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name: FromJson(string, JsonSerializerOptions?)
-  href: api/Google.GenAI.Types.RougeMetricValue.html#Google_GenAI_Types_RougeMetricValue_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
-  commentId: M:Google.GenAI.Types.RougeMetricValue.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name.vb: FromJson(String, JsonSerializerOptions)
-  fullName: Google.GenAI.Types.RougeMetricValue.FromJson(string, System.Text.Json.JsonSerializerOptions?)
-  fullName.vb: Google.GenAI.Types.RougeMetricValue.FromJson(String, System.Text.Json.JsonSerializerOptions)
-  nameWithType: RougeMetricValue.FromJson(string, JsonSerializerOptions?)
-  nameWithType.vb: RougeMetricValue.FromJson(String, JsonSerializerOptions)
-- uid: Google.GenAI.Types.RougeMetricValue.FromJson*
-  name: FromJson
-  href: api/Google.GenAI.Types.RougeMetricValue.html#Google_GenAI_Types_RougeMetricValue_FromJson_
-  commentId: Overload:Google.GenAI.Types.RougeMetricValue.FromJson
-  isSpec: "True"
-  fullName: Google.GenAI.Types.RougeMetricValue.FromJson
-  nameWithType: RougeMetricValue.FromJson
-- uid: Google.GenAI.Types.RougeMetricValue.Score
-  name: Score
-  href: api/Google.GenAI.Types.RougeMetricValue.html#Google_GenAI_Types_RougeMetricValue_Score
-  commentId: P:Google.GenAI.Types.RougeMetricValue.Score
-  fullName: Google.GenAI.Types.RougeMetricValue.Score
-  nameWithType: RougeMetricValue.Score
-- uid: Google.GenAI.Types.RougeMetricValue.Score*
-  name: Score
-  href: api/Google.GenAI.Types.RougeMetricValue.html#Google_GenAI_Types_RougeMetricValue_Score_
-  commentId: Overload:Google.GenAI.Types.RougeMetricValue.Score
-  isSpec: "True"
-  fullName: Google.GenAI.Types.RougeMetricValue.Score
-  nameWithType: RougeMetricValue.Score
 - uid: Google.GenAI.Types.SafetyAttributes
   name: SafetyAttributes
   href: api/Google.GenAI.Types.SafetyAttributes.html
@@ -22448,19 +21204,6 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.TuningJob.Error
   nameWithType: TuningJob.Error
-- uid: Google.GenAI.Types.TuningJob.EvaluateDatasetRuns
-  name: EvaluateDatasetRuns
-  href: api/Google.GenAI.Types.TuningJob.html#Google_GenAI_Types_TuningJob_EvaluateDatasetRuns
-  commentId: P:Google.GenAI.Types.TuningJob.EvaluateDatasetRuns
-  fullName: Google.GenAI.Types.TuningJob.EvaluateDatasetRuns
-  nameWithType: TuningJob.EvaluateDatasetRuns
-- uid: Google.GenAI.Types.TuningJob.EvaluateDatasetRuns*
-  name: EvaluateDatasetRuns
-  href: api/Google.GenAI.Types.TuningJob.html#Google_GenAI_Types_TuningJob_EvaluateDatasetRuns_
-  commentId: Overload:Google.GenAI.Types.TuningJob.EvaluateDatasetRuns
-  isSpec: "True"
-  fullName: Google.GenAI.Types.TuningJob.EvaluateDatasetRuns
-  nameWithType: TuningJob.EvaluateDatasetRuns
 - uid: Google.GenAI.Types.TuningJob.Experiment
   name: Experiment
   href: api/Google.GenAI.Types.TuningJob.html#Google_GenAI_Types_TuningJob_Experiment
@@ -22490,19 +21233,6 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.TuningJob.FromJson
   nameWithType: TuningJob.FromJson
-- uid: Google.GenAI.Types.TuningJob.FullFineTuningSpec
-  name: FullFineTuningSpec
-  href: api/Google.GenAI.Types.TuningJob.html#Google_GenAI_Types_TuningJob_FullFineTuningSpec
-  commentId: P:Google.GenAI.Types.TuningJob.FullFineTuningSpec
-  fullName: Google.GenAI.Types.TuningJob.FullFineTuningSpec
-  nameWithType: TuningJob.FullFineTuningSpec
-- uid: Google.GenAI.Types.TuningJob.FullFineTuningSpec*
-  name: FullFineTuningSpec
-  href: api/Google.GenAI.Types.TuningJob.html#Google_GenAI_Types_TuningJob_FullFineTuningSpec_
-  commentId: Overload:Google.GenAI.Types.TuningJob.FullFineTuningSpec
-  isSpec: "True"
-  fullName: Google.GenAI.Types.TuningJob.FullFineTuningSpec
-  nameWithType: TuningJob.FullFineTuningSpec
 - uid: Google.GenAI.Types.TuningJob.Labels
   name: Labels
   href: api/Google.GenAI.Types.TuningJob.html#Google_GenAI_Types_TuningJob_Labels
@@ -22698,19 +21428,6 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.TuningJob.TuningDataStats
   nameWithType: TuningJob.TuningDataStats
-- uid: Google.GenAI.Types.TuningJob.TuningJobState
-  name: TuningJobState
-  href: api/Google.GenAI.Types.TuningJob.html#Google_GenAI_Types_TuningJob_TuningJobState
-  commentId: P:Google.GenAI.Types.TuningJob.TuningJobState
-  fullName: Google.GenAI.Types.TuningJob.TuningJobState
-  nameWithType: TuningJob.TuningJobState
-- uid: Google.GenAI.Types.TuningJob.TuningJobState*
-  name: TuningJobState
-  href: api/Google.GenAI.Types.TuningJob.html#Google_GenAI_Types_TuningJob_TuningJobState_
-  commentId: Overload:Google.GenAI.Types.TuningJob.TuningJobState
-  isSpec: "True"
-  fullName: Google.GenAI.Types.TuningJob.TuningJobState
-  nameWithType: TuningJob.TuningJobState
 - uid: Google.GenAI.Types.TuningJob.UpdateTime
   name: UpdateTime
   href: api/Google.GenAI.Types.TuningJob.html#Google_GenAI_Types_TuningJob_UpdateTime
@@ -22737,48 +21454,6 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.TuningJob.VeoTuningSpec
   nameWithType: TuningJob.VeoTuningSpec
-- uid: Google.GenAI.Types.TuningJobState
-  name: TuningJobState
-  href: api/Google.GenAI.Types.TuningJobState.html
-  commentId: T:Google.GenAI.Types.TuningJobState
-  fullName: Google.GenAI.Types.TuningJobState
-  nameWithType: TuningJobState
-- uid: Google.GenAI.Types.TuningJobState.TUNING_JOB_STATE_POST_PROCESSING
-  name: TUNING_JOB_STATE_POST_PROCESSING
-  href: api/Google.GenAI.Types.TuningJobState.html#Google_GenAI_Types_TuningJobState_TUNING_JOB_STATE_POST_PROCESSING
-  commentId: F:Google.GenAI.Types.TuningJobState.TUNING_JOB_STATE_POST_PROCESSING
-  fullName: Google.GenAI.Types.TuningJobState.TUNING_JOB_STATE_POST_PROCESSING
-  nameWithType: TuningJobState.TUNING_JOB_STATE_POST_PROCESSING
-- uid: Google.GenAI.Types.TuningJobState.TUNING_JOB_STATE_PROCESSING_DATASET
-  name: TUNING_JOB_STATE_PROCESSING_DATASET
-  href: api/Google.GenAI.Types.TuningJobState.html#Google_GenAI_Types_TuningJobState_TUNING_JOB_STATE_PROCESSING_DATASET
-  commentId: F:Google.GenAI.Types.TuningJobState.TUNING_JOB_STATE_PROCESSING_DATASET
-  fullName: Google.GenAI.Types.TuningJobState.TUNING_JOB_STATE_PROCESSING_DATASET
-  nameWithType: TuningJobState.TUNING_JOB_STATE_PROCESSING_DATASET
-- uid: Google.GenAI.Types.TuningJobState.TUNING_JOB_STATE_TUNING
-  name: TUNING_JOB_STATE_TUNING
-  href: api/Google.GenAI.Types.TuningJobState.html#Google_GenAI_Types_TuningJobState_TUNING_JOB_STATE_TUNING
-  commentId: F:Google.GenAI.Types.TuningJobState.TUNING_JOB_STATE_TUNING
-  fullName: Google.GenAI.Types.TuningJobState.TUNING_JOB_STATE_TUNING
-  nameWithType: TuningJobState.TUNING_JOB_STATE_TUNING
-- uid: Google.GenAI.Types.TuningJobState.TUNING_JOB_STATE_UNSPECIFIED
-  name: TUNING_JOB_STATE_UNSPECIFIED
-  href: api/Google.GenAI.Types.TuningJobState.html#Google_GenAI_Types_TuningJobState_TUNING_JOB_STATE_UNSPECIFIED
-  commentId: F:Google.GenAI.Types.TuningJobState.TUNING_JOB_STATE_UNSPECIFIED
-  fullName: Google.GenAI.Types.TuningJobState.TUNING_JOB_STATE_UNSPECIFIED
-  nameWithType: TuningJobState.TUNING_JOB_STATE_UNSPECIFIED
-- uid: Google.GenAI.Types.TuningJobState.TUNING_JOB_STATE_WAITING_FOR_CAPACITY
-  name: TUNING_JOB_STATE_WAITING_FOR_CAPACITY
-  href: api/Google.GenAI.Types.TuningJobState.html#Google_GenAI_Types_TuningJobState_TUNING_JOB_STATE_WAITING_FOR_CAPACITY
-  commentId: F:Google.GenAI.Types.TuningJobState.TUNING_JOB_STATE_WAITING_FOR_CAPACITY
-  fullName: Google.GenAI.Types.TuningJobState.TUNING_JOB_STATE_WAITING_FOR_CAPACITY
-  nameWithType: TuningJobState.TUNING_JOB_STATE_WAITING_FOR_CAPACITY
-- uid: Google.GenAI.Types.TuningJobState.TUNING_JOB_STATE_WAITING_FOR_QUOTA
-  name: TUNING_JOB_STATE_WAITING_FOR_QUOTA
-  href: api/Google.GenAI.Types.TuningJobState.html#Google_GenAI_Types_TuningJobState_TUNING_JOB_STATE_WAITING_FOR_QUOTA
-  commentId: F:Google.GenAI.Types.TuningJobState.TUNING_JOB_STATE_WAITING_FOR_QUOTA
-  fullName: Google.GenAI.Types.TuningJobState.TUNING_JOB_STATE_WAITING_FOR_QUOTA
-  nameWithType: TuningJobState.TUNING_JOB_STATE_WAITING_FOR_QUOTA
 - uid: Google.GenAI.Types.TuningMethod
   name: TuningMethod
   href: api/Google.GenAI.Types.TuningMethod.html
@@ -24681,16 +23356,3 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.VoiceConfig.PrebuiltVoiceConfig
   nameWithType: VoiceConfig.PrebuiltVoiceConfig
-- uid: Google.GenAI.Types.VoiceConfig.ReplicatedVoiceConfig
-  name: ReplicatedVoiceConfig
-  href: api/Google.GenAI.Types.VoiceConfig.html#Google_GenAI_Types_VoiceConfig_ReplicatedVoiceConfig
-  commentId: P:Google.GenAI.Types.VoiceConfig.ReplicatedVoiceConfig
-  fullName: Google.GenAI.Types.VoiceConfig.ReplicatedVoiceConfig
-  nameWithType: VoiceConfig.ReplicatedVoiceConfig
-- uid: Google.GenAI.Types.VoiceConfig.ReplicatedVoiceConfig*
-  name: ReplicatedVoiceConfig
-  href: api/Google.GenAI.Types.VoiceConfig.html#Google_GenAI_Types_VoiceConfig_ReplicatedVoiceConfig_
-  commentId: Overload:Google.GenAI.Types.VoiceConfig.ReplicatedVoiceConfig
-  isSpec: "True"
-  fullName: Google.GenAI.Types.VoiceConfig.ReplicatedVoiceConfig
-  nameWithType: VoiceConfig.ReplicatedVoiceConfig
