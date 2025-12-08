@@ -17866,6 +17866,54 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ReplayResponse.StatusCode
   nameWithType: ReplayResponse.StatusCode
+- uid: Google.GenAI.Types.ReplicatedVoiceConfig
+  name: ReplicatedVoiceConfig
+  href: api/Google.GenAI.Types.ReplicatedVoiceConfig.html
+  commentId: T:Google.GenAI.Types.ReplicatedVoiceConfig
+  fullName: Google.GenAI.Types.ReplicatedVoiceConfig
+  nameWithType: ReplicatedVoiceConfig
+- uid: Google.GenAI.Types.ReplicatedVoiceConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ReplicatedVoiceConfig.html#Google_GenAI_Types_ReplicatedVoiceConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ReplicatedVoiceConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ReplicatedVoiceConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ReplicatedVoiceConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ReplicatedVoiceConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ReplicatedVoiceConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ReplicatedVoiceConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ReplicatedVoiceConfig.html#Google_GenAI_Types_ReplicatedVoiceConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.ReplicatedVoiceConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ReplicatedVoiceConfig.FromJson
+  nameWithType: ReplicatedVoiceConfig.FromJson
+- uid: Google.GenAI.Types.ReplicatedVoiceConfig.MimeType
+  name: MimeType
+  href: api/Google.GenAI.Types.ReplicatedVoiceConfig.html#Google_GenAI_Types_ReplicatedVoiceConfig_MimeType
+  commentId: P:Google.GenAI.Types.ReplicatedVoiceConfig.MimeType
+  fullName: Google.GenAI.Types.ReplicatedVoiceConfig.MimeType
+  nameWithType: ReplicatedVoiceConfig.MimeType
+- uid: Google.GenAI.Types.ReplicatedVoiceConfig.MimeType*
+  name: MimeType
+  href: api/Google.GenAI.Types.ReplicatedVoiceConfig.html#Google_GenAI_Types_ReplicatedVoiceConfig_MimeType_
+  commentId: Overload:Google.GenAI.Types.ReplicatedVoiceConfig.MimeType
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ReplicatedVoiceConfig.MimeType
+  nameWithType: ReplicatedVoiceConfig.MimeType
+- uid: Google.GenAI.Types.ReplicatedVoiceConfig.VoiceSampleAudio
+  name: VoiceSampleAudio
+  href: api/Google.GenAI.Types.ReplicatedVoiceConfig.html#Google_GenAI_Types_ReplicatedVoiceConfig_VoiceSampleAudio
+  commentId: P:Google.GenAI.Types.ReplicatedVoiceConfig.VoiceSampleAudio
+  fullName: Google.GenAI.Types.ReplicatedVoiceConfig.VoiceSampleAudio
+  nameWithType: ReplicatedVoiceConfig.VoiceSampleAudio
+- uid: Google.GenAI.Types.ReplicatedVoiceConfig.VoiceSampleAudio*
+  name: VoiceSampleAudio
+  href: api/Google.GenAI.Types.ReplicatedVoiceConfig.html#Google_GenAI_Types_ReplicatedVoiceConfig_VoiceSampleAudio_
+  commentId: Overload:Google.GenAI.Types.ReplicatedVoiceConfig.VoiceSampleAudio
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ReplicatedVoiceConfig.VoiceSampleAudio
+  nameWithType: ReplicatedVoiceConfig.VoiceSampleAudio
 - uid: Google.GenAI.Types.Retrieval
   name: Retrieval
   href: api/Google.GenAI.Types.Retrieval.html
@@ -23356,3 +23404,16 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.VoiceConfig.PrebuiltVoiceConfig
   nameWithType: VoiceConfig.PrebuiltVoiceConfig
+- uid: Google.GenAI.Types.VoiceConfig.ReplicatedVoiceConfig
+  name: ReplicatedVoiceConfig
+  href: api/Google.GenAI.Types.VoiceConfig.html#Google_GenAI_Types_VoiceConfig_ReplicatedVoiceConfig
+  commentId: P:Google.GenAI.Types.VoiceConfig.ReplicatedVoiceConfig
+  fullName: Google.GenAI.Types.VoiceConfig.ReplicatedVoiceConfig
+  nameWithType: VoiceConfig.ReplicatedVoiceConfig
+- uid: Google.GenAI.Types.VoiceConfig.ReplicatedVoiceConfig*
+  name: ReplicatedVoiceConfig
+  href: api/Google.GenAI.Types.VoiceConfig.html#Google_GenAI_Types_VoiceConfig_ReplicatedVoiceConfig_
+  commentId: Overload:Google.GenAI.Types.VoiceConfig.ReplicatedVoiceConfig
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VoiceConfig.ReplicatedVoiceConfig
+  nameWithType: VoiceConfig.ReplicatedVoiceConfig

@@ -3626,6 +3626,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ReplicatedVoiceConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ReplicatedVoiceConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ReplicatedVoiceConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReplicatedVoiceConfig.yml\" sourcestartlinenumber=\"1\">ReplicatedVoiceConfig is used to configure replicated voice.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.Retrieval.yml",
       "output": {
         ".html": {
@@ -3902,7 +3916,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.SpeechConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SpeechConfig.yml\" sourcestartlinenumber=\"1\">The speech generation config.</p>\n"
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -4770,7 +4784,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.VoiceConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VoiceConfig.yml\" sourcestartlinenumber=\"1\">The configuration for the voice to use.</p>\n"
+      "Summary": null
     },
     {
       "type": "ManagedReference",
