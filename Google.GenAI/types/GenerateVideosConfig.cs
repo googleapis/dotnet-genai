@@ -203,6 +203,17 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Output video mode. Only allowed for reference to video generation. Supported values are:
+    /// precise (default), expressive.
+    /// </summary>
+    [JsonPropertyName("videoMode")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string
+        ? VideoMode {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a GenerateVideosConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
