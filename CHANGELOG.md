@@ -1,5 +1,15 @@
 # Changelog
 
+## Version 0.8.0, released 2025-12-08
+
+
+### New features
+
+* Add DownloadAsync overloaded methods for Video and GeneratedVideo ([fb1cb85](https://github.com/googleapis/dotnet-genai/commit/fb1cb85dd0531f7f0c7aad00b578b6e3224e8cbe))
+* Add DownloadToFileAsync overloaded methods for Video and GeneratedVideo ([3e57601](https://github.com/googleapis/dotnet-genai/commit/3e5760186ff06e2ae250b8cdda7ad238ed81d1f7))
+* Update data types from discovery doc. ([b3273e8](https://github.com/googleapis/dotnet-genai/commit/b3273e8ec95a4c4664c59c831dc47ea6a5ef91bd))
+* Update data types from discovery doc. ([eb43afb](https://github.com/googleapis/dotnet-genai/commit/eb43afbc234b7772617938f12aa428deb3e381db))
+
 ## Version 0.7.0, released 2025-12-04
 
 
