@@ -265,6 +265,94 @@ data.</p>
 
   <a id="Google_GenAI_Files_DownloadAsync_" data-uid="Google.GenAI.Files.DownloadAsync*"></a>
 
+  <h3 id="Google_GenAI_Files_DownloadAsync_Google_GenAI_Types_GeneratedVideo_Google_GenAI_Types_DownloadFileConfig_" data-uid="Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.GeneratedVideo,Google.GenAI.Types.DownloadFileConfig)">
+  DownloadAsync(GeneratedVideo, DownloadFileConfig?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L544"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Downloads a <a class="xref" href="Google.GenAI.Types.GeneratedVideo.html">GeneratedVideo</a> object and returns it as a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a>. Caller is responsible for disposing the returned stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Stream&gt; DownloadAsync(GeneratedVideo generatedVideo, DownloadFileConfig? config = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>generatedVideo</code> <a class="xref" href="Google.GenAI.Types.GeneratedVideo.html">GeneratedVideo</a></dt>
+    <dd></dd>
+    <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.DownloadFileConfig.html">DownloadFileConfig</a></dt>
+    <dd><p>A <a class="xref" href="Google.GenAI.Types.DownloadFileConfig.html">DownloadFileConfig</a> instance that
+specifies the optional configurations.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a>&gt;</dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that
+represents the asynchronous operation. The task result contains a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a> with
+the file data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Files_DownloadAsync_" data-uid="Google.GenAI.Files.DownloadAsync*"></a>
+
+  <h3 id="Google_GenAI_Files_DownloadAsync_Google_GenAI_Types_Video_Google_GenAI_Types_DownloadFileConfig_" data-uid="Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.Video,Google.GenAI.Types.DownloadFileConfig)">
+  DownloadAsync(Video, DownloadFileConfig?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L523"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Downloads a <a class="xref" href="Google.GenAI.Types.Video.html">Video</a> object and returns it as a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a>. Caller is responsible for disposing the returned stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Stream&gt; DownloadAsync(Video video, DownloadFileConfig? config = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>video</code> <a class="xref" href="Google.GenAI.Types.Video.html">Video</a></dt>
+    <dd></dd>
+    <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.DownloadFileConfig.html">DownloadFileConfig</a></dt>
+    <dd><p>A <a class="xref" href="Google.GenAI.Types.DownloadFileConfig.html">DownloadFileConfig</a> instance that specifies the optional
+configurations.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a>&gt;</dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that represents the
+asynchronous operation. The task result contains a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a> with the file
+data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Files_DownloadAsync_" data-uid="Google.GenAI.Files.DownloadAsync*"></a>
+
   <h3 id="Google_GenAI_Files_DownloadAsync_System_String_Google_GenAI_Types_DownloadFileConfig_" data-uid="Google.GenAI.Files.DownloadAsync(System.String,Google.GenAI.Types.DownloadFileConfig)">
   DownloadAsync(string, DownloadFileConfig?)
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L484"><i class="bi bi-code-slash"></i></a>
@@ -314,7 +402,7 @@ the file data.</p>
 
   <h3 id="Google_GenAI_Files_DownloadToFileAsync_Google_GenAI_Types_File_System_String_Google_GenAI_Types_DownloadFileConfig_" data-uid="Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.File,System.String,Google.GenAI.Types.DownloadFileConfig)">
   DownloadToFileAsync(File, string, DownloadFileConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L544"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L586"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Downloads a <a class="xref" href="Google.GenAI.Types.File.html">File</a> object directly to a file path.</p>
@@ -361,7 +449,7 @@ operation.</p>
 
   <h3 id="Google_GenAI_Files_DownloadToFileAsync_Google_GenAI_Types_GeneratedVideo_System_String_Google_GenAI_Types_DownloadFileConfig_" data-uid="Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.GeneratedVideo,System.String,Google.GenAI.Types.DownloadFileConfig)">
   DownloadToFileAsync(GeneratedVideo, string, DownloadFileConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L564"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L606"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Downloads a <a class="xref" href="Google.GenAI.Types.GeneratedVideo.html">GeneratedVideo</a> object directly to a file path.</p>
@@ -407,7 +495,7 @@ operation.</p>
 
   <h3 id="Google_GenAI_Files_DownloadToFileAsync_Google_GenAI_Types_Video_System_String_Google_GenAI_Types_DownloadFileConfig_" data-uid="Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.Video,System.String,Google.GenAI.Types.DownloadFileConfig)">
   DownloadToFileAsync(Video, string, DownloadFileConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L584"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L626"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Downloads a <a class="xref" href="Google.GenAI.Types.Video.html">Video</a> object directly to a file path.</p>
@@ -453,7 +541,7 @@ operation.</p>
 
   <h3 id="Google_GenAI_Files_DownloadToFileAsync_System_String_System_String_Google_GenAI_Types_DownloadFileConfig_" data-uid="Google.GenAI.Files.DownloadToFileAsync(System.String,System.String,Google.GenAI.Types.DownloadFileConfig)">
   DownloadToFileAsync(string, string, DownloadFileConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L522"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L564"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Downloads a file directly to a file path.</p>
