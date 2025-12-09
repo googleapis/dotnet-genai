@@ -190,6 +190,41 @@ public ContextWindowCompressionConfig? ContextWindowCompression { get; set; }</c
 
 
 
+  <a id="Google_GenAI_Types_LiveClientSetup_ExplicitVadSignal_" data-uid="Google.GenAI.Types.LiveClientSetup.ExplicitVadSignal*"></a>
+
+  <h3 id="Google_GenAI_Types_LiveClientSetup_ExplicitVadSignal" data-uid="Google.GenAI.Types.LiveClientSetup.ExplicitVadSignal">
+  ExplicitVadSignal
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/LiveClientSetup.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures the explicit VAD signal. If enabled, the client will send vad_signal to indicate
+the start and end of speech. This allows the server to process the audio more efficiently.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;explicitVadSignal&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public bool? ExplicitVadSignal { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_LiveClientSetup_GenerationConfig_" data-uid="Google.GenAI.Types.LiveClientSetup.GenerationConfig*"></a>
 
   <h3 id="Google_GenAI_Types_LiveClientSetup_GenerationConfig" data-uid="Google.GenAI.Types.LiveClientSetup.GenerationConfig">
@@ -510,7 +545,7 @@ public List&lt;Tool&gt;? Tools { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_LiveClientSetup_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.LiveClientSetup.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/LiveClientSetup.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/LiveClientSetup.cs/#L152"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a LiveClientSetup object.</p>

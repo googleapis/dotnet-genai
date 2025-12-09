@@ -4592,6 +4592,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.VadSignalType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.VadSignalType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.VadSignalType",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VadSignalType.yml\" sourcestartlinenumber=\"1\">The type of the VAD signal.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.VeoHyperParameters.yml",
       "output": {
         ".html": {
@@ -4771,6 +4785,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.VideoMetadata",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VideoMetadata.yml\" sourcestartlinenumber=\"1\">Metadata describes the input video content.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.VoiceActivityDetectionSignal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.VoiceActivityDetectionSignal.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.VoiceActivityDetectionSignal",
+      "Summary": null
     },
     {
       "type": "ManagedReference",

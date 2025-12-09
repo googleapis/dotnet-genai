@@ -13863,6 +13863,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.LiveClientSetup.ContextWindowCompression
   nameWithType: LiveClientSetup.ContextWindowCompression
+- uid: Google.GenAI.Types.LiveClientSetup.ExplicitVadSignal
+  name: ExplicitVadSignal
+  href: api/Google.GenAI.Types.LiveClientSetup.html#Google_GenAI_Types_LiveClientSetup_ExplicitVadSignal
+  commentId: P:Google.GenAI.Types.LiveClientSetup.ExplicitVadSignal
+  fullName: Google.GenAI.Types.LiveClientSetup.ExplicitVadSignal
+  nameWithType: LiveClientSetup.ExplicitVadSignal
+- uid: Google.GenAI.Types.LiveClientSetup.ExplicitVadSignal*
+  name: ExplicitVadSignal
+  href: api/Google.GenAI.Types.LiveClientSetup.html#Google_GenAI_Types_LiveClientSetup_ExplicitVadSignal_
+  commentId: Overload:Google.GenAI.Types.LiveClientSetup.ExplicitVadSignal
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LiveClientSetup.ExplicitVadSignal
+  nameWithType: LiveClientSetup.ExplicitVadSignal
 - uid: Google.GenAI.Types.LiveClientSetup.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
   name: FromJson(string, JsonSerializerOptions?)
   href: api/Google.GenAI.Types.LiveClientSetup.html#Google_GenAI_Types_LiveClientSetup_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
@@ -14063,6 +14076,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.LiveConnectConfig.EnableAffectiveDialog
   nameWithType: LiveConnectConfig.EnableAffectiveDialog
+- uid: Google.GenAI.Types.LiveConnectConfig.ExplicitVadSignal
+  name: ExplicitVadSignal
+  href: api/Google.GenAI.Types.LiveConnectConfig.html#Google_GenAI_Types_LiveConnectConfig_ExplicitVadSignal
+  commentId: P:Google.GenAI.Types.LiveConnectConfig.ExplicitVadSignal
+  fullName: Google.GenAI.Types.LiveConnectConfig.ExplicitVadSignal
+  nameWithType: LiveConnectConfig.ExplicitVadSignal
+- uid: Google.GenAI.Types.LiveConnectConfig.ExplicitVadSignal*
+  name: ExplicitVadSignal
+  href: api/Google.GenAI.Types.LiveConnectConfig.html#Google_GenAI_Types_LiveConnectConfig_ExplicitVadSignal_
+  commentId: Overload:Google.GenAI.Types.LiveConnectConfig.ExplicitVadSignal
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LiveConnectConfig.ExplicitVadSignal
+  nameWithType: LiveConnectConfig.ExplicitVadSignal
 - uid: Google.GenAI.Types.LiveConnectConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
   name: FromJson(string, JsonSerializerOptions?)
   href: api/Google.GenAI.Types.LiveConnectConfig.html#Google_GenAI_Types_LiveConnectConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
@@ -14870,6 +14896,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.LiveServerMessage.UsageMetadata
   nameWithType: LiveServerMessage.UsageMetadata
+- uid: Google.GenAI.Types.LiveServerMessage.VoiceActivityDetectionSignal
+  name: VoiceActivityDetectionSignal
+  href: api/Google.GenAI.Types.LiveServerMessage.html#Google_GenAI_Types_LiveServerMessage_VoiceActivityDetectionSignal
+  commentId: P:Google.GenAI.Types.LiveServerMessage.VoiceActivityDetectionSignal
+  fullName: Google.GenAI.Types.LiveServerMessage.VoiceActivityDetectionSignal
+  nameWithType: LiveServerMessage.VoiceActivityDetectionSignal
+- uid: Google.GenAI.Types.LiveServerMessage.VoiceActivityDetectionSignal*
+  name: VoiceActivityDetectionSignal
+  href: api/Google.GenAI.Types.LiveServerMessage.html#Google_GenAI_Types_LiveServerMessage_VoiceActivityDetectionSignal_
+  commentId: Overload:Google.GenAI.Types.LiveServerMessage.VoiceActivityDetectionSignal
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LiveServerMessage.VoiceActivityDetectionSignal
+  nameWithType: LiveServerMessage.VoiceActivityDetectionSignal
 - uid: Google.GenAI.Types.LiveServerSessionResumptionUpdate
   name: LiveServerSessionResumptionUpdate
   href: api/Google.GenAI.Types.LiveServerSessionResumptionUpdate.html
@@ -22711,6 +22750,30 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.UsageMetadata.TrafficType
   nameWithType: UsageMetadata.TrafficType
+- uid: Google.GenAI.Types.VadSignalType
+  name: VadSignalType
+  href: api/Google.GenAI.Types.VadSignalType.html
+  commentId: T:Google.GenAI.Types.VadSignalType
+  fullName: Google.GenAI.Types.VadSignalType
+  nameWithType: VadSignalType
+- uid: Google.GenAI.Types.VadSignalType.VAD_SIGNAL_TYPE_EOS
+  name: VAD_SIGNAL_TYPE_EOS
+  href: api/Google.GenAI.Types.VadSignalType.html#Google_GenAI_Types_VadSignalType_VAD_SIGNAL_TYPE_EOS
+  commentId: F:Google.GenAI.Types.VadSignalType.VAD_SIGNAL_TYPE_EOS
+  fullName: Google.GenAI.Types.VadSignalType.VAD_SIGNAL_TYPE_EOS
+  nameWithType: VadSignalType.VAD_SIGNAL_TYPE_EOS
+- uid: Google.GenAI.Types.VadSignalType.VAD_SIGNAL_TYPE_SOS
+  name: VAD_SIGNAL_TYPE_SOS
+  href: api/Google.GenAI.Types.VadSignalType.html#Google_GenAI_Types_VadSignalType_VAD_SIGNAL_TYPE_SOS
+  commentId: F:Google.GenAI.Types.VadSignalType.VAD_SIGNAL_TYPE_SOS
+  fullName: Google.GenAI.Types.VadSignalType.VAD_SIGNAL_TYPE_SOS
+  nameWithType: VadSignalType.VAD_SIGNAL_TYPE_SOS
+- uid: Google.GenAI.Types.VadSignalType.VAD_SIGNAL_TYPE_UNSPECIFIED
+  name: VAD_SIGNAL_TYPE_UNSPECIFIED
+  href: api/Google.GenAI.Types.VadSignalType.html#Google_GenAI_Types_VadSignalType_VAD_SIGNAL_TYPE_UNSPECIFIED
+  commentId: F:Google.GenAI.Types.VadSignalType.VAD_SIGNAL_TYPE_UNSPECIFIED
+  fullName: Google.GenAI.Types.VadSignalType.VAD_SIGNAL_TYPE_UNSPECIFIED
+  nameWithType: VadSignalType.VAD_SIGNAL_TYPE_UNSPECIFIED
 - uid: Google.GenAI.Types.VeoHyperParameters
   name: VeoHyperParameters
   href: api/Google.GenAI.Types.VeoHyperParameters.html
@@ -23400,6 +23463,41 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.VideoMetadata.StartOffset
   nameWithType: VideoMetadata.StartOffset
+- uid: Google.GenAI.Types.VoiceActivityDetectionSignal
+  name: VoiceActivityDetectionSignal
+  href: api/Google.GenAI.Types.VoiceActivityDetectionSignal.html
+  commentId: T:Google.GenAI.Types.VoiceActivityDetectionSignal
+  fullName: Google.GenAI.Types.VoiceActivityDetectionSignal
+  nameWithType: VoiceActivityDetectionSignal
+- uid: Google.GenAI.Types.VoiceActivityDetectionSignal.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.VoiceActivityDetectionSignal.html#Google_GenAI_Types_VoiceActivityDetectionSignal_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.VoiceActivityDetectionSignal.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.VoiceActivityDetectionSignal.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.VoiceActivityDetectionSignal.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: VoiceActivityDetectionSignal.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: VoiceActivityDetectionSignal.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.VoiceActivityDetectionSignal.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.VoiceActivityDetectionSignal.html#Google_GenAI_Types_VoiceActivityDetectionSignal_FromJson_
+  commentId: Overload:Google.GenAI.Types.VoiceActivityDetectionSignal.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VoiceActivityDetectionSignal.FromJson
+  nameWithType: VoiceActivityDetectionSignal.FromJson
+- uid: Google.GenAI.Types.VoiceActivityDetectionSignal.VadSignalType
+  name: VadSignalType
+  href: api/Google.GenAI.Types.VoiceActivityDetectionSignal.html#Google_GenAI_Types_VoiceActivityDetectionSignal_VadSignalType
+  commentId: P:Google.GenAI.Types.VoiceActivityDetectionSignal.VadSignalType
+  fullName: Google.GenAI.Types.VoiceActivityDetectionSignal.VadSignalType
+  nameWithType: VoiceActivityDetectionSignal.VadSignalType
+- uid: Google.GenAI.Types.VoiceActivityDetectionSignal.VadSignalType*
+  name: VadSignalType
+  href: api/Google.GenAI.Types.VoiceActivityDetectionSignal.html#Google_GenAI_Types_VoiceActivityDetectionSignal_VadSignalType_
+  commentId: Overload:Google.GenAI.Types.VoiceActivityDetectionSignal.VadSignalType
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VoiceActivityDetectionSignal.VadSignalType
+  nameWithType: VoiceActivityDetectionSignal.VadSignalType
 - uid: Google.GenAI.Types.VoiceConfig
   name: VoiceConfig
   href: api/Google.GenAI.Types.VoiceConfig.html
