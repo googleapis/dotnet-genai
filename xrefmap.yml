@@ -8492,6 +8492,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerateContentConfig.CandidateCount
   nameWithType: GenerateContentConfig.CandidateCount
+- uid: Google.GenAI.Types.GenerateContentConfig.EnableEnhancedCivicAnswers
+  name: EnableEnhancedCivicAnswers
+  href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_EnableEnhancedCivicAnswers
+  commentId: P:Google.GenAI.Types.GenerateContentConfig.EnableEnhancedCivicAnswers
+  fullName: Google.GenAI.Types.GenerateContentConfig.EnableEnhancedCivicAnswers
+  nameWithType: GenerateContentConfig.EnableEnhancedCivicAnswers
+- uid: Google.GenAI.Types.GenerateContentConfig.EnableEnhancedCivicAnswers*
+  name: EnableEnhancedCivicAnswers
+  href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_EnableEnhancedCivicAnswers_
+  commentId: Overload:Google.GenAI.Types.GenerateContentConfig.EnableEnhancedCivicAnswers
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateContentConfig.EnableEnhancedCivicAnswers
+  nameWithType: GenerateContentConfig.EnableEnhancedCivicAnswers
 - uid: Google.GenAI.Types.GenerateContentConfig.FrequencyPenalty
   name: FrequencyPenalty
   href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_FrequencyPenalty
