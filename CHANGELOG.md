@@ -1,5 +1,14 @@
 # Changelog
 
+## Version 0.9.0, released 2025-12-10
+
+
+### New features
+
+* Add enableEnhancedCivicAnswers feature in GenerateContentConfig ([f2e199d](https://github.com/googleapis/dotnet-genai/commit/f2e199d084fec74b68119dcfdc4542f193fd2a58))
+* Add IMAGE_RECITATION and IMAGE_OTHER enum values to FinishReason ([7a825bd](https://github.com/googleapis/dotnet-genai/commit/7a825bd86a53f34cdcf74c2463900a3939ed8d77))
+* Add voice activity detection signal. ([6ff3f01](https://github.com/googleapis/dotnet-genai/commit/6ff3f0137114b30e9a0c03067570c33ae05f805f))
+
 ## Version 0.8.0, released 2025-12-08
 
 
