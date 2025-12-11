@@ -22,25 +22,22 @@ using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
-  /// <summary>
-  /// The speech generation config.
-  /// </summary>
 
   public record SpeechConfig {
+    /// <summary>
+    /// Configuration for the voice of the response.
+    /// </summary>
+    [JsonPropertyName("voiceConfig")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public VoiceConfig ? VoiceConfig { get; set; }
+
     /// <summary>
     /// Optional. Language code (ISO 639. e.g. en-US) for the speech synthesization.
     /// </summary>
     [JsonPropertyName("languageCode")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? LanguageCode { get; set; }
-
-    /// <summary>
-    /// The configuration for the speaker to use.
-    /// </summary>
-    [JsonPropertyName("voiceConfig")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public VoiceConfig
-        ? VoiceConfig {
+    public string
+        ? LanguageCode {
             get; set;
           }
 

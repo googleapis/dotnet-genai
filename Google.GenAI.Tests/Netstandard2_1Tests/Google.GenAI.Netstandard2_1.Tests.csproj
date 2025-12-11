@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="../ReleaseVersion.xml" />
+  <Import Project="../../ReleaseVersion.xml" />
   <PropertyGroup>
     <TargetFrameworks>net8.0</TargetFrameworks>
     <Nullable>enable</Nullable>
@@ -8,19 +8,25 @@
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
   </PropertyGroup>
 
+  <!-- Include all test source files from parent directory -->
+  <ItemGroup>
+    <Compile Include="../**/*.cs" Exclude="../Netstandard2_1Tests/**/*.cs;../bin/**;../obj/**" />
+  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="coverlet.collector">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <ProjectReference Include="..\Google.GenAI\Google.GenAI.csproj">
-      <SetTargetFramework>TargetFramework=net8.0</SetTargetFramework>
+    <ProjectReference Include="..\..\Google.GenAI\Google.GenAI.csproj">
+      <SetTargetFramework>TargetFramework=netstandard2.1</SetTargetFramework>
     </ProjectReference>
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
     <PackageReference Include="MSTest.TestFramework" />
     <PackageReference Include="MSTest.TestAdapter" />
     <PackageReference Include="Moq" />
     <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" />
+    <PackageReference Include="System.Text.Json" />
   </ItemGroup>
 
 </Project>

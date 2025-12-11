@@ -24,7 +24,6 @@ jobs:
       uses: actions/setup-dotnet@v5
       with:
         dotnet-version: |
-          6.0.x
           8.0.x
     - name: List Recordings folder location
       run: |
@@ -42,8 +41,11 @@ jobs:
     - name: Show .NET version
       run: dotnet --list-sdks
 
-    - name: Run Unit Tests
-      run: dotnet test ./Google.GenAI.Tests
+    - name: Run Unit Tests against net8.0 build
+      run: dotnet test ./Google.GenAI.Tests/Google.GenAI.Tests.csproj
+
+    - name: Run Unit Tests against netstandard2.1 build
+      run: dotnet test ./Google.GenAI.Tests/Netstandard2_1Tests/Google.GenAI.Netstandard2_1.Tests.csproj
 
     - name: Run E2E Tests against net8.0 build
       run: dotnet test ./Google.GenAI.E2E.Tests/Google.GenAI.E2E.Tests.csproj

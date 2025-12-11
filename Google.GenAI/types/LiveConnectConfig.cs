@@ -242,6 +242,17 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Configures the explicit VAD signal. If enabled, the client will send vad_signal to indicate
+    /// the start and end of speech. This allows the server to process the audio more efficiently.
+    /// </summary>
+    [JsonPropertyName("explicitVadSignal")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public bool
+        ? ExplicitVadSignal {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a LiveConnectConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

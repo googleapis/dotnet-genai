@@ -16,6 +16,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -32,6 +33,7 @@ public class FilesDownloadTest
     private static TestServerProcess? _server;
     private Client vertexClient;
     private Client geminiClient;
+    private string fileUri;
     public TestContext TestContext { get; set; }
 
     [ClassInitialize]
@@ -76,52 +78,218 @@ public class FilesDownloadTest
         geminiClient =
             new Client(apiKey: apiKey, vertexAI: false, httpOptions: geminiClientHttpOptions);
 
+        // Specific setup for this test class
+        // Note that replay mode does not return any bytes when downloading a file.
+        fileUri = "https://generativelanguage.googleapis.com/v1beta/files/p1crkz5nfru4:download?alt=media";
+
     }
 
     [TestMethod]
     public async Task DownloadFileNameVertexTest()
     {
-       var ex = await Assert.ThrowsExceptionAsync<NotSupportedException>(async () =>
-       {
-         await vertexClient.Files.DownloadAsync(fileName: "fileName");
-       });
+      var ex = await Assert.ThrowsExceptionAsync<NotSupportedException>(async () =>
+      {
+        await vertexClient.Files.DownloadAsync(fileName: "fileName");
+      });
 
-       StringAssert.Contains(ex.Message, "This method is only supported in the Gemini Developer API client");
+      StringAssert.Contains(ex.Message, "This method is only supported in the Gemini Developer API client");
+    }
+
+    [TestMethod]
+    public async Task DownloadFileNameGeminiTest()
+    {
+      var stream = await geminiClient.Files.DownloadAsync(
+          fileName: fileUri
+      );
+      using (MemoryStream memoryStream = new MemoryStream()) {
+        await stream.CopyToAsync(memoryStream);
+        memoryStream.Position = 0;
+        byte[] bytes = memoryStream.ToArray();
+        // Replay mode does not return any bytes when downloading a file.
+        if (!TestServer.IsReplayMode) {
+          Assert.IsTrue(bytes.Length > 0);
+        }
+      }
     }
 
     [TestMethod]
     public async Task DownloadToFileFileNameVertexTest()
     {
-       var ex = await Assert.ThrowsExceptionAsync<NotSupportedException>(async () =>
-       {
-         await vertexClient.Files.DownloadToFileAsync(fileName: "fileName", outputPath: "outputPath");
-       });
+      var ex = await Assert.ThrowsExceptionAsync<NotSupportedException>(async () =>
+      {
+        await vertexClient.Files.DownloadToFileAsync(fileName: "fileName", outputPath: "outputPath");
+      });
 
-       StringAssert.Contains(ex.Message, "This method is only supported in the Gemini Developer API client");
+      StringAssert.Contains(ex.Message, "This method is only supported in the Gemini Developer API client");
+    }
+
+    [TestMethod]
+    public async Task DownloadToFileFileNameGeminiTest()
+    {
+      await geminiClient.Files.DownloadToFileAsync(
+          fileName: fileUri,
+          outputPath: "output.mp4"
+      );
     }
 
     [TestMethod]
     public async Task DownloadFileVertexTest()
     {
-       var file = new Google.GenAI.Types.File { Name = "Name"};
-       var ex = await Assert.ThrowsExceptionAsync<NotSupportedException>(async () =>
-       {
-         await vertexClient.Files.DownloadAsync(file: file);
-       });
+      var file = new Google.GenAI.Types.File { Name = "Name"};
+      var ex = await Assert.ThrowsExceptionAsync<NotSupportedException>(async () =>
+      {
+        await vertexClient.Files.DownloadAsync(file: file);
+      });
 
-       StringAssert.Contains(ex.Message, "This method is only supported in the Gemini Developer API client");
+      StringAssert.Contains(ex.Message, "This method is only supported in the Gemini Developer API client");
+    }
+
+    [TestMethod]
+    public async Task DownloadFileGeminiTest()
+    {
+      var file = new Google.GenAI.Types.File {
+        Name = fileUri
+      };
+      await geminiClient.Files.DownloadAsync(file: file);
+    }
+
+    [TestMethod]
+    public async Task DownloadVideoGeminiTest()
+    {
+      var video = new Google.GenAI.Types.Video {
+        Uri = fileUri
+      };
+      var stream = await geminiClient.Files.DownloadAsync(
+          video: video
+      );
+      using (MemoryStream memoryStream = new MemoryStream()) {
+        await stream.CopyToAsync(memoryStream);
+        memoryStream.Position = 0;
+        byte[] bytes = memoryStream.ToArray();
+        // Replay mode does not return any bytes when downloading a file.
+        if (!TestServer.IsReplayMode) {
+          Assert.IsTrue(bytes.Length > 0);
+        }
+      }
+    }
+
+    [TestMethod]
+    public async Task DownloadVideoVertexTest()
+    {
+      var video = new Google.GenAI.Types.Video {
+        Uri = "fileName"
+      };
+      var ex = await Assert.ThrowsExceptionAsync<NotSupportedException>(async () =>
+      {
+        await vertexClient.Files.DownloadAsync(video: video);
+      });
+
+      StringAssert.Contains(ex.Message, "This method is only supported in the Gemini Developer API client");
+    }
+
+    [TestMethod]
+    public async Task DownloadGeneratedVideoGeminiTest()
+    {
+      var video = new Google.GenAI.Types.Video {
+        Uri = fileUri
+      };
+      var generatedVideo = new Google.GenAI.Types.GeneratedVideo { Video = video };
+      var stream = await geminiClient.Files.DownloadAsync(
+          generatedVideo: generatedVideo
+      );
+      using (MemoryStream memoryStream = new MemoryStream()) {
+        await stream.CopyToAsync(memoryStream);
+        memoryStream.Position = 0;
+        byte[] bytes = memoryStream.ToArray();
+        // Replay mode does not return any bytes when downloading a file.
+        if (!TestServer.IsReplayMode) {
+          Assert.IsTrue(bytes.Length > 0);
+        }
+      }
+    }
+
+    [TestMethod]
+    public async Task DownloadGeneratedVideoVertexTest()
+    {
+      var video = new Google.GenAI.Types.Video {
+        Uri = "fileName"
+      };
+      var generatedVideo = new Google.GenAI.Types.GeneratedVideo { Video = video };
+      var ex = await Assert.ThrowsExceptionAsync<NotSupportedException>(async () =>
+      {
+        await vertexClient.Files.DownloadAsync(generatedVideo: generatedVideo);
+      });
+
+      StringAssert.Contains(ex.Message, "This method is only supported in the Gemini Developer API client");
     }
 
     [TestMethod]
     public async Task DownloadToFileFileVertexTest()
     {
-       var file = new Google.GenAI.Types.File { Name = "Name"};
-       var ex = await Assert.ThrowsExceptionAsync<NotSupportedException>(async () =>
-       {
-         await vertexClient.Files.DownloadToFileAsync(file: file, outputPath: "outputPath");
-       });
+      var file = new Google.GenAI.Types.File { Name = "Name"};
+      var ex = await Assert.ThrowsExceptionAsync<NotSupportedException>(async () =>
+      {
+        await vertexClient.Files.DownloadToFileAsync(file: file, outputPath: "outputPath");
+      });
 
-       StringAssert.Contains(ex.Message, "This method is only supported in the Gemini Developer API client");
+      StringAssert.Contains(ex.Message, "This method is only supported in the Gemini Developer API client");
+    }
+
+    [TestMethod]
+    public async Task DownloadToFileFileGeminiTest()
+    {
+      var file = new Google.GenAI.Types.File {
+        Name = fileUri
+      };
+      await geminiClient.Files.DownloadToFileAsync(file: file, outputPath: "output.mp4");
+    }
+
+    [TestMethod]
+    public async Task DownloadToFileVideoVertexTest()
+    {
+      var video = new Google.GenAI.Types.Video {
+        Uri = fileUri
+      };
+      var ex = await Assert.ThrowsExceptionAsync<NotSupportedException>(async () =>
+      {
+        await vertexClient.Files.DownloadToFileAsync(video: video, outputPath: "outputPath");
+      });
+
+      StringAssert.Contains(ex.Message, "This method is only supported in the Gemini Developer API client");
+    }
+
+    [TestMethod]
+    public async Task DownloadToFileVideoGeminiTest()
+    {
+      var video = new Google.GenAI.Types.Video {
+        Uri = fileUri
+      };
+      await geminiClient.Files.DownloadToFileAsync(video: video, outputPath: "output.mp4");
+    }
+
+    [TestMethod]
+    public async Task DownloadToFileGeneratedVideoVertexTest()
+    {
+      var video = new Google.GenAI.Types.Video {
+        Uri = fileUri
+      };
+      var generatedVideo = new Google.GenAI.Types.GeneratedVideo { Video = video };
+      var ex = await Assert.ThrowsExceptionAsync<NotSupportedException>(async () =>
+      {
+        await vertexClient.Files.DownloadToFileAsync(generatedVideo: generatedVideo, outputPath: "outputPath");
+      });
+
+      StringAssert.Contains(ex.Message, "This method is only supported in the Gemini Developer API client");
+    }
+
+    [TestMethod]
+    public async Task DownloadToFileGeneratedVideoGeminiTest()
+    {
+      var video = new Google.GenAI.Types.Video {
+        Uri = fileUri
+      };
+      var generatedVideo = new Google.GenAI.Types.GeneratedVideo { Video = video };
+      await geminiClient.Files.DownloadToFileAsync(generatedVideo: generatedVideo, outputPath: "output.mp4");
     }
 
 }

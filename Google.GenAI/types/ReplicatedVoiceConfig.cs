@@ -22,34 +22,39 @@ using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
+  /// <summary>
+  /// ReplicatedVoiceConfig is used to configure replicated voice.
+  /// </summary>
 
-  public record VoiceConfig {
+  public record ReplicatedVoiceConfig {
     /// <summary>
-    /// If true, the model will use a replicated voice for the response.
+    /// The mime type of the replicated voice.
     /// </summary>
-    [JsonPropertyName("replicatedVoiceConfig")]
+    [JsonPropertyName("mimeType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public ReplicatedVoiceConfig ? ReplicatedVoiceConfig { get; set; }
+    public string ? MimeType { get; set; }
 
     /// <summary>
-    /// The configuration for the prebuilt voice to use.
+    /// The sample audio of the replicated voice.
     /// </summary>
-    [JsonPropertyName("prebuiltVoiceConfig")]
+    [JsonPropertyName("voiceSampleAudio")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public PrebuiltVoiceConfig
-        ? PrebuiltVoiceConfig {
+    public byte[]
+        ? VoiceSampleAudio {
             get; set;
           }
 
     /// <summary>
-    /// Deserializes a JSON string to a VoiceConfig object.
+    /// Deserializes a JSON string to a ReplicatedVoiceConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized VoiceConfig object, or null if deserialization fails.</returns>
-    public static VoiceConfig ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
+    /// <returns>The deserialized ReplicatedVoiceConfig object, or null if deserialization
+    /// fails.</returns>
+    public static ReplicatedVoiceConfig
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<VoiceConfig>(jsonString, options);
+        return JsonSerializer.Deserialize<ReplicatedVoiceConfig>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;

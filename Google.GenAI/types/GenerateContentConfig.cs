@@ -351,6 +351,17 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Enables enhanced civic answers. It may not be available for all models. This field is not
+    /// supported in Vertex AI.
+    /// </summary>
+    [JsonPropertyName("enableEnhancedCivicAnswers")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public bool
+        ? EnableEnhancedCivicAnswers {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a GenerateContentConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

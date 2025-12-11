@@ -619,6 +619,11 @@ namespace Google.GenAI {
                               Common.GetValueByPath(fromObject, new string[] { "proactivity" }));
       }
 
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "explicitVadSignal" }))) {
+        throw new NotSupportedException(
+            "explicitVadSignal parameter is not supported in Gemini API.");
+      }
+
       return toObject;
     }
 
@@ -689,6 +694,12 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "proactivity" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "proactivity" },
                               Common.GetValueByPath(fromObject, new string[] { "proactivity" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "explicitVadSignal" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "explicitVadSignal" },
+            Common.GetValueByPath(fromObject, new string[] { "explicitVadSignal" }));
       }
 
       return toObject;
@@ -819,6 +830,11 @@ namespace Google.GenAI {
                               Common.GetValueByPath(fromObject, new string[] { "proactivity" }));
       }
 
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "explicitVadSignal" }))) {
+        throw new NotSupportedException(
+            "explicitVadSignal parameter is not supported in Gemini API.");
+      }
+
       return toObject;
     }
 
@@ -944,6 +960,12 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "proactivity" }) != null) {
         Common.SetValueByPath(parentObject, new string[] { "setup", "proactivity" },
                               Common.GetValueByPath(fromObject, new string[] { "proactivity" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "explicitVadSignal" }) != null) {
+        Common.SetValueByPath(
+            parentObject, new string[] { "setup", "explicitVadSignal" },
+            Common.GetValueByPath(fromObject, new string[] { "explicitVadSignal" }));
       }
 
       return toObject;
@@ -1135,6 +1157,13 @@ namespace Google.GenAI {
             Common.GetValueByPath(fromObject, new string[] { "sessionResumptionUpdate" }));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "voiceActivityDetectionSignal" }) !=
+          null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "voiceActivityDetectionSignal" },
+            Common.GetValueByPath(fromObject, new string[] { "voiceActivityDetectionSignal" }));
+      }
+
       return toObject;
     }
 
@@ -1230,14 +1259,14 @@ namespace Google.GenAI {
     internal JsonNode SpeechConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
-      if (Common.GetValueByPath(fromObject, new string[] { "languageCode" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "languageCode" },
-                              Common.GetValueByPath(fromObject, new string[] { "languageCode" }));
-      }
-
       if (Common.GetValueByPath(fromObject, new string[] { "voiceConfig" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "voiceConfig" },
                               Common.GetValueByPath(fromObject, new string[] { "voiceConfig" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "languageCode" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "languageCode" },
+                              Common.GetValueByPath(fromObject, new string[] { "languageCode" }));
       }
 
       if (!Common.IsZero(

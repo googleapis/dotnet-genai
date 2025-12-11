@@ -336,6 +336,14 @@ public class GenerateVideosTest {
     Assert.IsTrue(operation1.Response.GeneratedVideos.Count > 0);
     Assert.IsNotNull(operation1.Response.GeneratedVideos.First().Video.Uri);
 
+    // Download generated video
+    await geminiClient.Files.DownloadToFileAsync(
+        generatedVideo: operation1.Response.GeneratedVideos.First(),
+        outputPath: "generatedVideo.mp4"
+    );
+    // Downloaded video is a file. Bytes do not get written to the Video object.
+    Assert.IsNull(operation1.Response.GeneratedVideos.First().Video.VideoBytes);
+
 
     var source2 = new GenerateVideosSource {
       Prompt = "Driving through a tunnel.",

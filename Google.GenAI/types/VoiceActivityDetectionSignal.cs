@@ -23,33 +23,25 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
 
-  public record VoiceConfig {
+  public record VoiceActivityDetectionSignal {
     /// <summary>
-    /// If true, the model will use a replicated voice for the response.
+    /// The type of the VAD signal.
     /// </summary>
-    [JsonPropertyName("replicatedVoiceConfig")]
+    [JsonPropertyName("vadSignalType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public ReplicatedVoiceConfig ? ReplicatedVoiceConfig { get; set; }
+    public VadSignalType ? VadSignalType { get; set; }
 
     /// <summary>
-    /// The configuration for the prebuilt voice to use.
-    /// </summary>
-    [JsonPropertyName("prebuiltVoiceConfig")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public PrebuiltVoiceConfig
-        ? PrebuiltVoiceConfig {
-            get; set;
-          }
-
-    /// <summary>
-    /// Deserializes a JSON string to a VoiceConfig object.
+    /// Deserializes a JSON string to a VoiceActivityDetectionSignal object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized VoiceConfig object, or null if deserialization fails.</returns>
-    public static VoiceConfig ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
+    /// <returns>The deserialized VoiceActivityDetectionSignal object, or null if deserialization
+    /// fails.</returns>
+    public static VoiceActivityDetectionSignal
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<VoiceConfig>(jsonString, options);
+        return JsonSerializer.Deserialize<VoiceActivityDetectionSignal>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;

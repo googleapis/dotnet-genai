@@ -33,6 +33,7 @@
     <PackageReference Include="System.Net.WebSockets.Client" />
     <PackageReference Include="Google.Apis.Auth" />
     <InternalsVisibleTo Include="Google.GenAI.Tests" />
+    <InternalsVisibleTo Include="Google.GenAI.Netstandard2_1.Tests" />
   </ItemGroup>
 
   <!-- Add additional packages for netstandard2.1 target -->

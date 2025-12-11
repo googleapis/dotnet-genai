@@ -404,6 +404,18 @@ public class SegmentImageSimple {
 
 ### Generate Videos
 
+Generated videos can be either be returned by the API as bytes or a GCS URI for
+Vertex. For Gemini Developer API, only a Files URI can be returned.
+
+For Gemini, generated videos can be downloaded to a local file as follows:
+
+```csharp
+await client.Files.DownloadToFileAsync(
+    generatedVideo: operation.Response.GeneratedVideos.First(),
+    outputPath: "video.mp4"
+);
+```
+
 #### Generate Videos (From Text)
 
 ```csharp

@@ -1095,6 +1095,13 @@ namespace Google.GenAI {
                                toObject));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "enableEnhancedCivicAnswers" }) !=
+          null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "enableEnhancedCivicAnswers" },
+            Common.GetValueByPath(fromObject, new string[] { "enableEnhancedCivicAnswers" }));
+      }
+
       return toObject;
     }
 
@@ -1268,6 +1275,12 @@ namespace Google.GenAI {
             ImageConfigToVertex(JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                     fromObject, new string[] { "imageConfig" }))),
                                 toObject));
+      }
+
+      if (!Common.IsZero(
+              Common.GetValueByPath(fromObject, new string[] { "enableEnhancedCivicAnswers" }))) {
+        throw new NotSupportedException(
+            "enableEnhancedCivicAnswers parameter is not supported in Vertex AI.");
       }
 
       return toObject;
@@ -3443,14 +3456,14 @@ namespace Google.GenAI {
     internal JsonNode SpeechConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
-      if (Common.GetValueByPath(fromObject, new string[] { "languageCode" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "languageCode" },
-                              Common.GetValueByPath(fromObject, new string[] { "languageCode" }));
-      }
-
       if (Common.GetValueByPath(fromObject, new string[] { "voiceConfig" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "voiceConfig" },
                               Common.GetValueByPath(fromObject, new string[] { "voiceConfig" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "languageCode" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "languageCode" },
+                              Common.GetValueByPath(fromObject, new string[] { "languageCode" }));
       }
 
       if (!Common.IsZero(

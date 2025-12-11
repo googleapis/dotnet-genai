@@ -1053,6 +1053,13 @@ namespace Google.GenAI {
                                toObject));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "enableEnhancedCivicAnswers" }) !=
+          null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "enableEnhancedCivicAnswers" },
+            Common.GetValueByPath(fromObject, new string[] { "enableEnhancedCivicAnswers" }));
+      }
+
       return toObject;
     }
 

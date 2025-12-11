@@ -94,13 +94,6 @@ public class UpscaleImageTest {
 
   [TestMethod]
   public async Task UpscaleImageAllConfigParamsVertexTest() {
-    #if NET6_0
-    if (TestServer.IsReplayMode)
-    {
-       Assert.Inconclusive("Skipped on .NET 6 in replay mode due to System.Text.Json 10.0 serialization differences");
-       return;
-    }
-   #endif
     // Generate an image first.
     var vertexResponse = await vertexClient.Models.GenerateImagesAsync(
         model: modelName, prompt: "Red skateboard", config: new GenerateImagesConfig {

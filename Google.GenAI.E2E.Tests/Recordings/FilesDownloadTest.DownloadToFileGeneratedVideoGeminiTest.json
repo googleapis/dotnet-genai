@@ -1,0 +1,38 @@
+{
+  "recordID": "FilesDownloadTest.DownloadToFileGeneratedVideoGeminiTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "GET",
+        "url": "/v1beta/files/p1crkz5nfru4:download?alt=media",
+        "request": "GET /v1beta/files/p1crkz5nfru4:download?alt=media HTTP/1.1",
+        "headers": {
+          "Test-Name": "FilesDownloadTest.DownloadToFileGeneratedVideoGeminiTest"
+        },
+        "bodySegments": [
+          null
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "generativelanguage.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "90d3378561db7a42c770bb29b2c7506c8e738787da0f1f4185bb1c7b28d7ed9a",
+      "response": {
+        "statusCode": 200,
+        "headers": {
+          "Cache-Control": "private, max-age=0",
+          "Content-Disposition": "attachment",
+          "Content-Length": "9864924",
+          "Content-Type": "video/mp4",
+          "Date": "Fri, 05 Dec 2025 00:28:42 GMT",
+          "Expires": "Fri, 05 Dec 2025 00:28:42 GMT",
+          "Server": "UploadServer",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Goog-Hash": "crc32c=gJcFCw==",
+          "X-Guploader-Uploadid": "AHVrFxP90fo6JeUHSuf8bwD9l1dO9BTGiQzNnhF5RwD_wsowUlm1sCX8aVErd0IR9oXGJtSu"
+        }
+      }
+    }
+  ]
+}

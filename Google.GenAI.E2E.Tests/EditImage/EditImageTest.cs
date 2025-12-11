@@ -78,13 +78,6 @@ public class EditImageTest {
 
   [TestMethod]
   public async Task EditImageMaskReferenceVertexTest() {
-   #if NET6_0
-   if (TestServer.IsReplayMode)
-   {
-      Assert.Inconclusive("Skipped on .NET 6 in replay mode due to System.Text.Json 10.0 serialization differences");
-      return;
-   }
-   #endif
     List<IReferenceImage> referenceImages = new List<IReferenceImage>();
 
     // Raw reference image
@@ -132,13 +125,6 @@ public class EditImageTest {
 
   [TestMethod]
   public async Task EditImageMaskReferenceUserProvidedVertexTest() {
-    #if NET6_0
-    if (TestServer.IsReplayMode)
-    {
-       Assert.Inconclusive("Skipped on .NET 6 in replay mode due to System.Text.Json 10.0 serialization differences");
-       return;
-    }
-   #endif
     List<IReferenceImage> referenceImages = new List<IReferenceImage>();
 
     // Raw reference image

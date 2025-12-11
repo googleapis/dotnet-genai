@@ -41,7 +41,7 @@
         "statusCode": 200,
         "headers": {
           "Content-Type": "application/json; charset=UTF-8",
-          "Date": "Sat, 22 Nov 2025 06:25:49 GMT",
+          "Date": "Fri, 05 Dec 2025 23:46:52 GMT",
           "Server": "ESF",
           "Vary": "Origin, X-Origin, Referer",
           "X-Content-Type-Options": "nosniff",
@@ -50,7 +50,7 @@
         },
         "bodySegments": [
           {
-            "createTime": "2025-11-22T06:25:49.925192Z",
+            "createTime": "2025-12-05T23:46:52.784129Z",
             "displayName": "test_batch_gcs",
             "encryptionSpec": {},
             "inputConfig": {
@@ -64,7 +64,7 @@
             "model": "publishers/google/models/gemini-2.5-flash",
             "modelMonitoringStatus": {},
             "modelVersionId": "1",
-            "name": "projects/964831358985/locations/us-central1/batchPredictionJobs/7984269762890825728",
+            "name": "projects/REDACTED/locations/us-central1/batchPredictionJobs/2732299090946686976",
             "outputConfig": {
               "gcsDestination": {
                 "outputUriPrefix": "gs://unified-genai-tests/batches/output"
@@ -72,7 +72,7 @@
               "predictionsFormat": "jsonl"
             },
             "state": "JOB_STATE_PENDING",
-            "updateTime": "2025-11-22T06:25:49.925192Z"
+            "updateTime": "2025-12-05T23:46:52.784129Z"
           }
         ]
       }

@@ -97,6 +97,16 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Voice activity detection signal.
+    /// </summary>
+    [JsonPropertyName("voiceActivityDetectionSignal")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public VoiceActivityDetectionSignal
+        ? VoiceActivityDetectionSignal {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a LiveServerMessage object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

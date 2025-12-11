@@ -100,6 +100,16 @@ namespace Google.GenAI.Types {
     /// <summary>
     /// The model was expected to generate an image, but none was generated.
     /// </summary>
-    [JsonPropertyName("NO_IMAGE")] NO_IMAGE
+    [JsonPropertyName("NO_IMAGE")] NO_IMAGE,
+
+    /// <summary>
+    /// Image generation stopped because the generated image may be a recitation from a source.
+    /// </summary>
+    [JsonPropertyName("IMAGE_RECITATION")] IMAGE_RECITATION,
+
+    /// <summary>
+    /// Image generation stopped for a reason not otherwise specified.
+    /// </summary>
+    [JsonPropertyName("IMAGE_OTHER")] IMAGE_OTHER
   }
 }
