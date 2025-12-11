@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "JsonParser": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:64636;http://localhost:64637"
+    }
+  }
+}

@@ -531,7 +531,11 @@ namespace Google.GenAI
 
       if (name.StartsWith("https://"))
       {
+#if NET
         string suffix = name.Split("files/")[1];
+#else
+        string suffix = name.Split(new[] { "files/" }, StringSplitOptions.None)[1];
+#endif
         Match match = Regex.Match(suffix, "[a-z0-9]+");
         if (match.Success)
         {
@@ -544,7 +548,11 @@ namespace Google.GenAI
       }
       else if (name.StartsWith("files/"))
       {
+#if NET
         name = name.Split("files/")[1];
+#else
+        name = name.Split(new[] { "files/" }, StringSplitOptions.None)[1];
+#endif
       }
 
       return name;

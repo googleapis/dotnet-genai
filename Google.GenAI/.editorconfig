@@ -34,6 +34,7 @@ dotnet_diagnostic.IDE1006.severity = none
 dotnet_diagnostic.IDE2000.severity = none
 dotnet_diagnostic.IDE2002.severity = none
 dotnet_diagnostic.CS8600.severity = none
+dotnet_diagnostic.CS8601.severity = none
 dotnet_diagnostic.CS8602.severity = none
 dotnet_diagnostic.IDE0009.severity = none
 dotnet_diagnostic.IDE0017.severity = none
