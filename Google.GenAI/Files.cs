@@ -413,7 +413,7 @@ namespace Google.GenAI {
     /// </summary>
     /// <param name="filePath">The path to the file to upload.</param>
     /// <param name="config">A <see cref="UploadFileConfig"/> instance that specifies the optional
-    /// configurations.</param> <returns>A <see cref="Task{File}"/> that
+    /// configurations.</param> <returns>A <see cref="Task{Google.GenAI.Types.File}"/> that
     /// represents the asynchronous operation. The task result contains the uploaded <see
     /// cref="Google.GenAI.Types.File"/> metadata.</returns>
     public async Task<Google.GenAI.Types.File> UploadAsync(string filePath,
@@ -435,7 +435,7 @@ namespace Google.GenAI {
     /// <param name="bytes">The file content as a byte array.</param>
     /// <param name="fileName">Optional file name to use.</param>
     /// <param name="config">A <see cref="UploadFileConfig"/> instance that specifies the optional
-    /// configurations.</param> <returns>A <see cref="Task{File}"/> that
+    /// configurations.</param> <returns>A <see cref="Task{Google.GenAI.Types.File}"/> that
     /// represents the asynchronous operation. The task result contains the uploaded <see
     /// cref="Google.GenAI.Types.File"/> metadata.</returns>
     public async Task<Google.GenAI.Types.File> UploadAsync(byte[] bytes, string? fileName = null,
@@ -457,7 +457,7 @@ namespace Google.GenAI {
     /// <param name="mimeType">Optional MIME type. If not provided, defaults to
     /// application/octet-stream.</param> <param name="config">A <see cref="UploadFileConfig"/>
     /// instance that specifies the optional configurations.</param> <returns>A <see
-    /// cref="Task{File}"/> that represents the asynchronous operation. The task
+    /// cref="Task{Google.GenAI.Types.File}"/> that represents the asynchronous operation. The task
     /// result contains the uploaded <see cref="Google.GenAI.Types.File"/> metadata.</returns>
     public async Task<Google.GenAI.Types.File> UploadAsync(Stream stream, long size,
                                                            string? fileName = null,
@@ -515,7 +515,7 @@ namespace Google.GenAI {
     /// Downloads a <see cref="Google.GenAI.Types.Video"/> object and returns it as a <see
     /// cref="Stream"/>. Caller is responsible for disposing the returned stream.
     /// </summary>
-    /// <param name="video">The <see cref="Google.GenAI.Types.Video"/> object to download.</param>
+    /// <param name="file">The <see cref="Google.GenAI.Types.Video"/> object to download.</param>
     /// <param name="config">A <see cref="DownloadFileConfig"/> instance that specifies the optional
     /// configurations.</param> <returns>A <see cref="Task{Stream}"/> that represents the
     /// asynchronous operation. The task result contains a <see cref="Stream"/> with the file
@@ -536,7 +536,7 @@ namespace Google.GenAI {
     /// Downloads a <see cref="Google.GenAI.Types.GeneratedVideo"/> object and returns it as a <see
     /// cref="Stream"/>. Caller is responsible for disposing the returned stream.
     /// </summary>
-    /// <param name="generatedVideo">The <see cref="Google.GenAI.Types.GeneratedVideo"/> object to
+    /// <param name="file">The <see cref="Google.GenAI.Types.GeneratedVideo"/> object to
     /// download.</param> <param name="config">A <see cref="DownloadFileConfig"/> instance that
     /// specifies the optional configurations.</param> <returns>A <see cref="Task{Stream}"/> that
     /// represents the asynchronous operation. The task result contains a <see cref="Stream"/> with
@@ -598,7 +598,7 @@ namespace Google.GenAI {
     /// <summary>
     /// Downloads a <see cref="Google.GenAI.Types.GeneratedVideo"/> object directly to a file path.
     /// </summary>
-    /// <param name="generatedVideo">The <see cref="GeneratedVideo"/> object to download.</param>
+    /// <param name="file">The <see cref="GeneratedVideo"/> object to download.</param>
     /// <param name="outputPath">The path where the Video should be saved.</param>
     /// <param name="config">A <see cref="DownloadFileConfig"/> instance that specifies the optional
     /// configurations.</param> <returns>A <see cref="Task"/> that represents the asynchronous
@@ -618,7 +618,7 @@ namespace Google.GenAI {
     /// <summary>
     /// Downloads a <see cref="Google.GenAI.Types.Video"/> object directly to a file path.
     /// </summary>
-    /// <param name="video">The <see cref="Video"/> object to download.</param>
+    /// <param name="file">The <see cref="Video"/> object to download.</param>
     /// <param name="outputPath">The path where the Video should be saved.</param>
     /// <param name="config">A <see cref="DownloadFileConfig"/> instance that specifies the optional
     /// configurations.</param> <returns>A <see cref="Task"/> that represents the asynchronous

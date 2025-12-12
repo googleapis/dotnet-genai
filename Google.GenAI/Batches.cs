@@ -20,7 +20,13 @@ using System;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
+
 using Google.GenAI.Types;
+
+using System;
+using Google.GenAI.Types;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Google.GenAI {
 
@@ -1938,7 +1944,7 @@ namespace Google.GenAI {
     /// Makes an API request to list the available batch jobs.
     /// </summary>
     /// <param name="config">A <see cref="ListBatchJobsConfig"/> for configuring the list
-    /// request.</param> <returns>A <see cref="Pager{BatchJob, ListBatchJobsConfig, ListBatchJobsResponse}"/> object that contains the list of
+    /// request.</param> <returns>A <see cref="Pager{BatchJob}"/> object that contains the list of
     /// batch jobs. The pager is an
     ///     iterable and automatically queries the next page once the current page is
     ///     exhausted.</returns>

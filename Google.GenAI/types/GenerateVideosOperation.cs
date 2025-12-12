@@ -54,8 +54,9 @@ namespace Google.GenAI.Types {
       }
     }
 
-    public override GenerateVideosOperation FromApiResponse(JsonNode apiResponse, bool isVertexAI) {
-      var operationsConverters = new OperationsConverters(null!);
+    public override GenerateVideosOperation
+        ? FromApiResponse(JsonNode apiResponse, bool isVertexAI) {
+      var operationsConverters = new OperationsConverters(null);
       JsonNode response;
       if (isVertexAI) {
         response =
@@ -64,8 +65,9 @@ namespace Google.GenAI.Types {
         response =
             operationsConverters.GenerateVideosOperationFromMldev(apiResponse, new JsonObject());
       }
-      return JsonSerializer.Deserialize<GenerateVideosOperation>(response.ToJsonString(), (JsonSerializerOptions?)null)
-        ?? throw new InvalidOperationException("Failed to deserialize GenerateVideosOperation.");
+      return JsonSerializer.Deserialize<GenerateVideosOperation>(response.ToJsonString(),
+                                                                 (JsonSerializerOptions?)null) ??
+             throw new InvalidOperationException("Failed to deserialize GenerateVideosOperation.");
     }
   }
 }

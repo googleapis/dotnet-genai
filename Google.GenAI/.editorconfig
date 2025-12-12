@@ -42,6 +42,9 @@ dotnet_diagnostic.IDE0028.severity = none
 dotnet_diagnostic.CS8603.severity = none
 dotnet_diagnostic.CS8424.severity = none
 dotnet_diagnostic.CS0108.severity = none
+dotnet_diagnostic.CS0105.severity = none
+dotnet_diagnostic.CS1572.severity = none
+dotnet_diagnostic.CS1573.severity = none
 
 [*.csproj]
 indent_size = 2
