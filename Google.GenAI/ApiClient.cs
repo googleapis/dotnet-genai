@@ -110,7 +110,11 @@ namespace Google.GenAI
 
     private static HttpClient CreateHttpClient(HttpOptions httpOptions)
     {
-      var client = new HttpClient();
+      var handler = new SocketsHttpHandler
+      {
+          PooledConnectionLifetime = TimeSpan.FromMinutes(2)
+      };
+      var client = new HttpClient(handler);
       if (httpOptions.Timeout != null)
       {
         client.Timeout = System.TimeSpan.FromMilliseconds(httpOptions.Timeout.Value);
