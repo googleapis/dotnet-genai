@@ -4126,7 +4126,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ThinkingLevel",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ThinkingLevel.yml\" sourcestartlinenumber=\"1\">The number of thoughts tokens that the model should generate.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ThinkingLevel.yml\" sourcestartlinenumber=\"1\">The level of thoughts tokens that the model should generate.</p>\n"
     },
     {
       "type": "ManagedReference",
