@@ -20523,6 +20523,18 @@ references:
   commentId: F:Google.GenAI.Types.ThinkingLevel.LOW
   fullName: Google.GenAI.Types.ThinkingLevel.LOW
   nameWithType: ThinkingLevel.LOW
+- uid: Google.GenAI.Types.ThinkingLevel.MEDIUM
+  name: MEDIUM
+  href: api/Google.GenAI.Types.ThinkingLevel.html#Google_GenAI_Types_ThinkingLevel_MEDIUM
+  commentId: F:Google.GenAI.Types.ThinkingLevel.MEDIUM
+  fullName: Google.GenAI.Types.ThinkingLevel.MEDIUM
+  nameWithType: ThinkingLevel.MEDIUM
+- uid: Google.GenAI.Types.ThinkingLevel.MINIMAL
+  name: MINIMAL
+  href: api/Google.GenAI.Types.ThinkingLevel.html#Google_GenAI_Types_ThinkingLevel_MINIMAL
+  commentId: F:Google.GenAI.Types.ThinkingLevel.MINIMAL
+  fullName: Google.GenAI.Types.ThinkingLevel.MINIMAL
+  nameWithType: ThinkingLevel.MINIMAL
 - uid: Google.GenAI.Types.ThinkingLevel.THINKING_LEVEL_UNSPECIFIED
   name: THINKING_LEVEL_UNSPECIFIED
   href: api/Google.GenAI.Types.ThinkingLevel.html#Google_GenAI_Types_ThinkingLevel_THINKING_LEVEL_UNSPECIFIED
