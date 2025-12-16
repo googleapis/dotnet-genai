@@ -16245,6 +16245,12 @@ references:
   commentId: F:Google.GenAI.Types.PartMediaResolutionLevel.MEDIA_RESOLUTION_MEDIUM
   fullName: Google.GenAI.Types.PartMediaResolutionLevel.MEDIA_RESOLUTION_MEDIUM
   nameWithType: PartMediaResolutionLevel.MEDIA_RESOLUTION_MEDIUM
+- uid: Google.GenAI.Types.PartMediaResolutionLevel.MEDIA_RESOLUTION_ULTRA_HIGH
+  name: MEDIA_RESOLUTION_ULTRA_HIGH
+  href: api/Google.GenAI.Types.PartMediaResolutionLevel.html#Google_GenAI_Types_PartMediaResolutionLevel_MEDIA_RESOLUTION_ULTRA_HIGH
+  commentId: F:Google.GenAI.Types.PartMediaResolutionLevel.MEDIA_RESOLUTION_ULTRA_HIGH
+  fullName: Google.GenAI.Types.PartMediaResolutionLevel.MEDIA_RESOLUTION_ULTRA_HIGH
+  nameWithType: PartMediaResolutionLevel.MEDIA_RESOLUTION_ULTRA_HIGH
 - uid: Google.GenAI.Types.PartMediaResolutionLevel.MEDIA_RESOLUTION_UNSPECIFIED
   name: MEDIA_RESOLUTION_UNSPECIFIED
   href: api/Google.GenAI.Types.PartMediaResolutionLevel.html#Google_GenAI_Types_PartMediaResolutionLevel_MEDIA_RESOLUTION_UNSPECIFIED
