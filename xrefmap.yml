@@ -15565,24 +15565,6 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ModalityTokenCount.TokenCount
   nameWithType: ModalityTokenCount.TokenCount
-- uid: Google.GenAI.Types.Mode
-  name: Mode
-  href: api/Google.GenAI.Types.Mode.html
-  commentId: T:Google.GenAI.Types.Mode
-  fullName: Google.GenAI.Types.Mode
-  nameWithType: Mode
-- uid: Google.GenAI.Types.Mode.MODE_DYNAMIC
-  name: MODE_DYNAMIC
-  href: api/Google.GenAI.Types.Mode.html#Google_GenAI_Types_Mode_MODE_DYNAMIC
-  commentId: F:Google.GenAI.Types.Mode.MODE_DYNAMIC
-  fullName: Google.GenAI.Types.Mode.MODE_DYNAMIC
-  nameWithType: Mode.MODE_DYNAMIC
-- uid: Google.GenAI.Types.Mode.MODE_UNSPECIFIED
-  name: MODE_UNSPECIFIED
-  href: api/Google.GenAI.Types.Mode.html#Google_GenAI_Types_Mode_MODE_UNSPECIFIED
-  commentId: F:Google.GenAI.Types.Mode.MODE_UNSPECIFIED
-  fullName: Google.GenAI.Types.Mode.MODE_UNSPECIFIED
-  nameWithType: Mode.MODE_UNSPECIFIED
 - uid: Google.GenAI.Types.Model
   name: Model
   href: api/Google.GenAI.Types.Model.html

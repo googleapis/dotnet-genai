@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Enum FunctionCallingConfigMode | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Config for the function calling config mode.">
+      <meta name="description" content="Function calling mode.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -94,7 +94,7 @@ Enum FunctionCallingConfigMode  <a class="header-action link-secondary" title="V
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Config for the function calling config mode.</p>
+  <div class="markdown summary"><p>Function calling mode.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -131,7 +131,7 @@ response.</p>
     <dt id="Google_GenAI_Types_FunctionCallingConfigMode_MODE_UNSPECIFIED"><code>[JsonPropertyName(&quot;MODE_UNSPECIFIED&quot;)]
 MODE_UNSPECIFIED = 0</code></dt>
   
-  <dd><p>The function calling config mode is unspecified. Should not be used.</p>
+  <dd><p>Unspecified function calling mode. This value should not be used.</p>
 </dd>
     <dt id="Google_GenAI_Types_FunctionCallingConfigMode_NONE"><code>[JsonPropertyName(&quot;NONE&quot;)]
 NONE = 3</code></dt>
@@ -142,10 +142,10 @@ function declarations.</p>
     <dt id="Google_GenAI_Types_FunctionCallingConfigMode_VALIDATED"><code>[JsonPropertyName(&quot;VALIDATED&quot;)]
 VALIDATED = 4</code></dt>
   
-  <dd><p>Model decides to predict either a function call or a natural language response, but will
-validate function calls with constrained decoding. If &quot;allowed_function_names&quot; are set, the
-predicted function call will be limited to any one of &quot;allowed_function_names&quot;, else the
-predicted function call will be any one of the provided &quot;function_declarations&quot;.</p>
+  <dd><p>Model is constrained to predict either function calls or natural language response. If
+&quot;allowed_function_names&quot; are set, the predicted function calls will be limited to any one of
+&quot;allowed_function_names&quot;, else the predicted function calls will be any one of the provided
+&quot;function_declarations&quot;.</p>
 </dd>
   </dl>
 

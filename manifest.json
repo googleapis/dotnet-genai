@@ -556,7 +556,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Behavior",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Behavior.yml\" sourcestartlinenumber=\"1\">Defines the function behavior. Defaults to <code sourcefile=\"api/Google.GenAI.Types.Behavior.yml\" sourcestartlinenumber=\"1\">BLOCKING</code>.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Behavior.yml\" sourcestartlinenumber=\"1\">Specifies the function Behavior. Currently only supported by the BidiGenerateContent method.\nThis enum is not supported in Vertex AI.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1214,7 +1214,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.DynamicRetrievalConfigMode",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DynamicRetrievalConfigMode.yml\" sourcestartlinenumber=\"1\">Config for the dynamic retrieval config mode.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DynamicRetrievalConfigMode.yml\" sourcestartlinenumber=\"1\">The mode of the predictor to be used in dynamic retrieval.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1620,7 +1620,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.FunctionCallingConfigMode",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FunctionCallingConfigMode.yml\" sourcestartlinenumber=\"1\">Config for the function calling config mode.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FunctionCallingConfigMode.yml\" sourcestartlinenumber=\"1\">Function calling mode.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1634,7 +1634,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.FunctionDeclaration",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FunctionDeclaration.yml\" sourcestartlinenumber=\"1\">Defines a function that the model can generate JSON inputs for.  The inputs are based on\nOpenAPI 3.0 specifications (<a href=\"https://spec.openapis.org/oas/v3.0.3\" sourcefile=\"api/Google.GenAI.Types.FunctionDeclaration.yml\" sourcestartlinenumber=\"2\">https://spec.openapis.org/oas/v3.0.3</a>).</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FunctionDeclaration.yml\" sourcestartlinenumber=\"1\">Structured representation of a function declaration as defined by the OpenAPI 3.0\nspecification (<a href=\"https://spec.openapis.org/oas/v3.0.3\" sourcefile=\"api/Google.GenAI.Types.FunctionDeclaration.yml\" sourcestartlinenumber=\"2\">https://spec.openapis.org/oas/v3.0.3</a>). Included in this declaration are the\nfunction name, description, parameters and response type. This FunctionDeclaration is a\nrepresentation of a block of code that can be used as a <code sourcefile=\"api/Google.GenAI.Types.FunctionDeclaration.yml\" sourcestartlinenumber=\"4\">Tool</code> by the model and executed by\nthe client.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3105,20 +3105,6 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ModalityTokenCount",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ModalityTokenCount.yml\" sourcestartlinenumber=\"1\">Represents token counting info for a single modality.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.Mode.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.Mode.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.Mode",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Mode.yml\" sourcestartlinenumber=\"1\">The mode of the predictor to be used in dynamic retrieval.</p>\n"
     },
     {
       "type": "ManagedReference",

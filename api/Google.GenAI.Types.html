@@ -513,8 +513,11 @@ API.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.FunctionDeclaration.html">FunctionDeclaration</a></dt>
-      <dd><p>Defines a function that the model can generate JSON inputs for.  The inputs are based on
-OpenAPI 3.0 specifications (<a href="https://spec.openapis.org/oas/v3.0.3">https://spec.openapis.org/oas/v3.0.3</a>).</p>
+      <dd><p>Structured representation of a function declaration as defined by the OpenAPI 3.0
+specification (<a href="https://spec.openapis.org/oas/v3.0.3">https://spec.openapis.org/oas/v3.0.3</a>). Included in this declaration are the
+function name, description, parameters and response type. This FunctionDeclaration is a
+representation of a block of code that can be used as a <code>Tool</code> by the model and executed by
+the client.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -1578,7 +1581,8 @@ Enums
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.Behavior.html">Behavior</a></dt>
-      <dd><p>Defines the function behavior. Defaults to <code>BLOCKING</code>.</p>
+      <dd><p>Specifies the function Behavior. Currently only supported by the BidiGenerateContent method.
+This enum is not supported in Vertex AI.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -1593,7 +1597,7 @@ Enums
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.DynamicRetrievalConfigMode.html">DynamicRetrievalConfigMode</a></dt>
-      <dd><p>Config for the dynamic retrieval config mode.</p>
+      <dd><p>The mode of the predictor to be used in dynamic retrieval.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -1634,7 +1638,7 @@ stopped generating the tokens.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.FunctionCallingConfigMode.html">FunctionCallingConfigMode</a></dt>
-      <dd><p>Config for the function calling config mode.</p>
+      <dd><p>Function calling mode.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -1706,11 +1710,6 @@ threshold is used for probability score. This enum is not supported in Gemini AP
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.Modality.html">Modality</a></dt>
       <dd><p>Server content modalities.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Google.GenAI.Types.Mode.html">Mode</a></dt>
-      <dd><p>The mode of the predictor to be used in dynamic retrieval.</p>
 </dd>
     </dl>
     <dl class="jumplist">
