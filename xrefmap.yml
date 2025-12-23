@@ -1330,13 +1330,13 @@ references:
   fullName: Google.GenAI.MimeTypes.GetMimeTypeExtensions
   nameWithType: MimeTypes.GetMimeTypeExtensions
 - uid: Google.GenAI.MimeTypes.TryGetMimeType(System.String,System.String@)
-  name: TryGetMimeType(string?, out string?)
+  name: TryGetMimeType(string, out string)
   href: api/Google.GenAI.MimeTypes.html#Google_GenAI_MimeTypes_TryGetMimeType_System_String_System_String__
   commentId: M:Google.GenAI.MimeTypes.TryGetMimeType(System.String,System.String@)
   name.vb: TryGetMimeType(String, String)
-  fullName: Google.GenAI.MimeTypes.TryGetMimeType(string?, out string?)
+  fullName: Google.GenAI.MimeTypes.TryGetMimeType(string, out string)
   fullName.vb: Google.GenAI.MimeTypes.TryGetMimeType(String, String)
-  nameWithType: MimeTypes.TryGetMimeType(string?, out string?)
+  nameWithType: MimeTypes.TryGetMimeType(string, out string)
   nameWithType.vb: MimeTypes.TryGetMimeType(String, String)
 - uid: Google.GenAI.MimeTypes.TryGetMimeType*
   name: TryGetMimeType
