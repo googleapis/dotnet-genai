@@ -7555,6 +7555,12 @@ references:
   commentId: F:Google.GenAI.Types.FileSource.GENERATED
   fullName: Google.GenAI.Types.FileSource.GENERATED
   nameWithType: FileSource.GENERATED
+- uid: Google.GenAI.Types.FileSource.REGISTERED
+  name: REGISTERED
+  href: api/Google.GenAI.Types.FileSource.html#Google_GenAI_Types_FileSource_REGISTERED
+  commentId: F:Google.GenAI.Types.FileSource.REGISTERED
+  fullName: Google.GenAI.Types.FileSource.REGISTERED
+  nameWithType: FileSource.REGISTERED
 - uid: Google.GenAI.Types.FileSource.SOURCE_UNSPECIFIED
   name: SOURCE_UNSPECIFIED
   href: api/Google.GenAI.Types.FileSource.html#Google_GenAI_Types_FileSource_SOURCE_UNSPECIFIED
