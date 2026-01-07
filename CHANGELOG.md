@@ -9,7 +9,6 @@
 
 ### New features
 
-* [Python] add RegisterFiles so gcs files can be used with genai. ([0b14d60](https://github.com/googleapis/dotnet-genai/commit/0b14d6071569f2264df3cf12ef7a1a492d948fb1))
 * Add minimal and medium thinking levels. ([60ba497](https://github.com/googleapis/dotnet-genai/commit/60ba49781b9d75ed2a2de9e274cb68d16197f5e9))
 * Add minimal and medium thinking levels. ([e8e5fb2](https://github.com/googleapis/dotnet-genai/commit/e8e5fb264873e9508dd890eaa3ca4057fee886a2))
 * Add minimal and medium thinking levels. ([06f8a92](https://github.com/googleapis/dotnet-genai/commit/06f8a9242034c08dfe9fdc6e068c15a498423e19))
