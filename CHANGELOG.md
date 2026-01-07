@@ -1,5 +1,31 @@
 # Changelog
 
+## Version 0.10.0, released 2026-01-07
+
+
+### ⚠ BREAKING CHANGES
+
+* replace netstandard2.1 target with netstandard2.0
+
+### New features
+
+* [Python] add RegisterFiles so gcs files can be used with genai. ([0b14d60](https://github.com/googleapis/dotnet-genai/commit/0b14d6071569f2264df3cf12ef7a1a492d948fb1))
+* Add minimal and medium thinking levels. ([60ba497](https://github.com/googleapis/dotnet-genai/commit/60ba49781b9d75ed2a2de9e274cb68d16197f5e9))
+* Add minimal and medium thinking levels. ([e8e5fb2](https://github.com/googleapis/dotnet-genai/commit/e8e5fb264873e9508dd890eaa3ca4057fee886a2))
+* Add minimal and medium thinking levels. ([06f8a92](https://github.com/googleapis/dotnet-genai/commit/06f8a9242034c08dfe9fdc6e068c15a498423e19))
+* Add PersonGeneration to ImageConfig for Vertex Gempix ([d147baa](https://github.com/googleapis/dotnet-genai/commit/d147baa9f4aaa6ed7687c2c2b3c2099d68f834fe))
+* Add Support for .Net Standard 2.0 ([35248b5](https://github.com/googleapis/dotnet-genai/commit/35248b52ac4a0c669cfc6a183b7d42454ccecbf0))
+* Add Support for .Net Standard 2.0 ([35248b5](https://github.com/googleapis/dotnet-genai/commit/35248b52ac4a0c669cfc6a183b7d42454ccecbf0))
+* Add Support for .Net Standard 2.0 ([#90](https://github.com/googleapis/dotnet-genai/issues/90)) ([aa628a0](https://github.com/googleapis/dotnet-genai/commit/aa628a0fa2e093dc600deed16c55bd728516b839))
+* Add ultra high resolution to the media resolution in Parts. ([f9a971f](https://github.com/googleapis/dotnet-genai/commit/f9a971f8980264f5cfbc55b8b258aa6721f8e402))
+* replace netstandard2.1 target with netstandard2.0 ([40da95d](https://github.com/googleapis/dotnet-genai/commit/40da95d5902c86a853ccca56d7343784b2f45d50))
+* support multi speaker for Vertex AI ([8a81239](https://github.com/googleapis/dotnet-genai/commit/8a812397982f66d1d17555e59c1d94f3f6c5b018))
+
+
+### Documentation improvements
+
+* Update Virtual Try-On model id in samples and docstrings ([6dbbac8](https://github.com/googleapis/dotnet-genai/commit/6dbbac8437551ec333e71d7970356b4d0b935972))
+
 ## Version 0.9.0, released 2025-12-10
 
 
