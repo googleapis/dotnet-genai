@@ -4829,34 +4829,6 @@
       "Summary": null
     },
     {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Microsoft.Extensions.AI.GoogleGenAIExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Microsoft.Extensions.AI.GoogleGenAIExtensions.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Microsoft.Extensions.AI.GoogleGenAIExtensions",
-      "Summary": "<p sourcefile=\"api/Microsoft.Extensions.AI.GoogleGenAIExtensions.yml\" sourcestartlinenumber=\"1\">Provides implementations of Microsoft.Extensions.AI abstractions based on <xref href=\"Google.GenAI.Client\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Microsoft.Extensions.AI.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Microsoft.Extensions.AI.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Microsoft.Extensions.AI",
-      "Summary": null
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "api/index.md",
       "output": {
