@@ -1,5 +1,13 @@
 # Changelog
 
+## Version 0.11.0, released 2026-01-08
+
+
+### New features
+
+* Add Microsoft.Extensions.AI implementations to Google.GenAI ([e39b1f5](https://github.com/googleapis/dotnet-genai/commit/e39b1f540ec1895ea35fb7a52dc30116a57090ba))
+* Add Microsoft.Extensions.AI implementations to Google.GenAI ([#81](https://github.com/googleapis/dotnet-genai/issues/81)) ([ff3f6b6](https://github.com/googleapis/dotnet-genai/commit/ff3f6b6efe18d624e99617335eef8b102b9db02a))
+
 ## Version 0.10.0, released 2026-01-07
 
 
