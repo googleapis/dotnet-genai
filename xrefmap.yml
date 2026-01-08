@@ -23577,3 +23577,90 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.VoiceConfig.ReplicatedVoiceConfig
   nameWithType: VoiceConfig.ReplicatedVoiceConfig
+- uid: Microsoft.Extensions.AI
+  name: Microsoft.Extensions.AI
+  href: api/Microsoft.Extensions.AI.html
+  commentId: N:Microsoft.Extensions.AI
+  fullName: Microsoft.Extensions.AI
+  nameWithType: Microsoft.Extensions.AI
+- uid: Microsoft.Extensions.AI.GoogleGenAIExtensions
+  name: GoogleGenAIExtensions
+  href: api/Microsoft.Extensions.AI.GoogleGenAIExtensions.html
+  commentId: T:Microsoft.Extensions.AI.GoogleGenAIExtensions
+  fullName: Microsoft.Extensions.AI.GoogleGenAIExtensions
+  nameWithType: GoogleGenAIExtensions
+- uid: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIChatClient(Google.GenAI.Client,System.String)
+  name: AsIChatClient(Client, string?)
+  href: api/Microsoft.Extensions.AI.GoogleGenAIExtensions.html#Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIChatClient_Google_GenAI_Client_System_String_
+  commentId: M:Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIChatClient(Google.GenAI.Client,System.String)
+  name.vb: AsIChatClient(Client, String)
+  fullName: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIChatClient(Google.GenAI.Client, string?)
+  fullName.vb: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIChatClient(Google.GenAI.Client, String)
+  nameWithType: GoogleGenAIExtensions.AsIChatClient(Client, string?)
+  nameWithType.vb: GoogleGenAIExtensions.AsIChatClient(Client, String)
+- uid: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIChatClient(Google.GenAI.Models,System.String)
+  name: AsIChatClient(Models, string?)
+  href: api/Microsoft.Extensions.AI.GoogleGenAIExtensions.html#Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIChatClient_Google_GenAI_Models_System_String_
+  commentId: M:Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIChatClient(Google.GenAI.Models,System.String)
+  name.vb: AsIChatClient(Models, String)
+  fullName: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIChatClient(Google.GenAI.Models, string?)
+  fullName.vb: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIChatClient(Google.GenAI.Models, String)
+  nameWithType: GoogleGenAIExtensions.AsIChatClient(Models, string?)
+  nameWithType.vb: GoogleGenAIExtensions.AsIChatClient(Models, String)
+- uid: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIChatClient*
+  name: AsIChatClient
+  href: api/Microsoft.Extensions.AI.GoogleGenAIExtensions.html#Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIChatClient_
+  commentId: Overload:Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIChatClient
+  isSpec: "True"
+  fullName: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIChatClient
+  nameWithType: GoogleGenAIExtensions.AsIChatClient
+- uid: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIEmbeddingGenerator(Google.GenAI.Client,System.String,System.Nullable{System.Int32})
+  name: AsIEmbeddingGenerator(Client, string?, int?)
+  href: api/Microsoft.Extensions.AI.GoogleGenAIExtensions.html#Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIEmbeddingGenerator_Google_GenAI_Client_System_String_System_Nullable_System_Int32__
+  commentId: M:Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIEmbeddingGenerator(Google.GenAI.Client,System.String,System.Nullable{System.Int32})
+  name.vb: AsIEmbeddingGenerator(Client, String, Integer?)
+  fullName: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIEmbeddingGenerator(Google.GenAI.Client, string?, int?)
+  fullName.vb: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIEmbeddingGenerator(Google.GenAI.Client, String, Integer?)
+  nameWithType: GoogleGenAIExtensions.AsIEmbeddingGenerator(Client, string?, int?)
+  nameWithType.vb: GoogleGenAIExtensions.AsIEmbeddingGenerator(Client, String, Integer?)
+- uid: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIEmbeddingGenerator(Google.GenAI.Models,System.String,System.Nullable{System.Int32})
+  name: AsIEmbeddingGenerator(Models, string?, int?)
+  href: api/Microsoft.Extensions.AI.GoogleGenAIExtensions.html#Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIEmbeddingGenerator_Google_GenAI_Models_System_String_System_Nullable_System_Int32__
+  commentId: M:Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIEmbeddingGenerator(Google.GenAI.Models,System.String,System.Nullable{System.Int32})
+  name.vb: AsIEmbeddingGenerator(Models, String, Integer?)
+  fullName: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIEmbeddingGenerator(Google.GenAI.Models, string?, int?)
+  fullName.vb: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIEmbeddingGenerator(Google.GenAI.Models, String, Integer?)
+  nameWithType: GoogleGenAIExtensions.AsIEmbeddingGenerator(Models, string?, int?)
+  nameWithType.vb: GoogleGenAIExtensions.AsIEmbeddingGenerator(Models, String, Integer?)
+- uid: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIEmbeddingGenerator*
+  name: AsIEmbeddingGenerator
+  href: api/Microsoft.Extensions.AI.GoogleGenAIExtensions.html#Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIEmbeddingGenerator_
+  commentId: Overload:Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIEmbeddingGenerator
+  isSpec: "True"
+  fullName: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIEmbeddingGenerator
+  nameWithType: GoogleGenAIExtensions.AsIEmbeddingGenerator
+- uid: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIImageGenerator(Google.GenAI.Client,System.String)
+  name: AsIImageGenerator(Client, string?)
+  href: api/Microsoft.Extensions.AI.GoogleGenAIExtensions.html#Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIImageGenerator_Google_GenAI_Client_System_String_
+  commentId: M:Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIImageGenerator(Google.GenAI.Client,System.String)
+  name.vb: AsIImageGenerator(Client, String)
+  fullName: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIImageGenerator(Google.GenAI.Client, string?)
+  fullName.vb: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIImageGenerator(Google.GenAI.Client, String)
+  nameWithType: GoogleGenAIExtensions.AsIImageGenerator(Client, string?)
+  nameWithType.vb: GoogleGenAIExtensions.AsIImageGenerator(Client, String)
+- uid: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIImageGenerator(Google.GenAI.Models,System.String)
+  name: AsIImageGenerator(Models, string?)
+  href: api/Microsoft.Extensions.AI.GoogleGenAIExtensions.html#Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIImageGenerator_Google_GenAI_Models_System_String_
+  commentId: M:Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIImageGenerator(Google.GenAI.Models,System.String)
+  name.vb: AsIImageGenerator(Models, String)
+  fullName: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIImageGenerator(Google.GenAI.Models, string?)
+  fullName.vb: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIImageGenerator(Google.GenAI.Models, String)
+  nameWithType: GoogleGenAIExtensions.AsIImageGenerator(Models, string?)
+  nameWithType.vb: GoogleGenAIExtensions.AsIImageGenerator(Models, String)
+- uid: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIImageGenerator*
+  name: AsIImageGenerator
+  href: api/Microsoft.Extensions.AI.GoogleGenAIExtensions.html#Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIImageGenerator_
+  commentId: Overload:Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIImageGenerator
+  isSpec: "True"
+  fullName: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIImageGenerator
+  nameWithType: GoogleGenAIExtensions.AsIImageGenerator
