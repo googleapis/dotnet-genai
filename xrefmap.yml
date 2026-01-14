@@ -14927,6 +14927,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.LiveServerMessage.UsageMetadata
   nameWithType: LiveServerMessage.UsageMetadata
+- uid: Google.GenAI.Types.LiveServerMessage.VoiceActivity
+  name: VoiceActivity
+  href: api/Google.GenAI.Types.LiveServerMessage.html#Google_GenAI_Types_LiveServerMessage_VoiceActivity
+  commentId: P:Google.GenAI.Types.LiveServerMessage.VoiceActivity
+  fullName: Google.GenAI.Types.LiveServerMessage.VoiceActivity
+  nameWithType: LiveServerMessage.VoiceActivity
+- uid: Google.GenAI.Types.LiveServerMessage.VoiceActivity*
+  name: VoiceActivity
+  href: api/Google.GenAI.Types.LiveServerMessage.html#Google_GenAI_Types_LiveServerMessage_VoiceActivity_
+  commentId: Overload:Google.GenAI.Types.LiveServerMessage.VoiceActivity
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LiveServerMessage.VoiceActivity
+  nameWithType: LiveServerMessage.VoiceActivity
 - uid: Google.GenAI.Types.LiveServerMessage.VoiceActivityDetectionSignal
   name: VoiceActivityDetectionSignal
   href: api/Google.GenAI.Types.LiveServerMessage.html#Google_GenAI_Types_LiveServerMessage_VoiceActivityDetectionSignal
@@ -23494,6 +23507,41 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.VideoMetadata.StartOffset
   nameWithType: VideoMetadata.StartOffset
+- uid: Google.GenAI.Types.VoiceActivity
+  name: VoiceActivity
+  href: api/Google.GenAI.Types.VoiceActivity.html
+  commentId: T:Google.GenAI.Types.VoiceActivity
+  fullName: Google.GenAI.Types.VoiceActivity
+  nameWithType: VoiceActivity
+- uid: Google.GenAI.Types.VoiceActivity.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.VoiceActivity.html#Google_GenAI_Types_VoiceActivity_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.VoiceActivity.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.VoiceActivity.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.VoiceActivity.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: VoiceActivity.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: VoiceActivity.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.VoiceActivity.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.VoiceActivity.html#Google_GenAI_Types_VoiceActivity_FromJson_
+  commentId: Overload:Google.GenAI.Types.VoiceActivity.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VoiceActivity.FromJson
+  nameWithType: VoiceActivity.FromJson
+- uid: Google.GenAI.Types.VoiceActivity.VoiceActivityType
+  name: VoiceActivityType
+  href: api/Google.GenAI.Types.VoiceActivity.html#Google_GenAI_Types_VoiceActivity_VoiceActivityType
+  commentId: P:Google.GenAI.Types.VoiceActivity.VoiceActivityType
+  fullName: Google.GenAI.Types.VoiceActivity.VoiceActivityType
+  nameWithType: VoiceActivity.VoiceActivityType
+- uid: Google.GenAI.Types.VoiceActivity.VoiceActivityType*
+  name: VoiceActivityType
+  href: api/Google.GenAI.Types.VoiceActivity.html#Google_GenAI_Types_VoiceActivity_VoiceActivityType_
+  commentId: Overload:Google.GenAI.Types.VoiceActivity.VoiceActivityType
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VoiceActivity.VoiceActivityType
+  nameWithType: VoiceActivity.VoiceActivityType
 - uid: Google.GenAI.Types.VoiceActivityDetectionSignal
   name: VoiceActivityDetectionSignal
   href: api/Google.GenAI.Types.VoiceActivityDetectionSignal.html
@@ -23529,6 +23577,30 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.VoiceActivityDetectionSignal.VadSignalType
   nameWithType: VoiceActivityDetectionSignal.VadSignalType
+- uid: Google.GenAI.Types.VoiceActivityType
+  name: VoiceActivityType
+  href: api/Google.GenAI.Types.VoiceActivityType.html
+  commentId: T:Google.GenAI.Types.VoiceActivityType
+  fullName: Google.GenAI.Types.VoiceActivityType
+  nameWithType: VoiceActivityType
+- uid: Google.GenAI.Types.VoiceActivityType.ACTIVITY_END
+  name: ACTIVITY_END
+  href: api/Google.GenAI.Types.VoiceActivityType.html#Google_GenAI_Types_VoiceActivityType_ACTIVITY_END
+  commentId: F:Google.GenAI.Types.VoiceActivityType.ACTIVITY_END
+  fullName: Google.GenAI.Types.VoiceActivityType.ACTIVITY_END
+  nameWithType: VoiceActivityType.ACTIVITY_END
+- uid: Google.GenAI.Types.VoiceActivityType.ACTIVITY_START
+  name: ACTIVITY_START
+  href: api/Google.GenAI.Types.VoiceActivityType.html#Google_GenAI_Types_VoiceActivityType_ACTIVITY_START
+  commentId: F:Google.GenAI.Types.VoiceActivityType.ACTIVITY_START
+  fullName: Google.GenAI.Types.VoiceActivityType.ACTIVITY_START
+  nameWithType: VoiceActivityType.ACTIVITY_START
+- uid: Google.GenAI.Types.VoiceActivityType.TYPE_UNSPECIFIED
+  name: TYPE_UNSPECIFIED
+  href: api/Google.GenAI.Types.VoiceActivityType.html#Google_GenAI_Types_VoiceActivityType_TYPE_UNSPECIFIED
+  commentId: F:Google.GenAI.Types.VoiceActivityType.TYPE_UNSPECIFIED
+  fullName: Google.GenAI.Types.VoiceActivityType.TYPE_UNSPECIFIED
+  nameWithType: VoiceActivityType.TYPE_UNSPECIFIED
 - uid: Google.GenAI.Types.VoiceConfig
   name: VoiceConfig
   href: api/Google.GenAI.Types.VoiceConfig.html

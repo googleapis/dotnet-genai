@@ -4774,6 +4774,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.VoiceActivity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.VoiceActivity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.VoiceActivity",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VoiceActivity.yml\" sourcestartlinenumber=\"1\">Voice activity signal.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.VoiceActivityDetectionSignal.yml",
       "output": {
         ".html": {
@@ -4785,6 +4799,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.VoiceActivityDetectionSignal",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.VoiceActivityType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.VoiceActivityType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.VoiceActivityType",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VoiceActivityType.yml\" sourcestartlinenumber=\"1\">The type of the voice activity signal.</p>\n"
     },
     {
       "type": "ManagedReference",
