@@ -1,6 +1,6 @@
 # Changelog
 
-## Version 0.11.0, released 2026-01-08
+## Version 0.11.0, released 2026-01-14
 
 
 ### New features
