@@ -1,5 +1,12 @@
 # Changelog
 
+## Version 0.12.0, released 2026-01-15
+
+
+### New features
+
+* voice activity support ([ca3ce95](https://github.com/googleapis/dotnet-genai/commit/ca3ce95e48f1fc6dff23110385dd124d887f0b47))
+
 ## Version 0.11.0, released 2026-01-14
 
 
