@@ -8630,6 +8630,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerateContentConfig.MediaResolution
   nameWithType: GenerateContentConfig.MediaResolution
+- uid: Google.GenAI.Types.GenerateContentConfig.ModelArmorConfig
+  name: ModelArmorConfig
+  href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_ModelArmorConfig
+  commentId: P:Google.GenAI.Types.GenerateContentConfig.ModelArmorConfig
+  fullName: Google.GenAI.Types.GenerateContentConfig.ModelArmorConfig
+  nameWithType: GenerateContentConfig.ModelArmorConfig
+- uid: Google.GenAI.Types.GenerateContentConfig.ModelArmorConfig*
+  name: ModelArmorConfig
+  href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_ModelArmorConfig_
+  commentId: Overload:Google.GenAI.Types.GenerateContentConfig.ModelArmorConfig
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateContentConfig.ModelArmorConfig
+  nameWithType: GenerateContentConfig.ModelArmorConfig
 - uid: Google.GenAI.Types.GenerateContentConfig.ModelSelectionConfig
   name: ModelSelectionConfig
   href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_ModelSelectionConfig
@@ -15827,6 +15840,54 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Model.Version
   nameWithType: Model.Version
+- uid: Google.GenAI.Types.ModelArmorConfig
+  name: ModelArmorConfig
+  href: api/Google.GenAI.Types.ModelArmorConfig.html
+  commentId: T:Google.GenAI.Types.ModelArmorConfig
+  fullName: Google.GenAI.Types.ModelArmorConfig
+  nameWithType: ModelArmorConfig
+- uid: Google.GenAI.Types.ModelArmorConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ModelArmorConfig.html#Google_GenAI_Types_ModelArmorConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ModelArmorConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ModelArmorConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ModelArmorConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ModelArmorConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ModelArmorConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ModelArmorConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ModelArmorConfig.html#Google_GenAI_Types_ModelArmorConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.ModelArmorConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ModelArmorConfig.FromJson
+  nameWithType: ModelArmorConfig.FromJson
+- uid: Google.GenAI.Types.ModelArmorConfig.PromptTemplateName
+  name: PromptTemplateName
+  href: api/Google.GenAI.Types.ModelArmorConfig.html#Google_GenAI_Types_ModelArmorConfig_PromptTemplateName
+  commentId: P:Google.GenAI.Types.ModelArmorConfig.PromptTemplateName
+  fullName: Google.GenAI.Types.ModelArmorConfig.PromptTemplateName
+  nameWithType: ModelArmorConfig.PromptTemplateName
+- uid: Google.GenAI.Types.ModelArmorConfig.PromptTemplateName*
+  name: PromptTemplateName
+  href: api/Google.GenAI.Types.ModelArmorConfig.html#Google_GenAI_Types_ModelArmorConfig_PromptTemplateName_
+  commentId: Overload:Google.GenAI.Types.ModelArmorConfig.PromptTemplateName
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ModelArmorConfig.PromptTemplateName
+  nameWithType: ModelArmorConfig.PromptTemplateName
+- uid: Google.GenAI.Types.ModelArmorConfig.ResponseTemplateName
+  name: ResponseTemplateName
+  href: api/Google.GenAI.Types.ModelArmorConfig.html#Google_GenAI_Types_ModelArmorConfig_ResponseTemplateName
+  commentId: P:Google.GenAI.Types.ModelArmorConfig.ResponseTemplateName
+  fullName: Google.GenAI.Types.ModelArmorConfig.ResponseTemplateName
+  nameWithType: ModelArmorConfig.ResponseTemplateName
+- uid: Google.GenAI.Types.ModelArmorConfig.ResponseTemplateName*
+  name: ResponseTemplateName
+  href: api/Google.GenAI.Types.ModelArmorConfig.html#Google_GenAI_Types_ModelArmorConfig_ResponseTemplateName_
+  commentId: Overload:Google.GenAI.Types.ModelArmorConfig.ResponseTemplateName
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ModelArmorConfig.ResponseTemplateName
+  nameWithType: ModelArmorConfig.ResponseTemplateName
 - uid: Google.GenAI.Types.ModelSelectionConfig
   name: ModelSelectionConfig
   href: api/Google.GenAI.Types.ModelSelectionConfig.html
