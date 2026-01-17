@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class SafetyRating | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Safety rating corresponding to the generated content.">
+      <meta name="description" content="A safety rating for a piece of content. The safety rating contains the harm category and the harm probability level.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Types_SafetyRating" data-uid="Google.GenAI.Types.SafetyRating" class="text-break">
-Class SafetyRating  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetyRating.cs/#L29"><i class="bi bi-code-slash"></i></a>
+Class SafetyRating  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetyRating.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,7 +93,8 @@ Class SafetyRating  <a class="header-action link-secondary" title="View source" 
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Safety rating corresponding to the generated content.</p>
+  <div class="markdown summary"><p>A safety rating for a piece of content. The safety rating contains the harm category and the
+harm probability level.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -159,10 +160,10 @@ Class SafetyRating  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Google_GenAI_Types_SafetyRating_Blocked" data-uid="Google.GenAI.Types.SafetyRating.Blocked">
   Blocked
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetyRating.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetyRating.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Output only. Indicates whether the content was filtered out because of this rating.</p>
+  <div class="markdown level1 summary"><p>Output only. Indicates whether the content was blocked because of this rating.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -193,10 +194,10 @@ public bool? Blocked { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_SafetyRating_Category" data-uid="Google.GenAI.Types.SafetyRating.Category">
   Category
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetyRating.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetyRating.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Output only. Harm category.</p>
+  <div class="markdown level1 summary"><p>Output only. The harm category of this rating.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -227,7 +228,7 @@ public HarmCategory? Category { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_SafetyRating_OverwrittenThreshold" data-uid="Google.GenAI.Types.SafetyRating.OverwrittenThreshold">
   OverwrittenThreshold
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetyRating.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetyRating.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Output only. The overwritten threshold for the safety category of Gemini 2.0 image out. If
@@ -263,10 +264,10 @@ public HarmBlockThreshold? OverwrittenThreshold { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_SafetyRating_Probability" data-uid="Google.GenAI.Types.SafetyRating.Probability">
   Probability
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetyRating.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetyRating.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Output only. Harm probability levels in the content.</p>
+  <div class="markdown level1 summary"><p>Output only. The probability of harm for this category.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -297,10 +298,11 @@ public HarmProbability? Probability { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_SafetyRating_ProbabilityScore" data-uid="Google.GenAI.Types.SafetyRating.ProbabilityScore">
   ProbabilityScore
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetyRating.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetyRating.cs/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Output only. Harm probability score. This field is not supported in Gemini API.</p>
+  <div class="markdown level1 summary"><p>Output only. The probability score of harm for this category. This field is not supported in
+Gemini API.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -331,10 +333,11 @@ public double? ProbabilityScore { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_SafetyRating_Severity" data-uid="Google.GenAI.Types.SafetyRating.Severity">
   Severity
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetyRating.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetyRating.cs/#L85"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Output only. Harm severity levels in the content. This field is not supported in Gemini API.</p>
+  <div class="markdown level1 summary"><p>Output only. The severity of harm for this category. This field is not supported in Gemini
+API.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -365,10 +368,11 @@ public HarmSeverity? Severity { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_SafetyRating_SeverityScore" data-uid="Google.GenAI.Types.SafetyRating.SeverityScore">
   SeverityScore
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetyRating.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetyRating.cs/#L96"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Output only. Harm severity score. This field is not supported in Gemini API.</p>
+  <div class="markdown level1 summary"><p>Output only. The severity score of harm for this category. This field is not supported in
+Gemini API.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -403,7 +407,7 @@ public double? SeverityScore { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_SafetyRating_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.SafetyRating.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetyRating.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetyRating.cs/#L109"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a SafetyRating object.</p>
@@ -445,7 +449,7 @@ public double? SeverityScore { get; set; }</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetyRating.cs/#L29" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetyRating.cs/#L30" class="edit-link">Edit this page</a>
         </div>
 
 

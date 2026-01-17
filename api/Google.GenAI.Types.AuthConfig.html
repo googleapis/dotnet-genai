@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class AuthConfig | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Auth configuration to run the extension. This data type is not supported in Gemini API.">
+      <meta name="description" content="The authentication config to access the API.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -93,7 +93,7 @@ Class AuthConfig  <a class="header-action link-secondary" title="View source" hr
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Auth configuration to run the extension. This data type is not supported in Gemini API.</p>
+  <div class="markdown summary"><p>The authentication config to access the API.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -155,11 +155,46 @@ Class AuthConfig  <a class="header-action link-secondary" title="View source" hr
 </h2>
 
 
+  <a id="Google_GenAI_Types_AuthConfig_ApiKey_" data-uid="Google.GenAI.Types.AuthConfig.ApiKey*"></a>
+
+  <h3 id="Google_GenAI_Types_AuthConfig_ApiKey" data-uid="Google.GenAI.Types.AuthConfig.ApiKey">
+  ApiKey
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthConfig.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The authentication config to access the API. Only API key is supported. This field is not
+supported in Gemini API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;apiKey&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public string? ApiKey { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_AuthConfig_ApiKeyConfig_" data-uid="Google.GenAI.Types.AuthConfig.ApiKeyConfig*"></a>
 
   <h3 id="Google_GenAI_Types_AuthConfig_ApiKeyConfig" data-uid="Google.GenAI.Types.AuthConfig.ApiKeyConfig">
   ApiKeyConfig
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthConfig.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthConfig.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Config for API key auth.</p>
@@ -193,7 +228,7 @@ public ApiKeyConfig? ApiKeyConfig { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_AuthConfig_AuthType" data-uid="Google.GenAI.Types.AuthConfig.AuthType">
   AuthType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthConfig.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthConfig.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Type of auth scheme.</p>
@@ -227,7 +262,7 @@ public AuthType? AuthType { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_AuthConfig_GoogleServiceAccountConfig" data-uid="Google.GenAI.Types.AuthConfig.GoogleServiceAccountConfig">
   GoogleServiceAccountConfig
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthConfig.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthConfig.cs/#L61"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Config for Google Service Account auth.</p>
@@ -261,7 +296,7 @@ public AuthConfigGoogleServiceAccountConfig? GoogleServiceAccountConfig { get; s
 
   <h3 id="Google_GenAI_Types_AuthConfig_HttpBasicAuthConfig" data-uid="Google.GenAI.Types.AuthConfig.HttpBasicAuthConfig">
   HttpBasicAuthConfig
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthConfig.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthConfig.cs/#L71"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Config for HTTP Basic auth.</p>
@@ -295,7 +330,7 @@ public AuthConfigHttpBasicAuthConfig? HttpBasicAuthConfig { get; set; }</code></
 
   <h3 id="Google_GenAI_Types_AuthConfig_OauthConfig" data-uid="Google.GenAI.Types.AuthConfig.OauthConfig">
   OauthConfig
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthConfig.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthConfig.cs/#L81"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Config for user oauth.</p>
@@ -329,7 +364,7 @@ public AuthConfigOauthConfig? OauthConfig { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_AuthConfig_OidcConfig" data-uid="Google.GenAI.Types.AuthConfig.OidcConfig">
   OidcConfig
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthConfig.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthConfig.cs/#L91"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Config for user OIDC auth.</p>
@@ -367,7 +402,7 @@ public AuthConfigOidcConfig? OidcConfig { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_AuthConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.AuthConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthConfig.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthConfig.cs/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a AuthConfig object.</p>

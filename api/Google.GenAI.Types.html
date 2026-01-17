@@ -103,6 +103,17 @@ activity detection is disabled.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.AggregationOutput.html">AggregationOutput</a></dt>
+      <dd><p>The aggregation result for the entire dataset and all metrics. This data type is not supported
+in Gemini API.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.AggregationResult.html">AggregationResult</a></dt>
+      <dd><p>The aggregation result for a single metric. This data type is not supported in Gemini API.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ApiAuth.html">ApiAuth</a></dt>
       <dd><p>The generic reusable api auth config. Deprecated. Please use AuthConfig
 (google/cloud/aiplatform/master/auth.proto) instead. This data type is not supported in Gemini
@@ -126,7 +137,7 @@ API.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.AuthConfig.html">AuthConfig</a></dt>
-      <dd><p>Auth configuration to run the extension. This data type is not supported in Gemini API.</p>
+      <dd><p>The authentication config to access the API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -171,8 +182,19 @@ API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.BigQuerySource.html">BigQuerySource</a></dt>
+      <dd><p>The BigQuery location for the input content. This data type is not supported in Gemini API.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.BleuMetricValue.html">BleuMetricValue</a></dt>
+      <dd><p>Bleu metric value for an instance. This data type is not supported in Gemini API.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.Blob.html">Blob</a></dt>
-      <dd><p>Content blob.</p>
+      <dd><p>A content blob. A Blob contains data of a specific media type. It is used to represent images,
+audio, and video.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -212,7 +234,7 @@ API.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.Citation.html">Citation</a></dt>
-      <dd><p>Source attributions for content. This data type is not supported in Gemini API.</p>
+      <dd><p>A citation for a piece of generatedcontent. This data type is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -330,6 +352,16 @@ for the model to fill in based on the prompt.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.CustomCodeExecutionResult.html">CustomCodeExecutionResult</a></dt>
+      <dd><p>Result for custom code execution metric. This data type is not supported in Gemini API.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.CustomOutput.html">CustomOutput</a></dt>
+      <dd><p>Spec for custom output. This data type is not supported in Gemini API.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.DatasetDistribution.html">DatasetDistribution</a></dt>
       <dd><p>Distribution computed over a tuning dataset. This data type is not supported in Gemini API.</p>
 </dd>
@@ -386,8 +418,8 @@ This data type is not supported in Gemini API.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.DistillationDataStats.html">DistillationDataStats</a></dt>
-      <dd><p>Statistics computed for datasets used for distillation. This data type is not supported in
-Gemini API.</p>
+      <dd><p>Statistics for distillation prompt dataset. These statistics do not include the responses
+sampled from the teacher model. This data type is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -436,8 +468,8 @@ Gemini API.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.EncryptionSpec.html">EncryptionSpec</a></dt>
-      <dd><p>Represents a customer-managed encryption key spec that can be applied to a top-level resource.
-This data type is not supported in Gemini API.</p>
+      <dd><p>Represents a customer-managed encryption key specification that can be applied to a Vertex AI
+resource. This data type is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -454,6 +486,27 @@ type is not supported in Gemini API.</p>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.EntityLabel.html">EntityLabel</a></dt>
       <dd><p>An entity representing the segmented area.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.EvaluateDatasetResponse.html">EvaluateDatasetResponse</a></dt>
+      <dd><p>Response in LRO for EvaluationService.EvaluateDataset. This data type is not supported in
+Gemini API.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.EvaluateDatasetRun.html">EvaluateDatasetRun</a></dt>
+      <dd><p>Evaluate Dataset Run Result for Tuning Job. This data type is not supported in Gemini API.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.EvaluationDataset.html">EvaluationDataset</a></dt>
+      <dd><p>The dataset used for evaluation. This data type is not supported in Gemini API.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.ExactMatchMetricValue.html">ExactMatchMetricValue</a></dt>
+      <dd><p>Exact match metric value for an instance. This data type is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -493,12 +546,25 @@ API.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.FileData.html">FileData</a></dt>
-      <dd><p>URI based data.</p>
+      <dd><p>URI-based data. A FileData message contains a URI pointing to data of a specific media type.
+It is used to represent images, audio, and video stored in Google Cloud Storage.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.FileSearch.html">FileSearch</a></dt>
+      <dd><p>The FileSearch tool that retrieves knowledge from Semantic Retrieval corpora. Files are
+imported to Semantic Retrieval corpora using the ImportFile API. This data type is not
+supported in Vertex AI.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.FileStatus.html">FileStatus</a></dt>
       <dd><p>Status of a File that uses a common error model.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.FullFineTuningSpec.html">FullFineTuningSpec</a></dt>
+      <dd><p>Tuning Spec for Full Fine Tuning. This data type is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -544,6 +610,12 @@ FunctionResponse.response field.</p>
 <code>FunctionResponsePart.data</code>.  A <code>FunctionResponsePart</code> must have a fixed IANA MIME type
 identifying the type and subtype of the media if the <code>inline_data</code> field is filled with raw
 bytes.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.GcsSource.html">GcsSource</a></dt>
+      <dd><p>The Google Cloud Storage location for the input content. This data type is not supported in
+Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -633,21 +705,22 @@ in Gemini API.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.GenerationConfigRoutingConfig.html">GenerationConfigRoutingConfig</a></dt>
-      <dd><p>The configuration for routing the request to a specific model. This data type is not supported
-in Gemini API.</p>
+      <dd><p>The configuration for routing the request to a specific model. This can be used to control
+which model is used for the generation, either automatically or by specifying a model name.
+This data type is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.GenerationConfigRoutingConfigAutoRoutingMode.html">GenerationConfigRoutingConfigAutoRoutingMode</a></dt>
-      <dd><p>When automated routing is specified, the routing will be determined by the pretrained routing
-model and customer provided model routing preference. This data type is not supported in
-Gemini API.</p>
+      <dd><p>The configuration for automated routing. When automated routing is specified, the routing will
+be determined by the pretrained routing model and customer provided model routing preference.
+This data type is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.GenerationConfigRoutingConfigManualRoutingMode.html">GenerationConfigRoutingConfigManualRoutingMode</a></dt>
-      <dd><p>When manual routing is set, the specified model will be used directly. This data type is not
-supported in Gemini API.</p>
+      <dd><p>The configuration for manual routing. When manual routing is specified, the model will be
+selected based on the model name provided. This data type is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -686,7 +759,7 @@ supported in Gemini API.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.GoogleMaps.html">GoogleMaps</a></dt>
-      <dd><p>Tool to retrieve public maps data for grounding, powered by Google.</p>
+      <dd><p>Tool to retrieve knowledge from Google Maps.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -722,38 +795,43 @@ google.protobuf.Timestamp. This data type is not supported in Gemini API.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.GroundingChunk.html">GroundingChunk</a></dt>
-      <dd><p>Grounding chunk.</p>
+      <dd><p>A chunk of evidence that was used to generate the response.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.GroundingChunkMaps.html">GroundingChunkMaps</a></dt>
-      <dd><p>Chunk from Google Maps. This data type is not supported in Gemini API.</p>
+      <dd><p>A <code>Maps</code> chunk is a piece of evidence that comes from Google Maps.  It contains information
+about a place, such as its name, address, and reviews. This is used to provide the user with
+rich, location-based information.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSources.html">GroundingChunkMapsPlaceAnswerSources</a></dt>
-      <dd><p>Sources used to generate the place answer. This data type is not supported in Gemini API.</p>
+      <dd><p>The sources that were used to generate the place answer.  This includes review snippets and
+photos that were used to generate the answer, as well as URIs to flag content.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesAuthorAttribution.html">GroundingChunkMapsPlaceAnswerSourcesAuthorAttribution</a></dt>
-      <dd><p>Author attribution for a photo or review. This data type is not supported in Gemini API.</p>
+      <dd><p>Author attribution for a photo or review.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.html">GroundingChunkMapsPlaceAnswerSourcesReviewSnippet</a></dt>
-      <dd><p>Encapsulates a review snippet. This data type is not supported in Gemini API.</p>
+      <dd><p>Encapsulates a review snippet.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.GroundingChunkRetrievedContext.html">GroundingChunkRetrievedContext</a></dt>
-      <dd><p>Chunk from context retrieved by the retrieval tools. This data type is not supported in Gemini
-API.</p>
+      <dd><p>Context retrieved from a data source to ground the model's response. This is used when a
+retrieval tool fetches information from a user-provided corpus or a public dataset.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.GroundingChunkWeb.html">GroundingChunkWeb</a></dt>
-      <dd><p>Chunk from the web.</p>
+      <dd><p>A <code>Web</code> chunk is a piece of evidence that comes from a web page. It contains the URI of the
+web page, the title of the page, and the domain of the page. This is used to provide the user
+with a link to the source of the information.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -763,8 +841,8 @@ API.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.html">GroundingMetadataSourceFlaggingUri</a></dt>
-      <dd><p>Source content flagging uri for a place or review. This is currently populated only for Google
-Maps grounding. This data type is not supported in Gemini API.</p>
+      <dd><p>A URI that can be used to flag a place or review for inappropriate content. This is populated
+only when the grounding source is Google Maps. This data type is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -790,6 +868,11 @@ Maps grounding. This data type is not supported in Gemini API.</p>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ImageConfig.html">ImageConfig</a></dt>
       <dd><p>The image generation configuration to be used in GenerateContentConfig.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.ImageConfigImageOutputOptions.html">ImageConfigImageOutputOptions</a></dt>
+      <dd><p>The image output format for generated images. This data type is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -994,17 +1077,22 @@ cases where the clients interrupt server turns.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.LogprobsResult.html">LogprobsResult</a></dt>
-      <dd><p>Logprobs Result</p>
+      <dd><p>The log probabilities of the tokens generated by the model. This is useful for understanding
+the model's confidence in its predictions and for debugging. For example, you can use log
+probabilities to identify when the model is making a less confident prediction or to explore
+alternative responses that the model considered. A low log probability can also indicate that
+the model is &quot;hallucinating&quot; or generating factually incorrect information.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.LogprobsResultCandidate.html">LogprobsResultCandidate</a></dt>
-      <dd><p>Candidate for the logprobs token and score.</p>
+      <dd><p>A single token and its associated log probability.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.LogprobsResultTopCandidates.html">LogprobsResultTopCandidates</a></dt>
-      <dd><p>Candidates with top log probabilities at each decoding step.</p>
+      <dd><p>A list of the top candidate tokens and their log probabilities at each decoding step. This can
+be used to see what other tokens the model considered.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -1021,6 +1109,12 @@ If the user provides a mask image, the mask must be in the same dimensions as th
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.McpServer.html">McpServer</a></dt>
+      <dd><p>A MCPServer is a server that can be called by the model to perform actions. It is a server
+that implements the MCP protocol. Next ID: 5. This data type is not supported in Vertex AI.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ModalityTokenCount.html">ModalityTokenCount</a></dt>
       <dd><p>Represents token counting info for a single modality.</p>
 </dd>
@@ -1032,13 +1126,21 @@ If the user provides a mask image, the mask must be in the same dimensions as th
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ModelArmorConfig.html">ModelArmorConfig</a></dt>
-      <dd><p>Configuration for Model Armor integrations of prompt and responses. This data type is not
-supported in Gemini API.</p>
+      <dd><p>Configuration for Model Armor. Model Armor is a Google Cloud service that provides safety and
+security filtering for prompts and responses. It helps protect your AI applications from risks
+such as harmful content, sensitive data leakage, and prompt injection attacks. This data type
+is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ModelSelectionConfig.html">ModelSelectionConfig</a></dt>
       <dd><p>Config for model selection.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.ModelStatus.html">ModelStatus</a></dt>
+      <dd><p>The status of the underlying model. This is used to indicate the stage of the underlying model
+and the retirement time if applicable. This data type is not supported in Vertex AI.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -1049,6 +1151,17 @@ supported in Gemini API.</p>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.Operation-1.html">Operation&lt;TOperation&gt;</a></dt>
       <dd><p>An abstract operation.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.OutputInfo.html">OutputInfo</a></dt>
+      <dd><p>Describes the info for output of EvaluationService.EvaluateDataset. This data type is not
+supported in Gemini API.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.PairwiseMetricResult.html">PairwiseMetricResult</a></dt>
+      <dd><p>Spec for pairwise metric result. This data type is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -1074,13 +1187,18 @@ same <code>Part</code> instance is considered invalid.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.PointwiseMetricResult.html">PointwiseMetricResult</a></dt>
+      <dd><p>Spec for pointwise metric result. This data type is not supported in Gemini API.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.PreTunedModel.html">PreTunedModel</a></dt>
       <dd><p>A pre-tuned model for continuous tuning. This data type is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.PrebuiltVoiceConfig.html">PrebuiltVoiceConfig</a></dt>
-      <dd><p>The configuration for the prebuilt speaker to use.</p>
+      <dd><p>Configuration for a prebuilt voice.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -1152,6 +1270,11 @@ Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.RawOutput.html">RawOutput</a></dt>
+      <dd><p>Raw output. This data type is not supported in Gemini API.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.RawReferenceImage.html">RawReferenceImage</a></dt>
       <dd><p>A raw reference image.  A raw reference image represents the base image to edit, provided by
 the user. It can optionally be provided in addition to a mask reference image or a style
@@ -1217,7 +1340,12 @@ not supported in Gemini API.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.RetrievalMetadata.html">RetrievalMetadata</a></dt>
-      <dd><p>Metadata related to retrieval in the grounding flow.</p>
+      <dd><p>Metadata returned to client when grounding is enabled.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.RougeMetricValue.html">RougeMetricValue</a></dt>
+      <dd><p>Rouge metric value for an instance. This data type is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -1227,12 +1355,14 @@ not supported in Gemini API.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.SafetyRating.html">SafetyRating</a></dt>
-      <dd><p>Safety rating corresponding to the generated content.</p>
+      <dd><p>A safety rating for a piece of content. The safety rating contains the harm category and the
+harm probability level.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.SafetySetting.html">SafetySetting</a></dt>
-      <dd><p>Safety settings.</p>
+      <dd><p>A safety setting that affects the safety-blocking behavior. A SafetySetting consists of a harm
+category and a threshold for that category.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -1249,12 +1379,12 @@ may be added in the future as needed.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.SearchEntryPoint.html">SearchEntryPoint</a></dt>
-      <dd><p>Google search entry point.</p>
+      <dd><p>The entry point used to search for grounding sources.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.Segment.html">Segment</a></dt>
-      <dd><p>Segment of the content.</p>
+      <dd><p>Segment of the content this support belongs to.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -1294,12 +1424,18 @@ they will always stay at the beginning of context window.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.SpeakerVoiceConfig.html">SpeakerVoiceConfig</a></dt>
-      <dd><p>Configuration for a single speaker in a multi speaker setup.</p>
+      <dd><p>Configuration for a single speaker in a multi-speaker setup.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.SpeechConfig.html">SpeechConfig</a></dt>
       <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.StreamableHttpTransport.html">StreamableHttpTransport</a></dt>
+      <dd><p>A transport that can stream HTTP requests and responses. Next ID: 6. This data type is not
+supported in Vertex AI.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.StyleReferenceConfig.html">StyleReferenceConfig</a></dt>
@@ -1384,6 +1520,12 @@ tool. This data type is not supported in Gemini API.</p>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ToolConfig.html">ToolConfig</a></dt>
       <dd><p>Tool config.  This config is shared for all tools provided in the request.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.ToolParallelAiSearch.html">ToolParallelAiSearch</a></dt>
+      <dd><p>ParallelAiSearch tool type. A tool that uses the Parallel.ai search engine for grounding. This
+data type is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -1478,12 +1620,13 @@ the Imagen API reference documentation
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.UrlContextMetadata.html">UrlContextMetadata</a></dt>
-      <dd><p>Metadata related to url context retrieval tool.</p>
+      <dd><p>Metadata returned when the model uses the <code>url_context</code> tool to get information from a
+user-provided URL.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.UrlMetadata.html">UrlMetadata</a></dt>
-      <dd><p>Context of the a single url retrieval.</p>
+      <dd><p>The metadata for a single URL retrieval.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -1543,7 +1686,8 @@ This data type is not supported in Gemini API.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.VideoMetadata.html">VideoMetadata</a></dt>
-      <dd><p>Metadata describes the input video content.</p>
+      <dd><p>Provides metadata for a video, including the start and end offsets for clipping and the frame
+rate.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -1578,6 +1722,11 @@ Enums
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.AdapterSize.html">AdapterSize</a></dt>
       <dd><p>Adapter size for tuning. This enum is not supported in Gemini API.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.AggregationMetric.html">AggregationMetric</a></dt>
+      <dd><p>Aggregation metric. This enum is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -1659,28 +1808,29 @@ stopped generating the tokens.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.HarmBlockMethod.html">HarmBlockMethod</a></dt>
-      <dd><p>Specify if the threshold is used for probability or severity score. If not specified, the
-threshold is used for probability score. This enum is not supported in Gemini API.</p>
+      <dd><p>The method for blocking content. If not specified, the default behavior is to use the
+probability score. This enum is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.HarmBlockThreshold.html">HarmBlockThreshold</a></dt>
-      <dd><p>The harm block threshold.</p>
+      <dd><p>The threshold for blocking content. If the harm probability exceeds this threshold, the
+content will be blocked.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.HarmCategory.html">HarmCategory</a></dt>
-      <dd><p>Harm category.</p>
+      <dd><p>The harm category to be blocked.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.HarmProbability.html">HarmProbability</a></dt>
-      <dd><p>Output only. Harm probability levels in the content.</p>
+      <dd><p>Output only. The probability of harm for this category.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.HarmSeverity.html">HarmSeverity</a></dt>
-      <dd><p>Output only. Harm severity levels in the content. This enum is not supported in Gemini API.</p>
+      <dd><p>Output only. The severity of harm for this category. This enum is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -1724,8 +1874,18 @@ threshold is used for probability score. This enum is not supported in Gemini AP
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.ModelStage.html">ModelStage</a></dt>
+      <dd><p>The stage of the underlying model. This enum is not supported in Vertex AI.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.Outcome.html">Outcome</a></dt>
       <dd><p>Outcome of the code execution.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.PairwiseChoice.html">PairwiseChoice</a></dt>
+      <dd><p>Output only. Pairwise metric choice. This enum is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -1775,6 +1935,12 @@ results. This enum is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.TuningJobState.html">TuningJobState</a></dt>
+      <dd><p>Output only. The detail state of the tuning job (while the overall <code>JobState</code> is running).
+This enum is not supported in Gemini API.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.TuningMethod.html">TuningMethod</a></dt>
       <dd><p>Enum representing the tuning method.</p>
 </dd>
@@ -1801,12 +1967,12 @@ results. This enum is not supported in Gemini API.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.Type.html">Type</a></dt>
-      <dd><p>The type of the data.</p>
+      <dd><p>Data type of the schema field.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.UrlRetrievalStatus.html">UrlRetrievalStatus</a></dt>
-      <dd><p>Status of the url retrieval.</p>
+      <dd><p>The status of the URL retrieval.</p>
 </dd>
     </dl>
     <dl class="jumplist">

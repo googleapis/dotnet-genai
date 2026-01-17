@@ -159,7 +159,7 @@ Class Tool  <a class="header-action link-secondary" title="View source" href="ht
 
   <h3 id="Google_GenAI_Types_Tool_CodeExecution" data-uid="Google.GenAI.Types.Tool.CodeExecution">
   CodeExecution
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Tool.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Tool.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. CodeExecution tool type. Enables the model to execute code as part of generation.</p>
@@ -228,7 +228,7 @@ public ComputerUse? ComputerUse { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Tool_EnterpriseWebSearch" data-uid="Google.GenAI.Types.Tool.EnterpriseWebSearch">
   EnterpriseWebSearch
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Tool.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Tool.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. Tool to support searching public web data, powered by Vertex AI Search and Sec4
@@ -263,7 +263,7 @@ public EnterpriseWebSearch? EnterpriseWebSearch { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Tool_FunctionDeclarations" data-uid="Google.GenAI.Types.Tool.FunctionDeclarations">
   FunctionDeclarations
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Tool.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Tool.cs/#L89"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. Function tool type. One or more function declarations to be passed to the model
@@ -301,10 +301,11 @@ public List&lt;FunctionDeclaration&gt;? FunctionDeclarations { get; set; }</code
 
   <h3 id="Google_GenAI_Types_Tool_GoogleMaps" data-uid="Google.GenAI.Types.Tool.GoogleMaps">
   GoogleMaps
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Tool.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Tool.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. GoogleMaps tool type. Tool to support Google Maps in Model.</p>
+  <div class="markdown level1 summary"><p>Optional. Tool that allows grounding the model's response with geospatial context related to
+the user's query.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -335,7 +336,7 @@ public GoogleMaps? GoogleMaps { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Tool_GoogleSearch" data-uid="Google.GenAI.Types.Tool.GoogleSearch">
   GoogleSearch
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Tool.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Tool.cs/#L99"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. GoogleSearch tool type. Tool to support Google Search in Model. Powered by Google.</p>
@@ -369,7 +370,7 @@ public GoogleSearch? GoogleSearch { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Tool_GoogleSearchRetrieval" data-uid="Google.GenAI.Types.Tool.GoogleSearchRetrieval">
   GoogleSearchRetrieval
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Tool.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Tool.cs/#L109"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. Specialized retrieval tool that is powered by Google Search.</p>
@@ -389,6 +390,76 @@ public GoogleSearchRetrieval? GoogleSearchRetrieval { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Google.GenAI.Types.GoogleSearchRetrieval.html">GoogleSearchRetrieval</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_Tool_McpServers_" data-uid="Google.GenAI.Types.Tool.McpServers*"></a>
+
+  <h3 id="Google_GenAI_Types_Tool_McpServers" data-uid="Google.GenAI.Types.Tool.McpServers">
+  McpServers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Tool.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional. MCP Servers to connect to. This field is not supported in Vertex AI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;mcpServers&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public List&lt;McpServer&gt;? McpServers { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Google.GenAI.Types.McpServer.html">McpServer</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_Tool_ParallelAiSearch_" data-uid="Google.GenAI.Types.Tool.ParallelAiSearch*"></a>
+
+  <h3 id="Google_GenAI_Types_Tool_ParallelAiSearch" data-uid="Google.GenAI.Types.Tool.ParallelAiSearch">
+  ParallelAiSearch
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Tool.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional. If specified, Vertex AI will use Parallel.ai to search for information to answer
+user queries. The search results will be grounded on Parallel.ai and presented to the model
+for response generation. This field is not supported in Gemini API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;parallelAiSearch&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public ToolParallelAiSearch? ParallelAiSearch { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.ToolParallelAiSearch.html">ToolParallelAiSearch</a></dt>
     <dd></dd>
   </dl>
 
@@ -439,7 +510,7 @@ public Retrieval? Retrieval { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Tool_UrlContext" data-uid="Google.GenAI.Types.Tool.UrlContext">
   UrlContext
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Tool.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Tool.cs/#L131"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. Tool to support URL context retrieval.</p>
@@ -477,7 +548,7 @@ public UrlContext? UrlContext { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Tool_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.Tool.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Tool.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Tool.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a Tool object.</p>

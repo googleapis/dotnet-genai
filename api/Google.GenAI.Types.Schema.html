@@ -199,8 +199,8 @@ public object? AdditionalProperties { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L69"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. The value should be validated against any (one or more) of the subschemas in the
-list.</p>
+  <div class="markdown level1 summary"><p>Optional. The instance must be valid against any (one or more) of the subschemas listed in
+<code>any_of</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -234,7 +234,7 @@ public List&lt;Schema&gt;? AnyOf { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. Default value of the data.</p>
+  <div class="markdown level1 summary"><p>Optional. Default value to use if the field is not specified.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -302,7 +302,7 @@ public Dictionary&lt;string, Schema&gt;? Defs { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L89"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. The description of the data.</p>
+  <div class="markdown level1 summary"><p>Optional. Description of the schema.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -333,13 +333,13 @@ public string? Description { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Schema_Enum" data-uid="Google.GenAI.Types.Schema.Enum">
   Enum
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. Possible values of the element of primitive type with enum format. Examples: 1. We
-can define direction as : {type:STRING, format:enum, enum:[&quot;EAST&quot;, NORTH&quot;, &quot;SOUTH&quot;,
-&quot;WEST&quot;]} 2. We can define apartment number as : {type:INTEGER, format:enum, enum:[&quot;101&quot;,
-&quot;201&quot;, &quot;301&quot;]}</p>
+  <div class="markdown level1 summary"><p>Optional. Possible values of the field. This field can be used to restrict a value to a
+fixed set of values. To mark a field as an enum, set <code>format</code> to <code>enum</code> and provide the list
+of possible values in <code>enum</code>. For example: 1. To define directions: <code>{type:STRING, format:enum, enum:[&quot;EAST&quot;, &quot;NORTH&quot;, &quot;SOUTH&quot;, &quot;WEST&quot;]}</code> 2. To define apartment numbers:
+<code>{type:INTEGER, format:enum, enum:[&quot;101&quot;, &quot;201&quot;, &quot;301&quot;]}</code></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -370,10 +370,10 @@ public List&lt;string&gt;? Enum { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Schema_Example" data-uid="Google.GenAI.Types.Schema.Example">
   Example
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L113"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. Example of the object. Will only populated when the object is the root.</p>
+  <div class="markdown level1 summary"><p>Optional. Example of an instance of this schema.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -404,11 +404,12 @@ public object? Example { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Schema_Format" data-uid="Google.GenAI.Types.Schema.Format">
   Format
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L125"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. The format of the data. Supported formats: for NUMBER type: &quot;float&quot;, &quot;double&quot; for
-INTEGER type: &quot;int32&quot;, &quot;int64&quot; for STRING type: &quot;email&quot;, &quot;byte&quot;, etc</p>
+  <div class="markdown level1 summary"><p>Optional. The format of the data. For <code>NUMBER</code> type, format can be <code>float</code> or <code>double</code>. For
+<code>INTEGER</code> type, format can be <code>int32</code> or <code>int64</code>. For <code>STRING</code> type, format can be <code>email</code>,
+<code>byte</code>, <code>date</code>, <code>date-time</code>, <code>password</code>, and other formats to further refine the data type.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -439,10 +440,10 @@ public string? Format { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Schema_Items" data-uid="Google.GenAI.Types.Schema.Items">
   Items
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L135"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. SCHEMA FIELDS FOR TYPE ARRAY Schema of the elements of Type.ARRAY.</p>
+  <div class="markdown level1 summary"><p>Optional. If type is <code>ARRAY</code>, <code>items</code> specifies the schema of elements in the array.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -473,10 +474,10 @@ public Schema? Items { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Schema_MaxItems" data-uid="Google.GenAI.Types.Schema.MaxItems">
   MaxItems
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L145"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. Maximum number of the elements for Type.ARRAY.</p>
+  <div class="markdown level1 summary"><p>Optional. If type is <code>ARRAY</code>, <code>max_items</code> specifies the maximum number of items in an array.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -508,10 +509,10 @@ public long? MaxItems { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Schema_MaxLength" data-uid="Google.GenAI.Types.Schema.MaxLength">
   MaxLength
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L156"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. Maximum length of the Type.STRING</p>
+  <div class="markdown level1 summary"><p>Optional. If type is <code>STRING</code>, <code>max_length</code> specifies the maximum length of the string.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -543,10 +544,11 @@ public long? MaxLength { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Schema_MaxProperties" data-uid="Google.GenAI.Types.Schema.MaxProperties">
   MaxProperties
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L168"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. Maximum number of the properties for Type.OBJECT.</p>
+  <div class="markdown level1 summary"><p>Optional. If type is <code>OBJECT</code>, <code>max_properties</code> specifies the maximum number of properties
+that can be provided.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -578,10 +580,10 @@ public long? MaxProperties { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Schema_Maximum" data-uid="Google.GenAI.Types.Schema.Maximum">
   Maximum
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L179"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. Maximum value of the Type.INTEGER and Type.NUMBER</p>
+  <div class="markdown level1 summary"><p>Optional. If type is <code>INTEGER</code> or <code>NUMBER</code>, <code>maximum</code> specifies the maximum allowed value.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -612,10 +614,10 @@ public double? Maximum { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Schema_MinItems" data-uid="Google.GenAI.Types.Schema.MinItems">
   MinItems
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L189"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. Minimum number of the elements for Type.ARRAY.</p>
+  <div class="markdown level1 summary"><p>Optional. If type is <code>ARRAY</code>, <code>min_items</code> specifies the minimum number of items in an array.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -647,10 +649,10 @@ public long? MinItems { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Schema_MinLength" data-uid="Google.GenAI.Types.Schema.MinLength">
   MinLength
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L200"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. SCHEMA FIELDS FOR TYPE STRING Minimum length of the Type.STRING</p>
+  <div class="markdown level1 summary"><p>Optional. If type is <code>STRING</code>, <code>min_length</code> specifies the minimum length of the string.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -682,10 +684,11 @@ public long? MinLength { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Schema_MinProperties" data-uid="Google.GenAI.Types.Schema.MinProperties">
   MinProperties
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L208"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L212"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. Minimum number of the properties for Type.OBJECT.</p>
+  <div class="markdown level1 summary"><p>Optional. If type is <code>OBJECT</code>, <code>min_properties</code> specifies the minimum number of properties
+that can be provided.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -717,11 +720,10 @@ public long? MinProperties { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Schema_Minimum" data-uid="Google.GenAI.Types.Schema.Minimum">
   Minimum
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L220"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L223"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. SCHEMA FIELDS FOR TYPE INTEGER and NUMBER Minimum value of the Type.INTEGER and
-Type.NUMBER</p>
+  <div class="markdown level1 summary"><p>Optional. If type is <code>INTEGER</code> or <code>NUMBER</code>, <code>minimum</code> specifies the minimum allowed value.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -752,10 +754,10 @@ public double? Minimum { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Schema_Nullable" data-uid="Google.GenAI.Types.Schema.Nullable">
   Nullable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L230"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L233"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. Indicates if the value may be null.</p>
+  <div class="markdown level1 summary"><p>Optional. Indicates if the value of this field can be null.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -786,10 +788,11 @@ public bool? Nullable { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Schema_Pattern" data-uid="Google.GenAI.Types.Schema.Pattern">
   Pattern
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L240"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L244"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. Pattern of the Type.STRING to restrict a string to a regular expression.</p>
+  <div class="markdown level1 summary"><p>Optional. If type is <code>STRING</code>, <code>pattern</code> specifies a regular expression that the string must
+match.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -820,10 +823,11 @@ public string? Pattern { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Schema_Properties" data-uid="Google.GenAI.Types.Schema.Properties">
   Properties
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L250"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L255"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. SCHEMA FIELDS FOR TYPE OBJECT Properties of Type.OBJECT.</p>
+  <div class="markdown level1 summary"><p>Optional. If type is <code>OBJECT</code>, <code>properties</code> is a map of property names to schema definitions
+for each property of the object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -854,11 +858,11 @@ public Dictionary&lt;string, Schema&gt;? Properties { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Schema_PropertyOrdering" data-uid="Google.GenAI.Types.Schema.PropertyOrdering">
   PropertyOrdering
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L261"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L266"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. The order of the properties. Not a standard field in open api spec. Only used to
-support the order of the properties.</p>
+  <div class="markdown level1 summary"><p>Optional. Order of properties displayed or used where order matters. This is not a standard
+field in OpenAPI specification, but can be used to control the order of properties.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -928,10 +932,11 @@ public string? Ref { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Schema_Required" data-uid="Google.GenAI.Types.Schema.Required">
   Required
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L271"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L277"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. Required properties of Type.OBJECT.</p>
+  <div class="markdown level1 summary"><p>Optional. If type is <code>OBJECT</code>, <code>required</code> lists the names of properties that must be
+present.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -962,10 +967,10 @@ public List&lt;string&gt;? Required { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Schema_Title" data-uid="Google.GenAI.Types.Schema.Title">
   Title
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L281"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L287"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. The title of the Schema.</p>
+  <div class="markdown level1 summary"><p>Optional. Title for the schema.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -996,10 +1001,10 @@ public string? Title { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Schema_Type" data-uid="Google.GenAI.Types.Schema.Type">
   Type
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L291"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L297"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. The type of the data.</p>
+  <div class="markdown level1 summary"><p>Optional. Data type of the schema field.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1034,7 +1039,7 @@ public Type? Type { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Schema_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.Schema.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L304"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Schema.cs/#L310"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a Schema object.</p>

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class GroundingChunkRetrievedContext | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Chunk from context retrieved by the retrieval tools. This data type is not supported in Gemini API.">
+      <meta name="description" content="Context retrieved from a data source to ground the model&#39;s response. This is used when a retrieval tool fetches information from a user-provided corpus or a public dataset.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -93,8 +93,8 @@ Class GroundingChunkRetrievedContext  <a class="header-action link-secondary" ti
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Chunk from context retrieved by the retrieval tools. This data type is not supported in Gemini
-API.</p>
+  <div class="markdown summary"><p>Context retrieved from a data source to ground the model's response. This is used when a
+retrieval tool fetches information from a user-provided corpus or a public dataset.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -160,10 +160,13 @@ API.</p>
 
   <h3 id="Google_GenAI_Types_GroundingChunkRetrievedContext_DocumentName" data-uid="Google.GenAI.Types.GroundingChunkRetrievedContext.DocumentName">
   DocumentName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkRetrievedContext.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkRetrievedContext.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Output only. The full document name for the referenced Vertex AI Search document.</p>
+  <div class="markdown level1 summary"><p>Output only. The full resource name of the referenced Vertex AI Search document. This is
+used to identify the specific document that was retrieved. The format is
+<code>projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}</code>.
+This field is not supported in Gemini API.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -190,15 +193,51 @@ public string? DocumentName { get; set; }</code></pre>
 
 
 
+  <a id="Google_GenAI_Types_GroundingChunkRetrievedContext_FileSearchStore_" data-uid="Google.GenAI.Types.GroundingChunkRetrievedContext.FileSearchStore*"></a>
+
+  <h3 id="Google_GenAI_Types_GroundingChunkRetrievedContext_FileSearchStore" data-uid="Google.GenAI.Types.GroundingChunkRetrievedContext.FileSearchStore">
+  FileSearchStore
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkRetrievedContext.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional. Name of the <code>FileSearchStore</code> containing the document. Example:
+<code>fileSearchStores/123</code>. This field is not supported in Vertex AI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;fileSearchStore&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public string? FileSearchStore { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_GroundingChunkRetrievedContext_RagChunk_" data-uid="Google.GenAI.Types.GroundingChunkRetrievedContext.RagChunk*"></a>
 
   <h3 id="Google_GenAI_Types_GroundingChunkRetrievedContext_RagChunk" data-uid="Google.GenAI.Types.GroundingChunkRetrievedContext.RagChunk">
   RagChunk
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkRetrievedContext.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkRetrievedContext.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Additional context for the RAG retrieval result. This is only populated when using the RAG
-retrieval tool.</p>
+  <div class="markdown level1 summary"><p>Additional context for a Retrieval-Augmented Generation (RAG) retrieval result. This is
+populated only when the RAG retrieval tool is used. This field is not supported in Gemini
+API.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -229,10 +268,10 @@ public RagChunk? RagChunk { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GroundingChunkRetrievedContext_Text" data-uid="Google.GenAI.Types.GroundingChunkRetrievedContext.Text">
   Text
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkRetrievedContext.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkRetrievedContext.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Text of the attribution.</p>
+  <div class="markdown level1 summary"><p>The content of the retrieved data source.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -263,10 +302,10 @@ public string? Text { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GroundingChunkRetrievedContext_Title" data-uid="Google.GenAI.Types.GroundingChunkRetrievedContext.Title">
   Title
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkRetrievedContext.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkRetrievedContext.cs/#L66"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Title of the attribution.</p>
+  <div class="markdown level1 summary"><p>The title of the retrieved data source.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -297,10 +336,10 @@ public string? Title { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GroundingChunkRetrievedContext_Uri" data-uid="Google.GenAI.Types.GroundingChunkRetrievedContext.Uri">
   Uri
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkRetrievedContext.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkRetrievedContext.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>URI reference of the attribution.</p>
+  <div class="markdown level1 summary"><p>The URI of the retrieved data source.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -335,7 +374,7 @@ public string? Uri { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GroundingChunkRetrievedContext_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.GroundingChunkRetrievedContext.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkRetrievedContext.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkRetrievedContext.cs/#L101"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a GroundingChunkRetrievedContext object.</p>

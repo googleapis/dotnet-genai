@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class SafetySetting | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Safety settings.">
+      <meta name="description" content="A safety setting that affects the safety-blocking behavior. A SafetySetting consists of a harm category and a threshold for that category.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Types_SafetySetting" data-uid="Google.GenAI.Types.SafetySetting" class="text-break">
-Class SafetySetting  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetySetting.cs/#L29"><i class="bi bi-code-slash"></i></a>
+Class SafetySetting  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetySetting.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,7 +93,8 @@ Class SafetySetting  <a class="header-action link-secondary" title="View source"
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Safety settings.</p>
+  <div class="markdown summary"><p>A safety setting that affects the safety-blocking behavior. A SafetySetting consists of a harm
+category and a threshold for that category.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -159,10 +160,10 @@ Class SafetySetting  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Google_GenAI_Types_SafetySetting_Category" data-uid="Google.GenAI.Types.SafetySetting.Category">
   Category
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetySetting.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetySetting.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Harm category.</p>
+  <div class="markdown level1 summary"><p>The harm category to be blocked.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -196,9 +197,8 @@ public HarmCategory? Category { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetySetting.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. Specify if the threshold is used for probability or severity score. If not
-specified, the threshold is used for probability score. This field is not supported in
-Gemini API.</p>
+  <div class="markdown level1 summary"><p>Optional. The method for blocking content. If not specified, the default behavior is to use
+the probability score. This field is not supported in Gemini API.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -229,10 +229,11 @@ public HarmBlockMethod? Method { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_SafetySetting_Threshold" data-uid="Google.GenAI.Types.SafetySetting.Threshold">
   Threshold
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetySetting.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetySetting.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The harm block threshold.</p>
+  <div class="markdown level1 summary"><p>The threshold for blocking content. If the harm probability exceeds this threshold, the
+content will be blocked.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -267,7 +268,7 @@ public HarmBlockThreshold? Threshold { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_SafetySetting_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.SafetySetting.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetySetting.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetySetting.cs/#L66"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a SafetySetting object.</p>
@@ -309,7 +310,7 @@ public HarmBlockThreshold? Threshold { get; set; }</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetySetting.cs/#L29" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SafetySetting.cs/#L30" class="edit-link">Edit this page</a>
         </div>
 
 

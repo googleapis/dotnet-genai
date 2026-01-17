@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class GroundingChunkMaps | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Chunk from Google Maps. This data type is not supported in Gemini API.">
+      <meta name="description" content="A Maps chunk is a piece of evidence that comes from Google Maps.  It contains information about a place, such as its name, address, and reviews. This is used to provide the user with rich, location-based information.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Types_GroundingChunkMaps" data-uid="Google.GenAI.Types.GroundingChunkMaps" class="text-break">
-Class GroundingChunkMaps  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkMaps.cs/#L29"><i class="bi bi-code-slash"></i></a>
+Class GroundingChunkMaps  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkMaps.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,7 +93,9 @@ Class GroundingChunkMaps  <a class="header-action link-secondary" title="View so
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Chunk from Google Maps. This data type is not supported in Gemini API.</p>
+  <div class="markdown summary"><p>A <code>Maps</code> chunk is a piece of evidence that comes from Google Maps.  It contains information
+about a place, such as its name, address, and reviews. This is used to provide the user with
+rich, location-based information.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -159,11 +161,11 @@ Class GroundingChunkMaps  <a class="header-action link-secondary" title="View so
 
   <h3 id="Google_GenAI_Types_GroundingChunkMaps_PlaceAnswerSources" data-uid="Google.GenAI.Types.GroundingChunkMaps.PlaceAnswerSources">
   PlaceAnswerSources
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkMaps.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkMaps.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Sources used to generate the place answer. This includes review snippets and photos that
-were used to generate the answer, as well as uris to flag content.</p>
+  <div class="markdown level1 summary"><p>The sources that were used to generate the place answer.  This includes review snippets and
+photos that were used to generate the answer, as well as URIs to flag content.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -194,10 +196,11 @@ public GroundingChunkMapsPlaceAnswerSources? PlaceAnswerSources { get; set; }</c
 
   <h3 id="Google_GenAI_Types_GroundingChunkMaps_PlaceId" data-uid="Google.GenAI.Types.GroundingChunkMaps.PlaceId">
   PlaceId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkMaps.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkMaps.cs/#L44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>This Place's resource name, in <code>places/{place_id}</code> format. Can be used to look up the Place.</p>
+  <div class="markdown level1 summary"><p>This Place's resource name, in <code>places/{place_id}</code> format.  This can be used to look up the
+place in the Google Maps API.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -228,10 +231,10 @@ public string? PlaceId { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GroundingChunkMaps_Text" data-uid="Google.GenAI.Types.GroundingChunkMaps.Text">
   Text
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkMaps.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkMaps.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Text of the place answer.</p>
+  <div class="markdown level1 summary"><p>The text of the place answer.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -262,10 +265,10 @@ public string? Text { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GroundingChunkMaps_Title" data-uid="Google.GenAI.Types.GroundingChunkMaps.Title">
   Title
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkMaps.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkMaps.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Title of the place.</p>
+  <div class="markdown level1 summary"><p>The title of the place.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -296,10 +299,10 @@ public string? Title { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GroundingChunkMaps_Uri" data-uid="Google.GenAI.Types.GroundingChunkMaps.Uri">
   Uri
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkMaps.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkMaps.cs/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>URI reference of the place.</p>
+  <div class="markdown level1 summary"><p>The URI of the place.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -334,7 +337,7 @@ public string? Uri { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GroundingChunkMaps_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.GroundingChunkMaps.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkMaps.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkMaps.cs/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a GroundingChunkMaps object.</p>
@@ -377,7 +380,7 @@ fails.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkMaps.cs/#L29" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkMaps.cs/#L31" class="edit-link">Edit this page</a>
         </div>
 
 
