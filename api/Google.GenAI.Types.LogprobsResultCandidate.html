@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class LogprobsResultCandidate | Google GenAI .NET SDK ">
       
-      <meta name="description" content="A single token and its associated log probability.">
+      <meta name="description" content="Candidate for the logprobs token and score.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -93,7 +93,7 @@ Class LogprobsResultCandidate  <a class="header-action link-secondary" title="Vi
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>A single token and its associated log probability.</p>
+  <div class="markdown summary"><p>Candidate for the logprobs token and score.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -159,12 +159,10 @@ Class LogprobsResultCandidate  <a class="header-action link-secondary" title="Vi
 
   <h3 id="Google_GenAI_Types_LogprobsResultCandidate_LogProbability" data-uid="Google.GenAI.Types.LogprobsResultCandidate.LogProbability">
   LogProbability
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/LogprobsResultCandidate.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/LogprobsResultCandidate.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The log probability of this token. A higher value indicates that the model was more
-confident in this token. The log probability can be used to assess the relative likelihood
-of different tokens and to identify when the model is uncertain.</p>
+  <div class="markdown level1 summary"><p>The candidate's log probability.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -195,10 +193,10 @@ public double? LogProbability { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_LogprobsResultCandidate_Token" data-uid="Google.GenAI.Types.LogprobsResultCandidate.Token">
   Token
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/LogprobsResultCandidate.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/LogprobsResultCandidate.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The token's string representation.</p>
+  <div class="markdown level1 summary"><p>The candidate's token string value.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -229,12 +227,10 @@ public string? Token { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_LogprobsResultCandidate_TokenId" data-uid="Google.GenAI.Types.LogprobsResultCandidate.TokenId">
   TokenId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/LogprobsResultCandidate.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/LogprobsResultCandidate.cs/#L50"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The token's numerical ID. While the <code>token</code> field provides the string representation of the
-token, the <code>token_id</code> is the numerical representation that the model uses internally. This
-can be useful for developers who want to build custom logic based on the model's vocabulary.</p>
+  <div class="markdown level1 summary"><p>The candidate's token id value.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -269,7 +265,7 @@ public int? TokenId { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_LogprobsResultCandidate_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.LogprobsResultCandidate.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/LogprobsResultCandidate.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/LogprobsResultCandidate.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a LogprobsResultCandidate object.</p>

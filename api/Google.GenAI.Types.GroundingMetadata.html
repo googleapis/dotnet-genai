@@ -159,11 +159,12 @@ Class GroundingMetadata  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Google_GenAI_Types_GroundingMetadata_GoogleMapsWidgetContextToken" data-uid="Google.GenAI.Types.GroundingMetadata.GoogleMapsWidgetContextToken">
   GoogleMapsWidgetContextToken
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingMetadata.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingMetadata.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. Output only. A token that can be used to render a Google Maps widget with the
-contextual data. This field is populated only when the grounding source is Google Maps.</p>
+  <div class="markdown level1 summary"><p>Optional. Output only. Resource name of the Google Maps widget context token to be used with
+the PlacesContextElement widget to render contextual data. This is populated only for Google
+Maps grounding. This field is not supported in Gemini API.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -194,7 +195,7 @@ public string? GoogleMapsWidgetContextToken { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GroundingMetadata_GroundingChunks" data-uid="Google.GenAI.Types.GroundingMetadata.GroundingChunks">
   GroundingChunks
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingMetadata.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingMetadata.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>List of supporting references retrieved from specified grounding source.</p>
@@ -228,10 +229,10 @@ public List&lt;GroundingChunk&gt;? GroundingChunks { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GroundingMetadata_GroundingSupports" data-uid="Google.GenAI.Types.GroundingMetadata.GroundingSupports">
   GroundingSupports
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingMetadata.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingMetadata.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>List of grounding support.</p>
+  <div class="markdown level1 summary"><p>Optional. List of grounding support.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -262,10 +263,10 @@ public List&lt;GroundingSupport&gt;? GroundingSupports { get; set; }</code></pre
 
   <h3 id="Google_GenAI_Types_GroundingMetadata_RetrievalMetadata" data-uid="Google.GenAI.Types.GroundingMetadata.RetrievalMetadata">
   RetrievalMetadata
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingMetadata.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingMetadata.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Metadata related to retrieval in the grounding flow.</p>
+  <div class="markdown level1 summary"><p>Optional. Output only. Retrieval metadata.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -296,12 +297,11 @@ public RetrievalMetadata? RetrievalMetadata { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GroundingMetadata_RetrievalQueries" data-uid="Google.GenAI.Types.GroundingMetadata.RetrievalQueries">
   RetrievalQueries
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingMetadata.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingMetadata.cs/#L73"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. The queries that were executed by the retrieval tools. This field is populated
-only when the grounding source is a retrieval tool, such as Vertex AI Search. This field is
-not supported in Gemini API.</p>
+  <div class="markdown level1 summary"><p>Optional. Queries executed by the retrieval tools. This field is not supported in Gemini
+API.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -332,7 +332,7 @@ public List&lt;string&gt;? RetrievalQueries { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GroundingMetadata_SearchEntryPoint" data-uid="Google.GenAI.Types.GroundingMetadata.SearchEntryPoint">
   SearchEntryPoint
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingMetadata.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingMetadata.cs/#L83"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. Google search entry for the following-up web searches.</p>
@@ -366,12 +366,11 @@ public SearchEntryPoint? SearchEntryPoint { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GroundingMetadata_SourceFlaggingUris" data-uid="Google.GenAI.Types.GroundingMetadata.SourceFlaggingUris">
   SourceFlaggingUris
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingMetadata.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingMetadata.cs/#L94"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. Output only. A list of URIs that can be used to flag a place or review for
-inappropriate content. This field is populated only when the grounding source is Google
-Maps. This field is not supported in Gemini API.</p>
+  <div class="markdown level1 summary"><p>Optional. Output only. List of source flagging uris. This is currently populated only for
+Google Maps grounding. This field is not supported in Gemini API.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -402,10 +401,10 @@ public List&lt;GroundingMetadataSourceFlaggingUri&gt;? SourceFlaggingUris { get;
 
   <h3 id="Google_GenAI_Types_GroundingMetadata_WebSearchQueries" data-uid="Google.GenAI.Types.GroundingMetadata.WebSearchQueries">
   WebSearchQueries
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingMetadata.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingMetadata.cs/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Web search queries for the following-up web search.</p>
+  <div class="markdown level1 summary"><p>Optional. Web search queries for the following-up web search.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -440,7 +439,7 @@ public List&lt;string&gt;? WebSearchQueries { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GroundingMetadata_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.GroundingMetadata.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingMetadata.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingMetadata.cs/#L118"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a GroundingMetadata object.</p>

@@ -159,12 +159,10 @@ Class Candidate  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Google_GenAI_Types_Candidate_AvgLogprobs" data-uid="Google.GenAI.Types.Candidate.AvgLogprobs">
   AvgLogprobs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Candidate.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Candidate.cs/#L81"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Output only. The average log probability of the tokens in this candidate. This is a
-length-normalized score that can be used to compare the quality of candidates of different
-lengths. A higher average log probability suggests a more confident and coherent response.</p>
+  <div class="markdown level1 summary"><p>Output only. Average log probability score of the candidate.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -332,11 +330,10 @@ public FinishReason? FinishReason { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Candidate_GroundingMetadata" data-uid="Google.GenAI.Types.Candidate.GroundingMetadata">
   GroundingMetadata
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Candidate.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Candidate.cs/#L91"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Output only. Grounding metadata for the candidate.  This field is populated for
-<code>GenerateContent</code> calls.</p>
+  <div class="markdown level1 summary"><p>Output only. Metadata specifies sources used to ground generated content.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -367,11 +364,10 @@ public GroundingMetadata? GroundingMetadata { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Candidate_Index" data-uid="Google.GenAI.Types.Candidate.Index">
   Index
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Candidate.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Candidate.cs/#L101"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Output only. The 0-based index of this candidate in the list of generated responses. This is
-useful for distinguishing between multiple candidates when <code>candidate_count</code> &gt; 1.</p>
+  <div class="markdown level1 summary"><p>Output only. Index of the candidate.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -402,12 +398,10 @@ public int? Index { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Candidate_LogprobsResult" data-uid="Google.GenAI.Types.Candidate.LogprobsResult">
   LogprobsResult
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Candidate.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Candidate.cs/#L111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Output only. The detailed log probability information for the tokens in this candidate. This
-is useful for debugging, understanding model uncertainty, and identifying potential
-&quot;hallucinations&quot;.</p>
+  <div class="markdown level1 summary"><p>Output only. Log-likelihood scores for the response tokens and top tokens</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -438,10 +432,10 @@ public LogprobsResult? LogprobsResult { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Candidate_SafetyRatings" data-uid="Google.GenAI.Types.Candidate.SafetyRatings">
   SafetyRatings
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Candidate.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Candidate.cs/#L122"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Output only. A list of ratings for the safety of a response candidate. There is at most one
+  <div class="markdown level1 summary"><p>Output only. List of ratings for the safety of a response candidate. There is at most one
 rating per category.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -507,11 +501,10 @@ public int? TokenCount { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Candidate_UrlContextMetadata" data-uid="Google.GenAI.Types.Candidate.UrlContextMetadata">
   UrlContextMetadata
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Candidate.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Candidate.cs/#L132"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Output only. Metadata returned when the model uses the <code>url_context</code> tool to get information
-from a user-provided URL.</p>
+  <div class="markdown level1 summary"><p>Output only. Metadata related to url context retrieval tool.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -546,7 +539,7 @@ public UrlContextMetadata? UrlContextMetadata { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_Candidate_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.Candidate.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Candidate.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Candidate.cs/#L145"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a Candidate object.</p>

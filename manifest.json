@@ -336,48 +336,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.AggregationMetric.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.AggregationMetric.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.AggregationMetric",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.AggregationMetric.yml\" sourcestartlinenumber=\"1\">Aggregation metric. This enum is not supported in Gemini API.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.AggregationOutput.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.AggregationOutput.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.AggregationOutput",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.AggregationOutput.yml\" sourcestartlinenumber=\"1\">The aggregation result for the entire dataset and all metrics. This data type is not supported\nin Gemini API.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.AggregationResult.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.AggregationResult.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.AggregationResult",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.AggregationResult.yml\" sourcestartlinenumber=\"1\">The aggregation result for a single metric. This data type is not supported in Gemini API.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.ApiAuth.yml",
       "output": {
         ".html": {
@@ -458,7 +416,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.AuthConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.AuthConfig.yml\" sourcestartlinenumber=\"1\">The authentication config to access the API.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.AuthConfig.yml\" sourcestartlinenumber=\"1\">Auth configuration to run the extension. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -602,34 +560,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.BigQuerySource.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.BigQuerySource.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.BigQuerySource",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.BigQuerySource.yml\" sourcestartlinenumber=\"1\">The BigQuery location for the input content. This data type is not supported in Gemini API.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.BleuMetricValue.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.BleuMetricValue.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.BleuMetricValue",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.BleuMetricValue.yml\" sourcestartlinenumber=\"1\">Bleu metric value for an instance. This data type is not supported in Gemini API.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.Blob.yml",
       "output": {
         ".html": {
@@ -640,7 +570,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Blob",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Blob.yml\" sourcestartlinenumber=\"1\">A content blob. A Blob contains data of a specific media type. It is used to represent images,\naudio, and video.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Blob.yml\" sourcestartlinenumber=\"1\">Content blob.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -766,7 +696,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Citation",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Citation.yml\" sourcestartlinenumber=\"1\">A citation for a piece of generatedcontent. This data type is not supported in Gemini API.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Citation.yml\" sourcestartlinenumber=\"1\">Source attributions for content. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1078,34 +1008,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.CustomCodeExecutionResult.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.CustomCodeExecutionResult.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.CustomCodeExecutionResult",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CustomCodeExecutionResult.yml\" sourcestartlinenumber=\"1\">Result for custom code execution metric. This data type is not supported in Gemini API.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.CustomOutput.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.CustomOutput.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.CustomOutput",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CustomOutput.yml\" sourcestartlinenumber=\"1\">Spec for custom output. This data type is not supported in Gemini API.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.DatasetDistribution.yml",
       "output": {
         ".html": {
@@ -1270,7 +1172,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.DistillationDataStats",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DistillationDataStats.yml\" sourcestartlinenumber=\"1\">Statistics for distillation prompt dataset. These statistics do not include the responses\nsampled from the teacher model. This data type is not supported in Gemini API.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DistillationDataStats.yml\" sourcestartlinenumber=\"1\">Statistics computed for datasets used for distillation. This data type is not supported in\nGemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1438,7 +1340,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.EncryptionSpec",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.EncryptionSpec.yml\" sourcestartlinenumber=\"1\">Represents a customer-managed encryption key specification that can be applied to a Vertex AI\nresource. This data type is not supported in Gemini API.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.EncryptionSpec.yml\" sourcestartlinenumber=\"1\">Represents a customer-managed encryption key spec that can be applied to a top-level resource.\nThis data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1509,62 +1411,6 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Environment",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Environment.yml\" sourcestartlinenumber=\"1\">The environment being operated.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.EvaluateDatasetResponse.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.EvaluateDatasetResponse.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.EvaluateDatasetResponse",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.EvaluateDatasetResponse.yml\" sourcestartlinenumber=\"1\">Response in LRO for EvaluationService.EvaluateDataset. This data type is not supported in\nGemini API.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.EvaluateDatasetRun.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.EvaluateDatasetRun.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.EvaluateDatasetRun",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.EvaluateDatasetRun.yml\" sourcestartlinenumber=\"1\">Evaluate Dataset Run Result for Tuning Job. This data type is not supported in Gemini API.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.EvaluationDataset.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.EvaluationDataset.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.EvaluationDataset",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.EvaluationDataset.yml\" sourcestartlinenumber=\"1\">The dataset used for evaluation. This data type is not supported in Gemini API.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.ExactMatchMetricValue.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.ExactMatchMetricValue.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.ExactMatchMetricValue",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ExactMatchMetricValue.yml\" sourcestartlinenumber=\"1\">Exact match metric value for an instance. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1676,21 +1522,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.FileData",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FileData.yml\" sourcestartlinenumber=\"1\">URI-based data. A FileData message contains a URI pointing to data of a specific media type.\nIt is used to represent images, audio, and video stored in Google Cloud Storage.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.FileSearch.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.FileSearch.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.FileSearch",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FileSearch.yml\" sourcestartlinenumber=\"1\">The FileSearch tool that retrieves knowledge from Semantic Retrieval corpora. Files are\nimported to Semantic Retrieval corpora using the ImportFile API. This data type is not\nsupported in Vertex AI.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FileData.yml\" sourcestartlinenumber=\"1\">URI based data.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1747,20 +1579,6 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.FinishReason",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FinishReason.yml\" sourcestartlinenumber=\"1\">Output only. The reason why the model stopped generating tokens.  If empty, the model has not\nstopped generating the tokens.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.FullFineTuningSpec.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.FullFineTuningSpec.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.FullFineTuningSpec",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FullFineTuningSpec.yml\" sourcestartlinenumber=\"1\">Tuning Spec for Full Fine Tuning. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1887,20 +1705,6 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.FunctionResponseScheduling",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FunctionResponseScheduling.yml\" sourcestartlinenumber=\"1\">Specifies how the response should be scheduled in the conversation.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.GcsSource.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.GcsSource.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.GcsSource",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GcsSource.yml\" sourcestartlinenumber=\"1\">The Google Cloud Storage location for the input content. This data type is not supported in\nGemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2138,7 +1942,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GenerationConfigRoutingConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerationConfigRoutingConfig.yml\" sourcestartlinenumber=\"1\">The configuration for routing the request to a specific model. This can be used to control\nwhich model is used for the generation, either automatically or by specifying a model name.\nThis data type is not supported in Gemini API.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerationConfigRoutingConfig.yml\" sourcestartlinenumber=\"1\">The configuration for routing the request to a specific model. This data type is not supported\nin Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2152,7 +1956,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GenerationConfigRoutingConfigAutoRoutingMode",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerationConfigRoutingConfigAutoRoutingMode.yml\" sourcestartlinenumber=\"1\">The configuration for automated routing. When automated routing is specified, the routing will\nbe determined by the pretrained routing model and customer provided model routing preference.\nThis data type is not supported in Gemini API.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerationConfigRoutingConfigAutoRoutingMode.yml\" sourcestartlinenumber=\"1\">When automated routing is specified, the routing will be determined by the pretrained routing\nmodel and customer provided model routing preference. This data type is not supported in\nGemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2166,7 +1970,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GenerationConfigRoutingConfigManualRoutingMode",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerationConfigRoutingConfigManualRoutingMode.yml\" sourcestartlinenumber=\"1\">The configuration for manual routing. When manual routing is specified, the model will be\nselected based on the model name provided. This data type is not supported in Gemini API.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GenerationConfigRoutingConfigManualRoutingMode.yml\" sourcestartlinenumber=\"1\">When manual routing is set, the specified model will be used directly. This data type is not\nsupported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2278,7 +2082,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GoogleMaps",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GoogleMaps.yml\" sourcestartlinenumber=\"1\">Tool to retrieve knowledge from Google Maps.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GoogleMaps.yml\" sourcestartlinenumber=\"1\">Tool to retrieve public maps data for grounding, powered by Google.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2348,7 +2152,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GroundingChunk",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingChunk.yml\" sourcestartlinenumber=\"1\">A chunk of evidence that was used to generate the response.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingChunk.yml\" sourcestartlinenumber=\"1\">Grounding chunk.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2362,7 +2166,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GroundingChunkMaps",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingChunkMaps.yml\" sourcestartlinenumber=\"1\">A <code sourcefile=\"api/Google.GenAI.Types.GroundingChunkMaps.yml\" sourcestartlinenumber=\"1\">Maps</code> chunk is a piece of evidence that comes from Google Maps.  It contains information\nabout a place, such as its name, address, and reviews. This is used to provide the user with\nrich, location-based information.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingChunkMaps.yml\" sourcestartlinenumber=\"1\">Chunk from Google Maps. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2376,7 +2180,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSources",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSources.yml\" sourcestartlinenumber=\"1\">The sources that were used to generate the place answer.  This includes review snippets and\nphotos that were used to generate the answer, as well as URIs to flag content.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSources.yml\" sourcestartlinenumber=\"1\">Sources used to generate the place answer. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2390,7 +2194,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesAuthorAttribution",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesAuthorAttribution.yml\" sourcestartlinenumber=\"1\">Author attribution for a photo or review.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesAuthorAttribution.yml\" sourcestartlinenumber=\"1\">Author attribution for a photo or review. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2404,7 +2208,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesReviewSnippet",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.yml\" sourcestartlinenumber=\"1\">Encapsulates a review snippet.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.yml\" sourcestartlinenumber=\"1\">Encapsulates a review snippet. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2418,7 +2222,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GroundingChunkRetrievedContext",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingChunkRetrievedContext.yml\" sourcestartlinenumber=\"1\">Context retrieved from a data source to ground the model's response. This is used when a\nretrieval tool fetches information from a user-provided corpus or a public dataset.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingChunkRetrievedContext.yml\" sourcestartlinenumber=\"1\">Chunk from context retrieved by the retrieval tools. This data type is not supported in Gemini\nAPI.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2432,7 +2236,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GroundingChunkWeb",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingChunkWeb.yml\" sourcestartlinenumber=\"1\">A <code sourcefile=\"api/Google.GenAI.Types.GroundingChunkWeb.yml\" sourcestartlinenumber=\"1\">Web</code> chunk is a piece of evidence that comes from a web page. It contains the URI of the\nweb page, the title of the page, and the domain of the page. This is used to provide the user\nwith a link to the source of the information.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingChunkWeb.yml\" sourcestartlinenumber=\"1\">Chunk from the web.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2460,7 +2264,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GroundingMetadataSourceFlaggingUri",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.yml\" sourcestartlinenumber=\"1\">A URI that can be used to flag a place or review for inappropriate content. This is populated\nonly when the grounding source is Google Maps. This data type is not supported in Gemini API.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.yml\" sourcestartlinenumber=\"1\">Source content flagging uri for a place or review. This is currently populated only for Google\nMaps grounding. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2488,7 +2292,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.HarmBlockMethod",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.HarmBlockMethod.yml\" sourcestartlinenumber=\"1\">The method for blocking content. If not specified, the default behavior is to use the\nprobability score. This enum is not supported in Gemini API.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.HarmBlockMethod.yml\" sourcestartlinenumber=\"1\">Specify if the threshold is used for probability or severity score. If not specified, the\nthreshold is used for probability score. This enum is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2502,7 +2306,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.HarmBlockThreshold",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.HarmBlockThreshold.yml\" sourcestartlinenumber=\"1\">The threshold for blocking content. If the harm probability exceeds this threshold, the\ncontent will be blocked.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.HarmBlockThreshold.yml\" sourcestartlinenumber=\"1\">The harm block threshold.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2516,7 +2320,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.HarmCategory",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.HarmCategory.yml\" sourcestartlinenumber=\"1\">The harm category to be blocked.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.HarmCategory.yml\" sourcestartlinenumber=\"1\">Harm category.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2530,7 +2334,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.HarmProbability",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.HarmProbability.yml\" sourcestartlinenumber=\"1\">Output only. The probability of harm for this category.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.HarmProbability.yml\" sourcestartlinenumber=\"1\">Output only. Harm probability levels in the content.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2544,7 +2348,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.HarmSeverity",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.HarmSeverity.yml\" sourcestartlinenumber=\"1\">Output only. The severity of harm for this category. This enum is not supported in Gemini API.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.HarmSeverity.yml\" sourcestartlinenumber=\"1\">Output only. Harm severity levels in the content. This enum is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2629,20 +2433,6 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ImageConfig",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ImageConfig.yml\" sourcestartlinenumber=\"1\">The image generation configuration to be used in GenerateContentConfig.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.ImageConfigImageOutputOptions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.ImageConfigImageOutputOptions.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.ImageConfigImageOutputOptions",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ImageConfigImageOutputOptions.yml\" sourcestartlinenumber=\"1\">The image output format for generated images. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3188,7 +2978,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.LogprobsResult",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LogprobsResult.yml\" sourcestartlinenumber=\"1\">The log probabilities of the tokens generated by the model. This is useful for understanding\nthe model's confidence in its predictions and for debugging. For example, you can use log\nprobabilities to identify when the model is making a less confident prediction or to explore\nalternative responses that the model considered. A low log probability can also indicate that\nthe model is &quot;hallucinating&quot; or generating factually incorrect information.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LogprobsResult.yml\" sourcestartlinenumber=\"1\">Logprobs Result</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3202,7 +2992,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.LogprobsResultCandidate",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LogprobsResultCandidate.yml\" sourcestartlinenumber=\"1\">A single token and its associated log probability.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LogprobsResultCandidate.yml\" sourcestartlinenumber=\"1\">Candidate for the logprobs token and score.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3216,7 +3006,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.LogprobsResultTopCandidates",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LogprobsResultTopCandidates.yml\" sourcestartlinenumber=\"1\">A list of the top candidate tokens and their log probabilities at each decoding step. This can\nbe used to see what other tokens the model considered.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LogprobsResultTopCandidates.yml\" sourcestartlinenumber=\"1\">Candidates with top log probabilities at each decoding step.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3259,20 +3049,6 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.MaskReferenceMode",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.MaskReferenceMode.yml\" sourcestartlinenumber=\"1\">Enum representing the mask mode of a mask reference image.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.McpServer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.McpServer.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.McpServer",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.McpServer.yml\" sourcestartlinenumber=\"1\">A MCPServer is a server that can be called by the model to perform actions. It is a server\nthat implements the MCP protocol. Next ID: 5. This data type is not supported in Vertex AI.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3356,7 +3132,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ModelArmorConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ModelArmorConfig.yml\" sourcestartlinenumber=\"1\">Configuration for Model Armor. Model Armor is a Google Cloud service that provides safety and\nsecurity filtering for prompts and responses. It helps protect your AI applications from risks\nsuch as harmful content, sensitive data leakage, and prompt injection attacks. This data type\nis not supported in Gemini API.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ModelArmorConfig.yml\" sourcestartlinenumber=\"1\">Configuration for Model Armor integrations of prompt and responses. This data type is not\nsupported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3371,34 +3147,6 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ModelSelectionConfig",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ModelSelectionConfig.yml\" sourcestartlinenumber=\"1\">Config for model selection.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.ModelStage.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.ModelStage.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.ModelStage",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ModelStage.yml\" sourcestartlinenumber=\"1\">The stage of the underlying model. This enum is not supported in Vertex AI.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.ModelStatus.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.ModelStatus.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.ModelStatus",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ModelStatus.yml\" sourcestartlinenumber=\"1\">The status of the underlying model. This is used to indicate the stage of the underlying model\nand the retirement time if applicable. This data type is not supported in Vertex AI.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3441,48 +3189,6 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Outcome",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Outcome.yml\" sourcestartlinenumber=\"1\">Outcome of the code execution.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.OutputInfo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.OutputInfo.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.OutputInfo",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.OutputInfo.yml\" sourcestartlinenumber=\"1\">Describes the info for output of EvaluationService.EvaluateDataset. This data type is not\nsupported in Gemini API.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.PairwiseChoice.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.PairwiseChoice.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.PairwiseChoice",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.PairwiseChoice.yml\" sourcestartlinenumber=\"1\">Output only. Pairwise metric choice. This enum is not supported in Gemini API.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.PairwiseMetricResult.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.PairwiseMetricResult.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.PairwiseMetricResult",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.PairwiseMetricResult.yml\" sourcestartlinenumber=\"1\">Spec for pairwise metric result. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3584,20 +3290,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.PointwiseMetricResult.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.PointwiseMetricResult.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.PointwiseMetricResult",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.PointwiseMetricResult.yml\" sourcestartlinenumber=\"1\">Spec for pointwise metric result. This data type is not supported in Gemini API.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.PreTunedModel.yml",
       "output": {
         ".html": {
@@ -3622,7 +3314,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.PrebuiltVoiceConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.PrebuiltVoiceConfig.yml\" sourcestartlinenumber=\"1\">Configuration for a prebuilt voice.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.PrebuiltVoiceConfig.yml\" sourcestartlinenumber=\"1\">The configuration for the prebuilt speaker to use.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3808,20 +3500,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.RawOutput.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.RawOutput.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.RawOutput",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RawOutput.yml\" sourcestartlinenumber=\"1\">Raw output. This data type is not supported in Gemini API.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.RawReferenceImage.yml",
       "output": {
         ".html": {
@@ -4000,21 +3678,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.RetrievalMetadata",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RetrievalMetadata.yml\" sourcestartlinenumber=\"1\">Metadata returned to client when grounding is enabled.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.RougeMetricValue.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.RougeMetricValue.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.RougeMetricValue",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RougeMetricValue.yml\" sourcestartlinenumber=\"1\">Rouge metric value for an instance. This data type is not supported in Gemini API.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RetrievalMetadata.yml\" sourcestartlinenumber=\"1\">Metadata related to retrieval in the grounding flow.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4056,7 +3720,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.SafetyRating",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SafetyRating.yml\" sourcestartlinenumber=\"1\">A safety rating for a piece of content. The safety rating contains the harm category and the\nharm probability level.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SafetyRating.yml\" sourcestartlinenumber=\"1\">Safety rating corresponding to the generated content.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4070,7 +3734,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.SafetySetting",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SafetySetting.yml\" sourcestartlinenumber=\"1\">A safety setting that affects the safety-blocking behavior. A SafetySetting consists of a harm\ncategory and a threshold for that category.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SafetySetting.yml\" sourcestartlinenumber=\"1\">Safety settings.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4112,7 +3776,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.SearchEntryPoint",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SearchEntryPoint.yml\" sourcestartlinenumber=\"1\">The entry point used to search for grounding sources.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SearchEntryPoint.yml\" sourcestartlinenumber=\"1\">Google search entry point.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4126,7 +3790,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Segment",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Segment.yml\" sourcestartlinenumber=\"1\">Segment of the content this support belongs to.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Segment.yml\" sourcestartlinenumber=\"1\">Segment of the content.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4238,7 +3902,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.SpeakerVoiceConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SpeakerVoiceConfig.yml\" sourcestartlinenumber=\"1\">Configuration for a single speaker in a multi-speaker setup.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SpeakerVoiceConfig.yml\" sourcestartlinenumber=\"1\">Configuration for a single speaker in a multi speaker setup.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4267,20 +3931,6 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.StartSensitivity",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.StartSensitivity.yml\" sourcestartlinenumber=\"1\">Start of speech sensitivity.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.StreamableHttpTransport.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.StreamableHttpTransport.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.StreamableHttpTransport",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.StreamableHttpTransport.yml\" sourcestartlinenumber=\"1\">A transport that can stream HTTP requests and responses. Next ID: 6. This data type is not\nsupported in Vertex AI.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4536,20 +4186,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.ToolParallelAiSearch.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.ToolParallelAiSearch.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.ToolParallelAiSearch",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ToolParallelAiSearch.yml\" sourcestartlinenumber=\"1\">ParallelAiSearch tool type. A tool that uses the Parallel.ai search engine for grounding. This\ndata type is not supported in Gemini API.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.TrafficType.yml",
       "output": {
         ".html": {
@@ -4676,20 +4312,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Google.GenAI.Types.TuningJobState.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Google.GenAI.Types.TuningJobState.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Google.GenAI.Types.TuningJobState",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.TuningJobState.yml\" sourcestartlinenumber=\"1\">Output only. The detail state of the tuning job (while the overall <code sourcefile=\"api/Google.GenAI.Types.TuningJobState.yml\" sourcestartlinenumber=\"1\">JobState</code> is running).\nThis enum is not supported in Gemini API.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.TuningMethod.yml",
       "output": {
         ".html": {
@@ -4798,7 +4420,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Type",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Type.yml\" sourcestartlinenumber=\"1\">Data type of the schema field.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Type.yml\" sourcestartlinenumber=\"1\">The type of the data.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4924,7 +4546,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.UrlContextMetadata",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.UrlContextMetadata.yml\" sourcestartlinenumber=\"1\">Metadata returned when the model uses the <code sourcefile=\"api/Google.GenAI.Types.UrlContextMetadata.yml\" sourcestartlinenumber=\"1\">url_context</code> tool to get information from a\nuser-provided URL.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.UrlContextMetadata.yml\" sourcestartlinenumber=\"1\">Metadata related to url context retrieval tool.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4938,7 +4560,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.UrlMetadata",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.UrlMetadata.yml\" sourcestartlinenumber=\"1\">The metadata for a single URL retrieval.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.UrlMetadata.yml\" sourcestartlinenumber=\"1\">Context of the a single url retrieval.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4952,7 +4574,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.UrlRetrievalStatus",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.UrlRetrievalStatus.yml\" sourcestartlinenumber=\"1\">The status of the URL retrieval.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.UrlRetrievalStatus.yml\" sourcestartlinenumber=\"1\">Status of the url retrieval.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -5162,7 +4784,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.VideoMetadata",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VideoMetadata.yml\" sourcestartlinenumber=\"1\">Provides metadata for a video, including the start and end offsets for clipping and the frame\nrate.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VideoMetadata.yml\" sourcestartlinenumber=\"1\">Metadata describes the input video content.</p>\n"
     },
     {
       "type": "ManagedReference",

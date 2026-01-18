@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class VideoMetadata | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Provides metadata for a video, including the start and end offsets for clipping and the frame rate.">
+      <meta name="description" content="Metadata describes the input video content.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Types_VideoMetadata" data-uid="Google.GenAI.Types.VideoMetadata" class="text-break">
-Class VideoMetadata  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoMetadata.cs/#L30"><i class="bi bi-code-slash"></i></a>
+Class VideoMetadata  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoMetadata.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,8 +93,7 @@ Class VideoMetadata  <a class="header-action link-secondary" title="View source"
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Provides metadata for a video, including the start and end offsets for clipping and the frame
-rate.</p>
+  <div class="markdown summary"><p>Metadata describes the input video content.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -160,7 +159,7 @@ rate.</p>
 
   <h3 id="Google_GenAI_Types_VideoMetadata_EndOffset" data-uid="Google.GenAI.Types.VideoMetadata.EndOffset">
   EndOffset
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoMetadata.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoMetadata.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. The end offset of the video.</p>
@@ -194,11 +193,11 @@ public string? EndOffset { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_VideoMetadata_Fps" data-uid="Google.GenAI.Types.VideoMetadata.Fps">
   Fps
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoMetadata.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoMetadata.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. The frame rate of the video sent to the model. If not specified, the default value
-is 1.0. The valid range is (0.0, 24.0].</p>
+will be 1.0. The fps range is (0.0, 24.0].</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -229,7 +228,7 @@ public double? Fps { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_VideoMetadata_StartOffset" data-uid="Google.GenAI.Types.VideoMetadata.StartOffset">
   StartOffset
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoMetadata.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoMetadata.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. The start offset of the video.</p>
@@ -267,7 +266,7 @@ public string? StartOffset { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_VideoMetadata_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.VideoMetadata.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoMetadata.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoMetadata.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a VideoMetadata object.</p>
@@ -309,7 +308,7 @@ public string? StartOffset { get; set; }</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoMetadata.cs/#L30" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoMetadata.cs/#L29" class="edit-link">Edit this page</a>
         </div>
 
 
