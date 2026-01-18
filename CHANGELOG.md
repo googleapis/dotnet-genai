@@ -1,5 +1,14 @@
 # Changelog
 
+## Version 0.13.0, released 2026-01-18
+
+
+### New features
+
+* Add ModelArmorConfig support for prompt and response sanitization via the Model Armor service ([8c8ab76](https://github.com/googleapis/dotnet-genai/commit/8c8ab768fd4723958728d276f4d1d08fe5eef055))
+* Update data types from discovery doc. ([5e95a01](https://github.com/googleapis/dotnet-genai/commit/5e95a012247f1eab30936f6d6b29740675c762a8))
+* Update data types from discovery doc. ([ee91b30](https://github.com/googleapis/dotnet-genai/commit/ee91b30a17c695203c15dcd9ad91c96b332d60f5))
+
 ## Version 0.12.0, released 2026-01-15
 
 
