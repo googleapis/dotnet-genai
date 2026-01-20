@@ -183,7 +183,7 @@ output might be lower in quality.
 
 ```csharp
 using System.Threading.Tasks;
-using Goolge.GenAI;
+using Google.GenAI;
 using Google.GenAI.Types;
 
 public class GenerateContentWithJsonSchema {
