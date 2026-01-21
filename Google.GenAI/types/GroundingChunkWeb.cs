@@ -23,19 +23,22 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Chunk from the web.
+  /// A `Web` chunk is a piece of evidence that comes from a web page. It contains the URI of the
+  /// web page, the title of the page, and the domain of the page. This is used to provide the user
+  /// with a link to the source of the information.
   /// </summary>
 
   public record GroundingChunkWeb {
     /// <summary>
-    /// Domain of the (original) URI. This field is not supported in Gemini API.
+    /// The domain of the web page that contains the evidence. This can be used to filter out
+    /// low-quality sources. This field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("domain")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string ? Domain { get; set; }
 
     /// <summary>
-    /// Title of the chunk.
+    /// The title of the web page that contains the evidence.
     /// </summary>
     [JsonPropertyName("title")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -45,7 +48,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// URI reference of the chunk.
+    /// The URI of the web page that contains the evidence.
     /// </summary>
     [JsonPropertyName("uri")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

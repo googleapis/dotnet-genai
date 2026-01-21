@@ -23,16 +23,15 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Represents a customer-managed encryption key spec that can be applied to a top-level resource.
-  /// This data type is not supported in Gemini API.
+  /// Represents a customer-managed encryption key specification that can be applied to a Vertex AI
+  /// resource. This data type is not supported in Gemini API.
   /// </summary>
 
   public record EncryptionSpec {
     /// <summary>
-    /// The Cloud KMS resource identifier of the customer managed encryption key used to protect a
-    /// resource. Has the form:
-    /// `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. The key needs to
-    /// be in the same region as where the compute resource is created.
+    /// Resource name of the Cloud KMS key used to protect the resource. The Cloud KMS key must be
+    /// in the same region as the resource. It must have the format
+    /// `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
     /// </summary>
     [JsonPropertyName("kmsKeyName")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

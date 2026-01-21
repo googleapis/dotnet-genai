@@ -23,20 +23,22 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Grounding chunk.
+  /// A chunk of evidence that was used to generate the response.
   /// </summary>
 
   public record GroundingChunk {
     /// <summary>
-    /// Grounding chunk from Google Maps. This field is not supported in Gemini API.
+    /// A `Maps` chunk is a piece of evidence that comes from Google Maps.  It contains information
+    /// about a place, such as its name, address, and reviews. This is used to provide the user with
+    /// rich, location-based information.
     /// </summary>
     [JsonPropertyName("maps")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public GroundingChunkMaps ? Maps { get; set; }
 
     /// <summary>
-    /// Grounding chunk from context retrieved by the retrieval tools. This field is not supported
-    /// in Gemini API.
+    /// A grounding chunk from a data source retrieved by a retrieval tool, such as Vertex AI
+    /// Search. See the `RetrievedContext` message for details
     /// </summary>
     [JsonPropertyName("retrievedContext")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -46,7 +48,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Grounding chunk from the web.
+    /// A grounding chunk from a web page, typically from Google Search. See the `Web` message for
+    /// details.
     /// </summary>
     [JsonPropertyName("web")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

@@ -30,6 +30,11 @@ namespace Google.GenAI.Types {
     [JsonPropertyName("THINKING_LEVEL_UNSPECIFIED")] THINKING_LEVEL_UNSPECIFIED,
 
     /// <summary>
+    /// MINIMAL thinking level.
+    /// </summary>
+    [JsonPropertyName("MINIMAL")] MINIMAL,
+
+    /// <summary>
     /// Low thinking level.
     /// </summary>
     [JsonPropertyName("LOW")] LOW,
@@ -42,11 +47,6 @@ namespace Google.GenAI.Types {
     /// <summary>
     /// High thinking level.
     /// </summary>
-    [JsonPropertyName("HIGH")] HIGH,
-
-    /// <summary>
-    /// MINIMAL thinking level.
-    /// </summary>
-    [JsonPropertyName("MINIMAL")] MINIMAL
+    [JsonPropertyName("HIGH")] HIGH
   }
 }

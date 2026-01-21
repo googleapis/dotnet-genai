@@ -23,7 +23,8 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Metadata describes the input video content.
+  /// Provides metadata for a video, including the start and end offsets for clipping and the frame
+  /// rate.
   /// </summary>
 
   public record VideoMetadata {
@@ -36,7 +37,7 @@ namespace Google.GenAI.Types {
 
     /// <summary>
     /// Optional. The frame rate of the video sent to the model. If not specified, the default value
-    /// will be 1.0. The fps range is (0.0, 24.0].
+    /// is 1.0. The valid range is (0.0, 24.0].
     /// </summary>
     [JsonPropertyName("fps")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

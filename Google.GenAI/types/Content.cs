@@ -36,8 +36,8 @@ namespace Google.GenAI.Types {
     public List<Part> ? Parts { get; set; }
 
     /// <summary>
-    /// Optional. The producer of the content. Must be either 'user' or 'model'. Useful to set for
-    /// multi-turn conversations, otherwise can be left blank or unset.
+    /// Optional. The producer of the content. Must be either 'user' or 'model'. If not set, the
+    /// service will default to 'user'.
     /// </summary>
     [JsonPropertyName("role")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

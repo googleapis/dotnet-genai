@@ -98,6 +98,17 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Output only. The current model status of this model. This field is not supported in Vertex
+    /// AI.
+    /// </summary>
+    [JsonPropertyName("modelStatus")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public ModelStatus
+        ? ModelStatus {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a GenerateContentResponse object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

@@ -23,16 +23,27 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Auth configuration to run the extension. This data type is not supported in Gemini API.
+  /// The authentication config to access the API.
   /// </summary>
 
   public record AuthConfig {
+    /// <summary>
+    /// The authentication config to access the API. Only API key is supported. This field is not
+    /// supported in Gemini API.
+    /// </summary>
+    [JsonPropertyName("apiKey")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string ? ApiKey { get; set; }
+
     /// <summary>
     /// Config for API key auth.
     /// </summary>
     [JsonPropertyName("apiKeyConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public ApiKeyConfig ? ApiKeyConfig { get; set; }
+    public ApiKeyConfig
+        ? ApiKeyConfig {
+            get; set;
+          }
 
     /// <summary>
     /// Type of auth scheme.

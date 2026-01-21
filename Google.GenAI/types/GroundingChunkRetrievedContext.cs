@@ -23,21 +23,25 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Chunk from context retrieved by the retrieval tools. This data type is not supported in Gemini
-  /// API.
+  /// Context retrieved from a data source to ground the model's response. This is used when a
+  /// retrieval tool fetches information from a user-provided corpus or a public dataset.
   /// </summary>
 
   public record GroundingChunkRetrievedContext {
     /// <summary>
-    /// Output only. The full document name for the referenced Vertex AI Search document.
+    /// Output only. The full resource name of the referenced Vertex AI Search document. This is
+    /// used to identify the specific document that was retrieved. The format is
+    /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`.
+    /// This field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("documentName")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string ? DocumentName { get; set; }
 
     /// <summary>
-    /// Additional context for the RAG retrieval result. This is only populated when using the RAG
-    /// retrieval tool.
+    /// Additional context for a Retrieval-Augmented Generation (RAG) retrieval result. This is
+    /// populated only when the RAG retrieval tool is used. This field is not supported in Gemini
+    /// API.
     /// </summary>
     [JsonPropertyName("ragChunk")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -47,7 +51,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Text of the attribution.
+    /// The content of the retrieved data source.
     /// </summary>
     [JsonPropertyName("text")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -57,7 +61,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Title of the attribution.
+    /// The title of the retrieved data source.
     /// </summary>
     [JsonPropertyName("title")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -67,12 +71,23 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// URI reference of the attribution.
+    /// The URI of the retrieved data source.
     /// </summary>
     [JsonPropertyName("uri")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
         ? Uri {
+            get; set;
+          }
+
+    /// <summary>
+    /// Optional. Name of the `FileSearchStore` containing the document. Example:
+    /// `fileSearchStores/123`. This field is not supported in Vertex AI.
+    /// </summary>
+    [JsonPropertyName("fileSearchStore")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string
+        ? FileSearchStore {
             get; set;
           }
 
