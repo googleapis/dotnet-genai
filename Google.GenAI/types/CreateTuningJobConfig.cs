@@ -35,8 +35,8 @@ namespace Google.GenAI.Types {
     public HttpOptions ? HttpOptions { get; set; }
 
     /// <summary>
-    /// The method to use for tuning (SUPERVISED_FINE_TUNING or PREFERENCE_TUNING). If not set, the
-    /// default method (SFT) will be used.
+    /// The method to use for tuning (SUPERVISED_FINE_TUNING or PREFERENCE_TUNING or DISTILLATION).
+    /// If not set, the default method (SFT) will be used.
     /// </summary>
     [JsonPropertyName("method")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -170,6 +170,46 @@ namespace Google.GenAI.Types {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
         ? Beta {
+            get; set;
+          }
+
+    /// <summary>
+    /// The base teacher model that is being distilled. Distillation only.
+    /// </summary>
+    [JsonPropertyName("baseTeacherModel")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string
+        ? BaseTeacherModel {
+            get; set;
+          }
+
+    /// <summary>
+    /// The resource name of the Tuned teacher model. Distillation only.
+    /// </summary>
+    [JsonPropertyName("tunedTeacherModelSource")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string
+        ? TunedTeacherModelSource {
+            get; set;
+          }
+
+    /// <summary>
+    /// Multiplier for adjusting the weight of the SFT loss. Distillation only.
+    /// </summary>
+    [JsonPropertyName("sftLossWeightMultiplier")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public double
+        ? SftLossWeightMultiplier {
+            get; set;
+          }
+
+    /// <summary>
+    /// The Google Cloud Storage location where the tuning job outputs are written.
+    /// </summary>
+    [JsonPropertyName("outputUri")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string
+        ? OutputUri {
             get; set;
           }
 
