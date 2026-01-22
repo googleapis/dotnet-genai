@@ -1,5 +1,12 @@
 # Changelog
 
+## Version 0.13.1, released 2026-01-22
+
+
+### Bug fixes
+
+* use converter to parse LiverServerMessage ([2420c8b](https://github.com/googleapis/dotnet-genai/commit/2420c8b57f3b2f778679196d12008663deabaa3b))
+
 ## Version 0.13.0, released 2026-01-18
 
 
