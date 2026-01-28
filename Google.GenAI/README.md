@@ -1409,6 +1409,40 @@ public class CancelTuningJobExample {
 }
 ```
 
+#### Distillation
+
+You can perform distillation by setting `Method` to `TuningMethod.DISTILLATION` in `CreateTuningJobConfig`.
+
+```csharp
+using System.Threading.Tasks;
+using Google.GenAI;
+using Google.GenAI.Types;
+
+public class DistillationJob {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client(vertexAI: true);
+
+    // Prompt dataset
+    var trainingDataset = new TuningDataset {
+      GcsUri = "gs://cloud-samples-data/ai-platform/generative_ai/gemini-2_0/text/sft_train_data.jsonl"
+    };
+
+    var config = new CreateTuningJobConfig {
+      Method = TuningMethod.DISTILLATION,
+      BaseTeacherModel = "teacher-model-id",
+      EpochCount = 1,
+    };
+    var tuningJob = await client.Tunings.TuneAsync(
+      baseModel: "student-model-id",
+      trainingDataset: trainingDataset,
+      config: config,
+    );
+    Console.WriteLine(tuningJob.State);
+  }
+}
+```
+
 ### List Tuning Jobs
 ```csharp
 using System.Threading.Tasks;

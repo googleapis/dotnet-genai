@@ -146,6 +146,27 @@ namespace Google.GenAI {
         throw new NotSupportedException("beta parameter is not supported in Gemini API.");
       }
 
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "baseTeacherModel" }))) {
+        throw new NotSupportedException(
+            "baseTeacherModel parameter is not supported in Gemini API.");
+      }
+
+      if (!Common.IsZero(
+              Common.GetValueByPath(fromObject, new string[] { "tunedTeacherModelSource" }))) {
+        throw new NotSupportedException(
+            "tunedTeacherModelSource parameter is not supported in Gemini API.");
+      }
+
+      if (!Common.IsZero(
+              Common.GetValueByPath(fromObject, new string[] { "sftLossWeightMultiplier" }))) {
+        throw new NotSupportedException(
+            "sftLossWeightMultiplier parameter is not supported in Gemini API.");
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "outputUri" }))) {
+        throw new NotSupportedException("outputUri parameter is not supported in Gemini API.");
+      }
+
       return toObject;
     }
 
@@ -170,6 +191,14 @@ namespace Google.GenAI {
       } else if (discriminatorValueValidationDataset == "PREFERENCE_TUNING") {
         if (Common.GetValueByPath(fromObject, new string[] { "validationDataset" }) != null) {
           Common.SetValueByPath(parentObject, new string[] { "preferenceOptimizationSpec" },
+                                TuningValidationDatasetToVertex(
+                                    JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
+                                        fromObject, new string[] { "validationDataset" }))),
+                                    toObject, rootObject));
+        }
+      } else if (discriminatorValueValidationDataset == "DISTILLATION") {
+        if (Common.GetValueByPath(fromObject, new string[] { "validationDataset" }) != null) {
+          Common.SetValueByPath(parentObject, new string[] { "distillationSpec" },
                                 TuningValidationDatasetToVertex(
                                     JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
                                         fromObject, new string[] { "validationDataset" }))),
@@ -206,6 +235,12 @@ namespace Google.GenAI {
               new string[] { "preferenceOptimizationSpec", "hyperParameters", "epochCount" },
               Common.GetValueByPath(fromObject, new string[] { "epochCount" }));
         }
+      } else if (discriminatorValueEpochCount == "DISTILLATION") {
+        if (Common.GetValueByPath(fromObject, new string[] { "epochCount" }) != null) {
+          Common.SetValueByPath(
+              parentObject, new string[] { "distillationSpec", "hyperParameters", "epochCount" },
+              Common.GetValueByPath(fromObject, new string[] { "epochCount" }));
+        }
       }
 
       JsonNode discriminatorLearningRateMultiplier =
@@ -227,6 +262,13 @@ namespace Google.GenAI {
               parentObject,
               new string[] { "preferenceOptimizationSpec", "hyperParameters",
                              "learningRateMultiplier" },
+              Common.GetValueByPath(fromObject, new string[] { "learningRateMultiplier" }));
+        }
+      } else if (discriminatorValueLearningRateMultiplier == "DISTILLATION") {
+        if (Common.GetValueByPath(fromObject, new string[] { "learningRateMultiplier" }) != null) {
+          Common.SetValueByPath(
+              parentObject,
+              new string[] { "distillationSpec", "hyperParameters", "learningRateMultiplier" },
               Common.GetValueByPath(fromObject, new string[] { "learningRateMultiplier" }));
         }
       }
@@ -252,6 +294,13 @@ namespace Google.GenAI {
               new string[] { "preferenceOptimizationSpec", "exportLastCheckpointOnly" },
               Common.GetValueByPath(fromObject, new string[] { "exportLastCheckpointOnly" }));
         }
+      } else if (discriminatorValueExportLastCheckpointOnly == "DISTILLATION") {
+        if (Common.GetValueByPath(fromObject, new string[] { "exportLastCheckpointOnly" }) !=
+            null) {
+          Common.SetValueByPath(
+              parentObject, new string[] { "distillationSpec", "exportLastCheckpointOnly" },
+              Common.GetValueByPath(fromObject, new string[] { "exportLastCheckpointOnly" }));
+        }
       }
 
       JsonNode discriminatorAdapterSize =
@@ -273,6 +322,12 @@ namespace Google.GenAI {
               new string[] { "preferenceOptimizationSpec", "hyperParameters", "adapterSize" },
               Common.GetValueByPath(fromObject, new string[] { "adapterSize" }));
         }
+      } else if (discriminatorValueAdapterSize == "DISTILLATION") {
+        if (Common.GetValueByPath(fromObject, new string[] { "adapterSize" }) != null) {
+          Common.SetValueByPath(
+              parentObject, new string[] { "distillationSpec", "hyperParameters", "adapterSize" },
+              Common.GetValueByPath(fromObject, new string[] { "adapterSize" }));
+        }
       }
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "batchSize" }))) {
         throw new NotSupportedException("batchSize parameter is not supported in Vertex AI.");
@@ -291,6 +346,30 @@ namespace Google.GenAI {
         Common.SetValueByPath(
             parentObject, new string[] { "preferenceOptimizationSpec", "hyperParameters", "beta" },
             Common.GetValueByPath(fromObject, new string[] { "beta" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "baseTeacherModel" }) != null) {
+        Common.SetValueByPath(
+            parentObject, new string[] { "distillationSpec", "baseTeacherModel" },
+            Common.GetValueByPath(fromObject, new string[] { "baseTeacherModel" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "tunedTeacherModelSource" }) != null) {
+        Common.SetValueByPath(
+            parentObject, new string[] { "distillationSpec", "tunedTeacherModelSource" },
+            Common.GetValueByPath(fromObject, new string[] { "tunedTeacherModelSource" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "sftLossWeightMultiplier" }) != null) {
+        Common.SetValueByPath(
+            parentObject,
+            new string[] { "distillationSpec", "hyperParameters", "sftLossWeightMultiplier" },
+            Common.GetValueByPath(fromObject, new string[] { "sftLossWeightMultiplier" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "outputUri" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "outputUri" },
+                              Common.GetValueByPath(fromObject, new string[] { "outputUri" }));
       }
 
       return toObject;
@@ -586,6 +665,12 @@ namespace Google.GenAI {
                                 new string[] { "preferenceOptimizationSpec", "trainingDatasetUri" },
                                 Common.GetValueByPath(fromObject, new string[] { "gcsUri" }));
         }
+      } else if (discriminatorValueGcsUri == "DISTILLATION") {
+        if (Common.GetValueByPath(fromObject, new string[] { "gcsUri" }) != null) {
+          Common.SetValueByPath(parentObject,
+                                new string[] { "distillationSpec", "promptDatasetUri" },
+                                Common.GetValueByPath(fromObject, new string[] { "gcsUri" }));
+        }
       }
 
       JsonNode discriminatorVertexDatasetResource =
@@ -604,6 +689,12 @@ namespace Google.GenAI {
         if (Common.GetValueByPath(fromObject, new string[] { "vertexDatasetResource" }) != null) {
           Common.SetValueByPath(
               parentObject, new string[] { "preferenceOptimizationSpec", "trainingDatasetUri" },
+              Common.GetValueByPath(fromObject, new string[] { "vertexDatasetResource" }));
+        }
+      } else if (discriminatorValueVertexDatasetResource == "DISTILLATION") {
+        if (Common.GetValueByPath(fromObject, new string[] { "vertexDatasetResource" }) != null) {
+          Common.SetValueByPath(
+              parentObject, new string[] { "distillationSpec", "promptDatasetUri" },
               Common.GetValueByPath(fromObject, new string[] { "vertexDatasetResource" }));
         }
       }
@@ -754,6 +845,12 @@ namespace Google.GenAI {
         Common.SetValueByPath(
             toObject, new string[] { "preferenceOptimizationSpec" },
             Common.GetValueByPath(fromObject, new string[] { "preferenceOptimizationSpec" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "distillationSpec" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "distillationSpec" },
+            Common.GetValueByPath(fromObject, new string[] { "distillationSpec" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "tuningDataStats" }) != null) {

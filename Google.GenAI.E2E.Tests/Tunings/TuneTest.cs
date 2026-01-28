@@ -208,4 +208,50 @@ public class TuneTest {
 
     StringAssert.Contains(ex.Message, "not supported in Gemini API");
   }
+
+  // TODO(ayushagra): Enable this test once the distillation e2e test is out of autopush.
+  [TestMethod]
+  public async Task TuneDistillationVertexTest() {
+    Assert.Inconclusive("Vertex distillation test is currently only supported in autopush.");
+    var baseModel = "meta/llama3_1@llama-3.1-8b-instruct";
+    var trainingDataset = new TuningDataset {
+      GcsUri = "gs://nathreya-oss-tuning-sdk-test/distillation-openai-opposites.jsonl"
+    };
+    var validationDataset = new TuningValidationDataset {
+      GcsUri = "gs://nathreya-oss-tuning-sdk-test/distillation-val-openai-opposites.jsonl"
+    };
+    var config = new CreateTuningJobConfig {
+      Method = TuningMethod.DISTILLATION,
+      BaseTeacherModel = "deepseek-ai/deepseek-v3.1-maas",
+      EpochCount = 20,
+      ValidationDataset = validationDataset,
+      OutputUri = "gs://nathreya-oss-tuning-sdk-test/ayushagra-distillation-test-folder",
+      HttpOptions = new HttpOptions {
+        ApiVersion = "v1beta1",
+        BaseUrl = "https://us-central1-autopush-aiplatform.sandbox.googleapis.com/"
+      }
+    };
+
+    var tuningJob = await vertexClient.Tunings.TuneAsync(baseModel, trainingDataset, config);
+
+    Assert.IsNotNull(tuningJob);
+  }
+
+  [TestMethod]
+  public async Task TuneDistillationGeminiTest() {
+    var baseModel = "meta/llama3_1@llama-3.1-8b-instruct";
+    var trainingDataset = new TuningDataset {
+      GcsUri = "gs://nathreya-oss-tuning-sdk-test/distillation-openai-opposites.jsonl"
+    };
+    var config = new CreateTuningJobConfig {
+      Method = TuningMethod.DISTILLATION,
+      BaseTeacherModel = "deepseek-ai/deepseek-v3.1-maas",
+    };
+
+    var ex = await Assert.ThrowsExceptionAsync<NotSupportedException>(async () => {
+      await geminiClient.Tunings.TuneAsync(baseModel, trainingDataset, config);
+    });
+
+    StringAssert.Contains(ex.Message, "not supported in Gemini API");
+  }
 }

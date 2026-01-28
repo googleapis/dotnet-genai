@@ -169,6 +169,16 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Tuning Spec for Distillation.
+    /// </summary>
+    [JsonPropertyName("distillationSpec")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public DistillationSpec
+        ? DistillationSpec {
+            get; set;
+          }
+
+    /// <summary>
     /// Output only. The tuning data statistics associated with this TuningJob.
     /// </summary>
     [JsonPropertyName("tuningDataStats")]

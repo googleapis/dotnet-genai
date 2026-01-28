@@ -32,6 +32,11 @@ namespace Google.GenAI.Types {
     /// <summary>
     /// Preference optimization tuning.
     /// </summary>
-    [JsonPropertyName("PREFERENCE_TUNING")] PREFERENCE_TUNING
+    [JsonPropertyName("PREFERENCE_TUNING")] PREFERENCE_TUNING,
+
+    /// <summary>
+    /// Distillation tuning.
+    /// </summary>
+    [JsonPropertyName("DISTILLATION")] DISTILLATION
   }
 }
