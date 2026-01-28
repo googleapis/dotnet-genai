@@ -1328,6 +1328,36 @@ public class ContinuousTuningJob {
   }
 }
 </code></pre>
+<h4 id="distillation">Distillation</h4>
+<p>You can perform distillation by setting <code>Method</code> to <code>TuningMethod.DISTILLATION</code> in <code>CreateTuningJobConfig</code>.</p>
+<pre><code class="lang-csharp">using System.Threading.Tasks;
+using Google.GenAI;
+using Google.GenAI.Types;
+
+public class DistillationJob {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client(vertexAI: true);
+
+    // Prompt dataset
+    var trainingDataset = new TuningDataset {
+      GcsUri = &quot;gs://cloud-samples-data/ai-platform/generative_ai/gemini-2_0/text/sft_train_data.jsonl&quot;
+    };
+
+    var config = new CreateTuningJobConfig {
+      Method = TuningMethod.DISTILLATION,
+      BaseTeacherModel = &quot;teacher-model-id&quot;,
+      EpochCount = 1,
+    };
+    var tuningJob = await client.Tunings.TuneAsync(
+      baseModel: &quot;student-model-id&quot;,
+      trainingDataset: trainingDataset,
+      config: config,
+    );
+    Console.WriteLine(tuningJob.State);
+  }
+}
+</code></pre>
 <h3 id="cancel-tuning-job">Cancel Tuning Job</h3>
 <pre><code class="lang-csharp">using System.Threading.Tasks;
 using Google.GenAI;

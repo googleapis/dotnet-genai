@@ -228,7 +228,7 @@ public DateTime? CreateTime { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_TuningJob_CustomBaseModel" data-uid="Google.GenAI.Types.TuningJob.CustomBaseModel">
   CustomBaseModel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningJob.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningJob.cs/#L219"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. The user-provided path to custom model weights. Set this field to tune a custom
@@ -296,11 +296,45 @@ public string? Description { get; set; }</code></pre>
 
 
 
+  <a id="Google_GenAI_Types_TuningJob_DistillationSpec_" data-uid="Google.GenAI.Types.TuningJob.DistillationSpec*"></a>
+
+  <h3 id="Google_GenAI_Types_TuningJob_DistillationSpec" data-uid="Google.GenAI.Types.TuningJob.DistillationSpec">
+  DistillationSpec
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningJob.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tuning Spec for Distillation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;distillationSpec&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public DistillationSpec? DistillationSpec { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.DistillationSpec.html">DistillationSpec</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_TuningJob_EncryptionSpec_" data-uid="Google.GenAI.Types.TuningJob.EncryptionSpec*"></a>
 
   <h3 id="Google_GenAI_Types_TuningJob_EncryptionSpec" data-uid="Google.GenAI.Types.TuningJob.EncryptionSpec">
   EncryptionSpec
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningJob.cs/#L185"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningJob.cs/#L195"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Customer-managed encryption key options for a TuningJob. If this is set, then all resources
@@ -404,7 +438,7 @@ public GoogleRpcStatus? Error { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_TuningJob_Experiment" data-uid="Google.GenAI.Types.TuningJob.Experiment">
   Experiment
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningJob.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningJob.cs/#L229"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Output only. The Experiment associated with this TuningJob.</p>
@@ -438,7 +472,7 @@ public string? Experiment { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_TuningJob_Labels" data-uid="Google.GenAI.Types.TuningJob.Labels">
   Labels
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningJob.cs/#L233"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningJob.cs/#L243"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. The labels with user-defined metadata to organize TuningJob and generated
@@ -511,7 +545,7 @@ public string? Name { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_TuningJob_OutputUri" data-uid="Google.GenAI.Types.TuningJob.OutputUri">
   OutputUri
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningJob.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningJob.cs/#L254"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. Cloud Storage path to the directory where tuning job outputs are written to. This
@@ -546,7 +580,7 @@ public string? OutputUri { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_TuningJob_PartnerModelTuningSpec" data-uid="Google.GenAI.Types.TuningJob.PartnerModelTuningSpec">
   PartnerModelTuningSpec
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningJob.cs/#L195"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningJob.cs/#L205"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Tuning Spec for open sourced and third party Partner models.</p>
@@ -580,7 +614,7 @@ public PartnerModelTuningSpec? PartnerModelTuningSpec { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_TuningJob_PipelineJob" data-uid="Google.GenAI.Types.TuningJob.PipelineJob">
   PipelineJob
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningJob.cs/#L255"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningJob.cs/#L265"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Output only. The resource name of the PipelineJob associated with the TuningJob. Format:
@@ -717,7 +751,7 @@ public HttpResponse? SdkHttpResponse { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_TuningJob_ServiceAccount" data-uid="Google.GenAI.Types.TuningJob.ServiceAccount">
   ServiceAccount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningJob.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningJob.cs/#L279"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The service account that the tuningJob workload runs as. If not specified, the Vertex AI
@@ -892,7 +926,7 @@ public TunedModel? TunedModel { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_TuningJob_TunedModelDisplayName" data-uid="Google.GenAI.Types.TuningJob.TunedModelDisplayName">
   TunedModelDisplayName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningJob.cs/#L282"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningJob.cs/#L292"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. The display name of the TunedModel. The name can be up to 128 characters long and
@@ -929,7 +963,7 @@ public string? TunedModelDisplayName { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_TuningJob_TuningDataStats" data-uid="Google.GenAI.Types.TuningJob.TuningDataStats">
   TuningDataStats
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningJob.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningJob.cs/#L184"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Output only. The tuning data statistics associated with this TuningJob.</p>
@@ -997,7 +1031,7 @@ public DateTime? UpdateTime { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_TuningJob_VeoTuningSpec" data-uid="Google.GenAI.Types.TuningJob.VeoTuningSpec">
   VeoTuningSpec
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningJob.cs/#L292"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningJob.cs/#L302"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Tuning Spec for Veo Tuning.</p>
@@ -1035,7 +1069,7 @@ public VeoTuningSpec? VeoTuningSpec { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_TuningJob_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.TuningJob.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningJob.cs/#L305"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningJob.cs/#L315"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a TuningJob object.</p>

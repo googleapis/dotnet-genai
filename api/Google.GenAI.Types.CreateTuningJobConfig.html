@@ -189,6 +189,40 @@ public AdapterSize? AdapterSize { get; set; }</code></pre>
 
 
 
+  <a id="Google_GenAI_Types_CreateTuningJobConfig_BaseTeacherModel_" data-uid="Google.GenAI.Types.CreateTuningJobConfig.BaseTeacherModel*"></a>
+
+  <h3 id="Google_GenAI_Types_CreateTuningJobConfig_BaseTeacherModel" data-uid="Google.GenAI.Types.CreateTuningJobConfig.BaseTeacherModel">
+  BaseTeacherModel
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/CreateTuningJobConfig.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The base teacher model that is being distilled. Distillation only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;baseTeacherModel&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public string? BaseTeacherModel { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_CreateTuningJobConfig_BatchSize_" data-uid="Google.GenAI.Types.CreateTuningJobConfig.BatchSize*"></a>
 
   <h3 id="Google_GenAI_Types_CreateTuningJobConfig_BatchSize" data-uid="Google.GenAI.Types.CreateTuningJobConfig.BatchSize">
@@ -509,8 +543,8 @@ public double? LearningRateMultiplier { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/CreateTuningJobConfig.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The method to use for tuning (SUPERVISED_FINE_TUNING or PREFERENCE_TUNING). If not set, the
-default method (SFT) will be used.</p>
+  <div class="markdown level1 summary"><p>The method to use for tuning (SUPERVISED_FINE_TUNING or PREFERENCE_TUNING or DISTILLATION).
+If not set, the default method (SFT) will be used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -527,6 +561,40 @@ public TuningMethod? Method { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Google.GenAI.Types.TuningMethod.html">TuningMethod</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_CreateTuningJobConfig_OutputUri_" data-uid="Google.GenAI.Types.CreateTuningJobConfig.OutputUri*"></a>
+
+  <h3 id="Google_GenAI_Types_CreateTuningJobConfig_OutputUri" data-uid="Google.GenAI.Types.CreateTuningJobConfig.OutputUri">
+  OutputUri
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/CreateTuningJobConfig.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Google Cloud Storage location where the tuning job outputs are written.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;outputUri&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public string? OutputUri { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
 
@@ -571,6 +639,40 @@ public string? PreTunedModelCheckpointId { get; set; }</code></pre>
 
 
 
+  <a id="Google_GenAI_Types_CreateTuningJobConfig_SftLossWeightMultiplier_" data-uid="Google.GenAI.Types.CreateTuningJobConfig.SftLossWeightMultiplier*"></a>
+
+  <h3 id="Google_GenAI_Types_CreateTuningJobConfig_SftLossWeightMultiplier" data-uid="Google.GenAI.Types.CreateTuningJobConfig.SftLossWeightMultiplier">
+  SftLossWeightMultiplier
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/CreateTuningJobConfig.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Multiplier for adjusting the weight of the SFT loss. Distillation only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;sftLossWeightMultiplier&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public double? SftLossWeightMultiplier { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_CreateTuningJobConfig_TunedModelDisplayName_" data-uid="Google.GenAI.Types.CreateTuningJobConfig.TunedModelDisplayName*"></a>
 
   <h3 id="Google_GenAI_Types_CreateTuningJobConfig_TunedModelDisplayName" data-uid="Google.GenAI.Types.CreateTuningJobConfig.TunedModelDisplayName">
@@ -587,6 +689,40 @@ consist of any UTF-8 characters.</p>
     <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;tunedModelDisplayName&quot;)]
 [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
 public string? TunedModelDisplayName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_CreateTuningJobConfig_TunedTeacherModelSource_" data-uid="Google.GenAI.Types.CreateTuningJobConfig.TunedTeacherModelSource*"></a>
+
+  <h3 id="Google_GenAI_Types_CreateTuningJobConfig_TunedTeacherModelSource" data-uid="Google.GenAI.Types.CreateTuningJobConfig.TunedTeacherModelSource">
+  TunedTeacherModelSource
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/CreateTuningJobConfig.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The resource name of the Tuned teacher model. Distillation only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;tunedTeacherModelSource&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public string? TunedTeacherModelSource { get; set; }</code></pre>
   </div>
 
 
@@ -648,7 +784,7 @@ public TuningValidationDataset? ValidationDataset { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_CreateTuningJobConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.CreateTuningJobConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/CreateTuningJobConfig.cs/#L183"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/CreateTuningJobConfig.cs/#L223"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a CreateTuningJobConfig object.</p>

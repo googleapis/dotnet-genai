@@ -1176,6 +1176,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.DistillationHyperParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.DistillationHyperParameters.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.DistillationHyperParameters",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DistillationHyperParameters.yml\" sourcestartlinenumber=\"1\">Hyperparameters for Distillation. This data type is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.DistillationSpec.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.DistillationSpec.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.DistillationSpec",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DistillationSpec.yml\" sourcestartlinenumber=\"1\">Distillation tuning spec for tuning.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.DownloadFileConfig.yml",
       "output": {
         ".html": {

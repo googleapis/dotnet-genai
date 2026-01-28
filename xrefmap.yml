@@ -5158,6 +5158,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CreateTuningJobConfig.AdapterSize
   nameWithType: CreateTuningJobConfig.AdapterSize
+- uid: Google.GenAI.Types.CreateTuningJobConfig.BaseTeacherModel
+  name: BaseTeacherModel
+  href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_BaseTeacherModel
+  commentId: P:Google.GenAI.Types.CreateTuningJobConfig.BaseTeacherModel
+  fullName: Google.GenAI.Types.CreateTuningJobConfig.BaseTeacherModel
+  nameWithType: CreateTuningJobConfig.BaseTeacherModel
+- uid: Google.GenAI.Types.CreateTuningJobConfig.BaseTeacherModel*
+  name: BaseTeacherModel
+  href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_BaseTeacherModel_
+  commentId: Overload:Google.GenAI.Types.CreateTuningJobConfig.BaseTeacherModel
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateTuningJobConfig.BaseTeacherModel
+  nameWithType: CreateTuningJobConfig.BaseTeacherModel
 - uid: Google.GenAI.Types.CreateTuningJobConfig.BatchSize
   name: BatchSize
   href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_BatchSize
@@ -5304,6 +5317,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CreateTuningJobConfig.Method
   nameWithType: CreateTuningJobConfig.Method
+- uid: Google.GenAI.Types.CreateTuningJobConfig.OutputUri
+  name: OutputUri
+  href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_OutputUri
+  commentId: P:Google.GenAI.Types.CreateTuningJobConfig.OutputUri
+  fullName: Google.GenAI.Types.CreateTuningJobConfig.OutputUri
+  nameWithType: CreateTuningJobConfig.OutputUri
+- uid: Google.GenAI.Types.CreateTuningJobConfig.OutputUri*
+  name: OutputUri
+  href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_OutputUri_
+  commentId: Overload:Google.GenAI.Types.CreateTuningJobConfig.OutputUri
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateTuningJobConfig.OutputUri
+  nameWithType: CreateTuningJobConfig.OutputUri
 - uid: Google.GenAI.Types.CreateTuningJobConfig.PreTunedModelCheckpointId
   name: PreTunedModelCheckpointId
   href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_PreTunedModelCheckpointId
@@ -5317,6 +5343,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CreateTuningJobConfig.PreTunedModelCheckpointId
   nameWithType: CreateTuningJobConfig.PreTunedModelCheckpointId
+- uid: Google.GenAI.Types.CreateTuningJobConfig.SftLossWeightMultiplier
+  name: SftLossWeightMultiplier
+  href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_SftLossWeightMultiplier
+  commentId: P:Google.GenAI.Types.CreateTuningJobConfig.SftLossWeightMultiplier
+  fullName: Google.GenAI.Types.CreateTuningJobConfig.SftLossWeightMultiplier
+  nameWithType: CreateTuningJobConfig.SftLossWeightMultiplier
+- uid: Google.GenAI.Types.CreateTuningJobConfig.SftLossWeightMultiplier*
+  name: SftLossWeightMultiplier
+  href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_SftLossWeightMultiplier_
+  commentId: Overload:Google.GenAI.Types.CreateTuningJobConfig.SftLossWeightMultiplier
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateTuningJobConfig.SftLossWeightMultiplier
+  nameWithType: CreateTuningJobConfig.SftLossWeightMultiplier
 - uid: Google.GenAI.Types.CreateTuningJobConfig.TunedModelDisplayName
   name: TunedModelDisplayName
   href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_TunedModelDisplayName
@@ -5330,6 +5369,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CreateTuningJobConfig.TunedModelDisplayName
   nameWithType: CreateTuningJobConfig.TunedModelDisplayName
+- uid: Google.GenAI.Types.CreateTuningJobConfig.TunedTeacherModelSource
+  name: TunedTeacherModelSource
+  href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_TunedTeacherModelSource
+  commentId: P:Google.GenAI.Types.CreateTuningJobConfig.TunedTeacherModelSource
+  fullName: Google.GenAI.Types.CreateTuningJobConfig.TunedTeacherModelSource
+  nameWithType: CreateTuningJobConfig.TunedTeacherModelSource
+- uid: Google.GenAI.Types.CreateTuningJobConfig.TunedTeacherModelSource*
+  name: TunedTeacherModelSource
+  href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_TunedTeacherModelSource_
+  commentId: Overload:Google.GenAI.Types.CreateTuningJobConfig.TunedTeacherModelSource
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateTuningJobConfig.TunedTeacherModelSource
+  nameWithType: CreateTuningJobConfig.TunedTeacherModelSource
 - uid: Google.GenAI.Types.CreateTuningJobConfig.ValidationDataset
   name: ValidationDataset
   href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_ValidationDataset
@@ -6010,6 +6062,193 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.DistillationDataStats.TrainingDatasetStats
   nameWithType: DistillationDataStats.TrainingDatasetStats
+- uid: Google.GenAI.Types.DistillationHyperParameters
+  name: DistillationHyperParameters
+  href: api/Google.GenAI.Types.DistillationHyperParameters.html
+  commentId: T:Google.GenAI.Types.DistillationHyperParameters
+  fullName: Google.GenAI.Types.DistillationHyperParameters
+  nameWithType: DistillationHyperParameters
+- uid: Google.GenAI.Types.DistillationHyperParameters.AdapterSize
+  name: AdapterSize
+  href: api/Google.GenAI.Types.DistillationHyperParameters.html#Google_GenAI_Types_DistillationHyperParameters_AdapterSize
+  commentId: P:Google.GenAI.Types.DistillationHyperParameters.AdapterSize
+  fullName: Google.GenAI.Types.DistillationHyperParameters.AdapterSize
+  nameWithType: DistillationHyperParameters.AdapterSize
+- uid: Google.GenAI.Types.DistillationHyperParameters.AdapterSize*
+  name: AdapterSize
+  href: api/Google.GenAI.Types.DistillationHyperParameters.html#Google_GenAI_Types_DistillationHyperParameters_AdapterSize_
+  commentId: Overload:Google.GenAI.Types.DistillationHyperParameters.AdapterSize
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DistillationHyperParameters.AdapterSize
+  nameWithType: DistillationHyperParameters.AdapterSize
+- uid: Google.GenAI.Types.DistillationHyperParameters.EpochCount
+  name: EpochCount
+  href: api/Google.GenAI.Types.DistillationHyperParameters.html#Google_GenAI_Types_DistillationHyperParameters_EpochCount
+  commentId: P:Google.GenAI.Types.DistillationHyperParameters.EpochCount
+  fullName: Google.GenAI.Types.DistillationHyperParameters.EpochCount
+  nameWithType: DistillationHyperParameters.EpochCount
+- uid: Google.GenAI.Types.DistillationHyperParameters.EpochCount*
+  name: EpochCount
+  href: api/Google.GenAI.Types.DistillationHyperParameters.html#Google_GenAI_Types_DistillationHyperParameters_EpochCount_
+  commentId: Overload:Google.GenAI.Types.DistillationHyperParameters.EpochCount
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DistillationHyperParameters.EpochCount
+  nameWithType: DistillationHyperParameters.EpochCount
+- uid: Google.GenAI.Types.DistillationHyperParameters.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.DistillationHyperParameters.html#Google_GenAI_Types_DistillationHyperParameters_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.DistillationHyperParameters.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.DistillationHyperParameters.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.DistillationHyperParameters.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: DistillationHyperParameters.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: DistillationHyperParameters.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.DistillationHyperParameters.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.DistillationHyperParameters.html#Google_GenAI_Types_DistillationHyperParameters_FromJson_
+  commentId: Overload:Google.GenAI.Types.DistillationHyperParameters.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DistillationHyperParameters.FromJson
+  nameWithType: DistillationHyperParameters.FromJson
+- uid: Google.GenAI.Types.DistillationHyperParameters.LearningRateMultiplier
+  name: LearningRateMultiplier
+  href: api/Google.GenAI.Types.DistillationHyperParameters.html#Google_GenAI_Types_DistillationHyperParameters_LearningRateMultiplier
+  commentId: P:Google.GenAI.Types.DistillationHyperParameters.LearningRateMultiplier
+  fullName: Google.GenAI.Types.DistillationHyperParameters.LearningRateMultiplier
+  nameWithType: DistillationHyperParameters.LearningRateMultiplier
+- uid: Google.GenAI.Types.DistillationHyperParameters.LearningRateMultiplier*
+  name: LearningRateMultiplier
+  href: api/Google.GenAI.Types.DistillationHyperParameters.html#Google_GenAI_Types_DistillationHyperParameters_LearningRateMultiplier_
+  commentId: Overload:Google.GenAI.Types.DistillationHyperParameters.LearningRateMultiplier
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DistillationHyperParameters.LearningRateMultiplier
+  nameWithType: DistillationHyperParameters.LearningRateMultiplier
+- uid: Google.GenAI.Types.DistillationSpec
+  name: DistillationSpec
+  href: api/Google.GenAI.Types.DistillationSpec.html
+  commentId: T:Google.GenAI.Types.DistillationSpec
+  fullName: Google.GenAI.Types.DistillationSpec
+  nameWithType: DistillationSpec
+- uid: Google.GenAI.Types.DistillationSpec.BaseTeacherModel
+  name: BaseTeacherModel
+  href: api/Google.GenAI.Types.DistillationSpec.html#Google_GenAI_Types_DistillationSpec_BaseTeacherModel
+  commentId: P:Google.GenAI.Types.DistillationSpec.BaseTeacherModel
+  fullName: Google.GenAI.Types.DistillationSpec.BaseTeacherModel
+  nameWithType: DistillationSpec.BaseTeacherModel
+- uid: Google.GenAI.Types.DistillationSpec.BaseTeacherModel*
+  name: BaseTeacherModel
+  href: api/Google.GenAI.Types.DistillationSpec.html#Google_GenAI_Types_DistillationSpec_BaseTeacherModel_
+  commentId: Overload:Google.GenAI.Types.DistillationSpec.BaseTeacherModel
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DistillationSpec.BaseTeacherModel
+  nameWithType: DistillationSpec.BaseTeacherModel
+- uid: Google.GenAI.Types.DistillationSpec.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.DistillationSpec.html#Google_GenAI_Types_DistillationSpec_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.DistillationSpec.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.DistillationSpec.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.DistillationSpec.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: DistillationSpec.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: DistillationSpec.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.DistillationSpec.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.DistillationSpec.html#Google_GenAI_Types_DistillationSpec_FromJson_
+  commentId: Overload:Google.GenAI.Types.DistillationSpec.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DistillationSpec.FromJson
+  nameWithType: DistillationSpec.FromJson
+- uid: Google.GenAI.Types.DistillationSpec.HyperParameters
+  name: HyperParameters
+  href: api/Google.GenAI.Types.DistillationSpec.html#Google_GenAI_Types_DistillationSpec_HyperParameters
+  commentId: P:Google.GenAI.Types.DistillationSpec.HyperParameters
+  fullName: Google.GenAI.Types.DistillationSpec.HyperParameters
+  nameWithType: DistillationSpec.HyperParameters
+- uid: Google.GenAI.Types.DistillationSpec.HyperParameters*
+  name: HyperParameters
+  href: api/Google.GenAI.Types.DistillationSpec.html#Google_GenAI_Types_DistillationSpec_HyperParameters_
+  commentId: Overload:Google.GenAI.Types.DistillationSpec.HyperParameters
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DistillationSpec.HyperParameters
+  nameWithType: DistillationSpec.HyperParameters
+- uid: Google.GenAI.Types.DistillationSpec.PipelineRootDirectory
+  name: PipelineRootDirectory
+  href: api/Google.GenAI.Types.DistillationSpec.html#Google_GenAI_Types_DistillationSpec_PipelineRootDirectory
+  commentId: P:Google.GenAI.Types.DistillationSpec.PipelineRootDirectory
+  fullName: Google.GenAI.Types.DistillationSpec.PipelineRootDirectory
+  nameWithType: DistillationSpec.PipelineRootDirectory
+- uid: Google.GenAI.Types.DistillationSpec.PipelineRootDirectory*
+  name: PipelineRootDirectory
+  href: api/Google.GenAI.Types.DistillationSpec.html#Google_GenAI_Types_DistillationSpec_PipelineRootDirectory_
+  commentId: Overload:Google.GenAI.Types.DistillationSpec.PipelineRootDirectory
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DistillationSpec.PipelineRootDirectory
+  nameWithType: DistillationSpec.PipelineRootDirectory
+- uid: Google.GenAI.Types.DistillationSpec.PromptDatasetUri
+  name: PromptDatasetUri
+  href: api/Google.GenAI.Types.DistillationSpec.html#Google_GenAI_Types_DistillationSpec_PromptDatasetUri
+  commentId: P:Google.GenAI.Types.DistillationSpec.PromptDatasetUri
+  fullName: Google.GenAI.Types.DistillationSpec.PromptDatasetUri
+  nameWithType: DistillationSpec.PromptDatasetUri
+- uid: Google.GenAI.Types.DistillationSpec.PromptDatasetUri*
+  name: PromptDatasetUri
+  href: api/Google.GenAI.Types.DistillationSpec.html#Google_GenAI_Types_DistillationSpec_PromptDatasetUri_
+  commentId: Overload:Google.GenAI.Types.DistillationSpec.PromptDatasetUri
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DistillationSpec.PromptDatasetUri
+  nameWithType: DistillationSpec.PromptDatasetUri
+- uid: Google.GenAI.Types.DistillationSpec.StudentModel
+  name: StudentModel
+  href: api/Google.GenAI.Types.DistillationSpec.html#Google_GenAI_Types_DistillationSpec_StudentModel
+  commentId: P:Google.GenAI.Types.DistillationSpec.StudentModel
+  fullName: Google.GenAI.Types.DistillationSpec.StudentModel
+  nameWithType: DistillationSpec.StudentModel
+- uid: Google.GenAI.Types.DistillationSpec.StudentModel*
+  name: StudentModel
+  href: api/Google.GenAI.Types.DistillationSpec.html#Google_GenAI_Types_DistillationSpec_StudentModel_
+  commentId: Overload:Google.GenAI.Types.DistillationSpec.StudentModel
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DistillationSpec.StudentModel
+  nameWithType: DistillationSpec.StudentModel
+- uid: Google.GenAI.Types.DistillationSpec.TrainingDatasetUri
+  name: TrainingDatasetUri
+  href: api/Google.GenAI.Types.DistillationSpec.html#Google_GenAI_Types_DistillationSpec_TrainingDatasetUri
+  commentId: P:Google.GenAI.Types.DistillationSpec.TrainingDatasetUri
+  fullName: Google.GenAI.Types.DistillationSpec.TrainingDatasetUri
+  nameWithType: DistillationSpec.TrainingDatasetUri
+- uid: Google.GenAI.Types.DistillationSpec.TrainingDatasetUri*
+  name: TrainingDatasetUri
+  href: api/Google.GenAI.Types.DistillationSpec.html#Google_GenAI_Types_DistillationSpec_TrainingDatasetUri_
+  commentId: Overload:Google.GenAI.Types.DistillationSpec.TrainingDatasetUri
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DistillationSpec.TrainingDatasetUri
+  nameWithType: DistillationSpec.TrainingDatasetUri
+- uid: Google.GenAI.Types.DistillationSpec.TunedTeacherModelSource
+  name: TunedTeacherModelSource
+  href: api/Google.GenAI.Types.DistillationSpec.html#Google_GenAI_Types_DistillationSpec_TunedTeacherModelSource
+  commentId: P:Google.GenAI.Types.DistillationSpec.TunedTeacherModelSource
+  fullName: Google.GenAI.Types.DistillationSpec.TunedTeacherModelSource
+  nameWithType: DistillationSpec.TunedTeacherModelSource
+- uid: Google.GenAI.Types.DistillationSpec.TunedTeacherModelSource*
+  name: TunedTeacherModelSource
+  href: api/Google.GenAI.Types.DistillationSpec.html#Google_GenAI_Types_DistillationSpec_TunedTeacherModelSource_
+  commentId: Overload:Google.GenAI.Types.DistillationSpec.TunedTeacherModelSource
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DistillationSpec.TunedTeacherModelSource
+  nameWithType: DistillationSpec.TunedTeacherModelSource
+- uid: Google.GenAI.Types.DistillationSpec.ValidationDatasetUri
+  name: ValidationDatasetUri
+  href: api/Google.GenAI.Types.DistillationSpec.html#Google_GenAI_Types_DistillationSpec_ValidationDatasetUri
+  commentId: P:Google.GenAI.Types.DistillationSpec.ValidationDatasetUri
+  fullName: Google.GenAI.Types.DistillationSpec.ValidationDatasetUri
+  nameWithType: DistillationSpec.ValidationDatasetUri
+- uid: Google.GenAI.Types.DistillationSpec.ValidationDatasetUri*
+  name: ValidationDatasetUri
+  href: api/Google.GenAI.Types.DistillationSpec.html#Google_GenAI_Types_DistillationSpec_ValidationDatasetUri_
+  commentId: Overload:Google.GenAI.Types.DistillationSpec.ValidationDatasetUri
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DistillationSpec.ValidationDatasetUri
+  nameWithType: DistillationSpec.ValidationDatasetUri
 - uid: Google.GenAI.Types.DownloadFileConfig
   name: DownloadFileConfig
   href: api/Google.GenAI.Types.DownloadFileConfig.html
@@ -21388,6 +21627,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.TuningJob.Description
   nameWithType: TuningJob.Description
+- uid: Google.GenAI.Types.TuningJob.DistillationSpec
+  name: DistillationSpec
+  href: api/Google.GenAI.Types.TuningJob.html#Google_GenAI_Types_TuningJob_DistillationSpec
+  commentId: P:Google.GenAI.Types.TuningJob.DistillationSpec
+  fullName: Google.GenAI.Types.TuningJob.DistillationSpec
+  nameWithType: TuningJob.DistillationSpec
+- uid: Google.GenAI.Types.TuningJob.DistillationSpec*
+  name: DistillationSpec
+  href: api/Google.GenAI.Types.TuningJob.html#Google_GenAI_Types_TuningJob_DistillationSpec_
+  commentId: Overload:Google.GenAI.Types.TuningJob.DistillationSpec
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TuningJob.DistillationSpec
+  nameWithType: TuningJob.DistillationSpec
 - uid: Google.GenAI.Types.TuningJob.EncryptionSpec
   name: EncryptionSpec
   href: api/Google.GenAI.Types.TuningJob.html#Google_GenAI_Types_TuningJob_EncryptionSpec
@@ -21683,6 +21935,12 @@ references:
   commentId: T:Google.GenAI.Types.TuningMethod
   fullName: Google.GenAI.Types.TuningMethod
   nameWithType: TuningMethod
+- uid: Google.GenAI.Types.TuningMethod.DISTILLATION
+  name: DISTILLATION
+  href: api/Google.GenAI.Types.TuningMethod.html#Google_GenAI_Types_TuningMethod_DISTILLATION
+  commentId: F:Google.GenAI.Types.TuningMethod.DISTILLATION
+  fullName: Google.GenAI.Types.TuningMethod.DISTILLATION
+  nameWithType: TuningMethod.DISTILLATION
 - uid: Google.GenAI.Types.TuningMethod.PREFERENCE_TUNING
   name: PREFERENCE_TUNING
   href: api/Google.GenAI.Types.TuningMethod.html#Google_GenAI_Types_TuningMethod_PREFERENCE_TUNING
