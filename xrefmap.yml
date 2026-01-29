@@ -5197,6 +5197,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CreateTuningJobConfig.Beta
   nameWithType: CreateTuningJobConfig.Beta
+- uid: Google.GenAI.Types.CreateTuningJobConfig.CustomBaseModel
+  name: CustomBaseModel
+  href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_CustomBaseModel
+  commentId: P:Google.GenAI.Types.CreateTuningJobConfig.CustomBaseModel
+  fullName: Google.GenAI.Types.CreateTuningJobConfig.CustomBaseModel
+  nameWithType: CreateTuningJobConfig.CustomBaseModel
+- uid: Google.GenAI.Types.CreateTuningJobConfig.CustomBaseModel*
+  name: CustomBaseModel
+  href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_CustomBaseModel_
+  commentId: Overload:Google.GenAI.Types.CreateTuningJobConfig.CustomBaseModel
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateTuningJobConfig.CustomBaseModel
+  nameWithType: CreateTuningJobConfig.CustomBaseModel
 - uid: Google.GenAI.Types.CreateTuningJobConfig.Description
   name: Description
   href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_Description
@@ -5382,6 +5395,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CreateTuningJobConfig.TunedTeacherModelSource
   nameWithType: CreateTuningJobConfig.TunedTeacherModelSource
+- uid: Google.GenAI.Types.CreateTuningJobConfig.TuningMode
+  name: TuningMode
+  href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_TuningMode
+  commentId: P:Google.GenAI.Types.CreateTuningJobConfig.TuningMode
+  fullName: Google.GenAI.Types.CreateTuningJobConfig.TuningMode
+  nameWithType: CreateTuningJobConfig.TuningMode
+- uid: Google.GenAI.Types.CreateTuningJobConfig.TuningMode*
+  name: TuningMode
+  href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_TuningMode_
+  commentId: Overload:Google.GenAI.Types.CreateTuningJobConfig.TuningMode
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateTuningJobConfig.TuningMode
+  nameWithType: CreateTuningJobConfig.TuningMode
 - uid: Google.GenAI.Types.CreateTuningJobConfig.ValidationDataset
   name: ValidationDataset
   href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_ValidationDataset
