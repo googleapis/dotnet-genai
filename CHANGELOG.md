@@ -1,5 +1,18 @@
 # Changelog
 
+## Version 0.14.0, released 2026-01-30
+
+
+### New features
+
+* Support distillation tuning ([1c6c012](https://github.com/googleapis/dotnet-genai/commit/1c6c012ac4e8fee31508edb95e62758ab017a826))
+* Support OSS Tuning in GenAI SDK ([2e897ed](https://github.com/googleapis/dotnet-genai/commit/2e897ed6b02915b3f82deb781956cee59af53c5f))
+
+
+### Bug fixes
+
+* Add metadata in batch inlined response ([4d3e138](https://github.com/googleapis/dotnet-genai/commit/4d3e138ad21e6ce78586474594e3404b98e2f342))
+
 ## Version 0.13.1, released 2026-01-22
 
 
