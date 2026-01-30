@@ -12977,6 +12977,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.InlinedResponse.FromJson
   nameWithType: InlinedResponse.FromJson
+- uid: Google.GenAI.Types.InlinedResponse.Metadata
+  name: Metadata
+  href: api/Google.GenAI.Types.InlinedResponse.html#Google_GenAI_Types_InlinedResponse_Metadata
+  commentId: P:Google.GenAI.Types.InlinedResponse.Metadata
+  fullName: Google.GenAI.Types.InlinedResponse.Metadata
+  nameWithType: InlinedResponse.Metadata
+- uid: Google.GenAI.Types.InlinedResponse.Metadata*
+  name: Metadata
+  href: api/Google.GenAI.Types.InlinedResponse.html#Google_GenAI_Types_InlinedResponse_Metadata_
+  commentId: Overload:Google.GenAI.Types.InlinedResponse.Metadata
+  isSpec: "True"
+  fullName: Google.GenAI.Types.InlinedResponse.Metadata
+  nameWithType: InlinedResponse.Metadata
 - uid: Google.GenAI.Types.InlinedResponse.Response
   name: Response
   href: api/Google.GenAI.Types.InlinedResponse.html#Google_GenAI_Types_InlinedResponse_Response
