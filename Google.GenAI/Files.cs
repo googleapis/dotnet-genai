@@ -181,8 +181,11 @@ namespace Google.GenAI {
       ApiResponse response = await this._apiClient.RequestAsync(
           HttpMethod.Get, path, JsonSerializer.Serialize(body), requestHttpOptions);
       HttpContent httpContent = response.GetEntity();
-      string contentString = await httpContent.ReadAsStringAsync();
-      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      JsonNode? httpContentNode;
+      using (var stream = await httpContent.ReadAsStreamAsync())
+      {
+        httpContentNode = await JsonNode.ParseAsync(stream);
+      }
       if (httpContentNode == null) {
         throw new NotSupportedException("Failed to parse response to JsonNode.");
       }
@@ -197,7 +200,7 @@ namespace Google.GenAI {
         responseNode = httpContentNode;
       }
 
-      return JsonSerializer.Deserialize<ListFilesResponse>(responseNode.ToString()) ??
+      return JsonSerializer.Deserialize<ListFilesResponse>(responseNode) ??
              throw new InvalidOperationException("Failed to deserialize Task<ListFilesResponse>.");
     }
 
@@ -272,7 +275,7 @@ namespace Google.GenAI {
         responseNode = httpContentNode;
       }
 
-      return JsonSerializer.Deserialize<CreateFileResponse>(responseNode.ToString()) ??
+      return JsonSerializer.Deserialize<CreateFileResponse>(responseNode) ??
              throw new InvalidOperationException("Failed to deserialize Task<CreateFileResponse>.");
     }
 
@@ -313,8 +316,11 @@ namespace Google.GenAI {
       ApiResponse response = await this._apiClient.RequestAsync(
           HttpMethod.Get, path, JsonSerializer.Serialize(body), requestHttpOptions);
       HttpContent httpContent = response.GetEntity();
-      string contentString = await httpContent.ReadAsStringAsync();
-      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      JsonNode? httpContentNode;
+      using (var stream = await httpContent.ReadAsStreamAsync())
+      {
+        httpContentNode = await JsonNode.ParseAsync(stream);
+      }
       if (httpContentNode == null) {
         throw new NotSupportedException("Failed to parse response to JsonNode.");
       }
@@ -329,7 +335,7 @@ namespace Google.GenAI {
         responseNode = httpContentNode;
       }
 
-      return JsonSerializer.Deserialize<Google.GenAI.Types.File>(responseNode.ToString()) ??
+      return JsonSerializer.Deserialize<Google.GenAI.Types.File>(responseNode) ??
              throw new InvalidOperationException(
                  "Failed to deserialize Task<Google.GenAI.Types.File>.");
     }
@@ -372,8 +378,11 @@ namespace Google.GenAI {
       ApiResponse response = await this._apiClient.RequestAsync(
           HttpMethod.Delete, path, JsonSerializer.Serialize(body), requestHttpOptions);
       HttpContent httpContent = response.GetEntity();
-      string contentString = await httpContent.ReadAsStringAsync();
-      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      JsonNode? httpContentNode;
+      using (var stream = await httpContent.ReadAsStreamAsync())
+      {
+        httpContentNode = await JsonNode.ParseAsync(stream);
+      }
       if (httpContentNode == null) {
         throw new NotSupportedException("Failed to parse response to JsonNode.");
       }
@@ -388,7 +397,7 @@ namespace Google.GenAI {
         responseNode = httpContentNode;
       }
 
-      return JsonSerializer.Deserialize<DeleteFileResponse>(responseNode.ToString()) ??
+      return JsonSerializer.Deserialize<DeleteFileResponse>(responseNode) ??
              throw new InvalidOperationException("Failed to deserialize Task<DeleteFileResponse>.");
     }
 
@@ -637,14 +646,17 @@ namespace Google.GenAI {
 
     private async Task<Google.GenAI.Types.File> FileFromUploadResponseBodyAsync(
         HttpContent responseContent) {
-      string responseString = await responseContent.ReadAsStringAsync();
-      JsonNode? responseNode = JsonNode.Parse(responseString);
+      JsonNode? responseNode;
+      using (var stream = await responseContent.ReadAsStreamAsync())
+      {
+        responseNode = await JsonNode.ParseAsync(stream);
+      }
 
       if (responseNode?["file"] is not JsonNode fileNode) {
         throw new InvalidOperationException("Upload response does not contain file object");
       }
 
-      return JsonSerializer.Deserialize<Google.GenAI.Types.File>(fileNode.ToString()) ??
+      return JsonSerializer.Deserialize<Google.GenAI.Types.File>(fileNode) ??
              throw new InvalidOperationException("Failed to deserialize File");
     }
 

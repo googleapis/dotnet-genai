@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Runtime.CompilerServices;
@@ -35,7 +36,7 @@ public class GoogleGenAIExtensionsTest
   public void AsIChatClient_ValidModels_ReturnsNonNull()
   {
     var models = new Models(new MockApiClient("", ""));
-    
+
     Assert.IsNotNull(models.AsIChatClient("gemini-2.5-pro"));
   }
 
@@ -44,7 +45,7 @@ public class GoogleGenAIExtensionsTest
   {
     var models = new Models(new MockApiClient("", ""));
     var client = models.AsIChatClient("gemini-2.5-pro");
-    
+
     Assert.AreSame(models, client.GetService<Models>());
     Assert.IsNull(client.GetService<Client>());
   }
@@ -62,7 +63,7 @@ public class GoogleGenAIExtensionsTest
   public void IChatClient_GetService_NullServiceType_ThrowsArgumentNullException()
   {
     var client = CreateChatClient("", "");
-    
+
     Assert.ThrowsException<ArgumentNullException>(() => client.GetService(null!));
   }
 
@@ -70,7 +71,7 @@ public class GoogleGenAIExtensionsTest
   public void AsIImageGenerator_WithModels_ReturnsImageGenerator()
   {
     var models = new Models(new MockApiClient("", ""));
-    
+
     Assert.IsNotNull(models.AsIImageGenerator("imagen-3.0-generate-001"));
   }
 
@@ -78,7 +79,7 @@ public class GoogleGenAIExtensionsTest
   public void AsIImageGenerator_WithClient_ReturnsImageGenerator()
   {
     var client = new Client(apiKey: "fake-api-key");
-    
+
     Assert.IsNotNull(client.AsIImageGenerator("imagen-3.0-generate-001"));
   }
 
@@ -87,9 +88,9 @@ public class GoogleGenAIExtensionsTest
   {
     var models = new Models(new MockApiClient("", ""));
     var imageGenerator = models.AsIImageGenerator("imagen-3.0-generate-001");
-    
+
     var metadata = imageGenerator.GetService<ImageGeneratorMetadata>();
-    
+
     Assert.IsNotNull(metadata);
     Assert.IsNotNull(metadata.ProviderName);
     Assert.AreEqual("gcp.gen_ai", metadata.ProviderName);
@@ -102,7 +103,7 @@ public class GoogleGenAIExtensionsTest
   {
     var models = new Models(new MockApiClient("", ""));
     var imageGenerator = models.AsIImageGenerator("imagen-3.0-generate-001");
-    
+
     var retrievedModels = imageGenerator.GetService<Models>();
     Assert.IsNotNull(retrievedModels);
     Assert.AreSame(models, retrievedModels);
@@ -115,7 +116,7 @@ public class GoogleGenAIExtensionsTest
   {
     var client = new Client(apiKey: "fake-api-key");
     var imageGenerator = client.AsIImageGenerator("imagen-3.0-generate-001");
-    
+
     Assert.AreSame(client, imageGenerator.GetService<Client>());
     Assert.AreSame(client.Models, imageGenerator.GetService<Models>());
   }
@@ -125,7 +126,7 @@ public class GoogleGenAIExtensionsTest
   {
     var models = new Models(new MockApiClient("", ""));
     var imageGenerator = models.AsIImageGenerator("imagen-3.0-generate-001");
-    
+
     Assert.ThrowsException<ArgumentNullException>(() => imageGenerator.GetService(null!));
   }
 
@@ -147,7 +148,7 @@ public class GoogleGenAIExtensionsTest
   public void AsIEmbeddingGenerator_WithModels_ReturnsEmbeddingGenerator()
   {
     var models = new Models(new MockApiClient("", ""));
-    
+
     Assert.IsNotNull(models.AsIEmbeddingGenerator("text-embedding-004"));
   }
 
@@ -155,7 +156,7 @@ public class GoogleGenAIExtensionsTest
   public void AsIEmbeddingGenerator_WithClient_ReturnsEmbeddingGenerator()
   {
     var client = new Client(apiKey: "fake-api-key");
-    
+
     Assert.IsNotNull(client.AsIEmbeddingGenerator("text-embedding-004"));
   }
 
@@ -178,9 +179,9 @@ public class GoogleGenAIExtensionsTest
   {
     var models = new Models(new MockApiClient("", ""));
     var embeddingGenerator = models.AsIEmbeddingGenerator("text-embedding-004", 768);
-    
+
     var metadata = embeddingGenerator.GetService<EmbeddingGeneratorMetadata>();
-    
+
     Assert.IsNotNull(metadata);
     Assert.AreEqual("gcp.gen_ai", metadata.ProviderName);
     Assert.AreEqual(new Uri("https://generativelanguage.googleapis.com/"), metadata.ProviderUri);
@@ -193,7 +194,7 @@ public class GoogleGenAIExtensionsTest
   {
     var models = new Models(new MockApiClient("", ""));
     var embeddingGenerator = models.AsIEmbeddingGenerator("text-embedding-004");
-    
+
     Assert.AreSame(models, embeddingGenerator.GetService<Models>());
     Assert.IsNull(embeddingGenerator.GetService<Client>());
   }
@@ -203,7 +204,7 @@ public class GoogleGenAIExtensionsTest
   {
     var client = new Client(apiKey: "fake-api-key");
     var embeddingGenerator = client.AsIEmbeddingGenerator("text-embedding-004");
-    
+
     Assert.AreSame(client, embeddingGenerator.GetService<Client>());
     Assert.AreSame(client.Models, embeddingGenerator.GetService<Models>());
   }
@@ -213,7 +214,7 @@ public class GoogleGenAIExtensionsTest
   {
     var models = new Models(new MockApiClient("", ""));
     var embeddingGenerator = models.AsIEmbeddingGenerator("text-embedding-004");
-    
+
     Assert.ThrowsException<ArgumentNullException>(() => embeddingGenerator.GetService(null!));
   }
 
@@ -247,7 +248,7 @@ public class GoogleGenAIExtensionsTest
       """, defaultDimensions: 128);
 
     var response = await embeddingGenerator.GenerateAsync(["Hello embeddings"]);
-    
+
     Assert.IsNotNull(response);
     Assert.AreEqual(1, response.Count);
     var embedding = response[0];
@@ -320,7 +321,7 @@ public class GoogleGenAIExtensionsTest
     };
 
     var response = await embeddingGenerator.GenerateAsync(["Trip plan intro", "Trip plan details"], options);
-    
+
     Assert.IsTrue(factoryCalled);
     Assert.AreEqual(2, response.Count);
     CollectionAssert.AreEqual(new[] { 0.5f, 0.25f, -0.5f, 0.75f }, response[0].Vector.ToArray());
@@ -372,7 +373,7 @@ public class GoogleGenAIExtensionsTest
     };
 
     var response = await embeddingGenerator.GenerateAsync(["Custom config"], options);
-    
+
     Assert.AreEqual(1, response.Count);
     CollectionAssert.AreEqual(new[] { 1f, 2f }, response[0].Vector.ToArray());
     Assert.IsNull(response.Usage);
@@ -448,7 +449,7 @@ public class GoogleGenAIExtensionsTest
   public async Task IEmbeddingGenerator_GenerateAsync_NullValues_ThrowsArgumentNullException()
   {
     var embeddingGenerator = CreateEmbeddingGenerator("{}", "{}");
-    
+
     await Assert.ThrowsExceptionAsync<ArgumentNullException>(() => embeddingGenerator.GenerateAsync(null!));
   }
 
@@ -503,7 +504,7 @@ public class GoogleGenAIExtensionsTest
       """);
 
     var response = await client.GetResponseAsync("Hello, world!");
-    
+
     Assert.IsNotNull(response);
     Assert.AreEqual(1, response.Messages.Count);
     Assert.AreEqual(ChatRole.Assistant, response.Messages[0].Role);
@@ -586,7 +587,7 @@ public class GoogleGenAIExtensionsTest
     ];
 
     var response = await client.GetResponseAsync(messages);
-    
+
     Assert.IsNotNull(response);
     Assert.AreEqual("6", response.Messages[0].Text);
     Assert.AreEqual(ChatFinishReason.Stop, response.FinishReason);
@@ -648,7 +649,7 @@ public class GoogleGenAIExtensionsTest
     ];
 
     var response = await client.GetResponseAsync(messages);
-    
+
     Assert.IsNotNull(response);
     Assert.IsTrue(response.Messages[0].Text.Contains("matey") || response.Messages[0].Text.Contains("Ahoy"));
   }
@@ -705,7 +706,7 @@ public class GoogleGenAIExtensionsTest
     };
 
     var response = await client.GetResponseAsync("Say hello", options);
-    
+
     Assert.IsNotNull(response);
     Assert.IsFalse(string.IsNullOrEmpty(response.Messages[0].Text));
   }
@@ -760,7 +761,7 @@ public class GoogleGenAIExtensionsTest
     };
 
     var response = await client.GetResponseAsync("Write a long story", options);
-    
+
     Assert.IsNotNull(response);
     Assert.AreEqual(ChatFinishReason.Length, response.FinishReason);
     Assert.AreEqual(10, response.Usage?.OutputTokenCount);
@@ -816,7 +817,7 @@ public class GoogleGenAIExtensionsTest
     };
 
     var response = await client.GetResponseAsync("Count: 1, 2, 3, 4, 5", options);
-    
+
     Assert.IsNotNull(response);
     Assert.IsFalse(response.Messages[0].Text.Contains('4'));
   }
@@ -871,7 +872,7 @@ public class GoogleGenAIExtensionsTest
     };
 
     var response = await client.GetResponseAsync("Pick a number", options);
-    
+
     Assert.IsNotNull(response);
     Assert.IsFalse(string.IsNullOrEmpty(response.Messages[0].Text));
   }
@@ -927,7 +928,7 @@ public class GoogleGenAIExtensionsTest
     ]);
 
     var response = await client.GetResponseAsync([message]);
-    
+
     Assert.IsNotNull(response);
     Assert.IsTrue(response.Messages[0].Text.Contains("two parts") || response.Messages[0].Text.Contains("First") && response.Messages[0].Text.Contains("Second"));
   }
@@ -975,7 +976,7 @@ public class GoogleGenAIExtensionsTest
       """);
 
     var response = await client.GetResponseAsync("");
-    
+
     Assert.IsNotNull(response);
     Assert.IsFalse(string.IsNullOrEmpty(response.Messages[0].Text));
   }
@@ -1026,7 +1027,7 @@ public class GoogleGenAIExtensionsTest
       """);
 
     var response = await client.GetResponseAsync("Tell me about AI");
-    
+
     Assert.IsNotNull(response);
     var message = response.Messages[0];
     Assert.IsTrue(message.Contents.Count >= 1);
@@ -1077,7 +1078,7 @@ public class GoogleGenAIExtensionsTest
       """);
 
     var response = await client.GetResponseAsync("Test");
-    
+
     Assert.IsNotNull(response);
     Assert.IsNotNull(response.Usage);
     Assert.AreEqual(2, response.Usage.InputTokenCount);
@@ -1128,7 +1129,7 @@ public class GoogleGenAIExtensionsTest
       """);
 
     var response = await client.GetResponseAsync("Hi");
-    
+
     Assert.IsNotNull(response);
     Assert.AreEqual("gemini-2.5-pro", response.ModelId);
   }
@@ -1205,7 +1206,7 @@ public class GoogleGenAIExtensionsTest
     };
 
     var response = await client.GetResponseAsync("What's the weather?", options);
-    
+
     Assert.IsNotNull(response);
     var functionCall = response.Messages[0].Contents.OfType<FunctionCallContent>().FirstOrDefault();
     Assert.IsNotNull(functionCall);
@@ -1264,7 +1265,7 @@ public class GoogleGenAIExtensionsTest
     ]);
 
     var response = await client.GetResponseAsync([message]);
-    
+
     Assert.IsNotNull(response);
     Assert.IsTrue(response.Messages[0].Text.Contains("sunny"));
   }
@@ -1324,7 +1325,7 @@ public class GoogleGenAIExtensionsTest
     ]);
 
     var response = await client.GetResponseAsync([message]);
-    
+
     Assert.IsNotNull(response);
     Assert.IsFalse(string.IsNullOrEmpty(response.Messages[0].Text));
   }
@@ -1383,7 +1384,7 @@ public class GoogleGenAIExtensionsTest
     ]);
 
     var response = await client.GetResponseAsync([message]);
-    
+
     Assert.IsNotNull(response);
     Assert.IsFalse(string.IsNullOrEmpty(response.Messages[0].Text));
   }
@@ -1438,7 +1439,7 @@ public class GoogleGenAIExtensionsTest
     };
 
     var response = await client.GetResponseAsync("Return JSON", options);
-    
+
     Assert.IsNotNull(response);
     Assert.IsTrue(response.Messages[0].Text.Contains("result"));
   }
@@ -1527,7 +1528,7 @@ public class GoogleGenAIExtensionsTest
     ];
 
     var response = await client.GetResponseAsync(messages);
-    
+
     Assert.IsNotNull(response);
     Assert.IsFalse(string.IsNullOrEmpty(response.Messages[0].Text));
   }
@@ -1582,7 +1583,7 @@ public class GoogleGenAIExtensionsTest
     };
 
     var response = await client.GetResponseAsync("Write a story", options);
-    
+
     Assert.IsNotNull(response);
     Assert.AreEqual(ChatFinishReason.Length, response.FinishReason);
   }
@@ -1643,7 +1644,7 @@ public class GoogleGenAIExtensionsTest
     ];
 
     var response = await client.GetResponseAsync(messages);
-    
+
     Assert.IsNotNull(response);
     Assert.IsFalse(string.IsNullOrEmpty(response.Messages[0].Text));
   }
@@ -1706,7 +1707,7 @@ public class GoogleGenAIExtensionsTest
     };
 
     var response = await client.GetResponseAsync("Test", options);
-    
+
     Assert.IsNotNull(response);
     Assert.IsFalse(string.IsNullOrEmpty(response.Messages[0].Text));
   }
@@ -1853,7 +1854,7 @@ public class GoogleGenAIExtensionsTest
       """);
 
     AIFunction stockFunc = AIFunctionFactory.Create(
-      (string symbol) => symbol == "GOOGL" 
+      (string symbol) => symbol == "GOOGL"
         ? new { symbol = "GOOGL", price = 142.50 }
         : new { symbol = "MSFT", price = 378.91 },
       "get_stock_price",
@@ -1876,7 +1877,7 @@ public class GoogleGenAIExtensionsTest
     };
 
     var response = await client.GetResponseAsync(messages, options);
-    
+
     Assert.IsNotNull(response);
     Assert.AreEqual(1, response.Messages.Count);
     Assert.AreEqual(ChatRole.Assistant, response.Messages[0].Role);
@@ -2049,7 +2050,7 @@ public class GoogleGenAIExtensionsTest
     };
 
     var response = await client.GetResponseAsync(messages, options);
-    
+
     Assert.IsNotNull(response);
     Assert.AreEqual(1, response.Messages.Count);
     Assert.AreEqual(ChatRole.Assistant, response.Messages[0].Role);
@@ -2345,7 +2346,7 @@ public class GoogleGenAIExtensionsTest
     };
 
     var response = await client.GetResponseAsync(messages, options);
-    
+
     Assert.IsNotNull(response);
     Assert.AreEqual(1, response.Messages.Count);
     Assert.AreEqual(ChatRole.Assistant, response.Messages[0].Role);
@@ -2516,7 +2517,7 @@ public class GoogleGenAIExtensionsTest
 
     ChatOptions options = new()
     {
-      Tools = [AIFunctionFactory.Create((string city) => 
+      Tools = [AIFunctionFactory.Create((string city) =>
         city == "New York" ? new { city = "New York", temp = 45, condition = "cloudy" } :
         city == "London" ? new { city = "London", temp = 50, condition = "rainy" } :
         new { city = "Tokyo", temp = 65, condition = "sunny" },
@@ -2524,7 +2525,7 @@ public class GoogleGenAIExtensionsTest
     };
 
     var response = await client.GetResponseAsync(messages, options);
-    
+
     Assert.IsNotNull(response);
     Assert.AreEqual(1, response.Messages.Count);
     Assert.AreEqual(ChatRole.Assistant, response.Messages[0].Role);
@@ -2602,22 +2603,22 @@ public class GoogleGenAIExtensionsTest
     };
 
     var response = await client.GetResponseAsync("Think step by step about this math problem: What is 15 * 23?", options);
-    
+
     Assert.IsNotNull(response);
     Assert.AreEqual(1, response.Messages.Count);
     Assert.AreEqual(ChatRole.Assistant, response.Messages[0].Role);
     Assert.AreEqual(2, response.Messages[0].Contents.Count);
-    
+
     // First part should be reasoning
     var reasoningContent = response.Messages[0].Contents[0] as TextReasoningContent;
     Assert.IsNotNull(reasoningContent, "First content should be TextReasoningContent");
     Assert.IsTrue(reasoningContent.Text.Contains("break this down") || reasoningContent.Text.Contains("15 * 20"));
-    
+
     // Second part should be final answer
     var textContent = response.Messages[0].Contents[1] as TextContent;
     Assert.IsNotNull(textContent, "Second content should be TextContent");
     Assert.IsTrue(textContent.Text.Contains("345"));
-    
+
     Assert.AreEqual(ChatFinishReason.Stop, response.FinishReason);
     Assert.IsNotNull(response.Usage);
     Assert.AreEqual(18, response.Usage.InputTokenCount);
@@ -2683,25 +2684,25 @@ public class GoogleGenAIExtensionsTest
     {
       RawRepresentationFactory = (_) => new GenerateContentConfig
       {
-        ThinkingConfig = new ThinkingConfig 
-        { 
+        ThinkingConfig = new ThinkingConfig
+        {
           IncludeThoughts = true
         }
       }
     };
 
     var response = await client.GetResponseAsync("Solve this: 7^3", options);
-    
+
     Assert.IsNotNull(response);
     Assert.AreEqual(1, response.Messages.Count);
     Assert.AreEqual(ChatRole.Assistant, response.Messages[0].Role);
     // When thought is protected (only thoughtSignature, no text), it may be merged with the answer
     Assert.IsTrue(response.Messages[0].Contents.Count >= 1);
-    
+
     var textContent = response.Messages[0].Contents.OfType<TextContent>().FirstOrDefault();
     Assert.IsNotNull(textContent, "Should have text content with answer");
     Assert.IsTrue(textContent.Text.Contains("343"));
-    
+
     // Check if we got reasoning content with protected data
     var reasoningContent = response.Messages[0].Contents.OfType<TextReasoningContent>().FirstOrDefault();
     if (reasoningContent != null)
@@ -2709,7 +2710,7 @@ public class GoogleGenAIExtensionsTest
       Assert.IsNotNull(reasoningContent.ProtectedData);
       Assert.AreEqual("dGhpbmtpbmcgc2lnbmF0dXJlIGRhdGE=", reasoningContent.ProtectedData);
     }
-    
+
     Assert.AreEqual(ChatFinishReason.Stop, response.FinishReason);
     Assert.IsNotNull(response.Usage);
     Assert.AreEqual(8, response.Usage.InputTokenCount);
@@ -2832,7 +2833,7 @@ public class GoogleGenAIExtensionsTest
       """);
 
     AIFunction weatherFunc = AIFunctionFactory.Create(
-      (string location) => location == "Seattle" 
+      (string location) => location == "Seattle"
         ? new { temperature = 55, condition = "rainy" }
         : new { temperature = 72, condition = "sunny" },
       "get_weather",
@@ -2857,7 +2858,7 @@ public class GoogleGenAIExtensionsTest
     };
 
     var response = await client.GetResponseAsync(messages, options);
-    
+
     Assert.IsNotNull(response);
     Assert.AreEqual(1, response.Messages.Count);
     Assert.AreEqual(ChatRole.Assistant, response.Messages[0].Role);
@@ -3047,7 +3048,7 @@ public class GoogleGenAIExtensionsTest
     };
 
     var response = await client.GetResponseAsync(messages, options);
-    
+
     Assert.IsNotNull(response);
     Assert.AreEqual(1, response.Messages.Count);
     Assert.AreEqual(ChatRole.Assistant, response.Messages[0].Role);
@@ -3122,7 +3123,7 @@ public class GoogleGenAIExtensionsTest
     };
 
     var response = await client.GetResponseAsync("Test custom config", options);
-    
+
     Assert.IsNotNull(response);
     Assert.AreEqual(1, response.Messages.Count);
     Assert.AreEqual(ChatRole.Assistant, response.Messages[0].Role);
@@ -3132,7 +3133,7 @@ public class GoogleGenAIExtensionsTest
     Assert.AreEqual(5, response.Usage.InputTokenCount);
     Assert.AreEqual(7, response.Usage.OutputTokenCount);
     Assert.IsNotNull(response.RawRepresentation);
-    
+
     var rawResponse = response.RawRepresentation as GenerateContentResponse;
     Assert.IsNotNull(rawResponse);
     Assert.AreEqual(1, rawResponse.Candidates?.Count);
@@ -3217,27 +3218,27 @@ public class GoogleGenAIExtensionsTest
 
     // Validate the updates
     Assert.AreEqual(5, updates.Count);
-    
+
     // First update: Thinking content with "thought": true
     Assert.IsTrue(updates[0].Contents.Any(c => c is TextReasoningContent));
     var thinkingContent1 = updates[0].Contents.OfType<TextReasoningContent>().First();
     Assert.IsTrue(thinkingContent1.Text.Contains("context"));
-    
+
     // Second update: Text with thoughtSignature
     Assert.IsTrue(updates[1].Contents.Any(c => c is TextContent));
     var textContent1 = updates[1].Contents.OfType<TextContent>().First();
     Assert.IsTrue(textContent1.Text.Contains("Paris"));
-    
+
     // Third update: More text
     Assert.IsTrue(updates[2].Contents.Any(c => c is TextContent));
     var textContent2 = updates[2].Contents.OfType<TextContent>().First();
     Assert.IsTrue(textContent2.Text.Contains("Seine") || textContent2.Text.Contains("museum"));
-    
+
     // Fourth update: More text
     Assert.IsTrue(updates[3].Contents.Any(c => c is TextContent));
     var textContent3 = updates[3].Contents.OfType<TextContent>().First();
     Assert.IsTrue(textContent3.Text.Contains("weather"));
-    
+
     // Fifth update: Function call
     Assert.IsTrue(updates[4].Contents.Any(c => c is FunctionCallContent));
     var functionCall = updates[4].Contents.OfType<FunctionCallContent>().First();
@@ -3245,43 +3246,43 @@ public class GoogleGenAIExtensionsTest
     Assert.IsTrue(functionCall.Arguments?.ContainsKey("location"));
     Assert.AreEqual("Paris", functionCall.Arguments?["location"]?.ToString());
     Assert.AreEqual(ChatFinishReason.Stop, updates[4].FinishReason);
-    
+
     // Validate final response
     var finalResponse = updates.ToChatResponse();
     Assert.IsNotNull(finalResponse);
     Assert.AreEqual(1, finalResponse.Messages.Count);
     Assert.AreEqual(ChatRole.Assistant, finalResponse.Messages[0].Role);
-    
+
     // Should have thinking, text, and function call
     Assert.IsTrue(finalResponse.Messages[0].Contents.Count >= 3);
     Assert.IsTrue(finalResponse.Messages[0].Contents.Any(c => c is TextReasoningContent));
     Assert.IsTrue(finalResponse.Messages[0].Contents.Any(c => c is TextContent));
     Assert.IsTrue(finalResponse.Messages[0].Contents.Any(c => c is FunctionCallContent));
-    
+
     // Validate usage metadata
     Assert.IsNotNull(finalResponse.Usage);
     Assert.IsTrue(finalResponse.Usage.InputTokenCount > 0);
     Assert.IsTrue(finalResponse.Usage.OutputTokenCount > 0);
     Assert.IsTrue(finalResponse.Usage.TotalTokenCount > 0);
-    
+
     // Add the updates to the message history
     messageHistory.AddRange(updates.ToChatResponse().Messages);
-    
+
     // Verify message history now has user message + assistant message with function call
     Assert.AreEqual(2, messageHistory.Count);
     Assert.AreEqual(ChatRole.User, messageHistory[0].Role);
     Assert.AreEqual(ChatRole.Assistant, messageHistory[1].Role);
     Assert.IsTrue(messageHistory[1].Contents.Any(c => c is FunctionCallContent));
-    
+
     // Add function result
     var functionCallFromHistory = messageHistory[1].Contents.OfType<FunctionCallContent>().First();
     var result = await weatherFunc.InvokeAsync(new(functionCallFromHistory.Arguments));
     messageHistory.Add(new ChatMessage(ChatRole.Tool, [new FunctionResultContent(functionCallFromHistory.CallId, result)]));
-    
+
     // Verify we have 3 messages now
     Assert.AreEqual(3, messageHistory.Count);
     Assert.AreEqual(ChatRole.Tool, messageHistory[2].Role);
-    
+
     // Now make a second streaming call with the full conversation history
     // This client has the expected request/response for the second turn
     // Note: The expected request needs to match the actual serialization from the message history,
@@ -3368,42 +3369,42 @@ public class GoogleGenAIExtensionsTest
       data: {"candidates": [{"content": {"parts": [{"text": "The weather in Paris"}],"role": "model"},"index": 0}],"usageMetadata": {"promptTokenCount": 145,"candidatesTokenCount": 4,"totalTokenCount": 149,"promptTokensDetails": [{"modality": "TEXT","tokenCount": 145}]},"modelVersion": "gemini-2.5-pro"}
       data: {"candidates": [{"content": {"parts": [{"text": " is 72°F and sunny."}],"role": "model"},"finishReason": "STOP","index": 0}],"usageMetadata": {"promptTokenCount": 145,"candidatesTokenCount": 13,"totalTokenCount": 158,"promptTokensDetails": [{"modality": "TEXT","tokenCount": 145}]},"modelVersion": "gemini-2.5-pro"}
       """);
-    
+
     List<ChatResponseUpdate> updates2 = [];
     await foreach (var update in client2.GetStreamingResponseAsync(messageHistory, options))
     {
       updates2.Add(update);
     }
-    
+
     // Validate the second response
     Assert.AreEqual(2, updates2.Count);
-    
+
     // First update: Text content
     Assert.IsTrue(updates2[0].Contents.Any(c => c is TextContent));
     var text1 = updates2[0].Contents.OfType<TextContent>().First();
     Assert.IsTrue(text1.Text.Contains("weather") || text1.Text.Contains("Paris"));
-    
+
     // Second update: More text with finish reason
     Assert.IsTrue(updates2[1].Contents.Any(c => c is TextContent));
     var text2 = updates2[1].Contents.OfType<TextContent>().First();
     Assert.IsTrue(text2.Text.Contains("72") || text2.Text.Contains("sunny"));
     Assert.AreEqual(ChatFinishReason.Stop, updates2[1].FinishReason);
-    
+
     // Validate the final aggregated response
     var finalResponse2 = updates2.ToChatResponse();
     Assert.IsNotNull(finalResponse2);
     Assert.AreEqual(1, finalResponse2.Messages.Count);
     Assert.AreEqual(ChatRole.Assistant, finalResponse2.Messages[0].Role);
-    
+
     // Should have text content
     Assert.IsTrue(finalResponse2.Messages[0].Contents.Any(c => c is TextContent));
-    
+
     // Validate usage
     Assert.IsNotNull(finalResponse2.Usage);
     Assert.IsTrue(finalResponse2.Usage.InputTokenCount > 0);
     Assert.IsTrue(finalResponse2.Usage.OutputTokenCount > 0);
     Assert.IsTrue(finalResponse2.Usage.TotalTokenCount > 0);
-    
+
     // Add the second response to history and verify final state
     messageHistory.AddRange(finalResponse2.Messages);
     Assert.AreEqual(4, messageHistory.Count);
@@ -3591,7 +3592,7 @@ public class GoogleGenAIExtensionsTest
     Assert.AreEqual(1, updates.Count);
     Assert.IsNotNull(updates[0].Contents);
     Assert.IsInstanceOfType(updates[0].Contents[0], typeof(FunctionCallContent));
-    
+
     var functionCall = (FunctionCallContent)updates[0].Contents[0];
     Assert.AreEqual("get_weather", functionCall.Name);
     Assert.IsNotNull(functionCall.Arguments);
@@ -4040,7 +4041,7 @@ public class GoogleGenAIExtensionsTest
     }
 
     Assert.AreEqual(1, updates.Count);
-    
+
     var finalResponse = updates.ToChatResponse();
     Assert.IsNotNull(finalResponse);
     Assert.AreEqual("Let me think creatively!", finalResponse.Messages[0].Text);
@@ -4219,7 +4220,7 @@ public class GoogleGenAIExtensionsTest
     ];
 
     var response = await client.GetResponseAsync(messages);
-    
+
     Assert.IsNotNull(response);
     Assert.IsTrue(response.Messages[0].Text.Contains("screenshot"));
   }
@@ -4297,7 +4298,7 @@ public class GoogleGenAIExtensionsTest
     ];
 
     var response = await client.GetResponseAsync(messages);
-    
+
     Assert.IsNotNull(response);
     Assert.IsTrue(response.Messages[0].Text.Contains("PDF"));
   }
@@ -4392,7 +4393,7 @@ public class GoogleGenAIExtensionsTest
     ];
 
     var response = await client.GetResponseAsync(messages);
-    
+
     Assert.IsNotNull(response);
     Assert.IsTrue(response.Messages[0].Text.Contains("image") || response.Messages[0].Text.Contains("text"));
   }
@@ -4453,13 +4454,13 @@ public class GoogleGenAIExtensionsTest
       """);
 
     var response = await client.GetResponseAsync("Calculate 42 * 17");
-    
+
     Assert.IsNotNull(response);
     Assert.AreEqual(1, response.Messages.Count);
-    
+
     var contents = response.Messages[0].Contents;
     Assert.AreEqual(3, contents.Count);
-    
+
     // First content should be CodeInterpreterToolCallContent
     Assert.IsInstanceOfType(contents[0], typeof(CodeInterpreterToolCallContent));
     var codeCall = (CodeInterpreterToolCallContent)contents[0];
@@ -4470,7 +4471,7 @@ public class GoogleGenAIExtensionsTest
     Assert.AreEqual("text/x-python", codeContent.MediaType);
     string code = Encoding.UTF8.GetString(codeContent.Data.Span);
     Assert.IsTrue(code.Contains("42 * 17"));
-    
+
     // Second content should be CodeInterpreterToolResultContent
     Assert.IsInstanceOfType(contents[1], typeof(CodeInterpreterToolResultContent));
     var codeResult = (CodeInterpreterToolResultContent)contents[1];
@@ -4478,7 +4479,7 @@ public class GoogleGenAIExtensionsTest
     Assert.AreEqual(1, codeResult.Outputs.Count);
     Assert.IsInstanceOfType(codeResult.Outputs[0], typeof(TextContent));
     Assert.AreEqual("714", ((TextContent)codeResult.Outputs[0]).Text);
-    
+
     // Third content should be TextContent
     Assert.IsInstanceOfType(contents[2], typeof(TextContent));
     Assert.IsTrue(((TextContent)contents[2]).Text.Contains("714"));
@@ -4540,11 +4541,11 @@ public class GoogleGenAIExtensionsTest
       """);
 
     var response = await client.GetResponseAsync("Run some code that fails");
-    
+
     Assert.IsNotNull(response);
     var contents = response.Messages[0].Contents;
     Assert.AreEqual(3, contents.Count);
-    
+
     // Second content should be CodeInterpreterToolResultContent with ErrorContent
     Assert.IsInstanceOfType(contents[1], typeof(CodeInterpreterToolResultContent));
     var codeResult = (CodeInterpreterToolResultContent)contents[1];
@@ -4602,11 +4603,11 @@ public class GoogleGenAIExtensionsTest
     // Create content with Part as RawRepresentation
     var part = new Part { Text = "Hello from raw part" };
     var content = new AIContent { RawRepresentation = part };
-    
+
     ChatMessage message = new(ChatRole.User, [content]);
 
     var response = await client.GetResponseAsync([message]);
-    
+
     Assert.IsNotNull(response);
     Assert.AreEqual("Response received!", response.Messages[0].Text);
   }
@@ -4682,7 +4683,7 @@ public class GoogleGenAIExtensionsTest
     ];
 
     var response = await client.GetResponseAsync(messages);
-    
+
     Assert.IsNotNull(response);
     Assert.IsTrue(response.Messages[0].Text.Contains("success"));
   }
@@ -4755,7 +4756,7 @@ public class GoogleGenAIExtensionsTest
     ];
 
     var response = await client.GetResponseAsync(messages);
-    
+
     Assert.IsNotNull(response);
     Assert.IsTrue(response.Messages[0].Text.Contains("Hello world"));
   }
@@ -4837,7 +4838,7 @@ public class GoogleGenAIExtensionsTest
     ];
 
     var response = await client.GetResponseAsync(messages);
-    
+
     Assert.IsNotNull(response);
     Assert.IsTrue(response.Messages[0].Text.Contains("readme.txt"));
   }
@@ -4872,7 +4873,7 @@ public class GoogleGenAIExtensionsTest
     Assert.IsNotNull(response);
     Assert.AreEqual(1, response.Contents.Count);
     Assert.IsInstanceOfType(response.Contents[0], typeof(DataContent));
-    
+
     var dataContent = (DataContent)response.Contents[0];
     Assert.IsNotNull(dataContent.Data);
     Assert.IsTrue(dataContent.Data.Length > 0);
@@ -4921,7 +4922,7 @@ public class GoogleGenAIExtensionsTest
     Assert.AreEqual(2, response.Contents.Count);
     Assert.IsInstanceOfType(response.Contents[0], typeof(DataContent));
     Assert.IsInstanceOfType(response.Contents[1], typeof(DataContent));
-    
+
     var dataContent1 = (DataContent)response.Contents[0];
     var dataContent2 = (DataContent)response.Contents[1];
     Assert.IsNotNull(dataContent1.Data);
@@ -5034,20 +5035,20 @@ public class GoogleGenAIExtensionsTest
       HttpMethod httpMethod, string path, string requestJson, HttpOptions? requestHttpOptions, [EnumeratorCancellation] CancellationToken cancellationToken = default)
     {
       string responseData = _actualResponse;
-      
+
       if (_makeRealRequest)
       {
         // Make a real streaming request
         using var client = new HttpApiClient(System.Environment.GetEnvironmentVariable("AI:Google:ApiKey"), null);
         StringBuilder fullResponse = new();
-        
+
         await foreach (var apiResponse in client.RequestStreamAsync(httpMethod, path, requestJson, requestHttpOptions, cancellationToken))
         {
           var responseJson = await apiResponse.GetEntity().ReadAsStringAsync();
           fullResponse.AppendLine("data: " + responseJson);
           Console.WriteLine($"CAPTURED STREAMING CHUNK: {responseJson}");
         }
-        
+
         responseData = fullResponse.ToString();
         Console.WriteLine($"\n\nFULL CAPTURED REQUEST:\n{requestJson}");
         Console.WriteLine($"\n\nFULL CAPTURED RESPONSE:\n{responseData}");
@@ -5058,7 +5059,7 @@ public class GoogleGenAIExtensionsTest
         Assert.IsTrue(JsonEquals(_expectedRequest, requestJson),
           $"Expected:<{_expectedRequest}>. Actual:<{requestJson}>.");
       }
-      
+
       // Split streaming response by "data:" prefix (if present)
       foreach (var chunk in responseData.Split(["data:"], StringSplitOptions.RemoveEmptyEntries))
       {
@@ -5074,4 +5075,3 @@ public class GoogleGenAIExtensionsTest
     private static string RemoveWhitespace(string input) => Regex.Replace(input, @"\s+", "");
   }
 }
-

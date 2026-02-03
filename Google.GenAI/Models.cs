@@ -4134,8 +4134,11 @@ namespace Google.GenAI {
       ApiResponse response = await this._apiClient.RequestAsync(
           HttpMethod.Post, path, JsonSerializer.Serialize(body), requestHttpOptions);
       HttpContent httpContent = response.GetEntity();
-      string contentString = await httpContent.ReadAsStringAsync();
-      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      JsonNode? httpContentNode;
+      using (var stream = await httpContent.ReadAsStreamAsync())
+      {
+        httpContentNode = await JsonNode.ParseAsync(stream);
+      }
       if (httpContentNode == null) {
         throw new NotSupportedException("Failed to parse response to JsonNode.");
       }
@@ -4151,7 +4154,7 @@ namespace Google.GenAI {
             GenerateContentResponseFromMldev(httpContentNode, new JsonObject(), parameterNode);
       }
 
-      return JsonSerializer.Deserialize<GenerateContentResponse>(responseNode.ToString()) ??
+      return JsonSerializer.Deserialize<GenerateContentResponse>(responseNode) ??
              throw new InvalidOperationException(
                  "Failed to deserialize Task<GenerateContentResponse>.");
     }
@@ -4199,8 +4202,11 @@ namespace Google.GenAI {
       await foreach (ApiResponse apiResponse in this._apiClient.RequestStreamAsync(
                          HttpMethod.Post, path, JsonSerializer.Serialize(body),
                          requestHttpOptions)) {
-        string chunkJson = await apiResponse.GetEntity().ReadAsStringAsync();
-        JsonNode? chunkNode = JsonNode.Parse(chunkJson);
+        JsonNode? chunkNode;
+        using (var stream = await apiResponse.GetEntity().ReadAsStreamAsync())
+        {
+          chunkNode = await JsonNode.ParseAsync(stream);
+        }
         if (chunkNode == null)
           continue;
         JsonNode responseNode;
@@ -4212,7 +4218,7 @@ namespace Google.GenAI {
               GenerateContentResponseFromMldev(chunkNode, new JsonObject(), parameterNode);
         }
         var chunkResponse =
-            JsonSerializer.Deserialize<GenerateContentResponse>(responseNode.ToString());
+            JsonSerializer.Deserialize<GenerateContentResponse>(responseNode);
         yield return chunkResponse;
       }
     }
@@ -4271,8 +4277,11 @@ namespace Google.GenAI {
       ApiResponse response = await this._apiClient.RequestAsync(
           HttpMethod.Post, path, JsonSerializer.Serialize(body), requestHttpOptions);
       HttpContent httpContent = response.GetEntity();
-      string contentString = await httpContent.ReadAsStringAsync();
-      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      JsonNode? httpContentNode;
+      using (var stream = await httpContent.ReadAsStreamAsync())
+      {
+        httpContentNode = await JsonNode.ParseAsync(stream);
+      }
       if (httpContentNode == null) {
         throw new NotSupportedException("Failed to parse response to JsonNode.");
       }
@@ -4288,7 +4297,7 @@ namespace Google.GenAI {
             EmbedContentResponseFromMldev(httpContentNode, new JsonObject(), parameterNode);
       }
 
-      return JsonSerializer.Deserialize<EmbedContentResponse>(responseNode.ToString()) ??
+      return JsonSerializer.Deserialize<EmbedContentResponse>(responseNode) ??
              throw new InvalidOperationException(
                  "Failed to deserialize Task<EmbedContentResponse>.");
     }
@@ -4336,8 +4345,11 @@ namespace Google.GenAI {
       ApiResponse response = await this._apiClient.RequestAsync(
           HttpMethod.Post, path, JsonSerializer.Serialize(body), requestHttpOptions);
       HttpContent httpContent = response.GetEntity();
-      string contentString = await httpContent.ReadAsStringAsync();
-      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      JsonNode? httpContentNode;
+      using (var stream = await httpContent.ReadAsStreamAsync())
+      {
+        httpContentNode = await JsonNode.ParseAsync(stream);
+      }
       if (httpContentNode == null) {
         throw new NotSupportedException("Failed to parse response to JsonNode.");
       }
@@ -4353,7 +4365,7 @@ namespace Google.GenAI {
             GenerateImagesResponseFromMldev(httpContentNode, new JsonObject(), parameterNode);
       }
 
-      return JsonSerializer.Deserialize<GenerateImagesResponse>(responseNode.ToString()) ??
+      return JsonSerializer.Deserialize<GenerateImagesResponse>(responseNode) ??
              throw new InvalidOperationException(
                  "Failed to deserialize Task<GenerateImagesResponse>.");
     }
@@ -4403,8 +4415,11 @@ namespace Google.GenAI {
       ApiResponse response = await this._apiClient.RequestAsync(
           HttpMethod.Post, path, JsonSerializer.Serialize(body), requestHttpOptions);
       HttpContent httpContent = response.GetEntity();
-      string contentString = await httpContent.ReadAsStringAsync();
-      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      JsonNode? httpContentNode;
+      using (var stream = await httpContent.ReadAsStreamAsync())
+      {
+        httpContentNode = await JsonNode.ParseAsync(stream);
+      }
       if (httpContentNode == null) {
         throw new NotSupportedException("Failed to parse response to JsonNode.");
       }
@@ -4419,7 +4434,7 @@ namespace Google.GenAI {
         throw new NotSupportedException("This method is only supported in the Vertex AI client.");
       }
 
-      return JsonSerializer.Deserialize<EditImageResponse>(responseNode.ToString()) ??
+      return JsonSerializer.Deserialize<EditImageResponse>(responseNode) ??
              throw new InvalidOperationException("Failed to deserialize Task<EditImageResponse>.");
     }
 
@@ -4467,8 +4482,11 @@ namespace Google.GenAI {
       ApiResponse response = await this._apiClient.RequestAsync(
           HttpMethod.Post, path, JsonSerializer.Serialize(body), requestHttpOptions);
       HttpContent httpContent = response.GetEntity();
-      string contentString = await httpContent.ReadAsStringAsync();
-      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      JsonNode? httpContentNode;
+      using (var stream = await httpContent.ReadAsStreamAsync())
+      {
+        httpContentNode = await JsonNode.ParseAsync(stream);
+      }
       if (httpContentNode == null) {
         throw new NotSupportedException("Failed to parse response to JsonNode.");
       }
@@ -4483,7 +4501,7 @@ namespace Google.GenAI {
         throw new NotSupportedException("This method is only supported in the Vertex AI client.");
       }
 
-      return JsonSerializer.Deserialize<UpscaleImageResponse>(responseNode.ToString()) ??
+      return JsonSerializer.Deserialize<UpscaleImageResponse>(responseNode) ??
              throw new InvalidOperationException(
                  "Failed to deserialize Task<UpscaleImageResponse>.");
     }
@@ -4529,8 +4547,11 @@ namespace Google.GenAI {
       ApiResponse response = await this._apiClient.RequestAsync(
           HttpMethod.Post, path, JsonSerializer.Serialize(body), requestHttpOptions);
       HttpContent httpContent = response.GetEntity();
-      string contentString = await httpContent.ReadAsStringAsync();
-      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      JsonNode? httpContentNode;
+      using (var stream = await httpContent.ReadAsStreamAsync())
+      {
+        httpContentNode = await JsonNode.ParseAsync(stream);
+      }
       if (httpContentNode == null) {
         throw new NotSupportedException("Failed to parse response to JsonNode.");
       }
@@ -4545,7 +4566,7 @@ namespace Google.GenAI {
         throw new NotSupportedException("This method is only supported in the Vertex AI client.");
       }
 
-      return JsonSerializer.Deserialize<RecontextImageResponse>(responseNode.ToString()) ??
+      return JsonSerializer.Deserialize<RecontextImageResponse>(responseNode) ??
              throw new InvalidOperationException(
                  "Failed to deserialize Task<RecontextImageResponse>.");
     }
@@ -4592,8 +4613,11 @@ namespace Google.GenAI {
       ApiResponse response = await this._apiClient.RequestAsync(
           HttpMethod.Post, path, JsonSerializer.Serialize(body), requestHttpOptions);
       HttpContent httpContent = response.GetEntity();
-      string contentString = await httpContent.ReadAsStringAsync();
-      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      JsonNode? httpContentNode;
+      using (var stream = await httpContent.ReadAsStreamAsync())
+      {
+        httpContentNode = await JsonNode.ParseAsync(stream);
+      }
       if (httpContentNode == null) {
         throw new NotSupportedException("Failed to parse response to JsonNode.");
       }
@@ -4608,7 +4632,7 @@ namespace Google.GenAI {
         throw new NotSupportedException("This method is only supported in the Vertex AI client.");
       }
 
-      return JsonSerializer.Deserialize<SegmentImageResponse>(responseNode.ToString()) ??
+      return JsonSerializer.Deserialize<SegmentImageResponse>(responseNode) ??
              throw new InvalidOperationException(
                  "Failed to deserialize Task<SegmentImageResponse>.");
     }
@@ -4656,8 +4680,11 @@ namespace Google.GenAI {
       ApiResponse response = await this._apiClient.RequestAsync(
           HttpMethod.Get, path, JsonSerializer.Serialize(body), requestHttpOptions);
       HttpContent httpContent = response.GetEntity();
-      string contentString = await httpContent.ReadAsStringAsync();
-      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      JsonNode? httpContentNode;
+      using (var stream = await httpContent.ReadAsStreamAsync())
+      {
+        httpContentNode = await JsonNode.ParseAsync(stream);
+      }
       if (httpContentNode == null) {
         throw new NotSupportedException("Failed to parse response to JsonNode.");
       }
@@ -4671,7 +4698,7 @@ namespace Google.GenAI {
         responseNode = ModelFromMldev(httpContentNode, new JsonObject(), parameterNode);
       }
 
-      return JsonSerializer.Deserialize<Model>(responseNode.ToString()) ??
+      return JsonSerializer.Deserialize<Model>(responseNode) ??
              throw new InvalidOperationException("Failed to deserialize Task<Model>.");
     }
 
@@ -4711,8 +4738,11 @@ namespace Google.GenAI {
       ApiResponse response = await this._apiClient.RequestAsync(
           HttpMethod.Get, path, JsonSerializer.Serialize(body), requestHttpOptions);
       HttpContent httpContent = response.GetEntity();
-      string contentString = await httpContent.ReadAsStringAsync();
-      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      JsonNode? httpContentNode;
+      using (var stream = await httpContent.ReadAsStreamAsync())
+      {
+        httpContentNode = await JsonNode.ParseAsync(stream);
+      }
       if (httpContentNode == null) {
         throw new NotSupportedException("Failed to parse response to JsonNode.");
       }
@@ -4728,7 +4758,7 @@ namespace Google.GenAI {
             ListModelsResponseFromMldev(httpContentNode, new JsonObject(), parameterNode);
       }
 
-      return JsonSerializer.Deserialize<ListModelsResponse>(responseNode.ToString()) ??
+      return JsonSerializer.Deserialize<ListModelsResponse>(responseNode) ??
              throw new InvalidOperationException("Failed to deserialize Task<ListModelsResponse>.");
     }
 
@@ -4779,8 +4809,11 @@ namespace Google.GenAI {
       ApiResponse response = await this._apiClient.RequestAsync(
           new HttpMethod("PATCH"), path, JsonSerializer.Serialize(body), requestHttpOptions);
       HttpContent httpContent = response.GetEntity();
-      string contentString = await httpContent.ReadAsStringAsync();
-      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      JsonNode? httpContentNode;
+      using (var stream = await httpContent.ReadAsStreamAsync())
+      {
+        httpContentNode = await JsonNode.ParseAsync(stream);
+      }
       if (httpContentNode == null) {
         throw new NotSupportedException("Failed to parse response to JsonNode.");
       }
@@ -4794,7 +4827,7 @@ namespace Google.GenAI {
         responseNode = ModelFromMldev(httpContentNode, new JsonObject(), parameterNode);
       }
 
-      return JsonSerializer.Deserialize<Model>(responseNode.ToString()) ??
+      return JsonSerializer.Deserialize<Model>(responseNode) ??
              throw new InvalidOperationException("Failed to deserialize Task<Model>.");
     }
 
@@ -4842,8 +4875,11 @@ namespace Google.GenAI {
       ApiResponse response = await this._apiClient.RequestAsync(
           HttpMethod.Delete, path, JsonSerializer.Serialize(body), requestHttpOptions);
       HttpContent httpContent = response.GetEntity();
-      string contentString = await httpContent.ReadAsStringAsync();
-      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      JsonNode? httpContentNode;
+      using (var stream = await httpContent.ReadAsStreamAsync())
+      {
+        httpContentNode = await JsonNode.ParseAsync(stream);
+      }
       if (httpContentNode == null) {
         throw new NotSupportedException("Failed to parse response to JsonNode.");
       }
@@ -4859,7 +4895,7 @@ namespace Google.GenAI {
             DeleteModelResponseFromMldev(httpContentNode, new JsonObject(), parameterNode);
       }
 
-      return JsonSerializer.Deserialize<DeleteModelResponse>(responseNode.ToString()) ??
+      return JsonSerializer.Deserialize<DeleteModelResponse>(responseNode) ??
              throw new InvalidOperationException(
                  "Failed to deserialize Task<DeleteModelResponse>.");
     }
@@ -4918,8 +4954,11 @@ namespace Google.GenAI {
       ApiResponse response = await this._apiClient.RequestAsync(
           HttpMethod.Post, path, JsonSerializer.Serialize(body), requestHttpOptions);
       HttpContent httpContent = response.GetEntity();
-      string contentString = await httpContent.ReadAsStringAsync();
-      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      JsonNode? httpContentNode;
+      using (var stream = await httpContent.ReadAsStreamAsync())
+      {
+        httpContentNode = await JsonNode.ParseAsync(stream);
+      }
       if (httpContentNode == null) {
         throw new NotSupportedException("Failed to parse response to JsonNode.");
       }
@@ -4935,7 +4974,7 @@ namespace Google.GenAI {
             CountTokensResponseFromMldev(httpContentNode, new JsonObject(), parameterNode);
       }
 
-      return JsonSerializer.Deserialize<CountTokensResponse>(responseNode.ToString()) ??
+      return JsonSerializer.Deserialize<CountTokensResponse>(responseNode) ??
              throw new InvalidOperationException(
                  "Failed to deserialize Task<CountTokensResponse>.");
     }
@@ -4992,8 +5031,11 @@ namespace Google.GenAI {
       ApiResponse response = await this._apiClient.RequestAsync(
           HttpMethod.Post, path, JsonSerializer.Serialize(body), requestHttpOptions);
       HttpContent httpContent = response.GetEntity();
-      string contentString = await httpContent.ReadAsStringAsync();
-      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      JsonNode? httpContentNode;
+      using (var stream = await httpContent.ReadAsStreamAsync())
+      {
+        httpContentNode = await JsonNode.ParseAsync(stream);
+      }
       if (httpContentNode == null) {
         throw new NotSupportedException("Failed to parse response to JsonNode.");
       }
@@ -5008,7 +5050,7 @@ namespace Google.GenAI {
         throw new NotSupportedException("This method is only supported in the Vertex AI client.");
       }
 
-      return JsonSerializer.Deserialize<ComputeTokensResponse>(responseNode.ToString()) ??
+      return JsonSerializer.Deserialize<ComputeTokensResponse>(responseNode) ??
              throw new InvalidOperationException(
                  "Failed to deserialize Task<ComputeTokensResponse>.");
     }
@@ -5066,8 +5108,11 @@ namespace Google.GenAI {
       ApiResponse response = await this._apiClient.RequestAsync(
           HttpMethod.Post, path, JsonSerializer.Serialize(body), requestHttpOptions);
       HttpContent httpContent = response.GetEntity();
-      string contentString = await httpContent.ReadAsStringAsync();
-      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      JsonNode? httpContentNode;
+      using (var stream = await httpContent.ReadAsStreamAsync())
+      {
+        httpContentNode = await JsonNode.ParseAsync(stream);
+      }
       if (httpContentNode == null) {
         throw new NotSupportedException("Failed to parse response to JsonNode.");
       }
@@ -5083,7 +5128,7 @@ namespace Google.GenAI {
             GenerateVideosOperationFromMldev(httpContentNode, new JsonObject(), parameterNode);
       }
 
-      return JsonSerializer.Deserialize<GenerateVideosOperation>(responseNode.ToString()) ??
+      return JsonSerializer.Deserialize<GenerateVideosOperation>(responseNode) ??
              throw new InvalidOperationException(
                  "Failed to deserialize Task<GenerateVideosOperation>.");
     }

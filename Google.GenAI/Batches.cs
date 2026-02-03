@@ -1618,8 +1618,11 @@ namespace Google.GenAI {
       ApiResponse response = await this._apiClient.RequestAsync(
           HttpMethod.Post, path, JsonSerializer.Serialize(body), requestHttpOptions);
       HttpContent httpContent = response.GetEntity();
-      string contentString = await httpContent.ReadAsStringAsync();
-      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      JsonNode? httpContentNode;
+      using (var stream = await httpContent.ReadAsStreamAsync())
+      {
+        httpContentNode = await JsonNode.ParseAsync(stream);
+      }
       if (httpContentNode == null) {
         throw new NotSupportedException("Failed to parse response to JsonNode.");
       }
@@ -1633,7 +1636,7 @@ namespace Google.GenAI {
         responseNode = BatchJobFromMldev(httpContentNode, new JsonObject());
       }
 
-      return JsonSerializer.Deserialize<BatchJob>(responseNode.ToString()) ??
+      return JsonSerializer.Deserialize<BatchJob>(responseNode) ??
              throw new InvalidOperationException("Failed to deserialize Task<BatchJob>.");
     }
 
@@ -1680,8 +1683,11 @@ namespace Google.GenAI {
       ApiResponse response = await this._apiClient.RequestAsync(
           HttpMethod.Post, path, JsonSerializer.Serialize(body), requestHttpOptions);
       HttpContent httpContent = response.GetEntity();
-      string contentString = await httpContent.ReadAsStringAsync();
-      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      JsonNode? httpContentNode;
+      using (var stream = await httpContent.ReadAsStreamAsync())
+      {
+        httpContentNode = await JsonNode.ParseAsync(stream);
+      }
       if (httpContentNode == null) {
         throw new NotSupportedException("Failed to parse response to JsonNode.");
       }
@@ -1696,7 +1702,7 @@ namespace Google.GenAI {
         responseNode = BatchJobFromMldev(httpContentNode, new JsonObject());
       }
 
-      return JsonSerializer.Deserialize<BatchJob>(responseNode.ToString()) ??
+      return JsonSerializer.Deserialize<BatchJob>(responseNode) ??
              throw new InvalidOperationException("Failed to deserialize Task<BatchJob>.");
     }
 
@@ -1748,8 +1754,11 @@ namespace Google.GenAI {
       ApiResponse response = await this._apiClient.RequestAsync(
           HttpMethod.Get, path, JsonSerializer.Serialize(body), requestHttpOptions);
       HttpContent httpContent = response.GetEntity();
-      string contentString = await httpContent.ReadAsStringAsync();
-      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      JsonNode? httpContentNode;
+      using (var stream = await httpContent.ReadAsStreamAsync())
+      {
+        httpContentNode = await JsonNode.ParseAsync(stream);
+      }
       if (httpContentNode == null) {
         throw new NotSupportedException("Failed to parse response to JsonNode.");
       }
@@ -1763,7 +1772,7 @@ namespace Google.GenAI {
         responseNode = BatchJobFromMldev(httpContentNode, new JsonObject());
       }
 
-      return JsonSerializer.Deserialize<BatchJob>(responseNode.ToString()) ??
+      return JsonSerializer.Deserialize<BatchJob>(responseNode) ??
              throw new InvalidOperationException("Failed to deserialize Task<BatchJob>.");
     }
 
@@ -1815,8 +1824,11 @@ namespace Google.GenAI {
       ApiResponse response = await this._apiClient.RequestAsync(
           HttpMethod.Post, path, JsonSerializer.Serialize(body), requestHttpOptions);
       HttpContent httpContent = response.GetEntity();
-      string contentString = await httpContent.ReadAsStringAsync();
-      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      JsonNode? httpContentNode;
+      using (var stream = await httpContent.ReadAsStreamAsync())
+      {
+        httpContentNode = await JsonNode.ParseAsync(stream);
+      }
       if (httpContentNode == null) {
         throw new NotSupportedException("Failed to parse response to JsonNode.");
       }
@@ -1867,8 +1879,11 @@ namespace Google.GenAI {
       ApiResponse response = await this._apiClient.RequestAsync(
           HttpMethod.Get, path, JsonSerializer.Serialize(body), requestHttpOptions);
       HttpContent httpContent = response.GetEntity();
-      string contentString = await httpContent.ReadAsStringAsync();
-      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      JsonNode? httpContentNode;
+      using (var stream = await httpContent.ReadAsStreamAsync())
+      {
+        httpContentNode = await JsonNode.ParseAsync(stream);
+      }
       if (httpContentNode == null) {
         throw new NotSupportedException("Failed to parse response to JsonNode.");
       }
@@ -1882,7 +1897,7 @@ namespace Google.GenAI {
         responseNode = ListBatchJobsResponseFromMldev(httpContentNode, new JsonObject());
       }
 
-      return JsonSerializer.Deserialize<ListBatchJobsResponse>(responseNode.ToString()) ??
+      return JsonSerializer.Deserialize<ListBatchJobsResponse>(responseNode) ??
              throw new InvalidOperationException(
                  "Failed to deserialize Task<ListBatchJobsResponse>.");
     }
@@ -1936,8 +1951,11 @@ namespace Google.GenAI {
       ApiResponse response = await this._apiClient.RequestAsync(
           HttpMethod.Delete, path, JsonSerializer.Serialize(body), requestHttpOptions);
       HttpContent httpContent = response.GetEntity();
-      string contentString = await httpContent.ReadAsStringAsync();
-      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      JsonNode? httpContentNode;
+      using (var stream = await httpContent.ReadAsStreamAsync())
+      {
+        httpContentNode = await JsonNode.ParseAsync(stream);
+      }
       if (httpContentNode == null) {
         throw new NotSupportedException("Failed to parse response to JsonNode.");
       }
@@ -1951,7 +1969,7 @@ namespace Google.GenAI {
         responseNode = DeleteResourceJobFromMldev(httpContentNode, new JsonObject());
       }
 
-      return JsonSerializer.Deserialize<DeleteResourceJob>(responseNode.ToString()) ??
+      return JsonSerializer.Deserialize<DeleteResourceJob>(responseNode) ??
              throw new InvalidOperationException("Failed to deserialize Task<DeleteResourceJob>.");
     }
 

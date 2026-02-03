@@ -154,11 +154,11 @@ namespace Google.GenAI
       }
       else if (contents is JsonObject jsonObject)
       {
-        return JsonSerializer.Deserialize<List<Content>>(jsonObject.ToString());
+        return JsonSerializer.Deserialize<List<Content>>(jsonObject);
       }
       else if (contents is JsonNode jsonNode)
       {
-        return JsonSerializer.Deserialize<List<Content>>(jsonNode.ToString());
+        return JsonSerializer.Deserialize<List<Content>>(jsonNode);
       }
 
       throw new ArgumentException($"Unsupported contents type: {contents.GetType()}");
@@ -191,7 +191,7 @@ namespace Google.GenAI
       }
       else if (content is JsonObject jsonObject)
       {
-        return JsonSerializer.Deserialize<Content>(jsonObject.ToString());
+        return JsonSerializer.Deserialize<Content>(jsonObject);
       }
 
       throw new ArgumentException($"Unsupported content type: {content.GetType()}");
@@ -211,7 +211,7 @@ namespace Google.GenAI
       }
       else if (origin is JsonObject jsonObject)
       {
-        return JsonSerializer.Deserialize<Schema>(jsonObject.ToString());
+        return JsonSerializer.Deserialize<Schema>(jsonObject);
       }
       throw new ArgumentException($"Unsupported schema type: {origin.GetType()}");
     }
@@ -232,7 +232,7 @@ namespace Google.GenAI
       }
       else if (speechConfig is JsonObject jsonObject)
       {
-        return JsonSerializer.Deserialize<SpeechConfig>(jsonObject.ToString());
+        return JsonSerializer.Deserialize<SpeechConfig>(jsonObject);
       }
 
       throw new ArgumentException($"Unsupported speechConfig type:{speechConfig.GetType()}");
@@ -322,7 +322,7 @@ namespace Google.GenAI
     {
       if (blob is JsonObject jsonObject)
       {
-        blob = JsonSerializer.Deserialize<Blob>(jsonObject.ToString());
+        blob = JsonSerializer.Deserialize<Blob>(jsonObject);
       }
 
       if (blob is Blob b)
