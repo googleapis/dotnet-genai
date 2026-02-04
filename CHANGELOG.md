@@ -1,5 +1,17 @@
 # Changelog
 
+## Version 0.15.0, released 2026-02-04
+
+
+### New features
+
+* Update data types from discovery doc. ([e504eb8](https://github.com/googleapis/dotnet-genai/commit/e504eb8285657a71dffed9bb3abdbb4731fc6844))
+
+
+### Documentation improvements
+
+* Update Dotnet Test Server usage caveats for recording redaction in E2E test dev guide ([6f517b6](https://github.com/googleapis/dotnet-genai/commit/6f517b67c86500202c9e274e74f8acf944886df0))
+
 ## Version 0.14.0, released 2026-01-30
 
 
