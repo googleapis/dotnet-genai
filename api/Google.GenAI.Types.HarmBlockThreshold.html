@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Enum HarmBlockThreshold | Google GenAI .NET SDK ">
       
-      <meta name="description" content="The harm block threshold.">
+      <meta name="description" content="The threshold for blocking content. If the harm probability exceeds this threshold, the content will be blocked.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -86,7 +86,7 @@
 
 
   <h1 id="Google_GenAI_Types_HarmBlockThreshold" data-uid="Google.GenAI.Types.HarmBlockThreshold" class="text-break">
-Enum HarmBlockThreshold  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Enum HarmBlockThreshold  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -94,7 +94,8 @@ Enum HarmBlockThreshold  <a class="header-action link-secondary" title="View sou
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>The harm block threshold.</p>
+  <div class="markdown summary"><p>The threshold for blocking content. If the harm probability exceeds this threshold, the
+content will be blocked.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -117,32 +118,32 @@ public enum HarmBlockThreshold</code></pre>
     <dt id="Google_GenAI_Types_HarmBlockThreshold_BLOCK_LOW_AND_ABOVE"><code>[JsonPropertyName(&quot;BLOCK_LOW_AND_ABOVE&quot;)]
 BLOCK_LOW_AND_ABOVE = 1</code></dt>
   
-  <dd><p>Block low threshold and above (i.e. block more).</p>
+  <dd><p>Block content with a low harm probability or higher.</p>
 </dd>
     <dt id="Google_GenAI_Types_HarmBlockThreshold_BLOCK_MEDIUM_AND_ABOVE"><code>[JsonPropertyName(&quot;BLOCK_MEDIUM_AND_ABOVE&quot;)]
 BLOCK_MEDIUM_AND_ABOVE = 2</code></dt>
   
-  <dd><p>Block medium threshold and above.</p>
+  <dd><p>Block content with a medium harm probability or higher.</p>
 </dd>
     <dt id="Google_GenAI_Types_HarmBlockThreshold_BLOCK_NONE"><code>[JsonPropertyName(&quot;BLOCK_NONE&quot;)]
 BLOCK_NONE = 4</code></dt>
   
-  <dd><p>Block none.</p>
+  <dd><p>Do not block any content, regardless of its harm probability.</p>
 </dd>
     <dt id="Google_GenAI_Types_HarmBlockThreshold_BLOCK_ONLY_HIGH"><code>[JsonPropertyName(&quot;BLOCK_ONLY_HIGH&quot;)]
 BLOCK_ONLY_HIGH = 3</code></dt>
   
-  <dd><p>Block only high threshold (i.e. block less).</p>
+  <dd><p>Block content with a high harm probability.</p>
 </dd>
     <dt id="Google_GenAI_Types_HarmBlockThreshold_HARM_BLOCK_THRESHOLD_UNSPECIFIED"><code>[JsonPropertyName(&quot;HARM_BLOCK_THRESHOLD_UNSPECIFIED&quot;)]
 HARM_BLOCK_THRESHOLD_UNSPECIFIED = 0</code></dt>
   
-  <dd><p>Unspecified harm block threshold.</p>
+  <dd><p>The harm block threshold is unspecified.</p>
 </dd>
     <dt id="Google_GenAI_Types_HarmBlockThreshold_OFF"><code>[JsonPropertyName(&quot;OFF&quot;)]
 OFF = 5</code></dt>
   
-  <dd><p>Turn off the safety filter.</p>
+  <dd><p>Turn off the safety filter entirely.</p>
 </dd>
   </dl>
 
@@ -151,7 +152,7 @@ OFF = 5</code></dt>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L26" class="edit-link">Edit this page</a>
         </div>
 
 
