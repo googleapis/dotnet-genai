@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class GroundingChunkWeb | Google GenAI .NET SDK ">
       
-      <meta name="description" content="A Web chunk is a piece of evidence that comes from a web page. It contains the URI of the web page, the title of the page, and the domain of the page. This is used to provide the user with a link to the source of the information.">
+      <meta name="description" content="Chunk from the web.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Types_GroundingChunkWeb" data-uid="Google.GenAI.Types.GroundingChunkWeb" class="text-break">
-Class GroundingChunkWeb  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkWeb.cs/#L31"><i class="bi bi-code-slash"></i></a>
+Class GroundingChunkWeb  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkWeb.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,9 +93,7 @@ Class GroundingChunkWeb  <a class="header-action link-secondary" title="View sou
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>A <code>Web</code> chunk is a piece of evidence that comes from a web page. It contains the URI of the
-web page, the title of the page, and the domain of the page. This is used to provide the user
-with a link to the source of the information.</p>
+  <div class="markdown summary"><p>Chunk from the web.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -161,11 +159,10 @@ with a link to the source of the information.</p>
 
   <h3 id="Google_GenAI_Types_GroundingChunkWeb_Domain" data-uid="Google.GenAI.Types.GroundingChunkWeb.Domain">
   Domain
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkWeb.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkWeb.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The domain of the web page that contains the evidence. This can be used to filter out
-low-quality sources. This field is not supported in Gemini API.</p>
+  <div class="markdown level1 summary"><p>Domain of the (original) URI. This field is not supported in Gemini API.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -196,10 +193,10 @@ public string? Domain { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GroundingChunkWeb_Title" data-uid="Google.GenAI.Types.GroundingChunkWeb.Title">
   Title
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkWeb.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkWeb.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The title of the web page that contains the evidence.</p>
+  <div class="markdown level1 summary"><p>Title of the chunk.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -230,10 +227,10 @@ public string? Title { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GroundingChunkWeb_Uri" data-uid="Google.GenAI.Types.GroundingChunkWeb.Uri">
   Uri
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkWeb.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkWeb.cs/#L50"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The URI of the web page that contains the evidence.</p>
+  <div class="markdown level1 summary"><p>URI reference of the chunk.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -268,7 +265,7 @@ public string? Uri { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GroundingChunkWeb_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.GroundingChunkWeb.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkWeb.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkWeb.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a GroundingChunkWeb object.</p>
@@ -311,7 +308,7 @@ fails.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkWeb.cs/#L31" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunkWeb.cs/#L29" class="edit-link">Edit this page</a>
         </div>
 
 
