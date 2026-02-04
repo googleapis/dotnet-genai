@@ -22,7 +22,8 @@ using System.Text.Json;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// The harm block threshold.
+  /// The threshold for blocking content. If the harm probability exceeds this threshold, the
+  /// content will be blocked.
   /// </summary>
 
   [JsonConverter(typeof(HarmBlockThresholdConverter))]
@@ -34,34 +35,34 @@ namespace Google.GenAI.Types {
     }
 
     /// <summary>
-    /// Unspecified harm block threshold.
+    /// The harm block threshold is unspecified.
     /// </summary>
     public static HarmBlockThreshold HarmBlockThresholdUnspecified {
       get;
     } = new("HARM_BLOCK_THRESHOLD_UNSPECIFIED");
 
     /// <summary>
-    /// Block low threshold and above (i.e. block more).
+    /// Block content with a low harm probability or higher.
     /// </summary>
     public static HarmBlockThreshold BlockLowAndAbove { get; } = new("BLOCK_LOW_AND_ABOVE");
 
     /// <summary>
-    /// Block medium threshold and above.
+    /// Block content with a medium harm probability or higher.
     /// </summary>
     public static HarmBlockThreshold BlockMediumAndAbove { get; } = new("BLOCK_MEDIUM_AND_ABOVE");
 
     /// <summary>
-    /// Block only high threshold (i.e. block less).
+    /// Block content with a high harm probability.
     /// </summary>
     public static HarmBlockThreshold BlockOnlyHigh { get; } = new("BLOCK_ONLY_HIGH");
 
     /// <summary>
-    /// Block none.
+    /// Do not block any content, regardless of its harm probability.
     /// </summary>
     public static HarmBlockThreshold BlockNone { get; } = new("BLOCK_NONE");
 
     /// <summary>
-    /// Turn off the safety filter.
+    /// Turn off the safety filter entirely.
     /// </summary>
     public static HarmBlockThreshold Off { get; } = new("OFF");
 

@@ -23,7 +23,7 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Encapsulates a review snippet. This data type is not supported in Gemini API.
+  /// Encapsulates a review snippet.
   /// </summary>
 
   public record GroundingChunkMapsPlaceAnswerSourcesReviewSnippet {

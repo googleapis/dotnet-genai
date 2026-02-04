@@ -22,7 +22,7 @@ using System.Text.Json;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Status of the url retrieval.
+  /// The status of the URL retrieval.
   /// </summary>
 
   [JsonConverter(typeof(UrlRetrievalStatusConverter))]
@@ -41,14 +41,14 @@ namespace Google.GenAI.Types {
     } = new("URL_RETRIEVAL_STATUS_UNSPECIFIED");
 
     /// <summary>
-    /// Url retrieval is successful.
+    /// The URL was retrieved successfully.
     /// </summary>
     public static UrlRetrievalStatus UrlRetrievalStatusSuccess {
       get;
     } = new("URL_RETRIEVAL_STATUS_SUCCESS");
 
     /// <summary>
-    /// Url retrieval is failed due to error.
+    /// The URL retrieval failed.
     /// </summary>
     public static UrlRetrievalStatus UrlRetrievalStatusError {
       get;

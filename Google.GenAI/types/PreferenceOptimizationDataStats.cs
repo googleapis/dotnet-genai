@@ -29,11 +29,33 @@ namespace Google.GenAI.Types {
 
   public record PreferenceOptimizationDataStats {
     /// <summary>
+    /// Output only. A partial sample of the indices (starting from 1) of the dropped examples.
+    /// </summary>
+    [JsonPropertyName("droppedExampleIndices")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    [JsonConverter(typeof(StringToNullableLongListConverter))]
+    public List<long> ? DroppedExampleIndices { get; set; }
+
+    /// <summary>
+    /// Output only. For each index in `dropped_example_indices`, the user-facing reason why the
+    /// example was dropped.
+    /// </summary>
+    [JsonPropertyName("droppedExampleReasons")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public List<string>
+        ? DroppedExampleReasons {
+            get; set;
+          }
+
+    /// <summary>
     /// Output only. Dataset distributions for scores variance per example.
     /// </summary>
     [JsonPropertyName("scoreVariancePerExampleDistribution")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public DatasetDistribution ? ScoreVariancePerExampleDistribution { get; set; }
+    public DatasetDistribution
+        ? ScoreVariancePerExampleDistribution {
+            get; set;
+          }
 
     /// <summary>
     /// Output only. Dataset distributions for scores.

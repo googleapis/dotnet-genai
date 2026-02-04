@@ -23,19 +23,30 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Sources used to generate the place answer. This data type is not supported in Gemini API.
+  /// The sources that were used to generate the place answer.  This includes review snippets and
+  /// photos that were used to generate the answer, as well as URIs to flag content.
   /// </summary>
 
   public record GroundingChunkMapsPlaceAnswerSources {
+    /// <summary>
+    /// Snippets of reviews that were used to generate the answer.
+    /// </summary>
+    [JsonPropertyName("reviewSnippet")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public List<GroundingChunkMapsPlaceAnswerSourcesReviewSnippet> ? ReviewSnippet { get; set; }
+
     /// <summary>
     /// A link where users can flag a problem with the generated answer.
     /// </summary>
     [JsonPropertyName("flagContentUri")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? FlagContentUri { get; set; }
+    public string
+        ? FlagContentUri {
+            get; set;
+          }
 
     /// <summary>
-    /// Snippets of reviews that are used to generate the answer.
+    /// Snippets of reviews that were used to generate the answer.
     /// </summary>
     [JsonPropertyName("reviewSnippets")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

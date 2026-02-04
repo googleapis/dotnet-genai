@@ -57,6 +57,18 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Optional. The ratio of Google internal dataset to use in the training mixture, in range of
+    /// `[0, 1)`. If `0.2`, it means 20% of Google internal dataset and 80% of user dataset will be
+    /// used for training. If not set, the default value is 0.1.
+    /// </summary>
+    [JsonPropertyName("veoDataMixtureRatio")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public double
+        ? VeoDataMixtureRatio {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a VeoHyperParameters object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

@@ -23,14 +23,13 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// When manual routing is set, the specified model will be used directly. This data type is not
-  /// supported in Gemini API.
+  /// The configuration for manual routing. When manual routing is specified, the model will be
+  /// selected based on the model name provided. This data type is not supported in Gemini API.
   /// </summary>
 
   public record GenerationConfigRoutingConfigManualRoutingMode {
     /// <summary>
-    /// The model name to use. Only the public LLM models are accepted. See Supported models
-    /// (https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/inference#supported-models).
+    /// The name of the model to use. Only public LLM models are accepted.
     /// </summary>
     [JsonPropertyName("modelName")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

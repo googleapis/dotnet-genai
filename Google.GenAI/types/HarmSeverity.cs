@@ -22,7 +22,7 @@ using System.Text.Json;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Output only. Harm severity levels in the content. This enum is not supported in Gemini API.
+  /// Output only. The severity of harm for this category. This enum is not supported in Gemini API.
   /// </summary>
 
   [JsonConverter(typeof(HarmSeverityConverter))]
@@ -34,27 +34,27 @@ namespace Google.GenAI.Types {
     }
 
     /// <summary>
-    /// Harm severity unspecified.
+    /// The harm severity is unspecified.
     /// </summary>
     public static HarmSeverity HarmSeverityUnspecified { get; } = new("HARM_SEVERITY_UNSPECIFIED");
 
     /// <summary>
-    /// Negligible level of harm severity.
+    /// The harm severity is negligible.
     /// </summary>
     public static HarmSeverity HarmSeverityNegligible { get; } = new("HARM_SEVERITY_NEGLIGIBLE");
 
     /// <summary>
-    /// Low level of harm severity.
+    /// The harm severity is low.
     /// </summary>
     public static HarmSeverity HarmSeverityLow { get; } = new("HARM_SEVERITY_LOW");
 
     /// <summary>
-    /// Medium level of harm severity.
+    /// The harm severity is medium.
     /// </summary>
     public static HarmSeverity HarmSeverityMedium { get; } = new("HARM_SEVERITY_MEDIUM");
 
     /// <summary>
-    /// High level of harm severity.
+    /// The harm severity is high.
     /// </summary>
     public static HarmSeverity HarmSeverityHigh { get; } = new("HARM_SEVERITY_HIGH");
 

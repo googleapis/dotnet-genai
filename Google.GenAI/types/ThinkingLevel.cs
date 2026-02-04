@@ -41,6 +41,11 @@ namespace Google.GenAI.Types {
     } = new("THINKING_LEVEL_UNSPECIFIED");
 
     /// <summary>
+    /// MINIMAL thinking level.
+    /// </summary>
+    public static ThinkingLevel Minimal { get; } = new("MINIMAL");
+
+    /// <summary>
     /// Low thinking level.
     /// </summary>
     public static ThinkingLevel Low { get; } = new("LOW");
@@ -55,14 +60,9 @@ namespace Google.GenAI.Types {
     /// </summary>
     public static ThinkingLevel High { get; } = new("HIGH");
 
-    /// <summary>
-    /// MINIMAL thinking level.
-    /// </summary>
-    public static ThinkingLevel Minimal { get; } = new("MINIMAL");
-
     public static IReadOnlyList<ThinkingLevel> AllValues {
       get;
-    } = new[] { ThinkingLevelUnspecified, Low, Medium, High, Minimal };
+    } = new[] { ThinkingLevelUnspecified, Minimal, Low, Medium, High };
 
     public static ThinkingLevel FromString(string value) {
       if (string.IsNullOrEmpty(value)) {

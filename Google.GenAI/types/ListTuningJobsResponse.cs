@@ -35,8 +35,8 @@ namespace Google.GenAI.Types {
     public HttpResponse ? SdkHttpResponse { get; set; }
 
     /// <summary>
-    /// A token to retrieve the next page of results. Pass to ListTuningJobsRequest.page_token to
-    /// obtain that page.
+    /// A token to retrieve the next page of results. Pass this token in a subsequent
+    /// [GenAiTuningService.ListTuningJobs] call to retrieve the next page of results.
     /// </summary>
     [JsonPropertyName("nextPageToken")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -46,7 +46,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// List of TuningJobs in the requested page.
+    /// The tuning jobs that match the request.
     /// </summary>
     [JsonPropertyName("tuningJobs")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

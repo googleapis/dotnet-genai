@@ -22,7 +22,7 @@ using System.Text.Json;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Output only. Harm probability levels in the content.
+  /// Output only. The probability of harm for this category.
   /// </summary>
 
   [JsonConverter(typeof(HarmProbabilityConverter))]
@@ -34,29 +34,29 @@ namespace Google.GenAI.Types {
     }
 
     /// <summary>
-    /// Harm probability unspecified.
+    /// The harm probability is unspecified.
     /// </summary>
     public static HarmProbability HarmProbabilityUnspecified {
       get;
     } = new("HARM_PROBABILITY_UNSPECIFIED");
 
     /// <summary>
-    /// Negligible level of harm.
+    /// The harm probability is negligible.
     /// </summary>
     public static HarmProbability Negligible { get; } = new("NEGLIGIBLE");
 
     /// <summary>
-    /// Low level of harm.
+    /// The harm probability is low.
     /// </summary>
     public static HarmProbability Low { get; } = new("LOW");
 
     /// <summary>
-    /// Medium level of harm.
+    /// The harm probability is medium.
     /// </summary>
     public static HarmProbability Medium { get; } = new("MEDIUM");
 
     /// <summary>
-    /// High level of harm.
+    /// The harm probability is high.
     /// </summary>
     public static HarmProbability High { get; } = new("HIGH");
 

@@ -23,22 +23,23 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Content blob.
+  /// A content blob. A Blob contains data of a specific media type. It is used to represent images,
+  /// audio, and video.
   /// </summary>
 
   public record Blob {
     /// <summary>
-    /// Raw bytes.
+    /// The raw bytes of the data.
     /// </summary>
     [JsonPropertyName("data")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public byte[] ? Data { get; set; }
 
     /// <summary>
-    /// Optional. Display name of the blob. Used to provide a label or filename to distinguish
-    /// blobs. This field is only returned in PromptMessage for prompt management. It is currently
-    /// used in the Gemini GenerateContent calls only when server side tools (code_execution,
-    /// google_search, and url_context) are enabled. This field is not supported in Gemini API.
+    /// Optional. The display name of the blob. Used to provide a label or filename to distinguish
+    /// blobs. This field is only returned in `PromptMessage` for prompt management. It is used in
+    /// the Gemini calls only when server-side tools (`code_execution`, `google_search`, and
+    /// `url_context`) are enabled. This field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("displayName")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

@@ -23,20 +23,30 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Configuration for Model Armor integrations of prompt and responses. This data type is not
-  /// supported in Gemini API.
+  /// Configuration for Model Armor. Model Armor is a Google Cloud service that provides safety and
+  /// security filtering for prompts and responses. It helps protect your AI applications from risks
+  /// such as harmful content, sensitive data leakage, and prompt injection attacks. This data type
+  /// is not supported in Gemini API.
   /// </summary>
 
   public record ModelArmorConfig {
     /// <summary>
-    /// Optional. The name of the Model Armor template to use for prompt sanitization.
+    /// Optional. The resource name of the Model Armor template to use for prompt screening. A Model
+    /// Armor template is a set of customized filters and thresholds that define how Model Armor
+    /// screens content. If specified, Model Armor will use this template to check the user's prompt
+    /// for safety and security risks before it is sent to the model. The name must be in the format
+    /// `projects/{project}/locations/{location}/templates/{template}`.
     /// </summary>
     [JsonPropertyName("promptTemplateName")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string ? PromptTemplateName { get; set; }
 
     /// <summary>
-    /// Optional. The name of the Model Armor template to use for response sanitization.
+    /// Optional. The resource name of the Model Armor template to use for response screening. A
+    /// Model Armor template is a set of customized filters and thresholds that define how Model
+    /// Armor screens content. If specified, Model Armor will use this template to check the model's
+    /// response for safety and security risks before it is returned to the user. The name must be
+    /// in the format `projects/{project}/locations/{location}/templates/{template}`.
     /// </summary>
     [JsonPropertyName("responseTemplateName")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

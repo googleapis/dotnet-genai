@@ -22,7 +22,7 @@ using System.Text.Json;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// The type of the data.
+  /// Data type of the schema field.
   /// </summary>
 
   [JsonConverter(typeof(TypeConverter))]

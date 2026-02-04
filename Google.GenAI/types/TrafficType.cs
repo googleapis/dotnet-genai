@@ -44,13 +44,24 @@ namespace Google.GenAI.Types {
     public static TrafficType OnDemand { get; } = new("ON_DEMAND");
 
     /// <summary>
+    /// Type for Priority Pay-As-You-Go traffic.
+    /// </summary>
+    public static TrafficType OnDemandPriority { get; } = new("ON_DEMAND_PRIORITY");
+
+    /// <summary>
+    /// Type for Flex traffic.
+    /// </summary>
+    public static TrafficType OnDemandFlex { get; } = new("ON_DEMAND_FLEX");
+
+    /// <summary>
     /// Type for Provisioned Throughput traffic.
     /// </summary>
     public static TrafficType ProvisionedThroughput { get; } = new("PROVISIONED_THROUGHPUT");
 
     public static IReadOnlyList<TrafficType> AllValues {
       get;
-    } = new[] { TrafficTypeUnspecified, OnDemand, ProvisionedThroughput };
+    } = new[] { TrafficTypeUnspecified, OnDemand, OnDemandPriority, OnDemandFlex,
+                ProvisionedThroughput };
 
     public static TrafficType FromString(string value) {
       if (string.IsNullOrEmpty(value)) {
