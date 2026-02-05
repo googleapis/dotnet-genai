@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum TuningMethod | Google GenAI .NET SDK </title>
+      <title>Struct TuningMethod | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum TuningMethod | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct TuningMethod | Google GenAI .NET SDK ">
       
       <meta name="description" content="Enum representing the tuning method.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_TuningMethod" data-uid="Google.GenAI.Types.TuningMethod" class="text-break">
-Enum TuningMethod  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningMethod.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Struct TuningMethod  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningMethod.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,44 +98,389 @@ Enum TuningMethod  <a class="header-action link-secondary" title="View source" h
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum TuningMethod</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(TuningMethodConverter))]
+public readonly record struct TuningMethod : IEquatable&lt;TuningMethod&gt;</code></pre>
   </div>
 
 
 
 
 
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="Google_GenAI_Types_TuningMethod_DISTILLATION"><code>[JsonPropertyName(&quot;DISTILLATION&quot;)]
-DISTILLATION = 2</code></dt>
-  
-  <dd><p>Distillation tuning.</p>
-</dd>
-    <dt id="Google_GenAI_Types_TuningMethod_PREFERENCE_TUNING"><code>[JsonPropertyName(&quot;PREFERENCE_TUNING&quot;)]
-PREFERENCE_TUNING = 1</code></dt>
-  
-  <dd><p>Preference optimization tuning.</p>
-</dd>
-    <dt id="Google_GenAI_Types_TuningMethod_SUPERVISED_FINE_TUNING"><code>[JsonPropertyName(&quot;SUPERVISED_FINE_TUNING&quot;)]
-SUPERVISED_FINE_TUNING = 0</code></dt>
-  
-  <dd><p>Supervised fine tuning.</p>
-</dd>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.TuningMethod.html">TuningMethod</a>&gt;</div>
+    </dd>
   </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_TuningMethod_AllValues_" data-uid="Google.GenAI.Types.TuningMethod.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_TuningMethod_AllValues" data-uid="Google.GenAI.Types.TuningMethod.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningMethod.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;TuningMethod&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.TuningMethod.html">TuningMethod</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TuningMethod_Distillation_" data-uid="Google.GenAI.Types.TuningMethod.Distillation*"></a>
+
+  <h3 id="Google_GenAI_Types_TuningMethod_Distillation" data-uid="Google.GenAI.Types.TuningMethod.Distillation">
+  Distillation
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningMethod.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Distillation tuning.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TuningMethod Distillation { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TuningMethod.html">TuningMethod</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TuningMethod_PreferenceTuning_" data-uid="Google.GenAI.Types.TuningMethod.PreferenceTuning*"></a>
+
+  <h3 id="Google_GenAI_Types_TuningMethod_PreferenceTuning" data-uid="Google.GenAI.Types.TuningMethod.PreferenceTuning">
+  PreferenceTuning
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningMethod.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Preference optimization tuning.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TuningMethod PreferenceTuning { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TuningMethod.html">TuningMethod</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TuningMethod_SupervisedFineTuning_" data-uid="Google.GenAI.Types.TuningMethod.SupervisedFineTuning*"></a>
+
+  <h3 id="Google_GenAI_Types_TuningMethod_SupervisedFineTuning" data-uid="Google.GenAI.Types.TuningMethod.SupervisedFineTuning">
+  SupervisedFineTuning
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningMethod.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Supervised fine tuning.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TuningMethod SupervisedFineTuning { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TuningMethod.html">TuningMethod</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TuningMethod_Value_" data-uid="Google.GenAI.Types.TuningMethod.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_TuningMethod_Value" data-uid="Google.GenAI.Types.TuningMethod.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningMethod.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_TuningMethod_Equals_" data-uid="Google.GenAI.Types.TuningMethod.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_TuningMethod_Equals_Google_GenAI_Types_TuningMethod_" data-uid="Google.GenAI.Types.TuningMethod.Equals(Google.GenAI.Types.TuningMethod)">
+  Equals(TuningMethod)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningMethod.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(TuningMethod other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.TuningMethod.html">TuningMethod</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TuningMethod_FromString_" data-uid="Google.GenAI.Types.TuningMethod.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_TuningMethod_FromString_System_String_" data-uid="Google.GenAI.Types.TuningMethod.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningMethod.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TuningMethod FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TuningMethod.html">TuningMethod</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TuningMethod_GetHashCode_" data-uid="Google.GenAI.Types.TuningMethod.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_TuningMethod_GetHashCode" data-uid="Google.GenAI.Types.TuningMethod.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningMethod.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TuningMethod_ToString_" data-uid="Google.GenAI.Types.TuningMethod.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_TuningMethod_ToString" data-uid="Google.GenAI.Types.TuningMethod.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningMethod.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_TuningMethod_op_Implicit_" data-uid="Google.GenAI.Types.TuningMethod.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_TuningMethod_op_Implicit_System_String__Google_GenAI_Types_TuningMethod" data-uid="Google.GenAI.Types.TuningMethod.op_Implicit(System.String)~Google.GenAI.Types.TuningMethod">
+  implicit operator TuningMethod(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningMethod.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator TuningMethod(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TuningMethod.html">TuningMethod</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningMethod.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningMethod.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

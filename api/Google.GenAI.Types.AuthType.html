@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum AuthType | Google GenAI .NET SDK </title>
+      <title>Struct AuthType | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum AuthType | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct AuthType | Google GenAI .NET SDK ">
       
       <meta name="description" content="Type of auth scheme. This enum is not supported in Gemini API.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_AuthType" data-uid="Google.GenAI.Types.AuthType" class="text-break">
-Enum AuthType  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthType.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Struct AuthType  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthType.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,63 +98,516 @@ Enum AuthType  <a class="header-action link-secondary" title="View source" href=
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum AuthType</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(AuthTypeConverter))]
+public readonly record struct AuthType : IEquatable&lt;AuthType&gt;</code></pre>
   </div>
 
 
 
 
 
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="Google_GenAI_Types_AuthType_API_KEY_AUTH"><code>[JsonPropertyName(&quot;API_KEY_AUTH&quot;)]
-API_KEY_AUTH = 2</code></dt>
-  
-  <dd><p>API Key Auth.</p>
-</dd>
-    <dt id="Google_GenAI_Types_AuthType_AUTH_TYPE_UNSPECIFIED"><code>[JsonPropertyName(&quot;AUTH_TYPE_UNSPECIFIED&quot;)]
-AUTH_TYPE_UNSPECIFIED = 0</code></dt>
-  
-  <dd></dd>
-    <dt id="Google_GenAI_Types_AuthType_GOOGLE_SERVICE_ACCOUNT_AUTH"><code>[JsonPropertyName(&quot;GOOGLE_SERVICE_ACCOUNT_AUTH&quot;)]
-GOOGLE_SERVICE_ACCOUNT_AUTH = 4</code></dt>
-  
-  <dd><p>Google Service Account Auth.</p>
-</dd>
-    <dt id="Google_GenAI_Types_AuthType_HTTP_BASIC_AUTH"><code>[JsonPropertyName(&quot;HTTP_BASIC_AUTH&quot;)]
-HTTP_BASIC_AUTH = 3</code></dt>
-  
-  <dd><p>HTTP Basic Auth.</p>
-</dd>
-    <dt id="Google_GenAI_Types_AuthType_NO_AUTH"><code>[JsonPropertyName(&quot;NO_AUTH&quot;)]
-NO_AUTH = 1</code></dt>
-  
-  <dd><p>No Auth.</p>
-</dd>
-    <dt id="Google_GenAI_Types_AuthType_OAUTH"><code>[JsonPropertyName(&quot;OAUTH&quot;)]
-OAUTH = 5</code></dt>
-  
-  <dd><p>OAuth auth.</p>
-</dd>
-    <dt id="Google_GenAI_Types_AuthType_OIDC_AUTH"><code>[JsonPropertyName(&quot;OIDC_AUTH&quot;)]
-OIDC_AUTH = 6</code></dt>
-  
-  <dd><p>OpenID Connect (OIDC) Auth.</p>
-</dd>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.AuthType.html">AuthType</a>&gt;</div>
+    </dd>
   </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_AuthType_AllValues_" data-uid="Google.GenAI.Types.AuthType.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_AuthType_AllValues" data-uid="Google.GenAI.Types.AuthType.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthType.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;AuthType&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.AuthType.html">AuthType</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_AuthType_ApiKeyAuth_" data-uid="Google.GenAI.Types.AuthType.ApiKeyAuth*"></a>
+
+  <h3 id="Google_GenAI_Types_AuthType_ApiKeyAuth" data-uid="Google.GenAI.Types.AuthType.ApiKeyAuth">
+  ApiKeyAuth
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthType.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>API Key Auth.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AuthType ApiKeyAuth { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.AuthType.html">AuthType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_AuthType_AuthTypeUnspecified_" data-uid="Google.GenAI.Types.AuthType.AuthTypeUnspecified*"></a>
+
+  <h3 id="Google_GenAI_Types_AuthType_AuthTypeUnspecified" data-uid="Google.GenAI.Types.AuthType.AuthTypeUnspecified">
+  AuthTypeUnspecified
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthType.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AuthType AuthTypeUnspecified { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.AuthType.html">AuthType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_AuthType_GoogleServiceAccountAuth_" data-uid="Google.GenAI.Types.AuthType.GoogleServiceAccountAuth*"></a>
+
+  <h3 id="Google_GenAI_Types_AuthType_GoogleServiceAccountAuth" data-uid="Google.GenAI.Types.AuthType.GoogleServiceAccountAuth">
+  GoogleServiceAccountAuth
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthType.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Google Service Account Auth.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AuthType GoogleServiceAccountAuth { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.AuthType.html">AuthType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_AuthType_HttpBasicAuth_" data-uid="Google.GenAI.Types.AuthType.HttpBasicAuth*"></a>
+
+  <h3 id="Google_GenAI_Types_AuthType_HttpBasicAuth" data-uid="Google.GenAI.Types.AuthType.HttpBasicAuth">
+  HttpBasicAuth
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthType.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>HTTP Basic Auth.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AuthType HttpBasicAuth { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.AuthType.html">AuthType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_AuthType_NoAuth_" data-uid="Google.GenAI.Types.AuthType.NoAuth*"></a>
+
+  <h3 id="Google_GenAI_Types_AuthType_NoAuth" data-uid="Google.GenAI.Types.AuthType.NoAuth">
+  NoAuth
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthType.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>No Auth.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AuthType NoAuth { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.AuthType.html">AuthType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_AuthType_Oauth_" data-uid="Google.GenAI.Types.AuthType.Oauth*"></a>
+
+  <h3 id="Google_GenAI_Types_AuthType_Oauth" data-uid="Google.GenAI.Types.AuthType.Oauth">
+  Oauth
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthType.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>OAuth auth.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AuthType Oauth { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.AuthType.html">AuthType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_AuthType_OidcAuth_" data-uid="Google.GenAI.Types.AuthType.OidcAuth*"></a>
+
+  <h3 id="Google_GenAI_Types_AuthType_OidcAuth" data-uid="Google.GenAI.Types.AuthType.OidcAuth">
+  OidcAuth
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthType.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>OpenID Connect (OIDC) Auth.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AuthType OidcAuth { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.AuthType.html">AuthType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_AuthType_Value_" data-uid="Google.GenAI.Types.AuthType.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_AuthType_Value" data-uid="Google.GenAI.Types.AuthType.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthType.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_AuthType_Equals_" data-uid="Google.GenAI.Types.AuthType.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_AuthType_Equals_Google_GenAI_Types_AuthType_" data-uid="Google.GenAI.Types.AuthType.Equals(Google.GenAI.Types.AuthType)">
+  Equals(AuthType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthType.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(AuthType other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.AuthType.html">AuthType</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_AuthType_FromString_" data-uid="Google.GenAI.Types.AuthType.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_AuthType_FromString_System_String_" data-uid="Google.GenAI.Types.AuthType.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthType.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AuthType FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.AuthType.html">AuthType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_AuthType_GetHashCode_" data-uid="Google.GenAI.Types.AuthType.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_AuthType_GetHashCode" data-uid="Google.GenAI.Types.AuthType.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthType.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_AuthType_ToString_" data-uid="Google.GenAI.Types.AuthType.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_AuthType_ToString" data-uid="Google.GenAI.Types.AuthType.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthType.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_AuthType_op_Implicit_" data-uid="Google.GenAI.Types.AuthType.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_AuthType_op_Implicit_System_String__Google_GenAI_Types_AuthType" data-uid="Google.GenAI.Types.AuthType.op_Implicit(System.String)~Google.GenAI.Types.AuthType">
+  implicit operator AuthType(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthType.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator AuthType(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.AuthType.html">AuthType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthType.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AuthType.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

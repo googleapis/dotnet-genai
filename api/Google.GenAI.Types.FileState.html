@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum FileState | Google GenAI .NET SDK </title>
+      <title>Struct FileState | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum FileState | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct FileState | Google GenAI .NET SDK ">
       
       <meta name="description" content="State for the lifecycle of a File.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_FileState" data-uid="Google.GenAI.Types.FileState" class="text-break">
-Enum FileState  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FileState.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Struct FileState  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FileState.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,45 +98,417 @@ Enum FileState  <a class="header-action link-secondary" title="View source" href
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum FileState</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(FileStateConverter))]
+public readonly record struct FileState : IEquatable&lt;FileState&gt;</code></pre>
   </div>
 
 
 
 
 
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="Google_GenAI_Types_FileState_ACTIVE"><code>[JsonPropertyName(&quot;ACTIVE&quot;)]
-ACTIVE = 2</code></dt>
-  
-  <dd></dd>
-    <dt id="Google_GenAI_Types_FileState_FAILED"><code>[JsonPropertyName(&quot;FAILED&quot;)]
-FAILED = 3</code></dt>
-  
-  <dd></dd>
-    <dt id="Google_GenAI_Types_FileState_PROCESSING"><code>[JsonPropertyName(&quot;PROCESSING&quot;)]
-PROCESSING = 1</code></dt>
-  
-  <dd></dd>
-    <dt id="Google_GenAI_Types_FileState_STATE_UNSPECIFIED"><code>[JsonPropertyName(&quot;STATE_UNSPECIFIED&quot;)]
-STATE_UNSPECIFIED = 0</code></dt>
-  
-  <dd></dd>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.FileState.html">FileState</a>&gt;</div>
+    </dd>
   </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_FileState_Active_" data-uid="Google.GenAI.Types.FileState.Active*"></a>
+
+  <h3 id="Google_GenAI_Types_FileState_Active" data-uid="Google.GenAI.Types.FileState.Active">
+  Active
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FileState.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FileState Active { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FileState.html">FileState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FileState_AllValues_" data-uid="Google.GenAI.Types.FileState.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_FileState_AllValues" data-uid="Google.GenAI.Types.FileState.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FileState.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;FileState&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.FileState.html">FileState</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FileState_Failed_" data-uid="Google.GenAI.Types.FileState.Failed*"></a>
+
+  <h3 id="Google_GenAI_Types_FileState_Failed" data-uid="Google.GenAI.Types.FileState.Failed">
+  Failed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FileState.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FileState Failed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FileState.html">FileState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FileState_Processing_" data-uid="Google.GenAI.Types.FileState.Processing*"></a>
+
+  <h3 id="Google_GenAI_Types_FileState_Processing" data-uid="Google.GenAI.Types.FileState.Processing">
+  Processing
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FileState.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FileState Processing { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FileState.html">FileState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FileState_StateUnspecified_" data-uid="Google.GenAI.Types.FileState.StateUnspecified*"></a>
+
+  <h3 id="Google_GenAI_Types_FileState_StateUnspecified" data-uid="Google.GenAI.Types.FileState.StateUnspecified">
+  StateUnspecified
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FileState.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FileState StateUnspecified { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FileState.html">FileState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FileState_Value_" data-uid="Google.GenAI.Types.FileState.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_FileState_Value" data-uid="Google.GenAI.Types.FileState.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FileState.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_FileState_Equals_" data-uid="Google.GenAI.Types.FileState.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_FileState_Equals_Google_GenAI_Types_FileState_" data-uid="Google.GenAI.Types.FileState.Equals(Google.GenAI.Types.FileState)">
+  Equals(FileState)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FileState.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(FileState other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.FileState.html">FileState</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FileState_FromString_" data-uid="Google.GenAI.Types.FileState.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_FileState_FromString_System_String_" data-uid="Google.GenAI.Types.FileState.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FileState.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FileState FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FileState.html">FileState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FileState_GetHashCode_" data-uid="Google.GenAI.Types.FileState.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_FileState_GetHashCode" data-uid="Google.GenAI.Types.FileState.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FileState.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FileState_ToString_" data-uid="Google.GenAI.Types.FileState.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_FileState_ToString" data-uid="Google.GenAI.Types.FileState.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FileState.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_FileState_op_Implicit_" data-uid="Google.GenAI.Types.FileState.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_FileState_op_Implicit_System_String__Google_GenAI_Types_FileState" data-uid="Google.GenAI.Types.FileState.op_Implicit(System.String)~Google.GenAI.Types.FileState">
+  implicit operator FileState(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FileState.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator FileState(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FileState.html">FileState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FileState.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FileState.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

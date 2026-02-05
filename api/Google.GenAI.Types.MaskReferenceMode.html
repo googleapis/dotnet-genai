@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum MaskReferenceMode | Google GenAI .NET SDK </title>
+      <title>Struct MaskReferenceMode | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum MaskReferenceMode | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct MaskReferenceMode | Google GenAI .NET SDK ">
       
       <meta name="description" content="Enum representing the mask mode of a mask reference image.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_MaskReferenceMode" data-uid="Google.GenAI.Types.MaskReferenceMode" class="text-break">
-Enum MaskReferenceMode  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MaskReferenceMode.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Struct MaskReferenceMode  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MaskReferenceMode.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,49 +98,448 @@ Enum MaskReferenceMode  <a class="header-action link-secondary" title="View sour
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum MaskReferenceMode</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(MaskReferenceModeConverter))]
+public readonly record struct MaskReferenceMode : IEquatable&lt;MaskReferenceMode&gt;</code></pre>
   </div>
 
 
 
 
 
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="Google_GenAI_Types_MaskReferenceMode_MASK_MODE_BACKGROUND"><code>[JsonPropertyName(&quot;MASK_MODE_BACKGROUND&quot;)]
-MASK_MODE_BACKGROUND = 2</code></dt>
-  
-  <dd></dd>
-    <dt id="Google_GenAI_Types_MaskReferenceMode_MASK_MODE_DEFAULT"><code>[JsonPropertyName(&quot;MASK_MODE_DEFAULT&quot;)]
-MASK_MODE_DEFAULT = 0</code></dt>
-  
-  <dd></dd>
-    <dt id="Google_GenAI_Types_MaskReferenceMode_MASK_MODE_FOREGROUND"><code>[JsonPropertyName(&quot;MASK_MODE_FOREGROUND&quot;)]
-MASK_MODE_FOREGROUND = 3</code></dt>
-  
-  <dd></dd>
-    <dt id="Google_GenAI_Types_MaskReferenceMode_MASK_MODE_SEMANTIC"><code>[JsonPropertyName(&quot;MASK_MODE_SEMANTIC&quot;)]
-MASK_MODE_SEMANTIC = 4</code></dt>
-  
-  <dd></dd>
-    <dt id="Google_GenAI_Types_MaskReferenceMode_MASK_MODE_USER_PROVIDED"><code>[JsonPropertyName(&quot;MASK_MODE_USER_PROVIDED&quot;)]
-MASK_MODE_USER_PROVIDED = 1</code></dt>
-  
-  <dd></dd>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.MaskReferenceMode.html">MaskReferenceMode</a>&gt;</div>
+    </dd>
   </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_MaskReferenceMode_AllValues_" data-uid="Google.GenAI.Types.MaskReferenceMode.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_MaskReferenceMode_AllValues" data-uid="Google.GenAI.Types.MaskReferenceMode.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MaskReferenceMode.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;MaskReferenceMode&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.MaskReferenceMode.html">MaskReferenceMode</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_MaskReferenceMode_MaskModeBackground_" data-uid="Google.GenAI.Types.MaskReferenceMode.MaskModeBackground*"></a>
+
+  <h3 id="Google_GenAI_Types_MaskReferenceMode_MaskModeBackground" data-uid="Google.GenAI.Types.MaskReferenceMode.MaskModeBackground">
+  MaskModeBackground
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MaskReferenceMode.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MaskReferenceMode MaskModeBackground { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.MaskReferenceMode.html">MaskReferenceMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_MaskReferenceMode_MaskModeDefault_" data-uid="Google.GenAI.Types.MaskReferenceMode.MaskModeDefault*"></a>
+
+  <h3 id="Google_GenAI_Types_MaskReferenceMode_MaskModeDefault" data-uid="Google.GenAI.Types.MaskReferenceMode.MaskModeDefault">
+  MaskModeDefault
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MaskReferenceMode.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MaskReferenceMode MaskModeDefault { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.MaskReferenceMode.html">MaskReferenceMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_MaskReferenceMode_MaskModeForeground_" data-uid="Google.GenAI.Types.MaskReferenceMode.MaskModeForeground*"></a>
+
+  <h3 id="Google_GenAI_Types_MaskReferenceMode_MaskModeForeground" data-uid="Google.GenAI.Types.MaskReferenceMode.MaskModeForeground">
+  MaskModeForeground
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MaskReferenceMode.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MaskReferenceMode MaskModeForeground { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.MaskReferenceMode.html">MaskReferenceMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_MaskReferenceMode_MaskModeSemantic_" data-uid="Google.GenAI.Types.MaskReferenceMode.MaskModeSemantic*"></a>
+
+  <h3 id="Google_GenAI_Types_MaskReferenceMode_MaskModeSemantic" data-uid="Google.GenAI.Types.MaskReferenceMode.MaskModeSemantic">
+  MaskModeSemantic
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MaskReferenceMode.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MaskReferenceMode MaskModeSemantic { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.MaskReferenceMode.html">MaskReferenceMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_MaskReferenceMode_MaskModeUserProvided_" data-uid="Google.GenAI.Types.MaskReferenceMode.MaskModeUserProvided*"></a>
+
+  <h3 id="Google_GenAI_Types_MaskReferenceMode_MaskModeUserProvided" data-uid="Google.GenAI.Types.MaskReferenceMode.MaskModeUserProvided">
+  MaskModeUserProvided
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MaskReferenceMode.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MaskReferenceMode MaskModeUserProvided { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.MaskReferenceMode.html">MaskReferenceMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_MaskReferenceMode_Value_" data-uid="Google.GenAI.Types.MaskReferenceMode.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_MaskReferenceMode_Value" data-uid="Google.GenAI.Types.MaskReferenceMode.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MaskReferenceMode.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_MaskReferenceMode_Equals_" data-uid="Google.GenAI.Types.MaskReferenceMode.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_MaskReferenceMode_Equals_Google_GenAI_Types_MaskReferenceMode_" data-uid="Google.GenAI.Types.MaskReferenceMode.Equals(Google.GenAI.Types.MaskReferenceMode)">
+  Equals(MaskReferenceMode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MaskReferenceMode.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(MaskReferenceMode other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.MaskReferenceMode.html">MaskReferenceMode</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_MaskReferenceMode_FromString_" data-uid="Google.GenAI.Types.MaskReferenceMode.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_MaskReferenceMode_FromString_System_String_" data-uid="Google.GenAI.Types.MaskReferenceMode.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MaskReferenceMode.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MaskReferenceMode FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.MaskReferenceMode.html">MaskReferenceMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_MaskReferenceMode_GetHashCode_" data-uid="Google.GenAI.Types.MaskReferenceMode.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_MaskReferenceMode_GetHashCode" data-uid="Google.GenAI.Types.MaskReferenceMode.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MaskReferenceMode.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_MaskReferenceMode_ToString_" data-uid="Google.GenAI.Types.MaskReferenceMode.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_MaskReferenceMode_ToString" data-uid="Google.GenAI.Types.MaskReferenceMode.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MaskReferenceMode.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_MaskReferenceMode_op_Implicit_" data-uid="Google.GenAI.Types.MaskReferenceMode.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_MaskReferenceMode_op_Implicit_System_String__Google_GenAI_Types_MaskReferenceMode" data-uid="Google.GenAI.Types.MaskReferenceMode.op_Implicit(System.String)~Google.GenAI.Types.MaskReferenceMode">
+  implicit operator MaskReferenceMode(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MaskReferenceMode.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator MaskReferenceMode(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.MaskReferenceMode.html">MaskReferenceMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MaskReferenceMode.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MaskReferenceMode.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum PersonGeneration | Google GenAI .NET SDK </title>
+      <title>Struct PersonGeneration | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum PersonGeneration | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct PersonGeneration | Google GenAI .NET SDK ">
       
       <meta name="description" content="Enum that controls the generation of people.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_PersonGeneration" data-uid="Google.GenAI.Types.PersonGeneration" class="text-break">
-Enum PersonGeneration  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PersonGeneration.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Struct PersonGeneration  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PersonGeneration.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,44 +98,389 @@ Enum PersonGeneration  <a class="header-action link-secondary" title="View sourc
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum PersonGeneration</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(PersonGenerationConverter))]
+public readonly record struct PersonGeneration : IEquatable&lt;PersonGeneration&gt;</code></pre>
   </div>
 
 
 
 
 
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="Google_GenAI_Types_PersonGeneration_ALLOW_ADULT"><code>[JsonPropertyName(&quot;ALLOW_ADULT&quot;)]
-ALLOW_ADULT = 1</code></dt>
-  
-  <dd><p>Generate images of adults, but not children.</p>
-</dd>
-    <dt id="Google_GenAI_Types_PersonGeneration_ALLOW_ALL"><code>[JsonPropertyName(&quot;ALLOW_ALL&quot;)]
-ALLOW_ALL = 2</code></dt>
-  
-  <dd><p>Generate images that include adults and children.</p>
-</dd>
-    <dt id="Google_GenAI_Types_PersonGeneration_DONT_ALLOW"><code>[JsonPropertyName(&quot;DONT_ALLOW&quot;)]
-DONT_ALLOW = 0</code></dt>
-  
-  <dd><p>Block generation of images of people.</p>
-</dd>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.PersonGeneration.html">PersonGeneration</a>&gt;</div>
+    </dd>
   </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_PersonGeneration_AllValues_" data-uid="Google.GenAI.Types.PersonGeneration.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_PersonGeneration_AllValues" data-uid="Google.GenAI.Types.PersonGeneration.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PersonGeneration.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;PersonGeneration&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.PersonGeneration.html">PersonGeneration</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_PersonGeneration_AllowAdult_" data-uid="Google.GenAI.Types.PersonGeneration.AllowAdult*"></a>
+
+  <h3 id="Google_GenAI_Types_PersonGeneration_AllowAdult" data-uid="Google.GenAI.Types.PersonGeneration.AllowAdult">
+  AllowAdult
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PersonGeneration.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generate images of adults, but not children.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PersonGeneration AllowAdult { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.PersonGeneration.html">PersonGeneration</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_PersonGeneration_AllowAll_" data-uid="Google.GenAI.Types.PersonGeneration.AllowAll*"></a>
+
+  <h3 id="Google_GenAI_Types_PersonGeneration_AllowAll" data-uid="Google.GenAI.Types.PersonGeneration.AllowAll">
+  AllowAll
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PersonGeneration.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generate images that include adults and children.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PersonGeneration AllowAll { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.PersonGeneration.html">PersonGeneration</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_PersonGeneration_DontAllow_" data-uid="Google.GenAI.Types.PersonGeneration.DontAllow*"></a>
+
+  <h3 id="Google_GenAI_Types_PersonGeneration_DontAllow" data-uid="Google.GenAI.Types.PersonGeneration.DontAllow">
+  DontAllow
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PersonGeneration.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Block generation of images of people.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PersonGeneration DontAllow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.PersonGeneration.html">PersonGeneration</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_PersonGeneration_Value_" data-uid="Google.GenAI.Types.PersonGeneration.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_PersonGeneration_Value" data-uid="Google.GenAI.Types.PersonGeneration.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PersonGeneration.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_PersonGeneration_Equals_" data-uid="Google.GenAI.Types.PersonGeneration.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_PersonGeneration_Equals_Google_GenAI_Types_PersonGeneration_" data-uid="Google.GenAI.Types.PersonGeneration.Equals(Google.GenAI.Types.PersonGeneration)">
+  Equals(PersonGeneration)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PersonGeneration.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(PersonGeneration other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.PersonGeneration.html">PersonGeneration</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_PersonGeneration_FromString_" data-uid="Google.GenAI.Types.PersonGeneration.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_PersonGeneration_FromString_System_String_" data-uid="Google.GenAI.Types.PersonGeneration.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PersonGeneration.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PersonGeneration FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.PersonGeneration.html">PersonGeneration</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_PersonGeneration_GetHashCode_" data-uid="Google.GenAI.Types.PersonGeneration.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_PersonGeneration_GetHashCode" data-uid="Google.GenAI.Types.PersonGeneration.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PersonGeneration.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_PersonGeneration_ToString_" data-uid="Google.GenAI.Types.PersonGeneration.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_PersonGeneration_ToString" data-uid="Google.GenAI.Types.PersonGeneration.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PersonGeneration.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_PersonGeneration_op_Implicit_" data-uid="Google.GenAI.Types.PersonGeneration.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_PersonGeneration_op_Implicit_System_String__Google_GenAI_Types_PersonGeneration" data-uid="Google.GenAI.Types.PersonGeneration.op_Implicit(System.String)~Google.GenAI.Types.PersonGeneration">
+  implicit operator PersonGeneration(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PersonGeneration.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator PersonGeneration(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.PersonGeneration.html">PersonGeneration</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PersonGeneration.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PersonGeneration.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

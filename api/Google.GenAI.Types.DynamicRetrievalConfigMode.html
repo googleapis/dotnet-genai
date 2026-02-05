@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum DynamicRetrievalConfigMode | Google GenAI .NET SDK </title>
+      <title>Struct DynamicRetrievalConfigMode | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum DynamicRetrievalConfigMode | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct DynamicRetrievalConfigMode | Google GenAI .NET SDK ">
       
       <meta name="description" content="The mode of the predictor to be used in dynamic retrieval.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_DynamicRetrievalConfigMode" data-uid="Google.GenAI.Types.DynamicRetrievalConfigMode" class="text-break">
-Enum DynamicRetrievalConfigMode  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DynamicRetrievalConfigMode.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Struct DynamicRetrievalConfigMode  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DynamicRetrievalConfigMode.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,39 +98,357 @@ Enum DynamicRetrievalConfigMode  <a class="header-action link-secondary" title="
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum DynamicRetrievalConfigMode</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(DynamicRetrievalConfigModeConverter))]
+public readonly record struct DynamicRetrievalConfigMode : IEquatable&lt;DynamicRetrievalConfigMode&gt;</code></pre>
   </div>
 
 
 
 
 
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="Google_GenAI_Types_DynamicRetrievalConfigMode_MODE_DYNAMIC"><code>[JsonPropertyName(&quot;MODE_DYNAMIC&quot;)]
-MODE_DYNAMIC = 1</code></dt>
-  
-  <dd><p>Run retrieval only when system decides it is necessary.</p>
-</dd>
-    <dt id="Google_GenAI_Types_DynamicRetrievalConfigMode_MODE_UNSPECIFIED"><code>[JsonPropertyName(&quot;MODE_UNSPECIFIED&quot;)]
-MODE_UNSPECIFIED = 0</code></dt>
-  
-  <dd><p>Always trigger retrieval.</p>
-</dd>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.DynamicRetrievalConfigMode.html">DynamicRetrievalConfigMode</a>&gt;</div>
+    </dd>
   </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_DynamicRetrievalConfigMode_AllValues_" data-uid="Google.GenAI.Types.DynamicRetrievalConfigMode.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_DynamicRetrievalConfigMode_AllValues" data-uid="Google.GenAI.Types.DynamicRetrievalConfigMode.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DynamicRetrievalConfigMode.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;DynamicRetrievalConfigMode&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.DynamicRetrievalConfigMode.html">DynamicRetrievalConfigMode</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_DynamicRetrievalConfigMode_ModeDynamic_" data-uid="Google.GenAI.Types.DynamicRetrievalConfigMode.ModeDynamic*"></a>
+
+  <h3 id="Google_GenAI_Types_DynamicRetrievalConfigMode_ModeDynamic" data-uid="Google.GenAI.Types.DynamicRetrievalConfigMode.ModeDynamic">
+  ModeDynamic
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DynamicRetrievalConfigMode.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Run retrieval only when system decides it is necessary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DynamicRetrievalConfigMode ModeDynamic { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.DynamicRetrievalConfigMode.html">DynamicRetrievalConfigMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_DynamicRetrievalConfigMode_ModeUnspecified_" data-uid="Google.GenAI.Types.DynamicRetrievalConfigMode.ModeUnspecified*"></a>
+
+  <h3 id="Google_GenAI_Types_DynamicRetrievalConfigMode_ModeUnspecified" data-uid="Google.GenAI.Types.DynamicRetrievalConfigMode.ModeUnspecified">
+  ModeUnspecified
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DynamicRetrievalConfigMode.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Always trigger retrieval.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DynamicRetrievalConfigMode ModeUnspecified { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.DynamicRetrievalConfigMode.html">DynamicRetrievalConfigMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_DynamicRetrievalConfigMode_Value_" data-uid="Google.GenAI.Types.DynamicRetrievalConfigMode.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_DynamicRetrievalConfigMode_Value" data-uid="Google.GenAI.Types.DynamicRetrievalConfigMode.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DynamicRetrievalConfigMode.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_DynamicRetrievalConfigMode_Equals_" data-uid="Google.GenAI.Types.DynamicRetrievalConfigMode.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_DynamicRetrievalConfigMode_Equals_Google_GenAI_Types_DynamicRetrievalConfigMode_" data-uid="Google.GenAI.Types.DynamicRetrievalConfigMode.Equals(Google.GenAI.Types.DynamicRetrievalConfigMode)">
+  Equals(DynamicRetrievalConfigMode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DynamicRetrievalConfigMode.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(DynamicRetrievalConfigMode other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.DynamicRetrievalConfigMode.html">DynamicRetrievalConfigMode</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_DynamicRetrievalConfigMode_FromString_" data-uid="Google.GenAI.Types.DynamicRetrievalConfigMode.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_DynamicRetrievalConfigMode_FromString_System_String_" data-uid="Google.GenAI.Types.DynamicRetrievalConfigMode.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DynamicRetrievalConfigMode.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DynamicRetrievalConfigMode FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.DynamicRetrievalConfigMode.html">DynamicRetrievalConfigMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_DynamicRetrievalConfigMode_GetHashCode_" data-uid="Google.GenAI.Types.DynamicRetrievalConfigMode.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_DynamicRetrievalConfigMode_GetHashCode" data-uid="Google.GenAI.Types.DynamicRetrievalConfigMode.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DynamicRetrievalConfigMode.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_DynamicRetrievalConfigMode_ToString_" data-uid="Google.GenAI.Types.DynamicRetrievalConfigMode.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_DynamicRetrievalConfigMode_ToString" data-uid="Google.GenAI.Types.DynamicRetrievalConfigMode.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DynamicRetrievalConfigMode.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_DynamicRetrievalConfigMode_op_Implicit_" data-uid="Google.GenAI.Types.DynamicRetrievalConfigMode.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_DynamicRetrievalConfigMode_op_Implicit_System_String__Google_GenAI_Types_DynamicRetrievalConfigMode" data-uid="Google.GenAI.Types.DynamicRetrievalConfigMode.op_Implicit(System.String)~Google.GenAI.Types.DynamicRetrievalConfigMode">
+  implicit operator DynamicRetrievalConfigMode(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DynamicRetrievalConfigMode.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator DynamicRetrievalConfigMode(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.DynamicRetrievalConfigMode.html">DynamicRetrievalConfigMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DynamicRetrievalConfigMode.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DynamicRetrievalConfigMode.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

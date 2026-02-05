@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum PhishBlockThreshold | Google GenAI .NET SDK </title>
+      <title>Struct PhishBlockThreshold | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum PhishBlockThreshold | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct PhishBlockThreshold | Google GenAI .NET SDK ">
       
       <meta name="description" content="Sites with confidence level chosen &amp;amp; above this value will be blocked from the search results. This enum is not supported in Gemini API.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_PhishBlockThreshold" data-uid="Google.GenAI.Types.PhishBlockThreshold" class="text-break">
-Enum PhishBlockThreshold  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PhishBlockThreshold.cs/#L26"><i class="bi bi-code-slash"></i></a>
+Struct PhishBlockThreshold  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PhishBlockThreshold.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -100,64 +99,517 @@ results. This enum is not supported in Gemini API.</p>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum PhishBlockThreshold</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(PhishBlockThresholdConverter))]
+public readonly record struct PhishBlockThreshold : IEquatable&lt;PhishBlockThreshold&gt;</code></pre>
   </div>
 
 
 
 
 
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="Google_GenAI_Types_PhishBlockThreshold_BLOCK_HIGHER_AND_ABOVE"><code>[JsonPropertyName(&quot;BLOCK_HIGHER_AND_ABOVE&quot;)]
-BLOCK_HIGHER_AND_ABOVE = 4</code></dt>
-  
-  <dd><p>Blocks Higher and above confidence URL that is risky.</p>
-</dd>
-    <dt id="Google_GenAI_Types_PhishBlockThreshold_BLOCK_HIGH_AND_ABOVE"><code>[JsonPropertyName(&quot;BLOCK_HIGH_AND_ABOVE&quot;)]
-BLOCK_HIGH_AND_ABOVE = 3</code></dt>
-  
-  <dd><p>Blocks High and above confidence URL that is risky.</p>
-</dd>
-    <dt id="Google_GenAI_Types_PhishBlockThreshold_BLOCK_LOW_AND_ABOVE"><code>[JsonPropertyName(&quot;BLOCK_LOW_AND_ABOVE&quot;)]
-BLOCK_LOW_AND_ABOVE = 1</code></dt>
-  
-  <dd><p>Blocks Low and above confidence URL that is risky.</p>
-</dd>
-    <dt id="Google_GenAI_Types_PhishBlockThreshold_BLOCK_MEDIUM_AND_ABOVE"><code>[JsonPropertyName(&quot;BLOCK_MEDIUM_AND_ABOVE&quot;)]
-BLOCK_MEDIUM_AND_ABOVE = 2</code></dt>
-  
-  <dd><p>Blocks Medium and above confidence URL that is risky.</p>
-</dd>
-    <dt id="Google_GenAI_Types_PhishBlockThreshold_BLOCK_ONLY_EXTREMELY_HIGH"><code>[JsonPropertyName(&quot;BLOCK_ONLY_EXTREMELY_HIGH&quot;)]
-BLOCK_ONLY_EXTREMELY_HIGH = 6</code></dt>
-  
-  <dd><p>Blocks Extremely high confidence URL that is risky.</p>
-</dd>
-    <dt id="Google_GenAI_Types_PhishBlockThreshold_BLOCK_VERY_HIGH_AND_ABOVE"><code>[JsonPropertyName(&quot;BLOCK_VERY_HIGH_AND_ABOVE&quot;)]
-BLOCK_VERY_HIGH_AND_ABOVE = 5</code></dt>
-  
-  <dd><p>Blocks Very high and above confidence URL that is risky.</p>
-</dd>
-    <dt id="Google_GenAI_Types_PhishBlockThreshold_PHISH_BLOCK_THRESHOLD_UNSPECIFIED"><code>[JsonPropertyName(&quot;PHISH_BLOCK_THRESHOLD_UNSPECIFIED&quot;)]
-PHISH_BLOCK_THRESHOLD_UNSPECIFIED = 0</code></dt>
-  
-  <dd><p>Defaults to unspecified.</p>
-</dd>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.PhishBlockThreshold.html">PhishBlockThreshold</a>&gt;</div>
+    </dd>
   </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_PhishBlockThreshold_AllValues_" data-uid="Google.GenAI.Types.PhishBlockThreshold.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_PhishBlockThreshold_AllValues" data-uid="Google.GenAI.Types.PhishBlockThreshold.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PhishBlockThreshold.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;PhishBlockThreshold&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.PhishBlockThreshold.html">PhishBlockThreshold</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_PhishBlockThreshold_BlockHighAndAbove_" data-uid="Google.GenAI.Types.PhishBlockThreshold.BlockHighAndAbove*"></a>
+
+  <h3 id="Google_GenAI_Types_PhishBlockThreshold_BlockHighAndAbove" data-uid="Google.GenAI.Types.PhishBlockThreshold.BlockHighAndAbove">
+  BlockHighAndAbove
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PhishBlockThreshold.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Blocks High and above confidence URL that is risky.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PhishBlockThreshold BlockHighAndAbove { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.PhishBlockThreshold.html">PhishBlockThreshold</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_PhishBlockThreshold_BlockHigherAndAbove_" data-uid="Google.GenAI.Types.PhishBlockThreshold.BlockHigherAndAbove*"></a>
+
+  <h3 id="Google_GenAI_Types_PhishBlockThreshold_BlockHigherAndAbove" data-uid="Google.GenAI.Types.PhishBlockThreshold.BlockHigherAndAbove">
+  BlockHigherAndAbove
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PhishBlockThreshold.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Blocks Higher and above confidence URL that is risky.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PhishBlockThreshold BlockHigherAndAbove { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.PhishBlockThreshold.html">PhishBlockThreshold</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_PhishBlockThreshold_BlockLowAndAbove_" data-uid="Google.GenAI.Types.PhishBlockThreshold.BlockLowAndAbove*"></a>
+
+  <h3 id="Google_GenAI_Types_PhishBlockThreshold_BlockLowAndAbove" data-uid="Google.GenAI.Types.PhishBlockThreshold.BlockLowAndAbove">
+  BlockLowAndAbove
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PhishBlockThreshold.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Blocks Low and above confidence URL that is risky.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PhishBlockThreshold BlockLowAndAbove { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.PhishBlockThreshold.html">PhishBlockThreshold</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_PhishBlockThreshold_BlockMediumAndAbove_" data-uid="Google.GenAI.Types.PhishBlockThreshold.BlockMediumAndAbove*"></a>
+
+  <h3 id="Google_GenAI_Types_PhishBlockThreshold_BlockMediumAndAbove" data-uid="Google.GenAI.Types.PhishBlockThreshold.BlockMediumAndAbove">
+  BlockMediumAndAbove
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PhishBlockThreshold.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Blocks Medium and above confidence URL that is risky.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PhishBlockThreshold BlockMediumAndAbove { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.PhishBlockThreshold.html">PhishBlockThreshold</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_PhishBlockThreshold_BlockOnlyExtremelyHigh_" data-uid="Google.GenAI.Types.PhishBlockThreshold.BlockOnlyExtremelyHigh*"></a>
+
+  <h3 id="Google_GenAI_Types_PhishBlockThreshold_BlockOnlyExtremelyHigh" data-uid="Google.GenAI.Types.PhishBlockThreshold.BlockOnlyExtremelyHigh">
+  BlockOnlyExtremelyHigh
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PhishBlockThreshold.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Blocks Extremely high confidence URL that is risky.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PhishBlockThreshold BlockOnlyExtremelyHigh { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.PhishBlockThreshold.html">PhishBlockThreshold</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_PhishBlockThreshold_BlockVeryHighAndAbove_" data-uid="Google.GenAI.Types.PhishBlockThreshold.BlockVeryHighAndAbove*"></a>
+
+  <h3 id="Google_GenAI_Types_PhishBlockThreshold_BlockVeryHighAndAbove" data-uid="Google.GenAI.Types.PhishBlockThreshold.BlockVeryHighAndAbove">
+  BlockVeryHighAndAbove
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PhishBlockThreshold.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Blocks Very high and above confidence URL that is risky.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PhishBlockThreshold BlockVeryHighAndAbove { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.PhishBlockThreshold.html">PhishBlockThreshold</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_PhishBlockThreshold_PhishBlockThresholdUnspecified_" data-uid="Google.GenAI.Types.PhishBlockThreshold.PhishBlockThresholdUnspecified*"></a>
+
+  <h3 id="Google_GenAI_Types_PhishBlockThreshold_PhishBlockThresholdUnspecified" data-uid="Google.GenAI.Types.PhishBlockThreshold.PhishBlockThresholdUnspecified">
+  PhishBlockThresholdUnspecified
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PhishBlockThreshold.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Defaults to unspecified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PhishBlockThreshold PhishBlockThresholdUnspecified { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.PhishBlockThreshold.html">PhishBlockThreshold</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_PhishBlockThreshold_Value_" data-uid="Google.GenAI.Types.PhishBlockThreshold.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_PhishBlockThreshold_Value" data-uid="Google.GenAI.Types.PhishBlockThreshold.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PhishBlockThreshold.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_PhishBlockThreshold_Equals_" data-uid="Google.GenAI.Types.PhishBlockThreshold.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_PhishBlockThreshold_Equals_Google_GenAI_Types_PhishBlockThreshold_" data-uid="Google.GenAI.Types.PhishBlockThreshold.Equals(Google.GenAI.Types.PhishBlockThreshold)">
+  Equals(PhishBlockThreshold)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PhishBlockThreshold.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(PhishBlockThreshold other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.PhishBlockThreshold.html">PhishBlockThreshold</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_PhishBlockThreshold_FromString_" data-uid="Google.GenAI.Types.PhishBlockThreshold.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_PhishBlockThreshold_FromString_System_String_" data-uid="Google.GenAI.Types.PhishBlockThreshold.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PhishBlockThreshold.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PhishBlockThreshold FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.PhishBlockThreshold.html">PhishBlockThreshold</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_PhishBlockThreshold_GetHashCode_" data-uid="Google.GenAI.Types.PhishBlockThreshold.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_PhishBlockThreshold_GetHashCode" data-uid="Google.GenAI.Types.PhishBlockThreshold.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PhishBlockThreshold.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_PhishBlockThreshold_ToString_" data-uid="Google.GenAI.Types.PhishBlockThreshold.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_PhishBlockThreshold_ToString" data-uid="Google.GenAI.Types.PhishBlockThreshold.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PhishBlockThreshold.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_PhishBlockThreshold_op_Implicit_" data-uid="Google.GenAI.Types.PhishBlockThreshold.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_PhishBlockThreshold_op_Implicit_System_String__Google_GenAI_Types_PhishBlockThreshold" data-uid="Google.GenAI.Types.PhishBlockThreshold.op_Implicit(System.String)~Google.GenAI.Types.PhishBlockThreshold">
+  implicit operator PhishBlockThreshold(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PhishBlockThreshold.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator PhishBlockThreshold(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.PhishBlockThreshold.html">PhishBlockThreshold</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PhishBlockThreshold.cs/#L26" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/PhishBlockThreshold.cs/#L29" class="edit-link">Edit this page</a>
         </div>
 
 

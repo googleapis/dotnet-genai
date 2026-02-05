@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum UrlRetrievalStatus | Google GenAI .NET SDK </title>
+      <title>Struct UrlRetrievalStatus | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum UrlRetrievalStatus | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct UrlRetrievalStatus | Google GenAI .NET SDK ">
       
       <meta name="description" content="Status of the url retrieval.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_UrlRetrievalStatus" data-uid="Google.GenAI.Types.UrlRetrievalStatus" class="text-break">
-Enum UrlRetrievalStatus  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UrlRetrievalStatus.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Struct UrlRetrievalStatus  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UrlRetrievalStatus.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,56 +98,455 @@ Enum UrlRetrievalStatus  <a class="header-action link-secondary" title="View sou
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum UrlRetrievalStatus</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(UrlRetrievalStatusConverter))]
+public readonly record struct UrlRetrievalStatus : IEquatable&lt;UrlRetrievalStatus&gt;</code></pre>
   </div>
 
 
 
 
 
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="Google_GenAI_Types_UrlRetrievalStatus_URL_RETRIEVAL_STATUS_ERROR"><code>[JsonPropertyName(&quot;URL_RETRIEVAL_STATUS_ERROR&quot;)]
-URL_RETRIEVAL_STATUS_ERROR = 2</code></dt>
-  
-  <dd><p>Url retrieval is failed due to error.</p>
-</dd>
-    <dt id="Google_GenAI_Types_UrlRetrievalStatus_URL_RETRIEVAL_STATUS_PAYWALL"><code>[JsonPropertyName(&quot;URL_RETRIEVAL_STATUS_PAYWALL&quot;)]
-URL_RETRIEVAL_STATUS_PAYWALL = 3</code></dt>
-  
-  <dd><p>Url retrieval is failed because the content is behind paywall. This enum value is not
-supported in Vertex AI.</p>
-</dd>
-    <dt id="Google_GenAI_Types_UrlRetrievalStatus_URL_RETRIEVAL_STATUS_SUCCESS"><code>[JsonPropertyName(&quot;URL_RETRIEVAL_STATUS_SUCCESS&quot;)]
-URL_RETRIEVAL_STATUS_SUCCESS = 1</code></dt>
-  
-  <dd><p>Url retrieval is successful.</p>
-</dd>
-    <dt id="Google_GenAI_Types_UrlRetrievalStatus_URL_RETRIEVAL_STATUS_UNSAFE"><code>[JsonPropertyName(&quot;URL_RETRIEVAL_STATUS_UNSAFE&quot;)]
-URL_RETRIEVAL_STATUS_UNSAFE = 4</code></dt>
-  
-  <dd><p>Url retrieval is failed because the content is unsafe. This enum value is not supported in
-Vertex AI.</p>
-</dd>
-    <dt id="Google_GenAI_Types_UrlRetrievalStatus_URL_RETRIEVAL_STATUS_UNSPECIFIED"><code>[JsonPropertyName(&quot;URL_RETRIEVAL_STATUS_UNSPECIFIED&quot;)]
-URL_RETRIEVAL_STATUS_UNSPECIFIED = 0</code></dt>
-  
-  <dd><p>Default value. This value is unused.</p>
-</dd>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.UrlRetrievalStatus.html">UrlRetrievalStatus</a>&gt;</div>
+    </dd>
   </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_UrlRetrievalStatus_AllValues_" data-uid="Google.GenAI.Types.UrlRetrievalStatus.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_UrlRetrievalStatus_AllValues" data-uid="Google.GenAI.Types.UrlRetrievalStatus.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UrlRetrievalStatus.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;UrlRetrievalStatus&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.UrlRetrievalStatus.html">UrlRetrievalStatus</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_UrlRetrievalStatus_UrlRetrievalStatusError_" data-uid="Google.GenAI.Types.UrlRetrievalStatus.UrlRetrievalStatusError*"></a>
+
+  <h3 id="Google_GenAI_Types_UrlRetrievalStatus_UrlRetrievalStatusError" data-uid="Google.GenAI.Types.UrlRetrievalStatus.UrlRetrievalStatusError">
+  UrlRetrievalStatusError
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UrlRetrievalStatus.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Url retrieval is failed due to error.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UrlRetrievalStatus UrlRetrievalStatusError { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.UrlRetrievalStatus.html">UrlRetrievalStatus</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_UrlRetrievalStatus_UrlRetrievalStatusPaywall_" data-uid="Google.GenAI.Types.UrlRetrievalStatus.UrlRetrievalStatusPaywall*"></a>
+
+  <h3 id="Google_GenAI_Types_UrlRetrievalStatus_UrlRetrievalStatusPaywall" data-uid="Google.GenAI.Types.UrlRetrievalStatus.UrlRetrievalStatusPaywall">
+  UrlRetrievalStatusPaywall
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UrlRetrievalStatus.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Url retrieval is failed because the content is behind paywall. This enum value is not
+supported in Vertex AI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UrlRetrievalStatus UrlRetrievalStatusPaywall { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.UrlRetrievalStatus.html">UrlRetrievalStatus</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_UrlRetrievalStatus_UrlRetrievalStatusSuccess_" data-uid="Google.GenAI.Types.UrlRetrievalStatus.UrlRetrievalStatusSuccess*"></a>
+
+  <h3 id="Google_GenAI_Types_UrlRetrievalStatus_UrlRetrievalStatusSuccess" data-uid="Google.GenAI.Types.UrlRetrievalStatus.UrlRetrievalStatusSuccess">
+  UrlRetrievalStatusSuccess
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UrlRetrievalStatus.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Url retrieval is successful.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UrlRetrievalStatus UrlRetrievalStatusSuccess { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.UrlRetrievalStatus.html">UrlRetrievalStatus</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_UrlRetrievalStatus_UrlRetrievalStatusUnsafe_" data-uid="Google.GenAI.Types.UrlRetrievalStatus.UrlRetrievalStatusUnsafe*"></a>
+
+  <h3 id="Google_GenAI_Types_UrlRetrievalStatus_UrlRetrievalStatusUnsafe" data-uid="Google.GenAI.Types.UrlRetrievalStatus.UrlRetrievalStatusUnsafe">
+  UrlRetrievalStatusUnsafe
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UrlRetrievalStatus.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Url retrieval is failed because the content is unsafe. This enum value is not supported in
+Vertex AI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UrlRetrievalStatus UrlRetrievalStatusUnsafe { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.UrlRetrievalStatus.html">UrlRetrievalStatus</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_UrlRetrievalStatus_UrlRetrievalStatusUnspecified_" data-uid="Google.GenAI.Types.UrlRetrievalStatus.UrlRetrievalStatusUnspecified*"></a>
+
+  <h3 id="Google_GenAI_Types_UrlRetrievalStatus_UrlRetrievalStatusUnspecified" data-uid="Google.GenAI.Types.UrlRetrievalStatus.UrlRetrievalStatusUnspecified">
+  UrlRetrievalStatusUnspecified
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UrlRetrievalStatus.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default value. This value is unused.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UrlRetrievalStatus UrlRetrievalStatusUnspecified { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.UrlRetrievalStatus.html">UrlRetrievalStatus</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_UrlRetrievalStatus_Value_" data-uid="Google.GenAI.Types.UrlRetrievalStatus.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_UrlRetrievalStatus_Value" data-uid="Google.GenAI.Types.UrlRetrievalStatus.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UrlRetrievalStatus.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_UrlRetrievalStatus_Equals_" data-uid="Google.GenAI.Types.UrlRetrievalStatus.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_UrlRetrievalStatus_Equals_Google_GenAI_Types_UrlRetrievalStatus_" data-uid="Google.GenAI.Types.UrlRetrievalStatus.Equals(Google.GenAI.Types.UrlRetrievalStatus)">
+  Equals(UrlRetrievalStatus)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UrlRetrievalStatus.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(UrlRetrievalStatus other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.UrlRetrievalStatus.html">UrlRetrievalStatus</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_UrlRetrievalStatus_FromString_" data-uid="Google.GenAI.Types.UrlRetrievalStatus.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_UrlRetrievalStatus_FromString_System_String_" data-uid="Google.GenAI.Types.UrlRetrievalStatus.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UrlRetrievalStatus.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UrlRetrievalStatus FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.UrlRetrievalStatus.html">UrlRetrievalStatus</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_UrlRetrievalStatus_GetHashCode_" data-uid="Google.GenAI.Types.UrlRetrievalStatus.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_UrlRetrievalStatus_GetHashCode" data-uid="Google.GenAI.Types.UrlRetrievalStatus.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UrlRetrievalStatus.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_UrlRetrievalStatus_ToString_" data-uid="Google.GenAI.Types.UrlRetrievalStatus.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_UrlRetrievalStatus_ToString" data-uid="Google.GenAI.Types.UrlRetrievalStatus.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UrlRetrievalStatus.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_UrlRetrievalStatus_op_Implicit_" data-uid="Google.GenAI.Types.UrlRetrievalStatus.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_UrlRetrievalStatus_op_Implicit_System_String__Google_GenAI_Types_UrlRetrievalStatus" data-uid="Google.GenAI.Types.UrlRetrievalStatus.op_Implicit(System.String)~Google.GenAI.Types.UrlRetrievalStatus">
+  implicit operator UrlRetrievalStatus(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UrlRetrievalStatus.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator UrlRetrievalStatus(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.UrlRetrievalStatus.html">UrlRetrievalStatus</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UrlRetrievalStatus.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UrlRetrievalStatus.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

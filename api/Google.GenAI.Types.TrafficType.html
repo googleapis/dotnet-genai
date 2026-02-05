@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum TrafficType | Google GenAI .NET SDK </title>
+      <title>Struct TrafficType | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum TrafficType | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct TrafficType | Google GenAI .NET SDK ">
       
       <meta name="description" content="Output only. The traffic type for this request. This enum is not supported in Gemini API.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_TrafficType" data-uid="Google.GenAI.Types.TrafficType" class="text-break">
-Enum TrafficType  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TrafficType.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Struct TrafficType  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TrafficType.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,44 +98,389 @@ Enum TrafficType  <a class="header-action link-secondary" title="View source" hr
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum TrafficType</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(TrafficTypeConverter))]
+public readonly record struct TrafficType : IEquatable&lt;TrafficType&gt;</code></pre>
   </div>
 
 
 
 
 
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="Google_GenAI_Types_TrafficType_ON_DEMAND"><code>[JsonPropertyName(&quot;ON_DEMAND&quot;)]
-ON_DEMAND = 1</code></dt>
-  
-  <dd><p>The request was processed using Pay-As-You-Go quota.</p>
-</dd>
-    <dt id="Google_GenAI_Types_TrafficType_PROVISIONED_THROUGHPUT"><code>[JsonPropertyName(&quot;PROVISIONED_THROUGHPUT&quot;)]
-PROVISIONED_THROUGHPUT = 2</code></dt>
-  
-  <dd><p>Type for Provisioned Throughput traffic.</p>
-</dd>
-    <dt id="Google_GenAI_Types_TrafficType_TRAFFIC_TYPE_UNSPECIFIED"><code>[JsonPropertyName(&quot;TRAFFIC_TYPE_UNSPECIFIED&quot;)]
-TRAFFIC_TYPE_UNSPECIFIED = 0</code></dt>
-  
-  <dd><p>Unspecified request traffic type.</p>
-</dd>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.TrafficType.html">TrafficType</a>&gt;</div>
+    </dd>
   </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_TrafficType_AllValues_" data-uid="Google.GenAI.Types.TrafficType.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_TrafficType_AllValues" data-uid="Google.GenAI.Types.TrafficType.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TrafficType.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;TrafficType&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.TrafficType.html">TrafficType</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TrafficType_OnDemand_" data-uid="Google.GenAI.Types.TrafficType.OnDemand*"></a>
+
+  <h3 id="Google_GenAI_Types_TrafficType_OnDemand" data-uid="Google.GenAI.Types.TrafficType.OnDemand">
+  OnDemand
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TrafficType.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The request was processed using Pay-As-You-Go quota.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TrafficType OnDemand { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TrafficType.html">TrafficType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TrafficType_ProvisionedThroughput_" data-uid="Google.GenAI.Types.TrafficType.ProvisionedThroughput*"></a>
+
+  <h3 id="Google_GenAI_Types_TrafficType_ProvisionedThroughput" data-uid="Google.GenAI.Types.TrafficType.ProvisionedThroughput">
+  ProvisionedThroughput
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TrafficType.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Type for Provisioned Throughput traffic.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TrafficType ProvisionedThroughput { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TrafficType.html">TrafficType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TrafficType_TrafficTypeUnspecified_" data-uid="Google.GenAI.Types.TrafficType.TrafficTypeUnspecified*"></a>
+
+  <h3 id="Google_GenAI_Types_TrafficType_TrafficTypeUnspecified" data-uid="Google.GenAI.Types.TrafficType.TrafficTypeUnspecified">
+  TrafficTypeUnspecified
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TrafficType.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unspecified request traffic type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TrafficType TrafficTypeUnspecified { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TrafficType.html">TrafficType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TrafficType_Value_" data-uid="Google.GenAI.Types.TrafficType.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_TrafficType_Value" data-uid="Google.GenAI.Types.TrafficType.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TrafficType.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_TrafficType_Equals_" data-uid="Google.GenAI.Types.TrafficType.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_TrafficType_Equals_Google_GenAI_Types_TrafficType_" data-uid="Google.GenAI.Types.TrafficType.Equals(Google.GenAI.Types.TrafficType)">
+  Equals(TrafficType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TrafficType.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(TrafficType other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.TrafficType.html">TrafficType</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TrafficType_FromString_" data-uid="Google.GenAI.Types.TrafficType.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_TrafficType_FromString_System_String_" data-uid="Google.GenAI.Types.TrafficType.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TrafficType.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TrafficType FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TrafficType.html">TrafficType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TrafficType_GetHashCode_" data-uid="Google.GenAI.Types.TrafficType.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_TrafficType_GetHashCode" data-uid="Google.GenAI.Types.TrafficType.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TrafficType.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TrafficType_ToString_" data-uid="Google.GenAI.Types.TrafficType.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_TrafficType_ToString" data-uid="Google.GenAI.Types.TrafficType.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TrafficType.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_TrafficType_op_Implicit_" data-uid="Google.GenAI.Types.TrafficType.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_TrafficType_op_Implicit_System_String__Google_GenAI_Types_TrafficType" data-uid="Google.GenAI.Types.TrafficType.op_Implicit(System.String)~Google.GenAI.Types.TrafficType">
+  implicit operator TrafficType(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TrafficType.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator TrafficType(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TrafficType.html">TrafficType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TrafficType.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TrafficType.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

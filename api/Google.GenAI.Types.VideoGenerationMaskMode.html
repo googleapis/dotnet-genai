@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum VideoGenerationMaskMode | Google GenAI .NET SDK </title>
+      <title>Struct VideoGenerationMaskMode | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum VideoGenerationMaskMode | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct VideoGenerationMaskMode | Google GenAI .NET SDK ">
       
       <meta name="description" content="Enum for the mask mode of a video generation mask.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_VideoGenerationMaskMode" data-uid="Google.GenAI.Types.VideoGenerationMaskMode" class="text-break">
-Enum VideoGenerationMaskMode  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoGenerationMaskMode.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Struct VideoGenerationMaskMode  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoGenerationMaskMode.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,54 +98,426 @@ Enum VideoGenerationMaskMode  <a class="header-action link-secondary" title="Vie
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum VideoGenerationMaskMode</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(VideoGenerationMaskModeConverter))]
+public readonly record struct VideoGenerationMaskMode : IEquatable&lt;VideoGenerationMaskMode&gt;</code></pre>
   </div>
 
 
 
 
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.VideoGenerationMaskMode.html">VideoGenerationMaskMode</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
 
 
 
 
-  <h2 id="fields">Fields
+
+
+  <h2 class="section" id="properties">Properties
 </h2>
+
+
+  <a id="Google_GenAI_Types_VideoGenerationMaskMode_AllValues_" data-uid="Google.GenAI.Types.VideoGenerationMaskMode.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_VideoGenerationMaskMode_AllValues" data-uid="Google.GenAI.Types.VideoGenerationMaskMode.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoGenerationMaskMode.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;VideoGenerationMaskMode&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt id="Google_GenAI_Types_VideoGenerationMaskMode_INSERT"><code>[JsonPropertyName(&quot;INSERT&quot;)]
-INSERT = 0</code></dt>
-  
-  <dd><p>The image mask contains a masked rectangular region which is applied on the first frame of
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.VideoGenerationMaskMode.html">VideoGenerationMaskMode</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_VideoGenerationMaskMode_Insert_" data-uid="Google.GenAI.Types.VideoGenerationMaskMode.Insert*"></a>
+
+  <h3 id="Google_GenAI_Types_VideoGenerationMaskMode_Insert" data-uid="Google.GenAI.Types.VideoGenerationMaskMode.Insert">
+  Insert
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoGenerationMaskMode.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The image mask contains a masked rectangular region which is applied on the first frame of
 the input video. The object described in the prompt is inserted into this region and will
 appear in subsequent frames.</p>
-</dd>
-    <dt id="Google_GenAI_Types_VideoGenerationMaskMode_OUTPAINT"><code>[JsonPropertyName(&quot;OUTPAINT&quot;)]
-OUTPAINT = 3</code></dt>
-  
-  <dd><p>The image mask contains a masked rectangular region where the input video will go. The
-remaining area will be generated. Video masks are not supported.</p>
-</dd>
-    <dt id="Google_GenAI_Types_VideoGenerationMaskMode_REMOVE"><code>[JsonPropertyName(&quot;REMOVE&quot;)]
-REMOVE = 1</code></dt>
-  
-  <dd><p>The image mask is used to determine an object in the first video frame to track. This object
-is removed from the video.</p>
-</dd>
-    <dt id="Google_GenAI_Types_VideoGenerationMaskMode_REMOVE_STATIC"><code>[JsonPropertyName(&quot;REMOVE_STATIC&quot;)]
-REMOVE_STATIC = 2</code></dt>
-  
-  <dd><p>The image mask is used to determine a region in the video. Objects in this region will be
-removed.</p>
-</dd>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static VideoGenerationMaskMode Insert { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.VideoGenerationMaskMode.html">VideoGenerationMaskMode</a></dt>
+    <dd></dd>
   </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_VideoGenerationMaskMode_Outpaint_" data-uid="Google.GenAI.Types.VideoGenerationMaskMode.Outpaint*"></a>
+
+  <h3 id="Google_GenAI_Types_VideoGenerationMaskMode_Outpaint" data-uid="Google.GenAI.Types.VideoGenerationMaskMode.Outpaint">
+  Outpaint
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoGenerationMaskMode.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The image mask contains a masked rectangular region where the input video will go. The
+remaining area will be generated. Video masks are not supported.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static VideoGenerationMaskMode Outpaint { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.VideoGenerationMaskMode.html">VideoGenerationMaskMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_VideoGenerationMaskMode_Remove_" data-uid="Google.GenAI.Types.VideoGenerationMaskMode.Remove*"></a>
+
+  <h3 id="Google_GenAI_Types_VideoGenerationMaskMode_Remove" data-uid="Google.GenAI.Types.VideoGenerationMaskMode.Remove">
+  Remove
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoGenerationMaskMode.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The image mask is used to determine an object in the first video frame to track. This object
+is removed from the video.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static VideoGenerationMaskMode Remove { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.VideoGenerationMaskMode.html">VideoGenerationMaskMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_VideoGenerationMaskMode_RemoveStatic_" data-uid="Google.GenAI.Types.VideoGenerationMaskMode.RemoveStatic*"></a>
+
+  <h3 id="Google_GenAI_Types_VideoGenerationMaskMode_RemoveStatic" data-uid="Google.GenAI.Types.VideoGenerationMaskMode.RemoveStatic">
+  RemoveStatic
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoGenerationMaskMode.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The image mask is used to determine a region in the video. Objects in this region will be
+removed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static VideoGenerationMaskMode RemoveStatic { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.VideoGenerationMaskMode.html">VideoGenerationMaskMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_VideoGenerationMaskMode_Value_" data-uid="Google.GenAI.Types.VideoGenerationMaskMode.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_VideoGenerationMaskMode_Value" data-uid="Google.GenAI.Types.VideoGenerationMaskMode.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoGenerationMaskMode.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_VideoGenerationMaskMode_Equals_" data-uid="Google.GenAI.Types.VideoGenerationMaskMode.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_VideoGenerationMaskMode_Equals_Google_GenAI_Types_VideoGenerationMaskMode_" data-uid="Google.GenAI.Types.VideoGenerationMaskMode.Equals(Google.GenAI.Types.VideoGenerationMaskMode)">
+  Equals(VideoGenerationMaskMode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoGenerationMaskMode.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(VideoGenerationMaskMode other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.VideoGenerationMaskMode.html">VideoGenerationMaskMode</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_VideoGenerationMaskMode_FromString_" data-uid="Google.GenAI.Types.VideoGenerationMaskMode.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_VideoGenerationMaskMode_FromString_System_String_" data-uid="Google.GenAI.Types.VideoGenerationMaskMode.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoGenerationMaskMode.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static VideoGenerationMaskMode FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.VideoGenerationMaskMode.html">VideoGenerationMaskMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_VideoGenerationMaskMode_GetHashCode_" data-uid="Google.GenAI.Types.VideoGenerationMaskMode.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_VideoGenerationMaskMode_GetHashCode" data-uid="Google.GenAI.Types.VideoGenerationMaskMode.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoGenerationMaskMode.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_VideoGenerationMaskMode_ToString_" data-uid="Google.GenAI.Types.VideoGenerationMaskMode.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_VideoGenerationMaskMode_ToString" data-uid="Google.GenAI.Types.VideoGenerationMaskMode.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoGenerationMaskMode.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_VideoGenerationMaskMode_op_Implicit_" data-uid="Google.GenAI.Types.VideoGenerationMaskMode.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_VideoGenerationMaskMode_op_Implicit_System_String__Google_GenAI_Types_VideoGenerationMaskMode" data-uid="Google.GenAI.Types.VideoGenerationMaskMode.op_Implicit(System.String)~Google.GenAI.Types.VideoGenerationMaskMode">
+  implicit operator VideoGenerationMaskMode(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoGenerationMaskMode.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator VideoGenerationMaskMode(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.VideoGenerationMaskMode.html">VideoGenerationMaskMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoGenerationMaskMode.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoGenerationMaskMode.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum StartSensitivity | Google GenAI .NET SDK </title>
+      <title>Struct StartSensitivity | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum StartSensitivity | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct StartSensitivity | Google GenAI .NET SDK ">
       
       <meta name="description" content="Start of speech sensitivity.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_StartSensitivity" data-uid="Google.GenAI.Types.StartSensitivity" class="text-break">
-Enum StartSensitivity  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/StartSensitivity.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Struct StartSensitivity  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/StartSensitivity.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,44 +98,389 @@ Enum StartSensitivity  <a class="header-action link-secondary" title="View sourc
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum StartSensitivity</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(StartSensitivityConverter))]
+public readonly record struct StartSensitivity : IEquatable&lt;StartSensitivity&gt;</code></pre>
   </div>
 
 
 
 
 
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="Google_GenAI_Types_StartSensitivity_START_SENSITIVITY_HIGH"><code>[JsonPropertyName(&quot;START_SENSITIVITY_HIGH&quot;)]
-START_SENSITIVITY_HIGH = 1</code></dt>
-  
-  <dd><p>Automatic detection will detect the start of speech more often.</p>
-</dd>
-    <dt id="Google_GenAI_Types_StartSensitivity_START_SENSITIVITY_LOW"><code>[JsonPropertyName(&quot;START_SENSITIVITY_LOW&quot;)]
-START_SENSITIVITY_LOW = 2</code></dt>
-  
-  <dd><p>Automatic detection will detect the start of speech less often.</p>
-</dd>
-    <dt id="Google_GenAI_Types_StartSensitivity_START_SENSITIVITY_UNSPECIFIED"><code>[JsonPropertyName(&quot;START_SENSITIVITY_UNSPECIFIED&quot;)]
-START_SENSITIVITY_UNSPECIFIED = 0</code></dt>
-  
-  <dd><p>The default is START_SENSITIVITY_LOW.</p>
-</dd>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.StartSensitivity.html">StartSensitivity</a>&gt;</div>
+    </dd>
   </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_StartSensitivity_AllValues_" data-uid="Google.GenAI.Types.StartSensitivity.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_StartSensitivity_AllValues" data-uid="Google.GenAI.Types.StartSensitivity.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/StartSensitivity.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;StartSensitivity&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.StartSensitivity.html">StartSensitivity</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_StartSensitivity_StartSensitivityHigh_" data-uid="Google.GenAI.Types.StartSensitivity.StartSensitivityHigh*"></a>
+
+  <h3 id="Google_GenAI_Types_StartSensitivity_StartSensitivityHigh" data-uid="Google.GenAI.Types.StartSensitivity.StartSensitivityHigh">
+  StartSensitivityHigh
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/StartSensitivity.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Automatic detection will detect the start of speech more often.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StartSensitivity StartSensitivityHigh { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.StartSensitivity.html">StartSensitivity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_StartSensitivity_StartSensitivityLow_" data-uid="Google.GenAI.Types.StartSensitivity.StartSensitivityLow*"></a>
+
+  <h3 id="Google_GenAI_Types_StartSensitivity_StartSensitivityLow" data-uid="Google.GenAI.Types.StartSensitivity.StartSensitivityLow">
+  StartSensitivityLow
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/StartSensitivity.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Automatic detection will detect the start of speech less often.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StartSensitivity StartSensitivityLow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.StartSensitivity.html">StartSensitivity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_StartSensitivity_StartSensitivityUnspecified_" data-uid="Google.GenAI.Types.StartSensitivity.StartSensitivityUnspecified*"></a>
+
+  <h3 id="Google_GenAI_Types_StartSensitivity_StartSensitivityUnspecified" data-uid="Google.GenAI.Types.StartSensitivity.StartSensitivityUnspecified">
+  StartSensitivityUnspecified
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/StartSensitivity.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The default is START_SENSITIVITY_LOW.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StartSensitivity StartSensitivityUnspecified { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.StartSensitivity.html">StartSensitivity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_StartSensitivity_Value_" data-uid="Google.GenAI.Types.StartSensitivity.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_StartSensitivity_Value" data-uid="Google.GenAI.Types.StartSensitivity.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/StartSensitivity.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_StartSensitivity_Equals_" data-uid="Google.GenAI.Types.StartSensitivity.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_StartSensitivity_Equals_Google_GenAI_Types_StartSensitivity_" data-uid="Google.GenAI.Types.StartSensitivity.Equals(Google.GenAI.Types.StartSensitivity)">
+  Equals(StartSensitivity)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/StartSensitivity.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(StartSensitivity other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.StartSensitivity.html">StartSensitivity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_StartSensitivity_FromString_" data-uid="Google.GenAI.Types.StartSensitivity.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_StartSensitivity_FromString_System_String_" data-uid="Google.GenAI.Types.StartSensitivity.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/StartSensitivity.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StartSensitivity FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.StartSensitivity.html">StartSensitivity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_StartSensitivity_GetHashCode_" data-uid="Google.GenAI.Types.StartSensitivity.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_StartSensitivity_GetHashCode" data-uid="Google.GenAI.Types.StartSensitivity.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/StartSensitivity.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_StartSensitivity_ToString_" data-uid="Google.GenAI.Types.StartSensitivity.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_StartSensitivity_ToString" data-uid="Google.GenAI.Types.StartSensitivity.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/StartSensitivity.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_StartSensitivity_op_Implicit_" data-uid="Google.GenAI.Types.StartSensitivity.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_StartSensitivity_op_Implicit_System_String__Google_GenAI_Types_StartSensitivity" data-uid="Google.GenAI.Types.StartSensitivity.op_Implicit(System.String)~Google.GenAI.Types.StartSensitivity">
+  implicit operator StartSensitivity(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/StartSensitivity.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator StartSensitivity(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.StartSensitivity.html">StartSensitivity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/StartSensitivity.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/StartSensitivity.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

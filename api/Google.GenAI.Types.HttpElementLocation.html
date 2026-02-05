@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum HttpElementLocation | Google GenAI .NET SDK </title>
+      <title>Struct HttpElementLocation | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum HttpElementLocation | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct HttpElementLocation | Google GenAI .NET SDK ">
       
       <meta name="description" content="The location of the API key. This enum is not supported in Gemini API.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_HttpElementLocation" data-uid="Google.GenAI.Types.HttpElementLocation" class="text-break">
-Enum HttpElementLocation  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HttpElementLocation.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Struct HttpElementLocation  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HttpElementLocation.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,58 +98,484 @@ Enum HttpElementLocation  <a class="header-action link-secondary" title="View so
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum HttpElementLocation</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(HttpElementLocationConverter))]
+public readonly record struct HttpElementLocation : IEquatable&lt;HttpElementLocation&gt;</code></pre>
   </div>
 
 
 
 
 
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="Google_GenAI_Types_HttpElementLocation_HTTP_IN_BODY"><code>[JsonPropertyName(&quot;HTTP_IN_BODY&quot;)]
-HTTP_IN_BODY = 4</code></dt>
-  
-  <dd><p>Element is in the HTTP request body.</p>
-</dd>
-    <dt id="Google_GenAI_Types_HttpElementLocation_HTTP_IN_COOKIE"><code>[JsonPropertyName(&quot;HTTP_IN_COOKIE&quot;)]
-HTTP_IN_COOKIE = 5</code></dt>
-  
-  <dd><p>Element is in the HTTP request cookie.</p>
-</dd>
-    <dt id="Google_GenAI_Types_HttpElementLocation_HTTP_IN_HEADER"><code>[JsonPropertyName(&quot;HTTP_IN_HEADER&quot;)]
-HTTP_IN_HEADER = 2</code></dt>
-  
-  <dd><p>Element is in the HTTP request header.</p>
-</dd>
-    <dt id="Google_GenAI_Types_HttpElementLocation_HTTP_IN_PATH"><code>[JsonPropertyName(&quot;HTTP_IN_PATH&quot;)]
-HTTP_IN_PATH = 3</code></dt>
-  
-  <dd><p>Element is in the HTTP request path.</p>
-</dd>
-    <dt id="Google_GenAI_Types_HttpElementLocation_HTTP_IN_QUERY"><code>[JsonPropertyName(&quot;HTTP_IN_QUERY&quot;)]
-HTTP_IN_QUERY = 1</code></dt>
-  
-  <dd><p>Element is in the HTTP request query.</p>
-</dd>
-    <dt id="Google_GenAI_Types_HttpElementLocation_HTTP_IN_UNSPECIFIED"><code>[JsonPropertyName(&quot;HTTP_IN_UNSPECIFIED&quot;)]
-HTTP_IN_UNSPECIFIED = 0</code></dt>
-  
-  <dd></dd>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.HttpElementLocation.html">HttpElementLocation</a>&gt;</div>
+    </dd>
   </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_HttpElementLocation_AllValues_" data-uid="Google.GenAI.Types.HttpElementLocation.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_HttpElementLocation_AllValues" data-uid="Google.GenAI.Types.HttpElementLocation.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HttpElementLocation.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;HttpElementLocation&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.HttpElementLocation.html">HttpElementLocation</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HttpElementLocation_HttpInBody_" data-uid="Google.GenAI.Types.HttpElementLocation.HttpInBody*"></a>
+
+  <h3 id="Google_GenAI_Types_HttpElementLocation_HttpInBody" data-uid="Google.GenAI.Types.HttpElementLocation.HttpInBody">
+  HttpInBody
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HttpElementLocation.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Element is in the HTTP request body.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HttpElementLocation HttpInBody { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HttpElementLocation.html">HttpElementLocation</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HttpElementLocation_HttpInCookie_" data-uid="Google.GenAI.Types.HttpElementLocation.HttpInCookie*"></a>
+
+  <h3 id="Google_GenAI_Types_HttpElementLocation_HttpInCookie" data-uid="Google.GenAI.Types.HttpElementLocation.HttpInCookie">
+  HttpInCookie
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HttpElementLocation.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Element is in the HTTP request cookie.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HttpElementLocation HttpInCookie { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HttpElementLocation.html">HttpElementLocation</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HttpElementLocation_HttpInHeader_" data-uid="Google.GenAI.Types.HttpElementLocation.HttpInHeader*"></a>
+
+  <h3 id="Google_GenAI_Types_HttpElementLocation_HttpInHeader" data-uid="Google.GenAI.Types.HttpElementLocation.HttpInHeader">
+  HttpInHeader
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HttpElementLocation.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Element is in the HTTP request header.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HttpElementLocation HttpInHeader { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HttpElementLocation.html">HttpElementLocation</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HttpElementLocation_HttpInPath_" data-uid="Google.GenAI.Types.HttpElementLocation.HttpInPath*"></a>
+
+  <h3 id="Google_GenAI_Types_HttpElementLocation_HttpInPath" data-uid="Google.GenAI.Types.HttpElementLocation.HttpInPath">
+  HttpInPath
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HttpElementLocation.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Element is in the HTTP request path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HttpElementLocation HttpInPath { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HttpElementLocation.html">HttpElementLocation</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HttpElementLocation_HttpInQuery_" data-uid="Google.GenAI.Types.HttpElementLocation.HttpInQuery*"></a>
+
+  <h3 id="Google_GenAI_Types_HttpElementLocation_HttpInQuery" data-uid="Google.GenAI.Types.HttpElementLocation.HttpInQuery">
+  HttpInQuery
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HttpElementLocation.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Element is in the HTTP request query.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HttpElementLocation HttpInQuery { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HttpElementLocation.html">HttpElementLocation</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HttpElementLocation_HttpInUnspecified_" data-uid="Google.GenAI.Types.HttpElementLocation.HttpInUnspecified*"></a>
+
+  <h3 id="Google_GenAI_Types_HttpElementLocation_HttpInUnspecified" data-uid="Google.GenAI.Types.HttpElementLocation.HttpInUnspecified">
+  HttpInUnspecified
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HttpElementLocation.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HttpElementLocation HttpInUnspecified { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HttpElementLocation.html">HttpElementLocation</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HttpElementLocation_Value_" data-uid="Google.GenAI.Types.HttpElementLocation.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_HttpElementLocation_Value" data-uid="Google.GenAI.Types.HttpElementLocation.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HttpElementLocation.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_HttpElementLocation_Equals_" data-uid="Google.GenAI.Types.HttpElementLocation.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_HttpElementLocation_Equals_Google_GenAI_Types_HttpElementLocation_" data-uid="Google.GenAI.Types.HttpElementLocation.Equals(Google.GenAI.Types.HttpElementLocation)">
+  Equals(HttpElementLocation)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HttpElementLocation.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(HttpElementLocation other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.HttpElementLocation.html">HttpElementLocation</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HttpElementLocation_FromString_" data-uid="Google.GenAI.Types.HttpElementLocation.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_HttpElementLocation_FromString_System_String_" data-uid="Google.GenAI.Types.HttpElementLocation.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HttpElementLocation.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HttpElementLocation FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HttpElementLocation.html">HttpElementLocation</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HttpElementLocation_GetHashCode_" data-uid="Google.GenAI.Types.HttpElementLocation.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_HttpElementLocation_GetHashCode" data-uid="Google.GenAI.Types.HttpElementLocation.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HttpElementLocation.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HttpElementLocation_ToString_" data-uid="Google.GenAI.Types.HttpElementLocation.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_HttpElementLocation_ToString" data-uid="Google.GenAI.Types.HttpElementLocation.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HttpElementLocation.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_HttpElementLocation_op_Implicit_" data-uid="Google.GenAI.Types.HttpElementLocation.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_HttpElementLocation_op_Implicit_System_String__Google_GenAI_Types_HttpElementLocation" data-uid="Google.GenAI.Types.HttpElementLocation.op_Implicit(System.String)~Google.GenAI.Types.HttpElementLocation">
+  implicit operator HttpElementLocation(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HttpElementLocation.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator HttpElementLocation(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HttpElementLocation.html">HttpElementLocation</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HttpElementLocation.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HttpElementLocation.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

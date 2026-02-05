@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum ApiSpec | Google GenAI .NET SDK </title>
+      <title>Struct ApiSpec | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum ApiSpec | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct ApiSpec | Google GenAI .NET SDK ">
       
       <meta name="description" content="The API spec that the external API implements. This enum is not supported in Gemini API.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_ApiSpec" data-uid="Google.GenAI.Types.ApiSpec" class="text-break">
-Enum ApiSpec  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ApiSpec.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Struct ApiSpec  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ApiSpec.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,44 +98,389 @@ Enum ApiSpec  <a class="header-action link-secondary" title="View source" href="
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum ApiSpec</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(ApiSpecConverter))]
+public readonly record struct ApiSpec : IEquatable&lt;ApiSpec&gt;</code></pre>
   </div>
 
 
 
 
 
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="Google_GenAI_Types_ApiSpec_API_SPEC_UNSPECIFIED"><code>[JsonPropertyName(&quot;API_SPEC_UNSPECIFIED&quot;)]
-API_SPEC_UNSPECIFIED = 0</code></dt>
-  
-  <dd><p>Unspecified API spec. This value should not be used.</p>
-</dd>
-    <dt id="Google_GenAI_Types_ApiSpec_ELASTIC_SEARCH"><code>[JsonPropertyName(&quot;ELASTIC_SEARCH&quot;)]
-ELASTIC_SEARCH = 2</code></dt>
-  
-  <dd><p>Elastic search API spec.</p>
-</dd>
-    <dt id="Google_GenAI_Types_ApiSpec_SIMPLE_SEARCH"><code>[JsonPropertyName(&quot;SIMPLE_SEARCH&quot;)]
-SIMPLE_SEARCH = 1</code></dt>
-  
-  <dd><p>Simple search API spec.</p>
-</dd>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.ApiSpec.html">ApiSpec</a>&gt;</div>
+    </dd>
   </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_ApiSpec_AllValues_" data-uid="Google.GenAI.Types.ApiSpec.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_ApiSpec_AllValues" data-uid="Google.GenAI.Types.ApiSpec.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ApiSpec.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;ApiSpec&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.ApiSpec.html">ApiSpec</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ApiSpec_ApiSpecUnspecified_" data-uid="Google.GenAI.Types.ApiSpec.ApiSpecUnspecified*"></a>
+
+  <h3 id="Google_GenAI_Types_ApiSpec_ApiSpecUnspecified" data-uid="Google.GenAI.Types.ApiSpec.ApiSpecUnspecified">
+  ApiSpecUnspecified
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ApiSpec.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unspecified API spec. This value should not be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ApiSpec ApiSpecUnspecified { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.ApiSpec.html">ApiSpec</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ApiSpec_ElasticSearch_" data-uid="Google.GenAI.Types.ApiSpec.ElasticSearch*"></a>
+
+  <h3 id="Google_GenAI_Types_ApiSpec_ElasticSearch" data-uid="Google.GenAI.Types.ApiSpec.ElasticSearch">
+  ElasticSearch
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ApiSpec.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Elastic search API spec.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ApiSpec ElasticSearch { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.ApiSpec.html">ApiSpec</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ApiSpec_SimpleSearch_" data-uid="Google.GenAI.Types.ApiSpec.SimpleSearch*"></a>
+
+  <h3 id="Google_GenAI_Types_ApiSpec_SimpleSearch" data-uid="Google.GenAI.Types.ApiSpec.SimpleSearch">
+  SimpleSearch
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ApiSpec.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Simple search API spec.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ApiSpec SimpleSearch { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.ApiSpec.html">ApiSpec</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ApiSpec_Value_" data-uid="Google.GenAI.Types.ApiSpec.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_ApiSpec_Value" data-uid="Google.GenAI.Types.ApiSpec.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ApiSpec.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_ApiSpec_Equals_" data-uid="Google.GenAI.Types.ApiSpec.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_ApiSpec_Equals_Google_GenAI_Types_ApiSpec_" data-uid="Google.GenAI.Types.ApiSpec.Equals(Google.GenAI.Types.ApiSpec)">
+  Equals(ApiSpec)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ApiSpec.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(ApiSpec other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.ApiSpec.html">ApiSpec</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ApiSpec_FromString_" data-uid="Google.GenAI.Types.ApiSpec.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_ApiSpec_FromString_System_String_" data-uid="Google.GenAI.Types.ApiSpec.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ApiSpec.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ApiSpec FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.ApiSpec.html">ApiSpec</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ApiSpec_GetHashCode_" data-uid="Google.GenAI.Types.ApiSpec.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_ApiSpec_GetHashCode" data-uid="Google.GenAI.Types.ApiSpec.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ApiSpec.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ApiSpec_ToString_" data-uid="Google.GenAI.Types.ApiSpec.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_ApiSpec_ToString" data-uid="Google.GenAI.Types.ApiSpec.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ApiSpec.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_ApiSpec_op_Implicit_" data-uid="Google.GenAI.Types.ApiSpec.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_ApiSpec_op_Implicit_System_String__Google_GenAI_Types_ApiSpec" data-uid="Google.GenAI.Types.ApiSpec.op_Implicit(System.String)~Google.GenAI.Types.ApiSpec">
+  implicit operator ApiSpec(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ApiSpec.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator ApiSpec(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.ApiSpec.html">ApiSpec</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ApiSpec.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ApiSpec.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

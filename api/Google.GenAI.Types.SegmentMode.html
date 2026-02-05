@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum SegmentMode | Google GenAI .NET SDK </title>
+      <title>Struct SegmentMode | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum SegmentMode | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct SegmentMode | Google GenAI .NET SDK ">
       
       <meta name="description" content="Enum that represents the segmentation mode.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_SegmentMode" data-uid="Google.GenAI.Types.SegmentMode" class="text-break">
-Enum SegmentMode  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SegmentMode.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Struct SegmentMode  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SegmentMode.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,49 +98,448 @@ Enum SegmentMode  <a class="header-action link-secondary" title="View source" hr
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum SegmentMode</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(SegmentModeConverter))]
+public readonly record struct SegmentMode : IEquatable&lt;SegmentMode&gt;</code></pre>
   </div>
 
 
 
 
 
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="Google_GenAI_Types_SegmentMode_BACKGROUND"><code>[JsonPropertyName(&quot;BACKGROUND&quot;)]
-BACKGROUND = 1</code></dt>
-  
-  <dd></dd>
-    <dt id="Google_GenAI_Types_SegmentMode_FOREGROUND"><code>[JsonPropertyName(&quot;FOREGROUND&quot;)]
-FOREGROUND = 0</code></dt>
-  
-  <dd></dd>
-    <dt id="Google_GenAI_Types_SegmentMode_INTERACTIVE"><code>[JsonPropertyName(&quot;INTERACTIVE&quot;)]
-INTERACTIVE = 4</code></dt>
-  
-  <dd></dd>
-    <dt id="Google_GenAI_Types_SegmentMode_PROMPT"><code>[JsonPropertyName(&quot;PROMPT&quot;)]
-PROMPT = 2</code></dt>
-  
-  <dd></dd>
-    <dt id="Google_GenAI_Types_SegmentMode_SEMANTIC"><code>[JsonPropertyName(&quot;SEMANTIC&quot;)]
-SEMANTIC = 3</code></dt>
-  
-  <dd></dd>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.SegmentMode.html">SegmentMode</a>&gt;</div>
+    </dd>
   </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_SegmentMode_AllValues_" data-uid="Google.GenAI.Types.SegmentMode.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_SegmentMode_AllValues" data-uid="Google.GenAI.Types.SegmentMode.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SegmentMode.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;SegmentMode&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.SegmentMode.html">SegmentMode</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_SegmentMode_Background_" data-uid="Google.GenAI.Types.SegmentMode.Background*"></a>
+
+  <h3 id="Google_GenAI_Types_SegmentMode_Background" data-uid="Google.GenAI.Types.SegmentMode.Background">
+  Background
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SegmentMode.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SegmentMode Background { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.SegmentMode.html">SegmentMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_SegmentMode_Foreground_" data-uid="Google.GenAI.Types.SegmentMode.Foreground*"></a>
+
+  <h3 id="Google_GenAI_Types_SegmentMode_Foreground" data-uid="Google.GenAI.Types.SegmentMode.Foreground">
+  Foreground
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SegmentMode.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SegmentMode Foreground { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.SegmentMode.html">SegmentMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_SegmentMode_Interactive_" data-uid="Google.GenAI.Types.SegmentMode.Interactive*"></a>
+
+  <h3 id="Google_GenAI_Types_SegmentMode_Interactive" data-uid="Google.GenAI.Types.SegmentMode.Interactive">
+  Interactive
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SegmentMode.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SegmentMode Interactive { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.SegmentMode.html">SegmentMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_SegmentMode_Prompt_" data-uid="Google.GenAI.Types.SegmentMode.Prompt*"></a>
+
+  <h3 id="Google_GenAI_Types_SegmentMode_Prompt" data-uid="Google.GenAI.Types.SegmentMode.Prompt">
+  Prompt
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SegmentMode.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SegmentMode Prompt { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.SegmentMode.html">SegmentMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_SegmentMode_Semantic_" data-uid="Google.GenAI.Types.SegmentMode.Semantic*"></a>
+
+  <h3 id="Google_GenAI_Types_SegmentMode_Semantic" data-uid="Google.GenAI.Types.SegmentMode.Semantic">
+  Semantic
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SegmentMode.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SegmentMode Semantic { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.SegmentMode.html">SegmentMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_SegmentMode_Value_" data-uid="Google.GenAI.Types.SegmentMode.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_SegmentMode_Value" data-uid="Google.GenAI.Types.SegmentMode.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SegmentMode.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_SegmentMode_Equals_" data-uid="Google.GenAI.Types.SegmentMode.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_SegmentMode_Equals_Google_GenAI_Types_SegmentMode_" data-uid="Google.GenAI.Types.SegmentMode.Equals(Google.GenAI.Types.SegmentMode)">
+  Equals(SegmentMode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SegmentMode.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(SegmentMode other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.SegmentMode.html">SegmentMode</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_SegmentMode_FromString_" data-uid="Google.GenAI.Types.SegmentMode.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_SegmentMode_FromString_System_String_" data-uid="Google.GenAI.Types.SegmentMode.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SegmentMode.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SegmentMode FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.SegmentMode.html">SegmentMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_SegmentMode_GetHashCode_" data-uid="Google.GenAI.Types.SegmentMode.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_SegmentMode_GetHashCode" data-uid="Google.GenAI.Types.SegmentMode.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SegmentMode.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_SegmentMode_ToString_" data-uid="Google.GenAI.Types.SegmentMode.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_SegmentMode_ToString" data-uid="Google.GenAI.Types.SegmentMode.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SegmentMode.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_SegmentMode_op_Implicit_" data-uid="Google.GenAI.Types.SegmentMode.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_SegmentMode_op_Implicit_System_String__Google_GenAI_Types_SegmentMode" data-uid="Google.GenAI.Types.SegmentMode.op_Implicit(System.String)~Google.GenAI.Types.SegmentMode">
+  implicit operator SegmentMode(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SegmentMode.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator SegmentMode(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.SegmentMode.html">SegmentMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SegmentMode.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SegmentMode.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

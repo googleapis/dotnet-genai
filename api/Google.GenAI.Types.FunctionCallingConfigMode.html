@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum FunctionCallingConfigMode | Google GenAI .NET SDK </title>
+      <title>Struct FunctionCallingConfigMode | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum FunctionCallingConfigMode | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct FunctionCallingConfigMode | Google GenAI .NET SDK ">
       
       <meta name="description" content="Function calling mode.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_FunctionCallingConfigMode" data-uid="Google.GenAI.Types.FunctionCallingConfigMode" class="text-break">
-Enum FunctionCallingConfigMode  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCallingConfigMode.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Struct FunctionCallingConfigMode  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCallingConfigMode.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,62 +98,461 @@ Enum FunctionCallingConfigMode  <a class="header-action link-secondary" title="V
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum FunctionCallingConfigMode</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(FunctionCallingConfigModeConverter))]
+public readonly record struct FunctionCallingConfigMode : IEquatable&lt;FunctionCallingConfigMode&gt;</code></pre>
   </div>
 
 
 
 
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.FunctionCallingConfigMode.html">FunctionCallingConfigMode</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
 
 
 
 
-  <h2 id="fields">Fields
+
+
+  <h2 class="section" id="properties">Properties
 </h2>
+
+
+  <a id="Google_GenAI_Types_FunctionCallingConfigMode_AllValues_" data-uid="Google.GenAI.Types.FunctionCallingConfigMode.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionCallingConfigMode_AllValues" data-uid="Google.GenAI.Types.FunctionCallingConfigMode.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCallingConfigMode.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;FunctionCallingConfigMode&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt id="Google_GenAI_Types_FunctionCallingConfigMode_ANY"><code>[JsonPropertyName(&quot;ANY&quot;)]
-ANY = 2</code></dt>
-  
-  <dd><p>Model is constrained to always predicting function calls only. If &quot;allowed_function_names&quot;
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.FunctionCallingConfigMode.html">FunctionCallingConfigMode</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FunctionCallingConfigMode_Any_" data-uid="Google.GenAI.Types.FunctionCallingConfigMode.Any*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionCallingConfigMode_Any" data-uid="Google.GenAI.Types.FunctionCallingConfigMode.Any">
+  Any
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCallingConfigMode.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Model is constrained to always predicting function calls only. If &quot;allowed_function_names&quot;
 are set, the predicted function calls will be limited to any one of
 &quot;allowed_function_names&quot;, else the predicted function calls will be any one of the provided
 &quot;function_declarations&quot;.</p>
-</dd>
-    <dt id="Google_GenAI_Types_FunctionCallingConfigMode_AUTO"><code>[JsonPropertyName(&quot;AUTO&quot;)]
-AUTO = 1</code></dt>
-  
-  <dd><p>Default model behavior, model decides to predict either function calls or natural language
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FunctionCallingConfigMode Any { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FunctionCallingConfigMode.html">FunctionCallingConfigMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FunctionCallingConfigMode_Auto_" data-uid="Google.GenAI.Types.FunctionCallingConfigMode.Auto*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionCallingConfigMode_Auto" data-uid="Google.GenAI.Types.FunctionCallingConfigMode.Auto">
+  Auto
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCallingConfigMode.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default model behavior, model decides to predict either function calls or natural language
 response.</p>
-</dd>
-    <dt id="Google_GenAI_Types_FunctionCallingConfigMode_MODE_UNSPECIFIED"><code>[JsonPropertyName(&quot;MODE_UNSPECIFIED&quot;)]
-MODE_UNSPECIFIED = 0</code></dt>
-  
-  <dd><p>Unspecified function calling mode. This value should not be used.</p>
-</dd>
-    <dt id="Google_GenAI_Types_FunctionCallingConfigMode_NONE"><code>[JsonPropertyName(&quot;NONE&quot;)]
-NONE = 3</code></dt>
-  
-  <dd><p>Model will not predict any function calls. Model behavior is same as when not passing any
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FunctionCallingConfigMode Auto { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FunctionCallingConfigMode.html">FunctionCallingConfigMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FunctionCallingConfigMode_ModeUnspecified_" data-uid="Google.GenAI.Types.FunctionCallingConfigMode.ModeUnspecified*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionCallingConfigMode_ModeUnspecified" data-uid="Google.GenAI.Types.FunctionCallingConfigMode.ModeUnspecified">
+  ModeUnspecified
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCallingConfigMode.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unspecified function calling mode. This value should not be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FunctionCallingConfigMode ModeUnspecified { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FunctionCallingConfigMode.html">FunctionCallingConfigMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FunctionCallingConfigMode_None_" data-uid="Google.GenAI.Types.FunctionCallingConfigMode.None*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionCallingConfigMode_None" data-uid="Google.GenAI.Types.FunctionCallingConfigMode.None">
+  None
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCallingConfigMode.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Model will not predict any function calls. Model behavior is same as when not passing any
 function declarations.</p>
-</dd>
-    <dt id="Google_GenAI_Types_FunctionCallingConfigMode_VALIDATED"><code>[JsonPropertyName(&quot;VALIDATED&quot;)]
-VALIDATED = 4</code></dt>
-  
-  <dd><p>Model is constrained to predict either function calls or natural language response. If
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FunctionCallingConfigMode None { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FunctionCallingConfigMode.html">FunctionCallingConfigMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FunctionCallingConfigMode_Validated_" data-uid="Google.GenAI.Types.FunctionCallingConfigMode.Validated*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionCallingConfigMode_Validated" data-uid="Google.GenAI.Types.FunctionCallingConfigMode.Validated">
+  Validated
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCallingConfigMode.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Model is constrained to predict either function calls or natural language response. If
 &quot;allowed_function_names&quot; are set, the predicted function calls will be limited to any one of
 &quot;allowed_function_names&quot;, else the predicted function calls will be any one of the provided
 &quot;function_declarations&quot;.</p>
-</dd>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FunctionCallingConfigMode Validated { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FunctionCallingConfigMode.html">FunctionCallingConfigMode</a></dt>
+    <dd></dd>
   </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FunctionCallingConfigMode_Value_" data-uid="Google.GenAI.Types.FunctionCallingConfigMode.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionCallingConfigMode_Value" data-uid="Google.GenAI.Types.FunctionCallingConfigMode.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCallingConfigMode.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_FunctionCallingConfigMode_Equals_" data-uid="Google.GenAI.Types.FunctionCallingConfigMode.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionCallingConfigMode_Equals_Google_GenAI_Types_FunctionCallingConfigMode_" data-uid="Google.GenAI.Types.FunctionCallingConfigMode.Equals(Google.GenAI.Types.FunctionCallingConfigMode)">
+  Equals(FunctionCallingConfigMode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCallingConfigMode.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(FunctionCallingConfigMode other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.FunctionCallingConfigMode.html">FunctionCallingConfigMode</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FunctionCallingConfigMode_FromString_" data-uid="Google.GenAI.Types.FunctionCallingConfigMode.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionCallingConfigMode_FromString_System_String_" data-uid="Google.GenAI.Types.FunctionCallingConfigMode.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCallingConfigMode.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FunctionCallingConfigMode FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FunctionCallingConfigMode.html">FunctionCallingConfigMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FunctionCallingConfigMode_GetHashCode_" data-uid="Google.GenAI.Types.FunctionCallingConfigMode.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionCallingConfigMode_GetHashCode" data-uid="Google.GenAI.Types.FunctionCallingConfigMode.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCallingConfigMode.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FunctionCallingConfigMode_ToString_" data-uid="Google.GenAI.Types.FunctionCallingConfigMode.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionCallingConfigMode_ToString" data-uid="Google.GenAI.Types.FunctionCallingConfigMode.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCallingConfigMode.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_FunctionCallingConfigMode_op_Implicit_" data-uid="Google.GenAI.Types.FunctionCallingConfigMode.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionCallingConfigMode_op_Implicit_System_String__Google_GenAI_Types_FunctionCallingConfigMode" data-uid="Google.GenAI.Types.FunctionCallingConfigMode.op_Implicit(System.String)~Google.GenAI.Types.FunctionCallingConfigMode">
+  implicit operator FunctionCallingConfigMode(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCallingConfigMode.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator FunctionCallingConfigMode(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FunctionCallingConfigMode.html">FunctionCallingConfigMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCallingConfigMode.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCallingConfigMode.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

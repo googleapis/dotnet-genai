@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum MediaModality | Google GenAI .NET SDK </title>
+      <title>Struct MediaModality | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum MediaModality | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct MediaModality | Google GenAI .NET SDK ">
       
       <meta name="description" content="Server content modalities.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_MediaModality" data-uid="Google.GenAI.Types.MediaModality" class="text-break">
-Enum MediaModality  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaModality.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Struct MediaModality  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaModality.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,59 +98,485 @@ Enum MediaModality  <a class="header-action link-secondary" title="View source" 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum MediaModality</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(MediaModalityConverter))]
+public readonly record struct MediaModality : IEquatable&lt;MediaModality&gt;</code></pre>
   </div>
 
 
 
 
 
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="Google_GenAI_Types_MediaModality_AUDIO"><code>[JsonPropertyName(&quot;AUDIO&quot;)]
-AUDIO = 4</code></dt>
-  
-  <dd><p>Audio.</p>
-</dd>
-    <dt id="Google_GenAI_Types_MediaModality_DOCUMENT"><code>[JsonPropertyName(&quot;DOCUMENT&quot;)]
-DOCUMENT = 5</code></dt>
-  
-  <dd><p>Document, e.g. PDF.</p>
-</dd>
-    <dt id="Google_GenAI_Types_MediaModality_IMAGE"><code>[JsonPropertyName(&quot;IMAGE&quot;)]
-IMAGE = 2</code></dt>
-  
-  <dd><p>Images.</p>
-</dd>
-    <dt id="Google_GenAI_Types_MediaModality_MODALITY_UNSPECIFIED"><code>[JsonPropertyName(&quot;MODALITY_UNSPECIFIED&quot;)]
-MODALITY_UNSPECIFIED = 0</code></dt>
-  
-  <dd><p>The modality is unspecified.</p>
-</dd>
-    <dt id="Google_GenAI_Types_MediaModality_TEXT"><code>[JsonPropertyName(&quot;TEXT&quot;)]
-TEXT = 1</code></dt>
-  
-  <dd><p>Plain text.</p>
-</dd>
-    <dt id="Google_GenAI_Types_MediaModality_VIDEO"><code>[JsonPropertyName(&quot;VIDEO&quot;)]
-VIDEO = 3</code></dt>
-  
-  <dd><p>Video.</p>
-</dd>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.MediaModality.html">MediaModality</a>&gt;</div>
+    </dd>
   </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_MediaModality_AllValues_" data-uid="Google.GenAI.Types.MediaModality.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_MediaModality_AllValues" data-uid="Google.GenAI.Types.MediaModality.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaModality.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;MediaModality&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.MediaModality.html">MediaModality</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_MediaModality_Audio_" data-uid="Google.GenAI.Types.MediaModality.Audio*"></a>
+
+  <h3 id="Google_GenAI_Types_MediaModality_Audio" data-uid="Google.GenAI.Types.MediaModality.Audio">
+  Audio
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaModality.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Audio.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MediaModality Audio { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.MediaModality.html">MediaModality</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_MediaModality_Document_" data-uid="Google.GenAI.Types.MediaModality.Document*"></a>
+
+  <h3 id="Google_GenAI_Types_MediaModality_Document" data-uid="Google.GenAI.Types.MediaModality.Document">
+  Document
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaModality.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Document, e.g. PDF.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MediaModality Document { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.MediaModality.html">MediaModality</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_MediaModality_Image_" data-uid="Google.GenAI.Types.MediaModality.Image*"></a>
+
+  <h3 id="Google_GenAI_Types_MediaModality_Image" data-uid="Google.GenAI.Types.MediaModality.Image">
+  Image
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaModality.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Images.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MediaModality Image { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.MediaModality.html">MediaModality</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_MediaModality_ModalityUnspecified_" data-uid="Google.GenAI.Types.MediaModality.ModalityUnspecified*"></a>
+
+  <h3 id="Google_GenAI_Types_MediaModality_ModalityUnspecified" data-uid="Google.GenAI.Types.MediaModality.ModalityUnspecified">
+  ModalityUnspecified
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaModality.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The modality is unspecified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MediaModality ModalityUnspecified { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.MediaModality.html">MediaModality</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_MediaModality_Text_" data-uid="Google.GenAI.Types.MediaModality.Text*"></a>
+
+  <h3 id="Google_GenAI_Types_MediaModality_Text" data-uid="Google.GenAI.Types.MediaModality.Text">
+  Text
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaModality.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Plain text.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MediaModality Text { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.MediaModality.html">MediaModality</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_MediaModality_Value_" data-uid="Google.GenAI.Types.MediaModality.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_MediaModality_Value" data-uid="Google.GenAI.Types.MediaModality.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaModality.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_MediaModality_Video_" data-uid="Google.GenAI.Types.MediaModality.Video*"></a>
+
+  <h3 id="Google_GenAI_Types_MediaModality_Video" data-uid="Google.GenAI.Types.MediaModality.Video">
+  Video
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaModality.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Video.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MediaModality Video { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.MediaModality.html">MediaModality</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_MediaModality_Equals_" data-uid="Google.GenAI.Types.MediaModality.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_MediaModality_Equals_Google_GenAI_Types_MediaModality_" data-uid="Google.GenAI.Types.MediaModality.Equals(Google.GenAI.Types.MediaModality)">
+  Equals(MediaModality)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaModality.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(MediaModality other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.MediaModality.html">MediaModality</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_MediaModality_FromString_" data-uid="Google.GenAI.Types.MediaModality.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_MediaModality_FromString_System_String_" data-uid="Google.GenAI.Types.MediaModality.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaModality.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MediaModality FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.MediaModality.html">MediaModality</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_MediaModality_GetHashCode_" data-uid="Google.GenAI.Types.MediaModality.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_MediaModality_GetHashCode" data-uid="Google.GenAI.Types.MediaModality.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaModality.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_MediaModality_ToString_" data-uid="Google.GenAI.Types.MediaModality.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_MediaModality_ToString" data-uid="Google.GenAI.Types.MediaModality.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaModality.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_MediaModality_op_Implicit_" data-uid="Google.GenAI.Types.MediaModality.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_MediaModality_op_Implicit_System_String__Google_GenAI_Types_MediaModality" data-uid="Google.GenAI.Types.MediaModality.op_Implicit(System.String)~Google.GenAI.Types.MediaModality">
+  implicit operator MediaModality(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaModality.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator MediaModality(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.MediaModality.html">MediaModality</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaModality.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaModality.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

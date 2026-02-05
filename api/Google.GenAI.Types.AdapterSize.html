@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum AdapterSize | Google GenAI .NET SDK </title>
+      <title>Struct AdapterSize | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum AdapterSize | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct AdapterSize | Google GenAI .NET SDK ">
       
       <meta name="description" content="Adapter size for tuning. This enum is not supported in Gemini API.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_AdapterSize" data-uid="Google.GenAI.Types.AdapterSize" class="text-break">
-Enum AdapterSize  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AdapterSize.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Struct AdapterSize  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AdapterSize.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,64 +98,517 @@ Enum AdapterSize  <a class="header-action link-secondary" title="View source" hr
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum AdapterSize</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(AdapterSizeConverter))]
+public readonly record struct AdapterSize : IEquatable&lt;AdapterSize&gt;</code></pre>
   </div>
 
 
 
 
 
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="Google_GenAI_Types_AdapterSize_ADAPTER_SIZE_EIGHT"><code>[JsonPropertyName(&quot;ADAPTER_SIZE_EIGHT&quot;)]
-ADAPTER_SIZE_EIGHT = 4</code></dt>
-  
-  <dd><p>Adapter size 8.</p>
-</dd>
-    <dt id="Google_GenAI_Types_AdapterSize_ADAPTER_SIZE_FOUR"><code>[JsonPropertyName(&quot;ADAPTER_SIZE_FOUR&quot;)]
-ADAPTER_SIZE_FOUR = 3</code></dt>
-  
-  <dd><p>Adapter size 4.</p>
-</dd>
-    <dt id="Google_GenAI_Types_AdapterSize_ADAPTER_SIZE_ONE"><code>[JsonPropertyName(&quot;ADAPTER_SIZE_ONE&quot;)]
-ADAPTER_SIZE_ONE = 1</code></dt>
-  
-  <dd><p>Adapter size 1.</p>
-</dd>
-    <dt id="Google_GenAI_Types_AdapterSize_ADAPTER_SIZE_SIXTEEN"><code>[JsonPropertyName(&quot;ADAPTER_SIZE_SIXTEEN&quot;)]
-ADAPTER_SIZE_SIXTEEN = 5</code></dt>
-  
-  <dd><p>Adapter size 16.</p>
-</dd>
-    <dt id="Google_GenAI_Types_AdapterSize_ADAPTER_SIZE_THIRTY_TWO"><code>[JsonPropertyName(&quot;ADAPTER_SIZE_THIRTY_TWO&quot;)]
-ADAPTER_SIZE_THIRTY_TWO = 6</code></dt>
-  
-  <dd><p>Adapter size 32.</p>
-</dd>
-    <dt id="Google_GenAI_Types_AdapterSize_ADAPTER_SIZE_TWO"><code>[JsonPropertyName(&quot;ADAPTER_SIZE_TWO&quot;)]
-ADAPTER_SIZE_TWO = 2</code></dt>
-  
-  <dd><p>Adapter size 2.</p>
-</dd>
-    <dt id="Google_GenAI_Types_AdapterSize_ADAPTER_SIZE_UNSPECIFIED"><code>[JsonPropertyName(&quot;ADAPTER_SIZE_UNSPECIFIED&quot;)]
-ADAPTER_SIZE_UNSPECIFIED = 0</code></dt>
-  
-  <dd><p>Adapter size is unspecified.</p>
-</dd>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.AdapterSize.html">AdapterSize</a>&gt;</div>
+    </dd>
   </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_AdapterSize_AdapterSizeEight_" data-uid="Google.GenAI.Types.AdapterSize.AdapterSizeEight*"></a>
+
+  <h3 id="Google_GenAI_Types_AdapterSize_AdapterSizeEight" data-uid="Google.GenAI.Types.AdapterSize.AdapterSizeEight">
+  AdapterSizeEight
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AdapterSize.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adapter size 8.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AdapterSize AdapterSizeEight { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.AdapterSize.html">AdapterSize</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_AdapterSize_AdapterSizeFour_" data-uid="Google.GenAI.Types.AdapterSize.AdapterSizeFour*"></a>
+
+  <h3 id="Google_GenAI_Types_AdapterSize_AdapterSizeFour" data-uid="Google.GenAI.Types.AdapterSize.AdapterSizeFour">
+  AdapterSizeFour
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AdapterSize.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adapter size 4.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AdapterSize AdapterSizeFour { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.AdapterSize.html">AdapterSize</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_AdapterSize_AdapterSizeOne_" data-uid="Google.GenAI.Types.AdapterSize.AdapterSizeOne*"></a>
+
+  <h3 id="Google_GenAI_Types_AdapterSize_AdapterSizeOne" data-uid="Google.GenAI.Types.AdapterSize.AdapterSizeOne">
+  AdapterSizeOne
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AdapterSize.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adapter size 1.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AdapterSize AdapterSizeOne { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.AdapterSize.html">AdapterSize</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_AdapterSize_AdapterSizeSixteen_" data-uid="Google.GenAI.Types.AdapterSize.AdapterSizeSixteen*"></a>
+
+  <h3 id="Google_GenAI_Types_AdapterSize_AdapterSizeSixteen" data-uid="Google.GenAI.Types.AdapterSize.AdapterSizeSixteen">
+  AdapterSizeSixteen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AdapterSize.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adapter size 16.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AdapterSize AdapterSizeSixteen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.AdapterSize.html">AdapterSize</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_AdapterSize_AdapterSizeThirtyTwo_" data-uid="Google.GenAI.Types.AdapterSize.AdapterSizeThirtyTwo*"></a>
+
+  <h3 id="Google_GenAI_Types_AdapterSize_AdapterSizeThirtyTwo" data-uid="Google.GenAI.Types.AdapterSize.AdapterSizeThirtyTwo">
+  AdapterSizeThirtyTwo
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AdapterSize.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adapter size 32.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AdapterSize AdapterSizeThirtyTwo { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.AdapterSize.html">AdapterSize</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_AdapterSize_AdapterSizeTwo_" data-uid="Google.GenAI.Types.AdapterSize.AdapterSizeTwo*"></a>
+
+  <h3 id="Google_GenAI_Types_AdapterSize_AdapterSizeTwo" data-uid="Google.GenAI.Types.AdapterSize.AdapterSizeTwo">
+  AdapterSizeTwo
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AdapterSize.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adapter size 2.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AdapterSize AdapterSizeTwo { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.AdapterSize.html">AdapterSize</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_AdapterSize_AdapterSizeUnspecified_" data-uid="Google.GenAI.Types.AdapterSize.AdapterSizeUnspecified*"></a>
+
+  <h3 id="Google_GenAI_Types_AdapterSize_AdapterSizeUnspecified" data-uid="Google.GenAI.Types.AdapterSize.AdapterSizeUnspecified">
+  AdapterSizeUnspecified
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AdapterSize.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adapter size is unspecified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AdapterSize AdapterSizeUnspecified { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.AdapterSize.html">AdapterSize</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_AdapterSize_AllValues_" data-uid="Google.GenAI.Types.AdapterSize.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_AdapterSize_AllValues" data-uid="Google.GenAI.Types.AdapterSize.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AdapterSize.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;AdapterSize&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.AdapterSize.html">AdapterSize</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_AdapterSize_Value_" data-uid="Google.GenAI.Types.AdapterSize.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_AdapterSize_Value" data-uid="Google.GenAI.Types.AdapterSize.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AdapterSize.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_AdapterSize_Equals_" data-uid="Google.GenAI.Types.AdapterSize.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_AdapterSize_Equals_Google_GenAI_Types_AdapterSize_" data-uid="Google.GenAI.Types.AdapterSize.Equals(Google.GenAI.Types.AdapterSize)">
+  Equals(AdapterSize)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AdapterSize.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(AdapterSize other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.AdapterSize.html">AdapterSize</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_AdapterSize_FromString_" data-uid="Google.GenAI.Types.AdapterSize.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_AdapterSize_FromString_System_String_" data-uid="Google.GenAI.Types.AdapterSize.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AdapterSize.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AdapterSize FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.AdapterSize.html">AdapterSize</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_AdapterSize_GetHashCode_" data-uid="Google.GenAI.Types.AdapterSize.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_AdapterSize_GetHashCode" data-uid="Google.GenAI.Types.AdapterSize.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AdapterSize.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_AdapterSize_ToString_" data-uid="Google.GenAI.Types.AdapterSize.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_AdapterSize_ToString" data-uid="Google.GenAI.Types.AdapterSize.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AdapterSize.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_AdapterSize_op_Implicit_" data-uid="Google.GenAI.Types.AdapterSize.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_AdapterSize_op_Implicit_System_String__Google_GenAI_Types_AdapterSize" data-uid="Google.GenAI.Types.AdapterSize.op_Implicit(System.String)~Google.GenAI.Types.AdapterSize">
+  implicit operator AdapterSize(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AdapterSize.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator AdapterSize(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.AdapterSize.html">AdapterSize</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AdapterSize.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AdapterSize.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

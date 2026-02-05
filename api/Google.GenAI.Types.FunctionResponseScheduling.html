@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum FunctionResponseScheduling | Google GenAI .NET SDK </title>
+      <title>Struct FunctionResponseScheduling | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum FunctionResponseScheduling | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct FunctionResponseScheduling | Google GenAI .NET SDK ">
       
       <meta name="description" content="Specifies how the response should be scheduled in the conversation.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_FunctionResponseScheduling" data-uid="Google.GenAI.Types.FunctionResponseScheduling" class="text-break">
-Enum FunctionResponseScheduling  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Struct FunctionResponseScheduling  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,51 +98,423 @@ Enum FunctionResponseScheduling  <a class="header-action link-secondary" title="
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum FunctionResponseScheduling</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(FunctionResponseSchedulingConverter))]
+public readonly record struct FunctionResponseScheduling : IEquatable&lt;FunctionResponseScheduling&gt;</code></pre>
   </div>
 
 
 
 
 
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="Google_GenAI_Types_FunctionResponseScheduling_INTERRUPT"><code>[JsonPropertyName(&quot;INTERRUPT&quot;)]
-INTERRUPT = 3</code></dt>
-  
-  <dd><p>Add the result to the conversation context, interrupt ongoing generation and prompt to
-generate output.</p>
-</dd>
-    <dt id="Google_GenAI_Types_FunctionResponseScheduling_SCHEDULING_UNSPECIFIED"><code>[JsonPropertyName(&quot;SCHEDULING_UNSPECIFIED&quot;)]
-SCHEDULING_UNSPECIFIED = 0</code></dt>
-  
-  <dd><p>This value is unused.</p>
-</dd>
-    <dt id="Google_GenAI_Types_FunctionResponseScheduling_SILENT"><code>[JsonPropertyName(&quot;SILENT&quot;)]
-SILENT = 1</code></dt>
-  
-  <dd><p>Only add the result to the conversation context, do not interrupt or trigger generation.</p>
-</dd>
-    <dt id="Google_GenAI_Types_FunctionResponseScheduling_WHEN_IDLE"><code>[JsonPropertyName(&quot;WHEN_IDLE&quot;)]
-WHEN_IDLE = 2</code></dt>
-  
-  <dd><p>Add the result to the conversation context, and prompt to generate output without
-interrupting ongoing generation.</p>
-</dd>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.FunctionResponseScheduling.html">FunctionResponseScheduling</a>&gt;</div>
+    </dd>
   </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_FunctionResponseScheduling_AllValues_" data-uid="Google.GenAI.Types.FunctionResponseScheduling.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionResponseScheduling_AllValues" data-uid="Google.GenAI.Types.FunctionResponseScheduling.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;FunctionResponseScheduling&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.FunctionResponseScheduling.html">FunctionResponseScheduling</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FunctionResponseScheduling_Interrupt_" data-uid="Google.GenAI.Types.FunctionResponseScheduling.Interrupt*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionResponseScheduling_Interrupt" data-uid="Google.GenAI.Types.FunctionResponseScheduling.Interrupt">
+  Interrupt
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add the result to the conversation context, interrupt ongoing generation and prompt to
+generate output.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FunctionResponseScheduling Interrupt { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FunctionResponseScheduling.html">FunctionResponseScheduling</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FunctionResponseScheduling_SchedulingUnspecified_" data-uid="Google.GenAI.Types.FunctionResponseScheduling.SchedulingUnspecified*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionResponseScheduling_SchedulingUnspecified" data-uid="Google.GenAI.Types.FunctionResponseScheduling.SchedulingUnspecified">
+  SchedulingUnspecified
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This value is unused.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FunctionResponseScheduling SchedulingUnspecified { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FunctionResponseScheduling.html">FunctionResponseScheduling</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FunctionResponseScheduling_Silent_" data-uid="Google.GenAI.Types.FunctionResponseScheduling.Silent*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionResponseScheduling_Silent" data-uid="Google.GenAI.Types.FunctionResponseScheduling.Silent">
+  Silent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Only add the result to the conversation context, do not interrupt or trigger generation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FunctionResponseScheduling Silent { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FunctionResponseScheduling.html">FunctionResponseScheduling</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FunctionResponseScheduling_Value_" data-uid="Google.GenAI.Types.FunctionResponseScheduling.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionResponseScheduling_Value" data-uid="Google.GenAI.Types.FunctionResponseScheduling.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FunctionResponseScheduling_WhenIdle_" data-uid="Google.GenAI.Types.FunctionResponseScheduling.WhenIdle*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionResponseScheduling_WhenIdle" data-uid="Google.GenAI.Types.FunctionResponseScheduling.WhenIdle">
+  WhenIdle
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add the result to the conversation context, and prompt to generate output without
+interrupting ongoing generation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FunctionResponseScheduling WhenIdle { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FunctionResponseScheduling.html">FunctionResponseScheduling</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_FunctionResponseScheduling_Equals_" data-uid="Google.GenAI.Types.FunctionResponseScheduling.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionResponseScheduling_Equals_Google_GenAI_Types_FunctionResponseScheduling_" data-uid="Google.GenAI.Types.FunctionResponseScheduling.Equals(Google.GenAI.Types.FunctionResponseScheduling)">
+  Equals(FunctionResponseScheduling)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(FunctionResponseScheduling other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.FunctionResponseScheduling.html">FunctionResponseScheduling</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FunctionResponseScheduling_FromString_" data-uid="Google.GenAI.Types.FunctionResponseScheduling.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionResponseScheduling_FromString_System_String_" data-uid="Google.GenAI.Types.FunctionResponseScheduling.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FunctionResponseScheduling FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FunctionResponseScheduling.html">FunctionResponseScheduling</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FunctionResponseScheduling_GetHashCode_" data-uid="Google.GenAI.Types.FunctionResponseScheduling.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionResponseScheduling_GetHashCode" data-uid="Google.GenAI.Types.FunctionResponseScheduling.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FunctionResponseScheduling_ToString_" data-uid="Google.GenAI.Types.FunctionResponseScheduling.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionResponseScheduling_ToString" data-uid="Google.GenAI.Types.FunctionResponseScheduling.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_FunctionResponseScheduling_op_Implicit_" data-uid="Google.GenAI.Types.FunctionResponseScheduling.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionResponseScheduling_op_Implicit_System_String__Google_GenAI_Types_FunctionResponseScheduling" data-uid="Google.GenAI.Types.FunctionResponseScheduling.op_Implicit(System.String)~Google.GenAI.Types.FunctionResponseScheduling">
+  implicit operator FunctionResponseScheduling(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator FunctionResponseScheduling(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FunctionResponseScheduling.html">FunctionResponseScheduling</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

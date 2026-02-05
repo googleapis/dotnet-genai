@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum HarmSeverity | Google GenAI .NET SDK </title>
+      <title>Struct HarmSeverity | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum HarmSeverity | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct HarmSeverity | Google GenAI .NET SDK ">
       
       <meta name="description" content="Output only. Harm severity levels in the content. This enum is not supported in Gemini API.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_HarmSeverity" data-uid="Google.GenAI.Types.HarmSeverity" class="text-break">
-Enum HarmSeverity  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmSeverity.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Struct HarmSeverity  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmSeverity.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,54 +98,453 @@ Enum HarmSeverity  <a class="header-action link-secondary" title="View source" h
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum HarmSeverity</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(HarmSeverityConverter))]
+public readonly record struct HarmSeverity : IEquatable&lt;HarmSeverity&gt;</code></pre>
   </div>
 
 
 
 
 
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="Google_GenAI_Types_HarmSeverity_HARM_SEVERITY_HIGH"><code>[JsonPropertyName(&quot;HARM_SEVERITY_HIGH&quot;)]
-HARM_SEVERITY_HIGH = 4</code></dt>
-  
-  <dd><p>High level of harm severity.</p>
-</dd>
-    <dt id="Google_GenAI_Types_HarmSeverity_HARM_SEVERITY_LOW"><code>[JsonPropertyName(&quot;HARM_SEVERITY_LOW&quot;)]
-HARM_SEVERITY_LOW = 2</code></dt>
-  
-  <dd><p>Low level of harm severity.</p>
-</dd>
-    <dt id="Google_GenAI_Types_HarmSeverity_HARM_SEVERITY_MEDIUM"><code>[JsonPropertyName(&quot;HARM_SEVERITY_MEDIUM&quot;)]
-HARM_SEVERITY_MEDIUM = 3</code></dt>
-  
-  <dd><p>Medium level of harm severity.</p>
-</dd>
-    <dt id="Google_GenAI_Types_HarmSeverity_HARM_SEVERITY_NEGLIGIBLE"><code>[JsonPropertyName(&quot;HARM_SEVERITY_NEGLIGIBLE&quot;)]
-HARM_SEVERITY_NEGLIGIBLE = 1</code></dt>
-  
-  <dd><p>Negligible level of harm severity.</p>
-</dd>
-    <dt id="Google_GenAI_Types_HarmSeverity_HARM_SEVERITY_UNSPECIFIED"><code>[JsonPropertyName(&quot;HARM_SEVERITY_UNSPECIFIED&quot;)]
-HARM_SEVERITY_UNSPECIFIED = 0</code></dt>
-  
-  <dd><p>Harm severity unspecified.</p>
-</dd>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.HarmSeverity.html">HarmSeverity</a>&gt;</div>
+    </dd>
   </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_HarmSeverity_AllValues_" data-uid="Google.GenAI.Types.HarmSeverity.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmSeverity_AllValues" data-uid="Google.GenAI.Types.HarmSeverity.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmSeverity.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;HarmSeverity&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.HarmSeverity.html">HarmSeverity</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmSeverity_HarmSeverityHigh_" data-uid="Google.GenAI.Types.HarmSeverity.HarmSeverityHigh*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmSeverity_HarmSeverityHigh" data-uid="Google.GenAI.Types.HarmSeverity.HarmSeverityHigh">
+  HarmSeverityHigh
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmSeverity.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>High level of harm severity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HarmSeverity HarmSeverityHigh { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HarmSeverity.html">HarmSeverity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmSeverity_HarmSeverityLow_" data-uid="Google.GenAI.Types.HarmSeverity.HarmSeverityLow*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmSeverity_HarmSeverityLow" data-uid="Google.GenAI.Types.HarmSeverity.HarmSeverityLow">
+  HarmSeverityLow
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmSeverity.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Low level of harm severity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HarmSeverity HarmSeverityLow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HarmSeverity.html">HarmSeverity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmSeverity_HarmSeverityMedium_" data-uid="Google.GenAI.Types.HarmSeverity.HarmSeverityMedium*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmSeverity_HarmSeverityMedium" data-uid="Google.GenAI.Types.HarmSeverity.HarmSeverityMedium">
+  HarmSeverityMedium
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmSeverity.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Medium level of harm severity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HarmSeverity HarmSeverityMedium { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HarmSeverity.html">HarmSeverity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmSeverity_HarmSeverityNegligible_" data-uid="Google.GenAI.Types.HarmSeverity.HarmSeverityNegligible*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmSeverity_HarmSeverityNegligible" data-uid="Google.GenAI.Types.HarmSeverity.HarmSeverityNegligible">
+  HarmSeverityNegligible
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmSeverity.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Negligible level of harm severity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HarmSeverity HarmSeverityNegligible { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HarmSeverity.html">HarmSeverity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmSeverity_HarmSeverityUnspecified_" data-uid="Google.GenAI.Types.HarmSeverity.HarmSeverityUnspecified*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmSeverity_HarmSeverityUnspecified" data-uid="Google.GenAI.Types.HarmSeverity.HarmSeverityUnspecified">
+  HarmSeverityUnspecified
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmSeverity.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Harm severity unspecified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HarmSeverity HarmSeverityUnspecified { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HarmSeverity.html">HarmSeverity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmSeverity_Value_" data-uid="Google.GenAI.Types.HarmSeverity.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmSeverity_Value" data-uid="Google.GenAI.Types.HarmSeverity.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmSeverity.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_HarmSeverity_Equals_" data-uid="Google.GenAI.Types.HarmSeverity.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmSeverity_Equals_Google_GenAI_Types_HarmSeverity_" data-uid="Google.GenAI.Types.HarmSeverity.Equals(Google.GenAI.Types.HarmSeverity)">
+  Equals(HarmSeverity)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmSeverity.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(HarmSeverity other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.HarmSeverity.html">HarmSeverity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmSeverity_FromString_" data-uid="Google.GenAI.Types.HarmSeverity.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmSeverity_FromString_System_String_" data-uid="Google.GenAI.Types.HarmSeverity.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmSeverity.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HarmSeverity FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HarmSeverity.html">HarmSeverity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmSeverity_GetHashCode_" data-uid="Google.GenAI.Types.HarmSeverity.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmSeverity_GetHashCode" data-uid="Google.GenAI.Types.HarmSeverity.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmSeverity.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmSeverity_ToString_" data-uid="Google.GenAI.Types.HarmSeverity.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmSeverity_ToString" data-uid="Google.GenAI.Types.HarmSeverity.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmSeverity.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_HarmSeverity_op_Implicit_" data-uid="Google.GenAI.Types.HarmSeverity.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmSeverity_op_Implicit_System_String__Google_GenAI_Types_HarmSeverity" data-uid="Google.GenAI.Types.HarmSeverity.op_Implicit(System.String)~Google.GenAI.Types.HarmSeverity">
+  implicit operator HarmSeverity(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmSeverity.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator HarmSeverity(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HarmSeverity.html">HarmSeverity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmSeverity.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmSeverity.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

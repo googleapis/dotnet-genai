@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum ActivityHandling | Google GenAI .NET SDK </title>
+      <title>Struct ActivityHandling | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum ActivityHandling | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct ActivityHandling | Google GenAI .NET SDK ">
       
       <meta name="description" content="The different ways of handling user activity.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_ActivityHandling" data-uid="Google.GenAI.Types.ActivityHandling" class="text-break">
-Enum ActivityHandling  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ActivityHandling.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Struct ActivityHandling  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ActivityHandling.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,46 +98,391 @@ Enum ActivityHandling  <a class="header-action link-secondary" title="View sourc
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum ActivityHandling</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(ActivityHandlingConverter))]
+public readonly record struct ActivityHandling : IEquatable&lt;ActivityHandling&gt;</code></pre>
   </div>
 
 
 
 
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.ActivityHandling.html">ActivityHandling</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
 
 
 
 
-  <h2 id="fields">Fields
+
+
+  <h2 class="section" id="properties">Properties
 </h2>
+
+
+  <a id="Google_GenAI_Types_ActivityHandling_ActivityHandlingUnspecified_" data-uid="Google.GenAI.Types.ActivityHandling.ActivityHandlingUnspecified*"></a>
+
+  <h3 id="Google_GenAI_Types_ActivityHandling_ActivityHandlingUnspecified" data-uid="Google.GenAI.Types.ActivityHandling.ActivityHandlingUnspecified">
+  ActivityHandlingUnspecified
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ActivityHandling.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If unspecified, the default behavior is <code>START_OF_ACTIVITY_INTERRUPTS</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ActivityHandling ActivityHandlingUnspecified { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt id="Google_GenAI_Types_ActivityHandling_ACTIVITY_HANDLING_UNSPECIFIED"><code>[JsonPropertyName(&quot;ACTIVITY_HANDLING_UNSPECIFIED&quot;)]
-ACTIVITY_HANDLING_UNSPECIFIED = 0</code></dt>
-  
-  <dd><p>If unspecified, the default behavior is <code>START_OF_ACTIVITY_INTERRUPTS</code>.</p>
-</dd>
-    <dt id="Google_GenAI_Types_ActivityHandling_NO_INTERRUPTION"><code>[JsonPropertyName(&quot;NO_INTERRUPTION&quot;)]
-NO_INTERRUPTION = 2</code></dt>
-  
-  <dd><p>The model's response will not be interrupted.</p>
-</dd>
-    <dt id="Google_GenAI_Types_ActivityHandling_START_OF_ACTIVITY_INTERRUPTS"><code>[JsonPropertyName(&quot;START_OF_ACTIVITY_INTERRUPTS&quot;)]
-START_OF_ACTIVITY_INTERRUPTS = 1</code></dt>
-  
-  <dd><p>If true, start of activity will interrupt the model's response (also called &quot;barge in&quot;). The
+    <dt><a class="xref" href="Google.GenAI.Types.ActivityHandling.html">ActivityHandling</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ActivityHandling_AllValues_" data-uid="Google.GenAI.Types.ActivityHandling.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_ActivityHandling_AllValues" data-uid="Google.GenAI.Types.ActivityHandling.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ActivityHandling.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;ActivityHandling&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.ActivityHandling.html">ActivityHandling</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ActivityHandling_NoInterruption_" data-uid="Google.GenAI.Types.ActivityHandling.NoInterruption*"></a>
+
+  <h3 id="Google_GenAI_Types_ActivityHandling_NoInterruption" data-uid="Google.GenAI.Types.ActivityHandling.NoInterruption">
+  NoInterruption
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ActivityHandling.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The model's response will not be interrupted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ActivityHandling NoInterruption { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.ActivityHandling.html">ActivityHandling</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ActivityHandling_StartOfActivityInterrupts_" data-uid="Google.GenAI.Types.ActivityHandling.StartOfActivityInterrupts*"></a>
+
+  <h3 id="Google_GenAI_Types_ActivityHandling_StartOfActivityInterrupts" data-uid="Google.GenAI.Types.ActivityHandling.StartOfActivityInterrupts">
+  StartOfActivityInterrupts
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ActivityHandling.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If true, start of activity will interrupt the model's response (also called &quot;barge in&quot;). The
 model's current response will be cut-off in the moment of the interruption. This is the
 default behavior.</p>
-</dd>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ActivityHandling StartOfActivityInterrupts { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.ActivityHandling.html">ActivityHandling</a></dt>
+    <dd></dd>
   </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ActivityHandling_Value_" data-uid="Google.GenAI.Types.ActivityHandling.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_ActivityHandling_Value" data-uid="Google.GenAI.Types.ActivityHandling.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ActivityHandling.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_ActivityHandling_Equals_" data-uid="Google.GenAI.Types.ActivityHandling.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_ActivityHandling_Equals_Google_GenAI_Types_ActivityHandling_" data-uid="Google.GenAI.Types.ActivityHandling.Equals(Google.GenAI.Types.ActivityHandling)">
+  Equals(ActivityHandling)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ActivityHandling.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(ActivityHandling other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.ActivityHandling.html">ActivityHandling</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ActivityHandling_FromString_" data-uid="Google.GenAI.Types.ActivityHandling.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_ActivityHandling_FromString_System_String_" data-uid="Google.GenAI.Types.ActivityHandling.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ActivityHandling.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ActivityHandling FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.ActivityHandling.html">ActivityHandling</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ActivityHandling_GetHashCode_" data-uid="Google.GenAI.Types.ActivityHandling.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_ActivityHandling_GetHashCode" data-uid="Google.GenAI.Types.ActivityHandling.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ActivityHandling.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ActivityHandling_ToString_" data-uid="Google.GenAI.Types.ActivityHandling.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_ActivityHandling_ToString" data-uid="Google.GenAI.Types.ActivityHandling.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ActivityHandling.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_ActivityHandling_op_Implicit_" data-uid="Google.GenAI.Types.ActivityHandling.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_ActivityHandling_op_Implicit_System_String__Google_GenAI_Types_ActivityHandling" data-uid="Google.GenAI.Types.ActivityHandling.op_Implicit(System.String)~Google.GenAI.Types.ActivityHandling">
+  implicit operator ActivityHandling(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ActivityHandling.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator ActivityHandling(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.ActivityHandling.html">ActivityHandling</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ActivityHandling.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ActivityHandling.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

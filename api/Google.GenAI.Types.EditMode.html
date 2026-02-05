@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum EditMode | Google GenAI .NET SDK </title>
+      <title>Struct EditMode | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum EditMode | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct EditMode | Google GenAI .NET SDK ">
       
       <meta name="description" content="Enum representing the editing mode.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_EditMode" data-uid="Google.GenAI.Types.EditMode" class="text-break">
-Enum EditMode  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/EditMode.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Struct EditMode  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/EditMode.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,61 +98,541 @@ Enum EditMode  <a class="header-action link-secondary" title="View source" href=
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum EditMode</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(EditModeConverter))]
+public readonly record struct EditMode : IEquatable&lt;EditMode&gt;</code></pre>
   </div>
 
 
 
 
 
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="Google_GenAI_Types_EditMode_EDIT_MODE_BGSWAP"><code>[JsonPropertyName(&quot;EDIT_MODE_BGSWAP&quot;)]
-EDIT_MODE_BGSWAP = 6</code></dt>
-  
-  <dd></dd>
-    <dt id="Google_GenAI_Types_EditMode_EDIT_MODE_CONTROLLED_EDITING"><code>[JsonPropertyName(&quot;EDIT_MODE_CONTROLLED_EDITING&quot;)]
-EDIT_MODE_CONTROLLED_EDITING = 4</code></dt>
-  
-  <dd></dd>
-    <dt id="Google_GenAI_Types_EditMode_EDIT_MODE_DEFAULT"><code>[JsonPropertyName(&quot;EDIT_MODE_DEFAULT&quot;)]
-EDIT_MODE_DEFAULT = 0</code></dt>
-  
-  <dd></dd>
-    <dt id="Google_GenAI_Types_EditMode_EDIT_MODE_INPAINT_INSERTION"><code>[JsonPropertyName(&quot;EDIT_MODE_INPAINT_INSERTION&quot;)]
-EDIT_MODE_INPAINT_INSERTION = 2</code></dt>
-  
-  <dd></dd>
-    <dt id="Google_GenAI_Types_EditMode_EDIT_MODE_INPAINT_REMOVAL"><code>[JsonPropertyName(&quot;EDIT_MODE_INPAINT_REMOVAL&quot;)]
-EDIT_MODE_INPAINT_REMOVAL = 1</code></dt>
-  
-  <dd></dd>
-    <dt id="Google_GenAI_Types_EditMode_EDIT_MODE_OUTPAINT"><code>[JsonPropertyName(&quot;EDIT_MODE_OUTPAINT&quot;)]
-EDIT_MODE_OUTPAINT = 3</code></dt>
-  
-  <dd></dd>
-    <dt id="Google_GenAI_Types_EditMode_EDIT_MODE_PRODUCT_IMAGE"><code>[JsonPropertyName(&quot;EDIT_MODE_PRODUCT_IMAGE&quot;)]
-EDIT_MODE_PRODUCT_IMAGE = 7</code></dt>
-  
-  <dd></dd>
-    <dt id="Google_GenAI_Types_EditMode_EDIT_MODE_STYLE"><code>[JsonPropertyName(&quot;EDIT_MODE_STYLE&quot;)]
-EDIT_MODE_STYLE = 5</code></dt>
-  
-  <dd></dd>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.EditMode.html">EditMode</a>&gt;</div>
+    </dd>
   </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_EditMode_AllValues_" data-uid="Google.GenAI.Types.EditMode.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_EditMode_AllValues" data-uid="Google.GenAI.Types.EditMode.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/EditMode.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;EditMode&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.EditMode.html">EditMode</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_EditMode_EditModeBgswap_" data-uid="Google.GenAI.Types.EditMode.EditModeBgswap*"></a>
+
+  <h3 id="Google_GenAI_Types_EditMode_EditModeBgswap" data-uid="Google.GenAI.Types.EditMode.EditModeBgswap">
+  EditModeBgswap
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/EditMode.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static EditMode EditModeBgswap { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.EditMode.html">EditMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_EditMode_EditModeControlledEditing_" data-uid="Google.GenAI.Types.EditMode.EditModeControlledEditing*"></a>
+
+  <h3 id="Google_GenAI_Types_EditMode_EditModeControlledEditing" data-uid="Google.GenAI.Types.EditMode.EditModeControlledEditing">
+  EditModeControlledEditing
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/EditMode.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static EditMode EditModeControlledEditing { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.EditMode.html">EditMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_EditMode_EditModeDefault_" data-uid="Google.GenAI.Types.EditMode.EditModeDefault*"></a>
+
+  <h3 id="Google_GenAI_Types_EditMode_EditModeDefault" data-uid="Google.GenAI.Types.EditMode.EditModeDefault">
+  EditModeDefault
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/EditMode.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static EditMode EditModeDefault { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.EditMode.html">EditMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_EditMode_EditModeInpaintInsertion_" data-uid="Google.GenAI.Types.EditMode.EditModeInpaintInsertion*"></a>
+
+  <h3 id="Google_GenAI_Types_EditMode_EditModeInpaintInsertion" data-uid="Google.GenAI.Types.EditMode.EditModeInpaintInsertion">
+  EditModeInpaintInsertion
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/EditMode.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static EditMode EditModeInpaintInsertion { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.EditMode.html">EditMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_EditMode_EditModeInpaintRemoval_" data-uid="Google.GenAI.Types.EditMode.EditModeInpaintRemoval*"></a>
+
+  <h3 id="Google_GenAI_Types_EditMode_EditModeInpaintRemoval" data-uid="Google.GenAI.Types.EditMode.EditModeInpaintRemoval">
+  EditModeInpaintRemoval
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/EditMode.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static EditMode EditModeInpaintRemoval { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.EditMode.html">EditMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_EditMode_EditModeOutpaint_" data-uid="Google.GenAI.Types.EditMode.EditModeOutpaint*"></a>
+
+  <h3 id="Google_GenAI_Types_EditMode_EditModeOutpaint" data-uid="Google.GenAI.Types.EditMode.EditModeOutpaint">
+  EditModeOutpaint
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/EditMode.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static EditMode EditModeOutpaint { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.EditMode.html">EditMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_EditMode_EditModeProductImage_" data-uid="Google.GenAI.Types.EditMode.EditModeProductImage*"></a>
+
+  <h3 id="Google_GenAI_Types_EditMode_EditModeProductImage" data-uid="Google.GenAI.Types.EditMode.EditModeProductImage">
+  EditModeProductImage
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/EditMode.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static EditMode EditModeProductImage { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.EditMode.html">EditMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_EditMode_EditModeStyle_" data-uid="Google.GenAI.Types.EditMode.EditModeStyle*"></a>
+
+  <h3 id="Google_GenAI_Types_EditMode_EditModeStyle" data-uid="Google.GenAI.Types.EditMode.EditModeStyle">
+  EditModeStyle
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/EditMode.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static EditMode EditModeStyle { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.EditMode.html">EditMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_EditMode_Value_" data-uid="Google.GenAI.Types.EditMode.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_EditMode_Value" data-uid="Google.GenAI.Types.EditMode.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/EditMode.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_EditMode_Equals_" data-uid="Google.GenAI.Types.EditMode.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_EditMode_Equals_Google_GenAI_Types_EditMode_" data-uid="Google.GenAI.Types.EditMode.Equals(Google.GenAI.Types.EditMode)">
+  Equals(EditMode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/EditMode.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(EditMode other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.EditMode.html">EditMode</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_EditMode_FromString_" data-uid="Google.GenAI.Types.EditMode.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_EditMode_FromString_System_String_" data-uid="Google.GenAI.Types.EditMode.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/EditMode.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static EditMode FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.EditMode.html">EditMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_EditMode_GetHashCode_" data-uid="Google.GenAI.Types.EditMode.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_EditMode_GetHashCode" data-uid="Google.GenAI.Types.EditMode.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/EditMode.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_EditMode_ToString_" data-uid="Google.GenAI.Types.EditMode.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_EditMode_ToString" data-uid="Google.GenAI.Types.EditMode.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/EditMode.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_EditMode_op_Implicit_" data-uid="Google.GenAI.Types.EditMode.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_EditMode_op_Implicit_System_String__Google_GenAI_Types_EditMode" data-uid="Google.GenAI.Types.EditMode.op_Implicit(System.String)~Google.GenAI.Types.EditMode">
+  implicit operator EditMode(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/EditMode.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator EditMode(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.EditMode.html">EditMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/EditMode.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/EditMode.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum TurnCoverage | Google GenAI .NET SDK </title>
+      <title>Struct TurnCoverage | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum TurnCoverage | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct TurnCoverage | Google GenAI .NET SDK ">
       
       <meta name="description" content="Options about which input is included in the user&#39;s turn.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_TurnCoverage" data-uid="Google.GenAI.Types.TurnCoverage" class="text-break">
-Enum TurnCoverage  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCoverage.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Struct TurnCoverage  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCoverage.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,46 +98,391 @@ Enum TurnCoverage  <a class="header-action link-secondary" title="View source" h
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum TurnCoverage</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(TurnCoverageConverter))]
+public readonly record struct TurnCoverage : IEquatable&lt;TurnCoverage&gt;</code></pre>
   </div>
 
 
 
 
 
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="Google_GenAI_Types_TurnCoverage_TURN_COVERAGE_UNSPECIFIED"><code>[JsonPropertyName(&quot;TURN_COVERAGE_UNSPECIFIED&quot;)]
-TURN_COVERAGE_UNSPECIFIED = 0</code></dt>
-  
-  <dd><p>If unspecified, the default behavior is <code>TURN_INCLUDES_ONLY_ACTIVITY</code>.</p>
-</dd>
-    <dt id="Google_GenAI_Types_TurnCoverage_TURN_INCLUDES_ALL_INPUT"><code>[JsonPropertyName(&quot;TURN_INCLUDES_ALL_INPUT&quot;)]
-TURN_INCLUDES_ALL_INPUT = 2</code></dt>
-  
-  <dd><p>The users turn includes all realtime input since the last turn, including inactivity (e.g.
-silence on the audio stream).</p>
-</dd>
-    <dt id="Google_GenAI_Types_TurnCoverage_TURN_INCLUDES_ONLY_ACTIVITY"><code>[JsonPropertyName(&quot;TURN_INCLUDES_ONLY_ACTIVITY&quot;)]
-TURN_INCLUDES_ONLY_ACTIVITY = 1</code></dt>
-  
-  <dd><p>The users turn only includes activity since the last turn, excluding inactivity (e.g.
-silence on the audio stream). This is the default behavior.</p>
-</dd>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.TurnCoverage.html">TurnCoverage</a>&gt;</div>
+    </dd>
   </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_TurnCoverage_AllValues_" data-uid="Google.GenAI.Types.TurnCoverage.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCoverage_AllValues" data-uid="Google.GenAI.Types.TurnCoverage.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCoverage.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;TurnCoverage&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.TurnCoverage.html">TurnCoverage</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCoverage_TurnCoverageUnspecified_" data-uid="Google.GenAI.Types.TurnCoverage.TurnCoverageUnspecified*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCoverage_TurnCoverageUnspecified" data-uid="Google.GenAI.Types.TurnCoverage.TurnCoverageUnspecified">
+  TurnCoverageUnspecified
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCoverage.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If unspecified, the default behavior is <code>TURN_INCLUDES_ONLY_ACTIVITY</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCoverage TurnCoverageUnspecified { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCoverage.html">TurnCoverage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCoverage_TurnIncludesAllInput_" data-uid="Google.GenAI.Types.TurnCoverage.TurnIncludesAllInput*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCoverage_TurnIncludesAllInput" data-uid="Google.GenAI.Types.TurnCoverage.TurnIncludesAllInput">
+  TurnIncludesAllInput
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCoverage.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The users turn includes all realtime input since the last turn, including inactivity (e.g.
+silence on the audio stream).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCoverage TurnIncludesAllInput { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCoverage.html">TurnCoverage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCoverage_TurnIncludesOnlyActivity_" data-uid="Google.GenAI.Types.TurnCoverage.TurnIncludesOnlyActivity*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCoverage_TurnIncludesOnlyActivity" data-uid="Google.GenAI.Types.TurnCoverage.TurnIncludesOnlyActivity">
+  TurnIncludesOnlyActivity
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCoverage.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The users turn only includes activity since the last turn, excluding inactivity (e.g.
+silence on the audio stream). This is the default behavior.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCoverage TurnIncludesOnlyActivity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCoverage.html">TurnCoverage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCoverage_Value_" data-uid="Google.GenAI.Types.TurnCoverage.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCoverage_Value" data-uid="Google.GenAI.Types.TurnCoverage.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCoverage.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_TurnCoverage_Equals_" data-uid="Google.GenAI.Types.TurnCoverage.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCoverage_Equals_Google_GenAI_Types_TurnCoverage_" data-uid="Google.GenAI.Types.TurnCoverage.Equals(Google.GenAI.Types.TurnCoverage)">
+  Equals(TurnCoverage)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCoverage.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(TurnCoverage other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.TurnCoverage.html">TurnCoverage</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCoverage_FromString_" data-uid="Google.GenAI.Types.TurnCoverage.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCoverage_FromString_System_String_" data-uid="Google.GenAI.Types.TurnCoverage.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCoverage.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCoverage FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCoverage.html">TurnCoverage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCoverage_GetHashCode_" data-uid="Google.GenAI.Types.TurnCoverage.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCoverage_GetHashCode" data-uid="Google.GenAI.Types.TurnCoverage.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCoverage.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCoverage_ToString_" data-uid="Google.GenAI.Types.TurnCoverage.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCoverage_ToString" data-uid="Google.GenAI.Types.TurnCoverage.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCoverage.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_TurnCoverage_op_Implicit_" data-uid="Google.GenAI.Types.TurnCoverage.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCoverage_op_Implicit_System_String__Google_GenAI_Types_TurnCoverage" data-uid="Google.GenAI.Types.TurnCoverage.op_Implicit(System.String)~Google.GenAI.Types.TurnCoverage">
+  implicit operator TurnCoverage(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCoverage.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator TurnCoverage(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCoverage.html">TurnCoverage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCoverage.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCoverage.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

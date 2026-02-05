@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum HarmBlockMethod | Google GenAI .NET SDK </title>
+      <title>Struct HarmBlockMethod | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum HarmBlockMethod | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct HarmBlockMethod | Google GenAI .NET SDK ">
       
       <meta name="description" content="Specify if the threshold is used for probability or severity score. If not specified, the threshold is used for probability score. This enum is not supported in Gemini API.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_HarmBlockMethod" data-uid="Google.GenAI.Types.HarmBlockMethod" class="text-break">
-Enum HarmBlockMethod  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockMethod.cs/#L26"><i class="bi bi-code-slash"></i></a>
+Struct HarmBlockMethod  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockMethod.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -100,44 +99,389 @@ threshold is used for probability score. This enum is not supported in Gemini AP
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum HarmBlockMethod</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(HarmBlockMethodConverter))]
+public readonly record struct HarmBlockMethod : IEquatable&lt;HarmBlockMethod&gt;</code></pre>
   </div>
 
 
 
 
 
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="Google_GenAI_Types_HarmBlockMethod_HARM_BLOCK_METHOD_UNSPECIFIED"><code>[JsonPropertyName(&quot;HARM_BLOCK_METHOD_UNSPECIFIED&quot;)]
-HARM_BLOCK_METHOD_UNSPECIFIED = 0</code></dt>
-  
-  <dd><p>The harm block method is unspecified.</p>
-</dd>
-    <dt id="Google_GenAI_Types_HarmBlockMethod_PROBABILITY"><code>[JsonPropertyName(&quot;PROBABILITY&quot;)]
-PROBABILITY = 2</code></dt>
-  
-  <dd><p>The harm block method uses the probability score.</p>
-</dd>
-    <dt id="Google_GenAI_Types_HarmBlockMethod_SEVERITY"><code>[JsonPropertyName(&quot;SEVERITY&quot;)]
-SEVERITY = 1</code></dt>
-  
-  <dd><p>The harm block method uses both probability and severity scores.</p>
-</dd>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.HarmBlockMethod.html">HarmBlockMethod</a>&gt;</div>
+    </dd>
   </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_HarmBlockMethod_AllValues_" data-uid="Google.GenAI.Types.HarmBlockMethod.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmBlockMethod_AllValues" data-uid="Google.GenAI.Types.HarmBlockMethod.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockMethod.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;HarmBlockMethod&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.HarmBlockMethod.html">HarmBlockMethod</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmBlockMethod_HarmBlockMethodUnspecified_" data-uid="Google.GenAI.Types.HarmBlockMethod.HarmBlockMethodUnspecified*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmBlockMethod_HarmBlockMethodUnspecified" data-uid="Google.GenAI.Types.HarmBlockMethod.HarmBlockMethodUnspecified">
+  HarmBlockMethodUnspecified
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockMethod.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The harm block method is unspecified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HarmBlockMethod HarmBlockMethodUnspecified { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HarmBlockMethod.html">HarmBlockMethod</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmBlockMethod_Probability_" data-uid="Google.GenAI.Types.HarmBlockMethod.Probability*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmBlockMethod_Probability" data-uid="Google.GenAI.Types.HarmBlockMethod.Probability">
+  Probability
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockMethod.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The harm block method uses the probability score.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HarmBlockMethod Probability { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HarmBlockMethod.html">HarmBlockMethod</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmBlockMethod_Severity_" data-uid="Google.GenAI.Types.HarmBlockMethod.Severity*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmBlockMethod_Severity" data-uid="Google.GenAI.Types.HarmBlockMethod.Severity">
+  Severity
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockMethod.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The harm block method uses both probability and severity scores.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HarmBlockMethod Severity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HarmBlockMethod.html">HarmBlockMethod</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmBlockMethod_Value_" data-uid="Google.GenAI.Types.HarmBlockMethod.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmBlockMethod_Value" data-uid="Google.GenAI.Types.HarmBlockMethod.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockMethod.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_HarmBlockMethod_Equals_" data-uid="Google.GenAI.Types.HarmBlockMethod.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmBlockMethod_Equals_Google_GenAI_Types_HarmBlockMethod_" data-uid="Google.GenAI.Types.HarmBlockMethod.Equals(Google.GenAI.Types.HarmBlockMethod)">
+  Equals(HarmBlockMethod)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockMethod.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(HarmBlockMethod other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.HarmBlockMethod.html">HarmBlockMethod</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmBlockMethod_FromString_" data-uid="Google.GenAI.Types.HarmBlockMethod.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmBlockMethod_FromString_System_String_" data-uid="Google.GenAI.Types.HarmBlockMethod.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockMethod.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HarmBlockMethod FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HarmBlockMethod.html">HarmBlockMethod</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmBlockMethod_GetHashCode_" data-uid="Google.GenAI.Types.HarmBlockMethod.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmBlockMethod_GetHashCode" data-uid="Google.GenAI.Types.HarmBlockMethod.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockMethod.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmBlockMethod_ToString_" data-uid="Google.GenAI.Types.HarmBlockMethod.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmBlockMethod_ToString" data-uid="Google.GenAI.Types.HarmBlockMethod.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockMethod.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_HarmBlockMethod_op_Implicit_" data-uid="Google.GenAI.Types.HarmBlockMethod.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmBlockMethod_op_Implicit_System_String__Google_GenAI_Types_HarmBlockMethod" data-uid="Google.GenAI.Types.HarmBlockMethod.op_Implicit(System.String)~Google.GenAI.Types.HarmBlockMethod">
+  implicit operator HarmBlockMethod(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockMethod.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator HarmBlockMethod(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HarmBlockMethod.html">HarmBlockMethod</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockMethod.cs/#L26" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockMethod.cs/#L29" class="edit-link">Edit this page</a>
         </div>
 
 

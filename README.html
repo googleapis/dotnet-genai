@@ -120,6 +120,16 @@ client = new Client();
 </code></pre>
 <h2 id="types">Types</h2>
 <p>Parameter types are specified in the <code>Google.GenAI.Types</code> namespace.</p>
+<h3 id="enums">Enums</h3>
+<p>Enums are represented using structs for forward compatibility reasons. Enum
+values follow C# naming conventions (PascalCase).</p>
+<p>The SDK enum value contains an underlying string value that is sent to the API,
+which is usually UPPER_SNAKE_CASE. Please refer to the API documentation for
+the expected enum string values if you do not use the static SDK enum values.</p>
+<p>Unknown enum values are preserved as string values, accessible through
+PersonGeneration.Value. String equality with static SDK enum values can be
+checked, but must match the underlying string value exactly
+(ex. <code>PersonGeneration.AllowAll == &quot;ALLOW_ALL&quot;</code> is true).</p>
 <h2 id="models">Models</h2>
 <p>The <code>client.Models</code> module exposes model inferencing. See <code>Create a client</code>
 section above to initialize a client.</p>

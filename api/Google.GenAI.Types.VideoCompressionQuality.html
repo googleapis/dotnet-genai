@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum VideoCompressionQuality | Google GenAI .NET SDK </title>
+      <title>Struct VideoCompressionQuality | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum VideoCompressionQuality | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct VideoCompressionQuality | Google GenAI .NET SDK ">
       
       <meta name="description" content="Enum that controls the compression quality of the generated videos.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_VideoCompressionQuality" data-uid="Google.GenAI.Types.VideoCompressionQuality" class="text-break">
-Enum VideoCompressionQuality  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoCompressionQuality.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Struct VideoCompressionQuality  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoCompressionQuality.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,40 +98,358 @@ Enum VideoCompressionQuality  <a class="header-action link-secondary" title="Vie
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum VideoCompressionQuality</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(VideoCompressionQualityConverter))]
+public readonly record struct VideoCompressionQuality : IEquatable&lt;VideoCompressionQuality&gt;</code></pre>
   </div>
 
 
 
 
 
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="Google_GenAI_Types_VideoCompressionQuality_LOSSLESS"><code>[JsonPropertyName(&quot;LOSSLESS&quot;)]
-LOSSLESS = 1</code></dt>
-  
-  <dd><p>Lossless video compression quality. This will produce videos with a larger file size.</p>
-</dd>
-    <dt id="Google_GenAI_Types_VideoCompressionQuality_OPTIMIZED"><code>[JsonPropertyName(&quot;OPTIMIZED&quot;)]
-OPTIMIZED = 0</code></dt>
-  
-  <dd><p>Optimized video compression quality. This will produce videos with a compressed, smaller
-file size.</p>
-</dd>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.VideoCompressionQuality.html">VideoCompressionQuality</a>&gt;</div>
+    </dd>
   </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_VideoCompressionQuality_AllValues_" data-uid="Google.GenAI.Types.VideoCompressionQuality.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_VideoCompressionQuality_AllValues" data-uid="Google.GenAI.Types.VideoCompressionQuality.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoCompressionQuality.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;VideoCompressionQuality&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.VideoCompressionQuality.html">VideoCompressionQuality</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_VideoCompressionQuality_Lossless_" data-uid="Google.GenAI.Types.VideoCompressionQuality.Lossless*"></a>
+
+  <h3 id="Google_GenAI_Types_VideoCompressionQuality_Lossless" data-uid="Google.GenAI.Types.VideoCompressionQuality.Lossless">
+  Lossless
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoCompressionQuality.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lossless video compression quality. This will produce videos with a larger file size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static VideoCompressionQuality Lossless { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.VideoCompressionQuality.html">VideoCompressionQuality</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_VideoCompressionQuality_Optimized_" data-uid="Google.GenAI.Types.VideoCompressionQuality.Optimized*"></a>
+
+  <h3 id="Google_GenAI_Types_VideoCompressionQuality_Optimized" data-uid="Google.GenAI.Types.VideoCompressionQuality.Optimized">
+  Optimized
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoCompressionQuality.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optimized video compression quality. This will produce videos with a compressed, smaller
+file size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static VideoCompressionQuality Optimized { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.VideoCompressionQuality.html">VideoCompressionQuality</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_VideoCompressionQuality_Value_" data-uid="Google.GenAI.Types.VideoCompressionQuality.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_VideoCompressionQuality_Value" data-uid="Google.GenAI.Types.VideoCompressionQuality.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoCompressionQuality.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_VideoCompressionQuality_Equals_" data-uid="Google.GenAI.Types.VideoCompressionQuality.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_VideoCompressionQuality_Equals_Google_GenAI_Types_VideoCompressionQuality_" data-uid="Google.GenAI.Types.VideoCompressionQuality.Equals(Google.GenAI.Types.VideoCompressionQuality)">
+  Equals(VideoCompressionQuality)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoCompressionQuality.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(VideoCompressionQuality other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.VideoCompressionQuality.html">VideoCompressionQuality</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_VideoCompressionQuality_FromString_" data-uid="Google.GenAI.Types.VideoCompressionQuality.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_VideoCompressionQuality_FromString_System_String_" data-uid="Google.GenAI.Types.VideoCompressionQuality.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoCompressionQuality.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static VideoCompressionQuality FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.VideoCompressionQuality.html">VideoCompressionQuality</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_VideoCompressionQuality_GetHashCode_" data-uid="Google.GenAI.Types.VideoCompressionQuality.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_VideoCompressionQuality_GetHashCode" data-uid="Google.GenAI.Types.VideoCompressionQuality.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoCompressionQuality.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_VideoCompressionQuality_ToString_" data-uid="Google.GenAI.Types.VideoCompressionQuality.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_VideoCompressionQuality_ToString" data-uid="Google.GenAI.Types.VideoCompressionQuality.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoCompressionQuality.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_VideoCompressionQuality_op_Implicit_" data-uid="Google.GenAI.Types.VideoCompressionQuality.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_VideoCompressionQuality_op_Implicit_System_String__Google_GenAI_Types_VideoCompressionQuality" data-uid="Google.GenAI.Types.VideoCompressionQuality.op_Implicit(System.String)~Google.GenAI.Types.VideoCompressionQuality">
+  implicit operator VideoCompressionQuality(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoCompressionQuality.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator VideoCompressionQuality(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.VideoCompressionQuality.html">VideoCompressionQuality</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoCompressionQuality.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VideoCompressionQuality.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum HarmCategory | Google GenAI .NET SDK </title>
+      <title>Struct HarmCategory | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum HarmCategory | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct HarmCategory | Google GenAI .NET SDK ">
       
       <meta name="description" content="Harm category.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_HarmCategory" data-uid="Google.GenAI.Types.HarmCategory" class="text-break">
-Enum HarmCategory  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmCategory.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Struct HarmCategory  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmCategory.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,86 +98,647 @@ Enum HarmCategory  <a class="header-action link-secondary" title="View source" h
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum HarmCategory</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(HarmCategoryConverter))]
+public readonly record struct HarmCategory : IEquatable&lt;HarmCategory&gt;</code></pre>
   </div>
 
 
 
 
 
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="Google_GenAI_Types_HarmCategory_HARM_CATEGORY_CIVIC_INTEGRITY"><code>[JsonPropertyName(&quot;HARM_CATEGORY_CIVIC_INTEGRITY&quot;)]
-HARM_CATEGORY_CIVIC_INTEGRITY = 5</code></dt>
-  
-  <dd><p>Deprecated: Election filter is not longer supported. The harm category is civic integrity.</p>
-</dd>
-    <dt id="Google_GenAI_Types_HarmCategory_HARM_CATEGORY_DANGEROUS_CONTENT"><code>[JsonPropertyName(&quot;HARM_CATEGORY_DANGEROUS_CONTENT&quot;)]
-HARM_CATEGORY_DANGEROUS_CONTENT = 4</code></dt>
-  
-  <dd><p>The harm category is dangerous content.</p>
-</dd>
-    <dt id="Google_GenAI_Types_HarmCategory_HARM_CATEGORY_HARASSMENT"><code>[JsonPropertyName(&quot;HARM_CATEGORY_HARASSMENT&quot;)]
-HARM_CATEGORY_HARASSMENT = 1</code></dt>
-  
-  <dd><p>The harm category is harassment.</p>
-</dd>
-    <dt id="Google_GenAI_Types_HarmCategory_HARM_CATEGORY_HATE_SPEECH"><code>[JsonPropertyName(&quot;HARM_CATEGORY_HATE_SPEECH&quot;)]
-HARM_CATEGORY_HATE_SPEECH = 2</code></dt>
-  
-  <dd><p>The harm category is hate speech.</p>
-</dd>
-    <dt id="Google_GenAI_Types_HarmCategory_HARM_CATEGORY_IMAGE_DANGEROUS_CONTENT"><code>[JsonPropertyName(&quot;HARM_CATEGORY_IMAGE_DANGEROUS_CONTENT&quot;)]
-HARM_CATEGORY_IMAGE_DANGEROUS_CONTENT = 7</code></dt>
-  
-  <dd><p>The harm category is image dangerous content. This enum value is not supported in Gemini
-API.</p>
-</dd>
-    <dt id="Google_GenAI_Types_HarmCategory_HARM_CATEGORY_IMAGE_HARASSMENT"><code>[JsonPropertyName(&quot;HARM_CATEGORY_IMAGE_HARASSMENT&quot;)]
-HARM_CATEGORY_IMAGE_HARASSMENT = 8</code></dt>
-  
-  <dd><p>The harm category is image harassment. This enum value is not supported in Gemini API.</p>
-</dd>
-    <dt id="Google_GenAI_Types_HarmCategory_HARM_CATEGORY_IMAGE_HATE"><code>[JsonPropertyName(&quot;HARM_CATEGORY_IMAGE_HATE&quot;)]
-HARM_CATEGORY_IMAGE_HATE = 6</code></dt>
-  
-  <dd><p>The harm category is image hate. This enum value is not supported in Gemini API.</p>
-</dd>
-    <dt id="Google_GenAI_Types_HarmCategory_HARM_CATEGORY_IMAGE_SEXUALLY_EXPLICIT"><code>[JsonPropertyName(&quot;HARM_CATEGORY_IMAGE_SEXUALLY_EXPLICIT&quot;)]
-HARM_CATEGORY_IMAGE_SEXUALLY_EXPLICIT = 9</code></dt>
-  
-  <dd><p>The harm category is image sexually explicit content. This enum value is not supported in
-Gemini API.</p>
-</dd>
-    <dt id="Google_GenAI_Types_HarmCategory_HARM_CATEGORY_JAILBREAK"><code>[JsonPropertyName(&quot;HARM_CATEGORY_JAILBREAK&quot;)]
-HARM_CATEGORY_JAILBREAK = 10</code></dt>
-  
-  <dd><p>The harm category is for jailbreak prompts. This enum value is not supported in Gemini API.</p>
-</dd>
-    <dt id="Google_GenAI_Types_HarmCategory_HARM_CATEGORY_SEXUALLY_EXPLICIT"><code>[JsonPropertyName(&quot;HARM_CATEGORY_SEXUALLY_EXPLICIT&quot;)]
-HARM_CATEGORY_SEXUALLY_EXPLICIT = 3</code></dt>
-  
-  <dd><p>The harm category is sexually explicit content.</p>
-</dd>
-    <dt id="Google_GenAI_Types_HarmCategory_HARM_CATEGORY_UNSPECIFIED"><code>[JsonPropertyName(&quot;HARM_CATEGORY_UNSPECIFIED&quot;)]
-HARM_CATEGORY_UNSPECIFIED = 0</code></dt>
-  
-  <dd><p>The harm category is unspecified.</p>
-</dd>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.HarmCategory.html">HarmCategory</a>&gt;</div>
+    </dd>
   </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_HarmCategory_AllValues_" data-uid="Google.GenAI.Types.HarmCategory.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmCategory_AllValues" data-uid="Google.GenAI.Types.HarmCategory.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmCategory.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;HarmCategory&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.HarmCategory.html">HarmCategory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmCategory_HarmCategoryCivicIntegrity_" data-uid="Google.GenAI.Types.HarmCategory.HarmCategoryCivicIntegrity*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmCategory_HarmCategoryCivicIntegrity" data-uid="Google.GenAI.Types.HarmCategory.HarmCategoryCivicIntegrity">
+  HarmCategoryCivicIntegrity
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmCategory.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deprecated: Election filter is not longer supported. The harm category is civic integrity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HarmCategory HarmCategoryCivicIntegrity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HarmCategory.html">HarmCategory</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmCategory_HarmCategoryDangerousContent_" data-uid="Google.GenAI.Types.HarmCategory.HarmCategoryDangerousContent*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmCategory_HarmCategoryDangerousContent" data-uid="Google.GenAI.Types.HarmCategory.HarmCategoryDangerousContent">
+  HarmCategoryDangerousContent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmCategory.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The harm category is dangerous content.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HarmCategory HarmCategoryDangerousContent { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HarmCategory.html">HarmCategory</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmCategory_HarmCategoryHarassment_" data-uid="Google.GenAI.Types.HarmCategory.HarmCategoryHarassment*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmCategory_HarmCategoryHarassment" data-uid="Google.GenAI.Types.HarmCategory.HarmCategoryHarassment">
+  HarmCategoryHarassment
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmCategory.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The harm category is harassment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HarmCategory HarmCategoryHarassment { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HarmCategory.html">HarmCategory</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmCategory_HarmCategoryHateSpeech_" data-uid="Google.GenAI.Types.HarmCategory.HarmCategoryHateSpeech*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmCategory_HarmCategoryHateSpeech" data-uid="Google.GenAI.Types.HarmCategory.HarmCategoryHateSpeech">
+  HarmCategoryHateSpeech
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmCategory.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The harm category is hate speech.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HarmCategory HarmCategoryHateSpeech { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HarmCategory.html">HarmCategory</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmCategory_HarmCategoryImageDangerousContent_" data-uid="Google.GenAI.Types.HarmCategory.HarmCategoryImageDangerousContent*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmCategory_HarmCategoryImageDangerousContent" data-uid="Google.GenAI.Types.HarmCategory.HarmCategoryImageDangerousContent">
+  HarmCategoryImageDangerousContent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmCategory.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The harm category is image dangerous content. This enum value is not supported in Gemini
+API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HarmCategory HarmCategoryImageDangerousContent { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HarmCategory.html">HarmCategory</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmCategory_HarmCategoryImageHarassment_" data-uid="Google.GenAI.Types.HarmCategory.HarmCategoryImageHarassment*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmCategory_HarmCategoryImageHarassment" data-uid="Google.GenAI.Types.HarmCategory.HarmCategoryImageHarassment">
+  HarmCategoryImageHarassment
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmCategory.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The harm category is image harassment. This enum value is not supported in Gemini API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HarmCategory HarmCategoryImageHarassment { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HarmCategory.html">HarmCategory</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmCategory_HarmCategoryImageHate_" data-uid="Google.GenAI.Types.HarmCategory.HarmCategoryImageHate*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmCategory_HarmCategoryImageHate" data-uid="Google.GenAI.Types.HarmCategory.HarmCategoryImageHate">
+  HarmCategoryImageHate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmCategory.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The harm category is image hate. This enum value is not supported in Gemini API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HarmCategory HarmCategoryImageHate { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HarmCategory.html">HarmCategory</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmCategory_HarmCategoryImageSexuallyExplicit_" data-uid="Google.GenAI.Types.HarmCategory.HarmCategoryImageSexuallyExplicit*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmCategory_HarmCategoryImageSexuallyExplicit" data-uid="Google.GenAI.Types.HarmCategory.HarmCategoryImageSexuallyExplicit">
+  HarmCategoryImageSexuallyExplicit
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmCategory.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The harm category is image sexually explicit content. This enum value is not supported in
+Gemini API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HarmCategory HarmCategoryImageSexuallyExplicit { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HarmCategory.html">HarmCategory</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmCategory_HarmCategoryJailbreak_" data-uid="Google.GenAI.Types.HarmCategory.HarmCategoryJailbreak*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmCategory_HarmCategoryJailbreak" data-uid="Google.GenAI.Types.HarmCategory.HarmCategoryJailbreak">
+  HarmCategoryJailbreak
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmCategory.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The harm category is for jailbreak prompts. This enum value is not supported in Gemini API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HarmCategory HarmCategoryJailbreak { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HarmCategory.html">HarmCategory</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmCategory_HarmCategorySexuallyExplicit_" data-uid="Google.GenAI.Types.HarmCategory.HarmCategorySexuallyExplicit*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmCategory_HarmCategorySexuallyExplicit" data-uid="Google.GenAI.Types.HarmCategory.HarmCategorySexuallyExplicit">
+  HarmCategorySexuallyExplicit
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmCategory.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The harm category is sexually explicit content.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HarmCategory HarmCategorySexuallyExplicit { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HarmCategory.html">HarmCategory</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmCategory_HarmCategoryUnspecified_" data-uid="Google.GenAI.Types.HarmCategory.HarmCategoryUnspecified*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmCategory_HarmCategoryUnspecified" data-uid="Google.GenAI.Types.HarmCategory.HarmCategoryUnspecified">
+  HarmCategoryUnspecified
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmCategory.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The harm category is unspecified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HarmCategory HarmCategoryUnspecified { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HarmCategory.html">HarmCategory</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmCategory_Value_" data-uid="Google.GenAI.Types.HarmCategory.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmCategory_Value" data-uid="Google.GenAI.Types.HarmCategory.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmCategory.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_HarmCategory_Equals_" data-uid="Google.GenAI.Types.HarmCategory.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmCategory_Equals_Google_GenAI_Types_HarmCategory_" data-uid="Google.GenAI.Types.HarmCategory.Equals(Google.GenAI.Types.HarmCategory)">
+  Equals(HarmCategory)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmCategory.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(HarmCategory other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.HarmCategory.html">HarmCategory</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmCategory_FromString_" data-uid="Google.GenAI.Types.HarmCategory.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmCategory_FromString_System_String_" data-uid="Google.GenAI.Types.HarmCategory.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmCategory.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static HarmCategory FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HarmCategory.html">HarmCategory</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmCategory_GetHashCode_" data-uid="Google.GenAI.Types.HarmCategory.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmCategory_GetHashCode" data-uid="Google.GenAI.Types.HarmCategory.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmCategory.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_HarmCategory_ToString_" data-uid="Google.GenAI.Types.HarmCategory.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmCategory_ToString" data-uid="Google.GenAI.Types.HarmCategory.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmCategory.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_HarmCategory_op_Implicit_" data-uid="Google.GenAI.Types.HarmCategory.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_HarmCategory_op_Implicit_System_String__Google_GenAI_Types_HarmCategory" data-uid="Google.GenAI.Types.HarmCategory.op_Implicit(System.String)~Google.GenAI.Types.HarmCategory">
+  implicit operator HarmCategory(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmCategory.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator HarmCategory(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.HarmCategory.html">HarmCategory</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmCategory.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmCategory.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -308,6 +308,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ActivityHandlingConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ActivityHandlingConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ActivityHandlingConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.ActivityStart.yml",
       "output": {
         ".html": {
@@ -333,6 +347,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.AdapterSize",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.AdapterSize.yml\" sourcestartlinenumber=\"1\">Adapter size for tuning. This enum is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.AdapterSizeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.AdapterSizeConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.AdapterSizeConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -389,6 +417,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ApiSpec",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ApiSpec.yml\" sourcestartlinenumber=\"1\">The API spec that the external API implements. This enum is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ApiSpecConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ApiSpecConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ApiSpecConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -490,6 +532,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.AuthTypeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.AuthTypeConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.AuthTypeConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.AutomaticActivityDetection.yml",
       "output": {
         ".html": {
@@ -560,6 +616,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.BehaviorConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.BehaviorConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.BehaviorConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.Blob.yml",
       "output": {
         ".html": {
@@ -585,6 +655,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.BlockedReason",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.BlockedReason.yml\" sourcestartlinenumber=\"1\">Output only. The reason why the prompt was blocked.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.BlockedReasonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.BlockedReasonConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.BlockedReasonConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -893,6 +977,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ControlReferenceType",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ControlReferenceType.yml\" sourcestartlinenumber=\"1\">Enum representing the control type of a control reference image.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ControlReferenceTypeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ControlReferenceTypeConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ControlReferenceTypeConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1246,6 +1344,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.DynamicRetrievalConfigModeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.DynamicRetrievalConfigModeConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.DynamicRetrievalConfigModeConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.EditImageConfig.yml",
       "output": {
         ".html": {
@@ -1285,6 +1397,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.EditMode",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.EditMode.yml\" sourcestartlinenumber=\"1\">Enum representing the editing mode.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.EditModeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.EditModeConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.EditModeConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1386,6 +1512,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.EndSensitivityConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.EndSensitivityConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.EndSensitivityConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.Endpoint.yml",
       "output": {
         ".html": {
@@ -1439,6 +1579,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Environment",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Environment.yml\" sourcestartlinenumber=\"1\">The environment being operated.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.EnvironmentConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.EnvironmentConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.EnvironmentConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1512,6 +1666,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.FeatureSelectionPreferenceConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.FeatureSelectionPreferenceConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.FeatureSelectionPreferenceConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.FetchPredictOperationConfig.yml",
       "output": {
         ".html": {
@@ -1568,6 +1736,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.FileSourceConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.FileSourceConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.FileSourceConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.FileState.yml",
       "output": {
         ".html": {
@@ -1579,6 +1761,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.FileState",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FileState.yml\" sourcestartlinenumber=\"1\">State for the lifecycle of a File.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.FileStateConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.FileStateConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.FileStateConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1607,6 +1803,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.FinishReason",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FinishReason.yml\" sourcestartlinenumber=\"1\">Output only. The reason why the model stopped generating tokens.  If empty, the model has not\nstopped generating the tokens.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.FinishReasonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.FinishReasonConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.FinishReasonConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1649,6 +1859,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.FunctionCallingConfigMode",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FunctionCallingConfigMode.yml\" sourcestartlinenumber=\"1\">Function calling mode.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.FunctionCallingConfigModeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.FunctionCallingConfigModeConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.FunctionCallingConfigModeConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1733,6 +1957,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.FunctionResponseScheduling",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FunctionResponseScheduling.yml\" sourcestartlinenumber=\"1\">Specifies how the response should be scheduled in the conversation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.FunctionResponseSchedulingConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.FunctionResponseSchedulingConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.FunctionResponseSchedulingConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -2324,6 +2562,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.HarmBlockMethodConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.HarmBlockMethodConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.HarmBlockMethodConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.HarmBlockThreshold.yml",
       "output": {
         ".html": {
@@ -2335,6 +2587,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.HarmBlockThreshold",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.HarmBlockThreshold.yml\" sourcestartlinenumber=\"1\">The harm block threshold.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.HarmBlockThresholdConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.HarmBlockThresholdConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.HarmBlockThresholdConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -2352,6 +2618,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.HarmCategoryConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.HarmCategoryConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.HarmCategoryConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.HarmProbability.yml",
       "output": {
         ".html": {
@@ -2363,6 +2643,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.HarmProbability",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.HarmProbability.yml\" sourcestartlinenumber=\"1\">Output only. Harm probability levels in the content.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.HarmProbabilityConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.HarmProbabilityConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.HarmProbabilityConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -2380,6 +2674,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.HarmSeverityConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.HarmSeverityConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.HarmSeverityConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.HttpElementLocation.yml",
       "output": {
         ".html": {
@@ -2391,6 +2699,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.HttpElementLocation",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.HttpElementLocation.yml\" sourcestartlinenumber=\"1\">The location of the API key. This enum is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.HttpElementLocationConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.HttpElementLocationConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.HttpElementLocationConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -2475,6 +2797,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ImagePromptLanguage",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ImagePromptLanguage.yml\" sourcestartlinenumber=\"1\">Enum that specifies the language of the text in the prompt.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ImagePromptLanguageConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ImagePromptLanguageConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ImagePromptLanguageConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -2590,6 +2926,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.JobStateConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.JobStateConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.JobStateConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.Language.yml",
       "output": {
         ".html": {
@@ -2601,6 +2951,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Language",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Language.yml\" sourcestartlinenumber=\"1\">Programming language of the <code sourcefile=\"api/Google.GenAI.Types.Language.yml\" sourcestartlinenumber=\"1\">code</code>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.LanguageConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.LanguageConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.LanguageConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -3080,6 +3444,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.MaskReferenceModeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.MaskReferenceModeConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.MaskReferenceModeConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.MediaModality.yml",
       "output": {
         ".html": {
@@ -3091,6 +3469,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.MediaModality",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.MediaModality.yml\" sourcestartlinenumber=\"1\">Server content modalities.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.MediaModalityConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.MediaModalityConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.MediaModalityConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -3108,6 +3500,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.MediaResolutionConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.MediaResolutionConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.MediaResolutionConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.Modality.yml",
       "output": {
         ".html": {
@@ -3119,6 +3525,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Modality",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Modality.yml\" sourcestartlinenumber=\"1\">Server content modalities.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ModalityConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ModalityConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ModalityConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -3220,6 +3640,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.OutcomeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.OutcomeConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.OutcomeConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.Part.yml",
       "output": {
         ".html": {
@@ -3259,6 +3693,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.PartMediaResolutionLevel",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.PartMediaResolutionLevel.yml\" sourcestartlinenumber=\"1\">The tokenization quality used for given media.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.PartMediaResolutionLevelConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.PartMediaResolutionLevelConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.PartMediaResolutionLevelConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -3304,6 +3752,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.PersonGenerationConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.PersonGenerationConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.PersonGenerationConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.PhishBlockThreshold.yml",
       "output": {
         ".html": {
@@ -3315,6 +3777,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.PhishBlockThreshold",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.PhishBlockThreshold.yml\" sourcestartlinenumber=\"1\">Sites with confidence level chosen &amp; above this value will be blocked from the search\nresults. This enum is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.PhishBlockThresholdConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.PhishBlockThresholdConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.PhishBlockThresholdConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -3738,6 +4214,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.SafetyFilterLevelConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.SafetyFilterLevelConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.SafetyFilterLevelConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.SafetyRating.yml",
       "output": {
         ".html": {
@@ -3878,6 +4368,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.SegmentModeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.SegmentModeConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.SegmentModeConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.SessionResumptionConfig.yml",
       "output": {
         ".html": {
@@ -3962,6 +4466,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.StartSensitivityConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.StartSensitivityConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.StartSensitivityConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.StyleReferenceConfig.yml",
       "output": {
         ".html": {
@@ -4029,6 +4547,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.SubjectReferenceType",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SubjectReferenceType.yml\" sourcestartlinenumber=\"1\">Enum representing the subject type of a subject reference image.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.SubjectReferenceTypeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.SubjectReferenceTypeConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.SubjectReferenceTypeConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -4158,6 +4690,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ThinkingLevelConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ThinkingLevelConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ThinkingLevelConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.TokensInfo.yml",
       "output": {
         ".html": {
@@ -4225,6 +4771,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.TrafficType",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.TrafficType.yml\" sourcestartlinenumber=\"1\">Output only. The traffic type for this request. This enum is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.TrafficTypeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.TrafficTypeConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.TrafficTypeConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -4354,6 +4914,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.TuningMethodConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.TuningMethodConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.TuningMethodConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.TuningMode.yml",
       "output": {
         ".html": {
@@ -4365,6 +4939,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.TuningMode",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.TuningMode.yml\" sourcestartlinenumber=\"1\">Tuning mode. This enum is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.TuningModeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.TuningModeConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.TuningModeConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -4396,6 +4984,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.TuningTaskConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.TuningTaskConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.TuningTaskConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.TuningValidationDataset.yml",
       "output": {
         ".html": {
@@ -4424,6 +5026,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.TurnCompleteReasonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.TurnCompleteReasonConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.TurnCompleteReasonConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.TurnCoverage.yml",
       "output": {
         ".html": {
@@ -4438,6 +5054,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.TurnCoverageConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.TurnCoverageConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.TurnCoverageConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.Type.yml",
       "output": {
         ".html": {
@@ -4449,6 +5079,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Type",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Type.yml\" sourcestartlinenumber=\"1\">The type of the data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.TypeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.TypeConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.TypeConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -4606,6 +5250,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.UrlRetrievalStatusConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.UrlRetrievalStatusConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.UrlRetrievalStatusConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.UsageMetadata.yml",
       "output": {
         ".html": {
@@ -4631,6 +5289,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.VadSignalType",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VadSignalType.yml\" sourcestartlinenumber=\"1\">The type of the VAD signal.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.VadSignalTypeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.VadSignalTypeConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.VadSignalTypeConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -4746,6 +5418,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.VideoCompressionQualityConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.VideoCompressionQualityConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.VideoCompressionQualityConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.VideoGenerationMask.yml",
       "output": {
         ".html": {
@@ -4774,6 +5460,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.VideoGenerationMaskModeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.VideoGenerationMaskModeConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.VideoGenerationMaskModeConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.VideoGenerationReferenceImage.yml",
       "output": {
         ".html": {
@@ -4799,6 +5499,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.VideoGenerationReferenceType",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VideoGenerationReferenceType.yml\" sourcestartlinenumber=\"1\">Enum for the reference type of a video generation reference image.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.VideoGenerationReferenceTypeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.VideoGenerationReferenceTypeConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.VideoGenerationReferenceTypeConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -4855,6 +5569,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.VoiceActivityType",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VoiceActivityType.yml\" sourcestartlinenumber=\"1\">The type of the voice activity signal.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.VoiceActivityTypeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.VoiceActivityTypeConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.VoiceActivityTypeConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",

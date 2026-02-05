@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum JobState | Google GenAI .NET SDK </title>
+      <title>Struct JobState | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum JobState | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct JobState | Google GenAI .NET SDK ">
       
       <meta name="description" content="Job state.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_JobState" data-uid="Google.GenAI.Types.JobState" class="text-break">
-Enum JobState  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/JobState.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Struct JobState  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/JobState.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,91 +98,679 @@ Enum JobState  <a class="header-action link-secondary" title="View source" href=
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum JobState</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JobStateConverter))]
+public readonly record struct JobState : IEquatable&lt;JobState&gt;</code></pre>
   </div>
 
 
 
 
 
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="Google_GenAI_Types_JobState_JOB_STATE_CANCELLED"><code>[JsonPropertyName(&quot;JOB_STATE_CANCELLED&quot;)]
-JOB_STATE_CANCELLED = 7</code></dt>
-  
-  <dd><p>The job has been cancelled.</p>
-</dd>
-    <dt id="Google_GenAI_Types_JobState_JOB_STATE_CANCELLING"><code>[JsonPropertyName(&quot;JOB_STATE_CANCELLING&quot;)]
-JOB_STATE_CANCELLING = 6</code></dt>
-  
-  <dd><p>The job is being cancelled. From this state the job may only go to either
-<code>JOB_STATE_SUCCEEDED</code>, <code>JOB_STATE_FAILED</code> or <code>JOB_STATE_CANCELLED</code>.</p>
-</dd>
-    <dt id="Google_GenAI_Types_JobState_JOB_STATE_EXPIRED"><code>[JsonPropertyName(&quot;JOB_STATE_EXPIRED&quot;)]
-JOB_STATE_EXPIRED = 9</code></dt>
-  
-  <dd><p>The job has expired.</p>
-</dd>
-    <dt id="Google_GenAI_Types_JobState_JOB_STATE_FAILED"><code>[JsonPropertyName(&quot;JOB_STATE_FAILED&quot;)]
-JOB_STATE_FAILED = 5</code></dt>
-  
-  <dd><p>The job failed.</p>
-</dd>
-    <dt id="Google_GenAI_Types_JobState_JOB_STATE_PARTIALLY_SUCCEEDED"><code>[JsonPropertyName(&quot;JOB_STATE_PARTIALLY_SUCCEEDED&quot;)]
-JOB_STATE_PARTIALLY_SUCCEEDED = 11</code></dt>
-  
-  <dd><p>The job is partially succeeded, some results may be missing due to errors.</p>
-</dd>
-    <dt id="Google_GenAI_Types_JobState_JOB_STATE_PAUSED"><code>[JsonPropertyName(&quot;JOB_STATE_PAUSED&quot;)]
-JOB_STATE_PAUSED = 8</code></dt>
-  
-  <dd><p>The job has been stopped, and can be resumed.</p>
-</dd>
-    <dt id="Google_GenAI_Types_JobState_JOB_STATE_PENDING"><code>[JsonPropertyName(&quot;JOB_STATE_PENDING&quot;)]
-JOB_STATE_PENDING = 2</code></dt>
-  
-  <dd><p>The service is preparing to run the job.</p>
-</dd>
-    <dt id="Google_GenAI_Types_JobState_JOB_STATE_QUEUED"><code>[JsonPropertyName(&quot;JOB_STATE_QUEUED&quot;)]
-JOB_STATE_QUEUED = 1</code></dt>
-  
-  <dd><p>The job has been just created or resumed and processing has not yet begun.</p>
-</dd>
-    <dt id="Google_GenAI_Types_JobState_JOB_STATE_RUNNING"><code>[JsonPropertyName(&quot;JOB_STATE_RUNNING&quot;)]
-JOB_STATE_RUNNING = 3</code></dt>
-  
-  <dd><p>The job is in progress.</p>
-</dd>
-    <dt id="Google_GenAI_Types_JobState_JOB_STATE_SUCCEEDED"><code>[JsonPropertyName(&quot;JOB_STATE_SUCCEEDED&quot;)]
-JOB_STATE_SUCCEEDED = 4</code></dt>
-  
-  <dd><p>The job completed successfully.</p>
-</dd>
-    <dt id="Google_GenAI_Types_JobState_JOB_STATE_UNSPECIFIED"><code>[JsonPropertyName(&quot;JOB_STATE_UNSPECIFIED&quot;)]
-JOB_STATE_UNSPECIFIED = 0</code></dt>
-  
-  <dd><p>The job state is unspecified.</p>
-</dd>
-    <dt id="Google_GenAI_Types_JobState_JOB_STATE_UPDATING"><code>[JsonPropertyName(&quot;JOB_STATE_UPDATING&quot;)]
-JOB_STATE_UPDATING = 10</code></dt>
-  
-  <dd><p>The job is being updated. Only jobs in the <code>JOB_STATE_RUNNING</code> state can be updated. After
-updating, the job goes back to the <code>JOB_STATE_RUNNING</code> state.</p>
-</dd>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.JobState.html">JobState</a>&gt;</div>
+    </dd>
   </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_JobState_AllValues_" data-uid="Google.GenAI.Types.JobState.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_JobState_AllValues" data-uid="Google.GenAI.Types.JobState.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/JobState.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;JobState&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.JobState.html">JobState</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_JobState_JobStateCancelled_" data-uid="Google.GenAI.Types.JobState.JobStateCancelled*"></a>
+
+  <h3 id="Google_GenAI_Types_JobState_JobStateCancelled" data-uid="Google.GenAI.Types.JobState.JobStateCancelled">
+  JobStateCancelled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/JobState.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The job has been cancelled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JobState JobStateCancelled { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.JobState.html">JobState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_JobState_JobStateCancelling_" data-uid="Google.GenAI.Types.JobState.JobStateCancelling*"></a>
+
+  <h3 id="Google_GenAI_Types_JobState_JobStateCancelling" data-uid="Google.GenAI.Types.JobState.JobStateCancelling">
+  JobStateCancelling
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/JobState.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The job is being cancelled. From this state the job may only go to either
+<code>JOB_STATE_SUCCEEDED</code>, <code>JOB_STATE_FAILED</code> or <code>JOB_STATE_CANCELLED</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JobState JobStateCancelling { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.JobState.html">JobState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_JobState_JobStateExpired_" data-uid="Google.GenAI.Types.JobState.JobStateExpired*"></a>
+
+  <h3 id="Google_GenAI_Types_JobState_JobStateExpired" data-uid="Google.GenAI.Types.JobState.JobStateExpired">
+  JobStateExpired
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/JobState.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The job has expired.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JobState JobStateExpired { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.JobState.html">JobState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_JobState_JobStateFailed_" data-uid="Google.GenAI.Types.JobState.JobStateFailed*"></a>
+
+  <h3 id="Google_GenAI_Types_JobState_JobStateFailed" data-uid="Google.GenAI.Types.JobState.JobStateFailed">
+  JobStateFailed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/JobState.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The job failed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JobState JobStateFailed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.JobState.html">JobState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_JobState_JobStatePartiallySucceeded_" data-uid="Google.GenAI.Types.JobState.JobStatePartiallySucceeded*"></a>
+
+  <h3 id="Google_GenAI_Types_JobState_JobStatePartiallySucceeded" data-uid="Google.GenAI.Types.JobState.JobStatePartiallySucceeded">
+  JobStatePartiallySucceeded
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/JobState.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The job is partially succeeded, some results may be missing due to errors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JobState JobStatePartiallySucceeded { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.JobState.html">JobState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_JobState_JobStatePaused_" data-uid="Google.GenAI.Types.JobState.JobStatePaused*"></a>
+
+  <h3 id="Google_GenAI_Types_JobState_JobStatePaused" data-uid="Google.GenAI.Types.JobState.JobStatePaused">
+  JobStatePaused
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/JobState.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The job has been stopped, and can be resumed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JobState JobStatePaused { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.JobState.html">JobState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_JobState_JobStatePending_" data-uid="Google.GenAI.Types.JobState.JobStatePending*"></a>
+
+  <h3 id="Google_GenAI_Types_JobState_JobStatePending" data-uid="Google.GenAI.Types.JobState.JobStatePending">
+  JobStatePending
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/JobState.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The service is preparing to run the job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JobState JobStatePending { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.JobState.html">JobState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_JobState_JobStateQueued_" data-uid="Google.GenAI.Types.JobState.JobStateQueued*"></a>
+
+  <h3 id="Google_GenAI_Types_JobState_JobStateQueued" data-uid="Google.GenAI.Types.JobState.JobStateQueued">
+  JobStateQueued
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/JobState.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The job has been just created or resumed and processing has not yet begun.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JobState JobStateQueued { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.JobState.html">JobState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_JobState_JobStateRunning_" data-uid="Google.GenAI.Types.JobState.JobStateRunning*"></a>
+
+  <h3 id="Google_GenAI_Types_JobState_JobStateRunning" data-uid="Google.GenAI.Types.JobState.JobStateRunning">
+  JobStateRunning
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/JobState.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The job is in progress.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JobState JobStateRunning { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.JobState.html">JobState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_JobState_JobStateSucceeded_" data-uid="Google.GenAI.Types.JobState.JobStateSucceeded*"></a>
+
+  <h3 id="Google_GenAI_Types_JobState_JobStateSucceeded" data-uid="Google.GenAI.Types.JobState.JobStateSucceeded">
+  JobStateSucceeded
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/JobState.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The job completed successfully.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JobState JobStateSucceeded { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.JobState.html">JobState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_JobState_JobStateUnspecified_" data-uid="Google.GenAI.Types.JobState.JobStateUnspecified*"></a>
+
+  <h3 id="Google_GenAI_Types_JobState_JobStateUnspecified" data-uid="Google.GenAI.Types.JobState.JobStateUnspecified">
+  JobStateUnspecified
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/JobState.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The job state is unspecified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JobState JobStateUnspecified { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.JobState.html">JobState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_JobState_JobStateUpdating_" data-uid="Google.GenAI.Types.JobState.JobStateUpdating*"></a>
+
+  <h3 id="Google_GenAI_Types_JobState_JobStateUpdating" data-uid="Google.GenAI.Types.JobState.JobStateUpdating">
+  JobStateUpdating
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/JobState.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The job is being updated. Only jobs in the <code>JOB_STATE_RUNNING</code> state can be updated. After
+updating, the job goes back to the <code>JOB_STATE_RUNNING</code> state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JobState JobStateUpdating { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.JobState.html">JobState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_JobState_Value_" data-uid="Google.GenAI.Types.JobState.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_JobState_Value" data-uid="Google.GenAI.Types.JobState.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/JobState.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_JobState_Equals_" data-uid="Google.GenAI.Types.JobState.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_JobState_Equals_Google_GenAI_Types_JobState_" data-uid="Google.GenAI.Types.JobState.Equals(Google.GenAI.Types.JobState)">
+  Equals(JobState)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/JobState.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(JobState other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.JobState.html">JobState</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_JobState_FromString_" data-uid="Google.GenAI.Types.JobState.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_JobState_FromString_System_String_" data-uid="Google.GenAI.Types.JobState.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/JobState.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static JobState FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.JobState.html">JobState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_JobState_GetHashCode_" data-uid="Google.GenAI.Types.JobState.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_JobState_GetHashCode" data-uid="Google.GenAI.Types.JobState.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/JobState.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_JobState_ToString_" data-uid="Google.GenAI.Types.JobState.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_JobState_ToString" data-uid="Google.GenAI.Types.JobState.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/JobState.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_JobState_op_Implicit_" data-uid="Google.GenAI.Types.JobState.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_JobState_op_Implicit_System_String__Google_GenAI_Types_JobState" data-uid="Google.GenAI.Types.JobState.op_Implicit(System.String)~Google.GenAI.Types.JobState">
+  implicit operator JobState(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/JobState.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator JobState(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.JobState.html">JobState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/JobState.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/JobState.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

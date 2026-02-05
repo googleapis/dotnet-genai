@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum FeatureSelectionPreference | Google GenAI .NET SDK </title>
+      <title>Struct FeatureSelectionPreference | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum FeatureSelectionPreference | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct FeatureSelectionPreference | Google GenAI .NET SDK ">
       
       <meta name="description" content="Options for feature selection preference.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_FeatureSelectionPreference" data-uid="Google.GenAI.Types.FeatureSelectionPreference" class="text-break">
-Enum FeatureSelectionPreference  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FeatureSelectionPreference.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Struct FeatureSelectionPreference  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FeatureSelectionPreference.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,45 +98,417 @@ Enum FeatureSelectionPreference  <a class="header-action link-secondary" title="
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum FeatureSelectionPreference</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(FeatureSelectionPreferenceConverter))]
+public readonly record struct FeatureSelectionPreference : IEquatable&lt;FeatureSelectionPreference&gt;</code></pre>
   </div>
 
 
 
 
 
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="Google_GenAI_Types_FeatureSelectionPreference_BALANCED"><code>[JsonPropertyName(&quot;BALANCED&quot;)]
-BALANCED = 2</code></dt>
-  
-  <dd></dd>
-    <dt id="Google_GenAI_Types_FeatureSelectionPreference_FEATURE_SELECTION_PREFERENCE_UNSPECIFIED"><code>[JsonPropertyName(&quot;FEATURE_SELECTION_PREFERENCE_UNSPECIFIED&quot;)]
-FEATURE_SELECTION_PREFERENCE_UNSPECIFIED = 0</code></dt>
-  
-  <dd></dd>
-    <dt id="Google_GenAI_Types_FeatureSelectionPreference_PRIORITIZE_COST"><code>[JsonPropertyName(&quot;PRIORITIZE_COST&quot;)]
-PRIORITIZE_COST = 3</code></dt>
-  
-  <dd></dd>
-    <dt id="Google_GenAI_Types_FeatureSelectionPreference_PRIORITIZE_QUALITY"><code>[JsonPropertyName(&quot;PRIORITIZE_QUALITY&quot;)]
-PRIORITIZE_QUALITY = 1</code></dt>
-  
-  <dd></dd>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.FeatureSelectionPreference.html">FeatureSelectionPreference</a>&gt;</div>
+    </dd>
   </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_FeatureSelectionPreference_AllValues_" data-uid="Google.GenAI.Types.FeatureSelectionPreference.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_FeatureSelectionPreference_AllValues" data-uid="Google.GenAI.Types.FeatureSelectionPreference.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FeatureSelectionPreference.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;FeatureSelectionPreference&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.FeatureSelectionPreference.html">FeatureSelectionPreference</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FeatureSelectionPreference_Balanced_" data-uid="Google.GenAI.Types.FeatureSelectionPreference.Balanced*"></a>
+
+  <h3 id="Google_GenAI_Types_FeatureSelectionPreference_Balanced" data-uid="Google.GenAI.Types.FeatureSelectionPreference.Balanced">
+  Balanced
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FeatureSelectionPreference.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FeatureSelectionPreference Balanced { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FeatureSelectionPreference.html">FeatureSelectionPreference</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FeatureSelectionPreference_FeatureSelectionPreferenceUnspecified_" data-uid="Google.GenAI.Types.FeatureSelectionPreference.FeatureSelectionPreferenceUnspecified*"></a>
+
+  <h3 id="Google_GenAI_Types_FeatureSelectionPreference_FeatureSelectionPreferenceUnspecified" data-uid="Google.GenAI.Types.FeatureSelectionPreference.FeatureSelectionPreferenceUnspecified">
+  FeatureSelectionPreferenceUnspecified
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FeatureSelectionPreference.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FeatureSelectionPreference FeatureSelectionPreferenceUnspecified { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FeatureSelectionPreference.html">FeatureSelectionPreference</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FeatureSelectionPreference_PrioritizeCost_" data-uid="Google.GenAI.Types.FeatureSelectionPreference.PrioritizeCost*"></a>
+
+  <h3 id="Google_GenAI_Types_FeatureSelectionPreference_PrioritizeCost" data-uid="Google.GenAI.Types.FeatureSelectionPreference.PrioritizeCost">
+  PrioritizeCost
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FeatureSelectionPreference.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FeatureSelectionPreference PrioritizeCost { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FeatureSelectionPreference.html">FeatureSelectionPreference</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FeatureSelectionPreference_PrioritizeQuality_" data-uid="Google.GenAI.Types.FeatureSelectionPreference.PrioritizeQuality*"></a>
+
+  <h3 id="Google_GenAI_Types_FeatureSelectionPreference_PrioritizeQuality" data-uid="Google.GenAI.Types.FeatureSelectionPreference.PrioritizeQuality">
+  PrioritizeQuality
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FeatureSelectionPreference.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FeatureSelectionPreference PrioritizeQuality { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FeatureSelectionPreference.html">FeatureSelectionPreference</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FeatureSelectionPreference_Value_" data-uid="Google.GenAI.Types.FeatureSelectionPreference.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_FeatureSelectionPreference_Value" data-uid="Google.GenAI.Types.FeatureSelectionPreference.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FeatureSelectionPreference.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_FeatureSelectionPreference_Equals_" data-uid="Google.GenAI.Types.FeatureSelectionPreference.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_FeatureSelectionPreference_Equals_Google_GenAI_Types_FeatureSelectionPreference_" data-uid="Google.GenAI.Types.FeatureSelectionPreference.Equals(Google.GenAI.Types.FeatureSelectionPreference)">
+  Equals(FeatureSelectionPreference)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FeatureSelectionPreference.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(FeatureSelectionPreference other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.FeatureSelectionPreference.html">FeatureSelectionPreference</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FeatureSelectionPreference_FromString_" data-uid="Google.GenAI.Types.FeatureSelectionPreference.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_FeatureSelectionPreference_FromString_System_String_" data-uid="Google.GenAI.Types.FeatureSelectionPreference.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FeatureSelectionPreference.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FeatureSelectionPreference FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FeatureSelectionPreference.html">FeatureSelectionPreference</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FeatureSelectionPreference_GetHashCode_" data-uid="Google.GenAI.Types.FeatureSelectionPreference.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_FeatureSelectionPreference_GetHashCode" data-uid="Google.GenAI.Types.FeatureSelectionPreference.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FeatureSelectionPreference.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FeatureSelectionPreference_ToString_" data-uid="Google.GenAI.Types.FeatureSelectionPreference.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_FeatureSelectionPreference_ToString" data-uid="Google.GenAI.Types.FeatureSelectionPreference.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FeatureSelectionPreference.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_FeatureSelectionPreference_op_Implicit_" data-uid="Google.GenAI.Types.FeatureSelectionPreference.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_FeatureSelectionPreference_op_Implicit_System_String__Google_GenAI_Types_FeatureSelectionPreference" data-uid="Google.GenAI.Types.FeatureSelectionPreference.op_Implicit(System.String)~Google.GenAI.Types.FeatureSelectionPreference">
+  implicit operator FeatureSelectionPreference(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FeatureSelectionPreference.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator FeatureSelectionPreference(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FeatureSelectionPreference.html">FeatureSelectionPreference</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FeatureSelectionPreference.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FeatureSelectionPreference.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum Outcome | Google GenAI .NET SDK </title>
+      <title>Struct Outcome | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum Outcome | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct Outcome | Google GenAI .NET SDK ">
       
       <meta name="description" content="Outcome of the code execution.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_Outcome" data-uid="Google.GenAI.Types.Outcome" class="text-break">
-Enum Outcome  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Struct Outcome  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,50 +98,422 @@ Enum Outcome  <a class="header-action link-secondary" title="View source" href="
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum Outcome</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(OutcomeConverter))]
+public readonly record struct Outcome : IEquatable&lt;Outcome&gt;</code></pre>
   </div>
 
 
 
 
 
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="Google_GenAI_Types_Outcome_OUTCOME_DEADLINE_EXCEEDED"><code>[JsonPropertyName(&quot;OUTCOME_DEADLINE_EXCEEDED&quot;)]
-OUTCOME_DEADLINE_EXCEEDED = 3</code></dt>
-  
-  <dd><p>Code execution ran for too long, and was cancelled. There may or may not be a partial output
-present.</p>
-</dd>
-    <dt id="Google_GenAI_Types_Outcome_OUTCOME_FAILED"><code>[JsonPropertyName(&quot;OUTCOME_FAILED&quot;)]
-OUTCOME_FAILED = 2</code></dt>
-  
-  <dd><p>Code execution finished but with a failure. <code>stderr</code> should contain the reason.</p>
-</dd>
-    <dt id="Google_GenAI_Types_Outcome_OUTCOME_OK"><code>[JsonPropertyName(&quot;OUTCOME_OK&quot;)]
-OUTCOME_OK = 1</code></dt>
-  
-  <dd><p>Code execution completed successfully.</p>
-</dd>
-    <dt id="Google_GenAI_Types_Outcome_OUTCOME_UNSPECIFIED"><code>[JsonPropertyName(&quot;OUTCOME_UNSPECIFIED&quot;)]
-OUTCOME_UNSPECIFIED = 0</code></dt>
-  
-  <dd><p>Unspecified status. This value should not be used.</p>
-</dd>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.Outcome.html">Outcome</a>&gt;</div>
+    </dd>
   </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_Outcome_AllValues_" data-uid="Google.GenAI.Types.Outcome.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_Outcome_AllValues" data-uid="Google.GenAI.Types.Outcome.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;Outcome&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.Outcome.html">Outcome</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_Outcome_OutcomeDeadlineExceeded_" data-uid="Google.GenAI.Types.Outcome.OutcomeDeadlineExceeded*"></a>
+
+  <h3 id="Google_GenAI_Types_Outcome_OutcomeDeadlineExceeded" data-uid="Google.GenAI.Types.Outcome.OutcomeDeadlineExceeded">
+  OutcomeDeadlineExceeded
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Code execution ran for too long, and was cancelled. There may or may not be a partial output
+present.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Outcome OutcomeDeadlineExceeded { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.Outcome.html">Outcome</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_Outcome_OutcomeFailed_" data-uid="Google.GenAI.Types.Outcome.OutcomeFailed*"></a>
+
+  <h3 id="Google_GenAI_Types_Outcome_OutcomeFailed" data-uid="Google.GenAI.Types.Outcome.OutcomeFailed">
+  OutcomeFailed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Code execution finished but with a failure. <code>stderr</code> should contain the reason.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Outcome OutcomeFailed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.Outcome.html">Outcome</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_Outcome_OutcomeOk_" data-uid="Google.GenAI.Types.Outcome.OutcomeOk*"></a>
+
+  <h3 id="Google_GenAI_Types_Outcome_OutcomeOk" data-uid="Google.GenAI.Types.Outcome.OutcomeOk">
+  OutcomeOk
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Code execution completed successfully.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Outcome OutcomeOk { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.Outcome.html">Outcome</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_Outcome_OutcomeUnspecified_" data-uid="Google.GenAI.Types.Outcome.OutcomeUnspecified*"></a>
+
+  <h3 id="Google_GenAI_Types_Outcome_OutcomeUnspecified" data-uid="Google.GenAI.Types.Outcome.OutcomeUnspecified">
+  OutcomeUnspecified
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unspecified status. This value should not be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Outcome OutcomeUnspecified { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.Outcome.html">Outcome</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_Outcome_Value_" data-uid="Google.GenAI.Types.Outcome.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_Outcome_Value" data-uid="Google.GenAI.Types.Outcome.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_Outcome_Equals_" data-uid="Google.GenAI.Types.Outcome.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_Outcome_Equals_Google_GenAI_Types_Outcome_" data-uid="Google.GenAI.Types.Outcome.Equals(Google.GenAI.Types.Outcome)">
+  Equals(Outcome)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(Outcome other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.Outcome.html">Outcome</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_Outcome_FromString_" data-uid="Google.GenAI.Types.Outcome.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_Outcome_FromString_System_String_" data-uid="Google.GenAI.Types.Outcome.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Outcome FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.Outcome.html">Outcome</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_Outcome_GetHashCode_" data-uid="Google.GenAI.Types.Outcome.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_Outcome_GetHashCode" data-uid="Google.GenAI.Types.Outcome.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_Outcome_ToString_" data-uid="Google.GenAI.Types.Outcome.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_Outcome_ToString" data-uid="Google.GenAI.Types.Outcome.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_Outcome_op_Implicit_" data-uid="Google.GenAI.Types.Outcome.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_Outcome_op_Implicit_System_String__Google_GenAI_Types_Outcome" data-uid="Google.GenAI.Types.Outcome.op_Implicit(System.String)~Google.GenAI.Types.Outcome">
+  implicit operator Outcome(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Outcome(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.Outcome.html">Outcome</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

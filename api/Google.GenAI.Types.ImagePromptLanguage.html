@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum ImagePromptLanguage | Google GenAI .NET SDK </title>
+      <title>Struct ImagePromptLanguage | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum ImagePromptLanguage | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct ImagePromptLanguage | Google GenAI .NET SDK ">
       
       <meta name="description" content="Enum that specifies the language of the text in the prompt.">
       <link rel="icon" href="../favicon.ico">
@@ -84,9 +84,8 @@
 
 
 
-
   <h1 id="Google_GenAI_Types_ImagePromptLanguage" data-uid="Google.GenAI.Types.ImagePromptLanguage" class="text-break">
-Enum ImagePromptLanguage  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ImagePromptLanguage.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Struct ImagePromptLanguage  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ImagePromptLanguage.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,69 +98,549 @@ Enum ImagePromptLanguage  <a class="header-action link-secondary" title="View so
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum ImagePromptLanguage</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(ImagePromptLanguageConverter))]
+public readonly record struct ImagePromptLanguage : IEquatable&lt;ImagePromptLanguage&gt;</code></pre>
   </div>
 
 
 
 
 
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="Google_GenAI_Types_ImagePromptLanguage_auto"><code>[JsonPropertyName(&quot;auto&quot;)]
-auto = 0</code></dt>
-  
-  <dd><p>Auto-detect the language.</p>
-</dd>
-    <dt id="Google_GenAI_Types_ImagePromptLanguage_en"><code>[JsonPropertyName(&quot;en&quot;)]
-en = 1</code></dt>
-  
-  <dd><p>English</p>
-</dd>
-    <dt id="Google_GenAI_Types_ImagePromptLanguage_es"><code>[JsonPropertyName(&quot;es&quot;)]
-es = 7</code></dt>
-  
-  <dd><p>Spanish</p>
-</dd>
-    <dt id="Google_GenAI_Types_ImagePromptLanguage_hi"><code>[JsonPropertyName(&quot;hi&quot;)]
-hi = 4</code></dt>
-  
-  <dd><p>Hindi</p>
-</dd>
-    <dt id="Google_GenAI_Types_ImagePromptLanguage_ja"><code>[JsonPropertyName(&quot;ja&quot;)]
-ja = 2</code></dt>
-  
-  <dd><p>Japanese</p>
-</dd>
-    <dt id="Google_GenAI_Types_ImagePromptLanguage_ko"><code>[JsonPropertyName(&quot;ko&quot;)]
-ko = 3</code></dt>
-  
-  <dd><p>Korean</p>
-</dd>
-    <dt id="Google_GenAI_Types_ImagePromptLanguage_pt"><code>[JsonPropertyName(&quot;pt&quot;)]
-pt = 6</code></dt>
-  
-  <dd><p>Portuguese</p>
-</dd>
-    <dt id="Google_GenAI_Types_ImagePromptLanguage_zh"><code>[JsonPropertyName(&quot;zh&quot;)]
-zh = 5</code></dt>
-  
-  <dd><p>Chinese</p>
-</dd>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.ImagePromptLanguage.html">ImagePromptLanguage</a>&gt;</div>
+    </dd>
   </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_ImagePromptLanguage_AllValues_" data-uid="Google.GenAI.Types.ImagePromptLanguage.AllValues*"></a>
+
+  <h3 id="Google_GenAI_Types_ImagePromptLanguage_AllValues" data-uid="Google.GenAI.Types.ImagePromptLanguage.AllValues">
+  AllValues
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ImagePromptLanguage.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;ImagePromptLanguage&gt; AllValues { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.ImagePromptLanguage.html">ImagePromptLanguage</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ImagePromptLanguage_Auto_" data-uid="Google.GenAI.Types.ImagePromptLanguage.Auto*"></a>
+
+  <h3 id="Google_GenAI_Types_ImagePromptLanguage_Auto" data-uid="Google.GenAI.Types.ImagePromptLanguage.Auto">
+  Auto
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ImagePromptLanguage.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Auto-detect the language.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ImagePromptLanguage Auto { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.ImagePromptLanguage.html">ImagePromptLanguage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ImagePromptLanguage_En_" data-uid="Google.GenAI.Types.ImagePromptLanguage.En*"></a>
+
+  <h3 id="Google_GenAI_Types_ImagePromptLanguage_En" data-uid="Google.GenAI.Types.ImagePromptLanguage.En">
+  En
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ImagePromptLanguage.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>English</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ImagePromptLanguage En { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.ImagePromptLanguage.html">ImagePromptLanguage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ImagePromptLanguage_Es_" data-uid="Google.GenAI.Types.ImagePromptLanguage.Es*"></a>
+
+  <h3 id="Google_GenAI_Types_ImagePromptLanguage_Es" data-uid="Google.GenAI.Types.ImagePromptLanguage.Es">
+  Es
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ImagePromptLanguage.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Spanish</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ImagePromptLanguage Es { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.ImagePromptLanguage.html">ImagePromptLanguage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ImagePromptLanguage_Hi_" data-uid="Google.GenAI.Types.ImagePromptLanguage.Hi*"></a>
+
+  <h3 id="Google_GenAI_Types_ImagePromptLanguage_Hi" data-uid="Google.GenAI.Types.ImagePromptLanguage.Hi">
+  Hi
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ImagePromptLanguage.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Hindi</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ImagePromptLanguage Hi { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.ImagePromptLanguage.html">ImagePromptLanguage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ImagePromptLanguage_Ja_" data-uid="Google.GenAI.Types.ImagePromptLanguage.Ja*"></a>
+
+  <h3 id="Google_GenAI_Types_ImagePromptLanguage_Ja" data-uid="Google.GenAI.Types.ImagePromptLanguage.Ja">
+  Ja
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ImagePromptLanguage.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Japanese</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ImagePromptLanguage Ja { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.ImagePromptLanguage.html">ImagePromptLanguage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ImagePromptLanguage_Ko_" data-uid="Google.GenAI.Types.ImagePromptLanguage.Ko*"></a>
+
+  <h3 id="Google_GenAI_Types_ImagePromptLanguage_Ko" data-uid="Google.GenAI.Types.ImagePromptLanguage.Ko">
+  Ko
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ImagePromptLanguage.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Korean</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ImagePromptLanguage Ko { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.ImagePromptLanguage.html">ImagePromptLanguage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ImagePromptLanguage_Pt_" data-uid="Google.GenAI.Types.ImagePromptLanguage.Pt*"></a>
+
+  <h3 id="Google_GenAI_Types_ImagePromptLanguage_Pt" data-uid="Google.GenAI.Types.ImagePromptLanguage.Pt">
+  Pt
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ImagePromptLanguage.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Portuguese</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ImagePromptLanguage Pt { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.ImagePromptLanguage.html">ImagePromptLanguage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ImagePromptLanguage_Value_" data-uid="Google.GenAI.Types.ImagePromptLanguage.Value*"></a>
+
+  <h3 id="Google_GenAI_Types_ImagePromptLanguage_Value" data-uid="Google.GenAI.Types.ImagePromptLanguage.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ImagePromptLanguage.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ImagePromptLanguage_Zh_" data-uid="Google.GenAI.Types.ImagePromptLanguage.Zh*"></a>
+
+  <h3 id="Google_GenAI_Types_ImagePromptLanguage_Zh" data-uid="Google.GenAI.Types.ImagePromptLanguage.Zh">
+  Zh
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ImagePromptLanguage.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Chinese</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ImagePromptLanguage Zh { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.ImagePromptLanguage.html">ImagePromptLanguage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Google_GenAI_Types_ImagePromptLanguage_Equals_" data-uid="Google.GenAI.Types.ImagePromptLanguage.Equals*"></a>
+
+  <h3 id="Google_GenAI_Types_ImagePromptLanguage_Equals_Google_GenAI_Types_ImagePromptLanguage_" data-uid="Google.GenAI.Types.ImagePromptLanguage.Equals(Google.GenAI.Types.ImagePromptLanguage)">
+  Equals(ImagePromptLanguage)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ImagePromptLanguage.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(ImagePromptLanguage other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.ImagePromptLanguage.html">ImagePromptLanguage</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ImagePromptLanguage_FromString_" data-uid="Google.GenAI.Types.ImagePromptLanguage.FromString*"></a>
+
+  <h3 id="Google_GenAI_Types_ImagePromptLanguage_FromString_System_String_" data-uid="Google.GenAI.Types.ImagePromptLanguage.FromString(System.String)">
+  FromString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ImagePromptLanguage.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ImagePromptLanguage FromString(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.ImagePromptLanguage.html">ImagePromptLanguage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ImagePromptLanguage_GetHashCode_" data-uid="Google.GenAI.Types.ImagePromptLanguage.GetHashCode*"></a>
+
+  <h3 id="Google_GenAI_Types_ImagePromptLanguage_GetHashCode" data-uid="Google.GenAI.Types.ImagePromptLanguage.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ImagePromptLanguage.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ImagePromptLanguage_ToString_" data-uid="Google.GenAI.Types.ImagePromptLanguage.ToString*"></a>
+
+  <h3 id="Google_GenAI_Types_ImagePromptLanguage_ToString" data-uid="Google.GenAI.Types.ImagePromptLanguage.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ImagePromptLanguage.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Google_GenAI_Types_ImagePromptLanguage_op_Implicit_" data-uid="Google.GenAI.Types.ImagePromptLanguage.op_Implicit*"></a>
+
+  <h3 id="Google_GenAI_Types_ImagePromptLanguage_op_Implicit_System_String__Google_GenAI_Types_ImagePromptLanguage" data-uid="Google.GenAI.Types.ImagePromptLanguage.op_Implicit(System.String)~Google.GenAI.Types.ImagePromptLanguage">
+  implicit operator ImagePromptLanguage(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ImagePromptLanguage.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator ImagePromptLanguage(string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.ImagePromptLanguage.html">ImagePromptLanguage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ImagePromptLanguage.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ImagePromptLanguage.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 
