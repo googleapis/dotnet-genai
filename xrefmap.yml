@@ -6413,6 +6413,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CreateTuningJobConfig.Description
   nameWithType: CreateTuningJobConfig.Description
+- uid: Google.GenAI.Types.CreateTuningJobConfig.EncryptionSpec
+  name: EncryptionSpec
+  href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_EncryptionSpec
+  commentId: P:Google.GenAI.Types.CreateTuningJobConfig.EncryptionSpec
+  fullName: Google.GenAI.Types.CreateTuningJobConfig.EncryptionSpec
+  nameWithType: CreateTuningJobConfig.EncryptionSpec
+- uid: Google.GenAI.Types.CreateTuningJobConfig.EncryptionSpec*
+  name: EncryptionSpec
+  href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_EncryptionSpec_
+  commentId: Overload:Google.GenAI.Types.CreateTuningJobConfig.EncryptionSpec
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateTuningJobConfig.EncryptionSpec
+  nameWithType: CreateTuningJobConfig.EncryptionSpec
 - uid: Google.GenAI.Types.CreateTuningJobConfig.EpochCount
   name: EpochCount
   href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_EpochCount
