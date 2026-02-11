@@ -184,10 +184,11 @@ Class Operations  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Google_GenAI_Operations_GetAsync__1___0_Google_GenAI_Types_GetOperationConfig_" data-uid="Google.GenAI.Operations.GetAsync``1(``0,Google.GenAI.Types.GetOperationConfig)">
   GetAsync&lt;TOperation&gt;(TOperation, GetOperationConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Operations.cs/#L379"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Operations.cs/#L388"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the status of a long-running operation.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -197,21 +198,27 @@ Class Operations  <a class="header-action link-secondary" title="View source" hr
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>operation</code> <span class="xref">TOperation</span></dt>
-    <dd></dd>
+    <dd><p>An operation instance to get the status for.</p>
+</dd>
     <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.GetOperationConfig.html">GetOperationConfig</a></dt>
-    <dd></dd>
+    <dd><p>A <a class="xref" href="Google.GenAI.Types.GetOperationConfig.html">GetOperationConfig</a> instance that specifies the optional
+configurations.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TOperation&gt;</dt>
-    <dd></dd>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that represents the
+asynchronous operation. The task result contains the updated <code class="typeparamref">TOperation</code> instance with the latest status or result.</p>
+</dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TOperation</code></dt>
-    <dd></dd>
+    <dd><p>The type of the operation.</p>
+</dd>
   </dl>
 
 
