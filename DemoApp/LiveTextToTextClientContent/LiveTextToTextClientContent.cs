@@ -28,7 +28,7 @@ public static class LiveTextToTextClientContent {
 
   public static async Task RunConversation(string systemInstructionString, bool vertexAI = false) {
     Types.LiveConnectConfig config = new Types.LiveConnectConfig {
-      ResponseModalities = new List<Types.Modality> { Types.Modality.TEXT },
+      ResponseModalities = new List<Types.Modality> { Types.Modality.Text },
       SystemInstruction =
           new Types.Content {
             Parts = new List<Types.Part> { new Types.Part { Text = systemInstructionString } },

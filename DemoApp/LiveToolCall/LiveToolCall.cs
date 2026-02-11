@@ -35,11 +35,11 @@ public static class LiveToolCall {
                   Description = "Get the current weather in a given location",
                   Parameters =
                       new Types
-                          .Schema { Type = Types.Type.OBJECT,
+                          .Schema { Type = Types.Type.Object,
                                     Properties = new Dictionary<string, Types.Schema> { { "location", new Types
                                                                                                                .Schema { Type = Types
                                                                                                                                     .Type
-                                                                                                                                    .STRING,
+                                                                                                                                    .String,
                                                                                                                          Description = "The city and state, e.g. San Francisco, CA" } } },
                                     Required = new List<string> { "location" } }
                 } }

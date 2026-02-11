@@ -58,7 +58,7 @@ app.Map("/ws", async (HttpContext context) => {
   }
 
   using var localServerWs = await context.WebSockets.AcceptWebSocketAsync();
-  var config = new LiveConnectConfig { ResponseModalities = new List<Modality> { Modality.AUDIO },
+  var config = new LiveConnectConfig { ResponseModalities = new List<Modality> { Modality.Audio },
                                        SpeechConfig = new SpeechConfig { LanguageCode = "en-US" } };
 
   var geminiLiveSession = await client.Live.ConnectAsync(model, config);

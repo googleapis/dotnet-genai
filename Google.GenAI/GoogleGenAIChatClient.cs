@@ -226,6 +226,33 @@ internal sealed class GoogleGenAIChatClient : IChatClient
         config.TopK ??= topK;
       }
 
+      if (options.Reasoning is { } reasoning)
+      {
+        if (reasoning.Effort is { } effort)
+        {
+          config.ThinkingConfig ??= new();
+          if (effort is ReasoningEffort.None)
+          {
+            config.ThinkingConfig.ThinkingBudget ??= 0;
+          }
+          else
+          {
+            config.ThinkingConfig.ThinkingLevel ??= effort switch
+            {
+              ReasoningEffort.Low => ThinkingLevel.Low,
+              ReasoningEffort.Medium => ThinkingLevel.Medium,
+              _ => ThinkingLevel.High,
+            };
+          }
+        }
+
+        if (reasoning.Output is { } output)
+        {
+          config.ThinkingConfig ??= new();
+          config.ThinkingConfig.IncludeThoughts ??= output != ReasoningOutput.None;
+        }
+      }
+
       // Populate tools. Each kind of tool is added on its own, except for function declarations,
       // which are grouped into a single FunctionDeclaration.
       List<FunctionDeclaration>? functionDeclarations = null;

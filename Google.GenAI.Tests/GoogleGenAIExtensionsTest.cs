@@ -2539,6 +2539,190 @@ public class GoogleGenAIExtensionsTest
     Assert.AreEqual(123, response.Usage.TotalTokenCount);
   }
 
+  [DataTestMethod]
+  [DataRow(ReasoningEffort.None, null, """{"thinkingBudget":0}""", DisplayName = "Effort=None")]
+  [DataRow(ReasoningEffort.Low, null, """{"thinkingLevel":"LOW"}""", DisplayName = "Effort=Low")]
+  [DataRow(ReasoningEffort.Medium, null, """{"thinkingLevel":"MEDIUM"}""", DisplayName = "Effort=Medium")]
+  [DataRow(ReasoningEffort.High, null, """{"thinkingLevel":"HIGH"}""", DisplayName = "Effort=High")]
+  [DataRow(ReasoningEffort.ExtraHigh, null, """{"thinkingLevel":"HIGH"}""", DisplayName = "Effort=ExtraHigh")]
+  [DataRow(null, ReasoningOutput.None, """{"includeThoughts":false}""", DisplayName = "Output=None")]
+  [DataRow(null, ReasoningOutput.Summary, """{"includeThoughts":true}""", DisplayName = "Output=Summary")]
+  [DataRow(null, ReasoningOutput.Full, """{"includeThoughts":true}""", DisplayName = "Output=Full")]
+  [DataRow(ReasoningEffort.Medium, ReasoningOutput.Full, """{"includeThoughts":true,"thinkingLevel":"MEDIUM"}""", DisplayName = "Effort=Medium,Output=Full")]
+  [DataRow(ReasoningEffort.High, ReasoningOutput.None, """{"includeThoughts":false,"thinkingLevel":"HIGH"}""", DisplayName = "Effort=High,Output=None")]
+  [DataRow(ReasoningEffort.None, ReasoningOutput.Full, """{"includeThoughts":true,"thinkingBudget":0}""", DisplayName = "Effort=None,Output=Full")]
+  [DataRow(ReasoningEffort.Low, ReasoningOutput.Summary, """{"includeThoughts":true,"thinkingLevel":"LOW"}""", DisplayName = "Effort=Low,Output=Summary")]
+  public async Task IChatClient_ReasoningOptionsMapping(ReasoningEffort? effort, ReasoningOutput? output, string expectedThinkingConfigJson)
+  {
+    string expectedRequest = $$"""
+      {
+        "contents": [
+          {
+            "parts": [
+              {
+                "text": "Hello"
+              }
+            ],
+            "role": "user"
+          }
+        ],
+        "generationConfig": {
+          "thinkingConfig": {{expectedThinkingConfigJson}}
+        }
+      }
+      """;
+
+    IChatClient client = CreateChatClient(expectedRequest, """
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "Hi"
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP"
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 5,
+          "candidatesTokenCount": 5,
+          "totalTokenCount": 10
+        },
+        "modelVersion": "gemini-2.5-pro"
+      }
+      """);
+
+    ChatOptions options = new()
+    {
+      Reasoning = new()
+      {
+        Effort = effort,
+        Output = output,
+      }
+    };
+
+    var response = await client.GetResponseAsync("Hello", options);
+    Assert.IsNotNull(response);
+    Assert.AreEqual("Hi", response.Messages[0].Text);
+  }
+
+  [DataTestMethod]
+  [DataRow(ReasoningEffort.Medium, ReasoningOutput.Full, """{"includeThoughts":true,"thinkingLevel":"MEDIUM"}""", DisplayName = "Streaming:Effort=Medium,Output=Full")]
+  [DataRow(ReasoningEffort.None, null, """{"thinkingBudget":0}""", DisplayName = "Streaming:Effort=None")]
+  [DataRow(null, ReasoningOutput.None, """{"includeThoughts":false}""", DisplayName = "Streaming:Output=None")]
+  [DataRow(ReasoningEffort.High, ReasoningOutput.Summary, """{"includeThoughts":true,"thinkingLevel":"HIGH"}""", DisplayName = "Streaming:Effort=High,Output=Summary")]
+  public async Task IChatClient_StreamingReasoningOptionsMapping(ReasoningEffort? effort, ReasoningOutput? output, string expectedThinkingConfigJson)
+  {
+    string expectedRequest = $$"""
+      {
+        "contents": [
+          {
+            "parts": [
+              {
+                "text": "Hello"
+              }
+            ],
+            "role": "user"
+          }
+        ],
+        "generationConfig": {
+          "thinkingConfig": {{expectedThinkingConfigJson}}
+        }
+      }
+      """;
+
+    IChatClient client = CreateChatClient(expectedRequest, """
+      data: {"candidates": [{"content": {"parts": [{"text": "Hi"}],"role": "model"},"finishReason": "STOP","index": 0}],"usageMetadata": {"promptTokenCount": 5,"candidatesTokenCount": 5,"totalTokenCount": 10},"modelVersion": "gemini-2.5-pro"}
+      """);
+
+    ChatOptions options = new()
+    {
+      Reasoning = new()
+      {
+        Effort = effort,
+        Output = output,
+      }
+    };
+
+    List<ChatResponseUpdate> updates = [];
+    await foreach (var update in client.GetStreamingResponseAsync("Hello", options))
+    {
+      updates.Add(update);
+    }
+
+    Assert.AreEqual(1, updates.Count);
+    Assert.IsTrue(updates[0].Contents.Any(c => c is TextContent));
+  }
+
+  [TestMethod]
+  public async Task IChatClient_ReasoningOptionsDoNotOverrideRawRepresentationFactory()
+  {
+    IChatClient client = CreateChatClient("""
+      {
+        "contents": [
+          {
+            "parts": [
+              {
+                "text": "Hello"
+              }
+            ],
+            "role": "user"
+          }
+        ],
+        "generationConfig": {
+          "thinkingConfig": {
+            "includeThoughts": true,
+            "thinkingBudget": 2048,
+            "thinkingLevel": "LOW"
+          }
+        }
+      }
+      """, """
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "Hi"
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP"
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 5,
+          "candidatesTokenCount": 5,
+          "totalTokenCount": 10
+        },
+        "modelVersion": "gemini-2.5-pro"
+      }
+      """);
+
+    ChatOptions options = new()
+    {
+      Reasoning = new()
+      {
+        Effort = ReasoningEffort.Low,
+        Output = ReasoningOutput.None,
+      },
+      RawRepresentationFactory = (_) => new GenerateContentConfig
+      {
+        ThinkingConfig = new ThinkingConfig { IncludeThoughts = true, ThinkingBudget = 2048 }
+      }
+    };
+
+    var response = await client.GetResponseAsync("Hello", options);
+    Assert.IsNotNull(response);
+    Assert.AreEqual("Hi", response.Messages[0].Text);
+  }
+
   [TestMethod]
   public async Task IChatClient_WithTextReasoningContent()
   {
@@ -2980,7 +3164,7 @@ public class GoogleGenAIExtensionsTest
                   "type": "object",
                   "properties": {
                     "destination": {"type": "string"},
-                    "date": {"type": "string"}
+                    "date": {"type": ["string", "null"]}
                   },
                   "required": ["destination", "date"]
                 }
