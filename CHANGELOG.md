@@ -1,5 +1,30 @@
 # Changelog
 
+## Version 1.0.0, released 2026-02-12
+
+
+### ⚠ BREAKING CHANGES
+
+* Refactor enums to use smart string struct representations for forward compatibility, change enum value names from UPPER_SNAKE_CASE to PascalCase to conform to Dotnet naming conventions
+
+### New features
+
+* enable cancellation token ([#86](https://github.com/googleapis/dotnet-genai/issues/86)) ([c409d99](https://github.com/googleapis/dotnet-genai/commit/c409d991c58c5aa47de9c57a6a86e3c00a3f4c46))
+* Refactor enums to use smart string struct representations for forward compatibility, change enum value names from UPPER_SNAKE_CASE to PascalCase to conform to Dotnet naming conventions ([14fb35b](https://github.com/googleapis/dotnet-genai/commit/14fb35b43507273baca1fa9138be80b22dd2bcf1))
+* Support encryption_spec in tuning job creation configuration for GenAI SDK ([c5ac0d2](https://github.com/googleapis/dotnet-genai/commit/c5ac0d2dfada6ebefabbf55038752350b04a4a31))
+
+
+### Miscellaneous chores
+
+* release 1.0.0 ([d6277aa](https://github.com/googleapis/dotnet-genai/commit/d6277aa3c864a6db8a972e2fc1b6e7d2060ae5f3))
+
+
+### Documentation improvements
+
+* Add docstrings to C# and Python SDK Operations methods. ([06e84cd](https://github.com/googleapis/dotnet-genai/commit/06e84cd6e56fa19b8c58a031a0d7fd34438183fa))
+* fix typo in readme ([#179](https://github.com/googleapis/dotnet-genai/issues/179)) ([43f2c02](https://github.com/googleapis/dotnet-genai/commit/43f2c02bf3dafd3b8d918f31b8e70609debd67f4))
+* update cancellation token docs ([008b666](https://github.com/googleapis/dotnet-genai/commit/008b666f36e30204b761ed817030c4257e3a82d7))
+
 ## Version 0.15.0, released 2026-02-04
 
 
