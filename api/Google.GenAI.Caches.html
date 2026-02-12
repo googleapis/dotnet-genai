@@ -304,7 +304,7 @@ Class Caches  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Google_GenAI_Caches_ListAsync_Google_GenAI_Types_ListCachedContentsConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Caches.ListAsync(Google.GenAI.Types.ListCachedContentsConfig,System.Threading.CancellationToken)">
   ListAsync(ListCachedContentsConfig?, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Caches.cs/#L1214"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Caches.cs/#L1215"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Lists cached contents asynchronously.</p>
@@ -322,15 +322,17 @@ Class Caches  <a class="header-action link-secondary" title="View source" href="
 optional configuration for the list request.</p>
 </dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>The
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> for the request.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Google.GenAI.Pager-3.html">Pager</a>&lt;<a class="xref" href="Google.GenAI.Types.CachedContent.html">CachedContent</a>, <a class="xref" href="Google.GenAI.Types.ListCachedContentsConfig.html">ListCachedContentsConfig</a>, <a class="xref" href="Google.GenAI.Types.ListCachedContentsResponse.html">ListCachedContentsResponse</a>&gt;&gt;</dt>
-    <dd><p>A Pager object that contains
-one page of cached contents. When iterating over the pager, it automatically fetches the
-next page if there are more.</p>
+    <dd><p>A Pager object that
+contains one page of cached contents. When iterating over the pager, it automatically
+fetches the next page if there are more.</p>
 </dd>
   </dl>
 
