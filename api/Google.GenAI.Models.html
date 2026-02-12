@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Models" data-uid="Google.GenAI.Models" class="text-break">
-Class Models  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L33"><i class="bi bi-code-slash"></i></a>
+Class Models  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -164,7 +164,7 @@ instantiated directly, instead it should be accessed through the <a class="xref"
 
   <h3 id="Google_GenAI_Models__ctor_Google_GenAI_ApiClient_" data-uid="Google.GenAI.Models.#ctor(Google.GenAI.ApiClient)">
   Models(ApiClient)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L4090"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L4091"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -197,9 +197,9 @@ instantiated directly, instead it should be accessed through the <a class="xref"
 
   <a id="Google_GenAI_Models_ComputeTokensAsync_" data-uid="Google.GenAI.Models.ComputeTokensAsync*"></a>
 
-  <h3 id="Google_GenAI_Models_ComputeTokensAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_ComputeTokensConfig_" data-uid="Google.GenAI.Models.ComputeTokensAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.ComputeTokensConfig)">
-  ComputeTokensAsync(string, Content, ComputeTokensConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5331"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Models_ComputeTokensAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_ComputeTokensConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Models.ComputeTokensAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.ComputeTokensConfig,System.Threading.CancellationToken)">
+  ComputeTokensAsync(string, Content, ComputeTokensConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5451"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Computes the number of tokens for a single content item.</p>
@@ -207,7 +207,7 @@ instantiated directly, instead it should be accessed through the <a class="xref"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;ComputeTokensResponse&gt; ComputeTokensAsync(string model, Content contents, ComputeTokensConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;ComputeTokensResponse&gt; ComputeTokensAsync(string model, Content contents, ComputeTokensConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -222,13 +222,17 @@ instantiated directly, instead it should be accessed through the <a class="xref"
     <dd><p>A <a class="xref" href="Google.GenAI.Types.ComputeTokensConfig.html">ComputeTokensConfig</a> instance that specifies the
 optional configurations.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to cancel the operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Google.GenAI.Types.ComputeTokensResponse.html">ComputeTokensResponse</a>&gt;</dt>
-    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that
-represents the asynchronous operation. The task result contains a <a class="xref" href="Google.GenAI.Types.ComputeTokensResponse.html">ComputeTokensResponse</a> instance with token information.</p>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that represents the asynchronous operation. The task
+result contains a <a class="xref" href="Google.GenAI.Types.ComputeTokensResponse.html">ComputeTokensResponse</a> instance with token
+information.</p>
 </dd>
   </dl>
 
@@ -242,7 +246,8 @@ represents the asynchronous operation. The task result contains a <a class="xref
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
-    <dd><p>Thrown when called with a non-Vertex AI client.</p>
+    <dd><p>Thrown when called with a
+non-Vertex AI client.</p>
 </dd>
   </dl>
 
@@ -250,9 +255,9 @@ represents the asynchronous operation. The task result contains a <a class="xref
 
   <a id="Google_GenAI_Models_ComputeTokensAsync_" data-uid="Google.GenAI.Models.ComputeTokensAsync*"></a>
 
-  <h3 id="Google_GenAI_Models_ComputeTokensAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_ComputeTokensConfig_" data-uid="Google.GenAI.Models.ComputeTokensAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.ComputeTokensConfig)">
-  ComputeTokensAsync(string, List&lt;Content&gt;, ComputeTokensConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L4954"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Models_ComputeTokensAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_ComputeTokensConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Models.ComputeTokensAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.ComputeTokensConfig,System.Threading.CancellationToken)">
+  ComputeTokensAsync(string, List&lt;Content&gt;, ComputeTokensConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5036"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Computes the number of tokens for the given content.</p>
@@ -260,7 +265,7 @@ represents the asynchronous operation. The task result contains a <a class="xref
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;ComputeTokensResponse&gt; ComputeTokensAsync(string model, List&lt;Content&gt; contents, ComputeTokensConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;ComputeTokensResponse&gt; ComputeTokensAsync(string model, List&lt;Content&gt; contents, ComputeTokensConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -275,13 +280,17 @@ represents the asynchronous operation. The task result contains a <a class="xref
     <dd><p>A <a class="xref" href="Google.GenAI.Types.ComputeTokensConfig.html">ComputeTokensConfig</a> instance that specifies the
 optional configurations.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to cancel the operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Google.GenAI.Types.ComputeTokensResponse.html">ComputeTokensResponse</a>&gt;</dt>
-    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that
-represents the asynchronous operation. The task result contains a <a class="xref" href="Google.GenAI.Types.ComputeTokensResponse.html">ComputeTokensResponse</a> instance with token information.</p>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that represents the asynchronous operation. The task
+result contains a <a class="xref" href="Google.GenAI.Types.ComputeTokensResponse.html">ComputeTokensResponse</a> instance with token
+information.</p>
 </dd>
   </dl>
 
@@ -295,7 +304,8 @@ represents the asynchronous operation. The task result contains a <a class="xref
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
-    <dd><p>Thrown when called with a non-Vertex AI client.</p>
+    <dd><p>Thrown when called with a
+non-Vertex AI client.</p>
 </dd>
   </dl>
 
@@ -303,9 +313,9 @@ represents the asynchronous operation. The task result contains a <a class="xref
 
   <a id="Google_GenAI_Models_ComputeTokensAsync_" data-uid="Google.GenAI.Models.ComputeTokensAsync*"></a>
 
-  <h3 id="Google_GenAI_Models_ComputeTokensAsync_System_String_System_String_Google_GenAI_Types_ComputeTokensConfig_" data-uid="Google.GenAI.Models.ComputeTokensAsync(System.String,System.String,Google.GenAI.Types.ComputeTokensConfig)">
-  ComputeTokensAsync(string, string, ComputeTokensConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5347"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Models_ComputeTokensAsync_System_String_System_String_Google_GenAI_Types_ComputeTokensConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Models.ComputeTokensAsync(System.String,System.String,Google.GenAI.Types.ComputeTokensConfig,System.Threading.CancellationToken)">
+  ComputeTokensAsync(string, string, ComputeTokensConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5470"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Computes the number of tokens for a text string.</p>
@@ -313,7 +323,7 @@ represents the asynchronous operation. The task result contains a <a class="xref
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;ComputeTokensResponse&gt; ComputeTokensAsync(string model, string contents, ComputeTokensConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;ComputeTokensResponse&gt; ComputeTokensAsync(string model, string contents, ComputeTokensConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -328,13 +338,17 @@ represents the asynchronous operation. The task result contains a <a class="xref
     <dd><p>A <a class="xref" href="Google.GenAI.Types.ComputeTokensConfig.html">ComputeTokensConfig</a> instance that specifies the
 optional configurations.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to cancel the operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Google.GenAI.Types.ComputeTokensResponse.html">ComputeTokensResponse</a>&gt;</dt>
-    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that
-represents the asynchronous operation. The task result contains a <a class="xref" href="Google.GenAI.Types.ComputeTokensResponse.html">ComputeTokensResponse</a> instance with token information.</p>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that represents the asynchronous operation. The task
+result contains a <a class="xref" href="Google.GenAI.Types.ComputeTokensResponse.html">ComputeTokensResponse</a> instance with token
+information.</p>
 </dd>
   </dl>
 
@@ -348,7 +362,8 @@ represents the asynchronous operation. The task result contains a <a class="xref
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
-    <dd><p>Thrown when called with a non-Vertex AI client.</p>
+    <dd><p>Thrown when called with a
+non-Vertex AI client.</p>
 </dd>
   </dl>
 
@@ -356,9 +371,9 @@ represents the asynchronous operation. The task result contains a <a class="xref
 
   <a id="Google_GenAI_Models_CountTokensAsync_" data-uid="Google.GenAI.Models.CountTokensAsync*"></a>
 
-  <h3 id="Google_GenAI_Models_CountTokensAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_CountTokensConfig_" data-uid="Google.GenAI.Models.CountTokensAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.CountTokensConfig)">
-  CountTokensAsync(string, Content, CountTokensConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5299"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Models_CountTokensAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_CountTokensConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Models.CountTokensAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.CountTokensConfig,System.Threading.CancellationToken)">
+  CountTokensAsync(string, Content, CountTokensConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5414"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Counts the number of tokens in the provided content.</p>
@@ -366,7 +381,7 @@ represents the asynchronous operation. The task result contains a <a class="xref
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;CountTokensResponse&gt; CountTokensAsync(string model, Content contents, CountTokensConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;CountTokensResponse&gt; CountTokensAsync(string model, Content contents, CountTokensConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -381,14 +396,18 @@ represents the asynchronous operation. The task result contains a <a class="xref
     <dd><p>A <a class="xref" href="Google.GenAI.Types.CountTokensConfig.html">CountTokensConfig</a> instance that specifies the
 optional configurations.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to cancel the
+operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Google.GenAI.Types.CountTokensResponse.html">CountTokensResponse</a>&gt;</dt>
-    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that represents the asynchronous
-operation. The task result contains a <a class="xref" href="Google.GenAI.Types.CountTokensResponse.html">CountTokensResponse</a> instance with
-the total token count and other metadata.</p>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that represents the
+asynchronous operation. The task result contains a <a class="xref" href="Google.GenAI.Types.CountTokensResponse.html">CountTokensResponse</a>
+instance with the total token count and other metadata.</p>
 </dd>
   </dl>
 
@@ -404,9 +423,9 @@ the total token count and other metadata.</p>
 
   <a id="Google_GenAI_Models_CountTokensAsync_" data-uid="Google.GenAI.Models.CountTokensAsync*"></a>
 
-  <h3 id="Google_GenAI_Models_CountTokensAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_CountTokensConfig_" data-uid="Google.GenAI.Models.CountTokensAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.CountTokensConfig)">
-  CountTokensAsync(string, List&lt;Content&gt;, CountTokensConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L4878"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Models_CountTokensAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_CountTokensConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Models.CountTokensAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.CountTokensConfig,System.Threading.CancellationToken)">
+  CountTokensAsync(string, List&lt;Content&gt;, CountTokensConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L4952"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Counts the number of tokens in the provided content.</p>
@@ -414,7 +433,7 @@ the total token count and other metadata.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;CountTokensResponse&gt; CountTokensAsync(string model, List&lt;Content&gt; contents, CountTokensConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;CountTokensResponse&gt; CountTokensAsync(string model, List&lt;Content&gt; contents, CountTokensConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -429,14 +448,18 @@ the total token count and other metadata.</p>
     <dd><p>A <a class="xref" href="Google.GenAI.Types.CountTokensConfig.html">CountTokensConfig</a> instance that specifies the
 optional configurations.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to cancel the
+operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Google.GenAI.Types.CountTokensResponse.html">CountTokensResponse</a>&gt;</dt>
-    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that represents the asynchronous
-operation. The task result contains a <a class="xref" href="Google.GenAI.Types.CountTokensResponse.html">CountTokensResponse</a> instance with
-the total token count and other metadata.</p>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that represents the
+asynchronous operation. The task result contains a <a class="xref" href="Google.GenAI.Types.CountTokensResponse.html">CountTokensResponse</a>
+instance with the total token count and other metadata.</p>
 </dd>
   </dl>
 
@@ -452,9 +475,9 @@ the total token count and other metadata.</p>
 
   <a id="Google_GenAI_Models_CountTokensAsync_" data-uid="Google.GenAI.Models.CountTokensAsync*"></a>
 
-  <h3 id="Google_GenAI_Models_CountTokensAsync_System_String_System_String_Google_GenAI_Types_CountTokensConfig_" data-uid="Google.GenAI.Models.CountTokensAsync(System.String,System.String,Google.GenAI.Types.CountTokensConfig)">
-  CountTokensAsync(string, string, CountTokensConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5315"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Models_CountTokensAsync_System_String_System_String_Google_GenAI_Types_CountTokensConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Models.CountTokensAsync(System.String,System.String,Google.GenAI.Types.CountTokensConfig,System.Threading.CancellationToken)">
+  CountTokensAsync(string, string, CountTokensConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5432"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Counts the number of tokens in the provided content.</p>
@@ -462,7 +485,7 @@ the total token count and other metadata.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;CountTokensResponse&gt; CountTokensAsync(string model, string contents, CountTokensConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;CountTokensResponse&gt; CountTokensAsync(string model, string contents, CountTokensConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -477,14 +500,18 @@ the total token count and other metadata.</p>
     <dd><p>A <a class="xref" href="Google.GenAI.Types.CountTokensConfig.html">CountTokensConfig</a> instance that specifies the
 optional configurations.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to cancel the
+operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Google.GenAI.Types.CountTokensResponse.html">CountTokensResponse</a>&gt;</dt>
-    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that represents the asynchronous
-operation. The task result contains a <a class="xref" href="Google.GenAI.Types.CountTokensResponse.html">CountTokensResponse</a> instance with
-the total token count and other metadata.</p>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that represents the
+asynchronous operation. The task result contains a <a class="xref" href="Google.GenAI.Types.CountTokensResponse.html">CountTokensResponse</a>
+instance with the total token count and other metadata.</p>
 </dd>
   </dl>
 
@@ -500,9 +527,9 @@ the total token count and other metadata.</p>
 
   <a id="Google_GenAI_Models_DeleteAsync_" data-uid="Google.GenAI.Models.DeleteAsync*"></a>
 
-  <h3 id="Google_GenAI_Models_DeleteAsync_System_String_Google_GenAI_Types_DeleteModelConfig_" data-uid="Google.GenAI.Models.DeleteAsync(System.String,Google.GenAI.Types.DeleteModelConfig)">
-  DeleteAsync(string, DeleteModelConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L4805"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Models_DeleteAsync_System_String_Google_GenAI_Types_DeleteModelConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Models.DeleteAsync(System.String,Google.GenAI.Types.DeleteModelConfig,System.Threading.CancellationToken)">
+  DeleteAsync(string, DeleteModelConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L4872"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deletes a specific model resource by its name.</p>
@@ -510,7 +537,7 @@ the total token count and other metadata.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;DeleteModelResponse&gt; DeleteAsync(string model, DeleteModelConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;DeleteModelResponse&gt; DeleteAsync(string model, DeleteModelConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -518,6 +545,8 @@ the total token count and other metadata.</p>
     <dt><code>model</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
     <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.DeleteModelConfig.html">DeleteModelConfig</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd></dd>
   </dl>
 
@@ -539,16 +568,16 @@ the total token count and other metadata.</p>
 
   <a id="Google_GenAI_Models_EditImageAsync_" data-uid="Google.GenAI.Models.EditImageAsync*"></a>
 
-  <h3 id="Google_GenAI_Models_EditImageAsync_System_String_System_String_System_Collections_Generic_List_Google_GenAI_Types_IReferenceImage__Google_GenAI_Types_EditImageConfig_" data-uid="Google.GenAI.Models.EditImageAsync(System.String,System.String,System.Collections.Generic.List{Google.GenAI.Types.IReferenceImage},Google.GenAI.Types.EditImageConfig)">
-  EditImageAsync(string, string, List&lt;IReferenceImage&gt;, EditImageConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5220"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Models_EditImageAsync_System_String_System_String_System_Collections_Generic_List_Google_GenAI_Types_IReferenceImage__Google_GenAI_Types_EditImageConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Models.EditImageAsync(System.String,System.String,System.Collections.Generic.List{Google.GenAI.Types.IReferenceImage},Google.GenAI.Types.EditImageConfig,System.Threading.CancellationToken)">
+  EditImageAsync(string, string, List&lt;IReferenceImage&gt;, EditImageConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5331"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;EditImageResponse&gt; EditImageAsync(string model, string prompt, List&lt;IReferenceImage&gt; referenceImages, EditImageConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;EditImageResponse&gt; EditImageAsync(string model, string prompt, List&lt;IReferenceImage&gt; referenceImages, EditImageConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -560,6 +589,8 @@ the total token count and other metadata.</p>
     <dt><code>referenceImages</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Google.GenAI.Types.IReferenceImage.html">IReferenceImage</a>&gt;</dt>
     <dd></dd>
     <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.EditImageConfig.html">EditImageConfig</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd></dd>
   </dl>
 
@@ -581,9 +612,9 @@ the total token count and other metadata.</p>
 
   <a id="Google_GenAI_Models_EmbedContentAsync_" data-uid="Google.GenAI.Models.EmbedContentAsync*"></a>
 
-  <h3 id="Google_GenAI_Models_EmbedContentAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_EmbedContentConfig_" data-uid="Google.GenAI.Models.EmbedContentAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.EmbedContentConfig)">
-  EmbedContentAsync(string, Content, EmbedContentConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5361"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Models_EmbedContentAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_EmbedContentConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Models.EmbedContentAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.EmbedContentConfig,System.Threading.CancellationToken)">
+  EmbedContentAsync(string, Content, EmbedContentConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5486"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Calculates embeddings for the given content. Only text is supported.</p>
@@ -591,7 +622,7 @@ the total token count and other metadata.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;EmbedContentResponse&gt; EmbedContentAsync(string model, Content contents, EmbedContentConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;EmbedContentResponse&gt; EmbedContentAsync(string model, Content contents, EmbedContentConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -605,13 +636,17 @@ the total token count and other metadata.</p>
     <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.EmbedContentConfig.html">EmbedContentConfig</a></dt>
     <dd><p>Optional configuration for embeddings.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to cancel the
+operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Google.GenAI.Types.EmbedContentResponse.html">EmbedContentResponse</a>&gt;</dt>
-    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that represents the asynchronous
-operation.</p>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that represents the
+asynchronous operation.</p>
 </dd>
   </dl>
 
@@ -627,9 +662,9 @@ operation.</p>
 
   <a id="Google_GenAI_Models_EmbedContentAsync_" data-uid="Google.GenAI.Models.EmbedContentAsync*"></a>
 
-  <h3 id="Google_GenAI_Models_EmbedContentAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_EmbedContentConfig_" data-uid="Google.GenAI.Models.EmbedContentAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.EmbedContentConfig)">
-  EmbedContentAsync(string, List&lt;Content&gt;, EmbedContentConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L4231"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Models_EmbedContentAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_EmbedContentConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Models.EmbedContentAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.EmbedContentConfig,System.Threading.CancellationToken)">
+  EmbedContentAsync(string, List&lt;Content&gt;, EmbedContentConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L4244"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Calculates embeddings for the given contents.</p>
@@ -637,7 +672,7 @@ operation.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;EmbedContentResponse&gt; EmbedContentAsync(string model, List&lt;Content&gt; contents, EmbedContentConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;EmbedContentResponse&gt; EmbedContentAsync(string model, List&lt;Content&gt; contents, EmbedContentConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -652,14 +687,18 @@ operation.</p>
     <dd><p>An <a class="xref" href="Google.GenAI.Types.EmbedContentConfig.html">EmbedContentConfig</a> instance that specifies the
 optional configurations.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to cancel the
+operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Google.GenAI.Types.EmbedContentResponse.html">EmbedContentResponse</a>&gt;</dt>
-    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that represents the asynchronous
-operation. The task result contains a <a class="xref" href="Google.GenAI.Types.EmbedContentResponse.html">EmbedContentResponse</a> instance with
-embeddings and other metadata.</p>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that represents the
+asynchronous operation. The task result contains a <a class="xref" href="Google.GenAI.Types.EmbedContentResponse.html">EmbedContentResponse</a>
+instance with embeddings and other metadata.</p>
 </dd>
   </dl>
 
@@ -675,9 +714,9 @@ embeddings and other metadata.</p>
 
   <a id="Google_GenAI_Models_EmbedContentAsync_" data-uid="Google.GenAI.Models.EmbedContentAsync*"></a>
 
-  <h3 id="Google_GenAI_Models_EmbedContentAsync_System_String_System_String_Google_GenAI_Types_EmbedContentConfig_" data-uid="Google.GenAI.Models.EmbedContentAsync(System.String,System.String,Google.GenAI.Types.EmbedContentConfig)">
-  EmbedContentAsync(string, string, EmbedContentConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5375"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Models_EmbedContentAsync_System_String_System_String_Google_GenAI_Types_EmbedContentConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Models.EmbedContentAsync(System.String,System.String,Google.GenAI.Types.EmbedContentConfig,System.Threading.CancellationToken)">
+  EmbedContentAsync(string, string, EmbedContentConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5502"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Calculates embeddings for the given text string.</p>
@@ -685,7 +724,7 @@ embeddings and other metadata.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;EmbedContentResponse&gt; EmbedContentAsync(string model, string contents, EmbedContentConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;EmbedContentResponse&gt; EmbedContentAsync(string model, string contents, EmbedContentConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -699,13 +738,17 @@ embeddings and other metadata.</p>
     <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.EmbedContentConfig.html">EmbedContentConfig</a></dt>
     <dd><p>Optional configuration for embeddings.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to cancel the
+operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Google.GenAI.Types.EmbedContentResponse.html">EmbedContentResponse</a>&gt;</dt>
-    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that represents the asynchronous
-operation.</p>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that represents the
+asynchronous operation.</p>
 </dd>
   </dl>
 
@@ -721,9 +764,9 @@ operation.</p>
 
   <a id="Google_GenAI_Models_GenerateContentAsync_" data-uid="Google.GenAI.Models.GenerateContentAsync*"></a>
 
-  <h3 id="Google_GenAI_Models_GenerateContentAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_GenerateContentConfig_" data-uid="Google.GenAI.Models.GenerateContentAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.GenerateContentConfig)">
-  GenerateContentAsync(string, Content, GenerateContentConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5116"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Models_GenerateContentAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_GenerateContentConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Models.GenerateContentAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.GenerateContentConfig,System.Threading.CancellationToken)">
+  GenerateContentAsync(string, Content, GenerateContentConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5212"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generates content given a GenAI model and a single content item.</p>
@@ -731,7 +774,7 @@ operation.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;GenerateContentResponse&gt; GenerateContentAsync(string model, Content contents, GenerateContentConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;GenerateContentResponse&gt; GenerateContentAsync(string model, Content contents, GenerateContentConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -746,6 +789,9 @@ model.</p>
     <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.GenerateContentConfig.html">GenerateContentConfig</a></dt>
     <dd><p>A <a class="xref" href="Google.GenAI.Types.GenerateContentConfig.html">GenerateContentConfig</a> instance that
 specifies the optional configurations.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to cancel the operation.</p>
 </dd>
   </dl>
 
@@ -770,9 +816,9 @@ other metadata.</p>
 
   <a id="Google_GenAI_Models_GenerateContentAsync_" data-uid="Google.GenAI.Models.GenerateContentAsync*"></a>
 
-  <h3 id="Google_GenAI_Models_GenerateContentAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_GenerateContentConfig_" data-uid="Google.GenAI.Models.GenerateContentAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.GenerateContentConfig)">
-  GenerateContentAsync(string, List&lt;Content&gt;, GenerateContentConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5101"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Models_GenerateContentAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_GenerateContentConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Models.GenerateContentAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.GenerateContentConfig,System.Threading.CancellationToken)">
+  GenerateContentAsync(string, List&lt;Content&gt;, GenerateContentConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5195"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generates content given a GenAI model and a list of content.</p>
@@ -780,7 +826,7 @@ other metadata.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;GenerateContentResponse&gt; GenerateContentAsync(string model, List&lt;Content&gt; contents, GenerateContentConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;GenerateContentResponse&gt; GenerateContentAsync(string model, List&lt;Content&gt; contents, GenerateContentConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -795,6 +841,9 @@ model.</p>
     <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.GenerateContentConfig.html">GenerateContentConfig</a></dt>
     <dd><p>A <a class="xref" href="Google.GenAI.Types.GenerateContentConfig.html">GenerateContentConfig</a> instance that
 specifies the optional configurations.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to cancel the operation.</p>
 </dd>
   </dl>
 
@@ -819,9 +868,9 @@ other metadata.</p>
 
   <a id="Google_GenAI_Models_GenerateContentAsync_" data-uid="Google.GenAI.Models.GenerateContentAsync*"></a>
 
-  <h3 id="Google_GenAI_Models_GenerateContentAsync_System_String_System_String_Google_GenAI_Types_GenerateContentConfig_" data-uid="Google.GenAI.Models.GenerateContentAsync(System.String,System.String,Google.GenAI.Types.GenerateContentConfig)">
-  GenerateContentAsync(string, string, GenerateContentConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5132"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Models_GenerateContentAsync_System_String_System_String_Google_GenAI_Types_GenerateContentConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Models.GenerateContentAsync(System.String,System.String,Google.GenAI.Types.GenerateContentConfig,System.Threading.CancellationToken)">
+  GenerateContentAsync(string, string, GenerateContentConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5230"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generates content given a GenAI model and a text string.</p>
@@ -829,7 +878,7 @@ other metadata.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;GenerateContentResponse&gt; GenerateContentAsync(string model, string contents, GenerateContentConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;GenerateContentResponse&gt; GenerateContentAsync(string model, string contents, GenerateContentConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -844,14 +893,17 @@ other metadata.</p>
     <dd><p>A <a class="xref" href="Google.GenAI.Types.GenerateContentConfig.html">GenerateContentConfig</a> instance that specifies the
 optional configurations.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to cancel the operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Google.GenAI.Types.GenerateContentResponse.html">GenerateContentResponse</a>&gt;</dt>
-    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that
-represents the asynchronous operation. The task result contains a <a class="xref" href="Google.GenAI.Types.GenerateContentResponse.html">GenerateContentResponse</a> instance with response contents and other
-metadata.</p>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that represents the asynchronous operation. The task
+result contains a <a class="xref" href="Google.GenAI.Types.GenerateContentResponse.html">GenerateContentResponse</a> instance with response contents and
+other metadata.</p>
 </dd>
   </dl>
 
@@ -867,9 +919,9 @@ metadata.</p>
 
   <a id="Google_GenAI_Models_GenerateContentStreamAsync_" data-uid="Google.GenAI.Models.GenerateContentStreamAsync*"></a>
 
-  <h3 id="Google_GenAI_Models_GenerateContentStreamAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_GenerateContentConfig_" data-uid="Google.GenAI.Models.GenerateContentStreamAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.GenerateContentConfig)">
-  GenerateContentStreamAsync(string, Content, GenerateContentConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5161"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Models_GenerateContentStreamAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_GenerateContentConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Models.GenerateContentStreamAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.GenerateContentConfig,System.Threading.CancellationToken)">
+  GenerateContentStreamAsync(string, Content, GenerateContentConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5264"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generates content with streaming responses given a GenAI model and a single content item.</p>
@@ -877,7 +929,7 @@ metadata.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;GenerateContentResponse&gt; GenerateContentStreamAsync(string model, Content contents, GenerateContentConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;GenerateContentResponse&gt; GenerateContentStreamAsync(string model, Content contents, GenerateContentConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -893,12 +945,16 @@ model.</p>
     <dd><p>A <a class="xref" href="Google.GenAI.Types.GenerateContentConfig.html">GenerateContentConfig</a> instance that
 specifies the optional configurations.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to cancel the operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="Google.GenAI.Types.GenerateContentResponse.html">GenerateContentResponse</a>&gt;</dt>
-    <dd><p>An async enumerable of <a class="xref" href="Google.GenAI.Types.GenerateContentResponse.html">GenerateContentResponse</a> chunks.</p>
+    <dd><p>An async enumerable of
+<a class="xref" href="Google.GenAI.Types.GenerateContentResponse.html">GenerateContentResponse</a> chunks.</p>
 </dd>
   </dl>
 
@@ -914,9 +970,9 @@ specifies the optional configurations.</p>
 
   <a id="Google_GenAI_Models_GenerateContentStreamAsync_" data-uid="Google.GenAI.Models.GenerateContentStreamAsync*"></a>
 
-  <h3 id="Google_GenAI_Models_GenerateContentStreamAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_GenerateContentConfig_" data-uid="Google.GenAI.Models.GenerateContentStreamAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.GenerateContentConfig)">
-  GenerateContentStreamAsync(string, List&lt;Content&gt;, GenerateContentConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5146"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Models_GenerateContentStreamAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_GenerateContentConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Models.GenerateContentStreamAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.GenerateContentConfig,System.Threading.CancellationToken)">
+  GenerateContentStreamAsync(string, List&lt;Content&gt;, GenerateContentConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5246"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generates content with streaming responses given a GenAI model and a list of content.</p>
@@ -924,7 +980,7 @@ specifies the optional configurations.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;GenerateContentResponse&gt; GenerateContentStreamAsync(string model, List&lt;Content&gt; contents, GenerateContentConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;GenerateContentResponse&gt; GenerateContentStreamAsync(string model, List&lt;Content&gt; contents, GenerateContentConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -940,12 +996,16 @@ model.</p>
     <dd><p>A <a class="xref" href="Google.GenAI.Types.GenerateContentConfig.html">GenerateContentConfig</a> instance that
 specifies the optional configurations.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to cancel the operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="Google.GenAI.Types.GenerateContentResponse.html">GenerateContentResponse</a>&gt;</dt>
-    <dd><p>An async enumerable of <a class="xref" href="Google.GenAI.Types.GenerateContentResponse.html">GenerateContentResponse</a> chunks.</p>
+    <dd><p>An async enumerable of
+<a class="xref" href="Google.GenAI.Types.GenerateContentResponse.html">GenerateContentResponse</a> chunks.</p>
 </dd>
   </dl>
 
@@ -961,9 +1021,9 @@ specifies the optional configurations.</p>
 
   <a id="Google_GenAI_Models_GenerateContentStreamAsync_" data-uid="Google.GenAI.Models.GenerateContentStreamAsync*"></a>
 
-  <h3 id="Google_GenAI_Models_GenerateContentStreamAsync_System_String_System_String_Google_GenAI_Types_GenerateContentConfig_" data-uid="Google.GenAI.Models.GenerateContentStreamAsync(System.String,System.String,Google.GenAI.Types.GenerateContentConfig)">
-  GenerateContentStreamAsync(string, string, GenerateContentConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5177"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Models_GenerateContentStreamAsync_System_String_System_String_Google_GenAI_Types_GenerateContentConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Models.GenerateContentStreamAsync(System.String,System.String,Google.GenAI.Types.GenerateContentConfig,System.Threading.CancellationToken)">
+  GenerateContentStreamAsync(string, string, GenerateContentConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5283"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generates content with streaming responses given a GenAI model and a text string.</p>
@@ -971,7 +1031,7 @@ specifies the optional configurations.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;GenerateContentResponse&gt; GenerateContentStreamAsync(string model, string contents, GenerateContentConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;GenerateContentResponse&gt; GenerateContentStreamAsync(string model, string contents, GenerateContentConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -986,12 +1046,16 @@ specifies the optional configurations.</p>
     <dd><p>A <a class="xref" href="Google.GenAI.Types.GenerateContentConfig.html">GenerateContentConfig</a> instance that specifies the
 optional configurations.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to cancel the operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="Google.GenAI.Types.GenerateContentResponse.html">GenerateContentResponse</a>&gt;</dt>
-    <dd><p>An async enumerable of <a class="xref" href="Google.GenAI.Types.GenerateContentResponse.html">GenerateContentResponse</a> chunks.</p>
+    <dd><p>An async enumerable of
+<a class="xref" href="Google.GenAI.Types.GenerateContentResponse.html">GenerateContentResponse</a> chunks.</p>
 </dd>
   </dl>
 
@@ -1007,9 +1071,9 @@ optional configurations.</p>
 
   <a id="Google_GenAI_Models_GenerateImagesAsync_" data-uid="Google.GenAI.Models.GenerateImagesAsync*"></a>
 
-  <h3 id="Google_GenAI_Models_GenerateImagesAsync_System_String_System_String_Google_GenAI_Types_GenerateImagesConfig_" data-uid="Google.GenAI.Models.GenerateImagesAsync(System.String,System.String,Google.GenAI.Types.GenerateImagesConfig)">
-  GenerateImagesAsync(string, string, GenerateImagesConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5195"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Models_GenerateImagesAsync_System_String_System_String_Google_GenAI_Types_GenerateImagesConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Models.GenerateImagesAsync(System.String,System.String,Google.GenAI.Types.GenerateImagesConfig,System.Threading.CancellationToken)">
+  GenerateImagesAsync(string, string, GenerateImagesConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5304"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generates images given a GenAI model and a prompt.</p>
@@ -1017,7 +1081,7 @@ optional configurations.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;GenerateImagesResponse&gt; GenerateImagesAsync(string model, string prompt, GenerateImagesConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;GenerateImagesResponse&gt; GenerateImagesAsync(string model, string prompt, GenerateImagesConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1032,14 +1096,17 @@ optional configurations.</p>
     <dd><p>A <a class="xref" href="Google.GenAI.Types.GenerateImagesConfig.html">GenerateImagesConfig</a> instance that specifies the
 optional configurations.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to cancel the operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Google.GenAI.Types.GenerateImagesResponse.html">GenerateImagesResponse</a>&gt;</dt>
-    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that
-represents the asynchronous operation. The task result contains a <a class="xref" href="Google.GenAI.Types.GenerateImagesResponse.html">GenerateImagesResponse</a> instance with response contents and other
-metadata.</p>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that represents the asynchronous operation. The task
+result contains a <a class="xref" href="Google.GenAI.Types.GenerateImagesResponse.html">GenerateImagesResponse</a> instance with response contents and
+other metadata.</p>
 </dd>
   </dl>
 
@@ -1055,16 +1122,16 @@ metadata.</p>
 
   <a id="Google_GenAI_Models_GenerateVideosAsync_" data-uid="Google.GenAI.Models.GenerateVideosAsync*"></a>
 
-  <h3 id="Google_GenAI_Models_GenerateVideosAsync_System_String_Google_GenAI_Types_GenerateVideosSource_Google_GenAI_Types_GenerateVideosConfig_" data-uid="Google.GenAI.Models.GenerateVideosAsync(System.String,Google.GenAI.Types.GenerateVideosSource,Google.GenAI.Types.GenerateVideosConfig)">
-  GenerateVideosAsync(string, GenerateVideosSource, GenerateVideosConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5381"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Models_GenerateVideosAsync_System_String_Google_GenAI_Types_GenerateVideosSource_Google_GenAI_Types_GenerateVideosConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Models.GenerateVideosAsync(System.String,Google.GenAI.Types.GenerateVideosSource,Google.GenAI.Types.GenerateVideosConfig,System.Threading.CancellationToken)">
+  GenerateVideosAsync(string, GenerateVideosSource, GenerateVideosConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5509"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;GenerateVideosOperation&gt; GenerateVideosAsync(string model, GenerateVideosSource source, GenerateVideosConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;GenerateVideosOperation&gt; GenerateVideosAsync(string model, GenerateVideosSource source, GenerateVideosConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1074,6 +1141,8 @@ metadata.</p>
     <dt><code>source</code> <a class="xref" href="Google.GenAI.Types.GenerateVideosSource.html">GenerateVideosSource</a></dt>
     <dd></dd>
     <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.GenerateVideosConfig.html">GenerateVideosConfig</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd></dd>
   </dl>
 
@@ -1095,9 +1164,9 @@ metadata.</p>
 
   <a id="Google_GenAI_Models_GetAsync_" data-uid="Google.GenAI.Models.GetAsync*"></a>
 
-  <h3 id="Google_GenAI_Models_GetAsync_System_String_Google_GenAI_Types_GetModelConfig_" data-uid="Google.GenAI.Models.GetAsync(System.String,Google.GenAI.Types.GetModelConfig)">
-  GetAsync(string, GetModelConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L4620"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Models_GetAsync_System_String_Google_GenAI_Types_GetModelConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Models.GetAsync(System.String,Google.GenAI.Types.GetModelConfig,System.Threading.CancellationToken)">
+  GetAsync(string, GetModelConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L4667"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Retrieves a specific model resource by its name.</p>
@@ -1105,7 +1174,7 @@ metadata.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Model&gt; GetAsync(string model, GetModelConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Model&gt; GetAsync(string model, GetModelConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1113,6 +1182,8 @@ metadata.</p>
     <dt><code>model</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
     <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.GetModelConfig.html">GetModelConfig</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd></dd>
   </dl>
 
@@ -1134,9 +1205,9 @@ metadata.</p>
 
   <a id="Google_GenAI_Models_ListAsync_" data-uid="Google.GenAI.Models.ListAsync*"></a>
 
-  <h3 id="Google_GenAI_Models_ListAsync_Google_GenAI_Types_ListModelsConfig_" data-uid="Google.GenAI.Models.ListAsync(Google.GenAI.Types.ListModelsConfig)">
-  ListAsync(ListModelsConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5259"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Models_ListAsync_Google_GenAI_Types_ListModelsConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Models.ListAsync(Google.GenAI.Types.ListModelsConfig,System.Threading.CancellationToken)">
+  ListAsync(ListModelsConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5373"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Lists models asynchronously.</p>
@@ -1144,7 +1215,7 @@ metadata.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Pager&lt;Model, ListModelsConfig, ListModelsResponse&gt;&gt; ListAsync(ListModelsConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Pager&lt;Model, ListModelsConfig, ListModelsResponse&gt;&gt; ListAsync(ListModelsConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1153,13 +1224,17 @@ metadata.</p>
     <dd><p>A <a class="xref" href="Google.GenAI.Types.ListModelsConfig.html">ListModelsConfig</a> instance that specifies the
 optional configuration for the list request.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to cancel the
+operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Google.GenAI.Pager-3.html">Pager</a>&lt;<a class="xref" href="Google.GenAI.Types.Model.html">Model</a>, <a class="xref" href="Google.GenAI.Types.ListModelsConfig.html">ListModelsConfig</a>, <a class="xref" href="Google.GenAI.Types.ListModelsResponse.html">ListModelsResponse</a>&gt;&gt;</dt>
-    <dd><p>A Pager object that contains one page of models. When iterating over the pager,
-it automatically fetches the next page if there are more.</p>
+    <dd><p>A Pager object that contains one page of models. When iterating
+over the pager, it automatically fetches the next page if there are more.</p>
 </dd>
   </dl>
 
@@ -1175,16 +1250,16 @@ it automatically fetches the next page if there are more.</p>
 
   <a id="Google_GenAI_Models_RecontextImageAsync_" data-uid="Google.GenAI.Models.RecontextImageAsync*"></a>
 
-  <h3 id="Google_GenAI_Models_RecontextImageAsync_System_String_Google_GenAI_Types_RecontextImageSource_Google_GenAI_Types_RecontextImageConfig_" data-uid="Google.GenAI.Models.RecontextImageAsync(System.String,Google.GenAI.Types.RecontextImageSource,Google.GenAI.Types.RecontextImageConfig)">
-  RecontextImageAsync(string, RecontextImageSource, RecontextImageConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L4491"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Models_RecontextImageAsync_System_String_Google_GenAI_Types_RecontextImageSource_Google_GenAI_Types_RecontextImageConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Models.RecontextImageAsync(System.String,Google.GenAI.Types.RecontextImageSource,Google.GenAI.Types.RecontextImageConfig,System.Threading.CancellationToken)">
+  RecontextImageAsync(string, RecontextImageSource, RecontextImageConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L4527"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;RecontextImageResponse&gt; RecontextImageAsync(string model, RecontextImageSource source, RecontextImageConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;RecontextImageResponse&gt; RecontextImageAsync(string model, RecontextImageSource source, RecontextImageConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1194,6 +1269,8 @@ it automatically fetches the next page if there are more.</p>
     <dt><code>source</code> <a class="xref" href="Google.GenAI.Types.RecontextImageSource.html">RecontextImageSource</a></dt>
     <dd></dd>
     <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.RecontextImageConfig.html">RecontextImageConfig</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd></dd>
   </dl>
 
@@ -1215,16 +1292,16 @@ it automatically fetches the next page if there are more.</p>
 
   <a id="Google_GenAI_Models_SegmentImageAsync_" data-uid="Google.GenAI.Models.SegmentImageAsync*"></a>
 
-  <h3 id="Google_GenAI_Models_SegmentImageAsync_System_String_Google_GenAI_Types_SegmentImageSource_Google_GenAI_Types_SegmentImageConfig_" data-uid="Google.GenAI.Models.SegmentImageAsync(System.String,Google.GenAI.Types.SegmentImageSource,Google.GenAI.Types.SegmentImageConfig)">
-  SegmentImageAsync(string, SegmentImageSource, SegmentImageConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L4553"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Models_SegmentImageAsync_System_String_Google_GenAI_Types_SegmentImageSource_Google_GenAI_Types_SegmentImageConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Models.SegmentImageAsync(System.String,Google.GenAI.Types.SegmentImageSource,Google.GenAI.Types.SegmentImageConfig,System.Threading.CancellationToken)">
+  SegmentImageAsync(string, SegmentImageSource, SegmentImageConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L4595"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;SegmentImageResponse&gt; SegmentImageAsync(string model, SegmentImageSource source, SegmentImageConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;SegmentImageResponse&gt; SegmentImageAsync(string model, SegmentImageSource source, SegmentImageConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1234,6 +1311,8 @@ it automatically fetches the next page if there are more.</p>
     <dt><code>source</code> <a class="xref" href="Google.GenAI.Types.SegmentImageSource.html">SegmentImageSource</a></dt>
     <dd></dd>
     <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.SegmentImageConfig.html">SegmentImageConfig</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd></dd>
   </dl>
 
@@ -1255,9 +1334,9 @@ it automatically fetches the next page if there are more.</p>
 
   <a id="Google_GenAI_Models_UpdateAsync_" data-uid="Google.GenAI.Models.UpdateAsync*"></a>
 
-  <h3 id="Google_GenAI_Models_UpdateAsync_System_String_Google_GenAI_Types_UpdateModelConfig_" data-uid="Google.GenAI.Models.UpdateAsync(System.String,Google.GenAI.Types.UpdateModelConfig)">
-  UpdateAsync(string, UpdateModelConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L4743"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Models_UpdateAsync_System_String_Google_GenAI_Types_UpdateModelConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Models.UpdateAsync(System.String,Google.GenAI.Types.UpdateModelConfig,System.Threading.CancellationToken)">
+  UpdateAsync(string, UpdateModelConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L4804"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Updates a specific model resource.</p>
@@ -1265,7 +1344,7 @@ it automatically fetches the next page if there are more.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Model&gt; UpdateAsync(string model, UpdateModelConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Model&gt; UpdateAsync(string model, UpdateModelConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1277,13 +1356,18 @@ it automatically fetches the next page if there are more.</p>
     <dd><p>An <a class="xref" href="Google.GenAI.Types.UpdateModelConfig.html">UpdateModelConfig</a> instance that specifies parameters
 to update.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to
+cancel the operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Google.GenAI.Types.Model.html">Model</a>&gt;</dt>
-    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that represents the asynchronous
-operation. The task result contains the updated <a class="xref" href="Google.GenAI.Types.Model.html">Model</a> instance.</p>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that represents the
+asynchronous operation. The task result contains the updated <a class="xref" href="Google.GenAI.Types.Model.html">Model</a>
+instance.</p>
 </dd>
   </dl>
 
@@ -1299,16 +1383,16 @@ operation. The task result contains the updated <a class="xref" href="Google.Gen
 
   <a id="Google_GenAI_Models_UpscaleImageAsync_" data-uid="Google.GenAI.Models.UpscaleImageAsync*"></a>
 
-  <h3 id="Google_GenAI_Models_UpscaleImageAsync_System_String_Google_GenAI_Types_Image_System_String_Google_GenAI_Types_UpscaleImageConfig_" data-uid="Google.GenAI.Models.UpscaleImageAsync(System.String,Google.GenAI.Types.Image,System.String,Google.GenAI.Types.UpscaleImageConfig)">
-  UpscaleImageAsync(string, Image, string, UpscaleImageConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5229"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Models_UpscaleImageAsync_System_String_Google_GenAI_Types_Image_System_String_Google_GenAI_Types_UpscaleImageConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Models.UpscaleImageAsync(System.String,Google.GenAI.Types.Image,System.String,Google.GenAI.Types.UpscaleImageConfig,System.Threading.CancellationToken)">
+  UpscaleImageAsync(string, Image, string, UpscaleImageConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L5341"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;UpscaleImageResponse&gt; UpscaleImageAsync(string model, Image image, string upscaleFactor, UpscaleImageConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;UpscaleImageResponse&gt; UpscaleImageAsync(string model, Image image, string upscaleFactor, UpscaleImageConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1320,6 +1404,8 @@ operation. The task result contains the updated <a class="xref" href="Google.Gen
     <dt><code>upscaleFactor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
     <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.UpscaleImageConfig.html">UpscaleImageConfig</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd></dd>
   </dl>
 
@@ -1343,7 +1429,7 @@ operation. The task result contains the updated <a class="xref" href="Google.Gen
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L33" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Models.cs/#L34" class="edit-link">Edit this page</a>
         </div>
 
 

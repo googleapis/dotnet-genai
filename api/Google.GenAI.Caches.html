@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Caches" data-uid="Google.GenAI.Caches" class="text-break">
-Class Caches  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Caches.cs/#L28"><i class="bi bi-code-slash"></i></a>
+Class Caches  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Caches.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -149,7 +149,7 @@ Class Caches  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Google_GenAI_Caches__ctor_Google_GenAI_ApiClient_" data-uid="Google.GenAI.Caches.#ctor(Google.GenAI.ApiClient)">
   Caches(ApiClient)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Caches.cs/#L879"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Caches.cs/#L880"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -182,16 +182,16 @@ Class Caches  <a class="header-action link-secondary" title="View source" href="
 
   <a id="Google_GenAI_Caches_CreateAsync_" data-uid="Google.GenAI.Caches.CreateAsync*"></a>
 
-  <h3 id="Google_GenAI_Caches_CreateAsync_System_String_Google_GenAI_Types_CreateCachedContentConfig_" data-uid="Google.GenAI.Caches.CreateAsync(System.String,Google.GenAI.Types.CreateCachedContentConfig)">
-  CreateAsync(string, CreateCachedContentConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Caches.cs/#L883"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Caches_CreateAsync_System_String_Google_GenAI_Types_CreateCachedContentConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Caches.CreateAsync(System.String,Google.GenAI.Types.CreateCachedContentConfig,System.Threading.CancellationToken)">
+  CreateAsync(string, CreateCachedContentConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Caches.cs/#L884"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;CachedContent&gt; CreateAsync(string model, CreateCachedContentConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;CachedContent&gt; CreateAsync(string model, CreateCachedContentConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -199,6 +199,8 @@ Class Caches  <a class="header-action link-secondary" title="View source" href="
     <dt><code>model</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
     <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.CreateCachedContentConfig.html">CreateCachedContentConfig</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd></dd>
   </dl>
 
@@ -220,16 +222,16 @@ Class Caches  <a class="header-action link-secondary" title="View source" href="
 
   <a id="Google_GenAI_Caches_DeleteAsync_" data-uid="Google.GenAI.Caches.DeleteAsync*"></a>
 
-  <h3 id="Google_GenAI_Caches_DeleteAsync_System_String_Google_GenAI_Types_DeleteCachedContentConfig_" data-uid="Google.GenAI.Caches.DeleteAsync(System.String,Google.GenAI.Types.DeleteCachedContentConfig)">
-  DeleteAsync(string, DeleteCachedContentConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Caches.cs/#L999"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Caches_DeleteAsync_System_String_Google_GenAI_Types_DeleteCachedContentConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Caches.DeleteAsync(System.String,Google.GenAI.Types.DeleteCachedContentConfig,System.Threading.CancellationToken)">
+  DeleteAsync(string, DeleteCachedContentConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Caches.cs/#L1012"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;DeleteCachedContentResponse&gt; DeleteAsync(string name, DeleteCachedContentConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;DeleteCachedContentResponse&gt; DeleteAsync(string name, DeleteCachedContentConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -237,6 +239,8 @@ Class Caches  <a class="header-action link-secondary" title="View source" href="
     <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
     <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.DeleteCachedContentConfig.html">DeleteCachedContentConfig</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd></dd>
   </dl>
 
@@ -258,16 +262,16 @@ Class Caches  <a class="header-action link-secondary" title="View source" href="
 
   <a id="Google_GenAI_Caches_GetAsync_" data-uid="Google.GenAI.Caches.GetAsync*"></a>
 
-  <h3 id="Google_GenAI_Caches_GetAsync_System_String_Google_GenAI_Types_GetCachedContentConfig_" data-uid="Google.GenAI.Caches.GetAsync(System.String,Google.GenAI.Types.GetCachedContentConfig)">
-  GetAsync(string, GetCachedContentConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Caches.cs/#L943"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Caches_GetAsync_System_String_Google_GenAI_Types_GetCachedContentConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Caches.GetAsync(System.String,Google.GenAI.Types.GetCachedContentConfig,System.Threading.CancellationToken)">
+  GetAsync(string, GetCachedContentConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Caches.cs/#L950"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;CachedContent&gt; GetAsync(string name, GetCachedContentConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;CachedContent&gt; GetAsync(string name, GetCachedContentConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -275,6 +279,8 @@ Class Caches  <a class="header-action link-secondary" title="View source" href="
     <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
     <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.GetCachedContentConfig.html">GetCachedContentConfig</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd></dd>
   </dl>
 
@@ -296,9 +302,9 @@ Class Caches  <a class="header-action link-secondary" title="View source" href="
 
   <a id="Google_GenAI_Caches_ListAsync_" data-uid="Google.GenAI.Caches.ListAsync*"></a>
 
-  <h3 id="Google_GenAI_Caches_ListAsync_Google_GenAI_Types_ListCachedContentsConfig_" data-uid="Google.GenAI.Caches.ListAsync(Google.GenAI.Types.ListCachedContentsConfig)">
-  ListAsync(ListCachedContentsConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Caches.cs/#L1184"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Caches_ListAsync_Google_GenAI_Types_ListCachedContentsConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Caches.ListAsync(Google.GenAI.Types.ListCachedContentsConfig,System.Threading.CancellationToken)">
+  ListAsync(ListCachedContentsConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Caches.cs/#L1214"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Lists cached contents asynchronously.</p>
@@ -306,7 +312,7 @@ Class Caches  <a class="header-action link-secondary" title="View source" href="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Pager&lt;CachedContent, ListCachedContentsConfig, ListCachedContentsResponse&gt;&gt; ListAsync(ListCachedContentsConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Pager&lt;CachedContent, ListCachedContentsConfig, ListCachedContentsResponse&gt;&gt; ListAsync(ListCachedContentsConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -315,6 +321,8 @@ Class Caches  <a class="header-action link-secondary" title="View source" href="
     <dd><p>A <a class="xref" href="Google.GenAI.Types.ListCachedContentsConfig.html">ListCachedContentsConfig</a> instance that specifies the
 optional configuration for the list request.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
@@ -338,16 +346,16 @@ next page if there are more.</p>
 
   <a id="Google_GenAI_Caches_UpdateAsync_" data-uid="Google.GenAI.Caches.UpdateAsync*"></a>
 
-  <h3 id="Google_GenAI_Caches_UpdateAsync_System_String_Google_GenAI_Types_UpdateCachedContentConfig_" data-uid="Google.GenAI.Caches.UpdateAsync(System.String,Google.GenAI.Types.UpdateCachedContentConfig)">
-  UpdateAsync(string, UpdateCachedContentConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Caches.cs/#L1060"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Caches_UpdateAsync_System_String_Google_GenAI_Types_UpdateCachedContentConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Caches.UpdateAsync(System.String,Google.GenAI.Types.UpdateCachedContentConfig,System.Threading.CancellationToken)">
+  UpdateAsync(string, UpdateCachedContentConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Caches.cs/#L1079"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;CachedContent&gt; UpdateAsync(string name, UpdateCachedContentConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;CachedContent&gt; UpdateAsync(string name, UpdateCachedContentConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -355,6 +363,8 @@ next page if there are more.</p>
     <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
     <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.UpdateCachedContentConfig.html">UpdateCachedContentConfig</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd></dd>
   </dl>
 
@@ -378,7 +388,7 @@ next page if there are more.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Caches.cs/#L28" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Caches.cs/#L29" class="edit-link">Edit this page</a>
         </div>
 
 

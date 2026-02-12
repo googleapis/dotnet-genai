@@ -423,15 +423,15 @@ references:
   fullName.vb: Google.GenAI.Batches.New
   nameWithType: Batches.Batches
   nameWithType.vb: Batches.New
-- uid: Google.GenAI.Batches.CancelAsync(System.String,Google.GenAI.Types.CancelBatchJobConfig)
-  name: CancelAsync(string, CancelBatchJobConfig?)
-  href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_CancelAsync_System_String_Google_GenAI_Types_CancelBatchJobConfig_
-  commentId: M:Google.GenAI.Batches.CancelAsync(System.String,Google.GenAI.Types.CancelBatchJobConfig)
-  name.vb: CancelAsync(String, CancelBatchJobConfig)
-  fullName: Google.GenAI.Batches.CancelAsync(string, Google.GenAI.Types.CancelBatchJobConfig?)
-  fullName.vb: Google.GenAI.Batches.CancelAsync(String, Google.GenAI.Types.CancelBatchJobConfig)
-  nameWithType: Batches.CancelAsync(string, CancelBatchJobConfig?)
-  nameWithType.vb: Batches.CancelAsync(String, CancelBatchJobConfig)
+- uid: Google.GenAI.Batches.CancelAsync(System.String,Google.GenAI.Types.CancelBatchJobConfig,System.Threading.CancellationToken)
+  name: CancelAsync(string, CancelBatchJobConfig?, CancellationToken)
+  href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_CancelAsync_System_String_Google_GenAI_Types_CancelBatchJobConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Batches.CancelAsync(System.String,Google.GenAI.Types.CancelBatchJobConfig,System.Threading.CancellationToken)
+  name.vb: CancelAsync(String, CancelBatchJobConfig, CancellationToken)
+  fullName: Google.GenAI.Batches.CancelAsync(string, Google.GenAI.Types.CancelBatchJobConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Batches.CancelAsync(String, Google.GenAI.Types.CancelBatchJobConfig, System.Threading.CancellationToken)
+  nameWithType: Batches.CancelAsync(string, CancelBatchJobConfig?, CancellationToken)
+  nameWithType.vb: Batches.CancelAsync(String, CancelBatchJobConfig, CancellationToken)
 - uid: Google.GenAI.Batches.CancelAsync*
   name: CancelAsync
   href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_CancelAsync_
@@ -439,15 +439,15 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Batches.CancelAsync
   nameWithType: Batches.CancelAsync
-- uid: Google.GenAI.Batches.CreateAsync(System.String,Google.GenAI.Types.BatchJobSource,Google.GenAI.Types.CreateBatchJobConfig)
-  name: CreateAsync(string, BatchJobSource, CreateBatchJobConfig)
-  href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_CreateAsync_System_String_Google_GenAI_Types_BatchJobSource_Google_GenAI_Types_CreateBatchJobConfig_
-  commentId: M:Google.GenAI.Batches.CreateAsync(System.String,Google.GenAI.Types.BatchJobSource,Google.GenAI.Types.CreateBatchJobConfig)
-  name.vb: CreateAsync(String, BatchJobSource, CreateBatchJobConfig)
-  fullName: Google.GenAI.Batches.CreateAsync(string, Google.GenAI.Types.BatchJobSource, Google.GenAI.Types.CreateBatchJobConfig)
-  fullName.vb: Google.GenAI.Batches.CreateAsync(String, Google.GenAI.Types.BatchJobSource, Google.GenAI.Types.CreateBatchJobConfig)
-  nameWithType: Batches.CreateAsync(string, BatchJobSource, CreateBatchJobConfig)
-  nameWithType.vb: Batches.CreateAsync(String, BatchJobSource, CreateBatchJobConfig)
+- uid: Google.GenAI.Batches.CreateAsync(System.String,Google.GenAI.Types.BatchJobSource,Google.GenAI.Types.CreateBatchJobConfig,System.Threading.CancellationToken)
+  name: CreateAsync(string, BatchJobSource, CreateBatchJobConfig, CancellationToken)
+  href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_CreateAsync_System_String_Google_GenAI_Types_BatchJobSource_Google_GenAI_Types_CreateBatchJobConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Batches.CreateAsync(System.String,Google.GenAI.Types.BatchJobSource,Google.GenAI.Types.CreateBatchJobConfig,System.Threading.CancellationToken)
+  name.vb: CreateAsync(String, BatchJobSource, CreateBatchJobConfig, CancellationToken)
+  fullName: Google.GenAI.Batches.CreateAsync(string, Google.GenAI.Types.BatchJobSource, Google.GenAI.Types.CreateBatchJobConfig, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Batches.CreateAsync(String, Google.GenAI.Types.BatchJobSource, Google.GenAI.Types.CreateBatchJobConfig, System.Threading.CancellationToken)
+  nameWithType: Batches.CreateAsync(string, BatchJobSource, CreateBatchJobConfig, CancellationToken)
+  nameWithType.vb: Batches.CreateAsync(String, BatchJobSource, CreateBatchJobConfig, CancellationToken)
 - uid: Google.GenAI.Batches.CreateAsync*
   name: CreateAsync
   href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_CreateAsync_
@@ -455,15 +455,15 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Batches.CreateAsync
   nameWithType: Batches.CreateAsync
-- uid: Google.GenAI.Batches.CreateEmbeddingsAsync(System.String,Google.GenAI.Types.EmbeddingsBatchJobSource,Google.GenAI.Types.CreateEmbeddingsBatchJobConfig)
-  name: CreateEmbeddingsAsync(string, EmbeddingsBatchJobSource, CreateEmbeddingsBatchJobConfig)
-  href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_CreateEmbeddingsAsync_System_String_Google_GenAI_Types_EmbeddingsBatchJobSource_Google_GenAI_Types_CreateEmbeddingsBatchJobConfig_
-  commentId: M:Google.GenAI.Batches.CreateEmbeddingsAsync(System.String,Google.GenAI.Types.EmbeddingsBatchJobSource,Google.GenAI.Types.CreateEmbeddingsBatchJobConfig)
-  name.vb: CreateEmbeddingsAsync(String, EmbeddingsBatchJobSource, CreateEmbeddingsBatchJobConfig)
-  fullName: Google.GenAI.Batches.CreateEmbeddingsAsync(string, Google.GenAI.Types.EmbeddingsBatchJobSource, Google.GenAI.Types.CreateEmbeddingsBatchJobConfig)
-  fullName.vb: Google.GenAI.Batches.CreateEmbeddingsAsync(String, Google.GenAI.Types.EmbeddingsBatchJobSource, Google.GenAI.Types.CreateEmbeddingsBatchJobConfig)
-  nameWithType: Batches.CreateEmbeddingsAsync(string, EmbeddingsBatchJobSource, CreateEmbeddingsBatchJobConfig)
-  nameWithType.vb: Batches.CreateEmbeddingsAsync(String, EmbeddingsBatchJobSource, CreateEmbeddingsBatchJobConfig)
+- uid: Google.GenAI.Batches.CreateEmbeddingsAsync(System.String,Google.GenAI.Types.EmbeddingsBatchJobSource,Google.GenAI.Types.CreateEmbeddingsBatchJobConfig,System.Threading.CancellationToken)
+  name: CreateEmbeddingsAsync(string, EmbeddingsBatchJobSource, CreateEmbeddingsBatchJobConfig, CancellationToken)
+  href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_CreateEmbeddingsAsync_System_String_Google_GenAI_Types_EmbeddingsBatchJobSource_Google_GenAI_Types_CreateEmbeddingsBatchJobConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Batches.CreateEmbeddingsAsync(System.String,Google.GenAI.Types.EmbeddingsBatchJobSource,Google.GenAI.Types.CreateEmbeddingsBatchJobConfig,System.Threading.CancellationToken)
+  name.vb: CreateEmbeddingsAsync(String, EmbeddingsBatchJobSource, CreateEmbeddingsBatchJobConfig, CancellationToken)
+  fullName: Google.GenAI.Batches.CreateEmbeddingsAsync(string, Google.GenAI.Types.EmbeddingsBatchJobSource, Google.GenAI.Types.CreateEmbeddingsBatchJobConfig, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Batches.CreateEmbeddingsAsync(String, Google.GenAI.Types.EmbeddingsBatchJobSource, Google.GenAI.Types.CreateEmbeddingsBatchJobConfig, System.Threading.CancellationToken)
+  nameWithType: Batches.CreateEmbeddingsAsync(string, EmbeddingsBatchJobSource, CreateEmbeddingsBatchJobConfig, CancellationToken)
+  nameWithType.vb: Batches.CreateEmbeddingsAsync(String, EmbeddingsBatchJobSource, CreateEmbeddingsBatchJobConfig, CancellationToken)
 - uid: Google.GenAI.Batches.CreateEmbeddingsAsync*
   name: CreateEmbeddingsAsync
   href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_CreateEmbeddingsAsync_
@@ -471,15 +471,15 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Batches.CreateEmbeddingsAsync
   nameWithType: Batches.CreateEmbeddingsAsync
-- uid: Google.GenAI.Batches.DeleteAsync(System.String,Google.GenAI.Types.DeleteBatchJobConfig)
-  name: DeleteAsync(string, DeleteBatchJobConfig?)
-  href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_DeleteAsync_System_String_Google_GenAI_Types_DeleteBatchJobConfig_
-  commentId: M:Google.GenAI.Batches.DeleteAsync(System.String,Google.GenAI.Types.DeleteBatchJobConfig)
-  name.vb: DeleteAsync(String, DeleteBatchJobConfig)
-  fullName: Google.GenAI.Batches.DeleteAsync(string, Google.GenAI.Types.DeleteBatchJobConfig?)
-  fullName.vb: Google.GenAI.Batches.DeleteAsync(String, Google.GenAI.Types.DeleteBatchJobConfig)
-  nameWithType: Batches.DeleteAsync(string, DeleteBatchJobConfig?)
-  nameWithType.vb: Batches.DeleteAsync(String, DeleteBatchJobConfig)
+- uid: Google.GenAI.Batches.DeleteAsync(System.String,Google.GenAI.Types.DeleteBatchJobConfig,System.Threading.CancellationToken)
+  name: DeleteAsync(string, DeleteBatchJobConfig?, CancellationToken)
+  href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_DeleteAsync_System_String_Google_GenAI_Types_DeleteBatchJobConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Batches.DeleteAsync(System.String,Google.GenAI.Types.DeleteBatchJobConfig,System.Threading.CancellationToken)
+  name.vb: DeleteAsync(String, DeleteBatchJobConfig, CancellationToken)
+  fullName: Google.GenAI.Batches.DeleteAsync(string, Google.GenAI.Types.DeleteBatchJobConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Batches.DeleteAsync(String, Google.GenAI.Types.DeleteBatchJobConfig, System.Threading.CancellationToken)
+  nameWithType: Batches.DeleteAsync(string, DeleteBatchJobConfig?, CancellationToken)
+  nameWithType.vb: Batches.DeleteAsync(String, DeleteBatchJobConfig, CancellationToken)
 - uid: Google.GenAI.Batches.DeleteAsync*
   name: DeleteAsync
   href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_DeleteAsync_
@@ -487,15 +487,15 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Batches.DeleteAsync
   nameWithType: Batches.DeleteAsync
-- uid: Google.GenAI.Batches.GetAsync(System.String,Google.GenAI.Types.GetBatchJobConfig)
-  name: GetAsync(string, GetBatchJobConfig?)
-  href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_GetAsync_System_String_Google_GenAI_Types_GetBatchJobConfig_
-  commentId: M:Google.GenAI.Batches.GetAsync(System.String,Google.GenAI.Types.GetBatchJobConfig)
-  name.vb: GetAsync(String, GetBatchJobConfig)
-  fullName: Google.GenAI.Batches.GetAsync(string, Google.GenAI.Types.GetBatchJobConfig?)
-  fullName.vb: Google.GenAI.Batches.GetAsync(String, Google.GenAI.Types.GetBatchJobConfig)
-  nameWithType: Batches.GetAsync(string, GetBatchJobConfig?)
-  nameWithType.vb: Batches.GetAsync(String, GetBatchJobConfig)
+- uid: Google.GenAI.Batches.GetAsync(System.String,Google.GenAI.Types.GetBatchJobConfig,System.Threading.CancellationToken)
+  name: GetAsync(string, GetBatchJobConfig?, CancellationToken)
+  href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_GetAsync_System_String_Google_GenAI_Types_GetBatchJobConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Batches.GetAsync(System.String,Google.GenAI.Types.GetBatchJobConfig,System.Threading.CancellationToken)
+  name.vb: GetAsync(String, GetBatchJobConfig, CancellationToken)
+  fullName: Google.GenAI.Batches.GetAsync(string, Google.GenAI.Types.GetBatchJobConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Batches.GetAsync(String, Google.GenAI.Types.GetBatchJobConfig, System.Threading.CancellationToken)
+  nameWithType: Batches.GetAsync(string, GetBatchJobConfig?, CancellationToken)
+  nameWithType.vb: Batches.GetAsync(String, GetBatchJobConfig, CancellationToken)
 - uid: Google.GenAI.Batches.GetAsync*
   name: GetAsync
   href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_GetAsync_
@@ -503,15 +503,15 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Batches.GetAsync
   nameWithType: Batches.GetAsync
-- uid: Google.GenAI.Batches.ListAsync(Google.GenAI.Types.ListBatchJobsConfig)
-  name: ListAsync(ListBatchJobsConfig?)
-  href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_ListAsync_Google_GenAI_Types_ListBatchJobsConfig_
-  commentId: M:Google.GenAI.Batches.ListAsync(Google.GenAI.Types.ListBatchJobsConfig)
-  name.vb: ListAsync(ListBatchJobsConfig)
-  fullName: Google.GenAI.Batches.ListAsync(Google.GenAI.Types.ListBatchJobsConfig?)
-  fullName.vb: Google.GenAI.Batches.ListAsync(Google.GenAI.Types.ListBatchJobsConfig)
-  nameWithType: Batches.ListAsync(ListBatchJobsConfig?)
-  nameWithType.vb: Batches.ListAsync(ListBatchJobsConfig)
+- uid: Google.GenAI.Batches.ListAsync(Google.GenAI.Types.ListBatchJobsConfig,System.Threading.CancellationToken)
+  name: ListAsync(ListBatchJobsConfig?, CancellationToken)
+  href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_ListAsync_Google_GenAI_Types_ListBatchJobsConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Batches.ListAsync(Google.GenAI.Types.ListBatchJobsConfig,System.Threading.CancellationToken)
+  name.vb: ListAsync(ListBatchJobsConfig, CancellationToken)
+  fullName: Google.GenAI.Batches.ListAsync(Google.GenAI.Types.ListBatchJobsConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Batches.ListAsync(Google.GenAI.Types.ListBatchJobsConfig, System.Threading.CancellationToken)
+  nameWithType: Batches.ListAsync(ListBatchJobsConfig?, CancellationToken)
+  nameWithType.vb: Batches.ListAsync(ListBatchJobsConfig, CancellationToken)
 - uid: Google.GenAI.Batches.ListAsync*
   name: ListAsync
   href: api/Google.GenAI.Batches.html#Google_GenAI_Batches_ListAsync_
@@ -544,15 +544,15 @@ references:
   fullName.vb: Google.GenAI.Caches.New
   nameWithType: Caches.Caches
   nameWithType.vb: Caches.New
-- uid: Google.GenAI.Caches.CreateAsync(System.String,Google.GenAI.Types.CreateCachedContentConfig)
-  name: CreateAsync(string, CreateCachedContentConfig?)
-  href: api/Google.GenAI.Caches.html#Google_GenAI_Caches_CreateAsync_System_String_Google_GenAI_Types_CreateCachedContentConfig_
-  commentId: M:Google.GenAI.Caches.CreateAsync(System.String,Google.GenAI.Types.CreateCachedContentConfig)
-  name.vb: CreateAsync(String, CreateCachedContentConfig)
-  fullName: Google.GenAI.Caches.CreateAsync(string, Google.GenAI.Types.CreateCachedContentConfig?)
-  fullName.vb: Google.GenAI.Caches.CreateAsync(String, Google.GenAI.Types.CreateCachedContentConfig)
-  nameWithType: Caches.CreateAsync(string, CreateCachedContentConfig?)
-  nameWithType.vb: Caches.CreateAsync(String, CreateCachedContentConfig)
+- uid: Google.GenAI.Caches.CreateAsync(System.String,Google.GenAI.Types.CreateCachedContentConfig,System.Threading.CancellationToken)
+  name: CreateAsync(string, CreateCachedContentConfig?, CancellationToken)
+  href: api/Google.GenAI.Caches.html#Google_GenAI_Caches_CreateAsync_System_String_Google_GenAI_Types_CreateCachedContentConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Caches.CreateAsync(System.String,Google.GenAI.Types.CreateCachedContentConfig,System.Threading.CancellationToken)
+  name.vb: CreateAsync(String, CreateCachedContentConfig, CancellationToken)
+  fullName: Google.GenAI.Caches.CreateAsync(string, Google.GenAI.Types.CreateCachedContentConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Caches.CreateAsync(String, Google.GenAI.Types.CreateCachedContentConfig, System.Threading.CancellationToken)
+  nameWithType: Caches.CreateAsync(string, CreateCachedContentConfig?, CancellationToken)
+  nameWithType.vb: Caches.CreateAsync(String, CreateCachedContentConfig, CancellationToken)
 - uid: Google.GenAI.Caches.CreateAsync*
   name: CreateAsync
   href: api/Google.GenAI.Caches.html#Google_GenAI_Caches_CreateAsync_
@@ -560,15 +560,15 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Caches.CreateAsync
   nameWithType: Caches.CreateAsync
-- uid: Google.GenAI.Caches.DeleteAsync(System.String,Google.GenAI.Types.DeleteCachedContentConfig)
-  name: DeleteAsync(string, DeleteCachedContentConfig?)
-  href: api/Google.GenAI.Caches.html#Google_GenAI_Caches_DeleteAsync_System_String_Google_GenAI_Types_DeleteCachedContentConfig_
-  commentId: M:Google.GenAI.Caches.DeleteAsync(System.String,Google.GenAI.Types.DeleteCachedContentConfig)
-  name.vb: DeleteAsync(String, DeleteCachedContentConfig)
-  fullName: Google.GenAI.Caches.DeleteAsync(string, Google.GenAI.Types.DeleteCachedContentConfig?)
-  fullName.vb: Google.GenAI.Caches.DeleteAsync(String, Google.GenAI.Types.DeleteCachedContentConfig)
-  nameWithType: Caches.DeleteAsync(string, DeleteCachedContentConfig?)
-  nameWithType.vb: Caches.DeleteAsync(String, DeleteCachedContentConfig)
+- uid: Google.GenAI.Caches.DeleteAsync(System.String,Google.GenAI.Types.DeleteCachedContentConfig,System.Threading.CancellationToken)
+  name: DeleteAsync(string, DeleteCachedContentConfig?, CancellationToken)
+  href: api/Google.GenAI.Caches.html#Google_GenAI_Caches_DeleteAsync_System_String_Google_GenAI_Types_DeleteCachedContentConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Caches.DeleteAsync(System.String,Google.GenAI.Types.DeleteCachedContentConfig,System.Threading.CancellationToken)
+  name.vb: DeleteAsync(String, DeleteCachedContentConfig, CancellationToken)
+  fullName: Google.GenAI.Caches.DeleteAsync(string, Google.GenAI.Types.DeleteCachedContentConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Caches.DeleteAsync(String, Google.GenAI.Types.DeleteCachedContentConfig, System.Threading.CancellationToken)
+  nameWithType: Caches.DeleteAsync(string, DeleteCachedContentConfig?, CancellationToken)
+  nameWithType.vb: Caches.DeleteAsync(String, DeleteCachedContentConfig, CancellationToken)
 - uid: Google.GenAI.Caches.DeleteAsync*
   name: DeleteAsync
   href: api/Google.GenAI.Caches.html#Google_GenAI_Caches_DeleteAsync_
@@ -576,15 +576,15 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Caches.DeleteAsync
   nameWithType: Caches.DeleteAsync
-- uid: Google.GenAI.Caches.GetAsync(System.String,Google.GenAI.Types.GetCachedContentConfig)
-  name: GetAsync(string, GetCachedContentConfig?)
-  href: api/Google.GenAI.Caches.html#Google_GenAI_Caches_GetAsync_System_String_Google_GenAI_Types_GetCachedContentConfig_
-  commentId: M:Google.GenAI.Caches.GetAsync(System.String,Google.GenAI.Types.GetCachedContentConfig)
-  name.vb: GetAsync(String, GetCachedContentConfig)
-  fullName: Google.GenAI.Caches.GetAsync(string, Google.GenAI.Types.GetCachedContentConfig?)
-  fullName.vb: Google.GenAI.Caches.GetAsync(String, Google.GenAI.Types.GetCachedContentConfig)
-  nameWithType: Caches.GetAsync(string, GetCachedContentConfig?)
-  nameWithType.vb: Caches.GetAsync(String, GetCachedContentConfig)
+- uid: Google.GenAI.Caches.GetAsync(System.String,Google.GenAI.Types.GetCachedContentConfig,System.Threading.CancellationToken)
+  name: GetAsync(string, GetCachedContentConfig?, CancellationToken)
+  href: api/Google.GenAI.Caches.html#Google_GenAI_Caches_GetAsync_System_String_Google_GenAI_Types_GetCachedContentConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Caches.GetAsync(System.String,Google.GenAI.Types.GetCachedContentConfig,System.Threading.CancellationToken)
+  name.vb: GetAsync(String, GetCachedContentConfig, CancellationToken)
+  fullName: Google.GenAI.Caches.GetAsync(string, Google.GenAI.Types.GetCachedContentConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Caches.GetAsync(String, Google.GenAI.Types.GetCachedContentConfig, System.Threading.CancellationToken)
+  nameWithType: Caches.GetAsync(string, GetCachedContentConfig?, CancellationToken)
+  nameWithType.vb: Caches.GetAsync(String, GetCachedContentConfig, CancellationToken)
 - uid: Google.GenAI.Caches.GetAsync*
   name: GetAsync
   href: api/Google.GenAI.Caches.html#Google_GenAI_Caches_GetAsync_
@@ -592,15 +592,15 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Caches.GetAsync
   nameWithType: Caches.GetAsync
-- uid: Google.GenAI.Caches.ListAsync(Google.GenAI.Types.ListCachedContentsConfig)
-  name: ListAsync(ListCachedContentsConfig?)
-  href: api/Google.GenAI.Caches.html#Google_GenAI_Caches_ListAsync_Google_GenAI_Types_ListCachedContentsConfig_
-  commentId: M:Google.GenAI.Caches.ListAsync(Google.GenAI.Types.ListCachedContentsConfig)
-  name.vb: ListAsync(ListCachedContentsConfig)
-  fullName: Google.GenAI.Caches.ListAsync(Google.GenAI.Types.ListCachedContentsConfig?)
-  fullName.vb: Google.GenAI.Caches.ListAsync(Google.GenAI.Types.ListCachedContentsConfig)
-  nameWithType: Caches.ListAsync(ListCachedContentsConfig?)
-  nameWithType.vb: Caches.ListAsync(ListCachedContentsConfig)
+- uid: Google.GenAI.Caches.ListAsync(Google.GenAI.Types.ListCachedContentsConfig,System.Threading.CancellationToken)
+  name: ListAsync(ListCachedContentsConfig?, CancellationToken)
+  href: api/Google.GenAI.Caches.html#Google_GenAI_Caches_ListAsync_Google_GenAI_Types_ListCachedContentsConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Caches.ListAsync(Google.GenAI.Types.ListCachedContentsConfig,System.Threading.CancellationToken)
+  name.vb: ListAsync(ListCachedContentsConfig, CancellationToken)
+  fullName: Google.GenAI.Caches.ListAsync(Google.GenAI.Types.ListCachedContentsConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Caches.ListAsync(Google.GenAI.Types.ListCachedContentsConfig, System.Threading.CancellationToken)
+  nameWithType: Caches.ListAsync(ListCachedContentsConfig?, CancellationToken)
+  nameWithType.vb: Caches.ListAsync(ListCachedContentsConfig, CancellationToken)
 - uid: Google.GenAI.Caches.ListAsync*
   name: ListAsync
   href: api/Google.GenAI.Caches.html#Google_GenAI_Caches_ListAsync_
@@ -608,15 +608,15 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Caches.ListAsync
   nameWithType: Caches.ListAsync
-- uid: Google.GenAI.Caches.UpdateAsync(System.String,Google.GenAI.Types.UpdateCachedContentConfig)
-  name: UpdateAsync(string, UpdateCachedContentConfig?)
-  href: api/Google.GenAI.Caches.html#Google_GenAI_Caches_UpdateAsync_System_String_Google_GenAI_Types_UpdateCachedContentConfig_
-  commentId: M:Google.GenAI.Caches.UpdateAsync(System.String,Google.GenAI.Types.UpdateCachedContentConfig)
-  name.vb: UpdateAsync(String, UpdateCachedContentConfig)
-  fullName: Google.GenAI.Caches.UpdateAsync(string, Google.GenAI.Types.UpdateCachedContentConfig?)
-  fullName.vb: Google.GenAI.Caches.UpdateAsync(String, Google.GenAI.Types.UpdateCachedContentConfig)
-  nameWithType: Caches.UpdateAsync(string, UpdateCachedContentConfig?)
-  nameWithType.vb: Caches.UpdateAsync(String, UpdateCachedContentConfig)
+- uid: Google.GenAI.Caches.UpdateAsync(System.String,Google.GenAI.Types.UpdateCachedContentConfig,System.Threading.CancellationToken)
+  name: UpdateAsync(string, UpdateCachedContentConfig?, CancellationToken)
+  href: api/Google.GenAI.Caches.html#Google_GenAI_Caches_UpdateAsync_System_String_Google_GenAI_Types_UpdateCachedContentConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Caches.UpdateAsync(System.String,Google.GenAI.Types.UpdateCachedContentConfig,System.Threading.CancellationToken)
+  name.vb: UpdateAsync(String, UpdateCachedContentConfig, CancellationToken)
+  fullName: Google.GenAI.Caches.UpdateAsync(string, Google.GenAI.Types.UpdateCachedContentConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Caches.UpdateAsync(String, Google.GenAI.Types.UpdateCachedContentConfig, System.Threading.CancellationToken)
+  nameWithType: Caches.UpdateAsync(string, UpdateCachedContentConfig?, CancellationToken)
+  nameWithType.vb: Caches.UpdateAsync(String, UpdateCachedContentConfig, CancellationToken)
 - uid: Google.GenAI.Caches.UpdateAsync*
   name: UpdateAsync
   href: api/Google.GenAI.Caches.html#Google_GenAI_Caches_UpdateAsync_
@@ -939,15 +939,15 @@ references:
   fullName.vb: Google.GenAI.Files.New
   nameWithType: Files.Files
   nameWithType.vb: Files.New
-- uid: Google.GenAI.Files.DeleteAsync(System.String,Google.GenAI.Types.DeleteFileConfig)
-  name: DeleteAsync(string, DeleteFileConfig?)
-  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DeleteAsync_System_String_Google_GenAI_Types_DeleteFileConfig_
-  commentId: M:Google.GenAI.Files.DeleteAsync(System.String,Google.GenAI.Types.DeleteFileConfig)
-  name.vb: DeleteAsync(String, DeleteFileConfig)
-  fullName: Google.GenAI.Files.DeleteAsync(string, Google.GenAI.Types.DeleteFileConfig?)
-  fullName.vb: Google.GenAI.Files.DeleteAsync(String, Google.GenAI.Types.DeleteFileConfig)
-  nameWithType: Files.DeleteAsync(string, DeleteFileConfig?)
-  nameWithType.vb: Files.DeleteAsync(String, DeleteFileConfig)
+- uid: Google.GenAI.Files.DeleteAsync(System.String,Google.GenAI.Types.DeleteFileConfig,System.Threading.CancellationToken)
+  name: DeleteAsync(string, DeleteFileConfig?, CancellationToken)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DeleteAsync_System_String_Google_GenAI_Types_DeleteFileConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Files.DeleteAsync(System.String,Google.GenAI.Types.DeleteFileConfig,System.Threading.CancellationToken)
+  name.vb: DeleteAsync(String, DeleteFileConfig, CancellationToken)
+  fullName: Google.GenAI.Files.DeleteAsync(string, Google.GenAI.Types.DeleteFileConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Files.DeleteAsync(String, Google.GenAI.Types.DeleteFileConfig, System.Threading.CancellationToken)
+  nameWithType: Files.DeleteAsync(string, DeleteFileConfig?, CancellationToken)
+  nameWithType.vb: Files.DeleteAsync(String, DeleteFileConfig, CancellationToken)
 - uid: Google.GenAI.Files.DeleteAsync*
   name: DeleteAsync
   href: api/Google.GenAI.Files.html#Google_GenAI_Files_DeleteAsync_
@@ -955,42 +955,42 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Files.DeleteAsync
   nameWithType: Files.DeleteAsync
-- uid: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.File,Google.GenAI.Types.DownloadFileConfig)
-  name: DownloadAsync(File, DownloadFileConfig?)
-  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadAsync_Google_GenAI_Types_File_Google_GenAI_Types_DownloadFileConfig_
-  commentId: M:Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.File,Google.GenAI.Types.DownloadFileConfig)
-  name.vb: DownloadAsync(File, DownloadFileConfig)
-  fullName: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.File, Google.GenAI.Types.DownloadFileConfig?)
-  fullName.vb: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.File, Google.GenAI.Types.DownloadFileConfig)
-  nameWithType: Files.DownloadAsync(File, DownloadFileConfig?)
-  nameWithType.vb: Files.DownloadAsync(File, DownloadFileConfig)
-- uid: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.GeneratedVideo,Google.GenAI.Types.DownloadFileConfig)
-  name: DownloadAsync(GeneratedVideo, DownloadFileConfig?)
-  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadAsync_Google_GenAI_Types_GeneratedVideo_Google_GenAI_Types_DownloadFileConfig_
-  commentId: M:Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.GeneratedVideo,Google.GenAI.Types.DownloadFileConfig)
-  name.vb: DownloadAsync(GeneratedVideo, DownloadFileConfig)
-  fullName: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.GeneratedVideo, Google.GenAI.Types.DownloadFileConfig?)
-  fullName.vb: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.GeneratedVideo, Google.GenAI.Types.DownloadFileConfig)
-  nameWithType: Files.DownloadAsync(GeneratedVideo, DownloadFileConfig?)
-  nameWithType.vb: Files.DownloadAsync(GeneratedVideo, DownloadFileConfig)
-- uid: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.Video,Google.GenAI.Types.DownloadFileConfig)
-  name: DownloadAsync(Video, DownloadFileConfig?)
-  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadAsync_Google_GenAI_Types_Video_Google_GenAI_Types_DownloadFileConfig_
-  commentId: M:Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.Video,Google.GenAI.Types.DownloadFileConfig)
-  name.vb: DownloadAsync(Video, DownloadFileConfig)
-  fullName: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.Video, Google.GenAI.Types.DownloadFileConfig?)
-  fullName.vb: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.Video, Google.GenAI.Types.DownloadFileConfig)
-  nameWithType: Files.DownloadAsync(Video, DownloadFileConfig?)
-  nameWithType.vb: Files.DownloadAsync(Video, DownloadFileConfig)
-- uid: Google.GenAI.Files.DownloadAsync(System.String,Google.GenAI.Types.DownloadFileConfig)
-  name: DownloadAsync(string, DownloadFileConfig?)
-  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadAsync_System_String_Google_GenAI_Types_DownloadFileConfig_
-  commentId: M:Google.GenAI.Files.DownloadAsync(System.String,Google.GenAI.Types.DownloadFileConfig)
-  name.vb: DownloadAsync(String, DownloadFileConfig)
-  fullName: Google.GenAI.Files.DownloadAsync(string, Google.GenAI.Types.DownloadFileConfig?)
-  fullName.vb: Google.GenAI.Files.DownloadAsync(String, Google.GenAI.Types.DownloadFileConfig)
-  nameWithType: Files.DownloadAsync(string, DownloadFileConfig?)
-  nameWithType.vb: Files.DownloadAsync(String, DownloadFileConfig)
+- uid: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.File,Google.GenAI.Types.DownloadFileConfig,System.Threading.CancellationToken)
+  name: DownloadAsync(File, DownloadFileConfig?, CancellationToken)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadAsync_Google_GenAI_Types_File_Google_GenAI_Types_DownloadFileConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.File,Google.GenAI.Types.DownloadFileConfig,System.Threading.CancellationToken)
+  name.vb: DownloadAsync(File, DownloadFileConfig, CancellationToken)
+  fullName: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.File, Google.GenAI.Types.DownloadFileConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.File, Google.GenAI.Types.DownloadFileConfig, System.Threading.CancellationToken)
+  nameWithType: Files.DownloadAsync(File, DownloadFileConfig?, CancellationToken)
+  nameWithType.vb: Files.DownloadAsync(File, DownloadFileConfig, CancellationToken)
+- uid: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.GeneratedVideo,Google.GenAI.Types.DownloadFileConfig,System.Threading.CancellationToken)
+  name: DownloadAsync(GeneratedVideo, DownloadFileConfig?, CancellationToken)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadAsync_Google_GenAI_Types_GeneratedVideo_Google_GenAI_Types_DownloadFileConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.GeneratedVideo,Google.GenAI.Types.DownloadFileConfig,System.Threading.CancellationToken)
+  name.vb: DownloadAsync(GeneratedVideo, DownloadFileConfig, CancellationToken)
+  fullName: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.GeneratedVideo, Google.GenAI.Types.DownloadFileConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.GeneratedVideo, Google.GenAI.Types.DownloadFileConfig, System.Threading.CancellationToken)
+  nameWithType: Files.DownloadAsync(GeneratedVideo, DownloadFileConfig?, CancellationToken)
+  nameWithType.vb: Files.DownloadAsync(GeneratedVideo, DownloadFileConfig, CancellationToken)
+- uid: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.Video,Google.GenAI.Types.DownloadFileConfig,System.Threading.CancellationToken)
+  name: DownloadAsync(Video, DownloadFileConfig?, CancellationToken)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadAsync_Google_GenAI_Types_Video_Google_GenAI_Types_DownloadFileConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.Video,Google.GenAI.Types.DownloadFileConfig,System.Threading.CancellationToken)
+  name.vb: DownloadAsync(Video, DownloadFileConfig, CancellationToken)
+  fullName: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.Video, Google.GenAI.Types.DownloadFileConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.Video, Google.GenAI.Types.DownloadFileConfig, System.Threading.CancellationToken)
+  nameWithType: Files.DownloadAsync(Video, DownloadFileConfig?, CancellationToken)
+  nameWithType.vb: Files.DownloadAsync(Video, DownloadFileConfig, CancellationToken)
+- uid: Google.GenAI.Files.DownloadAsync(System.String,Google.GenAI.Types.DownloadFileConfig,System.Threading.CancellationToken)
+  name: DownloadAsync(string, DownloadFileConfig?, CancellationToken)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadAsync_System_String_Google_GenAI_Types_DownloadFileConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Files.DownloadAsync(System.String,Google.GenAI.Types.DownloadFileConfig,System.Threading.CancellationToken)
+  name.vb: DownloadAsync(String, DownloadFileConfig, CancellationToken)
+  fullName: Google.GenAI.Files.DownloadAsync(string, Google.GenAI.Types.DownloadFileConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Files.DownloadAsync(String, Google.GenAI.Types.DownloadFileConfig, System.Threading.CancellationToken)
+  nameWithType: Files.DownloadAsync(string, DownloadFileConfig?, CancellationToken)
+  nameWithType.vb: Files.DownloadAsync(String, DownloadFileConfig, CancellationToken)
 - uid: Google.GenAI.Files.DownloadAsync*
   name: DownloadAsync
   href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadAsync_
@@ -998,42 +998,42 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Files.DownloadAsync
   nameWithType: Files.DownloadAsync
-- uid: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.File,System.String,Google.GenAI.Types.DownloadFileConfig)
-  name: DownloadToFileAsync(File, string, DownloadFileConfig?)
-  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadToFileAsync_Google_GenAI_Types_File_System_String_Google_GenAI_Types_DownloadFileConfig_
-  commentId: M:Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.File,System.String,Google.GenAI.Types.DownloadFileConfig)
-  name.vb: DownloadToFileAsync(File, String, DownloadFileConfig)
-  fullName: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.File, string, Google.GenAI.Types.DownloadFileConfig?)
-  fullName.vb: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.File, String, Google.GenAI.Types.DownloadFileConfig)
-  nameWithType: Files.DownloadToFileAsync(File, string, DownloadFileConfig?)
-  nameWithType.vb: Files.DownloadToFileAsync(File, String, DownloadFileConfig)
-- uid: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.GeneratedVideo,System.String,Google.GenAI.Types.DownloadFileConfig)
-  name: DownloadToFileAsync(GeneratedVideo, string, DownloadFileConfig?)
-  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadToFileAsync_Google_GenAI_Types_GeneratedVideo_System_String_Google_GenAI_Types_DownloadFileConfig_
-  commentId: M:Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.GeneratedVideo,System.String,Google.GenAI.Types.DownloadFileConfig)
-  name.vb: DownloadToFileAsync(GeneratedVideo, String, DownloadFileConfig)
-  fullName: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.GeneratedVideo, string, Google.GenAI.Types.DownloadFileConfig?)
-  fullName.vb: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.GeneratedVideo, String, Google.GenAI.Types.DownloadFileConfig)
-  nameWithType: Files.DownloadToFileAsync(GeneratedVideo, string, DownloadFileConfig?)
-  nameWithType.vb: Files.DownloadToFileAsync(GeneratedVideo, String, DownloadFileConfig)
-- uid: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.Video,System.String,Google.GenAI.Types.DownloadFileConfig)
-  name: DownloadToFileAsync(Video, string, DownloadFileConfig?)
-  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadToFileAsync_Google_GenAI_Types_Video_System_String_Google_GenAI_Types_DownloadFileConfig_
-  commentId: M:Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.Video,System.String,Google.GenAI.Types.DownloadFileConfig)
-  name.vb: DownloadToFileAsync(Video, String, DownloadFileConfig)
-  fullName: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.Video, string, Google.GenAI.Types.DownloadFileConfig?)
-  fullName.vb: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.Video, String, Google.GenAI.Types.DownloadFileConfig)
-  nameWithType: Files.DownloadToFileAsync(Video, string, DownloadFileConfig?)
-  nameWithType.vb: Files.DownloadToFileAsync(Video, String, DownloadFileConfig)
-- uid: Google.GenAI.Files.DownloadToFileAsync(System.String,System.String,Google.GenAI.Types.DownloadFileConfig)
-  name: DownloadToFileAsync(string, string, DownloadFileConfig?)
-  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadToFileAsync_System_String_System_String_Google_GenAI_Types_DownloadFileConfig_
-  commentId: M:Google.GenAI.Files.DownloadToFileAsync(System.String,System.String,Google.GenAI.Types.DownloadFileConfig)
-  name.vb: DownloadToFileAsync(String, String, DownloadFileConfig)
-  fullName: Google.GenAI.Files.DownloadToFileAsync(string, string, Google.GenAI.Types.DownloadFileConfig?)
-  fullName.vb: Google.GenAI.Files.DownloadToFileAsync(String, String, Google.GenAI.Types.DownloadFileConfig)
-  nameWithType: Files.DownloadToFileAsync(string, string, DownloadFileConfig?)
-  nameWithType.vb: Files.DownloadToFileAsync(String, String, DownloadFileConfig)
+- uid: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.File,System.String,Google.GenAI.Types.DownloadFileConfig,System.Threading.CancellationToken)
+  name: DownloadToFileAsync(File, string, DownloadFileConfig?, CancellationToken)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadToFileAsync_Google_GenAI_Types_File_System_String_Google_GenAI_Types_DownloadFileConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.File,System.String,Google.GenAI.Types.DownloadFileConfig,System.Threading.CancellationToken)
+  name.vb: DownloadToFileAsync(File, String, DownloadFileConfig, CancellationToken)
+  fullName: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.File, string, Google.GenAI.Types.DownloadFileConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.File, String, Google.GenAI.Types.DownloadFileConfig, System.Threading.CancellationToken)
+  nameWithType: Files.DownloadToFileAsync(File, string, DownloadFileConfig?, CancellationToken)
+  nameWithType.vb: Files.DownloadToFileAsync(File, String, DownloadFileConfig, CancellationToken)
+- uid: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.GeneratedVideo,System.String,Google.GenAI.Types.DownloadFileConfig,System.Threading.CancellationToken)
+  name: DownloadToFileAsync(GeneratedVideo, string, DownloadFileConfig?, CancellationToken)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadToFileAsync_Google_GenAI_Types_GeneratedVideo_System_String_Google_GenAI_Types_DownloadFileConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.GeneratedVideo,System.String,Google.GenAI.Types.DownloadFileConfig,System.Threading.CancellationToken)
+  name.vb: DownloadToFileAsync(GeneratedVideo, String, DownloadFileConfig, CancellationToken)
+  fullName: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.GeneratedVideo, string, Google.GenAI.Types.DownloadFileConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.GeneratedVideo, String, Google.GenAI.Types.DownloadFileConfig, System.Threading.CancellationToken)
+  nameWithType: Files.DownloadToFileAsync(GeneratedVideo, string, DownloadFileConfig?, CancellationToken)
+  nameWithType.vb: Files.DownloadToFileAsync(GeneratedVideo, String, DownloadFileConfig, CancellationToken)
+- uid: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.Video,System.String,Google.GenAI.Types.DownloadFileConfig,System.Threading.CancellationToken)
+  name: DownloadToFileAsync(Video, string, DownloadFileConfig?, CancellationToken)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadToFileAsync_Google_GenAI_Types_Video_System_String_Google_GenAI_Types_DownloadFileConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.Video,System.String,Google.GenAI.Types.DownloadFileConfig,System.Threading.CancellationToken)
+  name.vb: DownloadToFileAsync(Video, String, DownloadFileConfig, CancellationToken)
+  fullName: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.Video, string, Google.GenAI.Types.DownloadFileConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.Video, String, Google.GenAI.Types.DownloadFileConfig, System.Threading.CancellationToken)
+  nameWithType: Files.DownloadToFileAsync(Video, string, DownloadFileConfig?, CancellationToken)
+  nameWithType.vb: Files.DownloadToFileAsync(Video, String, DownloadFileConfig, CancellationToken)
+- uid: Google.GenAI.Files.DownloadToFileAsync(System.String,System.String,Google.GenAI.Types.DownloadFileConfig,System.Threading.CancellationToken)
+  name: DownloadToFileAsync(string, string, DownloadFileConfig?, CancellationToken)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadToFileAsync_System_String_System_String_Google_GenAI_Types_DownloadFileConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Files.DownloadToFileAsync(System.String,System.String,Google.GenAI.Types.DownloadFileConfig,System.Threading.CancellationToken)
+  name.vb: DownloadToFileAsync(String, String, DownloadFileConfig, CancellationToken)
+  fullName: Google.GenAI.Files.DownloadToFileAsync(string, string, Google.GenAI.Types.DownloadFileConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Files.DownloadToFileAsync(String, String, Google.GenAI.Types.DownloadFileConfig, System.Threading.CancellationToken)
+  nameWithType: Files.DownloadToFileAsync(string, string, DownloadFileConfig?, CancellationToken)
+  nameWithType.vb: Files.DownloadToFileAsync(String, String, DownloadFileConfig, CancellationToken)
 - uid: Google.GenAI.Files.DownloadToFileAsync*
   name: DownloadToFileAsync
   href: api/Google.GenAI.Files.html#Google_GenAI_Files_DownloadToFileAsync_
@@ -1041,15 +1041,15 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Files.DownloadToFileAsync
   nameWithType: Files.DownloadToFileAsync
-- uid: Google.GenAI.Files.GetAsync(System.String,Google.GenAI.Types.GetFileConfig)
-  name: GetAsync(string, GetFileConfig?)
-  href: api/Google.GenAI.Files.html#Google_GenAI_Files_GetAsync_System_String_Google_GenAI_Types_GetFileConfig_
-  commentId: M:Google.GenAI.Files.GetAsync(System.String,Google.GenAI.Types.GetFileConfig)
-  name.vb: GetAsync(String, GetFileConfig)
-  fullName: Google.GenAI.Files.GetAsync(string, Google.GenAI.Types.GetFileConfig?)
-  fullName.vb: Google.GenAI.Files.GetAsync(String, Google.GenAI.Types.GetFileConfig)
-  nameWithType: Files.GetAsync(string, GetFileConfig?)
-  nameWithType.vb: Files.GetAsync(String, GetFileConfig)
+- uid: Google.GenAI.Files.GetAsync(System.String,Google.GenAI.Types.GetFileConfig,System.Threading.CancellationToken)
+  name: GetAsync(string, GetFileConfig?, CancellationToken)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_GetAsync_System_String_Google_GenAI_Types_GetFileConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Files.GetAsync(System.String,Google.GenAI.Types.GetFileConfig,System.Threading.CancellationToken)
+  name.vb: GetAsync(String, GetFileConfig, CancellationToken)
+  fullName: Google.GenAI.Files.GetAsync(string, Google.GenAI.Types.GetFileConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Files.GetAsync(String, Google.GenAI.Types.GetFileConfig, System.Threading.CancellationToken)
+  nameWithType: Files.GetAsync(string, GetFileConfig?, CancellationToken)
+  nameWithType.vb: Files.GetAsync(String, GetFileConfig, CancellationToken)
 - uid: Google.GenAI.Files.GetAsync*
   name: GetAsync
   href: api/Google.GenAI.Files.html#Google_GenAI_Files_GetAsync_
@@ -1057,15 +1057,15 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Files.GetAsync
   nameWithType: Files.GetAsync
-- uid: Google.GenAI.Files.ListAsync(Google.GenAI.Types.ListFilesConfig)
-  name: ListAsync(ListFilesConfig?)
-  href: api/Google.GenAI.Files.html#Google_GenAI_Files_ListAsync_Google_GenAI_Types_ListFilesConfig_
-  commentId: M:Google.GenAI.Files.ListAsync(Google.GenAI.Types.ListFilesConfig)
-  name.vb: ListAsync(ListFilesConfig)
-  fullName: Google.GenAI.Files.ListAsync(Google.GenAI.Types.ListFilesConfig?)
-  fullName.vb: Google.GenAI.Files.ListAsync(Google.GenAI.Types.ListFilesConfig)
-  nameWithType: Files.ListAsync(ListFilesConfig?)
-  nameWithType.vb: Files.ListAsync(ListFilesConfig)
+- uid: Google.GenAI.Files.ListAsync(Google.GenAI.Types.ListFilesConfig,System.Threading.CancellationToken)
+  name: ListAsync(ListFilesConfig?, CancellationToken)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_ListAsync_Google_GenAI_Types_ListFilesConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Files.ListAsync(Google.GenAI.Types.ListFilesConfig,System.Threading.CancellationToken)
+  name.vb: ListAsync(ListFilesConfig, CancellationToken)
+  fullName: Google.GenAI.Files.ListAsync(Google.GenAI.Types.ListFilesConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Files.ListAsync(Google.GenAI.Types.ListFilesConfig, System.Threading.CancellationToken)
+  nameWithType: Files.ListAsync(ListFilesConfig?, CancellationToken)
+  nameWithType.vb: Files.ListAsync(ListFilesConfig, CancellationToken)
 - uid: Google.GenAI.Files.ListAsync*
   name: ListAsync
   href: api/Google.GenAI.Files.html#Google_GenAI_Files_ListAsync_
@@ -1073,33 +1073,33 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Files.ListAsync
   nameWithType: Files.ListAsync
-- uid: Google.GenAI.Files.UploadAsync(System.Byte[],System.String,Google.GenAI.Types.UploadFileConfig)
-  name: UploadAsync(byte[], string?, UploadFileConfig?)
-  href: api/Google.GenAI.Files.html#Google_GenAI_Files_UploadAsync_System_Byte___System_String_Google_GenAI_Types_UploadFileConfig_
-  commentId: M:Google.GenAI.Files.UploadAsync(System.Byte[],System.String,Google.GenAI.Types.UploadFileConfig)
-  name.vb: UploadAsync(Byte(), String, UploadFileConfig)
-  fullName: Google.GenAI.Files.UploadAsync(byte[], string?, Google.GenAI.Types.UploadFileConfig?)
-  fullName.vb: Google.GenAI.Files.UploadAsync(Byte(), String, Google.GenAI.Types.UploadFileConfig)
-  nameWithType: Files.UploadAsync(byte[], string?, UploadFileConfig?)
-  nameWithType.vb: Files.UploadAsync(Byte(), String, UploadFileConfig)
-- uid: Google.GenAI.Files.UploadAsync(System.IO.Stream,System.Int64,System.String,System.String,Google.GenAI.Types.UploadFileConfig)
-  name: UploadAsync(Stream, long, string?, string?, UploadFileConfig?)
-  href: api/Google.GenAI.Files.html#Google_GenAI_Files_UploadAsync_System_IO_Stream_System_Int64_System_String_System_String_Google_GenAI_Types_UploadFileConfig_
-  commentId: M:Google.GenAI.Files.UploadAsync(System.IO.Stream,System.Int64,System.String,System.String,Google.GenAI.Types.UploadFileConfig)
-  name.vb: UploadAsync(Stream, Long, String, String, UploadFileConfig)
-  fullName: Google.GenAI.Files.UploadAsync(System.IO.Stream, long, string?, string?, Google.GenAI.Types.UploadFileConfig?)
-  fullName.vb: Google.GenAI.Files.UploadAsync(System.IO.Stream, Long, String, String, Google.GenAI.Types.UploadFileConfig)
-  nameWithType: Files.UploadAsync(Stream, long, string?, string?, UploadFileConfig?)
-  nameWithType.vb: Files.UploadAsync(Stream, Long, String, String, UploadFileConfig)
-- uid: Google.GenAI.Files.UploadAsync(System.String,Google.GenAI.Types.UploadFileConfig)
-  name: UploadAsync(string, UploadFileConfig?)
-  href: api/Google.GenAI.Files.html#Google_GenAI_Files_UploadAsync_System_String_Google_GenAI_Types_UploadFileConfig_
-  commentId: M:Google.GenAI.Files.UploadAsync(System.String,Google.GenAI.Types.UploadFileConfig)
-  name.vb: UploadAsync(String, UploadFileConfig)
-  fullName: Google.GenAI.Files.UploadAsync(string, Google.GenAI.Types.UploadFileConfig?)
-  fullName.vb: Google.GenAI.Files.UploadAsync(String, Google.GenAI.Types.UploadFileConfig)
-  nameWithType: Files.UploadAsync(string, UploadFileConfig?)
-  nameWithType.vb: Files.UploadAsync(String, UploadFileConfig)
+- uid: Google.GenAI.Files.UploadAsync(System.Byte[],System.String,Google.GenAI.Types.UploadFileConfig,System.Threading.CancellationToken)
+  name: UploadAsync(byte[], string?, UploadFileConfig?, CancellationToken)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_UploadAsync_System_Byte___System_String_Google_GenAI_Types_UploadFileConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Files.UploadAsync(System.Byte[],System.String,Google.GenAI.Types.UploadFileConfig,System.Threading.CancellationToken)
+  name.vb: UploadAsync(Byte(), String, UploadFileConfig, CancellationToken)
+  fullName: Google.GenAI.Files.UploadAsync(byte[], string?, Google.GenAI.Types.UploadFileConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Files.UploadAsync(Byte(), String, Google.GenAI.Types.UploadFileConfig, System.Threading.CancellationToken)
+  nameWithType: Files.UploadAsync(byte[], string?, UploadFileConfig?, CancellationToken)
+  nameWithType.vb: Files.UploadAsync(Byte(), String, UploadFileConfig, CancellationToken)
+- uid: Google.GenAI.Files.UploadAsync(System.IO.Stream,System.Int64,System.String,System.String,Google.GenAI.Types.UploadFileConfig,System.Threading.CancellationToken)
+  name: UploadAsync(Stream, long, string?, string?, UploadFileConfig?, CancellationToken)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_UploadAsync_System_IO_Stream_System_Int64_System_String_System_String_Google_GenAI_Types_UploadFileConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Files.UploadAsync(System.IO.Stream,System.Int64,System.String,System.String,Google.GenAI.Types.UploadFileConfig,System.Threading.CancellationToken)
+  name.vb: UploadAsync(Stream, Long, String, String, UploadFileConfig, CancellationToken)
+  fullName: Google.GenAI.Files.UploadAsync(System.IO.Stream, long, string?, string?, Google.GenAI.Types.UploadFileConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Files.UploadAsync(System.IO.Stream, Long, String, String, Google.GenAI.Types.UploadFileConfig, System.Threading.CancellationToken)
+  nameWithType: Files.UploadAsync(Stream, long, string?, string?, UploadFileConfig?, CancellationToken)
+  nameWithType.vb: Files.UploadAsync(Stream, Long, String, String, UploadFileConfig, CancellationToken)
+- uid: Google.GenAI.Files.UploadAsync(System.String,Google.GenAI.Types.UploadFileConfig,System.Threading.CancellationToken)
+  name: UploadAsync(string, UploadFileConfig?, CancellationToken)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_UploadAsync_System_String_Google_GenAI_Types_UploadFileConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Files.UploadAsync(System.String,Google.GenAI.Types.UploadFileConfig,System.Threading.CancellationToken)
+  name.vb: UploadAsync(String, UploadFileConfig, CancellationToken)
+  fullName: Google.GenAI.Files.UploadAsync(string, Google.GenAI.Types.UploadFileConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Files.UploadAsync(String, Google.GenAI.Types.UploadFileConfig, System.Threading.CancellationToken)
+  nameWithType: Files.UploadAsync(string, UploadFileConfig?, CancellationToken)
+  nameWithType.vb: Files.UploadAsync(String, UploadFileConfig, CancellationToken)
 - uid: Google.GenAI.Files.UploadAsync*
   name: UploadAsync
   href: api/Google.GenAI.Files.html#Google_GenAI_Files_UploadAsync_
@@ -1370,33 +1370,33 @@ references:
   fullName.vb: Google.GenAI.Models.New
   nameWithType: Models.Models
   nameWithType.vb: Models.New
-- uid: Google.GenAI.Models.ComputeTokensAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.ComputeTokensConfig)
-  name: ComputeTokensAsync(string, Content, ComputeTokensConfig?)
-  href: api/Google.GenAI.Models.html#Google_GenAI_Models_ComputeTokensAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_ComputeTokensConfig_
-  commentId: M:Google.GenAI.Models.ComputeTokensAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.ComputeTokensConfig)
-  name.vb: ComputeTokensAsync(String, Content, ComputeTokensConfig)
-  fullName: Google.GenAI.Models.ComputeTokensAsync(string, Google.GenAI.Types.Content, Google.GenAI.Types.ComputeTokensConfig?)
-  fullName.vb: Google.GenAI.Models.ComputeTokensAsync(String, Google.GenAI.Types.Content, Google.GenAI.Types.ComputeTokensConfig)
-  nameWithType: Models.ComputeTokensAsync(string, Content, ComputeTokensConfig?)
-  nameWithType.vb: Models.ComputeTokensAsync(String, Content, ComputeTokensConfig)
-- uid: Google.GenAI.Models.ComputeTokensAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.ComputeTokensConfig)
-  name: ComputeTokensAsync(string, List<Content>, ComputeTokensConfig?)
-  href: api/Google.GenAI.Models.html#Google_GenAI_Models_ComputeTokensAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_ComputeTokensConfig_
-  commentId: M:Google.GenAI.Models.ComputeTokensAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.ComputeTokensConfig)
-  name.vb: ComputeTokensAsync(String, List(Of Content), ComputeTokensConfig)
-  fullName: Google.GenAI.Models.ComputeTokensAsync(string, System.Collections.Generic.List<Google.GenAI.Types.Content>, Google.GenAI.Types.ComputeTokensConfig?)
-  fullName.vb: Google.GenAI.Models.ComputeTokensAsync(String, System.Collections.Generic.List(Of Google.GenAI.Types.Content), Google.GenAI.Types.ComputeTokensConfig)
-  nameWithType: Models.ComputeTokensAsync(string, List<Content>, ComputeTokensConfig?)
-  nameWithType.vb: Models.ComputeTokensAsync(String, List(Of Content), ComputeTokensConfig)
-- uid: Google.GenAI.Models.ComputeTokensAsync(System.String,System.String,Google.GenAI.Types.ComputeTokensConfig)
-  name: ComputeTokensAsync(string, string, ComputeTokensConfig?)
-  href: api/Google.GenAI.Models.html#Google_GenAI_Models_ComputeTokensAsync_System_String_System_String_Google_GenAI_Types_ComputeTokensConfig_
-  commentId: M:Google.GenAI.Models.ComputeTokensAsync(System.String,System.String,Google.GenAI.Types.ComputeTokensConfig)
-  name.vb: ComputeTokensAsync(String, String, ComputeTokensConfig)
-  fullName: Google.GenAI.Models.ComputeTokensAsync(string, string, Google.GenAI.Types.ComputeTokensConfig?)
-  fullName.vb: Google.GenAI.Models.ComputeTokensAsync(String, String, Google.GenAI.Types.ComputeTokensConfig)
-  nameWithType: Models.ComputeTokensAsync(string, string, ComputeTokensConfig?)
-  nameWithType.vb: Models.ComputeTokensAsync(String, String, ComputeTokensConfig)
+- uid: Google.GenAI.Models.ComputeTokensAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.ComputeTokensConfig,System.Threading.CancellationToken)
+  name: ComputeTokensAsync(string, Content, ComputeTokensConfig?, CancellationToken)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_ComputeTokensAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_ComputeTokensConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Models.ComputeTokensAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.ComputeTokensConfig,System.Threading.CancellationToken)
+  name.vb: ComputeTokensAsync(String, Content, ComputeTokensConfig, CancellationToken)
+  fullName: Google.GenAI.Models.ComputeTokensAsync(string, Google.GenAI.Types.Content, Google.GenAI.Types.ComputeTokensConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Models.ComputeTokensAsync(String, Google.GenAI.Types.Content, Google.GenAI.Types.ComputeTokensConfig, System.Threading.CancellationToken)
+  nameWithType: Models.ComputeTokensAsync(string, Content, ComputeTokensConfig?, CancellationToken)
+  nameWithType.vb: Models.ComputeTokensAsync(String, Content, ComputeTokensConfig, CancellationToken)
+- uid: Google.GenAI.Models.ComputeTokensAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.ComputeTokensConfig,System.Threading.CancellationToken)
+  name: ComputeTokensAsync(string, List<Content>, ComputeTokensConfig?, CancellationToken)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_ComputeTokensAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_ComputeTokensConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Models.ComputeTokensAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.ComputeTokensConfig,System.Threading.CancellationToken)
+  name.vb: ComputeTokensAsync(String, List(Of Content), ComputeTokensConfig, CancellationToken)
+  fullName: Google.GenAI.Models.ComputeTokensAsync(string, System.Collections.Generic.List<Google.GenAI.Types.Content>, Google.GenAI.Types.ComputeTokensConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Models.ComputeTokensAsync(String, System.Collections.Generic.List(Of Google.GenAI.Types.Content), Google.GenAI.Types.ComputeTokensConfig, System.Threading.CancellationToken)
+  nameWithType: Models.ComputeTokensAsync(string, List<Content>, ComputeTokensConfig?, CancellationToken)
+  nameWithType.vb: Models.ComputeTokensAsync(String, List(Of Content), ComputeTokensConfig, CancellationToken)
+- uid: Google.GenAI.Models.ComputeTokensAsync(System.String,System.String,Google.GenAI.Types.ComputeTokensConfig,System.Threading.CancellationToken)
+  name: ComputeTokensAsync(string, string, ComputeTokensConfig?, CancellationToken)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_ComputeTokensAsync_System_String_System_String_Google_GenAI_Types_ComputeTokensConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Models.ComputeTokensAsync(System.String,System.String,Google.GenAI.Types.ComputeTokensConfig,System.Threading.CancellationToken)
+  name.vb: ComputeTokensAsync(String, String, ComputeTokensConfig, CancellationToken)
+  fullName: Google.GenAI.Models.ComputeTokensAsync(string, string, Google.GenAI.Types.ComputeTokensConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Models.ComputeTokensAsync(String, String, Google.GenAI.Types.ComputeTokensConfig, System.Threading.CancellationToken)
+  nameWithType: Models.ComputeTokensAsync(string, string, ComputeTokensConfig?, CancellationToken)
+  nameWithType.vb: Models.ComputeTokensAsync(String, String, ComputeTokensConfig, CancellationToken)
 - uid: Google.GenAI.Models.ComputeTokensAsync*
   name: ComputeTokensAsync
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_ComputeTokensAsync_
@@ -1404,33 +1404,33 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Models.ComputeTokensAsync
   nameWithType: Models.ComputeTokensAsync
-- uid: Google.GenAI.Models.CountTokensAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.CountTokensConfig)
-  name: CountTokensAsync(string, Content, CountTokensConfig?)
-  href: api/Google.GenAI.Models.html#Google_GenAI_Models_CountTokensAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_CountTokensConfig_
-  commentId: M:Google.GenAI.Models.CountTokensAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.CountTokensConfig)
-  name.vb: CountTokensAsync(String, Content, CountTokensConfig)
-  fullName: Google.GenAI.Models.CountTokensAsync(string, Google.GenAI.Types.Content, Google.GenAI.Types.CountTokensConfig?)
-  fullName.vb: Google.GenAI.Models.CountTokensAsync(String, Google.GenAI.Types.Content, Google.GenAI.Types.CountTokensConfig)
-  nameWithType: Models.CountTokensAsync(string, Content, CountTokensConfig?)
-  nameWithType.vb: Models.CountTokensAsync(String, Content, CountTokensConfig)
-- uid: Google.GenAI.Models.CountTokensAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.CountTokensConfig)
-  name: CountTokensAsync(string, List<Content>, CountTokensConfig?)
-  href: api/Google.GenAI.Models.html#Google_GenAI_Models_CountTokensAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_CountTokensConfig_
-  commentId: M:Google.GenAI.Models.CountTokensAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.CountTokensConfig)
-  name.vb: CountTokensAsync(String, List(Of Content), CountTokensConfig)
-  fullName: Google.GenAI.Models.CountTokensAsync(string, System.Collections.Generic.List<Google.GenAI.Types.Content>, Google.GenAI.Types.CountTokensConfig?)
-  fullName.vb: Google.GenAI.Models.CountTokensAsync(String, System.Collections.Generic.List(Of Google.GenAI.Types.Content), Google.GenAI.Types.CountTokensConfig)
-  nameWithType: Models.CountTokensAsync(string, List<Content>, CountTokensConfig?)
-  nameWithType.vb: Models.CountTokensAsync(String, List(Of Content), CountTokensConfig)
-- uid: Google.GenAI.Models.CountTokensAsync(System.String,System.String,Google.GenAI.Types.CountTokensConfig)
-  name: CountTokensAsync(string, string, CountTokensConfig?)
-  href: api/Google.GenAI.Models.html#Google_GenAI_Models_CountTokensAsync_System_String_System_String_Google_GenAI_Types_CountTokensConfig_
-  commentId: M:Google.GenAI.Models.CountTokensAsync(System.String,System.String,Google.GenAI.Types.CountTokensConfig)
-  name.vb: CountTokensAsync(String, String, CountTokensConfig)
-  fullName: Google.GenAI.Models.CountTokensAsync(string, string, Google.GenAI.Types.CountTokensConfig?)
-  fullName.vb: Google.GenAI.Models.CountTokensAsync(String, String, Google.GenAI.Types.CountTokensConfig)
-  nameWithType: Models.CountTokensAsync(string, string, CountTokensConfig?)
-  nameWithType.vb: Models.CountTokensAsync(String, String, CountTokensConfig)
+- uid: Google.GenAI.Models.CountTokensAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.CountTokensConfig,System.Threading.CancellationToken)
+  name: CountTokensAsync(string, Content, CountTokensConfig?, CancellationToken)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_CountTokensAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_CountTokensConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Models.CountTokensAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.CountTokensConfig,System.Threading.CancellationToken)
+  name.vb: CountTokensAsync(String, Content, CountTokensConfig, CancellationToken)
+  fullName: Google.GenAI.Models.CountTokensAsync(string, Google.GenAI.Types.Content, Google.GenAI.Types.CountTokensConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Models.CountTokensAsync(String, Google.GenAI.Types.Content, Google.GenAI.Types.CountTokensConfig, System.Threading.CancellationToken)
+  nameWithType: Models.CountTokensAsync(string, Content, CountTokensConfig?, CancellationToken)
+  nameWithType.vb: Models.CountTokensAsync(String, Content, CountTokensConfig, CancellationToken)
+- uid: Google.GenAI.Models.CountTokensAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.CountTokensConfig,System.Threading.CancellationToken)
+  name: CountTokensAsync(string, List<Content>, CountTokensConfig?, CancellationToken)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_CountTokensAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_CountTokensConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Models.CountTokensAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.CountTokensConfig,System.Threading.CancellationToken)
+  name.vb: CountTokensAsync(String, List(Of Content), CountTokensConfig, CancellationToken)
+  fullName: Google.GenAI.Models.CountTokensAsync(string, System.Collections.Generic.List<Google.GenAI.Types.Content>, Google.GenAI.Types.CountTokensConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Models.CountTokensAsync(String, System.Collections.Generic.List(Of Google.GenAI.Types.Content), Google.GenAI.Types.CountTokensConfig, System.Threading.CancellationToken)
+  nameWithType: Models.CountTokensAsync(string, List<Content>, CountTokensConfig?, CancellationToken)
+  nameWithType.vb: Models.CountTokensAsync(String, List(Of Content), CountTokensConfig, CancellationToken)
+- uid: Google.GenAI.Models.CountTokensAsync(System.String,System.String,Google.GenAI.Types.CountTokensConfig,System.Threading.CancellationToken)
+  name: CountTokensAsync(string, string, CountTokensConfig?, CancellationToken)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_CountTokensAsync_System_String_System_String_Google_GenAI_Types_CountTokensConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Models.CountTokensAsync(System.String,System.String,Google.GenAI.Types.CountTokensConfig,System.Threading.CancellationToken)
+  name.vb: CountTokensAsync(String, String, CountTokensConfig, CancellationToken)
+  fullName: Google.GenAI.Models.CountTokensAsync(string, string, Google.GenAI.Types.CountTokensConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Models.CountTokensAsync(String, String, Google.GenAI.Types.CountTokensConfig, System.Threading.CancellationToken)
+  nameWithType: Models.CountTokensAsync(string, string, CountTokensConfig?, CancellationToken)
+  nameWithType.vb: Models.CountTokensAsync(String, String, CountTokensConfig, CancellationToken)
 - uid: Google.GenAI.Models.CountTokensAsync*
   name: CountTokensAsync
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_CountTokensAsync_
@@ -1438,15 +1438,15 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Models.CountTokensAsync
   nameWithType: Models.CountTokensAsync
-- uid: Google.GenAI.Models.DeleteAsync(System.String,Google.GenAI.Types.DeleteModelConfig)
-  name: DeleteAsync(string, DeleteModelConfig?)
-  href: api/Google.GenAI.Models.html#Google_GenAI_Models_DeleteAsync_System_String_Google_GenAI_Types_DeleteModelConfig_
-  commentId: M:Google.GenAI.Models.DeleteAsync(System.String,Google.GenAI.Types.DeleteModelConfig)
-  name.vb: DeleteAsync(String, DeleteModelConfig)
-  fullName: Google.GenAI.Models.DeleteAsync(string, Google.GenAI.Types.DeleteModelConfig?)
-  fullName.vb: Google.GenAI.Models.DeleteAsync(String, Google.GenAI.Types.DeleteModelConfig)
-  nameWithType: Models.DeleteAsync(string, DeleteModelConfig?)
-  nameWithType.vb: Models.DeleteAsync(String, DeleteModelConfig)
+- uid: Google.GenAI.Models.DeleteAsync(System.String,Google.GenAI.Types.DeleteModelConfig,System.Threading.CancellationToken)
+  name: DeleteAsync(string, DeleteModelConfig?, CancellationToken)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_DeleteAsync_System_String_Google_GenAI_Types_DeleteModelConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Models.DeleteAsync(System.String,Google.GenAI.Types.DeleteModelConfig,System.Threading.CancellationToken)
+  name.vb: DeleteAsync(String, DeleteModelConfig, CancellationToken)
+  fullName: Google.GenAI.Models.DeleteAsync(string, Google.GenAI.Types.DeleteModelConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Models.DeleteAsync(String, Google.GenAI.Types.DeleteModelConfig, System.Threading.CancellationToken)
+  nameWithType: Models.DeleteAsync(string, DeleteModelConfig?, CancellationToken)
+  nameWithType.vb: Models.DeleteAsync(String, DeleteModelConfig, CancellationToken)
 - uid: Google.GenAI.Models.DeleteAsync*
   name: DeleteAsync
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_DeleteAsync_
@@ -1454,15 +1454,15 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Models.DeleteAsync
   nameWithType: Models.DeleteAsync
-- uid: Google.GenAI.Models.EditImageAsync(System.String,System.String,System.Collections.Generic.List{Google.GenAI.Types.IReferenceImage},Google.GenAI.Types.EditImageConfig)
-  name: EditImageAsync(string, string, List<IReferenceImage>, EditImageConfig?)
-  href: api/Google.GenAI.Models.html#Google_GenAI_Models_EditImageAsync_System_String_System_String_System_Collections_Generic_List_Google_GenAI_Types_IReferenceImage__Google_GenAI_Types_EditImageConfig_
-  commentId: M:Google.GenAI.Models.EditImageAsync(System.String,System.String,System.Collections.Generic.List{Google.GenAI.Types.IReferenceImage},Google.GenAI.Types.EditImageConfig)
-  name.vb: EditImageAsync(String, String, List(Of IReferenceImage), EditImageConfig)
-  fullName: Google.GenAI.Models.EditImageAsync(string, string, System.Collections.Generic.List<Google.GenAI.Types.IReferenceImage>, Google.GenAI.Types.EditImageConfig?)
-  fullName.vb: Google.GenAI.Models.EditImageAsync(String, String, System.Collections.Generic.List(Of Google.GenAI.Types.IReferenceImage), Google.GenAI.Types.EditImageConfig)
-  nameWithType: Models.EditImageAsync(string, string, List<IReferenceImage>, EditImageConfig?)
-  nameWithType.vb: Models.EditImageAsync(String, String, List(Of IReferenceImage), EditImageConfig)
+- uid: Google.GenAI.Models.EditImageAsync(System.String,System.String,System.Collections.Generic.List{Google.GenAI.Types.IReferenceImage},Google.GenAI.Types.EditImageConfig,System.Threading.CancellationToken)
+  name: EditImageAsync(string, string, List<IReferenceImage>, EditImageConfig?, CancellationToken)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_EditImageAsync_System_String_System_String_System_Collections_Generic_List_Google_GenAI_Types_IReferenceImage__Google_GenAI_Types_EditImageConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Models.EditImageAsync(System.String,System.String,System.Collections.Generic.List{Google.GenAI.Types.IReferenceImage},Google.GenAI.Types.EditImageConfig,System.Threading.CancellationToken)
+  name.vb: EditImageAsync(String, String, List(Of IReferenceImage), EditImageConfig, CancellationToken)
+  fullName: Google.GenAI.Models.EditImageAsync(string, string, System.Collections.Generic.List<Google.GenAI.Types.IReferenceImage>, Google.GenAI.Types.EditImageConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Models.EditImageAsync(String, String, System.Collections.Generic.List(Of Google.GenAI.Types.IReferenceImage), Google.GenAI.Types.EditImageConfig, System.Threading.CancellationToken)
+  nameWithType: Models.EditImageAsync(string, string, List<IReferenceImage>, EditImageConfig?, CancellationToken)
+  nameWithType.vb: Models.EditImageAsync(String, String, List(Of IReferenceImage), EditImageConfig, CancellationToken)
 - uid: Google.GenAI.Models.EditImageAsync*
   name: EditImageAsync
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_EditImageAsync_
@@ -1470,33 +1470,33 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Models.EditImageAsync
   nameWithType: Models.EditImageAsync
-- uid: Google.GenAI.Models.EmbedContentAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.EmbedContentConfig)
-  name: EmbedContentAsync(string, Content, EmbedContentConfig?)
-  href: api/Google.GenAI.Models.html#Google_GenAI_Models_EmbedContentAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_EmbedContentConfig_
-  commentId: M:Google.GenAI.Models.EmbedContentAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.EmbedContentConfig)
-  name.vb: EmbedContentAsync(String, Content, EmbedContentConfig)
-  fullName: Google.GenAI.Models.EmbedContentAsync(string, Google.GenAI.Types.Content, Google.GenAI.Types.EmbedContentConfig?)
-  fullName.vb: Google.GenAI.Models.EmbedContentAsync(String, Google.GenAI.Types.Content, Google.GenAI.Types.EmbedContentConfig)
-  nameWithType: Models.EmbedContentAsync(string, Content, EmbedContentConfig?)
-  nameWithType.vb: Models.EmbedContentAsync(String, Content, EmbedContentConfig)
-- uid: Google.GenAI.Models.EmbedContentAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.EmbedContentConfig)
-  name: EmbedContentAsync(string, List<Content>, EmbedContentConfig?)
-  href: api/Google.GenAI.Models.html#Google_GenAI_Models_EmbedContentAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_EmbedContentConfig_
-  commentId: M:Google.GenAI.Models.EmbedContentAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.EmbedContentConfig)
-  name.vb: EmbedContentAsync(String, List(Of Content), EmbedContentConfig)
-  fullName: Google.GenAI.Models.EmbedContentAsync(string, System.Collections.Generic.List<Google.GenAI.Types.Content>, Google.GenAI.Types.EmbedContentConfig?)
-  fullName.vb: Google.GenAI.Models.EmbedContentAsync(String, System.Collections.Generic.List(Of Google.GenAI.Types.Content), Google.GenAI.Types.EmbedContentConfig)
-  nameWithType: Models.EmbedContentAsync(string, List<Content>, EmbedContentConfig?)
-  nameWithType.vb: Models.EmbedContentAsync(String, List(Of Content), EmbedContentConfig)
-- uid: Google.GenAI.Models.EmbedContentAsync(System.String,System.String,Google.GenAI.Types.EmbedContentConfig)
-  name: EmbedContentAsync(string, string, EmbedContentConfig?)
-  href: api/Google.GenAI.Models.html#Google_GenAI_Models_EmbedContentAsync_System_String_System_String_Google_GenAI_Types_EmbedContentConfig_
-  commentId: M:Google.GenAI.Models.EmbedContentAsync(System.String,System.String,Google.GenAI.Types.EmbedContentConfig)
-  name.vb: EmbedContentAsync(String, String, EmbedContentConfig)
-  fullName: Google.GenAI.Models.EmbedContentAsync(string, string, Google.GenAI.Types.EmbedContentConfig?)
-  fullName.vb: Google.GenAI.Models.EmbedContentAsync(String, String, Google.GenAI.Types.EmbedContentConfig)
-  nameWithType: Models.EmbedContentAsync(string, string, EmbedContentConfig?)
-  nameWithType.vb: Models.EmbedContentAsync(String, String, EmbedContentConfig)
+- uid: Google.GenAI.Models.EmbedContentAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.EmbedContentConfig,System.Threading.CancellationToken)
+  name: EmbedContentAsync(string, Content, EmbedContentConfig?, CancellationToken)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_EmbedContentAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_EmbedContentConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Models.EmbedContentAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.EmbedContentConfig,System.Threading.CancellationToken)
+  name.vb: EmbedContentAsync(String, Content, EmbedContentConfig, CancellationToken)
+  fullName: Google.GenAI.Models.EmbedContentAsync(string, Google.GenAI.Types.Content, Google.GenAI.Types.EmbedContentConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Models.EmbedContentAsync(String, Google.GenAI.Types.Content, Google.GenAI.Types.EmbedContentConfig, System.Threading.CancellationToken)
+  nameWithType: Models.EmbedContentAsync(string, Content, EmbedContentConfig?, CancellationToken)
+  nameWithType.vb: Models.EmbedContentAsync(String, Content, EmbedContentConfig, CancellationToken)
+- uid: Google.GenAI.Models.EmbedContentAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.EmbedContentConfig,System.Threading.CancellationToken)
+  name: EmbedContentAsync(string, List<Content>, EmbedContentConfig?, CancellationToken)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_EmbedContentAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_EmbedContentConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Models.EmbedContentAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.EmbedContentConfig,System.Threading.CancellationToken)
+  name.vb: EmbedContentAsync(String, List(Of Content), EmbedContentConfig, CancellationToken)
+  fullName: Google.GenAI.Models.EmbedContentAsync(string, System.Collections.Generic.List<Google.GenAI.Types.Content>, Google.GenAI.Types.EmbedContentConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Models.EmbedContentAsync(String, System.Collections.Generic.List(Of Google.GenAI.Types.Content), Google.GenAI.Types.EmbedContentConfig, System.Threading.CancellationToken)
+  nameWithType: Models.EmbedContentAsync(string, List<Content>, EmbedContentConfig?, CancellationToken)
+  nameWithType.vb: Models.EmbedContentAsync(String, List(Of Content), EmbedContentConfig, CancellationToken)
+- uid: Google.GenAI.Models.EmbedContentAsync(System.String,System.String,Google.GenAI.Types.EmbedContentConfig,System.Threading.CancellationToken)
+  name: EmbedContentAsync(string, string, EmbedContentConfig?, CancellationToken)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_EmbedContentAsync_System_String_System_String_Google_GenAI_Types_EmbedContentConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Models.EmbedContentAsync(System.String,System.String,Google.GenAI.Types.EmbedContentConfig,System.Threading.CancellationToken)
+  name.vb: EmbedContentAsync(String, String, EmbedContentConfig, CancellationToken)
+  fullName: Google.GenAI.Models.EmbedContentAsync(string, string, Google.GenAI.Types.EmbedContentConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Models.EmbedContentAsync(String, String, Google.GenAI.Types.EmbedContentConfig, System.Threading.CancellationToken)
+  nameWithType: Models.EmbedContentAsync(string, string, EmbedContentConfig?, CancellationToken)
+  nameWithType.vb: Models.EmbedContentAsync(String, String, EmbedContentConfig, CancellationToken)
 - uid: Google.GenAI.Models.EmbedContentAsync*
   name: EmbedContentAsync
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_EmbedContentAsync_
@@ -1504,33 +1504,33 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Models.EmbedContentAsync
   nameWithType: Models.EmbedContentAsync
-- uid: Google.GenAI.Models.GenerateContentAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.GenerateContentConfig)
-  name: GenerateContentAsync(string, Content, GenerateContentConfig?)
-  href: api/Google.GenAI.Models.html#Google_GenAI_Models_GenerateContentAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_GenerateContentConfig_
-  commentId: M:Google.GenAI.Models.GenerateContentAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.GenerateContentConfig)
-  name.vb: GenerateContentAsync(String, Content, GenerateContentConfig)
-  fullName: Google.GenAI.Models.GenerateContentAsync(string, Google.GenAI.Types.Content, Google.GenAI.Types.GenerateContentConfig?)
-  fullName.vb: Google.GenAI.Models.GenerateContentAsync(String, Google.GenAI.Types.Content, Google.GenAI.Types.GenerateContentConfig)
-  nameWithType: Models.GenerateContentAsync(string, Content, GenerateContentConfig?)
-  nameWithType.vb: Models.GenerateContentAsync(String, Content, GenerateContentConfig)
-- uid: Google.GenAI.Models.GenerateContentAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.GenerateContentConfig)
-  name: GenerateContentAsync(string, List<Content>, GenerateContentConfig?)
-  href: api/Google.GenAI.Models.html#Google_GenAI_Models_GenerateContentAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_GenerateContentConfig_
-  commentId: M:Google.GenAI.Models.GenerateContentAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.GenerateContentConfig)
-  name.vb: GenerateContentAsync(String, List(Of Content), GenerateContentConfig)
-  fullName: Google.GenAI.Models.GenerateContentAsync(string, System.Collections.Generic.List<Google.GenAI.Types.Content>, Google.GenAI.Types.GenerateContentConfig?)
-  fullName.vb: Google.GenAI.Models.GenerateContentAsync(String, System.Collections.Generic.List(Of Google.GenAI.Types.Content), Google.GenAI.Types.GenerateContentConfig)
-  nameWithType: Models.GenerateContentAsync(string, List<Content>, GenerateContentConfig?)
-  nameWithType.vb: Models.GenerateContentAsync(String, List(Of Content), GenerateContentConfig)
-- uid: Google.GenAI.Models.GenerateContentAsync(System.String,System.String,Google.GenAI.Types.GenerateContentConfig)
-  name: GenerateContentAsync(string, string, GenerateContentConfig?)
-  href: api/Google.GenAI.Models.html#Google_GenAI_Models_GenerateContentAsync_System_String_System_String_Google_GenAI_Types_GenerateContentConfig_
-  commentId: M:Google.GenAI.Models.GenerateContentAsync(System.String,System.String,Google.GenAI.Types.GenerateContentConfig)
-  name.vb: GenerateContentAsync(String, String, GenerateContentConfig)
-  fullName: Google.GenAI.Models.GenerateContentAsync(string, string, Google.GenAI.Types.GenerateContentConfig?)
-  fullName.vb: Google.GenAI.Models.GenerateContentAsync(String, String, Google.GenAI.Types.GenerateContentConfig)
-  nameWithType: Models.GenerateContentAsync(string, string, GenerateContentConfig?)
-  nameWithType.vb: Models.GenerateContentAsync(String, String, GenerateContentConfig)
+- uid: Google.GenAI.Models.GenerateContentAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.GenerateContentConfig,System.Threading.CancellationToken)
+  name: GenerateContentAsync(string, Content, GenerateContentConfig?, CancellationToken)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_GenerateContentAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_GenerateContentConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Models.GenerateContentAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.GenerateContentConfig,System.Threading.CancellationToken)
+  name.vb: GenerateContentAsync(String, Content, GenerateContentConfig, CancellationToken)
+  fullName: Google.GenAI.Models.GenerateContentAsync(string, Google.GenAI.Types.Content, Google.GenAI.Types.GenerateContentConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Models.GenerateContentAsync(String, Google.GenAI.Types.Content, Google.GenAI.Types.GenerateContentConfig, System.Threading.CancellationToken)
+  nameWithType: Models.GenerateContentAsync(string, Content, GenerateContentConfig?, CancellationToken)
+  nameWithType.vb: Models.GenerateContentAsync(String, Content, GenerateContentConfig, CancellationToken)
+- uid: Google.GenAI.Models.GenerateContentAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.GenerateContentConfig,System.Threading.CancellationToken)
+  name: GenerateContentAsync(string, List<Content>, GenerateContentConfig?, CancellationToken)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_GenerateContentAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_GenerateContentConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Models.GenerateContentAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.GenerateContentConfig,System.Threading.CancellationToken)
+  name.vb: GenerateContentAsync(String, List(Of Content), GenerateContentConfig, CancellationToken)
+  fullName: Google.GenAI.Models.GenerateContentAsync(string, System.Collections.Generic.List<Google.GenAI.Types.Content>, Google.GenAI.Types.GenerateContentConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Models.GenerateContentAsync(String, System.Collections.Generic.List(Of Google.GenAI.Types.Content), Google.GenAI.Types.GenerateContentConfig, System.Threading.CancellationToken)
+  nameWithType: Models.GenerateContentAsync(string, List<Content>, GenerateContentConfig?, CancellationToken)
+  nameWithType.vb: Models.GenerateContentAsync(String, List(Of Content), GenerateContentConfig, CancellationToken)
+- uid: Google.GenAI.Models.GenerateContentAsync(System.String,System.String,Google.GenAI.Types.GenerateContentConfig,System.Threading.CancellationToken)
+  name: GenerateContentAsync(string, string, GenerateContentConfig?, CancellationToken)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_GenerateContentAsync_System_String_System_String_Google_GenAI_Types_GenerateContentConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Models.GenerateContentAsync(System.String,System.String,Google.GenAI.Types.GenerateContentConfig,System.Threading.CancellationToken)
+  name.vb: GenerateContentAsync(String, String, GenerateContentConfig, CancellationToken)
+  fullName: Google.GenAI.Models.GenerateContentAsync(string, string, Google.GenAI.Types.GenerateContentConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Models.GenerateContentAsync(String, String, Google.GenAI.Types.GenerateContentConfig, System.Threading.CancellationToken)
+  nameWithType: Models.GenerateContentAsync(string, string, GenerateContentConfig?, CancellationToken)
+  nameWithType.vb: Models.GenerateContentAsync(String, String, GenerateContentConfig, CancellationToken)
 - uid: Google.GenAI.Models.GenerateContentAsync*
   name: GenerateContentAsync
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_GenerateContentAsync_
@@ -1538,33 +1538,33 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Models.GenerateContentAsync
   nameWithType: Models.GenerateContentAsync
-- uid: Google.GenAI.Models.GenerateContentStreamAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.GenerateContentConfig)
-  name: GenerateContentStreamAsync(string, Content, GenerateContentConfig?)
-  href: api/Google.GenAI.Models.html#Google_GenAI_Models_GenerateContentStreamAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_GenerateContentConfig_
-  commentId: M:Google.GenAI.Models.GenerateContentStreamAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.GenerateContentConfig)
-  name.vb: GenerateContentStreamAsync(String, Content, GenerateContentConfig)
-  fullName: Google.GenAI.Models.GenerateContentStreamAsync(string, Google.GenAI.Types.Content, Google.GenAI.Types.GenerateContentConfig?)
-  fullName.vb: Google.GenAI.Models.GenerateContentStreamAsync(String, Google.GenAI.Types.Content, Google.GenAI.Types.GenerateContentConfig)
-  nameWithType: Models.GenerateContentStreamAsync(string, Content, GenerateContentConfig?)
-  nameWithType.vb: Models.GenerateContentStreamAsync(String, Content, GenerateContentConfig)
-- uid: Google.GenAI.Models.GenerateContentStreamAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.GenerateContentConfig)
-  name: GenerateContentStreamAsync(string, List<Content>, GenerateContentConfig?)
-  href: api/Google.GenAI.Models.html#Google_GenAI_Models_GenerateContentStreamAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_GenerateContentConfig_
-  commentId: M:Google.GenAI.Models.GenerateContentStreamAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.GenerateContentConfig)
-  name.vb: GenerateContentStreamAsync(String, List(Of Content), GenerateContentConfig)
-  fullName: Google.GenAI.Models.GenerateContentStreamAsync(string, System.Collections.Generic.List<Google.GenAI.Types.Content>, Google.GenAI.Types.GenerateContentConfig?)
-  fullName.vb: Google.GenAI.Models.GenerateContentStreamAsync(String, System.Collections.Generic.List(Of Google.GenAI.Types.Content), Google.GenAI.Types.GenerateContentConfig)
-  nameWithType: Models.GenerateContentStreamAsync(string, List<Content>, GenerateContentConfig?)
-  nameWithType.vb: Models.GenerateContentStreamAsync(String, List(Of Content), GenerateContentConfig)
-- uid: Google.GenAI.Models.GenerateContentStreamAsync(System.String,System.String,Google.GenAI.Types.GenerateContentConfig)
-  name: GenerateContentStreamAsync(string, string, GenerateContentConfig?)
-  href: api/Google.GenAI.Models.html#Google_GenAI_Models_GenerateContentStreamAsync_System_String_System_String_Google_GenAI_Types_GenerateContentConfig_
-  commentId: M:Google.GenAI.Models.GenerateContentStreamAsync(System.String,System.String,Google.GenAI.Types.GenerateContentConfig)
-  name.vb: GenerateContentStreamAsync(String, String, GenerateContentConfig)
-  fullName: Google.GenAI.Models.GenerateContentStreamAsync(string, string, Google.GenAI.Types.GenerateContentConfig?)
-  fullName.vb: Google.GenAI.Models.GenerateContentStreamAsync(String, String, Google.GenAI.Types.GenerateContentConfig)
-  nameWithType: Models.GenerateContentStreamAsync(string, string, GenerateContentConfig?)
-  nameWithType.vb: Models.GenerateContentStreamAsync(String, String, GenerateContentConfig)
+- uid: Google.GenAI.Models.GenerateContentStreamAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.GenerateContentConfig,System.Threading.CancellationToken)
+  name: GenerateContentStreamAsync(string, Content, GenerateContentConfig?, CancellationToken)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_GenerateContentStreamAsync_System_String_Google_GenAI_Types_Content_Google_GenAI_Types_GenerateContentConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Models.GenerateContentStreamAsync(System.String,Google.GenAI.Types.Content,Google.GenAI.Types.GenerateContentConfig,System.Threading.CancellationToken)
+  name.vb: GenerateContentStreamAsync(String, Content, GenerateContentConfig, CancellationToken)
+  fullName: Google.GenAI.Models.GenerateContentStreamAsync(string, Google.GenAI.Types.Content, Google.GenAI.Types.GenerateContentConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Models.GenerateContentStreamAsync(String, Google.GenAI.Types.Content, Google.GenAI.Types.GenerateContentConfig, System.Threading.CancellationToken)
+  nameWithType: Models.GenerateContentStreamAsync(string, Content, GenerateContentConfig?, CancellationToken)
+  nameWithType.vb: Models.GenerateContentStreamAsync(String, Content, GenerateContentConfig, CancellationToken)
+- uid: Google.GenAI.Models.GenerateContentStreamAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.GenerateContentConfig,System.Threading.CancellationToken)
+  name: GenerateContentStreamAsync(string, List<Content>, GenerateContentConfig?, CancellationToken)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_GenerateContentStreamAsync_System_String_System_Collections_Generic_List_Google_GenAI_Types_Content__Google_GenAI_Types_GenerateContentConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Models.GenerateContentStreamAsync(System.String,System.Collections.Generic.List{Google.GenAI.Types.Content},Google.GenAI.Types.GenerateContentConfig,System.Threading.CancellationToken)
+  name.vb: GenerateContentStreamAsync(String, List(Of Content), GenerateContentConfig, CancellationToken)
+  fullName: Google.GenAI.Models.GenerateContentStreamAsync(string, System.Collections.Generic.List<Google.GenAI.Types.Content>, Google.GenAI.Types.GenerateContentConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Models.GenerateContentStreamAsync(String, System.Collections.Generic.List(Of Google.GenAI.Types.Content), Google.GenAI.Types.GenerateContentConfig, System.Threading.CancellationToken)
+  nameWithType: Models.GenerateContentStreamAsync(string, List<Content>, GenerateContentConfig?, CancellationToken)
+  nameWithType.vb: Models.GenerateContentStreamAsync(String, List(Of Content), GenerateContentConfig, CancellationToken)
+- uid: Google.GenAI.Models.GenerateContentStreamAsync(System.String,System.String,Google.GenAI.Types.GenerateContentConfig,System.Threading.CancellationToken)
+  name: GenerateContentStreamAsync(string, string, GenerateContentConfig?, CancellationToken)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_GenerateContentStreamAsync_System_String_System_String_Google_GenAI_Types_GenerateContentConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Models.GenerateContentStreamAsync(System.String,System.String,Google.GenAI.Types.GenerateContentConfig,System.Threading.CancellationToken)
+  name.vb: GenerateContentStreamAsync(String, String, GenerateContentConfig, CancellationToken)
+  fullName: Google.GenAI.Models.GenerateContentStreamAsync(string, string, Google.GenAI.Types.GenerateContentConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Models.GenerateContentStreamAsync(String, String, Google.GenAI.Types.GenerateContentConfig, System.Threading.CancellationToken)
+  nameWithType: Models.GenerateContentStreamAsync(string, string, GenerateContentConfig?, CancellationToken)
+  nameWithType.vb: Models.GenerateContentStreamAsync(String, String, GenerateContentConfig, CancellationToken)
 - uid: Google.GenAI.Models.GenerateContentStreamAsync*
   name: GenerateContentStreamAsync
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_GenerateContentStreamAsync_
@@ -1572,15 +1572,15 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Models.GenerateContentStreamAsync
   nameWithType: Models.GenerateContentStreamAsync
-- uid: Google.GenAI.Models.GenerateImagesAsync(System.String,System.String,Google.GenAI.Types.GenerateImagesConfig)
-  name: GenerateImagesAsync(string, string, GenerateImagesConfig?)
-  href: api/Google.GenAI.Models.html#Google_GenAI_Models_GenerateImagesAsync_System_String_System_String_Google_GenAI_Types_GenerateImagesConfig_
-  commentId: M:Google.GenAI.Models.GenerateImagesAsync(System.String,System.String,Google.GenAI.Types.GenerateImagesConfig)
-  name.vb: GenerateImagesAsync(String, String, GenerateImagesConfig)
-  fullName: Google.GenAI.Models.GenerateImagesAsync(string, string, Google.GenAI.Types.GenerateImagesConfig?)
-  fullName.vb: Google.GenAI.Models.GenerateImagesAsync(String, String, Google.GenAI.Types.GenerateImagesConfig)
-  nameWithType: Models.GenerateImagesAsync(string, string, GenerateImagesConfig?)
-  nameWithType.vb: Models.GenerateImagesAsync(String, String, GenerateImagesConfig)
+- uid: Google.GenAI.Models.GenerateImagesAsync(System.String,System.String,Google.GenAI.Types.GenerateImagesConfig,System.Threading.CancellationToken)
+  name: GenerateImagesAsync(string, string, GenerateImagesConfig?, CancellationToken)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_GenerateImagesAsync_System_String_System_String_Google_GenAI_Types_GenerateImagesConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Models.GenerateImagesAsync(System.String,System.String,Google.GenAI.Types.GenerateImagesConfig,System.Threading.CancellationToken)
+  name.vb: GenerateImagesAsync(String, String, GenerateImagesConfig, CancellationToken)
+  fullName: Google.GenAI.Models.GenerateImagesAsync(string, string, Google.GenAI.Types.GenerateImagesConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Models.GenerateImagesAsync(String, String, Google.GenAI.Types.GenerateImagesConfig, System.Threading.CancellationToken)
+  nameWithType: Models.GenerateImagesAsync(string, string, GenerateImagesConfig?, CancellationToken)
+  nameWithType.vb: Models.GenerateImagesAsync(String, String, GenerateImagesConfig, CancellationToken)
 - uid: Google.GenAI.Models.GenerateImagesAsync*
   name: GenerateImagesAsync
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_GenerateImagesAsync_
@@ -1588,15 +1588,15 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Models.GenerateImagesAsync
   nameWithType: Models.GenerateImagesAsync
-- uid: Google.GenAI.Models.GenerateVideosAsync(System.String,Google.GenAI.Types.GenerateVideosSource,Google.GenAI.Types.GenerateVideosConfig)
-  name: GenerateVideosAsync(string, GenerateVideosSource, GenerateVideosConfig?)
-  href: api/Google.GenAI.Models.html#Google_GenAI_Models_GenerateVideosAsync_System_String_Google_GenAI_Types_GenerateVideosSource_Google_GenAI_Types_GenerateVideosConfig_
-  commentId: M:Google.GenAI.Models.GenerateVideosAsync(System.String,Google.GenAI.Types.GenerateVideosSource,Google.GenAI.Types.GenerateVideosConfig)
-  name.vb: GenerateVideosAsync(String, GenerateVideosSource, GenerateVideosConfig)
-  fullName: Google.GenAI.Models.GenerateVideosAsync(string, Google.GenAI.Types.GenerateVideosSource, Google.GenAI.Types.GenerateVideosConfig?)
-  fullName.vb: Google.GenAI.Models.GenerateVideosAsync(String, Google.GenAI.Types.GenerateVideosSource, Google.GenAI.Types.GenerateVideosConfig)
-  nameWithType: Models.GenerateVideosAsync(string, GenerateVideosSource, GenerateVideosConfig?)
-  nameWithType.vb: Models.GenerateVideosAsync(String, GenerateVideosSource, GenerateVideosConfig)
+- uid: Google.GenAI.Models.GenerateVideosAsync(System.String,Google.GenAI.Types.GenerateVideosSource,Google.GenAI.Types.GenerateVideosConfig,System.Threading.CancellationToken)
+  name: GenerateVideosAsync(string, GenerateVideosSource, GenerateVideosConfig?, CancellationToken)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_GenerateVideosAsync_System_String_Google_GenAI_Types_GenerateVideosSource_Google_GenAI_Types_GenerateVideosConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Models.GenerateVideosAsync(System.String,Google.GenAI.Types.GenerateVideosSource,Google.GenAI.Types.GenerateVideosConfig,System.Threading.CancellationToken)
+  name.vb: GenerateVideosAsync(String, GenerateVideosSource, GenerateVideosConfig, CancellationToken)
+  fullName: Google.GenAI.Models.GenerateVideosAsync(string, Google.GenAI.Types.GenerateVideosSource, Google.GenAI.Types.GenerateVideosConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Models.GenerateVideosAsync(String, Google.GenAI.Types.GenerateVideosSource, Google.GenAI.Types.GenerateVideosConfig, System.Threading.CancellationToken)
+  nameWithType: Models.GenerateVideosAsync(string, GenerateVideosSource, GenerateVideosConfig?, CancellationToken)
+  nameWithType.vb: Models.GenerateVideosAsync(String, GenerateVideosSource, GenerateVideosConfig, CancellationToken)
 - uid: Google.GenAI.Models.GenerateVideosAsync*
   name: GenerateVideosAsync
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_GenerateVideosAsync_
@@ -1604,15 +1604,15 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Models.GenerateVideosAsync
   nameWithType: Models.GenerateVideosAsync
-- uid: Google.GenAI.Models.GetAsync(System.String,Google.GenAI.Types.GetModelConfig)
-  name: GetAsync(string, GetModelConfig?)
-  href: api/Google.GenAI.Models.html#Google_GenAI_Models_GetAsync_System_String_Google_GenAI_Types_GetModelConfig_
-  commentId: M:Google.GenAI.Models.GetAsync(System.String,Google.GenAI.Types.GetModelConfig)
-  name.vb: GetAsync(String, GetModelConfig)
-  fullName: Google.GenAI.Models.GetAsync(string, Google.GenAI.Types.GetModelConfig?)
-  fullName.vb: Google.GenAI.Models.GetAsync(String, Google.GenAI.Types.GetModelConfig)
-  nameWithType: Models.GetAsync(string, GetModelConfig?)
-  nameWithType.vb: Models.GetAsync(String, GetModelConfig)
+- uid: Google.GenAI.Models.GetAsync(System.String,Google.GenAI.Types.GetModelConfig,System.Threading.CancellationToken)
+  name: GetAsync(string, GetModelConfig?, CancellationToken)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_GetAsync_System_String_Google_GenAI_Types_GetModelConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Models.GetAsync(System.String,Google.GenAI.Types.GetModelConfig,System.Threading.CancellationToken)
+  name.vb: GetAsync(String, GetModelConfig, CancellationToken)
+  fullName: Google.GenAI.Models.GetAsync(string, Google.GenAI.Types.GetModelConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Models.GetAsync(String, Google.GenAI.Types.GetModelConfig, System.Threading.CancellationToken)
+  nameWithType: Models.GetAsync(string, GetModelConfig?, CancellationToken)
+  nameWithType.vb: Models.GetAsync(String, GetModelConfig, CancellationToken)
 - uid: Google.GenAI.Models.GetAsync*
   name: GetAsync
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_GetAsync_
@@ -1620,15 +1620,15 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Models.GetAsync
   nameWithType: Models.GetAsync
-- uid: Google.GenAI.Models.ListAsync(Google.GenAI.Types.ListModelsConfig)
-  name: ListAsync(ListModelsConfig?)
-  href: api/Google.GenAI.Models.html#Google_GenAI_Models_ListAsync_Google_GenAI_Types_ListModelsConfig_
-  commentId: M:Google.GenAI.Models.ListAsync(Google.GenAI.Types.ListModelsConfig)
-  name.vb: ListAsync(ListModelsConfig)
-  fullName: Google.GenAI.Models.ListAsync(Google.GenAI.Types.ListModelsConfig?)
-  fullName.vb: Google.GenAI.Models.ListAsync(Google.GenAI.Types.ListModelsConfig)
-  nameWithType: Models.ListAsync(ListModelsConfig?)
-  nameWithType.vb: Models.ListAsync(ListModelsConfig)
+- uid: Google.GenAI.Models.ListAsync(Google.GenAI.Types.ListModelsConfig,System.Threading.CancellationToken)
+  name: ListAsync(ListModelsConfig?, CancellationToken)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_ListAsync_Google_GenAI_Types_ListModelsConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Models.ListAsync(Google.GenAI.Types.ListModelsConfig,System.Threading.CancellationToken)
+  name.vb: ListAsync(ListModelsConfig, CancellationToken)
+  fullName: Google.GenAI.Models.ListAsync(Google.GenAI.Types.ListModelsConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Models.ListAsync(Google.GenAI.Types.ListModelsConfig, System.Threading.CancellationToken)
+  nameWithType: Models.ListAsync(ListModelsConfig?, CancellationToken)
+  nameWithType.vb: Models.ListAsync(ListModelsConfig, CancellationToken)
 - uid: Google.GenAI.Models.ListAsync*
   name: ListAsync
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_ListAsync_
@@ -1636,15 +1636,15 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Models.ListAsync
   nameWithType: Models.ListAsync
-- uid: Google.GenAI.Models.RecontextImageAsync(System.String,Google.GenAI.Types.RecontextImageSource,Google.GenAI.Types.RecontextImageConfig)
-  name: RecontextImageAsync(string, RecontextImageSource, RecontextImageConfig?)
-  href: api/Google.GenAI.Models.html#Google_GenAI_Models_RecontextImageAsync_System_String_Google_GenAI_Types_RecontextImageSource_Google_GenAI_Types_RecontextImageConfig_
-  commentId: M:Google.GenAI.Models.RecontextImageAsync(System.String,Google.GenAI.Types.RecontextImageSource,Google.GenAI.Types.RecontextImageConfig)
-  name.vb: RecontextImageAsync(String, RecontextImageSource, RecontextImageConfig)
-  fullName: Google.GenAI.Models.RecontextImageAsync(string, Google.GenAI.Types.RecontextImageSource, Google.GenAI.Types.RecontextImageConfig?)
-  fullName.vb: Google.GenAI.Models.RecontextImageAsync(String, Google.GenAI.Types.RecontextImageSource, Google.GenAI.Types.RecontextImageConfig)
-  nameWithType: Models.RecontextImageAsync(string, RecontextImageSource, RecontextImageConfig?)
-  nameWithType.vb: Models.RecontextImageAsync(String, RecontextImageSource, RecontextImageConfig)
+- uid: Google.GenAI.Models.RecontextImageAsync(System.String,Google.GenAI.Types.RecontextImageSource,Google.GenAI.Types.RecontextImageConfig,System.Threading.CancellationToken)
+  name: RecontextImageAsync(string, RecontextImageSource, RecontextImageConfig?, CancellationToken)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_RecontextImageAsync_System_String_Google_GenAI_Types_RecontextImageSource_Google_GenAI_Types_RecontextImageConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Models.RecontextImageAsync(System.String,Google.GenAI.Types.RecontextImageSource,Google.GenAI.Types.RecontextImageConfig,System.Threading.CancellationToken)
+  name.vb: RecontextImageAsync(String, RecontextImageSource, RecontextImageConfig, CancellationToken)
+  fullName: Google.GenAI.Models.RecontextImageAsync(string, Google.GenAI.Types.RecontextImageSource, Google.GenAI.Types.RecontextImageConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Models.RecontextImageAsync(String, Google.GenAI.Types.RecontextImageSource, Google.GenAI.Types.RecontextImageConfig, System.Threading.CancellationToken)
+  nameWithType: Models.RecontextImageAsync(string, RecontextImageSource, RecontextImageConfig?, CancellationToken)
+  nameWithType.vb: Models.RecontextImageAsync(String, RecontextImageSource, RecontextImageConfig, CancellationToken)
 - uid: Google.GenAI.Models.RecontextImageAsync*
   name: RecontextImageAsync
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_RecontextImageAsync_
@@ -1652,15 +1652,15 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Models.RecontextImageAsync
   nameWithType: Models.RecontextImageAsync
-- uid: Google.GenAI.Models.SegmentImageAsync(System.String,Google.GenAI.Types.SegmentImageSource,Google.GenAI.Types.SegmentImageConfig)
-  name: SegmentImageAsync(string, SegmentImageSource, SegmentImageConfig?)
-  href: api/Google.GenAI.Models.html#Google_GenAI_Models_SegmentImageAsync_System_String_Google_GenAI_Types_SegmentImageSource_Google_GenAI_Types_SegmentImageConfig_
-  commentId: M:Google.GenAI.Models.SegmentImageAsync(System.String,Google.GenAI.Types.SegmentImageSource,Google.GenAI.Types.SegmentImageConfig)
-  name.vb: SegmentImageAsync(String, SegmentImageSource, SegmentImageConfig)
-  fullName: Google.GenAI.Models.SegmentImageAsync(string, Google.GenAI.Types.SegmentImageSource, Google.GenAI.Types.SegmentImageConfig?)
-  fullName.vb: Google.GenAI.Models.SegmentImageAsync(String, Google.GenAI.Types.SegmentImageSource, Google.GenAI.Types.SegmentImageConfig)
-  nameWithType: Models.SegmentImageAsync(string, SegmentImageSource, SegmentImageConfig?)
-  nameWithType.vb: Models.SegmentImageAsync(String, SegmentImageSource, SegmentImageConfig)
+- uid: Google.GenAI.Models.SegmentImageAsync(System.String,Google.GenAI.Types.SegmentImageSource,Google.GenAI.Types.SegmentImageConfig,System.Threading.CancellationToken)
+  name: SegmentImageAsync(string, SegmentImageSource, SegmentImageConfig?, CancellationToken)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_SegmentImageAsync_System_String_Google_GenAI_Types_SegmentImageSource_Google_GenAI_Types_SegmentImageConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Models.SegmentImageAsync(System.String,Google.GenAI.Types.SegmentImageSource,Google.GenAI.Types.SegmentImageConfig,System.Threading.CancellationToken)
+  name.vb: SegmentImageAsync(String, SegmentImageSource, SegmentImageConfig, CancellationToken)
+  fullName: Google.GenAI.Models.SegmentImageAsync(string, Google.GenAI.Types.SegmentImageSource, Google.GenAI.Types.SegmentImageConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Models.SegmentImageAsync(String, Google.GenAI.Types.SegmentImageSource, Google.GenAI.Types.SegmentImageConfig, System.Threading.CancellationToken)
+  nameWithType: Models.SegmentImageAsync(string, SegmentImageSource, SegmentImageConfig?, CancellationToken)
+  nameWithType.vb: Models.SegmentImageAsync(String, SegmentImageSource, SegmentImageConfig, CancellationToken)
 - uid: Google.GenAI.Models.SegmentImageAsync*
   name: SegmentImageAsync
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_SegmentImageAsync_
@@ -1668,15 +1668,15 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Models.SegmentImageAsync
   nameWithType: Models.SegmentImageAsync
-- uid: Google.GenAI.Models.UpdateAsync(System.String,Google.GenAI.Types.UpdateModelConfig)
-  name: UpdateAsync(string, UpdateModelConfig?)
-  href: api/Google.GenAI.Models.html#Google_GenAI_Models_UpdateAsync_System_String_Google_GenAI_Types_UpdateModelConfig_
-  commentId: M:Google.GenAI.Models.UpdateAsync(System.String,Google.GenAI.Types.UpdateModelConfig)
-  name.vb: UpdateAsync(String, UpdateModelConfig)
-  fullName: Google.GenAI.Models.UpdateAsync(string, Google.GenAI.Types.UpdateModelConfig?)
-  fullName.vb: Google.GenAI.Models.UpdateAsync(String, Google.GenAI.Types.UpdateModelConfig)
-  nameWithType: Models.UpdateAsync(string, UpdateModelConfig?)
-  nameWithType.vb: Models.UpdateAsync(String, UpdateModelConfig)
+- uid: Google.GenAI.Models.UpdateAsync(System.String,Google.GenAI.Types.UpdateModelConfig,System.Threading.CancellationToken)
+  name: UpdateAsync(string, UpdateModelConfig?, CancellationToken)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_UpdateAsync_System_String_Google_GenAI_Types_UpdateModelConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Models.UpdateAsync(System.String,Google.GenAI.Types.UpdateModelConfig,System.Threading.CancellationToken)
+  name.vb: UpdateAsync(String, UpdateModelConfig, CancellationToken)
+  fullName: Google.GenAI.Models.UpdateAsync(string, Google.GenAI.Types.UpdateModelConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Models.UpdateAsync(String, Google.GenAI.Types.UpdateModelConfig, System.Threading.CancellationToken)
+  nameWithType: Models.UpdateAsync(string, UpdateModelConfig?, CancellationToken)
+  nameWithType.vb: Models.UpdateAsync(String, UpdateModelConfig, CancellationToken)
 - uid: Google.GenAI.Models.UpdateAsync*
   name: UpdateAsync
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_UpdateAsync_
@@ -1684,15 +1684,15 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Models.UpdateAsync
   nameWithType: Models.UpdateAsync
-- uid: Google.GenAI.Models.UpscaleImageAsync(System.String,Google.GenAI.Types.Image,System.String,Google.GenAI.Types.UpscaleImageConfig)
-  name: UpscaleImageAsync(string, Image, string, UpscaleImageConfig?)
-  href: api/Google.GenAI.Models.html#Google_GenAI_Models_UpscaleImageAsync_System_String_Google_GenAI_Types_Image_System_String_Google_GenAI_Types_UpscaleImageConfig_
-  commentId: M:Google.GenAI.Models.UpscaleImageAsync(System.String,Google.GenAI.Types.Image,System.String,Google.GenAI.Types.UpscaleImageConfig)
-  name.vb: UpscaleImageAsync(String, Image, String, UpscaleImageConfig)
-  fullName: Google.GenAI.Models.UpscaleImageAsync(string, Google.GenAI.Types.Image, string, Google.GenAI.Types.UpscaleImageConfig?)
-  fullName.vb: Google.GenAI.Models.UpscaleImageAsync(String, Google.GenAI.Types.Image, String, Google.GenAI.Types.UpscaleImageConfig)
-  nameWithType: Models.UpscaleImageAsync(string, Image, string, UpscaleImageConfig?)
-  nameWithType.vb: Models.UpscaleImageAsync(String, Image, String, UpscaleImageConfig)
+- uid: Google.GenAI.Models.UpscaleImageAsync(System.String,Google.GenAI.Types.Image,System.String,Google.GenAI.Types.UpscaleImageConfig,System.Threading.CancellationToken)
+  name: UpscaleImageAsync(string, Image, string, UpscaleImageConfig?, CancellationToken)
+  href: api/Google.GenAI.Models.html#Google_GenAI_Models_UpscaleImageAsync_System_String_Google_GenAI_Types_Image_System_String_Google_GenAI_Types_UpscaleImageConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Models.UpscaleImageAsync(System.String,Google.GenAI.Types.Image,System.String,Google.GenAI.Types.UpscaleImageConfig,System.Threading.CancellationToken)
+  name.vb: UpscaleImageAsync(String, Image, String, UpscaleImageConfig, CancellationToken)
+  fullName: Google.GenAI.Models.UpscaleImageAsync(string, Google.GenAI.Types.Image, string, Google.GenAI.Types.UpscaleImageConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Models.UpscaleImageAsync(String, Google.GenAI.Types.Image, String, Google.GenAI.Types.UpscaleImageConfig, System.Threading.CancellationToken)
+  nameWithType: Models.UpscaleImageAsync(string, Image, string, UpscaleImageConfig?, CancellationToken)
+  nameWithType.vb: Models.UpscaleImageAsync(String, Image, String, UpscaleImageConfig, CancellationToken)
 - uid: Google.GenAI.Models.UpscaleImageAsync*
   name: UpscaleImageAsync
   href: api/Google.GenAI.Models.html#Google_GenAI_Models_UpscaleImageAsync_
@@ -1732,15 +1732,15 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Operations.GetAsync
   nameWithType: Operations.GetAsync
-- uid: Google.GenAI.Operations.GetAsync``1(``0,Google.GenAI.Types.GetOperationConfig)
-  name: GetAsync<TOperation>(TOperation, GetOperationConfig?)
-  href: api/Google.GenAI.Operations.html#Google_GenAI_Operations_GetAsync__1___0_Google_GenAI_Types_GetOperationConfig_
-  commentId: M:Google.GenAI.Operations.GetAsync``1(``0,Google.GenAI.Types.GetOperationConfig)
-  name.vb: GetAsync(Of TOperation)(TOperation, GetOperationConfig)
-  fullName: Google.GenAI.Operations.GetAsync<TOperation>(TOperation, Google.GenAI.Types.GetOperationConfig?)
-  fullName.vb: Google.GenAI.Operations.GetAsync(Of TOperation)(TOperation, Google.GenAI.Types.GetOperationConfig)
-  nameWithType: Operations.GetAsync<TOperation>(TOperation, GetOperationConfig?)
-  nameWithType.vb: Operations.GetAsync(Of TOperation)(TOperation, GetOperationConfig)
+- uid: Google.GenAI.Operations.GetAsync``1(``0,Google.GenAI.Types.GetOperationConfig,System.Threading.CancellationToken)
+  name: GetAsync<TOperation>(TOperation, GetOperationConfig?, CancellationToken)
+  href: api/Google.GenAI.Operations.html#Google_GenAI_Operations_GetAsync__1___0_Google_GenAI_Types_GetOperationConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Operations.GetAsync``1(``0,Google.GenAI.Types.GetOperationConfig,System.Threading.CancellationToken)
+  name.vb: GetAsync(Of TOperation)(TOperation, GetOperationConfig, CancellationToken)
+  fullName: Google.GenAI.Operations.GetAsync<TOperation>(TOperation, Google.GenAI.Types.GetOperationConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Operations.GetAsync(Of TOperation)(TOperation, Google.GenAI.Types.GetOperationConfig, System.Threading.CancellationToken)
+  nameWithType: Operations.GetAsync<TOperation>(TOperation, GetOperationConfig?, CancellationToken)
+  nameWithType.vb: Operations.GetAsync(Of TOperation)(TOperation, GetOperationConfig, CancellationToken)
 - uid: Google.GenAI.Pager`3
   name: Pager<TItem, TConfig, TResponse>
   href: api/Google.GenAI.Pager-3.html
@@ -2055,15 +2055,15 @@ references:
   fullName.vb: Google.GenAI.Tunings.New
   nameWithType: Tunings.Tunings
   nameWithType.vb: Tunings.New
-- uid: Google.GenAI.Tunings.CancelAsync(System.String,Google.GenAI.Types.CancelTuningJobConfig)
-  name: CancelAsync(string, CancelTuningJobConfig?)
-  href: api/Google.GenAI.Tunings.html#Google_GenAI_Tunings_CancelAsync_System_String_Google_GenAI_Types_CancelTuningJobConfig_
-  commentId: M:Google.GenAI.Tunings.CancelAsync(System.String,Google.GenAI.Types.CancelTuningJobConfig)
-  name.vb: CancelAsync(String, CancelTuningJobConfig)
-  fullName: Google.GenAI.Tunings.CancelAsync(string, Google.GenAI.Types.CancelTuningJobConfig?)
-  fullName.vb: Google.GenAI.Tunings.CancelAsync(String, Google.GenAI.Types.CancelTuningJobConfig)
-  nameWithType: Tunings.CancelAsync(string, CancelTuningJobConfig?)
-  nameWithType.vb: Tunings.CancelAsync(String, CancelTuningJobConfig)
+- uid: Google.GenAI.Tunings.CancelAsync(System.String,Google.GenAI.Types.CancelTuningJobConfig,System.Threading.CancellationToken)
+  name: CancelAsync(string, CancelTuningJobConfig?, CancellationToken)
+  href: api/Google.GenAI.Tunings.html#Google_GenAI_Tunings_CancelAsync_System_String_Google_GenAI_Types_CancelTuningJobConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Tunings.CancelAsync(System.String,Google.GenAI.Types.CancelTuningJobConfig,System.Threading.CancellationToken)
+  name.vb: CancelAsync(String, CancelTuningJobConfig, CancellationToken)
+  fullName: Google.GenAI.Tunings.CancelAsync(string, Google.GenAI.Types.CancelTuningJobConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Tunings.CancelAsync(String, Google.GenAI.Types.CancelTuningJobConfig, System.Threading.CancellationToken)
+  nameWithType: Tunings.CancelAsync(string, CancelTuningJobConfig?, CancellationToken)
+  nameWithType.vb: Tunings.CancelAsync(String, CancelTuningJobConfig, CancellationToken)
 - uid: Google.GenAI.Tunings.CancelAsync*
   name: CancelAsync
   href: api/Google.GenAI.Tunings.html#Google_GenAI_Tunings_CancelAsync_
@@ -2071,15 +2071,15 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Tunings.CancelAsync
   nameWithType: Tunings.CancelAsync
-- uid: Google.GenAI.Tunings.GetAsync(System.String,Google.GenAI.Types.GetTuningJobConfig)
-  name: GetAsync(string, GetTuningJobConfig?)
-  href: api/Google.GenAI.Tunings.html#Google_GenAI_Tunings_GetAsync_System_String_Google_GenAI_Types_GetTuningJobConfig_
-  commentId: M:Google.GenAI.Tunings.GetAsync(System.String,Google.GenAI.Types.GetTuningJobConfig)
-  name.vb: GetAsync(String, GetTuningJobConfig)
-  fullName: Google.GenAI.Tunings.GetAsync(string, Google.GenAI.Types.GetTuningJobConfig?)
-  fullName.vb: Google.GenAI.Tunings.GetAsync(String, Google.GenAI.Types.GetTuningJobConfig)
-  nameWithType: Tunings.GetAsync(string, GetTuningJobConfig?)
-  nameWithType.vb: Tunings.GetAsync(String, GetTuningJobConfig)
+- uid: Google.GenAI.Tunings.GetAsync(System.String,Google.GenAI.Types.GetTuningJobConfig,System.Threading.CancellationToken)
+  name: GetAsync(string, GetTuningJobConfig?, CancellationToken)
+  href: api/Google.GenAI.Tunings.html#Google_GenAI_Tunings_GetAsync_System_String_Google_GenAI_Types_GetTuningJobConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Tunings.GetAsync(System.String,Google.GenAI.Types.GetTuningJobConfig,System.Threading.CancellationToken)
+  name.vb: GetAsync(String, GetTuningJobConfig, CancellationToken)
+  fullName: Google.GenAI.Tunings.GetAsync(string, Google.GenAI.Types.GetTuningJobConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Tunings.GetAsync(String, Google.GenAI.Types.GetTuningJobConfig, System.Threading.CancellationToken)
+  nameWithType: Tunings.GetAsync(string, GetTuningJobConfig?, CancellationToken)
+  nameWithType.vb: Tunings.GetAsync(String, GetTuningJobConfig, CancellationToken)
 - uid: Google.GenAI.Tunings.GetAsync*
   name: GetAsync
   href: api/Google.GenAI.Tunings.html#Google_GenAI_Tunings_GetAsync_
@@ -2087,15 +2087,15 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Tunings.GetAsync
   nameWithType: Tunings.GetAsync
-- uid: Google.GenAI.Tunings.ListAsync(Google.GenAI.Types.ListTuningJobsConfig)
-  name: ListAsync(ListTuningJobsConfig?)
-  href: api/Google.GenAI.Tunings.html#Google_GenAI_Tunings_ListAsync_Google_GenAI_Types_ListTuningJobsConfig_
-  commentId: M:Google.GenAI.Tunings.ListAsync(Google.GenAI.Types.ListTuningJobsConfig)
-  name.vb: ListAsync(ListTuningJobsConfig)
-  fullName: Google.GenAI.Tunings.ListAsync(Google.GenAI.Types.ListTuningJobsConfig?)
-  fullName.vb: Google.GenAI.Tunings.ListAsync(Google.GenAI.Types.ListTuningJobsConfig)
-  nameWithType: Tunings.ListAsync(ListTuningJobsConfig?)
-  nameWithType.vb: Tunings.ListAsync(ListTuningJobsConfig)
+- uid: Google.GenAI.Tunings.ListAsync(Google.GenAI.Types.ListTuningJobsConfig,System.Threading.CancellationToken)
+  name: ListAsync(ListTuningJobsConfig?, CancellationToken)
+  href: api/Google.GenAI.Tunings.html#Google_GenAI_Tunings_ListAsync_Google_GenAI_Types_ListTuningJobsConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Tunings.ListAsync(Google.GenAI.Types.ListTuningJobsConfig,System.Threading.CancellationToken)
+  name.vb: ListAsync(ListTuningJobsConfig, CancellationToken)
+  fullName: Google.GenAI.Tunings.ListAsync(Google.GenAI.Types.ListTuningJobsConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Tunings.ListAsync(Google.GenAI.Types.ListTuningJobsConfig, System.Threading.CancellationToken)
+  nameWithType: Tunings.ListAsync(ListTuningJobsConfig?, CancellationToken)
+  nameWithType.vb: Tunings.ListAsync(ListTuningJobsConfig, CancellationToken)
 - uid: Google.GenAI.Tunings.ListAsync*
   name: ListAsync
   href: api/Google.GenAI.Tunings.html#Google_GenAI_Tunings_ListAsync_
@@ -2103,15 +2103,15 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Tunings.ListAsync
   nameWithType: Tunings.ListAsync
-- uid: Google.GenAI.Tunings.TuneAsync(System.String,Google.GenAI.Types.TuningDataset,Google.GenAI.Types.CreateTuningJobConfig)
-  name: TuneAsync(string, TuningDataset, CreateTuningJobConfig?)
-  href: api/Google.GenAI.Tunings.html#Google_GenAI_Tunings_TuneAsync_System_String_Google_GenAI_Types_TuningDataset_Google_GenAI_Types_CreateTuningJobConfig_
-  commentId: M:Google.GenAI.Tunings.TuneAsync(System.String,Google.GenAI.Types.TuningDataset,Google.GenAI.Types.CreateTuningJobConfig)
-  name.vb: TuneAsync(String, TuningDataset, CreateTuningJobConfig)
-  fullName: Google.GenAI.Tunings.TuneAsync(string, Google.GenAI.Types.TuningDataset, Google.GenAI.Types.CreateTuningJobConfig?)
-  fullName.vb: Google.GenAI.Tunings.TuneAsync(String, Google.GenAI.Types.TuningDataset, Google.GenAI.Types.CreateTuningJobConfig)
-  nameWithType: Tunings.TuneAsync(string, TuningDataset, CreateTuningJobConfig?)
-  nameWithType.vb: Tunings.TuneAsync(String, TuningDataset, CreateTuningJobConfig)
+- uid: Google.GenAI.Tunings.TuneAsync(System.String,Google.GenAI.Types.TuningDataset,Google.GenAI.Types.CreateTuningJobConfig,System.Threading.CancellationToken)
+  name: TuneAsync(string, TuningDataset, CreateTuningJobConfig?, CancellationToken)
+  href: api/Google.GenAI.Tunings.html#Google_GenAI_Tunings_TuneAsync_System_String_Google_GenAI_Types_TuningDataset_Google_GenAI_Types_CreateTuningJobConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Tunings.TuneAsync(System.String,Google.GenAI.Types.TuningDataset,Google.GenAI.Types.CreateTuningJobConfig,System.Threading.CancellationToken)
+  name.vb: TuneAsync(String, TuningDataset, CreateTuningJobConfig, CancellationToken)
+  fullName: Google.GenAI.Tunings.TuneAsync(string, Google.GenAI.Types.TuningDataset, Google.GenAI.Types.CreateTuningJobConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Tunings.TuneAsync(String, Google.GenAI.Types.TuningDataset, Google.GenAI.Types.CreateTuningJobConfig, System.Threading.CancellationToken)
+  nameWithType: Tunings.TuneAsync(string, TuningDataset, CreateTuningJobConfig?, CancellationToken)
+  nameWithType.vb: Tunings.TuneAsync(String, TuningDataset, CreateTuningJobConfig, CancellationToken)
 - uid: Google.GenAI.Tunings.TuneAsync*
   name: TuneAsync
   href: api/Google.GenAI.Tunings.html#Google_GenAI_Tunings_TuneAsync_

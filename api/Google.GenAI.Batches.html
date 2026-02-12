@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Batches" data-uid="Google.GenAI.Batches" class="text-break">
-Class Batches  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Batches.cs/#L33"><i class="bi bi-code-slash"></i></a>
+Class Batches  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Batches.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -149,7 +149,7 @@ Class Batches  <a class="header-action link-secondary" title="View source" href=
 
   <h3 id="Google_GenAI_Batches__ctor_Google_GenAI_ApiClient_" data-uid="Google.GenAI.Batches.#ctor(Google.GenAI.ApiClient)">
   Batches(ApiClient)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Batches.cs/#L1576"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Batches.cs/#L1577"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -182,9 +182,9 @@ Class Batches  <a class="header-action link-secondary" title="View source" href=
 
   <a id="Google_GenAI_Batches_CancelAsync_" data-uid="Google.GenAI.Batches.CancelAsync*"></a>
 
-  <h3 id="Google_GenAI_Batches_CancelAsync_System_String_Google_GenAI_Types_CancelBatchJobConfig_" data-uid="Google.GenAI.Batches.CancelAsync(System.String,Google.GenAI.Types.CancelBatchJobConfig)">
-  CancelAsync(string, CancelBatchJobConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Batches.cs/#L1781"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Batches_CancelAsync_System_String_Google_GenAI_Types_CancelBatchJobConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Batches.CancelAsync(System.String,Google.GenAI.Types.CancelBatchJobConfig,System.Threading.CancellationToken)">
+  CancelAsync(string, CancelBatchJobConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Batches.cs/#L1800"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Cancels a batch job resource.</p>
@@ -192,7 +192,7 @@ Class Batches  <a class="header-action link-secondary" title="View source" href=
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task CancelAsync(string name, CancelBatchJobConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task CancelAsync(string name, CancelBatchJobConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -207,6 +207,8 @@ Vertex AI client. Or &quot;batches/abc&quot; using the Gemini Developer AI clien
     <dd><p>A <a class="xref" href="Google.GenAI.Types.CancelBatchJobConfig.html">CancelBatchJobConfig</a> for configuring the cancel
 request.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
@@ -229,9 +231,9 @@ operation.</p>
 
   <a id="Google_GenAI_Batches_CreateAsync_" data-uid="Google.GenAI.Batches.CreateAsync*"></a>
 
-  <h3 id="Google_GenAI_Batches_CreateAsync_System_String_Google_GenAI_Types_BatchJobSource_Google_GenAI_Types_CreateBatchJobConfig_" data-uid="Google.GenAI.Batches.CreateAsync(System.String,Google.GenAI.Types.BatchJobSource,Google.GenAI.Types.CreateBatchJobConfig)">
-  CreateAsync(string, BatchJobSource, CreateBatchJobConfig)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Batches.cs/#L1995"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Batches_CreateAsync_System_String_Google_GenAI_Types_BatchJobSource_Google_GenAI_Types_CreateBatchJobConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Batches.CreateAsync(System.String,Google.GenAI.Types.BatchJobSource,Google.GenAI.Types.CreateBatchJobConfig,System.Threading.CancellationToken)">
+  CreateAsync(string, BatchJobSource, CreateBatchJobConfig, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Batches.cs/#L2032"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a batch job.</p>
@@ -239,7 +241,7 @@ operation.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;BatchJob&gt; CreateAsync(string model, BatchJobSource src, CreateBatchJobConfig config)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;BatchJob&gt; CreateAsync(string model, BatchJobSource src, CreateBatchJobConfig config, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -257,14 +259,16 @@ inlined_request, or file name. Example: &quot;files/file_name&quot;.</p>
     <dd><p>Optional <a class="xref" href="Google.GenAI.Types.CreateBatchJobConfig.html">CreateBatchJobConfig</a> to configure the batch
 job.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation token for the request.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Google.GenAI.Types.BatchJob.html">BatchJob</a>&gt;</dt>
-    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that represents the asynchronous
-operation. The task result contains a <a class="xref" href="Google.GenAI.Types.BatchJob.html">BatchJob</a> instance with batch job
-details.</p>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that represents the asynchronous operation. The task
+result contains a <a class="xref" href="Google.GenAI.Types.BatchJob.html">BatchJob</a> instance with batch job details.</p>
 </dd>
   </dl>
 
@@ -280,9 +284,9 @@ details.</p>
 
   <a id="Google_GenAI_Batches_CreateEmbeddingsAsync_" data-uid="Google.GenAI.Batches.CreateEmbeddingsAsync*"></a>
 
-  <h3 id="Google_GenAI_Batches_CreateEmbeddingsAsync_System_String_Google_GenAI_Types_EmbeddingsBatchJobSource_Google_GenAI_Types_CreateEmbeddingsBatchJobConfig_" data-uid="Google.GenAI.Batches.CreateEmbeddingsAsync(System.String,Google.GenAI.Types.EmbeddingsBatchJobSource,Google.GenAI.Types.CreateEmbeddingsBatchJobConfig)">
-  CreateEmbeddingsAsync(string, EmbeddingsBatchJobSource, CreateEmbeddingsBatchJobConfig)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Batches.cs/#L2031"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Batches_CreateEmbeddingsAsync_System_String_Google_GenAI_Types_EmbeddingsBatchJobSource_Google_GenAI_Types_CreateEmbeddingsBatchJobConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Batches.CreateEmbeddingsAsync(System.String,Google.GenAI.Types.EmbeddingsBatchJobSource,Google.GenAI.Types.CreateEmbeddingsBatchJobConfig,System.Threading.CancellationToken)">
+  CreateEmbeddingsAsync(string, EmbeddingsBatchJobSource, CreateEmbeddingsBatchJobConfig, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Batches.cs/#L2070"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Makes an API request to create the batch embeddings job. This method is experimental.</p>
@@ -290,7 +294,7 @@ details.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;BatchJob&gt; CreateEmbeddingsAsync(string model, EmbeddingsBatchJobSource src, CreateEmbeddingsBatchJobConfig config)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;BatchJob&gt; CreateEmbeddingsAsync(string model, EmbeddingsBatchJobSource src, CreateEmbeddingsBatchJobConfig config, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -305,6 +309,9 @@ Gemini Developer API supports List of inlined_request, or file name. Example:
 </dd>
     <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.html">CreateEmbeddingsBatchJobConfig</a></dt>
     <dd><p>Optional <a class="xref" href="Google.GenAI.Types.CreateEmbeddingsBatchJobConfig.html">CreateEmbeddingsBatchJobConfig</a> to configure the batch job.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation token for the request.</p>
 </dd>
   </dl>
 
@@ -328,9 +335,9 @@ a <a class="xref" href="Google.GenAI.Types.BatchJob.html">BatchJob</a> instance 
 
   <a id="Google_GenAI_Batches_DeleteAsync_" data-uid="Google.GenAI.Batches.DeleteAsync*"></a>
 
-  <h3 id="Google_GenAI_Batches_DeleteAsync_System_String_Google_GenAI_Types_DeleteBatchJobConfig_" data-uid="Google.GenAI.Batches.DeleteAsync(System.String,Google.GenAI.Types.DeleteBatchJobConfig)">
-  DeleteAsync(string, DeleteBatchJobConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Batches.cs/#L1901"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Batches_DeleteAsync_System_String_Google_GenAI_Types_DeleteBatchJobConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Batches.DeleteAsync(System.String,Google.GenAI.Types.DeleteBatchJobConfig,System.Threading.CancellationToken)">
+  DeleteAsync(string, DeleteBatchJobConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Batches.cs/#L1932"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deletes a batch job resource.</p>
@@ -338,7 +345,7 @@ a <a class="xref" href="Google.GenAI.Types.BatchJob.html">BatchJob</a> instance 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;DeleteResourceJob&gt; DeleteAsync(string name, DeleteBatchJobConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;DeleteResourceJob&gt; DeleteAsync(string name, DeleteBatchJobConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -353,6 +360,8 @@ Vertex AI client. Or &quot;batches/abc&quot; using the Gemini Developer AI clien
     <dd><p>A <a class="xref" href="Google.GenAI.Types.DeleteBatchJobConfig.html">DeleteBatchJobConfig</a> for configuring the delete
 request.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
@@ -375,9 +384,9 @@ the deletion.</p>
 
   <a id="Google_GenAI_Batches_GetAsync_" data-uid="Google.GenAI.Batches.GetAsync*"></a>
 
-  <h3 id="Google_GenAI_Batches_GetAsync_System_String_Google_GenAI_Types_GetBatchJobConfig_" data-uid="Google.GenAI.Batches.GetAsync(System.String,Google.GenAI.Types.GetBatchJobConfig)">
-  GetAsync(string, GetBatchJobConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Batches.cs/#L1714"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Batches_GetAsync_System_String_Google_GenAI_Types_GetBatchJobConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Batches.GetAsync(System.String,Google.GenAI.Types.GetBatchJobConfig,System.Threading.CancellationToken)">
+  GetAsync(string, GetBatchJobConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Batches.cs/#L1727"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a batch job resource.</p>
@@ -385,7 +394,7 @@ the deletion.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;BatchJob&gt; GetAsync(string name, GetBatchJobConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;BatchJob&gt; GetAsync(string name, GetBatchJobConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -400,6 +409,8 @@ Vertex AI client. Or &quot;batches/abc&quot; using the Gemini Developer AI clien
     <dd><p>A <a class="xref" href="Google.GenAI.Types.GetBatchJobConfig.html">GetBatchJobConfig</a> for configuring the get
 request.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
@@ -422,9 +433,9 @@ batch job.</p>
 
   <a id="Google_GenAI_Batches_ListAsync_" data-uid="Google.GenAI.Batches.ListAsync*"></a>
 
-  <h3 id="Google_GenAI_Batches_ListAsync_Google_GenAI_Types_ListBatchJobsConfig_" data-uid="Google.GenAI.Batches.ListAsync(Google.GenAI.Types.ListBatchJobsConfig)">
-  ListAsync(ListBatchJobsConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Batches.cs/#L1967"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Batches_ListAsync_Google_GenAI_Types_ListBatchJobsConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Batches.ListAsync(Google.GenAI.Types.ListBatchJobsConfig,System.Threading.CancellationToken)">
+  ListAsync(ListBatchJobsConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Batches.cs/#L2004"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Makes an API request to list the available batch jobs.</p>
@@ -432,7 +443,7 @@ batch job.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Pager&lt;BatchJob, ListBatchJobsConfig, ListBatchJobsResponse&gt;&gt; ListAsync(ListBatchJobsConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Pager&lt;BatchJob, ListBatchJobsConfig, ListBatchJobsResponse&gt;&gt; ListAsync(ListBatchJobsConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -441,6 +452,8 @@ batch job.</p>
     <dd><p>A <a class="xref" href="Google.GenAI.Types.ListBatchJobsConfig.html">ListBatchJobsConfig</a> for configuring the list
 request.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
@@ -467,7 +480,7 @@ exhausted.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Batches.cs/#L33" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Batches.cs/#L34" class="edit-link">Edit this page</a>
         </div>
 
 

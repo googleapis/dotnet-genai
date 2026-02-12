@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Operations" data-uid="Google.GenAI.Operations" class="text-break">
-Class Operations  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Operations.cs/#L28"><i class="bi bi-code-slash"></i></a>
+Class Operations  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Operations.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -149,7 +149,7 @@ Class Operations  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="Google_GenAI_Operations__ctor_Google_GenAI_ApiClient_" data-uid="Google.GenAI.Operations.#ctor(Google.GenAI.ApiClient)">
   Operations(ApiClient)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Operations.cs/#L276"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Operations.cs/#L277"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -182,9 +182,9 @@ Class Operations  <a class="header-action link-secondary" title="View source" hr
 
   <a id="Google_GenAI_Operations_GetAsync_" data-uid="Google.GenAI.Operations.GetAsync*"></a>
 
-  <h3 id="Google_GenAI_Operations_GetAsync__1___0_Google_GenAI_Types_GetOperationConfig_" data-uid="Google.GenAI.Operations.GetAsync``1(``0,Google.GenAI.Types.GetOperationConfig)">
-  GetAsync&lt;TOperation&gt;(TOperation, GetOperationConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Operations.cs/#L388"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Operations_GetAsync__1___0_Google_GenAI_Types_GetOperationConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Operations.GetAsync``1(``0,Google.GenAI.Types.GetOperationConfig,System.Threading.CancellationToken)">
+  GetAsync&lt;TOperation&gt;(TOperation, GetOperationConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Operations.cs/#L402"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the status of a long-running operation.</p>
@@ -192,7 +192,7 @@ Class Operations  <a class="header-action link-secondary" title="View source" hr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;TOperation&gt; GetAsync&lt;TOperation&gt;(TOperation operation, GetOperationConfig? config) where TOperation : Operation&lt;TOperation&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;TOperation&gt; GetAsync&lt;TOperation&gt;(TOperation operation, GetOperationConfig? config, CancellationToken cancellationToken = default) where TOperation : Operation&lt;TOperation&gt;</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -204,13 +204,18 @@ Class Operations  <a class="header-action link-secondary" title="View source" hr
     <dd><p>A <a class="xref" href="Google.GenAI.Types.GetOperationConfig.html">GetOperationConfig</a> instance that specifies the optional
 configurations.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>
+that can be used to cancel the operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TOperation&gt;</dt>
-    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that represents the
-asynchronous operation. The task result contains the updated <code class="typeparamref">TOperation</code> instance with the latest status or result.</p>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a>
+that represents the asynchronous operation. The task result contains the updated
+<code class="typeparamref">TOperation</code> instance with the latest status or result.</p>
 </dd>
   </dl>
 
@@ -234,7 +239,7 @@ asynchronous operation. The task result contains the updated <code class="typepa
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Operations.cs/#L28" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Operations.cs/#L29" class="edit-link">Edit this page</a>
         </div>
 
 

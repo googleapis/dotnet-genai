@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Files" data-uid="Google.GenAI.Files" class="text-break">
-Class Files  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L30"><i class="bi bi-code-slash"></i></a>
+Class Files  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -149,7 +149,7 @@ Class Files  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="Google_GenAI_Files__ctor_Google_GenAI_ApiClient_" data-uid="Google.GenAI.Files.#ctor(Google.GenAI.ApiClient)">
   Files(ApiClient)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L144"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -182,16 +182,16 @@ Class Files  <a class="header-action link-secondary" title="View source" href="h
 
   <a id="Google_GenAI_Files_DeleteAsync_" data-uid="Google.GenAI.Files.DeleteAsync*"></a>
 
-  <h3 id="Google_GenAI_Files_DeleteAsync_System_String_Google_GenAI_Types_DeleteFileConfig_" data-uid="Google.GenAI.Files.DeleteAsync(System.String,Google.GenAI.Types.DeleteFileConfig)">
-  DeleteAsync(string, DeleteFileConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L337"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Files_DeleteAsync_System_String_Google_GenAI_Types_DeleteFileConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Files.DeleteAsync(System.String,Google.GenAI.Types.DeleteFileConfig,System.Threading.CancellationToken)">
+  DeleteAsync(string, DeleteFileConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L356"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;DeleteFileResponse&gt; DeleteAsync(string name, DeleteFileConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;DeleteFileResponse&gt; DeleteAsync(string name, DeleteFileConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -199,6 +199,8 @@ Class Files  <a class="header-action link-secondary" title="View source" href="h
     <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
     <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.DeleteFileConfig.html">DeleteFileConfig</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd></dd>
   </dl>
 
@@ -220,9 +222,9 @@ Class Files  <a class="header-action link-secondary" title="View source" href="h
 
   <a id="Google_GenAI_Files_DownloadAsync_" data-uid="Google.GenAI.Files.DownloadAsync*"></a>
 
-  <h3 id="Google_GenAI_Files_DownloadAsync_Google_GenAI_Types_File_Google_GenAI_Types_DownloadFileConfig_" data-uid="Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.File,Google.GenAI.Types.DownloadFileConfig)">
-  DownloadAsync(File, DownloadFileConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L502"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Files_DownloadAsync_Google_GenAI_Types_File_Google_GenAI_Types_DownloadFileConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.File,Google.GenAI.Types.DownloadFileConfig,System.Threading.CancellationToken)">
+  DownloadAsync(File, DownloadFileConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L538"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Downloads a <a class="xref" href="Google.GenAI.Types.File.html">File</a> object and returns it as a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a>. Caller is responsible for disposing the returned stream.</p>
@@ -230,7 +232,7 @@ Class Files  <a class="header-action link-secondary" title="View source" href="h
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Stream&gt; DownloadAsync(File file, DownloadFileConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Stream&gt; DownloadAsync(File file, DownloadFileConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -242,6 +244,10 @@ Class Files  <a class="header-action link-secondary" title="View source" href="h
     <dd><p>A <a class="xref" href="Google.GenAI.Types.DownloadFileConfig.html">DownloadFileConfig</a> instance that specifies the optional
 configurations.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to
+cancel the operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
@@ -265,9 +271,9 @@ data.</p>
 
   <a id="Google_GenAI_Files_DownloadAsync_" data-uid="Google.GenAI.Files.DownloadAsync*"></a>
 
-  <h3 id="Google_GenAI_Files_DownloadAsync_Google_GenAI_Types_GeneratedVideo_Google_GenAI_Types_DownloadFileConfig_" data-uid="Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.GeneratedVideo,Google.GenAI.Types.DownloadFileConfig)">
-  DownloadAsync(GeneratedVideo, DownloadFileConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L544"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Files_DownloadAsync_Google_GenAI_Types_GeneratedVideo_Google_GenAI_Types_DownloadFileConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.GeneratedVideo,Google.GenAI.Types.DownloadFileConfig,System.Threading.CancellationToken)">
+  DownloadAsync(GeneratedVideo, DownloadFileConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L584"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Downloads a <a class="xref" href="Google.GenAI.Types.GeneratedVideo.html">GeneratedVideo</a> object and returns it as a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a>. Caller is responsible for disposing the returned stream.</p>
@@ -275,7 +281,7 @@ data.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Stream&gt; DownloadAsync(GeneratedVideo generatedVideo, DownloadFileConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Stream&gt; DownloadAsync(GeneratedVideo generatedVideo, DownloadFileConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -286,14 +292,16 @@ data.</p>
     <dd><p>A <a class="xref" href="Google.GenAI.Types.DownloadFileConfig.html">DownloadFileConfig</a> instance that
 specifies the optional configurations.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to cancel the operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a>&gt;</dt>
-    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that
-represents the asynchronous operation. The task result contains a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a> with
-the file data.</p>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that represents the asynchronous operation. The task result contains a
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a> with the file data.</p>
 </dd>
   </dl>
 
@@ -309,9 +317,9 @@ the file data.</p>
 
   <a id="Google_GenAI_Files_DownloadAsync_" data-uid="Google.GenAI.Files.DownloadAsync*"></a>
 
-  <h3 id="Google_GenAI_Files_DownloadAsync_Google_GenAI_Types_Video_Google_GenAI_Types_DownloadFileConfig_" data-uid="Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.Video,Google.GenAI.Types.DownloadFileConfig)">
-  DownloadAsync(Video, DownloadFileConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L523"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Files_DownloadAsync_Google_GenAI_Types_Video_Google_GenAI_Types_DownloadFileConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Files.DownloadAsync(Google.GenAI.Types.Video,Google.GenAI.Types.DownloadFileConfig,System.Threading.CancellationToken)">
+  DownloadAsync(Video, DownloadFileConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L561"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Downloads a <a class="xref" href="Google.GenAI.Types.Video.html">Video</a> object and returns it as a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a>. Caller is responsible for disposing the returned stream.</p>
@@ -319,7 +327,7 @@ the file data.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Stream&gt; DownloadAsync(Video video, DownloadFileConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Stream&gt; DownloadAsync(Video video, DownloadFileConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -329,6 +337,10 @@ the file data.</p>
     <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.DownloadFileConfig.html">DownloadFileConfig</a></dt>
     <dd><p>A <a class="xref" href="Google.GenAI.Types.DownloadFileConfig.html">DownloadFileConfig</a> instance that specifies the optional
 configurations.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to
+cancel the operation.</p>
 </dd>
   </dl>
 
@@ -353,9 +365,9 @@ data.</p>
 
   <a id="Google_GenAI_Files_DownloadAsync_" data-uid="Google.GenAI.Files.DownloadAsync*"></a>
 
-  <h3 id="Google_GenAI_Files_DownloadAsync_System_String_Google_GenAI_Types_DownloadFileConfig_" data-uid="Google.GenAI.Files.DownloadAsync(System.String,Google.GenAI.Types.DownloadFileConfig)">
-  DownloadAsync(string, DownloadFileConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L484"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Files_DownloadAsync_System_String_Google_GenAI_Types_DownloadFileConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Files.DownloadAsync(System.String,Google.GenAI.Types.DownloadFileConfig,System.Threading.CancellationToken)">
+  DownloadAsync(string, DownloadFileConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L518"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Downloads a file and returns it as a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a>. Caller is responsible for
@@ -364,7 +376,7 @@ disposing the returned stream.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Stream&gt; DownloadAsync(string fileName, DownloadFileConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Stream&gt; DownloadAsync(string fileName, DownloadFileConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -377,14 +389,16 @@ disposing the returned stream.</p>
     <dd><p>A <a class="xref" href="Google.GenAI.Types.DownloadFileConfig.html">DownloadFileConfig</a> instance that
 specifies the optional configurations.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to cancel the operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a>&gt;</dt>
-    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that
-represents the asynchronous operation. The task result contains a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a> with
-the file data.</p>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that represents the asynchronous operation. The task result contains a
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a> with the file data.</p>
 </dd>
   </dl>
 
@@ -400,9 +414,9 @@ the file data.</p>
 
   <a id="Google_GenAI_Files_DownloadToFileAsync_" data-uid="Google.GenAI.Files.DownloadToFileAsync*"></a>
 
-  <h3 id="Google_GenAI_Files_DownloadToFileAsync_Google_GenAI_Types_File_System_String_Google_GenAI_Types_DownloadFileConfig_" data-uid="Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.File,System.String,Google.GenAI.Types.DownloadFileConfig)">
-  DownloadToFileAsync(File, string, DownloadFileConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L586"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Files_DownloadToFileAsync_Google_GenAI_Types_File_System_String_Google_GenAI_Types_DownloadFileConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.File,System.String,Google.GenAI.Types.DownloadFileConfig,System.Threading.CancellationToken)">
+  DownloadToFileAsync(File, string, DownloadFileConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L634"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Downloads a <a class="xref" href="Google.GenAI.Types.File.html">File</a> object directly to a file path.</p>
@@ -410,7 +424,7 @@ the file data.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task DownloadToFileAsync(File file, string outputPath, DownloadFileConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task DownloadToFileAsync(File file, string outputPath, DownloadFileConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -425,6 +439,10 @@ the file data.</p>
     <dd><p>A <a class="xref" href="Google.GenAI.Types.DownloadFileConfig.html">DownloadFileConfig</a> instance that specifies the optional
 configurations.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to
+cancel the operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
@@ -447,9 +465,9 @@ operation.</p>
 
   <a id="Google_GenAI_Files_DownloadToFileAsync_" data-uid="Google.GenAI.Files.DownloadToFileAsync*"></a>
 
-  <h3 id="Google_GenAI_Files_DownloadToFileAsync_Google_GenAI_Types_GeneratedVideo_System_String_Google_GenAI_Types_DownloadFileConfig_" data-uid="Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.GeneratedVideo,System.String,Google.GenAI.Types.DownloadFileConfig)">
-  DownloadToFileAsync(GeneratedVideo, string, DownloadFileConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L606"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Files_DownloadToFileAsync_Google_GenAI_Types_GeneratedVideo_System_String_Google_GenAI_Types_DownloadFileConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.GeneratedVideo,System.String,Google.GenAI.Types.DownloadFileConfig,System.Threading.CancellationToken)">
+  DownloadToFileAsync(GeneratedVideo, string, DownloadFileConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L656"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Downloads a <a class="xref" href="Google.GenAI.Types.GeneratedVideo.html">GeneratedVideo</a> object directly to a file path.</p>
@@ -457,7 +475,7 @@ operation.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task DownloadToFileAsync(GeneratedVideo generatedVideo, string outputPath, DownloadFileConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task DownloadToFileAsync(GeneratedVideo generatedVideo, string outputPath, DownloadFileConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -471,6 +489,10 @@ operation.</p>
     <dd><p>A <a class="xref" href="Google.GenAI.Types.DownloadFileConfig.html">DownloadFileConfig</a> instance that specifies the optional
 configurations.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to
+cancel the operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
@@ -493,9 +515,9 @@ operation.</p>
 
   <a id="Google_GenAI_Files_DownloadToFileAsync_" data-uid="Google.GenAI.Files.DownloadToFileAsync*"></a>
 
-  <h3 id="Google_GenAI_Files_DownloadToFileAsync_Google_GenAI_Types_Video_System_String_Google_GenAI_Types_DownloadFileConfig_" data-uid="Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.Video,System.String,Google.GenAI.Types.DownloadFileConfig)">
-  DownloadToFileAsync(Video, string, DownloadFileConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L626"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Files_DownloadToFileAsync_Google_GenAI_Types_Video_System_String_Google_GenAI_Types_DownloadFileConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Files.DownloadToFileAsync(Google.GenAI.Types.Video,System.String,Google.GenAI.Types.DownloadFileConfig,System.Threading.CancellationToken)">
+  DownloadToFileAsync(Video, string, DownloadFileConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L678"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Downloads a <a class="xref" href="Google.GenAI.Types.Video.html">Video</a> object directly to a file path.</p>
@@ -503,7 +525,7 @@ operation.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task DownloadToFileAsync(Video video, string outputPath, DownloadFileConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task DownloadToFileAsync(Video video, string outputPath, DownloadFileConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -517,6 +539,10 @@ operation.</p>
     <dd><p>A <a class="xref" href="Google.GenAI.Types.DownloadFileConfig.html">DownloadFileConfig</a> instance that specifies the optional
 configurations.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to
+cancel the operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
@@ -539,9 +565,9 @@ operation.</p>
 
   <a id="Google_GenAI_Files_DownloadToFileAsync_" data-uid="Google.GenAI.Files.DownloadToFileAsync*"></a>
 
-  <h3 id="Google_GenAI_Files_DownloadToFileAsync_System_String_System_String_Google_GenAI_Types_DownloadFileConfig_" data-uid="Google.GenAI.Files.DownloadToFileAsync(System.String,System.String,Google.GenAI.Types.DownloadFileConfig)">
-  DownloadToFileAsync(string, string, DownloadFileConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L564"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Files_DownloadToFileAsync_System_String_System_String_Google_GenAI_Types_DownloadFileConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Files.DownloadToFileAsync(System.String,System.String,Google.GenAI.Types.DownloadFileConfig,System.Threading.CancellationToken)">
+  DownloadToFileAsync(string, string, DownloadFileConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L606"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Downloads a file directly to a file path.</p>
@@ -549,7 +575,7 @@ operation.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task DownloadToFileAsync(string fileName, string outputPath, DownloadFileConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task DownloadToFileAsync(string fileName, string outputPath, DownloadFileConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -564,6 +590,10 @@ operation.</p>
     <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.DownloadFileConfig.html">DownloadFileConfig</a></dt>
     <dd><p>A <a class="xref" href="Google.GenAI.Types.DownloadFileConfig.html">DownloadFileConfig</a> instance that specifies the optional
 configurations.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to
+cancel the operation.</p>
 </dd>
   </dl>
 
@@ -587,16 +617,16 @@ operation.</p>
 
   <a id="Google_GenAI_Files_GetAsync_" data-uid="Google.GenAI.Files.GetAsync*"></a>
 
-  <h3 id="Google_GenAI_Files_GetAsync_System_String_Google_GenAI_Types_GetFileConfig_" data-uid="Google.GenAI.Files.GetAsync(System.String,Google.GenAI.Types.GetFileConfig)">
-  GetAsync(string, GetFileConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L279"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Files_GetAsync_System_String_Google_GenAI_Types_GetFileConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Files.GetAsync(System.String,Google.GenAI.Types.GetFileConfig,System.Threading.CancellationToken)">
+  GetAsync(string, GetFileConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L292"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;File&gt; GetAsync(string name, GetFileConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;File&gt; GetAsync(string name, GetFileConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -604,6 +634,8 @@ operation.</p>
     <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
     <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.GetFileConfig.html">GetFileConfig</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd></dd>
   </dl>
 
@@ -625,21 +657,23 @@ operation.</p>
 
   <a id="Google_GenAI_Files_ListAsync_" data-uid="Google.GenAI.Files.ListAsync*"></a>
 
-  <h3 id="Google_GenAI_Files_ListAsync_Google_GenAI_Types_ListFilesConfig_" data-uid="Google.GenAI.Files.ListAsync(Google.GenAI.Types.ListFilesConfig)">
-  ListAsync(ListFilesConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L395"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Files_ListAsync_Google_GenAI_Types_ListFilesConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Files.ListAsync(Google.GenAI.Types.ListFilesConfig,System.Threading.CancellationToken)">
+  ListAsync(ListFilesConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L420"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Pager&lt;File, ListFilesConfig, ListFilesResponse&gt;&gt; ListAsync(ListFilesConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Pager&lt;File, ListFilesConfig, ListFilesResponse&gt;&gt; ListAsync(ListFilesConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.ListFilesConfig.html">ListFilesConfig</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd></dd>
   </dl>
 
@@ -661,9 +695,9 @@ operation.</p>
 
   <a id="Google_GenAI_Files_UploadAsync_" data-uid="Google.GenAI.Files.UploadAsync*"></a>
 
-  <h3 id="Google_GenAI_Files_UploadAsync_System_Byte___System_String_Google_GenAI_Types_UploadFileConfig_" data-uid="Google.GenAI.Files.UploadAsync(System.Byte[],System.String,Google.GenAI.Types.UploadFileConfig)">
-  UploadAsync(byte[], string?, UploadFileConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L441"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Files_UploadAsync_System_Byte___System_String_Google_GenAI_Types_UploadFileConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Files.UploadAsync(System.Byte[],System.String,Google.GenAI.Types.UploadFileConfig,System.Threading.CancellationToken)">
+  UploadAsync(byte[], string?, UploadFileConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L470"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Uploads a file from a byte array.</p>
@@ -671,7 +705,7 @@ operation.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;File&gt; UploadAsync(byte[] bytes, string? fileName = null, UploadFileConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;File&gt; UploadAsync(byte[] bytes, string? fileName = null, UploadFileConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -685,6 +719,10 @@ operation.</p>
     <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.UploadFileConfig.html">UploadFileConfig</a></dt>
     <dd><p>A <a class="xref" href="Google.GenAI.Types.UploadFileConfig.html">UploadFileConfig</a> instance that specifies the optional
 configurations.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to
+cancel the operation.</p>
 </dd>
   </dl>
 
@@ -708,9 +746,9 @@ represents the asynchronous operation. The task result contains the uploaded <a 
 
   <a id="Google_GenAI_Files_UploadAsync_" data-uid="Google.GenAI.Files.UploadAsync*"></a>
 
-  <h3 id="Google_GenAI_Files_UploadAsync_System_IO_Stream_System_Int64_System_String_System_String_Google_GenAI_Types_UploadFileConfig_" data-uid="Google.GenAI.Files.UploadAsync(System.IO.Stream,System.Int64,System.String,System.String,Google.GenAI.Types.UploadFileConfig)">
-  UploadAsync(Stream, long, string?, string?, UploadFileConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L462"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Files_UploadAsync_System_IO_Stream_System_Int64_System_String_System_String_Google_GenAI_Types_UploadFileConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Files.UploadAsync(System.IO.Stream,System.Int64,System.String,System.String,Google.GenAI.Types.UploadFileConfig,System.Threading.CancellationToken)">
+  UploadAsync(Stream, long, string?, string?, UploadFileConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L494"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Uploads a file from a stream.</p>
@@ -718,7 +756,7 @@ represents the asynchronous operation. The task result contains the uploaded <a 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;File&gt; UploadAsync(Stream stream, long size, string? fileName = null, string? mimeType = null, UploadFileConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;File&gt; UploadAsync(Stream stream, long size, string? fileName = null, string? mimeType = null, UploadFileConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -740,13 +778,17 @@ application/octet-stream.</p>
     <dd><p>A <a class="xref" href="Google.GenAI.Types.UploadFileConfig.html">UploadFileConfig</a>
 instance that specifies the optional configurations.</p>
 </dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to cancel the operation.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Google.GenAI.Types.File.html">File</a>&gt;</dt>
-    <dd><p>A Task&lt;Google.GenAI.Types.File&gt; that represents the asynchronous operation. The task
-result contains the uploaded <a class="xref" href="Google.GenAI.Types.File.html">File</a> metadata.</p>
+    <dd><p>A Task&lt;Google.GenAI.Types.File&gt; that represents the asynchronous
+operation. The task result contains the uploaded <a class="xref" href="Google.GenAI.Types.File.html">File</a>
+metadata.</p>
 </dd>
   </dl>
 
@@ -762,9 +804,9 @@ result contains the uploaded <a class="xref" href="Google.GenAI.Types.File.html"
 
   <a id="Google_GenAI_Files_UploadAsync_" data-uid="Google.GenAI.Files.UploadAsync*"></a>
 
-  <h3 id="Google_GenAI_Files_UploadAsync_System_String_Google_GenAI_Types_UploadFileConfig_" data-uid="Google.GenAI.Files.UploadAsync(System.String,Google.GenAI.Types.UploadFileConfig)">
-  UploadAsync(string, UploadFileConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L419"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Files_UploadAsync_System_String_Google_GenAI_Types_UploadFileConfig_System_Threading_CancellationToken_" data-uid="Google.GenAI.Files.UploadAsync(System.String,Google.GenAI.Types.UploadFileConfig,System.Threading.CancellationToken)">
+  UploadAsync(string, UploadFileConfig?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L445"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Uploads a file from a file path.</p>
@@ -772,7 +814,7 @@ result contains the uploaded <a class="xref" href="Google.GenAI.Types.File.html"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;File&gt; UploadAsync(string filePath, UploadFileConfig? config = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;File&gt; UploadAsync(string filePath, UploadFileConfig? config = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -783,6 +825,10 @@ result contains the uploaded <a class="xref" href="Google.GenAI.Types.File.html"
     <dt><code>config</code> <a class="xref" href="Google.GenAI.Types.UploadFileConfig.html">UploadFileConfig</a></dt>
     <dd><p>A <a class="xref" href="Google.GenAI.Types.UploadFileConfig.html">UploadFileConfig</a> instance that specifies the optional
 configurations.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> to
+cancel the operation.</p>
 </dd>
   </dl>
 
@@ -808,7 +854,7 @@ represents the asynchronous operation. The task result contains the uploaded <a 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L30" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Files.cs/#L31" class="edit-link">Edit this page</a>
         </div>
 
 
