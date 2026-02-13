@@ -754,6 +754,30 @@ public class EmbedContentExample {
     );
 
     Console.WriteLine(response.Embeddings[0].Values);
+
+    // Multimodal embedding with Vertex AI
+    var vertexClient = new Client(vertexAI: true);
+    var contents = new List&lt;Content&gt; {
+        new Content {
+            Parts = new List&lt;Part&gt; {
+                new Part { Text = &quot;Hello.&quot; },
+                new Part {
+                    FileData = new FileData {
+                        MimeType = &quot;image/png&quot;,
+                        FileUri = &quot;gs://cloud-samples-data/generative-ai/image/a-man-and-a-dog.png&quot;
+                    }
+                }
+            }
+        }
+    };
+    var config = new EmbedContentConfig {
+        OutputDimensionality = 10,
+        Title = &quot;test_title&quot;,
+        TaskType = &quot;RETRIEVAL_DOCUMENT&quot;,
+    };
+    var mmResponse = await vertexClient.Models.EmbedContentAsync(
+        model: &quot;gemini-embedding-2-exp-11-2025&quot;, contents: contents, config: config);
+    Console.WriteLine(mmResponse.Embeddings);
   }
 }
 </code></pre>

@@ -1470,6 +1470,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.EmbeddingApiType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.EmbeddingApiType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.EmbeddingApiType",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.EmbeddingApiType.yml\" sourcestartlinenumber=\"1\">Enum representing the Vertex embedding API to use.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.EmbeddingApiTypeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.EmbeddingApiTypeConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.EmbeddingApiTypeConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.EmbeddingsBatchJobSource.yml",
       "output": {
         ".html": {
