@@ -1,5 +1,13 @@
 # Changelog
 
+## Version 1.1.0, released 2026-02-19
+
+
+### New features
+
+* Support multimodal embedding for Gemini Embedding 2.0 and support MaaS models in Models.embed_content() (Vertex AI API) ([0af5cf5](https://github.com/googleapis/dotnet-genai/commit/0af5cf527989fb4ae6bc782afae51fc7f7fc3ea8))
+* Update to M.E.AI.Abstractions 10.3.0 and add reasoning support ([2d51687](https://github.com/googleapis/dotnet-genai/commit/2d516870b37eac6dbe576f44f4ddc8b028be1093))
+
 ## Version 1.0.0, released 2026-02-12
 
 
