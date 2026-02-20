@@ -20607,6 +20607,54 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.MaskReferenceModeConverter.Write
   nameWithType: MaskReferenceModeConverter.Write
+- uid: Google.GenAI.Types.McpServer
+  name: McpServer
+  href: api/Google.GenAI.Types.McpServer.html
+  commentId: T:Google.GenAI.Types.McpServer
+  fullName: Google.GenAI.Types.McpServer
+  nameWithType: McpServer
+- uid: Google.GenAI.Types.McpServer.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.McpServer.html#Google_GenAI_Types_McpServer_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.McpServer.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.McpServer.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.McpServer.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: McpServer.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: McpServer.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.McpServer.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.McpServer.html#Google_GenAI_Types_McpServer_FromJson_
+  commentId: Overload:Google.GenAI.Types.McpServer.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.McpServer.FromJson
+  nameWithType: McpServer.FromJson
+- uid: Google.GenAI.Types.McpServer.Name
+  name: Name
+  href: api/Google.GenAI.Types.McpServer.html#Google_GenAI_Types_McpServer_Name
+  commentId: P:Google.GenAI.Types.McpServer.Name
+  fullName: Google.GenAI.Types.McpServer.Name
+  nameWithType: McpServer.Name
+- uid: Google.GenAI.Types.McpServer.Name*
+  name: Name
+  href: api/Google.GenAI.Types.McpServer.html#Google_GenAI_Types_McpServer_Name_
+  commentId: Overload:Google.GenAI.Types.McpServer.Name
+  isSpec: "True"
+  fullName: Google.GenAI.Types.McpServer.Name
+  nameWithType: McpServer.Name
+- uid: Google.GenAI.Types.McpServer.StreamableHttpTransport
+  name: StreamableHttpTransport
+  href: api/Google.GenAI.Types.McpServer.html#Google_GenAI_Types_McpServer_StreamableHttpTransport
+  commentId: P:Google.GenAI.Types.McpServer.StreamableHttpTransport
+  fullName: Google.GenAI.Types.McpServer.StreamableHttpTransport
+  nameWithType: McpServer.StreamableHttpTransport
+- uid: Google.GenAI.Types.McpServer.StreamableHttpTransport*
+  name: StreamableHttpTransport
+  href: api/Google.GenAI.Types.McpServer.html#Google_GenAI_Types_McpServer_StreamableHttpTransport_
+  commentId: Overload:Google.GenAI.Types.McpServer.StreamableHttpTransport
+  isSpec: "True"
+  fullName: Google.GenAI.Types.McpServer.StreamableHttpTransport
+  nameWithType: McpServer.StreamableHttpTransport
 - uid: Google.GenAI.Types.MediaModality
   name: MediaModality
   href: api/Google.GenAI.Types.MediaModality.html
@@ -26337,6 +26385,93 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.StartSensitivityConverter.Write
   nameWithType: StartSensitivityConverter.Write
+- uid: Google.GenAI.Types.StreamableHttpTransport
+  name: StreamableHttpTransport
+  href: api/Google.GenAI.Types.StreamableHttpTransport.html
+  commentId: T:Google.GenAI.Types.StreamableHttpTransport
+  fullName: Google.GenAI.Types.StreamableHttpTransport
+  nameWithType: StreamableHttpTransport
+- uid: Google.GenAI.Types.StreamableHttpTransport.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.StreamableHttpTransport.html#Google_GenAI_Types_StreamableHttpTransport_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.StreamableHttpTransport.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.StreamableHttpTransport.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.StreamableHttpTransport.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: StreamableHttpTransport.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: StreamableHttpTransport.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.StreamableHttpTransport.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.StreamableHttpTransport.html#Google_GenAI_Types_StreamableHttpTransport_FromJson_
+  commentId: Overload:Google.GenAI.Types.StreamableHttpTransport.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.StreamableHttpTransport.FromJson
+  nameWithType: StreamableHttpTransport.FromJson
+- uid: Google.GenAI.Types.StreamableHttpTransport.Headers
+  name: Headers
+  href: api/Google.GenAI.Types.StreamableHttpTransport.html#Google_GenAI_Types_StreamableHttpTransport_Headers
+  commentId: P:Google.GenAI.Types.StreamableHttpTransport.Headers
+  fullName: Google.GenAI.Types.StreamableHttpTransport.Headers
+  nameWithType: StreamableHttpTransport.Headers
+- uid: Google.GenAI.Types.StreamableHttpTransport.Headers*
+  name: Headers
+  href: api/Google.GenAI.Types.StreamableHttpTransport.html#Google_GenAI_Types_StreamableHttpTransport_Headers_
+  commentId: Overload:Google.GenAI.Types.StreamableHttpTransport.Headers
+  isSpec: "True"
+  fullName: Google.GenAI.Types.StreamableHttpTransport.Headers
+  nameWithType: StreamableHttpTransport.Headers
+- uid: Google.GenAI.Types.StreamableHttpTransport.SseReadTimeout
+  name: SseReadTimeout
+  href: api/Google.GenAI.Types.StreamableHttpTransport.html#Google_GenAI_Types_StreamableHttpTransport_SseReadTimeout
+  commentId: P:Google.GenAI.Types.StreamableHttpTransport.SseReadTimeout
+  fullName: Google.GenAI.Types.StreamableHttpTransport.SseReadTimeout
+  nameWithType: StreamableHttpTransport.SseReadTimeout
+- uid: Google.GenAI.Types.StreamableHttpTransport.SseReadTimeout*
+  name: SseReadTimeout
+  href: api/Google.GenAI.Types.StreamableHttpTransport.html#Google_GenAI_Types_StreamableHttpTransport_SseReadTimeout_
+  commentId: Overload:Google.GenAI.Types.StreamableHttpTransport.SseReadTimeout
+  isSpec: "True"
+  fullName: Google.GenAI.Types.StreamableHttpTransport.SseReadTimeout
+  nameWithType: StreamableHttpTransport.SseReadTimeout
+- uid: Google.GenAI.Types.StreamableHttpTransport.TerminateOnClose
+  name: TerminateOnClose
+  href: api/Google.GenAI.Types.StreamableHttpTransport.html#Google_GenAI_Types_StreamableHttpTransport_TerminateOnClose
+  commentId: P:Google.GenAI.Types.StreamableHttpTransport.TerminateOnClose
+  fullName: Google.GenAI.Types.StreamableHttpTransport.TerminateOnClose
+  nameWithType: StreamableHttpTransport.TerminateOnClose
+- uid: Google.GenAI.Types.StreamableHttpTransport.TerminateOnClose*
+  name: TerminateOnClose
+  href: api/Google.GenAI.Types.StreamableHttpTransport.html#Google_GenAI_Types_StreamableHttpTransport_TerminateOnClose_
+  commentId: Overload:Google.GenAI.Types.StreamableHttpTransport.TerminateOnClose
+  isSpec: "True"
+  fullName: Google.GenAI.Types.StreamableHttpTransport.TerminateOnClose
+  nameWithType: StreamableHttpTransport.TerminateOnClose
+- uid: Google.GenAI.Types.StreamableHttpTransport.Timeout
+  name: Timeout
+  href: api/Google.GenAI.Types.StreamableHttpTransport.html#Google_GenAI_Types_StreamableHttpTransport_Timeout
+  commentId: P:Google.GenAI.Types.StreamableHttpTransport.Timeout
+  fullName: Google.GenAI.Types.StreamableHttpTransport.Timeout
+  nameWithType: StreamableHttpTransport.Timeout
+- uid: Google.GenAI.Types.StreamableHttpTransport.Timeout*
+  name: Timeout
+  href: api/Google.GenAI.Types.StreamableHttpTransport.html#Google_GenAI_Types_StreamableHttpTransport_Timeout_
+  commentId: Overload:Google.GenAI.Types.StreamableHttpTransport.Timeout
+  isSpec: "True"
+  fullName: Google.GenAI.Types.StreamableHttpTransport.Timeout
+  nameWithType: StreamableHttpTransport.Timeout
+- uid: Google.GenAI.Types.StreamableHttpTransport.Url
+  name: Url
+  href: api/Google.GenAI.Types.StreamableHttpTransport.html#Google_GenAI_Types_StreamableHttpTransport_Url
+  commentId: P:Google.GenAI.Types.StreamableHttpTransport.Url
+  fullName: Google.GenAI.Types.StreamableHttpTransport.Url
+  nameWithType: StreamableHttpTransport.Url
+- uid: Google.GenAI.Types.StreamableHttpTransport.Url*
+  name: Url
+  href: api/Google.GenAI.Types.StreamableHttpTransport.html#Google_GenAI_Types_StreamableHttpTransport_Url_
+  commentId: Overload:Google.GenAI.Types.StreamableHttpTransport.Url
+  isSpec: "True"
+  fullName: Google.GenAI.Types.StreamableHttpTransport.Url
+  nameWithType: StreamableHttpTransport.Url
 - uid: Google.GenAI.Types.StyleReferenceConfig
   name: StyleReferenceConfig
   href: api/Google.GenAI.Types.StyleReferenceConfig.html
@@ -27954,6 +28089,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Tool.GoogleSearchRetrieval
   nameWithType: Tool.GoogleSearchRetrieval
+- uid: Google.GenAI.Types.Tool.McpServers
+  name: McpServers
+  href: api/Google.GenAI.Types.Tool.html#Google_GenAI_Types_Tool_McpServers
+  commentId: P:Google.GenAI.Types.Tool.McpServers
+  fullName: Google.GenAI.Types.Tool.McpServers
+  nameWithType: Tool.McpServers
+- uid: Google.GenAI.Types.Tool.McpServers*
+  name: McpServers
+  href: api/Google.GenAI.Types.Tool.html#Google_GenAI_Types_Tool_McpServers_
+  commentId: Overload:Google.GenAI.Types.Tool.McpServers
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Tool.McpServers
+  nameWithType: Tool.McpServers
 - uid: Google.GenAI.Types.Tool.Retrieval
   name: Retrieval
   href: api/Google.GenAI.Types.Tool.html#Google_GenAI_Types_Tool_Retrieval
