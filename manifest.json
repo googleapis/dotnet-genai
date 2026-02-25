@@ -2404,7 +2404,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GoogleSearch",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GoogleSearch.yml\" sourcestartlinenumber=\"1\">GoogleSearch tool type. Tool to support Google Search in Model. Powered by Google.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GoogleSearch.yml\" sourcestartlinenumber=\"1\">Tool to support web search.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2446,7 +2446,21 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GroundingChunk",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingChunk.yml\" sourcestartlinenumber=\"1\">Grounding chunk.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingChunk.yml\" sourcestartlinenumber=\"1\">A piece of evidence that supports a claim made by the model.  This is used to show a citation\nfor a claim made by the model. When grounding is enabled, the model returns a <code sourcefile=\"api/Google.GenAI.Types.GroundingChunk.yml\" sourcestartlinenumber=\"2\">GroundingChunk</code>\nthat contains a reference to the source of the information.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.GroundingChunkImage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.GroundingChunkImage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.GroundingChunkImage",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingChunkImage.yml\" sourcestartlinenumber=\"1\">A piece of evidence that comes from an image search result.  It contains the URI of the image\nsearch result and the URI of the image. This is used to provide the user with a link to the\nsource of the information.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2544,7 +2558,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.GroundingMetadata",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GroundingMetadata.yml\" sourcestartlinenumber=\"1\">Metadata returned to client when grounding is enabled.</p>\n"
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -2839,6 +2853,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ImagePromptLanguageConverter",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ImageSearch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ImageSearch.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ImageSearch",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ImageSearch.yml\" sourcestartlinenumber=\"1\">Image search for grounding and related configurations.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3934,6 +3962,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ProminentPeople.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ProminentPeople.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ProminentPeople",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ProminentPeople.yml\" sourcestartlinenumber=\"1\">Enum for controlling whether the model can generate images of prominent people (celebrities).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ProminentPeopleConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ProminentPeopleConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ProminentPeopleConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.RagChunk.yml",
       "output": {
         ".html": {
@@ -4337,6 +4393,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.SearchEntryPoint",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SearchEntryPoint.yml\" sourcestartlinenumber=\"1\">Google search entry point.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.SearchTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.SearchTypes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.SearchTypes",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SearchTypes.yml\" sourcestartlinenumber=\"1\">Tool to support computer use.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -5653,6 +5723,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.VoiceConfig",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.WebSearch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.WebSearch.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.WebSearch",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.WebSearch.yml\" sourcestartlinenumber=\"1\">Standard web search for grounding and related configurations.  Only text results are returned.</p>\n"
     },
     {
       "type": "ManagedReference",

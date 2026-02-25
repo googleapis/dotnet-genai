@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class GroundingChunk | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Grounding chunk.">
+      <meta name="description" content="A piece of evidence that supports a claim made by the model.  This is used to show a citation for a claim made by the model. When grounding is enabled, the model returns a GroundingChunk that contains a reference to the source of the information.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Types_GroundingChunk" data-uid="Google.GenAI.Types.GroundingChunk" class="text-break">
-Class GroundingChunk  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunk.cs/#L29"><i class="bi bi-code-slash"></i></a>
+Class GroundingChunk  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunk.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,7 +93,9 @@ Class GroundingChunk  <a class="header-action link-secondary" title="View source
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Grounding chunk.</p>
+  <div class="markdown summary"><p>A piece of evidence that supports a claim made by the model.  This is used to show a citation
+for a claim made by the model. When grounding is enabled, the model returns a <code>GroundingChunk</code>
+that contains a reference to the source of the information.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -155,11 +157,45 @@ Class GroundingChunk  <a class="header-action link-secondary" title="View source
 </h2>
 
 
+  <a id="Google_GenAI_Types_GroundingChunk_Image_" data-uid="Google.GenAI.Types.GroundingChunk.Image*"></a>
+
+  <h3 id="Google_GenAI_Types_GroundingChunk_Image" data-uid="Google.GenAI.Types.GroundingChunk.Image">
+  Image
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunk.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A grounding chunk from an image search result. See the <code>Image</code> message for details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;image&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public GroundingChunkImage? Image { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.GroundingChunkImage.html">GroundingChunkImage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_GroundingChunk_Maps_" data-uid="Google.GenAI.Types.GroundingChunk.Maps*"></a>
 
   <h3 id="Google_GenAI_Types_GroundingChunk_Maps" data-uid="Google.GenAI.Types.GroundingChunk.Maps">
   Maps
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunk.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunk.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Grounding chunk from Google Maps. This field is not supported in Gemini API.</p>
@@ -193,7 +229,7 @@ public GroundingChunkMaps? Maps { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GroundingChunk_RetrievedContext" data-uid="Google.GenAI.Types.GroundingChunk.RetrievedContext">
   RetrievedContext
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunk.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunk.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Grounding chunk from context retrieved by the retrieval tools. This field is not supported
@@ -228,7 +264,7 @@ public GroundingChunkRetrievedContext? RetrievedContext { get; set; }</code></pr
 
   <h3 id="Google_GenAI_Types_GroundingChunk_Web" data-uid="Google.GenAI.Types.GroundingChunk.Web">
   Web
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunk.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunk.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Grounding chunk from the web.</p>
@@ -266,7 +302,7 @@ public GroundingChunkWeb? Web { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GroundingChunk_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.GroundingChunk.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunk.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunk.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a GroundingChunk object.</p>
@@ -308,7 +344,7 @@ public GroundingChunkWeb? Web { get; set; }</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunk.cs/#L29" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingChunk.cs/#L31" class="edit-link">Edit this page</a>
         </div>
 
 

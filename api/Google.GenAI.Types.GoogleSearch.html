@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class GoogleSearch | Google GenAI .NET SDK ">
       
-      <meta name="description" content="GoogleSearch tool type. Tool to support Google Search in Model. Powered by Google.">
+      <meta name="description" content="Tool to support web search.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -93,7 +93,7 @@ Class GoogleSearch  <a class="header-action link-secondary" title="View source" 
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>GoogleSearch tool type. Tool to support Google Search in Model. Powered by Google.</p>
+  <div class="markdown summary"><p>Tool to support web search.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -159,7 +159,7 @@ Class GoogleSearch  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Google_GenAI_Types_GoogleSearch_BlockingConfidence" data-uid="Google.GenAI.Types.GoogleSearch.BlockingConfidence">
   BlockingConfidence
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GoogleSearch.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GoogleSearch.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. Sites with confidence level chosen &amp; above this value will be blocked from the
@@ -194,7 +194,7 @@ public PhishBlockThreshold? BlockingConfidence { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GoogleSearch_ExcludeDomains" data-uid="Google.GenAI.Types.GoogleSearch.ExcludeDomains">
   ExcludeDomains
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GoogleSearch.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GoogleSearch.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. List of domains to be excluded from the search results. The default limit is 2000
@@ -225,11 +225,45 @@ public List&lt;string&gt;? ExcludeDomains { get; set; }</code></pre>
 
 
 
+  <a id="Google_GenAI_Types_GoogleSearch_SearchTypes_" data-uid="Google.GenAI.Types.GoogleSearch.SearchTypes*"></a>
+
+  <h3 id="Google_GenAI_Types_GoogleSearch_SearchTypes" data-uid="Google.GenAI.Types.GoogleSearch.SearchTypes">
+  SearchTypes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GoogleSearch.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Different types of search that can be enabled on the GoogleSearch tool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;searchTypes&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public SearchTypes? SearchTypes { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.SearchTypes.html">SearchTypes</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_GoogleSearch_TimeRangeFilter_" data-uid="Google.GenAI.Types.GoogleSearch.TimeRangeFilter*"></a>
 
   <h3 id="Google_GenAI_Types_GoogleSearch_TimeRangeFilter" data-uid="Google.GenAI.Types.GoogleSearch.TimeRangeFilter">
   TimeRangeFilter
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GoogleSearch.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GoogleSearch.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. Filter search results to a specific time range. If customers set a start time,
@@ -268,7 +302,7 @@ public Interval? TimeRangeFilter { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GoogleSearch_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.GoogleSearch.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GoogleSearch.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GoogleSearch.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a GoogleSearch object.</p>

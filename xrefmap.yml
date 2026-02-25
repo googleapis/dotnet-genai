@@ -14303,6 +14303,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GoogleSearch.FromJson
   nameWithType: GoogleSearch.FromJson
+- uid: Google.GenAI.Types.GoogleSearch.SearchTypes
+  name: SearchTypes
+  href: api/Google.GenAI.Types.GoogleSearch.html#Google_GenAI_Types_GoogleSearch_SearchTypes
+  commentId: P:Google.GenAI.Types.GoogleSearch.SearchTypes
+  fullName: Google.GenAI.Types.GoogleSearch.SearchTypes
+  nameWithType: GoogleSearch.SearchTypes
+- uid: Google.GenAI.Types.GoogleSearch.SearchTypes*
+  name: SearchTypes
+  href: api/Google.GenAI.Types.GoogleSearch.html#Google_GenAI_Types_GoogleSearch_SearchTypes_
+  commentId: Overload:Google.GenAI.Types.GoogleSearch.SearchTypes
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GoogleSearch.SearchTypes
+  nameWithType: GoogleSearch.SearchTypes
 - uid: Google.GenAI.Types.GoogleSearch.TimeRangeFilter
   name: TimeRangeFilter
   href: api/Google.GenAI.Types.GoogleSearch.html#Google_GenAI_Types_GoogleSearch_TimeRangeFilter
@@ -14434,6 +14447,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GroundingChunk.FromJson
   nameWithType: GroundingChunk.FromJson
+- uid: Google.GenAI.Types.GroundingChunk.Image
+  name: Image
+  href: api/Google.GenAI.Types.GroundingChunk.html#Google_GenAI_Types_GroundingChunk_Image
+  commentId: P:Google.GenAI.Types.GroundingChunk.Image
+  fullName: Google.GenAI.Types.GroundingChunk.Image
+  nameWithType: GroundingChunk.Image
+- uid: Google.GenAI.Types.GroundingChunk.Image*
+  name: Image
+  href: api/Google.GenAI.Types.GroundingChunk.html#Google_GenAI_Types_GroundingChunk_Image_
+  commentId: Overload:Google.GenAI.Types.GroundingChunk.Image
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingChunk.Image
+  nameWithType: GroundingChunk.Image
 - uid: Google.GenAI.Types.GroundingChunk.Maps
   name: Maps
   href: api/Google.GenAI.Types.GroundingChunk.html#Google_GenAI_Types_GroundingChunk_Maps
@@ -14473,6 +14499,80 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GroundingChunk.Web
   nameWithType: GroundingChunk.Web
+- uid: Google.GenAI.Types.GroundingChunkImage
+  name: GroundingChunkImage
+  href: api/Google.GenAI.Types.GroundingChunkImage.html
+  commentId: T:Google.GenAI.Types.GroundingChunkImage
+  fullName: Google.GenAI.Types.GroundingChunkImage
+  nameWithType: GroundingChunkImage
+- uid: Google.GenAI.Types.GroundingChunkImage.Domain
+  name: Domain
+  href: api/Google.GenAI.Types.GroundingChunkImage.html#Google_GenAI_Types_GroundingChunkImage_Domain
+  commentId: P:Google.GenAI.Types.GroundingChunkImage.Domain
+  fullName: Google.GenAI.Types.GroundingChunkImage.Domain
+  nameWithType: GroundingChunkImage.Domain
+- uid: Google.GenAI.Types.GroundingChunkImage.Domain*
+  name: Domain
+  href: api/Google.GenAI.Types.GroundingChunkImage.html#Google_GenAI_Types_GroundingChunkImage_Domain_
+  commentId: Overload:Google.GenAI.Types.GroundingChunkImage.Domain
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingChunkImage.Domain
+  nameWithType: GroundingChunkImage.Domain
+- uid: Google.GenAI.Types.GroundingChunkImage.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.GroundingChunkImage.html#Google_GenAI_Types_GroundingChunkImage_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.GroundingChunkImage.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.GroundingChunkImage.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.GroundingChunkImage.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: GroundingChunkImage.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: GroundingChunkImage.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.GroundingChunkImage.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.GroundingChunkImage.html#Google_GenAI_Types_GroundingChunkImage_FromJson_
+  commentId: Overload:Google.GenAI.Types.GroundingChunkImage.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingChunkImage.FromJson
+  nameWithType: GroundingChunkImage.FromJson
+- uid: Google.GenAI.Types.GroundingChunkImage.ImageUri
+  name: ImageUri
+  href: api/Google.GenAI.Types.GroundingChunkImage.html#Google_GenAI_Types_GroundingChunkImage_ImageUri
+  commentId: P:Google.GenAI.Types.GroundingChunkImage.ImageUri
+  fullName: Google.GenAI.Types.GroundingChunkImage.ImageUri
+  nameWithType: GroundingChunkImage.ImageUri
+- uid: Google.GenAI.Types.GroundingChunkImage.ImageUri*
+  name: ImageUri
+  href: api/Google.GenAI.Types.GroundingChunkImage.html#Google_GenAI_Types_GroundingChunkImage_ImageUri_
+  commentId: Overload:Google.GenAI.Types.GroundingChunkImage.ImageUri
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingChunkImage.ImageUri
+  nameWithType: GroundingChunkImage.ImageUri
+- uid: Google.GenAI.Types.GroundingChunkImage.SourceUri
+  name: SourceUri
+  href: api/Google.GenAI.Types.GroundingChunkImage.html#Google_GenAI_Types_GroundingChunkImage_SourceUri
+  commentId: P:Google.GenAI.Types.GroundingChunkImage.SourceUri
+  fullName: Google.GenAI.Types.GroundingChunkImage.SourceUri
+  nameWithType: GroundingChunkImage.SourceUri
+- uid: Google.GenAI.Types.GroundingChunkImage.SourceUri*
+  name: SourceUri
+  href: api/Google.GenAI.Types.GroundingChunkImage.html#Google_GenAI_Types_GroundingChunkImage_SourceUri_
+  commentId: Overload:Google.GenAI.Types.GroundingChunkImage.SourceUri
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingChunkImage.SourceUri
+  nameWithType: GroundingChunkImage.SourceUri
+- uid: Google.GenAI.Types.GroundingChunkImage.Title
+  name: Title
+  href: api/Google.GenAI.Types.GroundingChunkImage.html#Google_GenAI_Types_GroundingChunkImage_Title
+  commentId: P:Google.GenAI.Types.GroundingChunkImage.Title
+  fullName: Google.GenAI.Types.GroundingChunkImage.Title
+  nameWithType: GroundingChunkImage.Title
+- uid: Google.GenAI.Types.GroundingChunkImage.Title*
+  name: Title
+  href: api/Google.GenAI.Types.GroundingChunkImage.html#Google_GenAI_Types_GroundingChunkImage_Title_
+  commentId: Overload:Google.GenAI.Types.GroundingChunkImage.Title
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingChunkImage.Title
+  nameWithType: GroundingChunkImage.Title
 - uid: Google.GenAI.Types.GroundingChunkMaps
   name: GroundingChunkMaps
   href: api/Google.GenAI.Types.GroundingChunkMaps.html
@@ -14991,6 +15091,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GroundingMetadata.GroundingSupports
   nameWithType: GroundingMetadata.GroundingSupports
+- uid: Google.GenAI.Types.GroundingMetadata.ImageSearchQueries
+  name: ImageSearchQueries
+  href: api/Google.GenAI.Types.GroundingMetadata.html#Google_GenAI_Types_GroundingMetadata_ImageSearchQueries
+  commentId: P:Google.GenAI.Types.GroundingMetadata.ImageSearchQueries
+  fullName: Google.GenAI.Types.GroundingMetadata.ImageSearchQueries
+  nameWithType: GroundingMetadata.ImageSearchQueries
+- uid: Google.GenAI.Types.GroundingMetadata.ImageSearchQueries*
+  name: ImageSearchQueries
+  href: api/Google.GenAI.Types.GroundingMetadata.html#Google_GenAI_Types_GroundingMetadata_ImageSearchQueries_
+  commentId: Overload:Google.GenAI.Types.GroundingMetadata.ImageSearchQueries
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingMetadata.ImageSearchQueries
+  nameWithType: GroundingMetadata.ImageSearchQueries
 - uid: Google.GenAI.Types.GroundingMetadata.RetrievalMetadata
   name: RetrievalMetadata
   href: api/Google.GenAI.Types.GroundingMetadata.html#Google_GenAI_Types_GroundingMetadata_RetrievalMetadata
@@ -16771,6 +16884,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ImageConfig.PersonGeneration
   nameWithType: ImageConfig.PersonGeneration
+- uid: Google.GenAI.Types.ImageConfig.ProminentPeople
+  name: ProminentPeople
+  href: api/Google.GenAI.Types.ImageConfig.html#Google_GenAI_Types_ImageConfig_ProminentPeople
+  commentId: P:Google.GenAI.Types.ImageConfig.ProminentPeople
+  fullName: Google.GenAI.Types.ImageConfig.ProminentPeople
+  nameWithType: ImageConfig.ProminentPeople
+- uid: Google.GenAI.Types.ImageConfig.ProminentPeople*
+  name: ProminentPeople
+  href: api/Google.GenAI.Types.ImageConfig.html#Google_GenAI_Types_ImageConfig_ProminentPeople_
+  commentId: Overload:Google.GenAI.Types.ImageConfig.ProminentPeople
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageConfig.ProminentPeople
+  nameWithType: ImageConfig.ProminentPeople
 - uid: Google.GenAI.Types.ImagePromptLanguage
   name: ImagePromptLanguage
   href: api/Google.GenAI.Types.ImagePromptLanguage.html
@@ -17016,6 +17142,28 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ImagePromptLanguageConverter.Write
   nameWithType: ImagePromptLanguageConverter.Write
+- uid: Google.GenAI.Types.ImageSearch
+  name: ImageSearch
+  href: api/Google.GenAI.Types.ImageSearch.html
+  commentId: T:Google.GenAI.Types.ImageSearch
+  fullName: Google.GenAI.Types.ImageSearch
+  nameWithType: ImageSearch
+- uid: Google.GenAI.Types.ImageSearch.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ImageSearch.html#Google_GenAI_Types_ImageSearch_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ImageSearch.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ImageSearch.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ImageSearch.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ImageSearch.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ImageSearch.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ImageSearch.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ImageSearch.html#Google_GenAI_Types_ImageSearch_FromJson_
+  commentId: Overload:Google.GenAI.Types.ImageSearch.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageSearch.FromJson
+  nameWithType: ImageSearch.FromJson
 - uid: Google.GenAI.Types.ImportFileOperation
   name: ImportFileOperation
   href: api/Google.GenAI.Types.ImportFileOperation.html
@@ -23389,6 +23537,186 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ProductImage.ProductImageField
   nameWithType: ProductImage.ProductImageField
+- uid: Google.GenAI.Types.ProminentPeople
+  name: ProminentPeople
+  href: api/Google.GenAI.Types.ProminentPeople.html
+  commentId: T:Google.GenAI.Types.ProminentPeople
+  fullName: Google.GenAI.Types.ProminentPeople
+  nameWithType: ProminentPeople
+- uid: Google.GenAI.Types.ProminentPeople.AllValues
+  name: AllValues
+  href: api/Google.GenAI.Types.ProminentPeople.html#Google_GenAI_Types_ProminentPeople_AllValues
+  commentId: P:Google.GenAI.Types.ProminentPeople.AllValues
+  fullName: Google.GenAI.Types.ProminentPeople.AllValues
+  nameWithType: ProminentPeople.AllValues
+- uid: Google.GenAI.Types.ProminentPeople.AllValues*
+  name: AllValues
+  href: api/Google.GenAI.Types.ProminentPeople.html#Google_GenAI_Types_ProminentPeople_AllValues_
+  commentId: Overload:Google.GenAI.Types.ProminentPeople.AllValues
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ProminentPeople.AllValues
+  nameWithType: ProminentPeople.AllValues
+- uid: Google.GenAI.Types.ProminentPeople.AllowProminentPeople
+  name: AllowProminentPeople
+  href: api/Google.GenAI.Types.ProminentPeople.html#Google_GenAI_Types_ProminentPeople_AllowProminentPeople
+  commentId: P:Google.GenAI.Types.ProminentPeople.AllowProminentPeople
+  fullName: Google.GenAI.Types.ProminentPeople.AllowProminentPeople
+  nameWithType: ProminentPeople.AllowProminentPeople
+- uid: Google.GenAI.Types.ProminentPeople.AllowProminentPeople*
+  name: AllowProminentPeople
+  href: api/Google.GenAI.Types.ProminentPeople.html#Google_GenAI_Types_ProminentPeople_AllowProminentPeople_
+  commentId: Overload:Google.GenAI.Types.ProminentPeople.AllowProminentPeople
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ProminentPeople.AllowProminentPeople
+  nameWithType: ProminentPeople.AllowProminentPeople
+- uid: Google.GenAI.Types.ProminentPeople.BlockProminentPeople
+  name: BlockProminentPeople
+  href: api/Google.GenAI.Types.ProminentPeople.html#Google_GenAI_Types_ProminentPeople_BlockProminentPeople
+  commentId: P:Google.GenAI.Types.ProminentPeople.BlockProminentPeople
+  fullName: Google.GenAI.Types.ProminentPeople.BlockProminentPeople
+  nameWithType: ProminentPeople.BlockProminentPeople
+- uid: Google.GenAI.Types.ProminentPeople.BlockProminentPeople*
+  name: BlockProminentPeople
+  href: api/Google.GenAI.Types.ProminentPeople.html#Google_GenAI_Types_ProminentPeople_BlockProminentPeople_
+  commentId: Overload:Google.GenAI.Types.ProminentPeople.BlockProminentPeople
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ProminentPeople.BlockProminentPeople
+  nameWithType: ProminentPeople.BlockProminentPeople
+- uid: Google.GenAI.Types.ProminentPeople.Equals(Google.GenAI.Types.ProminentPeople)
+  name: Equals(ProminentPeople)
+  href: api/Google.GenAI.Types.ProminentPeople.html#Google_GenAI_Types_ProminentPeople_Equals_Google_GenAI_Types_ProminentPeople_
+  commentId: M:Google.GenAI.Types.ProminentPeople.Equals(Google.GenAI.Types.ProminentPeople)
+  fullName: Google.GenAI.Types.ProminentPeople.Equals(Google.GenAI.Types.ProminentPeople)
+  nameWithType: ProminentPeople.Equals(ProminentPeople)
+- uid: Google.GenAI.Types.ProminentPeople.Equals*
+  name: Equals
+  href: api/Google.GenAI.Types.ProminentPeople.html#Google_GenAI_Types_ProminentPeople_Equals_
+  commentId: Overload:Google.GenAI.Types.ProminentPeople.Equals
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ProminentPeople.Equals
+  nameWithType: ProminentPeople.Equals
+- uid: Google.GenAI.Types.ProminentPeople.FromString(System.String)
+  name: FromString(string)
+  href: api/Google.GenAI.Types.ProminentPeople.html#Google_GenAI_Types_ProminentPeople_FromString_System_String_
+  commentId: M:Google.GenAI.Types.ProminentPeople.FromString(System.String)
+  name.vb: FromString(String)
+  fullName: Google.GenAI.Types.ProminentPeople.FromString(string)
+  fullName.vb: Google.GenAI.Types.ProminentPeople.FromString(String)
+  nameWithType: ProminentPeople.FromString(string)
+  nameWithType.vb: ProminentPeople.FromString(String)
+- uid: Google.GenAI.Types.ProminentPeople.FromString*
+  name: FromString
+  href: api/Google.GenAI.Types.ProminentPeople.html#Google_GenAI_Types_ProminentPeople_FromString_
+  commentId: Overload:Google.GenAI.Types.ProminentPeople.FromString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ProminentPeople.FromString
+  nameWithType: ProminentPeople.FromString
+- uid: Google.GenAI.Types.ProminentPeople.GetHashCode
+  name: GetHashCode()
+  href: api/Google.GenAI.Types.ProminentPeople.html#Google_GenAI_Types_ProminentPeople_GetHashCode
+  commentId: M:Google.GenAI.Types.ProminentPeople.GetHashCode
+  fullName: Google.GenAI.Types.ProminentPeople.GetHashCode()
+  nameWithType: ProminentPeople.GetHashCode()
+- uid: Google.GenAI.Types.ProminentPeople.GetHashCode*
+  name: GetHashCode
+  href: api/Google.GenAI.Types.ProminentPeople.html#Google_GenAI_Types_ProminentPeople_GetHashCode_
+  commentId: Overload:Google.GenAI.Types.ProminentPeople.GetHashCode
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ProminentPeople.GetHashCode
+  nameWithType: ProminentPeople.GetHashCode
+- uid: Google.GenAI.Types.ProminentPeople.ProminentPeopleUnspecified
+  name: ProminentPeopleUnspecified
+  href: api/Google.GenAI.Types.ProminentPeople.html#Google_GenAI_Types_ProminentPeople_ProminentPeopleUnspecified
+  commentId: P:Google.GenAI.Types.ProminentPeople.ProminentPeopleUnspecified
+  fullName: Google.GenAI.Types.ProminentPeople.ProminentPeopleUnspecified
+  nameWithType: ProminentPeople.ProminentPeopleUnspecified
+- uid: Google.GenAI.Types.ProminentPeople.ProminentPeopleUnspecified*
+  name: ProminentPeopleUnspecified
+  href: api/Google.GenAI.Types.ProminentPeople.html#Google_GenAI_Types_ProminentPeople_ProminentPeopleUnspecified_
+  commentId: Overload:Google.GenAI.Types.ProminentPeople.ProminentPeopleUnspecified
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ProminentPeople.ProminentPeopleUnspecified
+  nameWithType: ProminentPeople.ProminentPeopleUnspecified
+- uid: Google.GenAI.Types.ProminentPeople.ToString
+  name: ToString()
+  href: api/Google.GenAI.Types.ProminentPeople.html#Google_GenAI_Types_ProminentPeople_ToString
+  commentId: M:Google.GenAI.Types.ProminentPeople.ToString
+  fullName: Google.GenAI.Types.ProminentPeople.ToString()
+  nameWithType: ProminentPeople.ToString()
+- uid: Google.GenAI.Types.ProminentPeople.ToString*
+  name: ToString
+  href: api/Google.GenAI.Types.ProminentPeople.html#Google_GenAI_Types_ProminentPeople_ToString_
+  commentId: Overload:Google.GenAI.Types.ProminentPeople.ToString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ProminentPeople.ToString
+  nameWithType: ProminentPeople.ToString
+- uid: Google.GenAI.Types.ProminentPeople.Value
+  name: Value
+  href: api/Google.GenAI.Types.ProminentPeople.html#Google_GenAI_Types_ProminentPeople_Value
+  commentId: P:Google.GenAI.Types.ProminentPeople.Value
+  fullName: Google.GenAI.Types.ProminentPeople.Value
+  nameWithType: ProminentPeople.Value
+- uid: Google.GenAI.Types.ProminentPeople.Value*
+  name: Value
+  href: api/Google.GenAI.Types.ProminentPeople.html#Google_GenAI_Types_ProminentPeople_Value_
+  commentId: Overload:Google.GenAI.Types.ProminentPeople.Value
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ProminentPeople.Value
+  nameWithType: ProminentPeople.Value
+- uid: Google.GenAI.Types.ProminentPeople.op_Implicit(System.String)~Google.GenAI.Types.ProminentPeople
+  name: implicit operator ProminentPeople(string)
+  href: api/Google.GenAI.Types.ProminentPeople.html#Google_GenAI_Types_ProminentPeople_op_Implicit_System_String__Google_GenAI_Types_ProminentPeople
+  commentId: M:Google.GenAI.Types.ProminentPeople.op_Implicit(System.String)~Google.GenAI.Types.ProminentPeople
+  name.vb: CType(String)
+  fullName: Google.GenAI.Types.ProminentPeople.implicit operator Google.GenAI.Types.ProminentPeople(string)
+  fullName.vb: Google.GenAI.Types.ProminentPeople.CType(String)
+  nameWithType: ProminentPeople.implicit operator ProminentPeople(string)
+  nameWithType.vb: ProminentPeople.CType(String)
+- uid: Google.GenAI.Types.ProminentPeople.op_Implicit*
+  name: implicit operator
+  href: api/Google.GenAI.Types.ProminentPeople.html#Google_GenAI_Types_ProminentPeople_op_Implicit_
+  commentId: Overload:Google.GenAI.Types.ProminentPeople.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: Google.GenAI.Types.ProminentPeople.implicit operator
+  fullName.vb: Google.GenAI.Types.ProminentPeople.CType
+  nameWithType: ProminentPeople.implicit operator
+  nameWithType.vb: ProminentPeople.CType
+- uid: Google.GenAI.Types.ProminentPeopleConverter
+  name: ProminentPeopleConverter
+  href: api/Google.GenAI.Types.ProminentPeopleConverter.html
+  commentId: T:Google.GenAI.Types.ProminentPeopleConverter
+  fullName: Google.GenAI.Types.ProminentPeopleConverter
+  nameWithType: ProminentPeopleConverter
+- uid: Google.GenAI.Types.ProminentPeopleConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.ProminentPeopleConverter.html#Google_GenAI_Types_ProminentPeopleConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ProminentPeopleConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name.vb: Read(Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ProminentPeopleConverter.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: Google.GenAI.Types.ProminentPeopleConverter.Read(System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ProminentPeopleConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: ProminentPeopleConverter.Read(Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ProminentPeopleConverter.Read*
+  name: Read
+  href: api/Google.GenAI.Types.ProminentPeopleConverter.html#Google_GenAI_Types_ProminentPeopleConverter_Read_
+  commentId: Overload:Google.GenAI.Types.ProminentPeopleConverter.Read
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ProminentPeopleConverter.Read
+  nameWithType: ProminentPeopleConverter.Read
+- uid: Google.GenAI.Types.ProminentPeopleConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.ProminentPeople,System.Text.Json.JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, ProminentPeople, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.ProminentPeopleConverter.html#Google_GenAI_Types_ProminentPeopleConverter_Write_System_Text_Json_Utf8JsonWriter_Google_GenAI_Types_ProminentPeople_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ProminentPeopleConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.ProminentPeople,System.Text.Json.JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ProminentPeopleConverter.Write(System.Text.Json.Utf8JsonWriter, Google.GenAI.Types.ProminentPeople, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ProminentPeopleConverter.Write(Utf8JsonWriter, ProminentPeople, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ProminentPeopleConverter.Write*
+  name: Write
+  href: api/Google.GenAI.Types.ProminentPeopleConverter.html#Google_GenAI_Types_ProminentPeopleConverter_Write_
+  commentId: Overload:Google.GenAI.Types.ProminentPeopleConverter.Write
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ProminentPeopleConverter.Write
+  nameWithType: ProminentPeopleConverter.Write
 - uid: Google.GenAI.Types.RagChunk
   name: RagChunk
   href: api/Google.GenAI.Types.RagChunk.html
@@ -25476,6 +25804,54 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.SearchEntryPoint.SdkBlob
   nameWithType: SearchEntryPoint.SdkBlob
+- uid: Google.GenAI.Types.SearchTypes
+  name: SearchTypes
+  href: api/Google.GenAI.Types.SearchTypes.html
+  commentId: T:Google.GenAI.Types.SearchTypes
+  fullName: Google.GenAI.Types.SearchTypes
+  nameWithType: SearchTypes
+- uid: Google.GenAI.Types.SearchTypes.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.SearchTypes.html#Google_GenAI_Types_SearchTypes_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.SearchTypes.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.SearchTypes.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.SearchTypes.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: SearchTypes.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: SearchTypes.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.SearchTypes.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.SearchTypes.html#Google_GenAI_Types_SearchTypes_FromJson_
+  commentId: Overload:Google.GenAI.Types.SearchTypes.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SearchTypes.FromJson
+  nameWithType: SearchTypes.FromJson
+- uid: Google.GenAI.Types.SearchTypes.ImageSearch
+  name: ImageSearch
+  href: api/Google.GenAI.Types.SearchTypes.html#Google_GenAI_Types_SearchTypes_ImageSearch
+  commentId: P:Google.GenAI.Types.SearchTypes.ImageSearch
+  fullName: Google.GenAI.Types.SearchTypes.ImageSearch
+  nameWithType: SearchTypes.ImageSearch
+- uid: Google.GenAI.Types.SearchTypes.ImageSearch*
+  name: ImageSearch
+  href: api/Google.GenAI.Types.SearchTypes.html#Google_GenAI_Types_SearchTypes_ImageSearch_
+  commentId: Overload:Google.GenAI.Types.SearchTypes.ImageSearch
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SearchTypes.ImageSearch
+  nameWithType: SearchTypes.ImageSearch
+- uid: Google.GenAI.Types.SearchTypes.WebSearch
+  name: WebSearch
+  href: api/Google.GenAI.Types.SearchTypes.html#Google_GenAI_Types_SearchTypes_WebSearch
+  commentId: P:Google.GenAI.Types.SearchTypes.WebSearch
+  fullName: Google.GenAI.Types.SearchTypes.WebSearch
+  nameWithType: SearchTypes.WebSearch
+- uid: Google.GenAI.Types.SearchTypes.WebSearch*
+  name: WebSearch
+  href: api/Google.GenAI.Types.SearchTypes.html#Google_GenAI_Types_SearchTypes_WebSearch_
+  commentId: Overload:Google.GenAI.Types.SearchTypes.WebSearch
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SearchTypes.WebSearch
+  nameWithType: SearchTypes.WebSearch
 - uid: Google.GenAI.Types.Segment
   name: Segment
   href: api/Google.GenAI.Types.Segment.html
@@ -33119,6 +33495,28 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.VoiceConfig.ReplicatedVoiceConfig
   nameWithType: VoiceConfig.ReplicatedVoiceConfig
+- uid: Google.GenAI.Types.WebSearch
+  name: WebSearch
+  href: api/Google.GenAI.Types.WebSearch.html
+  commentId: T:Google.GenAI.Types.WebSearch
+  fullName: Google.GenAI.Types.WebSearch
+  nameWithType: WebSearch
+- uid: Google.GenAI.Types.WebSearch.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.WebSearch.html#Google_GenAI_Types_WebSearch_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.WebSearch.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.WebSearch.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.WebSearch.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: WebSearch.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: WebSearch.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.WebSearch.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.WebSearch.html#Google_GenAI_Types_WebSearch_FromJson_
+  commentId: Overload:Google.GenAI.Types.WebSearch.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.WebSearch.FromJson
+  nameWithType: WebSearch.FromJson
 - uid: Microsoft.Extensions.AI
   name: Microsoft.Extensions.AI
   href: api/Microsoft.Extensions.AI.html

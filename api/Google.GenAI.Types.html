@@ -783,7 +783,7 @@ Gemini API.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.GoogleSearch.html">GoogleSearch</a></dt>
-      <dd><p>GoogleSearch tool type. Tool to support Google Search in Model. Powered by Google.</p>
+      <dd><p>Tool to support web search.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -804,7 +804,16 @@ google.protobuf.Timestamp. This data type is not supported in Gemini API.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.GroundingChunk.html">GroundingChunk</a></dt>
-      <dd><p>Grounding chunk.</p>
+      <dd><p>A piece of evidence that supports a claim made by the model.  This is used to show a citation
+for a claim made by the model. When grounding is enabled, the model returns a <code>GroundingChunk</code>
+that contains a reference to the source of the information.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.GroundingChunkImage.html">GroundingChunkImage</a></dt>
+      <dd><p>A piece of evidence that comes from an image search result.  It contains the URI of the image
+search result and the URI of the image. This is used to provide the user with a link to the
+source of the information.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -840,8 +849,7 @@ API.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.GroundingMetadata.html">GroundingMetadata</a></dt>
-      <dd><p>Metadata returned to client when grounding is enabled.</p>
-</dd>
+      <dd></dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.GroundingMetadataSourceFlaggingUri.html">GroundingMetadataSourceFlaggingUri</a></dt>
@@ -901,6 +909,11 @@ Maps grounding. This data type is not supported in Gemini API.</p>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ImagePromptLanguageConverter.html">ImagePromptLanguageConverter</a></dt>
       <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.ImageSearch.html">ImageSearch</a></dt>
+      <dd><p>Image search for grounding and related configurations.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ImportFileOperation.html">ImportFileOperation</a></dt>
@@ -1266,6 +1279,10 @@ supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.ProminentPeopleConverter.html">ProminentPeopleConverter</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.RagChunk.html">RagChunk</a></dt>
       <dd><p>A RagChunk includes the content of a chunk of a RagFile, and associated metadata. This data
 type is not supported in Gemini API.</p>
@@ -1410,6 +1427,11 @@ may be added in the future as needed.</p>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.SearchEntryPoint.html">SearchEntryPoint</a></dt>
       <dd><p>Google search entry point.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.SearchTypes.html">SearchTypes</a></dt>
+      <dd><p>Tool to support computer use.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -1793,6 +1815,11 @@ This data type is not supported in Gemini API.</p>
       <dt><a class="xref" href="Google.GenAI.Types.VoiceConfig.html">VoiceConfig</a></dt>
       <dd></dd>
     </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.WebSearch.html">WebSearch</a></dt>
+      <dd><p>Standard web search for grounding and related configurations.  Only text results are returned.</p>
+</dd>
+    </dl>
     <h3 id="structs">
 Structs
 </h3>
@@ -1973,6 +2000,11 @@ threshold is used for probability score. This enum is not supported in Gemini AP
       <dt><a class="xref" href="Google.GenAI.Types.PhishBlockThreshold.html">PhishBlockThreshold</a></dt>
       <dd><p>Sites with confidence level chosen &amp; above this value will be blocked from the search
 results. This enum is not supported in Gemini API.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.ProminentPeople.html">ProminentPeople</a></dt>
+      <dd><p>Enum for controlling whether the model can generate images of prominent people (celebrities).</p>
 </dd>
     </dl>
     <dl class="jumplist">
