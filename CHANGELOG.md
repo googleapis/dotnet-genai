@@ -1,5 +1,13 @@
 # Changelog
 
+## Version 1.2.0, released 2026-02-25
+
+
+### New features
+
+* Add Image Grounding support to GoogleSearch tool ([2c81645](https://github.com/googleapis/dotnet-genai/commit/2c8164584b2a48da69ed88fd5a9b1b1bed45d801))
+* enable server side MCP and disable all other AFC when server side MCP is configured. ([46ca4c1](https://github.com/googleapis/dotnet-genai/commit/46ca4c191b8623c81f38e2602954a2bbfc208b33))
+
 ## Version 1.1.0, released 2026-02-19
 
 
