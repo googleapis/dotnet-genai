@@ -539,6 +539,206 @@ public VideoMetadata? VideoMetadata { get; set; }</code></pre>
 </h2>
 
 
+  <a id="Google_GenAI_Types_Part_FromBytes_" data-uid="Google.GenAI.Types.Part.FromBytes*"></a>
+
+  <h3 id="Google_GenAI_Types_Part_FromBytes_System_Byte___System_String_Google_GenAI_Types_PartMediaResolution_" data-uid="Google.GenAI.Types.Part.FromBytes(System.Byte[],System.String,Google.GenAI.Types.PartMediaResolution)">
+  FromBytes(byte[], string, PartMediaResolution?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Part.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a Part with inline binary data. <code class="paramref">mimeType</code> must be a valid
+IANA MIME type string (e.g. &quot;image/jpeg&quot;).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Part FromBytes(byte[] data, string mimeType, PartMediaResolution? mediaResolution = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd></dd>
+    <dt><code>mimeType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>mediaResolution</code> <a class="xref" href="Google.GenAI.Types.PartMediaResolution.html">PartMediaResolution</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.Part.html">Part</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_Part_FromCodeExecutionResult_" data-uid="Google.GenAI.Types.Part.FromCodeExecutionResult*"></a>
+
+  <h3 id="Google_GenAI_Types_Part_FromCodeExecutionResult_Google_GenAI_Types_Outcome_System_String_" data-uid="Google.GenAI.Types.Part.FromCodeExecutionResult(Google.GenAI.Types.Outcome,System.String)">
+  FromCodeExecutionResult(Outcome, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Part.cs/#L200"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a Part containing a code execution result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Part FromCodeExecutionResult(Outcome outcome, string output)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>outcome</code> <a class="xref" href="Google.GenAI.Types.Outcome.html">Outcome</a></dt>
+    <dd></dd>
+    <dt><code>output</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.Part.html">Part</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_Part_FromExecutableCode_" data-uid="Google.GenAI.Types.Part.FromExecutableCode*"></a>
+
+  <h3 id="Google_GenAI_Types_Part_FromExecutableCode_System_String_Google_GenAI_Types_Language_" data-uid="Google.GenAI.Types.Part.FromExecutableCode(System.String,Google.GenAI.Types.Language)">
+  FromExecutableCode(string, Language)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Part.cs/#L196"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a Part containing executable code.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Part FromExecutableCode(string code, Language language)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>code</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>language</code> <a class="xref" href="Google.GenAI.Types.Language.html">Language</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.Part.html">Part</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_Part_FromFunctionCall_" data-uid="Google.GenAI.Types.Part.FromFunctionCall*"></a>
+
+  <h3 id="Google_GenAI_Types_Part_FromFunctionCall_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__" data-uid="Google.GenAI.Types.Part.FromFunctionCall(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+  FromFunctionCall(string, Dictionary&lt;string, object&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Part.cs/#L185"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a Part containing a model-issued function call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Part FromFunctionCall(string name, Dictionary&lt;string, object&gt;? args = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.Part.html">Part</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_Part_FromFunctionResponse_" data-uid="Google.GenAI.Types.Part.FromFunctionResponse*"></a>
+
+  <h3 id="Google_GenAI_Types_Part_FromFunctionResponse_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__System_Collections_Generic_List_Google_GenAI_Types_FunctionResponsePart__" data-uid="Google.GenAI.Types.Part.FromFunctionResponse(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.List{Google.GenAI.Types.FunctionResponsePart})">
+  FromFunctionResponse(string, Dictionary&lt;string, object&gt;?, List&lt;FunctionResponsePart&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Part.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a Part containing the result of a function call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Part FromFunctionResponse(string name, Dictionary&lt;string, object&gt;? response = null, List&lt;FunctionResponsePart&gt;? parts = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>response</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>parts</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Google.GenAI.Types.FunctionResponsePart.html">FunctionResponsePart</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.Part.html">Part</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_Part_FromJson_" data-uid="Google.GenAI.Types.Part.FromJson*"></a>
 
   <h3 id="Google_GenAI_Types_Part_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.Part.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
@@ -569,6 +769,86 @@ public VideoMetadata? VideoMetadata { get; set; }</code></pre>
     <dt><a class="xref" href="Google.GenAI.Types.Part.html">Part</a></dt>
     <dd><p>The deserialized Part object, or null if deserialization fails.</p>
 </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_Part_FromText_" data-uid="Google.GenAI.Types.Part.FromText*"></a>
+
+  <h3 id="Google_GenAI_Types_Part_FromText_System_String_" data-uid="Google.GenAI.Types.Part.FromText(System.String)">
+  FromText(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Part.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a Part with text content.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Part FromText(string text)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.Part.html">Part</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_Part_FromUri_" data-uid="Google.GenAI.Types.Part.FromUri*"></a>
+
+  <h3 id="Google_GenAI_Types_Part_FromUri_System_String_System_String_Google_GenAI_Types_PartMediaResolution_" data-uid="Google.GenAI.Types.Part.FromUri(System.String,System.String,Google.GenAI.Types.PartMediaResolution)">
+  FromUri(string, string?, PartMediaResolution?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Part.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a Part from a file URI. If <code class="paramref">mimeType</code> is not provided it is
+inferred from the URI's file extension. Throws <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a> if the
+MIME type cannot be determined.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Part FromUri(string fileUri, string? mimeType = null, PartMediaResolution? mediaResolution = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileUri</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>mimeType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>mediaResolution</code> <a class="xref" href="Google.GenAI.Types.PartMediaResolution.html">PartMediaResolution</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.Part.html">Part</a></dt>
+    <dd></dd>
   </dl>
 
 

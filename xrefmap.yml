@@ -22215,6 +22215,86 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Part.FileData
   nameWithType: Part.FileData
+- uid: Google.GenAI.Types.Part.FromBytes(System.Byte[],System.String,Google.GenAI.Types.PartMediaResolution)
+  name: FromBytes(byte[], string, PartMediaResolution?)
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_FromBytes_System_Byte___System_String_Google_GenAI_Types_PartMediaResolution_
+  commentId: M:Google.GenAI.Types.Part.FromBytes(System.Byte[],System.String,Google.GenAI.Types.PartMediaResolution)
+  name.vb: FromBytes(Byte(), String, PartMediaResolution)
+  fullName: Google.GenAI.Types.Part.FromBytes(byte[], string, Google.GenAI.Types.PartMediaResolution?)
+  fullName.vb: Google.GenAI.Types.Part.FromBytes(Byte(), String, Google.GenAI.Types.PartMediaResolution)
+  nameWithType: Part.FromBytes(byte[], string, PartMediaResolution?)
+  nameWithType.vb: Part.FromBytes(Byte(), String, PartMediaResolution)
+- uid: Google.GenAI.Types.Part.FromBytes*
+  name: FromBytes
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_FromBytes_
+  commentId: Overload:Google.GenAI.Types.Part.FromBytes
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Part.FromBytes
+  nameWithType: Part.FromBytes
+- uid: Google.GenAI.Types.Part.FromCodeExecutionResult(Google.GenAI.Types.Outcome,System.String)
+  name: FromCodeExecutionResult(Outcome, string)
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_FromCodeExecutionResult_Google_GenAI_Types_Outcome_System_String_
+  commentId: M:Google.GenAI.Types.Part.FromCodeExecutionResult(Google.GenAI.Types.Outcome,System.String)
+  name.vb: FromCodeExecutionResult(Outcome, String)
+  fullName: Google.GenAI.Types.Part.FromCodeExecutionResult(Google.GenAI.Types.Outcome, string)
+  fullName.vb: Google.GenAI.Types.Part.FromCodeExecutionResult(Google.GenAI.Types.Outcome, String)
+  nameWithType: Part.FromCodeExecutionResult(Outcome, string)
+  nameWithType.vb: Part.FromCodeExecutionResult(Outcome, String)
+- uid: Google.GenAI.Types.Part.FromCodeExecutionResult*
+  name: FromCodeExecutionResult
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_FromCodeExecutionResult_
+  commentId: Overload:Google.GenAI.Types.Part.FromCodeExecutionResult
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Part.FromCodeExecutionResult
+  nameWithType: Part.FromCodeExecutionResult
+- uid: Google.GenAI.Types.Part.FromExecutableCode(System.String,Google.GenAI.Types.Language)
+  name: FromExecutableCode(string, Language)
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_FromExecutableCode_System_String_Google_GenAI_Types_Language_
+  commentId: M:Google.GenAI.Types.Part.FromExecutableCode(System.String,Google.GenAI.Types.Language)
+  name.vb: FromExecutableCode(String, Language)
+  fullName: Google.GenAI.Types.Part.FromExecutableCode(string, Google.GenAI.Types.Language)
+  fullName.vb: Google.GenAI.Types.Part.FromExecutableCode(String, Google.GenAI.Types.Language)
+  nameWithType: Part.FromExecutableCode(string, Language)
+  nameWithType.vb: Part.FromExecutableCode(String, Language)
+- uid: Google.GenAI.Types.Part.FromExecutableCode*
+  name: FromExecutableCode
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_FromExecutableCode_
+  commentId: Overload:Google.GenAI.Types.Part.FromExecutableCode
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Part.FromExecutableCode
+  nameWithType: Part.FromExecutableCode
+- uid: Google.GenAI.Types.Part.FromFunctionCall(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  name: FromFunctionCall(string, Dictionary<string, object>?)
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_FromFunctionCall_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__
+  commentId: M:Google.GenAI.Types.Part.FromFunctionCall(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  name.vb: FromFunctionCall(String, Dictionary(Of String, Object))
+  fullName: Google.GenAI.Types.Part.FromFunctionCall(string, System.Collections.Generic.Dictionary<string, object>?)
+  fullName.vb: Google.GenAI.Types.Part.FromFunctionCall(String, System.Collections.Generic.Dictionary(Of String, Object))
+  nameWithType: Part.FromFunctionCall(string, Dictionary<string, object>?)
+  nameWithType.vb: Part.FromFunctionCall(String, Dictionary(Of String, Object))
+- uid: Google.GenAI.Types.Part.FromFunctionCall*
+  name: FromFunctionCall
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_FromFunctionCall_
+  commentId: Overload:Google.GenAI.Types.Part.FromFunctionCall
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Part.FromFunctionCall
+  nameWithType: Part.FromFunctionCall
+- uid: Google.GenAI.Types.Part.FromFunctionResponse(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.List{Google.GenAI.Types.FunctionResponsePart})
+  name: FromFunctionResponse(string, Dictionary<string, object>?, List<FunctionResponsePart>?)
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_FromFunctionResponse_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__System_Collections_Generic_List_Google_GenAI_Types_FunctionResponsePart__
+  commentId: M:Google.GenAI.Types.Part.FromFunctionResponse(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.List{Google.GenAI.Types.FunctionResponsePart})
+  name.vb: FromFunctionResponse(String, Dictionary(Of String, Object), List(Of FunctionResponsePart))
+  fullName: Google.GenAI.Types.Part.FromFunctionResponse(string, System.Collections.Generic.Dictionary<string, object>?, System.Collections.Generic.List<Google.GenAI.Types.FunctionResponsePart>?)
+  fullName.vb: Google.GenAI.Types.Part.FromFunctionResponse(String, System.Collections.Generic.Dictionary(Of String, Object), System.Collections.Generic.List(Of Google.GenAI.Types.FunctionResponsePart))
+  nameWithType: Part.FromFunctionResponse(string, Dictionary<string, object>?, List<FunctionResponsePart>?)
+  nameWithType.vb: Part.FromFunctionResponse(String, Dictionary(Of String, Object), List(Of FunctionResponsePart))
+- uid: Google.GenAI.Types.Part.FromFunctionResponse*
+  name: FromFunctionResponse
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_FromFunctionResponse_
+  commentId: Overload:Google.GenAI.Types.Part.FromFunctionResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Part.FromFunctionResponse
+  nameWithType: Part.FromFunctionResponse
 - uid: Google.GenAI.Types.Part.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
   name: FromJson(string, JsonSerializerOptions?)
   href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
@@ -22231,6 +22311,38 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Part.FromJson
   nameWithType: Part.FromJson
+- uid: Google.GenAI.Types.Part.FromText(System.String)
+  name: FromText(string)
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_FromText_System_String_
+  commentId: M:Google.GenAI.Types.Part.FromText(System.String)
+  name.vb: FromText(String)
+  fullName: Google.GenAI.Types.Part.FromText(string)
+  fullName.vb: Google.GenAI.Types.Part.FromText(String)
+  nameWithType: Part.FromText(string)
+  nameWithType.vb: Part.FromText(String)
+- uid: Google.GenAI.Types.Part.FromText*
+  name: FromText
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_FromText_
+  commentId: Overload:Google.GenAI.Types.Part.FromText
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Part.FromText
+  nameWithType: Part.FromText
+- uid: Google.GenAI.Types.Part.FromUri(System.String,System.String,Google.GenAI.Types.PartMediaResolution)
+  name: FromUri(string, string?, PartMediaResolution?)
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_FromUri_System_String_System_String_Google_GenAI_Types_PartMediaResolution_
+  commentId: M:Google.GenAI.Types.Part.FromUri(System.String,System.String,Google.GenAI.Types.PartMediaResolution)
+  name.vb: FromUri(String, String, PartMediaResolution)
+  fullName: Google.GenAI.Types.Part.FromUri(string, string?, Google.GenAI.Types.PartMediaResolution?)
+  fullName.vb: Google.GenAI.Types.Part.FromUri(String, String, Google.GenAI.Types.PartMediaResolution)
+  nameWithType: Part.FromUri(string, string?, PartMediaResolution?)
+  nameWithType.vb: Part.FromUri(String, String, PartMediaResolution)
+- uid: Google.GenAI.Types.Part.FromUri*
+  name: FromUri
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_FromUri_
+  commentId: Overload:Google.GenAI.Types.Part.FromUri
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Part.FromUri
+  nameWithType: Part.FromUri
 - uid: Google.GenAI.Types.Part.FunctionCall
   name: FunctionCall
   href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_FunctionCall
