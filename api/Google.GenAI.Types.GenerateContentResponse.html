@@ -189,6 +189,39 @@ public List&lt;Candidate&gt;? Candidates { get; set; }</code></pre>
 
 
 
+  <a id="Google_GenAI_Types_GenerateContentResponse_CodeExecutionResult_" data-uid="Google.GenAI.Types.GenerateContentResponse.CodeExecutionResult*"></a>
+
+  <h3 id="Google_GenAI_Types_GenerateContentResponse_CodeExecutionResult" data-uid="Google.GenAI.Types.GenerateContentResponse.CodeExecutionResult">
+  CodeExecutionResult
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentResponse.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the code execution result output from the first candidate's first result part.
+Returns null if no code execution result parts are present.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? CodeExecutionResult { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_GenerateContentResponse_CreateTime_" data-uid="Google.GenAI.Types.GenerateContentResponse.CreateTime*"></a>
 
   <h3 id="Google_GenAI_Types_GenerateContentResponse_CreateTime" data-uid="Google.GenAI.Types.GenerateContentResponse.CreateTime">
@@ -223,6 +256,72 @@ public DateTime? CreateTime { get; set; }</code></pre>
 
 
 
+  <a id="Google_GenAI_Types_GenerateContentResponse_ExecutableCode_" data-uid="Google.GenAI.Types.GenerateContentResponse.ExecutableCode*"></a>
+
+  <h3 id="Google_GenAI_Types_GenerateContentResponse_ExecutableCode" data-uid="Google.GenAI.Types.GenerateContentResponse.ExecutableCode">
+  ExecutableCode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentResponse.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the executable code string from the first candidate's first executable code part.
+Returns null if no executable code parts are present.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? ExecutableCode { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_GenerateContentResponse_FunctionCalls_" data-uid="Google.GenAI.Types.GenerateContentResponse.FunctionCalls*"></a>
+
+  <h3 id="Google_GenAI_Types_GenerateContentResponse_FunctionCalls" data-uid="Google.GenAI.Types.GenerateContentResponse.FunctionCalls">
+  FunctionCalls
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentResponse.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the list of function calls from the first candidate.
+Returns null if no function call parts are present.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;FunctionCall&gt;? FunctionCalls { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Google.GenAI.Types.FunctionCall.html">FunctionCall</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_GenerateContentResponse_ModelVersion_" data-uid="Google.GenAI.Types.GenerateContentResponse.ModelVersion*"></a>
 
   <h3 id="Google_GenAI_Types_GenerateContentResponse_ModelVersion" data-uid="Google.GenAI.Types.GenerateContentResponse.ModelVersion">
@@ -247,6 +346,39 @@ public string? ModelVersion { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_GenerateContentResponse_Parts_" data-uid="Google.GenAI.Types.GenerateContentResponse.Parts*"></a>
+
+  <h3 id="Google_GenAI_Types_GenerateContentResponse_Parts" data-uid="Google.GenAI.Types.GenerateContentResponse.Parts">
+  Parts
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentResponse.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the parts from the first candidate's content.
+Returns null if there are no candidates or no content.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Part&gt;? Parts { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Google.GenAI.Types.Part.html">Part</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -352,6 +484,39 @@ public HttpResponse? SdkHttpResponse { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Google.GenAI.Types.HttpResponse.html">HttpResponse</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_GenerateContentResponse_Text_" data-uid="Google.GenAI.Types.GenerateContentResponse.Text*"></a>
+
+  <h3 id="Google_GenAI_Types_GenerateContentResponse_Text" data-uid="Google.GenAI.Types.GenerateContentResponse.Text">
+  Text
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentResponse.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the concatenation of all text parts from the first candidate.
+Non-text parts are ignored. Returns null if no text parts are present.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Text { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
 

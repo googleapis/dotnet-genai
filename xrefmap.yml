@@ -12265,6 +12265,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerateContentResponse.Candidates
   nameWithType: GenerateContentResponse.Candidates
+- uid: Google.GenAI.Types.GenerateContentResponse.CodeExecutionResult
+  name: CodeExecutionResult
+  href: api/Google.GenAI.Types.GenerateContentResponse.html#Google_GenAI_Types_GenerateContentResponse_CodeExecutionResult
+  commentId: P:Google.GenAI.Types.GenerateContentResponse.CodeExecutionResult
+  fullName: Google.GenAI.Types.GenerateContentResponse.CodeExecutionResult
+  nameWithType: GenerateContentResponse.CodeExecutionResult
+- uid: Google.GenAI.Types.GenerateContentResponse.CodeExecutionResult*
+  name: CodeExecutionResult
+  href: api/Google.GenAI.Types.GenerateContentResponse.html#Google_GenAI_Types_GenerateContentResponse_CodeExecutionResult_
+  commentId: Overload:Google.GenAI.Types.GenerateContentResponse.CodeExecutionResult
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateContentResponse.CodeExecutionResult
+  nameWithType: GenerateContentResponse.CodeExecutionResult
 - uid: Google.GenAI.Types.GenerateContentResponse.CreateTime
   name: CreateTime
   href: api/Google.GenAI.Types.GenerateContentResponse.html#Google_GenAI_Types_GenerateContentResponse_CreateTime
@@ -12278,6 +12291,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerateContentResponse.CreateTime
   nameWithType: GenerateContentResponse.CreateTime
+- uid: Google.GenAI.Types.GenerateContentResponse.ExecutableCode
+  name: ExecutableCode
+  href: api/Google.GenAI.Types.GenerateContentResponse.html#Google_GenAI_Types_GenerateContentResponse_ExecutableCode
+  commentId: P:Google.GenAI.Types.GenerateContentResponse.ExecutableCode
+  fullName: Google.GenAI.Types.GenerateContentResponse.ExecutableCode
+  nameWithType: GenerateContentResponse.ExecutableCode
+- uid: Google.GenAI.Types.GenerateContentResponse.ExecutableCode*
+  name: ExecutableCode
+  href: api/Google.GenAI.Types.GenerateContentResponse.html#Google_GenAI_Types_GenerateContentResponse_ExecutableCode_
+  commentId: Overload:Google.GenAI.Types.GenerateContentResponse.ExecutableCode
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateContentResponse.ExecutableCode
+  nameWithType: GenerateContentResponse.ExecutableCode
 - uid: Google.GenAI.Types.GenerateContentResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
   name: FromJson(string, JsonSerializerOptions?)
   href: api/Google.GenAI.Types.GenerateContentResponse.html#Google_GenAI_Types_GenerateContentResponse_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
@@ -12294,6 +12320,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerateContentResponse.FromJson
   nameWithType: GenerateContentResponse.FromJson
+- uid: Google.GenAI.Types.GenerateContentResponse.FunctionCalls
+  name: FunctionCalls
+  href: api/Google.GenAI.Types.GenerateContentResponse.html#Google_GenAI_Types_GenerateContentResponse_FunctionCalls
+  commentId: P:Google.GenAI.Types.GenerateContentResponse.FunctionCalls
+  fullName: Google.GenAI.Types.GenerateContentResponse.FunctionCalls
+  nameWithType: GenerateContentResponse.FunctionCalls
+- uid: Google.GenAI.Types.GenerateContentResponse.FunctionCalls*
+  name: FunctionCalls
+  href: api/Google.GenAI.Types.GenerateContentResponse.html#Google_GenAI_Types_GenerateContentResponse_FunctionCalls_
+  commentId: Overload:Google.GenAI.Types.GenerateContentResponse.FunctionCalls
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateContentResponse.FunctionCalls
+  nameWithType: GenerateContentResponse.FunctionCalls
 - uid: Google.GenAI.Types.GenerateContentResponse.ModelVersion
   name: ModelVersion
   href: api/Google.GenAI.Types.GenerateContentResponse.html#Google_GenAI_Types_GenerateContentResponse_ModelVersion
@@ -12307,6 +12346,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerateContentResponse.ModelVersion
   nameWithType: GenerateContentResponse.ModelVersion
+- uid: Google.GenAI.Types.GenerateContentResponse.Parts
+  name: Parts
+  href: api/Google.GenAI.Types.GenerateContentResponse.html#Google_GenAI_Types_GenerateContentResponse_Parts
+  commentId: P:Google.GenAI.Types.GenerateContentResponse.Parts
+  fullName: Google.GenAI.Types.GenerateContentResponse.Parts
+  nameWithType: GenerateContentResponse.Parts
+- uid: Google.GenAI.Types.GenerateContentResponse.Parts*
+  name: Parts
+  href: api/Google.GenAI.Types.GenerateContentResponse.html#Google_GenAI_Types_GenerateContentResponse_Parts_
+  commentId: Overload:Google.GenAI.Types.GenerateContentResponse.Parts
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateContentResponse.Parts
+  nameWithType: GenerateContentResponse.Parts
 - uid: Google.GenAI.Types.GenerateContentResponse.PromptFeedback
   name: PromptFeedback
   href: api/Google.GenAI.Types.GenerateContentResponse.html#Google_GenAI_Types_GenerateContentResponse_PromptFeedback
@@ -12346,6 +12398,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerateContentResponse.SdkHttpResponse
   nameWithType: GenerateContentResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.GenerateContentResponse.Text
+  name: Text
+  href: api/Google.GenAI.Types.GenerateContentResponse.html#Google_GenAI_Types_GenerateContentResponse_Text
+  commentId: P:Google.GenAI.Types.GenerateContentResponse.Text
+  fullName: Google.GenAI.Types.GenerateContentResponse.Text
+  nameWithType: GenerateContentResponse.Text
+- uid: Google.GenAI.Types.GenerateContentResponse.Text*
+  name: Text
+  href: api/Google.GenAI.Types.GenerateContentResponse.html#Google_GenAI_Types_GenerateContentResponse_Text_
+  commentId: Overload:Google.GenAI.Types.GenerateContentResponse.Text
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateContentResponse.Text
+  nameWithType: GenerateContentResponse.Text
 - uid: Google.GenAI.Types.GenerateContentResponse.UsageMetadata
   name: UsageMetadata
   href: api/Google.GenAI.Types.GenerateContentResponse.html#Google_GenAI_Types_GenerateContentResponse_UsageMetadata
