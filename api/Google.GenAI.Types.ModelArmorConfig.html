@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ModelArmorConfig | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Configuration for Model Armor integrations of prompt and responses. This data type is not supported in Gemini API.">
+      <meta name="description" content="Configuration for Model Armor. Model Armor is a Google Cloud service that provides safety and security filtering for prompts and responses. It helps protect your AI applications from risks such as harmful content, sensitive data leakage, and prompt injection attacks. This data type is not supported in Gemini API.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Types_ModelArmorConfig" data-uid="Google.GenAI.Types.ModelArmorConfig" class="text-break">
-Class ModelArmorConfig  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ModelArmorConfig.cs/#L30"><i class="bi bi-code-slash"></i></a>
+Class ModelArmorConfig  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ModelArmorConfig.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,8 +93,10 @@ Class ModelArmorConfig  <a class="header-action link-secondary" title="View sour
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Configuration for Model Armor integrations of prompt and responses. This data type is not
-supported in Gemini API.</p>
+  <div class="markdown summary"><p>Configuration for Model Armor. Model Armor is a Google Cloud service that provides safety and
+security filtering for prompts and responses. It helps protect your AI applications from risks
+such as harmful content, sensitive data leakage, and prompt injection attacks. This data type
+is not supported in Gemini API.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -160,10 +162,14 @@ supported in Gemini API.</p>
 
   <h3 id="Google_GenAI_Types_ModelArmorConfig_PromptTemplateName" data-uid="Google.GenAI.Types.ModelArmorConfig.PromptTemplateName">
   PromptTemplateName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ModelArmorConfig.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ModelArmorConfig.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. The name of the Model Armor template to use for prompt sanitization.</p>
+  <div class="markdown level1 summary"><p>Optional. The resource name of the Model Armor template to use for prompt screening. A Model
+Armor template is a set of customized filters and thresholds that define how Model Armor
+screens content. If specified, Model Armor will use this template to check the user's prompt
+for safety and security risks before it is sent to the model. The name must be in the format
+<code>projects/{project}/locations/{location}/templates/{template}</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -194,10 +200,14 @@ public string? PromptTemplateName { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_ModelArmorConfig_ResponseTemplateName" data-uid="Google.GenAI.Types.ModelArmorConfig.ResponseTemplateName">
   ResponseTemplateName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ModelArmorConfig.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ModelArmorConfig.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. The name of the Model Armor template to use for response sanitization.</p>
+  <div class="markdown level1 summary"><p>Optional. The resource name of the Model Armor template to use for response screening. A
+Model Armor template is a set of customized filters and thresholds that define how Model
+Armor screens content. If specified, Model Armor will use this template to check the model's
+response for safety and security risks before it is returned to the user. The name must be
+in the format <code>projects/{project}/locations/{location}/templates/{template}</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -232,7 +242,7 @@ public string? ResponseTemplateName { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_ModelArmorConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.ModelArmorConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ModelArmorConfig.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ModelArmorConfig.cs/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a ModelArmorConfig object.</p>
@@ -275,7 +285,7 @@ fails.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ModelArmorConfig.cs/#L30" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ModelArmorConfig.cs/#L32" class="edit-link">Edit this page</a>
         </div>
 
 

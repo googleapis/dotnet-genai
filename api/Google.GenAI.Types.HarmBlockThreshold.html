@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Struct HarmBlockThreshold | Google GenAI .NET SDK ">
       
-      <meta name="description" content="The harm block threshold.">
+      <meta name="description" content="The threshold for blocking content. If the harm probability exceeds this threshold, the content will be blocked.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Types_HarmBlockThreshold" data-uid="Google.GenAI.Types.HarmBlockThreshold" class="text-break">
-Struct HarmBlockThreshold  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L28"><i class="bi bi-code-slash"></i></a>
+Struct HarmBlockThreshold  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,7 +93,8 @@ Struct HarmBlockThreshold  <a class="header-action link-secondary" title="View s
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>The harm block threshold.</p>
+  <div class="markdown summary"><p>The threshold for blocking content. If the harm probability exceeds this threshold, the
+content will be blocked.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -144,7 +145,7 @@ public readonly record struct HarmBlockThreshold : IEquatable&lt;HarmBlockThresh
 
   <h3 id="Google_GenAI_Types_HarmBlockThreshold_AllValues" data-uid="Google.GenAI.Types.HarmBlockThreshold.AllValues">
   AllValues
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L69"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -175,10 +176,10 @@ public readonly record struct HarmBlockThreshold : IEquatable&lt;HarmBlockThresh
 
   <h3 id="Google_GenAI_Types_HarmBlockThreshold_BlockLowAndAbove" data-uid="Google.GenAI.Types.HarmBlockThreshold.BlockLowAndAbove">
   BlockLowAndAbove
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Block low threshold and above (i.e. block more).</p>
+  <div class="markdown level1 summary"><p>Block content with a low harm probability or higher.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -207,10 +208,10 @@ public readonly record struct HarmBlockThreshold : IEquatable&lt;HarmBlockThresh
 
   <h3 id="Google_GenAI_Types_HarmBlockThreshold_BlockMediumAndAbove" data-uid="Google.GenAI.Types.HarmBlockThreshold.BlockMediumAndAbove">
   BlockMediumAndAbove
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Block medium threshold and above.</p>
+  <div class="markdown level1 summary"><p>Block content with a medium harm probability or higher.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -239,10 +240,10 @@ public readonly record struct HarmBlockThreshold : IEquatable&lt;HarmBlockThresh
 
   <h3 id="Google_GenAI_Types_HarmBlockThreshold_BlockNone" data-uid="Google.GenAI.Types.HarmBlockThreshold.BlockNone">
   BlockNone
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Block none.</p>
+  <div class="markdown level1 summary"><p>Do not block any content, regardless of its harm probability.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -271,10 +272,10 @@ public readonly record struct HarmBlockThreshold : IEquatable&lt;HarmBlockThresh
 
   <h3 id="Google_GenAI_Types_HarmBlockThreshold_BlockOnlyHigh" data-uid="Google.GenAI.Types.HarmBlockThreshold.BlockOnlyHigh">
   BlockOnlyHigh
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Block only high threshold (i.e. block less).</p>
+  <div class="markdown level1 summary"><p>Block content with a high harm probability.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -303,10 +304,10 @@ public readonly record struct HarmBlockThreshold : IEquatable&lt;HarmBlockThresh
 
   <h3 id="Google_GenAI_Types_HarmBlockThreshold_HarmBlockThresholdUnspecified" data-uid="Google.GenAI.Types.HarmBlockThreshold.HarmBlockThresholdUnspecified">
   HarmBlockThresholdUnspecified
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Unspecified harm block threshold.</p>
+  <div class="markdown level1 summary"><p>The harm block threshold is unspecified.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -335,10 +336,10 @@ public readonly record struct HarmBlockThreshold : IEquatable&lt;HarmBlockThresh
 
   <h3 id="Google_GenAI_Types_HarmBlockThreshold_Off" data-uid="Google.GenAI.Types.HarmBlockThreshold.Off">
   Off
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L67"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Turn off the safety filter.</p>
+  <div class="markdown level1 summary"><p>Turn off the safety filter entirely.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -367,7 +368,7 @@ public readonly record struct HarmBlockThreshold : IEquatable&lt;HarmBlockThresh
 
   <h3 id="Google_GenAI_Types_HarmBlockThreshold_Value" data-uid="Google.GenAI.Types.HarmBlockThreshold.Value">
   Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -402,7 +403,7 @@ public readonly record struct HarmBlockThreshold : IEquatable&lt;HarmBlockThresh
 
   <h3 id="Google_GenAI_Types_HarmBlockThreshold_Equals_Google_GenAI_Types_HarmBlockThreshold_" data-uid="Google.GenAI.Types.HarmBlockThreshold.Equals(Google.GenAI.Types.HarmBlockThreshold)">
   Equals(HarmBlockThreshold)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L96"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -438,7 +439,7 @@ public readonly record struct HarmBlockThreshold : IEquatable&lt;HarmBlockThresh
 
   <h3 id="Google_GenAI_Types_HarmBlockThreshold_FromString_System_String_" data-uid="Google.GenAI.Types.HarmBlockThreshold.FromString(System.String)">
   FromString(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -474,7 +475,7 @@ public readonly record struct HarmBlockThreshold : IEquatable&lt;HarmBlockThresh
 
   <h3 id="Google_GenAI_Types_HarmBlockThreshold_GetHashCode" data-uid="Google.GenAI.Types.HarmBlockThreshold.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L98"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -505,7 +506,7 @@ public readonly record struct HarmBlockThreshold : IEquatable&lt;HarmBlockThresh
 
   <h3 id="Google_GenAI_Types_HarmBlockThreshold_ToString" data-uid="Google.GenAI.Types.HarmBlockThreshold.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L92"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -540,7 +541,7 @@ public readonly record struct HarmBlockThreshold : IEquatable&lt;HarmBlockThresh
 
   <h3 id="Google_GenAI_Types_HarmBlockThreshold_op_Implicit_System_String__Google_GenAI_Types_HarmBlockThreshold" data-uid="Google.GenAI.Types.HarmBlockThreshold.op_Implicit(System.String)~Google.GenAI.Types.HarmBlockThreshold">
   implicit operator HarmBlockThreshold(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L94"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -576,7 +577,7 @@ public readonly record struct HarmBlockThreshold : IEquatable&lt;HarmBlockThresh
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L28" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/HarmBlockThreshold.cs/#L29" class="edit-link">Edit this page</a>
         </div>
 
 
