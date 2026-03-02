@@ -518,6 +518,7 @@ public class GoogleGenAIExtensionsTest
     Assert.AreEqual("gemini-2.5-pro", response.ModelId);
     Assert.IsNotNull(response.RawRepresentation);
     Assert.AreEqual("UTQBaY2BNLXg_uMP9Y_W8Q8", ((GenerateContentResponse)response.RawRepresentation).ResponseId);
+    Assert.AreEqual("UTQBaY2BNLXg_uMP9Y_W8Q8", response.Messages[0].MessageId);
   }
 
   [TestMethod]
@@ -3628,7 +3629,8 @@ public class GoogleGenAIExtensionsTest
             },
             "index": 0
           }
-        ]
+        ],
+        "responseId": "stream123"
       }
       data: {
         "candidates": [
@@ -3643,7 +3645,8 @@ public class GoogleGenAIExtensionsTest
             },
             "index": 0
           }
-        ]
+        ],
+        "responseId": "stream123"
       }
       data: {
         "candidates": [
@@ -3664,7 +3667,8 @@ public class GoogleGenAIExtensionsTest
           "promptTokenCount": 4,
           "candidatesTokenCount": 3,
           "totalTokenCount": 7
-        }
+        },
+        "responseId": "stream123"
       }
       """);
 
@@ -3674,6 +3678,7 @@ public class GoogleGenAIExtensionsTest
       updates.Add(update);
       Assert.IsNotNull(update);
       Assert.AreEqual(ChatRole.Assistant, update.Role);
+      Assert.AreEqual("stream123", update.MessageId);
     }
 
     Assert.AreEqual(3, updates.Count);

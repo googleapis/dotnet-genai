@@ -72,7 +72,7 @@ internal sealed class GoogleGenAIChatClient : IChatClient
     GenerateContentResponse generateResult = await _models.GenerateContentAsync(modelId!, contents, config).ConfigureAwait(false);
 
     // Create the response.
-    ChatResponse chatResponse = new(new ChatMessage(ChatRole.Assistant, new List<AIContent>()))
+    ChatResponse chatResponse = new(new ChatMessage(ChatRole.Assistant, new List<AIContent>()) { MessageId = generateResult.ResponseId })
     {
       CreatedAt = generateResult.CreateTime is { } dt ? new DateTimeOffset(dt) : null,
       ModelId = !string.IsNullOrWhiteSpace(generateResult.ModelVersion) ? generateResult.ModelVersion : modelId,
@@ -108,6 +108,7 @@ internal sealed class GoogleGenAIChatClient : IChatClient
       ChatResponseUpdate responseUpdate = new(ChatRole.Assistant, new List<AIContent>())
       {
         CreatedAt = generateResult.CreateTime is { } dt ? new DateTimeOffset(dt) : null,
+        MessageId = generateResult.ResponseId,
         ModelId = !string.IsNullOrWhiteSpace(generateResult.ModelVersion) ? generateResult.ModelVersion : modelId,
         RawRepresentation = generateResult,
         ResponseId = generateResult.ResponseId,
