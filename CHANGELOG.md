@@ -1,5 +1,19 @@
 # Changelog
 
+## Version 1.3.0, released 2026-03-02
+
+
+### New features
+
+* create Part.FromText, Part.FromUri, Part.FromBytes, Part.FromFunctionCall, Part.FromFunctionResponse, Part.FromExecutableCode, Part.FromCodeExecutionResult, quick accessors to facilitate fast Part record creation ([bc4203e](https://github.com/googleapis/dotnet-genai/commit/bc4203e206dadf33b1c7287f8dd12958768298b9))
+* include response.Text, response.FunctionCalls, response.ExecutableCode, response.CodeExecutionResult response.Parts quick accessor to GenerateContentResponse record ([94b99d6](https://github.com/googleapis/dotnet-genai/commit/94b99d64a1ad4989b28086e7f78003cb4e737f50))
+* Update data types from discovery doc. ([b9218ac](https://github.com/googleapis/dotnet-genai/commit/b9218ac8b1ac941969f984845845a954eeb1cd1e))
+
+
+### Bug fixes
+
+* Use response ID as message ID in chat client implementation ([df5231e](https://github.com/googleapis/dotnet-genai/commit/df5231e5a4c1c47d99f0aa4c045157040239ea88))
+
 ## Version 1.2.0, released 2026-02-25
 
 
