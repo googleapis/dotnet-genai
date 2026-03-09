@@ -15,6 +15,7 @@
  */
 
 using System;
+using System.Net.Http;
 
 using Google.Apis.Auth.OAuth2;
 
@@ -51,6 +52,7 @@ namespace Google.GenAI.Tests {
       Assert.AreEqual("https://generativelanguage.googleapis.com", client.HttpOptions.BaseUrl);
       Assert.AreEqual("v1beta", client.HttpOptions.ApiVersion);
       Assert.IsNull(client.HttpOptions.Timeout);
+      Assert.IsNull(client.HttpOptions.HttpClientFactory);
     }
 
     [TestMethod]
@@ -67,13 +69,16 @@ namespace Google.GenAI.Tests {
       Assert.AreEqual("https://generativelanguage.googleapis.com", client.HttpOptions.BaseUrl);
       Assert.AreEqual("v1beta", client.HttpOptions.ApiVersion);
       Assert.IsNull(client.HttpOptions.Timeout);
+      Assert.IsNull(client.HttpOptions.HttpClientFactory);
     }
 
     [TestMethod]
     public void GeminiConstructor_WithHttpOptionsProvided_SetsPropertiesCorrectly() {
       System.Environment.SetEnvironmentVariable(EnvApiKeyName, TestApiKey);
+      var httpClientFactory = () => new HttpClient();
       var customHttpOptions = new Types.HttpOptions { BaseUrl = "https://custom-url.com",
-                                                      ApiVersion = "v2", Timeout = 6000 };
+                                                      ApiVersion = "v2", Timeout = 6000,
+                                                      HttpClientFactory = httpClientFactory };
 
       var client = new HttpApiClient(null, customHttpOptions);
 
@@ -85,6 +90,7 @@ namespace Google.GenAI.Tests {
       Assert.AreEqual("https://custom-url.com", client.HttpOptions.BaseUrl);
       Assert.AreEqual("v2", client.HttpOptions.ApiVersion);
       Assert.AreEqual(6000, client.HttpOptions.Timeout);
+      Assert.AreSame(httpClientFactory, client.HttpOptions.HttpClientFactory);
     }
 
     [TestMethod]
@@ -124,6 +130,7 @@ namespace Google.GenAI.Tests {
                       client.HttpOptions.BaseUrl);
       Assert.AreEqual("v1beta1", client.HttpOptions.ApiVersion);
       Assert.IsNull(client.HttpOptions.Timeout);
+      Assert.IsNull(client.HttpOptions.HttpClientFactory);
     }
 
     [TestMethod]
@@ -147,6 +154,7 @@ namespace Google.GenAI.Tests {
                       client.HttpOptions.BaseUrl);
       Assert.AreEqual("v1beta1", client.HttpOptions.ApiVersion);
       Assert.IsNull(client.HttpOptions.Timeout);
+      Assert.IsNull(client.HttpOptions.HttpClientFactory);
     }
 
     [TestMethod]
@@ -214,8 +222,10 @@ namespace Google.GenAI.Tests {
           .Setup(c => c.GetAccessTokenForRequestAsync(
                      It.IsAny<string?>(), It.IsAny<System.Threading.CancellationToken>()))
           .ReturnsAsync("mock-access-token");
+      var httpClientFactory = () => new HttpClient();
       var customOptions = new Types.HttpOptions { BaseUrl = "https://custom.vertex.ai",
-                                                  ApiVersion = "v2alpha", Timeout = 8000 };
+                                                  ApiVersion = "v2alpha", Timeout = 8000,
+                                                  HttpClientFactory = httpClientFactory };
 
       var client =
           new HttpApiClient(TestProject, TestLocation, mockCredential.Object, customOptions);
@@ -228,6 +238,7 @@ namespace Google.GenAI.Tests {
       Assert.AreEqual("https://custom.vertex.ai", client.HttpOptions.BaseUrl);
       Assert.AreEqual("v2alpha", client.HttpOptions.ApiVersion);
       Assert.AreEqual(8000, client.HttpOptions.Timeout);
+      Assert.AreSame(httpClientFactory, client.HttpOptions.HttpClientFactory);
     }
   }
 }

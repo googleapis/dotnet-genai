@@ -15,6 +15,7 @@
  */
 
 using System;
+using System.Net.Http;
 
 using Google.Apis.Auth.OAuth2;
 using Google.GenAI;
@@ -587,6 +588,16 @@ namespace Google.GenAI.Tests {
       var client = new Client(vertexAI: false, apiKey: "key", httpOptions: options);
 
       Assert.AreEqual(1000, client._apiClient.HttpOptions.Timeout);
+    }
+
+    [TestMethod]
+    public void Constructor_HttpOptionsProvided_HttpClientFactory() {
+      Func<HttpClient> factory = () => new HttpClient();
+      var options = new HttpOptions { HttpClientFactory = factory };
+
+      var client = new Client(vertexAI: false, apiKey: "key", httpOptions: options);
+
+      Assert.AreSame(factory, client._apiClient.HttpOptions.HttpClientFactory);
     }
 
 #endregion

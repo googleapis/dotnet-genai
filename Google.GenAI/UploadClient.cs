@@ -86,7 +86,8 @@ namespace Google.GenAI
         ApiVersion = "",
         Headers = mergedHeaders,
         BaseUrl = userOptions?.BaseUrl,
-        Timeout = userOptions?.Timeout
+        Timeout = userOptions?.Timeout,
+        HttpClientFactory = userOptions?.HttpClientFactory
       };
     }
 

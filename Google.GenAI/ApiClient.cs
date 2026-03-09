@@ -126,7 +126,7 @@ namespace Google.GenAI
 
     private static HttpClient CreateHttpClient(HttpOptions httpOptions)
     {
-      var client = new HttpClient();
+      var client = httpOptions.HttpClientFactory?.Invoke() ?? new HttpClient();
       if (httpOptions.Timeout != null)
       {
         client.Timeout = System.TimeSpan.FromMilliseconds(httpOptions.Timeout.Value);
@@ -200,6 +200,10 @@ namespace Google.GenAI
       if (optionsToApply?.Timeout != null)
       {
         mergedOptions.Timeout = optionsToApply?.Timeout;
+      }
+      if (optionsToApply?.HttpClientFactory != null)
+      {
+        mergedOptions.HttpClientFactory = optionsToApply?.HttpClientFactory;
       }
 
       var currentHeaders = this.HttpOptions.Headers ?? new Dictionary<string, string>();

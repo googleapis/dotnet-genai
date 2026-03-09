@@ -65,6 +65,16 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// A factory function to create HttpClient instances.
+    /// This allows for custom configuration of HttpClient, such as setting default headers, timeouts, or using a custom message handler.
+    /// </summary>
+    [JsonIgnore]
+    public Func<HttpClient>
+      ? HttpClientFactory {
+          get; set;
+        }
+
+    /// <summary>
     /// Deserializes a JSON string to a HttpOptions object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
