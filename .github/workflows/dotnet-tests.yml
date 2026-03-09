@@ -41,6 +41,10 @@ jobs:
     - name: Show .NET version
       run: dotnet --list-sdks
 
+    - name: Build main SDK project
+      if: github.repository == 'googleapis/dotnet-genai'
+      run: dotnet build ./Google.GenAI/Google.GenAI.csproj --configuration Release
+
     - name: Run Unit Tests against net8.0 build
       if: github.repository == 'googleapis/dotnet-genai'
       run: dotnet test ./Google.GenAI.Tests/Google.GenAI.Tests.csproj
