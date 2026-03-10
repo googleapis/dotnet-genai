@@ -4466,6 +4466,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.RegisterFilesConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.RegisterFilesConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.RegisterFilesConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RegisterFilesConfig.yml\" sourcestartlinenumber=\"1\">Used to override the default configuration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.RegisterFilesResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.RegisterFilesResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.RegisterFilesResponse",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RegisterFilesResponse.yml\" sourcestartlinenumber=\"1\">Response for the _register file method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.ReplayFile.yml",
       "output": {
         ".html": {

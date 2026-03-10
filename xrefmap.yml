@@ -1073,6 +1073,22 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Files.ListAsync
   nameWithType: Files.ListAsync
+- uid: Google.GenAI.Files.RegisterFilesAsync(System.Collections.Generic.IEnumerable{System.String},Google.Apis.Auth.OAuth2.GoogleCredential,Google.GenAI.Types.RegisterFilesConfig,System.Threading.CancellationToken)
+  name: RegisterFilesAsync(IEnumerable<string>, GoogleCredential, RegisterFilesConfig?, CancellationToken)
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_RegisterFilesAsync_System_Collections_Generic_IEnumerable_System_String__Google_Apis_Auth_OAuth2_GoogleCredential_Google_GenAI_Types_RegisterFilesConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Files.RegisterFilesAsync(System.Collections.Generic.IEnumerable{System.String},Google.Apis.Auth.OAuth2.GoogleCredential,Google.GenAI.Types.RegisterFilesConfig,System.Threading.CancellationToken)
+  name.vb: RegisterFilesAsync(IEnumerable(Of String), GoogleCredential, RegisterFilesConfig, CancellationToken)
+  fullName: Google.GenAI.Files.RegisterFilesAsync(System.Collections.Generic.IEnumerable<string>, Google.Apis.Auth.OAuth2.GoogleCredential, Google.GenAI.Types.RegisterFilesConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Files.RegisterFilesAsync(System.Collections.Generic.IEnumerable(Of String), Google.Apis.Auth.OAuth2.GoogleCredential, Google.GenAI.Types.RegisterFilesConfig, System.Threading.CancellationToken)
+  nameWithType: Files.RegisterFilesAsync(IEnumerable<string>, GoogleCredential, RegisterFilesConfig?, CancellationToken)
+  nameWithType.vb: Files.RegisterFilesAsync(IEnumerable(Of String), GoogleCredential, RegisterFilesConfig, CancellationToken)
+- uid: Google.GenAI.Files.RegisterFilesAsync*
+  name: RegisterFilesAsync
+  href: api/Google.GenAI.Files.html#Google_GenAI_Files_RegisterFilesAsync_
+  commentId: Overload:Google.GenAI.Files.RegisterFilesAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Files.RegisterFilesAsync
+  nameWithType: Files.RegisterFilesAsync
 - uid: Google.GenAI.Files.UploadAsync(System.Byte[],System.String,Google.GenAI.Types.UploadFileConfig,System.Threading.CancellationToken)
   name: UploadAsync(byte[], string?, UploadFileConfig?, CancellationToken)
   href: api/Google.GenAI.Files.html#Google_GenAI_Files_UploadAsync_System_Byte___System_String_Google_GenAI_Types_UploadFileConfig_System_Threading_CancellationToken_
@@ -26097,6 +26113,102 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.RecontextImageSource.Prompt
   nameWithType: RecontextImageSource.Prompt
+- uid: Google.GenAI.Types.RegisterFilesConfig
+  name: RegisterFilesConfig
+  href: api/Google.GenAI.Types.RegisterFilesConfig.html
+  commentId: T:Google.GenAI.Types.RegisterFilesConfig
+  fullName: Google.GenAI.Types.RegisterFilesConfig
+  nameWithType: RegisterFilesConfig
+- uid: Google.GenAI.Types.RegisterFilesConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.RegisterFilesConfig.html#Google_GenAI_Types_RegisterFilesConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.RegisterFilesConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.RegisterFilesConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.RegisterFilesConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: RegisterFilesConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: RegisterFilesConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.RegisterFilesConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.RegisterFilesConfig.html#Google_GenAI_Types_RegisterFilesConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.RegisterFilesConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RegisterFilesConfig.FromJson
+  nameWithType: RegisterFilesConfig.FromJson
+- uid: Google.GenAI.Types.RegisterFilesConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.RegisterFilesConfig.html#Google_GenAI_Types_RegisterFilesConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.RegisterFilesConfig.HttpOptions
+  fullName: Google.GenAI.Types.RegisterFilesConfig.HttpOptions
+  nameWithType: RegisterFilesConfig.HttpOptions
+- uid: Google.GenAI.Types.RegisterFilesConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.RegisterFilesConfig.html#Google_GenAI_Types_RegisterFilesConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.RegisterFilesConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RegisterFilesConfig.HttpOptions
+  nameWithType: RegisterFilesConfig.HttpOptions
+- uid: Google.GenAI.Types.RegisterFilesConfig.ShouldReturnHttpResponse
+  name: ShouldReturnHttpResponse
+  href: api/Google.GenAI.Types.RegisterFilesConfig.html#Google_GenAI_Types_RegisterFilesConfig_ShouldReturnHttpResponse
+  commentId: P:Google.GenAI.Types.RegisterFilesConfig.ShouldReturnHttpResponse
+  fullName: Google.GenAI.Types.RegisterFilesConfig.ShouldReturnHttpResponse
+  nameWithType: RegisterFilesConfig.ShouldReturnHttpResponse
+- uid: Google.GenAI.Types.RegisterFilesConfig.ShouldReturnHttpResponse*
+  name: ShouldReturnHttpResponse
+  href: api/Google.GenAI.Types.RegisterFilesConfig.html#Google_GenAI_Types_RegisterFilesConfig_ShouldReturnHttpResponse_
+  commentId: Overload:Google.GenAI.Types.RegisterFilesConfig.ShouldReturnHttpResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RegisterFilesConfig.ShouldReturnHttpResponse
+  nameWithType: RegisterFilesConfig.ShouldReturnHttpResponse
+- uid: Google.GenAI.Types.RegisterFilesResponse
+  name: RegisterFilesResponse
+  href: api/Google.GenAI.Types.RegisterFilesResponse.html
+  commentId: T:Google.GenAI.Types.RegisterFilesResponse
+  fullName: Google.GenAI.Types.RegisterFilesResponse
+  nameWithType: RegisterFilesResponse
+- uid: Google.GenAI.Types.RegisterFilesResponse.Files
+  name: Files
+  href: api/Google.GenAI.Types.RegisterFilesResponse.html#Google_GenAI_Types_RegisterFilesResponse_Files
+  commentId: P:Google.GenAI.Types.RegisterFilesResponse.Files
+  fullName: Google.GenAI.Types.RegisterFilesResponse.Files
+  nameWithType: RegisterFilesResponse.Files
+- uid: Google.GenAI.Types.RegisterFilesResponse.Files*
+  name: Files
+  href: api/Google.GenAI.Types.RegisterFilesResponse.html#Google_GenAI_Types_RegisterFilesResponse_Files_
+  commentId: Overload:Google.GenAI.Types.RegisterFilesResponse.Files
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RegisterFilesResponse.Files
+  nameWithType: RegisterFilesResponse.Files
+- uid: Google.GenAI.Types.RegisterFilesResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.RegisterFilesResponse.html#Google_GenAI_Types_RegisterFilesResponse_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.RegisterFilesResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.RegisterFilesResponse.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.RegisterFilesResponse.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: RegisterFilesResponse.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: RegisterFilesResponse.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.RegisterFilesResponse.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.RegisterFilesResponse.html#Google_GenAI_Types_RegisterFilesResponse_FromJson_
+  commentId: Overload:Google.GenAI.Types.RegisterFilesResponse.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RegisterFilesResponse.FromJson
+  nameWithType: RegisterFilesResponse.FromJson
+- uid: Google.GenAI.Types.RegisterFilesResponse.SdkHttpResponse
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.RegisterFilesResponse.html#Google_GenAI_Types_RegisterFilesResponse_SdkHttpResponse
+  commentId: P:Google.GenAI.Types.RegisterFilesResponse.SdkHttpResponse
+  fullName: Google.GenAI.Types.RegisterFilesResponse.SdkHttpResponse
+  nameWithType: RegisterFilesResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.RegisterFilesResponse.SdkHttpResponse*
+  name: SdkHttpResponse
+  href: api/Google.GenAI.Types.RegisterFilesResponse.html#Google_GenAI_Types_RegisterFilesResponse_SdkHttpResponse_
+  commentId: Overload:Google.GenAI.Types.RegisterFilesResponse.SdkHttpResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RegisterFilesResponse.SdkHttpResponse
+  nameWithType: RegisterFilesResponse.SdkHttpResponse
 - uid: Google.GenAI.Types.ReplayFile
   name: ReplayFile
   href: api/Google.GenAI.Types.ReplayFile.html
