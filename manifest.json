@@ -4564,6 +4564,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ResourceScope.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ResourceScope.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ResourceScope",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ResourceScope.yml\" sourcestartlinenumber=\"1\">Resource scope.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ResourceScopeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ResourceScopeConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ResourceScopeConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.Retrieval.yml",
       "output": {
         ".html": {

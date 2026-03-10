@@ -13,24 +13,15 @@ references:
   commentId: T:Google.GenAI.ApiClient
   fullName: Google.GenAI.ApiClient
   nameWithType: ApiClient
-- uid: Google.GenAI.ApiClient.#ctor(System.String,Google.GenAI.Types.HttpOptions)
-  name: ApiClient(string?, HttpOptions?)
-  href: api/Google.GenAI.ApiClient.html#Google_GenAI_ApiClient__ctor_System_String_Google_GenAI_Types_HttpOptions_
-  commentId: M:Google.GenAI.ApiClient.#ctor(System.String,Google.GenAI.Types.HttpOptions)
-  name.vb: New(String, HttpOptions)
-  fullName: Google.GenAI.ApiClient.ApiClient(string?, Google.GenAI.Types.HttpOptions?)
-  fullName.vb: Google.GenAI.ApiClient.New(String, Google.GenAI.Types.HttpOptions)
-  nameWithType: ApiClient.ApiClient(string?, HttpOptions?)
-  nameWithType.vb: ApiClient.New(String, HttpOptions)
-- uid: Google.GenAI.ApiClient.#ctor(System.String,System.String,Google.Apis.Auth.OAuth2.ICredential,Google.GenAI.Types.HttpOptions)
-  name: ApiClient(string?, string?, ICredential?, HttpOptions?)
-  href: api/Google.GenAI.ApiClient.html#Google_GenAI_ApiClient__ctor_System_String_System_String_Google_Apis_Auth_OAuth2_ICredential_Google_GenAI_Types_HttpOptions_
-  commentId: M:Google.GenAI.ApiClient.#ctor(System.String,System.String,Google.Apis.Auth.OAuth2.ICredential,Google.GenAI.Types.HttpOptions)
-  name.vb: New(String, String, ICredential, HttpOptions)
-  fullName: Google.GenAI.ApiClient.ApiClient(string?, string?, Google.Apis.Auth.OAuth2.ICredential?, Google.GenAI.Types.HttpOptions?)
-  fullName.vb: Google.GenAI.ApiClient.New(String, String, Google.Apis.Auth.OAuth2.ICredential, Google.GenAI.Types.HttpOptions)
-  nameWithType: ApiClient.ApiClient(string?, string?, ICredential?, HttpOptions?)
-  nameWithType.vb: ApiClient.New(String, String, ICredential, HttpOptions)
+- uid: Google.GenAI.ApiClient.#ctor(System.Nullable{System.Boolean},System.String,System.String,System.String,Google.Apis.Auth.OAuth2.ICredential,Google.GenAI.Types.HttpOptions)
+  name: ApiClient(bool?, string?, string?, string?, ICredential?, HttpOptions?)
+  href: api/Google.GenAI.ApiClient.html#Google_GenAI_ApiClient__ctor_System_Nullable_System_Boolean__System_String_System_String_System_String_Google_Apis_Auth_OAuth2_ICredential_Google_GenAI_Types_HttpOptions_
+  commentId: M:Google.GenAI.ApiClient.#ctor(System.Nullable{System.Boolean},System.String,System.String,System.String,Google.Apis.Auth.OAuth2.ICredential,Google.GenAI.Types.HttpOptions)
+  name.vb: New(Boolean?, String, String, String, ICredential, HttpOptions)
+  fullName: Google.GenAI.ApiClient.ApiClient(bool?, string?, string?, string?, Google.Apis.Auth.OAuth2.ICredential?, Google.GenAI.Types.HttpOptions?)
+  fullName.vb: Google.GenAI.ApiClient.New(Boolean?, String, String, String, Google.Apis.Auth.OAuth2.ICredential, Google.GenAI.Types.HttpOptions)
+  nameWithType: ApiClient.ApiClient(bool?, string?, string?, string?, ICredential?, HttpOptions?)
+  nameWithType.vb: ApiClient.New(Boolean?, String, String, String, ICredential, HttpOptions)
 - uid: Google.GenAI.ApiClient.#ctor*
   name: ApiClient
   href: api/Google.GenAI.ApiClient.html#Google_GenAI_ApiClient__ctor_
@@ -67,6 +58,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.ApiClient.Credentials
   nameWithType: ApiClient.Credentials
+- uid: Google.GenAI.ApiClient.CustomBaseUrl
+  name: CustomBaseUrl
+  href: api/Google.GenAI.ApiClient.html#Google_GenAI_ApiClient_CustomBaseUrl
+  commentId: P:Google.GenAI.ApiClient.CustomBaseUrl
+  fullName: Google.GenAI.ApiClient.CustomBaseUrl
+  nameWithType: ApiClient.CustomBaseUrl
+- uid: Google.GenAI.ApiClient.CustomBaseUrl*
+  name: CustomBaseUrl
+  href: api/Google.GenAI.ApiClient.html#Google_GenAI_ApiClient_CustomBaseUrl_
+  commentId: Overload:Google.GenAI.ApiClient.CustomBaseUrl
+  isSpec: "True"
+  fullName: Google.GenAI.ApiClient.CustomBaseUrl
+  nameWithType: ApiClient.CustomBaseUrl
 - uid: Google.GenAI.ApiClient.Dispose
   name: Dispose()
   href: api/Google.GenAI.ApiClient.html#Google_GenAI_ApiClient_Dispose
@@ -1129,24 +1133,15 @@ references:
   commentId: T:Google.GenAI.HttpApiClient
   fullName: Google.GenAI.HttpApiClient
   nameWithType: HttpApiClient
-- uid: Google.GenAI.HttpApiClient.#ctor(System.String,Google.GenAI.Types.HttpOptions)
-  name: HttpApiClient(string?, HttpOptions?)
-  href: api/Google.GenAI.HttpApiClient.html#Google_GenAI_HttpApiClient__ctor_System_String_Google_GenAI_Types_HttpOptions_
-  commentId: M:Google.GenAI.HttpApiClient.#ctor(System.String,Google.GenAI.Types.HttpOptions)
-  name.vb: New(String, HttpOptions)
-  fullName: Google.GenAI.HttpApiClient.HttpApiClient(string?, Google.GenAI.Types.HttpOptions?)
-  fullName.vb: Google.GenAI.HttpApiClient.New(String, Google.GenAI.Types.HttpOptions)
-  nameWithType: HttpApiClient.HttpApiClient(string?, HttpOptions?)
-  nameWithType.vb: HttpApiClient.New(String, HttpOptions)
-- uid: Google.GenAI.HttpApiClient.#ctor(System.String,System.String,Google.Apis.Auth.OAuth2.ICredential,Google.GenAI.Types.HttpOptions)
-  name: HttpApiClient(string?, string?, ICredential?, HttpOptions?)
-  href: api/Google.GenAI.HttpApiClient.html#Google_GenAI_HttpApiClient__ctor_System_String_System_String_Google_Apis_Auth_OAuth2_ICredential_Google_GenAI_Types_HttpOptions_
-  commentId: M:Google.GenAI.HttpApiClient.#ctor(System.String,System.String,Google.Apis.Auth.OAuth2.ICredential,Google.GenAI.Types.HttpOptions)
-  name.vb: New(String, String, ICredential, HttpOptions)
-  fullName: Google.GenAI.HttpApiClient.HttpApiClient(string?, string?, Google.Apis.Auth.OAuth2.ICredential?, Google.GenAI.Types.HttpOptions?)
-  fullName.vb: Google.GenAI.HttpApiClient.New(String, String, Google.Apis.Auth.OAuth2.ICredential, Google.GenAI.Types.HttpOptions)
-  nameWithType: HttpApiClient.HttpApiClient(string?, string?, ICredential?, HttpOptions?)
-  nameWithType.vb: HttpApiClient.New(String, String, ICredential, HttpOptions)
+- uid: Google.GenAI.HttpApiClient.#ctor(System.Nullable{System.Boolean},System.String,System.String,System.String,Google.Apis.Auth.OAuth2.ICredential,Google.GenAI.Types.HttpOptions)
+  name: HttpApiClient(bool?, string?, string?, string?, ICredential?, HttpOptions?)
+  href: api/Google.GenAI.HttpApiClient.html#Google_GenAI_HttpApiClient__ctor_System_Nullable_System_Boolean__System_String_System_String_System_String_Google_Apis_Auth_OAuth2_ICredential_Google_GenAI_Types_HttpOptions_
+  commentId: M:Google.GenAI.HttpApiClient.#ctor(System.Nullable{System.Boolean},System.String,System.String,System.String,Google.Apis.Auth.OAuth2.ICredential,Google.GenAI.Types.HttpOptions)
+  name.vb: New(Boolean?, String, String, String, ICredential, HttpOptions)
+  fullName: Google.GenAI.HttpApiClient.HttpApiClient(bool?, string?, string?, string?, Google.Apis.Auth.OAuth2.ICredential?, Google.GenAI.Types.HttpOptions?)
+  fullName.vb: Google.GenAI.HttpApiClient.New(Boolean?, String, String, String, Google.Apis.Auth.OAuth2.ICredential, Google.GenAI.Types.HttpOptions)
+  nameWithType: HttpApiClient.HttpApiClient(bool?, string?, string?, string?, ICredential?, HttpOptions?)
+  nameWithType.vb: HttpApiClient.New(Boolean?, String, String, String, ICredential, HttpOptions)
 - uid: Google.GenAI.HttpApiClient.#ctor*
   name: HttpApiClient
   href: api/Google.GenAI.HttpApiClient.html#Google_GenAI_HttpApiClient__ctor_
@@ -17656,6 +17651,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.HttpOptions.BaseUrl
   nameWithType: HttpOptions.BaseUrl
+- uid: Google.GenAI.Types.HttpOptions.BaseUrlResourceScope
+  name: BaseUrlResourceScope
+  href: api/Google.GenAI.Types.HttpOptions.html#Google_GenAI_Types_HttpOptions_BaseUrlResourceScope
+  commentId: P:Google.GenAI.Types.HttpOptions.BaseUrlResourceScope
+  fullName: Google.GenAI.Types.HttpOptions.BaseUrlResourceScope
+  nameWithType: HttpOptions.BaseUrlResourceScope
+- uid: Google.GenAI.Types.HttpOptions.BaseUrlResourceScope*
+  name: BaseUrlResourceScope
+  href: api/Google.GenAI.Types.HttpOptions.html#Google_GenAI_Types_HttpOptions_BaseUrlResourceScope_
+  commentId: Overload:Google.GenAI.Types.HttpOptions.BaseUrlResourceScope
+  isSpec: "True"
+  fullName: Google.GenAI.Types.HttpOptions.BaseUrlResourceScope
+  nameWithType: HttpOptions.BaseUrlResourceScope
 - uid: Google.GenAI.Types.HttpOptions.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
   name: FromJson(string, JsonSerializerOptions?)
   href: api/Google.GenAI.Types.HttpOptions.html#Google_GenAI_Types_HttpOptions_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
@@ -26501,6 +26509,160 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ReplicatedVoiceConfig.VoiceSampleAudio
   nameWithType: ReplicatedVoiceConfig.VoiceSampleAudio
+- uid: Google.GenAI.Types.ResourceScope
+  name: ResourceScope
+  href: api/Google.GenAI.Types.ResourceScope.html
+  commentId: T:Google.GenAI.Types.ResourceScope
+  fullName: Google.GenAI.Types.ResourceScope
+  nameWithType: ResourceScope
+- uid: Google.GenAI.Types.ResourceScope.AllValues
+  name: AllValues
+  href: api/Google.GenAI.Types.ResourceScope.html#Google_GenAI_Types_ResourceScope_AllValues
+  commentId: P:Google.GenAI.Types.ResourceScope.AllValues
+  fullName: Google.GenAI.Types.ResourceScope.AllValues
+  nameWithType: ResourceScope.AllValues
+- uid: Google.GenAI.Types.ResourceScope.AllValues*
+  name: AllValues
+  href: api/Google.GenAI.Types.ResourceScope.html#Google_GenAI_Types_ResourceScope_AllValues_
+  commentId: Overload:Google.GenAI.Types.ResourceScope.AllValues
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ResourceScope.AllValues
+  nameWithType: ResourceScope.AllValues
+- uid: Google.GenAI.Types.ResourceScope.Collection
+  name: Collection
+  href: api/Google.GenAI.Types.ResourceScope.html#Google_GenAI_Types_ResourceScope_Collection
+  commentId: P:Google.GenAI.Types.ResourceScope.Collection
+  fullName: Google.GenAI.Types.ResourceScope.Collection
+  nameWithType: ResourceScope.Collection
+- uid: Google.GenAI.Types.ResourceScope.Collection*
+  name: Collection
+  href: api/Google.GenAI.Types.ResourceScope.html#Google_GenAI_Types_ResourceScope_Collection_
+  commentId: Overload:Google.GenAI.Types.ResourceScope.Collection
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ResourceScope.Collection
+  nameWithType: ResourceScope.Collection
+- uid: Google.GenAI.Types.ResourceScope.Equals(Google.GenAI.Types.ResourceScope)
+  name: Equals(ResourceScope)
+  href: api/Google.GenAI.Types.ResourceScope.html#Google_GenAI_Types_ResourceScope_Equals_Google_GenAI_Types_ResourceScope_
+  commentId: M:Google.GenAI.Types.ResourceScope.Equals(Google.GenAI.Types.ResourceScope)
+  fullName: Google.GenAI.Types.ResourceScope.Equals(Google.GenAI.Types.ResourceScope)
+  nameWithType: ResourceScope.Equals(ResourceScope)
+- uid: Google.GenAI.Types.ResourceScope.Equals*
+  name: Equals
+  href: api/Google.GenAI.Types.ResourceScope.html#Google_GenAI_Types_ResourceScope_Equals_
+  commentId: Overload:Google.GenAI.Types.ResourceScope.Equals
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ResourceScope.Equals
+  nameWithType: ResourceScope.Equals
+- uid: Google.GenAI.Types.ResourceScope.FromString(System.String)
+  name: FromString(string)
+  href: api/Google.GenAI.Types.ResourceScope.html#Google_GenAI_Types_ResourceScope_FromString_System_String_
+  commentId: M:Google.GenAI.Types.ResourceScope.FromString(System.String)
+  name.vb: FromString(String)
+  fullName: Google.GenAI.Types.ResourceScope.FromString(string)
+  fullName.vb: Google.GenAI.Types.ResourceScope.FromString(String)
+  nameWithType: ResourceScope.FromString(string)
+  nameWithType.vb: ResourceScope.FromString(String)
+- uid: Google.GenAI.Types.ResourceScope.FromString*
+  name: FromString
+  href: api/Google.GenAI.Types.ResourceScope.html#Google_GenAI_Types_ResourceScope_FromString_
+  commentId: Overload:Google.GenAI.Types.ResourceScope.FromString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ResourceScope.FromString
+  nameWithType: ResourceScope.FromString
+- uid: Google.GenAI.Types.ResourceScope.GetHashCode
+  name: GetHashCode()
+  href: api/Google.GenAI.Types.ResourceScope.html#Google_GenAI_Types_ResourceScope_GetHashCode
+  commentId: M:Google.GenAI.Types.ResourceScope.GetHashCode
+  fullName: Google.GenAI.Types.ResourceScope.GetHashCode()
+  nameWithType: ResourceScope.GetHashCode()
+- uid: Google.GenAI.Types.ResourceScope.GetHashCode*
+  name: GetHashCode
+  href: api/Google.GenAI.Types.ResourceScope.html#Google_GenAI_Types_ResourceScope_GetHashCode_
+  commentId: Overload:Google.GenAI.Types.ResourceScope.GetHashCode
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ResourceScope.GetHashCode
+  nameWithType: ResourceScope.GetHashCode
+- uid: Google.GenAI.Types.ResourceScope.ToString
+  name: ToString()
+  href: api/Google.GenAI.Types.ResourceScope.html#Google_GenAI_Types_ResourceScope_ToString
+  commentId: M:Google.GenAI.Types.ResourceScope.ToString
+  fullName: Google.GenAI.Types.ResourceScope.ToString()
+  nameWithType: ResourceScope.ToString()
+- uid: Google.GenAI.Types.ResourceScope.ToString*
+  name: ToString
+  href: api/Google.GenAI.Types.ResourceScope.html#Google_GenAI_Types_ResourceScope_ToString_
+  commentId: Overload:Google.GenAI.Types.ResourceScope.ToString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ResourceScope.ToString
+  nameWithType: ResourceScope.ToString
+- uid: Google.GenAI.Types.ResourceScope.Value
+  name: Value
+  href: api/Google.GenAI.Types.ResourceScope.html#Google_GenAI_Types_ResourceScope_Value
+  commentId: P:Google.GenAI.Types.ResourceScope.Value
+  fullName: Google.GenAI.Types.ResourceScope.Value
+  nameWithType: ResourceScope.Value
+- uid: Google.GenAI.Types.ResourceScope.Value*
+  name: Value
+  href: api/Google.GenAI.Types.ResourceScope.html#Google_GenAI_Types_ResourceScope_Value_
+  commentId: Overload:Google.GenAI.Types.ResourceScope.Value
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ResourceScope.Value
+  nameWithType: ResourceScope.Value
+- uid: Google.GenAI.Types.ResourceScope.op_Implicit(System.String)~Google.GenAI.Types.ResourceScope
+  name: implicit operator ResourceScope(string)
+  href: api/Google.GenAI.Types.ResourceScope.html#Google_GenAI_Types_ResourceScope_op_Implicit_System_String__Google_GenAI_Types_ResourceScope
+  commentId: M:Google.GenAI.Types.ResourceScope.op_Implicit(System.String)~Google.GenAI.Types.ResourceScope
+  name.vb: CType(String)
+  fullName: Google.GenAI.Types.ResourceScope.implicit operator Google.GenAI.Types.ResourceScope(string)
+  fullName.vb: Google.GenAI.Types.ResourceScope.CType(String)
+  nameWithType: ResourceScope.implicit operator ResourceScope(string)
+  nameWithType.vb: ResourceScope.CType(String)
+- uid: Google.GenAI.Types.ResourceScope.op_Implicit*
+  name: implicit operator
+  href: api/Google.GenAI.Types.ResourceScope.html#Google_GenAI_Types_ResourceScope_op_Implicit_
+  commentId: Overload:Google.GenAI.Types.ResourceScope.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: Google.GenAI.Types.ResourceScope.implicit operator
+  fullName.vb: Google.GenAI.Types.ResourceScope.CType
+  nameWithType: ResourceScope.implicit operator
+  nameWithType.vb: ResourceScope.CType
+- uid: Google.GenAI.Types.ResourceScopeConverter
+  name: ResourceScopeConverter
+  href: api/Google.GenAI.Types.ResourceScopeConverter.html
+  commentId: T:Google.GenAI.Types.ResourceScopeConverter
+  fullName: Google.GenAI.Types.ResourceScopeConverter
+  nameWithType: ResourceScopeConverter
+- uid: Google.GenAI.Types.ResourceScopeConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.ResourceScopeConverter.html#Google_GenAI_Types_ResourceScopeConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ResourceScopeConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name.vb: Read(Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ResourceScopeConverter.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: Google.GenAI.Types.ResourceScopeConverter.Read(System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ResourceScopeConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: ResourceScopeConverter.Read(Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ResourceScopeConverter.Read*
+  name: Read
+  href: api/Google.GenAI.Types.ResourceScopeConverter.html#Google_GenAI_Types_ResourceScopeConverter_Read_
+  commentId: Overload:Google.GenAI.Types.ResourceScopeConverter.Read
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ResourceScopeConverter.Read
+  nameWithType: ResourceScopeConverter.Read
+- uid: Google.GenAI.Types.ResourceScopeConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.ResourceScope,System.Text.Json.JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, ResourceScope, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.ResourceScopeConverter.html#Google_GenAI_Types_ResourceScopeConverter_Write_System_Text_Json_Utf8JsonWriter_Google_GenAI_Types_ResourceScope_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ResourceScopeConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.ResourceScope,System.Text.Json.JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ResourceScopeConverter.Write(System.Text.Json.Utf8JsonWriter, Google.GenAI.Types.ResourceScope, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ResourceScopeConverter.Write(Utf8JsonWriter, ResourceScope, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ResourceScopeConverter.Write*
+  name: Write
+  href: api/Google.GenAI.Types.ResourceScopeConverter.html#Google_GenAI_Types_ResourceScopeConverter_Write_
+  commentId: Overload:Google.GenAI.Types.ResourceScopeConverter.Write
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ResourceScopeConverter.Write
+  nameWithType: ResourceScopeConverter.Write
 - uid: Google.GenAI.Types.Retrieval
   name: Retrieval
   href: api/Google.GenAI.Types.Retrieval.html
