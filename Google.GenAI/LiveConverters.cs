@@ -679,6 +679,11 @@ namespace Google.GenAI {
                               Common.GetValueByPath(fromObject, new string[] { "proactivity" }));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "historyConfig" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "historyConfig" },
+                              Common.GetValueByPath(fromObject, new string[] { "historyConfig" }));
+      }
+
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "explicitVadSignal" }))) {
         throw new NotSupportedException(
             "explicitVadSignal parameter is not supported in Gemini API.");
@@ -754,6 +759,10 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "proactivity" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "proactivity" },
                               Common.GetValueByPath(fromObject, new string[] { "proactivity" }));
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "historyConfig" }))) {
+        throw new NotSupportedException("historyConfig parameter is not supported in Vertex AI.");
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "explicitVadSignal" }) != null) {
@@ -894,6 +903,11 @@ namespace Google.GenAI {
                               Common.GetValueByPath(fromObject, new string[] { "proactivity" }));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "historyConfig" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "setup", "historyConfig" },
+                              Common.GetValueByPath(fromObject, new string[] { "historyConfig" }));
+      }
+
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "explicitVadSignal" }))) {
         throw new NotSupportedException(
             "explicitVadSignal parameter is not supported in Gemini API.");
@@ -1022,6 +1036,10 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "proactivity" }) != null) {
         Common.SetValueByPath(parentObject, new string[] { "setup", "proactivity" },
                               Common.GetValueByPath(fromObject, new string[] { "proactivity" }));
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "historyConfig" }))) {
+        throw new NotSupportedException("historyConfig parameter is not supported in Vertex AI.");
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "explicitVadSignal" }) != null) {

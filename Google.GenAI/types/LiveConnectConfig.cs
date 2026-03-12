@@ -242,6 +242,16 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Configures the exchange of history between the client and the server.
+    /// </summary>
+    [JsonPropertyName("historyConfig")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public HistoryConfig
+        ? HistoryConfig {
+            get; set;
+          }
+
+    /// <summary>
     /// Configures the explicit VAD signal. If enabled, the client will send vad_signal to indicate
     /// the start and end of speech. This allows the server to process the audio more efficiently.
     /// </summary>
