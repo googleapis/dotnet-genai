@@ -151,6 +151,46 @@ Class AudioTranscriptionConfig  <a class="header-action link-secondary" title="V
 
 
 
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_Types_AudioTranscriptionConfig_LanguageCodes_" data-uid="Google.GenAI.Types.AudioTranscriptionConfig.LanguageCodes*"></a>
+
+  <h3 id="Google_GenAI_Types_AudioTranscriptionConfig_LanguageCodes" data-uid="Google.GenAI.Types.AudioTranscriptionConfig.LanguageCodes">
+  LanguageCodes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AudioTranscriptionConfig.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The language codes of the audio. BCP-47 language code. If not set, the transcription will be
+in the language detected by the model. If set, the server will use the language code
+specified in the model config as a hint for the language of the audio</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;languageCodes&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public List&lt;string&gt;? LanguageCodes { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -159,7 +199,7 @@ Class AudioTranscriptionConfig  <a class="header-action link-secondary" title="V
 
   <h3 id="Google_GenAI_Types_AudioTranscriptionConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.AudioTranscriptionConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AudioTranscriptionConfig.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AudioTranscriptionConfig.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a AudioTranscriptionConfig object.</p>

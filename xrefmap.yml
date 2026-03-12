@@ -3396,6 +3396,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.AudioTranscriptionConfig.FromJson
   nameWithType: AudioTranscriptionConfig.FromJson
+- uid: Google.GenAI.Types.AudioTranscriptionConfig.LanguageCodes
+  name: LanguageCodes
+  href: api/Google.GenAI.Types.AudioTranscriptionConfig.html#Google_GenAI_Types_AudioTranscriptionConfig_LanguageCodes
+  commentId: P:Google.GenAI.Types.AudioTranscriptionConfig.LanguageCodes
+  fullName: Google.GenAI.Types.AudioTranscriptionConfig.LanguageCodes
+  nameWithType: AudioTranscriptionConfig.LanguageCodes
+- uid: Google.GenAI.Types.AudioTranscriptionConfig.LanguageCodes*
+  name: LanguageCodes
+  href: api/Google.GenAI.Types.AudioTranscriptionConfig.html#Google_GenAI_Types_AudioTranscriptionConfig_LanguageCodes_
+  commentId: Overload:Google.GenAI.Types.AudioTranscriptionConfig.LanguageCodes
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioTranscriptionConfig.LanguageCodes
+  nameWithType: AudioTranscriptionConfig.LanguageCodes
 - uid: Google.GenAI.Types.AuthConfig
   name: AuthConfig
   href: api/Google.GenAI.Types.AuthConfig.html
