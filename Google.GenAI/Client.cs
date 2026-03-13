@@ -65,28 +65,21 @@ namespace Google.GenAI {
       string projectEnv = Environment.GetEnvironmentVariable("GOOGLE_CLOUD_PROJECT");
       string locationEnv = Environment.GetEnvironmentVariable("GOOGLE_CLOUD_LOCATION");
       string apiKeyEnv = Environment.GetEnvironmentVariable("GOOGLE_API_KEY");
-      project = project ?? projectEnv;
-      location = location ?? locationEnv;
-      apiKey = apiKey ?? apiKeyEnv;
-      if (project != null || location != null) {
-        if (apiKey != null && projectEnv == null && apiKeyEnv == null)
-          throw new ArgumentException(
-              "Project/location and API key are mutually exclusive in the client initializer.");
-        if (!resolvedVertexAI && apiKeyEnv == null)
+
+      if ((project != null || location != null) && !resolvedVertexAI) {
+        if (apiKeyEnv == null && apiKey == null)
+        {
           throw new ArgumentException(
               "project/location is present, but vertexai is not set to true. project/location can only be used for Vertex AI. Please set vertexai to be true.");
+        }
       }
-      // TODO(yyyu): Remove this check once we support express mode for GCP.
-      if (apiKey != null && apiKeyEnv == null && resolvedVertexAI)
-        throw new ArgumentException(
-            "apiKey is set and vertexai is true. Vertex AI doesn't support api key at the moment.");
+
       string? baseUrl = inferBaseUrl(resolvedVertexAI, httpOptions);
-      if (baseUrl != null && httpOptions is not null)
+      if (baseUrl != null && httpOptions != null && httpOptions.BaseUrl == null) {
         httpOptions.BaseUrl = baseUrl;
-      if (resolvedVertexAI)
-        _apiClient = new HttpApiClient(project, location, credential, httpOptions);
-      else
-        _apiClient = new HttpApiClient(apiKey, httpOptions);
+      }
+
+      _apiClient = new HttpApiClient(vertexAI, apiKey, project, location, credential, httpOptions);
       Live = new Live(_apiClient);
       Models = new Models(_apiClient);
       Tunings = new Tunings(_apiClient);

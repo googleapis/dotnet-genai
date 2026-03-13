@@ -57,71 +57,129 @@ namespace Google.GenAI
     public string? Location { get; }
     public ICredential? Credentials { get; }
 
+    public string? CustomBaseUrl { get; }
+
     public HttpOptions HttpOptions { get; protected set; }
     public bool VertexAI { get; }
 
     private int _disposed = 0;
 
     /// <summary>
-    /// Constructs an ApiClient for Gemini API.
-    /// </summary>
-    protected ApiClient(string? apiKey, HttpOptions? customHttpOptions)
-    {
-      this.ApiKey = apiKey ?? System.Environment.GetEnvironmentVariable("GOOGLE_API_KEY");
-      if (string.IsNullOrEmpty(this.ApiKey))
-      {
-        throw new ArgumentException(
-            "API key must either be provided or set in the environment variable GOOGLE_API_KEY.");
-      }
-
-      this.Project = null;
-      this.Location = null;
-      this.Credentials = null;
-      this.VertexAI = false;
-
-      this.HttpOptions = GetDefaultHttpOptions(false, this.Location);
-
-      if (customHttpOptions is not null)
-      {
-        this.HttpOptions = MergeHttpOptions(customHttpOptions);
-      }
-    }
-
-    /// <summary>
-    /// Constructs an ApiClient for Vertex AI APIs.
+    /// Constructs an ApiClient.
     /// </summary>
     protected ApiClient(
-        string? project,
-        string? location,
-        ICredential? credentials,
-        HttpOptions? customHttpOptions)
+        bool? vertexAI = null,
+        string? apiKey = null,
+        string? project = null,
+        string? location = null,
+        ICredential? credentials = null,
+        HttpOptions? customHttpOptions = null)
     {
-
-      this.Project = project ?? System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_PROJECT");
-      if (string.IsNullOrEmpty(this.Project))
+      if (vertexAI.HasValue)
       {
-        throw new ArgumentException(
-            "Project must either be provided or set in the environment variable GOOGLE_CLOUD_PROJECT.");
+        this.VertexAI = vertexAI.Value;
+      }
+      else
+      {
+        string? vertexAIEnv = System.Environment.GetEnvironmentVariable("GOOGLE_GENAI_USE_VERTEXAI");
+        this.VertexAI = vertexAIEnv != null && vertexAIEnv.ToLower() == "true";
       }
 
-      this.Location = location ?? System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_LOCATION");
-      if (string.IsNullOrEmpty(this.Location))
+      var envProject = System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_PROJECT");
+      var envLocation = System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_LOCATION");
+      var envApiKey = System.Environment.GetEnvironmentVariable("GOOGLE_API_KEY");
+
+      this.Project = project ?? envProject;
+      this.Location = location ?? envLocation;
+      this.ApiKey = apiKey ?? envApiKey;
+      this.Credentials = credentials;
+      this.CustomBaseUrl = customHttpOptions?.BaseUrl;
+
+      // Validate explicitly set initializer values.
+      if (customHttpOptions?.BaseUrlResourceScope != null && string.IsNullOrEmpty(customHttpOptions?.BaseUrl))
       {
         throw new ArgumentException(
-            "Location must either be provided or set in the environment variable GOOGLE_CLOUD_LOCATION.");
+            "base_url must be set when base_url_resource_scope is set.");
       }
 
-      this.Credentials = credentials ?? GetDefaultCredentials();
+      if ((project != null || location != null) && apiKey != null)
+      {
+        throw new ArgumentException(
+            "Project/location and API key are mutually exclusive in the client initializer.");
+      }
+      else if (credentials != null && apiKey != null)
+      {
+        throw new ArgumentException(
+            "Credentials and API key are mutually exclusive in the client initializer.");
+      }
 
-      this.HttpOptions = GetDefaultHttpOptions(true, this.Location);
+      if (this.VertexAI)
+      {
+        if (credentials != null && !string.IsNullOrEmpty(envApiKey))
+        {
+          this.ApiKey = null;
+        }
+        else if ((!string.IsNullOrEmpty(envLocation) || !string.IsNullOrEmpty(envProject)) && !string.IsNullOrEmpty(apiKey))
+        {
+          this.Project = null;
+          this.Location = null;
+        }
+        else if ((!string.IsNullOrEmpty(project) || !string.IsNullOrEmpty(location)) && !string.IsNullOrEmpty(envApiKey))
+        {
+          this.ApiKey = null;
+        }
+        else if ((!string.IsNullOrEmpty(envLocation) || !string.IsNullOrEmpty(envProject)) && !string.IsNullOrEmpty(envApiKey))
+        {
+          this.ApiKey = null;
+        }
 
-      if (customHttpOptions is not null)
+        if (string.IsNullOrEmpty(this.Location) && string.IsNullOrEmpty(this.ApiKey))
+        {
+          if (this.CustomBaseUrl == null || this.CustomBaseUrl.EndsWith(".googleapis.com"))
+          {
+            this.Location = "global";
+          }
+        }
+
+        bool hasSufficientAuth = (!string.IsNullOrEmpty(this.Project) && !string.IsNullOrEmpty(this.Location)) || !string.IsNullOrEmpty(this.ApiKey);
+
+        if (!hasSufficientAuth && this.CustomBaseUrl == null)
+        {
+          throw new ArgumentException("Project or API key must be set when using the Vertex AI API.");
+        }
+
+        bool hasSufficientAuthParams = (project != null && location != null) || apiKey != null;
+        if (this.CustomBaseUrl != null && !this.CustomBaseUrl.EndsWith(".googleapis.com") && !hasSufficientAuthParams)
+        {
+          this.Project = null;
+          this.Location = null;
+          this.ApiKey = null;
+        }
+
+        if (!string.IsNullOrEmpty(this.Project) && !string.IsNullOrEmpty(this.Location))
+        {
+          this.Credentials ??= GetDefaultCredentials();
+        }
+      }
+      else
+      {
+        this.Project = null;
+        this.Location = null;
+        this.Credentials = null;
+
+        if (string.IsNullOrEmpty(this.ApiKey))
+        {
+          throw new ArgumentException(
+              "API key must either be provided or set in the environment variable GOOGLE_API_KEY.");
+        }
+      }
+
+      this.HttpOptions = GetDefaultHttpOptions(this.VertexAI, this.Location);
+
+      if (customHttpOptions != null)
       {
         this.HttpOptions = MergeHttpOptions(customHttpOptions);
       }
-
-      this.ApiKey = null;
-      this.VertexAI = true;
     }
 
     private static HttpClient CreateHttpClient(HttpOptions httpOptions)
@@ -201,6 +259,10 @@ namespace Google.GenAI
       {
         mergedOptions.Timeout = optionsToApply?.Timeout;
       }
+      if (optionsToApply?.BaseUrlResourceScope != null)
+      {
+        mergedOptions.BaseUrlResourceScope = optionsToApply?.BaseUrlResourceScope;
+      }
       if (optionsToApply?.HttpClientFactory != null)
       {
         mergedOptions.HttpClientFactory = optionsToApply?.HttpClientFactory;
@@ -254,13 +316,14 @@ namespace Google.GenAI
 
       if (vertexAI)
       {
-        if (string.IsNullOrEmpty(location))
+        if (string.IsNullOrEmpty(location) || location!.Equals("global", StringComparison.OrdinalIgnoreCase))
         {
-          throw new ArgumentException("Location must be provided for Vertex AI APIs.");
+          defaultHttpOptions.BaseUrl = "https://aiplatform.googleapis.com";
         }
-        defaultHttpOptions.BaseUrl = location.Equals("global", StringComparison.OrdinalIgnoreCase)
-            ? "https://aiplatform.googleapis.com"
-            : $"https://{location}-aiplatform.googleapis.com";
+        else
+        {
+          defaultHttpOptions.BaseUrl = $"https://{location}-aiplatform.googleapis.com";
+        }
         defaultHttpOptions.ApiVersion = "v1beta1";
       }
       else

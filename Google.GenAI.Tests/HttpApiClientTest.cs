@@ -16,6 +16,8 @@
 
 using System;
 using System.Net.Http;
+using System.Reflection;
+using System.Threading.Tasks;
 
 using Google.Apis.Auth.OAuth2;
 
@@ -42,7 +44,7 @@ namespace Google.GenAI.Tests {
 
     [TestMethod]
     public void GeminiConstructor_WithApiKey_SetsPropertiesCorrectly() {
-      var client = new HttpApiClient(TestApiKey, null);
+      var client = new HttpApiClient(vertexAI: false, apiKey: TestApiKey);
 
       Assert.AreEqual(TestApiKey, client.ApiKey);
       Assert.IsFalse(client.VertexAI);
@@ -59,7 +61,7 @@ namespace Google.GenAI.Tests {
     public void GeminiConstructor_WithApiKeyFromEnvironment_SetsPropertiesCorrectly() {
       System.Environment.SetEnvironmentVariable(EnvApiKeyName, TestApiKey);
 
-      var client = new HttpApiClient(null, null);
+      var client = new HttpApiClient(vertexAI: false);
 
       Assert.AreEqual(TestApiKey, client.ApiKey);
       Assert.IsFalse(client.VertexAI);
@@ -80,7 +82,7 @@ namespace Google.GenAI.Tests {
                                                       ApiVersion = "v2", Timeout = 6000,
                                                       HttpClientFactory = httpClientFactory };
 
-      var client = new HttpApiClient(null, customHttpOptions);
+      var client = new HttpApiClient(vertexAI: false, httpOptions: customHttpOptions);
 
       Assert.AreEqual(TestApiKey, client.ApiKey);
       Assert.IsFalse(client.VertexAI);
@@ -97,7 +99,7 @@ namespace Google.GenAI.Tests {
     public void GeminiConstructor_NullApiKey_ThrowsArgumentException() {
       System.Environment.SetEnvironmentVariable(EnvApiKeyName, null);
 
-      var ex = Assert.ThrowsException<ArgumentException>(() => new HttpApiClient(null, null));
+      var ex = Assert.ThrowsException<ArgumentException>(() => new HttpApiClient(vertexAI: false));
       Assert.IsTrue(ex.Message.Contains(
           "API key must either be provided or set in the environment variable GOOGLE_API_KEY."));
     }
@@ -106,7 +108,7 @@ namespace Google.GenAI.Tests {
     public void GeminiConstructor_EmptyApiKey_ThrowsArgumentException() {
       System.Environment.SetEnvironmentVariable(EnvApiKeyName, null);
 
-      var ex = Assert.ThrowsException<ArgumentException>(() => new HttpApiClient("", null));
+      var ex = Assert.ThrowsException<ArgumentException>(() => new HttpApiClient(vertexAI: false, apiKey: ""));
       Assert.IsTrue(ex.Message.Contains(
           "API key must either be provided or set in the environment variable GOOGLE_API_KEY."));
     }
@@ -119,7 +121,7 @@ namespace Google.GenAI.Tests {
                      It.IsAny<string?>(), It.IsAny<System.Threading.CancellationToken>()))
           .ReturnsAsync("mock-access-token");
 
-      var client = new HttpApiClient(TestProject, TestLocation, mockCredential.Object, null);
+      var client = new HttpApiClient(vertexAI: true, project: TestProject, location: TestLocation, credentials: mockCredential.Object);
 
       Assert.AreEqual(TestProject, client.Project);
       Assert.AreEqual(TestLocation, client.Location);
@@ -143,7 +145,7 @@ namespace Google.GenAI.Tests {
                      It.IsAny<string?>(), It.IsAny<System.Threading.CancellationToken>()))
           .ReturnsAsync("mock-access-token");
 
-      var client = new HttpApiClient(null, null, mockCredential.Object, null);
+      var client = new HttpApiClient(vertexAI: true, credentials: mockCredential.Object);
 
       Assert.AreEqual(TestProject, client.Project);
       Assert.AreEqual(TestLocation, client.Location);
@@ -167,13 +169,13 @@ namespace Google.GenAI.Tests {
       System.Environment.SetEnvironmentVariable(EnvProjectName, null);
 
       var ex = Assert.ThrowsException<ArgumentException>(
-          () => new HttpApiClient(null, TestLocation, mockCredential.Object, null));
+          () => new HttpApiClient(vertexAI: true, location: TestLocation, credentials: mockCredential.Object));
       Assert.IsTrue(ex.Message.Contains(
-          "Project must either be provided or set in the environment variable GOOGLE_CLOUD_PROJECT."));
+          "Project or API key must be set when using the Vertex AI API."));
     }
 
     [TestMethod]
-    public void VertexConstructor_NullLocation_ThrowsArgumentException() {
+    public void VertexConstructor_NullLocation_DefaultsToGlobal() {
       var mockCredential = new Mock<ICredential>();
       mockCredential
           .Setup(c => c.GetAccessTokenForRequestAsync(
@@ -181,10 +183,8 @@ namespace Google.GenAI.Tests {
           .ReturnsAsync("mock-access-token");
       System.Environment.SetEnvironmentVariable(EnvLocationName, null);
 
-      var ex = Assert.ThrowsException<ArgumentException>(
-          () => new HttpApiClient(TestProject, null, mockCredential.Object, null));
-      Assert.IsTrue(ex.Message.Contains(
-          "Location must either be provided or set in the environment variable GOOGLE_CLOUD_LOCATION."));
+      var client = new HttpApiClient(vertexAI: true, project: TestProject, credentials: mockCredential.Object);
+      Assert.AreEqual("global", client.Location);
     }
 
     [TestMethod]
@@ -196,23 +196,21 @@ namespace Google.GenAI.Tests {
           .ReturnsAsync("mock-access-token");
 
       var ex = Assert.ThrowsException<ArgumentException>(
-          () => new HttpApiClient("", TestLocation, mockCredential.Object, null));
+          () => new HttpApiClient(vertexAI: true, project: "", location: TestLocation, credentials: mockCredential.Object));
       Assert.IsTrue(ex.Message.Contains(
-          "Project must either be provided or set in the environment variable GOOGLE_CLOUD_PROJECT."));
+          "Project or API key must be set when using the Vertex AI API."));
     }
 
     [TestMethod]
-    public void VertexConstructor_EmptyLocation_ThrowsArgumentException() {
+    public void VertexConstructor_EmptyLocation_DefaultsToGlobal() {
       var mockCredential = new Mock<ICredential>();
       mockCredential
           .Setup(c => c.GetAccessTokenForRequestAsync(
                      It.IsAny<string?>(), It.IsAny<System.Threading.CancellationToken>()))
           .ReturnsAsync("mock-access-token");
 
-      var ex = Assert.ThrowsException<ArgumentException>(
-          () => new HttpApiClient(TestProject, "", mockCredential.Object, null));
-      Assert.IsTrue(ex.Message.Contains(
-          "Location must either be provided or set in the environment variable GOOGLE_CLOUD_LOCATION."));
+      var client = new HttpApiClient(vertexAI: true, project: TestProject, location: "", credentials: mockCredential.Object);
+      Assert.AreEqual("global", client.Location);
     }
 
     [TestMethod]
@@ -228,7 +226,7 @@ namespace Google.GenAI.Tests {
                                                   HttpClientFactory = httpClientFactory };
 
       var client =
-          new HttpApiClient(TestProject, TestLocation, mockCredential.Object, customOptions);
+          new HttpApiClient(vertexAI: true, project: TestProject, location: TestLocation, credentials: mockCredential.Object, httpOptions: customOptions);
 
       Assert.AreEqual(TestProject, client.Project);
       Assert.AreEqual(TestLocation, client.Location);
@@ -239,6 +237,304 @@ namespace Google.GenAI.Tests {
       Assert.AreEqual("v2alpha", client.HttpOptions.ApiVersion);
       Assert.AreEqual(8000, client.HttpOptions.Timeout);
       Assert.AreSame(httpClientFactory, client.HttpOptions.HttpClientFactory);
+    }
+
+    [TestMethod]
+    public void VertexConstructor_WithCustomHttpOptions_NoGoogleApisEnv_ClearsAuthIfInsufficient() {
+      var customOptions = new Types.HttpOptions { BaseUrl = "https://my-proxy.company.internal" };
+
+      var client =
+          new HttpApiClient(vertexAI: true, httpOptions: customOptions);
+
+      Assert.IsNull(client.Project);
+      Assert.IsNull(client.Location);
+      Assert.IsNull(client.ApiKey);
+      Assert.IsNull(client.Credentials);
+      Assert.IsTrue(client.VertexAI);
+      Assert.AreEqual("https://my-proxy.company.internal", client.HttpOptions.BaseUrl);
+    }
+
+    [TestMethod]
+    public void VertexConstructor_WithApiKey_VertexExpress_ClearsProjectEnvVar() {
+      System.Environment.SetEnvironmentVariable(EnvProjectName, "ignored-project");
+      System.Environment.SetEnvironmentVariable(EnvLocationName, "ignored-location");
+
+      var client = new HttpApiClient(vertexAI: true, apiKey: "express-key");
+
+      Assert.AreEqual("express-key", client.ApiKey);
+      Assert.IsNull(client.Project);
+      Assert.IsNull(client.Location);
+      Assert.IsNull(client.Credentials);
+      Assert.IsTrue(client.VertexAI);
+      Assert.AreEqual("https://aiplatform.googleapis.com", client.HttpOptions.BaseUrl);
+    }
+
+    [TestMethod]
+    public void VertexConstructor_LocationGlobal_SetsCorrectBaseUrl() {
+      var mockCredential = new Mock<ICredential>();
+      var client = new HttpApiClient(vertexAI: true, project: "my-project", location: "global", credentials: mockCredential.Object);
+
+      Assert.AreEqual("my-project", client.Project);
+      Assert.AreEqual("global", client.Location);
+      Assert.IsTrue(client.VertexAI);
+      Assert.AreEqual("https://aiplatform.googleapis.com", client.HttpOptions.BaseUrl);
+    }
+
+    [TestMethod]
+    public void Constructor_HttpOptions_BaseUrlResourceScopeWithoutBaseUrl_ThrowsArgumentException() {
+      var customOptions = new Types.HttpOptions { BaseUrlResourceScope = Types.ResourceScope.Collection, BaseUrl = null };
+      var ex = Assert.ThrowsException<ArgumentException>(() => new HttpApiClient(vertexAI: false, apiKey: "key", httpOptions: customOptions));
+      Assert.IsTrue(ex.Message.Contains("base_url must be set when base_url_resource_scope is set."));
+    }
+
+    private async System.Threading.Tasks.Task<System.Net.Http.HttpRequestMessage> InvokeCreateHttpRequestAsync(
+        HttpApiClient client, System.Net.Http.HttpMethod method, string path, string content, Types.HttpOptions? options)
+    {
+      var methodInfo = typeof(HttpApiClient).GetMethod("CreateHttpRequestAsync",
+          System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance,
+          null,
+          new[] { typeof(System.Net.Http.HttpMethod), typeof(string), typeof(string), typeof(Types.HttpOptions) },
+          null);
+
+      var task = (System.Threading.Tasks.Task<System.Net.Http.HttpRequestMessage>)methodInfo!.Invoke(client, new object?[] { method, path, content, options })!;
+      return await task;
+    }
+
+    [TestMethod]
+    public async System.Threading.Tasks.Task CreateHttpRequestAsync_Vertex_ResourceScopeCollection_OmitsApiVersion() {
+      var customOptions = new Types.HttpOptions { BaseUrl = "https://custom.vertex.ai", BaseUrlResourceScope = Types.ResourceScope.Collection };
+      var mockCredential = new Mock<ICredential>();
+      mockCredential
+          .Setup(c => c.GetAccessTokenForRequestAsync(
+                     It.IsAny<string?>(), It.IsAny<System.Threading.CancellationToken>()))
+          .ReturnsAsync("mock-access-token");
+      var client = new HttpApiClient(vertexAI: true, httpOptions: customOptions, credentials: mockCredential.Object);
+
+      var request = await InvokeCreateHttpRequestAsync(client, System.Net.Http.HttpMethod.Post, "some/path", "{}", null);
+
+      Assert.AreEqual("https://custom.vertex.ai/some/path", request.RequestUri!.ToString());
+    }
+
+    [TestMethod]
+    public async System.Threading.Tasks.Task CreateHttpRequestAsync_Vertex_NullProjectLocation_DoesNotPrependPath() {
+      // Use an explicit base URL and custom options to avoid default location/project requirement.
+      var customOptions = new Types.HttpOptions { BaseUrl = "https://my-proxy.company.internal" };
+      var mockCredential = new Mock<ICredential>();
+      mockCredential
+          .Setup(c => c.GetAccessTokenForRequestAsync(
+                     It.IsAny<string?>(), It.IsAny<System.Threading.CancellationToken>()))
+          .ReturnsAsync("mock-access-token");
+      var client = new HttpApiClient(vertexAI: true, httpOptions: customOptions, credentials: mockCredential.Object);
+
+      var request = await InvokeCreateHttpRequestAsync(client, System.Net.Http.HttpMethod.Post, "some/path", "{}", null);
+
+      // Should not prepend projects/{project}/locations/{location} because they are null/empty.
+      Assert.AreEqual("https://my-proxy.company.internal/v1beta1/some/path", request.RequestUri!.ToString());
+    }
+
+    [TestMethod]
+    public async System.Threading.Tasks.Task CreateHttpRequestAsync_Vertex_WithProjectLocation_PrependsPath() {
+      var mockCredential = new Mock<ICredential>();
+      mockCredential
+          .Setup(c => c.GetAccessTokenForRequestAsync(
+                     It.IsAny<string?>(), It.IsAny<System.Threading.CancellationToken>()))
+          .ReturnsAsync("mock-access-token");
+      var client = new HttpApiClient(vertexAI: true, project: "my-project", location: "my-location", credentials: mockCredential.Object);
+
+      var request = await InvokeCreateHttpRequestAsync(client, System.Net.Http.HttpMethod.Post, "some/path", "{}", null);
+
+      Assert.AreEqual("https://my-location-aiplatform.googleapis.com/v1beta1/projects/my-project/locations/my-location/some/path", request.RequestUri!.ToString());
+    }
+
+    [TestMethod]
+    public async Task CreateHttpRequestAsync_RewritesAbsoluteUrlWithBaseUrl() {
+        var customHttpOptions = new Types.HttpOptions { BaseUrl = "https://my-proxy.company.com" };
+        var client = new HttpApiClient(apiKey: TestApiKey, httpOptions: customHttpOptions);
+
+        var method = typeof(HttpApiClient).GetMethod("CreateHttpRequestAsync", 
+            System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance, 
+            null, 
+            new[] { typeof(System.Net.Http.HttpMethod), typeof(string), typeof(byte[]), typeof(Types.HttpOptions) }, 
+            null);
+        Assert.IsNotNull(method, "Could not find CreateHttpRequestAsync method via reflection.");
+
+        var absoluteUrl = "https://generativelanguage.googleapis.com/upload/v1beta/files?uploadType=resumable";
+        var bytes = new byte[] { 1, 2, 3 };
+
+        var task = (Task<System.Net.Http.HttpRequestMessage>)method.Invoke(client, new object[] { System.Net.Http.HttpMethod.Post, absoluteUrl, bytes, null });
+        var request = await task;
+
+        Assert.AreEqual("https://my-proxy.company.com/upload/v1beta/files?uploadType=resumable", request.RequestUri.ToString());
+    }
+
+    [TestMethod]
+    public async Task CreateHttpRequestAsync_RewritesAbsoluteUrlInPathWithBaseUrl() {
+        var customHttpOptions = new Types.HttpOptions { BaseUrl = "https://my-proxy.company.com" };
+        var client = new HttpApiClient(apiKey: TestApiKey, httpOptions: customHttpOptions);
+
+        var method = typeof(HttpApiClient).GetMethod("CreateHttpRequestAsync", 
+            System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance, 
+            null, 
+            new[] { typeof(System.Net.Http.HttpMethod), typeof(string), typeof(string), typeof(Types.HttpOptions) }, 
+            null);
+        Assert.IsNotNull(method, "Could not find CreateHttpRequestAsync method via reflection.");
+
+        var absoluteUrl = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.0-flash:generateContent";
+        var json = "{}";
+
+        var task = (Task<System.Net.Http.HttpRequestMessage>)method.Invoke(client, new object[] { System.Net.Http.HttpMethod.Post, absoluteUrl, json, null });
+        var request = await task;
+
+        Assert.AreEqual("https://my-proxy.company.com/v1beta/models/gemini-3.0-flash:generateContent", request.RequestUri.ToString());
+    }
+
+    [TestMethod]
+    public void VertexConstructor_WithCustomHttpOptions_NoGoogleApisEnv_ClearsAuthIfInsufficient() {
+      var customOptions = new Types.HttpOptions { BaseUrl = "https://my-proxy.company.internal" };
+
+      var client =
+          new HttpApiClient(vertexAI: true, httpOptions: customOptions);
+
+      Assert.IsNull(client.Project);
+      Assert.IsNull(client.Location);
+      Assert.IsNull(client.ApiKey);
+      Assert.IsNull(client.Credentials);
+      Assert.IsTrue(client.VertexAI);
+      Assert.AreEqual("https://my-proxy.company.internal", client.HttpOptions.BaseUrl);
+    }
+
+    [TestMethod]
+    public void VertexConstructor_WithApiKey_VertexExpress_ClearsProjectEnvVar() {
+      System.Environment.SetEnvironmentVariable(EnvProjectName, "ignored-project");
+      System.Environment.SetEnvironmentVariable(EnvLocationName, "ignored-location");
+
+      var client = new HttpApiClient(vertexAI: true, apiKey: "express-key");
+
+      Assert.AreEqual("express-key", client.ApiKey);
+      Assert.IsNull(client.Project);
+      Assert.IsNull(client.Location);
+      Assert.IsNull(client.Credentials);
+      Assert.IsTrue(client.VertexAI);
+      Assert.AreEqual("https://aiplatform.googleapis.com", client.HttpOptions.BaseUrl);
+    }
+
+    [TestMethod]
+    public void VertexConstructor_LocationGlobal_SetsCorrectBaseUrl() {
+      var mockCredential = new Mock<ICredential>();
+      var client = new HttpApiClient(vertexAI: true, project: "my-project", location: "global", credentials: mockCredential.Object);
+
+      Assert.AreEqual("my-project", client.Project);
+      Assert.AreEqual("global", client.Location);
+      Assert.IsTrue(client.VertexAI);
+      Assert.AreEqual("https://aiplatform.googleapis.com", client.HttpOptions.BaseUrl);
+    }
+
+    [TestMethod]
+    public void Constructor_HttpOptions_BaseUrlResourceScopeWithoutBaseUrl_ThrowsArgumentException() {
+      var customOptions = new Types.HttpOptions { BaseUrlResourceScope = Types.ResourceScope.Collection, BaseUrl = null };
+      var ex = Assert.ThrowsException<ArgumentException>(() => new HttpApiClient(vertexAI: false, apiKey: "key", httpOptions: customOptions));
+      Assert.IsTrue(ex.Message.Contains("base_url must be set when base_url_resource_scope is set."));
+    }
+
+    private async System.Threading.Tasks.Task<System.Net.Http.HttpRequestMessage> InvokeCreateHttpRequestAsync(
+        HttpApiClient client, System.Net.Http.HttpMethod method, string path, string content, Types.HttpOptions? options)
+    {
+      var methodInfo = typeof(HttpApiClient).GetMethod("CreateHttpRequestAsync",
+          System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance,
+          null,
+          new[] { typeof(System.Net.Http.HttpMethod), typeof(string), typeof(string), typeof(Types.HttpOptions) },
+          null);
+
+      var task = (System.Threading.Tasks.Task<System.Net.Http.HttpRequestMessage>)methodInfo!.Invoke(client, new object?[] { method, path, content, options })!;
+      return await task;
+    }
+
+    [TestMethod]
+    public async System.Threading.Tasks.Task CreateHttpRequestAsync_Vertex_ResourceScopeCollection_OmitsApiVersion() {
+      var customOptions = new Types.HttpOptions { BaseUrl = "https://custom.vertex.ai", BaseUrlResourceScope = Types.ResourceScope.Collection };
+      var mockCredential = new Mock<ICredential>();
+      mockCredential
+          .Setup(c => c.GetAccessTokenForRequestAsync(
+                     It.IsAny<string?>(), It.IsAny<System.Threading.CancellationToken>()))
+          .ReturnsAsync("mock-access-token");
+      var client = new HttpApiClient(vertexAI: true, httpOptions: customOptions, credentials: mockCredential.Object);
+
+      var request = await InvokeCreateHttpRequestAsync(client, System.Net.Http.HttpMethod.Post, "some/path", "{}", null);
+
+      Assert.AreEqual("https://custom.vertex.ai/some/path", request.RequestUri!.ToString());
+    }
+
+    [TestMethod]
+    public async System.Threading.Tasks.Task CreateHttpRequestAsync_Vertex_NullProjectLocation_DoesNotPrependPath() {
+      // Use an explicit base URL and custom options to avoid default location/project requirement.
+      var customOptions = new Types.HttpOptions { BaseUrl = "https://my-proxy.company.internal" };
+      var mockCredential = new Mock<ICredential>();
+      mockCredential
+          .Setup(c => c.GetAccessTokenForRequestAsync(
+                     It.IsAny<string?>(), It.IsAny<System.Threading.CancellationToken>()))
+          .ReturnsAsync("mock-access-token");
+      var client = new HttpApiClient(vertexAI: true, httpOptions: customOptions, credentials: mockCredential.Object);
+
+      var request = await InvokeCreateHttpRequestAsync(client, System.Net.Http.HttpMethod.Post, "some/path", "{}", null);
+
+      // Should not prepend projects/{project}/locations/{location} because they are null/empty.
+      Assert.AreEqual("https://my-proxy.company.internal/v1beta1/some/path", request.RequestUri!.ToString());
+    }
+
+    [TestMethod]
+    public async System.Threading.Tasks.Task CreateHttpRequestAsync_Vertex_WithProjectLocation_PrependsPath() {
+      var mockCredential = new Mock<ICredential>();
+      mockCredential
+          .Setup(c => c.GetAccessTokenForRequestAsync(
+                     It.IsAny<string?>(), It.IsAny<System.Threading.CancellationToken>()))
+          .ReturnsAsync("mock-access-token");
+      var client = new HttpApiClient(vertexAI: true, project: "my-project", location: "my-location", credentials: mockCredential.Object);
+
+      var request = await InvokeCreateHttpRequestAsync(client, System.Net.Http.HttpMethod.Post, "some/path", "{}", null);
+
+      Assert.AreEqual("https://my-location-aiplatform.googleapis.com/v1beta1/projects/my-project/locations/my-location/some/path", request.RequestUri!.ToString());
+    }
+
+    [TestMethod]
+    public async Task CreateHttpRequestAsync_RewritesAbsoluteUrlWithBaseUrl() {
+        var customHttpOptions = new Types.HttpOptions { BaseUrl = "https://my-proxy.company.com" };
+        var client = new HttpApiClient(apiKey: TestApiKey, httpOptions: customHttpOptions);
+
+        var method = typeof(HttpApiClient).GetMethod("CreateHttpRequestAsync", 
+            System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance, 
+            null, 
+            new[] { typeof(System.Net.Http.HttpMethod), typeof(string), typeof(byte[]), typeof(Types.HttpOptions) }, 
+            null);
+        Assert.IsNotNull(method, "Could not find CreateHttpRequestAsync method via reflection.");
+
+        var absoluteUrl = "https://generativelanguage.googleapis.com/upload/v1beta/files?uploadType=resumable";
+        var bytes = new byte[] { 1, 2, 3 };
+
+        var task = (Task<System.Net.Http.HttpRequestMessage>)method.Invoke(client, new object[] { System.Net.Http.HttpMethod.Post, absoluteUrl, bytes, null });
+        var request = await task;
+
+        Assert.AreEqual("https://my-proxy.company.com/upload/v1beta/files?uploadType=resumable", request.RequestUri.ToString());
+    }
+
+    [TestMethod]
+    public async Task CreateHttpRequestAsync_RewritesAbsoluteUrlInPathWithBaseUrl() {
+        var customHttpOptions = new Types.HttpOptions { BaseUrl = "https://my-proxy.company.com" };
+        var client = new HttpApiClient(apiKey: TestApiKey, httpOptions: customHttpOptions);
+
+        var method = typeof(HttpApiClient).GetMethod("CreateHttpRequestAsync", 
+            System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance, 
+            null, 
+            new[] { typeof(System.Net.Http.HttpMethod), typeof(string), typeof(string), typeof(Types.HttpOptions) }, 
+            null);
+        Assert.IsNotNull(method, "Could not find CreateHttpRequestAsync method via reflection.");
+
+        var absoluteUrl = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.0-flash:generateContent";
+        var json = "{}";
+
+        var task = (Task<System.Net.Http.HttpRequestMessage>)method.Invoke(client, new object[] { System.Net.Http.HttpMethod.Post, absoluteUrl, json, null });
+        var request = await task;
+
+        Assert.AreEqual("https://my-proxy.company.com/v1beta/models/gemini-3.0-flash:generateContent", request.RequestUri.ToString());
     }
   }
 }

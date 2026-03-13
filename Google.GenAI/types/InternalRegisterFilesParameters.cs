@@ -23,30 +23,38 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// The audio transcription configuration in Setup.
+  /// Parameters for the private _Register method.
   /// </summary>
 
-  public record AudioTranscriptionConfig {
+  internal record InternalRegisterFilesParameters {
     /// <summary>
-    /// The language codes of the audio. BCP-47 language code. If not set, the transcription will be
-    /// in the language detected by the model. If set, the server will use the language code
-    /// specified in the model config as a hint for the language of the audio
+    /// The Google Cloud Storage URIs to register. Example: `gs://bucket/object`.
     /// </summary>
-    [JsonPropertyName("languageCodes")]
+    [JsonPropertyName("uris")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<string> ? LanguageCodes { get; set; }
+    public List<string> ? Uris { get; set; }
 
     /// <summary>
-    /// Deserializes a JSON string to a AudioTranscriptionConfig object.
+    /// Used to override the default configuration.
+    /// </summary>
+    [JsonPropertyName("config")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public RegisterFilesConfig
+        ? Config {
+            get; set;
+          }
+
+    /// <summary>
+    /// Deserializes a JSON string to a InternalRegisterFilesParameters object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized AudioTranscriptionConfig object, or null if deserialization
+    /// <returns>The deserialized InternalRegisterFilesParameters object, or null if deserialization
     /// fails.</returns>
-    public static AudioTranscriptionConfig
+    public static InternalRegisterFilesParameters
         ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<AudioTranscriptionConfig>(jsonString, options);
+        return JsonSerializer.Deserialize<InternalRegisterFilesParameters>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;

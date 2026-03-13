@@ -289,82 +289,159 @@ namespace Google.GenAI.Tests {
 #region Constructor Validation Error Tests
 
     [TestMethod]
-    [ExpectedException(typeof(ArgumentException))]
     public void Constructor_Error_ProjectAndApiKeySet_Params() {
-      new Client(project: "project", apiKey: "key");
+      var ex = Assert.ThrowsException<ArgumentException>(
+          () => new Client(project: "project", apiKey: "key"));
+      Assert.AreEqual("Project/location and API key are mutually exclusive in the client initializer.",
+                      ex.Message);
     }
 
     [TestMethod]
-    [ExpectedException(typeof(ArgumentException))]
-    public void Constructor_Error_ProjectEnvAndApiKeyParamSet() {
+    public void Constructor_ProjectEnvAndApiKeyParam_UsesApiKeyMode() {
       System.Environment.SetEnvironmentVariable("GOOGLE_CLOUD_PROJECT", "env-project");
-      new Client(apiKey: "key");
+      var client = new Client(apiKey: "key");
+      Assert.IsFalse(client._apiClient.VertexAI);
+      Assert.AreEqual("key", client._apiClient.ApiKey);
+      Assert.IsNull(client._apiClient.Project);
     }
 
     [TestMethod]
-    public void Constructor_Error_ProjectParamAndApiKeyEnvSet() {
+    public void Constructor_ProjectParamAndApiKeyEnv_UsesApiKeyModeIfVertexFalse() {
       var apiKeyParam = "env-key";
       System.Environment.SetEnvironmentVariable("GOOGLE_API_KEY", apiKeyParam);
-      var client = new Client(project: "project");
+      var client = new Client(project: "project", vertexAI: false); // VertexAI false overrides project parameter in Python sdk
       Assert.IsFalse(client._apiClient.VertexAI);
       Assert.AreEqual(apiKeyParam, client._apiClient.ApiKey);
     }
 
     [TestMethod]
-    [ExpectedException(typeof(ArgumentException))]
     public void Constructor_Error_LocationAndApiKeySet_Params() {
-      new Client(location: "location", apiKey: "key");
+      var ex = Assert.ThrowsException<ArgumentException>(
+          () => new Client(location: "location", apiKey: "key"));
+      Assert.AreEqual("Project/location and API key are mutually exclusive in the client initializer.",
+                      ex.Message);
     }
 
     [TestMethod]
-    [ExpectedException(typeof(ArgumentException))]
     public void Constructor_Error_ProjectSet_VertexAIFalse_Param() {
-      new Client(vertexAI: false, project: "project", location: "location");
+      var ex = Assert.ThrowsException<ArgumentException>(
+          () => new Client(vertexAI: false, project: "project", location: "location"));
+      Assert.AreEqual("project/location is present, but vertexai is not set to true. project/location can only be used for Vertex AI. Please set vertexai to be true.",
+                      ex.Message);
     }
 
     [TestMethod]
-    [ExpectedException(typeof(ArgumentException))]
     public void Constructor_Error_ProjectSet_VertexAIDefaultsToFalse_Env() {
       System.Environment.SetEnvironmentVariable("GOOGLE_GENAI_USE_VERTEXAI",
                                                 "false");  // Explicitly false
-      new Client(project: "project", location: "location");
+      var ex = Assert.ThrowsException<ArgumentException>(
+          () => new Client(project: "project", location: "location"));
+      Assert.AreEqual("project/location is present, but vertexai is not set to true. project/location can only be used for Vertex AI. Please set vertexai to be true.",
+                      ex.Message);
     }
 
     [TestMethod]
-    [ExpectedException(typeof(ArgumentException))]
     public void Constructor_Error_ProjectSet_VertexAINotSet_Env() {
       // GOOGLE_GENAI_USE_VERTEXAI is null (cleared in TestInitialize), defaults to false
-      new Client(project: "project", location: "location");
+      var ex = Assert.ThrowsException<ArgumentException>(
+          () => new Client(project: "project", location: "location"));
+      Assert.AreEqual("project/location is present, but vertexai is not set to true. project/location can only be used for Vertex AI. Please set vertexai to be true.",
+                      ex.Message);
     }
 
     [TestMethod]
-    [ExpectedException(typeof(ArgumentException))]
     public void Constructor_Error_LocationSet_VertexAIFalse_Param() {
-      new Client(vertexAI: false, location: "location", project: "project");
+      var ex = Assert.ThrowsException<ArgumentException>(
+          () => new Client(vertexAI: false, location: "location", project: "project"));
+      Assert.AreEqual("project/location is present, but vertexai is not set to true. project/location can only be used for Vertex AI. Please set vertexai to be true.",
+                      ex.Message);
     }
 
     [TestMethod]
-    [ExpectedException(typeof(ArgumentException))]
     public void Constructor_Error_ApiKeySet_VertexAITrue_Param() {
-      new Client(vertexAI: true, apiKey: "key", project: "project", location: "location");
+      var ex = Assert.ThrowsException<ArgumentException>(
+          () => new Client(vertexAI: true, apiKey: "key", project: "project", location: "location"));
+      Assert.AreEqual("Project/location and API key are mutually exclusive in the client initializer.",
+                      ex.Message);
     }
 
     [TestMethod]
-    [ExpectedException(typeof(ArgumentException))]
     public void Constructor_VertexAI_MissingProject_ThrowsArgumentException() {
-      new Client(vertexAI: true, location: "location");
+      var ex = Assert.ThrowsException<ArgumentException>(
+          () => new Client(vertexAI: true, location: "location"));
+      Assert.AreEqual("Project or API key must be set when using the Vertex AI API.",
+                      ex.Message);
     }
 
     [TestMethod]
-    [ExpectedException(typeof(ArgumentException))]
-    public void Constructor_VertexAI_MissingLocation_ThrowsArgumentException() {
-      new Client(vertexAI: true, project: "project");
+    public void Constructor_VertexAI_MissingLocation_DefaultsToGlobal() {
+      var client = new Client(vertexAI: true, project: "project");
+      Assert.AreEqual("global", client._apiClient.Location);
     }
 
     [TestMethod]
-    [ExpectedException(typeof(ArgumentException))]
+    public void Constructor_VertexAI_WithCredentials_MissingLocation_DefaultsToGlobal()
+    {
+      var mockCredential = new Mock<ICredential>();
+      var client = new Client(vertexAI: true, project: "project", credential: mockCredential.Object);
+      Assert.AreEqual("global", client._apiClient.Location);
+      Assert.AreEqual("project", client._apiClient.Project);
+    }
+
+    [TestMethod]
+    public void Constructor_VertexAI_ExplicitProjectAndEnvApiKey_MissingLocation_DefaultsToGlobal()
+    {
+        System.Environment.SetEnvironmentVariable("GOOGLE_API_KEY", "env_api_key");
+        var client = new Client(vertexAI: true, project: "project");
+        Assert.AreEqual("global", client._apiClient.Location);
+        Assert.AreEqual("project", client._apiClient.Project);
+        Assert.IsNull(client._apiClient.ApiKey);
+    }
+
+    [TestMethod]
+    public void Constructor_VertexAI_EnvProjectAndGoodBaseUrl_MissingLocation_DefaultsToGlobal()
+    {
+        System.Environment.SetEnvironmentVariable("GOOGLE_CLOUD_PROJECT", "project");
+        var client = new Client(vertexAI: true, httpOptions: new HttpOptions { BaseUrl = "https://fake-url.googleapis.com" });
+        Assert.AreEqual("global", client._apiClient.Location);
+        Assert.AreEqual("project", client._apiClient.Project);
+    }
+
+    [TestMethod]
+    public void Constructor_VertexAI_EnvProjectAndBadBaseUrl_MissingLocation_LocationIsNull()
+    {
+        System.Environment.SetEnvironmentVariable("GOOGLE_CLOUD_PROJECT", "project");
+        var client = new Client(vertexAI: true, httpOptions: new HttpOptions { BaseUrl = "https://fake-url.com" });
+        Assert.IsNull(client._apiClient.Location);
+        Assert.IsNull(client._apiClient.Project);
+    }
+
+    [TestMethod]
+    public void Constructor_VertexAI_EnvProjectAndEnvApiKey_MissingLocation_DefaultsToGlobal()
+    {
+        System.Environment.SetEnvironmentVariable("GOOGLE_CLOUD_PROJECT", "project");
+        System.Environment.SetEnvironmentVariable("GOOGLE_API_KEY", "env_api_key");
+        var client = new Client(vertexAI: true);
+        Assert.AreEqual("global", client._apiClient.Location);
+        Assert.AreEqual("project", client._apiClient.Project);
+        Assert.IsNull(client._apiClient.ApiKey);
+    }
+
+    [TestMethod]
+    public void Constructor_VertexAI_ApiKeyOnly_LocationIsNull()
+    {
+        var client = new Client(vertexAI: true, apiKey: "api_key");
+        Assert.IsNull(client._apiClient.Location);
+        Assert.IsNull(client._apiClient.Project);
+        Assert.AreEqual("api_key", client._apiClient.ApiKey);
+    }
+
+    [TestMethod]
     public void Constructor_GeminiAI_MissingApiKey_ThrowsArgumentException() {
-      new Client(vertexAI: false);
+      var ex = Assert.ThrowsException<ArgumentException>(
+          () => new Client(vertexAI: false));
+      Assert.AreEqual("API key must either be provided or set in the environment variable GOOGLE_API_KEY.",
+                      ex.Message);
     }
 
 #endregion

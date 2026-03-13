@@ -1,0 +1,56 @@
+{
+  "recordID": "FilesRegisterTest.RegisterFilesGeminiTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1beta/files:register",
+        "request": "POST /v1beta/files:register HTTP/1.1",
+        "headers": {
+          "Content-Length": "43",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test-Name": "FilesRegisterTest.RegisterFilesGeminiTest"
+        },
+        "bodySegments": [
+          {
+            "uris": [
+              "gs://tensorflow_docs/image.jpg"
+            ]
+          }
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "generativelanguage.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "6ee39fb519f39a385a4b532eb68c74cfb3bea927b2167fd5e2d7996f8f3d41cf",
+      "response": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=UTF-8",
+          "Date": "Fri, 06 Mar 2026 00:25:39 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Server-Timing": "gfet4t7; dur=374",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "files": [
+              {
+                "displayName": "tfhy3jwbirne",
+                "mimeType": "image/jpeg",
+                "name": "files/tfhy3jwbirne",
+                "sizeBytes": "357568",
+                "source": "REGISTERED",
+                "uri": "https://generativelanguage.googleapis.com/v1beta/files/tfhy3jwbirne"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

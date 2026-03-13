@@ -29,8 +29,8 @@ namespace Google.GenAI.Tests
     [TestClass]
     public class TransformersTest
     {
-        private ApiClient vertexClient = new HttpApiClient("test-project", "test-location", null, null);
-        private ApiClient geminiClient = new HttpApiClient("test-api-key", null);
+        private ApiClient vertexClient = new HttpApiClient(vertexAI: true, project: "test-project", location: "test-location");
+        private ApiClient geminiClient = new HttpApiClient(vertexAI: false, apiKey: "test-api-key");
 
         [TestMethod]
         public void GetResourceName_Vertex_FullResourceName()

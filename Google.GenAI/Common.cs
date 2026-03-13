@@ -93,7 +93,7 @@ namespace Google.GenAI
           string keyName = key.Substring(0, key.Length - 3);
           if (!currentObject.ContainsKey(keyName))
           {
-            currentObject[keyName] = new JsonArray(new JsonObject());
+            currentObject[keyName] = new JsonArray(new[] { (JsonNode)new JsonObject() });
           }
           currentObject = (JsonObject)((JsonArray)currentObject[keyName])[0];
         }

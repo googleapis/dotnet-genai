@@ -35,6 +35,16 @@ namespace Google.GenAI.Types {
     public string ? BaseUrl { get; set; }
 
     /// <summary>
+    /// The resource scope used to constructing the resource name when base_url is set
+    /// </summary>
+    [JsonPropertyName("baseUrlResourceScope")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public ResourceScope
+        ? BaseUrlResourceScope {
+            get; set;
+          }
+
+    /// <summary>
     /// Specifies the version of the API to use.
     /// </summary>
     [JsonPropertyName("apiVersion")]

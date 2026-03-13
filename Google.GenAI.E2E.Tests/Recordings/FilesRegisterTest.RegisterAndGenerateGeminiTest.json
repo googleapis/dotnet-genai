@@ -1,0 +1,198 @@
+{
+  "recordID": "FilesRegisterTest.RegisterAndGenerateGeminiTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1beta/files:register",
+        "request": "POST /v1beta/files:register HTTP/1.1",
+        "headers": {
+          "Content-Length": "43",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test-Name": "FilesRegisterTest.RegisterAndGenerateGeminiTest"
+        },
+        "bodySegments": [
+          {
+            "uris": [
+              "gs://tensorflow_docs/image.jpg"
+            ]
+          }
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "generativelanguage.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "eaad6a9439ce22d23974811d32ff0492b780038afef98e1ad38312865665b058",
+      "response": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=UTF-8",
+          "Date": "Fri, 06 Mar 2026 00:25:40 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Server-Timing": "gfet4t7; dur=243",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "files": [
+              {
+                "displayName": "nxsb2u1twh7m",
+                "mimeType": "image/jpeg",
+                "name": "files/nxsb2u1twh7m",
+                "sizeBytes": "357568",
+                "source": "REGISTERED",
+                "uri": "https://generativelanguage.googleapis.com/v1beta/files/nxsb2u1twh7m"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/v1beta/files/nxsb2u1twh7m",
+        "request": "GET /v1beta/files/nxsb2u1twh7m HTTP/1.1",
+        "headers": {
+          "Test-Name": "FilesRegisterTest.RegisterAndGenerateGeminiTest"
+        },
+        "bodySegments": [
+          null
+        ],
+        "previousRequest": "eaad6a9439ce22d23974811d32ff0492b780038afef98e1ad38312865665b058",
+        "serverAddress": "generativelanguage.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "ae8fc849c09751ae7aad8ef608b4d117624f091e7ffc475954111e72229f40fb",
+      "response": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=UTF-8",
+          "Date": "Fri, 06 Mar 2026 00:25:40 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Server-Timing": "gfet4t7; dur=121",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "createTime": "2026-03-06T00:25:40.298875Z",
+            "expirationTime": "2026-04-05T00:25:40.219088218Z",
+            "mimeType": "image/jpeg",
+            "name": "files/nxsb2u1twh7m",
+            "sizeBytes": "357568",
+            "source": "REGISTERED",
+            "state": "ACTIVE",
+            "updateTime": "2026-03-06T00:25:40.298875Z",
+            "uri": "https://generativelanguage.googleapis.com/v1beta/files/nxsb2u1twh7m"
+          }
+        ]
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1beta/models/gemini-2.5-flash:generateContent",
+        "request": "POST /v1beta/models/gemini-2.5-flash:generateContent HTTP/1.1",
+        "headers": {
+          "Content-Length": "193",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test-Name": "FilesRegisterTest.RegisterAndGenerateGeminiTest"
+        },
+        "bodySegments": [
+          {
+            "contents": [
+              {
+                "parts": [
+                  {
+                    "text": "What is in this image?"
+                  },
+                  {
+                    "fileData": {
+                      "fileUri": "https://generativelanguage.googleapis.com/v1beta/files/nxsb2u1twh7m",
+                      "mimeType": "image/jpeg"
+                    }
+                  }
+                ],
+                "role": "user"
+              }
+            ]
+          }
+        ],
+        "previousRequest": "ae8fc849c09751ae7aad8ef608b4d117624f091e7ffc475954111e72229f40fb",
+        "serverAddress": "generativelanguage.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "7291691531a7d2dbfedec46a421e6b771afd1fda956154c05f24b8c34584e695",
+      "response": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=UTF-8",
+          "Date": "Fri, 06 Mar 2026 00:25:47 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Server-Timing": "gfet4t7; dur=7166",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "This image is a **hand-drawn concept sketch in blue ink on a piece of lined notebook paper, titled \"JETPACK BACKPACK\"**.\n\nThe drawing depicts a backpack with several features and specifications written around it, outlining its design and functionality:\n\n*   **Design \u0026 Comfort:**\n    *   It has \"PADDED STRAP SUPPORT.\"\n    *   It is described as \"LIGHTWEIGHT\" and \"LOOKS LIKE A NORMAL BACKPACK.\"\n    *   It \"FITS 18\" LAPTOP.\"\n\n*   **Jetpack Functionality:**\n    *   It features \"RETRACTABLE BOOSTERS\" at the bottom.\n    *   The propulsion system is \"STEAM-POWERED, GREEN/CLEAN,\" indicated by the swirling \"steam\" emanating from the boosters.\n    *   It uses \"USB-C CHARGING.\"\n    *   It has a \"15-MIN BATTERY LIFE.\"\n\nIn summary, it's a detailed conceptual sketch for a futuristic, eco-friendly personal flight device integrated into a conventional-looking backpack."
+                    }
+                  ],
+                  "role": "model"
+                },
+                "finishReason": "STOP",
+                "index": 0
+              }
+            ],
+            "modelVersion": "gemini-2.5-flash",
+            "responseId": "BB-qac3_NuyKqtsPnM_bwAg",
+            "turnToken": "v1_ChdCQi1xYWMzX051eUtxdHNQbk1fYndBZxIXQkItcWFjM19OdXlLcXRzUG5NX2J3QWc",
+            "usageMetadata": {
+              "cacheTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 5
+                },
+                {
+                  "modality": "IMAGE",
+                  "tokenCount": 196
+                }
+              ],
+              "cachedContentTokenCount": 201,
+              "candidatesTokenCount": 223,
+              "promptTokenCount": 265,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 7
+                },
+                {
+                  "modality": "IMAGE",
+                  "tokenCount": 258
+                }
+              ],
+              "thoughtsTokenCount": 1030,
+              "totalTokenCount": 1518
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

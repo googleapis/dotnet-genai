@@ -114,6 +114,13 @@ namespace Google.GenAI
       }
       try
       {
+        bool hasSufficientAuth = (_apiClient.Project != null && _apiClient.Location != null) || _apiClient.ApiKey != null;
+        if (_apiClient.CustomBaseUrl != null && !_apiClient.CustomBaseUrl.EndsWith(".googleapis.com") && !hasSufficientAuth)
+        {
+          var customUri = new Uri(_apiClient.CustomBaseUrl);
+          return new UriBuilder( customUri ) { Scheme = customUri.Scheme == "http" ? "ws" : "wss" }.Uri;
+        }
+
         var baseUri = new Uri(baseUrl);
         var uriBuilder = new UriBuilder(baseUri)
         {
@@ -141,7 +148,10 @@ namespace Google.GenAI
     private string getSetupMessage(string model, LiveConnectConfig config)
     {
       var transformedModel = Transformers.TModel(this._apiClient, model);
-      if (_apiClient.VertexAI && transformedModel != null && transformedModel.StartsWith("publishers/"))
+      bool shouldPrependVertexProjectPath = _apiClient.VertexAI && string.IsNullOrEmpty(_apiClient.ApiKey) &&
+        !((_apiClient.HttpOptions?.BaseUrlResourceScope == Types.ResourceScope.Collection) && !string.IsNullOrEmpty(_apiClient.HttpOptions?.BaseUrl));
+
+      if (shouldPrependVertexProjectPath && transformedModel != null && transformedModel.StartsWith("publishers/"))
       {
         transformedModel = string.Format(
           "projects/{0}/locations/{1}/{2}",

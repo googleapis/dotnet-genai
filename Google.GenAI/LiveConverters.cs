@@ -31,6 +31,17 @@ namespace Google.GenAI {
       _apiClient = apiClient;
     }
 
+    internal JsonNode AudioTranscriptionConfigToMldev(JsonNode fromObject,
+                                                      JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "languageCodes" }))) {
+        throw new NotSupportedException("languageCodes parameter is not supported in Gemini API.");
+      }
+
+      return toObject;
+    }
+
     internal JsonNode AuthConfigToMldev(JsonNode fromObject, JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
@@ -648,15 +659,19 @@ namespace Google.GenAI {
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "inputAudioTranscription" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "inputAudioTranscription" },
-            Common.GetValueByPath(fromObject, new string[] { "inputAudioTranscription" }));
+        Common.SetValueByPath(toObject, new string[] { "inputAudioTranscription" },
+                              AudioTranscriptionConfigToMldev(
+                                  JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
+                                      fromObject, new string[] { "inputAudioTranscription" }))),
+                                  toObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "outputAudioTranscription" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "outputAudioTranscription" },
-            Common.GetValueByPath(fromObject, new string[] { "outputAudioTranscription" }));
+        Common.SetValueByPath(toObject, new string[] { "outputAudioTranscription" },
+                              AudioTranscriptionConfigToMldev(
+                                  JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
+                                      fromObject, new string[] { "outputAudioTranscription" }))),
+                                  toObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "proactivity" }) != null) {
@@ -847,15 +862,19 @@ namespace Google.GenAI {
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "inputAudioTranscription" }) != null) {
-        Common.SetValueByPath(
-            parentObject, new string[] { "setup", "inputAudioTranscription" },
-            Common.GetValueByPath(fromObject, new string[] { "inputAudioTranscription" }));
+        Common.SetValueByPath(parentObject, new string[] { "setup", "inputAudioTranscription" },
+                              AudioTranscriptionConfigToMldev(
+                                  JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
+                                      fromObject, new string[] { "inputAudioTranscription" }))),
+                                  toObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "outputAudioTranscription" }) != null) {
-        Common.SetValueByPath(
-            parentObject, new string[] { "setup", "outputAudioTranscription" },
-            Common.GetValueByPath(fromObject, new string[] { "outputAudioTranscription" }));
+        Common.SetValueByPath(parentObject, new string[] { "setup", "outputAudioTranscription" },
+                              AudioTranscriptionConfigToMldev(
+                                  JsonNode.Parse(JsonSerializer.Serialize(Common.GetValueByPath(
+                                      fromObject, new string[] { "outputAudioTranscription" }))),
+                                  toObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "realtimeInputConfig" }) != null) {

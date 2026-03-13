@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+using System;
 using System.Net.Http.Headers;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -84,15 +85,13 @@ namespace Google.GenAI
   public class HttpApiClient : ApiClient
   {
     public HttpApiClient(
-      string? apiKey,
-      Types.HttpOptions? httpOptions
-    ) : base(apiKey, httpOptions) { }
-    public HttpApiClient(
-        string? project,
-        string? location,
-        ICredential? credentials,
-        Types.HttpOptions? httpOptions
-    ) : base(project, location, credentials, httpOptions) { }
+        bool? vertexAI = null,
+        string? apiKey = null,
+        string? project = null,
+        string? location = null,
+        ICredential? credentials = null,
+        Types.HttpOptions? httpOptions = null
+    ) : base(vertexAI, apiKey, project, location, credentials, httpOptions) { }
 
     public override async Task<ApiResponse> RequestAsync(
         HttpMethod httpMethod,
@@ -183,18 +182,33 @@ namespace Google.GenAI
       }
     }
 
+    private bool ShouldPrependVertexProjectPath(Types.HttpOptions mergedHttpOptions)
+    {
+      if (!this.VertexAI) return false;
+      if (!string.IsNullOrEmpty(this.ApiKey)) return false;
+      if (string.IsNullOrEmpty(this.Project) && string.IsNullOrEmpty(this.Location)) return false;
+      if (mergedHttpOptions.BaseUrlResourceScope == Types.ResourceScope.Collection && !string.IsNullOrEmpty(mergedHttpOptions.BaseUrl)) return false;
+      return true;
+    }
+
     private async Task<HttpRequestMessage> CreateHttpRequestAsync(HttpMethod httpMethod, string path,
         string requestJson, Types.HttpOptions? requestHttpOptions)
     {
+        Types.HttpOptions mergedHttpOptions = MergeHttpOptions(requestHttpOptions);
         bool queryBaseModel = httpMethod == HttpMethod.Get && path.StartsWith("publishers/google/models");
-        if (this.VertexAI && !path.StartsWith("projects/") && !queryBaseModel)
+        if (ShouldPrependVertexProjectPath(mergedHttpOptions) && !path.StartsWith("projects/") && !queryBaseModel)
         {
             path = $"projects/{Project}/locations/{Location}/{path}";
         }
-
-        Types.HttpOptions mergedHttpOptions = MergeHttpOptions(requestHttpOptions);
         string requestUrl;
-        if (string.IsNullOrEmpty(mergedHttpOptions.ApiVersion))
+        if (path.StartsWith("http://", StringComparison.OrdinalIgnoreCase) ||
+              path.StartsWith("https://", StringComparison.OrdinalIgnoreCase))
+        {
+            // If the path is an absolute URL (typical for resumable file upload sessions), 
+            // ensure it is rewritten to use the custom BaseUrl if one is provided.
+            requestUrl = RewriteIfAbsoluteUrl(path, mergedHttpOptions);
+        }
+        else if (string.IsNullOrEmpty(mergedHttpOptions.ApiVersion) || mergedHttpOptions.BaseUrlResourceScope == Types.ResourceScope.Collection)
         {
             requestUrl = $"{mergedHttpOptions.BaseUrl}/{path}";
         }
@@ -218,6 +232,10 @@ namespace Google.GenAI
         byte[] requestBytes, Types.HttpOptions? requestHttpOptions)
     {
         Types.HttpOptions mergedHttpOptions = MergeHttpOptions(requestHttpOptions);
+
+        // If the URL is an absolute Google URL (standard for file upload chunk requests),
+        // we must rewrite it to stay within the user's custom BaseUrl/Proxy.
+        url = RewriteIfAbsoluteUrl(url, mergedHttpOptions);
 
         var request = new HttpRequestMessage(httpMethod, url);
         await SetHeadersAsync(request, mergedHttpOptions);
@@ -464,6 +482,37 @@ namespace Google.GenAI
         // Swallow any unexpected parsing errors here; we don't want to mask the original error handling.
       }
       return null;
+    }
+
+    /// <summary>
+    /// Rewrites an absolute URL (e.g. from a resumable upload session) to use the
+    /// custom BaseUrl if one is provided. This ensures custom proxies are honored for file uploads.
+    /// </summary>
+    private string RewriteIfAbsoluteUrl(string url, Types.HttpOptions mergedHttpOptions)
+    {
+        if (string.IsNullOrEmpty(mergedHttpOptions.BaseUrl) ||
+            (!url.StartsWith("http://", StringComparison.OrdinalIgnoreCase) &&
+             !url.StartsWith("https://", StringComparison.OrdinalIgnoreCase)))
+        {
+            return url;
+        }
+
+        try
+        {
+            Uri originalUri = new Uri(url);
+            Uri baseUri = new Uri(mergedHttpOptions.BaseUrl);
+            var uriBuilder = new UriBuilder(originalUri)
+            {
+                Scheme = baseUri.Scheme,
+                Host = baseUri.Host,
+                Port = baseUri.Port
+            };
+            return uriBuilder.Uri.ToString();
+        }
+        catch (UriFormatException)
+        {
+            return url;
+        }
     }
   }
 }

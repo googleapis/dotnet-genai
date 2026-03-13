@@ -5150,7 +5150,7 @@ public class GoogleGenAIExtensionsTest
     private readonly string _actualResponse;
     private readonly bool _makeRealRequest;
 
-    public MockApiClient(string expectedRequest, string actualResponse, bool makeRealRequest = false) : base("fake_api_key", new() { BaseUrl = "http://localhost/" })
+    public MockApiClient(string expectedRequest, string actualResponse, bool makeRealRequest = false) : base(apiKey: "fake_api_key", customHttpOptions: new() { BaseUrl = "http://localhost/" })
     {
       _expectedRequest = expectedRequest;
       _actualResponse = actualResponse;
@@ -5205,7 +5205,7 @@ public class GoogleGenAIExtensionsTest
 
       if (_makeRealRequest)
       {
-        using var client = new HttpApiClient(System.Environment.GetEnvironmentVariable("AI:Google:ApiKey"), null);
+        using var client = new HttpApiClient(apiKey: System.Environment.GetEnvironmentVariable("AI:Google:ApiKey"));
         using var response = await client.RequestAsync(HttpMethod.Post, @"models/gemini-2.5-pro:generateContent", @"{ ""contents"":[{""parts"":[{""text"":""Hello, world!""}],""role"":""user""}],""generationConfig"":{}}", null);
         responseJson = await response.GetEntity().ReadAsStringAsync();
       }
@@ -5223,20 +5223,20 @@ public class GoogleGenAIExtensionsTest
       HttpMethod httpMethod, string path, string requestJson, HttpOptions? requestHttpOptions, [EnumeratorCancellation] CancellationToken cancellationToken = default)
     {
       string responseData = _actualResponse;
-      
+
       if (_makeRealRequest)
       {
         // Make a real streaming request
-        using var client = new HttpApiClient(System.Environment.GetEnvironmentVariable("AI:Google:ApiKey"), null);
+        using var client = new HttpApiClient(apiKey: System.Environment.GetEnvironmentVariable("AI:Google:ApiKey"));
         StringBuilder fullResponse = new();
-        
+
         await foreach (var apiResponse in client.RequestStreamAsync(httpMethod, path, requestJson, requestHttpOptions, cancellationToken))
         {
           var responseJson = await apiResponse.GetEntity().ReadAsStringAsync();
           fullResponse.AppendLine("data: " + responseJson);
           Console.WriteLine($"CAPTURED STREAMING CHUNK: {responseJson}");
         }
-        
+
         responseData = fullResponse.ToString();
         Console.WriteLine($"\n\nFULL CAPTURED REQUEST:\n{requestJson}");
         Console.WriteLine($"\n\nFULL CAPTURED RESPONSE:\n{responseData}");

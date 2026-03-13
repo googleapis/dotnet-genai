@@ -173,7 +173,7 @@ namespace Google.GenAI.Types {
     /// Output response mimetype of the generated candidate text. Supported mimetype:  -
     /// `text/plain`: (default) Text output.  - `application/json`: JSON response in the candidates.
     /// The model needs to be prompted to output the appropriate response type, otherwise the
-    /// behavior is undefined. This is a preview feature.
+    /// behavior is undefined.
     /// </summary>
     [JsonPropertyName("responseMimeType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

@@ -37,7 +37,7 @@ namespace Google.GenAI.Tests {
   public class TestApiClient : ApiClient {
     private readonly bool VertexAI;
 
-    public TestApiClient(bool vertexAI) : base("test-api-key", null) {
+    public TestApiClient(bool vertexAI) : base(vertexAI: vertexAI, apiKey: "test-api-key") {
       VertexAI = vertexAI;
     }
 

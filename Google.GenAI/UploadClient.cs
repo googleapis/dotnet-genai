@@ -95,17 +95,21 @@ namespace Google.GenAI
     /// Uploads data from a byte array.
     /// </summary>
     public async Task<HttpContent> UploadAsync(
-        string uploadUrl, byte[] bytes, CancellationToken cancellationToken = default)
+        string uploadUrl, byte[] bytes, HttpOptions? httpOptions = null, CancellationToken cancellationToken = default)
     {
       using var stream = new MemoryStream(bytes);
-      return await UploadAsync(uploadUrl, stream, bytes.Length, cancellationToken);
+      return await UploadAsync(uploadUrl, stream, bytes.Length, httpOptions, cancellationToken);
     }
 
     /// <summary>
     /// Uploads data from a stream using chunked resumable protocol.
     /// </summary>
     public async Task<HttpContent> UploadAsync(
-        string uploadUrl, Stream inputStream, long size, CancellationToken cancellationToken = default)
+        string uploadUrl,
+        Stream inputStream,
+        long size,
+        HttpOptions? httpOptions = null,
+        CancellationToken cancellationToken = default)
     {
       string uploadCommand = "upload";
       byte[] buffer = new byte[_chunkSize];
@@ -115,7 +119,7 @@ namespace Google.GenAI
       // Upload chunks
       while ((bytesRead = await inputStream.ReadAsync(buffer, 0, _chunkSize, cancellationToken)) == _chunkSize)
       {
-        var uploadResponse = await UploadChunkAsync(uploadUrl, buffer, offset, uploadCommand, cancellationToken);
+        var uploadResponse = await UploadChunkAsync(uploadUrl, buffer, offset, uploadCommand, httpOptions, cancellationToken);
 
         if (uploadResponse.UploadStatus != "active")
         {
@@ -131,7 +135,7 @@ namespace Google.GenAI
       Array.Copy(buffer, finalBuffer, bytesRead);
       uploadCommand = "upload, finalize";
 
-      var finalResponse = await UploadChunkAsync(uploadUrl, finalBuffer, offset, uploadCommand, cancellationToken);
+      var finalResponse = await UploadChunkAsync(uploadUrl, finalBuffer, offset, uploadCommand, httpOptions, cancellationToken);
 
       if (finalResponse.UploadStatus != "final")
       {
@@ -147,15 +151,23 @@ namespace Google.GenAI
         byte[] chunk,
         long offset,
         string uploadCommand,
+        HttpOptions? httpOptions,
         CancellationToken cancellationToken)
     {
-      var headers = new Dictionary<string, string>
+      var chunkHeaders = new Dictionary<string, string>
       {
         ["X-Goog-Upload-Command"] = uploadCommand,
         ["X-Goog-Upload-Offset"] = offset.ToString()
       };
 
-      var httpOptions = new HttpOptions { Headers = headers };
+      var chunkOptions = (httpOptions ?? new HttpOptions()) with { Headers = chunkHeaders };
+      if (httpOptions?.Headers != null)
+      {
+          foreach (var header in httpOptions.Headers)
+          {
+              chunkOptions.Headers[header.Key] = header.Value;
+          }
+      }
 
       for (int retryCount = 0; retryCount < MAX_RETRY_COUNT; retryCount++)
       {
@@ -163,7 +175,7 @@ namespace Google.GenAI
             HttpMethod.Post,
             uploadUrl,
             chunk,
-            httpOptions,
+            chunkOptions,
             cancellationToken);
 
         if (response.GetHeaders().TryGetValues("X-Goog-Upload-Status", out var values))

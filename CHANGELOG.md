@@ -1,5 +1,20 @@
 # Changelog
 
+## Version 1.4.0, released 2026-03-12
+
+
+### New features
+
+* Add inference_generation_config to EvaluationConfig for Tuning ([9c46031](https://github.com/googleapis/dotnet-genai/commit/9c460311d71e70e23b5c29e691e9499d521b4257))
+* Allow custom endpoints for authentication with Vertex AI in C# ([da18a06](https://github.com/googleapis/dotnet-genai/commit/da18a068076682354faf52c9098d6a778e70c74a))
+* enable language code for audio transcription config in Live API for Vertex AI ([e723b0a](https://github.com/googleapis/dotnet-genai/commit/e723b0a61db33949057111b3e644d28f05c13eb6))
+* Implement RegisterFiles ([aa946e4](https://github.com/googleapis/dotnet-genai/commit/aa946e43c783f9e97ad5c27fa5bde44a43225e63))
+
+
+### Bug fixes
+
+* Compilation for .NET SDK versions 8.0.300 and 8.0.301 ([2ec2fd5](https://github.com/googleapis/dotnet-genai/commit/2ec2fd5d56d2587ead922ac5ed3841df9684c461))
+
 ## Version 1.3.0, released 2026-03-02
 
 

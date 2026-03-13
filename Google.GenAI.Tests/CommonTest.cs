@@ -25,6 +25,49 @@ namespace Google.GenAI.Tests
     public class CommonTest
     {
         [TestMethod]
+        public void SetValueByPath_Basic()
+        {
+            var data = new JsonObject();
+            Common.SetValueByPath(data, new string[] { "a", "b", "c" }, 42);
+
+            Assert.AreEqual(42, (int)data["a"]["b"]["c"]);
+        }
+
+        [TestMethod]
+        public void SetValueByPath_ParallelList()
+        {
+            var data = new JsonObject();
+            var values = new List<string> { "gs://file1", "gs://file2" };
+
+            // 1:1 Mapping - Each value in the list goes to its own object in the array.
+            Common.SetValueByPath(data, new string[] { "request", "uris[]", "uri" }, values);
+
+            var array = data["request"]["uris"] as JsonArray;
+            Assert.IsNotNull(array);
+            Assert.AreEqual(2, array.Count);
+            Assert.AreEqual("gs://file1", array[0]["uri"].GetValue<string>());
+            Assert.AreEqual("gs://file2", array[1]["uri"].GetValue<string>());
+        }
+
+        [TestMethod]
+        public void SetValueByPath_BroadcastValue()
+        {
+            var data = new JsonObject();
+
+            // 1:N Mapping - A single value is "broadcast" to all objects in the array.
+            // First, create an array with 3 objects.
+            data["parts"] = new JsonArray { new JsonObject(), new JsonObject(), new JsonObject() };
+
+            Common.SetValueByPath(data, new string[] { "parts[]", "role" }, "user");
+
+            var array = data["parts"] as JsonArray;
+            Assert.AreEqual(3, array.Count);
+            Assert.AreEqual("user", array[0]["role"].GetValue<string>());
+            Assert.AreEqual("user", array[1]["role"].GetValue<string>());
+            Assert.AreEqual("user", array[2]["role"].GetValue<string>());
+        }
+
+        [TestMethod]
         public void MoveValueByPath_Wildcard()
         {
             var data = new JsonObject

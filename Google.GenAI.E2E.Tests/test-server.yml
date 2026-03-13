@@ -11,6 +11,11 @@ endpoints:
       - X-Goog-User-Project
       - User-Agent
       - X-Goog-Api-Client
+      - x-goog-api-key
+      - authorization
+      - x-goog-user-project
+      - user-agent
+      - x-goog-api-client
     response_header_replacements:
       - header: X-Goog-Upload-Url
         regex: "^https://generativelanguage.googleapis.com/"
@@ -27,3 +32,8 @@ endpoints:
       - X-Goog-User-Project
       - User-Agent
       - X-Goog-Api-Client
+      - x-goog-api-key
+      - authorization
+      - x-goog-user-project
+      - user-agent
+      - x-goog-api-client

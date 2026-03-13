@@ -25,6 +25,8 @@ using System.Text.Json.Serialization;
 using Google.GenAI.Types;
 
 using System.IO;
+using System.Collections.Generic;
+using Google.Apis.Auth.OAuth2;
 
 namespace Google.GenAI {
 
@@ -91,6 +93,18 @@ namespace Google.GenAI {
       return toObject;
     }
 
+    internal JsonNode InternalRegisterFilesParametersToMldev(JsonNode fromObject,
+                                                             JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "uris" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "uris" },
+                              Common.GetValueByPath(fromObject, new string[] { "uris" }));
+      }
+
+      return toObject;
+    }
+
     internal JsonNode ListFilesConfigToMldev(JsonNode fromObject, JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
@@ -131,6 +145,23 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "nextPageToken" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "nextPageToken" },
                               Common.GetValueByPath(fromObject, new string[] { "nextPageToken" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "files" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "files" },
+                              Common.GetValueByPath(fromObject, new string[] { "files" }));
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode RegisterFilesResponseFromMldev(JsonNode fromObject, JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "sdkHttpResponse" },
+            Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "files" }) != null) {
@@ -417,6 +448,89 @@ namespace Google.GenAI {
              throw new InvalidOperationException("Failed to deserialize Task<DeleteFileResponse>.");
     }
 
+    private async Task<RegisterFilesResponse> PrivateRegisterFilesAsync(
+        List<string> uris, RegisterFilesConfig? config,
+        CancellationToken cancellationToken = default) {
+      InternalRegisterFilesParameters parameter = new InternalRegisterFilesParameters();
+
+      if (!Common.IsZero(uris)) {
+        parameter.Uris = uris;
+      }
+      if (!Common.IsZero(config)) {
+        parameter.Config = config;
+      }
+      string jsonString = JsonSerializer.Serialize(parameter);
+      JsonNode? parameterNode = JsonNode.Parse(jsonString);
+      if (parameterNode == null) {
+        throw new NotSupportedException(
+            "Failed to parse InternalRegisterFilesParameters to JsonNode.");
+      }
+
+      JsonNode body;
+      string path;
+      if (this._apiClient.VertexAI) {
+        throw new NotSupportedException(
+            "This method is only supported in the Gemini Developer API client.");
+      } else {
+        body = InternalRegisterFilesParametersToMldev(parameterNode, new JsonObject());
+        path = Common.FormatMap("files:register", body["_url"]);
+      }
+      JsonObject? bodyObj = body?.AsObject();
+      bodyObj?.Remove("_url");
+      if (bodyObj != null && bodyObj.ContainsKey("_query")) {
+        path = path + "?" + Common.FormatQuery((JsonObject)bodyObj["_query"]);
+        bodyObj.Remove("_query");
+      } else {
+        bodyObj?.Remove("_query");
+      }
+      HttpOptions? requestHttpOptions = config?.HttpOptions;
+
+      ApiResponse response =
+          await this._apiClient.RequestAsync(HttpMethod.Post, path, JsonSerializer.Serialize(body),
+                                             requestHttpOptions, cancellationToken);
+      HttpContent httpContent = response.GetEntity();
+#if NETSTANDARD2_0
+      string contentString = await httpContent.ReadAsStringAsync();
+#else
+      string contentString = await httpContent.ReadAsStringAsync(cancellationToken);
+#endif
+
+      if (config?.ShouldReturnHttpResponse == true) {
+        var httpHeaders = response.GetHeaders();
+        Dictionary<string, string>? headers = null;
+
+        if (httpHeaders != null) {
+          headers = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+          foreach (var header in httpHeaders) {
+            headers[header.Key] = string.Join(", ", header.Value);
+          }
+        }
+
+        return new RegisterFilesResponse {
+          SdkHttpResponse = new HttpResponse { Headers = headers, Body = contentString }
+        };
+      }
+
+      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      if (httpContentNode == null) {
+        throw new NotSupportedException("Failed to parse response to JsonNode.");
+      }
+      JsonNode responseNode = httpContentNode;
+
+      if (this._apiClient.VertexAI) {
+        throw new NotSupportedException(
+            "This method is only supported in the Gemini Developer API client.");
+      }
+
+      if (!this._apiClient.VertexAI) {
+        responseNode = httpContentNode;
+      }
+
+      return JsonSerializer.Deserialize<RegisterFilesResponse>(responseNode.ToString()) ??
+             throw new InvalidOperationException(
+                 "Failed to deserialize Task<RegisterFilesResponse>.");
+    }
+
     public async Task<Pager<Google.GenAI.Types.File, ListFilesConfig, ListFilesResponse>> ListAsync(
         ListFilesConfig? config = null, CancellationToken cancellationToken = default) {
       config ??= new ListFilesConfig();
@@ -431,6 +545,54 @@ namespace Google.GenAI {
             cfg.PageToken = token;
             return cfg;
           }, initialConfig: config, initialResponse: initialResponse, requestedPageSize: config.PageSize ?? 0);
+    }
+
+    /// <summary>
+    /// Registers Google Cloud Storage files for use with the API.
+    /// </summary>
+    /// <param name="uris">The list of GCS URIs to register.</param>
+    /// <param name="credential">The <see cref="GoogleCredential"/> to use for
+    /// authorization.</param> <param name="config">A <see cref="RegisterFilesConfig"/> instance
+    /// that specifies the optional configurations.</param> <param name="cancellationToken">A <see
+    /// cref="CancellationToken"/> to cancel the operation.</param> <returns>A <see
+    /// cref="Task{RegisterFilesResponse}"/> that represents the asynchronous operation. The task
+    /// result contains the <see cref="RegisterFilesResponse"/>.</returns>
+    public async Task<RegisterFilesResponse> RegisterFilesAsync(
+        IEnumerable<string> uris, GoogleCredential credential, RegisterFilesConfig? config = null,
+        CancellationToken cancellationToken = default) {
+      if (this._apiClient.VertexAI) {
+        throw new NotSupportedException(
+            "This method is only supported in the Gemini Developer API client.");
+      }
+      if (uris == null)
+        throw new ArgumentNullException(nameof(uris));
+      if (credential == null)
+        throw new ArgumentNullException(nameof(credential));
+
+      ICredential cred = (ICredential)credential;
+      string accessToken =
+          await cred.GetAccessTokenForRequestAsync(cancellationToken: cancellationToken);
+      if (string.IsNullOrEmpty(accessToken)) {
+        throw new InvalidOperationException("Failed to obtain access token from credentials.");
+      }
+
+      var localConfig = config ?? new RegisterFilesConfig();
+      var httpOptions = localConfig.HttpOptions ?? new HttpOptions();
+      var headers = httpOptions.Headers != null
+                        ? new Dictionary<string, string>(httpOptions.Headers,
+                                                         StringComparer.OrdinalIgnoreCase)
+                        : new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+
+      headers["Authorization"] = $"Bearer {accessToken}";
+      if (!string.IsNullOrEmpty(credential.QuotaProject)) {
+        headers["x-goog-user-project"] = credential.QuotaProject;
+      }
+
+      // Create an effective configuration with updated headers without mutating the input object.
+      var effectiveConfig =
+          localConfig with { HttpOptions = httpOptions with { Headers = headers } };
+
+      return await PrivateRegisterFilesAsync(uris.ToList(), effectiveConfig, cancellationToken);
     }
 
     /// <summary>
@@ -499,8 +661,8 @@ namespace Google.GenAI {
       }
       string uploadUrl =
           await CreateFileInApiAsync(config, mimeType, fileName, size, cancellationToken);
-      HttpContent responseContent =
-          await _uploadClient.UploadAsync(uploadUrl, stream, size, cancellationToken);
+      HttpContent responseContent = await _uploadClient.UploadAsync(
+          uploadUrl, stream, size, config?.HttpOptions, cancellationToken);
       return await FileFromUploadResponseBodyAsync(responseContent);
     }
 

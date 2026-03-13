@@ -23,30 +23,38 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// The audio transcription configuration in Setup.
+  /// Response for the _register file method.
   /// </summary>
 
-  public record AudioTranscriptionConfig {
+  public record RegisterFilesResponse {
     /// <summary>
-    /// The language codes of the audio. BCP-47 language code. If not set, the transcription will be
-    /// in the language detected by the model. If set, the server will use the language code
-    /// specified in the model config as a hint for the language of the audio
+    /// Used to retain the full HTTP response.
     /// </summary>
-    [JsonPropertyName("languageCodes")]
+    [JsonPropertyName("sdkHttpResponse")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<string> ? LanguageCodes { get; set; }
+    public HttpResponse ? SdkHttpResponse { get; set; }
 
     /// <summary>
-    /// Deserializes a JSON string to a AudioTranscriptionConfig object.
+    /// The registered files.
+    /// </summary>
+    [JsonPropertyName("files")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public List<Google.GenAI.Types.File>
+        ? Files {
+            get; set;
+          }
+
+    /// <summary>
+    /// Deserializes a JSON string to a RegisterFilesResponse object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized AudioTranscriptionConfig object, or null if deserialization
+    /// <returns>The deserialized RegisterFilesResponse object, or null if deserialization
     /// fails.</returns>
-    public static AudioTranscriptionConfig
+    public static RegisterFilesResponse
         ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<AudioTranscriptionConfig>(jsonString, options);
+        return JsonSerializer.Deserialize<RegisterFilesResponse>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
