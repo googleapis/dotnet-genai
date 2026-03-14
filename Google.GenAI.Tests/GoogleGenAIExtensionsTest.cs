@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Runtime.CompilerServices;
@@ -215,6 +216,267 @@ public class GoogleGenAIExtensionsTest
     var embeddingGenerator = models.AsIEmbeddingGenerator("text-embedding-004");
     
     Assert.ThrowsException<ArgumentNullException>(() => embeddingGenerator.GetService(null!));
+  }
+
+  [TestMethod]
+  public void AsIHostedFileClient_WithFiles_ReturnsHostedFileClient()
+  {
+    var files = new Files(new MockApiClient("", ""));
+
+    Assert.IsNotNull(files.AsIHostedFileClient());
+  }
+
+  [TestMethod]
+  public void AsIHostedFileClient_NullFiles_ThrowsArgumentNullException()
+  {
+    Files? files = null;
+    Assert.ThrowsException<ArgumentNullException>(() => files!.AsIHostedFileClient());
+  }
+
+  [TestMethod]
+  public void AsIHostedFileClient_NullClient_ThrowsArgumentNullException()
+  {
+    Client? client = null;
+    Assert.ThrowsException<ArgumentNullException>(() => client!.AsIHostedFileClient());
+  }
+
+  [TestMethod]
+  public void IHostedFileClient_GetService_Metadata_ReturnsValidMetadata()
+  {
+    var files = new Files(new MockApiClient("", ""));
+    var hostedFileClient = files.AsIHostedFileClient();
+
+    var metadata = hostedFileClient.GetService<HostedFileClientMetadata>();
+
+    Assert.IsNotNull(metadata);
+    Assert.AreEqual("gcp.gen_ai", metadata.ProviderName);
+    Assert.AreEqual(new Uri("https://generativelanguage.googleapis.com/"), metadata.ProviderUri);
+  }
+
+  [TestMethod]
+  public void IHostedFileClient_GetService_Files_ReturnsUnderlyingFiles()
+  {
+    var files = new Files(new MockApiClient("", ""));
+    var hostedFileClient = files.AsIHostedFileClient();
+
+    Assert.AreSame(files, hostedFileClient.GetService<Files>());
+  }
+
+  [TestMethod]
+  public void IHostedFileClient_GetService_Client_ReturnsUnderlyingClient()
+  {
+    var client = new Client(apiKey: "fake-api-key");
+    var hostedFileClient = client.AsIHostedFileClient();
+
+    Assert.AreSame(client, hostedFileClient.GetService<Client>());
+    Assert.AreSame(client.Files, hostedFileClient.GetService<Files>());
+  }
+
+  [TestMethod]
+  public void IHostedFileClient_GetService_Self_ReturnsSelf()
+  {
+    var files = new Files(new MockApiClient("", ""));
+    var hostedFileClient = files.AsIHostedFileClient();
+
+    Assert.AreSame(hostedFileClient, hostedFileClient.GetService<IHostedFileClient>());
+  }
+
+  [TestMethod]
+  public void IHostedFileClient_GetService_NullServiceType_ThrowsArgumentNullException()
+  {
+    var files = new Files(new MockApiClient("", ""));
+    var hostedFileClient = files.AsIHostedFileClient();
+
+    Assert.ThrowsException<ArgumentNullException>(() => hostedFileClient.GetService(null!));
+  }
+
+  [TestMethod]
+  public void IHostedFileClient_GetService_UnknownType_ReturnsNull()
+  {
+    var files = new Files(new MockApiClient("", ""));
+    var hostedFileClient = files.AsIHostedFileClient();
+
+    Assert.IsNull(hostedFileClient.GetService<string>());
+  }
+
+  [TestMethod]
+  public void IHostedFileClient_GetService_WithKey_ReturnsNull()
+  {
+    var files = new Files(new MockApiClient("", ""));
+    var hostedFileClient = files.AsIHostedFileClient();
+
+    Assert.IsNull(hostedFileClient.GetService(typeof(IHostedFileClient), "somekey"));
+  }
+
+  [TestMethod]
+  public async Task IHostedFileClient_GetFileInfoAsync_MapsProperties()
+  {
+    var hostedFileClient = CreateHostedFileClient(
+      """
+      {
+        "name": "files/abc123",
+        "mimeType": "application/pdf",
+        "displayName": "test.pdf",
+        "sizeBytes": "12345",
+        "createTime": "2025-01-15T10:30:00Z",
+        "state": "ACTIVE",
+        "uri": "https://generativelanguage.googleapis.com/v1beta/files/abc123"
+      }
+      """);
+
+    var result = await hostedFileClient.GetFileInfoAsync("files/abc123");
+
+    Assert.IsNotNull(result);
+    Assert.AreEqual("files/abc123", result.FileId);
+    Assert.AreEqual("application/pdf", result.MediaType);
+    Assert.AreEqual("test.pdf", result.Name);
+    Assert.AreEqual(12345L, result.SizeInBytes);
+    Assert.IsNotNull(result.CreatedAt);
+    Assert.AreEqual(new DateTimeOffset(2025, 1, 15, 10, 30, 0, TimeSpan.Zero), result.CreatedAt);
+    Assert.IsNotNull(result.RawRepresentation);
+    Assert.IsInstanceOfType(result.RawRepresentation, typeof(Google.GenAI.Types.File));
+  }
+
+  [TestMethod]
+  public async Task IHostedFileClient_GetFileInfoAsync_NullFileId_Throws()
+  {
+    var hostedFileClient = CreateHostedFileClient("{}");
+
+    await Assert.ThrowsExceptionAsync<ArgumentNullException>(() => hostedFileClient.GetFileInfoAsync(null!));
+  }
+
+  [TestMethod]
+  public async Task IHostedFileClient_DeleteAsync_ReturnsTrue()
+  {
+    var hostedFileClient = CreateHostedFileClient("{}");
+
+    var result = await hostedFileClient.DeleteAsync("files/abc123");
+
+    Assert.IsTrue(result);
+  }
+
+  [TestMethod]
+  public async Task IHostedFileClient_DeleteAsync_NullFileId_Throws()
+  {
+    var hostedFileClient = CreateHostedFileClient("{}");
+
+    await Assert.ThrowsExceptionAsync<ArgumentNullException>(() => hostedFileClient.DeleteAsync(null!));
+  }
+
+  [TestMethod]
+  public async Task IHostedFileClient_ListFilesAsync_EnumeratesFiles()
+  {
+    var hostedFileClient = CreateHostedFileClient(
+      """
+      {
+        "files": [
+          {
+            "name": "files/file1",
+            "mimeType": "text/plain",
+            "displayName": "notes.txt",
+            "sizeBytes": "100",
+            "createTime": "2025-01-10T08:00:00Z"
+          },
+          {
+            "name": "files/file2",
+            "mimeType": "image/png",
+            "displayName": "photo.png",
+            "sizeBytes": "5000",
+            "createTime": "2025-01-11T09:00:00Z"
+          }
+        ]
+      }
+      """);
+
+    var results = new List<HostedFileContent>();
+    await foreach (var file in hostedFileClient.ListFilesAsync())
+    {
+      results.Add(file);
+    }
+
+    Assert.AreEqual(2, results.Count);
+
+    Assert.AreEqual("files/file1", results[0].FileId);
+    Assert.AreEqual("text/plain", results[0].MediaType);
+    Assert.AreEqual("notes.txt", results[0].Name);
+    Assert.AreEqual(100L, results[0].SizeInBytes);
+
+    Assert.AreEqual("files/file2", results[1].FileId);
+    Assert.AreEqual("image/png", results[1].MediaType);
+    Assert.AreEqual("photo.png", results[1].Name);
+    Assert.AreEqual(5000L, results[1].SizeInBytes);
+  }
+
+  [TestMethod]
+  public async Task IHostedFileClient_ListFilesAsync_EmptyList_ReturnsNoFiles()
+  {
+    var hostedFileClient = CreateHostedFileClient("{}");
+
+    var results = new List<HostedFileContent>();
+    await foreach (var file in hostedFileClient.ListFilesAsync())
+    {
+      results.Add(file);
+    }
+
+    Assert.AreEqual(0, results.Count);
+  }
+
+  [TestMethod]
+  public async Task IHostedFileClient_DownloadAsync_ReturnsStreamWithMetadata()
+  {
+    var hostedFileClient = CreateHostedFileClient(
+      // First call: GetAsync for file metadata
+      """
+      {
+        "name": "files/abc123",
+        "mimeType": "text/plain",
+        "displayName": "hello.txt",
+        "sizeBytes": "13"
+      }
+      """,
+      // Second call: DownloadStreamAsync returns the actual file content
+      "Hello, world!");
+
+    using var stream = await hostedFileClient.DownloadAsync("files/abc123");
+
+    Assert.IsNotNull(stream);
+    Assert.AreEqual("text/plain", stream.MediaType);
+    Assert.AreEqual("hello.txt", stream.FileName);
+
+    using var reader = new StreamReader(stream);
+    var content = await reader.ReadToEndAsync();
+    Assert.AreEqual("Hello, world!", content);
+  }
+
+  [TestMethod]
+  public async Task IHostedFileClient_DownloadAsync_NullFileId_Throws()
+  {
+    var hostedFileClient = CreateHostedFileClient("{}");
+
+    await Assert.ThrowsExceptionAsync<ArgumentNullException>(() => hostedFileClient.DownloadAsync(null!));
+  }
+
+  [TestMethod]
+  public async Task IHostedFileClient_UploadAsync_NullContent_Throws()
+  {
+    var hostedFileClient = CreateHostedFileClient("{}");
+
+    await Assert.ThrowsExceptionAsync<ArgumentNullException>(() => hostedFileClient.UploadAsync(null!));
+  }
+
+  [TestMethod]
+  public void IHostedFileClient_Dispose_DoesNotThrow()
+  {
+    var files = new Files(new MockApiClient("", ""));
+    var hostedFileClient = files.AsIHostedFileClient();
+
+    ((IDisposable)hostedFileClient).Dispose();
+  }
+
+  private static IHostedFileClient CreateHostedFileClient(params string[] responses)
+  {
+    var files = new Files(new QueueMockApiClient(responses));
+    return files.AsIHostedFileClient();
   }
 
   [TestMethod]
@@ -5032,6 +5294,109 @@ public class GoogleGenAIExtensionsTest
   }
 
   [TestMethod]
+  public async Task IChatClient_ResponseWithWebSearchGrounding()
+  {
+    IChatClient client = CreateChatClient("""
+      {
+        "contents": [
+          {
+            "parts": [
+              {
+                "text": "What is the weather in NYC?"
+              }
+            ],
+            "role": "user"
+          }
+        ],
+        "generationConfig": {}
+      }
+      """, """
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "The current weather in NYC is 72°F and sunny."
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "groundingMetadata": {
+              "webSearchQueries": [
+                "weather in NYC",
+                "current NYC weather"
+              ],
+              "groundingChunks": [
+                {
+                  "web": {
+                    "uri": "https://weather.com/nyc",
+                    "title": "NYC Weather - Weather.com"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://www.accuweather.com/nyc",
+                    "title": "NYC Weather | AccuWeather"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 20,
+          "totalTokenCount": 30
+        },
+        "modelVersion": "gemini-2.0-flash"
+      }
+      """);
+
+    var response = await client.GetResponseAsync("What is the weather in NYC?");
+
+    Assert.IsNotNull(response);
+    Assert.AreEqual(1, response.Messages.Count);
+
+    var contents = response.Messages[0].Contents;
+
+    // Should have: TextContent, WebSearchToolCallContent, WebSearchToolResultContent
+    Assert.AreEqual(3, contents.Count);
+
+    Assert.IsInstanceOfType(contents[0], typeof(TextContent));
+    Assert.IsTrue(((TextContent)contents[0]).Text.Contains("72°F"));
+
+    // Web search tool call content
+    Assert.IsInstanceOfType(contents[1], typeof(WebSearchToolCallContent));
+    var searchCall = (WebSearchToolCallContent)contents[1];
+    Assert.IsNotNull(searchCall.Queries);
+    Assert.AreEqual(2, searchCall.Queries.Count);
+    Assert.AreEqual("weather in NYC", searchCall.Queries[0]);
+    Assert.AreEqual("current NYC weather", searchCall.Queries[1]);
+
+    // Web search tool result content
+    Assert.IsInstanceOfType(contents[2], typeof(WebSearchToolResultContent));
+    var searchResult = (WebSearchToolResultContent)contents[2];
+    Assert.IsNotNull(searchResult.Results);
+    Assert.AreEqual(2, searchResult.Results.Count);
+
+    // Both results should be UriContent with title in AdditionalProperties
+    Assert.IsInstanceOfType(searchResult.Results[0], typeof(UriContent));
+    var firstResult = (UriContent)searchResult.Results[0];
+    Assert.AreEqual("https://weather.com/nyc", firstResult.Uri.ToString());
+    Assert.AreEqual("NYC Weather - Weather.com", firstResult.AdditionalProperties?["title"]);
+
+    Assert.IsInstanceOfType(searchResult.Results[1], typeof(UriContent));
+    var secondResult = (UriContent)searchResult.Results[1];
+    Assert.AreEqual("https://www.accuweather.com/nyc", secondResult.Uri.ToString());
+    Assert.AreEqual("NYC Weather | AccuWeather", secondResult.AdditionalProperties?["title"]);
+
+    // CallId should match between call and result
+    Assert.AreEqual(searchCall.CallId, searchResult.CallId);
+  }
+
+  [TestMethod]
   public async Task IImageGeneration_BasicRequest()
   {
     IImageGenerator imageGenerator = CreateImageGenerator("""
@@ -5261,6 +5626,38 @@ public class GoogleGenAIExtensionsTest
     }
 
     private static string RemoveWhitespace(string input) => Regex.Replace(input, @"\s+", "");
+  }
+
+  /// <summary>A mock <see cref="ApiClient"/> that returns queued responses in order without asserting on request content.</summary>
+  private sealed class QueueMockApiClient : ApiClient
+  {
+    private readonly Queue<string> _responses;
+
+    public QueueMockApiClient(params string[] responses) : base(apiKey: "fake_api_key", customHttpOptions: new() { BaseUrl = "http://localhost/" })
+    {
+      _responses = new Queue<string>(responses);
+    }
+
+    internal override Task<ApiResponse> RequestAsync(HttpMethod httpMethod, string path, byte[] requestBytes, HttpOptions? requestHttpOptions, CancellationToken cancellationToken = default) =>
+      RequestAsync(httpMethod, path, Encoding.UTF8.GetString(requestBytes), requestHttpOptions, cancellationToken);
+
+    public override Task<ApiResponse> RequestAsync(
+      HttpMethod httpMethod, string path, string requestJson, HttpOptions? requestHttpOptions, CancellationToken cancellationToken = default)
+    {
+      string responseJson = _responses.Count > 0 ? _responses.Dequeue() : "{}";
+      return Task.FromResult<ApiResponse>(new HttpApiResponse(new HttpResponseMessage()
+      {
+        Content = new StringContent(responseJson, Encoding.UTF8, "application/json")
+      }));
+    }
+
+    public override async IAsyncEnumerable<ApiResponse> RequestStreamAsync(
+      HttpMethod httpMethod, string path, string requestJson, HttpOptions? requestHttpOptions, [EnumeratorCancellation] CancellationToken cancellationToken = default)
+    {
+      string responseJson = _responses.Count > 0 ? _responses.Dequeue() : "{}";
+      await Task.Yield();
+      yield return new StreamingApiResponse(responseJson, new HttpResponseMessage());
+    }
   }
 }
 

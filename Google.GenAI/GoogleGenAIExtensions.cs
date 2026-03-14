@@ -103,4 +103,30 @@ public static class GoogleGenAIExtensions
     Utilities.ThrowIfNull(models, nameof(models));
     return new GoogleGenAIEmbeddingGenerator(models, defaultModelId, defaultModelDimensions);
   }
+
+  /// <summary>
+  /// Creates an <see cref="IHostedFileClient"/> wrapper around the specified <see cref="Client"/>.
+  /// </summary>
+  /// <param name="client">The <see cref="Client"/> to wrap.</param>
+  /// <returns>An <see cref="IHostedFileClient"/> that wraps the specified client.</returns>
+  /// <exception cref="ArgumentNullException"><paramref name="client"/> is <see langword="null"/>.</exception>
+  /// <remarks>The hosted file client is only supported with the Gemini Developer API, not Vertex AI.</remarks>
+  public static IHostedFileClient AsIHostedFileClient(this Client client)
+  {
+    Utilities.ThrowIfNull(client, nameof(client));
+    return new GoogleGenAIHostedFileClient(client);
+  }
+
+  /// <summary>
+  /// Creates an <see cref="IHostedFileClient"/> wrapper around the specified <see cref="Files"/>.
+  /// </summary>
+  /// <param name="files">The <see cref="Files"/> client to wrap.</param>
+  /// <returns>An <see cref="IHostedFileClient"/> that wraps the specified <see cref="Files"/> client.</returns>
+  /// <exception cref="ArgumentNullException"><paramref name="files"/> is <see langword="null"/>.</exception>
+  /// <remarks>The hosted file client is only supported with the Gemini Developer API, not Vertex AI.</remarks>
+  public static IHostedFileClient AsIHostedFileClient(this Files files)
+  {
+    Utilities.ThrowIfNull(files, nameof(files));
+    return new GoogleGenAIHostedFileClient(files);
+  }
 }

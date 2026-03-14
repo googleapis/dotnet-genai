@@ -558,6 +558,7 @@ internal sealed class GoogleGenAIChatClient : IChatClient
   /// <summary>Creates <see cref="AIContent"/>s for <paramref name="parts"/> and adds them to <paramref name="contents"/>.</summary>
   private static void AddAIContentsForParts(List<Part> parts, IList<AIContent> contents)
   {
+    string? lastCodeCallId = null;
     foreach (var part in parts)
     {
       AIContent content;
@@ -593,7 +594,8 @@ internal sealed class GoogleGenAIChatClient : IChatClient
       }
       else if (part.ExecutableCode is { Code: not null } executableCode)
       {
-        content = new CodeInterpreterToolCallContent()
+        lastCodeCallId = Guid.NewGuid().ToString("N");
+        content = new CodeInterpreterToolCallContent(lastCodeCallId)
         {
           Inputs = new List<AIContent>()
           {
@@ -607,7 +609,7 @@ internal sealed class GoogleGenAIChatClient : IChatClient
       }
       else if (part.CodeExecutionResult is { Output: { } codeOutput } codeExecutionResult)
       {
-        content = new CodeInterpreterToolResultContent()
+        content = new CodeInterpreterToolResultContent(lastCodeCallId ?? Guid.NewGuid().ToString("N"))
         {
           Outputs = new List<AIContent>()
            {
@@ -616,6 +618,7 @@ internal sealed class GoogleGenAIChatClient : IChatClient
               new ErrorContent(codeOutput) { ErrorCode = codeExecutionResult.Outcome.ToString() }
            },
         };
+        lastCodeCallId = null;
       }
       else
       {
@@ -675,6 +678,41 @@ internal sealed class GoogleGenAIChatClient : IChatClient
               }
           };
         }
+      }
+
+      // Add web search grounding metadata as WebSearchToolCallContent/WebSearchToolResultContent.
+      if (candidate.GroundingMetadata is { } groundingMetadata &&
+          (groundingMetadata.WebSearchQueries is { Count: > 0 } || groundingMetadata.GroundingChunks is { Count: > 0 }))
+      {
+        string searchCallId = Guid.NewGuid().ToString("N");
+
+        responseContents.Add(new WebSearchToolCallContent(searchCallId)
+        {
+          Queries = groundingMetadata.WebSearchQueries,
+          RawRepresentation = groundingMetadata,
+        });
+
+        List<AIContent>? searchResults = null;
+        if (groundingMetadata.GroundingChunks is { } chunks)
+        {
+          foreach (var chunk in chunks)
+          {
+            if (chunk.Web is { Uri: not null } web)
+            {
+              var result = new UriContent(new Uri(web.Uri), MimeTypes.TryGetMimeType(web.Uri, out string mimeType) ? mimeType : "application/octet-stream");
+              if (web.Title is not null)
+              {
+                (result.AdditionalProperties ??= new())["title"] = web.Title;
+              }
+              (searchResults ??= new()).Add(result);
+            }
+          }
+        }
+
+        responseContents.Add(new WebSearchToolResultContent(searchCallId)
+        {
+          Results = searchResults,
+        });
       }
     }
 
