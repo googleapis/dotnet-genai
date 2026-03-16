@@ -309,7 +309,7 @@ namespace Google.GenAI
       }
 
       var buffer = new byte[4096];
-      var messageBuilder = new StringBuilder();
+      using var messageStream = new MemoryStream();
       WebSocketReceiveResult result;
 
       try
@@ -321,7 +321,7 @@ namespace Google.GenAI
           {
             return null;
           }
-          messageBuilder.Append(Encoding.UTF8.GetString(buffer, 0, result.Count));
+          messageStream.Write(buffer, 0, result.Count);
         }
         while (!result.EndOfMessage);
       }
@@ -330,7 +330,7 @@ namespace Google.GenAI
         return null;
       }
 
-      var messageString = messageBuilder.ToString();
+      var messageString = Encoding.UTF8.GetString(messageStream.GetBuffer(), 0, (int)messageStream.Length);
       if (string.IsNullOrEmpty(messageString))
       {
         throw new InvalidOperationException("Received an empty message from the server.");

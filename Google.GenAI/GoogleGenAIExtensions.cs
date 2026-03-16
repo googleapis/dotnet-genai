@@ -129,4 +129,21 @@ public static class GoogleGenAIExtensions
     Utilities.ThrowIfNull(files, nameof(files));
     return new GoogleGenAIHostedFileClient(files);
   }
+
+  /// <summary>
+  /// Creates an <see cref="IRealtimeClient"/> wrapper around the specified <see cref="Client"/>
+  /// for use with the Google GenAI Live API.
+  /// </summary>
+  /// <param name="client">The <see cref="Client"/> to wrap.</param>
+  /// <param name="defaultModelId">The default model ID to use for realtime sessions.</param>
+  /// <returns>An <see cref="IRealtimeClient"/> that wraps the specified client.</returns>
+  /// <exception cref="ArgumentNullException"><paramref name="client"/> is <see langword="null"/>.</exception>
+#if NET8_0_OR_GREATER
+  [System.Diagnostics.CodeAnalysis.Experimental("MEAI001")]
+#endif
+  public static IRealtimeClient AsIRealtimeClient(this Client client, string? defaultModelId = null)
+  {
+    Utilities.ThrowIfNull(client, nameof(client));
+    return new GoogleGenAIRealtimeClient(client, defaultModelId);
+  }
 }
