@@ -5616,6 +5616,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CodeExecutionResult.FromJson
   nameWithType: CodeExecutionResult.FromJson
+- uid: Google.GenAI.Types.CodeExecutionResult.Id
+  name: Id
+  href: api/Google.GenAI.Types.CodeExecutionResult.html#Google_GenAI_Types_CodeExecutionResult_Id
+  commentId: P:Google.GenAI.Types.CodeExecutionResult.Id
+  fullName: Google.GenAI.Types.CodeExecutionResult.Id
+  nameWithType: CodeExecutionResult.Id
+- uid: Google.GenAI.Types.CodeExecutionResult.Id*
+  name: Id
+  href: api/Google.GenAI.Types.CodeExecutionResult.html#Google_GenAI_Types_CodeExecutionResult_Id_
+  commentId: Overload:Google.GenAI.Types.CodeExecutionResult.Id
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CodeExecutionResult.Id
+  nameWithType: CodeExecutionResult.Id
 - uid: Google.GenAI.Types.CodeExecutionResult.Outcome
   name: Outcome
   href: api/Google.GenAI.Types.CodeExecutionResult.html#Google_GenAI_Types_CodeExecutionResult_Outcome
@@ -10163,6 +10176,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ExecutableCode.FromJson
   nameWithType: ExecutableCode.FromJson
+- uid: Google.GenAI.Types.ExecutableCode.Id
+  name: Id
+  href: api/Google.GenAI.Types.ExecutableCode.html#Google_GenAI_Types_ExecutableCode_Id
+  commentId: P:Google.GenAI.Types.ExecutableCode.Id
+  fullName: Google.GenAI.Types.ExecutableCode.Id
+  nameWithType: ExecutableCode.Id
+- uid: Google.GenAI.Types.ExecutableCode.Id*
+  name: Id
+  href: api/Google.GenAI.Types.ExecutableCode.html#Google_GenAI_Types_ExecutableCode_Id_
+  commentId: Overload:Google.GenAI.Types.ExecutableCode.Id
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ExecutableCode.Id
+  nameWithType: ExecutableCode.Id
 - uid: Google.GenAI.Types.ExecutableCode.Language
   name: Language
   href: api/Google.GenAI.Types.ExecutableCode.html#Google_GenAI_Types_ExecutableCode_Language
@@ -23772,6 +23798,32 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Part.ThoughtSignature
   nameWithType: Part.ThoughtSignature
+- uid: Google.GenAI.Types.Part.ToolCall
+  name: ToolCall
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_ToolCall
+  commentId: P:Google.GenAI.Types.Part.ToolCall
+  fullName: Google.GenAI.Types.Part.ToolCall
+  nameWithType: Part.ToolCall
+- uid: Google.GenAI.Types.Part.ToolCall*
+  name: ToolCall
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_ToolCall_
+  commentId: Overload:Google.GenAI.Types.Part.ToolCall
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Part.ToolCall
+  nameWithType: Part.ToolCall
+- uid: Google.GenAI.Types.Part.ToolResponse
+  name: ToolResponse
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_ToolResponse
+  commentId: P:Google.GenAI.Types.Part.ToolResponse
+  fullName: Google.GenAI.Types.Part.ToolResponse
+  nameWithType: Part.ToolResponse
+- uid: Google.GenAI.Types.Part.ToolResponse*
+  name: ToolResponse
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_ToolResponse_
+  commentId: Overload:Google.GenAI.Types.Part.ToolResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Part.ToolResponse
+  nameWithType: Part.ToolResponse
 - uid: Google.GenAI.Types.Part.VideoMetadata
   name: VideoMetadata
   href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_VideoMetadata
@@ -30439,6 +30491,67 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Tool.UrlContext
   nameWithType: Tool.UrlContext
+- uid: Google.GenAI.Types.ToolCall
+  name: ToolCall
+  href: api/Google.GenAI.Types.ToolCall.html
+  commentId: T:Google.GenAI.Types.ToolCall
+  fullName: Google.GenAI.Types.ToolCall
+  nameWithType: ToolCall
+- uid: Google.GenAI.Types.ToolCall.Args
+  name: Args
+  href: api/Google.GenAI.Types.ToolCall.html#Google_GenAI_Types_ToolCall_Args
+  commentId: P:Google.GenAI.Types.ToolCall.Args
+  fullName: Google.GenAI.Types.ToolCall.Args
+  nameWithType: ToolCall.Args
+- uid: Google.GenAI.Types.ToolCall.Args*
+  name: Args
+  href: api/Google.GenAI.Types.ToolCall.html#Google_GenAI_Types_ToolCall_Args_
+  commentId: Overload:Google.GenAI.Types.ToolCall.Args
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolCall.Args
+  nameWithType: ToolCall.Args
+- uid: Google.GenAI.Types.ToolCall.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ToolCall.html#Google_GenAI_Types_ToolCall_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ToolCall.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ToolCall.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ToolCall.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ToolCall.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ToolCall.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ToolCall.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ToolCall.html#Google_GenAI_Types_ToolCall_FromJson_
+  commentId: Overload:Google.GenAI.Types.ToolCall.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolCall.FromJson
+  nameWithType: ToolCall.FromJson
+- uid: Google.GenAI.Types.ToolCall.Id
+  name: Id
+  href: api/Google.GenAI.Types.ToolCall.html#Google_GenAI_Types_ToolCall_Id
+  commentId: P:Google.GenAI.Types.ToolCall.Id
+  fullName: Google.GenAI.Types.ToolCall.Id
+  nameWithType: ToolCall.Id
+- uid: Google.GenAI.Types.ToolCall.Id*
+  name: Id
+  href: api/Google.GenAI.Types.ToolCall.html#Google_GenAI_Types_ToolCall_Id_
+  commentId: Overload:Google.GenAI.Types.ToolCall.Id
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolCall.Id
+  nameWithType: ToolCall.Id
+- uid: Google.GenAI.Types.ToolCall.ToolType
+  name: ToolType
+  href: api/Google.GenAI.Types.ToolCall.html#Google_GenAI_Types_ToolCall_ToolType
+  commentId: P:Google.GenAI.Types.ToolCall.ToolType
+  fullName: Google.GenAI.Types.ToolCall.ToolType
+  nameWithType: ToolCall.ToolType
+- uid: Google.GenAI.Types.ToolCall.ToolType*
+  name: ToolType
+  href: api/Google.GenAI.Types.ToolCall.html#Google_GenAI_Types_ToolCall_ToolType_
+  commentId: Overload:Google.GenAI.Types.ToolCall.ToolType
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolCall.ToolType
+  nameWithType: ToolCall.ToolType
 - uid: Google.GenAI.Types.ToolCodeExecution
   name: ToolCodeExecution
   href: api/Google.GenAI.Types.ToolCodeExecution.html
@@ -30496,6 +30609,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ToolConfig.FunctionCallingConfig
   nameWithType: ToolConfig.FunctionCallingConfig
+- uid: Google.GenAI.Types.ToolConfig.IncludeServerSideToolInvocations
+  name: IncludeServerSideToolInvocations
+  href: api/Google.GenAI.Types.ToolConfig.html#Google_GenAI_Types_ToolConfig_IncludeServerSideToolInvocations
+  commentId: P:Google.GenAI.Types.ToolConfig.IncludeServerSideToolInvocations
+  fullName: Google.GenAI.Types.ToolConfig.IncludeServerSideToolInvocations
+  nameWithType: ToolConfig.IncludeServerSideToolInvocations
+- uid: Google.GenAI.Types.ToolConfig.IncludeServerSideToolInvocations*
+  name: IncludeServerSideToolInvocations
+  href: api/Google.GenAI.Types.ToolConfig.html#Google_GenAI_Types_ToolConfig_IncludeServerSideToolInvocations_
+  commentId: Overload:Google.GenAI.Types.ToolConfig.IncludeServerSideToolInvocations
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolConfig.IncludeServerSideToolInvocations
+  nameWithType: ToolConfig.IncludeServerSideToolInvocations
 - uid: Google.GenAI.Types.ToolConfig.RetrievalConfig
   name: RetrievalConfig
   href: api/Google.GenAI.Types.ToolConfig.html#Google_GenAI_Types_ToolConfig_RetrievalConfig
@@ -30557,6 +30683,286 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ToolParallelAiSearch.FromJson
   nameWithType: ToolParallelAiSearch.FromJson
+- uid: Google.GenAI.Types.ToolResponse
+  name: ToolResponse
+  href: api/Google.GenAI.Types.ToolResponse.html
+  commentId: T:Google.GenAI.Types.ToolResponse
+  fullName: Google.GenAI.Types.ToolResponse
+  nameWithType: ToolResponse
+- uid: Google.GenAI.Types.ToolResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ToolResponse.html#Google_GenAI_Types_ToolResponse_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ToolResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ToolResponse.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ToolResponse.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ToolResponse.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ToolResponse.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ToolResponse.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ToolResponse.html#Google_GenAI_Types_ToolResponse_FromJson_
+  commentId: Overload:Google.GenAI.Types.ToolResponse.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolResponse.FromJson
+  nameWithType: ToolResponse.FromJson
+- uid: Google.GenAI.Types.ToolResponse.Id
+  name: Id
+  href: api/Google.GenAI.Types.ToolResponse.html#Google_GenAI_Types_ToolResponse_Id
+  commentId: P:Google.GenAI.Types.ToolResponse.Id
+  fullName: Google.GenAI.Types.ToolResponse.Id
+  nameWithType: ToolResponse.Id
+- uid: Google.GenAI.Types.ToolResponse.Id*
+  name: Id
+  href: api/Google.GenAI.Types.ToolResponse.html#Google_GenAI_Types_ToolResponse_Id_
+  commentId: Overload:Google.GenAI.Types.ToolResponse.Id
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolResponse.Id
+  nameWithType: ToolResponse.Id
+- uid: Google.GenAI.Types.ToolResponse.Response
+  name: Response
+  href: api/Google.GenAI.Types.ToolResponse.html#Google_GenAI_Types_ToolResponse_Response
+  commentId: P:Google.GenAI.Types.ToolResponse.Response
+  fullName: Google.GenAI.Types.ToolResponse.Response
+  nameWithType: ToolResponse.Response
+- uid: Google.GenAI.Types.ToolResponse.Response*
+  name: Response
+  href: api/Google.GenAI.Types.ToolResponse.html#Google_GenAI_Types_ToolResponse_Response_
+  commentId: Overload:Google.GenAI.Types.ToolResponse.Response
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolResponse.Response
+  nameWithType: ToolResponse.Response
+- uid: Google.GenAI.Types.ToolResponse.ToolType
+  name: ToolType
+  href: api/Google.GenAI.Types.ToolResponse.html#Google_GenAI_Types_ToolResponse_ToolType
+  commentId: P:Google.GenAI.Types.ToolResponse.ToolType
+  fullName: Google.GenAI.Types.ToolResponse.ToolType
+  nameWithType: ToolResponse.ToolType
+- uid: Google.GenAI.Types.ToolResponse.ToolType*
+  name: ToolType
+  href: api/Google.GenAI.Types.ToolResponse.html#Google_GenAI_Types_ToolResponse_ToolType_
+  commentId: Overload:Google.GenAI.Types.ToolResponse.ToolType
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolResponse.ToolType
+  nameWithType: ToolResponse.ToolType
+- uid: Google.GenAI.Types.ToolType
+  name: ToolType
+  href: api/Google.GenAI.Types.ToolType.html
+  commentId: T:Google.GenAI.Types.ToolType
+  fullName: Google.GenAI.Types.ToolType
+  nameWithType: ToolType
+- uid: Google.GenAI.Types.ToolType.AllValues
+  name: AllValues
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_AllValues
+  commentId: P:Google.GenAI.Types.ToolType.AllValues
+  fullName: Google.GenAI.Types.ToolType.AllValues
+  nameWithType: ToolType.AllValues
+- uid: Google.GenAI.Types.ToolType.AllValues*
+  name: AllValues
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_AllValues_
+  commentId: Overload:Google.GenAI.Types.ToolType.AllValues
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolType.AllValues
+  nameWithType: ToolType.AllValues
+- uid: Google.GenAI.Types.ToolType.Equals(Google.GenAI.Types.ToolType)
+  name: Equals(ToolType)
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_Equals_Google_GenAI_Types_ToolType_
+  commentId: M:Google.GenAI.Types.ToolType.Equals(Google.GenAI.Types.ToolType)
+  fullName: Google.GenAI.Types.ToolType.Equals(Google.GenAI.Types.ToolType)
+  nameWithType: ToolType.Equals(ToolType)
+- uid: Google.GenAI.Types.ToolType.Equals*
+  name: Equals
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_Equals_
+  commentId: Overload:Google.GenAI.Types.ToolType.Equals
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolType.Equals
+  nameWithType: ToolType.Equals
+- uid: Google.GenAI.Types.ToolType.FileSearch
+  name: FileSearch
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_FileSearch
+  commentId: P:Google.GenAI.Types.ToolType.FileSearch
+  fullName: Google.GenAI.Types.ToolType.FileSearch
+  nameWithType: ToolType.FileSearch
+- uid: Google.GenAI.Types.ToolType.FileSearch*
+  name: FileSearch
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_FileSearch_
+  commentId: Overload:Google.GenAI.Types.ToolType.FileSearch
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolType.FileSearch
+  nameWithType: ToolType.FileSearch
+- uid: Google.GenAI.Types.ToolType.FromString(System.String)
+  name: FromString(string)
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_FromString_System_String_
+  commentId: M:Google.GenAI.Types.ToolType.FromString(System.String)
+  name.vb: FromString(String)
+  fullName: Google.GenAI.Types.ToolType.FromString(string)
+  fullName.vb: Google.GenAI.Types.ToolType.FromString(String)
+  nameWithType: ToolType.FromString(string)
+  nameWithType.vb: ToolType.FromString(String)
+- uid: Google.GenAI.Types.ToolType.FromString*
+  name: FromString
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_FromString_
+  commentId: Overload:Google.GenAI.Types.ToolType.FromString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolType.FromString
+  nameWithType: ToolType.FromString
+- uid: Google.GenAI.Types.ToolType.GetHashCode
+  name: GetHashCode()
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_GetHashCode
+  commentId: M:Google.GenAI.Types.ToolType.GetHashCode
+  fullName: Google.GenAI.Types.ToolType.GetHashCode()
+  nameWithType: ToolType.GetHashCode()
+- uid: Google.GenAI.Types.ToolType.GetHashCode*
+  name: GetHashCode
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_GetHashCode_
+  commentId: Overload:Google.GenAI.Types.ToolType.GetHashCode
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolType.GetHashCode
+  nameWithType: ToolType.GetHashCode
+- uid: Google.GenAI.Types.ToolType.GoogleMaps
+  name: GoogleMaps
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_GoogleMaps
+  commentId: P:Google.GenAI.Types.ToolType.GoogleMaps
+  fullName: Google.GenAI.Types.ToolType.GoogleMaps
+  nameWithType: ToolType.GoogleMaps
+- uid: Google.GenAI.Types.ToolType.GoogleMaps*
+  name: GoogleMaps
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_GoogleMaps_
+  commentId: Overload:Google.GenAI.Types.ToolType.GoogleMaps
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolType.GoogleMaps
+  nameWithType: ToolType.GoogleMaps
+- uid: Google.GenAI.Types.ToolType.GoogleSearchImage
+  name: GoogleSearchImage
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_GoogleSearchImage
+  commentId: P:Google.GenAI.Types.ToolType.GoogleSearchImage
+  fullName: Google.GenAI.Types.ToolType.GoogleSearchImage
+  nameWithType: ToolType.GoogleSearchImage
+- uid: Google.GenAI.Types.ToolType.GoogleSearchImage*
+  name: GoogleSearchImage
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_GoogleSearchImage_
+  commentId: Overload:Google.GenAI.Types.ToolType.GoogleSearchImage
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolType.GoogleSearchImage
+  nameWithType: ToolType.GoogleSearchImage
+- uid: Google.GenAI.Types.ToolType.GoogleSearchWeb
+  name: GoogleSearchWeb
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_GoogleSearchWeb
+  commentId: P:Google.GenAI.Types.ToolType.GoogleSearchWeb
+  fullName: Google.GenAI.Types.ToolType.GoogleSearchWeb
+  nameWithType: ToolType.GoogleSearchWeb
+- uid: Google.GenAI.Types.ToolType.GoogleSearchWeb*
+  name: GoogleSearchWeb
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_GoogleSearchWeb_
+  commentId: Overload:Google.GenAI.Types.ToolType.GoogleSearchWeb
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolType.GoogleSearchWeb
+  nameWithType: ToolType.GoogleSearchWeb
+- uid: Google.GenAI.Types.ToolType.ToString
+  name: ToString()
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_ToString
+  commentId: M:Google.GenAI.Types.ToolType.ToString
+  fullName: Google.GenAI.Types.ToolType.ToString()
+  nameWithType: ToolType.ToString()
+- uid: Google.GenAI.Types.ToolType.ToString*
+  name: ToString
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_ToString_
+  commentId: Overload:Google.GenAI.Types.ToolType.ToString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolType.ToString
+  nameWithType: ToolType.ToString
+- uid: Google.GenAI.Types.ToolType.ToolTypeUnspecified
+  name: ToolTypeUnspecified
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_ToolTypeUnspecified
+  commentId: P:Google.GenAI.Types.ToolType.ToolTypeUnspecified
+  fullName: Google.GenAI.Types.ToolType.ToolTypeUnspecified
+  nameWithType: ToolType.ToolTypeUnspecified
+- uid: Google.GenAI.Types.ToolType.ToolTypeUnspecified*
+  name: ToolTypeUnspecified
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_ToolTypeUnspecified_
+  commentId: Overload:Google.GenAI.Types.ToolType.ToolTypeUnspecified
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolType.ToolTypeUnspecified
+  nameWithType: ToolType.ToolTypeUnspecified
+- uid: Google.GenAI.Types.ToolType.UrlContext
+  name: UrlContext
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_UrlContext
+  commentId: P:Google.GenAI.Types.ToolType.UrlContext
+  fullName: Google.GenAI.Types.ToolType.UrlContext
+  nameWithType: ToolType.UrlContext
+- uid: Google.GenAI.Types.ToolType.UrlContext*
+  name: UrlContext
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_UrlContext_
+  commentId: Overload:Google.GenAI.Types.ToolType.UrlContext
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolType.UrlContext
+  nameWithType: ToolType.UrlContext
+- uid: Google.GenAI.Types.ToolType.Value
+  name: Value
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_Value
+  commentId: P:Google.GenAI.Types.ToolType.Value
+  fullName: Google.GenAI.Types.ToolType.Value
+  nameWithType: ToolType.Value
+- uid: Google.GenAI.Types.ToolType.Value*
+  name: Value
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_Value_
+  commentId: Overload:Google.GenAI.Types.ToolType.Value
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolType.Value
+  nameWithType: ToolType.Value
+- uid: Google.GenAI.Types.ToolType.op_Implicit(System.String)~Google.GenAI.Types.ToolType
+  name: implicit operator ToolType(string)
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_op_Implicit_System_String__Google_GenAI_Types_ToolType
+  commentId: M:Google.GenAI.Types.ToolType.op_Implicit(System.String)~Google.GenAI.Types.ToolType
+  name.vb: CType(String)
+  fullName: Google.GenAI.Types.ToolType.implicit operator Google.GenAI.Types.ToolType(string)
+  fullName.vb: Google.GenAI.Types.ToolType.CType(String)
+  nameWithType: ToolType.implicit operator ToolType(string)
+  nameWithType.vb: ToolType.CType(String)
+- uid: Google.GenAI.Types.ToolType.op_Implicit*
+  name: implicit operator
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_op_Implicit_
+  commentId: Overload:Google.GenAI.Types.ToolType.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: Google.GenAI.Types.ToolType.implicit operator
+  fullName.vb: Google.GenAI.Types.ToolType.CType
+  nameWithType: ToolType.implicit operator
+  nameWithType.vb: ToolType.CType
+- uid: Google.GenAI.Types.ToolTypeConverter
+  name: ToolTypeConverter
+  href: api/Google.GenAI.Types.ToolTypeConverter.html
+  commentId: T:Google.GenAI.Types.ToolTypeConverter
+  fullName: Google.GenAI.Types.ToolTypeConverter
+  nameWithType: ToolTypeConverter
+- uid: Google.GenAI.Types.ToolTypeConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.ToolTypeConverter.html#Google_GenAI_Types_ToolTypeConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ToolTypeConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name.vb: Read(Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ToolTypeConverter.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: Google.GenAI.Types.ToolTypeConverter.Read(System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ToolTypeConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: ToolTypeConverter.Read(Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ToolTypeConverter.Read*
+  name: Read
+  href: api/Google.GenAI.Types.ToolTypeConverter.html#Google_GenAI_Types_ToolTypeConverter_Read_
+  commentId: Overload:Google.GenAI.Types.ToolTypeConverter.Read
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolTypeConverter.Read
+  nameWithType: ToolTypeConverter.Read
+- uid: Google.GenAI.Types.ToolTypeConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.ToolType,System.Text.Json.JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, ToolType, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.ToolTypeConverter.html#Google_GenAI_Types_ToolTypeConverter_Write_System_Text_Json_Utf8JsonWriter_Google_GenAI_Types_ToolType_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ToolTypeConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.ToolType,System.Text.Json.JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ToolTypeConverter.Write(System.Text.Json.Utf8JsonWriter, Google.GenAI.Types.ToolType, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ToolTypeConverter.Write(Utf8JsonWriter, ToolType, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ToolTypeConverter.Write*
+  name: Write
+  href: api/Google.GenAI.Types.ToolTypeConverter.html#Google_GenAI_Types_ToolTypeConverter_Write_
+  commentId: Overload:Google.GenAI.Types.ToolTypeConverter.Write
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolTypeConverter.Write
+  nameWithType: ToolTypeConverter.Write
 - uid: Google.GenAI.Types.TrafficType
   name: TrafficType
   href: api/Google.GenAI.Types.TrafficType.html
