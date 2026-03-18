@@ -3644,6 +3644,16 @@ namespace Google.GenAI {
             Common.GetValueByPath(fromObject, new string[] { "voiceSampleAudio" }));
       }
 
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "consentAudio" }))) {
+        throw new NotSupportedException("consentAudio parameter is not supported in Vertex AI.");
+      }
+
+      if (!Common.IsZero(
+              Common.GetValueByPath(fromObject, new string[] { "voiceConsentSignature" }))) {
+        throw new NotSupportedException(
+            "voiceConsentSignature parameter is not supported in Vertex AI.");
+      }
+
       return toObject;
     }
 

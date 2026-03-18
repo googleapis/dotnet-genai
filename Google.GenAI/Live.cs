@@ -62,6 +62,7 @@ namespace Google.GenAI
         await clientWebSocket.SendAsync(new ArraySegment<byte>(buffer), WebSocketMessageType.Text, true, cancellationToken);
 
         var session = new AsyncSession(clientWebSocket, _apiClient);
+        await session.ReadSetupCompleteAsync(cancellationToken);
         success = true;
         return session;
       }
@@ -201,6 +202,17 @@ namespace Google.GenAI
     {
       _webSocket = webSocket;
       _apiClient = apiClient;
+    }
+
+    public LiveServerSetupComplete? SetupComplete { get; private set; }
+
+    internal async Task ReadSetupCompleteAsync(CancellationToken cancellationToken = default)
+    {
+      var message = await ReceiveAsync(cancellationToken);
+      if (message?.SetupComplete != null)
+      {
+        SetupComplete = message.SetupComplete;
+      }
     }
 
     /// <summary>

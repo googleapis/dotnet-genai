@@ -23,41 +23,28 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Sent in response to a `LiveGenerateContentSetup` message from the client.
+  /// The signature of the voice consent check.
   /// </summary>
 
-  public record LiveServerSetupComplete {
+  public record VoiceConsentSignature {
     /// <summary>
-    /// The session id of the live session.
+    /// The signature string.
     /// </summary>
-    [JsonPropertyName("sessionId")]
+    [JsonPropertyName("signature")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? SessionId { get; set; }
+    public string ? Signature { get; set; }
 
     /// <summary>
-    /// Signature of the verified consent audio. This is populated when the request has a
-    /// ReplicatedVoiceConfig with consent_audio set, if the consent verification was successful.
-    /// This may be used in a subsequent request instead of the consent_audio to verify the same
-    /// consent.
-    /// </summary>
-    [JsonPropertyName("voiceConsentSignature")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public VoiceConsentSignature
-        ? VoiceConsentSignature {
-            get; set;
-          }
-
-    /// <summary>
-    /// Deserializes a JSON string to a LiveServerSetupComplete object.
+    /// Deserializes a JSON string to a VoiceConsentSignature object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized LiveServerSetupComplete object, or null if deserialization
+    /// <returns>The deserialized VoiceConsentSignature object, or null if deserialization
     /// fails.</returns>
-    public static LiveServerSetupComplete
+    public static VoiceConsentSignature
         ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<LiveServerSetupComplete>(jsonString, options);
+        return JsonSerializer.Deserialize<VoiceConsentSignature>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
