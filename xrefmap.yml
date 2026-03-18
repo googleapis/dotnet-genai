@@ -36265,6 +36265,25 @@ references:
   isSpec: "True"
   fullName: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIEmbeddingGenerator
   nameWithType: GoogleGenAIExtensions.AsIEmbeddingGenerator
+- uid: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIHostedFileClient(Google.GenAI.Client)
+  name: AsIHostedFileClient(Client)
+  href: api/Microsoft.Extensions.AI.GoogleGenAIExtensions.html#Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIHostedFileClient_Google_GenAI_Client_
+  commentId: M:Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIHostedFileClient(Google.GenAI.Client)
+  fullName: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIHostedFileClient(Google.GenAI.Client)
+  nameWithType: GoogleGenAIExtensions.AsIHostedFileClient(Client)
+- uid: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIHostedFileClient(Google.GenAI.Files)
+  name: AsIHostedFileClient(Files)
+  href: api/Microsoft.Extensions.AI.GoogleGenAIExtensions.html#Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIHostedFileClient_Google_GenAI_Files_
+  commentId: M:Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIHostedFileClient(Google.GenAI.Files)
+  fullName: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIHostedFileClient(Google.GenAI.Files)
+  nameWithType: GoogleGenAIExtensions.AsIHostedFileClient(Files)
+- uid: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIHostedFileClient*
+  name: AsIHostedFileClient
+  href: api/Microsoft.Extensions.AI.GoogleGenAIExtensions.html#Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIHostedFileClient_
+  commentId: Overload:Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIHostedFileClient
+  isSpec: "True"
+  fullName: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIHostedFileClient
+  nameWithType: GoogleGenAIExtensions.AsIHostedFileClient
 - uid: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIImageGenerator(Google.GenAI.Client,System.String)
   name: AsIImageGenerator(Client, string?)
   href: api/Microsoft.Extensions.AI.GoogleGenAIExtensions.html#Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIImageGenerator_Google_GenAI_Client_System_String_

@@ -347,6 +347,102 @@ Class GoogleGenAIExtensions  <a class="header-action link-secondary" title="View
 
 
 
+  <a id="Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIHostedFileClient_" data-uid="Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIHostedFileClient*"></a>
+
+  <h3 id="Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIHostedFileClient_Google_GenAI_Client_" data-uid="Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIHostedFileClient(Google.GenAI.Client)">
+  AsIHostedFileClient(Client)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIExtensions.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an <span class="xref">Microsoft.Extensions.AI.IHostedFileClient</span> wrapper around the specified <a class="xref" href="Google.GenAI.Client.html">Client</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IHostedFileClient AsIHostedFileClient(this Client client)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>client</code> <a class="xref" href="Google.GenAI.Client.html">Client</a></dt>
+    <dd><p>The <a class="xref" href="Google.GenAI.Client.html">Client</a> to wrap.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IHostedFileClient</span></dt>
+    <dd><p>An <span class="xref">Microsoft.Extensions.AI.IHostedFileClient</span> that wraps the specified client.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIHostedFileClient_Google_GenAI_Client__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The hosted file client is only supported with the Gemini Developer API, not Vertex AI.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">client</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIHostedFileClient_" data-uid="Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIHostedFileClient*"></a>
+
+  <h3 id="Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIHostedFileClient_Google_GenAI_Files_" data-uid="Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIHostedFileClient(Google.GenAI.Files)">
+  AsIHostedFileClient(Files)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIExtensions.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an <span class="xref">Microsoft.Extensions.AI.IHostedFileClient</span> wrapper around the specified <a class="xref" href="Google.GenAI.Files.html">Files</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IHostedFileClient AsIHostedFileClient(this Files files)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>files</code> <a class="xref" href="Google.GenAI.Files.html">Files</a></dt>
+    <dd><p>The <a class="xref" href="Google.GenAI.Files.html">Files</a> client to wrap.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IHostedFileClient</span></dt>
+    <dd><p>An <span class="xref">Microsoft.Extensions.AI.IHostedFileClient</span> that wraps the specified <a class="xref" href="Google.GenAI.Files.html">Files</a> client.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIHostedFileClient_Google_GenAI_Files__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The hosted file client is only supported with the Gemini Developer API, not Vertex AI.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">files</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
   <a id="Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIImageGenerator_" data-uid="Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIImageGenerator*"></a>
 
   <h3 id="Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIImageGenerator_Google_GenAI_Client_System_String_" data-uid="Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIImageGenerator(Google.GenAI.Client,System.String)">
