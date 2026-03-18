@@ -1,5 +1,18 @@
 # Changelog
 
+## Version 1.5.0, released 2026-03-18
+
+
+### New features
+
+* Support include_server_side_tool_invocations for genai. ([c304c12](https://github.com/googleapis/dotnet-genai/commit/c304c12289e1c0ce74e6f810481217900b742814))
+* Update to Microsoft.Extensions.AI.Abstractions 10.4.0 ([#247](https://github.com/googleapis/dotnet-genai/issues/247)) ([b16b93f](https://github.com/googleapis/dotnet-genai/commit/b16b93f7f20409b552ff720cbfe412bef2e7e644))
+
+
+### Bug fixes
+
+* use deep copy in Common.cs to avoid large string operation that introduces OutOfMemeory exceptions ([501e586](https://github.com/googleapis/dotnet-genai/commit/501e5864904364000cfa910a56859047231477c5))
+
 ## Version 1.4.0, released 2026-03-12
 
 
