@@ -226,8 +226,12 @@ public class GenerateVideosTest {
       Prompt = "A neon hologram of a cat driving at top speed.",
       Image = Image.FromFile("TestAssets/bridge1.png"),
     };
+    var config = new GenerateVideosConfig {
+      NumberOfVideos = 1,
+      ResizeMode = ImageResizeMode.Crop,
+    };
     var operation = await vertexClient.Models.GenerateVideosAsync(
-        model: modelName, source: source, config: null);
+        model: "veo-3.1-generate-001", source: source, config: config);
 
     Assert.IsNotNull(operation.Name);
     while (operation.Done != true) {

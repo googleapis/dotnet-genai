@@ -459,7 +459,8 @@ namespace Google.GenAI {
       }
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "behavior" }))) {
-        throw new NotSupportedException("behavior parameter is not supported in Vertex AI.");
+        throw new NotSupportedException(
+            "behavior parameter is not supported in Gemini Enterprise Agent Platform (previously known as Vertex AI).");
       }
 
       return toObject;
@@ -793,15 +794,18 @@ namespace Google.GenAI {
       }
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "toolCall" }))) {
-        throw new NotSupportedException("toolCall parameter is not supported in Vertex AI.");
+        throw new NotSupportedException(
+            "toolCall parameter is not supported in Gemini Enterprise Agent Platform (previously known as Vertex AI).");
       }
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "toolResponse" }))) {
-        throw new NotSupportedException("toolResponse parameter is not supported in Vertex AI.");
+        throw new NotSupportedException(
+            "toolResponse parameter is not supported in Gemini Enterprise Agent Platform (previously known as Vertex AI).");
       }
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "partMetadata" }))) {
-        throw new NotSupportedException("partMetadata parameter is not supported in Vertex AI.");
+        throw new NotSupportedException(
+            "partMetadata parameter is not supported in Gemini Enterprise Agent Platform (previously known as Vertex AI).");
       }
 
       return toObject;
@@ -852,7 +856,7 @@ namespace Google.GenAI {
       if (!Common.IsZero(Common.GetValueByPath(
               fromObject, new string[] { "includeServerSideToolInvocations" }))) {
         throw new NotSupportedException(
-            "includeServerSideToolInvocations parameter is not supported in Vertex AI.");
+            "includeServerSideToolInvocations parameter is not supported in Gemini Enterprise Agent Platform (previously known as Vertex AI).");
       }
 
       return toObject;
@@ -944,7 +948,8 @@ namespace Google.GenAI {
       }
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "fileSearch" }))) {
-        throw new NotSupportedException("fileSearch parameter is not supported in Vertex AI.");
+        throw new NotSupportedException(
+            "fileSearch parameter is not supported in Gemini Enterprise Agent Platform (previously known as Vertex AI).");
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "googleSearch" }) != null) {
@@ -997,7 +1002,8 @@ namespace Google.GenAI {
       }
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "mcpServers" }))) {
-        throw new NotSupportedException("mcpServers parameter is not supported in Vertex AI.");
+        throw new NotSupportedException(
+            "mcpServers parameter is not supported in Gemini Enterprise Agent Platform (previously known as Vertex AI).");
       }
 
       return toObject;

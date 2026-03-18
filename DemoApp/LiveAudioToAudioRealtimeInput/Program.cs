@@ -18,11 +18,18 @@ using System.Net.WebSockets;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.Linq;
 
 using Google.GenAI;
 using Google.GenAI.Types;
 
 var builder = WebApplication.CreateBuilder(args);
+
+string portStr = args.FirstOrDefault(a => a.StartsWith("--port="))?.Substring("--port=".Length);
+if (!string.IsNullOrEmpty(portStr)) {
+    builder.WebHost.UseUrls($"http://localhost:{portStr}");
+}
+
 var app = builder.Build();
 
 app.UseWebSockets();
@@ -30,6 +37,28 @@ app.UseDefaultFiles();
 app.UseStaticFiles();
 
 bool isVertex = args.Contains("--vertex", StringComparer.OrdinalIgnoreCase);
+
+string voiceSamplePath = args.FirstOrDefault(a => a.StartsWith("--voice-sample="))?.Substring("--voice-sample=".Length);
+string voiceConsentPath = args.FirstOrDefault(a => a.StartsWith("--voice-consent="))?.Substring("--voice-consent=".Length);
+string voiceSignature = args.FirstOrDefault(a => a.StartsWith("--voice-signature="))?.Substring("--voice-signature=".Length);
+
+byte[] voiceSampleAudio = null;
+byte[] consentAudio = null;
+
+if (!string.IsNullOrEmpty(voiceSamplePath)) {
+  voiceSampleAudio = System.IO.File.ReadAllBytes(voiceSamplePath);
+  
+  if (string.IsNullOrEmpty(voiceConsentPath) && string.IsNullOrEmpty(voiceSignature)) {
+    throw new ArgumentException("Either --voice-consent or --voice-signature must be provided when --voice-sample is used.");
+  }
+}
+
+if (!string.IsNullOrEmpty(voiceConsentPath)) {
+  consentAudio = System.IO.File.ReadAllBytes(voiceConsentPath);
+}
+
+string parsedModel = args.FirstOrDefault(a => a.StartsWith("--model="))?.Substring("--model=".Length);
+
 string model;
 string mimeType;
 Client client;
@@ -40,14 +69,14 @@ if (isVertex) {
                    throw new ArgumentNullException("GOOGLE_CLOUD_PROJECT not set for Vertex AI.");
   string location = System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_LOCATION") ?? "us-central1";
   client = new Client(project: project, location: location, vertexAI: true);
-  model = "gemini-2.0-flash-live-preview-04-09";
+  model = parsedModel ?? "gemini-2.0-flash-live-preview-04-09";
   mimeType = "audio/l16;rate=24000";
 } else {
   Console.WriteLine("Running in Gemini API mode.");
   string apiKey = System.Environment.GetEnvironmentVariable("GOOGLE_API_KEY") ??
                   throw new ArgumentNullException("GOOGLE_API_KEY not set for Gemini API.");
   client = new Client(apiKey: apiKey);
-  model = "gemini-2.5-flash-native-audio-preview-12-2025";
+  model = parsedModel ?? "gemini-2.5-flash-native-audio-preview-12-2025";
   mimeType = "audio/pcm";
 }
 
@@ -58,11 +87,30 @@ app.Map("/ws", async (HttpContext context) => {
   }
 
   using var localServerWs = await context.WebSockets.AcceptWebSocketAsync();
-  var config = new LiveConnectConfig { ResponseModalities = new List<Modality> { Modality.Audio },
-                                       SpeechConfig = new SpeechConfig { LanguageCode = "en-US" } };
+  var config = new LiveConnectConfig {
+    ResponseModalities = new List<Modality> { Modality.Audio },
+    SpeechConfig = new SpeechConfig {
+      LanguageCode = "en-US"
+    }
+  };
+
+  if (voiceSampleAudio != null) {
+    config.SpeechConfig.VoiceConfig = new VoiceConfig {
+      ReplicatedVoiceConfig = new ReplicatedVoiceConfig {
+        MimeType = "audio/wav",
+        VoiceSampleAudio = voiceSampleAudio,
+        ConsentAudio = consentAudio,
+        VoiceConsentSignature = voiceSignature != null ? new VoiceConsentSignature { Signature = voiceSignature } : null
+      }
+    };
+  }
 
   var geminiLiveSession = await client.Live.ConnectAsync(model, config);
   var cts = new CancellationTokenSource();
+
+  if (geminiLiveSession.SetupComplete?.VoiceConsentSignature?.Signature != null) {
+    Console.WriteLine($"\n=== Voice Consent Signature Received ===\n{geminiLiveSession.SetupComplete.VoiceConsentSignature.Signature}\n========================================\n");
+  }
 
   Console.CancelKeyPress += (sender, e) => {
     e.Cancel = true;
@@ -98,6 +146,7 @@ app.Map("/ws", async (HttpContext context) => {
           Console.WriteLine($"Error processing client message: {ex.Message}");
         }
       } else if (result.MessageType == WebSocketMessageType.Close) {
+        Console.WriteLine($"WebSocket closed by server. Status: {result.CloseStatus}, Description: {result.CloseStatusDescription}");
         cts.Cancel();
         break;
       }
@@ -108,12 +157,18 @@ app.Map("/ws", async (HttpContext context) => {
   var receiveTask = Task.Run(async () => {
     while (!cts.Token.IsCancellationRequested) {
       var serverMsg = await geminiLiveSession.ReceiveAsync();
-      if (serverMsg != null) {
-        var jsonResponse = JsonSerializer.Serialize(serverMsg);
-        var responseBytes = Encoding.UTF8.GetBytes(jsonResponse);
-        await localServerWs.SendAsync(new ArraySegment<byte>(responseBytes),
-                                      WebSocketMessageType.Text, true, cts.Token);
+      if (serverMsg == null) {
+        var wsField = geminiLiveSession.GetType().GetField("_webSocket", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+        var ws = wsField != null ? (System.Net.WebSockets.WebSocket)wsField.GetValue(geminiLiveSession) : null;
+        string closeInfo = ws != null ? $"Status: {ws.CloseStatus}, Description: {ws.CloseStatusDescription}" : "Unknown";
+        Console.WriteLine($"Gemini session ended (server closed connection). {closeInfo}");
+        cts.Cancel();
+        break;
       }
+      var jsonResponse = JsonSerializer.Serialize(serverMsg);
+      var responseBytes = Encoding.UTF8.GetBytes(jsonResponse);
+      await localServerWs.SendAsync(new ArraySegment<byte>(responseBytes),
+                                    WebSocketMessageType.Text, true, cts.Token);
     }
   }, cts.Token);
 

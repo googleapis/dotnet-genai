@@ -716,6 +716,16 @@ namespace Google.GenAI {
         throw new NotSupportedException("autoTruncate parameter is not supported in Gemini API.");
       }
 
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "documentOcr" }))) {
+        throw new NotSupportedException("documentOcr parameter is not supported in Gemini API.");
+      }
+
+      if (!Common.IsZero(
+              Common.GetValueByPath(fromObject, new string[] { "audioTrackExtraction" }))) {
+        throw new NotSupportedException(
+            "audioTrackExtraction parameter is not supported in Gemini API.");
+      }
+
       return toObject;
     }
 
@@ -734,7 +744,7 @@ namespace Google.GenAI {
         }
       } else if (discriminatorValueTaskType == "EMBED_CONTENT") {
         if (Common.GetValueByPath(fromObject, new string[] { "taskType" }) != null) {
-          Common.SetValueByPath(parentObject, new string[] { "taskType" },
+          Common.SetValueByPath(parentObject, new string[] { "embedContentConfig", "taskType" },
                                 Common.GetValueByPath(fromObject, new string[] { "taskType" }));
         }
       }
@@ -750,7 +760,7 @@ namespace Google.GenAI {
         }
       } else if (discriminatorValueTitle == "EMBED_CONTENT") {
         if (Common.GetValueByPath(fromObject, new string[] { "title" }) != null) {
-          Common.SetValueByPath(parentObject, new string[] { "title" },
+          Common.SetValueByPath(parentObject, new string[] { "embedContentConfig", "title" },
                                 Common.GetValueByPath(fromObject, new string[] { "title" }));
         }
       }
@@ -770,7 +780,7 @@ namespace Google.GenAI {
       } else if (discriminatorValueOutputDimensionality == "EMBED_CONTENT") {
         if (Common.GetValueByPath(fromObject, new string[] { "outputDimensionality" }) != null) {
           Common.SetValueByPath(
-              parentObject, new string[] { "outputDimensionality" },
+              parentObject, new string[] { "embedContentConfig", "outputDimensionality" },
               Common.GetValueByPath(fromObject, new string[] { "outputDimensionality" }));
         }
       }
@@ -798,8 +808,34 @@ namespace Google.GenAI {
         }
       } else if (discriminatorValueAutoTruncate == "EMBED_CONTENT") {
         if (Common.GetValueByPath(fromObject, new string[] { "autoTruncate" }) != null) {
-          Common.SetValueByPath(parentObject, new string[] { "autoTruncate" },
+          Common.SetValueByPath(parentObject, new string[] { "embedContentConfig", "autoTruncate" },
                                 Common.GetValueByPath(fromObject, new string[] { "autoTruncate" }));
+        }
+      }
+
+      JsonNode discriminatorDocumentOcr =
+          Common.GetValueByPath(rootObject, new string[] { "embeddingApiType" });
+      string discriminatorValueDocumentOcr = discriminatorDocumentOcr == null
+                                                 ? "PREDICT"
+                                                 : discriminatorDocumentOcr.GetValue<string>();
+      if (discriminatorValueDocumentOcr == "EMBED_CONTENT") {
+        if (Common.GetValueByPath(fromObject, new string[] { "documentOcr" }) != null) {
+          Common.SetValueByPath(parentObject, new string[] { "embedContentConfig", "documentOcr" },
+                                Common.GetValueByPath(fromObject, new string[] { "documentOcr" }));
+        }
+      }
+
+      JsonNode discriminatorAudioTrackExtraction =
+          Common.GetValueByPath(rootObject, new string[] { "embeddingApiType" });
+      string discriminatorValueAudioTrackExtraction =
+          discriminatorAudioTrackExtraction == null
+              ? "PREDICT"
+              : discriminatorAudioTrackExtraction.GetValue<string>();
+      if (discriminatorValueAudioTrackExtraction == "EMBED_CONTENT") {
+        if (Common.GetValueByPath(fromObject, new string[] { "audioTrackExtraction" }) != null) {
+          Common.SetValueByPath(
+              parentObject, new string[] { "embedContentConfig", "audioTrackExtraction" },
+              Common.GetValueByPath(fromObject, new string[] { "audioTrackExtraction" }));
         }
       }
 
@@ -1103,7 +1139,8 @@ namespace Google.GenAI {
       }
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "behavior" }))) {
-        throw new NotSupportedException("behavior parameter is not supported in Vertex AI.");
+        throw new NotSupportedException(
+            "behavior parameter is not supported in Gemini Enterprise Agent Platform (previously known as Vertex AI).");
       }
 
       return toObject;
@@ -1482,7 +1519,7 @@ namespace Google.GenAI {
       if (!Common.IsZero(
               Common.GetValueByPath(fromObject, new string[] { "enableEnhancedCivicAnswers" }))) {
         throw new NotSupportedException(
-            "enableEnhancedCivicAnswers parameter is not supported in Vertex AI.");
+            "enableEnhancedCivicAnswers parameter is not supported in Gemini Enterprise Agent Platform (previously known as Vertex AI).");
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "modelArmorConfig" }) != null) {
@@ -2068,6 +2105,15 @@ namespace Google.GenAI {
         throw new NotSupportedException("labels parameter is not supported in Gemini API.");
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "webhookConfig" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "webhookConfig" },
+                              Common.GetValueByPath(fromObject, new string[] { "webhookConfig" }));
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "resizeMode" }))) {
+        throw new NotSupportedException("resizeMode parameter is not supported in Gemini API.");
+      }
+
       return toObject;
     }
 
@@ -2174,6 +2220,16 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "labels" }) != null) {
         Common.SetValueByPath(parentObject, new string[] { "labels" },
                               Common.GetValueByPath(fromObject, new string[] { "labels" }));
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "webhookConfig" }))) {
+        throw new NotSupportedException(
+            "webhookConfig parameter is not supported in Gemini Enterprise Agent Platform (previously known as Vertex AI).");
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "resizeMode" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "parameters", "resizeMode" },
+                              Common.GetValueByPath(fromObject, new string[] { "resizeMode" }));
       }
 
       return toObject;
@@ -2695,7 +2751,7 @@ namespace Google.GenAI {
       if (!Common.IsZero(
               Common.GetValueByPath(fromObject, new string[] { "enableEnhancedCivicAnswers" }))) {
         throw new NotSupportedException(
-            "enableEnhancedCivicAnswers parameter is not supported in Vertex AI.");
+            "enableEnhancedCivicAnswers parameter is not supported in Gemini Enterprise Agent Platform (previously known as Vertex AI).");
       }
 
       return toObject;
@@ -3425,15 +3481,18 @@ namespace Google.GenAI {
       }
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "toolCall" }))) {
-        throw new NotSupportedException("toolCall parameter is not supported in Vertex AI.");
+        throw new NotSupportedException(
+            "toolCall parameter is not supported in Gemini Enterprise Agent Platform (previously known as Vertex AI).");
       }
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "toolResponse" }))) {
-        throw new NotSupportedException("toolResponse parameter is not supported in Vertex AI.");
+        throw new NotSupportedException(
+            "toolResponse parameter is not supported in Gemini Enterprise Agent Platform (previously known as Vertex AI).");
       }
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "partMetadata" }))) {
-        throw new NotSupportedException("partMetadata parameter is not supported in Vertex AI.");
+        throw new NotSupportedException(
+            "partMetadata parameter is not supported in Gemini Enterprise Agent Platform (previously known as Vertex AI).");
       }
 
       return toObject;
@@ -3661,6 +3720,17 @@ namespace Google.GenAI {
         Common.SetValueByPath(
             toObject, new string[] { "voiceSampleAudio" },
             Common.GetValueByPath(fromObject, new string[] { "voiceSampleAudio" }));
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "consentAudio" }))) {
+        throw new NotSupportedException(
+            "consentAudio parameter is not supported in Gemini Enterprise Agent Platform (previously known as Vertex AI).");
+      }
+
+      if (!Common.IsZero(
+              Common.GetValueByPath(fromObject, new string[] { "voiceConsentSignature" }))) {
+        throw new NotSupportedException(
+            "voiceConsentSignature parameter is not supported in Gemini Enterprise Agent Platform (previously known as Vertex AI).");
       }
 
       return toObject;
@@ -3957,7 +4027,7 @@ namespace Google.GenAI {
       if (!Common.IsZero(Common.GetValueByPath(
               fromObject, new string[] { "includeServerSideToolInvocations" }))) {
         throw new NotSupportedException(
-            "includeServerSideToolInvocations parameter is not supported in Vertex AI.");
+            "includeServerSideToolInvocations parameter is not supported in Gemini Enterprise Agent Platform (previously known as Vertex AI).");
       }
 
       return toObject;
@@ -4051,7 +4121,8 @@ namespace Google.GenAI {
       }
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "fileSearch" }))) {
-        throw new NotSupportedException("fileSearch parameter is not supported in Vertex AI.");
+        throw new NotSupportedException(
+            "fileSearch parameter is not supported in Gemini Enterprise Agent Platform (previously known as Vertex AI).");
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "googleSearch" }) != null) {
@@ -4105,7 +4176,8 @@ namespace Google.GenAI {
       }
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "mcpServers" }))) {
-        throw new NotSupportedException("mcpServers parameter is not supported in Vertex AI.");
+        throw new NotSupportedException(
+            "mcpServers parameter is not supported in Gemini Enterprise Agent Platform (previously known as Vertex AI).");
       }
 
       return toObject;
@@ -4860,7 +4932,8 @@ namespace Google.GenAI {
                                            parameterNode);
         path = Common.FormatMap("{model}:predict", body["_url"]);
       } else {
-        throw new NotSupportedException("This method is only supported in the Vertex AI client.");
+        throw new NotSupportedException(
+            "This method is only supported in the Gemini Enterprise Agent Platform (previously known as Vertex AI) client.");
       }
       JsonObject? bodyObj = body?.AsObject();
       bodyObj?.Remove("_url");
@@ -4893,7 +4966,8 @@ namespace Google.GenAI {
       }
 
       if (!this._apiClient.VertexAI) {
-        throw new NotSupportedException("This method is only supported in the Vertex AI client.");
+        throw new NotSupportedException(
+            "This method is only supported in the Gemini Enterprise Agent Platform (previously known as Vertex AI) client.");
       }
 
       return responseNode.Deserialize<EditImageResponse>() ??
@@ -4930,7 +5004,8 @@ namespace Google.GenAI {
                                                  parameterNode);
         path = Common.FormatMap("{model}:predict", body["_url"]);
       } else {
-        throw new NotSupportedException("This method is only supported in the Vertex AI client.");
+        throw new NotSupportedException(
+            "This method is only supported in the Gemini Enterprise Agent Platform (previously known as Vertex AI) client.");
       }
       JsonObject? bodyObj = body?.AsObject();
       bodyObj?.Remove("_url");
@@ -4963,7 +5038,8 @@ namespace Google.GenAI {
       }
 
       if (!this._apiClient.VertexAI) {
-        throw new NotSupportedException("This method is only supported in the Vertex AI client.");
+        throw new NotSupportedException(
+            "This method is only supported in the Gemini Enterprise Agent Platform (previously known as Vertex AI) client.");
       }
 
       return responseNode.Deserialize<UpscaleImageResponse>() ??
@@ -4998,7 +5074,8 @@ namespace Google.GenAI {
                                                 parameterNode);
         path = Common.FormatMap("{model}:predict", body["_url"]);
       } else {
-        throw new NotSupportedException("This method is only supported in the Vertex AI client.");
+        throw new NotSupportedException(
+            "This method is only supported in the Gemini Enterprise Agent Platform (previously known as Vertex AI) client.");
       }
       JsonObject? bodyObj = body?.AsObject();
       bodyObj?.Remove("_url");
@@ -5031,7 +5108,8 @@ namespace Google.GenAI {
       }
 
       if (!this._apiClient.VertexAI) {
-        throw new NotSupportedException("This method is only supported in the Vertex AI client.");
+        throw new NotSupportedException(
+            "This method is only supported in the Gemini Enterprise Agent Platform (previously known as Vertex AI) client.");
       }
 
       return responseNode.Deserialize<RecontextImageResponse>() ??
@@ -5066,7 +5144,8 @@ namespace Google.GenAI {
                                               parameterNode);
         path = Common.FormatMap("{model}:predict", body["_url"]);
       } else {
-        throw new NotSupportedException("This method is only supported in the Vertex AI client.");
+        throw new NotSupportedException(
+            "This method is only supported in the Gemini Enterprise Agent Platform (previously known as Vertex AI) client.");
       }
       JsonObject? bodyObj = body?.AsObject();
       bodyObj?.Remove("_url");
@@ -5099,7 +5178,8 @@ namespace Google.GenAI {
       }
 
       if (!this._apiClient.VertexAI) {
-        throw new NotSupportedException("This method is only supported in the Vertex AI client.");
+        throw new NotSupportedException(
+            "This method is only supported in the Gemini Enterprise Agent Platform (previously known as Vertex AI) client.");
       }
 
       return responseNode.Deserialize<SegmentImageResponse>() ??
@@ -5478,7 +5558,7 @@ namespace Google.GenAI {
     /// cref="Task{ComputeTokensResponse}"/> that represents the asynchronous operation. The task
     /// result contains a <see cref="ComputeTokensResponse"/> instance with token
     /// information.</returns> <exception cref="NotSupportedException">Thrown when called with a
-    /// non-Vertex AI client.</exception>
+    /// non-Gemini Enterprise Agent Platform (previously known as Vertex AI) client.</exception>
 
     public async Task<ComputeTokensResponse> ComputeTokensAsync(
         string model, List<Content> contents, ComputeTokensConfig? config = null,
@@ -5507,7 +5587,8 @@ namespace Google.GenAI {
                                                parameterNode);
         path = Common.FormatMap("{model}:computeTokens", body["_url"]);
       } else {
-        throw new NotSupportedException("This method is only supported in the Vertex AI client.");
+        throw new NotSupportedException(
+            "This method is only supported in the Gemini Enterprise Agent Platform (previously known as Vertex AI) client.");
       }
       JsonObject? bodyObj = body?.AsObject();
       bodyObj?.Remove("_url");
@@ -5540,7 +5621,8 @@ namespace Google.GenAI {
       }
 
       if (!this._apiClient.VertexAI) {
-        throw new NotSupportedException("This method is only supported in the Vertex AI client.");
+        throw new NotSupportedException(
+            "This method is only supported in the Gemini Enterprise Agent Platform (previously known as Vertex AI) client.");
       }
 
       return responseNode.Deserialize<ComputeTokensResponse>() ??
@@ -5829,7 +5911,7 @@ namespace Google.GenAI {
         if (!config.QueryBase.Value) {
           if (!String.IsNullOrEmpty(config.Filter)) {
             throw new NotSupportedException(
-                "Filtering tuned models list for Vertex AI is not currently supported");
+                "Filtering tuned models list for Gemini Enterprise Agent Platform (previously known as Vertex AI) is not currently supported");
           }
         }
       }
@@ -5894,7 +5976,7 @@ namespace Google.GenAI {
     /// cref="Task{ComputeTokensResponse}"/> that represents the asynchronous operation. The task
     /// result contains a <see cref="ComputeTokensResponse"/> instance with token
     /// information.</returns> <exception cref="NotSupportedException">Thrown when called with a
-    /// non-Vertex AI client.</exception>
+    /// non-Gemini Enterprise Agent Platform (previously known as Vertex AI) client.</exception>
     public async Task<ComputeTokensResponse> ComputeTokensAsync(
         String model, Content contents, ComputeTokensConfig? config = null,
         CancellationToken cancellationToken = default) {
@@ -5913,7 +5995,7 @@ namespace Google.GenAI {
     /// cref="Task{ComputeTokensResponse}"/> that represents the asynchronous operation. The task
     /// result contains a <see cref="ComputeTokensResponse"/> instance with token
     /// information.</returns> <exception cref="NotSupportedException">Thrown when called with a
-    /// non-Vertex AI client.</exception>
+    /// non-Gemini Enterprise Agent Platform (previously known as Vertex AI) client.</exception>
     public async Task<ComputeTokensResponse> ComputeTokensAsync(
         String model, String contents, ComputeTokensConfig? config = null,
         CancellationToken cancellationToken = default) {

@@ -35,6 +35,19 @@ namespace Google.GenAI.Types {
     public string ? SessionId { get; set; }
 
     /// <summary>
+    /// Signature of the verified consent audio. This is populated when the request has a
+    /// ReplicatedVoiceConfig with consent_audio set, if the consent verification was successful.
+    /// This may be used in a subsequent request instead of the consent_audio to verify the same
+    /// consent.
+    /// </summary>
+    [JsonPropertyName("voiceConsentSignature")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public VoiceConsentSignature
+        ? VoiceConsentSignature {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a LiveServerSetupComplete object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

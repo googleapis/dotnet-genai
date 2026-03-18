@@ -414,5 +414,26 @@ namespace Google.GenAI.Tests {
 
       _mockWebSocket.Verify(ws => ws.Dispose(), Times.Once);
     }
+
+    [TestMethod]
+    public async Task ReadSetupCompleteAsync_PopulatesVoiceConsentSignature() {
+      var setupCompleteMessage = "{\"setupComplete\":{\"voiceConsentSignature\":{\"signature\":\"test_sig\"}}}";
+      byte[] messageBytes = Encoding.UTF8.GetBytes(setupCompleteMessage);
+
+      _mockWebSocket.Setup(ws => ws.State).Returns(WebSocketState.Open);
+
+      _mockWebSocket
+          .Setup(ws => ws.ReceiveAsync(It.IsAny<ArraySegment<byte>>(), It.IsAny<CancellationToken>()))
+          .Callback<ArraySegment<byte>, CancellationToken>((buffer, token) => {
+            Array.Copy(messageBytes, 0, buffer.Array!, buffer.Offset, messageBytes.Length);
+          })
+          .ReturnsAsync(new WebSocketReceiveResult(messageBytes.Length, WebSocketMessageType.Text, true));
+
+      await _asyncSession.ReadSetupCompleteAsync();
+
+      Assert.IsNotNull(_asyncSession.SetupComplete);
+      Assert.IsNotNull(_asyncSession.SetupComplete.VoiceConsentSignature);
+      Assert.AreEqual("test_sig", _asyncSession.SetupComplete.VoiceConsentSignature.Signature);
+    }
   }
 }
