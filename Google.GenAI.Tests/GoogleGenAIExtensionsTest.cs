@@ -2917,7 +2917,7 @@ public class GoogleGenAIExtensionsTest
       updates.Add(update);
     }
 
-    Assert.AreEqual(1, updates.Count);
+    Assert.AreEqual(2, updates.Count);
     Assert.IsTrue(updates[0].Contents.Any(c => c is TextContent));
   }
 
@@ -3663,7 +3663,7 @@ public class GoogleGenAIExtensionsTest
     }
 
     // Validate the updates
-    Assert.AreEqual(5, updates.Count);
+    Assert.AreEqual(6, updates.Count);
     
     // First update: Thinking content with "thought": true
     Assert.IsTrue(updates[0].Contents.Any(c => c is TextReasoningContent));
@@ -3705,11 +3705,12 @@ public class GoogleGenAIExtensionsTest
     Assert.IsTrue(finalResponse.Messages[0].Contents.Any(c => c is TextContent));
     Assert.IsTrue(finalResponse.Messages[0].Contents.Any(c => c is FunctionCallContent));
     
-    // Validate usage metadata
+    // Validate usage metadata uses only the final chunk's cumulative values,
+    // not the sum of all chunks (which would yield inflated counts).
     Assert.IsNotNull(finalResponse.Usage);
-    Assert.IsTrue(finalResponse.Usage.InputTokenCount > 0);
-    Assert.IsTrue(finalResponse.Usage.OutputTokenCount > 0);
-    Assert.IsTrue(finalResponse.Usage.TotalTokenCount > 0);
+    Assert.AreEqual(60, finalResponse.Usage.InputTokenCount);
+    Assert.AreEqual(47, finalResponse.Usage.OutputTokenCount);
+    Assert.AreEqual(112, finalResponse.Usage.TotalTokenCount);
     
     // Add the updates to the message history
     messageHistory.AddRange(updates.ToChatResponse().Messages);
@@ -3823,7 +3824,7 @@ public class GoogleGenAIExtensionsTest
     }
     
     // Validate the second response
-    Assert.AreEqual(2, updates2.Count);
+    Assert.AreEqual(3, updates2.Count);
     
     // First update: Text content
     Assert.IsTrue(updates2[0].Contents.Any(c => c is TextContent));
@@ -3858,6 +3859,54 @@ public class GoogleGenAIExtensionsTest
     Assert.AreEqual(ChatRole.Assistant, messageHistory[1].Role);
     Assert.AreEqual(ChatRole.Tool, messageHistory[2].Role);
     Assert.AreEqual(ChatRole.Assistant, messageHistory[3].Role);
+  }
+
+  [TestMethod]
+  public async Task IChatClient_StreamingCumulativeUsageNotSummed()
+  {
+    // Gemini reports cumulative usage metadata in every streaming chunk.
+    // ToChatResponse() must use only the final chunk's values, not sum them.
+    IChatClient client = CreateChatClient("""
+      {
+        "contents": [
+          {
+            "parts": [
+              {
+                "text": "Hello"
+              }
+            ],
+            "role": "user"
+          }
+        ],
+        "generationConfig": {}
+      }
+      """, """
+      data: {"candidates": [{"content": {"parts": [{"text": "Hi"}],"role": "model"},"index": 0}],"usageMetadata": {"promptTokenCount": 10,"candidatesTokenCount": 1,"totalTokenCount": 11},"responseId": "r1"}
+      data: {"candidates": [{"content": {"parts": [{"text": " there"}],"role": "model"},"index": 0}],"usageMetadata": {"promptTokenCount": 10,"candidatesTokenCount": 3,"totalTokenCount": 13},"responseId": "r1"}
+      data: {"candidates": [{"content": {"parts": [{"text": "!"}],"role": "model"},"finishReason": "STOP","index": 0}],"usageMetadata": {"promptTokenCount": 10,"candidatesTokenCount": 5,"totalTokenCount": 15},"responseId": "r1"}
+      """);
+
+    List<ChatResponseUpdate> updates = [];
+    await foreach (var update in client.GetStreamingResponseAsync("Hello"))
+    {
+      updates.Add(update);
+    }
+
+    Assert.AreEqual(4, updates.Count);
+    Assert.AreEqual("Hi", updates[0].Text);
+    Assert.AreEqual(" there", updates[1].Text);
+    Assert.AreEqual("!", updates[2].Text);
+
+    var finalResponse = updates.ToChatResponse();
+    Assert.IsNotNull(finalResponse);
+    Assert.AreEqual("Hi there!", finalResponse.Messages[0].Text);
+    Assert.IsNotNull(finalResponse.Usage);
+
+    // These must be the final chunk's cumulative values (10, 5, 15),
+    // NOT the sum across all chunks (30, 9, 39).
+    Assert.AreEqual(10, finalResponse.Usage.InputTokenCount);
+    Assert.AreEqual(5, finalResponse.Usage.OutputTokenCount);
+    Assert.AreEqual(15, finalResponse.Usage.TotalTokenCount);
   }
 
   [TestMethod]
@@ -3940,10 +3989,9 @@ public class GoogleGenAIExtensionsTest
       updates.Add(update);
       Assert.IsNotNull(update);
       Assert.AreEqual(ChatRole.Assistant, update.Role);
-      Assert.AreEqual("stream123", update.MessageId);
     }
 
-    Assert.AreEqual(3, updates.Count);
+    Assert.AreEqual(4, updates.Count);
     Assert.AreEqual("Hello", updates[0].Text);
     Assert.AreEqual(" there", updates[1].Text);
     Assert.AreEqual("!", updates[2].Text);
@@ -4039,7 +4087,7 @@ public class GoogleGenAIExtensionsTest
       updates.Add(update);
     }
 
-    Assert.AreEqual(1, updates.Count);
+    Assert.AreEqual(2, updates.Count);
     Assert.IsNotNull(updates[0].Contents);
     Assert.IsInstanceOfType(updates[0].Contents[0], typeof(FunctionCallContent));
     
@@ -4168,7 +4216,7 @@ public class GoogleGenAIExtensionsTest
       Assert.IsNotNull(update);
     }
 
-    Assert.AreEqual(5, updates.Count);
+    Assert.AreEqual(6, updates.Count);
     Assert.AreEqual("1", updates[0].Text);
     Assert.AreEqual(", 2", updates[1].Text);
     Assert.AreEqual(", 3", updates[2].Text);
@@ -4246,7 +4294,7 @@ public class GoogleGenAIExtensionsTest
       updates.Add(update);
     }
 
-    Assert.AreEqual(1, updates.Count);
+    Assert.AreEqual(2, updates.Count);
     Assert.AreEqual("Hello", updates[0].Text);
 
     var finalResponse = updates.ToChatResponse();
@@ -4344,7 +4392,7 @@ public class GoogleGenAIExtensionsTest
       updates.Add(update);
     }
 
-    Assert.AreEqual(2, updates.Count);
+    Assert.AreEqual(3, updates.Count);
     Assert.AreEqual("I'm doing", updates[0].Text);
     Assert.AreEqual(" well, thanks!", updates[1].Text);
 
@@ -4425,7 +4473,7 @@ public class GoogleGenAIExtensionsTest
       updates.Add(update);
     }
 
-    Assert.AreEqual(2, updates.Count);
+    Assert.AreEqual(3, updates.Count);
     Assert.AreEqual(ChatFinishReason.Length, updates[1].FinishReason);
 
     var finalResponse = updates.ToChatResponse();
@@ -4490,7 +4538,7 @@ public class GoogleGenAIExtensionsTest
       updates.Add(update);
     }
 
-    Assert.AreEqual(1, updates.Count);
+    Assert.AreEqual(2, updates.Count);
     
     var finalResponse = updates.ToChatResponse();
     Assert.IsNotNull(finalResponse);
@@ -4580,7 +4628,7 @@ public class GoogleGenAIExtensionsTest
       updates.Add(update);
     }
 
-    Assert.AreEqual(3, updates.Count);
+    Assert.AreEqual(4, updates.Count);
     Assert.AreEqual("", updates[0].Text);
     Assert.AreEqual("Hi", updates[1].Text);
     Assert.AreEqual(" there", updates[2].Text);

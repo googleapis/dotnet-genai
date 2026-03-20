@@ -102,6 +102,7 @@ internal sealed class GoogleGenAIChatClient : IChatClient
     (string? modelId, List<Content> contents, GenerateContentConfig config) = CreateRequest(messages, options);
 
     // Send it, and process the results.
+    GenerateContentResponseUsageMetadata? lastUsageMetadata = null;
     await foreach (GenerateContentResponse generateResult in _models.GenerateContentStreamAsync(modelId!, contents, config).WithCancellation(cancellationToken).ConfigureAwait(false))
     {
       // Create a response update for each result in the stream.
@@ -117,14 +118,26 @@ internal sealed class GoogleGenAIChatClient : IChatClient
       // Populate the response update contents.
       responseUpdate.FinishReason = PopulateResponseContents(generateResult, responseUpdate.Contents);
 
-      // Populate usage information if there is any.
+      // Gemini reports cumulative usage in each chunk rather than incremental deltas,
+      // whereas the M.E.AI contract is that every UsageContent is a delta. As such,
+      // we only report the last usage metadata we receive.
       if (generateResult.UsageMetadata is { } usageMetadata)
       {
-        responseUpdate.Contents.Add(new UsageContent(ExtractUsageDetails(usageMetadata)));
+        lastUsageMetadata = usageMetadata;
       }
 
       // Yield the update.
       yield return responseUpdate;
+    }
+
+    // Yield a trailing update with only the final usage data.
+    if (lastUsageMetadata is not null)
+    {
+      yield return new ChatResponseUpdate
+      {
+        Role = ChatRole.Assistant,
+        Contents = new List<AIContent> { new UsageContent(ExtractUsageDetails(lastUsageMetadata)) },
+      };
     }
   }
 
