@@ -8013,6 +8013,67 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.DistillationHyperParameters.LearningRateMultiplier
   nameWithType: DistillationHyperParameters.LearningRateMultiplier
+- uid: Google.GenAI.Types.DistillationSamplingSpec
+  name: DistillationSamplingSpec
+  href: api/Google.GenAI.Types.DistillationSamplingSpec.html
+  commentId: T:Google.GenAI.Types.DistillationSamplingSpec
+  fullName: Google.GenAI.Types.DistillationSamplingSpec
+  nameWithType: DistillationSamplingSpec
+- uid: Google.GenAI.Types.DistillationSamplingSpec.BaseTeacherModel
+  name: BaseTeacherModel
+  href: api/Google.GenAI.Types.DistillationSamplingSpec.html#Google_GenAI_Types_DistillationSamplingSpec_BaseTeacherModel
+  commentId: P:Google.GenAI.Types.DistillationSamplingSpec.BaseTeacherModel
+  fullName: Google.GenAI.Types.DistillationSamplingSpec.BaseTeacherModel
+  nameWithType: DistillationSamplingSpec.BaseTeacherModel
+- uid: Google.GenAI.Types.DistillationSamplingSpec.BaseTeacherModel*
+  name: BaseTeacherModel
+  href: api/Google.GenAI.Types.DistillationSamplingSpec.html#Google_GenAI_Types_DistillationSamplingSpec_BaseTeacherModel_
+  commentId: Overload:Google.GenAI.Types.DistillationSamplingSpec.BaseTeacherModel
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DistillationSamplingSpec.BaseTeacherModel
+  nameWithType: DistillationSamplingSpec.BaseTeacherModel
+- uid: Google.GenAI.Types.DistillationSamplingSpec.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.DistillationSamplingSpec.html#Google_GenAI_Types_DistillationSamplingSpec_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.DistillationSamplingSpec.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.DistillationSamplingSpec.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.DistillationSamplingSpec.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: DistillationSamplingSpec.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: DistillationSamplingSpec.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.DistillationSamplingSpec.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.DistillationSamplingSpec.html#Google_GenAI_Types_DistillationSamplingSpec_FromJson_
+  commentId: Overload:Google.GenAI.Types.DistillationSamplingSpec.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DistillationSamplingSpec.FromJson
+  nameWithType: DistillationSamplingSpec.FromJson
+- uid: Google.GenAI.Types.DistillationSamplingSpec.TunedTeacherModelSource
+  name: TunedTeacherModelSource
+  href: api/Google.GenAI.Types.DistillationSamplingSpec.html#Google_GenAI_Types_DistillationSamplingSpec_TunedTeacherModelSource
+  commentId: P:Google.GenAI.Types.DistillationSamplingSpec.TunedTeacherModelSource
+  fullName: Google.GenAI.Types.DistillationSamplingSpec.TunedTeacherModelSource
+  nameWithType: DistillationSamplingSpec.TunedTeacherModelSource
+- uid: Google.GenAI.Types.DistillationSamplingSpec.TunedTeacherModelSource*
+  name: TunedTeacherModelSource
+  href: api/Google.GenAI.Types.DistillationSamplingSpec.html#Google_GenAI_Types_DistillationSamplingSpec_TunedTeacherModelSource_
+  commentId: Overload:Google.GenAI.Types.DistillationSamplingSpec.TunedTeacherModelSource
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DistillationSamplingSpec.TunedTeacherModelSource
+  nameWithType: DistillationSamplingSpec.TunedTeacherModelSource
+- uid: Google.GenAI.Types.DistillationSamplingSpec.ValidationDatasetUri
+  name: ValidationDatasetUri
+  href: api/Google.GenAI.Types.DistillationSamplingSpec.html#Google_GenAI_Types_DistillationSamplingSpec_ValidationDatasetUri
+  commentId: P:Google.GenAI.Types.DistillationSamplingSpec.ValidationDatasetUri
+  fullName: Google.GenAI.Types.DistillationSamplingSpec.ValidationDatasetUri
+  nameWithType: DistillationSamplingSpec.ValidationDatasetUri
+- uid: Google.GenAI.Types.DistillationSamplingSpec.ValidationDatasetUri*
+  name: ValidationDatasetUri
+  href: api/Google.GenAI.Types.DistillationSamplingSpec.html#Google_GenAI_Types_DistillationSamplingSpec_ValidationDatasetUri_
+  commentId: Overload:Google.GenAI.Types.DistillationSamplingSpec.ValidationDatasetUri
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DistillationSamplingSpec.ValidationDatasetUri
+  nameWithType: DistillationSamplingSpec.ValidationDatasetUri
 - uid: Google.GenAI.Types.DistillationSpec
   name: DistillationSpec
   href: api/Google.GenAI.Types.DistillationSpec.html
@@ -10878,6 +10939,67 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.FileData.MimeType
   nameWithType: FileData.MimeType
+- uid: Google.GenAI.Types.FileSearch
+  name: FileSearch
+  href: api/Google.GenAI.Types.FileSearch.html
+  commentId: T:Google.GenAI.Types.FileSearch
+  fullName: Google.GenAI.Types.FileSearch
+  nameWithType: FileSearch
+- uid: Google.GenAI.Types.FileSearch.FileSearchStoreNames
+  name: FileSearchStoreNames
+  href: api/Google.GenAI.Types.FileSearch.html#Google_GenAI_Types_FileSearch_FileSearchStoreNames
+  commentId: P:Google.GenAI.Types.FileSearch.FileSearchStoreNames
+  fullName: Google.GenAI.Types.FileSearch.FileSearchStoreNames
+  nameWithType: FileSearch.FileSearchStoreNames
+- uid: Google.GenAI.Types.FileSearch.FileSearchStoreNames*
+  name: FileSearchStoreNames
+  href: api/Google.GenAI.Types.FileSearch.html#Google_GenAI_Types_FileSearch_FileSearchStoreNames_
+  commentId: Overload:Google.GenAI.Types.FileSearch.FileSearchStoreNames
+  isSpec: "True"
+  fullName: Google.GenAI.Types.FileSearch.FileSearchStoreNames
+  nameWithType: FileSearch.FileSearchStoreNames
+- uid: Google.GenAI.Types.FileSearch.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.FileSearch.html#Google_GenAI_Types_FileSearch_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.FileSearch.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.FileSearch.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.FileSearch.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: FileSearch.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: FileSearch.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.FileSearch.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.FileSearch.html#Google_GenAI_Types_FileSearch_FromJson_
+  commentId: Overload:Google.GenAI.Types.FileSearch.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.FileSearch.FromJson
+  nameWithType: FileSearch.FromJson
+- uid: Google.GenAI.Types.FileSearch.MetadataFilter
+  name: MetadataFilter
+  href: api/Google.GenAI.Types.FileSearch.html#Google_GenAI_Types_FileSearch_MetadataFilter
+  commentId: P:Google.GenAI.Types.FileSearch.MetadataFilter
+  fullName: Google.GenAI.Types.FileSearch.MetadataFilter
+  nameWithType: FileSearch.MetadataFilter
+- uid: Google.GenAI.Types.FileSearch.MetadataFilter*
+  name: MetadataFilter
+  href: api/Google.GenAI.Types.FileSearch.html#Google_GenAI_Types_FileSearch_MetadataFilter_
+  commentId: Overload:Google.GenAI.Types.FileSearch.MetadataFilter
+  isSpec: "True"
+  fullName: Google.GenAI.Types.FileSearch.MetadataFilter
+  nameWithType: FileSearch.MetadataFilter
+- uid: Google.GenAI.Types.FileSearch.TopK
+  name: TopK
+  href: api/Google.GenAI.Types.FileSearch.html#Google_GenAI_Types_FileSearch_TopK
+  commentId: P:Google.GenAI.Types.FileSearch.TopK
+  fullName: Google.GenAI.Types.FileSearch.TopK
+  nameWithType: FileSearch.TopK
+- uid: Google.GenAI.Types.FileSearch.TopK*
+  name: TopK
+  href: api/Google.GenAI.Types.FileSearch.html#Google_GenAI_Types_FileSearch_TopK_
+  commentId: Overload:Google.GenAI.Types.FileSearch.TopK
+  isSpec: "True"
+  fullName: Google.GenAI.Types.FileSearch.TopK
+  nameWithType: FileSearch.TopK
 - uid: Google.GenAI.Types.FileSource
   name: FileSource
   href: api/Google.GenAI.Types.FileSource.html
@@ -13321,6 +13443,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerateContentResponse.FunctionCalls
   nameWithType: GenerateContentResponse.FunctionCalls
+- uid: Google.GenAI.Types.GenerateContentResponse.ModelStatus
+  name: ModelStatus
+  href: api/Google.GenAI.Types.GenerateContentResponse.html#Google_GenAI_Types_GenerateContentResponse_ModelStatus
+  commentId: P:Google.GenAI.Types.GenerateContentResponse.ModelStatus
+  fullName: Google.GenAI.Types.GenerateContentResponse.ModelStatus
+  nameWithType: GenerateContentResponse.ModelStatus
+- uid: Google.GenAI.Types.GenerateContentResponse.ModelStatus*
+  name: ModelStatus
+  href: api/Google.GenAI.Types.GenerateContentResponse.html#Google_GenAI_Types_GenerateContentResponse_ModelStatus_
+  commentId: Overload:Google.GenAI.Types.GenerateContentResponse.ModelStatus
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateContentResponse.ModelStatus
+  nameWithType: GenerateContentResponse.ModelStatus
 - uid: Google.GenAI.Types.GenerateContentResponse.ModelVersion
   name: ModelVersion
   href: api/Google.GenAI.Types.GenerateContentResponse.html#Google_GenAI_Types_GenerateContentResponse_ModelVersion
@@ -15552,6 +15687,80 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GroundingChunk.Web
   nameWithType: GroundingChunk.Web
+- uid: Google.GenAI.Types.GroundingChunkCustomMetadata
+  name: GroundingChunkCustomMetadata
+  href: api/Google.GenAI.Types.GroundingChunkCustomMetadata.html
+  commentId: T:Google.GenAI.Types.GroundingChunkCustomMetadata
+  fullName: Google.GenAI.Types.GroundingChunkCustomMetadata
+  nameWithType: GroundingChunkCustomMetadata
+- uid: Google.GenAI.Types.GroundingChunkCustomMetadata.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.GroundingChunkCustomMetadata.html#Google_GenAI_Types_GroundingChunkCustomMetadata_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.GroundingChunkCustomMetadata.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.GroundingChunkCustomMetadata.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.GroundingChunkCustomMetadata.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: GroundingChunkCustomMetadata.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: GroundingChunkCustomMetadata.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.GroundingChunkCustomMetadata.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.GroundingChunkCustomMetadata.html#Google_GenAI_Types_GroundingChunkCustomMetadata_FromJson_
+  commentId: Overload:Google.GenAI.Types.GroundingChunkCustomMetadata.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingChunkCustomMetadata.FromJson
+  nameWithType: GroundingChunkCustomMetadata.FromJson
+- uid: Google.GenAI.Types.GroundingChunkCustomMetadata.Key
+  name: Key
+  href: api/Google.GenAI.Types.GroundingChunkCustomMetadata.html#Google_GenAI_Types_GroundingChunkCustomMetadata_Key
+  commentId: P:Google.GenAI.Types.GroundingChunkCustomMetadata.Key
+  fullName: Google.GenAI.Types.GroundingChunkCustomMetadata.Key
+  nameWithType: GroundingChunkCustomMetadata.Key
+- uid: Google.GenAI.Types.GroundingChunkCustomMetadata.Key*
+  name: Key
+  href: api/Google.GenAI.Types.GroundingChunkCustomMetadata.html#Google_GenAI_Types_GroundingChunkCustomMetadata_Key_
+  commentId: Overload:Google.GenAI.Types.GroundingChunkCustomMetadata.Key
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingChunkCustomMetadata.Key
+  nameWithType: GroundingChunkCustomMetadata.Key
+- uid: Google.GenAI.Types.GroundingChunkCustomMetadata.NumericValue
+  name: NumericValue
+  href: api/Google.GenAI.Types.GroundingChunkCustomMetadata.html#Google_GenAI_Types_GroundingChunkCustomMetadata_NumericValue
+  commentId: P:Google.GenAI.Types.GroundingChunkCustomMetadata.NumericValue
+  fullName: Google.GenAI.Types.GroundingChunkCustomMetadata.NumericValue
+  nameWithType: GroundingChunkCustomMetadata.NumericValue
+- uid: Google.GenAI.Types.GroundingChunkCustomMetadata.NumericValue*
+  name: NumericValue
+  href: api/Google.GenAI.Types.GroundingChunkCustomMetadata.html#Google_GenAI_Types_GroundingChunkCustomMetadata_NumericValue_
+  commentId: Overload:Google.GenAI.Types.GroundingChunkCustomMetadata.NumericValue
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingChunkCustomMetadata.NumericValue
+  nameWithType: GroundingChunkCustomMetadata.NumericValue
+- uid: Google.GenAI.Types.GroundingChunkCustomMetadata.StringListValue
+  name: StringListValue
+  href: api/Google.GenAI.Types.GroundingChunkCustomMetadata.html#Google_GenAI_Types_GroundingChunkCustomMetadata_StringListValue
+  commentId: P:Google.GenAI.Types.GroundingChunkCustomMetadata.StringListValue
+  fullName: Google.GenAI.Types.GroundingChunkCustomMetadata.StringListValue
+  nameWithType: GroundingChunkCustomMetadata.StringListValue
+- uid: Google.GenAI.Types.GroundingChunkCustomMetadata.StringListValue*
+  name: StringListValue
+  href: api/Google.GenAI.Types.GroundingChunkCustomMetadata.html#Google_GenAI_Types_GroundingChunkCustomMetadata_StringListValue_
+  commentId: Overload:Google.GenAI.Types.GroundingChunkCustomMetadata.StringListValue
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingChunkCustomMetadata.StringListValue
+  nameWithType: GroundingChunkCustomMetadata.StringListValue
+- uid: Google.GenAI.Types.GroundingChunkCustomMetadata.StringValue
+  name: StringValue
+  href: api/Google.GenAI.Types.GroundingChunkCustomMetadata.html#Google_GenAI_Types_GroundingChunkCustomMetadata_StringValue
+  commentId: P:Google.GenAI.Types.GroundingChunkCustomMetadata.StringValue
+  fullName: Google.GenAI.Types.GroundingChunkCustomMetadata.StringValue
+  nameWithType: GroundingChunkCustomMetadata.StringValue
+- uid: Google.GenAI.Types.GroundingChunkCustomMetadata.StringValue*
+  name: StringValue
+  href: api/Google.GenAI.Types.GroundingChunkCustomMetadata.html#Google_GenAI_Types_GroundingChunkCustomMetadata_StringValue_
+  commentId: Overload:Google.GenAI.Types.GroundingChunkCustomMetadata.StringValue
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingChunkCustomMetadata.StringValue
+  nameWithType: GroundingChunkCustomMetadata.StringValue
 - uid: Google.GenAI.Types.GroundingChunkImage
   name: GroundingChunkImage
   href: api/Google.GenAI.Types.GroundingChunkImage.html
@@ -15674,6 +15883,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GroundingChunkMaps.PlaceId
   nameWithType: GroundingChunkMaps.PlaceId
+- uid: Google.GenAI.Types.GroundingChunkMaps.Route
+  name: Route
+  href: api/Google.GenAI.Types.GroundingChunkMaps.html#Google_GenAI_Types_GroundingChunkMaps_Route
+  commentId: P:Google.GenAI.Types.GroundingChunkMaps.Route
+  fullName: Google.GenAI.Types.GroundingChunkMaps.Route
+  nameWithType: GroundingChunkMaps.Route
+- uid: Google.GenAI.Types.GroundingChunkMaps.Route*
+  name: Route
+  href: api/Google.GenAI.Types.GroundingChunkMaps.html#Google_GenAI_Types_GroundingChunkMaps_Route_
+  commentId: Overload:Google.GenAI.Types.GroundingChunkMaps.Route
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingChunkMaps.Route
+  nameWithType: GroundingChunkMaps.Route
 - uid: Google.GenAI.Types.GroundingChunkMaps.Text
   name: Text
   href: api/Google.GenAI.Types.GroundingChunkMaps.html#Google_GenAI_Types_GroundingChunkMaps_Text
@@ -15948,12 +16170,86 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.Title
   nameWithType: GroundingChunkMapsPlaceAnswerSourcesReviewSnippet.Title
+- uid: Google.GenAI.Types.GroundingChunkMapsRoute
+  name: GroundingChunkMapsRoute
+  href: api/Google.GenAI.Types.GroundingChunkMapsRoute.html
+  commentId: T:Google.GenAI.Types.GroundingChunkMapsRoute
+  fullName: Google.GenAI.Types.GroundingChunkMapsRoute
+  nameWithType: GroundingChunkMapsRoute
+- uid: Google.GenAI.Types.GroundingChunkMapsRoute.DistanceMeters
+  name: DistanceMeters
+  href: api/Google.GenAI.Types.GroundingChunkMapsRoute.html#Google_GenAI_Types_GroundingChunkMapsRoute_DistanceMeters
+  commentId: P:Google.GenAI.Types.GroundingChunkMapsRoute.DistanceMeters
+  fullName: Google.GenAI.Types.GroundingChunkMapsRoute.DistanceMeters
+  nameWithType: GroundingChunkMapsRoute.DistanceMeters
+- uid: Google.GenAI.Types.GroundingChunkMapsRoute.DistanceMeters*
+  name: DistanceMeters
+  href: api/Google.GenAI.Types.GroundingChunkMapsRoute.html#Google_GenAI_Types_GroundingChunkMapsRoute_DistanceMeters_
+  commentId: Overload:Google.GenAI.Types.GroundingChunkMapsRoute.DistanceMeters
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingChunkMapsRoute.DistanceMeters
+  nameWithType: GroundingChunkMapsRoute.DistanceMeters
+- uid: Google.GenAI.Types.GroundingChunkMapsRoute.Duration
+  name: Duration
+  href: api/Google.GenAI.Types.GroundingChunkMapsRoute.html#Google_GenAI_Types_GroundingChunkMapsRoute_Duration
+  commentId: P:Google.GenAI.Types.GroundingChunkMapsRoute.Duration
+  fullName: Google.GenAI.Types.GroundingChunkMapsRoute.Duration
+  nameWithType: GroundingChunkMapsRoute.Duration
+- uid: Google.GenAI.Types.GroundingChunkMapsRoute.Duration*
+  name: Duration
+  href: api/Google.GenAI.Types.GroundingChunkMapsRoute.html#Google_GenAI_Types_GroundingChunkMapsRoute_Duration_
+  commentId: Overload:Google.GenAI.Types.GroundingChunkMapsRoute.Duration
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingChunkMapsRoute.Duration
+  nameWithType: GroundingChunkMapsRoute.Duration
+- uid: Google.GenAI.Types.GroundingChunkMapsRoute.EncodedPolyline
+  name: EncodedPolyline
+  href: api/Google.GenAI.Types.GroundingChunkMapsRoute.html#Google_GenAI_Types_GroundingChunkMapsRoute_EncodedPolyline
+  commentId: P:Google.GenAI.Types.GroundingChunkMapsRoute.EncodedPolyline
+  fullName: Google.GenAI.Types.GroundingChunkMapsRoute.EncodedPolyline
+  nameWithType: GroundingChunkMapsRoute.EncodedPolyline
+- uid: Google.GenAI.Types.GroundingChunkMapsRoute.EncodedPolyline*
+  name: EncodedPolyline
+  href: api/Google.GenAI.Types.GroundingChunkMapsRoute.html#Google_GenAI_Types_GroundingChunkMapsRoute_EncodedPolyline_
+  commentId: Overload:Google.GenAI.Types.GroundingChunkMapsRoute.EncodedPolyline
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingChunkMapsRoute.EncodedPolyline
+  nameWithType: GroundingChunkMapsRoute.EncodedPolyline
+- uid: Google.GenAI.Types.GroundingChunkMapsRoute.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.GroundingChunkMapsRoute.html#Google_GenAI_Types_GroundingChunkMapsRoute_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.GroundingChunkMapsRoute.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.GroundingChunkMapsRoute.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.GroundingChunkMapsRoute.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: GroundingChunkMapsRoute.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: GroundingChunkMapsRoute.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.GroundingChunkMapsRoute.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.GroundingChunkMapsRoute.html#Google_GenAI_Types_GroundingChunkMapsRoute_FromJson_
+  commentId: Overload:Google.GenAI.Types.GroundingChunkMapsRoute.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingChunkMapsRoute.FromJson
+  nameWithType: GroundingChunkMapsRoute.FromJson
 - uid: Google.GenAI.Types.GroundingChunkRetrievedContext
   name: GroundingChunkRetrievedContext
   href: api/Google.GenAI.Types.GroundingChunkRetrievedContext.html
   commentId: T:Google.GenAI.Types.GroundingChunkRetrievedContext
   fullName: Google.GenAI.Types.GroundingChunkRetrievedContext
   nameWithType: GroundingChunkRetrievedContext
+- uid: Google.GenAI.Types.GroundingChunkRetrievedContext.CustomMetadata
+  name: CustomMetadata
+  href: api/Google.GenAI.Types.GroundingChunkRetrievedContext.html#Google_GenAI_Types_GroundingChunkRetrievedContext_CustomMetadata
+  commentId: P:Google.GenAI.Types.GroundingChunkRetrievedContext.CustomMetadata
+  fullName: Google.GenAI.Types.GroundingChunkRetrievedContext.CustomMetadata
+  nameWithType: GroundingChunkRetrievedContext.CustomMetadata
+- uid: Google.GenAI.Types.GroundingChunkRetrievedContext.CustomMetadata*
+  name: CustomMetadata
+  href: api/Google.GenAI.Types.GroundingChunkRetrievedContext.html#Google_GenAI_Types_GroundingChunkRetrievedContext_CustomMetadata_
+  commentId: Overload:Google.GenAI.Types.GroundingChunkRetrievedContext.CustomMetadata
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingChunkRetrievedContext.CustomMetadata
+  nameWithType: GroundingChunkRetrievedContext.CustomMetadata
 - uid: Google.GenAI.Types.GroundingChunkRetrievedContext.DocumentName
   name: DocumentName
   href: api/Google.GenAI.Types.GroundingChunkRetrievedContext.html#Google_GenAI_Types_GroundingChunkRetrievedContext_DocumentName
@@ -15967,6 +16263,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GroundingChunkRetrievedContext.DocumentName
   nameWithType: GroundingChunkRetrievedContext.DocumentName
+- uid: Google.GenAI.Types.GroundingChunkRetrievedContext.FileSearchStore
+  name: FileSearchStore
+  href: api/Google.GenAI.Types.GroundingChunkRetrievedContext.html#Google_GenAI_Types_GroundingChunkRetrievedContext_FileSearchStore
+  commentId: P:Google.GenAI.Types.GroundingChunkRetrievedContext.FileSearchStore
+  fullName: Google.GenAI.Types.GroundingChunkRetrievedContext.FileSearchStore
+  nameWithType: GroundingChunkRetrievedContext.FileSearchStore
+- uid: Google.GenAI.Types.GroundingChunkRetrievedContext.FileSearchStore*
+  name: FileSearchStore
+  href: api/Google.GenAI.Types.GroundingChunkRetrievedContext.html#Google_GenAI_Types_GroundingChunkRetrievedContext_FileSearchStore_
+  commentId: Overload:Google.GenAI.Types.GroundingChunkRetrievedContext.FileSearchStore
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingChunkRetrievedContext.FileSearchStore
+  nameWithType: GroundingChunkRetrievedContext.FileSearchStore
 - uid: Google.GenAI.Types.GroundingChunkRetrievedContext.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
   name: FromJson(string, JsonSerializerOptions?)
   href: api/Google.GenAI.Types.GroundingChunkRetrievedContext.html#Google_GenAI_Types_GroundingChunkRetrievedContext_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
@@ -16035,6 +16344,41 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GroundingChunkRetrievedContext.Uri
   nameWithType: GroundingChunkRetrievedContext.Uri
+- uid: Google.GenAI.Types.GroundingChunkStringList
+  name: GroundingChunkStringList
+  href: api/Google.GenAI.Types.GroundingChunkStringList.html
+  commentId: T:Google.GenAI.Types.GroundingChunkStringList
+  fullName: Google.GenAI.Types.GroundingChunkStringList
+  nameWithType: GroundingChunkStringList
+- uid: Google.GenAI.Types.GroundingChunkStringList.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.GroundingChunkStringList.html#Google_GenAI_Types_GroundingChunkStringList_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.GroundingChunkStringList.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.GroundingChunkStringList.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.GroundingChunkStringList.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: GroundingChunkStringList.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: GroundingChunkStringList.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.GroundingChunkStringList.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.GroundingChunkStringList.html#Google_GenAI_Types_GroundingChunkStringList_FromJson_
+  commentId: Overload:Google.GenAI.Types.GroundingChunkStringList.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingChunkStringList.FromJson
+  nameWithType: GroundingChunkStringList.FromJson
+- uid: Google.GenAI.Types.GroundingChunkStringList.Values
+  name: Values
+  href: api/Google.GenAI.Types.GroundingChunkStringList.html#Google_GenAI_Types_GroundingChunkStringList_Values
+  commentId: P:Google.GenAI.Types.GroundingChunkStringList.Values
+  fullName: Google.GenAI.Types.GroundingChunkStringList.Values
+  nameWithType: GroundingChunkStringList.Values
+- uid: Google.GenAI.Types.GroundingChunkStringList.Values*
+  name: Values
+  href: api/Google.GenAI.Types.GroundingChunkStringList.html#Google_GenAI_Types_GroundingChunkStringList_Values_
+  commentId: Overload:Google.GenAI.Types.GroundingChunkStringList.Values
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingChunkStringList.Values
+  nameWithType: GroundingChunkStringList.Values
 - uid: Google.GenAI.Types.GroundingChunkWeb
   name: GroundingChunkWeb
   href: api/Google.GenAI.Types.GroundingChunkWeb.html
@@ -16331,6 +16675,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GroundingSupport.GroundingChunkIndices
   nameWithType: GroundingSupport.GroundingChunkIndices
+- uid: Google.GenAI.Types.GroundingSupport.RenderedParts
+  name: RenderedParts
+  href: api/Google.GenAI.Types.GroundingSupport.html#Google_GenAI_Types_GroundingSupport_RenderedParts
+  commentId: P:Google.GenAI.Types.GroundingSupport.RenderedParts
+  fullName: Google.GenAI.Types.GroundingSupport.RenderedParts
+  nameWithType: GroundingSupport.RenderedParts
+- uid: Google.GenAI.Types.GroundingSupport.RenderedParts*
+  name: RenderedParts
+  href: api/Google.GenAI.Types.GroundingSupport.html#Google_GenAI_Types_GroundingSupport_RenderedParts_
+  commentId: Overload:Google.GenAI.Types.GroundingSupport.RenderedParts
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingSupport.RenderedParts
+  nameWithType: GroundingSupport.RenderedParts
 - uid: Google.GenAI.Types.GroundingSupport.Segment
   name: Segment
   href: api/Google.GenAI.Types.GroundingSupport.html#Google_GenAI_Types_GroundingSupport_Segment
@@ -18487,6 +18844,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.InlinedEmbedContentResponse.FromJson
   nameWithType: InlinedEmbedContentResponse.FromJson
+- uid: Google.GenAI.Types.InlinedEmbedContentResponse.Metadata
+  name: Metadata
+  href: api/Google.GenAI.Types.InlinedEmbedContentResponse.html#Google_GenAI_Types_InlinedEmbedContentResponse_Metadata
+  commentId: P:Google.GenAI.Types.InlinedEmbedContentResponse.Metadata
+  fullName: Google.GenAI.Types.InlinedEmbedContentResponse.Metadata
+  nameWithType: InlinedEmbedContentResponse.Metadata
+- uid: Google.GenAI.Types.InlinedEmbedContentResponse.Metadata*
+  name: Metadata
+  href: api/Google.GenAI.Types.InlinedEmbedContentResponse.html#Google_GenAI_Types_InlinedEmbedContentResponse_Metadata_
+  commentId: Overload:Google.GenAI.Types.InlinedEmbedContentResponse.Metadata
+  isSpec: "True"
+  fullName: Google.GenAI.Types.InlinedEmbedContentResponse.Metadata
+  nameWithType: InlinedEmbedContentResponse.Metadata
 - uid: Google.GenAI.Types.InlinedEmbedContentResponse.Response
   name: Response
   href: api/Google.GenAI.Types.InlinedEmbedContentResponse.html#Google_GenAI_Types_InlinedEmbedContentResponse_Response
@@ -21445,6 +21815,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.LogprobsResult.FromJson
   nameWithType: LogprobsResult.FromJson
+- uid: Google.GenAI.Types.LogprobsResult.LogProbabilitySum
+  name: LogProbabilitySum
+  href: api/Google.GenAI.Types.LogprobsResult.html#Google_GenAI_Types_LogprobsResult_LogProbabilitySum
+  commentId: P:Google.GenAI.Types.LogprobsResult.LogProbabilitySum
+  fullName: Google.GenAI.Types.LogprobsResult.LogProbabilitySum
+  nameWithType: LogprobsResult.LogProbabilitySum
+- uid: Google.GenAI.Types.LogprobsResult.LogProbabilitySum*
+  name: LogProbabilitySum
+  href: api/Google.GenAI.Types.LogprobsResult.html#Google_GenAI_Types_LogprobsResult_LogProbabilitySum_
+  commentId: Overload:Google.GenAI.Types.LogprobsResult.LogProbabilitySum
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LogprobsResult.LogProbabilitySum
+  nameWithType: LogprobsResult.LogProbabilitySum
 - uid: Google.GenAI.Types.LogprobsResult.TopCandidates
   name: TopCandidates
   href: api/Google.GenAI.Types.LogprobsResult.html#Google_GenAI_Types_LogprobsResult_TopCandidates
@@ -22922,6 +23305,312 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ModelSelectionConfig.FromJson
   nameWithType: ModelSelectionConfig.FromJson
+- uid: Google.GenAI.Types.ModelStage
+  name: ModelStage
+  href: api/Google.GenAI.Types.ModelStage.html
+  commentId: T:Google.GenAI.Types.ModelStage
+  fullName: Google.GenAI.Types.ModelStage
+  nameWithType: ModelStage
+- uid: Google.GenAI.Types.ModelStage.AllValues
+  name: AllValues
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_AllValues
+  commentId: P:Google.GenAI.Types.ModelStage.AllValues
+  fullName: Google.GenAI.Types.ModelStage.AllValues
+  nameWithType: ModelStage.AllValues
+- uid: Google.GenAI.Types.ModelStage.AllValues*
+  name: AllValues
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_AllValues_
+  commentId: Overload:Google.GenAI.Types.ModelStage.AllValues
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ModelStage.AllValues
+  nameWithType: ModelStage.AllValues
+- uid: Google.GenAI.Types.ModelStage.Deprecated
+  name: Deprecated
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_Deprecated
+  commentId: P:Google.GenAI.Types.ModelStage.Deprecated
+  fullName: Google.GenAI.Types.ModelStage.Deprecated
+  nameWithType: ModelStage.Deprecated
+- uid: Google.GenAI.Types.ModelStage.Deprecated*
+  name: Deprecated
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_Deprecated_
+  commentId: Overload:Google.GenAI.Types.ModelStage.Deprecated
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ModelStage.Deprecated
+  nameWithType: ModelStage.Deprecated
+- uid: Google.GenAI.Types.ModelStage.Equals(Google.GenAI.Types.ModelStage)
+  name: Equals(ModelStage)
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_Equals_Google_GenAI_Types_ModelStage_
+  commentId: M:Google.GenAI.Types.ModelStage.Equals(Google.GenAI.Types.ModelStage)
+  fullName: Google.GenAI.Types.ModelStage.Equals(Google.GenAI.Types.ModelStage)
+  nameWithType: ModelStage.Equals(ModelStage)
+- uid: Google.GenAI.Types.ModelStage.Equals*
+  name: Equals
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_Equals_
+  commentId: Overload:Google.GenAI.Types.ModelStage.Equals
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ModelStage.Equals
+  nameWithType: ModelStage.Equals
+- uid: Google.GenAI.Types.ModelStage.Experimental
+  name: Experimental
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_Experimental
+  commentId: P:Google.GenAI.Types.ModelStage.Experimental
+  fullName: Google.GenAI.Types.ModelStage.Experimental
+  nameWithType: ModelStage.Experimental
+- uid: Google.GenAI.Types.ModelStage.Experimental*
+  name: Experimental
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_Experimental_
+  commentId: Overload:Google.GenAI.Types.ModelStage.Experimental
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ModelStage.Experimental
+  nameWithType: ModelStage.Experimental
+- uid: Google.GenAI.Types.ModelStage.FromString(System.String)
+  name: FromString(string)
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_FromString_System_String_
+  commentId: M:Google.GenAI.Types.ModelStage.FromString(System.String)
+  name.vb: FromString(String)
+  fullName: Google.GenAI.Types.ModelStage.FromString(string)
+  fullName.vb: Google.GenAI.Types.ModelStage.FromString(String)
+  nameWithType: ModelStage.FromString(string)
+  nameWithType.vb: ModelStage.FromString(String)
+- uid: Google.GenAI.Types.ModelStage.FromString*
+  name: FromString
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_FromString_
+  commentId: Overload:Google.GenAI.Types.ModelStage.FromString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ModelStage.FromString
+  nameWithType: ModelStage.FromString
+- uid: Google.GenAI.Types.ModelStage.GetHashCode
+  name: GetHashCode()
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_GetHashCode
+  commentId: M:Google.GenAI.Types.ModelStage.GetHashCode
+  fullName: Google.GenAI.Types.ModelStage.GetHashCode()
+  nameWithType: ModelStage.GetHashCode()
+- uid: Google.GenAI.Types.ModelStage.GetHashCode*
+  name: GetHashCode
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_GetHashCode_
+  commentId: Overload:Google.GenAI.Types.ModelStage.GetHashCode
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ModelStage.GetHashCode
+  nameWithType: ModelStage.GetHashCode
+- uid: Google.GenAI.Types.ModelStage.Legacy
+  name: Legacy
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_Legacy
+  commentId: P:Google.GenAI.Types.ModelStage.Legacy
+  fullName: Google.GenAI.Types.ModelStage.Legacy
+  nameWithType: ModelStage.Legacy
+- uid: Google.GenAI.Types.ModelStage.Legacy*
+  name: Legacy
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_Legacy_
+  commentId: Overload:Google.GenAI.Types.ModelStage.Legacy
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ModelStage.Legacy
+  nameWithType: ModelStage.Legacy
+- uid: Google.GenAI.Types.ModelStage.ModelStageUnspecified
+  name: ModelStageUnspecified
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_ModelStageUnspecified
+  commentId: P:Google.GenAI.Types.ModelStage.ModelStageUnspecified
+  fullName: Google.GenAI.Types.ModelStage.ModelStageUnspecified
+  nameWithType: ModelStage.ModelStageUnspecified
+- uid: Google.GenAI.Types.ModelStage.ModelStageUnspecified*
+  name: ModelStageUnspecified
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_ModelStageUnspecified_
+  commentId: Overload:Google.GenAI.Types.ModelStage.ModelStageUnspecified
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ModelStage.ModelStageUnspecified
+  nameWithType: ModelStage.ModelStageUnspecified
+- uid: Google.GenAI.Types.ModelStage.Preview
+  name: Preview
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_Preview
+  commentId: P:Google.GenAI.Types.ModelStage.Preview
+  fullName: Google.GenAI.Types.ModelStage.Preview
+  nameWithType: ModelStage.Preview
+- uid: Google.GenAI.Types.ModelStage.Preview*
+  name: Preview
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_Preview_
+  commentId: Overload:Google.GenAI.Types.ModelStage.Preview
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ModelStage.Preview
+  nameWithType: ModelStage.Preview
+- uid: Google.GenAI.Types.ModelStage.Retired
+  name: Retired
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_Retired
+  commentId: P:Google.GenAI.Types.ModelStage.Retired
+  fullName: Google.GenAI.Types.ModelStage.Retired
+  nameWithType: ModelStage.Retired
+- uid: Google.GenAI.Types.ModelStage.Retired*
+  name: Retired
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_Retired_
+  commentId: Overload:Google.GenAI.Types.ModelStage.Retired
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ModelStage.Retired
+  nameWithType: ModelStage.Retired
+- uid: Google.GenAI.Types.ModelStage.Stable
+  name: Stable
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_Stable
+  commentId: P:Google.GenAI.Types.ModelStage.Stable
+  fullName: Google.GenAI.Types.ModelStage.Stable
+  nameWithType: ModelStage.Stable
+- uid: Google.GenAI.Types.ModelStage.Stable*
+  name: Stable
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_Stable_
+  commentId: Overload:Google.GenAI.Types.ModelStage.Stable
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ModelStage.Stable
+  nameWithType: ModelStage.Stable
+- uid: Google.GenAI.Types.ModelStage.ToString
+  name: ToString()
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_ToString
+  commentId: M:Google.GenAI.Types.ModelStage.ToString
+  fullName: Google.GenAI.Types.ModelStage.ToString()
+  nameWithType: ModelStage.ToString()
+- uid: Google.GenAI.Types.ModelStage.ToString*
+  name: ToString
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_ToString_
+  commentId: Overload:Google.GenAI.Types.ModelStage.ToString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ModelStage.ToString
+  nameWithType: ModelStage.ToString
+- uid: Google.GenAI.Types.ModelStage.UnstableExperimental
+  name: UnstableExperimental
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_UnstableExperimental
+  commentId: P:Google.GenAI.Types.ModelStage.UnstableExperimental
+  fullName: Google.GenAI.Types.ModelStage.UnstableExperimental
+  nameWithType: ModelStage.UnstableExperimental
+- uid: Google.GenAI.Types.ModelStage.UnstableExperimental*
+  name: UnstableExperimental
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_UnstableExperimental_
+  commentId: Overload:Google.GenAI.Types.ModelStage.UnstableExperimental
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ModelStage.UnstableExperimental
+  nameWithType: ModelStage.UnstableExperimental
+- uid: Google.GenAI.Types.ModelStage.Value
+  name: Value
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_Value
+  commentId: P:Google.GenAI.Types.ModelStage.Value
+  fullName: Google.GenAI.Types.ModelStage.Value
+  nameWithType: ModelStage.Value
+- uid: Google.GenAI.Types.ModelStage.Value*
+  name: Value
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_Value_
+  commentId: Overload:Google.GenAI.Types.ModelStage.Value
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ModelStage.Value
+  nameWithType: ModelStage.Value
+- uid: Google.GenAI.Types.ModelStage.op_Implicit(System.String)~Google.GenAI.Types.ModelStage
+  name: implicit operator ModelStage(string)
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_op_Implicit_System_String__Google_GenAI_Types_ModelStage
+  commentId: M:Google.GenAI.Types.ModelStage.op_Implicit(System.String)~Google.GenAI.Types.ModelStage
+  name.vb: CType(String)
+  fullName: Google.GenAI.Types.ModelStage.implicit operator Google.GenAI.Types.ModelStage(string)
+  fullName.vb: Google.GenAI.Types.ModelStage.CType(String)
+  nameWithType: ModelStage.implicit operator ModelStage(string)
+  nameWithType.vb: ModelStage.CType(String)
+- uid: Google.GenAI.Types.ModelStage.op_Implicit*
+  name: implicit operator
+  href: api/Google.GenAI.Types.ModelStage.html#Google_GenAI_Types_ModelStage_op_Implicit_
+  commentId: Overload:Google.GenAI.Types.ModelStage.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: Google.GenAI.Types.ModelStage.implicit operator
+  fullName.vb: Google.GenAI.Types.ModelStage.CType
+  nameWithType: ModelStage.implicit operator
+  nameWithType.vb: ModelStage.CType
+- uid: Google.GenAI.Types.ModelStageConverter
+  name: ModelStageConverter
+  href: api/Google.GenAI.Types.ModelStageConverter.html
+  commentId: T:Google.GenAI.Types.ModelStageConverter
+  fullName: Google.GenAI.Types.ModelStageConverter
+  nameWithType: ModelStageConverter
+- uid: Google.GenAI.Types.ModelStageConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.ModelStageConverter.html#Google_GenAI_Types_ModelStageConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ModelStageConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name.vb: Read(Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ModelStageConverter.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: Google.GenAI.Types.ModelStageConverter.Read(System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ModelStageConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: ModelStageConverter.Read(Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ModelStageConverter.Read*
+  name: Read
+  href: api/Google.GenAI.Types.ModelStageConverter.html#Google_GenAI_Types_ModelStageConverter_Read_
+  commentId: Overload:Google.GenAI.Types.ModelStageConverter.Read
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ModelStageConverter.Read
+  nameWithType: ModelStageConverter.Read
+- uid: Google.GenAI.Types.ModelStageConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.ModelStage,System.Text.Json.JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, ModelStage, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.ModelStageConverter.html#Google_GenAI_Types_ModelStageConverter_Write_System_Text_Json_Utf8JsonWriter_Google_GenAI_Types_ModelStage_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ModelStageConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.ModelStage,System.Text.Json.JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ModelStageConverter.Write(System.Text.Json.Utf8JsonWriter, Google.GenAI.Types.ModelStage, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ModelStageConverter.Write(Utf8JsonWriter, ModelStage, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ModelStageConverter.Write*
+  name: Write
+  href: api/Google.GenAI.Types.ModelStageConverter.html#Google_GenAI_Types_ModelStageConverter_Write_
+  commentId: Overload:Google.GenAI.Types.ModelStageConverter.Write
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ModelStageConverter.Write
+  nameWithType: ModelStageConverter.Write
+- uid: Google.GenAI.Types.ModelStatus
+  name: ModelStatus
+  href: api/Google.GenAI.Types.ModelStatus.html
+  commentId: T:Google.GenAI.Types.ModelStatus
+  fullName: Google.GenAI.Types.ModelStatus
+  nameWithType: ModelStatus
+- uid: Google.GenAI.Types.ModelStatus.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ModelStatus.html#Google_GenAI_Types_ModelStatus_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ModelStatus.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ModelStatus.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ModelStatus.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ModelStatus.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ModelStatus.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ModelStatus.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ModelStatus.html#Google_GenAI_Types_ModelStatus_FromJson_
+  commentId: Overload:Google.GenAI.Types.ModelStatus.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ModelStatus.FromJson
+  nameWithType: ModelStatus.FromJson
+- uid: Google.GenAI.Types.ModelStatus.Message
+  name: Message
+  href: api/Google.GenAI.Types.ModelStatus.html#Google_GenAI_Types_ModelStatus_Message
+  commentId: P:Google.GenAI.Types.ModelStatus.Message
+  fullName: Google.GenAI.Types.ModelStatus.Message
+  nameWithType: ModelStatus.Message
+- uid: Google.GenAI.Types.ModelStatus.Message*
+  name: Message
+  href: api/Google.GenAI.Types.ModelStatus.html#Google_GenAI_Types_ModelStatus_Message_
+  commentId: Overload:Google.GenAI.Types.ModelStatus.Message
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ModelStatus.Message
+  nameWithType: ModelStatus.Message
+- uid: Google.GenAI.Types.ModelStatus.ModelStage
+  name: ModelStage
+  href: api/Google.GenAI.Types.ModelStatus.html#Google_GenAI_Types_ModelStatus_ModelStage
+  commentId: P:Google.GenAI.Types.ModelStatus.ModelStage
+  fullName: Google.GenAI.Types.ModelStatus.ModelStage
+  nameWithType: ModelStatus.ModelStage
+- uid: Google.GenAI.Types.ModelStatus.ModelStage*
+  name: ModelStage
+  href: api/Google.GenAI.Types.ModelStatus.html#Google_GenAI_Types_ModelStatus_ModelStage_
+  commentId: Overload:Google.GenAI.Types.ModelStatus.ModelStage
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ModelStatus.ModelStage
+  nameWithType: ModelStatus.ModelStage
+- uid: Google.GenAI.Types.ModelStatus.RetirementTime
+  name: RetirementTime
+  href: api/Google.GenAI.Types.ModelStatus.html#Google_GenAI_Types_ModelStatus_RetirementTime
+  commentId: P:Google.GenAI.Types.ModelStatus.RetirementTime
+  fullName: Google.GenAI.Types.ModelStatus.RetirementTime
+  nameWithType: ModelStatus.RetirementTime
+- uid: Google.GenAI.Types.ModelStatus.RetirementTime*
+  name: RetirementTime
+  href: api/Google.GenAI.Types.ModelStatus.html#Google_GenAI_Types_ModelStatus_RetirementTime_
+  commentId: Overload:Google.GenAI.Types.ModelStatus.RetirementTime
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ModelStatus.RetirementTime
+  nameWithType: ModelStatus.RetirementTime
 - uid: Google.GenAI.Types.MultiSpeakerVoiceConfig
   name: MultiSpeakerVoiceConfig
   href: api/Google.GenAI.Types.MultiSpeakerVoiceConfig.html
@@ -23759,6 +24448,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Part.MediaResolution
   nameWithType: Part.MediaResolution
+- uid: Google.GenAI.Types.Part.PartMetadata
+  name: PartMetadata
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_PartMetadata
+  commentId: P:Google.GenAI.Types.Part.PartMetadata
+  fullName: Google.GenAI.Types.Part.PartMetadata
+  nameWithType: Part.PartMetadata
+- uid: Google.GenAI.Types.Part.PartMetadata*
+  name: PartMetadata
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_PartMetadata_
+  commentId: Overload:Google.GenAI.Types.Part.PartMetadata
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Part.PartMetadata
+  nameWithType: Part.PartMetadata
 - uid: Google.GenAI.Types.Part.Text
   name: Text
   href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_Text
@@ -30371,6 +31073,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Tool.EnterpriseWebSearch
   nameWithType: Tool.EnterpriseWebSearch
+- uid: Google.GenAI.Types.Tool.FileSearch
+  name: FileSearch
+  href: api/Google.GenAI.Types.Tool.html#Google_GenAI_Types_Tool_FileSearch
+  commentId: P:Google.GenAI.Types.Tool.FileSearch
+  fullName: Google.GenAI.Types.Tool.FileSearch
+  nameWithType: Tool.FileSearch
+- uid: Google.GenAI.Types.Tool.FileSearch*
+  name: FileSearch
+  href: api/Google.GenAI.Types.Tool.html#Google_GenAI_Types_Tool_FileSearch_
+  commentId: Overload:Google.GenAI.Types.Tool.FileSearch
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Tool.FileSearch
+  nameWithType: Tool.FileSearch
 - uid: Google.GenAI.Types.Tool.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
   name: FromJson(string, JsonSerializerOptions?)
   href: api/Google.GenAI.Types.Tool.html#Google_GenAI_Types_Tool_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
@@ -31641,6 +32356,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.TuningJob.Description
   nameWithType: TuningJob.Description
+- uid: Google.GenAI.Types.TuningJob.DistillationSamplingSpec
+  name: DistillationSamplingSpec
+  href: api/Google.GenAI.Types.TuningJob.html#Google_GenAI_Types_TuningJob_DistillationSamplingSpec
+  commentId: P:Google.GenAI.Types.TuningJob.DistillationSamplingSpec
+  fullName: Google.GenAI.Types.TuningJob.DistillationSamplingSpec
+  nameWithType: TuningJob.DistillationSamplingSpec
+- uid: Google.GenAI.Types.TuningJob.DistillationSamplingSpec*
+  name: DistillationSamplingSpec
+  href: api/Google.GenAI.Types.TuningJob.html#Google_GenAI_Types_TuningJob_DistillationSamplingSpec_
+  commentId: Overload:Google.GenAI.Types.TuningJob.DistillationSamplingSpec
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TuningJob.DistillationSamplingSpec
+  nameWithType: TuningJob.DistillationSamplingSpec
 - uid: Google.GenAI.Types.TuningJob.DistillationSpec
   name: DistillationSpec
   href: api/Google.GenAI.Types.TuningJob.html#Google_GenAI_Types_TuningJob_DistillationSpec
@@ -31943,6 +32671,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.TuningJob.TuningDataStats
   nameWithType: TuningJob.TuningDataStats
+- uid: Google.GenAI.Types.TuningJob.TuningJobMetadata
+  name: TuningJobMetadata
+  href: api/Google.GenAI.Types.TuningJob.html#Google_GenAI_Types_TuningJob_TuningJobMetadata
+  commentId: P:Google.GenAI.Types.TuningJob.TuningJobMetadata
+  fullName: Google.GenAI.Types.TuningJob.TuningJobMetadata
+  nameWithType: TuningJob.TuningJobMetadata
+- uid: Google.GenAI.Types.TuningJob.TuningJobMetadata*
+  name: TuningJobMetadata
+  href: api/Google.GenAI.Types.TuningJob.html#Google_GenAI_Types_TuningJob_TuningJobMetadata_
+  commentId: Overload:Google.GenAI.Types.TuningJob.TuningJobMetadata
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TuningJob.TuningJobMetadata
+  nameWithType: TuningJob.TuningJobMetadata
 - uid: Google.GenAI.Types.TuningJob.TuningJobState
   name: TuningJobState
   href: api/Google.GenAI.Types.TuningJob.html#Google_GenAI_Types_TuningJob_TuningJobState
@@ -31982,6 +32723,54 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.TuningJob.VeoTuningSpec
   nameWithType: TuningJob.VeoTuningSpec
+- uid: Google.GenAI.Types.TuningJobMetadata
+  name: TuningJobMetadata
+  href: api/Google.GenAI.Types.TuningJobMetadata.html
+  commentId: T:Google.GenAI.Types.TuningJobMetadata
+  fullName: Google.GenAI.Types.TuningJobMetadata
+  nameWithType: TuningJobMetadata
+- uid: Google.GenAI.Types.TuningJobMetadata.CompletedEpochCount
+  name: CompletedEpochCount
+  href: api/Google.GenAI.Types.TuningJobMetadata.html#Google_GenAI_Types_TuningJobMetadata_CompletedEpochCount
+  commentId: P:Google.GenAI.Types.TuningJobMetadata.CompletedEpochCount
+  fullName: Google.GenAI.Types.TuningJobMetadata.CompletedEpochCount
+  nameWithType: TuningJobMetadata.CompletedEpochCount
+- uid: Google.GenAI.Types.TuningJobMetadata.CompletedEpochCount*
+  name: CompletedEpochCount
+  href: api/Google.GenAI.Types.TuningJobMetadata.html#Google_GenAI_Types_TuningJobMetadata_CompletedEpochCount_
+  commentId: Overload:Google.GenAI.Types.TuningJobMetadata.CompletedEpochCount
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TuningJobMetadata.CompletedEpochCount
+  nameWithType: TuningJobMetadata.CompletedEpochCount
+- uid: Google.GenAI.Types.TuningJobMetadata.CompletedStepCount
+  name: CompletedStepCount
+  href: api/Google.GenAI.Types.TuningJobMetadata.html#Google_GenAI_Types_TuningJobMetadata_CompletedStepCount
+  commentId: P:Google.GenAI.Types.TuningJobMetadata.CompletedStepCount
+  fullName: Google.GenAI.Types.TuningJobMetadata.CompletedStepCount
+  nameWithType: TuningJobMetadata.CompletedStepCount
+- uid: Google.GenAI.Types.TuningJobMetadata.CompletedStepCount*
+  name: CompletedStepCount
+  href: api/Google.GenAI.Types.TuningJobMetadata.html#Google_GenAI_Types_TuningJobMetadata_CompletedStepCount_
+  commentId: Overload:Google.GenAI.Types.TuningJobMetadata.CompletedStepCount
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TuningJobMetadata.CompletedStepCount
+  nameWithType: TuningJobMetadata.CompletedStepCount
+- uid: Google.GenAI.Types.TuningJobMetadata.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.TuningJobMetadata.html#Google_GenAI_Types_TuningJobMetadata_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.TuningJobMetadata.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.TuningJobMetadata.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.TuningJobMetadata.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: TuningJobMetadata.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: TuningJobMetadata.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.TuningJobMetadata.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.TuningJobMetadata.html#Google_GenAI_Types_TuningJobMetadata_FromJson_
+  commentId: Overload:Google.GenAI.Types.TuningJobMetadata.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TuningJobMetadata.FromJson
+  nameWithType: TuningJobMetadata.FromJson
 - uid: Google.GenAI.Types.TuningJobState
   name: TuningJobState
   href: api/Google.GenAI.Types.TuningJobState.html

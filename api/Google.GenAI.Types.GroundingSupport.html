@@ -226,6 +226,41 @@ public List&lt;int&gt;? GroundingChunkIndices { get; set; }</code></pre>
 
 
 
+  <a id="Google_GenAI_Types_GroundingSupport_RenderedParts_" data-uid="Google.GenAI.Types.GroundingSupport.RenderedParts*"></a>
+
+  <h3 id="Google_GenAI_Types_GroundingSupport_RenderedParts" data-uid="Google.GenAI.Types.GroundingSupport.RenderedParts">
+  RenderedParts
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingSupport.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indices into the <code>rendered_parts</code> field of the <code>GroundingMetadata</code> message. These indices
+specify which rendered parts are associated with this support message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;renderedParts&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public List&lt;int&gt;? RenderedParts { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_GroundingSupport_Segment_" data-uid="Google.GenAI.Types.GroundingSupport.Segment*"></a>
 
   <h3 id="Google_GenAI_Types_GroundingSupport_Segment" data-uid="Google.GenAI.Types.GroundingSupport.Segment">
@@ -268,7 +303,7 @@ public Segment? Segment { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GroundingSupport_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.GroundingSupport.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingSupport.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GroundingSupport.cs/#L78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a GroundingSupport object.</p>
