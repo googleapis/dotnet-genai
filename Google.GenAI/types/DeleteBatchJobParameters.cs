@@ -29,7 +29,7 @@ namespace Google.GenAI.Types {
   internal record DeleteBatchJobParameters {
     /// <summary>
     /// A fully-qualified BatchJob resource name or ID. Example:
-    /// "projects/.../locations/.../batchPredictionJobs/456" or "456" when project and location are
+    /// "projects/.../locations/.../batchPredictionJobs/123" or "123" when project and location are
     /// initialized in the client.
     /// </summary>
     [JsonPropertyName("name")]
