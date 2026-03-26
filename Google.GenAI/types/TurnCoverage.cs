@@ -52,9 +52,18 @@ namespace Google.GenAI.Types {
     /// </summary>
     public static TurnCoverage TurnIncludesAllInput { get; } = new("TURN_INCLUDES_ALL_INPUT");
 
+    /// <summary>
+    /// Includes audio activity and all video since the last turn. With automatic activity
+    /// detection, audio activity means speech and excludes silence.
+    /// </summary>
+    public static TurnCoverage TurnIncludesAudioActivityAndAllVideo {
+      get;
+    } = new("TURN_INCLUDES_AUDIO_ACTIVITY_AND_ALL_VIDEO");
+
     public static IReadOnlyList<TurnCoverage> AllValues {
       get;
-    } = new[] { TurnCoverageUnspecified, TurnIncludesOnlyActivity, TurnIncludesAllInput };
+    } = new[] { TurnCoverageUnspecified, TurnIncludesOnlyActivity, TurnIncludesAllInput,
+                TurnIncludesAudioActivityAndAllVideo };
 
     public static TurnCoverage FromString(string value) {
       if (string.IsNullOrEmpty(value)) {
