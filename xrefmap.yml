@@ -33984,6 +33984,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.TurnCoverage.TurnIncludesAllInput
   nameWithType: TurnCoverage.TurnIncludesAllInput
+- uid: Google.GenAI.Types.TurnCoverage.TurnIncludesAudioActivityAndAllVideo
+  name: TurnIncludesAudioActivityAndAllVideo
+  href: api/Google.GenAI.Types.TurnCoverage.html#Google_GenAI_Types_TurnCoverage_TurnIncludesAudioActivityAndAllVideo
+  commentId: P:Google.GenAI.Types.TurnCoverage.TurnIncludesAudioActivityAndAllVideo
+  fullName: Google.GenAI.Types.TurnCoverage.TurnIncludesAudioActivityAndAllVideo
+  nameWithType: TurnCoverage.TurnIncludesAudioActivityAndAllVideo
+- uid: Google.GenAI.Types.TurnCoverage.TurnIncludesAudioActivityAndAllVideo*
+  name: TurnIncludesAudioActivityAndAllVideo
+  href: api/Google.GenAI.Types.TurnCoverage.html#Google_GenAI_Types_TurnCoverage_TurnIncludesAudioActivityAndAllVideo_
+  commentId: Overload:Google.GenAI.Types.TurnCoverage.TurnIncludesAudioActivityAndAllVideo
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TurnCoverage.TurnIncludesAudioActivityAndAllVideo
+  nameWithType: TurnCoverage.TurnIncludesAudioActivityAndAllVideo
 - uid: Google.GenAI.Types.TurnCoverage.TurnIncludesOnlyActivity
   name: TurnIncludesOnlyActivity
   href: api/Google.GenAI.Types.TurnCoverage.html#Google_GenAI_Types_TurnCoverage_TurnIncludesOnlyActivity
