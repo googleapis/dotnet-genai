@@ -60,12 +60,14 @@ public sealed class GoogleGenAIRealtimeSession : IRealtimeClientSession
   //      audio frames → ActivityEnd) that must be atomic.
   private readonly SemaphoreSlim _sendLock = new(1, 1);
 
-  // Track whether audio was sent via SendRealtimeInputAsync to avoid mixing with SendClientContentAsync.
-  private bool _lastInputWasRealtime;
-
   // Track whether a tool response was just sent. After SendToolResponseAsync, the server
   // automatically continues generating — sending TurnComplete would be unexpected.
   private bool _lastSendWasToolResponse;
+
+  // Track whether the last content sent was media (image/video/audio via CreateConversationItem)
+  // that does not auto-trigger a model response. Unlike text, media input requires an explicit
+  // ActivityEnd signal in CreateResponse to prompt the model to respond.
+  private bool _pendingMediaNeedsTrigger;
 
   // Maps function call IDs to function names. Populated when ToolCall messages arrive,
   // consumed when sending FunctionResponse back to the server.
@@ -175,15 +177,27 @@ public sealed class GoogleGenAIRealtimeSession : IRealtimeClientSession
           if (_lastSendWasToolResponse)
           {
             // After a tool response, Gemini automatically continues generating.
-            // Do not send TurnComplete — it would cause the server to close the connection.
+            // Do not send ActivityEnd — it would be unexpected.
             _lastSendWasToolResponse = false;
           }
-          else if (!_lastInputWasRealtime)
+          else if (_pendingMediaNeedsTrigger)
           {
-            await _asyncSession.SendClientContentAsync(
-              new LiveSendClientContentParameters { TurnComplete = true },
+            // Media inputs (image, video) via SendRealtimeInputAsync are added to
+            // the model's context but don't auto-trigger a response. Gemini's Live API
+            // has no equivalent to OpenAI's CreateResponse command — the only way to
+            // trigger a response is via text input. Send a minimal whitespace text to
+            // prompt the model to respond about the media in context without biasing
+            // the response content.
+            _pendingMediaNeedsTrigger = false;
+            await _asyncSession.SendRealtimeInputAsync(
+              new LiveSendRealtimeInputParameters
+              {
+                Text = " ",
+              },
               cancellationToken).ConfigureAwait(false);
           }
+          // For text input: auto-triggers, no signal needed.
+          // For audio commit: ActivityEnd/AudioStreamEnd already sent in HandleAudioCommitAsync.
           break;
 
         default:
@@ -350,11 +364,13 @@ public sealed class GoogleGenAIRealtimeSession : IRealtimeClientSession
       _audioBufferSize = 0;
     }
 
-    _lastInputWasRealtime = true;
+    _lastSendWasToolResponse = false;
+    _pendingMediaNeedsTrigger = false;
 
-    // When VAD is disabled, explicit ActivityStart/ActivityEnd framing is required.
-    // ActivityStart marks the beginning of user speech; ActivityEnd triggers model response.
-    // When VAD is enabled, the server auto-detects speech boundaries — skip framing.
+    // When VAD is disabled, explicit ActivityStart/ActivityEnd framing is required
+    // to mark speech boundaries and trigger the model to respond.
+    // When VAD is enabled, the server auto-detects speech boundaries —
+    // sending explicit framing conflicts with automatic detection.
     if (!_vadEnabled)
     {
       await _asyncSession.SendRealtimeInputAsync(
@@ -387,14 +403,25 @@ public sealed class GoogleGenAIRealtimeSession : IRealtimeClientSession
       }
     }
 
-    // When VAD is disabled, signal end of user activity — this triggers the model to respond.
-    // When VAD is enabled, the server detects end of speech automatically.
+    // When VAD is disabled, signal end of user activity to trigger the model's response.
+    // When VAD is enabled, send AudioStreamEnd to indicate the mic was turned off and the
+    // server should process the buffered audio. AudioStreamEnd is specifically designed for
+    // the push-to-talk pattern with automatic activity detection.
     if (!_vadEnabled)
     {
       await _asyncSession.SendRealtimeInputAsync(
         new LiveSendRealtimeInputParameters
         {
           ActivityEnd = new ActivityEnd()
+        },
+        cancellationToken).ConfigureAwait(false);
+    }
+    else
+    {
+      await _asyncSession.SendRealtimeInputAsync(
+        new LiveSendRealtimeInputParameters
+        {
+          AudioStreamEnd = true
         },
         cancellationToken).ConfigureAwait(false);
     }
@@ -451,68 +478,68 @@ public sealed class GoogleGenAIRealtimeSession : IRealtimeClientSession
       return;
     }
 
-    // Otherwise, treat as text/content conversation input
-    var parts = new List<Part>();
+    // Send text and media via SendRealtimeInputAsync without activity framing.
+    // Text auto-triggers a model response. Images/audio are treated as streaming
+    // context by Gemini's Live API — they do NOT auto-trigger a response.
+    // When only media is sent (no accompanying text), we append a brief text prompt
+    // so the model knows to respond about the media content.
+    bool hasText = false;
+    bool hasMedia = false;
     foreach (var content in itemCreate.Item.Contents)
     {
       if (content is TextContent textContent && !string.IsNullOrEmpty(textContent.Text))
       {
-        parts.Add(new Part { Text = textContent.Text });
+        hasText = true;
+        _lastSendWasToolResponse = false;
+        await _asyncSession.SendRealtimeInputAsync(
+          new LiveSendRealtimeInputParameters
+          {
+            Text = textContent.Text,
+          },
+          cancellationToken).ConfigureAwait(false);
       }
       else if (content is DataContent dataContent)
       {
-        if (dataContent.HasTopLevelMediaType("audio"))
+        if (dataContent.HasTopLevelMediaType("image"))
         {
-          parts.Add(new Part
-          {
-            InlineData = new Blob
+          hasMedia = true;
+          _lastSendWasToolResponse = false;
+          await _asyncSession.SendRealtimeInputAsync(
+            new LiveSendRealtimeInputParameters
             {
-              Data = ExtractDataBytes(dataContent),
-              MimeType = dataContent.MediaType ?? "audio/pcm",
-            }
-          });
+              Video = new Blob
+              {
+                Data = ExtractDataBytes(dataContent),
+                MimeType = dataContent.MediaType ?? "image/jpeg",
+              }
+            },
+            cancellationToken).ConfigureAwait(false);
         }
-        else if (dataContent.HasTopLevelMediaType("image"))
+        else if (dataContent.HasTopLevelMediaType("audio"))
         {
-          byte[] imageBytes = ExtractDataBytes(dataContent);
-          parts.Add(new Part
-          {
-            InlineData = new Blob
+          hasMedia = true;
+          _lastSendWasToolResponse = false;
+          await _asyncSession.SendRealtimeInputAsync(
+            new LiveSendRealtimeInputParameters
             {
-              Data = imageBytes,
-              MimeType = dataContent.MediaType ?? "image/png",
-            }
-          });
+              Audio = new Blob
+              {
+                Data = ExtractDataBytes(dataContent),
+                MimeType = dataContent.MediaType ?? _inputAudioMimeType,
+              }
+            },
+            cancellationToken).ConfigureAwait(false);
         }
       }
     }
 
-    if (parts.Count == 0)
+    if (hasMedia && !hasText)
     {
-      return;
+      // Gemini treats media as streaming context (like a video frame) and won't
+      // respond until it receives a text/voice prompt. Send a brief text to
+      // trigger a response about the media content.
+      _pendingMediaNeedsTrigger = true;
     }
-
-    string role = itemCreate.Item.Role?.Value switch
-    {
-      "assistant" => "model",
-      _ => "user",
-    };
-
-    _lastInputWasRealtime = false;
-    _lastSendWasToolResponse = false;
-    await _asyncSession.SendClientContentAsync(
-      new LiveSendClientContentParameters
-      {
-        Turns = new List<Content>
-        {
-          new Content
-          {
-            Parts = parts,
-            Role = role,
-          }
-        },
-      },
-      cancellationToken).ConfigureAwait(false);
   }
 
   internal static byte[] ExtractDataBytes(DataContent content)
@@ -733,14 +760,77 @@ public sealed class GoogleGenAIRealtimeSession : IRealtimeClientSession
       Description = aiFunction.Description,
     };
 
-    // Map the JSON schema for parameters
+    // Convert the MEAI JSON schema to a Google Schema object.
+    // Google's API expects the Schema type with uppercase type names (STRING, OBJECT, etc.),
+    // not raw JSON schema with lowercase types. Using Parameters instead of ParametersJsonSchema
+    // ensures compatibility with the Live API's function calling.
     if (aiFunction.JsonSchema is JsonElement schemaElement &&
-        schemaElement.ValueKind != JsonValueKind.Undefined)
+        schemaElement.ValueKind == JsonValueKind.Object)
     {
-      declaration.ParametersJsonSchema = schemaElement;
+      declaration.Parameters = ConvertJsonSchemaToGoogleSchema(schemaElement);
     }
 
     return declaration;
+  }
+
+  /// <summary>
+  /// Recursively converts a standard JSON Schema <see cref="JsonElement"/> to a Google GenAI
+  /// <see cref="Schema"/> object, mapping lowercase type names to Google's uppercase enum values.
+  /// </summary>
+  internal static Schema ConvertJsonSchemaToGoogleSchema(JsonElement element)
+  {
+    var schema = new Schema();
+
+    if (element.TryGetProperty("type", out var typeValue))
+    {
+      schema.Type = typeValue.GetString()?.ToLowerInvariant() switch
+      {
+        "object" => Google.GenAI.Types.Type.Object,
+        "string" => Google.GenAI.Types.Type.String,
+        "integer" => Google.GenAI.Types.Type.Integer,
+        "number" => Google.GenAI.Types.Type.Number,
+        "boolean" => Google.GenAI.Types.Type.Boolean,
+        "array" => Google.GenAI.Types.Type.Array,
+        _ => null
+      };
+    }
+
+    if (element.TryGetProperty("description", out var desc) &&
+        desc.ValueKind == JsonValueKind.String)
+    {
+      schema.Description = desc.GetString();
+    }
+
+    if (element.TryGetProperty("properties", out var props) &&
+        props.ValueKind == JsonValueKind.Object)
+    {
+      schema.Properties = new Dictionary<string, Schema>();
+      foreach (var prop in props.EnumerateObject())
+      {
+        schema.Properties[prop.Name] = ConvertJsonSchemaToGoogleSchema(prop.Value);
+      }
+    }
+
+    if (element.TryGetProperty("required", out var req) &&
+        req.ValueKind == JsonValueKind.Array)
+    {
+      schema.Required = new List<string>();
+      foreach (var item in req.EnumerateArray())
+      {
+        if (item.ValueKind == JsonValueKind.String)
+        {
+          schema.Required.Add(item.GetString()!);
+        }
+      }
+    }
+
+    if (element.TryGetProperty("items", out var items) &&
+        items.ValueKind == JsonValueKind.Object)
+    {
+      schema.Items = ConvertJsonSchemaToGoogleSchema(items);
+    }
+
+    return schema;
   }
 
   #endregion
