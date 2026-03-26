@@ -14203,6 +14203,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerateVideosConfig.HttpOptions
   nameWithType: GenerateVideosConfig.HttpOptions
+- uid: Google.GenAI.Types.GenerateVideosConfig.Labels
+  name: Labels
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_Labels
+  commentId: P:Google.GenAI.Types.GenerateVideosConfig.Labels
+  fullName: Google.GenAI.Types.GenerateVideosConfig.Labels
+  nameWithType: GenerateVideosConfig.Labels
+- uid: Google.GenAI.Types.GenerateVideosConfig.Labels*
+  name: Labels
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_Labels_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosConfig.Labels
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosConfig.Labels
+  nameWithType: GenerateVideosConfig.Labels
 - uid: Google.GenAI.Types.GenerateVideosConfig.LastFrame
   name: LastFrame
   href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_LastFrame
