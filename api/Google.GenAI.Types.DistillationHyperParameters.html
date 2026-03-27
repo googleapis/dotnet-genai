@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class DistillationHyperParameters | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Hyperparameters for Distillation. This data type is not supported in Gemini API.">
+      <meta name="description" content="Hyperparameters for distillation.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -93,7 +93,7 @@ Class DistillationHyperParameters  <a class="header-action link-secondary" title
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Hyperparameters for Distillation. This data type is not supported in Gemini API.</p>
+  <div class="markdown summary"><p>Hyperparameters for distillation.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -189,6 +189,40 @@ public AdapterSize? AdapterSize { get; set; }</code></pre>
 
 
 
+  <a id="Google_GenAI_Types_DistillationHyperParameters_BatchSize_" data-uid="Google.GenAI.Types.DistillationHyperParameters.BatchSize*"></a>
+
+  <h3 id="Google_GenAI_Types_DistillationHyperParameters_BatchSize" data-uid="Google.GenAI.Types.DistillationHyperParameters.BatchSize">
+  BatchSize
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationHyperParameters.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The batch size hyperparameter for tuning. This is only supported for OSS models in Vertex.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;batchSize&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public int? BatchSize { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_DistillationHyperParameters_EpochCount_" data-uid="Google.GenAI.Types.DistillationHyperParameters.EpochCount*"></a>
 
   <h3 id="Google_GenAI_Types_DistillationHyperParameters_EpochCount" data-uid="Google.GenAI.Types.DistillationHyperParameters.EpochCount">
@@ -215,6 +249,40 @@ public long? EpochCount { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_DistillationHyperParameters_LearningRate_" data-uid="Google.GenAI.Types.DistillationHyperParameters.LearningRate*"></a>
+
+  <h3 id="Google_GenAI_Types_DistillationHyperParameters_LearningRate" data-uid="Google.GenAI.Types.DistillationHyperParameters.LearningRate">
+  LearningRate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationHyperParameters.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The learning rate for tuning. OSS models only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;learningRate&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public double? LearningRate { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>?</dt>
     <dd></dd>
   </dl>
 
@@ -267,7 +335,7 @@ public double? LearningRateMultiplier { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_DistillationHyperParameters_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.DistillationHyperParameters.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationHyperParameters.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationHyperParameters.cs/#L86"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a DistillationHyperParameters object.</p>

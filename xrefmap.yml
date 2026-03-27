@@ -7971,6 +7971,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.DistillationHyperParameters.AdapterSize
   nameWithType: DistillationHyperParameters.AdapterSize
+- uid: Google.GenAI.Types.DistillationHyperParameters.BatchSize
+  name: BatchSize
+  href: api/Google.GenAI.Types.DistillationHyperParameters.html#Google_GenAI_Types_DistillationHyperParameters_BatchSize
+  commentId: P:Google.GenAI.Types.DistillationHyperParameters.BatchSize
+  fullName: Google.GenAI.Types.DistillationHyperParameters.BatchSize
+  nameWithType: DistillationHyperParameters.BatchSize
+- uid: Google.GenAI.Types.DistillationHyperParameters.BatchSize*
+  name: BatchSize
+  href: api/Google.GenAI.Types.DistillationHyperParameters.html#Google_GenAI_Types_DistillationHyperParameters_BatchSize_
+  commentId: Overload:Google.GenAI.Types.DistillationHyperParameters.BatchSize
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DistillationHyperParameters.BatchSize
+  nameWithType: DistillationHyperParameters.BatchSize
 - uid: Google.GenAI.Types.DistillationHyperParameters.EpochCount
   name: EpochCount
   href: api/Google.GenAI.Types.DistillationHyperParameters.html#Google_GenAI_Types_DistillationHyperParameters_EpochCount
@@ -8000,6 +8013,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.DistillationHyperParameters.FromJson
   nameWithType: DistillationHyperParameters.FromJson
+- uid: Google.GenAI.Types.DistillationHyperParameters.LearningRate
+  name: LearningRate
+  href: api/Google.GenAI.Types.DistillationHyperParameters.html#Google_GenAI_Types_DistillationHyperParameters_LearningRate
+  commentId: P:Google.GenAI.Types.DistillationHyperParameters.LearningRate
+  fullName: Google.GenAI.Types.DistillationHyperParameters.LearningRate
+  nameWithType: DistillationHyperParameters.LearningRate
+- uid: Google.GenAI.Types.DistillationHyperParameters.LearningRate*
+  name: LearningRate
+  href: api/Google.GenAI.Types.DistillationHyperParameters.html#Google_GenAI_Types_DistillationHyperParameters_LearningRate_
+  commentId: Overload:Google.GenAI.Types.DistillationHyperParameters.LearningRate
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DistillationHyperParameters.LearningRate
+  nameWithType: DistillationHyperParameters.LearningRate
 - uid: Google.GenAI.Types.DistillationHyperParameters.LearningRateMultiplier
   name: LearningRateMultiplier
   href: api/Google.GenAI.Types.DistillationHyperParameters.html#Google_GenAI_Types_DistillationHyperParameters_LearningRateMultiplier
@@ -8187,6 +8213,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.DistillationSpec.TunedTeacherModelSource
   nameWithType: DistillationSpec.TunedTeacherModelSource
+- uid: Google.GenAI.Types.DistillationSpec.TuningMode
+  name: TuningMode
+  href: api/Google.GenAI.Types.DistillationSpec.html#Google_GenAI_Types_DistillationSpec_TuningMode
+  commentId: P:Google.GenAI.Types.DistillationSpec.TuningMode
+  fullName: Google.GenAI.Types.DistillationSpec.TuningMode
+  nameWithType: DistillationSpec.TuningMode
+- uid: Google.GenAI.Types.DistillationSpec.TuningMode*
+  name: TuningMode
+  href: api/Google.GenAI.Types.DistillationSpec.html#Google_GenAI_Types_DistillationSpec_TuningMode_
+  commentId: Overload:Google.GenAI.Types.DistillationSpec.TuningMode
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DistillationSpec.TuningMode
+  nameWithType: DistillationSpec.TuningMode
 - uid: Google.GenAI.Types.DistillationSpec.ValidationDatasetUri
   name: ValidationDatasetUri
   href: api/Google.GenAI.Types.DistillationSpec.html#Google_GenAI_Types_DistillationSpec_ValidationDatasetUri

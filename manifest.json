@@ -1396,7 +1396,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.DistillationHyperParameters",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DistillationHyperParameters.yml\" sourcestartlinenumber=\"1\">Hyperparameters for Distillation. This data type is not supported in Gemini API.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DistillationHyperParameters.yml\" sourcestartlinenumber=\"1\">Hyperparameters for distillation.</p>\n"
     },
     {
       "type": "ManagedReference",
