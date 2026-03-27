@@ -13278,6 +13278,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerateContentConfig.Seed
   nameWithType: GenerateContentConfig.Seed
+- uid: Google.GenAI.Types.GenerateContentConfig.ServiceTier
+  name: ServiceTier
+  href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_ServiceTier
+  commentId: P:Google.GenAI.Types.GenerateContentConfig.ServiceTier
+  fullName: Google.GenAI.Types.GenerateContentConfig.ServiceTier
+  nameWithType: GenerateContentConfig.ServiceTier
+- uid: Google.GenAI.Types.GenerateContentConfig.ServiceTier*
+  name: ServiceTier
+  href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_ServiceTier_
+  commentId: Overload:Google.GenAI.Types.GenerateContentConfig.ServiceTier
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateContentConfig.ServiceTier
+  nameWithType: GenerateContentConfig.ServiceTier
 - uid: Google.GenAI.Types.GenerateContentConfig.SpeechConfig
   name: SpeechConfig
   href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_SpeechConfig
@@ -29069,6 +29082,199 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.SegmentModeConverter.Write
   nameWithType: SegmentModeConverter.Write
+- uid: Google.GenAI.Types.ServiceTier
+  name: ServiceTier
+  href: api/Google.GenAI.Types.ServiceTier.html
+  commentId: T:Google.GenAI.Types.ServiceTier
+  fullName: Google.GenAI.Types.ServiceTier
+  nameWithType: ServiceTier
+- uid: Google.GenAI.Types.ServiceTier.AllValues
+  name: AllValues
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_AllValues
+  commentId: P:Google.GenAI.Types.ServiceTier.AllValues
+  fullName: Google.GenAI.Types.ServiceTier.AllValues
+  nameWithType: ServiceTier.AllValues
+- uid: Google.GenAI.Types.ServiceTier.AllValues*
+  name: AllValues
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_AllValues_
+  commentId: Overload:Google.GenAI.Types.ServiceTier.AllValues
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ServiceTier.AllValues
+  nameWithType: ServiceTier.AllValues
+- uid: Google.GenAI.Types.ServiceTier.Equals(Google.GenAI.Types.ServiceTier)
+  name: Equals(ServiceTier)
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_Equals_Google_GenAI_Types_ServiceTier_
+  commentId: M:Google.GenAI.Types.ServiceTier.Equals(Google.GenAI.Types.ServiceTier)
+  fullName: Google.GenAI.Types.ServiceTier.Equals(Google.GenAI.Types.ServiceTier)
+  nameWithType: ServiceTier.Equals(ServiceTier)
+- uid: Google.GenAI.Types.ServiceTier.Equals*
+  name: Equals
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_Equals_
+  commentId: Overload:Google.GenAI.Types.ServiceTier.Equals
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ServiceTier.Equals
+  nameWithType: ServiceTier.Equals
+- uid: Google.GenAI.Types.ServiceTier.FromString(System.String)
+  name: FromString(string)
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_FromString_System_String_
+  commentId: M:Google.GenAI.Types.ServiceTier.FromString(System.String)
+  name.vb: FromString(String)
+  fullName: Google.GenAI.Types.ServiceTier.FromString(string)
+  fullName.vb: Google.GenAI.Types.ServiceTier.FromString(String)
+  nameWithType: ServiceTier.FromString(string)
+  nameWithType.vb: ServiceTier.FromString(String)
+- uid: Google.GenAI.Types.ServiceTier.FromString*
+  name: FromString
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_FromString_
+  commentId: Overload:Google.GenAI.Types.ServiceTier.FromString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ServiceTier.FromString
+  nameWithType: ServiceTier.FromString
+- uid: Google.GenAI.Types.ServiceTier.GetHashCode
+  name: GetHashCode()
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_GetHashCode
+  commentId: M:Google.GenAI.Types.ServiceTier.GetHashCode
+  fullName: Google.GenAI.Types.ServiceTier.GetHashCode()
+  nameWithType: ServiceTier.GetHashCode()
+- uid: Google.GenAI.Types.ServiceTier.GetHashCode*
+  name: GetHashCode
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_GetHashCode_
+  commentId: Overload:Google.GenAI.Types.ServiceTier.GetHashCode
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ServiceTier.GetHashCode
+  nameWithType: ServiceTier.GetHashCode
+- uid: Google.GenAI.Types.ServiceTier.ServiceTierFlex
+  name: ServiceTierFlex
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_ServiceTierFlex
+  commentId: P:Google.GenAI.Types.ServiceTier.ServiceTierFlex
+  fullName: Google.GenAI.Types.ServiceTier.ServiceTierFlex
+  nameWithType: ServiceTier.ServiceTierFlex
+- uid: Google.GenAI.Types.ServiceTier.ServiceTierFlex*
+  name: ServiceTierFlex
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_ServiceTierFlex_
+  commentId: Overload:Google.GenAI.Types.ServiceTier.ServiceTierFlex
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ServiceTier.ServiceTierFlex
+  nameWithType: ServiceTier.ServiceTierFlex
+- uid: Google.GenAI.Types.ServiceTier.ServiceTierPriority
+  name: ServiceTierPriority
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_ServiceTierPriority
+  commentId: P:Google.GenAI.Types.ServiceTier.ServiceTierPriority
+  fullName: Google.GenAI.Types.ServiceTier.ServiceTierPriority
+  nameWithType: ServiceTier.ServiceTierPriority
+- uid: Google.GenAI.Types.ServiceTier.ServiceTierPriority*
+  name: ServiceTierPriority
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_ServiceTierPriority_
+  commentId: Overload:Google.GenAI.Types.ServiceTier.ServiceTierPriority
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ServiceTier.ServiceTierPriority
+  nameWithType: ServiceTier.ServiceTierPriority
+- uid: Google.GenAI.Types.ServiceTier.ServiceTierStandard
+  name: ServiceTierStandard
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_ServiceTierStandard
+  commentId: P:Google.GenAI.Types.ServiceTier.ServiceTierStandard
+  fullName: Google.GenAI.Types.ServiceTier.ServiceTierStandard
+  nameWithType: ServiceTier.ServiceTierStandard
+- uid: Google.GenAI.Types.ServiceTier.ServiceTierStandard*
+  name: ServiceTierStandard
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_ServiceTierStandard_
+  commentId: Overload:Google.GenAI.Types.ServiceTier.ServiceTierStandard
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ServiceTier.ServiceTierStandard
+  nameWithType: ServiceTier.ServiceTierStandard
+- uid: Google.GenAI.Types.ServiceTier.ServiceTierUnspecified
+  name: ServiceTierUnspecified
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_ServiceTierUnspecified
+  commentId: P:Google.GenAI.Types.ServiceTier.ServiceTierUnspecified
+  fullName: Google.GenAI.Types.ServiceTier.ServiceTierUnspecified
+  nameWithType: ServiceTier.ServiceTierUnspecified
+- uid: Google.GenAI.Types.ServiceTier.ServiceTierUnspecified*
+  name: ServiceTierUnspecified
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_ServiceTierUnspecified_
+  commentId: Overload:Google.GenAI.Types.ServiceTier.ServiceTierUnspecified
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ServiceTier.ServiceTierUnspecified
+  nameWithType: ServiceTier.ServiceTierUnspecified
+- uid: Google.GenAI.Types.ServiceTier.ToString
+  name: ToString()
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_ToString
+  commentId: M:Google.GenAI.Types.ServiceTier.ToString
+  fullName: Google.GenAI.Types.ServiceTier.ToString()
+  nameWithType: ServiceTier.ToString()
+- uid: Google.GenAI.Types.ServiceTier.ToString*
+  name: ToString
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_ToString_
+  commentId: Overload:Google.GenAI.Types.ServiceTier.ToString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ServiceTier.ToString
+  nameWithType: ServiceTier.ToString
+- uid: Google.GenAI.Types.ServiceTier.Value
+  name: Value
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_Value
+  commentId: P:Google.GenAI.Types.ServiceTier.Value
+  fullName: Google.GenAI.Types.ServiceTier.Value
+  nameWithType: ServiceTier.Value
+- uid: Google.GenAI.Types.ServiceTier.Value*
+  name: Value
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_Value_
+  commentId: Overload:Google.GenAI.Types.ServiceTier.Value
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ServiceTier.Value
+  nameWithType: ServiceTier.Value
+- uid: Google.GenAI.Types.ServiceTier.op_Implicit(System.String)~Google.GenAI.Types.ServiceTier
+  name: implicit operator ServiceTier(string)
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_op_Implicit_System_String__Google_GenAI_Types_ServiceTier
+  commentId: M:Google.GenAI.Types.ServiceTier.op_Implicit(System.String)~Google.GenAI.Types.ServiceTier
+  name.vb: CType(String)
+  fullName: Google.GenAI.Types.ServiceTier.implicit operator Google.GenAI.Types.ServiceTier(string)
+  fullName.vb: Google.GenAI.Types.ServiceTier.CType(String)
+  nameWithType: ServiceTier.implicit operator ServiceTier(string)
+  nameWithType.vb: ServiceTier.CType(String)
+- uid: Google.GenAI.Types.ServiceTier.op_Implicit*
+  name: implicit operator
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_op_Implicit_
+  commentId: Overload:Google.GenAI.Types.ServiceTier.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: Google.GenAI.Types.ServiceTier.implicit operator
+  fullName.vb: Google.GenAI.Types.ServiceTier.CType
+  nameWithType: ServiceTier.implicit operator
+  nameWithType.vb: ServiceTier.CType
+- uid: Google.GenAI.Types.ServiceTierConverter
+  name: ServiceTierConverter
+  href: api/Google.GenAI.Types.ServiceTierConverter.html
+  commentId: T:Google.GenAI.Types.ServiceTierConverter
+  fullName: Google.GenAI.Types.ServiceTierConverter
+  nameWithType: ServiceTierConverter
+- uid: Google.GenAI.Types.ServiceTierConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.ServiceTierConverter.html#Google_GenAI_Types_ServiceTierConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ServiceTierConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name.vb: Read(Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ServiceTierConverter.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: Google.GenAI.Types.ServiceTierConverter.Read(System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ServiceTierConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: ServiceTierConverter.Read(Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ServiceTierConverter.Read*
+  name: Read
+  href: api/Google.GenAI.Types.ServiceTierConverter.html#Google_GenAI_Types_ServiceTierConverter_Read_
+  commentId: Overload:Google.GenAI.Types.ServiceTierConverter.Read
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ServiceTierConverter.Read
+  nameWithType: ServiceTierConverter.Read
+- uid: Google.GenAI.Types.ServiceTierConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.ServiceTier,System.Text.Json.JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, ServiceTier, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.ServiceTierConverter.html#Google_GenAI_Types_ServiceTierConverter_Write_System_Text_Json_Utf8JsonWriter_Google_GenAI_Types_ServiceTier_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ServiceTierConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.ServiceTier,System.Text.Json.JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ServiceTierConverter.Write(System.Text.Json.Utf8JsonWriter, Google.GenAI.Types.ServiceTier, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ServiceTierConverter.Write(Utf8JsonWriter, ServiceTier, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ServiceTierConverter.Write*
+  name: Write
+  href: api/Google.GenAI.Types.ServiceTierConverter.html#Google_GenAI_Types_ServiceTierConverter_Write_
+  commentId: Overload:Google.GenAI.Types.ServiceTierConverter.Write
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ServiceTierConverter.Write
+  nameWithType: ServiceTierConverter.Write
 - uid: Google.GenAI.Types.SessionResumptionConfig
   name: SessionResumptionConfig
   href: api/Google.GenAI.Types.SessionResumptionConfig.html
