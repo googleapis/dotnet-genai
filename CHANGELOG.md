@@ -1,5 +1,28 @@
 # Changelog
 
+## Version 1.6.0, released 2026-03-27
+
+
+### New features
+
+* [Python] Add consent_audio and voice_consent_signature and AsyncSession.setup_complete ([8e5dc09](https://github.com/googleapis/dotnet-genai/commit/8e5dc09028df0dfc08f17530f3595a0d16fa5d73))
+* Add labels field to Veo configs ([b089cb6](https://github.com/googleapis/dotnet-genai/commit/b089cb6356dfb32b267942f456f9c1441a5e8c32))
+* Add model_status to GenerateContentResponse (Gemini API only) ([7b526d4](https://github.com/googleapis/dotnet-genai/commit/7b526d4db8d44975406a76c42a8b345563207338))
+* Add part_metadata in Part (Gemini API only) ([7b526d4](https://github.com/googleapis/dotnet-genai/commit/7b526d4db8d44975406a76c42a8b345563207338))
+* Add service tier to GenerateContent. ([4e8f820](https://github.com/googleapis/dotnet-genai/commit/4e8f820c784aa3c7ff1a661d624e25c4ba1164df))
+* **genai:** add TURN_INCLUDES_AUDIO_ACTIVITY_AND_ALL_VIDEO to TurnCoverage ([594f64e](https://github.com/googleapis/dotnet-genai/commit/594f64e33065348b1dca3d99abe365b98f53df5c))
+* support hyperparameters in distillation tuning ([e73defd](https://github.com/googleapis/dotnet-genai/commit/e73defd5fe495b4d0c0766d817915ce59069799f))
+* Support rendered_parts in GroundingSupport ([7b526d4](https://github.com/googleapis/dotnet-genai/commit/7b526d4db8d44975406a76c42a8b345563207338))
+* Update to Microsoft.Extensions.AI.Abstractions 10.4.0 ([dfcbbc4](https://github.com/googleapis/dotnet-genai/commit/dfcbbc414248e88ac8549822fa6f254c79db2700))
+* Update to Microsoft.Extensions.AI.Abstractions 10.4.0 ([#247](https://github.com/googleapis/dotnet-genai/issues/247)) ([6ec6c07](https://github.com/googleapis/dotnet-genai/commit/6ec6c0732ed73eb1fe2508328904ca5327043ff8))
+
+
+### Bug fixes
+
+* reduce stringify json node in response ([2801e54](https://github.com/googleapis/dotnet-genai/commit/2801e54e4d3603e36f5b7e2f17acfb79e634b91d))
+* remove redundant json stringify in converters ([a039bd8](https://github.com/googleapis/dotnet-genai/commit/a039bd8255a171022c066c34831f03f7df5431dd))
+* support us region routing ([0d4ca46](https://github.com/googleapis/dotnet-genai/commit/0d4ca4683b66e71e0a51e3f85fa0b3a397304b52))
+
 ## Version 1.5.0, released 2026-03-18
 
 
