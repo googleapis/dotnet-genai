@@ -5,7 +5,6 @@
 
 ### New features
 
-* [Python] Add consent_audio and voice_consent_signature and AsyncSession.setup_complete ([8e5dc09](https://github.com/googleapis/dotnet-genai/commit/8e5dc09028df0dfc08f17530f3595a0d16fa5d73))
 * Add labels field to Veo configs ([b089cb6](https://github.com/googleapis/dotnet-genai/commit/b089cb6356dfb32b267942f456f9c1441a5e8c32))
 * Add model_status to GenerateContentResponse (Gemini API only) ([7b526d4](https://github.com/googleapis/dotnet-genai/commit/7b526d4db8d44975406a76c42a8b345563207338))
 * Add part_metadata in Part (Gemini API only) ([7b526d4](https://github.com/googleapis/dotnet-genai/commit/7b526d4db8d44975406a76c42a8b345563207338))
