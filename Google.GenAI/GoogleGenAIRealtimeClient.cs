@@ -41,6 +41,21 @@ public sealed class GoogleGenAIRealtimeClient : IRealtimeClient
     _defaultModelId = defaultModelId;
   }
 
+  /// <summary>Initializes a new instance using an API key.</summary>
+  /// <param name="apiKey">The Google GenAI API key.</param>
+  /// <param name="defaultModelId">The default model to use for realtime sessions.</param>
+  /// <exception cref="ArgumentNullException"><paramref name="apiKey"/> is <see langword="null"/> or empty.</exception>
+  public GoogleGenAIRealtimeClient(string apiKey, string? defaultModelId = null)
+  {
+    if (string.IsNullOrEmpty(apiKey))
+    {
+      throw new ArgumentNullException(nameof(apiKey));
+    }
+
+    _client = new Client(apiKey: apiKey);
+    _defaultModelId = defaultModelId;
+  }
+
   /// <inheritdoc />
   public async Task<IRealtimeClientSession> CreateSessionAsync(
     RealtimeSessionOptions? options = null,
@@ -53,6 +68,17 @@ public sealed class GoogleGenAIRealtimeClient : IRealtimeClient
     var config = BuildLiveConnectConfig(options);
 
     var asyncSession = await _client.Live.ConnectAsync(model, config, cancellationToken).ConfigureAwait(false);
+
+    // The Google SDK's ConnectAsync sends the setup message but does NOT wait
+    // for the server's SetupComplete acknowledgment. We must drain it here so
+    // the session is fully ready (tools configured, modalities set) before the
+    // caller starts sending audio or text.
+    var setupResponse = await asyncSession.ReceiveAsync(cancellationToken).ConfigureAwait(false);
+    if (setupResponse?.SetupComplete is null)
+    {
+      throw new InvalidOperationException(
+        "Expected SetupComplete from Gemini server after connection, but received an unexpected message.");
+    }
 
     return new GoogleGenAIRealtimeSession(asyncSession, model, options);
   }

@@ -69,7 +69,7 @@ public class GoogleGenAIRealtimeClientTest
   public void RealtimeClient_NullClient_ThrowsArgumentNullException()
   {
     Assert.ThrowsException<ArgumentNullException>(
-      () => new GoogleGenAIRealtimeClient(null!, "model"));
+      () => new GoogleGenAIRealtimeClient((Client)null!, "model"));
   }
 
   [TestMethod]
@@ -213,8 +213,8 @@ public class GoogleGenAIRealtimeClientTest
     Assert.AreEqual("greet", declaration.Name);
     Assert.AreEqual("Greets a person", declaration.Description);
 
-    // The ParametersJsonSchema should be set since the function has parameters
-    Assert.IsNotNull(declaration.ParametersJsonSchema);
+    // The Parameters (Google Schema) should be set since the function has parameters
+    Assert.IsNotNull(declaration.Parameters);
   }
 
   [TestMethod]
@@ -1439,21 +1439,26 @@ public class GoogleGenAIRealtimeSessionTest
         })
       .Returns(Task.CompletedTask);
 
-    // Send a conversation item first (sets _lastInputWasRealtime = false)
+    // Send a conversation item with text
     var itemMsg = new CreateConversationItemRealtimeClientMessage(new RealtimeConversationItem(
       new List<AIContent> { new TextContent("Hello") },
       role: ChatRole.User));
     await _session.SendAsync(itemMsg);
 
+    // Text input auto-triggers a response in Gemini's Live API, so the text
+    // send happened during CreateConversationItem, not CreateResponse.
+    Assert.AreEqual(1, sentMessages.Count, "Text should be sent via SendRealtimeInputAsync");
+    Assert.IsTrue(sentMessages[0].Contains("Hello"),
+      "The sent message should contain the text content");
+
     sentMessages.Clear();
 
-    // CreateResponse should send TurnComplete since last input was NOT realtime
+    // CreateResponse after text input does nothing — text auto-triggers.
     var createResp = new CreateResponseRealtimeClientMessage();
     await _session.SendAsync(createResp);
 
-    Assert.AreEqual(1, sentMessages.Count);
-    Assert.IsTrue(sentMessages[0].Contains("turnComplete"),
-      "Should send turnComplete when last input was conversation item (not realtime audio)");
+    Assert.AreEqual(0, sentMessages.Count,
+      "CreateResponse should not send additional messages after text input (auto-triggers)");
   }
 
   [TestMethod]
@@ -1597,18 +1602,19 @@ public class GoogleGenAIRealtimeSessionTest
 
     sentMessages.Clear();
 
-    // Now send normal text → CreateResponse. This SHOULD send TurnComplete
+    // Now send normal text → CreateResponse. Text auto-triggers; CreateResponse is a no-op.
     var textMsg = new CreateConversationItemRealtimeClientMessage(new RealtimeConversationItem(
       new List<AIContent> { new TextContent("Hello again") },
       role: ChatRole.User));
     await _session.SendAsync(textMsg);
     await _session.SendAsync(new CreateResponseRealtimeClientMessage());
 
-    // Should have 2 messages: the text content and TurnComplete
-    Assert.AreEqual(2, sentMessages.Count,
-      "Normal text followed by CreateResponse should send content + TurnComplete");
-    Assert.IsTrue(sentMessages[1].Contains("turnComplete"),
-      "Should send turnComplete for normal text input after tool cycle completes");
+    // Should have 1 message: the text content sent via SendRealtimeInputAsync.
+    // CreateResponse does not send a turnComplete — text auto-triggers in Gemini.
+    Assert.AreEqual(1, sentMessages.Count,
+      "Normal text followed by CreateResponse should send only the text content");
+    Assert.IsTrue(sentMessages[0].Contains("Hello again"),
+      "The sent message should contain the text content");
   }
 
   #endregion
@@ -1876,9 +1882,11 @@ public class GoogleGenAIRealtimeSessionTest
 
     await _session.SendAsync(msg);
 
+    // Gemini's SendRealtimeInputAsync sends text only (no role field).
+    // Verify the text content was sent.
     Assert.AreEqual(1, sentMessages.Count);
-    Assert.IsTrue(sentMessages[0].Contains("user"),
-      "User role should map to 'user'");
+    Assert.IsTrue(sentMessages[0].Contains("User text"),
+      "User text should be sent via SendRealtimeInputAsync");
   }
 
   [TestMethod]
@@ -1903,9 +1911,11 @@ public class GoogleGenAIRealtimeSessionTest
 
     await _session.SendAsync(msg);
 
+    // Gemini's SendRealtimeInputAsync sends text only (no role field).
+    // Verify the text content was sent regardless of the absence of a role.
     Assert.AreEqual(1, sentMessages.Count);
-    Assert.IsTrue(sentMessages[0].Contains("user"),
-      "Null role should default to 'user'");
+    Assert.IsTrue(sentMessages[0].Contains("No role text"),
+      "Text should be sent via SendRealtimeInputAsync even without a role");
   }
 
   [TestMethod]

@@ -601,20 +601,21 @@ public sealed class GoogleGenAIRealtimeSession : IRealtimeClientSession
 
       foreach (var fc in functionCalls)
       {
-        if (fc.Id is not null && fc.Name is not null)
-        {
-          _callIdToFunctionName[fc.Id] = fc.Name;
-        }
+        // Ensure every function call has a usable ID for the round-trip mapping.
+        var callId = fc.Id ?? Guid.NewGuid().ToString();
+        var functionName = fc.Name ?? string.Empty;
+
+        _callIdToFunctionName[callId] = functionName;
 
         var contents = new List<AIContent>
         {
           new FunctionCallContent(
-            fc.Id ?? string.Empty,
-            fc.Name ?? string.Empty,
+            callId,
+            functionName,
             fc.Args?.ToDictionary(kvp => kvp.Key, kvp => (object?)kvp.Value))
         };
 
-        var item = new RealtimeConversationItem(contents, id: fc.Id, role: ChatRole.Assistant);
+        var item = new RealtimeConversationItem(contents, id: callId, role: ChatRole.Assistant);
 
         // Emit ResponseOutputItemAdded (signals start of output item)
         yield return new ResponseOutputItemRealtimeServerMessage(RealtimeServerMessageType.ResponseOutputItemAdded)
