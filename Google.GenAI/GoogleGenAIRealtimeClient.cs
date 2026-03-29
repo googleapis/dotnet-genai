@@ -135,6 +135,13 @@ public sealed class GoogleGenAIRealtimeClient : IRealtimeClient
       return config;
     }
 
+    // Transcription-only sessions use a minimal configuration with
+    // only input audio transcription enabled (no audio output, no tools).
+    if (options.SessionKind == RealtimeSessionKind.Transcription)
+    {
+      return BuildTranscriptionConnectConfig(options);
+    }
+
     // System instructions
     if (!string.IsNullOrEmpty(options.Instructions))
     {
@@ -207,10 +214,16 @@ public sealed class GoogleGenAIRealtimeClient : IRealtimeClient
       }
     }
 
-    // Transcription
+    // Transcription (both directions for conversation sessions)
     if (options.TranscriptionOptions is not null)
     {
-      config.InputAudioTranscription = new AudioTranscriptionConfig();
+      var inputTranscriptionConfig = new AudioTranscriptionConfig();
+      if (!string.IsNullOrEmpty(options.TranscriptionOptions.SpeechLanguage))
+      {
+        inputTranscriptionConfig.LanguageCodes = new List<string> { options.TranscriptionOptions.SpeechLanguage };
+      }
+
+      config.InputAudioTranscription = inputTranscriptionConfig;
       config.OutputAudioTranscription = new AudioTranscriptionConfig();
     }
 
@@ -236,6 +249,45 @@ public sealed class GoogleGenAIRealtimeClient : IRealtimeClient
       // No VAD options specified — disable automatic VAD by default when using
       // the MEAI audio buffering pattern (AudioBufferAppend → AudioBufferCommit).
       // The client controls activity boundaries via explicit ActivityEnd signals.
+      config.RealtimeInputConfig.AutomaticActivityDetection = new AutomaticActivityDetection { Disabled = true };
+    }
+
+    return config;
+  }
+
+  /// <summary>
+  /// Builds a minimal <see cref="LiveConnectConfig"/> for transcription-only sessions.
+  /// Only input audio transcription is enabled; no audio output, tools, or voice config.
+  /// </summary>
+  private static LiveConnectConfig BuildTranscriptionConnectConfig(RealtimeSessionOptions options)
+  {
+    var config = new LiveConnectConfig
+    {
+      // No audio output for transcription-only sessions
+      ResponseModalities = new List<Modality> { Modality.Text },
+    };
+
+    // Enable input transcription with optional language hint
+    var transcriptionConfig = new AudioTranscriptionConfig();
+    if (!string.IsNullOrEmpty(options.TranscriptionOptions?.SpeechLanguage))
+    {
+      transcriptionConfig.LanguageCodes = new List<string> { options.TranscriptionOptions.SpeechLanguage };
+    }
+
+    config.InputAudioTranscription = transcriptionConfig;
+
+    // VAD configuration still applies for speech boundary detection
+    config.RealtimeInputConfig = new RealtimeInputConfig();
+
+    if (options.VoiceActivityDetection is { Enabled: true } vad)
+    {
+      config.RealtimeInputConfig.AutomaticActivityDetection = new AutomaticActivityDetection { Disabled = false };
+      config.RealtimeInputConfig.ActivityHandling = vad.AllowInterruption
+        ? ActivityHandling.StartOfActivityInterrupts
+        : ActivityHandling.NoInterruption;
+    }
+    else
+    {
       config.RealtimeInputConfig.AutomaticActivityDetection = new AutomaticActivityDetection { Disabled = true };
     }
 

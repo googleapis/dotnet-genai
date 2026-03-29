@@ -1368,6 +1368,140 @@ public class GoogleGenAIRealtimeSessionTest
     Assert.IsTrue(config.RealtimeInputConfig.AutomaticActivityDetection.Disabled);
   }
 
+  [TestMethod]
+  public void BuildLiveConnectConfig_TranscriptionMode_OnlyInputTranscription()
+  {
+    var options = new RealtimeSessionOptions
+    {
+      SessionKind = RealtimeSessionKind.Transcription,
+      TranscriptionOptions = new TranscriptionOptions(),
+    };
+
+    var config = GoogleGenAIRealtimeClient.BuildLiveConnectConfig(options);
+
+    Assert.IsNotNull(config.InputAudioTranscription);
+    Assert.IsNull(config.OutputAudioTranscription);
+  }
+
+  [TestMethod]
+  public void BuildLiveConnectConfig_TranscriptionMode_TextModalityOnly()
+  {
+    var options = new RealtimeSessionOptions
+    {
+      SessionKind = RealtimeSessionKind.Transcription,
+    };
+
+    var config = GoogleGenAIRealtimeClient.BuildLiveConnectConfig(options);
+
+    Assert.AreEqual(1, config.ResponseModalities.Count);
+    Assert.AreEqual(Modality.Text, config.ResponseModalities[0]);
+  }
+
+  [TestMethod]
+  public void BuildLiveConnectConfig_TranscriptionMode_NoVoiceOrToolsOrInstructions()
+  {
+    var fn = AIFunctionFactory.Create(
+      (string q) => "result",
+      "search",
+      "Searches things");
+
+    var options = new RealtimeSessionOptions
+    {
+      SessionKind = RealtimeSessionKind.Transcription,
+      Instructions = "Be concise.",
+      Voice = "Aoede",
+      MaxOutputTokens = 500,
+      Tools = new List<AITool> { fn },
+      TranscriptionOptions = new TranscriptionOptions(),
+    };
+
+    var config = GoogleGenAIRealtimeClient.BuildLiveConnectConfig(options);
+
+    // Transcription-only: conversation-oriented options are ignored
+    Assert.IsNull(config.SystemInstruction);
+    Assert.IsNull(config.SpeechConfig);
+    Assert.IsNull(config.GenerationConfig);
+    Assert.IsNull(config.Tools);
+    Assert.IsNotNull(config.InputAudioTranscription);
+    Assert.IsNull(config.OutputAudioTranscription);
+  }
+
+  [TestMethod]
+  public void BuildLiveConnectConfig_TranscriptionMode_LanguageCodeMapped()
+  {
+    var options = new RealtimeSessionOptions
+    {
+      SessionKind = RealtimeSessionKind.Transcription,
+      TranscriptionOptions = new TranscriptionOptions { SpeechLanguage = "en-US" },
+    };
+
+    var config = GoogleGenAIRealtimeClient.BuildLiveConnectConfig(options);
+
+    Assert.IsNotNull(config.InputAudioTranscription);
+    Assert.AreEqual(1, config.InputAudioTranscription.LanguageCodes.Count);
+    Assert.AreEqual("en-US", config.InputAudioTranscription.LanguageCodes[0]);
+  }
+
+  [TestMethod]
+  public void BuildLiveConnectConfig_TranscriptionMode_NoLanguage_NoLanguageCodes()
+  {
+    var options = new RealtimeSessionOptions
+    {
+      SessionKind = RealtimeSessionKind.Transcription,
+      TranscriptionOptions = new TranscriptionOptions(),
+    };
+
+    var config = GoogleGenAIRealtimeClient.BuildLiveConnectConfig(options);
+
+    Assert.IsNotNull(config.InputAudioTranscription);
+    Assert.IsNull(config.InputAudioTranscription.LanguageCodes);
+  }
+
+  [TestMethod]
+  public void BuildLiveConnectConfig_TranscriptionMode_VadEnabled()
+  {
+    var options = new RealtimeSessionOptions
+    {
+      SessionKind = RealtimeSessionKind.Transcription,
+      VoiceActivityDetection = new VoiceActivityDetectionOptions { Enabled = true, AllowInterruption = false },
+    };
+
+    var config = GoogleGenAIRealtimeClient.BuildLiveConnectConfig(options);
+
+    Assert.IsFalse(config.RealtimeInputConfig.AutomaticActivityDetection.Disabled);
+    Assert.AreEqual(ActivityHandling.NoInterruption, config.RealtimeInputConfig.ActivityHandling);
+  }
+
+  [TestMethod]
+  public void BuildLiveConnectConfig_TranscriptionMode_DefaultVadDisabled()
+  {
+    var options = new RealtimeSessionOptions
+    {
+      SessionKind = RealtimeSessionKind.Transcription,
+    };
+
+    var config = GoogleGenAIRealtimeClient.BuildLiveConnectConfig(options);
+
+    Assert.IsTrue(config.RealtimeInputConfig.AutomaticActivityDetection.Disabled);
+  }
+
+  [TestMethod]
+  public void BuildLiveConnectConfig_ConversationMode_LanguageCodeMapped()
+  {
+    var options = new RealtimeSessionOptions
+    {
+      TranscriptionOptions = new TranscriptionOptions { SpeechLanguage = "ja-JP" },
+    };
+
+    var config = GoogleGenAIRealtimeClient.BuildLiveConnectConfig(options);
+
+    Assert.IsNotNull(config.InputAudioTranscription);
+    Assert.AreEqual(1, config.InputAudioTranscription.LanguageCodes.Count);
+    Assert.AreEqual("ja-JP", config.InputAudioTranscription.LanguageCodes[0]);
+    // Output transcription is also enabled in conversation mode (no language codes)
+    Assert.IsNotNull(config.OutputAudioTranscription);
+  }
+
   #endregion
 
   #region ExtractDataBytes Tests
