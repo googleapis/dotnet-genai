@@ -1,5 +1,13 @@
 # Changelog
 
+## Version 1.6.1, released 2026-03-31
+
+
+### Bug fixes
+
+* Fix handling of usage metadata in IChatClient ([e44705e](https://github.com/googleapis/dotnet-genai/commit/e44705e428af0d3278236b99c569a7d2a6843ff1))
+* Fix service_tier enums. ([3df2f5f](https://github.com/googleapis/dotnet-genai/commit/3df2f5fcdf118f45f28e30b6ac5887fb2eaccef1))
+
 ## Version 1.6.0, released 2026-03-27
 
 
