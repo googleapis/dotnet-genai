@@ -29114,6 +29114,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ServiceTier.Equals
   nameWithType: ServiceTier.Equals
+- uid: Google.GenAI.Types.ServiceTier.Flex
+  name: Flex
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_Flex
+  commentId: P:Google.GenAI.Types.ServiceTier.Flex
+  fullName: Google.GenAI.Types.ServiceTier.Flex
+  nameWithType: ServiceTier.Flex
+- uid: Google.GenAI.Types.ServiceTier.Flex*
+  name: Flex
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_Flex_
+  commentId: Overload:Google.GenAI.Types.ServiceTier.Flex
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ServiceTier.Flex
+  nameWithType: ServiceTier.Flex
 - uid: Google.GenAI.Types.ServiceTier.FromString(System.String)
   name: FromString(string)
   href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_FromString_System_String_
@@ -29143,58 +29156,32 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ServiceTier.GetHashCode
   nameWithType: ServiceTier.GetHashCode
-- uid: Google.GenAI.Types.ServiceTier.ServiceTierFlex
-  name: ServiceTierFlex
-  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_ServiceTierFlex
-  commentId: P:Google.GenAI.Types.ServiceTier.ServiceTierFlex
-  fullName: Google.GenAI.Types.ServiceTier.ServiceTierFlex
-  nameWithType: ServiceTier.ServiceTierFlex
-- uid: Google.GenAI.Types.ServiceTier.ServiceTierFlex*
-  name: ServiceTierFlex
-  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_ServiceTierFlex_
-  commentId: Overload:Google.GenAI.Types.ServiceTier.ServiceTierFlex
+- uid: Google.GenAI.Types.ServiceTier.Priority
+  name: Priority
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_Priority
+  commentId: P:Google.GenAI.Types.ServiceTier.Priority
+  fullName: Google.GenAI.Types.ServiceTier.Priority
+  nameWithType: ServiceTier.Priority
+- uid: Google.GenAI.Types.ServiceTier.Priority*
+  name: Priority
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_Priority_
+  commentId: Overload:Google.GenAI.Types.ServiceTier.Priority
   isSpec: "True"
-  fullName: Google.GenAI.Types.ServiceTier.ServiceTierFlex
-  nameWithType: ServiceTier.ServiceTierFlex
-- uid: Google.GenAI.Types.ServiceTier.ServiceTierPriority
-  name: ServiceTierPriority
-  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_ServiceTierPriority
-  commentId: P:Google.GenAI.Types.ServiceTier.ServiceTierPriority
-  fullName: Google.GenAI.Types.ServiceTier.ServiceTierPriority
-  nameWithType: ServiceTier.ServiceTierPriority
-- uid: Google.GenAI.Types.ServiceTier.ServiceTierPriority*
-  name: ServiceTierPriority
-  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_ServiceTierPriority_
-  commentId: Overload:Google.GenAI.Types.ServiceTier.ServiceTierPriority
+  fullName: Google.GenAI.Types.ServiceTier.Priority
+  nameWithType: ServiceTier.Priority
+- uid: Google.GenAI.Types.ServiceTier.Standard
+  name: Standard
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_Standard
+  commentId: P:Google.GenAI.Types.ServiceTier.Standard
+  fullName: Google.GenAI.Types.ServiceTier.Standard
+  nameWithType: ServiceTier.Standard
+- uid: Google.GenAI.Types.ServiceTier.Standard*
+  name: Standard
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_Standard_
+  commentId: Overload:Google.GenAI.Types.ServiceTier.Standard
   isSpec: "True"
-  fullName: Google.GenAI.Types.ServiceTier.ServiceTierPriority
-  nameWithType: ServiceTier.ServiceTierPriority
-- uid: Google.GenAI.Types.ServiceTier.ServiceTierStandard
-  name: ServiceTierStandard
-  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_ServiceTierStandard
-  commentId: P:Google.GenAI.Types.ServiceTier.ServiceTierStandard
-  fullName: Google.GenAI.Types.ServiceTier.ServiceTierStandard
-  nameWithType: ServiceTier.ServiceTierStandard
-- uid: Google.GenAI.Types.ServiceTier.ServiceTierStandard*
-  name: ServiceTierStandard
-  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_ServiceTierStandard_
-  commentId: Overload:Google.GenAI.Types.ServiceTier.ServiceTierStandard
-  isSpec: "True"
-  fullName: Google.GenAI.Types.ServiceTier.ServiceTierStandard
-  nameWithType: ServiceTier.ServiceTierStandard
-- uid: Google.GenAI.Types.ServiceTier.ServiceTierUnspecified
-  name: ServiceTierUnspecified
-  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_ServiceTierUnspecified
-  commentId: P:Google.GenAI.Types.ServiceTier.ServiceTierUnspecified
-  fullName: Google.GenAI.Types.ServiceTier.ServiceTierUnspecified
-  nameWithType: ServiceTier.ServiceTierUnspecified
-- uid: Google.GenAI.Types.ServiceTier.ServiceTierUnspecified*
-  name: ServiceTierUnspecified
-  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_ServiceTierUnspecified_
-  commentId: Overload:Google.GenAI.Types.ServiceTier.ServiceTierUnspecified
-  isSpec: "True"
-  fullName: Google.GenAI.Types.ServiceTier.ServiceTierUnspecified
-  nameWithType: ServiceTier.ServiceTierUnspecified
+  fullName: Google.GenAI.Types.ServiceTier.Standard
+  nameWithType: ServiceTier.Standard
 - uid: Google.GenAI.Types.ServiceTier.ToString
   name: ToString()
   href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_ToString
@@ -29208,6 +29195,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ServiceTier.ToString
   nameWithType: ServiceTier.ToString
+- uid: Google.GenAI.Types.ServiceTier.Unspecified
+  name: Unspecified
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_Unspecified
+  commentId: P:Google.GenAI.Types.ServiceTier.Unspecified
+  fullName: Google.GenAI.Types.ServiceTier.Unspecified
+  nameWithType: ServiceTier.Unspecified
+- uid: Google.GenAI.Types.ServiceTier.Unspecified*
+  name: Unspecified
+  href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_Unspecified_
+  commentId: Overload:Google.GenAI.Types.ServiceTier.Unspecified
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ServiceTier.Unspecified
+  nameWithType: ServiceTier.Unspecified
 - uid: Google.GenAI.Types.ServiceTier.Value
   name: Value
   href: api/Google.GenAI.Types.ServiceTier.html#Google_GenAI_Types_ServiceTier_Value
