@@ -30,6 +30,7 @@
     <PackageReference Include="Google.Apis.Auth" />
     <PackageReference Include="Microsoft.Extensions.AI.Abstractions" />
     <PackageReference Include="MimeTypes" />
+    <PackageReference Include="System.Text.Json" />
     <InternalsVisibleTo Include="Google.GenAI.Tests" />
     <InternalsVisibleTo Include="Google.GenAI.Netstandard2_0.Tests" />
   </ItemGroup>

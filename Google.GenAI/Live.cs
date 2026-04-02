@@ -166,7 +166,7 @@ namespace Google.GenAI
         Config = config,
       };
       LiveConverters liveConverters = new LiveConverters(_apiClient);
-      string jsonString = JsonSerializer.Serialize(parameters);
+      string jsonString = JsonSerializer.Serialize(parameters, JsonConfig.InternalSerializerOptions);
       JsonNode? parameterNode = JsonNode.Parse(jsonString);
       if (parameterNode == null)
       {

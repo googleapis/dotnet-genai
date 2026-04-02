@@ -264,7 +264,8 @@
         "dependencies": {
           "Google.Apis.Auth": "[1.69.0, )",
           "Microsoft.Extensions.AI.Abstractions": "[10.4.1, )",
-          "MimeTypes": "[2.5.2, )"
+          "MimeTypes": "[2.5.2, )",
+          "System.Text.Json": "[10.0.4, )"
         }
       },
       "Google.Apis.Auth": {

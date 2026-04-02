@@ -4531,7 +4531,7 @@ namespace Google.GenAI {
       if (!Common.IsZero(config)) {
         parameter.Config = config;
       }
-      string jsonString = JsonSerializer.Serialize(parameter);
+      string jsonString = JsonSerializer.Serialize(parameter, JsonConfig.InternalSerializerOptions);
       JsonNode? parameterNode = JsonNode.Parse(jsonString);
       if (parameterNode == null) {
         throw new NotSupportedException("Failed to parse GenerateContentParameters to JsonNode.");
@@ -4559,7 +4559,7 @@ namespace Google.GenAI {
       HttpOptions? requestHttpOptions = config?.HttpOptions;
 
       ApiResponse response =
-          await this._apiClient.RequestAsync(HttpMethod.Post, path, JsonSerializer.Serialize(body),
+          await this._apiClient.RequestAsync(HttpMethod.Post, path, JsonSerializer.Serialize(body, JsonConfig.JsonSerializerOptions),
                                              requestHttpOptions, cancellationToken);
       HttpContent httpContent = response.GetEntity();
 #if NETSTANDARD2_0
@@ -4602,7 +4602,7 @@ namespace Google.GenAI {
       if (!Common.IsZero(config)) {
         parameter.Config = config;
       }
-      string jsonString = JsonSerializer.Serialize(parameter);
+      string jsonString = JsonSerializer.Serialize(parameter, JsonConfig.InternalSerializerOptions);
       JsonNode? parameterNode = JsonNode.Parse(jsonString);
       if (parameterNode == null) {
         throw new NotSupportedException("Failed to parse GenerateContentParameters to JsonNode.");
@@ -4630,7 +4630,7 @@ namespace Google.GenAI {
       HttpOptions? requestHttpOptions = config?.HttpOptions;
 
       await foreach (ApiResponse apiResponse in this._apiClient.RequestStreamAsync(
-                         HttpMethod.Post, path, JsonSerializer.Serialize(body), requestHttpOptions,
+                         HttpMethod.Post, path, JsonSerializer.Serialize(body, JsonConfig.JsonSerializerOptions), requestHttpOptions,
                          cancellationToken)) {
 #if NETSTANDARD2_0
         string chunkJson = await apiResponse.GetEntity().ReadAsStringAsync();
@@ -4687,7 +4687,7 @@ namespace Google.GenAI {
       if (!Common.IsZero(config)) {
         parameter.Config = config;
       }
-      string jsonString = JsonSerializer.Serialize(parameter);
+      string jsonString = JsonSerializer.Serialize(parameter, JsonConfig.InternalSerializerOptions);
       JsonNode? parameterNode = JsonNode.Parse(jsonString);
       if (parameterNode == null) {
         throw new NotSupportedException(
@@ -4720,7 +4720,7 @@ namespace Google.GenAI {
       HttpOptions? requestHttpOptions = config?.HttpOptions;
 
       ApiResponse response =
-          await this._apiClient.RequestAsync(HttpMethod.Post, path, JsonSerializer.Serialize(body),
+          await this._apiClient.RequestAsync(HttpMethod.Post, path, JsonSerializer.Serialize(body, JsonConfig.JsonSerializerOptions),
                                              requestHttpOptions, cancellationToken);
       HttpContent httpContent = response.GetEntity();
 #if NETSTANDARD2_0
@@ -4763,7 +4763,7 @@ namespace Google.GenAI {
       if (!Common.IsZero(config)) {
         parameter.Config = config;
       }
-      string jsonString = JsonSerializer.Serialize(parameter);
+      string jsonString = JsonSerializer.Serialize(parameter, JsonConfig.InternalSerializerOptions);
       JsonNode? parameterNode = JsonNode.Parse(jsonString);
       if (parameterNode == null) {
         throw new NotSupportedException("Failed to parse GenerateImagesParameters to JsonNode.");
@@ -4791,7 +4791,7 @@ namespace Google.GenAI {
       HttpOptions? requestHttpOptions = config?.HttpOptions;
 
       ApiResponse response =
-          await this._apiClient.RequestAsync(HttpMethod.Post, path, JsonSerializer.Serialize(body),
+          await this._apiClient.RequestAsync(HttpMethod.Post, path, JsonSerializer.Serialize(body, JsonConfig.JsonSerializerOptions),
                                              requestHttpOptions, cancellationToken);
       HttpContent httpContent = response.GetEntity();
 #if NETSTANDARD2_0
@@ -4837,7 +4837,7 @@ namespace Google.GenAI {
       if (!Common.IsZero(config)) {
         parameter.Config = config;
       }
-      string jsonString = JsonSerializer.Serialize(parameter);
+      string jsonString = JsonSerializer.Serialize(parameter, JsonConfig.InternalSerializerOptions);
       JsonNode? parameterNode = JsonNode.Parse(jsonString);
       if (parameterNode == null) {
         throw new NotSupportedException("Failed to parse EditImageParameters to JsonNode.");
@@ -4863,7 +4863,7 @@ namespace Google.GenAI {
       HttpOptions? requestHttpOptions = config?.HttpOptions;
 
       ApiResponse response =
-          await this._apiClient.RequestAsync(HttpMethod.Post, path, JsonSerializer.Serialize(body),
+          await this._apiClient.RequestAsync(HttpMethod.Post, path, JsonSerializer.Serialize(body, JsonConfig.JsonSerializerOptions),
                                              requestHttpOptions, cancellationToken);
       HttpContent httpContent = response.GetEntity();
 #if NETSTANDARD2_0
@@ -4907,7 +4907,7 @@ namespace Google.GenAI {
       if (!Common.IsZero(config)) {
         parameter.Config = config;
       }
-      string jsonString = JsonSerializer.Serialize(parameter);
+      string jsonString = JsonSerializer.Serialize(parameter, JsonConfig.InternalSerializerOptions);
       JsonNode? parameterNode = JsonNode.Parse(jsonString);
       if (parameterNode == null) {
         throw new NotSupportedException("Failed to parse UpscaleImageAPIParameters to JsonNode.");
@@ -4933,7 +4933,7 @@ namespace Google.GenAI {
       HttpOptions? requestHttpOptions = config?.HttpOptions;
 
       ApiResponse response =
-          await this._apiClient.RequestAsync(HttpMethod.Post, path, JsonSerializer.Serialize(body),
+          await this._apiClient.RequestAsync(HttpMethod.Post, path, JsonSerializer.Serialize(body, JsonConfig.JsonSerializerOptions),
                                              requestHttpOptions, cancellationToken);
       HttpContent httpContent = response.GetEntity();
 #if NETSTANDARD2_0
@@ -4975,7 +4975,7 @@ namespace Google.GenAI {
       if (!Common.IsZero(config)) {
         parameter.Config = config;
       }
-      string jsonString = JsonSerializer.Serialize(parameter);
+      string jsonString = JsonSerializer.Serialize(parameter, JsonConfig.InternalSerializerOptions);
       JsonNode? parameterNode = JsonNode.Parse(jsonString);
       if (parameterNode == null) {
         throw new NotSupportedException("Failed to parse RecontextImageParameters to JsonNode.");
@@ -5001,7 +5001,7 @@ namespace Google.GenAI {
       HttpOptions? requestHttpOptions = config?.HttpOptions;
 
       ApiResponse response =
-          await this._apiClient.RequestAsync(HttpMethod.Post, path, JsonSerializer.Serialize(body),
+          await this._apiClient.RequestAsync(HttpMethod.Post, path, JsonSerializer.Serialize(body, JsonConfig.JsonSerializerOptions),
                                              requestHttpOptions, cancellationToken);
       HttpContent httpContent = response.GetEntity();
 #if NETSTANDARD2_0
@@ -5043,7 +5043,7 @@ namespace Google.GenAI {
       if (!Common.IsZero(config)) {
         parameter.Config = config;
       }
-      string jsonString = JsonSerializer.Serialize(parameter);
+      string jsonString = JsonSerializer.Serialize(parameter, JsonConfig.InternalSerializerOptions);
       JsonNode? parameterNode = JsonNode.Parse(jsonString);
       if (parameterNode == null) {
         throw new NotSupportedException("Failed to parse SegmentImageParameters to JsonNode.");
@@ -5069,7 +5069,7 @@ namespace Google.GenAI {
       HttpOptions? requestHttpOptions = config?.HttpOptions;
 
       ApiResponse response =
-          await this._apiClient.RequestAsync(HttpMethod.Post, path, JsonSerializer.Serialize(body),
+          await this._apiClient.RequestAsync(HttpMethod.Post, path, JsonSerializer.Serialize(body, JsonConfig.JsonSerializerOptions),
                                              requestHttpOptions, cancellationToken);
       HttpContent httpContent = response.GetEntity();
 #if NETSTANDARD2_0
@@ -5111,7 +5111,7 @@ namespace Google.GenAI {
       if (!Common.IsZero(config)) {
         parameter.Config = config;
       }
-      string jsonString = JsonSerializer.Serialize(parameter);
+      string jsonString = JsonSerializer.Serialize(parameter, JsonConfig.InternalSerializerOptions);
       JsonNode? parameterNode = JsonNode.Parse(jsonString);
       if (parameterNode == null) {
         throw new NotSupportedException("Failed to parse GetModelParameters to JsonNode.");
@@ -5139,7 +5139,7 @@ namespace Google.GenAI {
       HttpOptions? requestHttpOptions = config?.HttpOptions;
 
       ApiResponse response =
-          await this._apiClient.RequestAsync(HttpMethod.Get, path, JsonSerializer.Serialize(body),
+          await this._apiClient.RequestAsync(HttpMethod.Get, path, JsonSerializer.Serialize(body, JsonConfig.JsonSerializerOptions),
                                              requestHttpOptions, cancellationToken);
       HttpContent httpContent = response.GetEntity();
 #if NETSTANDARD2_0
@@ -5172,7 +5172,7 @@ namespace Google.GenAI {
       if (!Common.IsZero(config)) {
         parameter.Config = config;
       }
-      string jsonString = JsonSerializer.Serialize(parameter);
+      string jsonString = JsonSerializer.Serialize(parameter, JsonConfig.InternalSerializerOptions);
       JsonNode? parameterNode = JsonNode.Parse(jsonString);
       if (parameterNode == null) {
         throw new NotSupportedException("Failed to parse ListModelsParameters to JsonNode.");
@@ -5200,7 +5200,7 @@ namespace Google.GenAI {
       HttpOptions? requestHttpOptions = config?.HttpOptions;
 
       ApiResponse response =
-          await this._apiClient.RequestAsync(HttpMethod.Get, path, JsonSerializer.Serialize(body),
+          await this._apiClient.RequestAsync(HttpMethod.Get, path, JsonSerializer.Serialize(body, JsonConfig.JsonSerializerOptions),
                                              requestHttpOptions, cancellationToken);
       HttpContent httpContent = response.GetEntity();
 #if NETSTANDARD2_0
@@ -5248,7 +5248,7 @@ namespace Google.GenAI {
       if (!Common.IsZero(config)) {
         parameter.Config = config;
       }
-      string jsonString = JsonSerializer.Serialize(parameter);
+      string jsonString = JsonSerializer.Serialize(parameter, JsonConfig.InternalSerializerOptions);
       JsonNode? parameterNode = JsonNode.Parse(jsonString);
       if (parameterNode == null) {
         throw new NotSupportedException("Failed to parse UpdateModelParameters to JsonNode.");
@@ -5276,7 +5276,7 @@ namespace Google.GenAI {
       HttpOptions? requestHttpOptions = config?.HttpOptions;
 
       ApiResponse response = await this._apiClient.RequestAsync(
-          new HttpMethod("PATCH"), path, JsonSerializer.Serialize(body), requestHttpOptions,
+          new HttpMethod("PATCH"), path, JsonSerializer.Serialize(body, JsonConfig.JsonSerializerOptions), requestHttpOptions,
           cancellationToken);
       HttpContent httpContent = response.GetEntity();
 #if NETSTANDARD2_0
@@ -5317,7 +5317,7 @@ namespace Google.GenAI {
       if (!Common.IsZero(config)) {
         parameter.Config = config;
       }
-      string jsonString = JsonSerializer.Serialize(parameter);
+      string jsonString = JsonSerializer.Serialize(parameter, JsonConfig.InternalSerializerOptions);
       JsonNode? parameterNode = JsonNode.Parse(jsonString);
       if (parameterNode == null) {
         throw new NotSupportedException("Failed to parse DeleteModelParameters to JsonNode.");
@@ -5345,7 +5345,7 @@ namespace Google.GenAI {
       HttpOptions? requestHttpOptions = config?.HttpOptions;
 
       ApiResponse response = await this._apiClient.RequestAsync(
-          HttpMethod.Delete, path, JsonSerializer.Serialize(body), requestHttpOptions,
+          HttpMethod.Delete, path, JsonSerializer.Serialize(body, JsonConfig.JsonSerializerOptions), requestHttpOptions,
           cancellationToken);
       HttpContent httpContent = response.GetEntity();
 #if NETSTANDARD2_0
@@ -5400,7 +5400,7 @@ namespace Google.GenAI {
       if (!Common.IsZero(config)) {
         parameter.Config = config;
       }
-      string jsonString = JsonSerializer.Serialize(parameter);
+      string jsonString = JsonSerializer.Serialize(parameter, JsonConfig.InternalSerializerOptions);
       JsonNode? parameterNode = JsonNode.Parse(jsonString);
       if (parameterNode == null) {
         throw new NotSupportedException("Failed to parse CountTokensParameters to JsonNode.");
@@ -5428,7 +5428,7 @@ namespace Google.GenAI {
       HttpOptions? requestHttpOptions = config?.HttpOptions;
 
       ApiResponse response =
-          await this._apiClient.RequestAsync(HttpMethod.Post, path, JsonSerializer.Serialize(body),
+          await this._apiClient.RequestAsync(HttpMethod.Post, path, JsonSerializer.Serialize(body, JsonConfig.JsonSerializerOptions),
                                              requestHttpOptions, cancellationToken);
       HttpContent httpContent = response.GetEntity();
 #if NETSTANDARD2_0
@@ -5484,7 +5484,7 @@ namespace Google.GenAI {
       if (!Common.IsZero(config)) {
         parameter.Config = config;
       }
-      string jsonString = JsonSerializer.Serialize(parameter);
+      string jsonString = JsonSerializer.Serialize(parameter, JsonConfig.InternalSerializerOptions);
       JsonNode? parameterNode = JsonNode.Parse(jsonString);
       if (parameterNode == null) {
         throw new NotSupportedException("Failed to parse ComputeTokensParameters to JsonNode.");
@@ -5510,7 +5510,7 @@ namespace Google.GenAI {
       HttpOptions? requestHttpOptions = config?.HttpOptions;
 
       ApiResponse response =
-          await this._apiClient.RequestAsync(HttpMethod.Post, path, JsonSerializer.Serialize(body),
+          await this._apiClient.RequestAsync(HttpMethod.Post, path, JsonSerializer.Serialize(body, JsonConfig.JsonSerializerOptions),
                                              requestHttpOptions, cancellationToken);
       HttpContent httpContent = response.GetEntity();
 #if NETSTANDARD2_0
@@ -5561,7 +5561,7 @@ namespace Google.GenAI {
       if (!Common.IsZero(config)) {
         parameter.Config = config;
       }
-      string jsonString = JsonSerializer.Serialize(parameter);
+      string jsonString = JsonSerializer.Serialize(parameter, JsonConfig.InternalSerializerOptions);
       JsonNode? parameterNode = JsonNode.Parse(jsonString);
       if (parameterNode == null) {
         throw new NotSupportedException("Failed to parse GenerateVideosParameters to JsonNode.");
@@ -5589,7 +5589,7 @@ namespace Google.GenAI {
       HttpOptions? requestHttpOptions = config?.HttpOptions;
 
       ApiResponse response =
-          await this._apiClient.RequestAsync(HttpMethod.Post, path, JsonSerializer.Serialize(body),
+          await this._apiClient.RequestAsync(HttpMethod.Post, path, JsonSerializer.Serialize(body, JsonConfig.JsonSerializerOptions),
                                              requestHttpOptions, cancellationToken);
       HttpContent httpContent = response.GetEntity();
 #if NETSTANDARD2_0

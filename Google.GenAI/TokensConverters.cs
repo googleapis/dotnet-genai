@@ -84,7 +84,7 @@ namespace Google.GenAI {
         JsonArray result = new JsonArray();
 
         foreach (var record in keyArray) {
-          result.Add(SpeakerVoiceConfigToMldev(JsonNode.Parse(JsonSerializer.Serialize(record)),
+          result.Add(SpeakerVoiceConfigToMldev(JsonNode.Parse(JsonSerializer.Serialize(record, JsonConfig.InternalSerializerOptions)),
                                                toObject));
         }
         Common.SetValueByPath(toObject, new string[] { "speakerVoiceConfigs" }, result);
@@ -257,7 +257,7 @@ namespace Google.GenAI {
         JsonArray result = new JsonArray();
 
         foreach (var record in keyArray) {
-          result.Add(PartToMldev(JsonNode.Parse(JsonSerializer.Serialize(record)), toObject));
+          result.Add(PartToMldev(JsonNode.Parse(JsonSerializer.Serialize(record, JsonConfig.InternalSerializerOptions)), toObject));
         }
         Common.SetValueByPath(toObject, new string[] { "parts" }, result);
       }
@@ -404,7 +404,7 @@ namespace Google.GenAI {
         JsonArray result = new JsonArray();
 
         foreach (var record in keyArray) {
-          result.Add(FunctionDeclarationToMldev(JsonNode.Parse(JsonSerializer.Serialize(record)),
+          result.Add(FunctionDeclarationToMldev(JsonNode.Parse(JsonSerializer.Serialize(record, JsonConfig.InternalSerializerOptions)),
                                                 toObject));
         }
         Common.SetValueByPath(toObject, new string[] { "functionDeclarations" }, result);
@@ -668,7 +668,7 @@ namespace Google.GenAI {
 
         foreach (var record in keyArray) {
           result.Add(ToolToMldev(
-              JsonNode.Parse(JsonSerializer.Serialize(Transformers.TTool(record))), toObject));
+              JsonNode.Parse(JsonSerializer.Serialize(Transformers.TTool(record), JsonConfig.InternalSerializerOptions)), toObject));
         }
         Common.SetValueByPath(parentObject, new string[] { "setup", "tools" }, result);
       }
