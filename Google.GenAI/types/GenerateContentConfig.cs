@@ -373,6 +373,16 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// The service tier to use for the request. For example, ServiceTier.FLEX.
+    /// </summary>
+    [JsonPropertyName("serviceTier")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public ServiceTier
+        ? ServiceTier {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a GenerateContentConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

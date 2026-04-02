@@ -112,6 +112,16 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Tuning mode for tuning.
+    /// </summary>
+    [JsonPropertyName("tuningMode")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public TuningMode
+        ? TuningMode {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a DistillationSpec object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

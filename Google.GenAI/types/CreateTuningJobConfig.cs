@@ -129,7 +129,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Tuning mode for SFT tuning.
+    /// Tuning mode for tuning.
     /// </summary>
     [JsonPropertyName("tuningMode")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

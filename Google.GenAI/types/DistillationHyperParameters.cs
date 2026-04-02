@@ -23,7 +23,7 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Hyperparameters for Distillation. This data type is not supported in Gemini API.
+  /// Hyperparameters for distillation.
   /// </summary>
 
   public record DistillationHyperParameters {
@@ -53,6 +53,26 @@ namespace Google.GenAI.Types {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
         ? LearningRateMultiplier {
+            get; set;
+          }
+
+    /// <summary>
+    /// The batch size hyperparameter for tuning. This is only supported for OSS models in Vertex.
+    /// </summary>
+    [JsonPropertyName("batchSize")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public int
+        ? BatchSize {
+            get; set;
+          }
+
+    /// <summary>
+    /// The learning rate for tuning. OSS models only.
+    /// </summary>
+    [JsonPropertyName("learningRate")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public double
+        ? LearningRate {
             get; set;
           }
 

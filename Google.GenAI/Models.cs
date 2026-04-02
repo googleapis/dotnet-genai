@@ -1296,6 +1296,11 @@ namespace Google.GenAI {
             "modelArmorConfig parameter is not supported in Gemini API.");
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "serviceTier" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "serviceTier" },
+                              Common.GetValueByPath(fromObject, new string[] { "serviceTier" }));
+      }
+
       return toObject;
     }
 
@@ -1484,6 +1489,11 @@ namespace Google.GenAI {
         Common.SetValueByPath(
             parentObject, new string[] { "modelArmorConfig" },
             Common.GetValueByPath(fromObject, new string[] { "modelArmorConfig" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "serviceTier" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "serviceTier" },
+                              Common.GetValueByPath(fromObject, new string[] { "serviceTier" }));
       }
 
       return toObject;

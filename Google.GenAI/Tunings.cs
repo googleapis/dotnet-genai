@@ -355,6 +355,11 @@ namespace Google.GenAI {
           Common.SetValueByPath(parentObject, new string[] { "supervisedTuningSpec", "tuningMode" },
                                 Common.GetValueByPath(fromObject, new string[] { "tuningMode" }));
         }
+      } else if (discriminatorValueTuningMode == "DISTILLATION") {
+        if (Common.GetValueByPath(fromObject, new string[] { "tuningMode" }) != null) {
+          Common.SetValueByPath(parentObject, new string[] { "distillationSpec", "tuningMode" },
+                                Common.GetValueByPath(fromObject, new string[] { "tuningMode" }));
+        }
       }
       if (Common.GetValueByPath(fromObject, new string[] { "customBaseModel" }) != null) {
         Common.SetValueByPath(
@@ -373,6 +378,12 @@ namespace Google.GenAI {
               parentObject, new string[] { "supervisedTuningSpec", "hyperParameters", "batchSize" },
               Common.GetValueByPath(fromObject, new string[] { "batchSize" }));
         }
+      } else if (discriminatorValueBatchSize == "DISTILLATION") {
+        if (Common.GetValueByPath(fromObject, new string[] { "batchSize" }) != null) {
+          Common.SetValueByPath(parentObject,
+                                new string[] { "distillationSpec", "hyperParameters", "batchSize" },
+                                Common.GetValueByPath(fromObject, new string[] { "batchSize" }));
+        }
       }
 
       JsonNode discriminatorLearningRate =
@@ -385,6 +396,12 @@ namespace Google.GenAI {
           Common.SetValueByPath(
               parentObject,
               new string[] { "supervisedTuningSpec", "hyperParameters", "learningRate" },
+              Common.GetValueByPath(fromObject, new string[] { "learningRate" }));
+        }
+      } else if (discriminatorValueLearningRate == "DISTILLATION") {
+        if (Common.GetValueByPath(fromObject, new string[] { "learningRate" }) != null) {
+          Common.SetValueByPath(
+              parentObject, new string[] { "distillationSpec", "hyperParameters", "learningRate" },
               Common.GetValueByPath(fromObject, new string[] { "learningRate" }));
         }
       }
