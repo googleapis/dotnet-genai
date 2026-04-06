@@ -2468,7 +2468,7 @@ public class GoogleGenAIRealtimeSessionTest
   #region Exception Handling Tests
 
   [TestMethod]
-  public async Task SendAsync_ObjectDisposedException_FromAsyncSession_Swallowed()
+  public async Task SendAsync_ObjectDisposedException_FromAsyncSession_Throws()
   {
     _mockWebSocket
       .Setup(ws => ws.SendAsync(
@@ -2483,12 +2483,13 @@ public class GoogleGenAIRealtimeSessionTest
       new List<AIContent> { new TextContent("Hello") },
       role: ChatRole.User));
 
-    // Should NOT throw — teardown exception is swallowed
-    await _session.SendAsync(msg);
+    // ObjectDisposedException is re-surfaced so callers know the session is gone
+    await Assert.ThrowsExceptionAsync<ObjectDisposedException>(
+      () => _session.SendAsync(msg));
   }
 
   [TestMethod]
-  public async Task SendAsync_WebSocketException_FromAsyncSession_Swallowed()
+  public async Task SendAsync_WebSocketException_FromAsyncSession_WhenNotDisposed_Throws()
   {
     _mockWebSocket
       .Setup(ws => ws.SendAsync(
@@ -2502,12 +2503,13 @@ public class GoogleGenAIRealtimeSessionTest
       new List<AIContent> { new TextContent("Hello") },
       role: ChatRole.User));
 
-    // Should NOT throw — teardown exception is swallowed
-    await _session.SendAsync(msg);
+    // WebSocketException when session is NOT disposed indicates a real error
+    await Assert.ThrowsExceptionAsync<WebSocketException>(
+      () => _session.SendAsync(msg));
   }
 
   [TestMethod]
-  public async Task SendAsync_InternalOperationCancelled_Swallowed()
+  public async Task SendAsync_InternalOperationCancelled_Propagated()
   {
     _mockWebSocket
       .Setup(ws => ws.SendAsync(
@@ -2521,8 +2523,10 @@ public class GoogleGenAIRealtimeSessionTest
       new List<AIContent> { new TextContent("Hello") },
       role: ChatRole.User));
 
-    // Should NOT throw — internal cancellation (not the caller's token) is swallowed
-    await _session.SendAsync(msg);
+    // Internal cancellation (not the caller's token) is now propagated
+    // so callers can observe unexpected teardown
+    await Assert.ThrowsExceptionAsync<OperationCanceledException>(
+      () => _session.SendAsync(msg));
   }
 
   [TestMethod]
@@ -2755,6 +2759,91 @@ public class GoogleGenAIRealtimeSessionTest
     // Release the text send
     sendCanProceed.SetResult(true);
     await textSend;
+  }
+
+  #endregion
+
+  #region Tool Payload Normalization Tests
+
+  [TestMethod]
+  public void NormalizeToolPayload_ByteArray_EncodesAsBase64()
+  {
+    byte[] payload = [1, 2, 3, 4];
+    var result = GoogleGenAIRealtimeSession.NormalizeToolPayload(payload);
+    Assert.AreEqual(Convert.ToBase64String(payload), result);
+  }
+
+  [TestMethod]
+  public void NormalizeToolPayload_JsonElement_DecomposesCorrectly()
+  {
+    var json = JsonSerializer.SerializeToElement(new { name = "test", count = 42 });
+    var result = GoogleGenAIRealtimeSession.NormalizeToolPayload(json) as Dictionary<string, object?>;
+    Assert.IsNotNull(result);
+    Assert.AreEqual("test", result["name"]);
+    // JSON numbers may deserialize as int64 or double depending on the runtime
+    Assert.IsTrue(
+      result["count"] is 42L or 42.0,
+      $"Expected 42 as long or double, got {result["count"]} ({result["count"]?.GetType()})");
+  }
+
+  [TestMethod]
+  public void NormalizeToolPayload_TooDeep_Throws()
+  {
+    var payload = new Dictionary<string, object?>();
+    IDictionary<string, object?> current = payload;
+    for (int i = 0; i < 80; i++)
+    {
+      var next = new Dictionary<string, object?>();
+      current[$"level{i}"] = next;
+      current = next;
+    }
+
+    Assert.ThrowsException<InvalidOperationException>(
+      () => GoogleGenAIRealtimeSession.NormalizeToolPayload(payload));
+  }
+
+  [TestMethod]
+  public void NormalizeToolArguments_NormalizesNestedJsonElements()
+  {
+    var jsonElement = JsonSerializer.SerializeToElement("hello");
+    var args = new Dictionary<string, object?> { ["key"] = jsonElement };
+    var result = GoogleGenAIRealtimeSession.NormalizeToolArguments(args);
+    Assert.AreEqual("hello", result["key"]);
+  }
+
+  #endregion
+
+  #region Concurrent Enumeration Guard Tests
+
+  [TestMethod]
+  public async Task GetStreamingResponseAsync_ConcurrentEnumeration_Throws()
+  {
+    // Set up WebSocket to block on receive so the first enumeration stays active
+    var receiveGate = new TaskCompletionSource<WebSocketReceiveResult>();
+    _mockWebSocket
+      .Setup(ws => ws.ReceiveAsync(
+        It.IsAny<ArraySegment<byte>>(),
+        It.IsAny<CancellationToken>()))
+      .Returns(receiveGate.Task);
+
+    // Start first enumeration
+    using var cts = new CancellationTokenSource();
+    var enumerator = _session.GetStreamingResponseAsync(cts.Token).GetAsyncEnumerator(cts.Token);
+    var firstMoveNext = enumerator.MoveNextAsync();
+
+    // Attempt second concurrent enumeration — should throw
+    await Assert.ThrowsExceptionAsync<InvalidOperationException>(async () =>
+    {
+      await foreach (var _ in _session.GetStreamingResponseAsync())
+      {
+      }
+    });
+
+    // Clean up
+    cts.Cancel();
+    receiveGate.SetCanceled();
+    try { await firstMoveNext; } catch { }
+    await enumerator.DisposeAsync();
   }
 
   #endregion

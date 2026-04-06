@@ -69,18 +69,26 @@ public sealed class GoogleGenAIRealtimeClient : IRealtimeClient
 
     var asyncSession = await _client.Live.ConnectAsync(model, config, cancellationToken).ConfigureAwait(false);
 
-    // The Google SDK's ConnectAsync sends the setup message but does NOT wait
-    // for the server's SetupComplete acknowledgment. We must drain it here so
-    // the session is fully ready (tools configured, modalities set) before the
-    // caller starts sending audio or text.
-    var setupResponse = await asyncSession.ReceiveAsync(cancellationToken).ConfigureAwait(false);
-    if (setupResponse?.SetupComplete is null)
+    try
     {
-      throw new InvalidOperationException(
-        "Expected SetupComplete from Gemini server after connection, but received an unexpected message.");
-    }
+      // The Google SDK's ConnectAsync sends the setup message but does NOT wait
+      // for the server's SetupComplete acknowledgment. We must drain it here so
+      // the session is fully ready (tools configured, modalities set) before the
+      // caller starts sending audio or text.
+      var setupResponse = await asyncSession.ReceiveAsync(cancellationToken).ConfigureAwait(false);
+      if (setupResponse?.SetupComplete is null)
+      {
+        throw new InvalidOperationException(
+          "Expected SetupComplete from Gemini server after connection, but received an unexpected message.");
+      }
 
-    return new GoogleGenAIRealtimeSession(asyncSession, model, options);
+      return new GoogleGenAIRealtimeSession(asyncSession, model, options);
+    }
+    catch
+    {
+      await asyncSession.DisposeAsync().ConfigureAwait(false);
+      throw;
+    }
   }
 
   /// <inheritdoc />

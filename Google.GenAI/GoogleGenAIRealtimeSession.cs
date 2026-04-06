@@ -14,10 +14,12 @@
  * limitations under the License.
  */
 
+using System.Collections;
 using System.Collections.Concurrent;
 using System.Linq;
 using System.Net.WebSockets;
 using System.Runtime.CompilerServices;
+using System.Runtime.ExceptionServices;
 using System.Text.Json;
 
 using Google.GenAI;
@@ -51,6 +53,13 @@ public sealed class GoogleGenAIRealtimeSession : IRealtimeClientSession
   // Accessed only from GetStreamingResponseAsync's single enumeration; callers must not
   // enumerate concurrently.
   private bool _responseInProgress;
+
+  // Guards against multiple concurrent GetStreamingResponseAsync enumerations. A single
+  // WebSocket can't safely serve two concurrent readers.
+  private int _activeStreamingEnumeration;
+
+  /// <summary>Maximum nesting depth for tool payloads to prevent stack overflow from malicious/malformed data.</summary>
+  private const int MaxToolPayloadDepth = 64;
 
   // Serializes all WebSocket send operations. Required because:
   //   1. WebSocket.SendAsync is NOT thread-safe for concurrent calls.
@@ -144,6 +153,12 @@ public sealed class GoogleGenAIRealtimeSession : IRealtimeClientSession
 
     try
     {
+      // Recheck after acquiring lock to avoid race with DisposeAsync
+      if (Volatile.Read(ref _disposed) != 0)
+      {
+        throw new ObjectDisposedException(nameof(GoogleGenAIRealtimeSession));
+      }
+
       switch (message)
       {
         case InputAudioBufferCommitRealtimeClientMessage:
@@ -210,13 +225,13 @@ public sealed class GoogleGenAIRealtimeSession : IRealtimeClientSession
       // can observe the cancellation they requested.
       throw;
     }
-    catch (Exception ex) when (ex is OperationCanceledException or ObjectDisposedException or WebSocketException)
+    catch (ObjectDisposedException)
     {
-      // These exceptions are expected during session teardown and are swallowed:
-      //   - OperationCanceledException: internal cancellation from disposal (not the caller's token).
-      //   - ObjectDisposedException: DisposeAsync was called on another thread while an
-      //     operation was in-flight on the underlying WebSocket.
-      //   - WebSocketException: the connection was closed (server disconnect or local close).
+      throw new ObjectDisposedException(nameof(GoogleGenAIRealtimeSession));
+    }
+    catch (WebSocketException) when (Volatile.Read(ref _disposed) != 0)
+    {
+      // WebSocketException during/after disposal is expected — swallow.
     }
     finally
     {
@@ -240,6 +255,15 @@ public sealed class GoogleGenAIRealtimeSession : IRealtimeClientSession
       throw new ObjectDisposedException(nameof(GoogleGenAIRealtimeSession));
     }
 
+    if (Interlocked.CompareExchange(ref _activeStreamingEnumeration, 1, 0) != 0)
+    {
+      throw new InvalidOperationException(
+        "Only one active streaming enumeration is allowed at a time. " +
+        "Await or cancel the existing enumeration before starting a new one.");
+    }
+
+    try
+    {
     while (!cancellationToken.IsCancellationRequested)
     {
       LiveServerMessage? serverMessage;
@@ -273,6 +297,11 @@ public sealed class GoogleGenAIRealtimeSession : IRealtimeClientSession
       {
         yield return mapped;
       }
+    }
+    }
+    finally
+    {
+      Volatile.Write(ref _activeStreamingEnumeration, 0);
     }
   }
 
@@ -316,8 +345,30 @@ public sealed class GoogleGenAIRealtimeSession : IRealtimeClientSession
     }
 
     _responseInProgress = false;
-    await _asyncSession.DisposeAsync().ConfigureAwait(false);
-    _sendLock.Dispose();
+
+    Exception? firstException = null;
+    try
+    {
+      await _asyncSession.DisposeAsync().ConfigureAwait(false);
+    }
+    catch (Exception ex)
+    {
+      firstException = ex;
+    }
+
+    try
+    {
+      _sendLock.Dispose();
+    }
+    catch (Exception ex) when (firstException is null)
+    {
+      firstException = ex;
+    }
+
+    if (firstException is not null)
+    {
+      ExceptionDispatchInfo.Capture(firstException).Throw();
+    }
   }
 
   #region Send Helpers (MEAI → Google GenAI)
@@ -463,7 +514,7 @@ public sealed class GoogleGenAIRealtimeSession : IRealtimeClientSession
           Name = functionName ?? string.Empty,
           Response = new Dictionary<string, object>
           {
-            ["result"] = functionResult.Result?.ToString() ?? string.Empty
+            ["result"] = NormalizeToolPayload(functionResult.Result) ?? string.Empty
           }
         });
       }
@@ -568,6 +619,151 @@ public sealed class GoogleGenAIRealtimeSession : IRealtimeClientSession
 
   #endregion
 
+  #region Tool Payload Normalization
+
+  internal static Dictionary<string, object?> NormalizeToolArguments(IReadOnlyDictionary<string, object?> arguments, int depth = 0)
+  {
+    ValidateToolPayloadDepth(depth);
+
+    var normalized = new Dictionary<string, object?>(arguments.Count);
+    foreach (var pair in arguments)
+    {
+      normalized[pair.Key] = NormalizeToolPayload(pair.Value, depth + 1);
+    }
+    return normalized;
+  }
+
+  internal static object? NormalizeToolPayload(object? value, int depth = 0)
+  {
+    ValidateToolPayloadDepth(depth);
+
+    switch (value)
+    {
+      case null:
+        return null;
+
+      case JsonElement element:
+        return ConvertJsonElementToToolPayload(element, depth + 1);
+
+      case JsonDocument document:
+        return ConvertJsonElementToToolPayload(document.RootElement, depth + 1);
+
+      case TextContent textContent:
+        return textContent.Text ?? "";
+
+      case DataContent dataContent:
+        return new Dictionary<string, object?>
+        {
+          ["data"] = Convert.ToBase64String(ExtractDataBytes(dataContent)),
+          ["mimeType"] = dataContent.MediaType,
+          ["name"] = dataContent.Name,
+        };
+
+      case UriContent uriContent:
+        return new Dictionary<string, object?>
+        {
+          ["uri"] = uriContent.Uri.AbsoluteUri,
+          ["mimeType"] = uriContent.MediaType,
+        };
+
+      case IEnumerable<KeyValuePair<string, object?>> pairs:
+        return NormalizeToolArguments(pairs.ToDictionary(pair => pair.Key, pair => pair.Value), depth + 1);
+
+      case IDictionary dictionary:
+        var mapped = new Dictionary<string, object?>();
+        foreach (DictionaryEntry entry in dictionary)
+        {
+          if (entry.Key is string key)
+          {
+            mapped[key] = NormalizeToolPayload(entry.Value, depth + 1);
+          }
+        }
+        return mapped;
+
+      case IEnumerable<AIContent> aiContents:
+        return aiContents.Select(content => NormalizeToolPayload(content, depth + 1)).ToList();
+
+      case string or bool or byte or sbyte or short or ushort or int or uint or long or ulong or
+        float or double or decimal:
+        return value;
+
+      case byte[] bytes:
+        return Convert.ToBase64String(bytes);
+
+      case ReadOnlyMemory<byte> readOnlyMemory:
+        return Convert.ToBase64String(readOnlyMemory.ToArray());
+
+      case Memory<byte> memory:
+        return Convert.ToBase64String(memory.ToArray());
+
+      case Enum enumValue:
+        return enumValue.ToString();
+
+      case IEnumerable enumerable when value is not string:
+        var list = new List<object?>();
+        foreach (object? item in enumerable)
+        {
+          list.Add(NormalizeToolPayload(item, depth + 1));
+        }
+        return list;
+
+      default:
+        return value.ToString();
+    }
+  }
+
+  private static object? ConvertJsonElementToToolPayload(JsonElement element, int depth)
+  {
+    ValidateToolPayloadDepth(depth);
+
+    switch (element.ValueKind)
+    {
+      case JsonValueKind.Object:
+        var dictionary = new Dictionary<string, object?>();
+        foreach (var property in element.EnumerateObject())
+        {
+          dictionary[property.Name] = ConvertJsonElementToToolPayload(property.Value, depth + 1);
+        }
+        return dictionary;
+
+      case JsonValueKind.Array:
+        var arrayList = new List<object?>();
+        foreach (var item in element.EnumerateArray())
+        {
+          arrayList.Add(ConvertJsonElementToToolPayload(item, depth + 1));
+        }
+        return arrayList;
+
+      case JsonValueKind.String:
+        return element.GetString();
+
+      case JsonValueKind.Number:
+        return element.TryGetInt64(out long intValue) ? intValue : element.GetDouble();
+
+      case JsonValueKind.True:
+        return true;
+
+      case JsonValueKind.False:
+        return false;
+
+      case JsonValueKind.Null:
+      case JsonValueKind.Undefined:
+      default:
+        return null;
+    }
+  }
+
+  private static void ValidateToolPayloadDepth(int depth)
+  {
+    if (depth > MaxToolPayloadDepth)
+    {
+      throw new InvalidOperationException(
+        $"Realtime tool payloads exceed the maximum supported nesting depth of {MaxToolPayloadDepth}.");
+    }
+  }
+
+  #endregion
+
   #region Receive Helpers (Google GenAI → MEAI)
 
   private IEnumerable<RealtimeServerMessage> MapServerMessage(LiveServerMessage serverMessage)
@@ -609,10 +805,12 @@ public sealed class GoogleGenAIRealtimeSession : IRealtimeClientSession
 
         var contents = new List<AIContent>
         {
-          new FunctionCallContent(
-            callId,
-            functionName,
-            fc.Args?.ToDictionary(kvp => kvp.Key, kvp => (object?)kvp.Value))
+          fc.Args is not null
+            ? FunctionCallContent.CreateFromParsedArguments(
+                fc.Args, callId, functionName,
+                static args => args is IReadOnlyDictionary<string, object?> dictionary
+                  ? NormalizeToolArguments(dictionary) : null)
+            : new FunctionCallContent(callId, functionName)
         };
 
         var item = new RealtimeConversationItem(contents, id: callId, role: ChatRole.Assistant);
