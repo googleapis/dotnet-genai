@@ -328,11 +328,8 @@ namespace Google.GenAI {
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "speechConfig" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "speechConfig" },
-            SpeechConfigToVertex(Common.ParseToJsonNode(Common.GetValueByPath(
-                                     fromObject, new string[] { "speechConfig" })),
-                                 toObject));
+        Common.SetValueByPath(toObject, new string[] { "speechConfig" },
+                              Common.GetValueByPath(fromObject, new string[] { "speechConfig" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "stopSequences" }) != null) {
@@ -979,12 +976,10 @@ namespace Google.GenAI {
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "speechConfig" }) != null) {
-        Common.SetValueByPath(
-            parentObject, new string[] { "setup", "generationConfig", "speechConfig" },
-            SpeechConfigToVertex(
-                Common.ParseToJsonNode(Transformers.TLiveSpeechConfig(
-                    Common.GetValueByPath(fromObject, new string[] { "speechConfig" }))),
-                toObject));
+        Common.SetValueByPath(parentObject,
+                              new string[] { "setup", "generationConfig", "speechConfig" },
+                              Transformers.TLiveSpeechConfig(Common.GetValueByPath(
+                                  fromObject, new string[] { "speechConfig" })));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "thinkingConfig" }) != null) {
@@ -1323,24 +1318,6 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode MultiSpeakerVoiceConfigToVertex(JsonNode fromObject,
-                                                      JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "speakerVoiceConfigs" }) != null) {
-        JsonArray keyArray =
-            (JsonArray)Common.GetValueByPath(fromObject, new string[] { "speakerVoiceConfigs" });
-        JsonArray result = new JsonArray();
-
-        foreach (var record in keyArray) {
-          result.Add(SpeakerVoiceConfigToVertex(Common.ParseToJsonNode(record), toObject));
-        }
-        Common.SetValueByPath(toObject, new string[] { "speakerVoiceConfigs" }, result);
-      }
-
-      return toObject;
-    }
-
     internal JsonNode PartToMldev(JsonNode fromObject, JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
@@ -1504,23 +1481,6 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode ReplicatedVoiceConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "mimeType" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "mimeType" },
-                              Common.GetValueByPath(fromObject, new string[] { "mimeType" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "voiceSampleAudio" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "voiceSampleAudio" },
-            Common.GetValueByPath(fromObject, new string[] { "voiceSampleAudio" }));
-      }
-
-      return toObject;
-    }
-
     internal JsonNode SessionResumptionConfigToMldev(JsonNode fromObject, JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
@@ -1531,50 +1491,6 @@ namespace Google.GenAI {
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "transparent" }))) {
         throw new NotSupportedException("transparent parameter is not supported in Gemini API.");
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode SpeakerVoiceConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "speaker" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "speaker" },
-                              Common.GetValueByPath(fromObject, new string[] { "speaker" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "voiceConfig" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "voiceConfig" },
-                              VoiceConfigToVertex(Common.ParseToJsonNode(Common.GetValueByPath(
-                                                      fromObject, new string[] { "voiceConfig" })),
-                                                  toObject));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode SpeechConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "voiceConfig" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "voiceConfig" },
-                              VoiceConfigToVertex(Common.ParseToJsonNode(Common.GetValueByPath(
-                                                      fromObject, new string[] { "voiceConfig" })),
-                                                  toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "languageCode" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "languageCode" },
-                              Common.GetValueByPath(fromObject, new string[] { "languageCode" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "multiSpeakerVoiceConfig" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "multiSpeakerVoiceConfig" },
-                              MultiSpeakerVoiceConfigToVertex(
-                                  Common.ParseToJsonNode(Common.GetValueByPath(
-                                      fromObject, new string[] { "multiSpeakerVoiceConfig" })),
-                                  toObject));
       }
 
       return toObject;
@@ -1814,26 +1730,6 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "type" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "voiceActivityType" },
                               Common.GetValueByPath(fromObject, new string[] { "type" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode VoiceConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "replicatedVoiceConfig" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "replicatedVoiceConfig" },
-                              ReplicatedVoiceConfigToVertex(
-                                  Common.ParseToJsonNode(Common.GetValueByPath(
-                                      fromObject, new string[] { "replicatedVoiceConfig" })),
-                                  toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "prebuiltVoiceConfig" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "prebuiltVoiceConfig" },
-            Common.GetValueByPath(fromObject, new string[] { "prebuiltVoiceConfig" }));
       }
 
       return toObject;
