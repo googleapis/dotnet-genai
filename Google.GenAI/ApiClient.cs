@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+using System.Collections.Generic;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
@@ -28,6 +29,12 @@ namespace Google.GenAI
   public abstract class ApiClient : IDisposable, IAsyncDisposable
   {
     private static readonly string SdkVersion = GetSdkVersion();
+
+    private static readonly HashSet<string> MultiRegionalLocations = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+    {
+        "us",
+        "eu"
+    };
 
     private HttpClient? _httpClient;
     private readonly object _httpClientLock = new object();
@@ -316,7 +323,7 @@ namespace Google.GenAI
         {
           defaultHttpOptions.BaseUrl = "https://aiplatform.googleapis.com";
         }
-        else if (location!.Equals("us"))
+        else if (MultiRegionalLocations.Contains(location!))
         {
           defaultHttpOptions.BaseUrl = $"https://aiplatform.{location}.rep.googleapis.com";
         }
