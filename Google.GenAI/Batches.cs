@@ -794,6 +794,16 @@ namespace Google.GenAI {
         throw new NotSupportedException("autoTruncate parameter is not supported in Gemini API.");
       }
 
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "documentOcr" }))) {
+        throw new NotSupportedException("documentOcr parameter is not supported in Gemini API.");
+      }
+
+      if (!Common.IsZero(
+              Common.GetValueByPath(fromObject, new string[] { "audioTrackExtraction" }))) {
+        throw new NotSupportedException(
+            "audioTrackExtraction parameter is not supported in Gemini API.");
+      }
+
       return toObject;
     }
 
