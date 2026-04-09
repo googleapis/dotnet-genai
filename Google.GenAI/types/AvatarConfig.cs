@@ -23,78 +23,57 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Config for `src` parameter.
+  /// Configures the avatar to be used in the session.
   /// </summary>
 
-  public record BatchJobSource {
+  public record AvatarConfig {
     /// <summary>
-    /// Storage format of the input files. Must be one of: 'jsonl', 'bigquery', 'vertex-dataset'.
+    /// Pre-built avatar id.
     /// </summary>
-    [JsonPropertyName("format")]
+    [JsonPropertyName("avatarName")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? Format { get; set; }
+    public string ? AvatarName { get; set; }
 
     /// <summary>
-    /// The Google Cloud Storage URIs to input files.
+    /// Customized avatar appearance with a reference image.
     /// </summary>
-    [JsonPropertyName("gcsUri")]
+    [JsonPropertyName("customizedAvatar")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<string>
-        ? GcsUri {
+    public CustomizedAvatar
+        ? CustomizedAvatar {
             get; set;
           }
 
     /// <summary>
-    /// The BigQuery URI to input table.
+    /// The bitrate of compressed audio.
     /// </summary>
-    [JsonPropertyName("bigqueryUri")]
+    [JsonPropertyName("audioBitrateBps")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string
-        ? BigqueryUri {
+    public int
+        ? AudioBitrateBps {
             get; set;
           }
 
     /// <summary>
-    /// The Gemini Developer API's file resource name of the input data (e.g. "files/12345").
+    /// The bitrate of compressed video output.
     /// </summary>
-    [JsonPropertyName("fileName")]
+    [JsonPropertyName("videoBitrateBps")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string
-        ? FileName {
+    public int
+        ? VideoBitrateBps {
             get; set;
           }
 
     /// <summary>
-    /// The Gemini Developer API's inlined input data to run batch job.
-    /// </summary>
-    [JsonPropertyName("inlinedRequests")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<InlinedRequest>
-        ? InlinedRequests {
-            get; set;
-          }
-
-    /// <summary>
-    /// This field is experimental and may change in future versions. The Vertex AI dataset resource
-    /// name to use as input. Must be of type multimodal.
-    /// </summary>
-    [JsonPropertyName("vertexDatasetName")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string
-        ? VertexDatasetName {
-            get; set;
-          }
-
-    /// <summary>
-    /// Deserializes a JSON string to a BatchJobSource object.
+    /// Deserializes a JSON string to a AvatarConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized BatchJobSource object, or null if deserialization fails.</returns>
-    public static BatchJobSource
+    /// <returns>The deserialized AvatarConfig object, or null if deserialization fails.</returns>
+    public static AvatarConfig
         ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<BatchJobSource>(jsonString, options);
+        return JsonSerializer.Deserialize<AvatarConfig>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;

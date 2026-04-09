@@ -4,10 +4,10 @@
     {
       "request": {
         "method": "POST",
-        "url": "/v1beta/models/text-embedding-004:batchEmbedContents",
-        "request": "POST /v1beta/models/text-embedding-004:batchEmbedContents HTTP/1.1",
+        "url": "/v1beta/models/gemini-embedding-001:batchEmbedContents",
+        "request": "POST /v1beta/models/gemini-embedding-001:batchEmbedContents HTTP/1.1",
         "headers": {
-          "Content-Length": "347",
+          "Content-Length": "351",
           "Content-Type": "application/json; charset=utf-8",
           "Test-Name": "EmbedContentTest.EmbedContentMultiTextGeminiTest"
         },
@@ -22,7 +22,7 @@
                     }
                   ]
                 },
-                "model": "models/text-embedding-004",
+                "model": "models/gemini-embedding-001",
                 "outputDimensionality": 10,
                 "taskType": "RETRIEVAL_DOCUMENT",
                 "title": "test_title"
@@ -35,7 +35,7 @@
                     }
                   ]
                 },
-                "model": "models/text-embedding-004",
+                "model": "models/gemini-embedding-001",
                 "outputDimensionality": 10,
                 "taskType": "RETRIEVAL_DOCUMENT",
                 "title": "test_title"
@@ -48,14 +48,14 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "50128cd8a28c44e38af1b0551cc25ebf7c7af1c59953d49db45899a450dbb1bc",
+      "shaSum": "2da9e795ef60e639f9f070fea9a6736bd1be0d0358809e2b5510e4c63466fa48",
       "response": {
         "statusCode": 200,
         "headers": {
           "Content-Type": "application/json; charset=UTF-8",
-          "Date": "Tue, 09 Dec 2025 00:42:46 GMT",
+          "Date": "Thu, 09 Apr 2026 18:58:31 GMT",
           "Server": "scaffolding on HTTPServer2",
-          "Server-Timing": "gfet4t7; dur=179",
+          "Server-Timing": "gfet4t7; dur=150",
           "Vary": "Origin, X-Origin, Referer",
           "X-Content-Type-Options": "nosniff",
           "X-Frame-Options": "SAMEORIGIN",
@@ -66,33 +66,34 @@
             "embeddings": [
               {
                 "values": [
-                  0.0062209684,
-                  -0.00016352482,
-                  -0.04497254,
-                  -0.024360893,
-                  0.024183987,
-                  0.027219841,
-                  0.036644667,
-                  0.028461628,
-                  -0.04021491,
-                  0.03328241
+                  -0.03950208,
+                  0.0007256423,
+                  0.036894154,
+                  -0.06420937,
+                  0.007837503,
+                  0.0070161745,
+                  -0.013046161,
+                  0.0040008393,
+                  0.019140515,
+                  -0.0029148892
                 ]
               },
               {
                 "values": [
-                  -0.02997993,
-                  -0.031975683,
-                  -0.041643385,
-                  -0.01656822,
-                  0.031309083,
-                  0.025444405,
-                  0.0028291983,
-                  0.05965454,
-                  -0.014440891,
-                  0.024713816
+                  -0.037093285,
+                  0.010633466,
+                  0.022869334,
+                  -0.066629514,
+                  -0.0067563136,
+                  0.012390815,
+                  -0.0096923895,
+                  -0.0016614407,
+                  -0.0002718712,
+                  -0.010780795
                 ]
               }
-            ]
+            ],
+            "tokenCount": "10"
           }
         ]
       }

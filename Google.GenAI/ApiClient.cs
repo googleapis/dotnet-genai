@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+using System.Collections.Generic;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
@@ -28,6 +29,12 @@ namespace Google.GenAI
   public abstract class ApiClient : IDisposable, IAsyncDisposable
   {
     private static readonly string SdkVersion = GetSdkVersion();
+
+    private static readonly HashSet<string> MultiRegionalLocations = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+    {
+        "us",
+        "eu"
+    };
 
     private HttpClient? _httpClient;
     private readonly object _httpClientLock = new object();
@@ -44,7 +51,7 @@ namespace Google.GenAI
                     {
                         throw new ObjectDisposedException(nameof(ApiClient));
                     }
-                    _httpClient ??= CreateHttpClient(this.HttpOptions);
+                    _httpClient ??= CreateHttpClient(this.HttpOptions, this.ClientOptions);
                 }
             }
             return _httpClient;
@@ -60,6 +67,7 @@ namespace Google.GenAI
     public string? CustomBaseUrl { get; }
 
     public HttpOptions HttpOptions { get; protected set; }
+    public Google.GenAI.Types.ClientOptions ClientOptions { get; protected set; }
     public bool VertexAI { get; }
 
     private int _disposed = 0;
@@ -73,7 +81,8 @@ namespace Google.GenAI
         string? project = null,
         string? location = null,
         ICredential? credentials = null,
-        HttpOptions? customHttpOptions = null)
+        HttpOptions? customHttpOptions = null,
+        Google.GenAI.Types.ClientOptions? clientOptions = null)
     {
       if (vertexAI.HasValue)
       {
@@ -180,14 +189,27 @@ namespace Google.GenAI
       {
         this.HttpOptions = MergeHttpOptions(customHttpOptions);
       }
+
+      this.ClientOptions = clientOptions ?? new Google.GenAI.Types.ClientOptions();
     }
 
-    private static HttpClient CreateHttpClient(HttpOptions httpOptions)
+    private static HttpClient CreateHttpClient(
+        HttpOptions httpOptions, Google.GenAI.Types.ClientOptions? clientOptions = null
+    )
     {
-      var client = new HttpClient();
-      if (httpOptions.Timeout != null)
+      HttpClient client = null;
+      if (clientOptions != null)
       {
-        client.Timeout = System.TimeSpan.FromMilliseconds(httpOptions.Timeout.Value);
+        client = clientOptions.HttpClientFactory?.Invoke();
+      }
+      // If no factory was provided, create a default client and apply SDK options
+      if (client == null)
+      {
+        client = new HttpClient();
+        if (httpOptions.Timeout != null)
+        {
+          client.Timeout = System.TimeSpan.FromMilliseconds(httpOptions.Timeout.Value);
+        }
       }
       return client;
     }
@@ -316,7 +338,7 @@ namespace Google.GenAI
         {
           defaultHttpOptions.BaseUrl = "https://aiplatform.googleapis.com";
         }
-        else if (location!.Equals("us"))
+        else if (MultiRegionalLocations.Contains(location!))
         {
           defaultHttpOptions.BaseUrl = $"https://aiplatform.{location}.rep.googleapis.com";
         }

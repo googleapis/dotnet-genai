@@ -57,10 +57,186 @@ namespace Google.GenAI.Types {
     /// </summary>
     public static TurnCompleteReason NeedMoreInput { get; } = new("NEED_MORE_INPUT");
 
+    /// <summary>
+    /// Input content is prohibited.
+    /// </summary>
+    public static TurnCompleteReason ProhibitedInputContent {
+      get;
+    } = new("PROHIBITED_INPUT_CONTENT");
+
+    /// <summary>
+    /// Input image contains prohibited content.
+    /// </summary>
+    public static TurnCompleteReason ImageProhibitedInputContent {
+      get;
+    } = new("IMAGE_PROHIBITED_INPUT_CONTENT");
+
+    /// <summary>
+    /// Input text contains prominent person reference.
+    /// </summary>
+    public static TurnCompleteReason InputTextContainProminentPersonProhibited {
+      get;
+    } = new("INPUT_TEXT_CONTAIN_PROMINENT_PERSON_PROHIBITED");
+
+    /// <summary>
+    /// Input image contains celebrity.
+    /// </summary>
+    public static TurnCompleteReason InputImageCelebrity { get; } = new("INPUT_IMAGE_CELEBRITY");
+
+    /// <summary>
+    /// Input image contains photo realistic child.
+    /// </summary>
+    public static TurnCompleteReason InputImagePhotoRealisticChildProhibited {
+      get;
+    } = new("INPUT_IMAGE_PHOTO_REALISTIC_CHILD_PROHIBITED");
+
+    /// <summary>
+    /// Input text contains NCII content.
+    /// </summary>
+    public static TurnCompleteReason InputTextNciiProhibited {
+      get;
+    } = new("INPUT_TEXT_NCII_PROHIBITED");
+
+    /// <summary>
+    /// Other input safety issue.
+    /// </summary>
+    public static TurnCompleteReason InputOther { get; } = new("INPUT_OTHER");
+
+    /// <summary>
+    /// Input contains IP violation.
+    /// </summary>
+    public static TurnCompleteReason InputIpProhibited { get; } = new("INPUT_IP_PROHIBITED");
+
+    /// <summary>
+    /// Input matched blocklist.
+    /// </summary>
+    public static TurnCompleteReason Blocklist { get; } = new("BLOCKLIST");
+
+    /// <summary>
+    /// Input is unsafe for image generation.
+    /// </summary>
+    public static TurnCompleteReason UnsafePromptForImageGeneration {
+      get;
+    } = new("UNSAFE_PROMPT_FOR_IMAGE_GENERATION");
+
+    /// <summary>
+    /// Generated image failed safety check.
+    /// </summary>
+    public static TurnCompleteReason GeneratedImageSafety { get; } = new("GENERATED_IMAGE_SAFETY");
+
+    /// <summary>
+    /// Generated content failed safety check.
+    /// </summary>
+    public static TurnCompleteReason GeneratedContentSafety {
+      get;
+    } = new("GENERATED_CONTENT_SAFETY");
+
+    /// <summary>
+    /// Generated audio failed safety check.
+    /// </summary>
+    public static TurnCompleteReason GeneratedAudioSafety { get; } = new("GENERATED_AUDIO_SAFETY");
+
+    /// <summary>
+    /// Generated video failed safety check.
+    /// </summary>
+    public static TurnCompleteReason GeneratedVideoSafety { get; } = new("GENERATED_VIDEO_SAFETY");
+
+    /// <summary>
+    /// Generated content is prohibited.
+    /// </summary>
+    public static TurnCompleteReason GeneratedContentProhibited {
+      get;
+    } = new("GENERATED_CONTENT_PROHIBITED");
+
+    /// <summary>
+    /// Generated content matched blocklist.
+    /// </summary>
+    public static TurnCompleteReason GeneratedContentBlocklist {
+      get;
+    } = new("GENERATED_CONTENT_BLOCKLIST");
+
+    /// <summary>
+    /// Generated image is prohibited.
+    /// </summary>
+    public static TurnCompleteReason GeneratedImageProhibited {
+      get;
+    } = new("GENERATED_IMAGE_PROHIBITED");
+
+    /// <summary>
+    /// Generated image contains celebrity.
+    /// </summary>
+    public static TurnCompleteReason GeneratedImageCelebrity {
+      get;
+    } = new("GENERATED_IMAGE_CELEBRITY");
+
+    /// <summary>
+    /// Generated image contains prominent people detected by rewriter.
+    /// </summary>
+    public static TurnCompleteReason GeneratedImageProminentPeopleDetectedByRewriter {
+      get;
+    } = new("GENERATED_IMAGE_PROMINENT_PEOPLE_DETECTED_BY_REWRITER");
+
+    /// <summary>
+    /// Generated image contains identifiable people.
+    /// </summary>
+    public static TurnCompleteReason GeneratedImageIdentifiablePeople {
+      get;
+    } = new("GENERATED_IMAGE_IDENTIFIABLE_PEOPLE");
+
+    /// <summary>
+    /// Generated image contains minors.
+    /// </summary>
+    public static TurnCompleteReason GeneratedImageMinors { get; } = new("GENERATED_IMAGE_MINORS");
+
+    /// <summary>
+    /// Generated image contains IP violation.
+    /// </summary>
+    public static TurnCompleteReason OutputImageIpProhibited {
+      get;
+    } = new("OUTPUT_IMAGE_IP_PROHIBITED");
+
+    /// <summary>
+    /// Other generated content issue.
+    /// </summary>
+    public static TurnCompleteReason GeneratedOther { get; } = new("GENERATED_OTHER");
+
+    /// <summary>
+    /// Max regeneration attempts reached.
+    /// </summary>
+    public static TurnCompleteReason MaxRegenerationReached {
+      get;
+    } = new("MAX_REGENERATION_REACHED");
+
     public static IReadOnlyList<TurnCompleteReason> AllValues {
       get;
-    } = new[] { TurnCompleteReasonUnspecified, MalformedFunctionCall, ResponseRejected,
-                NeedMoreInput };
+    } = new[] { TurnCompleteReasonUnspecified,
+                MalformedFunctionCall,
+                ResponseRejected,
+                NeedMoreInput,
+                ProhibitedInputContent,
+                ImageProhibitedInputContent,
+                InputTextContainProminentPersonProhibited,
+                InputImageCelebrity,
+                InputImagePhotoRealisticChildProhibited,
+                InputTextNciiProhibited,
+                InputOther,
+                InputIpProhibited,
+                Blocklist,
+                UnsafePromptForImageGeneration,
+                GeneratedImageSafety,
+                GeneratedContentSafety,
+                GeneratedAudioSafety,
+                GeneratedVideoSafety,
+                GeneratedContentProhibited,
+                GeneratedContentBlocklist,
+                GeneratedImageProhibited,
+                GeneratedImageCelebrity,
+                GeneratedImageProminentPeopleDetectedByRewriter,
+                GeneratedImageIdentifiablePeople,
+                GeneratedImageMinors,
+                OutputImageIpProhibited,
+                GeneratedOther,
+                MaxRegenerationReached };
 
     public static TurnCompleteReason FromString(string value) {
       if (string.IsNullOrEmpty(value)) {

@@ -113,19 +113,11 @@ public class ListTuningsTest
     [TestMethod]
     public async Task ListTuningsGeminiTest()
     {
-        var pager = await geminiClient.Tunings.ListAsync(new ListTuningJobsConfig { PageSize = 1 });
+        // throws exception, unsupported
+        var ex = await Assert.ThrowsExceptionAsync<NotSupportedException>(async () => {
+            await geminiClient.Tunings.ListAsync(new ListTuningJobsConfig { PageSize = 1 });
+        });
 
-        int count = 0;
-        await foreach(var item in pager)
-        {
-            count++;
-            if (count >= 2)
-            {
-                break;
-            }
-        }
-
-        Assert.IsTrue(count >= 0);
-        Assert.AreEqual(1, pager.PageSize);
+        StringAssert.Contains(ex.Message, "only supported in the Vertex AI client");
     }
 }

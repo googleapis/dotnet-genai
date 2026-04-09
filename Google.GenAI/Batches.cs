@@ -126,6 +126,16 @@ namespace Google.GenAI {
             Common.GetValueByPath(fromObject, new string[] { "bigqueryDestination", "outputUri" }));
       }
 
+      if (Common.GetValueByPath(fromObject,
+                                new string[] { "vertexMultimodalDatasetDestination" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "vertexDataset" },
+            VertexMultimodalDatasetDestinationFromVertex(
+                Common.ParseToJsonNode(Common.GetValueByPath(
+                    fromObject, new string[] { "vertexMultimodalDatasetDestination" })),
+                toObject));
+      }
+
       return toObject;
     }
 
@@ -160,6 +170,14 @@ namespace Google.GenAI {
               Common.GetValueByPath(fromObject, new string[] { "inlinedEmbedContentResponses" }))) {
         throw new NotSupportedException(
             "inlinedEmbedContentResponses parameter is not supported in Vertex AI.");
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "vertexDataset" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "vertexMultimodalDatasetDestination" },
+                              VertexMultimodalDatasetDestinationToVertex(
+                                  Common.ParseToJsonNode(Common.GetValueByPath(
+                                      fromObject, new string[] { "vertexDataset" })),
+                                  toObject));
       }
 
       return toObject;
@@ -318,6 +336,14 @@ namespace Google.GenAI {
             Common.GetValueByPath(fromObject, new string[] { "bigquerySource", "inputUri" }));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "vertexMultimodalDatasetSource",
+                                                           "datasetName" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "vertexDatasetName" },
+            Common.GetValueByPath(fromObject,
+                                  new string[] { "vertexMultimodalDatasetSource", "datasetName" }));
+      }
+
       return toObject;
     }
 
@@ -353,6 +379,11 @@ namespace Google.GenAI {
         Common.SetValueByPath(toObject, new string[] { "requests", "requests" }, result);
       }
 
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "vertexDatasetName" }))) {
+        throw new NotSupportedException(
+            "vertexDatasetName parameter is not supported in Gemini API.");
+      }
+
       return toObject;
     }
 
@@ -380,6 +411,12 @@ namespace Google.GenAI {
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "inlinedRequests" }))) {
         throw new NotSupportedException("inlinedRequests parameter is not supported in Vertex AI.");
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "vertexDatasetName" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "vertexMultimodalDatasetSource", "datasetName" },
+            Common.GetValueByPath(fromObject, new string[] { "vertexDatasetName" }));
       }
 
       return toObject;
@@ -539,6 +576,11 @@ namespace Google.GenAI {
         throw new NotSupportedException("dest parameter is not supported in Gemini API.");
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "webhookConfig" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "batch", "webhookConfig" },
+                              Common.GetValueByPath(fromObject, new string[] { "webhookConfig" }));
+      }
+
       return toObject;
     }
 
@@ -556,6 +598,10 @@ namespace Google.GenAI {
                                   Common.ParseToJsonNode(Transformers.TBatchJobDestination(
                                       Common.GetValueByPath(fromObject, new string[] { "dest" }))),
                                   toObject));
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "webhookConfig" }))) {
+        throw new NotSupportedException("webhookConfig parameter is not supported in Vertex AI.");
       }
 
       return toObject;
@@ -792,6 +838,16 @@ namespace Google.GenAI {
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "autoTruncate" }))) {
         throw new NotSupportedException("autoTruncate parameter is not supported in Gemini API.");
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "documentOcr" }))) {
+        throw new NotSupportedException("documentOcr parameter is not supported in Gemini API.");
+      }
+
+      if (!Common.IsZero(
+              Common.GetValueByPath(fromObject, new string[] { "audioTrackExtraction" }))) {
+        throw new NotSupportedException(
+            "audioTrackExtraction parameter is not supported in Gemini API.");
       }
 
       return toObject;
@@ -1636,6 +1692,43 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "mcpServers" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "mcpServers" },
                               Common.GetValueByPath(fromObject, new string[] { "mcpServers" }));
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode VertexMultimodalDatasetDestinationFromVertex(JsonNode fromObject,
+                                                                   JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "bigqueryDestination", "outputUri" }) !=
+          null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "bigqueryDestination" },
+            Common.GetValueByPath(fromObject, new string[] { "bigqueryDestination", "outputUri" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "displayName" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "displayName" },
+                              Common.GetValueByPath(fromObject, new string[] { "displayName" }));
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode VertexMultimodalDatasetDestinationToVertex(JsonNode fromObject,
+                                                                 JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "bigqueryDestination" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "bigqueryDestination", "outputUri" },
+            Common.GetValueByPath(fromObject, new string[] { "bigqueryDestination" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "displayName" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "displayName" },
+                              Common.GetValueByPath(fromObject, new string[] { "displayName" }));
       }
 
       return toObject;
