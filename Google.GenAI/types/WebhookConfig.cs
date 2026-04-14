@@ -23,59 +23,41 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Config for optional parameters.
+  /// Configuration for webhook notifications.  Used to configure webhook endpoints that will
+  /// receive notifications when long-running operations (e.g., batch jobs, video generation)
+  /// complete.
   /// </summary>
 
-  public record CreateBatchJobConfig {
+  public record WebhookConfig {
     /// <summary>
-    /// Used to override HTTP request options.
+    /// The webhook URIs to receive notifications. If set, these webhook URIs will be used instead
+    /// of the registered webhooks.
     /// </summary>
-    [JsonPropertyName("httpOptions")]
+    [JsonPropertyName("uris")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public HttpOptions ? HttpOptions { get; set; }
+    public List<string> ? Uris { get; set; }
 
     /// <summary>
-    /// The user-defined name of this BatchJob.
+    /// User metadata that will be included in each webhook event notification. Use this to attach
+    /// custom key-value data to correlate webhook events with your internal systems.
     /// </summary>
-    [JsonPropertyName("displayName")]
+    [JsonPropertyName("userMetadata")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string
-        ? DisplayName {
+    public Dictionary<string, object>
+        ? UserMetadata {
             get; set;
           }
 
     /// <summary>
-    /// GCS or BigQuery URI prefix for the output predictions. Example: "gs://path/to/output/data"
-    /// or "bq://projectId.bqDatasetId.bqTableId".
-    /// </summary>
-    [JsonPropertyName("dest")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public BatchJobDestination
-        ? Dest {
-            get; set;
-          }
-
-    /// <summary>
-    /// Webhook configuration for receiving notifications when the batch operation completes.
-    /// </summary>
-    [JsonPropertyName("webhookConfig")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public WebhookConfig
-        ? WebhookConfig {
-            get; set;
-          }
-
-    /// <summary>
-    /// Deserializes a JSON string to a CreateBatchJobConfig object.
+    /// Deserializes a JSON string to a WebhookConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized CreateBatchJobConfig object, or null if deserialization
-    /// fails.</returns>
-    public static CreateBatchJobConfig
+    /// <returns>The deserialized WebhookConfig object, or null if deserialization fails.</returns>
+    public static WebhookConfig
         ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<CreateBatchJobConfig>(jsonString, options);
+        return JsonSerializer.Deserialize<WebhookConfig>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;

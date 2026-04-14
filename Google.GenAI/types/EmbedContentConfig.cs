@@ -89,6 +89,28 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Vertex API only. Whether to enable OCR for document content. Only applicable to Gemini
+    /// Embedding 2 models.
+    /// </summary>
+    [JsonPropertyName("documentOcr")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public bool
+        ? DocumentOcr {
+            get; set;
+          }
+
+    /// <summary>
+    /// Vertex API only. Whether to extract audio from video content. Only applicable to Gemini
+    /// Embedding 2 models.
+    /// </summary>
+    [JsonPropertyName("audioTrackExtraction")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public bool
+        ? AudioTrackExtraction {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a EmbedContentConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

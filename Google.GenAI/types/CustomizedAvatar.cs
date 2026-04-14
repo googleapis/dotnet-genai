@@ -23,59 +23,39 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Config for optional parameters.
+  /// Configures the customized avatar to be used in the session.
   /// </summary>
 
-  public record CreateBatchJobConfig {
+  public record CustomizedAvatar {
     /// <summary>
-    /// Used to override HTTP request options.
+    /// The mime type of the reference image, e.g., "image/jpeg".
     /// </summary>
-    [JsonPropertyName("httpOptions")]
+    [JsonPropertyName("imageMimeType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public HttpOptions ? HttpOptions { get; set; }
+    public string ? ImageMimeType { get; set; }
 
     /// <summary>
-    /// The user-defined name of this BatchJob.
+    /// The data of the reference image. The dimensions of the reference image should be 9:16
+    /// (portrait) with a minimum resolution of 704x1280.
     /// </summary>
-    [JsonPropertyName("displayName")]
+    [JsonPropertyName("imageData")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string
-        ? DisplayName {
+    public byte[]
+        ? ImageData {
             get; set;
           }
 
     /// <summary>
-    /// GCS or BigQuery URI prefix for the output predictions. Example: "gs://path/to/output/data"
-    /// or "bq://projectId.bqDatasetId.bqTableId".
-    /// </summary>
-    [JsonPropertyName("dest")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public BatchJobDestination
-        ? Dest {
-            get; set;
-          }
-
-    /// <summary>
-    /// Webhook configuration for receiving notifications when the batch operation completes.
-    /// </summary>
-    [JsonPropertyName("webhookConfig")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public WebhookConfig
-        ? WebhookConfig {
-            get; set;
-          }
-
-    /// <summary>
-    /// Deserializes a JSON string to a CreateBatchJobConfig object.
+    /// Deserializes a JSON string to a CustomizedAvatar object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized CreateBatchJobConfig object, or null if deserialization
+    /// <returns>The deserialized CustomizedAvatar object, or null if deserialization
     /// fails.</returns>
-    public static CreateBatchJobConfig
+    public static CustomizedAvatar
         ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<CreateBatchJobConfig>(jsonString, options);
+        return JsonSerializer.Deserialize<CustomizedAvatar>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
