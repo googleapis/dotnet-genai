@@ -90,8 +90,9 @@ namespace Google.GenAI
         string? project = null,
         string? location = null,
         ICredential? credentials = null,
-        Types.HttpOptions? httpOptions = null
-    ) : base(vertexAI, apiKey, project, location, credentials, httpOptions) { }
+        Types.HttpOptions? httpOptions = null,
+        Types.ClientOptions? clientOptions = null
+    ) : base(vertexAI, apiKey, project, location, credentials, httpOptions, clientOptions) { }
 
     public override async Task<ApiResponse> RequestAsync(
         HttpMethod httpMethod,

@@ -23,59 +23,57 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Config for optional parameters.
+  /// Configures the avatar to be used in the session.
   /// </summary>
 
-  public record CreateBatchJobConfig {
+  public record AvatarConfig {
     /// <summary>
-    /// Used to override HTTP request options.
+    /// Pre-built avatar id.
     /// </summary>
-    [JsonPropertyName("httpOptions")]
+    [JsonPropertyName("avatarName")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public HttpOptions ? HttpOptions { get; set; }
+    public string ? AvatarName { get; set; }
 
     /// <summary>
-    /// The user-defined name of this BatchJob.
+    /// Customized avatar appearance with a reference image.
     /// </summary>
-    [JsonPropertyName("displayName")]
+    [JsonPropertyName("customizedAvatar")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string
-        ? DisplayName {
+    public CustomizedAvatar
+        ? CustomizedAvatar {
             get; set;
           }
 
     /// <summary>
-    /// GCS or BigQuery URI prefix for the output predictions. Example: "gs://path/to/output/data"
-    /// or "bq://projectId.bqDatasetId.bqTableId".
+    /// The bitrate of compressed audio.
     /// </summary>
-    [JsonPropertyName("dest")]
+    [JsonPropertyName("audioBitrateBps")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public BatchJobDestination
-        ? Dest {
+    public int
+        ? AudioBitrateBps {
             get; set;
           }
 
     /// <summary>
-    /// Webhook configuration for receiving notifications when the batch operation completes.
+    /// The bitrate of compressed video output.
     /// </summary>
-    [JsonPropertyName("webhookConfig")]
+    [JsonPropertyName("videoBitrateBps")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public WebhookConfig
-        ? WebhookConfig {
+    public int
+        ? VideoBitrateBps {
             get; set;
           }
 
     /// <summary>
-    /// Deserializes a JSON string to a CreateBatchJobConfig object.
+    /// Deserializes a JSON string to a AvatarConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized CreateBatchJobConfig object, or null if deserialization
-    /// fails.</returns>
-    public static CreateBatchJobConfig
+    /// <returns>The deserialized AvatarConfig object, or null if deserialization fails.</returns>
+    public static AvatarConfig
         ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<CreateBatchJobConfig>(jsonString, options);
+        return JsonSerializer.Deserialize<AvatarConfig>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;

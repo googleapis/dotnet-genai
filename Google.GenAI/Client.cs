@@ -52,9 +52,12 @@ namespace Google.GenAI {
     /// <param name="httpOptions">Optional <see cref="Google.GenAI.Types.HttpOptions"/> for sending
     /// HTTP requests.</param> <exception cref="System.ArgumentException">Thrown if the
     /// project/location and API key are set together.</exception>
+    /// <param name="clientOptions">Optional <see cref="Google.GenAI.Types.ClientOptions"/> for
+    /// configuring the client.</param>
     public Client(bool? vertexAI = null, string? apiKey = null, ICredential? credential = null,
                   string? project = null, string? location = null,
-                  Types.HttpOptions? httpOptions = null) {
+                  Types.HttpOptions? httpOptions = null,
+                  Types.ClientOptions? clientOptions = null) {
       httpOptions ??= new();
       bool resolvedVertexAI;
       if (vertexAI.HasValue) {
@@ -77,7 +80,7 @@ namespace Google.GenAI {
 
       httpOptions.BaseUrl ??= inferBaseUrl(resolvedVertexAI);
 
-      _apiClient = new HttpApiClient(vertexAI, apiKey, project, location, credential, httpOptions);
+      _apiClient = new HttpApiClient(vertexAI, apiKey, project, location, credential, httpOptions, clientOptions);
       Live = new Live(_apiClient);
       Models = new Models(_apiClient);
       Tunings = new Tunings(_apiClient);
