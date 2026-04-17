@@ -186,7 +186,7 @@ namespace Google.GenAI {
       if (!Common.IsZero(config)) {
         parameter.Config = config;
       }
-      string jsonString = JsonSerializer.Serialize(parameter, JsonConfig.InternalSerializerOptions);
+      string jsonString = JsonSerializer.Serialize(parameter);
       JsonNode? parameterNode = JsonNode.Parse(jsonString);
       if (parameterNode == null) {
         throw new NotSupportedException("Failed to parse ListFilesParameters to JsonNode.");
@@ -212,7 +212,7 @@ namespace Google.GenAI {
       HttpOptions? requestHttpOptions = config?.HttpOptions;
 
       ApiResponse response =
-          await this._apiClient.RequestAsync(HttpMethod.Get, path, JsonSerializer.Serialize(body, JsonConfig.JsonSerializerOptions),
+          await this._apiClient.RequestAsync(HttpMethod.Get, path, JsonSerializer.Serialize(body),
                                              requestHttpOptions, cancellationToken);
       HttpContent httpContent = response.GetEntity();
 #if NETSTANDARD2_0
@@ -250,7 +250,7 @@ namespace Google.GenAI {
       if (!Common.IsZero(config)) {
         parameter.Config = config;
       }
-      string jsonString = JsonSerializer.Serialize(parameter, JsonConfig.InternalSerializerOptions);
+      string jsonString = JsonSerializer.Serialize(parameter);
       JsonNode? parameterNode = JsonNode.Parse(jsonString);
       if (parameterNode == null) {
         throw new NotSupportedException("Failed to parse CreateFileParameters to JsonNode.");
@@ -276,7 +276,7 @@ namespace Google.GenAI {
       HttpOptions? requestHttpOptions = config?.HttpOptions;
 
       ApiResponse response =
-          await this._apiClient.RequestAsync(HttpMethod.Post, path, JsonSerializer.Serialize(body, JsonConfig.JsonSerializerOptions),
+          await this._apiClient.RequestAsync(HttpMethod.Post, path, JsonSerializer.Serialize(body),
                                              requestHttpOptions, cancellationToken);
       HttpContent httpContent = response.GetEntity();
 #if NETSTANDARD2_0
@@ -330,7 +330,7 @@ namespace Google.GenAI {
       if (!Common.IsZero(config)) {
         parameter.Config = config;
       }
-      string jsonString = JsonSerializer.Serialize(parameter, JsonConfig.InternalSerializerOptions);
+      string jsonString = JsonSerializer.Serialize(parameter);
       JsonNode? parameterNode = JsonNode.Parse(jsonString);
       if (parameterNode == null) {
         throw new NotSupportedException("Failed to parse GetFileParameters to JsonNode.");
@@ -356,7 +356,7 @@ namespace Google.GenAI {
       HttpOptions? requestHttpOptions = config?.HttpOptions;
 
       ApiResponse response =
-          await this._apiClient.RequestAsync(HttpMethod.Get, path, JsonSerializer.Serialize(body, JsonConfig.JsonSerializerOptions),
+          await this._apiClient.RequestAsync(HttpMethod.Get, path, JsonSerializer.Serialize(body),
                                              requestHttpOptions, cancellationToken);
       HttpContent httpContent = response.GetEntity();
 #if NETSTANDARD2_0
@@ -395,7 +395,7 @@ namespace Google.GenAI {
       if (!Common.IsZero(config)) {
         parameter.Config = config;
       }
-      string jsonString = JsonSerializer.Serialize(parameter, JsonConfig.InternalSerializerOptions);
+      string jsonString = JsonSerializer.Serialize(parameter);
       JsonNode? parameterNode = JsonNode.Parse(jsonString);
       if (parameterNode == null) {
         throw new NotSupportedException("Failed to parse DeleteFileParameters to JsonNode.");
@@ -421,7 +421,7 @@ namespace Google.GenAI {
       HttpOptions? requestHttpOptions = config?.HttpOptions;
 
       ApiResponse response = await this._apiClient.RequestAsync(
-          HttpMethod.Delete, path, JsonSerializer.Serialize(body, JsonConfig.JsonSerializerOptions), requestHttpOptions,
+          HttpMethod.Delete, path, JsonSerializer.Serialize(body), requestHttpOptions,
           cancellationToken);
       HttpContent httpContent = response.GetEntity();
 #if NETSTANDARD2_0
@@ -459,7 +459,7 @@ namespace Google.GenAI {
       if (!Common.IsZero(config)) {
         parameter.Config = config;
       }
-      string jsonString = JsonSerializer.Serialize(parameter, JsonConfig.InternalSerializerOptions);
+      string jsonString = JsonSerializer.Serialize(parameter);
       JsonNode? parameterNode = JsonNode.Parse(jsonString);
       if (parameterNode == null) {
         throw new NotSupportedException(
@@ -486,7 +486,7 @@ namespace Google.GenAI {
       HttpOptions? requestHttpOptions = config?.HttpOptions;
 
       ApiResponse response =
-          await this._apiClient.RequestAsync(HttpMethod.Post, path, JsonSerializer.Serialize(body, JsonConfig.JsonSerializerOptions),
+          await this._apiClient.RequestAsync(HttpMethod.Post, path, JsonSerializer.Serialize(body),
                                              requestHttpOptions, cancellationToken);
       HttpContent httpContent = response.GetEntity();
 #if NETSTANDARD2_0
@@ -857,7 +857,7 @@ namespace Google.GenAI {
         throw new InvalidOperationException("Upload response does not contain file object");
       }
 
-      return JsonSerializer.Deserialize<Google.GenAI.Types.File>(fileNode.ToString(), JsonConfig.JsonSerializerOptions) ??
+      return JsonSerializer.Deserialize<Google.GenAI.Types.File>(fileNode.ToString()) ??
              throw new InvalidOperationException("Failed to deserialize File");
     }
 
