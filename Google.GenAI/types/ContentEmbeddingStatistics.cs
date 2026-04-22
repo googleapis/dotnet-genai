@@ -28,15 +28,15 @@ namespace Google.GenAI.Types {
 
   public record ContentEmbeddingStatistics {
     /// <summary>
-    /// Vertex API only. If the input text was truncated due to having a length longer than the
-    /// allowed maximum input.
+    /// Gemini Enterprise Agent Platform only. If the input text was truncated due to having a
+    /// length longer than the allowed maximum input.
     /// </summary>
     [JsonPropertyName("truncated")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool ? Truncated { get; set; }
 
     /// <summary>
-    /// Vertex API only. Number of tokens of the input text.
+    /// Gemini Enterprise Agent Platform only. Number of tokens of the input text.
     /// </summary>
     [JsonPropertyName("tokenCount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

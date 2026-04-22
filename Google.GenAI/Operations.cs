@@ -355,7 +355,8 @@ namespace Google.GenAI {
         body = FetchPredictOperationParametersToVertex(parameterNode, new JsonObject());
         path = Common.FormatMap("{resourceName}:fetchPredictOperation", body["_url"]);
       } else {
-        throw new NotSupportedException("This method is only supported in the Vertex AI client.");
+        throw new NotSupportedException(
+            "This method is only supported in the Gemini Enterprise Agent Platform (previously known as Vertex AI) client.");
       }
       JsonObject? bodyObj = body?.AsObject();
       bodyObj?.Remove("_url");

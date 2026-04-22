@@ -15,6 +15,8 @@
  */
 
 using System;
+using System.Net;
+using System.Net.Http;
 
 using Google.Apis.Auth.OAuth2;
 using Google.GenAI;
@@ -28,6 +30,7 @@ namespace Google.GenAI.Tests {
   [TestClass]
   public class ClientTests {
     private string? _originalVertexAiEnv;
+    private string? _originalEnterpriseEnv;
     private string? _originalProjectEnv;
     private string? _originalLocationEnv;
     private string? _originalApiKeyEnv;
@@ -37,6 +40,7 @@ namespace Google.GenAI.Tests {
     [TestInitialize]
     public void TestInitialize() {
       _originalVertexAiEnv = System.Environment.GetEnvironmentVariable("GOOGLE_GENAI_USE_VERTEXAI");
+      _originalEnterpriseEnv = System.Environment.GetEnvironmentVariable("GOOGLE_GENAI_USE_ENTERPRISE");
       _originalProjectEnv = System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_PROJECT");
       _originalLocationEnv = System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_LOCATION");
       _originalApiKeyEnv = System.Environment.GetEnvironmentVariable("GOOGLE_API_KEY");
@@ -46,6 +50,7 @@ namespace Google.GenAI.Tests {
           System.Environment.GetEnvironmentVariable("GOOGLE_GEMINI_BASE_URL");
 
       System.Environment.SetEnvironmentVariable("GOOGLE_GENAI_USE_VERTEXAI", null);
+      System.Environment.SetEnvironmentVariable("GOOGLE_GENAI_USE_ENTERPRISE", null);
       System.Environment.SetEnvironmentVariable("GOOGLE_CLOUD_PROJECT", null);
       System.Environment.SetEnvironmentVariable("GOOGLE_CLOUD_LOCATION", null);
       System.Environment.SetEnvironmentVariable("GOOGLE_API_KEY", null);
@@ -58,6 +63,7 @@ namespace Google.GenAI.Tests {
     [TestCleanup]
     public void TestCleanup() {
       System.Environment.SetEnvironmentVariable("GOOGLE_GENAI_USE_VERTEXAI", _originalVertexAiEnv);
+      System.Environment.SetEnvironmentVariable("GOOGLE_GENAI_USE_ENTERPRISE", _originalEnterpriseEnv);
       System.Environment.SetEnvironmentVariable("GOOGLE_CLOUD_PROJECT", _originalProjectEnv);
       System.Environment.SetEnvironmentVariable("GOOGLE_CLOUD_LOCATION", _originalLocationEnv);
       System.Environment.SetEnvironmentVariable("GOOGLE_API_KEY", _originalApiKeyEnv);
@@ -180,6 +186,150 @@ namespace Google.GenAI.Tests {
       Assert.IsFalse(client._apiClient.VertexAI);
     }
 
+#endregion
+
+#region Constructor Enterprise Resolution Tests
+    [TestMethod]
+    public void Constructor_Enterprise_TrueByParameter()
+    {
+        var client = new Client(enterprise: true, project: "project", location: "location");
+        Assert.IsTrue(client._apiClient.VertexAI);
+    }
+
+    [TestMethod]
+    public void Constructor_Enterprise_FalseByParameter()
+    {
+        var client = new Client(enterprise: false, apiKey: "key");
+        Assert.IsFalse(client._apiClient.VertexAI);
+    }
+
+    [TestMethod]
+    public void Constructor_Enterprise_TrueByEnvironment()
+    {
+        System.Environment.SetEnvironmentVariable("GOOGLE_GENAI_USE_ENTERPRISE", "true");
+        var client = new Client(project: "project", location: "location");
+        Assert.IsTrue(client._apiClient.VertexAI);
+    }
+
+    [TestMethod]
+    public void Constructor_Enterprise_FalseByEnvironment()
+    {
+        System.Environment.SetEnvironmentVariable("GOOGLE_GENAI_USE_ENTERPRISE", "false");
+        var client = new Client(apiKey: "key");
+        Assert.IsFalse(client._apiClient.VertexAI);
+    }
+
+    [TestMethod]
+    public void Constructor_Enterprise_VertexAi_Params_Conflict_Case1()
+    {
+        var ex = Assert.ThrowsException<ArgumentException>(() => new Client(enterprise: true, vertexAI: false, project: "project", location: "location"));
+    }
+
+    [TestMethod]
+    public void Constructor_Enterprise_VertexAi_Params_Conflict_Case2()
+    {
+        var ex = Assert.ThrowsException<ArgumentException>(() => new Client(enterprise: false, vertexAI: true, project: "project", location: "location"));
+    }
+
+    [TestMethod]
+    public void Constructor_Enterprise_FalseByEnvironment_VertexAI_TrueByParameter() {
+      System.Environment.SetEnvironmentVariable("GOOGLE_GENAI_USE_ENTERPRISE", "false");
+      var client = new Client(vertexAI: true, project: "project", location: "location");
+      Assert.IsTrue(client._apiClient.VertexAI);
+    }
+
+    [TestMethod]
+    public void Constructor_Enterprise_TakesPriorityOverVertexAi_Env()
+    {
+        System.Environment.SetEnvironmentVariable("GOOGLE_GENAI_USE_ENTERPRISE", "true");
+        System.Environment.SetEnvironmentVariable("GOOGLE_GENAI_USE_VERTEXAI", "false");
+        var client = new Client(project: "project", location: "location");
+        Assert.IsTrue(client._apiClient.VertexAI);
+    }
+
+    [TestMethod]
+    public void Constructor_Enterprise_FallsbackToVertexAi_Param()
+    {
+        var client = new Client(enterprise: null, vertexAI: true, project: "project", location: "location");
+        Assert.IsTrue(client._apiClient.VertexAI);
+    }
+
+    [TestMethod]
+    public void Constructor_Enterprise_FallsbackToVertexAi_Env()
+    {
+        System.Environment.SetEnvironmentVariable("GOOGLE_GENAI_USE_VERTEXAI", "true");
+        var client = new Client(project: "project", location: "location");
+        Assert.IsTrue(client._apiClient.VertexAI);
+    }
+
+#endregion
+
+#region Constructor Warning Tests
+    [TestMethod]
+    public void Constructor_Warns_On_EnterpriseEnv_And_VertexEnv()
+    {
+        System.Environment.SetEnvironmentVariable("GOOGLE_GENAI_USE_VERTEXAI", "false");
+        System.Environment.SetEnvironmentVariable("GOOGLE_GENAI_USE_ENTERPRISE", "true");
+        var sw = new System.IO.StringWriter();
+        var listener = new System.Diagnostics.TextWriterTraceListener(sw);
+        System.Diagnostics.Trace.Listeners.Add(listener);
+
+        try
+        {
+            var client = new Client(project: "project", location: "location");
+            listener.Flush();
+            var output = sw.ToString();
+            StringAssert.Contains(output, "Warning: Both GOOGLE_GENAI_USE_ENTERPRISE and GOOGLE_GENAI_USE_VERTEXAI are set. The value of GOOGLE_GENAI_USE_ENTERPRISE will be used.");
+            Assert.IsTrue(client._apiClient.VertexAI);
+        }
+        finally
+        {
+            System.Diagnostics.Trace.Listeners.Remove(listener);
+        }
+    }
+
+    [TestMethod]
+    public void Constructor_NoWarning_On_EnterpriseParam_Only()
+    {
+        System.Environment.SetEnvironmentVariable("GOOGLE_GENAI_USE_VERTEXAI", "false");
+        var sw = new System.IO.StringWriter();
+        var listener = new System.Diagnostics.TextWriterTraceListener(sw);
+        System.Diagnostics.Trace.Listeners.Add(listener);
+
+        try
+        {
+            var client = new Client(enterprise: true, project: "project", location: "location");
+            listener.Flush();
+            var output = sw.ToString();
+            Assert.AreEqual(string.Empty, output.Trim());
+            Assert.IsTrue(client._apiClient.VertexAI);
+        }
+        finally
+        {
+            System.Diagnostics.Trace.Listeners.Remove(listener);
+        }
+    }
+
+    [TestMethod]
+    public void Constructor_NoWarning_On_VertexParam_Only()
+    {
+        System.Environment.SetEnvironmentVariable("GOOGLE_GENAI_USE_ENTERPRISE", "false");
+        var sw = new System.IO.StringWriter();
+        var listener = new System.Diagnostics.TextWriterTraceListener(sw);
+        System.Diagnostics.Trace.Listeners.Add(listener);
+
+        try
+        {
+            var client = new Client(vertexAI: true, project: "project", location: "location");
+            listener.Flush();
+            var output = sw.ToString();
+            Assert.AreEqual(string.Empty, output.Trim());
+        }
+        finally
+        {
+            System.Diagnostics.Trace.Listeners.Remove(listener);
+        }
+    }
 #endregion
 
 #region Constructor Credential / Parameter Source Tests(Vertex AI)
@@ -325,7 +475,15 @@ namespace Google.GenAI.Tests {
     public void Constructor_Error_ProjectSet_VertexAIFalse_Param() {
       var ex = Assert.ThrowsException<ArgumentException>(
           () => new Client(vertexAI: false, project: "project", location: "location"));
-      Assert.AreEqual("project/location is present, but vertexai is not set to true. project/location can only be used for Vertex AI. Please set vertexai to be true.",
+      Assert.AreEqual("project/location is present, but neither enterprise nor vertexAI is set to true. project/location can only be used for a cloud platform. Please set enterprise to be true.",
+                      ex.Message);
+    }
+
+    [TestMethod]
+    public void Constructor_Error_ProjectSet_EnterpriseFalse_Param() {
+      var ex = Assert.ThrowsException<ArgumentException>(
+          () => new Client(enterprise: false, project: "project", location: "location"));
+      Assert.AreEqual("project/location is present, but neither enterprise nor vertexAI is set to true. project/location can only be used for a cloud platform. Please set enterprise to be true.",
                       ex.Message);
     }
 
@@ -335,7 +493,7 @@ namespace Google.GenAI.Tests {
                                                 "false");  // Explicitly false
       var ex = Assert.ThrowsException<ArgumentException>(
           () => new Client(project: "project", location: "location"));
-      Assert.AreEqual("project/location is present, but vertexai is not set to true. project/location can only be used for Vertex AI. Please set vertexai to be true.",
+      Assert.AreEqual("project/location is present, but neither enterprise nor vertexAI is set to true. project/location can only be used for a cloud platform. Please set enterprise to be true.",
                       ex.Message);
     }
 
@@ -344,7 +502,7 @@ namespace Google.GenAI.Tests {
       // GOOGLE_GENAI_USE_VERTEXAI is null (cleared in TestInitialize), defaults to false
       var ex = Assert.ThrowsException<ArgumentException>(
           () => new Client(project: "project", location: "location"));
-      Assert.AreEqual("project/location is present, but vertexai is not set to true. project/location can only be used for Vertex AI. Please set vertexai to be true.",
+      Assert.AreEqual("project/location is present, but neither enterprise nor vertexAI is set to true. project/location can only be used for a cloud platform. Please set enterprise to be true.",
                       ex.Message);
     }
 
@@ -352,7 +510,7 @@ namespace Google.GenAI.Tests {
     public void Constructor_Error_LocationSet_VertexAIFalse_Param() {
       var ex = Assert.ThrowsException<ArgumentException>(
           () => new Client(vertexAI: false, location: "location", project: "project"));
-      Assert.AreEqual("project/location is present, but vertexai is not set to true. project/location can only be used for Vertex AI. Please set vertexai to be true.",
+      Assert.AreEqual("project/location is present, but neither enterprise nor vertexAI is set to true. project/location can only be used for a cloud platform. Please set enterprise to be true.",
                       ex.Message);
     }
 
@@ -666,6 +824,18 @@ namespace Google.GenAI.Tests {
       Assert.AreEqual(1000, client._apiClient.HttpOptions.Timeout);
     }
 
+    [TestMethod]
+    public void Constructor_ClientOptionsProvided_HttpClientFactory() {
+      var proxyAddress = "http://your-proxy-address:port";
+      var options =
+          new ClientOptions { HttpClientFactory = () => new HttpClient(
+                                  new HttpClientHandler { Proxy = new WebProxy(proxyAddress) }) };
+
+      var client = new Client(vertexAI: true, project: "project", location: "location",
+                              clientOptions: options);
+
+      Assert.AreSame(options.HttpClientFactory, client._apiClient.ClientOptions.HttpClientFactory);
+    }
 #endregion
 
 #region Successful Instantiation(all modules)

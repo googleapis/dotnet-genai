@@ -1,0 +1,202 @@
+// Copyright 2025 Google LLC
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+using System;
+using System.Collections.Concurrent;
+using System.Collections.Frozen;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.Json;
+using Google.GenAI.Interactions.Exceptions;
+
+namespace Google.GenAI.Interactions.Core;
+
+/// <summary>
+/// A dictionary that holds mixed JSON and binary content.
+///
+/// <para>It can be mutated and then frozen once no more mutations are expected.
+/// This is useful for allowing the dictionary to be modified by a class's
+/// <c>init</c> properties, but then preventing it from being modified afterwards.</para>
+///
+/// <para>It also caches data deserialization for performance.</para>
+/// </summary>
+sealed class MultipartJsonDictionary
+{
+    IReadOnlyDictionary<string, MultipartJsonElement> _rawData;
+
+    readonly ConcurrentDictionary<string, object?> _deserializedData;
+
+    Dictionary<string, MultipartJsonElement> MutableRawData
+    {
+        get
+        {
+            if (_rawData is Dictionary<string, MultipartJsonElement> dictionary)
+            {
+                return dictionary;
+            }
+            throw new InvalidOperationException("Can't mutate after freezing.");
+        }
+    }
+
+    public MultipartJsonDictionary()
+    {
+        _rawData = new Dictionary<string, MultipartJsonElement>();
+        _deserializedData = new();
+    }
+
+    public MultipartJsonDictionary(IReadOnlyDictionary<string, MultipartJsonElement> dictionary)
+    {
+        _rawData = Enumerable.ToDictionary(dictionary, (e) => e.Key, (e) => e.Value);
+        _deserializedData = new();
+    }
+
+    public MultipartJsonDictionary(FrozenDictionary<string, MultipartJsonElement> dictionary)
+    {
+        _rawData = dictionary;
+        _deserializedData = new();
+    }
+
+    public MultipartJsonDictionary(MultipartJsonDictionary dictionary)
+    {
+        _rawData = Enumerable.ToDictionary(dictionary._rawData, (e) => e.Key, (e) => e.Value);
+        _deserializedData = new(dictionary._deserializedData);
+    }
+
+    /// <summary>
+    /// Freezes this dictionary and returns a readonly view of it.
+    ///
+    /// <para>Future calls to mutating methods on this class will throw
+    /// <see cref="InvalidOperationException"/></para>.
+    /// </summary>
+    public IReadOnlyDictionary<string, MultipartJsonElement> Freeze()
+    {
+        if (_rawData is FrozenDictionary<string, MultipartJsonElement> dictionary)
+        {
+            return dictionary;
+        }
+
+        var frozenRawData = FrozenDictionary.ToFrozenDictionary(_rawData);
+        _rawData = frozenRawData;
+        return frozenRawData;
+    }
+
+    public void Set<T>(string key, T value)
+    {
+        MutableRawData[key] = MultipartJsonSerializer.SerializeToElement(
+            value,
+            ModelBase.SerializerOptions
+        );
+        _deserializedData[key] = value;
+    }
+
+    public T GetNotNullClass<T>(string key)
+        where T : class
+    {
+        if (_deserializedData.TryGetValue(key, out var cached) && cached is T t)
+        {
+            return t;
+        }
+        if (!_rawData.TryGetValue(key, out MultipartJsonElement element))
+        {
+            throw new GeminiNextGenApiInvalidDataException($"'{key}' cannot be absent");
+        }
+        T? deserialized = WrappedMultipartJsonSerializer.GetNotNullClass<T>(element, key);
+        _deserializedData[key] = deserialized;
+        return deserialized;
+    }
+
+    public T GetNotNullStruct<T>(string key)
+        where T : struct
+    {
+        if (_deserializedData.TryGetValue(key, out var cached) && cached is T t)
+        {
+            return t;
+        }
+        if (!_rawData.TryGetValue(key, out MultipartJsonElement element))
+        {
+            throw new GeminiNextGenApiInvalidDataException($"'{key}' cannot be absent");
+        }
+        T deserialized = WrappedMultipartJsonSerializer.GetNotNullStruct<T>(element, key);
+        _deserializedData[key] = deserialized;
+        return deserialized;
+    }
+
+    public T? GetNullableClass<T>(string key)
+        where T : class
+    {
+        if (_deserializedData.TryGetValue(key, out var cached) && (cached == null || cached is T))
+        {
+            return (T?)cached;
+        }
+        if (!_rawData.TryGetValue(key, out MultipartJsonElement element))
+        {
+            _deserializedData[key] = null;
+            return null;
+        }
+        T? deserialized = WrappedMultipartJsonSerializer.GetNullableClass<T>(element, key);
+        _deserializedData[key] = deserialized;
+        return deserialized;
+    }
+
+    public T? GetNullableStruct<T>(string key)
+        where T : struct
+    {
+        if (_deserializedData.TryGetValue(key, out var cached) && (cached == null || cached is T))
+        {
+            return (T?)cached;
+        }
+        if (!_rawData.TryGetValue(key, out MultipartJsonElement element))
+        {
+            _deserializedData[key] = null;
+            return null;
+        }
+        T? deserialized = WrappedMultipartJsonSerializer.GetNullableStruct<T>(element, key);
+        _deserializedData[key] = deserialized;
+        return deserialized;
+    }
+
+    public override string ToString() =>
+        JsonSerializer.Serialize(
+            FriendlyJsonPrinter.PrintValue(this._rawData),
+            ModelBase.ToStringSerializerOptions
+        );
+
+    public override bool Equals(object? obj)
+    {
+        if (obj is not MultipartJsonDictionary other || _rawData.Count != other._rawData.Count)
+        {
+            return false;
+        }
+
+        foreach (var item in _rawData)
+        {
+            if (!other._rawData.TryGetValue(item.Key, out var otherValue))
+            {
+                return false;
+            }
+
+            if (!MultipartJsonElement.DeepEquals(item.Value, otherValue))
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public override int GetHashCode()
+    {
+        return 0;
+    }
+}
