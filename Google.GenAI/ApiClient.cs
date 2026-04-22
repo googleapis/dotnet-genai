@@ -39,7 +39,7 @@ namespace Google.GenAI
     private HttpClient? _httpClient;
     private readonly object _httpClientLock = new object();
 
-    protected HttpClient HttpClient
+    internal HttpClient HttpClient
     {
         get
         {
@@ -230,8 +230,7 @@ namespace Google.GenAI
       {
         this.HttpOptions = MergeHttpOptions(customHttpOptions);
       }
-
-      this.ClientOptions = clientOptions ?? new Google.GenAI.Types.ClientOptions();
+       this.ClientOptions = clientOptions ?? new Google.GenAI.Types.ClientOptions();
     }
 
     private static HttpClient CreateHttpClient(
