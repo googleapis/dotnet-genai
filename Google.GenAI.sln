@@ -1,4 +1,4 @@
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
 VisualStudioVersion = 18.1.11304.174
 MinimumVisualStudioVersion = 10.0.40219.1
@@ -44,6 +44,50 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.GenAI.Netstandard2_0.Tests", "Google.GenAI.Tests\Netstandard2_0Tests\Google.GenAI.Netstandard2_0.Tests.csproj", "{750DC926-0B2D-504C-7168-FEE801B21D12}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DemoApp", "DemoApp", "{6B4F5E52-A0ED-4AE1-8FB7-7F96E9FFD71F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionStateless", "DemoApp\Interactions\InteractionStateless\InteractionStateless.csproj", "{475500FD-D26A-46CC-ADEE-9B25942A3499}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionStateful", "DemoApp\Interactions\InteractionStateful\InteractionStateful.csproj", "{1B189A04-A2C4-46DC-9638-4D1FC70CCC07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionGet", "DemoApp\Interactions\InteractionGet\InteractionGet.csproj", "{A4FB959E-F3EA-4B0E-AAD7-F9F013314F9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionBasic", "DemoApp\Interactions\InteractionBasic\InteractionBasic.csproj", "{52799824-A14B-473F-9A91-EE257243F3D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionFunctionCallingServerState", "DemoApp\Interactions\InteractionFunctionCallingServerState\InteractionFunctionCallingServerState.csproj", "{7E9D5911-646A-4292-8FAC-3D8556C892A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionWithConfig", "DemoApp\Interactions\InteractionWithConfig\InteractionWithConfig.csproj", "{088CFDAE-9D10-4095-88E9-E54BC0713FE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionFunctionCallingClientState", "DemoApp\Interactions\InteractionFunctionCallingClientState\InteractionFunctionCallingClientState.csproj", "{14842F8C-DB95-45A5-B06E-77C712A00879}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionToolCallWithFunctions", "DemoApp\Interactions\InteractionToolCallWithFunctions\InteractionToolCallWithFunctions.csproj", "{CD472CC8-D808-499A-90F0-B19C80527172}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionToolCallWithGoogleSearch", "DemoApp\Interactions\InteractionToolCallWithGoogleSearch\InteractionToolCallWithGoogleSearch.csproj", "{F0AB0348-965A-47E0-A921-A454869FA189}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionMultimodalResponseImage", "DemoApp\Interactions\InteractionMultimodalResponseImage\InteractionMultimodalResponseImage.csproj", "{8736D289-8D19-4840-AC9B-644856CFBB61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionMultimodalResponseAudio", "DemoApp\Interactions\InteractionMultimodalResponseAudio\InteractionMultimodalResponseAudio.csproj", "{E122A1EE-AB03-499F-9705-276A963BC7AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionToolCallWithUrlContext", "DemoApp\Interactions\InteractionToolCallWithUrlContext\InteractionToolCallWithUrlContext.csproj", "{7DD104D7-3393-4177-AF24-9DC45A06286A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionStructuredOutputJson", "DemoApp\Interactions\InteractionStructuredOutputJson\InteractionStructuredOutputJson.csproj", "{79E49BF3-E08B-456D-8529-2F9D18E9E14A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionToolCallWithCodeExecution", "DemoApp\Interactions\InteractionToolCallWithCodeExecution\InteractionToolCallWithCodeExecution.csproj", "{F7A4A38E-10AF-4FF0-B5F2-98E6D07B2F62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionToolCallWithComputerUse", "DemoApp\Interactions\InteractionToolCallWithComputerUse\InteractionToolCallWithComputerUse.csproj", "{E2DC7301-B0C9-48A6-9E70-1E70BB501134}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionMultimodalInputTextAndAudio", "DemoApp\Interactions\InteractionMultimodalInputTextAndAudio\InteractionMultimodalInputTextAndAudio.csproj", "{520250EA-AA5A-46CB-B26D-DA6D23EB5D6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionMultimodalInputTextAndImage", "DemoApp\Interactions\InteractionMultimodalInputTextAndImage\InteractionMultimodalInputTextAndImage.csproj", "{2A95BF05-83B8-48AA-B8F8-3498CCBE47A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interactions", "Interactions", "{C69C4ED4-A92C-4105-9144-027473A98D57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionCreate", "DemoApp\Interactions\InteractionCreate\InteractionCreate.csproj", "{AEEF64EA-1454-418C-856C-6689DE059D22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionCreateStreaming", "DemoApp\Interactions\InteractionCreateStreaming\InteractionCreateStreaming.csproj", "{92A89545-080D-400E-8885-ACEF3D180D54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionDeepResearch", "DemoApp\Interactions\InteractionDeepResearch\InteractionDeepResearch.csproj", "{78A7571A-69F2-450D-A5FC-9D55CA02CFA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -95,6 +139,86 @@ Global
 		{750DC926-0B2D-504C-7168-FEE801B21D12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{750DC926-0B2D-504C-7168-FEE801B21D12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{750DC926-0B2D-504C-7168-FEE801B21D12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{475500FD-D26A-46CC-ADEE-9B25942A3499}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{475500FD-D26A-46CC-ADEE-9B25942A3499}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{475500FD-D26A-46CC-ADEE-9B25942A3499}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{475500FD-D26A-46CC-ADEE-9B25942A3499}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B189A04-A2C4-46DC-9638-4D1FC70CCC07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B189A04-A2C4-46DC-9638-4D1FC70CCC07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B189A04-A2C4-46DC-9638-4D1FC70CCC07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B189A04-A2C4-46DC-9638-4D1FC70CCC07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4FB959E-F3EA-4B0E-AAD7-F9F013314F9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4FB959E-F3EA-4B0E-AAD7-F9F013314F9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4FB959E-F3EA-4B0E-AAD7-F9F013314F9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4FB959E-F3EA-4B0E-AAD7-F9F013314F9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52799824-A14B-473F-9A91-EE257243F3D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52799824-A14B-473F-9A91-EE257243F3D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52799824-A14B-473F-9A91-EE257243F3D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52799824-A14B-473F-9A91-EE257243F3D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E9D5911-646A-4292-8FAC-3D8556C892A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E9D5911-646A-4292-8FAC-3D8556C892A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E9D5911-646A-4292-8FAC-3D8556C892A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E9D5911-646A-4292-8FAC-3D8556C892A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{088CFDAE-9D10-4095-88E9-E54BC0713FE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{088CFDAE-9D10-4095-88E9-E54BC0713FE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{088CFDAE-9D10-4095-88E9-E54BC0713FE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{088CFDAE-9D10-4095-88E9-E54BC0713FE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14842F8C-DB95-45A5-B06E-77C712A00879}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14842F8C-DB95-45A5-B06E-77C712A00879}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14842F8C-DB95-45A5-B06E-77C712A00879}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14842F8C-DB95-45A5-B06E-77C712A00879}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD472CC8-D808-499A-90F0-B19C80527172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD472CC8-D808-499A-90F0-B19C80527172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD472CC8-D808-499A-90F0-B19C80527172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD472CC8-D808-499A-90F0-B19C80527172}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0AB0348-965A-47E0-A921-A454869FA189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0AB0348-965A-47E0-A921-A454869FA189}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0AB0348-965A-47E0-A921-A454869FA189}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0AB0348-965A-47E0-A921-A454869FA189}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8736D289-8D19-4840-AC9B-644856CFBB61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8736D289-8D19-4840-AC9B-644856CFBB61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8736D289-8D19-4840-AC9B-644856CFBB61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8736D289-8D19-4840-AC9B-644856CFBB61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E122A1EE-AB03-499F-9705-276A963BC7AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E122A1EE-AB03-499F-9705-276A963BC7AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E122A1EE-AB03-499F-9705-276A963BC7AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E122A1EE-AB03-499F-9705-276A963BC7AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DD104D7-3393-4177-AF24-9DC45A06286A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DD104D7-3393-4177-AF24-9DC45A06286A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DD104D7-3393-4177-AF24-9DC45A06286A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DD104D7-3393-4177-AF24-9DC45A06286A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79E49BF3-E08B-456D-8529-2F9D18E9E14A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79E49BF3-E08B-456D-8529-2F9D18E9E14A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79E49BF3-E08B-456D-8529-2F9D18E9E14A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79E49BF3-E08B-456D-8529-2F9D18E9E14A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7A4A38E-10AF-4FF0-B5F2-98E6D07B2F62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7A4A38E-10AF-4FF0-B5F2-98E6D07B2F62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7A4A38E-10AF-4FF0-B5F2-98E6D07B2F62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7A4A38E-10AF-4FF0-B5F2-98E6D07B2F62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2DC7301-B0C9-48A6-9E70-1E70BB501134}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2DC7301-B0C9-48A6-9E70-1E70BB501134}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2DC7301-B0C9-48A6-9E70-1E70BB501134}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2DC7301-B0C9-48A6-9E70-1E70BB501134}.Release|Any CPU.Build.0 = Release|Any CPU
+		{520250EA-AA5A-46CB-B26D-DA6D23EB5D6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{520250EA-AA5A-46CB-B26D-DA6D23EB5D6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{520250EA-AA5A-46CB-B26D-DA6D23EB5D6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{520250EA-AA5A-46CB-B26D-DA6D23EB5D6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A95BF05-83B8-48AA-B8F8-3498CCBE47A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A95BF05-83B8-48AA-B8F8-3498CCBE47A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A95BF05-83B8-48AA-B8F8-3498CCBE47A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A95BF05-83B8-48AA-B8F8-3498CCBE47A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEEF64EA-1454-418C-856C-6689DE059D22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEEF64EA-1454-418C-856C-6689DE059D22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEEF64EA-1454-418C-856C-6689DE059D22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEEF64EA-1454-418C-856C-6689DE059D22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92A89545-080D-400E-8885-ACEF3D180D54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92A89545-080D-400E-8885-ACEF3D180D54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92A89545-080D-400E-8885-ACEF3D180D54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92A89545-080D-400E-8885-ACEF3D180D54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78A7571A-69F2-450D-A5FC-9D55CA02CFA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78A7571A-69F2-450D-A5FC-9D55CA02CFA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78A7571A-69F2-450D-A5FC-9D55CA02CFA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78A7571A-69F2-450D-A5FC-9D55CA02CFA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -111,6 +235,27 @@ Global
 		{976E5ABB-E26C-053A-3462-591503F3E67D} = {814B1E4F-AA62-4EE1-BC14-8DF9A3088398}
 		{794DEEC8-86DB-2ACD-25B9-3D360F800432} = {814B1E4F-AA62-4EE1-BC14-8DF9A3088398}
 		{750DC926-0B2D-504C-7168-FEE801B21D12} = {FD96F647-C6D2-4C03-9BCD-5491AB949CDF}
+		{475500FD-D26A-46CC-ADEE-9B25942A3499} = {6B4F5E52-A0ED-4AE1-8FB7-7F96E9FFD71F}
+		{1B189A04-A2C4-46DC-9638-4D1FC70CCC07} = {6B4F5E52-A0ED-4AE1-8FB7-7F96E9FFD71F}
+		{A4FB959E-F3EA-4B0E-AAD7-F9F013314F9D} = {6B4F5E52-A0ED-4AE1-8FB7-7F96E9FFD71F}
+		{52799824-A14B-473F-9A91-EE257243F3D6} = {6B4F5E52-A0ED-4AE1-8FB7-7F96E9FFD71F}
+		{7E9D5911-646A-4292-8FAC-3D8556C892A0} = {6B4F5E52-A0ED-4AE1-8FB7-7F96E9FFD71F}
+		{088CFDAE-9D10-4095-88E9-E54BC0713FE7} = {6B4F5E52-A0ED-4AE1-8FB7-7F96E9FFD71F}
+		{14842F8C-DB95-45A5-B06E-77C712A00879} = {6B4F5E52-A0ED-4AE1-8FB7-7F96E9FFD71F}
+		{CD472CC8-D808-499A-90F0-B19C80527172} = {6B4F5E52-A0ED-4AE1-8FB7-7F96E9FFD71F}
+		{F0AB0348-965A-47E0-A921-A454869FA189} = {6B4F5E52-A0ED-4AE1-8FB7-7F96E9FFD71F}
+		{8736D289-8D19-4840-AC9B-644856CFBB61} = {6B4F5E52-A0ED-4AE1-8FB7-7F96E9FFD71F}
+		{E122A1EE-AB03-499F-9705-276A963BC7AF} = {6B4F5E52-A0ED-4AE1-8FB7-7F96E9FFD71F}
+		{7DD104D7-3393-4177-AF24-9DC45A06286A} = {6B4F5E52-A0ED-4AE1-8FB7-7F96E9FFD71F}
+		{79E49BF3-E08B-456D-8529-2F9D18E9E14A} = {6B4F5E52-A0ED-4AE1-8FB7-7F96E9FFD71F}
+		{F7A4A38E-10AF-4FF0-B5F2-98E6D07B2F62} = {6B4F5E52-A0ED-4AE1-8FB7-7F96E9FFD71F}
+		{E2DC7301-B0C9-48A6-9E70-1E70BB501134} = {6B4F5E52-A0ED-4AE1-8FB7-7F96E9FFD71F}
+		{520250EA-AA5A-46CB-B26D-DA6D23EB5D6E} = {6B4F5E52-A0ED-4AE1-8FB7-7F96E9FFD71F}
+		{2A95BF05-83B8-48AA-B8F8-3498CCBE47A5} = {6B4F5E52-A0ED-4AE1-8FB7-7F96E9FFD71F}
+		{C69C4ED4-A92C-4105-9144-027473A98D57} = {6B4F5E52-A0ED-4AE1-8FB7-7F96E9FFD71F}
+		{AEEF64EA-1454-418C-856C-6689DE059D22} = {C69C4ED4-A92C-4105-9144-027473A98D57}
+		{92A89545-080D-400E-8885-ACEF3D180D54} = {C69C4ED4-A92C-4105-9144-027473A98D57}
+		{78A7571A-69F2-450D-A5FC-9D55CA02CFA4} = {C69C4ED4-A92C-4105-9144-027473A98D57}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C5C5D6D6-276F-43FA-89C8-AA44F98787DF}
