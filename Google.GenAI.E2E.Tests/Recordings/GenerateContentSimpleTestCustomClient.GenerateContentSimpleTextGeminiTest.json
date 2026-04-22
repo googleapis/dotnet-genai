@@ -1,0 +1,83 @@
+{
+  "recordID": "GenerateContentSimpleTestCustomClient.GenerateContentSimpleTextGeminiTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1beta/models/gemini-2.5-flash:generateContent",
+        "request": "POST /v1beta/models/gemini-2.5-flash:generateContent HTTP/1.1",
+        "headers": {
+          "Content-Length": "82",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test-Name": "GenerateContentSimpleTestCustomClient.GenerateContentSimpleTextGeminiTest"
+        },
+        "bodySegments": [
+          {
+            "contents": [
+              {
+                "parts": [
+                  {
+                    "text": "What is the capital of France?"
+                  }
+                ],
+                "role": "user"
+              }
+            ]
+          }
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "generativelanguage.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "bd8f07a7b3a292d81133f2159caef97891d4d75fbef8f7920f918d41df3aeebf",
+      "response": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=UTF-8",
+          "Date": "Wed, 08 Apr 2026 17:28:13 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Server-Timing": "gfet4t7; dur=965",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Gemini-Service-Tier": "standard",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "The capital of France is **Paris**."
+                    }
+                  ],
+                  "role": "model"
+                },
+                "finishReason": "STOP",
+                "index": 0
+              }
+            ],
+            "modelVersion": "gemini-2.5-flash",
+            "responseId": "LJDWadScJp2hjrEPw9nW2Ac",
+            "turnToken": "v1_ChdMSkRXYWRTY0pwMmhqckVQdzluVzJBYxIXTEpEV2FkU2NKcDJoanJFUHc5blcyQWM",
+            "usageMetadata": {
+              "candidatesTokenCount": 8,
+              "promptTokenCount": 8,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 8
+                }
+              ],
+              "thoughtsTokenCount": 24,
+              "totalTokenCount": 40
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

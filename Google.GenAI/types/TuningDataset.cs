@@ -35,8 +35,9 @@ namespace Google.GenAI.Types {
     public string ? GcsUri { get; set; }
 
     /// <summary>
-    /// The resource name of the Vertex Multimodal Dataset that is used as training dataset.
-    /// Example: 'projects/my-project-id-or-number/locations/my-location/datasets/my-dataset-id'.
+    /// The resource name of the Gemini Enterprise Agent Platform (previously known as Vertex AI)
+    /// Multimodal Dataset that is used as training dataset. Example:
+    /// 'projects/my-project-id-or-number/locations/my-location/datasets/my-dataset-id'.
     /// </summary>
     [JsonPropertyName("vertexDatasetResource")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

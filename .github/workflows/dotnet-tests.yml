@@ -45,6 +45,10 @@ jobs:
       if: github.repository == 'googleapis/dotnet-genai' || github.repository == 'google-gemini/private-dotnet-genai'
       run: dotnet test ./Google.GenAI.Tests/Google.GenAI.Tests.csproj
 
+    - name: Run Interactions Tests
+      if: github.repository == 'googleapis/dotnet-genai' || github.repository == 'google-gemini/private-dotnet-genai'
+      run: dotnet test ./Google.GenAI.Interactions.Tests/Google.GenAI.Interactions.Tests.csproj
+
     - name: Run Unit Tests against netstandard2.0 build
       if: github.repository == 'googleapis/dotnet-genai' || github.repository == 'google-gemini/private-dotnet-genai'
       run: dotnet test ./Google.GenAI.Tests/Netstandard2_0Tests/Google.GenAI.Netstandard2_0.Tests.csproj

@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <Import Project="../ReleaseVersion.xml" />
   <PropertyGroup>
@@ -18,6 +18,8 @@
     <RepositoryUrl>https://github.com/googleapis/dotnet-genai</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -30,8 +32,11 @@
     <PackageReference Include="Google.Apis.Auth" />
     <PackageReference Include="Microsoft.Extensions.AI.Abstractions" />
     <PackageReference Include="MimeTypes" />
+    <PackageReference Include="System.Net.ServerSentEvents" />
+    <PackageReference Include="System.Collections.Immutable" />
     <InternalsVisibleTo Include="Google.GenAI.Tests" />
     <InternalsVisibleTo Include="Google.GenAI.Netstandard2_0.Tests" />
+    <InternalsVisibleTo Include="Google.GenAI.Interactions.Tests" />
   </ItemGroup>
 
   <ItemGroup>

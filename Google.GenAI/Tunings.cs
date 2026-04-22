@@ -405,7 +405,6 @@ namespace Google.GenAI {
               Common.GetValueByPath(fromObject, new string[] { "learningRate" }));
         }
       }
-
       if (Common.GetValueByPath(fromObject, new string[] { "labels" }) != null) {
         Common.SetValueByPath(parentObject, new string[] { "labels" },
                               Common.GetValueByPath(fromObject, new string[] { "labels" }));
@@ -509,282 +508,6 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode EvaluationConfigFromVertex(JsonNode fromObject, JsonObject parentObject,
-                                                 JsonNode rootObject) {
-      JsonObject toObject = new JsonObject();
-
-      return toObject;
-    }
-
-    internal JsonNode EvaluationConfigToVertex(JsonNode fromObject, JsonObject parentObject,
-                                               JsonNode rootObject) {
-      JsonObject toObject = new JsonObject();
-
-      return toObject;
-    }
-
-    internal JsonNode GenerationConfigFromVertex(JsonNode fromObject, JsonObject parentObject,
-                                                 JsonNode rootObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "modelConfig" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "modelSelectionConfig" },
-                              Common.GetValueByPath(fromObject, new string[] { "modelConfig" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "responseJsonSchema" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "responseJsonSchema" },
-            Common.GetValueByPath(fromObject, new string[] { "responseJsonSchema" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "audioTimestamp" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "audioTimestamp" },
-                              Common.GetValueByPath(fromObject, new string[] { "audioTimestamp" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "candidateCount" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "candidateCount" },
-                              Common.GetValueByPath(fromObject, new string[] { "candidateCount" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "enableAffectiveDialog" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "enableAffectiveDialog" },
-            Common.GetValueByPath(fromObject, new string[] { "enableAffectiveDialog" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "frequencyPenalty" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "frequencyPenalty" },
-            Common.GetValueByPath(fromObject, new string[] { "frequencyPenalty" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "logprobs" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "logprobs" },
-                              Common.GetValueByPath(fromObject, new string[] { "logprobs" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "maxOutputTokens" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "maxOutputTokens" },
-            Common.GetValueByPath(fromObject, new string[] { "maxOutputTokens" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "mediaResolution" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "mediaResolution" },
-            Common.GetValueByPath(fromObject, new string[] { "mediaResolution" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "presencePenalty" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "presencePenalty" },
-            Common.GetValueByPath(fromObject, new string[] { "presencePenalty" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "responseLogprobs" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "responseLogprobs" },
-            Common.GetValueByPath(fromObject, new string[] { "responseLogprobs" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "responseMimeType" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "responseMimeType" },
-            Common.GetValueByPath(fromObject, new string[] { "responseMimeType" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "responseModalities" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "responseModalities" },
-            Common.GetValueByPath(fromObject, new string[] { "responseModalities" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "responseSchema" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "responseSchema" },
-                              Common.GetValueByPath(fromObject, new string[] { "responseSchema" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "routingConfig" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "routingConfig" },
-                              Common.GetValueByPath(fromObject, new string[] { "routingConfig" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "seed" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "seed" },
-                              Common.GetValueByPath(fromObject, new string[] { "seed" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "speechConfig" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "speechConfig" },
-                              Common.GetValueByPath(fromObject, new string[] { "speechConfig" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "stopSequences" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "stopSequences" },
-                              Common.GetValueByPath(fromObject, new string[] { "stopSequences" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "temperature" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "temperature" },
-                              Common.GetValueByPath(fromObject, new string[] { "temperature" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "thinkingConfig" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "thinkingConfig" },
-                              Common.GetValueByPath(fromObject, new string[] { "thinkingConfig" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "topK" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "topK" },
-                              Common.GetValueByPath(fromObject, new string[] { "topK" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "topP" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "topP" },
-                              Common.GetValueByPath(fromObject, new string[] { "topP" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode GenerationConfigToVertex(JsonNode fromObject, JsonObject parentObject,
-                                               JsonNode rootObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "modelSelectionConfig" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "modelConfig" },
-            Common.GetValueByPath(fromObject, new string[] { "modelSelectionConfig" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "responseJsonSchema" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "responseJsonSchema" },
-            Common.GetValueByPath(fromObject, new string[] { "responseJsonSchema" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "audioTimestamp" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "audioTimestamp" },
-                              Common.GetValueByPath(fromObject, new string[] { "audioTimestamp" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "candidateCount" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "candidateCount" },
-                              Common.GetValueByPath(fromObject, new string[] { "candidateCount" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "enableAffectiveDialog" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "enableAffectiveDialog" },
-            Common.GetValueByPath(fromObject, new string[] { "enableAffectiveDialog" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "frequencyPenalty" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "frequencyPenalty" },
-            Common.GetValueByPath(fromObject, new string[] { "frequencyPenalty" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "logprobs" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "logprobs" },
-                              Common.GetValueByPath(fromObject, new string[] { "logprobs" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "maxOutputTokens" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "maxOutputTokens" },
-            Common.GetValueByPath(fromObject, new string[] { "maxOutputTokens" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "mediaResolution" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "mediaResolution" },
-            Common.GetValueByPath(fromObject, new string[] { "mediaResolution" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "presencePenalty" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "presencePenalty" },
-            Common.GetValueByPath(fromObject, new string[] { "presencePenalty" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "responseLogprobs" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "responseLogprobs" },
-            Common.GetValueByPath(fromObject, new string[] { "responseLogprobs" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "responseMimeType" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "responseMimeType" },
-            Common.GetValueByPath(fromObject, new string[] { "responseMimeType" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "responseModalities" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "responseModalities" },
-            Common.GetValueByPath(fromObject, new string[] { "responseModalities" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "responseSchema" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "responseSchema" },
-                              Common.GetValueByPath(fromObject, new string[] { "responseSchema" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "routingConfig" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "routingConfig" },
-                              Common.GetValueByPath(fromObject, new string[] { "routingConfig" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "seed" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "seed" },
-                              Common.GetValueByPath(fromObject, new string[] { "seed" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "speechConfig" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "speechConfig" },
-            SpeechConfigToVertex(Common.ParseToJsonNode(Common.GetValueByPath(
-                                     fromObject, new string[] { "speechConfig" })),
-                                 toObject, rootObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "stopSequences" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "stopSequences" },
-                              Common.GetValueByPath(fromObject, new string[] { "stopSequences" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "temperature" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "temperature" },
-                              Common.GetValueByPath(fromObject, new string[] { "temperature" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "thinkingConfig" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "thinkingConfig" },
-                              Common.GetValueByPath(fromObject, new string[] { "thinkingConfig" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "topK" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "topK" },
-                              Common.GetValueByPath(fromObject, new string[] { "topK" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "topP" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "topP" },
-                              Common.GetValueByPath(fromObject, new string[] { "topP" }));
-      }
-
-      if (!Common.IsZero(
-              Common.GetValueByPath(fromObject, new string[] { "enableEnhancedCivicAnswers" }))) {
-        throw new NotSupportedException(
-            "enableEnhancedCivicAnswers parameter is not supported in Vertex AI.");
-      }
-
-      return toObject;
-    }
-
     internal JsonNode GetTuningJobParametersToMldev(JsonNode fromObject, JsonObject parentObject,
                                                     JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
@@ -804,28 +527,6 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "name" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "_url", "name" },
                               Common.GetValueByPath(fromObject, new string[] { "name" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode ListTuningJobsConfigToMldev(JsonNode fromObject, JsonObject parentObject,
-                                                  JsonNode rootObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "pageSize" }) != null) {
-        Common.SetValueByPath(parentObject, new string[] { "_query", "pageSize" },
-                              Common.GetValueByPath(fromObject, new string[] { "pageSize" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "pageToken" }) != null) {
-        Common.SetValueByPath(parentObject, new string[] { "_query", "pageToken" },
-                              Common.GetValueByPath(fromObject, new string[] { "pageToken" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "filter" }) != null) {
-        Common.SetValueByPath(parentObject, new string[] { "_query", "filter" },
-                              Common.GetValueByPath(fromObject, new string[] { "filter" }));
       }
 
       return toObject;
@@ -853,19 +554,6 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode ListTuningJobsParametersToMldev(JsonNode fromObject, JsonObject parentObject,
-                                                      JsonNode rootObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "config" }) != null) {
-        _ = ListTuningJobsConfigToMldev(
-            Common.ParseToJsonNode(Common.GetValueByPath(fromObject, new string[] { "config" })),
-            toObject, rootObject);
-      }
-
-      return toObject;
-    }
-
     internal JsonNode ListTuningJobsParametersToVertex(JsonNode fromObject, JsonObject parentObject,
                                                        JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
@@ -874,35 +562,6 @@ namespace Google.GenAI {
         _ = ListTuningJobsConfigToVertex(
             Common.ParseToJsonNode(Common.GetValueByPath(fromObject, new string[] { "config" })),
             toObject, rootObject);
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode ListTuningJobsResponseFromMldev(JsonNode fromObject, JsonObject parentObject,
-                                                      JsonNode rootObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "sdkHttpResponse" },
-            Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "nextPageToken" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "nextPageToken" },
-                              Common.GetValueByPath(fromObject, new string[] { "nextPageToken" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "tunedModels" }) != null) {
-        JsonArray keyArray =
-            (JsonArray)Common.GetValueByPath(fromObject, new string[] { "tunedModels" });
-        JsonArray result = new JsonArray();
-
-        foreach (var record in keyArray) {
-          result.Add(TuningJobFromMldev(Common.ParseToJsonNode(record), toObject, rootObject));
-        }
-        Common.SetValueByPath(toObject, new string[] { "tuningJobs" }, result);
       }
 
       return toObject;
@@ -932,89 +591,6 @@ namespace Google.GenAI {
           result.Add(TuningJobFromVertex(Common.ParseToJsonNode(record), toObject, rootObject));
         }
         Common.SetValueByPath(toObject, new string[] { "tuningJobs" }, result);
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode MultiSpeakerVoiceConfigToVertex(JsonNode fromObject, JsonObject parentObject,
-                                                      JsonNode rootObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "speakerVoiceConfigs" }) != null) {
-        JsonArray keyArray =
-            (JsonArray)Common.GetValueByPath(fromObject, new string[] { "speakerVoiceConfigs" });
-        JsonArray result = new JsonArray();
-
-        foreach (var record in keyArray) {
-          result.Add(
-              SpeakerVoiceConfigToVertex(Common.ParseToJsonNode(record), toObject, rootObject));
-        }
-        Common.SetValueByPath(toObject, new string[] { "speakerVoiceConfigs" }, result);
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode ReplicatedVoiceConfigToVertex(JsonNode fromObject, JsonObject parentObject,
-                                                    JsonNode rootObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "mimeType" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "mimeType" },
-                              Common.GetValueByPath(fromObject, new string[] { "mimeType" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "voiceSampleAudio" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "voiceSampleAudio" },
-            Common.GetValueByPath(fromObject, new string[] { "voiceSampleAudio" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode SpeakerVoiceConfigToVertex(JsonNode fromObject, JsonObject parentObject,
-                                                 JsonNode rootObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "speaker" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "speaker" },
-                              Common.GetValueByPath(fromObject, new string[] { "speaker" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "voiceConfig" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "voiceConfig" },
-                              VoiceConfigToVertex(Common.ParseToJsonNode(Common.GetValueByPath(
-                                                      fromObject, new string[] { "voiceConfig" })),
-                                                  toObject, rootObject));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode SpeechConfigToVertex(JsonNode fromObject, JsonObject parentObject,
-                                           JsonNode rootObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "voiceConfig" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "voiceConfig" },
-                              VoiceConfigToVertex(Common.ParseToJsonNode(Common.GetValueByPath(
-                                                      fromObject, new string[] { "voiceConfig" })),
-                                                  toObject, rootObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "languageCode" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "languageCode" },
-                              Common.GetValueByPath(fromObject, new string[] { "languageCode" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "multiSpeakerVoiceConfig" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "multiSpeakerVoiceConfig" },
-                              MultiSpeakerVoiceConfigToVertex(
-                                  Common.ParseToJsonNode(Common.GetValueByPath(
-                                      fromObject, new string[] { "multiSpeakerVoiceConfig" })),
-                                  toObject, rootObject));
       }
 
       return toObject;
@@ -1114,7 +690,8 @@ namespace Google.GenAI {
         }
       }
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "examples" }))) {
-        throw new NotSupportedException("examples parameter is not supported in Vertex AI.");
+        throw new NotSupportedException(
+            "examples parameter is not supported in Gemini Enterprise Agent Platform (previously known as Vertex AI).");
       }
 
       return toObject;
@@ -1411,27 +988,6 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode VoiceConfigToVertex(JsonNode fromObject, JsonObject parentObject,
-                                          JsonNode rootObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "replicatedVoiceConfig" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "replicatedVoiceConfig" },
-                              ReplicatedVoiceConfigToVertex(
-                                  Common.ParseToJsonNode(Common.GetValueByPath(
-                                      fromObject, new string[] { "replicatedVoiceConfig" })),
-                                  toObject, rootObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "prebuiltVoiceConfig" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "prebuiltVoiceConfig" },
-            Common.GetValueByPath(fromObject, new string[] { "prebuiltVoiceConfig" }));
-      }
-
-      return toObject;
-    }
-
     public Tunings(ApiClient apiClient) {
       _apiClient = apiClient;
     }
@@ -1517,8 +1073,8 @@ namespace Google.GenAI {
         body = ListTuningJobsParametersToVertex(parameterNode, new JsonObject(), parameterNode);
         path = Common.FormatMap("tuningJobs", body["_url"]);
       } else {
-        body = ListTuningJobsParametersToMldev(parameterNode, new JsonObject(), parameterNode);
-        path = Common.FormatMap("tunedModels", body["_url"]);
+        throw new NotSupportedException(
+            "This method is only supported in the Gemini Enterprise Agent Platform (previously known as Vertex AI) client.");
       }
       JsonObject? bodyObj = body?.AsObject();
       bodyObj?.Remove("_url");
@@ -1551,8 +1107,8 @@ namespace Google.GenAI {
       }
 
       if (!this._apiClient.VertexAI) {
-        responseNode =
-            ListTuningJobsResponseFromMldev(httpContentNode, new JsonObject(), parameterNode);
+        throw new NotSupportedException(
+            "This method is only supported in the Gemini Enterprise Agent Platform (previously known as Vertex AI) client.");
       }
 
       return responseNode.Deserialize<ListTuningJobsResponse>() ??
@@ -1563,8 +1119,8 @@ namespace Google.GenAI {
     /// <summary>
     /// Cancels a tuning job resource.
     /// </summary>
-    /// <param name="name">The resource name of the tuning job. For Vertex, this is the full
-    /// resource name or `tuningJobs/{id}`.</param> <param name="config">A <see
+    /// <param name="name">The resource name of the tuning job. For Gemini Enterprise Agent Platform
+    /// , this is the full resource name or `tuningJobs/{id}`.</param> <param name="config">A <see
     /// cref="CancelTuningJobConfig"/> for configuring the cancel request.</param> <param
     /// name="cancellationToken">A <see cref="CancellationToken"/> to cancel the operation.</param>
 
@@ -1666,7 +1222,8 @@ namespace Google.GenAI {
                                                         parameterNode);
         path = Common.FormatMap("tuningJobs", body["_url"]);
       } else {
-        throw new NotSupportedException("This method is only supported in the Vertex AI client.");
+        throw new NotSupportedException(
+            "This method is only supported in the Gemini Enterprise Agent Platform (previously known as Vertex AI) client.");
       }
       JsonObject? bodyObj = body?.AsObject();
       bodyObj?.Remove("_url");
@@ -1698,7 +1255,8 @@ namespace Google.GenAI {
       }
 
       if (!this._apiClient.VertexAI) {
-        throw new NotSupportedException("This method is only supported in the Vertex AI client.");
+        throw new NotSupportedException(
+            "This method is only supported in the Gemini Enterprise Agent Platform (previously known as Vertex AI) client.");
       }
 
       return responseNode.Deserialize<TuningJob>() ??

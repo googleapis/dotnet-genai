@@ -74,8 +74,8 @@ public class EmbedContentTest {
         new Client(apiKey: apiKey, vertexAI: false, httpOptions: geminiClientHttpOptions);
 
     // Specific setup for this test class
-    modelName = "text-embedding-004";
-    multimodalModelName = "gemini-embedding-2-exp-11-2025";
+    modelName = "gemini-embedding-001";
+    multimodalModelName = "gemini-embedding-2-preview";
   }
 
   [TestMethod]
@@ -84,7 +84,7 @@ public class EmbedContentTest {
       new Content { Parts = new List<Part> { new Part { Text = "What is your name?" } } }
     };
     var vertexResponse = await vertexClient.Models.EmbedContentAsync(
-        model: modelName, contents: contents, config: null);
+        model: modelName, contents: contents, config: new EmbedContentConfig { OutputDimensionality = 10 });
 
     Assert.IsNotNull(vertexResponse.Embeddings);
   }
@@ -95,7 +95,7 @@ public class EmbedContentTest {
       new Content { Parts = new List<Part> { new Part { Text = "What is your name?" } } }
     };
     var geminiResponse = await geminiClient.Models.EmbedContentAsync(
-        model: modelName, contents: contents, config: null);
+        model: modelName, contents: contents, config: new EmbedContentConfig { OutputDimensionality = 10 });
 
     Assert.IsNotNull(geminiResponse.Embeddings);
   }
@@ -103,7 +103,7 @@ public class EmbedContentTest {
   [TestMethod]
   public async Task EmbedContentSingleStringVertexTest() {
     var vertexResponse = await vertexClient.Models.EmbedContentAsync(
-        model: modelName, contents: "What is your name?", config: null);
+        model: modelName, contents: "What is your name?", config: new EmbedContentConfig { OutputDimensionality = 10 });
 
     Assert.IsNotNull(vertexResponse.Embeddings);
   }
@@ -111,7 +111,7 @@ public class EmbedContentTest {
   [TestMethod]
   public async Task EmbedContentSingleStringGeminiTest() {
     var geminiResponse = await geminiClient.Models.EmbedContentAsync(
-        model: modelName, contents: "What is your name?", config: null);
+        model: modelName, contents: "What is your name?", config: new EmbedContentConfig { OutputDimensionality = 10 });
 
     Assert.IsNotNull(geminiResponse.Embeddings);
   }
@@ -231,7 +231,7 @@ public class EmbedContentTest {
             new Content { Parts = new List<Part> { new Part { Text = "What is your name?" } } }
         };
         var config = new EmbedContentConfig {
-          OutputDimensionality = 100,
+          OutputDimensionality = 10,
         };
         var vertexResponse = await vertexClient.Models.EmbedContentAsync(
             model: multimodalModelName, contents: contents, config: config);
@@ -247,7 +247,7 @@ public class EmbedContentTest {
             new Content { Parts = new List<Part> { new Part { Text = "What is your name?" } } }
         };
         var config = new EmbedContentConfig {
-          OutputDimensionality = 100,
+          OutputDimensionality = 10,
         };
         var vertexResponse = await vertexClient.Models.EmbedContentAsync(
             model: "publishers/intfloat/models/multilingual-e5-large-instruct-maas", contents: contents, config: config);
@@ -298,5 +298,41 @@ public class EmbedContentTest {
             () => vertexClient.Models.EmbedContentAsync(model: multimodalModelName, contents: contents, config: null));
 
         Assert.IsTrue(exception.Message.Contains("The embedContent API for this model only supports one content at a time."));
+    }
+
+    [TestMethod]
+    public async Task EmbedContentInlinePdfDocumentOcrVertexTest()
+    {
+        byte[] fileBytes = await System.IO.File.ReadAllBytesAsync("TestAssets/story.pdf");
+        var contents = new List<Content> {
+            new Content { Parts = new List<Part> { Part.FromBytes(fileBytes, "application/pdf") } }
+        };
+        var config = new EmbedContentConfig {
+            OutputDimensionality = 10,
+            DocumentOcr = true
+        };
+        var vertexResponse = await vertexClient.Models.EmbedContentAsync(
+            model: multimodalModelName, contents: contents, config: config);
+
+        Assert.IsNotNull(vertexResponse);
+        Assert.IsNotNull(vertexResponse.Embeddings);
+    }
+
+    [TestMethod]
+    public async Task EmbedContentInlineVideoAudioTrackExtractionVertexTest()
+    {
+        byte[] fileBytes = await System.IO.File.ReadAllBytesAsync("TestAssets/animal.mp4");
+        var contents = new List<Content> {
+            new Content { Parts = new List<Part> { Part.FromBytes(fileBytes, "video/mp4") } }
+        };
+        var config = new EmbedContentConfig {
+            OutputDimensionality = 10,
+            AudioTrackExtraction = true
+        };
+        var vertexResponse = await vertexClient.Models.EmbedContentAsync(
+            model: multimodalModelName, contents: contents, config: config);
+
+        Assert.IsNotNull(vertexResponse);
+        Assert.IsNotNull(vertexResponse.Embeddings);
     }
 }

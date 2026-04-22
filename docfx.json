@@ -7,6 +7,7 @@
           "files": ["Google.GenAI/Google.GenAI.csproj"]
         }
       ],
+      "filter": "filter.yml",
       "disableGitFeatures": false,
       "disableDefaultFilter": false,
       "warningsAsErrors": false,

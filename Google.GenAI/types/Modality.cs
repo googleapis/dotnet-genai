@@ -53,9 +53,14 @@ namespace Google.GenAI.Types {
     /// </summary>
     public static Modality Audio { get; } = new("AUDIO");
 
+    /// <summary>
+    /// Indicates the model should return video.
+    /// </summary>
+    public static Modality Video { get; } = new("VIDEO");
+
     public static IReadOnlyList<Modality> AllValues {
       get;
-    } = new[] { ModalityUnspecified, Text, Image, Audio };
+    } = new[] { ModalityUnspecified, Text, Image, Audio, Video };
 
     public static Modality FromString(string value) {
       if (string.IsNullOrEmpty(value)) {

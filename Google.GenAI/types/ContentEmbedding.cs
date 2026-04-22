@@ -35,7 +35,8 @@ namespace Google.GenAI.Types {
     public List<double> ? Values { get; set; }
 
     /// <summary>
-    /// Vertex API only. Statistics of the input text associated with this embedding.
+    /// Gemini Enterprise Agent Platform only. Statistics of the input text associated with this
+    /// embedding.
     /// </summary>
     [JsonPropertyName("statistics")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
