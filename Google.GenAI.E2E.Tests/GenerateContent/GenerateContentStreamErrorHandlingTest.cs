@@ -28,7 +28,7 @@ using TestServerSdk;
 [TestClass]
 public class GenerateContentStreamErrorHandlingTest {
   private static TestServerProcess? _server;
-  private Client vertexClient;
+  private Client enterpriseClient;
   private Client geminiClient;
   private string modelName;
   public TestContext TestContext { get; set; }
@@ -53,7 +53,7 @@ public class GenerateContentStreamErrorHandlingTest {
                                                    $"{GetType().Name}.{TestContext.TestName}" } },
       BaseUrl = "http://localhost:1453"
     };
-    var vertexClientHttpOptions = new HttpOptions {
+    var enterpriseClientHttpOptions = new HttpOptions {
       Headers = new Dictionary<string, string> { { "Test-Name",
                                                    $"{GetType().Name}.{TestContext.TestName}" } },
       BaseUrl = "http://localhost:1454"
@@ -64,11 +64,11 @@ public class GenerateContentStreamErrorHandlingTest {
     string location =
         System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_LOCATION") ?? "us-central1";
     string apiKey = System.Environment.GetEnvironmentVariable("GOOGLE_API_KEY");
-    vertexClient = new Client(project: project, location: location, vertexAI: true,
+    enterpriseClient = new Client(project: project, location: location, enterprise: true,
                               credential: TestServer.GetCredentialForTestMode(),
-                              httpOptions: vertexClientHttpOptions);
+                              httpOptions: enterpriseClientHttpOptions);
     geminiClient =
-        new Client(apiKey: apiKey, vertexAI: false, httpOptions: geminiClientHttpOptions);
+        new Client(apiKey: apiKey, enterprise: false, httpOptions: geminiClientHttpOptions);
 
     // Specific setup for this test class
     modelName = "gemini-2.0-flash";
@@ -77,7 +77,7 @@ public class GenerateContentStreamErrorHandlingTest {
   [TestMethod]
   public async Task GenerateContentStreamWrongModelNameVertexTest() {
     var ex = await Assert.ThrowsExceptionAsync<ClientError>(async () => {
-      await foreach (var chunk in vertexClient.Models.GenerateContentStreamAsync(
+      await foreach (var chunk in enterpriseClient.Models.GenerateContentStreamAsync(
                          model: "wrong-model-name", contents: "What is the capital of France?")) {}
     });
 
@@ -101,7 +101,7 @@ public class GenerateContentStreamErrorHandlingTest {
   [TestMethod]
   public async Task GenerateContentStreamEnterpriseWebSearchVertexTest() {
     GroundingMetadata? groundingMetadata = null;
-    await foreach (var chunk in vertexClient.Models.GenerateContentStreamAsync(
+    await foreach (var chunk in enterpriseClient.Models.GenerateContentStreamAsync(
                        model: modelName,
                        contents: new Content { Parts = new List<Part> { new Part {
                                                  Text = "Why is the sky blue?"
@@ -144,7 +144,7 @@ public class GenerateContentStreamErrorHandlingTest {
 
   [TestMethod]
   public async Task GenerateContentStreamLabelsVertexTest() {
-    await foreach (var chunk in vertexClient.Models.GenerateContentStreamAsync(
+    await foreach (var chunk in enterpriseClient.Models.GenerateContentStreamAsync(
                        model: modelName, contents: "What is the capital of France?",
                        config: new GenerateContentConfig { Labels = new Dictionary<string, string> {
                          { "test-label-key", "test-label-value" }

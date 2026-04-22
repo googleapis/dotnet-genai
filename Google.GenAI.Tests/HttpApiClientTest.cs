@@ -282,6 +282,17 @@ namespace Google.GenAI.Tests {
     }
 
     [TestMethod]
+    public void VertexConstructor_LocationEu_SetsCorrectBaseUrl() {
+      var mockCredential = new Mock<ICredential>();
+      var client = new HttpApiClient(vertexAI: true, project: "my-project", location: "eu", credentials: mockCredential.Object);
+
+      Assert.AreEqual("my-project", client.Project);
+      Assert.AreEqual("eu", client.Location);
+      Assert.IsTrue(client.VertexAI);
+      Assert.AreEqual("https://aiplatform.eu.rep.googleapis.com", client.HttpOptions.BaseUrl);
+    }
+
+    [TestMethod]
     public void VertexConstructor_LocationUsAndCustomHttpOptions_SetsCorrectBaseUrl() {
       var mockCredential = new Mock<ICredential>();
       var customOptions = new Types.HttpOptions { BaseUrl = "https://my-custom-url.com/" };
