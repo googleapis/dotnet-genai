@@ -29,7 +29,7 @@ using TestServerSdk;
 [TestClass]
 public class GenerateContentSimpleTest {
   private static TestServerProcess? _server;
-  private Client vertexClient;
+  private Client enterpriseClient;
   private Client geminiClient;
   private string modelName;
   public TestContext TestContext { get; set; }
@@ -55,7 +55,7 @@ public class GenerateContentSimpleTest {
                                                    $"{GetType().Name}.{TestContext.TestName}" } },
       BaseUrl = "http://localhost:1453"
     };
-    var vertexClientHttpOptions = new HttpOptions {
+    var enterpriseClientHttpOptions = new HttpOptions {
       Headers = new Dictionary<string, string> { { "Test-Name",
                                                    $"{GetType().Name}.{TestContext.TestName}" } },
       BaseUrl = "http://localhost:1454"
@@ -66,11 +66,11 @@ public class GenerateContentSimpleTest {
     string location =
         System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_LOCATION") ?? "us-central1";
     string apiKey = System.Environment.GetEnvironmentVariable("GOOGLE_API_KEY");
-    vertexClient = new Client(project: project, location: location, vertexAI: true,
+    enterpriseClient = new Client(project: project, location: location, enterprise: true,
                               credential: TestServer.GetCredentialForTestMode(),
-                              httpOptions: vertexClientHttpOptions);
+                              httpOptions: enterpriseClientHttpOptions);
     geminiClient =
-        new Client(apiKey: apiKey, vertexAI: false, httpOptions: geminiClientHttpOptions);
+        new Client(apiKey: apiKey, enterprise: false, httpOptions: geminiClientHttpOptions);
 
     // Specific setup for this test class
     modelName = "gemini-2.0-flash";
@@ -78,7 +78,7 @@ public class GenerateContentSimpleTest {
 
   [TestMethod]
   public async Task GenerateContentSimpleTextVertexTest() {
-    var vertexResponse = await vertexClient.Models.GenerateContentAsync(
+    var vertexResponse = await enterpriseClient.Models.GenerateContentAsync(
         model: modelName, contents: "What is the capital of France?");
 
     Assert.IsNotNull(vertexResponse.Candidates);
@@ -99,7 +99,7 @@ public class GenerateContentSimpleTest {
     var generateContentConfig = new GenerateContentConfig { SystemInstruction = new Content {
       Parts = new List<Part> { new Part { Text = "I say high you say low." } }
     } };
-    var vertexResponse = await vertexClient.Models.GenerateContentAsync(
+    var vertexResponse = await enterpriseClient.Models.GenerateContentAsync(
         model: modelName, contents: "high", config: generateContentConfig);
 
     Assert.IsNotNull(vertexResponse.Candidates);
@@ -123,7 +123,7 @@ public class GenerateContentSimpleTest {
     var generateContentConfig =
         new GenerateContentConfig { Temperature = 0.5, TopP = 0.9, MaxOutputTokens = 100,
                                     ResponseModalities = new List<string> { "TEXT" } };
-    var vertexResponse = await vertexClient.Models.GenerateContentAsync(
+    var vertexResponse = await enterpriseClient.Models.GenerateContentAsync(
         model: modelName, contents: "Why is the sky blue?", config: generateContentConfig);
 
     Assert.IsNotNull(vertexResponse.Candidates);
@@ -170,7 +170,7 @@ public class GenerateContentSimpleTest {
     var generateContentConfig =
         new GenerateContentConfig { SafetySettings = new List<SafetySetting>(safetySettings) };
 
-    var vertexResponse = await vertexClient.Models.GenerateContentAsync(
+    var vertexResponse = await enterpriseClient.Models.GenerateContentAsync(
         model: modelName, contents: "What hate speech is prohibited by responsible AI?",
         config: generateContentConfig);
 

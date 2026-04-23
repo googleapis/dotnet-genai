@@ -23,49 +23,39 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Supervised fine-tuning training dataset.
+  /// Configures the customized avatar to be used in the session.
   /// </summary>
 
-  public record TuningDataset {
+  public record CustomizedAvatar {
     /// <summary>
-    /// GCS URI of the file containing training dataset in JSONL format.
+    /// The mime type of the reference image, e.g., "image/jpeg".
     /// </summary>
-    [JsonPropertyName("gcsUri")]
+    [JsonPropertyName("imageMimeType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? GcsUri { get; set; }
+    public string ? ImageMimeType { get; set; }
 
     /// <summary>
-    /// The resource name of the Gemini Enterprise Agent Platform (previously known as Vertex AI)
-    /// Multimodal Dataset that is used as training dataset. Example:
-    /// 'projects/my-project-id-or-number/locations/my-location/datasets/my-dataset-id'.
+    /// The data of the reference image. The dimensions of the reference image should be 9:16
+    /// (portrait) with a minimum resolution of 704x1280.
     /// </summary>
-    [JsonPropertyName("vertexDatasetResource")]
+    [JsonPropertyName("imageData")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string
-        ? VertexDatasetResource {
+    public byte[]
+        ? ImageData {
             get; set;
           }
 
     /// <summary>
-    /// Inline examples with simple input/output text.
-    /// </summary>
-    [JsonPropertyName("examples")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<TuningExample>
-        ? Examples {
-            get; set;
-          }
-
-    /// <summary>
-    /// Deserializes a JSON string to a TuningDataset object.
+    /// Deserializes a JSON string to a CustomizedAvatar object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized TuningDataset object, or null if deserialization fails.</returns>
-    public static TuningDataset
+    /// <returns>The deserialized CustomizedAvatar object, or null if deserialization
+    /// fails.</returns>
+    public static CustomizedAvatar
         ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<TuningDataset>(jsonString, options);
+        return JsonSerializer.Deserialize<CustomizedAvatar>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;

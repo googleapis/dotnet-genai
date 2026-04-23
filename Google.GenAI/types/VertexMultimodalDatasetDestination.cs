@@ -23,49 +23,39 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Supervised fine-tuning training dataset.
+  /// This class is experimental and may change in future versions.  The specification for an output
+  /// Vertex AI multimodal dataset.
   /// </summary>
 
-  public record TuningDataset {
+  public record VertexMultimodalDatasetDestination {
     /// <summary>
-    /// GCS URI of the file containing training dataset in JSONL format.
+    /// The BigQuery destination for the multimodal dataset.
     /// </summary>
-    [JsonPropertyName("gcsUri")]
+    [JsonPropertyName("bigqueryDestination")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? GcsUri { get; set; }
+    public string ? BigqueryDestination { get; set; }
 
     /// <summary>
-    /// The resource name of the Gemini Enterprise Agent Platform (previously known as Vertex AI)
-    /// Multimodal Dataset that is used as training dataset. Example:
-    /// 'projects/my-project-id-or-number/locations/my-location/datasets/my-dataset-id'.
+    /// The display name of the multimodal dataset.
     /// </summary>
-    [JsonPropertyName("vertexDatasetResource")]
+    [JsonPropertyName("displayName")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? VertexDatasetResource {
+        ? DisplayName {
             get; set;
           }
 
     /// <summary>
-    /// Inline examples with simple input/output text.
-    /// </summary>
-    [JsonPropertyName("examples")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<TuningExample>
-        ? Examples {
-            get; set;
-          }
-
-    /// <summary>
-    /// Deserializes a JSON string to a TuningDataset object.
+    /// Deserializes a JSON string to a VertexMultimodalDatasetDestination object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized TuningDataset object, or null if deserialization fails.</returns>
-    public static TuningDataset
+    /// <returns>The deserialized VertexMultimodalDatasetDestination object, or null if
+    /// deserialization fails.</returns>
+    public static VertexMultimodalDatasetDestination
         ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<TuningDataset>(jsonString, options);
+        return JsonSerializer.Deserialize<VertexMultimodalDatasetDestination>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;

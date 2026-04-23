@@ -57,7 +57,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// The batch size hyperparameter for tuning. This is only supported for OSS models in Vertex.
+    /// The batch size hyperparameter for tuning. This is only supported for OSS models in Gemini
+    /// Enterprise Agent Platform.
     /// </summary>
     [JsonPropertyName("batchSize")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

@@ -21,51 +21,31 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.GenAI.Serialization;
 
+using System.Net.Http;
+
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Supervised fine-tuning training dataset.
+  /// Client options to be used in the client instantiation.
   /// </summary>
 
-  public record TuningDataset {
+  public record ClientOptions {
     /// <summary>
-    /// GCS URI of the file containing training dataset in JSONL format.
+    /// The factory to use for creating the custom HttpClient.
     /// </summary>
-    [JsonPropertyName("gcsUri")]
+    [JsonPropertyName("httpClientFactory")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? GcsUri { get; set; }
+    public Func<HttpClient> ? HttpClientFactory { get; set; }
 
     /// <summary>
-    /// The resource name of the Gemini Enterprise Agent Platform (previously known as Vertex AI)
-    /// Multimodal Dataset that is used as training dataset. Example:
-    /// 'projects/my-project-id-or-number/locations/my-location/datasets/my-dataset-id'.
-    /// </summary>
-    [JsonPropertyName("vertexDatasetResource")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string
-        ? VertexDatasetResource {
-            get; set;
-          }
-
-    /// <summary>
-    /// Inline examples with simple input/output text.
-    /// </summary>
-    [JsonPropertyName("examples")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<TuningExample>
-        ? Examples {
-            get; set;
-          }
-
-    /// <summary>
-    /// Deserializes a JSON string to a TuningDataset object.
+    /// Deserializes a JSON string to a ClientOptions object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized TuningDataset object, or null if deserialization fails.</returns>
-    public static TuningDataset
+    /// <returns>The deserialized ClientOptions object, or null if deserialization fails.</returns>
+    public static ClientOptions
         ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<TuningDataset>(jsonString, options);
+        return JsonSerializer.Deserialize<ClientOptions>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;

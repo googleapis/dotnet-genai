@@ -23,49 +23,57 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Supervised fine-tuning training dataset.
+  /// Configures the avatar to be used in the session.
   /// </summary>
 
-  public record TuningDataset {
+  public record AvatarConfig {
     /// <summary>
-    /// GCS URI of the file containing training dataset in JSONL format.
+    /// Pre-built avatar id.
     /// </summary>
-    [JsonPropertyName("gcsUri")]
+    [JsonPropertyName("avatarName")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? GcsUri { get; set; }
+    public string ? AvatarName { get; set; }
 
     /// <summary>
-    /// The resource name of the Gemini Enterprise Agent Platform (previously known as Vertex AI)
-    /// Multimodal Dataset that is used as training dataset. Example:
-    /// 'projects/my-project-id-or-number/locations/my-location/datasets/my-dataset-id'.
+    /// Customized avatar appearance with a reference image.
     /// </summary>
-    [JsonPropertyName("vertexDatasetResource")]
+    [JsonPropertyName("customizedAvatar")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string
-        ? VertexDatasetResource {
+    public CustomizedAvatar
+        ? CustomizedAvatar {
             get; set;
           }
 
     /// <summary>
-    /// Inline examples with simple input/output text.
+    /// The bitrate of compressed audio.
     /// </summary>
-    [JsonPropertyName("examples")]
+    [JsonPropertyName("audioBitrateBps")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<TuningExample>
-        ? Examples {
+    public int
+        ? AudioBitrateBps {
             get; set;
           }
 
     /// <summary>
-    /// Deserializes a JSON string to a TuningDataset object.
+    /// The bitrate of compressed video output.
+    /// </summary>
+    [JsonPropertyName("videoBitrateBps")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public int
+        ? VideoBitrateBps {
+            get; set;
+          }
+
+    /// <summary>
+    /// Deserializes a JSON string to a AvatarConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized TuningDataset object, or null if deserialization fails.</returns>
-    public static TuningDataset
+    /// <returns>The deserialized AvatarConfig object, or null if deserialization fails.</returns>
+    public static AvatarConfig
         ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<TuningDataset>(jsonString, options);
+        return JsonSerializer.Deserialize<AvatarConfig>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;

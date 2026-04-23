@@ -16,21 +16,23 @@
 
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
+
 using Google.GenAI;
-using GoogleType = Google.GenAI.Types;
+using Google.GenAI.Types;
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 using TestServerSdk;
 
 [TestClass]
-public class SendToolResponseTest {
+public class GenerateContentSimpleTestCustomClient {
   private static TestServerProcess? _server;
   private Client enterpriseClient;
   private Client geminiClient;
-  private string vertexModelName;
-  private string geminiModelName;
+  private string modelName;
   public TestContext TestContext { get; set; }
 
   [ClassInitialize]
@@ -49,73 +51,57 @@ public class SendToolResponseTest {
     if (_server == null) {
       throw new InvalidOperationException("Test server is not initialized.");
     }
-    var geminiClientHttpOptions = new GoogleType.HttpOptions {
+    var geminiClientHttpOptions = new HttpOptions {
       Headers = new Dictionary<string, string> { { "Test-Name",
                                                    $"{GetType().Name}.{TestContext.TestName}" } },
       BaseUrl = "http://localhost:1453"
     };
-    var enterpriseClientHttpOptions = new GoogleType.HttpOptions {
+    var enterpriseClientHttpOptions = new HttpOptions {
       Headers = new Dictionary<string, string> { { "Test-Name",
                                                    $"{GetType().Name}.{TestContext.TestName}" } },
       BaseUrl = "http://localhost:1454"
     };
-    // Common setup for both clients
+
+    // Common setup for both clients.
     string project = System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_PROJECT");
     string location =
         System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_LOCATION") ?? "us-central1";
     string apiKey = System.Environment.GetEnvironmentVariable("GOOGLE_API_KEY");
     enterpriseClient = new Client(project: project, location: location, enterprise: true,
                               credential: TestServer.GetCredentialForTestMode(),
-                              httpOptions: enterpriseClientHttpOptions);
+                              httpOptions: enterpriseClientHttpOptions,
+                              clientOptions: new ClientOptions {
+                                HttpClientFactory = () => new HttpClient(new HttpClientHandler()) {
+                                  Timeout = TimeSpan.FromMinutes(5)
+                                }
+                              });
     geminiClient =
-        new Client(apiKey: apiKey, enterprise: false, httpOptions: geminiClientHttpOptions);
+        new Client(apiKey: apiKey, enterprise: false, httpOptions: geminiClientHttpOptions, 
+                   clientOptions: new ClientOptions {
+                    HttpClientFactory = () => new HttpClient(new HttpClientHandler()) {
+                      Timeout = TimeSpan.FromMinutes(5)
+                    }
+                   });
 
     // Specific setup for this test class
-    vertexModelName = "gemini-2.0-flash-live-preview-04-09";
-    geminiModelName = "gemini-live-2.5-flash-preview";
+    modelName = "gemini-2.5-flash";
   }
 
   [TestMethod]
-  public async Task SendToolResponseFunctionResponseGeminiTest() {
-    var geminiSession = new SessionWithQueue(geminiClient, geminiModelName);
-    await geminiSession.InitializeSessionAsync();
+  public async Task GenerateContentSimpleTextVertexTest() {
+    var vertexResponse = await enterpriseClient.Models.GenerateContentAsync(
+        model: modelName, contents: "What is the capital of France?");
 
-    var setupMessage = await geminiSession.ReceiveAsync();
-    Assert.IsNotNull(setupMessage.SetupComplete);
-
-    var functionResponse = new GoogleType.FunctionResponse {
-      Name = "getStatus", Response = new Dictionary<string, object> { ["mood"] = "happy" }
-    };
-
-    await geminiSession.SendToolResponseAsync(new GoogleType.LiveSendToolResponseParameters {
-      FunctionResponses = new List<GoogleType.FunctionResponse> { functionResponse }
-    });
-
-    // Unlike Vertex, Gemini doesn't return server content for this mocked function response usage
-    // So we just check that the send doesn't cause error.
-
-    await geminiSession.CloseAsync();
+    Assert.IsNotNull(vertexResponse.Candidates);
+    StringAssert.Contains(vertexResponse.Text, "Paris");
   }
 
   [TestMethod]
-  public async Task SendToolResponseFunctionResponseVertexTest() {
-    var vertexSession = new SessionWithQueue(enterpriseClient, vertexModelName);
-    await vertexSession.InitializeSessionAsync();
+  public async Task GenerateContentSimpleTextGeminiTest() {
+    var geminiResponse = await geminiClient.Models.GenerateContentAsync(
+        model: modelName, contents: "What is the capital of France?");
 
-    var setupMessage = await vertexSession.ReceiveAsync();
-    Assert.IsNotNull(setupMessage.SetupComplete);
-
-    var functionResponse = new GoogleType.FunctionResponse {
-      Name = "getStatus", Response = new Dictionary<string, object> { ["mood"] = "happy" }
-    };
-
-    await vertexSession.SendToolResponseAsync(new GoogleType.LiveSendToolResponseParameters {
-      FunctionResponses = new List<GoogleType.FunctionResponse> { functionResponse }
-    });
-
-    var message = await vertexSession.ReceiveAsync();
-    Assert.IsNotNull(message.ServerContent);
-
-    await vertexSession.CloseAsync();
+    Assert.IsNotNull(geminiResponse.Candidates);
+    StringAssert.Contains(geminiResponse.Text, "Paris");
   }
 }

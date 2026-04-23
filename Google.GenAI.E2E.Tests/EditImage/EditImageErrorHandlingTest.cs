@@ -29,7 +29,7 @@ using TestServerSdk;
 [TestClass]
 public class EditImageErrorHandlingTest {
   private static TestServerProcess? _server;
-  private Client vertexClient;
+  private Client enterpriseClient;
   private Client geminiClient;
   private string modelName;
   public TestContext TestContext { get; set; }
@@ -54,7 +54,7 @@ public class EditImageErrorHandlingTest {
                                                    $"{GetType().Name}.{TestContext.TestName}" } },
       BaseUrl = "http://localhost:1453"
     };
-    var vertexClientHttpOptions = new HttpOptions {
+    var enterpriseClientHttpOptions = new HttpOptions {
       Headers = new Dictionary<string, string> { { "Test-Name",
                                                    $"{GetType().Name}.{TestContext.TestName}" } },
       BaseUrl = "http://localhost:1454"
@@ -65,11 +65,11 @@ public class EditImageErrorHandlingTest {
     string location =
         System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_LOCATION") ?? "us-central1";
     string apiKey = System.Environment.GetEnvironmentVariable("GOOGLE_API_KEY");
-    vertexClient = new Client(project: project, location: location, vertexAI: true,
+    enterpriseClient = new Client(project: project, location: location, enterprise: true,
                               credential: TestServer.GetCredentialForTestMode(),
-                              httpOptions: vertexClientHttpOptions);
+                              httpOptions: enterpriseClientHttpOptions);
     geminiClient =
-        new Client(apiKey: apiKey, vertexAI: false, httpOptions: geminiClientHttpOptions);
+        new Client(apiKey: apiKey, enterprise: false, httpOptions: geminiClientHttpOptions);
 
     // Specific setup for this test class
     modelName = "imagen-3.0-capability-002";
@@ -96,7 +96,7 @@ public class EditImageErrorHandlingTest {
     };
 
     var ex = await Assert.ThrowsExceptionAsync<ClientError>(async () => {
-      await vertexClient.Models.EditImageAsync(
+      await enterpriseClient.Models.EditImageAsync(
         model: "wrong-model-name",
         prompt: "Generate an image in glowing style [1] based on the following caption: A church in the mountain.",
         referenceImages: referenceImages,
@@ -136,7 +136,7 @@ public class EditImageErrorHandlingTest {
         config: editImageConfig);
     });
 
-    StringAssert.Contains(ex.Message, "only supported in the Vertex AI client");
+    StringAssert.Contains(ex.Message, "only supported in the Gemini Enterprise Agent Platform");
   }
 
   [TestMethod]

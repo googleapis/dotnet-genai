@@ -23,49 +23,41 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Supervised fine-tuning training dataset.
+  /// Configuration for webhook notifications.  Used to configure webhook endpoints that will
+  /// receive notifications when long-running operations (e.g., batch jobs, video generation)
+  /// complete.
   /// </summary>
 
-  public record TuningDataset {
+  public record WebhookConfig {
     /// <summary>
-    /// GCS URI of the file containing training dataset in JSONL format.
+    /// The webhook URIs to receive notifications. If set, these webhook URIs will be used instead
+    /// of the registered webhooks.
     /// </summary>
-    [JsonPropertyName("gcsUri")]
+    [JsonPropertyName("uris")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? GcsUri { get; set; }
+    public List<string> ? Uris { get; set; }
 
     /// <summary>
-    /// The resource name of the Gemini Enterprise Agent Platform (previously known as Vertex AI)
-    /// Multimodal Dataset that is used as training dataset. Example:
-    /// 'projects/my-project-id-or-number/locations/my-location/datasets/my-dataset-id'.
+    /// User metadata that will be included in each webhook event notification. Use this to attach
+    /// custom key-value data to correlate webhook events with your internal systems.
     /// </summary>
-    [JsonPropertyName("vertexDatasetResource")]
+    [JsonPropertyName("userMetadata")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string
-        ? VertexDatasetResource {
+    public Dictionary<string, object>
+        ? UserMetadata {
             get; set;
           }
 
     /// <summary>
-    /// Inline examples with simple input/output text.
-    /// </summary>
-    [JsonPropertyName("examples")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<TuningExample>
-        ? Examples {
-            get; set;
-          }
-
-    /// <summary>
-    /// Deserializes a JSON string to a TuningDataset object.
+    /// Deserializes a JSON string to a WebhookConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized TuningDataset object, or null if deserialization fails.</returns>
-    public static TuningDataset
+    /// <returns>The deserialized WebhookConfig object, or null if deserialization fails.</returns>
+    public static WebhookConfig
         ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<TuningDataset>(jsonString, options);
+        return JsonSerializer.Deserialize<WebhookConfig>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;

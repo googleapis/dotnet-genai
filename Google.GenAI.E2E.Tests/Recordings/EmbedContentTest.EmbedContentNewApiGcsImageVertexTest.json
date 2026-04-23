@@ -4,10 +4,10 @@
     {
       "request": {
         "method": "POST",
-        "url": "/v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-embedding-2-exp-11-2025:embedContent",
-        "request": "POST /v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-embedding-2-exp-11-2025:embedContent HTTP/1.1",
+        "url": "/v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-embedding-2-preview:embedContent",
+        "request": "POST /v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-embedding-2-preview:embedContent HTTP/1.1",
         "headers": {
-          "Content-Length": "266",
+          "Content-Length": "289",
           "Content-Type": "application/json; charset=utf-8",
           "Test": "headers",
           "Test-Name": "EmbedContentTest.EmbedContentNewApiGcsImageVertexTest"
@@ -27,9 +27,11 @@
                 }
               ]
             },
-            "outputDimensionality": 10,
-            "taskType": "RETRIEVAL_DOCUMENT",
-            "title": "test_title"
+            "embedContentConfig": {
+              "outputDimensionality": 10,
+              "taskType": "RETRIEVAL_DOCUMENT",
+              "title": "test_title"
+            }
           }
         ],
         "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
@@ -37,12 +39,12 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "c8fa35198d1e235fb7b2704058d5565fc5e2346f2bb4f42b3945abe9ec3ae4ce",
+      "shaSum": "4ddbf162fe93c058afb1c15237af6adda060ee9facfbecfb5f743ada22b8c799",
       "response": {
         "statusCode": 200,
         "headers": {
           "Content-Type": "application/json; charset=UTF-8",
-          "Date": "Tue, 09 Dec 2025 00:42:49 GMT",
+          "Date": "Thu, 09 Apr 2026 18:58:35 GMT",
           "Server": "scaffolding on HTTPServer2",
           "Vary": "Origin, X-Origin, Referer",
           "X-Content-Type-Options": "nosniff",
@@ -53,28 +55,28 @@
           {
             "embedding": {
               "values": [
-                0.03267052,
-                -0.019948306,
-                -0.26355338,
-                -0.083766565,
-                0.46080554,
-                0.06582495,
-                0.1117486,
-                -0.05421921,
-                0.12484404,
-                -0.8211999
+                -0.07647316,
+                -0.12963627,
+                -0.060913052,
+                -0.16998938,
+                0.49739563,
+                -0.08104164,
+                0.07235751,
+                -0.09048736,
+                0.13443284,
+                -0.81195664
               ]
             },
             "usageMetadata": {
               "promptTokenCount": 265,
               "promptTokensDetails": [
                 {
-                  "modality": "TEXT",
-                  "tokenCount": 7
-                },
-                {
                   "modality": "IMAGE",
                   "tokenCount": 258
+                },
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 7
                 }
               ],
               "totalTokenCount": 265

@@ -23,12 +23,13 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Request-level metadata for the Vertex Embed Content API.
+  /// Request-level metadata for the Gemini Enterprise Agent Platform Embed Content API.
   /// </summary>
 
   public record EmbedContentMetadata {
     /// <summary>
-    /// Vertex API only. The total number of billable characters included in the request.
+    /// Gemini Enterprise Agent Platform only. The total number of billable characters included in
+    /// the request.
     /// </summary>
     [JsonPropertyName("billableCharacterCount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

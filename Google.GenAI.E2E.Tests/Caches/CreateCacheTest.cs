@@ -30,7 +30,7 @@ using TestServerSdk;
 public class CreateCacheTest
 {
     private static TestServerProcess? _server;
-    private Client vertexClient;
+    private Client enterpriseClient;
     private Client geminiClient;
     private string modelName;
     public TestContext TestContext { get; set; }
@@ -60,7 +60,7 @@ public class CreateCacheTest
                                                    $"{GetType().Name}.{TestContext.TestName}" } },
             BaseUrl = "http://localhost:1453"
         };
-        var vertexClientHttpOptions = new HttpOptions {
+        var enterpriseClientHttpOptions = new HttpOptions {
             Headers = new Dictionary<string, string> { { "Test-Name",
                                                    $"{GetType().Name}.{TestContext.TestName}" } },
             BaseUrl = "http://localhost:1454"
@@ -71,11 +71,11 @@ public class CreateCacheTest
         string location =
             System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_LOCATION") ?? "us-central1";
         string apiKey = System.Environment.GetEnvironmentVariable("GOOGLE_API_KEY");
-        vertexClient = new Client(project: project, location: location, vertexAI: true,
+        enterpriseClient = new Client(project: project, location: location, enterprise: true,
                                   credential: TestServer.GetCredentialForTestMode(),
-                                  httpOptions: vertexClientHttpOptions);
+                                  httpOptions: enterpriseClientHttpOptions);
         geminiClient =
-            new Client(apiKey: apiKey, vertexAI: false, httpOptions: geminiClientHttpOptions);
+            new Client(apiKey: apiKey, enterprise: false, httpOptions: geminiClientHttpOptions);
 
         // Specific setup for this test class
         modelName = "gemini-2.5-flash";
@@ -108,7 +108,7 @@ public class CreateCacheTest
             Ttl = "86400s"
         };
 
-        var vertexResponse = await vertexClient.Caches.CreateAsync(model: modelName, config: config);
+        var vertexResponse = await enterpriseClient.Caches.CreateAsync(model: modelName, config: config);
 
         Assert.IsNotNull(vertexResponse);
         Assert.IsNotNull(vertexResponse.Name);
@@ -186,7 +186,7 @@ public class CreateCacheTest
         };
 
         await Assert.ThrowsExceptionAsync<ServerError>(async () => {
-            await vertexClient.Caches.CreateAsync(model: modelName, config: config);
+            await enterpriseClient.Caches.CreateAsync(model: modelName, config: config);
         });
     }
 }

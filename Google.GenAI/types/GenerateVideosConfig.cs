@@ -213,6 +213,17 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Webhook configuration for receiving notifications when the video generation operation
+    /// completes.
+    /// </summary>
+    [JsonPropertyName("webhookConfig")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public WebhookConfig
+        ? WebhookConfig {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a GenerateVideosConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

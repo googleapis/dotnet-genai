@@ -85,7 +85,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// The time when the BatchJob was completed. This field is for Vertex AI only.
+    /// The time when the BatchJob was completed. This field is for Gemini Enterprise Agent Platform
+    /// only.
     /// </summary>
     [JsonPropertyName("endTime")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -115,7 +116,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Configuration for the input data. This field is for Vertex AI only.
+    /// Configuration for the input data. This field is for Gemini Enterprise Agent Platform only.
     /// </summary>
     [JsonPropertyName("src")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -135,7 +136,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Statistics on completed and failed prediction instances. This field is for Vertex AI only.
+    /// Statistics on completed and failed prediction instances. This field is for Gemini Enterprise
+    /// Agent Platform only.
     /// </summary>
     [JsonPropertyName("completionStats")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
