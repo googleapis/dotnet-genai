@@ -360,6 +360,15 @@ namespace Google.GenAI.Tests {
     }
 
     [TestMethod]
+    public async System.Threading.Tasks.Task CreateHttpRequestAsync_Vertex_ApiKeyWithProjectLocation_PrependsPath() {
+      var client = new HttpApiClient(vertexAI: true, apiKey: "my-key", project: "my-project", location: "us-central1");
+
+      var request = await InvokeCreateHttpRequestAsync(client, System.Net.Http.HttpMethod.Post, "some/path", "{}", null);
+
+      Assert.AreEqual("https://us-central1-aiplatform.googleapis.com/v1beta1/projects/my-project/locations/us-central1/some/path", request.RequestUri!.ToString());
+    }
+
+    [TestMethod]
     public async Task CreateHttpRequestAsync_RewritesAbsoluteUrlWithBaseUrl() {
         var customHttpOptions = new Types.HttpOptions { BaseUrl = "https://my-proxy.company.com" };
         var client = new HttpApiClient(apiKey: TestApiKey, httpOptions: customHttpOptions);

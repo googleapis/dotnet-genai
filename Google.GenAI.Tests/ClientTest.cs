@@ -357,11 +357,13 @@ namespace Google.GenAI.Tests {
     }
 
     [TestMethod]
-    public void Constructor_Error_ApiKeySet_VertexAITrue_Param() {
-      var ex = Assert.ThrowsException<ArgumentException>(
-          () => new Client(vertexAI: true, apiKey: "key", project: "project", location: "location"));
-      Assert.AreEqual("Project/location and API key are mutually exclusive in the client initializer.",
-                      ex.Message);
+    public void Constructor_ApiKeySet_VertexAITrue_Param() {
+      var client = new Client(vertexAI: true, apiKey: "key", project: "project", location: "location");
+      Assert.IsTrue(client._apiClient.VertexAI);
+      Assert.AreEqual("key", client._apiClient.ApiKey);
+      Assert.AreEqual("project", client._apiClient.Project);
+      Assert.AreEqual("location", client._apiClient.Location);
+      Assert.IsNull(client._apiClient.Credentials);
     }
 
     [TestMethod]

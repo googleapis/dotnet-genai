@@ -185,7 +185,7 @@ namespace Google.GenAI
     private bool ShouldPrependVertexProjectPath(Types.HttpOptions mergedHttpOptions)
     {
       if (!this.VertexAI) return false;
-      if (!string.IsNullOrEmpty(this.ApiKey)) return false;
+      if (!string.IsNullOrEmpty(this.ApiKey) && (string.IsNullOrEmpty(this.Project) || string.IsNullOrEmpty(this.Location))) return false;
       if (string.IsNullOrEmpty(this.Project) && string.IsNullOrEmpty(this.Location)) return false;
       if (mergedHttpOptions.BaseUrlResourceScope == Types.ResourceScope.Collection && !string.IsNullOrEmpty(mergedHttpOptions.BaseUrl)) return false;
       return true;
