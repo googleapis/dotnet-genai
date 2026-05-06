@@ -31,7 +31,7 @@ using GoogleType = Google.GenAI.Types;
 [TestClass]
 public class GenerateContentResponseConfigTest {
   private static TestServerProcess? _server;
-  private Client vertexClient;
+  private Client enterpriseClient;
   private Client geminiClient;
   private string modelName;
   private GoogleType.Schema countryInfo = new GoogleType.Schema {
@@ -87,7 +87,7 @@ public class GenerateContentResponseConfigTest {
                                                    $"{GetType().Name}.{TestContext.TestName}" } },
       BaseUrl = "http://localhost:1453"
     };
-    var vertexClientHttpOptions = new GoogleType.HttpOptions {
+    var enterpriseClientHttpOptions = new GoogleType.HttpOptions {
       Headers = new Dictionary<string, string> { { "Test-Name",
                                                    $"{GetType().Name}.{TestContext.TestName}" } },
       BaseUrl = "http://localhost:1454"
@@ -98,11 +98,11 @@ public class GenerateContentResponseConfigTest {
     string location =
         System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_LOCATION") ?? "us-central1";
     string apiKey = System.Environment.GetEnvironmentVariable("GOOGLE_API_KEY");
-    vertexClient = new Client(project: project, location: location, vertexAI: true,
+    enterpriseClient = new Client(project: project, location: location, enterprise: true,
                               credential: TestServer.GetCredentialForTestMode(),
-                              httpOptions: vertexClientHttpOptions);
+                              httpOptions: enterpriseClientHttpOptions);
     geminiClient =
-        new Client(apiKey: apiKey, vertexAI: false, httpOptions: geminiClientHttpOptions);
+        new Client(apiKey: apiKey, enterprise: false, httpOptions: geminiClientHttpOptions);
 
     // Specific setup for this test class
     modelName = "gemini-2.0-flash";
@@ -110,7 +110,7 @@ public class GenerateContentResponseConfigTest {
 
   [TestMethod]
   public async Task GenerateContentResponseSchemaVertexTest() {
-    var vertexResponse = await vertexClient.Models.GenerateContentAsync(
+    var vertexResponse = await enterpriseClient.Models.GenerateContentAsync(
         model: modelName, contents: "Give me information about Australia",
         config: new GoogleType.GenerateContentConfig { ResponseMimeType = "application/json",
                                                        ResponseSchema = countryInfo });
@@ -146,7 +146,7 @@ public class GenerateContentResponseConfigTest {
 
   [TestMethod]
   public async Task GenerateContentResponseSchemaWithDefaultVertexTest() {
-    var vertexResponse = await vertexClient.Models.GenerateContentAsync(
+    var vertexResponse = await enterpriseClient.Models.GenerateContentAsync(
         model: modelName, contents: "Can you recommend a restaurant for me?",
         config: new GoogleType.GenerateContentConfig { ResponseMimeType = "application/json",
                                                        ResponseSchema = restaurantInfo });
@@ -179,7 +179,7 @@ public class GenerateContentResponseConfigTest {
   }
   [TestMethod]
   public async Task GenerateContentResponseModalityImageVertexTest() {
-    var vertexResponse = await vertexClient.Models.GenerateContentAsync(
+    var vertexResponse = await enterpriseClient.Models.GenerateContentAsync(
         model: "gemini-2.0-flash-preview-image-generation",
         contents: "Can you generate an image of a cat?",
         config: new GoogleType.GenerateContentConfig { ResponseModalities =

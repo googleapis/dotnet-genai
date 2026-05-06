@@ -22,7 +22,7 @@ using System.Text.Json;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Enum representing the Vertex embedding API to use.
+  /// Enum representing the Gemini Enterprise Agent Platform embedding API to use.
   /// </summary>
 
   [JsonConverter(typeof(EmbeddingApiTypeConverter))]

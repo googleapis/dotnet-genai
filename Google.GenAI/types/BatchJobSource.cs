@@ -28,7 +28,7 @@ namespace Google.GenAI.Types {
 
   public record BatchJobSource {
     /// <summary>
-    /// Storage format of the input files. Must be one of: 'jsonl', 'bigquery'.
+    /// Storage format of the input files. Must be one of: 'jsonl', 'bigquery', 'vertex-dataset'.
     /// </summary>
     [JsonPropertyName("format")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -71,6 +71,17 @@ namespace Google.GenAI.Types {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<InlinedRequest>
         ? InlinedRequests {
+            get; set;
+          }
+
+    /// <summary>
+    /// This field is experimental and may change in future versions. The Vertex AI dataset resource
+    /// name to use as input. Must be of type multimodal.
+    /// </summary>
+    [JsonPropertyName("vertexDatasetName")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string
+        ? VertexDatasetName {
             get; set;
           }
 

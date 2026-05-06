@@ -28,7 +28,7 @@ using TestServerSdk;
 [TestClass]
 public class GenerateContentErrorHandlingTest {
   private static TestServerProcess? _server;
-  private Client vertexClient;
+  private Client enterpriseClient;
   private Client geminiClient;
   private string modelName;
   public TestContext TestContext { get; set; }
@@ -53,7 +53,7 @@ public class GenerateContentErrorHandlingTest {
                                                    $"{GetType().Name}.{TestContext.TestName}" } },
       BaseUrl = "http://localhost:1453"
     };
-    var vertexClientHttpOptions = new HttpOptions {
+    var enterpriseClientHttpOptions = new HttpOptions {
       Headers = new Dictionary<string, string> { { "Test-Name",
                                                    $"{GetType().Name}.{TestContext.TestName}" } },
       BaseUrl = "http://localhost:1454"
@@ -64,11 +64,11 @@ public class GenerateContentErrorHandlingTest {
     string location =
         System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_LOCATION") ?? "us-central1";
     string apiKey = System.Environment.GetEnvironmentVariable("GOOGLE_API_KEY");
-    vertexClient = new Client(project: project, location: location, vertexAI: true,
+    enterpriseClient = new Client(project: project, location: location, enterprise: true,
                               credential: TestServer.GetCredentialForTestMode(),
-                              httpOptions: vertexClientHttpOptions);
+                              httpOptions: enterpriseClientHttpOptions);
     geminiClient =
-        new Client(apiKey: apiKey, vertexAI: false, httpOptions: geminiClientHttpOptions);
+        new Client(apiKey: apiKey, enterprise: false, httpOptions: geminiClientHttpOptions);
 
     // Specific setup for this test class
     modelName = "gemini-2.0-flash";
@@ -77,7 +77,7 @@ public class GenerateContentErrorHandlingTest {
   [TestMethod]
   public async Task GenerateContentWrongModelNameVertexTest() {
     var ex = await Assert.ThrowsExceptionAsync<ClientError>(async () => {
-      await vertexClient.Models.GenerateContentAsync(model: "wrong-model-name",
+      await enterpriseClient.Models.GenerateContentAsync(model: "wrong-model-name",
                                                      contents: "What is the capital of France?");
     });
 
@@ -100,7 +100,7 @@ public class GenerateContentErrorHandlingTest {
 
   [TestMethod]
   public async Task GenerateContentEnterpriseWebSearchVertexTest() {
-    var vertexResponse = await vertexClient.Models.GenerateContentAsync(
+    var vertexResponse = await enterpriseClient.Models.GenerateContentAsync(
         model: modelName,
         contents: new Content { Parts =
                                     new List<Part> { new Part { Text = "Why is the sky blue?" } },
@@ -139,7 +139,7 @@ public class GenerateContentErrorHandlingTest {
 
   [TestMethod]
   public async Task GenerateContentLabelsVertexTest() {
-    var vertexResponse = await vertexClient.Models.GenerateContentAsync(
+    var vertexResponse = await enterpriseClient.Models.GenerateContentAsync(
         model: modelName, contents: "What is the capital of France?",
         config: new GenerateContentConfig {
           Labels = new Dictionary<string, string> { { "test-label-key", "test-label-value" } }
