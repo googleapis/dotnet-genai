@@ -724,7 +724,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Behavior",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Behavior.yml\" sourcestartlinenumber=\"1\">Specifies the function Behavior. Currently only supported by the BidiGenerateContent method.\nThis enum is not supported in Vertex AI.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Behavior.yml\" sourcestartlinenumber=\"1\">Specifies the function Behavior. Currently only non-blocking functions are supported. If not\nspecified, the system keeps the current function call behavior. This field is currently only\nsupported by the BidiGenerateContent method.</p>\n"
     },
     {
       "type": "ManagedReference",

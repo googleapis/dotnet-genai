@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Struct Behavior | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Specifies the function Behavior. Currently only supported by the BidiGenerateContent method. This enum is not supported in Vertex AI.">
+      <meta name="description" content="Specifies the function Behavior. Currently only non-blocking functions are supported. If not specified, the system keeps the current function call behavior. This field is currently only supported by the BidiGenerateContent method.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Types_Behavior" data-uid="Google.GenAI.Types.Behavior" class="text-break">
-Struct Behavior  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Behavior.cs/#L29"><i class="bi bi-code-slash"></i></a>
+Struct Behavior  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Behavior.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,8 +93,9 @@ Struct Behavior  <a class="header-action link-secondary" title="View source" hre
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Specifies the function Behavior. Currently only supported by the BidiGenerateContent method.
-This enum is not supported in Vertex AI.</p>
+  <div class="markdown summary"><p>Specifies the function Behavior. Currently only non-blocking functions are supported. If not
+specified, the system keeps the current function call behavior. This field is currently only
+supported by the BidiGenerateContent method.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -145,7 +146,7 @@ public readonly record struct Behavior : IEquatable&lt;Behavior&gt;</code></pre>
 
   <h3 id="Google_GenAI_Types_Behavior_AllValues" data-uid="Google.GenAI.Types.Behavior.AllValues">
   AllValues
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Behavior.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Behavior.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -176,7 +177,7 @@ public readonly record struct Behavior : IEquatable&lt;Behavior&gt;</code></pre>
 
   <h3 id="Google_GenAI_Types_Behavior_Blocking" data-uid="Google.GenAI.Types.Behavior.Blocking">
   Blocking
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Behavior.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Behavior.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>If set, the system will wait to receive the function response before continuing the
@@ -209,7 +210,7 @@ conversation.</p>
 
   <h3 id="Google_GenAI_Types_Behavior_NonBlocking" data-uid="Google.GenAI.Types.Behavior.NonBlocking">
   NonBlocking
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Behavior.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Behavior.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>If set, the system will not wait to receive the function response. Instead, it will attempt
@@ -243,10 +244,10 @@ between the user and the model.</p>
 
   <h3 id="Google_GenAI_Types_Behavior_Unspecified" data-uid="Google.GenAI.Types.Behavior.Unspecified">
   Unspecified
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Behavior.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Behavior.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>This value is unused.</p>
+  <div class="markdown level1 summary"><p>This value is unspecified.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -275,7 +276,7 @@ between the user and the model.</p>
 
   <h3 id="Google_GenAI_Types_Behavior_Value" data-uid="Google.GenAI.Types.Behavior.Value">
   Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Behavior.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Behavior.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -310,7 +311,7 @@ between the user and the model.</p>
 
   <h3 id="Google_GenAI_Types_Behavior_Equals_Google_GenAI_Types_Behavior_" data-uid="Google.GenAI.Types.Behavior.Equals(Google.GenAI.Types.Behavior)">
   Equals(Behavior)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Behavior.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Behavior.cs/#L78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -346,7 +347,7 @@ between the user and the model.</p>
 
   <h3 id="Google_GenAI_Types_Behavior_FromString_System_String_" data-uid="Google.GenAI.Types.Behavior.FromString(System.String)">
   FromString(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Behavior.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Behavior.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -382,7 +383,7 @@ between the user and the model.</p>
 
   <h3 id="Google_GenAI_Types_Behavior_GetHashCode" data-uid="Google.GenAI.Types.Behavior.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Behavior.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Behavior.cs/#L80"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -413,7 +414,7 @@ between the user and the model.</p>
 
   <h3 id="Google_GenAI_Types_Behavior_ToString" data-uid="Google.GenAI.Types.Behavior.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Behavior.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Behavior.cs/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -448,7 +449,7 @@ between the user and the model.</p>
 
   <h3 id="Google_GenAI_Types_Behavior_op_Implicit_System_String__Google_GenAI_Types_Behavior" data-uid="Google.GenAI.Types.Behavior.op_Implicit(System.String)~Google.GenAI.Types.Behavior">
   implicit operator Behavior(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Behavior.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Behavior.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -484,7 +485,7 @@ between the user and the model.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Behavior.cs/#L29" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Behavior.cs/#L30" class="edit-link">Edit this page</a>
         </div>
 
 
