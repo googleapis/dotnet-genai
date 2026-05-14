@@ -16692,6 +16692,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GroundingChunkRetrievedContext.FromJson
   nameWithType: GroundingChunkRetrievedContext.FromJson
+- uid: Google.GenAI.Types.GroundingChunkRetrievedContext.PageNumber
+  name: PageNumber
+  href: api/Google.GenAI.Types.GroundingChunkRetrievedContext.html#Google_GenAI_Types_GroundingChunkRetrievedContext_PageNumber
+  commentId: P:Google.GenAI.Types.GroundingChunkRetrievedContext.PageNumber
+  fullName: Google.GenAI.Types.GroundingChunkRetrievedContext.PageNumber
+  nameWithType: GroundingChunkRetrievedContext.PageNumber
+- uid: Google.GenAI.Types.GroundingChunkRetrievedContext.PageNumber*
+  name: PageNumber
+  href: api/Google.GenAI.Types.GroundingChunkRetrievedContext.html#Google_GenAI_Types_GroundingChunkRetrievedContext_PageNumber_
+  commentId: Overload:Google.GenAI.Types.GroundingChunkRetrievedContext.PageNumber
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GroundingChunkRetrievedContext.PageNumber
+  nameWithType: GroundingChunkRetrievedContext.PageNumber
 - uid: Google.GenAI.Types.GroundingChunkRetrievedContext.RagChunk
   name: RagChunk
   href: api/Google.GenAI.Types.GroundingChunkRetrievedContext.html#Google_GenAI_Types_GroundingChunkRetrievedContext_RagChunk
