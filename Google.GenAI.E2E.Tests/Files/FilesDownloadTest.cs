@@ -92,7 +92,7 @@ public class FilesDownloadTest
         await vertexClient.Files.DownloadAsync(fileName: "fileName");
       });
 
-      StringAssert.Contains(ex.Message, "This method is only supported in the Gemini Developer API client");
+      StringAssert.Contains(ex.Message, "This method is only supported in Gemini Developer API mode");
     }
 
     [TestMethod]
@@ -120,7 +120,7 @@ public class FilesDownloadTest
         await vertexClient.Files.DownloadToFileAsync(fileName: "fileName", outputPath: "outputPath");
       });
 
-      StringAssert.Contains(ex.Message, "This method is only supported in the Gemini Developer API client");
+      StringAssert.Contains(ex.Message, "This method is only supported in Gemini Developer API mode");
     }
 
     [TestMethod]
@@ -141,7 +141,7 @@ public class FilesDownloadTest
         await vertexClient.Files.DownloadAsync(file: file);
       });
 
-      StringAssert.Contains(ex.Message, "This method is only supported in the Gemini Developer API client");
+      StringAssert.Contains(ex.Message, "This method is only supported in Gemini Developer API mode");
     }
 
     [TestMethod]
@@ -184,7 +184,7 @@ public class FilesDownloadTest
         await vertexClient.Files.DownloadAsync(video: video);
       });
 
-      StringAssert.Contains(ex.Message, "This method is only supported in the Gemini Developer API client");
+      StringAssert.Contains(ex.Message, "This method is only supported in Gemini Developer API mode");
     }
 
     [TestMethod]
@@ -220,7 +220,7 @@ public class FilesDownloadTest
         await vertexClient.Files.DownloadAsync(generatedVideo: generatedVideo);
       });
 
-      StringAssert.Contains(ex.Message, "This method is only supported in the Gemini Developer API client");
+      StringAssert.Contains(ex.Message, "This method is only supported in Gemini Developer API mode");
     }
 
     [TestMethod]
@@ -232,7 +232,7 @@ public class FilesDownloadTest
         await vertexClient.Files.DownloadToFileAsync(file: file, outputPath: "outputPath");
       });
 
-      StringAssert.Contains(ex.Message, "This method is only supported in the Gemini Developer API client");
+      StringAssert.Contains(ex.Message, "This method is only supported in Gemini Developer API mode");
     }
 
     [TestMethod]
@@ -255,7 +255,7 @@ public class FilesDownloadTest
         await vertexClient.Files.DownloadToFileAsync(video: video, outputPath: "outputPath");
       });
 
-      StringAssert.Contains(ex.Message, "This method is only supported in the Gemini Developer API client");
+      StringAssert.Contains(ex.Message, "This method is only supported in Gemini Developer API mode");
     }
 
     [TestMethod]
@@ -279,7 +279,7 @@ public class FilesDownloadTest
         await vertexClient.Files.DownloadToFileAsync(generatedVideo: generatedVideo, outputPath: "outputPath");
       });
 
-      StringAssert.Contains(ex.Message, "This method is only supported in the Gemini Developer API client");
+      StringAssert.Contains(ex.Message, "This method is only supported in Gemini Developer API mode");
     }
 
     [TestMethod]

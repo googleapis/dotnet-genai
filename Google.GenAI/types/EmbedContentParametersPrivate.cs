@@ -56,7 +56,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// The Vertex embedding API to use.
+    /// The Gemini Enterprise Agent Platform embedding API to use.
     /// </summary>
     [JsonPropertyName("embeddingApiType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

@@ -22,8 +22,9 @@ using System.Text.Json;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Specifies the function Behavior. Currently only supported by the BidiGenerateContent method.
-  /// This enum is not supported in Vertex AI.
+  /// Specifies the function Behavior. Currently only non-blocking functions are supported. If not
+  /// specified, the system keeps the current function call behavior. This field is currently only
+  /// supported by the BidiGenerateContent method.
   /// </summary>
 
   [JsonConverter(typeof(BehaviorConverter))]
@@ -35,7 +36,7 @@ namespace Google.GenAI.Types {
     }
 
     /// <summary>
-    /// This value is unused.
+    /// This value is unspecified.
     /// </summary>
     public static Behavior Unspecified { get; } = new("UNSPECIFIED");
 

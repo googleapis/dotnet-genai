@@ -226,8 +226,12 @@ public class GenerateVideosTest {
       Prompt = "A neon hologram of a cat driving at top speed.",
       Image = Image.FromFile("TestAssets/bridge1.png"),
     };
+    var config = new GenerateVideosConfig {
+      NumberOfVideos = 1,
+      ResizeMode = ImageResizeMode.Crop,
+    };
     var operation = await vertexClient.Models.GenerateVideosAsync(
-        model: modelName, source: source, config: null);
+        model: "veo-3.1-generate-001", source: source, config: config);
 
     Assert.IsNotNull(operation.Name);
     while (operation.Done != true) {
@@ -579,7 +583,7 @@ public class GenerateVideosTest {
           model: "veo-2.0-generate-exp", source: source, config: config);
     });
 
-    Assert.AreEqual(ex.Message, "mask parameter is not supported in Gemini API.");
+    StringAssert.Contains(ex.Message, "parameter is only supported in Gemini Enterprise Agent Platform mode");
   }
 
 }

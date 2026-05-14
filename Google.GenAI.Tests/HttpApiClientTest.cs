@@ -18,6 +18,7 @@ using System;
 using System.Net.Http;
 using System.Reflection;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 using Google.Apis.Auth.OAuth2;
 
@@ -282,6 +283,17 @@ namespace Google.GenAI.Tests {
     }
 
     [TestMethod]
+    public void VertexConstructor_LocationEu_SetsCorrectBaseUrl() {
+      var mockCredential = new Mock<ICredential>();
+      var client = new HttpApiClient(vertexAI: true, project: "my-project", location: "eu", credentials: mockCredential.Object);
+
+      Assert.AreEqual("my-project", client.Project);
+      Assert.AreEqual("eu", client.Location);
+      Assert.IsTrue(client.VertexAI);
+      Assert.AreEqual("https://aiplatform.eu.rep.googleapis.com", client.HttpOptions.BaseUrl);
+    }
+
+    [TestMethod]
     public void VertexConstructor_LocationUsAndCustomHttpOptions_SetsCorrectBaseUrl() {
       var mockCredential = new Mock<ICredential>();
       var customOptions = new Types.HttpOptions { BaseUrl = "https://my-custom-url.com/" };
@@ -399,6 +411,28 @@ namespace Google.GenAI.Tests {
         var request = await task;
 
         Assert.AreEqual("https://my-proxy.company.com/v1beta/models/gemini-3.0-flash:generateContent", request.RequestUri.ToString());
+    }
+
+    [TestMethod]
+    public async Task ProcessStreamResponse_MultilineData_StripsPrefixes() {
+        var client = new HttpApiClient(apiKey: TestApiKey);
+
+        var sseData = "data: {\ndata:   \"foo\": \"bar\"\ndata: }\n\n";
+        var stream = new System.IO.MemoryStream(System.Text.Encoding.UTF8.GetBytes(sseData));
+
+        var methodInfo = typeof(HttpApiClient).GetMethod("ProcessStreamResponse",
+            BindingFlags.NonPublic | BindingFlags.Instance);
+
+        var enumerable = (IAsyncEnumerable<string>)methodInfo.Invoke(client, new object[] { stream, System.Threading.CancellationToken.None });
+
+        var results = new System.Collections.Generic.List<string>();
+        await foreach (var item in enumerable)
+        {
+            results.Add(item);
+        }
+
+        Assert.AreEqual(1, results.Count);
+        Assert.AreEqual("{\n  \"foo\": \"bar\"\n}", results[0]);
     }
   }
 }

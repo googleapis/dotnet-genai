@@ -105,8 +105,9 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Optional. Specifies the function Behavior. Currently only supported by the
-    /// BidiGenerateContent method. This field is not supported in Vertex AI.
+    /// Optional. Specifies the function Behavior. Currently only non-blocking functions are
+    /// supported. If not specified, the system keeps the current function call behavior. This field
+    /// is currently only supported by the BidiGenerateContent method.
     /// </summary>
     [JsonPropertyName("behavior")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

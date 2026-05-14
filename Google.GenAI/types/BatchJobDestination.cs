@@ -28,7 +28,7 @@ namespace Google.GenAI.Types {
 
   public record BatchJobDestination {
     /// <summary>
-    /// Storage format of the output files. Must be one of: 'jsonl', 'bigquery'.
+    /// Storage format of the output files. Must be one of: 'jsonl', 'bigquery', 'vertex-dataset'.
     /// </summary>
     [JsonPropertyName("format")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -86,6 +86,17 @@ namespace Google.GenAI.Types {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<InlinedEmbedContentResponse>
         ? InlinedEmbedContentResponses {
+            get; set;
+          }
+
+    /// <summary>
+    /// This field is experimental and may change in future versions. The Vertex AI dataset
+    /// destination.
+    /// </summary>
+    [JsonPropertyName("vertexDataset")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public VertexMultimodalDatasetDestination
+        ? VertexDataset {
             get; set;
           }
 

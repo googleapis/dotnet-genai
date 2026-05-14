@@ -4,17 +4,16 @@
     {
       "request": {
         "method": "POST",
-        "url": "/v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-embedding-2-exp-11-2025:embedContent",
-        "request": "POST /v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-embedding-2-exp-11-2025:embedContent HTTP/1.1",
+        "url": "/v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-embedding-2-preview:embedContent",
+        "request": "POST /v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-embedding-2-preview:embedContent HTTP/1.1",
         "headers": {
-          "Content-Length": "152",
+          "Content-Length": "175",
           "Content-Type": "application/json; charset=utf-8",
           "Test": "headers",
           "Test-Name": "EmbedContentTest.EmbedContentNewApiTextOnlyWithConfigVertexTest"
         },
         "bodySegments": [
           {
-            "autoTruncate": true,
             "content": {
               "parts": [
                 {
@@ -22,9 +21,12 @@
                 }
               ]
             },
-            "outputDimensionality": 10,
-            "taskType": "RETRIEVAL_DOCUMENT",
-            "title": "test_title"
+            "embedContentConfig": {
+              "autoTruncate": true,
+              "outputDimensionality": 10,
+              "taskType": "RETRIEVAL_DOCUMENT",
+              "title": "test_title"
+            }
           }
         ],
         "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
@@ -32,12 +34,12 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "04f008a5761ed6e074c57ba1330b2c0c728bd2052bb9bede0e2e2e3659a3a4a0",
+      "shaSum": "0fccbf36b43b04b82896f38662e7f363c9154c42ef9c309994230fc49fc37887",
       "response": {
         "statusCode": 200,
         "headers": {
           "Content-Type": "application/json; charset=UTF-8",
-          "Date": "Tue, 09 Dec 2025 00:42:47 GMT",
+          "Date": "Thu, 09 Apr 2026 18:58:32 GMT",
           "Server": "scaffolding on HTTPServer2",
           "Vary": "Origin, X-Origin, Referer",
           "X-Content-Type-Options": "nosniff",
@@ -48,27 +50,27 @@
           {
             "embedding": {
               "values": [
-                -0.09408051,
-                -0.22214933,
-                0.4618354,
-                0.15021776,
-                0.005017484,
-                -0.17563783,
-                -0.13656189,
-                0.2586441,
-                0.24553321,
-                -0.72748536
+                -0.15841544,
+                -0.025661757,
+                0.45645604,
+                -0.11546087,
+                -0.1236348,
+                -0.22930059,
+                0.15334183,
+                0.20970052,
+                0.1530765,
+                -0.77056986
               ]
             },
             "usageMetadata": {
-              "promptTokenCount": 13,
+              "promptTokenCount": 5,
               "promptTokensDetails": [
                 {
                   "modality": "TEXT",
-                  "tokenCount": 13
+                  "tokenCount": 5
                 }
               ],
-              "totalTokenCount": 13
+              "totalTokenCount": 5
             }
           }
         ]

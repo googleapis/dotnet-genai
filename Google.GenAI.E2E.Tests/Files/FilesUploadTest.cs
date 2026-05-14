@@ -86,7 +86,7 @@ public class FilesUploadTest
          await vertexClient.Files.UploadAsync(filePath: "TestAssets/google_small.png");
        });
 
-       StringAssert.Contains(ex.Message, "This method is only supported in the Gemini Developer API client");
+       StringAssert.Contains(ex.Message, "This method is only supported in Gemini Developer API mode");
     }
 
     [TestMethod]
@@ -98,7 +98,7 @@ public class FilesUploadTest
          await vertexClient.Files.UploadAsync(bytes: fileBytes, fileName: "google_small.png");
        });
 
-       StringAssert.Contains(ex.Message, "This method is only supported in the Gemini Developer API client");
+       StringAssert.Contains(ex.Message, "This method is only supported in Gemini Developer API mode");
     }
 
 }

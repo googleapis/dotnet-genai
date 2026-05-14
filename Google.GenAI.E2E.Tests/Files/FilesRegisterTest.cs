@@ -90,7 +90,7 @@ namespace Google.GenAI.E2E.Tests.Files
              await vertexClient.Files.RegisterFilesAsync(uris, GoogleCredential.FromAccessToken("fake-token"));
            });
 
-           StringAssert.Contains(ex.Message, "This method is only supported in the Gemini Developer API client");
+           StringAssert.Contains(ex.Message, "This method is only supported in Gemini Developer API mode");
         }
 
         [TestMethod]
