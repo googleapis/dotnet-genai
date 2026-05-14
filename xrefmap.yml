@@ -6746,6 +6746,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CreateBatchJobConfig.HttpOptions
   nameWithType: CreateBatchJobConfig.HttpOptions
+- uid: Google.GenAI.Types.CreateBatchJobConfig.WebhookConfig
+  name: WebhookConfig
+  href: api/Google.GenAI.Types.CreateBatchJobConfig.html#Google_GenAI_Types_CreateBatchJobConfig_WebhookConfig
+  commentId: P:Google.GenAI.Types.CreateBatchJobConfig.WebhookConfig
+  fullName: Google.GenAI.Types.CreateBatchJobConfig.WebhookConfig
+  nameWithType: CreateBatchJobConfig.WebhookConfig
+- uid: Google.GenAI.Types.CreateBatchJobConfig.WebhookConfig*
+  name: WebhookConfig
+  href: api/Google.GenAI.Types.CreateBatchJobConfig.html#Google_GenAI_Types_CreateBatchJobConfig_WebhookConfig_
+  commentId: Overload:Google.GenAI.Types.CreateBatchJobConfig.WebhookConfig
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateBatchJobConfig.WebhookConfig
+  nameWithType: CreateBatchJobConfig.WebhookConfig
 - uid: Google.GenAI.Types.CreateCachedContentConfig
   name: CreateCachedContentConfig
   href: api/Google.GenAI.Types.CreateCachedContentConfig.html
@@ -14594,6 +14607,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerateVideosConfig.Seed
   nameWithType: GenerateVideosConfig.Seed
+- uid: Google.GenAI.Types.GenerateVideosConfig.WebhookConfig
+  name: WebhookConfig
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_WebhookConfig
+  commentId: P:Google.GenAI.Types.GenerateVideosConfig.WebhookConfig
+  fullName: Google.GenAI.Types.GenerateVideosConfig.WebhookConfig
+  nameWithType: GenerateVideosConfig.WebhookConfig
+- uid: Google.GenAI.Types.GenerateVideosConfig.WebhookConfig*
+  name: WebhookConfig
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_WebhookConfig_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosConfig.WebhookConfig
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosConfig.WebhookConfig
+  nameWithType: GenerateVideosConfig.WebhookConfig
 - uid: Google.GenAI.Types.GenerateVideosOperation
   name: GenerateVideosOperation
   href: api/Google.GenAI.Types.GenerateVideosOperation.html
@@ -37836,6 +37862,54 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.WebSearch.FromJson
   nameWithType: WebSearch.FromJson
+- uid: Google.GenAI.Types.WebhookConfig
+  name: WebhookConfig
+  href: api/Google.GenAI.Types.WebhookConfig.html
+  commentId: T:Google.GenAI.Types.WebhookConfig
+  fullName: Google.GenAI.Types.WebhookConfig
+  nameWithType: WebhookConfig
+- uid: Google.GenAI.Types.WebhookConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.WebhookConfig.html#Google_GenAI_Types_WebhookConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.WebhookConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.WebhookConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.WebhookConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: WebhookConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: WebhookConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.WebhookConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.WebhookConfig.html#Google_GenAI_Types_WebhookConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.WebhookConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.WebhookConfig.FromJson
+  nameWithType: WebhookConfig.FromJson
+- uid: Google.GenAI.Types.WebhookConfig.Uris
+  name: Uris
+  href: api/Google.GenAI.Types.WebhookConfig.html#Google_GenAI_Types_WebhookConfig_Uris
+  commentId: P:Google.GenAI.Types.WebhookConfig.Uris
+  fullName: Google.GenAI.Types.WebhookConfig.Uris
+  nameWithType: WebhookConfig.Uris
+- uid: Google.GenAI.Types.WebhookConfig.Uris*
+  name: Uris
+  href: api/Google.GenAI.Types.WebhookConfig.html#Google_GenAI_Types_WebhookConfig_Uris_
+  commentId: Overload:Google.GenAI.Types.WebhookConfig.Uris
+  isSpec: "True"
+  fullName: Google.GenAI.Types.WebhookConfig.Uris
+  nameWithType: WebhookConfig.Uris
+- uid: Google.GenAI.Types.WebhookConfig.UserMetadata
+  name: UserMetadata
+  href: api/Google.GenAI.Types.WebhookConfig.html#Google_GenAI_Types_WebhookConfig_UserMetadata
+  commentId: P:Google.GenAI.Types.WebhookConfig.UserMetadata
+  fullName: Google.GenAI.Types.WebhookConfig.UserMetadata
+  nameWithType: WebhookConfig.UserMetadata
+- uid: Google.GenAI.Types.WebhookConfig.UserMetadata*
+  name: UserMetadata
+  href: api/Google.GenAI.Types.WebhookConfig.html#Google_GenAI_Types_WebhookConfig_UserMetadata_
+  commentId: Overload:Google.GenAI.Types.WebhookConfig.UserMetadata
+  isSpec: "True"
+  fullName: Google.GenAI.Types.WebhookConfig.UserMetadata
+  nameWithType: WebhookConfig.UserMetadata
 - uid: Microsoft.Extensions.AI
   name: Microsoft.Extensions.AI
   href: api/Microsoft.Extensions.AI.html
