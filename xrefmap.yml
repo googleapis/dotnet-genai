@@ -4220,6 +4220,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.BatchJob.Name
   nameWithType: BatchJob.Name
+- uid: Google.GenAI.Types.BatchJob.OutputInfo
+  name: OutputInfo
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_OutputInfo
+  commentId: P:Google.GenAI.Types.BatchJob.OutputInfo
+  fullName: Google.GenAI.Types.BatchJob.OutputInfo
+  nameWithType: BatchJob.OutputInfo
+- uid: Google.GenAI.Types.BatchJob.OutputInfo*
+  name: OutputInfo
+  href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_OutputInfo_
+  commentId: Overload:Google.GenAI.Types.BatchJob.OutputInfo
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJob.OutputInfo
+  nameWithType: BatchJob.OutputInfo
 - uid: Google.GenAI.Types.BatchJob.Src
   name: Src
   href: api/Google.GenAI.Types.BatchJob.html#Google_GenAI_Types_BatchJob_Src
@@ -4385,6 +4398,67 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.BatchJobDestination.VertexDataset
   nameWithType: BatchJobDestination.VertexDataset
+- uid: Google.GenAI.Types.BatchJobOutputInfo
+  name: BatchJobOutputInfo
+  href: api/Google.GenAI.Types.BatchJobOutputInfo.html
+  commentId: T:Google.GenAI.Types.BatchJobOutputInfo
+  fullName: Google.GenAI.Types.BatchJobOutputInfo
+  nameWithType: BatchJobOutputInfo
+- uid: Google.GenAI.Types.BatchJobOutputInfo.BigqueryOutputTable
+  name: BigqueryOutputTable
+  href: api/Google.GenAI.Types.BatchJobOutputInfo.html#Google_GenAI_Types_BatchJobOutputInfo_BigqueryOutputTable
+  commentId: P:Google.GenAI.Types.BatchJobOutputInfo.BigqueryOutputTable
+  fullName: Google.GenAI.Types.BatchJobOutputInfo.BigqueryOutputTable
+  nameWithType: BatchJobOutputInfo.BigqueryOutputTable
+- uid: Google.GenAI.Types.BatchJobOutputInfo.BigqueryOutputTable*
+  name: BigqueryOutputTable
+  href: api/Google.GenAI.Types.BatchJobOutputInfo.html#Google_GenAI_Types_BatchJobOutputInfo_BigqueryOutputTable_
+  commentId: Overload:Google.GenAI.Types.BatchJobOutputInfo.BigqueryOutputTable
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJobOutputInfo.BigqueryOutputTable
+  nameWithType: BatchJobOutputInfo.BigqueryOutputTable
+- uid: Google.GenAI.Types.BatchJobOutputInfo.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.BatchJobOutputInfo.html#Google_GenAI_Types_BatchJobOutputInfo_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.BatchJobOutputInfo.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.BatchJobOutputInfo.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.BatchJobOutputInfo.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: BatchJobOutputInfo.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: BatchJobOutputInfo.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.BatchJobOutputInfo.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.BatchJobOutputInfo.html#Google_GenAI_Types_BatchJobOutputInfo_FromJson_
+  commentId: Overload:Google.GenAI.Types.BatchJobOutputInfo.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJobOutputInfo.FromJson
+  nameWithType: BatchJobOutputInfo.FromJson
+- uid: Google.GenAI.Types.BatchJobOutputInfo.GcsOutputDirectory
+  name: GcsOutputDirectory
+  href: api/Google.GenAI.Types.BatchJobOutputInfo.html#Google_GenAI_Types_BatchJobOutputInfo_GcsOutputDirectory
+  commentId: P:Google.GenAI.Types.BatchJobOutputInfo.GcsOutputDirectory
+  fullName: Google.GenAI.Types.BatchJobOutputInfo.GcsOutputDirectory
+  nameWithType: BatchJobOutputInfo.GcsOutputDirectory
+- uid: Google.GenAI.Types.BatchJobOutputInfo.GcsOutputDirectory*
+  name: GcsOutputDirectory
+  href: api/Google.GenAI.Types.BatchJobOutputInfo.html#Google_GenAI_Types_BatchJobOutputInfo_GcsOutputDirectory_
+  commentId: Overload:Google.GenAI.Types.BatchJobOutputInfo.GcsOutputDirectory
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJobOutputInfo.GcsOutputDirectory
+  nameWithType: BatchJobOutputInfo.GcsOutputDirectory
+- uid: Google.GenAI.Types.BatchJobOutputInfo.VertexMultimodalDatasetName
+  name: VertexMultimodalDatasetName
+  href: api/Google.GenAI.Types.BatchJobOutputInfo.html#Google_GenAI_Types_BatchJobOutputInfo_VertexMultimodalDatasetName
+  commentId: P:Google.GenAI.Types.BatchJobOutputInfo.VertexMultimodalDatasetName
+  fullName: Google.GenAI.Types.BatchJobOutputInfo.VertexMultimodalDatasetName
+  nameWithType: BatchJobOutputInfo.VertexMultimodalDatasetName
+- uid: Google.GenAI.Types.BatchJobOutputInfo.VertexMultimodalDatasetName*
+  name: VertexMultimodalDatasetName
+  href: api/Google.GenAI.Types.BatchJobOutputInfo.html#Google_GenAI_Types_BatchJobOutputInfo_VertexMultimodalDatasetName_
+  commentId: Overload:Google.GenAI.Types.BatchJobOutputInfo.VertexMultimodalDatasetName
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJobOutputInfo.VertexMultimodalDatasetName
+  nameWithType: BatchJobOutputInfo.VertexMultimodalDatasetName
 - uid: Google.GenAI.Types.BatchJobSource
   name: BatchJobSource
   href: api/Google.GenAI.Types.BatchJobSource.html
