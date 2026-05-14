@@ -96,7 +96,14 @@ namespace Google.GenAI
         {
           throw new InvalidOperationException("An API key is required for Gemini API connections.");
         }
-        clientWebSocket.Options.SetRequestHeader("x-goog-api-key", _apiClient.ApiKey);
+        if (_apiClient.ApiKey.StartsWith("auth_tokens/"))
+        {
+          clientWebSocket.Options.SetRequestHeader("Authorization", "Token " + _apiClient.ApiKey);
+        }
+        else
+        {
+          clientWebSocket.Options.SetRequestHeader("x-goog-api-key", _apiClient.ApiKey);
+        }
       }
 
       foreach (var header in _apiClient?.HttpOptions?.Headers ?? new Dictionary<string, string>())
@@ -137,7 +144,18 @@ namespace Google.GenAI
         else
         {
             string apiVersion = _apiClient.HttpOptions?.ApiVersion ?? "v1beta";
-            return new Uri($"{wsBaseUrl}/ws/google.ai.generativelanguage.{apiVersion}.GenerativeService.BidiGenerateContent");
+            string method;
+            if (_apiClient.ApiKey != null && _apiClient.ApiKey.StartsWith("auth_tokens/"))
+            {
+              if (apiVersion != "v1alpha") {
+                throw new InvalidOperationException(
+                    $"The SDK's ephemeral token support is in v1alpha only. Got: {apiVersion}.");
+              }
+              method = "BidiGenerateContentConstrained";
+            } else {
+              method = "BidiGenerateContent";
+            }
+            return new Uri($"{wsBaseUrl}/ws/google.ai.generativelanguage.{apiVersion}.GenerativeService.{method}");
         }
       }
       catch (UriFormatException e)

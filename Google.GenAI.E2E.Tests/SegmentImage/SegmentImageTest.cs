@@ -90,7 +90,7 @@ public class SegmentImageTest {
         config: segmentImageConfig);
     });
 
-    StringAssert.Contains(ex.Message, "only supported in the Vertex AI client");
+    StringAssert.Contains(ex.Message, "only supported in Gemini Enterprise Agent Platform mode");
   }
 
   [TestMethod]

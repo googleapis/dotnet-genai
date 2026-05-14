@@ -86,7 +86,7 @@ public class FilesDeleteTest
          await vertexClient.Files.DeleteAsync(name: "fileName");
        });
 
-       StringAssert.Contains(ex.Message, "This method is only supported in the Gemini Developer API client");
+       StringAssert.Contains(ex.Message, "This method is only supported in Gemini Developer API mode");
     }
 
     [TestMethod]

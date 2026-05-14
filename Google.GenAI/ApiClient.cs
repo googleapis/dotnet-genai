@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+using System.Collections.Generic;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
@@ -28,6 +29,12 @@ namespace Google.GenAI
   public abstract class ApiClient : IDisposable, IAsyncDisposable
   {
     private static readonly string SdkVersion = GetSdkVersion();
+
+    private static readonly HashSet<string> MultiRegionalLocations = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+    {
+        "us",
+        "eu"
+    };
 
     private HttpClient? _httpClient;
     private readonly object _httpClientLock = new object();
@@ -44,7 +51,7 @@ namespace Google.GenAI
                     {
                         throw new ObjectDisposedException(nameof(ApiClient));
                     }
-                    _httpClient ??= CreateHttpClient(this.HttpOptions);
+                    _httpClient ??= CreateHttpClient(this.HttpOptions, this.ClientOptions);
                 }
             }
             return _httpClient;
@@ -60,6 +67,7 @@ namespace Google.GenAI
     public string? CustomBaseUrl { get; }
 
     public HttpOptions HttpOptions { get; protected set; }
+    public Google.GenAI.Types.ClientOptions ClientOptions { get; protected set; }
     public bool VertexAI { get; }
 
     private int _disposed = 0;
@@ -68,22 +76,51 @@ namespace Google.GenAI
     /// Constructs an ApiClient.
     /// </summary>
     protected ApiClient(
+        bool? enterprise = null,
         bool? vertexAI = null,
         string? apiKey = null,
         string? project = null,
         string? location = null,
         ICredential? credentials = null,
-        HttpOptions? customHttpOptions = null)
+        HttpOptions? customHttpOptions = null,
+        Google.GenAI.Types.ClientOptions? clientOptions = null)
     {
-      if (vertexAI.HasValue)
+      if (enterprise.HasValue && vertexAI.HasValue && enterprise.Value != vertexAI.Value)
       {
-        this.VertexAI = vertexAI.Value;
+        throw new ArgumentException("enterprise and vertexAI flags have conflicting values, please set enterprise value only.");
       }
-      else
+
+      bool? resolvedCloudFlag = null;
+
+      if (enterprise.HasValue)
       {
-        string? vertexAIEnv = System.Environment.GetEnvironmentVariable("GOOGLE_GENAI_USE_VERTEXAI");
-        this.VertexAI = vertexAIEnv != null && vertexAIEnv.ToLower() == "true";
+        resolvedCloudFlag = enterprise.Value;
       }
+
+      if (!resolvedCloudFlag.HasValue && vertexAI.HasValue)
+      {
+        resolvedCloudFlag = vertexAI.Value;
+      }
+
+      string? enterpriseEnv = System.Environment.GetEnvironmentVariable("GOOGLE_GENAI_USE_ENTERPRISE");
+      string? vertexAIEnv = System.Environment.GetEnvironmentVariable("GOOGLE_GENAI_USE_VERTEXAI");
+
+      if (!resolvedCloudFlag.HasValue && enterpriseEnv != null && vertexAIEnv != null)
+      {
+        System.Diagnostics.Trace.TraceWarning("Warning: Both GOOGLE_GENAI_USE_ENTERPRISE and GOOGLE_GENAI_USE_VERTEXAI are set. The value of GOOGLE_GENAI_USE_ENTERPRISE will be used.");
+      }
+
+      if (!resolvedCloudFlag.HasValue && enterpriseEnv != null)
+      {
+        resolvedCloudFlag = enterpriseEnv.ToLower() == "true";
+      }
+
+      if (!resolvedCloudFlag.HasValue && vertexAIEnv != null)
+      {
+        resolvedCloudFlag = vertexAIEnv.ToLower() == "true";
+      }
+
+      this.VertexAI = resolvedCloudFlag ?? false;
 
       var envProject = System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_PROJECT");
       var envLocation = System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_LOCATION");
@@ -180,14 +217,27 @@ namespace Google.GenAI
       {
         this.HttpOptions = MergeHttpOptions(customHttpOptions);
       }
+
+      this.ClientOptions = clientOptions ?? new Google.GenAI.Types.ClientOptions();
     }
 
-    private static HttpClient CreateHttpClient(HttpOptions httpOptions)
+    private static HttpClient CreateHttpClient(
+        HttpOptions httpOptions, Google.GenAI.Types.ClientOptions? clientOptions = null
+    )
     {
-      var client = new HttpClient();
-      if (httpOptions.Timeout != null)
+      HttpClient client = null;
+      if (clientOptions != null)
       {
-        client.Timeout = System.TimeSpan.FromMilliseconds(httpOptions.Timeout.Value);
+        client = clientOptions.HttpClientFactory?.Invoke();
+      }
+      // If no factory was provided, create a default client and apply SDK options
+      if (client == null)
+      {
+        client = new HttpClient();
+        if (httpOptions.Timeout != null)
+        {
+          client.Timeout = System.TimeSpan.FromMilliseconds(httpOptions.Timeout.Value);
+        }
       }
       return client;
     }
@@ -316,7 +366,7 @@ namespace Google.GenAI
         {
           defaultHttpOptions.BaseUrl = "https://aiplatform.googleapis.com";
         }
-        else if (location!.Equals("us"))
+        else if (MultiRegionalLocations.Contains(location!))
         {
           defaultHttpOptions.BaseUrl = $"https://aiplatform.{location}.rep.googleapis.com";
         }
@@ -379,9 +429,9 @@ namespace Google.GenAI
     /// <returns>A <see cref="ValueTask"/> that represents the asynchronous dispose operation.</returns>
     public virtual ValueTask DisposeAsync()
     {
-        Dispose();
+      Dispose();
 #if NETSTANDARD2_0_OR_GREATER
-        return new ValueTask(Task.CompletedTask);
+      return new ValueTask(Task.CompletedTask);
 #else
         return ValueTask.CompletedTask;
 #endif
@@ -389,14 +439,14 @@ namespace Google.GenAI
 
     private static string GetSdkVersion()
     {
-        // This reads AssemblyInformationalVersionAttribute from the assembly,
-        // which is generated during build from the <Version> property.
-        // Google.GenAI.csproj imports ReleaseVersion.xml to set <Version>,
-        // so this effectively reads the version from ReleaseVersion.xml.
-        return typeof(ApiClient)
-            .Assembly
-            .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
-            ?.InformationalVersion ?? "";
+      // This reads AssemblyInformationalVersionAttribute from the assembly,
+      // which is generated during build from the <Version> property.
+      // Google.GenAI.csproj imports ReleaseVersion.xml to set <Version>,
+      // so this effectively reads the version from ReleaseVersion.xml.
+      return typeof(ApiClient)
+          .Assembly
+          .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
+          ?.InformationalVersion ?? "";
     }
   }
 }

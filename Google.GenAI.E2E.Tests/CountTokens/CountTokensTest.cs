@@ -216,6 +216,6 @@ public class CountTokensTest {
     });
 
     StringAssert.Contains(ex.Message, "systemInstruction");
-    StringAssert.Contains(ex.Message, "not supported in Gemini API");
+    StringAssert.Contains(ex.Message, "only supported in Gemini Enterprise Agent Platform mode");
   }
 }

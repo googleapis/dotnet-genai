@@ -30,7 +30,7 @@ using System.Net.WebSockets;
 [TestClass]
 public class ErrorHandlingTests {
   private static TestServerProcess? _server;
-  private Client vertexClient = null!;
+  private Client enterpriseClient = null!;
   private Client geminiClient = null!;
   private string vertexModelName = null!;
   private string geminiModelName = null!;
@@ -57,7 +57,7 @@ public class ErrorHandlingTests {
                                                    $"{GetType().Name}.{TestContext.TestName}" } },
       BaseUrl = "http://localhost:1453"
     };
-    var vertexClientHttpOptions = new GoogleType.HttpOptions {
+    var enterpriseClientHttpOptions = new GoogleType.HttpOptions {
       Headers = new Dictionary<string, string> { { "Test-Name",
                                                    $"{GetType().Name}.{TestContext.TestName}" } },
       BaseUrl = "http://localhost:1454"
@@ -68,11 +68,11 @@ public class ErrorHandlingTests {
     string location =
         System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_LOCATION") ?? "us-central1";
     string? apiKey = System.Environment.GetEnvironmentVariable("GOOGLE_API_KEY");
-    vertexClient = new Client(project: project, location: location, vertexAI: true,
+    enterpriseClient = new Client(project: project, location: location, enterprise: true,
                               credential: TestServer.GetCredentialForTestMode(),
-                              httpOptions: vertexClientHttpOptions);
+                              httpOptions: enterpriseClientHttpOptions);
     geminiClient =
-        new Client(apiKey: apiKey, vertexAI: false, httpOptions: geminiClientHttpOptions);
+        new Client(apiKey: apiKey, enterprise: false, httpOptions: geminiClientHttpOptions);
 
     // Specific setup for this test class
     vertexModelName = "gemini-2.0-flash-live-preview-04-09";
@@ -102,7 +102,7 @@ public class ErrorHandlingTests {
 
   [TestMethod]
   public async Task SendClientContentAsync_AfterSessionClosed_ThrowsExceptionVertexTest() {
-    var vertexSession = new SessionWithQueue(vertexClient, vertexModelName);
+    var vertexSession = new SessionWithQueue(enterpriseClient, vertexModelName);
     await vertexSession.InitializeSessionAsync();
 
     var setupMessage = await vertexSession.ReceiveAsync();
@@ -142,7 +142,7 @@ public class ErrorHandlingTests {
 
   [TestMethod]
   public async Task SendRealtimeInputAsync_AfterSessionClosed_ThrowsExceptionVertexTest() {
-    var vertexSession = new SessionWithQueue(vertexClient, vertexModelName);
+    var vertexSession = new SessionWithQueue(enterpriseClient, vertexModelName);
     await vertexSession.InitializeSessionAsync();
 
     var setupMessage = await vertexSession.ReceiveAsync();
@@ -181,7 +181,7 @@ public class ErrorHandlingTests {
 
   [TestMethod]
   public async Task SendToolResponseAsync_AfterSessionClosed_ThrowsExceptionVertexTest() {
-    var vertexSession = new SessionWithQueue(vertexClient, vertexModelName);
+    var vertexSession = new SessionWithQueue(enterpriseClient, vertexModelName);
     await vertexSession.InitializeSessionAsync();
 
     var setupMessage = await vertexSession.ReceiveAsync();
@@ -215,7 +215,7 @@ public class ErrorHandlingTests {
 
   [TestMethod]
   public async Task CloseAsync_CalledMultipleTimes_DoesNotThrowVertexTest() {
-    var vertexSession = new SessionWithQueue(vertexClient, vertexModelName);
+    var vertexSession = new SessionWithQueue(enterpriseClient, vertexModelName);
     await vertexSession.InitializeSessionAsync();
 
     var setupMessage = await vertexSession.ReceiveAsync();
@@ -244,7 +244,7 @@ public class ErrorHandlingTests {
 
   [TestMethod]
   public async Task ReceiveAsync_AfterSessionClosed_ThrowsExceptionVertexTest() {
-    var vertexSession = new SessionWithQueue(vertexClient, vertexModelName);
+    var vertexSession = new SessionWithQueue(enterpriseClient, vertexModelName);
     await vertexSession.InitializeSessionAsync();
 
     var setupMessage = await vertexSession.ReceiveAsync();

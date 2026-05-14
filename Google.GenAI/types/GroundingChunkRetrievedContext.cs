@@ -103,6 +103,26 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Optional. Page number of the retrieved context. This field is not supported in Vertex AI.
+    /// </summary>
+    [JsonPropertyName("pageNumber")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public int
+        ? PageNumber {
+            get; set;
+          }
+
+    /// <summary>
+    /// Optional. Media ID. This field is not supported in Vertex AI.
+    /// </summary>
+    [JsonPropertyName("mediaId")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string
+        ? MediaId {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a GroundingChunkRetrievedContext object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

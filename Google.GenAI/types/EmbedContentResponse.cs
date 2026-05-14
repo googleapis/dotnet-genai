@@ -45,7 +45,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Vertex API only. Metadata about the request.
+    /// Gemini Enterprise Agent Platform only. Metadata about the request.
     /// </summary>
     [JsonPropertyName("metadata")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

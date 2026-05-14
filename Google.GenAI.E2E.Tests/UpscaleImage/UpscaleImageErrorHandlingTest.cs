@@ -112,6 +112,6 @@ public class UpscaleImageErrorHandlingTest {
           upscaleFactor: "x2", config: null);
     });
 
-    StringAssert.Contains(ex.Message, "This method is only supported in the Vertex AI client.");
+    StringAssert.Contains(ex.Message, "This method is only supported in Gemini Enterprise Agent Platform");
   }
 }

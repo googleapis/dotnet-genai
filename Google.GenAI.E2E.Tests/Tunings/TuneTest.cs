@@ -118,7 +118,7 @@ public class TuneTest {
       await geminiClient.Tunings.TuneAsync(modelName, trainingDataset, config);
     });
 
-    StringAssert.Contains(ex.Message, "not supported in Gemini API");
+    StringAssert.Contains(ex.Message, "only supported in Gemini Enterprise Agent Platform mode");
   }
 
   [TestMethod]
@@ -151,7 +151,7 @@ public class TuneTest {
       await geminiClient.Tunings.TuneAsync(modelName, trainingDataset, config);
     });
 
-    StringAssert.Contains(ex.Message, "not supported in Gemini API");
+    StringAssert.Contains(ex.Message, "only supported in Gemini Enterprise Agent Platform mode");
   }
 
   [TestMethod]
@@ -190,7 +190,7 @@ public class TuneTest {
       await geminiClient.Tunings.TuneAsync(modelName, trainingDataset, config);
     });
 
-    StringAssert.Contains(ex.Message, "not supported in Gemini API");
+    StringAssert.Contains(ex.Message, "only supported in Gemini Enterprise Agent Platform mode");
   }
 
   [TestMethod]
@@ -206,7 +206,7 @@ public class TuneTest {
       await geminiClient.Tunings.TuneAsync(modelName, trainingDataset, config);
     });
 
-    StringAssert.Contains(ex.Message, "not supported in Gemini API");
+    StringAssert.Contains(ex.Message, "only supported in Gemini Enterprise Agent Platform mode");
   }
 
   // TODO(ayushagra): Enable this test once the distillation e2e test is out of autopush.
@@ -252,6 +252,6 @@ public class TuneTest {
       await geminiClient.Tunings.TuneAsync(baseModel, trainingDataset, config);
     });
 
-    StringAssert.Contains(ex.Message, "not supported in Gemini API");
+    StringAssert.Contains(ex.Message, "only supported in Gemini Enterprise Agent Platform mode");
   }
 }
