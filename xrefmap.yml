@@ -9262,6 +9262,19 @@ references:
   commentId: T:Google.GenAI.Types.EmbedContentConfig
   fullName: Google.GenAI.Types.EmbedContentConfig
   nameWithType: EmbedContentConfig
+- uid: Google.GenAI.Types.EmbedContentConfig.AudioTrackExtraction
+  name: AudioTrackExtraction
+  href: api/Google.GenAI.Types.EmbedContentConfig.html#Google_GenAI_Types_EmbedContentConfig_AudioTrackExtraction
+  commentId: P:Google.GenAI.Types.EmbedContentConfig.AudioTrackExtraction
+  fullName: Google.GenAI.Types.EmbedContentConfig.AudioTrackExtraction
+  nameWithType: EmbedContentConfig.AudioTrackExtraction
+- uid: Google.GenAI.Types.EmbedContentConfig.AudioTrackExtraction*
+  name: AudioTrackExtraction
+  href: api/Google.GenAI.Types.EmbedContentConfig.html#Google_GenAI_Types_EmbedContentConfig_AudioTrackExtraction_
+  commentId: Overload:Google.GenAI.Types.EmbedContentConfig.AudioTrackExtraction
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EmbedContentConfig.AudioTrackExtraction
+  nameWithType: EmbedContentConfig.AudioTrackExtraction
 - uid: Google.GenAI.Types.EmbedContentConfig.AutoTruncate
   name: AutoTruncate
   href: api/Google.GenAI.Types.EmbedContentConfig.html#Google_GenAI_Types_EmbedContentConfig_AutoTruncate
@@ -9275,6 +9288,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.EmbedContentConfig.AutoTruncate
   nameWithType: EmbedContentConfig.AutoTruncate
+- uid: Google.GenAI.Types.EmbedContentConfig.DocumentOcr
+  name: DocumentOcr
+  href: api/Google.GenAI.Types.EmbedContentConfig.html#Google_GenAI_Types_EmbedContentConfig_DocumentOcr
+  commentId: P:Google.GenAI.Types.EmbedContentConfig.DocumentOcr
+  fullName: Google.GenAI.Types.EmbedContentConfig.DocumentOcr
+  nameWithType: EmbedContentConfig.DocumentOcr
+- uid: Google.GenAI.Types.EmbedContentConfig.DocumentOcr*
+  name: DocumentOcr
+  href: api/Google.GenAI.Types.EmbedContentConfig.html#Google_GenAI_Types_EmbedContentConfig_DocumentOcr_
+  commentId: Overload:Google.GenAI.Types.EmbedContentConfig.DocumentOcr
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EmbedContentConfig.DocumentOcr
+  nameWithType: EmbedContentConfig.DocumentOcr
 - uid: Google.GenAI.Types.EmbedContentConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
   name: FromJson(string, JsonSerializerOptions?)
   href: api/Google.GenAI.Types.EmbedContentConfig.html#Google_GenAI_Types_EmbedContentConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_

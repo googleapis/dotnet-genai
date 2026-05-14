@@ -155,6 +155,41 @@ Class EmbedContentConfig  <a class="header-action link-secondary" title="View so
 </h2>
 
 
+  <a id="Google_GenAI_Types_EmbedContentConfig_AudioTrackExtraction_" data-uid="Google.GenAI.Types.EmbedContentConfig.AudioTrackExtraction*"></a>
+
+  <h3 id="Google_GenAI_Types_EmbedContentConfig_AudioTrackExtraction" data-uid="Google.GenAI.Types.EmbedContentConfig.AudioTrackExtraction">
+  AudioTrackExtraction
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/EmbedContentConfig.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Vertex API only. Whether to extract audio from video content. Only applicable to Gemini
+Embedding 2 models.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;audioTrackExtraction&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public bool? AudioTrackExtraction { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_EmbedContentConfig_AutoTruncate_" data-uid="Google.GenAI.Types.EmbedContentConfig.AutoTruncate*"></a>
 
   <h3 id="Google_GenAI_Types_EmbedContentConfig_AutoTruncate" data-uid="Google.GenAI.Types.EmbedContentConfig.AutoTruncate">
@@ -172,6 +207,41 @@ similar to other text APIs.</p>
     <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;autoTruncate&quot;)]
 [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
 public bool? AutoTruncate { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_EmbedContentConfig_DocumentOcr_" data-uid="Google.GenAI.Types.EmbedContentConfig.DocumentOcr*"></a>
+
+  <h3 id="Google_GenAI_Types_EmbedContentConfig_DocumentOcr" data-uid="Google.GenAI.Types.EmbedContentConfig.DocumentOcr">
+  DocumentOcr
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/EmbedContentConfig.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Vertex API only. Whether to enable OCR for document content. Only applicable to Gemini
+Embedding 2 models.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;documentOcr&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public bool? DocumentOcr { get; set; }</code></pre>
   </div>
 
 
@@ -371,7 +441,7 @@ public string? Title { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_EmbedContentConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.EmbedContentConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/EmbedContentConfig.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/EmbedContentConfig.cs/#L120"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a EmbedContentConfig object.</p>
