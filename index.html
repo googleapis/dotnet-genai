@@ -87,7 +87,7 @@ using Google.GenAI.Types;
 </code></pre>
 <h2 id="create-a-client">Create a client</h2>
 <p>Please run one of the following code blocks to create a client for
-different services (<a href="https://ai.google.dev/gemini-api/docs">Gemini Developer API</a> or <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/learn/overview">Vertex AI</a>).</p>
+different services (<a href="https://ai.google.dev/gemini-api/docs">Gemini Developer API</a> or <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/learn/overview">Gemini Enterprise Agent Platform</a>).</p>
 <pre><code class="lang-csharp">using Google.GenAI;
 
 //  Only run this block for Gemini Developer API
@@ -95,22 +95,22 @@ var client = new Client(apiKey: apiKey);
 </code></pre>
 <pre><code class="lang-csharp">using Google.GenAI;
 
-// only run this block for Vertex AI API
+// only run this block for Gemini Enterprise Agent Platform API
 client = new Client(
-    project: project, location: location, vertexAI: true
+    project: project, location: location, enterprise: true
 )
 </code></pre>
 <p><strong>(Optional) Using environment variables:</strong></p>
 <p>You can create a client by configuring the necessary environment variables.
 Configuration setup instructions depends on whether you're using the Gemini
-Developer API or the Gemini API in Vertex AI.</p>
+Developer API or the Gemini Enterprise Agent Platform.</p>
 <p><strong>Gemini Developer API:</strong> Set the <code>GOOGLE_API_KEY</code>. It will automatically be
 picked up by the client.</p>
 <pre><code class="lang-bash">export GEMINI_API_KEY='your-api-key'
 </code></pre>
-<p><strong>Gemini API on Vertex AI:</strong> Set <code>GOOGLE_GENAI_USE_VERTEXAI</code>,
+<p><strong>Gemini Enterprise Agent Platform:</strong> Set <code>GOOGLE_GENAI_USE_ENTERPRISE</code>,
 <code>GOOGLE_CLOUD_PROJECT</code> and <code>GOOGLE_CLOUD_LOCATION</code>, as shown below:</p>
-<pre><code class="lang-bash">export GOOGLE_GENAI_USE_VERTEXAI=true
+<pre><code class="lang-bash">export GOOGLE_GENAI_USE_ENTERPRISE=true
 export GOOGLE_CLOUD_PROJECT='your-project-id'
 export GOOGLE_CLOUD_LOCATION='us-central1'
 </code></pre>
@@ -156,7 +156,7 @@ available in GenerateContentAsync's config parameter. For example, to make a mod
 deterministic, lowering the <code>Temperature</code> parameter reduces randomness, with
 values near 0 minimizing variability. Capabilities and parameter defaults for
 each model is shown in the
-<a href="https://cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-5-flash">Vertex AI docs</a>
+<a href="https://cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-5-flash">Gemini Enterprise Agent Platform docs</a>
 and <a href="https://ai.google.dev/gemini-api/docs/models">Gemini API docs</a> respectively.</p>
 <pre><code class="lang-csharp">using System.Threading.Tasks;
 using Google.GenAI;
@@ -351,7 +351,7 @@ public class GenerateImagesSimple {
 }
 </code></pre>
 <h3 id="upscale-image">Upscale Image</h3>
-<p>Upscaling an image is only supported on the Vertex AI client.</p>
+<p>Upscaling an image is only supported on the Gemini Enterprise Agent Platform client.</p>
 <pre><code class="lang-csharp">using System.Threading.Tasks;
 using Google.GenAI;
 using Google.GenAI.Types;
@@ -375,7 +375,7 @@ public class UpscaleImageSimple {
 </code></pre>
 <h3 id="edit-image">Edit Image</h3>
 <p>Edit image uses a separate model from generate and upscale.</p>
-<p>Edit image is only supported in the Vertex AI client.</p>
+<p>Edit image is only supported in the Gemini Enterprise Agent Platform.</p>
 <pre><code class="lang-csharp">using Google.GenAI;
 using Google.GenAI.Types;
 
@@ -422,7 +422,7 @@ public class EditImageSimple {
 }
 </code></pre>
 <h3 id="segment-image">Segment Image</h3>
-<p>Segment image is only supported in the Vertex AI client.</p>
+<p>Segment image is only supported in the Gemini Enterprise Agent Platform client.</p>
 <pre><code class="lang-csharp">using Google.GenAI;
 using Google.GenAI.Types;
 
@@ -450,7 +450,7 @@ public class SegmentImageSimple {
 </code></pre>
 <h3 id="generate-videos">Generate Videos</h3>
 <p>Generated videos can be either be returned by the API as bytes or a GCS URI for
-Vertex. For Gemini Developer API, only a Files URI can be returned.</p>
+Gemini Enterprise Agent Platform. For Gemini Developer API, only a Files URI can be returned.</p>
 <p>For Gemini, generated videos can be downloaded to a local file as follows:</p>
 <pre><code class="lang-csharp">await client.Files.DownloadToFileAsync(
     generatedVideo: operation.Response.GeneratedVideos.First(),
@@ -604,7 +604,7 @@ public class GenerateVideosReferenceImages{
 </code></pre>
 <h4 id="generate-videos-from-video">Generate Videos (From Video)</h4>
 <p>Gemini Developer API only accepts previously generated videos.
-Vertex accepts a Video from GCS URI.</p>
+Gemini Enterprise Agent Platform accepts a Video from GCS URI.</p>
 <pre><code class="lang-csharp">using System.Threading.Tasks;
 using Google.GenAI;
 using Google.GenAI.Types;
@@ -656,7 +656,7 @@ public class GenerateVideosFromVideo {
 }
 </code></pre>
 <h3 id="edit-video">Edit Video</h3>
-<p>Editing a video is only available on Vertex</p>
+<p>Editing a video is only available on Gemini Enterprise Agent Platform.</p>
 <pre><code class="lang-csharp">using System.Threading.Tasks;
 using Google.GenAI;
 using Google.GenAI.Types;
@@ -685,13 +685,13 @@ public class EditVideoOutpaint {
         MaskMode = VideoGenerationMaskMode.OUTPAINT,
       },
     };
-    var operation = await vertexClient.Models.GenerateVideosAsync(
+    var operation = await client.Models.GenerateVideosAsync(
         model: &quot;veo-2.0-generate-exp&quot;, source: source, config: config);
 
     while (operation.Done != true) {
       try {
         await Task.Delay(10000);
-        operation = await vertexClient.Operations.GetAsync(operation, null);
+        operation = await client.Operations.GetAsync(operation, null);
       } catch (TaskCanceledException) {
         System.Console.WriteLine(&quot;Task was cancelled while waiting.&quot;);
         break;
@@ -755,8 +755,8 @@ public class EmbedContentExample {
 
     Console.WriteLine(response.Embeddings[0].Values);
 
-    // Multimodal embedding with Vertex AI
-    var vertexClient = new Client(vertexAI: true);
+    // Multimodal embedding with Gemini Enterprise Agent Platform
+    var client = new Client(enterprise: true);
     var contents = new List&lt;Content&gt; {
         new Content {
             Parts = new List&lt;Part&gt; {
@@ -775,7 +775,7 @@ public class EmbedContentExample {
         Title = &quot;test_title&quot;,
         TaskType = &quot;RETRIEVAL_DOCUMENT&quot;,
     };
-    var mmResponse = await vertexClient.Models.EmbedContentAsync(
+    var mmResponse = await client.Models.EmbedContentAsync(
         model: &quot;gemini-embedding-2-exp-11-2025&quot;, contents: contents, config: config);
     Console.WriteLine(mmResponse.Embeddings);
   }
@@ -868,8 +868,10 @@ public class ListModelsExample {
 <p>The <code>client.Batches</code> module can be used to manage batch jobs.
 See <code>Create a client</code> section above to initialize a client.</p>
 <h3 id="create-batch-job">Create Batch Job</h3>
-<p>Batch jobs can be created from GCS URIs or BigQuery URIs when using Vertex AI, or from Files or Inlined Requests when using the Gemini API.</p>
-<h4 id="with-gcs-uri-vertex-ai-only">With GCS URI (Vertex AI only)</h4>
+<p>Batch jobs can be created from GCS URIs or BigQuery URIs when using Gemini
+Enterprise Agent Platform, or from Files or Inlined Requests when using the
+Gemini API.</p>
+<h4 id="with-gcs-uri-gemini-enterprise-agent-platform-only">With GCS URI (Gemini Enterprise Agent Platform only)</h4>
 <pre><code class="lang-csharp">using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -879,7 +881,7 @@ using Google.GenAI.Types;
 public class CreateBatchWithGcs {
     public static async Task main()
     {
-        // assuming credentials are set up for Vertex AI in environment variables as instructed above.
+        // assuming credentials are set up for Gemini Enterprise Agent Platform in environment variables as instructed above.
         var client = new Client();
         var src = new BatchJobSource
         {
@@ -896,11 +898,11 @@ public class CreateBatchWithGcs {
             }
         };
         var response = await client.Batches.CreateAsync(&quot;gemini-2.5-flash&quot;, src, config);
-        Console.WriteLine($&quot;Created Vertex AI batch job: {response.Name}&quot;);
+        Console.WriteLine($&quot;Created Gemini Enterprise Agent Platform batch job: {response.Name}&quot;);
     }
 }
 </code></pre>
-<h4 id="with-bigquery-uri-vertex-ai-only">With BigQuery URI (Vertex AI only)</h4>
+<h4 id="with-bigquery-uri-gemini-enterprise-agent-platform-only">With BigQuery URI (Gemini Enterprise Agent Platform only)</h4>
 <pre><code class="lang-csharp">using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -910,7 +912,7 @@ using Google.GenAI.Types;
 public class CreateBatchWithBigQuery {
     public static async Task main()
     {
-        // assuming credentials are set up for Vertex AI in environment variables as instructed above.
+        // assuming credentials are set up for Gemini Enterprise Agent Platfrom in environment variables as instructed above.
         var client = new Client();
         var src = new BatchJobSource
         {
@@ -927,7 +929,7 @@ public class CreateBatchWithBigQuery {
             }
         };
         var response = await client.Batches.CreateAsync(&quot;gemini-2.5-flash&quot;, src, config);
-        Console.WriteLine($&quot;Created Vertex AI batch job: {response.Name}&quot;);
+        Console.WriteLine($&quot;Created Gemini Enterprise Agent Platform batch job: {response.Name}&quot;);
     }
 }
 </code></pre>
@@ -1141,7 +1143,8 @@ public class DeleteBatchJob {
 <p>The <code>client.Caches</code> module can be used to manage cached content.
 See <code>Create a client</code> section above to initialize a client.</p>
 <h3 id="create-cache">Create Cache</h3>
-<p>Cacheable content can be created from Google Cloud Storage URIs when using Vertex AI, or from File URIs when using the Gemini API.</p>
+<p>Cacheable content can be created from Google Cloud Storage URIs when using
+Gemini Enterprise Agent Platform, or from File URIs when using the Gemini API.</p>
 <pre><code class="lang-csharp">using System.Threading.Tasks;
 using Google.GenAI;
 using Google.GenAI.Types;
@@ -1149,9 +1152,9 @@ using Google.GenAI.Types;
 public class CreateCache {
     public static async Task main()
     {
-        // Example for Vertex AI with GCS URIs:
-        var vertexClient = new Client(project: project, location: location, vertexAI: true);
-        var vertexConfig = new CreateCachedContentConfig {
+        // Example for Gemini Enterprise Agent Platform with GCS URIs:
+        var enterpriseClient = new Client(project: project, location: location, enterprise: true);
+        var agenterpriseConfig = new CreateCachedContentConfig {
             Contents = new List&lt;Content&gt; {
                 new Content {
                     Role = &quot;user&quot;,
@@ -1161,11 +1164,11 @@ public class CreateCache {
                     }
                 }
             },
-            DisplayName = &quot;my-vertex-cache&quot;,
+            DisplayName = &quot;my-enterprise-cache&quot;,
             Ttl = &quot;600s&quot;
         };
-        var vertexResponse = await vertexClient.Caches.CreateAsync(model: &quot;gemini-2.5-flash&quot;, config: vertexConfig);
-        Console.WriteLine($&quot;Created Vertex AI cache: {vertexResponse.Name}&quot;);
+        var enterpriseResponse = await agenterpriseClient.Caches.CreateAsync(model: &quot;gemini-2.5-flash&quot;, config: enterpriseConfig);
+        Console.WriteLine($&quot;Created Gemini Enterprise Agent Platform cache: {enterpriseResponse.Name}&quot;);
 
         // Example for Gemini API with File URIs:
         var geminiClient = new Client(apiKey: apiKey);
@@ -1257,7 +1260,7 @@ public class ListCaches {
 <h2 id="tunings">Tunings</h2>
 <p>The <code>client.Tunings</code> module exposes model tuning. See <code>Create a client</code>
 section above to initialize a client.</p>
-<h3 id="create-tuning-job-vertex-only">Create Tuning Job (Vertex Only)</h3>
+<h3 id="create-tuning-job-gemini-enterprise-agent-platform-only">Create Tuning Job (Gemini Enterprise Agent Platform only)</h3>
 <h4 id="with-simple-training-data">With simple training data</h4>
 <pre><code class="lang-csharp">using System.Threading.Tasks;
 using Google.GenAI;
@@ -1266,7 +1269,7 @@ using Google.GenAI.Types;
 public class CreateTuningJobSimple {
   public static async Task main() {
     // assuming credentials are set up in environment variables as instructed above.
-    var client = new Client(vertexAI: true);
+    var client = new Client(enterprise: true);
     var trainingDataset = new TuningDataset {
       GcsUri = &quot;gs://cloud-samples-data/ai-platform/generative_ai/gemini-2_0/text/sft_train_data.jsonl&quot;
     };
@@ -1289,7 +1292,7 @@ using Google.GenAI.Types;
 public class CreateTuningJobWithConfig {
   public static async Task main() {
     // assuming credentials are set up in environment variables as instructed above.
-    var client = new Client(vertexAI: true);
+    var client = new Client(enterprise: true);
     var trainingDataset = new TuningDataset {
       GcsUri = &quot;gs://cloud-samples-data/ai-platform/generative_ai/gemini-2_0/text/sft_train_data.jsonl&quot;
     };
@@ -1320,7 +1323,7 @@ using Google.GenAI.Types;
 public class PreferenceTuningJob {
   public static async Task main() {
     // assuming credentials are set up in environment variables as instructed above.
-    var client = new Client(vertexAI: true);
+    var client = new Client(enterprise: true);
     var trainingDataset = new TuningDataset {
       GcsUri = &quot;gs://cloud-samples-data/ai-platform/generative_ai/gemini-1_5/text/sft_train_data.jsonl&quot;
     };
@@ -1348,7 +1351,7 @@ using Google.GenAI.Types;
 public class ContinuousTuningJob {
   public static async Task main() {
     // assuming credentials are set up in environment variables as instructed above.
-    var client = new Client(vertexAI: true);
+    var client = new Client(enterprise: true);
     var trainingDataset = new TuningDataset {
       GcsUri = &quot;gs://cloud-samples-data/ai-platform/generative_ai/gemini-2_0/text/sft_train_data.jsonl&quot;
     };
@@ -1371,7 +1374,7 @@ using Google.GenAI.Types;
 public class DistillationJob {
   public static async Task main() {
     // assuming credentials are set up in environment variables as instructed above.
-    var client = new Client(vertexAI: true);
+    var client = new Client(enterprise: true);
 
     // Prompt dataset
     var trainingDataset = new TuningDataset {
@@ -1436,7 +1439,7 @@ using Google.GenAI.Types;
 public class Files {
   public static async Task Main() {
     // assuming credentials are set up in environment variables as instructed above.
-    var client = new Client(vertexAI: false);
+    var client = new Client(enterprise: false);
 
     // uploading from local file path
     var uploadResponse1 = await client.Files.UploadAsync(filtePath: &quot;path/to/your/file.png&quot;);
@@ -1460,7 +1463,7 @@ using Google.GenAI.Types;
 public class Files {
   public static async Task Main() {
     // assuming credentials are set up in environment variables as instructed above.
-    var client = new Client(vertexAI: false);
+    var client = new Client(enterprise: false);
 
     // usually, pattern is similar to this example &quot;files/s0pa54alni6w&quot;
     string fileName = &quot;files/randomID&quot;;
@@ -1477,7 +1480,7 @@ using Google.GenAI.Types;
 public class Files {
   public static async Task Main() {
     // assuming credentials are set up in environment variables as instructed above.
-    var client = new Client(vertexAI: false);
+    var client = new Client(enterprise: false);
 
     // usually, pattern is similar to this example &quot;files/s0pa54alni6w&quot;
     string fileName = &quot;files/randomID&quot;;
@@ -1494,7 +1497,7 @@ using Google.GenAI.Types;
 public class Files {
   public static async Task Main() {
     // assuming credentials are set up in environment variables as instructed above.
-    var client = new Client(vertexAI: false);
+    var client = new Client(enterprise: false);
 
     var pager = await client.Files.ListAsync();
     await foreach(var page in pager) {

@@ -13,15 +13,15 @@ references:
   commentId: T:Google.GenAI.ApiClient
   fullName: Google.GenAI.ApiClient
   nameWithType: ApiClient
-- uid: Google.GenAI.ApiClient.#ctor(System.Nullable{System.Boolean},System.String,System.String,System.String,Google.Apis.Auth.OAuth2.ICredential,Google.GenAI.Types.HttpOptions,Google.GenAI.Types.ClientOptions)
-  name: ApiClient(bool?, string?, string?, string?, ICredential?, HttpOptions?, ClientOptions?)
-  href: api/Google.GenAI.ApiClient.html#Google_GenAI_ApiClient__ctor_System_Nullable_System_Boolean__System_String_System_String_System_String_Google_Apis_Auth_OAuth2_ICredential_Google_GenAI_Types_HttpOptions_Google_GenAI_Types_ClientOptions_
-  commentId: M:Google.GenAI.ApiClient.#ctor(System.Nullable{System.Boolean},System.String,System.String,System.String,Google.Apis.Auth.OAuth2.ICredential,Google.GenAI.Types.HttpOptions,Google.GenAI.Types.ClientOptions)
-  name.vb: New(Boolean?, String, String, String, ICredential, HttpOptions, ClientOptions)
-  fullName: Google.GenAI.ApiClient.ApiClient(bool?, string?, string?, string?, Google.Apis.Auth.OAuth2.ICredential?, Google.GenAI.Types.HttpOptions?, Google.GenAI.Types.ClientOptions?)
-  fullName.vb: Google.GenAI.ApiClient.New(Boolean?, String, String, String, Google.Apis.Auth.OAuth2.ICredential, Google.GenAI.Types.HttpOptions, Google.GenAI.Types.ClientOptions)
-  nameWithType: ApiClient.ApiClient(bool?, string?, string?, string?, ICredential?, HttpOptions?, ClientOptions?)
-  nameWithType.vb: ApiClient.New(Boolean?, String, String, String, ICredential, HttpOptions, ClientOptions)
+- uid: Google.GenAI.ApiClient.#ctor(System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.String,System.String,Google.Apis.Auth.OAuth2.ICredential,Google.GenAI.Types.HttpOptions,Google.GenAI.Types.ClientOptions)
+  name: ApiClient(bool?, bool?, string?, string?, string?, ICredential?, HttpOptions?, ClientOptions?)
+  href: api/Google.GenAI.ApiClient.html#Google_GenAI_ApiClient__ctor_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_String_System_String_System_String_Google_Apis_Auth_OAuth2_ICredential_Google_GenAI_Types_HttpOptions_Google_GenAI_Types_ClientOptions_
+  commentId: M:Google.GenAI.ApiClient.#ctor(System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.String,System.String,Google.Apis.Auth.OAuth2.ICredential,Google.GenAI.Types.HttpOptions,Google.GenAI.Types.ClientOptions)
+  name.vb: New(Boolean?, Boolean?, String, String, String, ICredential, HttpOptions, ClientOptions)
+  fullName: Google.GenAI.ApiClient.ApiClient(bool?, bool?, string?, string?, string?, Google.Apis.Auth.OAuth2.ICredential?, Google.GenAI.Types.HttpOptions?, Google.GenAI.Types.ClientOptions?)
+  fullName.vb: Google.GenAI.ApiClient.New(Boolean?, Boolean?, String, String, String, Google.Apis.Auth.OAuth2.ICredential, Google.GenAI.Types.HttpOptions, Google.GenAI.Types.ClientOptions)
+  nameWithType: ApiClient.ApiClient(bool?, bool?, string?, string?, string?, ICredential?, HttpOptions?, ClientOptions?)
+  nameWithType.vb: ApiClient.New(Boolean?, Boolean?, String, String, String, ICredential, HttpOptions, ClientOptions)
 - uid: Google.GenAI.ApiClient.#ctor*
   name: ApiClient
   href: api/Google.GenAI.ApiClient.html#Google_GenAI_ApiClient__ctor_
@@ -647,15 +647,15 @@ references:
   commentId: T:Google.GenAI.Client
   fullName: Google.GenAI.Client
   nameWithType: Client
-- uid: Google.GenAI.Client.#ctor(System.Nullable{System.Boolean},System.String,Google.Apis.Auth.OAuth2.ICredential,System.String,System.String,Google.GenAI.Types.HttpOptions,Google.GenAI.Types.ClientOptions)
-  name: Client(bool?, string?, ICredential?, string?, string?, HttpOptions?, ClientOptions?)
-  href: api/Google.GenAI.Client.html#Google_GenAI_Client__ctor_System_Nullable_System_Boolean__System_String_Google_Apis_Auth_OAuth2_ICredential_System_String_System_String_Google_GenAI_Types_HttpOptions_Google_GenAI_Types_ClientOptions_
-  commentId: M:Google.GenAI.Client.#ctor(System.Nullable{System.Boolean},System.String,Google.Apis.Auth.OAuth2.ICredential,System.String,System.String,Google.GenAI.Types.HttpOptions,Google.GenAI.Types.ClientOptions)
-  name.vb: New(Boolean?, String, ICredential, String, String, HttpOptions, ClientOptions)
-  fullName: Google.GenAI.Client.Client(bool?, string?, Google.Apis.Auth.OAuth2.ICredential?, string?, string?, Google.GenAI.Types.HttpOptions?, Google.GenAI.Types.ClientOptions?)
-  fullName.vb: Google.GenAI.Client.New(Boolean?, String, Google.Apis.Auth.OAuth2.ICredential, String, String, Google.GenAI.Types.HttpOptions, Google.GenAI.Types.ClientOptions)
-  nameWithType: Client.Client(bool?, string?, ICredential?, string?, string?, HttpOptions?, ClientOptions?)
-  nameWithType.vb: Client.New(Boolean?, String, ICredential, String, String, HttpOptions, ClientOptions)
+- uid: Google.GenAI.Client.#ctor(System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,Google.Apis.Auth.OAuth2.ICredential,System.String,System.String,Google.GenAI.Types.HttpOptions,Google.GenAI.Types.ClientOptions)
+  name: Client(bool?, bool?, string?, ICredential?, string?, string?, HttpOptions?, ClientOptions?)
+  href: api/Google.GenAI.Client.html#Google_GenAI_Client__ctor_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_String_Google_Apis_Auth_OAuth2_ICredential_System_String_System_String_Google_GenAI_Types_HttpOptions_Google_GenAI_Types_ClientOptions_
+  commentId: M:Google.GenAI.Client.#ctor(System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,Google.Apis.Auth.OAuth2.ICredential,System.String,System.String,Google.GenAI.Types.HttpOptions,Google.GenAI.Types.ClientOptions)
+  name.vb: New(Boolean?, Boolean?, String, ICredential, String, String, HttpOptions, ClientOptions)
+  fullName: Google.GenAI.Client.Client(bool?, bool?, string?, Google.Apis.Auth.OAuth2.ICredential?, string?, string?, Google.GenAI.Types.HttpOptions?, Google.GenAI.Types.ClientOptions?)
+  fullName.vb: Google.GenAI.Client.New(Boolean?, Boolean?, String, Google.Apis.Auth.OAuth2.ICredential, String, String, Google.GenAI.Types.HttpOptions, Google.GenAI.Types.ClientOptions)
+  nameWithType: Client.Client(bool?, bool?, string?, ICredential?, string?, string?, HttpOptions?, ClientOptions?)
+  nameWithType.vb: Client.New(Boolean?, Boolean?, String, ICredential, String, String, HttpOptions, ClientOptions)
 - uid: Google.GenAI.Client.#ctor*
   name: Client
   href: api/Google.GenAI.Client.html#Google_GenAI_Client__ctor_
@@ -1146,15 +1146,15 @@ references:
   commentId: T:Google.GenAI.HttpApiClient
   fullName: Google.GenAI.HttpApiClient
   nameWithType: HttpApiClient
-- uid: Google.GenAI.HttpApiClient.#ctor(System.Nullable{System.Boolean},System.String,System.String,System.String,Google.Apis.Auth.OAuth2.ICredential,Google.GenAI.Types.HttpOptions,Google.GenAI.Types.ClientOptions)
-  name: HttpApiClient(bool?, string?, string?, string?, ICredential?, HttpOptions?, ClientOptions?)
-  href: api/Google.GenAI.HttpApiClient.html#Google_GenAI_HttpApiClient__ctor_System_Nullable_System_Boolean__System_String_System_String_System_String_Google_Apis_Auth_OAuth2_ICredential_Google_GenAI_Types_HttpOptions_Google_GenAI_Types_ClientOptions_
-  commentId: M:Google.GenAI.HttpApiClient.#ctor(System.Nullable{System.Boolean},System.String,System.String,System.String,Google.Apis.Auth.OAuth2.ICredential,Google.GenAI.Types.HttpOptions,Google.GenAI.Types.ClientOptions)
-  name.vb: New(Boolean?, String, String, String, ICredential, HttpOptions, ClientOptions)
-  fullName: Google.GenAI.HttpApiClient.HttpApiClient(bool?, string?, string?, string?, Google.Apis.Auth.OAuth2.ICredential?, Google.GenAI.Types.HttpOptions?, Google.GenAI.Types.ClientOptions?)
-  fullName.vb: Google.GenAI.HttpApiClient.New(Boolean?, String, String, String, Google.Apis.Auth.OAuth2.ICredential, Google.GenAI.Types.HttpOptions, Google.GenAI.Types.ClientOptions)
-  nameWithType: HttpApiClient.HttpApiClient(bool?, string?, string?, string?, ICredential?, HttpOptions?, ClientOptions?)
-  nameWithType.vb: HttpApiClient.New(Boolean?, String, String, String, ICredential, HttpOptions, ClientOptions)
+- uid: Google.GenAI.HttpApiClient.#ctor(System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.String,System.String,Google.Apis.Auth.OAuth2.ICredential,Google.GenAI.Types.HttpOptions,Google.GenAI.Types.ClientOptions)
+  name: HttpApiClient(bool?, bool?, string?, string?, string?, ICredential?, HttpOptions?, ClientOptions?)
+  href: api/Google.GenAI.HttpApiClient.html#Google_GenAI_HttpApiClient__ctor_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_String_System_String_System_String_Google_Apis_Auth_OAuth2_ICredential_Google_GenAI_Types_HttpOptions_Google_GenAI_Types_ClientOptions_
+  commentId: M:Google.GenAI.HttpApiClient.#ctor(System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.String,System.String,Google.Apis.Auth.OAuth2.ICredential,Google.GenAI.Types.HttpOptions,Google.GenAI.Types.ClientOptions)
+  name.vb: New(Boolean?, Boolean?, String, String, String, ICredential, HttpOptions, ClientOptions)
+  fullName: Google.GenAI.HttpApiClient.HttpApiClient(bool?, bool?, string?, string?, string?, Google.Apis.Auth.OAuth2.ICredential?, Google.GenAI.Types.HttpOptions?, Google.GenAI.Types.ClientOptions?)
+  fullName.vb: Google.GenAI.HttpApiClient.New(Boolean?, Boolean?, String, String, String, Google.Apis.Auth.OAuth2.ICredential, Google.GenAI.Types.HttpOptions, Google.GenAI.Types.ClientOptions)
+  nameWithType: HttpApiClient.HttpApiClient(bool?, bool?, string?, string?, string?, ICredential?, HttpOptions?, ClientOptions?)
+  nameWithType.vb: HttpApiClient.New(Boolean?, Boolean?, String, String, String, ICredential, HttpOptions, ClientOptions)
 - uid: Google.GenAI.HttpApiClient.#ctor*
   name: HttpApiClient
   href: api/Google.GenAI.HttpApiClient.html#Google_GenAI_HttpApiClient__ctor_
