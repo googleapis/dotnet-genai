@@ -4372,6 +4372,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.BatchJobDestination.InlinedResponses
   nameWithType: BatchJobDestination.InlinedResponses
+- uid: Google.GenAI.Types.BatchJobDestination.VertexDataset
+  name: VertexDataset
+  href: api/Google.GenAI.Types.BatchJobDestination.html#Google_GenAI_Types_BatchJobDestination_VertexDataset
+  commentId: P:Google.GenAI.Types.BatchJobDestination.VertexDataset
+  fullName: Google.GenAI.Types.BatchJobDestination.VertexDataset
+  nameWithType: BatchJobDestination.VertexDataset
+- uid: Google.GenAI.Types.BatchJobDestination.VertexDataset*
+  name: VertexDataset
+  href: api/Google.GenAI.Types.BatchJobDestination.html#Google_GenAI_Types_BatchJobDestination_VertexDataset_
+  commentId: Overload:Google.GenAI.Types.BatchJobDestination.VertexDataset
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJobDestination.VertexDataset
+  nameWithType: BatchJobDestination.VertexDataset
 - uid: Google.GenAI.Types.BatchJobSource
   name: BatchJobSource
   href: api/Google.GenAI.Types.BatchJobSource.html
@@ -4459,6 +4472,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.BatchJobSource.InlinedRequests
   nameWithType: BatchJobSource.InlinedRequests
+- uid: Google.GenAI.Types.BatchJobSource.VertexDatasetName
+  name: VertexDatasetName
+  href: api/Google.GenAI.Types.BatchJobSource.html#Google_GenAI_Types_BatchJobSource_VertexDatasetName
+  commentId: P:Google.GenAI.Types.BatchJobSource.VertexDatasetName
+  fullName: Google.GenAI.Types.BatchJobSource.VertexDatasetName
+  nameWithType: BatchJobSource.VertexDatasetName
+- uid: Google.GenAI.Types.BatchJobSource.VertexDatasetName*
+  name: VertexDatasetName
+  href: api/Google.GenAI.Types.BatchJobSource.html#Google_GenAI_Types_BatchJobSource_VertexDatasetName_
+  commentId: Overload:Google.GenAI.Types.BatchJobSource.VertexDatasetName
+  isSpec: "True"
+  fullName: Google.GenAI.Types.BatchJobSource.VertexDatasetName
+  nameWithType: BatchJobSource.VertexDatasetName
 - uid: Google.GenAI.Types.Behavior
   name: Behavior
   href: api/Google.GenAI.Types.Behavior.html
@@ -36649,6 +36675,54 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.VertexAISearchDataStoreSpec.FromJson
   nameWithType: VertexAISearchDataStoreSpec.FromJson
+- uid: Google.GenAI.Types.VertexMultimodalDatasetDestination
+  name: VertexMultimodalDatasetDestination
+  href: api/Google.GenAI.Types.VertexMultimodalDatasetDestination.html
+  commentId: T:Google.GenAI.Types.VertexMultimodalDatasetDestination
+  fullName: Google.GenAI.Types.VertexMultimodalDatasetDestination
+  nameWithType: VertexMultimodalDatasetDestination
+- uid: Google.GenAI.Types.VertexMultimodalDatasetDestination.BigqueryDestination
+  name: BigqueryDestination
+  href: api/Google.GenAI.Types.VertexMultimodalDatasetDestination.html#Google_GenAI_Types_VertexMultimodalDatasetDestination_BigqueryDestination
+  commentId: P:Google.GenAI.Types.VertexMultimodalDatasetDestination.BigqueryDestination
+  fullName: Google.GenAI.Types.VertexMultimodalDatasetDestination.BigqueryDestination
+  nameWithType: VertexMultimodalDatasetDestination.BigqueryDestination
+- uid: Google.GenAI.Types.VertexMultimodalDatasetDestination.BigqueryDestination*
+  name: BigqueryDestination
+  href: api/Google.GenAI.Types.VertexMultimodalDatasetDestination.html#Google_GenAI_Types_VertexMultimodalDatasetDestination_BigqueryDestination_
+  commentId: Overload:Google.GenAI.Types.VertexMultimodalDatasetDestination.BigqueryDestination
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VertexMultimodalDatasetDestination.BigqueryDestination
+  nameWithType: VertexMultimodalDatasetDestination.BigqueryDestination
+- uid: Google.GenAI.Types.VertexMultimodalDatasetDestination.DisplayName
+  name: DisplayName
+  href: api/Google.GenAI.Types.VertexMultimodalDatasetDestination.html#Google_GenAI_Types_VertexMultimodalDatasetDestination_DisplayName
+  commentId: P:Google.GenAI.Types.VertexMultimodalDatasetDestination.DisplayName
+  fullName: Google.GenAI.Types.VertexMultimodalDatasetDestination.DisplayName
+  nameWithType: VertexMultimodalDatasetDestination.DisplayName
+- uid: Google.GenAI.Types.VertexMultimodalDatasetDestination.DisplayName*
+  name: DisplayName
+  href: api/Google.GenAI.Types.VertexMultimodalDatasetDestination.html#Google_GenAI_Types_VertexMultimodalDatasetDestination_DisplayName_
+  commentId: Overload:Google.GenAI.Types.VertexMultimodalDatasetDestination.DisplayName
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VertexMultimodalDatasetDestination.DisplayName
+  nameWithType: VertexMultimodalDatasetDestination.DisplayName
+- uid: Google.GenAI.Types.VertexMultimodalDatasetDestination.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.VertexMultimodalDatasetDestination.html#Google_GenAI_Types_VertexMultimodalDatasetDestination_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.VertexMultimodalDatasetDestination.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.VertexMultimodalDatasetDestination.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.VertexMultimodalDatasetDestination.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: VertexMultimodalDatasetDestination.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: VertexMultimodalDatasetDestination.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.VertexMultimodalDatasetDestination.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.VertexMultimodalDatasetDestination.html#Google_GenAI_Types_VertexMultimodalDatasetDestination_FromJson_
+  commentId: Overload:Google.GenAI.Types.VertexMultimodalDatasetDestination.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VertexMultimodalDatasetDestination.FromJson
+  nameWithType: VertexMultimodalDatasetDestination.FromJson
 - uid: Google.GenAI.Types.VertexRagStore
   name: VertexRagStore
   href: api/Google.GenAI.Types.VertexRagStore.html

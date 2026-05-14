@@ -230,7 +230,7 @@ public string? FileName { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/BatchJobSource.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Storage format of the input files. Must be one of: 'jsonl', 'bigquery'.</p>
+  <div class="markdown level1 summary"><p>Storage format of the input files. Must be one of: 'jsonl', 'bigquery', 'vertex-dataset'.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -325,6 +325,41 @@ public List&lt;InlinedRequest&gt;? InlinedRequests { get; set; }</code></pre>
 
 
 
+  <a id="Google_GenAI_Types_BatchJobSource_VertexDatasetName_" data-uid="Google.GenAI.Types.BatchJobSource.VertexDatasetName*"></a>
+
+  <h3 id="Google_GenAI_Types_BatchJobSource_VertexDatasetName" data-uid="Google.GenAI.Types.BatchJobSource.VertexDatasetName">
+  VertexDatasetName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/BatchJobSource.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This field is experimental and may change in future versions. The Vertex AI dataset resource
+name to use as input. Must be of type multimodal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;vertexDatasetName&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public string? VertexDatasetName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -333,7 +368,7 @@ public List&lt;InlinedRequest&gt;? InlinedRequests { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_BatchJobSource_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.BatchJobSource.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/BatchJobSource.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/BatchJobSource.cs/#L94"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a BatchJobSource object.</p>
