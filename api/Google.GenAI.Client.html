@@ -172,9 +172,9 @@ Using this client to make a request to Gemini Developer API or Vertex AI API.</p
 
   <a id="Google_GenAI_Client__ctor_" data-uid="Google.GenAI.Client.#ctor*"></a>
 
-  <h3 id="Google_GenAI_Client__ctor_System_Nullable_System_Boolean__System_String_Google_Apis_Auth_OAuth2_ICredential_System_String_System_String_Google_GenAI_Types_HttpOptions_" data-uid="Google.GenAI.Client.#ctor(System.Nullable{System.Boolean},System.String,Google.Apis.Auth.OAuth2.ICredential,System.String,System.String,Google.GenAI.Types.HttpOptions)">
-  Client(bool?, string?, ICredential?, string?, string?, HttpOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Client.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Client__ctor_System_Nullable_System_Boolean__System_String_Google_Apis_Auth_OAuth2_ICredential_System_String_System_String_Google_GenAI_Types_HttpOptions_Google_GenAI_Types_ClientOptions_" data-uid="Google.GenAI.Client.#ctor(System.Nullable{System.Boolean},System.String,Google.Apis.Auth.OAuth2.ICredential,System.String,System.String,Google.GenAI.Types.HttpOptions,Google.GenAI.Types.ClientOptions)">
+  Client(bool?, string?, ICredential?, string?, string?, HttpOptions?, ClientOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Client.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Constructs a Client instance with the given parameters.</p>
@@ -182,7 +182,7 @@ Using this client to make a request to Gemini Developer API or Vertex AI API.</p
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Client(bool? vertexAI = null, string? apiKey = null, ICredential? credential = null, string? project = null, string? location = null, HttpOptions? httpOptions = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Client(bool? vertexAI = null, string? apiKey = null, ICredential? credential = null, string? project = null, string? location = null, HttpOptions? httpOptions = null, ClientOptions? clientOptions = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -210,6 +210,10 @@ Vertex AI APIs only.</p>
     <dt><code>httpOptions</code> <a class="xref" href="Google.GenAI.Types.HttpOptions.html">HttpOptions</a></dt>
     <dd><p>Optional <a class="xref" href="Google.GenAI.Types.HttpOptions.html">HttpOptions</a> for sending
 HTTP requests.</p>
+</dd>
+    <dt><code>clientOptions</code> <a class="xref" href="Google.GenAI.Types.ClientOptions.html">ClientOptions</a></dt>
+    <dd><p>Optional <a class="xref" href="Google.GenAI.Types.ClientOptions.html">ClientOptions</a> for
+configuring the client.</p>
 </dd>
   </dl>
 
@@ -460,7 +464,7 @@ project/location and API key are set together.</p>
 
   <h3 id="Google_GenAI_Client_Dispose" data-uid="Google.GenAI.Client.Dispose">
   Dispose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Client.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Client.cs/#L108"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Disposes the client and its underlying resources.</p>
@@ -487,7 +491,7 @@ project/location and API key are set together.</p>
 
   <h3 id="Google_GenAI_Client_DisposeAsync" data-uid="Google.GenAI.Client.DisposeAsync">
   DisposeAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Client.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Client.cs/#L131"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Asynchronously disposes the client and its underlying resources.</p>
@@ -520,7 +524,7 @@ project/location and API key are set together.</p>
 
   <h3 id="Google_GenAI_Client_setDefaultBaseUrl_System_String_System_String_" data-uid="Google.GenAI.Client.setDefaultBaseUrl(System.String,System.String)">
   setDefaultBaseUrl(string?, string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Client.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Client.cs/#L100"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

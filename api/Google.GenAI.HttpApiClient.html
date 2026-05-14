@@ -146,6 +146,9 @@ Class HttpApiClient  <a class="header-action link-secondary" title="View source"
       <a class="xref" href="Google.GenAI.ApiClient.html#Google_GenAI_ApiClient_HttpOptions">ApiClient.HttpOptions</a>
     </div>
     <div>
+      <a class="xref" href="Google.GenAI.ApiClient.html#Google_GenAI_ApiClient_ClientOptions">ApiClient.ClientOptions</a>
+    </div>
+    <div>
       <a class="xref" href="Google.GenAI.ApiClient.html#Google_GenAI_ApiClient_VertexAI">ApiClient.VertexAI</a>
     </div>
     <div>
@@ -194,8 +197,8 @@ Class HttpApiClient  <a class="header-action link-secondary" title="View source"
 
   <a id="Google_GenAI_HttpApiClient__ctor_" data-uid="Google.GenAI.HttpApiClient.#ctor*"></a>
 
-  <h3 id="Google_GenAI_HttpApiClient__ctor_System_Nullable_System_Boolean__System_String_System_String_System_String_Google_Apis_Auth_OAuth2_ICredential_Google_GenAI_Types_HttpOptions_" data-uid="Google.GenAI.HttpApiClient.#ctor(System.Nullable{System.Boolean},System.String,System.String,System.String,Google.Apis.Auth.OAuth2.ICredential,Google.GenAI.Types.HttpOptions)">
-  HttpApiClient(bool?, string?, string?, string?, ICredential?, HttpOptions?)
+  <h3 id="Google_GenAI_HttpApiClient__ctor_System_Nullable_System_Boolean__System_String_System_String_System_String_Google_Apis_Auth_OAuth2_ICredential_Google_GenAI_Types_HttpOptions_Google_GenAI_Types_ClientOptions_" data-uid="Google.GenAI.HttpApiClient.#ctor(System.Nullable{System.Boolean},System.String,System.String,System.String,Google.Apis.Auth.OAuth2.ICredential,Google.GenAI.Types.HttpOptions,Google.GenAI.Types.ClientOptions)">
+  HttpApiClient(bool?, string?, string?, string?, ICredential?, HttpOptions?, ClientOptions?)
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/HttpApiClient.cs/#L87"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -203,7 +206,7 @@ Class HttpApiClient  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HttpApiClient(bool? vertexAI = null, string? apiKey = null, string? project = null, string? location = null, ICredential? credentials = null, HttpOptions? httpOptions = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public HttpApiClient(bool? vertexAI = null, string? apiKey = null, string? project = null, string? location = null, ICredential? credentials = null, HttpOptions? httpOptions = null, ClientOptions? clientOptions = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -219,6 +222,8 @@ Class HttpApiClient  <a class="header-action link-secondary" title="View source"
     <dt><code>credentials</code> <a class="xref" href="https://github.com/googleapis/google-api-dotnet-client/blob/main/Src/Support/Google.Apis.Auth/OAuth2/ICredential.cs">ICredential</a></dt>
     <dd></dd>
     <dt><code>httpOptions</code> <a class="xref" href="Google.GenAI.Types.HttpOptions.html">HttpOptions</a></dt>
+    <dd></dd>
+    <dt><code>clientOptions</code> <a class="xref" href="Google.GenAI.Types.ClientOptions.html">ClientOptions</a></dt>
     <dd></dd>
   </dl>
 
@@ -241,7 +246,7 @@ Class HttpApiClient  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Google_GenAI_HttpApiClient_RequestAsync_System_Net_Http_HttpMethod_System_String_System_String_Google_GenAI_Types_HttpOptions_System_Threading_CancellationToken_" data-uid="Google.GenAI.HttpApiClient.RequestAsync(System.Net.Http.HttpMethod,System.String,System.String,Google.GenAI.Types.HttpOptions,System.Threading.CancellationToken)">
   RequestAsync(HttpMethod, string, string, HttpOptions?, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/HttpApiClient.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/HttpApiClient.cs/#L97"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends an HTTP request given the HTTP method, path, and request JSON string.</p>
@@ -286,7 +291,7 @@ Class HttpApiClient  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Google_GenAI_HttpApiClient_RequestStreamAsync_System_Net_Http_HttpMethod_System_String_System_String_Google_GenAI_Types_HttpOptions_System_Threading_CancellationToken_" data-uid="Google.GenAI.HttpApiClient.RequestStreamAsync(System.Net.Http.HttpMethod,System.String,System.String,Google.GenAI.Types.HttpOptions,System.Threading.CancellationToken)">
   RequestStreamAsync(HttpMethod, string, string, HttpOptions?, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/HttpApiClient.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/HttpApiClient.cs/#L145"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends an HTTP request for streaming responses that return Server-Sent Events.</p>
