@@ -14681,6 +14681,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerateVideosConfig.ReferenceImages
   nameWithType: GenerateVideosConfig.ReferenceImages
+- uid: Google.GenAI.Types.GenerateVideosConfig.ResizeMode
+  name: ResizeMode
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_ResizeMode
+  commentId: P:Google.GenAI.Types.GenerateVideosConfig.ResizeMode
+  fullName: Google.GenAI.Types.GenerateVideosConfig.ResizeMode
+  nameWithType: GenerateVideosConfig.ResizeMode
+- uid: Google.GenAI.Types.GenerateVideosConfig.ResizeMode*
+  name: ResizeMode
+  href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_ResizeMode_
+  commentId: Overload:Google.GenAI.Types.GenerateVideosConfig.ResizeMode
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateVideosConfig.ResizeMode
+  nameWithType: GenerateVideosConfig.ResizeMode
 - uid: Google.GenAI.Types.GenerateVideosConfig.Resolution
   name: Resolution
   href: api/Google.GenAI.Types.GenerateVideosConfig.html#Google_GenAI_Types_GenerateVideosConfig_Resolution
@@ -19026,6 +19039,173 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ImagePromptLanguageConverter.Write
   nameWithType: ImagePromptLanguageConverter.Write
+- uid: Google.GenAI.Types.ImageResizeMode
+  name: ImageResizeMode
+  href: api/Google.GenAI.Types.ImageResizeMode.html
+  commentId: T:Google.GenAI.Types.ImageResizeMode
+  fullName: Google.GenAI.Types.ImageResizeMode
+  nameWithType: ImageResizeMode
+- uid: Google.GenAI.Types.ImageResizeMode.AllValues
+  name: AllValues
+  href: api/Google.GenAI.Types.ImageResizeMode.html#Google_GenAI_Types_ImageResizeMode_AllValues
+  commentId: P:Google.GenAI.Types.ImageResizeMode.AllValues
+  fullName: Google.GenAI.Types.ImageResizeMode.AllValues
+  nameWithType: ImageResizeMode.AllValues
+- uid: Google.GenAI.Types.ImageResizeMode.AllValues*
+  name: AllValues
+  href: api/Google.GenAI.Types.ImageResizeMode.html#Google_GenAI_Types_ImageResizeMode_AllValues_
+  commentId: Overload:Google.GenAI.Types.ImageResizeMode.AllValues
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageResizeMode.AllValues
+  nameWithType: ImageResizeMode.AllValues
+- uid: Google.GenAI.Types.ImageResizeMode.Crop
+  name: Crop
+  href: api/Google.GenAI.Types.ImageResizeMode.html#Google_GenAI_Types_ImageResizeMode_Crop
+  commentId: P:Google.GenAI.Types.ImageResizeMode.Crop
+  fullName: Google.GenAI.Types.ImageResizeMode.Crop
+  nameWithType: ImageResizeMode.Crop
+- uid: Google.GenAI.Types.ImageResizeMode.Crop*
+  name: Crop
+  href: api/Google.GenAI.Types.ImageResizeMode.html#Google_GenAI_Types_ImageResizeMode_Crop_
+  commentId: Overload:Google.GenAI.Types.ImageResizeMode.Crop
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageResizeMode.Crop
+  nameWithType: ImageResizeMode.Crop
+- uid: Google.GenAI.Types.ImageResizeMode.Equals(Google.GenAI.Types.ImageResizeMode)
+  name: Equals(ImageResizeMode)
+  href: api/Google.GenAI.Types.ImageResizeMode.html#Google_GenAI_Types_ImageResizeMode_Equals_Google_GenAI_Types_ImageResizeMode_
+  commentId: M:Google.GenAI.Types.ImageResizeMode.Equals(Google.GenAI.Types.ImageResizeMode)
+  fullName: Google.GenAI.Types.ImageResizeMode.Equals(Google.GenAI.Types.ImageResizeMode)
+  nameWithType: ImageResizeMode.Equals(ImageResizeMode)
+- uid: Google.GenAI.Types.ImageResizeMode.Equals*
+  name: Equals
+  href: api/Google.GenAI.Types.ImageResizeMode.html#Google_GenAI_Types_ImageResizeMode_Equals_
+  commentId: Overload:Google.GenAI.Types.ImageResizeMode.Equals
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageResizeMode.Equals
+  nameWithType: ImageResizeMode.Equals
+- uid: Google.GenAI.Types.ImageResizeMode.FromString(System.String)
+  name: FromString(string)
+  href: api/Google.GenAI.Types.ImageResizeMode.html#Google_GenAI_Types_ImageResizeMode_FromString_System_String_
+  commentId: M:Google.GenAI.Types.ImageResizeMode.FromString(System.String)
+  name.vb: FromString(String)
+  fullName: Google.GenAI.Types.ImageResizeMode.FromString(string)
+  fullName.vb: Google.GenAI.Types.ImageResizeMode.FromString(String)
+  nameWithType: ImageResizeMode.FromString(string)
+  nameWithType.vb: ImageResizeMode.FromString(String)
+- uid: Google.GenAI.Types.ImageResizeMode.FromString*
+  name: FromString
+  href: api/Google.GenAI.Types.ImageResizeMode.html#Google_GenAI_Types_ImageResizeMode_FromString_
+  commentId: Overload:Google.GenAI.Types.ImageResizeMode.FromString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageResizeMode.FromString
+  nameWithType: ImageResizeMode.FromString
+- uid: Google.GenAI.Types.ImageResizeMode.GetHashCode
+  name: GetHashCode()
+  href: api/Google.GenAI.Types.ImageResizeMode.html#Google_GenAI_Types_ImageResizeMode_GetHashCode
+  commentId: M:Google.GenAI.Types.ImageResizeMode.GetHashCode
+  fullName: Google.GenAI.Types.ImageResizeMode.GetHashCode()
+  nameWithType: ImageResizeMode.GetHashCode()
+- uid: Google.GenAI.Types.ImageResizeMode.GetHashCode*
+  name: GetHashCode
+  href: api/Google.GenAI.Types.ImageResizeMode.html#Google_GenAI_Types_ImageResizeMode_GetHashCode_
+  commentId: Overload:Google.GenAI.Types.ImageResizeMode.GetHashCode
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageResizeMode.GetHashCode
+  nameWithType: ImageResizeMode.GetHashCode
+- uid: Google.GenAI.Types.ImageResizeMode.Pad
+  name: Pad
+  href: api/Google.GenAI.Types.ImageResizeMode.html#Google_GenAI_Types_ImageResizeMode_Pad
+  commentId: P:Google.GenAI.Types.ImageResizeMode.Pad
+  fullName: Google.GenAI.Types.ImageResizeMode.Pad
+  nameWithType: ImageResizeMode.Pad
+- uid: Google.GenAI.Types.ImageResizeMode.Pad*
+  name: Pad
+  href: api/Google.GenAI.Types.ImageResizeMode.html#Google_GenAI_Types_ImageResizeMode_Pad_
+  commentId: Overload:Google.GenAI.Types.ImageResizeMode.Pad
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageResizeMode.Pad
+  nameWithType: ImageResizeMode.Pad
+- uid: Google.GenAI.Types.ImageResizeMode.ToString
+  name: ToString()
+  href: api/Google.GenAI.Types.ImageResizeMode.html#Google_GenAI_Types_ImageResizeMode_ToString
+  commentId: M:Google.GenAI.Types.ImageResizeMode.ToString
+  fullName: Google.GenAI.Types.ImageResizeMode.ToString()
+  nameWithType: ImageResizeMode.ToString()
+- uid: Google.GenAI.Types.ImageResizeMode.ToString*
+  name: ToString
+  href: api/Google.GenAI.Types.ImageResizeMode.html#Google_GenAI_Types_ImageResizeMode_ToString_
+  commentId: Overload:Google.GenAI.Types.ImageResizeMode.ToString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageResizeMode.ToString
+  nameWithType: ImageResizeMode.ToString
+- uid: Google.GenAI.Types.ImageResizeMode.Value
+  name: Value
+  href: api/Google.GenAI.Types.ImageResizeMode.html#Google_GenAI_Types_ImageResizeMode_Value
+  commentId: P:Google.GenAI.Types.ImageResizeMode.Value
+  fullName: Google.GenAI.Types.ImageResizeMode.Value
+  nameWithType: ImageResizeMode.Value
+- uid: Google.GenAI.Types.ImageResizeMode.Value*
+  name: Value
+  href: api/Google.GenAI.Types.ImageResizeMode.html#Google_GenAI_Types_ImageResizeMode_Value_
+  commentId: Overload:Google.GenAI.Types.ImageResizeMode.Value
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageResizeMode.Value
+  nameWithType: ImageResizeMode.Value
+- uid: Google.GenAI.Types.ImageResizeMode.op_Implicit(System.String)~Google.GenAI.Types.ImageResizeMode
+  name: implicit operator ImageResizeMode(string)
+  href: api/Google.GenAI.Types.ImageResizeMode.html#Google_GenAI_Types_ImageResizeMode_op_Implicit_System_String__Google_GenAI_Types_ImageResizeMode
+  commentId: M:Google.GenAI.Types.ImageResizeMode.op_Implicit(System.String)~Google.GenAI.Types.ImageResizeMode
+  name.vb: CType(String)
+  fullName: Google.GenAI.Types.ImageResizeMode.implicit operator Google.GenAI.Types.ImageResizeMode(string)
+  fullName.vb: Google.GenAI.Types.ImageResizeMode.CType(String)
+  nameWithType: ImageResizeMode.implicit operator ImageResizeMode(string)
+  nameWithType.vb: ImageResizeMode.CType(String)
+- uid: Google.GenAI.Types.ImageResizeMode.op_Implicit*
+  name: implicit operator
+  href: api/Google.GenAI.Types.ImageResizeMode.html#Google_GenAI_Types_ImageResizeMode_op_Implicit_
+  commentId: Overload:Google.GenAI.Types.ImageResizeMode.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: Google.GenAI.Types.ImageResizeMode.implicit operator
+  fullName.vb: Google.GenAI.Types.ImageResizeMode.CType
+  nameWithType: ImageResizeMode.implicit operator
+  nameWithType.vb: ImageResizeMode.CType
+- uid: Google.GenAI.Types.ImageResizeModeConverter
+  name: ImageResizeModeConverter
+  href: api/Google.GenAI.Types.ImageResizeModeConverter.html
+  commentId: T:Google.GenAI.Types.ImageResizeModeConverter
+  fullName: Google.GenAI.Types.ImageResizeModeConverter
+  nameWithType: ImageResizeModeConverter
+- uid: Google.GenAI.Types.ImageResizeModeConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.ImageResizeModeConverter.html#Google_GenAI_Types_ImageResizeModeConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ImageResizeModeConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name.vb: Read(Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ImageResizeModeConverter.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: Google.GenAI.Types.ImageResizeModeConverter.Read(System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ImageResizeModeConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: ImageResizeModeConverter.Read(Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ImageResizeModeConverter.Read*
+  name: Read
+  href: api/Google.GenAI.Types.ImageResizeModeConverter.html#Google_GenAI_Types_ImageResizeModeConverter_Read_
+  commentId: Overload:Google.GenAI.Types.ImageResizeModeConverter.Read
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageResizeModeConverter.Read
+  nameWithType: ImageResizeModeConverter.Read
+- uid: Google.GenAI.Types.ImageResizeModeConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.ImageResizeMode,System.Text.Json.JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, ImageResizeMode, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.ImageResizeModeConverter.html#Google_GenAI_Types_ImageResizeModeConverter_Write_System_Text_Json_Utf8JsonWriter_Google_GenAI_Types_ImageResizeMode_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ImageResizeModeConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.ImageResizeMode,System.Text.Json.JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ImageResizeModeConverter.Write(System.Text.Json.Utf8JsonWriter, Google.GenAI.Types.ImageResizeMode, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ImageResizeModeConverter.Write(Utf8JsonWriter, ImageResizeMode, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ImageResizeModeConverter.Write*
+  name: Write
+  href: api/Google.GenAI.Types.ImageResizeModeConverter.html#Google_GenAI_Types_ImageResizeModeConverter_Write_
+  commentId: Overload:Google.GenAI.Types.ImageResizeModeConverter.Write
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageResizeModeConverter.Write
+  nameWithType: ImageResizeModeConverter.Write
 - uid: Google.GenAI.Types.ImageSearch
   name: ImageSearch
   href: api/Google.GenAI.Types.ImageSearch.html
