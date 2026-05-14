@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_AsyncSession" data-uid="Google.GenAI.AsyncSession" class="text-break">
-Class AsyncSession  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L194"><i class="bi bi-code-slash"></i></a>
+Class AsyncSession  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L212"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -161,7 +161,7 @@ Instead, use <a class="xref" href="Google.GenAI.Live.html#Google_GenAI_Live_Conn
 
   <h3 id="Google_GenAI_AsyncSession__ctor_System_Net_WebSockets_WebSocket_Google_GenAI_ApiClient_" data-uid="Google.GenAI.AsyncSession.#ctor(System.Net.WebSockets.WebSocket,Google.GenAI.ApiClient)">
   AsyncSession(WebSocket, ApiClient)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L200"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L218"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -198,7 +198,7 @@ Instead, use <a class="xref" href="Google.GenAI.Live.html#Google_GenAI_Live_Conn
 
   <h3 id="Google_GenAI_AsyncSession_CloseAsync" data-uid="Google.GenAI.AsyncSession.CloseAsync">
   CloseAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L365"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L383"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Closes the WebSocket connection gracefully. This method is thread-safe and idempotent.</p>
@@ -230,7 +230,7 @@ Instead, use <a class="xref" href="Google.GenAI.Live.html#Google_GenAI_Live_Conn
 
   <h3 id="Google_GenAI_AsyncSession_DisposeAsync" data-uid="Google.GenAI.AsyncSession.DisposeAsync">
   DisposeAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L404"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L422"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Asynchronously disposes the session by closing the WebSocket connection.</p>
@@ -262,7 +262,7 @@ Instead, use <a class="xref" href="Google.GenAI.Live.html#Google_GenAI_Live_Conn
 
   <h3 id="Google_GenAI_AsyncSession_ReceiveAsync_System_Threading_CancellationToken_" data-uid="Google.GenAI.AsyncSession.ReceiveAsync(System.Threading.CancellationToken)">
   ReceiveAsync(CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L294"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L312"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Receives model responses from the server.</p>
@@ -310,7 +310,7 @@ connection has been gracefully closed.</p>
 
   <h3 id="Google_GenAI_AsyncSession_SendClientContentAsync_Google_GenAI_Types_LiveSendClientContentParameters_System_Threading_CancellationToken_" data-uid="Google.GenAI.AsyncSession.SendClientContentAsync(Google.GenAI.Types.LiveSendClientContentParameters,System.Threading.CancellationToken)">
   SendClientContentAsync(LiveSendClientContentParameters, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L246"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L264"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends non-realtime, turn-based content to the model.</p>
@@ -380,7 +380,7 @@ can lead to unexpected behavior.
 
   <h3 id="Google_GenAI_AsyncSession_SendRealtimeInputAsync_Google_GenAI_Types_LiveSendRealtimeInputParameters_System_Threading_CancellationToken_" data-uid="Google.GenAI.AsyncSession.SendRealtimeInputAsync(Google.GenAI.Types.LiveSendRealtimeInputParameters,System.Threading.CancellationToken)">
   SendRealtimeInputAsync(LiveSendRealtimeInputParameters, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L268"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L286"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sends realtime input to the model. With <code>SendRealtimeInputAsync</code>,
@@ -425,7 +425,7 @@ messages. Response tokens are added to the context as they become available.</p>
 
   <h3 id="Google_GenAI_AsyncSession_SendToolResponseAsync_Google_GenAI_Types_LiveSendToolResponseParameters_System_Threading_CancellationToken_" data-uid="Google.GenAI.AsyncSession.SendToolResponseAsync(Google.GenAI.Types.LiveSendToolResponseParameters,System.Threading.CancellationToken)">
   SendToolResponseAsync(LiveSendToolResponseParameters, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L275"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L293"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -463,7 +463,7 @@ messages. Response tokens are added to the context as they become available.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L194" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L212" class="edit-link">Edit this page</a>
         </div>
 
 

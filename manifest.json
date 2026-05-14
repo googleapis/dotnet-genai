@@ -266,6 +266,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Tokens.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Tokens.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Tokens",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Tokens.yml\" sourcestartlinenumber=\"1\">Provides methods for managing the ephemeral auth tokens. The tokens module is experimental.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Tunings.yml",
       "output": {
         ".html": {
@@ -571,6 +585,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.AuthConfigOidcConfig",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.AuthConfigOidcConfig.yml\" sourcestartlinenumber=\"1\">Config for user OIDC auth. This data type is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.AuthToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.AuthToken.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.AuthToken",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.AuthToken.yml\" sourcestartlinenumber=\"1\">Config for auth_tokens.create parameters.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1145,6 +1173,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.CountTokensResponse",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CountTokensResponse.yml\" sourcestartlinenumber=\"1\">Response for counting tokens.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.CreateAuthTokenConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.CreateAuthTokenConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.CreateAuthTokenConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CreateAuthTokenConfig.yml\" sourcestartlinenumber=\"1\">Optional parameters.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3623,6 +3665,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.LiveConnectConfig",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LiveConnectConfig.yml\" sourcestartlinenumber=\"1\">Session config for the API connection.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.LiveConnectConstraints.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.LiveConnectConstraints.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.LiveConnectConstraints",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LiveConnectConstraints.yml\" sourcestartlinenumber=\"1\">Config for LiveConnectConstraints for Auth Token creation.</p>\n"
     },
     {
       "type": "ManagedReference",

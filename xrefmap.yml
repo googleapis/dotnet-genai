@@ -770,6 +770,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Client.Operations
   nameWithType: Client.Operations
+- uid: Google.GenAI.Client.Tokens
+  name: Tokens
+  href: api/Google.GenAI.Client.html#Google_GenAI_Client_Tokens
+  commentId: P:Google.GenAI.Client.Tokens
+  fullName: Google.GenAI.Client.Tokens
+  nameWithType: Client.Tokens
+- uid: Google.GenAI.Client.Tokens*
+  name: Tokens
+  href: api/Google.GenAI.Client.html#Google_GenAI_Client_Tokens_
+  commentId: Overload:Google.GenAI.Client.Tokens
+  isSpec: "True"
+  fullName: Google.GenAI.Client.Tokens
+  nameWithType: Client.Tokens
 - uid: Google.GenAI.Client.Tunings
   name: Tunings
   href: api/Google.GenAI.Client.html#Google_GenAI_Client_Tunings
@@ -2054,6 +2067,28 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.StreamingApiResponse.GetJsonContent
   nameWithType: StreamingApiResponse.GetJsonContent
+- uid: Google.GenAI.Tokens
+  name: Tokens
+  href: api/Google.GenAI.Tokens.html
+  commentId: T:Google.GenAI.Tokens
+  fullName: Google.GenAI.Tokens
+  nameWithType: Tokens
+- uid: Google.GenAI.Tokens.CreateAsync(Google.GenAI.Types.CreateAuthTokenConfig,System.Threading.CancellationToken)
+  name: CreateAsync(CreateAuthTokenConfig?, CancellationToken)
+  href: api/Google.GenAI.Tokens.html#Google_GenAI_Tokens_CreateAsync_Google_GenAI_Types_CreateAuthTokenConfig_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.Tokens.CreateAsync(Google.GenAI.Types.CreateAuthTokenConfig,System.Threading.CancellationToken)
+  name.vb: CreateAsync(CreateAuthTokenConfig, CancellationToken)
+  fullName: Google.GenAI.Tokens.CreateAsync(Google.GenAI.Types.CreateAuthTokenConfig?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.Tokens.CreateAsync(Google.GenAI.Types.CreateAuthTokenConfig, System.Threading.CancellationToken)
+  nameWithType: Tokens.CreateAsync(CreateAuthTokenConfig?, CancellationToken)
+  nameWithType.vb: Tokens.CreateAsync(CreateAuthTokenConfig, CancellationToken)
+- uid: Google.GenAI.Tokens.CreateAsync*
+  name: CreateAsync
+  href: api/Google.GenAI.Tokens.html#Google_GenAI_Tokens_CreateAsync_
+  commentId: Overload:Google.GenAI.Tokens.CreateAsync
+  isSpec: "True"
+  fullName: Google.GenAI.Tokens.CreateAsync
+  nameWithType: Tokens.CreateAsync
 - uid: Google.GenAI.Tunings
   name: Tunings
   href: api/Google.GenAI.Tunings.html
@@ -3701,6 +3736,41 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.AuthConfigOidcConfig.ServiceAccount
   nameWithType: AuthConfigOidcConfig.ServiceAccount
+- uid: Google.GenAI.Types.AuthToken
+  name: AuthToken
+  href: api/Google.GenAI.Types.AuthToken.html
+  commentId: T:Google.GenAI.Types.AuthToken
+  fullName: Google.GenAI.Types.AuthToken
+  nameWithType: AuthToken
+- uid: Google.GenAI.Types.AuthToken.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.AuthToken.html#Google_GenAI_Types_AuthToken_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.AuthToken.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.AuthToken.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.AuthToken.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: AuthToken.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: AuthToken.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.AuthToken.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.AuthToken.html#Google_GenAI_Types_AuthToken_FromJson_
+  commentId: Overload:Google.GenAI.Types.AuthToken.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AuthToken.FromJson
+  nameWithType: AuthToken.FromJson
+- uid: Google.GenAI.Types.AuthToken.Name
+  name: Name
+  href: api/Google.GenAI.Types.AuthToken.html#Google_GenAI_Types_AuthToken_Name
+  commentId: P:Google.GenAI.Types.AuthToken.Name
+  fullName: Google.GenAI.Types.AuthToken.Name
+  nameWithType: AuthToken.Name
+- uid: Google.GenAI.Types.AuthToken.Name*
+  name: Name
+  href: api/Google.GenAI.Types.AuthToken.html#Google_GenAI_Types_AuthToken_Name_
+  commentId: Overload:Google.GenAI.Types.AuthToken.Name
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AuthToken.Name
+  nameWithType: AuthToken.Name
 - uid: Google.GenAI.Types.AuthType
   name: AuthType
   href: api/Google.GenAI.Types.AuthType.html
@@ -6785,6 +6855,106 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CountTokensResponse.TotalTokens
   nameWithType: CountTokensResponse.TotalTokens
+- uid: Google.GenAI.Types.CreateAuthTokenConfig
+  name: CreateAuthTokenConfig
+  href: api/Google.GenAI.Types.CreateAuthTokenConfig.html
+  commentId: T:Google.GenAI.Types.CreateAuthTokenConfig
+  fullName: Google.GenAI.Types.CreateAuthTokenConfig
+  nameWithType: CreateAuthTokenConfig
+- uid: Google.GenAI.Types.CreateAuthTokenConfig.ExpireTime
+  name: ExpireTime
+  href: api/Google.GenAI.Types.CreateAuthTokenConfig.html#Google_GenAI_Types_CreateAuthTokenConfig_ExpireTime
+  commentId: P:Google.GenAI.Types.CreateAuthTokenConfig.ExpireTime
+  fullName: Google.GenAI.Types.CreateAuthTokenConfig.ExpireTime
+  nameWithType: CreateAuthTokenConfig.ExpireTime
+- uid: Google.GenAI.Types.CreateAuthTokenConfig.ExpireTime*
+  name: ExpireTime
+  href: api/Google.GenAI.Types.CreateAuthTokenConfig.html#Google_GenAI_Types_CreateAuthTokenConfig_ExpireTime_
+  commentId: Overload:Google.GenAI.Types.CreateAuthTokenConfig.ExpireTime
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateAuthTokenConfig.ExpireTime
+  nameWithType: CreateAuthTokenConfig.ExpireTime
+- uid: Google.GenAI.Types.CreateAuthTokenConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.CreateAuthTokenConfig.html#Google_GenAI_Types_CreateAuthTokenConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.CreateAuthTokenConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.CreateAuthTokenConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.CreateAuthTokenConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: CreateAuthTokenConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: CreateAuthTokenConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.CreateAuthTokenConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.CreateAuthTokenConfig.html#Google_GenAI_Types_CreateAuthTokenConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.CreateAuthTokenConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateAuthTokenConfig.FromJson
+  nameWithType: CreateAuthTokenConfig.FromJson
+- uid: Google.GenAI.Types.CreateAuthTokenConfig.HttpOptions
+  name: HttpOptions
+  href: api/Google.GenAI.Types.CreateAuthTokenConfig.html#Google_GenAI_Types_CreateAuthTokenConfig_HttpOptions
+  commentId: P:Google.GenAI.Types.CreateAuthTokenConfig.HttpOptions
+  fullName: Google.GenAI.Types.CreateAuthTokenConfig.HttpOptions
+  nameWithType: CreateAuthTokenConfig.HttpOptions
+- uid: Google.GenAI.Types.CreateAuthTokenConfig.HttpOptions*
+  name: HttpOptions
+  href: api/Google.GenAI.Types.CreateAuthTokenConfig.html#Google_GenAI_Types_CreateAuthTokenConfig_HttpOptions_
+  commentId: Overload:Google.GenAI.Types.CreateAuthTokenConfig.HttpOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateAuthTokenConfig.HttpOptions
+  nameWithType: CreateAuthTokenConfig.HttpOptions
+- uid: Google.GenAI.Types.CreateAuthTokenConfig.LiveConnectConstraints
+  name: LiveConnectConstraints
+  href: api/Google.GenAI.Types.CreateAuthTokenConfig.html#Google_GenAI_Types_CreateAuthTokenConfig_LiveConnectConstraints
+  commentId: P:Google.GenAI.Types.CreateAuthTokenConfig.LiveConnectConstraints
+  fullName: Google.GenAI.Types.CreateAuthTokenConfig.LiveConnectConstraints
+  nameWithType: CreateAuthTokenConfig.LiveConnectConstraints
+- uid: Google.GenAI.Types.CreateAuthTokenConfig.LiveConnectConstraints*
+  name: LiveConnectConstraints
+  href: api/Google.GenAI.Types.CreateAuthTokenConfig.html#Google_GenAI_Types_CreateAuthTokenConfig_LiveConnectConstraints_
+  commentId: Overload:Google.GenAI.Types.CreateAuthTokenConfig.LiveConnectConstraints
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateAuthTokenConfig.LiveConnectConstraints
+  nameWithType: CreateAuthTokenConfig.LiveConnectConstraints
+- uid: Google.GenAI.Types.CreateAuthTokenConfig.LockAdditionalFields
+  name: LockAdditionalFields
+  href: api/Google.GenAI.Types.CreateAuthTokenConfig.html#Google_GenAI_Types_CreateAuthTokenConfig_LockAdditionalFields
+  commentId: P:Google.GenAI.Types.CreateAuthTokenConfig.LockAdditionalFields
+  fullName: Google.GenAI.Types.CreateAuthTokenConfig.LockAdditionalFields
+  nameWithType: CreateAuthTokenConfig.LockAdditionalFields
+- uid: Google.GenAI.Types.CreateAuthTokenConfig.LockAdditionalFields*
+  name: LockAdditionalFields
+  href: api/Google.GenAI.Types.CreateAuthTokenConfig.html#Google_GenAI_Types_CreateAuthTokenConfig_LockAdditionalFields_
+  commentId: Overload:Google.GenAI.Types.CreateAuthTokenConfig.LockAdditionalFields
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateAuthTokenConfig.LockAdditionalFields
+  nameWithType: CreateAuthTokenConfig.LockAdditionalFields
+- uid: Google.GenAI.Types.CreateAuthTokenConfig.NewSessionExpireTime
+  name: NewSessionExpireTime
+  href: api/Google.GenAI.Types.CreateAuthTokenConfig.html#Google_GenAI_Types_CreateAuthTokenConfig_NewSessionExpireTime
+  commentId: P:Google.GenAI.Types.CreateAuthTokenConfig.NewSessionExpireTime
+  fullName: Google.GenAI.Types.CreateAuthTokenConfig.NewSessionExpireTime
+  nameWithType: CreateAuthTokenConfig.NewSessionExpireTime
+- uid: Google.GenAI.Types.CreateAuthTokenConfig.NewSessionExpireTime*
+  name: NewSessionExpireTime
+  href: api/Google.GenAI.Types.CreateAuthTokenConfig.html#Google_GenAI_Types_CreateAuthTokenConfig_NewSessionExpireTime_
+  commentId: Overload:Google.GenAI.Types.CreateAuthTokenConfig.NewSessionExpireTime
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateAuthTokenConfig.NewSessionExpireTime
+  nameWithType: CreateAuthTokenConfig.NewSessionExpireTime
+- uid: Google.GenAI.Types.CreateAuthTokenConfig.Uses
+  name: Uses
+  href: api/Google.GenAI.Types.CreateAuthTokenConfig.html#Google_GenAI_Types_CreateAuthTokenConfig_Uses
+  commentId: P:Google.GenAI.Types.CreateAuthTokenConfig.Uses
+  fullName: Google.GenAI.Types.CreateAuthTokenConfig.Uses
+  nameWithType: CreateAuthTokenConfig.Uses
+- uid: Google.GenAI.Types.CreateAuthTokenConfig.Uses*
+  name: Uses
+  href: api/Google.GenAI.Types.CreateAuthTokenConfig.html#Google_GenAI_Types_CreateAuthTokenConfig_Uses_
+  commentId: Overload:Google.GenAI.Types.CreateAuthTokenConfig.Uses
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateAuthTokenConfig.Uses
+  nameWithType: CreateAuthTokenConfig.Uses
 - uid: Google.GenAI.Types.CreateBatchJobConfig
   name: CreateBatchJobConfig
   href: api/Google.GenAI.Types.CreateBatchJobConfig.html
@@ -21663,6 +21833,54 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.LiveConnectConfig.TopP
   nameWithType: LiveConnectConfig.TopP
+- uid: Google.GenAI.Types.LiveConnectConstraints
+  name: LiveConnectConstraints
+  href: api/Google.GenAI.Types.LiveConnectConstraints.html
+  commentId: T:Google.GenAI.Types.LiveConnectConstraints
+  fullName: Google.GenAI.Types.LiveConnectConstraints
+  nameWithType: LiveConnectConstraints
+- uid: Google.GenAI.Types.LiveConnectConstraints.Config
+  name: Config
+  href: api/Google.GenAI.Types.LiveConnectConstraints.html#Google_GenAI_Types_LiveConnectConstraints_Config
+  commentId: P:Google.GenAI.Types.LiveConnectConstraints.Config
+  fullName: Google.GenAI.Types.LiveConnectConstraints.Config
+  nameWithType: LiveConnectConstraints.Config
+- uid: Google.GenAI.Types.LiveConnectConstraints.Config*
+  name: Config
+  href: api/Google.GenAI.Types.LiveConnectConstraints.html#Google_GenAI_Types_LiveConnectConstraints_Config_
+  commentId: Overload:Google.GenAI.Types.LiveConnectConstraints.Config
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LiveConnectConstraints.Config
+  nameWithType: LiveConnectConstraints.Config
+- uid: Google.GenAI.Types.LiveConnectConstraints.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.LiveConnectConstraints.html#Google_GenAI_Types_LiveConnectConstraints_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.LiveConnectConstraints.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.LiveConnectConstraints.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.LiveConnectConstraints.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: LiveConnectConstraints.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: LiveConnectConstraints.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.LiveConnectConstraints.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.LiveConnectConstraints.html#Google_GenAI_Types_LiveConnectConstraints_FromJson_
+  commentId: Overload:Google.GenAI.Types.LiveConnectConstraints.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LiveConnectConstraints.FromJson
+  nameWithType: LiveConnectConstraints.FromJson
+- uid: Google.GenAI.Types.LiveConnectConstraints.Model
+  name: Model
+  href: api/Google.GenAI.Types.LiveConnectConstraints.html#Google_GenAI_Types_LiveConnectConstraints_Model
+  commentId: P:Google.GenAI.Types.LiveConnectConstraints.Model
+  fullName: Google.GenAI.Types.LiveConnectConstraints.Model
+  nameWithType: LiveConnectConstraints.Model
+- uid: Google.GenAI.Types.LiveConnectConstraints.Model*
+  name: Model
+  href: api/Google.GenAI.Types.LiveConnectConstraints.html#Google_GenAI_Types_LiveConnectConstraints_Model_
+  commentId: Overload:Google.GenAI.Types.LiveConnectConstraints.Model
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LiveConnectConstraints.Model
+  nameWithType: LiveConnectConstraints.Model
 - uid: Google.GenAI.Types.LiveConnectParameters
   name: LiveConnectParameters
   href: api/Google.GenAI.Types.LiveConnectParameters.html
