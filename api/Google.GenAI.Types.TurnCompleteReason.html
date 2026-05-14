@@ -144,7 +144,7 @@ public readonly record struct TurnCompleteReason : IEquatable&lt;TurnCompleteRea
 
   <h3 id="Google_GenAI_Types_TurnCompleteReason_AllValues" data-uid="Google.GenAI.Types.TurnCompleteReason.AllValues">
   AllValues
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L210"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -161,6 +161,646 @@ public readonly record struct TurnCompleteReason : IEquatable&lt;TurnCompleteRea
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.TurnCompleteReason.html">TurnCompleteReason</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCompleteReason_Blocklist_" data-uid="Google.GenAI.Types.TurnCompleteReason.Blocklist*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCompleteReason_Blocklist" data-uid="Google.GenAI.Types.TurnCompleteReason.Blocklist">
+  Blocklist
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Input matched blocklist.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCompleteReason Blocklist { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCompleteReason.html">TurnCompleteReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCompleteReason_GeneratedAudioSafety_" data-uid="Google.GenAI.Types.TurnCompleteReason.GeneratedAudioSafety*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCompleteReason_GeneratedAudioSafety" data-uid="Google.GenAI.Types.TurnCompleteReason.GeneratedAudioSafety">
+  GeneratedAudioSafety
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generated audio failed safety check.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCompleteReason GeneratedAudioSafety { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCompleteReason.html">TurnCompleteReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCompleteReason_GeneratedContentBlocklist_" data-uid="Google.GenAI.Types.TurnCompleteReason.GeneratedContentBlocklist*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCompleteReason_GeneratedContentBlocklist" data-uid="Google.GenAI.Types.TurnCompleteReason.GeneratedContentBlocklist">
+  GeneratedContentBlocklist
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generated content matched blocklist.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCompleteReason GeneratedContentBlocklist { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCompleteReason.html">TurnCompleteReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCompleteReason_GeneratedContentProhibited_" data-uid="Google.GenAI.Types.TurnCompleteReason.GeneratedContentProhibited*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCompleteReason_GeneratedContentProhibited" data-uid="Google.GenAI.Types.TurnCompleteReason.GeneratedContentProhibited">
+  GeneratedContentProhibited
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generated content is prohibited.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCompleteReason GeneratedContentProhibited { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCompleteReason.html">TurnCompleteReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCompleteReason_GeneratedContentSafety_" data-uid="Google.GenAI.Types.TurnCompleteReason.GeneratedContentSafety*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCompleteReason_GeneratedContentSafety" data-uid="Google.GenAI.Types.TurnCompleteReason.GeneratedContentSafety">
+  GeneratedContentSafety
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generated content failed safety check.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCompleteReason GeneratedContentSafety { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCompleteReason.html">TurnCompleteReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCompleteReason_GeneratedImageCelebrity_" data-uid="Google.GenAI.Types.TurnCompleteReason.GeneratedImageCelebrity*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCompleteReason_GeneratedImageCelebrity" data-uid="Google.GenAI.Types.TurnCompleteReason.GeneratedImageCelebrity">
+  GeneratedImageCelebrity
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generated image contains celebrity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCompleteReason GeneratedImageCelebrity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCompleteReason.html">TurnCompleteReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCompleteReason_GeneratedImageIdentifiablePeople_" data-uid="Google.GenAI.Types.TurnCompleteReason.GeneratedImageIdentifiablePeople*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCompleteReason_GeneratedImageIdentifiablePeople" data-uid="Google.GenAI.Types.TurnCompleteReason.GeneratedImageIdentifiablePeople">
+  GeneratedImageIdentifiablePeople
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generated image contains identifiable people.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCompleteReason GeneratedImageIdentifiablePeople { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCompleteReason.html">TurnCompleteReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCompleteReason_GeneratedImageMinors_" data-uid="Google.GenAI.Types.TurnCompleteReason.GeneratedImageMinors*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCompleteReason_GeneratedImageMinors" data-uid="Google.GenAI.Types.TurnCompleteReason.GeneratedImageMinors">
+  GeneratedImageMinors
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generated image contains minors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCompleteReason GeneratedImageMinors { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCompleteReason.html">TurnCompleteReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCompleteReason_GeneratedImageProhibited_" data-uid="Google.GenAI.Types.TurnCompleteReason.GeneratedImageProhibited*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCompleteReason_GeneratedImageProhibited" data-uid="Google.GenAI.Types.TurnCompleteReason.GeneratedImageProhibited">
+  GeneratedImageProhibited
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generated image is prohibited.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCompleteReason GeneratedImageProhibited { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCompleteReason.html">TurnCompleteReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCompleteReason_GeneratedImageProminentPeopleDetectedByRewriter_" data-uid="Google.GenAI.Types.TurnCompleteReason.GeneratedImageProminentPeopleDetectedByRewriter*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCompleteReason_GeneratedImageProminentPeopleDetectedByRewriter" data-uid="Google.GenAI.Types.TurnCompleteReason.GeneratedImageProminentPeopleDetectedByRewriter">
+  GeneratedImageProminentPeopleDetectedByRewriter
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generated image contains prominent people detected by rewriter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCompleteReason GeneratedImageProminentPeopleDetectedByRewriter { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCompleteReason.html">TurnCompleteReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCompleteReason_GeneratedImageSafety_" data-uid="Google.GenAI.Types.TurnCompleteReason.GeneratedImageSafety*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCompleteReason_GeneratedImageSafety" data-uid="Google.GenAI.Types.TurnCompleteReason.GeneratedImageSafety">
+  GeneratedImageSafety
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generated image failed safety check.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCompleteReason GeneratedImageSafety { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCompleteReason.html">TurnCompleteReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCompleteReason_GeneratedOther_" data-uid="Google.GenAI.Types.TurnCompleteReason.GeneratedOther*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCompleteReason_GeneratedOther" data-uid="Google.GenAI.Types.TurnCompleteReason.GeneratedOther">
+  GeneratedOther
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L201"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Other generated content issue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCompleteReason GeneratedOther { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCompleteReason.html">TurnCompleteReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCompleteReason_GeneratedVideoSafety_" data-uid="Google.GenAI.Types.TurnCompleteReason.GeneratedVideoSafety*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCompleteReason_GeneratedVideoSafety" data-uid="Google.GenAI.Types.TurnCompleteReason.GeneratedVideoSafety">
+  GeneratedVideoSafety
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generated video failed safety check.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCompleteReason GeneratedVideoSafety { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCompleteReason.html">TurnCompleteReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCompleteReason_ImageProhibitedInputContent_" data-uid="Google.GenAI.Types.TurnCompleteReason.ImageProhibitedInputContent*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCompleteReason_ImageProhibitedInputContent" data-uid="Google.GenAI.Types.TurnCompleteReason.ImageProhibitedInputContent">
+  ImageProhibitedInputContent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Input image contains prohibited content.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCompleteReason ImageProhibitedInputContent { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCompleteReason.html">TurnCompleteReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCompleteReason_InputImageCelebrity_" data-uid="Google.GenAI.Types.TurnCompleteReason.InputImageCelebrity*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCompleteReason_InputImageCelebrity" data-uid="Google.GenAI.Types.TurnCompleteReason.InputImageCelebrity">
+  InputImageCelebrity
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Input image contains celebrity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCompleteReason InputImageCelebrity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCompleteReason.html">TurnCompleteReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCompleteReason_InputImagePhotoRealisticChildProhibited_" data-uid="Google.GenAI.Types.TurnCompleteReason.InputImagePhotoRealisticChildProhibited*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCompleteReason_InputImagePhotoRealisticChildProhibited" data-uid="Google.GenAI.Types.TurnCompleteReason.InputImagePhotoRealisticChildProhibited">
+  InputImagePhotoRealisticChildProhibited
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Input image contains photo realistic child.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCompleteReason InputImagePhotoRealisticChildProhibited { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCompleteReason.html">TurnCompleteReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCompleteReason_InputIpProhibited_" data-uid="Google.GenAI.Types.TurnCompleteReason.InputIpProhibited*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCompleteReason_InputIpProhibited" data-uid="Google.GenAI.Types.TurnCompleteReason.InputIpProhibited">
+  InputIpProhibited
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Input contains IP violation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCompleteReason InputIpProhibited { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCompleteReason.html">TurnCompleteReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCompleteReason_InputOther_" data-uid="Google.GenAI.Types.TurnCompleteReason.InputOther*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCompleteReason_InputOther" data-uid="Google.GenAI.Types.TurnCompleteReason.InputOther">
+  InputOther
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Other input safety issue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCompleteReason InputOther { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCompleteReason.html">TurnCompleteReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCompleteReason_InputTextContainProminentPersonProhibited_" data-uid="Google.GenAI.Types.TurnCompleteReason.InputTextContainProminentPersonProhibited*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCompleteReason_InputTextContainProminentPersonProhibited" data-uid="Google.GenAI.Types.TurnCompleteReason.InputTextContainProminentPersonProhibited">
+  InputTextContainProminentPersonProhibited
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Input text contains prominent person reference.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCompleteReason InputTextContainProminentPersonProhibited { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCompleteReason.html">TurnCompleteReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCompleteReason_InputTextNciiProhibited_" data-uid="Google.GenAI.Types.TurnCompleteReason.InputTextNciiProhibited*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCompleteReason_InputTextNciiProhibited" data-uid="Google.GenAI.Types.TurnCompleteReason.InputTextNciiProhibited">
+  InputTextNciiProhibited
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Input text contains NCII content.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCompleteReason InputTextNciiProhibited { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCompleteReason.html">TurnCompleteReason</a></dt>
     <dd></dd>
   </dl>
 
@@ -203,6 +843,38 @@ public readonly record struct TurnCompleteReason : IEquatable&lt;TurnCompleteRea
 
 
 
+  <a id="Google_GenAI_Types_TurnCompleteReason_MaxRegenerationReached_" data-uid="Google.GenAI.Types.TurnCompleteReason.MaxRegenerationReached*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCompleteReason_MaxRegenerationReached" data-uid="Google.GenAI.Types.TurnCompleteReason.MaxRegenerationReached">
+  MaxRegenerationReached
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L206"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Max regeneration attempts reached.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCompleteReason MaxRegenerationReached { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCompleteReason.html">TurnCompleteReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_TurnCompleteReason_NeedMoreInput_" data-uid="Google.GenAI.Types.TurnCompleteReason.NeedMoreInput*"></a>
 
   <h3 id="Google_GenAI_Types_TurnCompleteReason_NeedMoreInput" data-uid="Google.GenAI.Types.TurnCompleteReason.NeedMoreInput">
@@ -216,6 +888,70 @@ public readonly record struct TurnCompleteReason : IEquatable&lt;TurnCompleteRea
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TurnCompleteReason NeedMoreInput { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCompleteReason.html">TurnCompleteReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCompleteReason_OutputImageIpProhibited_" data-uid="Google.GenAI.Types.TurnCompleteReason.OutputImageIpProhibited*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCompleteReason_OutputImageIpProhibited" data-uid="Google.GenAI.Types.TurnCompleteReason.OutputImageIpProhibited">
+  OutputImageIpProhibited
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generated image contains IP violation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCompleteReason OutputImageIpProhibited { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCompleteReason.html">TurnCompleteReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_TurnCompleteReason_ProhibitedInputContent_" data-uid="Google.GenAI.Types.TurnCompleteReason.ProhibitedInputContent*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCompleteReason_ProhibitedInputContent" data-uid="Google.GenAI.Types.TurnCompleteReason.ProhibitedInputContent">
+  ProhibitedInputContent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Input content is prohibited.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCompleteReason ProhibitedInputContent { get; }</code></pre>
   </div>
 
 
@@ -299,6 +1035,38 @@ public readonly record struct TurnCompleteReason : IEquatable&lt;TurnCompleteRea
 
 
 
+  <a id="Google_GenAI_Types_TurnCompleteReason_UnsafePromptForImageGeneration_" data-uid="Google.GenAI.Types.TurnCompleteReason.UnsafePromptForImageGeneration*"></a>
+
+  <h3 id="Google_GenAI_Types_TurnCompleteReason_UnsafePromptForImageGeneration" data-uid="Google.GenAI.Types.TurnCompleteReason.UnsafePromptForImageGeneration">
+  UnsafePromptForImageGeneration
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Input is unsafe for image generation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TurnCompleteReason UnsafePromptForImageGeneration { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TurnCompleteReason.html">TurnCompleteReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_TurnCompleteReason_Value_" data-uid="Google.GenAI.Types.TurnCompleteReason.Value*"></a>
 
   <h3 id="Google_GenAI_Types_TurnCompleteReason_Value" data-uid="Google.GenAI.Types.TurnCompleteReason.Value">
@@ -338,7 +1106,7 @@ public readonly record struct TurnCompleteReason : IEquatable&lt;TurnCompleteRea
 
   <h3 id="Google_GenAI_Types_TurnCompleteReason_Equals_Google_GenAI_Types_TurnCompleteReason_" data-uid="Google.GenAI.Types.TurnCompleteReason.Equals(Google.GenAI.Types.TurnCompleteReason)">
   Equals(TurnCompleteReason)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L259"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -374,7 +1142,7 @@ public readonly record struct TurnCompleteReason : IEquatable&lt;TurnCompleteRea
 
   <h3 id="Google_GenAI_Types_TurnCompleteReason_FromString_System_String_" data-uid="Google.GenAI.Types.TurnCompleteReason.FromString(System.String)">
   FromString(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L241"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -410,7 +1178,7 @@ public readonly record struct TurnCompleteReason : IEquatable&lt;TurnCompleteRea
 
   <h3 id="Google_GenAI_Types_TurnCompleteReason_GetHashCode" data-uid="Google.GenAI.Types.TurnCompleteReason.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L261"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -441,7 +1209,7 @@ public readonly record struct TurnCompleteReason : IEquatable&lt;TurnCompleteRea
 
   <h3 id="Google_GenAI_Types_TurnCompleteReason_ToString" data-uid="Google.GenAI.Types.TurnCompleteReason.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L255"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -476,7 +1244,7 @@ public readonly record struct TurnCompleteReason : IEquatable&lt;TurnCompleteRea
 
   <h3 id="Google_GenAI_Types_TurnCompleteReason_op_Implicit_System_String__Google_GenAI_Types_TurnCompleteReason" data-uid="Google.GenAI.Types.TurnCompleteReason.op_Implicit(System.String)~Google.GenAI.Types.TurnCompleteReason">
   implicit operator TurnCompleteReason(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TurnCompleteReason.cs/#L257"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

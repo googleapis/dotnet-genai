@@ -4020,6 +4020,80 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.AutomaticActivityDetection.StartOfSpeechSensitivity
   nameWithType: AutomaticActivityDetection.StartOfSpeechSensitivity
+- uid: Google.GenAI.Types.AvatarConfig
+  name: AvatarConfig
+  href: api/Google.GenAI.Types.AvatarConfig.html
+  commentId: T:Google.GenAI.Types.AvatarConfig
+  fullName: Google.GenAI.Types.AvatarConfig
+  nameWithType: AvatarConfig
+- uid: Google.GenAI.Types.AvatarConfig.AudioBitrateBps
+  name: AudioBitrateBps
+  href: api/Google.GenAI.Types.AvatarConfig.html#Google_GenAI_Types_AvatarConfig_AudioBitrateBps
+  commentId: P:Google.GenAI.Types.AvatarConfig.AudioBitrateBps
+  fullName: Google.GenAI.Types.AvatarConfig.AudioBitrateBps
+  nameWithType: AvatarConfig.AudioBitrateBps
+- uid: Google.GenAI.Types.AvatarConfig.AudioBitrateBps*
+  name: AudioBitrateBps
+  href: api/Google.GenAI.Types.AvatarConfig.html#Google_GenAI_Types_AvatarConfig_AudioBitrateBps_
+  commentId: Overload:Google.GenAI.Types.AvatarConfig.AudioBitrateBps
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AvatarConfig.AudioBitrateBps
+  nameWithType: AvatarConfig.AudioBitrateBps
+- uid: Google.GenAI.Types.AvatarConfig.AvatarName
+  name: AvatarName
+  href: api/Google.GenAI.Types.AvatarConfig.html#Google_GenAI_Types_AvatarConfig_AvatarName
+  commentId: P:Google.GenAI.Types.AvatarConfig.AvatarName
+  fullName: Google.GenAI.Types.AvatarConfig.AvatarName
+  nameWithType: AvatarConfig.AvatarName
+- uid: Google.GenAI.Types.AvatarConfig.AvatarName*
+  name: AvatarName
+  href: api/Google.GenAI.Types.AvatarConfig.html#Google_GenAI_Types_AvatarConfig_AvatarName_
+  commentId: Overload:Google.GenAI.Types.AvatarConfig.AvatarName
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AvatarConfig.AvatarName
+  nameWithType: AvatarConfig.AvatarName
+- uid: Google.GenAI.Types.AvatarConfig.CustomizedAvatar
+  name: CustomizedAvatar
+  href: api/Google.GenAI.Types.AvatarConfig.html#Google_GenAI_Types_AvatarConfig_CustomizedAvatar
+  commentId: P:Google.GenAI.Types.AvatarConfig.CustomizedAvatar
+  fullName: Google.GenAI.Types.AvatarConfig.CustomizedAvatar
+  nameWithType: AvatarConfig.CustomizedAvatar
+- uid: Google.GenAI.Types.AvatarConfig.CustomizedAvatar*
+  name: CustomizedAvatar
+  href: api/Google.GenAI.Types.AvatarConfig.html#Google_GenAI_Types_AvatarConfig_CustomizedAvatar_
+  commentId: Overload:Google.GenAI.Types.AvatarConfig.CustomizedAvatar
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AvatarConfig.CustomizedAvatar
+  nameWithType: AvatarConfig.CustomizedAvatar
+- uid: Google.GenAI.Types.AvatarConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.AvatarConfig.html#Google_GenAI_Types_AvatarConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.AvatarConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.AvatarConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.AvatarConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: AvatarConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: AvatarConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.AvatarConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.AvatarConfig.html#Google_GenAI_Types_AvatarConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.AvatarConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AvatarConfig.FromJson
+  nameWithType: AvatarConfig.FromJson
+- uid: Google.GenAI.Types.AvatarConfig.VideoBitrateBps
+  name: VideoBitrateBps
+  href: api/Google.GenAI.Types.AvatarConfig.html#Google_GenAI_Types_AvatarConfig_VideoBitrateBps
+  commentId: P:Google.GenAI.Types.AvatarConfig.VideoBitrateBps
+  fullName: Google.GenAI.Types.AvatarConfig.VideoBitrateBps
+  nameWithType: AvatarConfig.VideoBitrateBps
+- uid: Google.GenAI.Types.AvatarConfig.VideoBitrateBps*
+  name: VideoBitrateBps
+  href: api/Google.GenAI.Types.AvatarConfig.html#Google_GenAI_Types_AvatarConfig_VideoBitrateBps_
+  commentId: Overload:Google.GenAI.Types.AvatarConfig.VideoBitrateBps
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AvatarConfig.VideoBitrateBps
+  nameWithType: AvatarConfig.VideoBitrateBps
 - uid: Google.GenAI.Types.BatchJob
   name: BatchJob
   href: api/Google.GenAI.Types.BatchJob.html
@@ -7307,6 +7381,54 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CustomOutput.RawOutputs
   nameWithType: CustomOutput.RawOutputs
+- uid: Google.GenAI.Types.CustomizedAvatar
+  name: CustomizedAvatar
+  href: api/Google.GenAI.Types.CustomizedAvatar.html
+  commentId: T:Google.GenAI.Types.CustomizedAvatar
+  fullName: Google.GenAI.Types.CustomizedAvatar
+  nameWithType: CustomizedAvatar
+- uid: Google.GenAI.Types.CustomizedAvatar.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.CustomizedAvatar.html#Google_GenAI_Types_CustomizedAvatar_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.CustomizedAvatar.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.CustomizedAvatar.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.CustomizedAvatar.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: CustomizedAvatar.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: CustomizedAvatar.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.CustomizedAvatar.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.CustomizedAvatar.html#Google_GenAI_Types_CustomizedAvatar_FromJson_
+  commentId: Overload:Google.GenAI.Types.CustomizedAvatar.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CustomizedAvatar.FromJson
+  nameWithType: CustomizedAvatar.FromJson
+- uid: Google.GenAI.Types.CustomizedAvatar.ImageData
+  name: ImageData
+  href: api/Google.GenAI.Types.CustomizedAvatar.html#Google_GenAI_Types_CustomizedAvatar_ImageData
+  commentId: P:Google.GenAI.Types.CustomizedAvatar.ImageData
+  fullName: Google.GenAI.Types.CustomizedAvatar.ImageData
+  nameWithType: CustomizedAvatar.ImageData
+- uid: Google.GenAI.Types.CustomizedAvatar.ImageData*
+  name: ImageData
+  href: api/Google.GenAI.Types.CustomizedAvatar.html#Google_GenAI_Types_CustomizedAvatar_ImageData_
+  commentId: Overload:Google.GenAI.Types.CustomizedAvatar.ImageData
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CustomizedAvatar.ImageData
+  nameWithType: CustomizedAvatar.ImageData
+- uid: Google.GenAI.Types.CustomizedAvatar.ImageMimeType
+  name: ImageMimeType
+  href: api/Google.GenAI.Types.CustomizedAvatar.html#Google_GenAI_Types_CustomizedAvatar_ImageMimeType
+  commentId: P:Google.GenAI.Types.CustomizedAvatar.ImageMimeType
+  fullName: Google.GenAI.Types.CustomizedAvatar.ImageMimeType
+  nameWithType: CustomizedAvatar.ImageMimeType
+- uid: Google.GenAI.Types.CustomizedAvatar.ImageMimeType*
+  name: ImageMimeType
+  href: api/Google.GenAI.Types.CustomizedAvatar.html#Google_GenAI_Types_CustomizedAvatar_ImageMimeType_
+  commentId: Overload:Google.GenAI.Types.CustomizedAvatar.ImageMimeType
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CustomizedAvatar.ImageMimeType
+  nameWithType: CustomizedAvatar.ImageMimeType
 - uid: Google.GenAI.Types.DatasetDistribution
   name: DatasetDistribution
   href: api/Google.GenAI.Types.DatasetDistribution.html
@@ -20655,6 +20777,19 @@ references:
   commentId: T:Google.GenAI.Types.LiveClientSetup
   fullName: Google.GenAI.Types.LiveClientSetup
   nameWithType: LiveClientSetup
+- uid: Google.GenAI.Types.LiveClientSetup.AvatarConfig
+  name: AvatarConfig
+  href: api/Google.GenAI.Types.LiveClientSetup.html#Google_GenAI_Types_LiveClientSetup_AvatarConfig
+  commentId: P:Google.GenAI.Types.LiveClientSetup.AvatarConfig
+  fullName: Google.GenAI.Types.LiveClientSetup.AvatarConfig
+  nameWithType: LiveClientSetup.AvatarConfig
+- uid: Google.GenAI.Types.LiveClientSetup.AvatarConfig*
+  name: AvatarConfig
+  href: api/Google.GenAI.Types.LiveClientSetup.html#Google_GenAI_Types_LiveClientSetup_AvatarConfig_
+  commentId: Overload:Google.GenAI.Types.LiveClientSetup.AvatarConfig
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LiveClientSetup.AvatarConfig
+  nameWithType: LiveClientSetup.AvatarConfig
 - uid: Google.GenAI.Types.LiveClientSetup.ContextWindowCompression
   name: ContextWindowCompression
   href: api/Google.GenAI.Types.LiveClientSetup.html#Google_GenAI_Types_LiveClientSetup_ContextWindowCompression
@@ -20775,6 +20910,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.LiveClientSetup.RealtimeInputConfig
   nameWithType: LiveClientSetup.RealtimeInputConfig
+- uid: Google.GenAI.Types.LiveClientSetup.SafetySettings
+  name: SafetySettings
+  href: api/Google.GenAI.Types.LiveClientSetup.html#Google_GenAI_Types_LiveClientSetup_SafetySettings
+  commentId: P:Google.GenAI.Types.LiveClientSetup.SafetySettings
+  fullName: Google.GenAI.Types.LiveClientSetup.SafetySettings
+  nameWithType: LiveClientSetup.SafetySettings
+- uid: Google.GenAI.Types.LiveClientSetup.SafetySettings*
+  name: SafetySettings
+  href: api/Google.GenAI.Types.LiveClientSetup.html#Google_GenAI_Types_LiveClientSetup_SafetySettings_
+  commentId: Overload:Google.GenAI.Types.LiveClientSetup.SafetySettings
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LiveClientSetup.SafetySettings
+  nameWithType: LiveClientSetup.SafetySettings
 - uid: Google.GenAI.Types.LiveClientSetup.SessionResumption
   name: SessionResumption
   href: api/Google.GenAI.Types.LiveClientSetup.html#Google_GenAI_Types_LiveClientSetup_SessionResumption
@@ -20855,6 +21003,19 @@ references:
   commentId: T:Google.GenAI.Types.LiveConnectConfig
   fullName: Google.GenAI.Types.LiveConnectConfig
   nameWithType: LiveConnectConfig
+- uid: Google.GenAI.Types.LiveConnectConfig.AvatarConfig
+  name: AvatarConfig
+  href: api/Google.GenAI.Types.LiveConnectConfig.html#Google_GenAI_Types_LiveConnectConfig_AvatarConfig
+  commentId: P:Google.GenAI.Types.LiveConnectConfig.AvatarConfig
+  fullName: Google.GenAI.Types.LiveConnectConfig.AvatarConfig
+  nameWithType: LiveConnectConfig.AvatarConfig
+- uid: Google.GenAI.Types.LiveConnectConfig.AvatarConfig*
+  name: AvatarConfig
+  href: api/Google.GenAI.Types.LiveConnectConfig.html#Google_GenAI_Types_LiveConnectConfig_AvatarConfig_
+  commentId: Overload:Google.GenAI.Types.LiveConnectConfig.AvatarConfig
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LiveConnectConfig.AvatarConfig
+  nameWithType: LiveConnectConfig.AvatarConfig
 - uid: Google.GenAI.Types.LiveConnectConfig.ContextWindowCompression
   name: ContextWindowCompression
   href: api/Google.GenAI.Types.LiveConnectConfig.html#Google_GenAI_Types_LiveConnectConfig_ContextWindowCompression
@@ -21027,6 +21188,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.LiveConnectConfig.ResponseModalities
   nameWithType: LiveConnectConfig.ResponseModalities
+- uid: Google.GenAI.Types.LiveConnectConfig.SafetySettings
+  name: SafetySettings
+  href: api/Google.GenAI.Types.LiveConnectConfig.html#Google_GenAI_Types_LiveConnectConfig_SafetySettings
+  commentId: P:Google.GenAI.Types.LiveConnectConfig.SafetySettings
+  fullName: Google.GenAI.Types.LiveConnectConfig.SafetySettings
+  nameWithType: LiveConnectConfig.SafetySettings
+- uid: Google.GenAI.Types.LiveConnectConfig.SafetySettings*
+  name: SafetySettings
+  href: api/Google.GenAI.Types.LiveConnectConfig.html#Google_GenAI_Types_LiveConnectConfig_SafetySettings_
+  commentId: Overload:Google.GenAI.Types.LiveConnectConfig.SafetySettings
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LiveConnectConfig.SafetySettings
+  nameWithType: LiveConnectConfig.SafetySettings
 - uid: Google.GenAI.Types.LiveConnectConfig.Seed
   name: Seed
   href: api/Google.GenAI.Types.LiveConnectConfig.html#Google_GenAI_Types_LiveConnectConfig_Seed
@@ -22990,6 +23164,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Modality.Value
   nameWithType: Modality.Value
+- uid: Google.GenAI.Types.Modality.Video
+  name: Video
+  href: api/Google.GenAI.Types.Modality.html#Google_GenAI_Types_Modality_Video
+  commentId: P:Google.GenAI.Types.Modality.Video
+  fullName: Google.GenAI.Types.Modality.Video
+  nameWithType: Modality.Video
+- uid: Google.GenAI.Types.Modality.Video*
+  name: Video
+  href: api/Google.GenAI.Types.Modality.html#Google_GenAI_Types_Modality_Video_
+  commentId: Overload:Google.GenAI.Types.Modality.Video
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Modality.Video
+  nameWithType: Modality.Video
 - uid: Google.GenAI.Types.Modality.op_Implicit(System.String)~Google.GenAI.Types.Modality
   name: implicit operator Modality(string)
   href: api/Google.GenAI.Types.Modality.html#Google_GenAI_Types_Modality_op_Implicit_System_String__Google_GenAI_Types_Modality
@@ -34003,6 +34190,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.TurnCompleteReason.AllValues
   nameWithType: TurnCompleteReason.AllValues
+- uid: Google.GenAI.Types.TurnCompleteReason.Blocklist
+  name: Blocklist
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_Blocklist
+  commentId: P:Google.GenAI.Types.TurnCompleteReason.Blocklist
+  fullName: Google.GenAI.Types.TurnCompleteReason.Blocklist
+  nameWithType: TurnCompleteReason.Blocklist
+- uid: Google.GenAI.Types.TurnCompleteReason.Blocklist*
+  name: Blocklist
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_Blocklist_
+  commentId: Overload:Google.GenAI.Types.TurnCompleteReason.Blocklist
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TurnCompleteReason.Blocklist
+  nameWithType: TurnCompleteReason.Blocklist
 - uid: Google.GenAI.Types.TurnCompleteReason.Equals(Google.GenAI.Types.TurnCompleteReason)
   name: Equals(TurnCompleteReason)
   href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_Equals_Google_GenAI_Types_TurnCompleteReason_
@@ -34032,6 +34232,162 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.TurnCompleteReason.FromString
   nameWithType: TurnCompleteReason.FromString
+- uid: Google.GenAI.Types.TurnCompleteReason.GeneratedAudioSafety
+  name: GeneratedAudioSafety
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_GeneratedAudioSafety
+  commentId: P:Google.GenAI.Types.TurnCompleteReason.GeneratedAudioSafety
+  fullName: Google.GenAI.Types.TurnCompleteReason.GeneratedAudioSafety
+  nameWithType: TurnCompleteReason.GeneratedAudioSafety
+- uid: Google.GenAI.Types.TurnCompleteReason.GeneratedAudioSafety*
+  name: GeneratedAudioSafety
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_GeneratedAudioSafety_
+  commentId: Overload:Google.GenAI.Types.TurnCompleteReason.GeneratedAudioSafety
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TurnCompleteReason.GeneratedAudioSafety
+  nameWithType: TurnCompleteReason.GeneratedAudioSafety
+- uid: Google.GenAI.Types.TurnCompleteReason.GeneratedContentBlocklist
+  name: GeneratedContentBlocklist
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_GeneratedContentBlocklist
+  commentId: P:Google.GenAI.Types.TurnCompleteReason.GeneratedContentBlocklist
+  fullName: Google.GenAI.Types.TurnCompleteReason.GeneratedContentBlocklist
+  nameWithType: TurnCompleteReason.GeneratedContentBlocklist
+- uid: Google.GenAI.Types.TurnCompleteReason.GeneratedContentBlocklist*
+  name: GeneratedContentBlocklist
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_GeneratedContentBlocklist_
+  commentId: Overload:Google.GenAI.Types.TurnCompleteReason.GeneratedContentBlocklist
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TurnCompleteReason.GeneratedContentBlocklist
+  nameWithType: TurnCompleteReason.GeneratedContentBlocklist
+- uid: Google.GenAI.Types.TurnCompleteReason.GeneratedContentProhibited
+  name: GeneratedContentProhibited
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_GeneratedContentProhibited
+  commentId: P:Google.GenAI.Types.TurnCompleteReason.GeneratedContentProhibited
+  fullName: Google.GenAI.Types.TurnCompleteReason.GeneratedContentProhibited
+  nameWithType: TurnCompleteReason.GeneratedContentProhibited
+- uid: Google.GenAI.Types.TurnCompleteReason.GeneratedContentProhibited*
+  name: GeneratedContentProhibited
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_GeneratedContentProhibited_
+  commentId: Overload:Google.GenAI.Types.TurnCompleteReason.GeneratedContentProhibited
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TurnCompleteReason.GeneratedContentProhibited
+  nameWithType: TurnCompleteReason.GeneratedContentProhibited
+- uid: Google.GenAI.Types.TurnCompleteReason.GeneratedContentSafety
+  name: GeneratedContentSafety
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_GeneratedContentSafety
+  commentId: P:Google.GenAI.Types.TurnCompleteReason.GeneratedContentSafety
+  fullName: Google.GenAI.Types.TurnCompleteReason.GeneratedContentSafety
+  nameWithType: TurnCompleteReason.GeneratedContentSafety
+- uid: Google.GenAI.Types.TurnCompleteReason.GeneratedContentSafety*
+  name: GeneratedContentSafety
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_GeneratedContentSafety_
+  commentId: Overload:Google.GenAI.Types.TurnCompleteReason.GeneratedContentSafety
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TurnCompleteReason.GeneratedContentSafety
+  nameWithType: TurnCompleteReason.GeneratedContentSafety
+- uid: Google.GenAI.Types.TurnCompleteReason.GeneratedImageCelebrity
+  name: GeneratedImageCelebrity
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_GeneratedImageCelebrity
+  commentId: P:Google.GenAI.Types.TurnCompleteReason.GeneratedImageCelebrity
+  fullName: Google.GenAI.Types.TurnCompleteReason.GeneratedImageCelebrity
+  nameWithType: TurnCompleteReason.GeneratedImageCelebrity
+- uid: Google.GenAI.Types.TurnCompleteReason.GeneratedImageCelebrity*
+  name: GeneratedImageCelebrity
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_GeneratedImageCelebrity_
+  commentId: Overload:Google.GenAI.Types.TurnCompleteReason.GeneratedImageCelebrity
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TurnCompleteReason.GeneratedImageCelebrity
+  nameWithType: TurnCompleteReason.GeneratedImageCelebrity
+- uid: Google.GenAI.Types.TurnCompleteReason.GeneratedImageIdentifiablePeople
+  name: GeneratedImageIdentifiablePeople
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_GeneratedImageIdentifiablePeople
+  commentId: P:Google.GenAI.Types.TurnCompleteReason.GeneratedImageIdentifiablePeople
+  fullName: Google.GenAI.Types.TurnCompleteReason.GeneratedImageIdentifiablePeople
+  nameWithType: TurnCompleteReason.GeneratedImageIdentifiablePeople
+- uid: Google.GenAI.Types.TurnCompleteReason.GeneratedImageIdentifiablePeople*
+  name: GeneratedImageIdentifiablePeople
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_GeneratedImageIdentifiablePeople_
+  commentId: Overload:Google.GenAI.Types.TurnCompleteReason.GeneratedImageIdentifiablePeople
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TurnCompleteReason.GeneratedImageIdentifiablePeople
+  nameWithType: TurnCompleteReason.GeneratedImageIdentifiablePeople
+- uid: Google.GenAI.Types.TurnCompleteReason.GeneratedImageMinors
+  name: GeneratedImageMinors
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_GeneratedImageMinors
+  commentId: P:Google.GenAI.Types.TurnCompleteReason.GeneratedImageMinors
+  fullName: Google.GenAI.Types.TurnCompleteReason.GeneratedImageMinors
+  nameWithType: TurnCompleteReason.GeneratedImageMinors
+- uid: Google.GenAI.Types.TurnCompleteReason.GeneratedImageMinors*
+  name: GeneratedImageMinors
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_GeneratedImageMinors_
+  commentId: Overload:Google.GenAI.Types.TurnCompleteReason.GeneratedImageMinors
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TurnCompleteReason.GeneratedImageMinors
+  nameWithType: TurnCompleteReason.GeneratedImageMinors
+- uid: Google.GenAI.Types.TurnCompleteReason.GeneratedImageProhibited
+  name: GeneratedImageProhibited
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_GeneratedImageProhibited
+  commentId: P:Google.GenAI.Types.TurnCompleteReason.GeneratedImageProhibited
+  fullName: Google.GenAI.Types.TurnCompleteReason.GeneratedImageProhibited
+  nameWithType: TurnCompleteReason.GeneratedImageProhibited
+- uid: Google.GenAI.Types.TurnCompleteReason.GeneratedImageProhibited*
+  name: GeneratedImageProhibited
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_GeneratedImageProhibited_
+  commentId: Overload:Google.GenAI.Types.TurnCompleteReason.GeneratedImageProhibited
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TurnCompleteReason.GeneratedImageProhibited
+  nameWithType: TurnCompleteReason.GeneratedImageProhibited
+- uid: Google.GenAI.Types.TurnCompleteReason.GeneratedImageProminentPeopleDetectedByRewriter
+  name: GeneratedImageProminentPeopleDetectedByRewriter
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_GeneratedImageProminentPeopleDetectedByRewriter
+  commentId: P:Google.GenAI.Types.TurnCompleteReason.GeneratedImageProminentPeopleDetectedByRewriter
+  fullName: Google.GenAI.Types.TurnCompleteReason.GeneratedImageProminentPeopleDetectedByRewriter
+  nameWithType: TurnCompleteReason.GeneratedImageProminentPeopleDetectedByRewriter
+- uid: Google.GenAI.Types.TurnCompleteReason.GeneratedImageProminentPeopleDetectedByRewriter*
+  name: GeneratedImageProminentPeopleDetectedByRewriter
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_GeneratedImageProminentPeopleDetectedByRewriter_
+  commentId: Overload:Google.GenAI.Types.TurnCompleteReason.GeneratedImageProminentPeopleDetectedByRewriter
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TurnCompleteReason.GeneratedImageProminentPeopleDetectedByRewriter
+  nameWithType: TurnCompleteReason.GeneratedImageProminentPeopleDetectedByRewriter
+- uid: Google.GenAI.Types.TurnCompleteReason.GeneratedImageSafety
+  name: GeneratedImageSafety
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_GeneratedImageSafety
+  commentId: P:Google.GenAI.Types.TurnCompleteReason.GeneratedImageSafety
+  fullName: Google.GenAI.Types.TurnCompleteReason.GeneratedImageSafety
+  nameWithType: TurnCompleteReason.GeneratedImageSafety
+- uid: Google.GenAI.Types.TurnCompleteReason.GeneratedImageSafety*
+  name: GeneratedImageSafety
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_GeneratedImageSafety_
+  commentId: Overload:Google.GenAI.Types.TurnCompleteReason.GeneratedImageSafety
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TurnCompleteReason.GeneratedImageSafety
+  nameWithType: TurnCompleteReason.GeneratedImageSafety
+- uid: Google.GenAI.Types.TurnCompleteReason.GeneratedOther
+  name: GeneratedOther
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_GeneratedOther
+  commentId: P:Google.GenAI.Types.TurnCompleteReason.GeneratedOther
+  fullName: Google.GenAI.Types.TurnCompleteReason.GeneratedOther
+  nameWithType: TurnCompleteReason.GeneratedOther
+- uid: Google.GenAI.Types.TurnCompleteReason.GeneratedOther*
+  name: GeneratedOther
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_GeneratedOther_
+  commentId: Overload:Google.GenAI.Types.TurnCompleteReason.GeneratedOther
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TurnCompleteReason.GeneratedOther
+  nameWithType: TurnCompleteReason.GeneratedOther
+- uid: Google.GenAI.Types.TurnCompleteReason.GeneratedVideoSafety
+  name: GeneratedVideoSafety
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_GeneratedVideoSafety
+  commentId: P:Google.GenAI.Types.TurnCompleteReason.GeneratedVideoSafety
+  fullName: Google.GenAI.Types.TurnCompleteReason.GeneratedVideoSafety
+  nameWithType: TurnCompleteReason.GeneratedVideoSafety
+- uid: Google.GenAI.Types.TurnCompleteReason.GeneratedVideoSafety*
+  name: GeneratedVideoSafety
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_GeneratedVideoSafety_
+  commentId: Overload:Google.GenAI.Types.TurnCompleteReason.GeneratedVideoSafety
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TurnCompleteReason.GeneratedVideoSafety
+  nameWithType: TurnCompleteReason.GeneratedVideoSafety
 - uid: Google.GenAI.Types.TurnCompleteReason.GetHashCode
   name: GetHashCode()
   href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_GetHashCode
@@ -34045,6 +34401,97 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.TurnCompleteReason.GetHashCode
   nameWithType: TurnCompleteReason.GetHashCode
+- uid: Google.GenAI.Types.TurnCompleteReason.ImageProhibitedInputContent
+  name: ImageProhibitedInputContent
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_ImageProhibitedInputContent
+  commentId: P:Google.GenAI.Types.TurnCompleteReason.ImageProhibitedInputContent
+  fullName: Google.GenAI.Types.TurnCompleteReason.ImageProhibitedInputContent
+  nameWithType: TurnCompleteReason.ImageProhibitedInputContent
+- uid: Google.GenAI.Types.TurnCompleteReason.ImageProhibitedInputContent*
+  name: ImageProhibitedInputContent
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_ImageProhibitedInputContent_
+  commentId: Overload:Google.GenAI.Types.TurnCompleteReason.ImageProhibitedInputContent
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TurnCompleteReason.ImageProhibitedInputContent
+  nameWithType: TurnCompleteReason.ImageProhibitedInputContent
+- uid: Google.GenAI.Types.TurnCompleteReason.InputImageCelebrity
+  name: InputImageCelebrity
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_InputImageCelebrity
+  commentId: P:Google.GenAI.Types.TurnCompleteReason.InputImageCelebrity
+  fullName: Google.GenAI.Types.TurnCompleteReason.InputImageCelebrity
+  nameWithType: TurnCompleteReason.InputImageCelebrity
+- uid: Google.GenAI.Types.TurnCompleteReason.InputImageCelebrity*
+  name: InputImageCelebrity
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_InputImageCelebrity_
+  commentId: Overload:Google.GenAI.Types.TurnCompleteReason.InputImageCelebrity
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TurnCompleteReason.InputImageCelebrity
+  nameWithType: TurnCompleteReason.InputImageCelebrity
+- uid: Google.GenAI.Types.TurnCompleteReason.InputImagePhotoRealisticChildProhibited
+  name: InputImagePhotoRealisticChildProhibited
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_InputImagePhotoRealisticChildProhibited
+  commentId: P:Google.GenAI.Types.TurnCompleteReason.InputImagePhotoRealisticChildProhibited
+  fullName: Google.GenAI.Types.TurnCompleteReason.InputImagePhotoRealisticChildProhibited
+  nameWithType: TurnCompleteReason.InputImagePhotoRealisticChildProhibited
+- uid: Google.GenAI.Types.TurnCompleteReason.InputImagePhotoRealisticChildProhibited*
+  name: InputImagePhotoRealisticChildProhibited
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_InputImagePhotoRealisticChildProhibited_
+  commentId: Overload:Google.GenAI.Types.TurnCompleteReason.InputImagePhotoRealisticChildProhibited
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TurnCompleteReason.InputImagePhotoRealisticChildProhibited
+  nameWithType: TurnCompleteReason.InputImagePhotoRealisticChildProhibited
+- uid: Google.GenAI.Types.TurnCompleteReason.InputIpProhibited
+  name: InputIpProhibited
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_InputIpProhibited
+  commentId: P:Google.GenAI.Types.TurnCompleteReason.InputIpProhibited
+  fullName: Google.GenAI.Types.TurnCompleteReason.InputIpProhibited
+  nameWithType: TurnCompleteReason.InputIpProhibited
+- uid: Google.GenAI.Types.TurnCompleteReason.InputIpProhibited*
+  name: InputIpProhibited
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_InputIpProhibited_
+  commentId: Overload:Google.GenAI.Types.TurnCompleteReason.InputIpProhibited
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TurnCompleteReason.InputIpProhibited
+  nameWithType: TurnCompleteReason.InputIpProhibited
+- uid: Google.GenAI.Types.TurnCompleteReason.InputOther
+  name: InputOther
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_InputOther
+  commentId: P:Google.GenAI.Types.TurnCompleteReason.InputOther
+  fullName: Google.GenAI.Types.TurnCompleteReason.InputOther
+  nameWithType: TurnCompleteReason.InputOther
+- uid: Google.GenAI.Types.TurnCompleteReason.InputOther*
+  name: InputOther
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_InputOther_
+  commentId: Overload:Google.GenAI.Types.TurnCompleteReason.InputOther
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TurnCompleteReason.InputOther
+  nameWithType: TurnCompleteReason.InputOther
+- uid: Google.GenAI.Types.TurnCompleteReason.InputTextContainProminentPersonProhibited
+  name: InputTextContainProminentPersonProhibited
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_InputTextContainProminentPersonProhibited
+  commentId: P:Google.GenAI.Types.TurnCompleteReason.InputTextContainProminentPersonProhibited
+  fullName: Google.GenAI.Types.TurnCompleteReason.InputTextContainProminentPersonProhibited
+  nameWithType: TurnCompleteReason.InputTextContainProminentPersonProhibited
+- uid: Google.GenAI.Types.TurnCompleteReason.InputTextContainProminentPersonProhibited*
+  name: InputTextContainProminentPersonProhibited
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_InputTextContainProminentPersonProhibited_
+  commentId: Overload:Google.GenAI.Types.TurnCompleteReason.InputTextContainProminentPersonProhibited
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TurnCompleteReason.InputTextContainProminentPersonProhibited
+  nameWithType: TurnCompleteReason.InputTextContainProminentPersonProhibited
+- uid: Google.GenAI.Types.TurnCompleteReason.InputTextNciiProhibited
+  name: InputTextNciiProhibited
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_InputTextNciiProhibited
+  commentId: P:Google.GenAI.Types.TurnCompleteReason.InputTextNciiProhibited
+  fullName: Google.GenAI.Types.TurnCompleteReason.InputTextNciiProhibited
+  nameWithType: TurnCompleteReason.InputTextNciiProhibited
+- uid: Google.GenAI.Types.TurnCompleteReason.InputTextNciiProhibited*
+  name: InputTextNciiProhibited
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_InputTextNciiProhibited_
+  commentId: Overload:Google.GenAI.Types.TurnCompleteReason.InputTextNciiProhibited
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TurnCompleteReason.InputTextNciiProhibited
+  nameWithType: TurnCompleteReason.InputTextNciiProhibited
 - uid: Google.GenAI.Types.TurnCompleteReason.MalformedFunctionCall
   name: MalformedFunctionCall
   href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_MalformedFunctionCall
@@ -34058,6 +34505,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.TurnCompleteReason.MalformedFunctionCall
   nameWithType: TurnCompleteReason.MalformedFunctionCall
+- uid: Google.GenAI.Types.TurnCompleteReason.MaxRegenerationReached
+  name: MaxRegenerationReached
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_MaxRegenerationReached
+  commentId: P:Google.GenAI.Types.TurnCompleteReason.MaxRegenerationReached
+  fullName: Google.GenAI.Types.TurnCompleteReason.MaxRegenerationReached
+  nameWithType: TurnCompleteReason.MaxRegenerationReached
+- uid: Google.GenAI.Types.TurnCompleteReason.MaxRegenerationReached*
+  name: MaxRegenerationReached
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_MaxRegenerationReached_
+  commentId: Overload:Google.GenAI.Types.TurnCompleteReason.MaxRegenerationReached
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TurnCompleteReason.MaxRegenerationReached
+  nameWithType: TurnCompleteReason.MaxRegenerationReached
 - uid: Google.GenAI.Types.TurnCompleteReason.NeedMoreInput
   name: NeedMoreInput
   href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_NeedMoreInput
@@ -34071,6 +34531,32 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.TurnCompleteReason.NeedMoreInput
   nameWithType: TurnCompleteReason.NeedMoreInput
+- uid: Google.GenAI.Types.TurnCompleteReason.OutputImageIpProhibited
+  name: OutputImageIpProhibited
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_OutputImageIpProhibited
+  commentId: P:Google.GenAI.Types.TurnCompleteReason.OutputImageIpProhibited
+  fullName: Google.GenAI.Types.TurnCompleteReason.OutputImageIpProhibited
+  nameWithType: TurnCompleteReason.OutputImageIpProhibited
+- uid: Google.GenAI.Types.TurnCompleteReason.OutputImageIpProhibited*
+  name: OutputImageIpProhibited
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_OutputImageIpProhibited_
+  commentId: Overload:Google.GenAI.Types.TurnCompleteReason.OutputImageIpProhibited
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TurnCompleteReason.OutputImageIpProhibited
+  nameWithType: TurnCompleteReason.OutputImageIpProhibited
+- uid: Google.GenAI.Types.TurnCompleteReason.ProhibitedInputContent
+  name: ProhibitedInputContent
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_ProhibitedInputContent
+  commentId: P:Google.GenAI.Types.TurnCompleteReason.ProhibitedInputContent
+  fullName: Google.GenAI.Types.TurnCompleteReason.ProhibitedInputContent
+  nameWithType: TurnCompleteReason.ProhibitedInputContent
+- uid: Google.GenAI.Types.TurnCompleteReason.ProhibitedInputContent*
+  name: ProhibitedInputContent
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_ProhibitedInputContent_
+  commentId: Overload:Google.GenAI.Types.TurnCompleteReason.ProhibitedInputContent
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TurnCompleteReason.ProhibitedInputContent
+  nameWithType: TurnCompleteReason.ProhibitedInputContent
 - uid: Google.GenAI.Types.TurnCompleteReason.ResponseRejected
   name: ResponseRejected
   href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_ResponseRejected
@@ -34110,6 +34596,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.TurnCompleteReason.TurnCompleteReasonUnspecified
   nameWithType: TurnCompleteReason.TurnCompleteReasonUnspecified
+- uid: Google.GenAI.Types.TurnCompleteReason.UnsafePromptForImageGeneration
+  name: UnsafePromptForImageGeneration
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_UnsafePromptForImageGeneration
+  commentId: P:Google.GenAI.Types.TurnCompleteReason.UnsafePromptForImageGeneration
+  fullName: Google.GenAI.Types.TurnCompleteReason.UnsafePromptForImageGeneration
+  nameWithType: TurnCompleteReason.UnsafePromptForImageGeneration
+- uid: Google.GenAI.Types.TurnCompleteReason.UnsafePromptForImageGeneration*
+  name: UnsafePromptForImageGeneration
+  href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_UnsafePromptForImageGeneration_
+  commentId: Overload:Google.GenAI.Types.TurnCompleteReason.UnsafePromptForImageGeneration
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TurnCompleteReason.UnsafePromptForImageGeneration
+  nameWithType: TurnCompleteReason.UnsafePromptForImageGeneration
 - uid: Google.GenAI.Types.TurnCompleteReason.Value
   name: Value
   href: api/Google.GenAI.Types.TurnCompleteReason.html#Google_GenAI_Types_TurnCompleteReason_Value
