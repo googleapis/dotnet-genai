@@ -1,5 +1,40 @@
 # Changelog
 
+## Version 1.6.2, released 2026-05-14
+
+
+### New features
+
+* [Python] Multimodal file search ([73d24ad](https://github.com/googleapis/dotnet-genai/commit/73d24ad98dc6433cc6b2c6db6a2393d62d1b0ada))
+* Add "eu" as a supported service location for Vertex AI platform. ([e1d2f36](https://github.com/googleapis/dotnet-genai/commit/e1d2f365a83c3c10c62e3d2a34302bc23ae9c7f9))
+* Add `output_info` to `BatchJob` ([5f4ca93](https://github.com/googleapis/dotnet-genai/commit/5f4ca93044b916469846b389f4d5f413af76d62b))
+* Add ImageResizeMode for GenerateVideos ([74083e6](https://github.com/googleapis/dotnet-genai/commit/74083e6aaa54277b8afcd0502675418a08dfcb0d))
+* Add Live Avatar new fields ([fd82178](https://github.com/googleapis/dotnet-genai/commit/fd82178df207ad0afd51bd43e4d11f05f9a8b7c2))
+* Add Vertex Dataset input and output options for batch jobs ([6b6c06c](https://github.com/googleapis/dotnet-genai/commit/6b6c06c04e72b8f4091abb03eb82b0313ee68cf3))
+* Add webhook_config to batches.create() and models.generate_videos() ([a1e9528](https://github.com/googleapis/dotnet-genai/commit/a1e952882d186e3196502b90858a2d35ca298a36))
+* Ephemeral token support for Live API ([4bd35cf](https://github.com/googleapis/dotnet-genai/commit/4bd35cfd39146041f6b24aa49941edd7fe9778a1))
+* introduce enterprise appearance in dotnet genai sdk ([2ff5eb7](https://github.com/googleapis/dotnet-genai/commit/2ff5eb7fc3376ca424a9e86b614f1fca0c7189c8))
+* support Blocking FunctionCall in Live API in AgentPlatform (Vertex) ([f72ca92](https://github.com/googleapis/dotnet-genai/commit/f72ca92832a3e3c1ddf16faa47a08774135b5765))
+* support custom HttpClient factory ([d1fe71d](https://github.com/googleapis/dotnet-genai/commit/d1fe71dcd7b9fbe6d3c1391b5b8530f19f39a83c)), closes [#166](https://github.com/googleapis/dotnet-genai/issues/166)
+* support speech to speech translation in Gemini Live ([e0e64a9](https://github.com/googleapis/dotnet-genai/commit/e0e64a9494d1739206ff75bffdf1cf51159cdde8))
+
+
+### Bug fixes
+
+* Streaming method doesn't handle multi-line SSE ([559dae3](https://github.com/googleapis/dotnet-genai/commit/559dae39eb45256fd60aeea509db9eb3621cc570))
+
+
+### Miscellaneous chores
+
+* release 1.6.2 ([8aa121f](https://github.com/googleapis/dotnet-genai/commit/8aa121f7c98a377c2e3640d0d789d23563c3619a))
+
+
+### Documentation improvements
+
+* replace Vertex AI with Gemini Enterprise Agent Platform ([c4ed542](https://github.com/googleapis/dotnet-genai/commit/c4ed542a75ede4dfa9c209c38e7004516e459df4))
+* update doc string to replace `Vertex AI` with `Gemini Enterprise Agent Platform`, update method error message to replace `Vertex AI` with `Gemini Enterprise Agent Platform (previously known as Vertex AI)`, update converter error message to replace `Vertex AI` with `Gemini Enterprise Agent Platform` ([5eca351](https://github.com/googleapis/dotnet-genai/commit/5eca351032f576eb2616654b6dd441aeb78b5625))
+* update Gemini Enterprise Agent Platform home page url ([d68c3a7](https://github.com/googleapis/dotnet-genai/commit/d68c3a72b12f62a7888045ffde6637ccd9949f73))
+
 ## Version 1.6.1, released 2026-03-31
 
 
