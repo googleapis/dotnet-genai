@@ -5426,17 +5426,17 @@ public class GoogleGenAIExtensionsTest
     // Web search tool result content
     Assert.IsInstanceOfType(contents[2], typeof(WebSearchToolResultContent));
     var searchResult = (WebSearchToolResultContent)contents[2];
-    Assert.IsNotNull(searchResult.Results);
-    Assert.AreEqual(2, searchResult.Results.Count);
+    Assert.IsNotNull(searchResult.Outputs);
+    Assert.AreEqual(2, searchResult.Outputs.Count);
 
     // Both results should be UriContent with title in AdditionalProperties
-    Assert.IsInstanceOfType(searchResult.Results[0], typeof(UriContent));
-    var firstResult = (UriContent)searchResult.Results[0];
+    Assert.IsInstanceOfType(searchResult.Outputs[0], typeof(UriContent));
+    var firstResult = (UriContent)searchResult.Outputs[0];
     Assert.AreEqual("https://weather.com/nyc", firstResult.Uri.ToString());
     Assert.AreEqual("NYC Weather - Weather.com", firstResult.AdditionalProperties?["title"]);
 
-    Assert.IsInstanceOfType(searchResult.Results[1], typeof(UriContent));
-    var secondResult = (UriContent)searchResult.Results[1];
+    Assert.IsInstanceOfType(searchResult.Outputs[1], typeof(UriContent));
+    var secondResult = (UriContent)searchResult.Outputs[1];
     Assert.AreEqual("https://www.accuweather.com/nyc", secondResult.Uri.ToString());
     Assert.AreEqual("NYC Weather | AccuWeather", secondResult.AdditionalProperties?["title"]);
 

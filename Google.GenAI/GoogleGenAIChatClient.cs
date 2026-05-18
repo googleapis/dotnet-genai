@@ -724,7 +724,7 @@ internal sealed class GoogleGenAIChatClient : IChatClient
 
         responseContents.Add(new WebSearchToolResultContent(searchCallId)
         {
-          Results = searchResults,
+          Outputs = searchResults,
         });
       }
     }
