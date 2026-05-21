@@ -6110,6 +6110,19 @@ references:
   commentId: T:Google.GenAI.Types.ComputerUse
   fullName: Google.GenAI.Types.ComputerUse
   nameWithType: ComputerUse
+- uid: Google.GenAI.Types.ComputerUse.EnablePromptInjectionDetection
+  name: EnablePromptInjectionDetection
+  href: api/Google.GenAI.Types.ComputerUse.html#Google_GenAI_Types_ComputerUse_EnablePromptInjectionDetection
+  commentId: P:Google.GenAI.Types.ComputerUse.EnablePromptInjectionDetection
+  fullName: Google.GenAI.Types.ComputerUse.EnablePromptInjectionDetection
+  nameWithType: ComputerUse.EnablePromptInjectionDetection
+- uid: Google.GenAI.Types.ComputerUse.EnablePromptInjectionDetection*
+  name: EnablePromptInjectionDetection
+  href: api/Google.GenAI.Types.ComputerUse.html#Google_GenAI_Types_ComputerUse_EnablePromptInjectionDetection_
+  commentId: Overload:Google.GenAI.Types.ComputerUse.EnablePromptInjectionDetection
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ComputerUse.EnablePromptInjectionDetection
+  nameWithType: ComputerUse.EnablePromptInjectionDetection
 - uid: Google.GenAI.Types.ComputerUse.Environment
   name: Environment
   href: api/Google.GenAI.Types.ComputerUse.html#Google_GenAI_Types_ComputerUse_Environment
@@ -10406,6 +10419,32 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Environment.EnvironmentBrowser
   nameWithType: Environment.EnvironmentBrowser
+- uid: Google.GenAI.Types.Environment.EnvironmentDesktop
+  name: EnvironmentDesktop
+  href: api/Google.GenAI.Types.Environment.html#Google_GenAI_Types_Environment_EnvironmentDesktop
+  commentId: P:Google.GenAI.Types.Environment.EnvironmentDesktop
+  fullName: Google.GenAI.Types.Environment.EnvironmentDesktop
+  nameWithType: Environment.EnvironmentDesktop
+- uid: Google.GenAI.Types.Environment.EnvironmentDesktop*
+  name: EnvironmentDesktop
+  href: api/Google.GenAI.Types.Environment.html#Google_GenAI_Types_Environment_EnvironmentDesktop_
+  commentId: Overload:Google.GenAI.Types.Environment.EnvironmentDesktop
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Environment.EnvironmentDesktop
+  nameWithType: Environment.EnvironmentDesktop
+- uid: Google.GenAI.Types.Environment.EnvironmentMobile
+  name: EnvironmentMobile
+  href: api/Google.GenAI.Types.Environment.html#Google_GenAI_Types_Environment_EnvironmentMobile
+  commentId: P:Google.GenAI.Types.Environment.EnvironmentMobile
+  fullName: Google.GenAI.Types.Environment.EnvironmentMobile
+  nameWithType: Environment.EnvironmentMobile
+- uid: Google.GenAI.Types.Environment.EnvironmentMobile*
+  name: EnvironmentMobile
+  href: api/Google.GenAI.Types.Environment.html#Google_GenAI_Types_Environment_EnvironmentMobile_
+  commentId: Overload:Google.GenAI.Types.Environment.EnvironmentMobile
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Environment.EnvironmentMobile
+  nameWithType: Environment.EnvironmentMobile
 - uid: Google.GenAI.Types.Environment.EnvironmentUnspecified
   name: EnvironmentUnspecified
   href: api/Google.GenAI.Types.Environment.html#Google_GenAI_Types_Environment_EnvironmentUnspecified
