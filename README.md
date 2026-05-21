@@ -188,7 +188,7 @@ class GenerateContentWithSafetySettings {
 }
 ```
 
-#### Json response scehema
+#### Json response schema
 
 However you define your schema, don't duplicate it in your input prompt,
 including by giving examples of expected JSON output. If you do, the generated
