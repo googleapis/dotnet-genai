@@ -1,5 +1,16 @@
 # Changelog
 
+## Version 1.7.0, released 2026-05-21
+
+
+### New features
+
+* add `enable_prompt_injection_detection` for Computer Use feature for the Gemini API. ([cfda72c](https://github.com/googleapis/dotnet-genai/commit/cfda72ceb4384257ca03bdb1c1f3d8cef5156d1b))
+* add new fields ([cb4bfbe](https://github.com/googleapis/dotnet-genai/commit/cb4bfbea8d901d2bdd98334339bc8bd761e500de))
+* Add Stale Bot workflow ([a339c7b](https://github.com/googleapis/dotnet-genai/commit/a339c7bbf579ab13f706f26dbd08b9e7b16f0779))
+* Add Stale Bot workflow ([a339c7b](https://github.com/googleapis/dotnet-genai/commit/a339c7bbf579ab13f706f26dbd08b9e7b16f0779))
+* Migrate changes to public repo ([adf1c91](https://github.com/googleapis/dotnet-genai/commit/adf1c9183f401f490748e7afb5036b90753187dd))
+
 ## Version 1.6.2, released 2026-05-14
 
 
