@@ -159,7 +159,7 @@ Class DistillationSpec  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Google_GenAI_Types_DistillationSpec_BaseTeacherModel" data-uid="Google.GenAI.Types.DistillationSpec.BaseTeacherModel">
   BaseTeacherModel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSpec.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSpec.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The base teacher model that is being distilled. See Supported models
@@ -194,7 +194,7 @@ public string? BaseTeacherModel { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_DistillationSpec_HyperParameters" data-uid="Google.GenAI.Types.DistillationSpec.HyperParameters">
   HyperParameters
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSpec.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSpec.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. Hyperparameters for Distillation.</p>
@@ -228,7 +228,7 @@ public DistillationHyperParameters? HyperParameters { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_DistillationSpec_PipelineRootDirectory" data-uid="Google.GenAI.Types.DistillationSpec.PipelineRootDirectory">
   PipelineRootDirectory
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSpec.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSpec.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deprecated. A path in a Cloud Storage bucket, which will be treated as the root output
@@ -264,10 +264,11 @@ public string? PipelineRootDirectory { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_DistillationSpec_PromptDatasetUri" data-uid="Google.GenAI.Types.DistillationSpec.PromptDatasetUri">
   PromptDatasetUri
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSpec.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSpec.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The GCS URI of the prompt dataset to use during distillation.</p>
+  <div class="markdown level1 summary"><p>Optional. Cloud Storage path to file containing prompt dataset for distillation. The dataset
+must be formatted as a JSONL file.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -298,7 +299,7 @@ public string? PromptDatasetUri { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_DistillationSpec_StudentModel" data-uid="Google.GenAI.Types.DistillationSpec.StudentModel">
   StudentModel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSpec.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSpec.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The student model that is being tuned, e.g., &quot;google/gemma-2b-1.1-it&quot;. Deprecated. Use
@@ -333,7 +334,7 @@ public string? StudentModel { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_DistillationSpec_TrainingDatasetUri" data-uid="Google.GenAI.Types.DistillationSpec.TrainingDatasetUri">
   TrainingDatasetUri
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSpec.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSpec.cs/#L86"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deprecated. Cloud Storage path to file containing training dataset for tuning. The dataset
@@ -368,7 +369,7 @@ public string? TrainingDatasetUri { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_DistillationSpec_TunedTeacherModelSource" data-uid="Google.GenAI.Types.DistillationSpec.TunedTeacherModelSource">
   TunedTeacherModelSource
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSpec.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSpec.cs/#L97"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The resource name of the Tuned teacher model. Format:
@@ -403,10 +404,11 @@ public string? TunedTeacherModelSource { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_DistillationSpec_TuningMode" data-uid="Google.GenAI.Types.DistillationSpec.TuningMode">
   TuningMode
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSpec.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSpec.cs/#L119"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Tuning mode for tuning.</p>
+  <div class="markdown level1 summary"><p>Optional. Specifies the tuning mode for distillation (sft part). This feature is only
+available for open source models.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -437,7 +439,7 @@ public TuningMode? TuningMode { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_DistillationSpec_ValidationDatasetUri" data-uid="Google.GenAI.Types.DistillationSpec.ValidationDatasetUri">
   ValidationDatasetUri
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSpec.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSpec.cs/#L108"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. Cloud Storage path to file containing validation dataset for tuning. The dataset
@@ -476,7 +478,7 @@ public string? ValidationDatasetUri { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_DistillationSpec_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.DistillationSpec.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSpec.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSpec.cs/#L133"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a DistillationSpec object.</p>

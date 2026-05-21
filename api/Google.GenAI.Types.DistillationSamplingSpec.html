@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class DistillationSamplingSpec | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Spec for creating a distilled dataset in Vertex Dataset. This data type is not supported in Gemini API.">
+      <meta name="description" content="Distillation sampling spec for tuning.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Types_DistillationSamplingSpec" data-uid="Google.GenAI.Types.DistillationSamplingSpec" class="text-break">
-Class DistillationSamplingSpec  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSamplingSpec.cs/#L30"><i class="bi bi-code-slash"></i></a>
+Class DistillationSamplingSpec  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSamplingSpec.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,8 +93,7 @@ Class DistillationSamplingSpec  <a class="header-action link-secondary" title="V
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Spec for creating a distilled dataset in Vertex Dataset. This data type is not supported in
-Gemini API.</p>
+  <div class="markdown summary"><p>Distillation sampling spec for tuning.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -160,10 +159,10 @@ Gemini API.</p>
 
   <h3 id="Google_GenAI_Types_DistillationSamplingSpec_BaseTeacherModel" data-uid="Google.GenAI.Types.DistillationSamplingSpec.BaseTeacherModel">
   BaseTeacherModel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSamplingSpec.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSamplingSpec.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. The base teacher model that is being distilled. See Supported models
+  <div class="markdown level1 summary"><p>The base teacher model that is being distilled. See Supported models
 (<a href="https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/tuning#supported_models">https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/tuning#supported_models</a>).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -191,14 +190,83 @@ public string? BaseTeacherModel { get; set; }</code></pre>
 
 
 
+  <a id="Google_GenAI_Types_DistillationSamplingSpec_Hyperparameters_" data-uid="Google.GenAI.Types.DistillationSamplingSpec.Hyperparameters*"></a>
+
+  <h3 id="Google_GenAI_Types_DistillationSamplingSpec_Hyperparameters" data-uid="Google.GenAI.Types.DistillationSamplingSpec.Hyperparameters">
+  Hyperparameters
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSamplingSpec.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Hyperparameters for distillation tuning.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;hyperparameters&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public DistillationHyperParameters? Hyperparameters { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.DistillationHyperParameters.html">DistillationHyperParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_DistillationSamplingSpec_PromptDatasetUri_" data-uid="Google.GenAI.Types.DistillationSamplingSpec.PromptDatasetUri*"></a>
+
+  <h3 id="Google_GenAI_Types_DistillationSamplingSpec_PromptDatasetUri" data-uid="Google.GenAI.Types.DistillationSamplingSpec.PromptDatasetUri">
+  PromptDatasetUri
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSamplingSpec.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Cloud Storage path to file containing prompt dataset for distillation. The dataset must be
+formatted as a JSONL file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;promptDatasetUri&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public string? PromptDatasetUri { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_DistillationSamplingSpec_TunedTeacherModelSource_" data-uid="Google.GenAI.Types.DistillationSamplingSpec.TunedTeacherModelSource*"></a>
 
   <h3 id="Google_GenAI_Types_DistillationSamplingSpec_TunedTeacherModelSource" data-uid="Google.GenAI.Types.DistillationSamplingSpec.TunedTeacherModelSource">
   TunedTeacherModelSource
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSamplingSpec.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSamplingSpec.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. The resource name of the Tuned teacher model. Format:
+  <div class="markdown level1 summary"><p>The resource name of the Tuned teacher model. Format:
 <code>projects/{project}/locations/{location}/models/{model}</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -230,11 +298,11 @@ public string? TunedTeacherModelSource { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_DistillationSamplingSpec_ValidationDatasetUri" data-uid="Google.GenAI.Types.DistillationSamplingSpec.ValidationDatasetUri">
   ValidationDatasetUri
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSamplingSpec.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSamplingSpec.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. Cloud Storage path to file containing validation dataset for distillation. The
-dataset must be formatted as a JSONL file.</p>
+  <div class="markdown level1 summary"><p>Cloud Storage path to file containing validation dataset for distillation. The dataset must
+be formatted as a JSONL file.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -269,7 +337,7 @@ public string? ValidationDatasetUri { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_DistillationSamplingSpec_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.DistillationSamplingSpec.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSamplingSpec.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSamplingSpec.cs/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a DistillationSamplingSpec object.</p>
@@ -312,7 +380,7 @@ fails.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSamplingSpec.cs/#L30" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/DistillationSamplingSpec.cs/#L29" class="edit-link">Edit this page</a>
         </div>
 
 

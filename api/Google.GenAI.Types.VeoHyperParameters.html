@@ -155,6 +155,40 @@ Class VeoHyperParameters  <a class="header-action link-secondary" title="View so
 </h2>
 
 
+  <a id="Google_GenAI_Types_VeoHyperParameters_AdapterSize_" data-uid="Google.GenAI.Types.VeoHyperParameters.AdapterSize*"></a>
+
+  <h3 id="Google_GenAI_Types_VeoHyperParameters_AdapterSize" data-uid="Google.GenAI.Types.VeoHyperParameters.AdapterSize">
+  AdapterSize
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VeoHyperParameters.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional. The adapter size for LoRA tuning.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;adapterSize&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public AdapterSize? AdapterSize { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.AdapterSize.html">AdapterSize</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_VeoHyperParameters_EpochCount_" data-uid="Google.GenAI.Types.VeoHyperParameters.EpochCount*"></a>
 
   <h3 id="Google_GenAI_Types_VeoHyperParameters_EpochCount" data-uid="Google.GenAI.Types.VeoHyperParameters.EpochCount">
@@ -225,6 +259,40 @@ public double? LearningRateMultiplier { get; set; }</code></pre>
 
 
 
+  <a id="Google_GenAI_Types_VeoHyperParameters_TuningSpeed_" data-uid="Google.GenAI.Types.VeoHyperParameters.TuningSpeed*"></a>
+
+  <h3 id="Google_GenAI_Types_VeoHyperParameters_TuningSpeed" data-uid="Google.GenAI.Types.VeoHyperParameters.TuningSpeed">
+  TuningSpeed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VeoHyperParameters.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The speed of the tuning job. Only supported for Veo 3.0 models.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;tuningSpeed&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public TuningSpeed? TuningSpeed { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TuningSpeed.html">TuningSpeed</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_VeoHyperParameters_TuningTask_" data-uid="Google.GenAI.Types.VeoHyperParameters.TuningTask*"></a>
 
   <h3 id="Google_GenAI_Types_VeoHyperParameters_TuningTask" data-uid="Google.GenAI.Types.VeoHyperParameters.TuningTask">
@@ -232,7 +300,7 @@ public double? LearningRateMultiplier { get; set; }</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VeoHyperParameters.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. The tuning task. Either I2V or T2V.</p>
+  <div class="markdown level1 summary"><p>The tuning task for Veo.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -303,7 +371,7 @@ public double? VeoDataMixtureRatio { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_VeoHyperParameters_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.VeoHyperParameters.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VeoHyperParameters.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/VeoHyperParameters.cs/#L98"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a VeoHyperParameters object.</p>

@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Struct Outcome | Google GenAI .NET SDK </title>
+      <title>Struct TuningSpeed | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Struct Outcome | Google GenAI .NET SDK ">
+      <meta name="title" content="Struct TuningSpeed | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Outcome of the code execution.">
+      <meta name="description" content="The speed of the tuning job. Only supported for Veo 3.0 models. This enum is not supported in Gemini API.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/googleapis/dotnet-genai/new/main/apiSpec/new?filename=Google_GenAI_Types_Outcome.md&amp;value=---%0Auid%3A%20Google.GenAI.Types.Outcome%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/googleapis/dotnet-genai/new/main/apiSpec/new?filename=Google_GenAI_Types_TuningSpeed.md&amp;value=---%0Auid%3A%20Google.GenAI.Types.TuningSpeed%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -80,12 +80,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Google.GenAI.Types.Outcome">
+        <article data-uid="Google.GenAI.Types.TuningSpeed">
 
 
 
-  <h1 id="Google_GenAI_Types_Outcome" data-uid="Google.GenAI.Types.Outcome" class="text-break">
-Struct Outcome  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  <h1 id="Google_GenAI_Types_TuningSpeed" data-uid="Google.GenAI.Types.TuningSpeed" class="text-break">
+Struct TuningSpeed  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningSpeed.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,13 +93,14 @@ Struct Outcome  <a class="header-action link-secondary" title="View source" href
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Outcome of the code execution.</p>
+  <div class="markdown summary"><p>The speed of the tuning job. Only supported for Veo 3.0 models. This enum is not supported in
+Gemini API.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(OutcomeConverter))]
-public readonly record struct Outcome : IEquatable&lt;Outcome&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(TuningSpeedConverter))]
+public readonly record struct TuningSpeed : IEquatable&lt;TuningSpeed&gt;</code></pre>
   </div>
 
 
@@ -109,7 +110,7 @@ public readonly record struct Outcome : IEquatable&lt;Outcome&gt;</code></pre>
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.Outcome.html">Outcome</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.TuningSpeed.html">TuningSpeed</a>&gt;</div>
     </dd>
   </dl>
 
@@ -140,18 +141,18 @@ public readonly record struct Outcome : IEquatable&lt;Outcome&gt;</code></pre>
 </h2>
 
 
-  <a id="Google_GenAI_Types_Outcome_AllValues_" data-uid="Google.GenAI.Types.Outcome.AllValues*"></a>
+  <a id="Google_GenAI_Types_TuningSpeed_AllValues_" data-uid="Google.GenAI.Types.TuningSpeed.AllValues*"></a>
 
-  <h3 id="Google_GenAI_Types_Outcome_AllValues" data-uid="Google.GenAI.Types.Outcome.AllValues">
+  <h3 id="Google_GenAI_Types_TuningSpeed_AllValues" data-uid="Google.GenAI.Types.TuningSpeed.AllValues">
   AllValues
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningSpeed.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;Outcome&gt; AllValues { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;TuningSpeed&gt; AllValues { get; }</code></pre>
   </div>
 
 
@@ -160,7 +161,7 @@ public readonly record struct Outcome : IEquatable&lt;Outcome&gt;</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.Outcome.html">Outcome</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Google.GenAI.Types.TuningSpeed.html">TuningSpeed</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -171,20 +172,19 @@ public readonly record struct Outcome : IEquatable&lt;Outcome&gt;</code></pre>
 
 
 
-  <a id="Google_GenAI_Types_Outcome_OutcomeDeadlineExceeded_" data-uid="Google.GenAI.Types.Outcome.OutcomeDeadlineExceeded*"></a>
+  <a id="Google_GenAI_Types_TuningSpeed_Fast_" data-uid="Google.GenAI.Types.TuningSpeed.Fast*"></a>
 
-  <h3 id="Google_GenAI_Types_Outcome_OutcomeDeadlineExceeded" data-uid="Google.GenAI.Types.Outcome.OutcomeDeadlineExceeded">
-  OutcomeDeadlineExceeded
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Types_TuningSpeed_Fast" data-uid="Google.GenAI.Types.TuningSpeed.Fast">
+  Fast
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningSpeed.cs/#L50"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Code execution ran for too long, and was cancelled. There may or may not be a partial
-<code>output</code> present.</p>
+  <div class="markdown level1 summary"><p>Fast tuning speed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Outcome OutcomeDeadlineExceeded { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static TuningSpeed Fast { get; }</code></pre>
   </div>
 
 
@@ -193,7 +193,7 @@ public readonly record struct Outcome : IEquatable&lt;Outcome&gt;</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Google.GenAI.Types.Outcome.html">Outcome</a></dt>
+    <dt><a class="xref" href="Google.GenAI.Types.TuningSpeed.html">TuningSpeed</a></dt>
     <dd></dd>
   </dl>
 
@@ -204,19 +204,19 @@ public readonly record struct Outcome : IEquatable&lt;Outcome&gt;</code></pre>
 
 
 
-  <a id="Google_GenAI_Types_Outcome_OutcomeFailed_" data-uid="Google.GenAI.Types.Outcome.OutcomeFailed*"></a>
+  <a id="Google_GenAI_Types_TuningSpeed_Regular_" data-uid="Google.GenAI.Types.TuningSpeed.Regular*"></a>
 
-  <h3 id="Google_GenAI_Types_Outcome_OutcomeFailed" data-uid="Google.GenAI.Types.Outcome.OutcomeFailed">
-  OutcomeFailed
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Types_TuningSpeed_Regular" data-uid="Google.GenAI.Types.TuningSpeed.Regular">
+  Regular
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningSpeed.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Code execution failed. <code>output</code> contains the stderr and stdout, if any.</p>
+  <div class="markdown level1 summary"><p>Regular tuning speed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Outcome OutcomeFailed { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static TuningSpeed Regular { get; }</code></pre>
   </div>
 
 
@@ -225,7 +225,7 @@ public readonly record struct Outcome : IEquatable&lt;Outcome&gt;</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Google.GenAI.Types.Outcome.html">Outcome</a></dt>
+    <dt><a class="xref" href="Google.GenAI.Types.TuningSpeed.html">TuningSpeed</a></dt>
     <dd></dd>
   </dl>
 
@@ -236,19 +236,19 @@ public readonly record struct Outcome : IEquatable&lt;Outcome&gt;</code></pre>
 
 
 
-  <a id="Google_GenAI_Types_Outcome_OutcomeOk_" data-uid="Google.GenAI.Types.Outcome.OutcomeOk*"></a>
+  <a id="Google_GenAI_Types_TuningSpeed_TuningSpeedUnspecified_" data-uid="Google.GenAI.Types.TuningSpeed.TuningSpeedUnspecified*"></a>
 
-  <h3 id="Google_GenAI_Types_Outcome_OutcomeOk" data-uid="Google.GenAI.Types.Outcome.OutcomeOk">
-  OutcomeOk
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Types_TuningSpeed_TuningSpeedUnspecified" data-uid="Google.GenAI.Types.TuningSpeed.TuningSpeedUnspecified">
+  TuningSpeedUnspecified
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningSpeed.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Code execution completed successfully. <code>output</code> contains the stdout, if any.</p>
+  <div class="markdown level1 summary"><p>The default / unset value. For Veo 3.0 models, this defaults to FAST.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Outcome OutcomeOk { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static TuningSpeed TuningSpeedUnspecified { get; }</code></pre>
   </div>
 
 
@@ -257,7 +257,7 @@ public readonly record struct Outcome : IEquatable&lt;Outcome&gt;</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Google.GenAI.Types.Outcome.html">Outcome</a></dt>
+    <dt><a class="xref" href="Google.GenAI.Types.TuningSpeed.html">TuningSpeed</a></dt>
     <dd></dd>
   </dl>
 
@@ -268,43 +268,11 @@ public readonly record struct Outcome : IEquatable&lt;Outcome&gt;</code></pre>
 
 
 
-  <a id="Google_GenAI_Types_Outcome_OutcomeUnspecified_" data-uid="Google.GenAI.Types.Outcome.OutcomeUnspecified*"></a>
+  <a id="Google_GenAI_Types_TuningSpeed_Value_" data-uid="Google.GenAI.Types.TuningSpeed.Value*"></a>
 
-  <h3 id="Google_GenAI_Types_Outcome_OutcomeUnspecified" data-uid="Google.GenAI.Types.Outcome.OutcomeUnspecified">
-  OutcomeUnspecified
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L39"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Unspecified status. This value should not be used.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Outcome OutcomeUnspecified { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Google.GenAI.Types.Outcome.html">Outcome</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Google_GenAI_Types_Outcome_Value_" data-uid="Google.GenAI.Types.Outcome.Value*"></a>
-
-  <h3 id="Google_GenAI_Types_Outcome_Value" data-uid="Google.GenAI.Types.Outcome.Value">
+  <h3 id="Google_GenAI_Types_TuningSpeed_Value" data-uid="Google.GenAI.Types.TuningSpeed.Value">
   Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningSpeed.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -335,23 +303,23 @@ public readonly record struct Outcome : IEquatable&lt;Outcome&gt;</code></pre>
 </h2>
 
 
-  <a id="Google_GenAI_Types_Outcome_Equals_" data-uid="Google.GenAI.Types.Outcome.Equals*"></a>
+  <a id="Google_GenAI_Types_TuningSpeed_Equals_" data-uid="Google.GenAI.Types.TuningSpeed.Equals*"></a>
 
-  <h3 id="Google_GenAI_Types_Outcome_Equals_Google_GenAI_Types_Outcome_" data-uid="Google.GenAI.Types.Outcome.Equals(Google.GenAI.Types.Outcome)">
-  Equals(Outcome)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Types_TuningSpeed_Equals_Google_GenAI_Types_TuningSpeed_" data-uid="Google.GenAI.Types.TuningSpeed.Equals(Google.GenAI.Types.TuningSpeed)">
+  Equals(TuningSpeed)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningSpeed.cs/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(Outcome other)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Equals(TuningSpeed other)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.Outcome.html">Outcome</a></dt>
+    <dt><code>other</code> <a class="xref" href="Google.GenAI.Types.TuningSpeed.html">TuningSpeed</a></dt>
     <dd></dd>
   </dl>
 
@@ -371,18 +339,18 @@ public readonly record struct Outcome : IEquatable&lt;Outcome&gt;</code></pre>
 
 
 
-  <a id="Google_GenAI_Types_Outcome_FromString_" data-uid="Google.GenAI.Types.Outcome.FromString*"></a>
+  <a id="Google_GenAI_Types_TuningSpeed_FromString_" data-uid="Google.GenAI.Types.TuningSpeed.FromString*"></a>
 
-  <h3 id="Google_GenAI_Types_Outcome_FromString_System_String_" data-uid="Google.GenAI.Types.Outcome.FromString(System.String)">
+  <h3 id="Google_GenAI_Types_TuningSpeed_FromString_System_String_" data-uid="Google.GenAI.Types.TuningSpeed.FromString(System.String)">
   FromString(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningSpeed.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Outcome FromString(string value)</code></pre>
+    <pre><code class="lang-csharp hljs">public static TuningSpeed FromString(string value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -393,7 +361,7 @@ public readonly record struct Outcome : IEquatable&lt;Outcome&gt;</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Google.GenAI.Types.Outcome.html">Outcome</a></dt>
+    <dt><a class="xref" href="Google.GenAI.Types.TuningSpeed.html">TuningSpeed</a></dt>
     <dd></dd>
   </dl>
 
@@ -407,11 +375,11 @@ public readonly record struct Outcome : IEquatable&lt;Outcome&gt;</code></pre>
 
 
 
-  <a id="Google_GenAI_Types_Outcome_GetHashCode_" data-uid="Google.GenAI.Types.Outcome.GetHashCode*"></a>
+  <a id="Google_GenAI_Types_TuningSpeed_GetHashCode_" data-uid="Google.GenAI.Types.TuningSpeed.GetHashCode*"></a>
 
-  <h3 id="Google_GenAI_Types_Outcome_GetHashCode" data-uid="Google.GenAI.Types.Outcome.GetHashCode">
+  <h3 id="Google_GenAI_Types_TuningSpeed_GetHashCode" data-uid="Google.GenAI.Types.TuningSpeed.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningSpeed.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -438,11 +406,11 @@ public readonly record struct Outcome : IEquatable&lt;Outcome&gt;</code></pre>
 
 
 
-  <a id="Google_GenAI_Types_Outcome_ToString_" data-uid="Google.GenAI.Types.Outcome.ToString*"></a>
+  <a id="Google_GenAI_Types_TuningSpeed_ToString_" data-uid="Google.GenAI.Types.TuningSpeed.ToString*"></a>
 
-  <h3 id="Google_GenAI_Types_Outcome_ToString" data-uid="Google.GenAI.Types.Outcome.ToString">
+  <h3 id="Google_GenAI_Types_TuningSpeed_ToString" data-uid="Google.GenAI.Types.TuningSpeed.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningSpeed.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -473,18 +441,18 @@ public readonly record struct Outcome : IEquatable&lt;Outcome&gt;</code></pre>
 </h2>
 
 
-  <a id="Google_GenAI_Types_Outcome_op_Implicit_" data-uid="Google.GenAI.Types.Outcome.op_Implicit*"></a>
+  <a id="Google_GenAI_Types_TuningSpeed_op_Implicit_" data-uid="Google.GenAI.Types.TuningSpeed.op_Implicit*"></a>
 
-  <h3 id="Google_GenAI_Types_Outcome_op_Implicit_System_String__Google_GenAI_Types_Outcome" data-uid="Google.GenAI.Types.Outcome.op_Implicit(System.String)~Google.GenAI.Types.Outcome">
-  implicit operator Outcome(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Types_TuningSpeed_op_Implicit_System_String__Google_GenAI_Types_TuningSpeed" data-uid="Google.GenAI.Types.TuningSpeed.op_Implicit(System.String)~Google.GenAI.Types.TuningSpeed">
+  implicit operator TuningSpeed(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningSpeed.cs/#L72"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Outcome(string value)</code></pre>
+    <pre><code class="lang-csharp hljs">public static implicit operator TuningSpeed(string value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -495,7 +463,7 @@ public readonly record struct Outcome : IEquatable&lt;Outcome&gt;</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Google.GenAI.Types.Outcome.html">Outcome</a></dt>
+    <dt><a class="xref" href="Google.GenAI.Types.TuningSpeed.html">TuningSpeed</a></dt>
     <dd></dd>
   </dl>
 
@@ -513,7 +481,7 @@ public readonly record struct Outcome : IEquatable&lt;Outcome&gt;</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Outcome.cs/#L28" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TuningSpeed.cs/#L29" class="edit-link">Edit this page</a>
         </div>
 
 
