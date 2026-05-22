@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class FunctionCall | Google GenAI .NET SDK ">
       
-      <meta name="description" content="A function call.">
+      <meta name="description" content="A predicted FunctionCall returned from the model that contains a string representing the FunctionDeclaration.name and a structured JSON object containing the parameters and their values.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Types_FunctionCall" data-uid="Google.GenAI.Types.FunctionCall" class="text-break">
-Class FunctionCall  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCall.cs/#L29"><i class="bi bi-code-slash"></i></a>
+Class FunctionCall  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCall.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,7 +93,9 @@ Class FunctionCall  <a class="header-action link-secondary" title="View source" 
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>A function call.</p>
+  <div class="markdown summary"><p>A predicted FunctionCall returned from the model that contains a string representing the
+FunctionDeclaration.name and a structured JSON object containing the parameters and their
+values.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -159,7 +161,7 @@ Class FunctionCall  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Google_GenAI_Types_FunctionCall_Args" data-uid="Google.GenAI.Types.FunctionCall.Args">
   Args
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCall.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCall.cs/#L44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. The function parameters and values in JSON object format. See
@@ -194,11 +196,11 @@ public Dictionary&lt;string, object&gt;? Args { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_FunctionCall_Id" data-uid="Google.GenAI.Types.FunctionCall.Id">
   Id
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCall.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCall.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The unique id of the function call. If populated, the client to execute the <code>function_call</code>
-and return the response with the matching <code>id</code>.</p>
+  <div class="markdown level1 summary"><p>Optional. The unique id of the function call. If populated, the client to execute the
+<code>function_call</code> and return the response with the matching <code>id</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -229,7 +231,7 @@ public string? Id { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_FunctionCall_Name" data-uid="Google.GenAI.Types.FunctionCall.Name">
   Name
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCall.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCall.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. The name of the function to call. Matches FunctionDeclaration.name.</p>
@@ -263,7 +265,7 @@ public string? Name { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_FunctionCall_PartialArgs" data-uid="Google.GenAI.Types.FunctionCall.PartialArgs">
   PartialArgs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCall.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCall.cs/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. The partial argument value of the function call. If provided, represents the
@@ -298,7 +300,7 @@ public List&lt;PartialArg&gt;? PartialArgs { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_FunctionCall_WillContinue" data-uid="Google.GenAI.Types.FunctionCall.WillContinue">
   WillContinue
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCall.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCall.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. Whether this is the last part of the FunctionCall. If true, another partial
@@ -338,7 +340,7 @@ public bool? WillContinue { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_FunctionCall_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.FunctionCall.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCall.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCall.cs/#L90"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a FunctionCall object.</p>
@@ -380,7 +382,7 @@ public bool? WillContinue { get; set; }</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCall.cs/#L29" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionCall.cs/#L31" class="edit-link">Edit this page</a>
         </div>
 
 

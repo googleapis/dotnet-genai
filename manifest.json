@@ -2208,7 +2208,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.FunctionCall",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FunctionCall.yml\" sourcestartlinenumber=\"1\">A function call.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FunctionCall.yml\" sourcestartlinenumber=\"1\">A predicted FunctionCall returned from the model that contains a string representing the\nFunctionDeclaration.name and a structured JSON object containing the parameters and their\nvalues.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3482,7 +3482,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.LatLng",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LatLng.yml\" sourcestartlinenumber=\"1\">An object that represents a latitude/longitude pair.  This is expressed as a pair of doubles\nto represent degrees latitude and degrees longitude. Unless specified otherwise, this object\nmust conform to the &lt;a\nhref=&quot;https://en.wikipedia.org/wiki/World_Geodetic_System#1984_version&quot;&gt; WGS84\nstandard&lt;/a&gt;. Values must be within normalized ranges.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LatLng.yml\" sourcestartlinenumber=\"1\">An object that represents a latitude/longitude pair. This is expressed as a pair of doubles to\nrepresent degrees latitude and degrees longitude. Unless specified otherwise, this object must\nconform to the WGS84 standard. Values must be within normalized ranges.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -5624,7 +5624,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ToolConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ToolConfig.yml\" sourcestartlinenumber=\"1\">Tool config.  This config is shared for all tools provided in the request.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ToolConfig.yml\" sourcestartlinenumber=\"1\">Tool config. This config is shared for all tools provided in the request.</p>\n"
     },
     {
       "type": "ManagedReference",

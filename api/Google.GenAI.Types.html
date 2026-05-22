@@ -696,7 +696,9 @@ supported in Vertex AI.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.FunctionCall.html">FunctionCall</a></dt>
-      <dd><p>A function call.</p>
+      <dd><p>A predicted FunctionCall returned from the model that contains a string representing the
+FunctionDeclaration.name and a structured JSON object containing the parameters and their
+values.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -1119,11 +1121,9 @@ matches any time.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.LatLng.html">LatLng</a></dt>
-      <dd><p>An object that represents a latitude/longitude pair.  This is expressed as a pair of doubles
-to represent degrees latitude and degrees longitude. Unless specified otherwise, this object
-must conform to the &lt;a
-href=&quot;https://en.wikipedia.org/wiki/World_Geodetic_System#1984_version&quot;&gt; WGS84
-standard&lt;/a&gt;. Values must be within normalized ranges.</p>
+      <dd><p>An object that represents a latitude/longitude pair. This is expressed as a pair of doubles to
+represent degrees latitude and degrees longitude. Unless specified otherwise, this object must
+conform to the WGS84 standard. Values must be within normalized ranges.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -1839,7 +1839,7 @@ tool. This data type is not supported in Gemini API.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ToolConfig.html">ToolConfig</a></dt>
-      <dd><p>Tool config.  This config is shared for all tools provided in the request.</p>
+      <dd><p>Tool config. This config is shared for all tools provided in the request.</p>
 </dd>
     </dl>
     <dl class="jumplist">
