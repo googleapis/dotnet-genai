@@ -4090,6 +4090,80 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.AutomaticActivityDetection.StartOfSpeechSensitivity
   nameWithType: AutomaticActivityDetection.StartOfSpeechSensitivity
+- uid: Google.GenAI.Types.AutoraterConfig
+  name: AutoraterConfig
+  href: api/Google.GenAI.Types.AutoraterConfig.html
+  commentId: T:Google.GenAI.Types.AutoraterConfig
+  fullName: Google.GenAI.Types.AutoraterConfig
+  nameWithType: AutoraterConfig
+- uid: Google.GenAI.Types.AutoraterConfig.AutoraterModel
+  name: AutoraterModel
+  href: api/Google.GenAI.Types.AutoraterConfig.html#Google_GenAI_Types_AutoraterConfig_AutoraterModel
+  commentId: P:Google.GenAI.Types.AutoraterConfig.AutoraterModel
+  fullName: Google.GenAI.Types.AutoraterConfig.AutoraterModel
+  nameWithType: AutoraterConfig.AutoraterModel
+- uid: Google.GenAI.Types.AutoraterConfig.AutoraterModel*
+  name: AutoraterModel
+  href: api/Google.GenAI.Types.AutoraterConfig.html#Google_GenAI_Types_AutoraterConfig_AutoraterModel_
+  commentId: Overload:Google.GenAI.Types.AutoraterConfig.AutoraterModel
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AutoraterConfig.AutoraterModel
+  nameWithType: AutoraterConfig.AutoraterModel
+- uid: Google.GenAI.Types.AutoraterConfig.FlipEnabled
+  name: FlipEnabled
+  href: api/Google.GenAI.Types.AutoraterConfig.html#Google_GenAI_Types_AutoraterConfig_FlipEnabled
+  commentId: P:Google.GenAI.Types.AutoraterConfig.FlipEnabled
+  fullName: Google.GenAI.Types.AutoraterConfig.FlipEnabled
+  nameWithType: AutoraterConfig.FlipEnabled
+- uid: Google.GenAI.Types.AutoraterConfig.FlipEnabled*
+  name: FlipEnabled
+  href: api/Google.GenAI.Types.AutoraterConfig.html#Google_GenAI_Types_AutoraterConfig_FlipEnabled_
+  commentId: Overload:Google.GenAI.Types.AutoraterConfig.FlipEnabled
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AutoraterConfig.FlipEnabled
+  nameWithType: AutoraterConfig.FlipEnabled
+- uid: Google.GenAI.Types.AutoraterConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.AutoraterConfig.html#Google_GenAI_Types_AutoraterConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.AutoraterConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.AutoraterConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.AutoraterConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: AutoraterConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: AutoraterConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.AutoraterConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.AutoraterConfig.html#Google_GenAI_Types_AutoraterConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.AutoraterConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AutoraterConfig.FromJson
+  nameWithType: AutoraterConfig.FromJson
+- uid: Google.GenAI.Types.AutoraterConfig.GenerationConfig
+  name: GenerationConfig
+  href: api/Google.GenAI.Types.AutoraterConfig.html#Google_GenAI_Types_AutoraterConfig_GenerationConfig
+  commentId: P:Google.GenAI.Types.AutoraterConfig.GenerationConfig
+  fullName: Google.GenAI.Types.AutoraterConfig.GenerationConfig
+  nameWithType: AutoraterConfig.GenerationConfig
+- uid: Google.GenAI.Types.AutoraterConfig.GenerationConfig*
+  name: GenerationConfig
+  href: api/Google.GenAI.Types.AutoraterConfig.html#Google_GenAI_Types_AutoraterConfig_GenerationConfig_
+  commentId: Overload:Google.GenAI.Types.AutoraterConfig.GenerationConfig
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AutoraterConfig.GenerationConfig
+  nameWithType: AutoraterConfig.GenerationConfig
+- uid: Google.GenAI.Types.AutoraterConfig.SamplingCount
+  name: SamplingCount
+  href: api/Google.GenAI.Types.AutoraterConfig.html#Google_GenAI_Types_AutoraterConfig_SamplingCount
+  commentId: P:Google.GenAI.Types.AutoraterConfig.SamplingCount
+  fullName: Google.GenAI.Types.AutoraterConfig.SamplingCount
+  nameWithType: AutoraterConfig.SamplingCount
+- uid: Google.GenAI.Types.AutoraterConfig.SamplingCount*
+  name: SamplingCount
+  href: api/Google.GenAI.Types.AutoraterConfig.html#Google_GenAI_Types_AutoraterConfig_SamplingCount_
+  commentId: Overload:Google.GenAI.Types.AutoraterConfig.SamplingCount
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AutoraterConfig.SamplingCount
+  nameWithType: AutoraterConfig.SamplingCount
 - uid: Google.GenAI.Types.AvatarConfig
   name: AvatarConfig
   href: api/Google.GenAI.Types.AvatarConfig.html
@@ -6021,6 +6095,89 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CompletionStats.SuccessfulForecastPointCount
   nameWithType: CompletionStats.SuccessfulForecastPointCount
+- uid: Google.GenAI.Types.CompositeReinforcementTuningRewardConfig
+  name: CompositeReinforcementTuningRewardConfig
+  href: api/Google.GenAI.Types.CompositeReinforcementTuningRewardConfig.html
+  commentId: T:Google.GenAI.Types.CompositeReinforcementTuningRewardConfig
+  fullName: Google.GenAI.Types.CompositeReinforcementTuningRewardConfig
+  nameWithType: CompositeReinforcementTuningRewardConfig
+- uid: Google.GenAI.Types.CompositeReinforcementTuningRewardConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.CompositeReinforcementTuningRewardConfig.html#Google_GenAI_Types_CompositeReinforcementTuningRewardConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.CompositeReinforcementTuningRewardConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.CompositeReinforcementTuningRewardConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.CompositeReinforcementTuningRewardConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: CompositeReinforcementTuningRewardConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: CompositeReinforcementTuningRewardConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.CompositeReinforcementTuningRewardConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.CompositeReinforcementTuningRewardConfig.html#Google_GenAI_Types_CompositeReinforcementTuningRewardConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.CompositeReinforcementTuningRewardConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CompositeReinforcementTuningRewardConfig.FromJson
+  nameWithType: CompositeReinforcementTuningRewardConfig.FromJson
+- uid: Google.GenAI.Types.CompositeReinforcementTuningRewardConfig.WeightedRewardConfigs
+  name: WeightedRewardConfigs
+  href: api/Google.GenAI.Types.CompositeReinforcementTuningRewardConfig.html#Google_GenAI_Types_CompositeReinforcementTuningRewardConfig_WeightedRewardConfigs
+  commentId: P:Google.GenAI.Types.CompositeReinforcementTuningRewardConfig.WeightedRewardConfigs
+  fullName: Google.GenAI.Types.CompositeReinforcementTuningRewardConfig.WeightedRewardConfigs
+  nameWithType: CompositeReinforcementTuningRewardConfig.WeightedRewardConfigs
+- uid: Google.GenAI.Types.CompositeReinforcementTuningRewardConfig.WeightedRewardConfigs*
+  name: WeightedRewardConfigs
+  href: api/Google.GenAI.Types.CompositeReinforcementTuningRewardConfig.html#Google_GenAI_Types_CompositeReinforcementTuningRewardConfig_WeightedRewardConfigs_
+  commentId: Overload:Google.GenAI.Types.CompositeReinforcementTuningRewardConfig.WeightedRewardConfigs
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CompositeReinforcementTuningRewardConfig.WeightedRewardConfigs
+  nameWithType: CompositeReinforcementTuningRewardConfig.WeightedRewardConfigs
+- uid: Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig
+  name: CompositeReinforcementTuningRewardConfigWeightedRewardConfig
+  href: api/Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.html
+  commentId: T:Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig
+  fullName: Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig
+  nameWithType: CompositeReinforcementTuningRewardConfigWeightedRewardConfig
+- uid: Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.html#Google_GenAI_Types_CompositeReinforcementTuningRewardConfigWeightedRewardConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: CompositeReinforcementTuningRewardConfigWeightedRewardConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: CompositeReinforcementTuningRewardConfigWeightedRewardConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.html#Google_GenAI_Types_CompositeReinforcementTuningRewardConfigWeightedRewardConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.FromJson
+  nameWithType: CompositeReinforcementTuningRewardConfigWeightedRewardConfig.FromJson
+- uid: Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.RewardConfig
+  name: RewardConfig
+  href: api/Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.html#Google_GenAI_Types_CompositeReinforcementTuningRewardConfigWeightedRewardConfig_RewardConfig
+  commentId: P:Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.RewardConfig
+  fullName: Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.RewardConfig
+  nameWithType: CompositeReinforcementTuningRewardConfigWeightedRewardConfig.RewardConfig
+- uid: Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.RewardConfig*
+  name: RewardConfig
+  href: api/Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.html#Google_GenAI_Types_CompositeReinforcementTuningRewardConfigWeightedRewardConfig_RewardConfig_
+  commentId: Overload:Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.RewardConfig
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.RewardConfig
+  nameWithType: CompositeReinforcementTuningRewardConfigWeightedRewardConfig.RewardConfig
+- uid: Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.Weight
+  name: Weight
+  href: api/Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.html#Google_GenAI_Types_CompositeReinforcementTuningRewardConfigWeightedRewardConfig_Weight
+  commentId: P:Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.Weight
+  fullName: Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.Weight
+  nameWithType: CompositeReinforcementTuningRewardConfigWeightedRewardConfig.Weight
+- uid: Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.Weight*
+  name: Weight
+  href: api/Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.html#Google_GenAI_Types_CompositeReinforcementTuningRewardConfigWeightedRewardConfig_Weight_
+  commentId: Overload:Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.Weight
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.Weight
+  nameWithType: CompositeReinforcementTuningRewardConfigWeightedRewardConfig.Weight
 - uid: Google.GenAI.Types.ComputeTokensConfig
   name: ComputeTokensConfig
   href: api/Google.GenAI.Types.ComputeTokensConfig.html
@@ -7370,6 +7527,32 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CreateTuningJobConfig.Beta
   nameWithType: CreateTuningJobConfig.Beta
+- uid: Google.GenAI.Types.CreateTuningJobConfig.CheckpointInterval
+  name: CheckpointInterval
+  href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_CheckpointInterval
+  commentId: P:Google.GenAI.Types.CreateTuningJobConfig.CheckpointInterval
+  fullName: Google.GenAI.Types.CreateTuningJobConfig.CheckpointInterval
+  nameWithType: CreateTuningJobConfig.CheckpointInterval
+- uid: Google.GenAI.Types.CreateTuningJobConfig.CheckpointInterval*
+  name: CheckpointInterval
+  href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_CheckpointInterval_
+  commentId: Overload:Google.GenAI.Types.CreateTuningJobConfig.CheckpointInterval
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateTuningJobConfig.CheckpointInterval
+  nameWithType: CreateTuningJobConfig.CheckpointInterval
+- uid: Google.GenAI.Types.CreateTuningJobConfig.CompositeRewardConfig
+  name: CompositeRewardConfig
+  href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_CompositeRewardConfig
+  commentId: P:Google.GenAI.Types.CreateTuningJobConfig.CompositeRewardConfig
+  fullName: Google.GenAI.Types.CreateTuningJobConfig.CompositeRewardConfig
+  nameWithType: CreateTuningJobConfig.CompositeRewardConfig
+- uid: Google.GenAI.Types.CreateTuningJobConfig.CompositeRewardConfig*
+  name: CompositeRewardConfig
+  href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_CompositeRewardConfig_
+  commentId: Overload:Google.GenAI.Types.CreateTuningJobConfig.CompositeRewardConfig
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateTuningJobConfig.CompositeRewardConfig
+  nameWithType: CreateTuningJobConfig.CompositeRewardConfig
 - uid: Google.GenAI.Types.CreateTuningJobConfig.CustomBaseModel
   name: CustomBaseModel
   href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_CustomBaseModel
@@ -7422,6 +7605,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CreateTuningJobConfig.EpochCount
   nameWithType: CreateTuningJobConfig.EpochCount
+- uid: Google.GenAI.Types.CreateTuningJobConfig.EvaluateInterval
+  name: EvaluateInterval
+  href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_EvaluateInterval
+  commentId: P:Google.GenAI.Types.CreateTuningJobConfig.EvaluateInterval
+  fullName: Google.GenAI.Types.CreateTuningJobConfig.EvaluateInterval
+  nameWithType: CreateTuningJobConfig.EvaluateInterval
+- uid: Google.GenAI.Types.CreateTuningJobConfig.EvaluateInterval*
+  name: EvaluateInterval
+  href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_EvaluateInterval_
+  commentId: Overload:Google.GenAI.Types.CreateTuningJobConfig.EvaluateInterval
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateTuningJobConfig.EvaluateInterval
+  nameWithType: CreateTuningJobConfig.EvaluateInterval
 - uid: Google.GenAI.Types.CreateTuningJobConfig.ExportLastCheckpointOnly
   name: ExportLastCheckpointOnly
   href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_ExportLastCheckpointOnly
@@ -7503,6 +7699,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CreateTuningJobConfig.LearningRateMultiplier
   nameWithType: CreateTuningJobConfig.LearningRateMultiplier
+- uid: Google.GenAI.Types.CreateTuningJobConfig.MaxOutputTokens
+  name: MaxOutputTokens
+  href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_MaxOutputTokens
+  commentId: P:Google.GenAI.Types.CreateTuningJobConfig.MaxOutputTokens
+  fullName: Google.GenAI.Types.CreateTuningJobConfig.MaxOutputTokens
+  nameWithType: CreateTuningJobConfig.MaxOutputTokens
+- uid: Google.GenAI.Types.CreateTuningJobConfig.MaxOutputTokens*
+  name: MaxOutputTokens
+  href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_MaxOutputTokens_
+  commentId: Overload:Google.GenAI.Types.CreateTuningJobConfig.MaxOutputTokens
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateTuningJobConfig.MaxOutputTokens
+  nameWithType: CreateTuningJobConfig.MaxOutputTokens
 - uid: Google.GenAI.Types.CreateTuningJobConfig.Method
   name: Method
   href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_Method
@@ -7542,6 +7751,32 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CreateTuningJobConfig.PreTunedModelCheckpointId
   nameWithType: CreateTuningJobConfig.PreTunedModelCheckpointId
+- uid: Google.GenAI.Types.CreateTuningJobConfig.RewardConfig
+  name: RewardConfig
+  href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_RewardConfig
+  commentId: P:Google.GenAI.Types.CreateTuningJobConfig.RewardConfig
+  fullName: Google.GenAI.Types.CreateTuningJobConfig.RewardConfig
+  nameWithType: CreateTuningJobConfig.RewardConfig
+- uid: Google.GenAI.Types.CreateTuningJobConfig.RewardConfig*
+  name: RewardConfig
+  href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_RewardConfig_
+  commentId: Overload:Google.GenAI.Types.CreateTuningJobConfig.RewardConfig
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateTuningJobConfig.RewardConfig
+  nameWithType: CreateTuningJobConfig.RewardConfig
+- uid: Google.GenAI.Types.CreateTuningJobConfig.SamplesPerPrompt
+  name: SamplesPerPrompt
+  href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_SamplesPerPrompt
+  commentId: P:Google.GenAI.Types.CreateTuningJobConfig.SamplesPerPrompt
+  fullName: Google.GenAI.Types.CreateTuningJobConfig.SamplesPerPrompt
+  nameWithType: CreateTuningJobConfig.SamplesPerPrompt
+- uid: Google.GenAI.Types.CreateTuningJobConfig.SamplesPerPrompt*
+  name: SamplesPerPrompt
+  href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_SamplesPerPrompt_
+  commentId: Overload:Google.GenAI.Types.CreateTuningJobConfig.SamplesPerPrompt
+  isSpec: "True"
+  fullName: Google.GenAI.Types.CreateTuningJobConfig.SamplesPerPrompt
+  nameWithType: CreateTuningJobConfig.SamplesPerPrompt
 - uid: Google.GenAI.Types.CreateTuningJobConfig.SftLossWeightMultiplier
   name: SftLossWeightMultiplier
   href: api/Google.GenAI.Types.CreateTuningJobConfig.html#Google_GenAI_Types_CreateTuningJobConfig_SftLossWeightMultiplier
@@ -27977,6 +28212,41 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.RegisterFilesResponse.SdkHttpResponse
   nameWithType: RegisterFilesResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.ReinforcementTuningAutoraterScorer
+  name: ReinforcementTuningAutoraterScorer
+  href: api/Google.GenAI.Types.ReinforcementTuningAutoraterScorer.html
+  commentId: T:Google.GenAI.Types.ReinforcementTuningAutoraterScorer
+  fullName: Google.GenAI.Types.ReinforcementTuningAutoraterScorer
+  nameWithType: ReinforcementTuningAutoraterScorer
+- uid: Google.GenAI.Types.ReinforcementTuningAutoraterScorer.AutoraterConfig
+  name: AutoraterConfig
+  href: api/Google.GenAI.Types.ReinforcementTuningAutoraterScorer.html#Google_GenAI_Types_ReinforcementTuningAutoraterScorer_AutoraterConfig
+  commentId: P:Google.GenAI.Types.ReinforcementTuningAutoraterScorer.AutoraterConfig
+  fullName: Google.GenAI.Types.ReinforcementTuningAutoraterScorer.AutoraterConfig
+  nameWithType: ReinforcementTuningAutoraterScorer.AutoraterConfig
+- uid: Google.GenAI.Types.ReinforcementTuningAutoraterScorer.AutoraterConfig*
+  name: AutoraterConfig
+  href: api/Google.GenAI.Types.ReinforcementTuningAutoraterScorer.html#Google_GenAI_Types_ReinforcementTuningAutoraterScorer_AutoraterConfig_
+  commentId: Overload:Google.GenAI.Types.ReinforcementTuningAutoraterScorer.AutoraterConfig
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ReinforcementTuningAutoraterScorer.AutoraterConfig
+  nameWithType: ReinforcementTuningAutoraterScorer.AutoraterConfig
+- uid: Google.GenAI.Types.ReinforcementTuningAutoraterScorer.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ReinforcementTuningAutoraterScorer.html#Google_GenAI_Types_ReinforcementTuningAutoraterScorer_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ReinforcementTuningAutoraterScorer.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ReinforcementTuningAutoraterScorer.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ReinforcementTuningAutoraterScorer.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ReinforcementTuningAutoraterScorer.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ReinforcementTuningAutoraterScorer.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ReinforcementTuningAutoraterScorer.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ReinforcementTuningAutoraterScorer.html#Google_GenAI_Types_ReinforcementTuningAutoraterScorer_FromJson_
+  commentId: Overload:Google.GenAI.Types.ReinforcementTuningAutoraterScorer.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ReinforcementTuningAutoraterScorer.FromJson
+  nameWithType: ReinforcementTuningAutoraterScorer.FromJson
 - uid: Google.GenAI.Types.ReplayFile
   name: ReplayFile
   href: api/Google.GenAI.Types.ReplayFile.html
@@ -30299,6 +30569,41 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.SingleEmbedContentResponse.TokenCount
   nameWithType: SingleEmbedContentResponse.TokenCount
+- uid: Google.GenAI.Types.SingleReinforcementTuningRewardConfig
+  name: SingleReinforcementTuningRewardConfig
+  href: api/Google.GenAI.Types.SingleReinforcementTuningRewardConfig.html
+  commentId: T:Google.GenAI.Types.SingleReinforcementTuningRewardConfig
+  fullName: Google.GenAI.Types.SingleReinforcementTuningRewardConfig
+  nameWithType: SingleReinforcementTuningRewardConfig
+- uid: Google.GenAI.Types.SingleReinforcementTuningRewardConfig.AutoraterScorer
+  name: AutoraterScorer
+  href: api/Google.GenAI.Types.SingleReinforcementTuningRewardConfig.html#Google_GenAI_Types_SingleReinforcementTuningRewardConfig_AutoraterScorer
+  commentId: P:Google.GenAI.Types.SingleReinforcementTuningRewardConfig.AutoraterScorer
+  fullName: Google.GenAI.Types.SingleReinforcementTuningRewardConfig.AutoraterScorer
+  nameWithType: SingleReinforcementTuningRewardConfig.AutoraterScorer
+- uid: Google.GenAI.Types.SingleReinforcementTuningRewardConfig.AutoraterScorer*
+  name: AutoraterScorer
+  href: api/Google.GenAI.Types.SingleReinforcementTuningRewardConfig.html#Google_GenAI_Types_SingleReinforcementTuningRewardConfig_AutoraterScorer_
+  commentId: Overload:Google.GenAI.Types.SingleReinforcementTuningRewardConfig.AutoraterScorer
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SingleReinforcementTuningRewardConfig.AutoraterScorer
+  nameWithType: SingleReinforcementTuningRewardConfig.AutoraterScorer
+- uid: Google.GenAI.Types.SingleReinforcementTuningRewardConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.SingleReinforcementTuningRewardConfig.html#Google_GenAI_Types_SingleReinforcementTuningRewardConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.SingleReinforcementTuningRewardConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.SingleReinforcementTuningRewardConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.SingleReinforcementTuningRewardConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: SingleReinforcementTuningRewardConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: SingleReinforcementTuningRewardConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.SingleReinforcementTuningRewardConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.SingleReinforcementTuningRewardConfig.html#Google_GenAI_Types_SingleReinforcementTuningRewardConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.SingleReinforcementTuningRewardConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SingleReinforcementTuningRewardConfig.FromJson
+  nameWithType: SingleReinforcementTuningRewardConfig.FromJson
 - uid: Google.GenAI.Types.SlidingWindow
   name: SlidingWindow
   href: api/Google.GenAI.Types.SlidingWindow.html
@@ -34324,6 +34629,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.TuningMethod.PreferenceTuning
   nameWithType: TuningMethod.PreferenceTuning
+- uid: Google.GenAI.Types.TuningMethod.ReinforcementTuning
+  name: ReinforcementTuning
+  href: api/Google.GenAI.Types.TuningMethod.html#Google_GenAI_Types_TuningMethod_ReinforcementTuning
+  commentId: P:Google.GenAI.Types.TuningMethod.ReinforcementTuning
+  fullName: Google.GenAI.Types.TuningMethod.ReinforcementTuning
+  nameWithType: TuningMethod.ReinforcementTuning
+- uid: Google.GenAI.Types.TuningMethod.ReinforcementTuning*
+  name: ReinforcementTuning
+  href: api/Google.GenAI.Types.TuningMethod.html#Google_GenAI_Types_TuningMethod_ReinforcementTuning_
+  commentId: Overload:Google.GenAI.Types.TuningMethod.ReinforcementTuning
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TuningMethod.ReinforcementTuning
+  nameWithType: TuningMethod.ReinforcementTuning
 - uid: Google.GenAI.Types.TuningMethod.SupervisedFineTuning
   name: SupervisedFineTuning
   href: api/Google.GenAI.Types.TuningMethod.html#Google_GenAI_Types_TuningMethod_SupervisedFineTuning

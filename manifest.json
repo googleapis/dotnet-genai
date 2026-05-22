@@ -644,6 +644,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.AutoraterConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.AutoraterConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.AutoraterConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.AutoraterConfig.yml\" sourcestartlinenumber=\"1\">Autorater config used for evaluation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.AvatarConfig.yml",
       "output": {
         ".html": {
@@ -977,6 +991,34 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.CompletionStats",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CompletionStats.yml\" sourcestartlinenumber=\"1\">Success and error statistics of processing multiple entities (for example, DataItems or\nstructured data rows) in batch. This data type is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.CompositeReinforcementTuningRewardConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.CompositeReinforcementTuningRewardConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.CompositeReinforcementTuningRewardConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CompositeReinforcementTuningRewardConfig.yml\" sourcestartlinenumber=\"1\">Composite reinforcement tuning reward config.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.yml\" sourcestartlinenumber=\"1\">Composite reinforcement tuning reward config weighted reward config.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4746,6 +4788,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ReinforcementTuningAutoraterScorer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ReinforcementTuningAutoraterScorer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ReinforcementTuningAutoraterScorer",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningAutoraterScorer.yml\" sourcestartlinenumber=\"1\">Reinforcement tuning autorater scorer.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.ReplayFile.yml",
       "output": {
         ".html": {
@@ -5163,6 +5219,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.SingleEmbedContentResponse",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SingleEmbedContentResponse.yml\" sourcestartlinenumber=\"1\">Config for <code sourcefile=\"api/Google.GenAI.Types.SingleEmbedContentResponse.yml\" sourcestartlinenumber=\"1\">response</code> parameter.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.SingleReinforcementTuningRewardConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.SingleReinforcementTuningRewardConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.SingleReinforcementTuningRewardConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SingleReinforcementTuningRewardConfig.yml\" sourcestartlinenumber=\"1\">Single reinforcement tuning reward config.</p>\n"
     },
     {
       "type": "ManagedReference",
