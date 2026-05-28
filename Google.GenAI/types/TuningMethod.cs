@@ -48,9 +48,14 @@ namespace Google.GenAI.Types {
     /// </summary>
     public static TuningMethod Distillation { get; } = new("DISTILLATION");
 
+    /// <summary>
+    /// Reinforcement tuning.
+    /// </summary>
+    public static TuningMethod ReinforcementTuning { get; } = new("REINFORCEMENT_TUNING");
+
     public static IReadOnlyList<TuningMethod> AllValues {
       get;
-    } = new[] { SupervisedFineTuning, PreferenceTuning, Distillation };
+    } = new[] { SupervisedFineTuning, PreferenceTuning, Distillation, ReinforcementTuning };
 
     public static TuningMethod FromString(string value) {
       if (string.IsNullOrEmpty(value)) {

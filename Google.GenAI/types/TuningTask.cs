@@ -22,7 +22,7 @@ using System.Text.Json;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// The tuning task. Either I2V or T2V. This enum is not supported in Gemini API.
+  /// The tuning task for Veo. This enum is not supported in Gemini API.
   /// </summary>
 
   [JsonConverter(typeof(TuningTaskConverter))]

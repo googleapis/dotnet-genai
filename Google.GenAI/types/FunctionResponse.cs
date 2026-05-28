@@ -74,8 +74,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// The name of the function to call. Matches [FunctionDeclaration.name] and
-    /// [FunctionCall.name].
+    /// The name of the function to call. Matches FunctionDeclaration.name and FunctionCall.name.
     /// </summary>
     [JsonPropertyName("name")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

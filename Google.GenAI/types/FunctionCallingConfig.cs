@@ -29,8 +29,8 @@ namespace Google.GenAI.Types {
   public record FunctionCallingConfig {
     /// <summary>
     /// Optional. Function names to call. Only set when the Mode is ANY. Function names should match
-    /// [FunctionDeclaration.name]. With mode set to ANY, model will predict a function call from
-    /// the set of function names provided.
+    /// FunctionDeclaration.name. With mode set to ANY, model will predict a function call from the
+    /// set of function names provided.
     /// </summary>
     [JsonPropertyName("allowedFunctionNames")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -49,7 +49,7 @@ namespace Google.GenAI.Types {
     /// <summary>
     /// Optional. When set to true, arguments of a single function call will be streamed out in
     /// multiple parts/contents/responses. Partial parameter results will be returned in the
-    /// [FunctionCall.partial_args] field. This field is not supported in Gemini API.
+    /// `FunctionCall.partial_args` field. This field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("streamFunctionCallArguments")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

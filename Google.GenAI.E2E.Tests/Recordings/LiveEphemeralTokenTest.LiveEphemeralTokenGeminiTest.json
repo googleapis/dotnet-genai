@@ -1,0 +1,48 @@
+{
+  "recordID": "LiveEphemeralTokenTest.LiveEphemeralTokenGeminiTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1alpha/auth_tokens",
+        "request": "POST /v1alpha/auth_tokens HTTP/1.1",
+        "headers": {
+          "Content-Length": "97",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test-Name": "LiveEphemeralTokenTest.LiveEphemeralTokenGeminiTest"
+        },
+        "bodySegments": [
+          {
+            "bidiGenerateContentSetup": {
+              "model": "models/gemini-live-2.5-flash-preview"
+            },
+            "fieldMask": "model"
+          }
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "generativelanguage.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "20bd4eecba06d025e2e984aef861c2294998fadb40731c00f1d1db76d4ceb602",
+      "response": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=UTF-8",
+          "Date": "Fri, 24 Apr 2026 23:14:58 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Server-Timing": "gfet4t7; dur=90",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "name": "auth_tokens/bfff71cebf24306f9b118c4399f05061f7519395f9c750b79efdc3dae39b62af"
+          }
+        ]
+      }
+    }
+  ]
+}

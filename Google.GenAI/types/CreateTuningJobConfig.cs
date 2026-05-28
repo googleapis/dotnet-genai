@@ -35,8 +35,8 @@ namespace Google.GenAI.Types {
     public HttpOptions ? HttpOptions { get; set; }
 
     /// <summary>
-    /// The method to use for tuning (SUPERVISED_FINE_TUNING or PREFERENCE_TUNING or DISTILLATION).
-    /// If not set, the default method (SFT) will be used.
+    /// The method to use for tuning (SUPERVISED_FINE_TUNING or PREFERENCE_TUNING or DISTILLATION or
+    /// REINFORCEMENT_TUNING). If not set, the default method (SFT) will be used.
     /// </summary>
     [JsonPropertyName("method")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -139,7 +139,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Custom base model for tuning. This is only supported for OSS models in Vertex.
+    /// Custom base model for tuning. This is only supported for OSS models in Gemini Enterprise
+    /// Agent Platform.
     /// </summary>
     [JsonPropertyName("customBaseModel")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -149,7 +150,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// The batch size hyperparameter for tuning. This is only supported for OSS models in Vertex.
+    /// The batch size hyperparameter for tuning. This is only supported for OSS models in Gemini
+    /// Enterprise Agent Platform.
     /// </summary>
     [JsonPropertyName("batchSize")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -242,6 +244,67 @@ namespace Google.GenAI.Types {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public EncryptionSpec
         ? EncryptionSpec {
+            get; set;
+          }
+
+    /// <summary>
+    /// Reward function configuration for reinforcement tuning. Reinforcement tuning only.
+    /// </summary>
+    [JsonPropertyName("rewardConfig")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public SingleReinforcementTuningRewardConfig
+        ? RewardConfig {
+            get; set;
+          }
+
+    /// <summary>
+    /// Composite reward function configuration for reinforcement tuning. Reinforcement tuning only.
+    /// </summary>
+    [JsonPropertyName("compositeRewardConfig")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public CompositeReinforcementTuningRewardConfig
+        ? CompositeRewardConfig {
+            get; set;
+          }
+
+    /// <summary>
+    /// Number of different responses to generate per prompt during tuning. Reinforcement tuning
+    /// only.
+    /// </summary>
+    [JsonPropertyName("samplesPerPrompt")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public int
+        ? SamplesPerPrompt {
+            get; set;
+          }
+
+    /// <summary>
+    /// How often at steps to evaluate the tuning job during training. Reinforcement tuning only.
+    /// </summary>
+    [JsonPropertyName("evaluateInterval")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public int
+        ? EvaluateInterval {
+            get; set;
+          }
+
+    /// <summary>
+    /// How often at steps to save checkpoints during training. Reinforcement tuning only.
+    /// </summary>
+    [JsonPropertyName("checkpointInterval")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public int
+        ? CheckpointInterval {
+            get; set;
+          }
+
+    /// <summary>
+    /// The maximum number of tokens to generate per prompt. Reinforcement tuning only.
+    /// </summary>
+    [JsonPropertyName("maxOutputTokens")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public int
+        ? MaxOutputTokens {
             get; set;
           }
 

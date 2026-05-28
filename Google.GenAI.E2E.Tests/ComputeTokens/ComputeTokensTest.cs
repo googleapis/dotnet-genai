@@ -118,7 +118,7 @@ public class ComputeTokensTest {
         model: modelName, contents: contents, config: null);
     });
 
-    StringAssert.Contains(ex.Message, "only supported in the Vertex AI");
+    StringAssert.Contains(ex.Message, "only supported in Gemini Enterprise Agent Platform mode");
   }
 
   [TestMethod]

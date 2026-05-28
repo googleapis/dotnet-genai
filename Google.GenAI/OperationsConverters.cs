@@ -36,15 +36,18 @@ namespace Google.GenAI {
       JsonObject toObject = new JsonObject();
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "operationName" }))) {
-        throw new NotSupportedException("operationName parameter is not supported in Gemini API.");
+        throw new NotSupportedException(
+            "operationName parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
       }
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "resourceName" }))) {
-        throw new NotSupportedException("resourceName parameter is not supported in Gemini API.");
+        throw new NotSupportedException(
+            "resourceName parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
       }
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "config" }))) {
-        throw new NotSupportedException("config parameter is not supported in Gemini API.");
+        throw new NotSupportedException(
+            "config parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
       }
 
       return toObject;

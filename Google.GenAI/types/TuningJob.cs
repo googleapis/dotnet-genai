@@ -337,22 +337,32 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Optional. Spec for creating a distillation dataset.
-    /// </summary>
-    [JsonPropertyName("distillationSamplingSpec")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public DistillationSamplingSpec
-        ? DistillationSamplingSpec {
-            get; set;
-          }
-
-    /// <summary>
     /// Output only. Tuning Job metadata.
     /// </summary>
     [JsonPropertyName("tuningJobMetadata")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public TuningJobMetadata
         ? TuningJobMetadata {
+            get; set;
+          }
+
+    /// <summary>
+    /// Tuning Spec for Veo LoRA Tuning.
+    /// </summary>
+    [JsonPropertyName("veoLoraTuningSpec")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public VeoLoraTuningSpec
+        ? VeoLoraTuningSpec {
+            get; set;
+          }
+
+    /// <summary>
+    ///
+    /// </summary>
+    [JsonPropertyName("distillationSamplingSpec")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public DistillationSamplingSpec
+        ? DistillationSamplingSpec {
             get; set;
           }
 

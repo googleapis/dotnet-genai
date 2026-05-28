@@ -23,20 +23,19 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Hyperparameters for distillation.
+  /// Distillation hyperparameters for tuning.
   /// </summary>
 
   public record DistillationHyperParameters {
     /// <summary>
-    /// Optional. Adapter size for distillation.
+    /// The size of the adapter. Can be 'small', 'medium', or 'large'.
     /// </summary>
     [JsonPropertyName("adapterSize")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public AdapterSize ? AdapterSize { get; set; }
 
     /// <summary>
-    /// Optional. Number of complete passes the model makes over the entire training dataset during
-    /// training.
+    /// Number of complete passes the model makes over the entire training dataset during training.
     /// </summary>
     [JsonPropertyName("epochCount")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -47,7 +46,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Optional. Multiplier for adjusting the default learning rate.
+    /// Multiplier for adjusting the default learning rate.
     /// </summary>
     [JsonPropertyName("learningRateMultiplier")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -57,22 +56,34 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// The batch size hyperparameter for tuning. This is only supported for OSS models in Vertex.
+    /// Generation config for Distillation teacher model sampling. Only the following fields are
+    /// supported for distillation teacher samplings: - temperature - top_p - top_k -
+    /// candidate_count - thinking_config
     /// </summary>
-    [JsonPropertyName("batchSize")]
+    [JsonPropertyName("generationConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public int
-        ? BatchSize {
+    public GenerationConfig
+        ? GenerationConfig {
             get; set;
           }
 
     /// <summary>
-    /// The learning rate for tuning. OSS models only.
+    /// The learning rate for distillation tuning.
     /// </summary>
     [JsonPropertyName("learningRate")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
         ? LearningRate {
+            get; set;
+          }
+
+    /// <summary>
+    /// Batch size for tuning. This feature is only available for open source models.
+    /// </summary>
+    [JsonPropertyName("batchSize")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public int
+        ? BatchSize {
             get; set;
           }
 

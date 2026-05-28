@@ -86,7 +86,7 @@ public class FilesListTest
          await vertexClient.Files.ListAsync();
        });
 
-       StringAssert.Contains(ex.Message, "This method is only supported in the Gemini Developer API client");
+       StringAssert.Contains(ex.Message, "This method is only supported in Gemini Developer API mode");
     }
 
     [TestMethod]

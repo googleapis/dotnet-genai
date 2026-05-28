@@ -28,21 +28,11 @@ namespace Google.GenAI.Types {
 
   public record EmbedContentConfig {
     /// <summary>
-    /// Used to override HTTP request options.
-    /// </summary>
-    [JsonPropertyName("httpOptions")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public HttpOptions ? HttpOptions { get; set; }
-
-    /// <summary>
     /// Type of task for which the embedding will be used.
     /// </summary>
     [JsonPropertyName("taskType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string
-        ? TaskType {
-            get; set;
-          }
+    public string ? TaskType { get; set; }
 
     /// <summary>
     /// Title for the text. Only applicable when TaskType is `RETRIEVAL_DOCUMENT`.
@@ -67,7 +57,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Vertex API only. The MIME type of the input.
+    /// Gemini Enterprise Agent Platform only. The MIME type of the input.
     /// </summary>
     [JsonPropertyName("mimeType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -77,14 +67,46 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Vertex API only. Whether to silently truncate inputs longer than the max sequence length. If
-    /// this option is set to false, oversized inputs will lead to an INVALID_ARGUMENT error,
-    /// similar to other text APIs.
+    /// Gemini Enterprise Agent Platform only. Whether to silently truncate inputs longer than the
+    /// max sequence length. If this option is set to false, oversized inputs will lead to an
+    /// INVALID_ARGUMENT error, similar to other text APIs.
     /// </summary>
     [JsonPropertyName("autoTruncate")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool
         ? AutoTruncate {
+            get; set;
+          }
+
+    /// <summary>
+    /// Gemini Enterprise Agent Platform only. Whether to enable OCR for document content. Only
+    /// applicable to Gemini Embedding 2 models.
+    /// </summary>
+    [JsonPropertyName("documentOcr")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public bool
+        ? DocumentOcr {
+            get; set;
+          }
+
+    /// <summary>
+    /// Gemini Enterprise Agent Platform only. Whether to extract audio from video content. Only
+    /// applicable to Gemini Embedding 2 models.
+    /// </summary>
+    [JsonPropertyName("audioTrackExtraction")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public bool
+        ? AudioTrackExtraction {
+            get; set;
+          }
+
+    /// <summary>
+    /// Used to override HTTP request options.
+    /// </summary>
+    [JsonPropertyName("httpOptions")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public HttpOptions
+        ? HttpOptions {
             get; set;
           }
 

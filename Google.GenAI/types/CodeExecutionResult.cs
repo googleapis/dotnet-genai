@@ -23,8 +23,7 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Result of executing the `ExecutableCode`.  Generated only when the `CodeExecution` tool is
-  /// used.
+  /// Result of executing the ExecutableCode. Generated only when the `CodeExecution` tool is used.
   /// </summary>
 
   public record CodeExecutionResult {
@@ -47,8 +46,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// The identifier of the `ExecutableCode` part this result is for. Only populated if the
-    /// corresponding `ExecutableCode` has an id.
+    /// Optional. The identifier of the `ExecutableCode` part this result is for. Only populated if
+    /// the corresponding `ExecutableCode` has an id. This field is not supported in Vertex AI.
     /// </summary>
     [JsonPropertyName("id")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

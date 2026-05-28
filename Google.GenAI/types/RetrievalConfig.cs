@@ -28,7 +28,7 @@ namespace Google.GenAI.Types {
 
   public record RetrievalConfig {
     /// <summary>
-    /// Optional. The location of the user.
+    /// The location of the user.
     /// </summary>
     [JsonPropertyName("latLng")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

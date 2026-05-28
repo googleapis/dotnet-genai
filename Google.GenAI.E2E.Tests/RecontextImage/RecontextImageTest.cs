@@ -31,7 +31,6 @@ public class RecontextImageTest {
   private static TestServerProcess? _server;
   private Client vertexClient;
   private Client geminiClient;
-  private string productRecontextModel;
   private string virtualTryOnModel;
   public TestContext TestContext { get; set; }
 
@@ -72,99 +71,7 @@ public class RecontextImageTest {
         new Client(apiKey: apiKey, vertexAI: false, httpOptions: geminiClientHttpOptions);
 
     // Specific setup for this test class
-    productRecontextModel = "imagen-product-recontext-preview-06-30";
     virtualTryOnModel = "virtual-try-on-001";
-  }
-
-  [TestMethod]
-  public async Task RecontextImageGeminiTest() {
-    List<ProductImage> productImages = new List<ProductImage>();
-
-    var ex = await Assert.ThrowsExceptionAsync<NotSupportedException>(async () => {
-      await geminiClient.Models.RecontextImageAsync(
-        model: productRecontextModel,
-        source: new RecontextImageSource {
-          Prompt = "On a school desk",
-          ProductImages = productImages,
-        },
-        config: null);
-    });
-
-    StringAssert.Contains(ex.Message, "only supported in the Vertex AI client");
-  }
-
-  [TestMethod]
-  public async Task RecontextImageVertexTest() {
-    List<ProductImage> productImages = new List<ProductImage>();
-
-    productImages.Add(new ProductImage {
-      ProductImageField = new Image {
-        GcsUri = "gs://genai-sdk-tests/inputs/images/backpack1.png"
-      }
-    });
-    var recontextImageConfig = new RecontextImageConfig {
-      NumberOfImages = 1,
-      AddWatermark = true,
-      OutputMimeType = "image/jpeg",
-      Labels = new Dictionary<string, string> { ["imagen_label_key"] = "recontext_image" },
-    };
-
-    var recontextImageResponse = await vertexClient.Models.RecontextImageAsync(
-        model: productRecontextModel,
-        source: new RecontextImageSource {
-          Prompt = "On a school desk",
-          ProductImages = productImages,
-        },
-        config: recontextImageConfig);
-
-    Assert.IsNotNull(recontextImageResponse.GeneratedImages);
-    Assert.AreEqual(recontextImageResponse.GeneratedImages.Count, 1, "Expected 1 generated image.");
-    Assert.IsNotNull(recontextImageResponse.GeneratedImages.First().Image.ImageBytes);
-  }
-
-  [TestMethod]
-  public async Task RecontextImageAllConfigVertexTest() {
-    List<ProductImage> productImages = new List<ProductImage>();
-
-    productImages.Add(new ProductImage {
-      ProductImageField = new Image {
-        GcsUri = "gs://genai-sdk-tests/inputs/images/backpack1.png"
-      }
-    });
-    productImages.Add(new ProductImage {
-      ProductImageField = new Image {
-        GcsUri = "gs://genai-sdk-tests/inputs/images/backpack2.png"
-      }
-    });
-    productImages.Add(new ProductImage {
-      ProductImageField = new Image {
-        GcsUri = "gs://genai-sdk-tests/inputs/images/backpack3.png"
-      }
-    });
-    var recontextImageConfig = new RecontextImageConfig {
-      NumberOfImages = 1,
-      OutputMimeType = "image/jpeg",
-      BaseSteps = 32,
-      Seed = 1337,
-      AddWatermark = false,
-      SafetyFilterLevel = SafetyFilterLevel.BlockMediumAndAbove,
-      PersonGeneration = PersonGeneration.AllowAdult,
-      OutputCompressionQuality = 75,
-      EnhancePrompt = false,
-      Labels = new Dictionary<string, string> { ["imagen_label_key"] = "recontext_image" },
-    };
-
-    var recontextImageResponse = await vertexClient.Models.RecontextImageAsync(
-        model: productRecontextModel,
-        source: new RecontextImageSource {
-          Prompt = "On a school desk",
-          ProductImages = productImages,
-        },
-        config: recontextImageConfig);
-
-    Assert.IsNotNull(recontextImageResponse.GeneratedImages);
-    Assert.AreEqual(recontextImageResponse.GeneratedImages.Count, 1, "Expected 1 generated image.");
-    Assert.IsNotNull(recontextImageResponse.GeneratedImages.First().Image.ImageBytes);
   }
 
   [TestMethod]

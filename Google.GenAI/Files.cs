@@ -196,7 +196,7 @@ namespace Google.GenAI {
       string path;
       if (this._apiClient.VertexAI) {
         throw new NotSupportedException(
-            "This method is only supported in the Gemini Developer API client.");
+            "This method is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       } else {
         body = ListFilesParametersToMldev(parameterNode, new JsonObject());
         path = Common.FormatMap("files", body["_url"]);
@@ -228,7 +228,7 @@ namespace Google.GenAI {
 
       if (this._apiClient.VertexAI) {
         throw new NotSupportedException(
-            "This method is only supported in the Gemini Developer API client.");
+            "This method is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       }
 
       if (!this._apiClient.VertexAI) {
@@ -260,7 +260,7 @@ namespace Google.GenAI {
       string path;
       if (this._apiClient.VertexAI) {
         throw new NotSupportedException(
-            "This method is only supported in the Gemini Developer API client.");
+            "This method is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       } else {
         body = CreateFileParametersToMldev(parameterNode, new JsonObject());
         path = Common.FormatMap("upload/v1beta/files", body["_url"]);
@@ -309,7 +309,7 @@ namespace Google.GenAI {
 
       if (this._apiClient.VertexAI) {
         throw new NotSupportedException(
-            "This method is only supported in the Gemini Developer API client.");
+            "This method is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       }
 
       if (!this._apiClient.VertexAI) {
@@ -340,7 +340,7 @@ namespace Google.GenAI {
       string path;
       if (this._apiClient.VertexAI) {
         throw new NotSupportedException(
-            "This method is only supported in the Gemini Developer API client.");
+            "This method is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       } else {
         body = GetFileParametersToMldev(parameterNode, new JsonObject());
         path = Common.FormatMap("files/{file}", body["_url"]);
@@ -372,7 +372,7 @@ namespace Google.GenAI {
 
       if (this._apiClient.VertexAI) {
         throw new NotSupportedException(
-            "This method is only supported in the Gemini Developer API client.");
+            "This method is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       }
 
       if (!this._apiClient.VertexAI) {
@@ -405,7 +405,7 @@ namespace Google.GenAI {
       string path;
       if (this._apiClient.VertexAI) {
         throw new NotSupportedException(
-            "This method is only supported in the Gemini Developer API client.");
+            "This method is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       } else {
         body = DeleteFileParametersToMldev(parameterNode, new JsonObject());
         path = Common.FormatMap("files/{file}", body["_url"]);
@@ -437,7 +437,7 @@ namespace Google.GenAI {
 
       if (this._apiClient.VertexAI) {
         throw new NotSupportedException(
-            "This method is only supported in the Gemini Developer API client.");
+            "This method is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       }
 
       if (!this._apiClient.VertexAI) {
@@ -470,7 +470,7 @@ namespace Google.GenAI {
       string path;
       if (this._apiClient.VertexAI) {
         throw new NotSupportedException(
-            "This method is only supported in the Gemini Developer API client.");
+            "This method is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       } else {
         body = InternalRegisterFilesParametersToMldev(parameterNode, new JsonObject());
         path = Common.FormatMap("files:register", body["_url"]);
@@ -519,7 +519,7 @@ namespace Google.GenAI {
 
       if (this._apiClient.VertexAI) {
         throw new NotSupportedException(
-            "This method is only supported in the Gemini Developer API client.");
+            "This method is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       }
 
       if (!this._apiClient.VertexAI) {
@@ -562,7 +562,7 @@ namespace Google.GenAI {
         CancellationToken cancellationToken = default) {
       if (this._apiClient.VertexAI) {
         throw new NotSupportedException(
-            "This method is only supported in the Gemini Developer API client.");
+            "This method is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       }
       if (uris == null)
         throw new ArgumentNullException(nameof(uris));
@@ -609,7 +609,7 @@ namespace Google.GenAI {
         CancellationToken cancellationToken = default) {
       if (this._apiClient.VertexAI) {
         throw new NotSupportedException(
-            "This method is only supported in the Gemini Developer API client.");
+            "This method is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       }
       var fileInfo = new FileInfo(filePath);
       using var stream = fileInfo.OpenRead();
@@ -634,7 +634,7 @@ namespace Google.GenAI {
         CancellationToken cancellationToken = default) {
       if (this._apiClient.VertexAI) {
         throw new NotSupportedException(
-            "This method is only supported in the Gemini Developer API client.");
+            "This method is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       }
       using var stream = new MemoryStream(bytes);
       return await UploadAsync(stream, bytes.Length, fileName, null, config, cancellationToken);
@@ -657,7 +657,7 @@ namespace Google.GenAI {
         UploadFileConfig? config = null, CancellationToken cancellationToken = default) {
       if (this._apiClient.VertexAI) {
         throw new NotSupportedException(
-            "This method is only supported in the Gemini Developer API client.");
+            "This method is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       }
       string uploadUrl =
           await CreateFileInApiAsync(config, mimeType, fileName, size, cancellationToken);
@@ -680,7 +680,7 @@ namespace Google.GenAI {
                                             CancellationToken cancellationToken = default) {
       if (this._apiClient.VertexAI) {
         throw new NotSupportedException(
-            "This method is only supported in the Gemini Developer API client.");
+            "This method is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       }
       string extractedFileName = Transformers.TFileName(fileName);
       return await DownloadStreamAsync(extractedFileName, config, cancellationToken);
@@ -701,7 +701,7 @@ namespace Google.GenAI {
                                             CancellationToken cancellationToken = default) {
       if (this._apiClient.VertexAI) {
         throw new NotSupportedException(
-            "This method is only supported in the Gemini Developer API client.");
+            "This method is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       }
       if (string.IsNullOrEmpty(file.Name))
         throw new ArgumentException("File.Name is required", nameof(file));
@@ -723,7 +723,7 @@ namespace Google.GenAI {
                                             CancellationToken cancellationToken = default) {
       if (this._apiClient.VertexAI) {
         throw new NotSupportedException(
-            "This method is only supported in the Gemini Developer API client.");
+            "This method is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       }
       if (string.IsNullOrEmpty(video.Uri))
         throw new ArgumentException("Video.Uri is required", nameof(video));
@@ -746,7 +746,7 @@ namespace Google.GenAI {
                                             CancellationToken cancellationToken = default) {
       if (this._apiClient.VertexAI) {
         throw new NotSupportedException(
-            "This method is only supported in the Gemini Developer API client.");
+            "This method is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       }
       if (generatedVideo.Video == null)
         throw new ArgumentException("Video is empty", nameof(generatedVideo));
@@ -768,7 +768,7 @@ namespace Google.GenAI {
                                           CancellationToken cancellationToken = default) {
       if (this._apiClient.VertexAI) {
         throw new NotSupportedException(
-            "This method is only supported in the Gemini Developer API client.");
+            "This method is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       }
       using var stream = await DownloadAsync(fileName, config, cancellationToken);
       using var fileStream =
@@ -796,7 +796,7 @@ namespace Google.GenAI {
                                           CancellationToken cancellationToken = default) {
       if (this._apiClient.VertexAI) {
         throw new NotSupportedException(
-            "This method is only supported in the Gemini Developer API client.");
+            "This method is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       }
       if (string.IsNullOrEmpty(file.Name))
         throw new ArgumentException("Google.GenAI.Types.File.Name is required", nameof(file));
@@ -818,7 +818,7 @@ namespace Google.GenAI {
                                           CancellationToken cancellationToken = default) {
       if (this._apiClient.VertexAI) {
         throw new NotSupportedException(
-            "This method is only supported in the Gemini Developer API client.");
+            "This method is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       }
       if (generatedVideo.Video == null)
         throw new ArgumentException("Video is empty", nameof(generatedVideo));
@@ -840,7 +840,7 @@ namespace Google.GenAI {
                                           CancellationToken cancellationToken = default) {
       if (this._apiClient.VertexAI) {
         throw new NotSupportedException(
-            "This method is only supported in the Gemini Developer API client.");
+            "This method is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       }
       if (string.IsNullOrEmpty(video.Uri))
         throw new ArgumentException("Video.Uri is required", nameof(video));

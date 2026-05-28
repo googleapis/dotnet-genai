@@ -47,7 +47,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Optional. The tuning task. Either I2V or T2V.
+    /// The tuning task for Veo.
     /// </summary>
     [JsonPropertyName("tuningTask")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -65,6 +65,26 @@ namespace Google.GenAI.Types {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double
         ? VeoDataMixtureRatio {
+            get; set;
+          }
+
+    /// <summary>
+    /// Optional. The adapter size for LoRA tuning.
+    /// </summary>
+    [JsonPropertyName("adapterSize")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public AdapterSize
+        ? AdapterSize {
+            get; set;
+          }
+
+    /// <summary>
+    /// The speed of the tuning job. Only supported for Veo 3.0 models.
+    /// </summary>
+    [JsonPropertyName("tuningSpeed")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public TuningSpeed
+        ? TuningSpeed {
             get; set;
           }
 

@@ -23,13 +23,12 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Spec for creating a distilled dataset in Vertex Dataset. This data type is not supported in
-  /// Gemini API.
+  /// Distillation sampling spec for tuning.
   /// </summary>
 
   public record DistillationSamplingSpec {
     /// <summary>
-    /// Optional. The base teacher model that is being distilled. See Supported models
+    /// The base teacher model that is being distilled. See Supported models
     /// (https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/tuning#supported_models).
     /// </summary>
     [JsonPropertyName("baseTeacherModel")]
@@ -37,7 +36,7 @@ namespace Google.GenAI.Types {
     public string ? BaseTeacherModel { get; set; }
 
     /// <summary>
-    /// Optional. The resource name of the Tuned teacher model. Format:
+    /// The resource name of the Tuned teacher model. Format:
     /// `projects/{project}/locations/{location}/models/{model}`.
     /// </summary>
     [JsonPropertyName("tunedTeacherModelSource")]
@@ -48,13 +47,34 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Optional. Cloud Storage path to file containing validation dataset for distillation. The
-    /// dataset must be formatted as a JSONL file.
+    /// Cloud Storage path to file containing validation dataset for distillation. The dataset must
+    /// be formatted as a JSONL file.
     /// </summary>
     [JsonPropertyName("validationDatasetUri")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
         ? ValidationDatasetUri {
+            get; set;
+          }
+
+    /// <summary>
+    /// Cloud Storage path to file containing prompt dataset for distillation. The dataset must be
+    /// formatted as a JSONL file.
+    /// </summary>
+    [JsonPropertyName("promptDatasetUri")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string
+        ? PromptDatasetUri {
+            get; set;
+          }
+
+    /// <summary>
+    /// Hyperparameters for distillation tuning.
+    /// </summary>
+    [JsonPropertyName("hyperparameters")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public DistillationHyperParameters
+        ? Hyperparameters {
             get; set;
           }
 

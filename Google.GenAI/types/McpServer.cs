@@ -24,7 +24,7 @@ using Google.GenAI.Serialization;
 namespace Google.GenAI.Types {
   /// <summary>
   /// A MCPServer is a server that can be called by the model to perform actions. It is a server
-  /// that implements the MCP protocol. Next ID: 5. This data type is not supported in Vertex AI.
+  /// that implements the MCP protocol. Next ID: 6. This data type is not supported in Vertex AI.
   /// </summary>
 
   public record McpServer {

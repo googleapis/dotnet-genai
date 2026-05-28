@@ -46,6 +46,26 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// The ID of the chunk.
+    /// </summary>
+    [JsonPropertyName("chunkId")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string
+        ? ChunkId {
+            get; set;
+          }
+
+    /// <summary>
+    /// The ID of the file that the chunk belongs to.
+    /// </summary>
+    [JsonPropertyName("fileId")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string
+        ? FileId {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a RagChunk object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

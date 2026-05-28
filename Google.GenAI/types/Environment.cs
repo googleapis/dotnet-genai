@@ -43,9 +43,19 @@ namespace Google.GenAI.Types {
     /// </summary>
     public static Environment EnvironmentBrowser { get; } = new("ENVIRONMENT_BROWSER");
 
+    /// <summary>
+    /// Operates in a mobile environment.
+    /// </summary>
+    public static Environment EnvironmentMobile { get; } = new("ENVIRONMENT_MOBILE");
+
+    /// <summary>
+    /// Operates in a desktop environment.
+    /// </summary>
+    public static Environment EnvironmentDesktop { get; } = new("ENVIRONMENT_DESKTOP");
+
     public static IReadOnlyList<Environment> AllValues {
       get;
-    } = new[] { EnvironmentUnspecified, EnvironmentBrowser };
+    } = new[] { EnvironmentUnspecified, EnvironmentBrowser, EnvironmentMobile, EnvironmentDesktop };
 
     public static Environment FromString(string value) {
       if (string.IsNullOrEmpty(value)) {

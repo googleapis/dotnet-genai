@@ -41,7 +41,7 @@ namespace Google.GenAI.Types {
 
     /// <summary>
     /// The name of the function to call. Must start with a letter or an underscore. Must be a-z,
-    /// A-Z, 0-9, or contain underscores, dots, colons and dashes, with a maximum length of 64.
+    /// A-Z, 0-9, or contain underscores, dots, colons and dashes, with a maximum length of 128.
     /// </summary>
     [JsonPropertyName("name")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -105,8 +105,9 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Optional. Specifies the function Behavior. Currently only supported by the
-    /// BidiGenerateContent method. This field is not supported in Vertex AI.
+    /// Optional. Specifies the function Behavior. Currently only non-blocking functions are
+    /// supported. If not specified, the system keeps the current function call behavior. This field
+    /// is currently only supported by the BidiGenerateContent method.
     /// </summary>
     [JsonPropertyName("behavior")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

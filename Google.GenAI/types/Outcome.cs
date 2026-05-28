@@ -39,18 +39,18 @@ namespace Google.GenAI.Types {
     public static Outcome OutcomeUnspecified { get; } = new("OUTCOME_UNSPECIFIED");
 
     /// <summary>
-    /// Code execution completed successfully.
+    /// Code execution completed successfully. `output` contains the stdout, if any.
     /// </summary>
     public static Outcome OutcomeOk { get; } = new("OUTCOME_OK");
 
     /// <summary>
-    /// Code execution finished but with a failure. `stderr` should contain the reason.
+    /// Code execution failed. `output` contains the stderr and stdout, if any.
     /// </summary>
     public static Outcome OutcomeFailed { get; } = new("OUTCOME_FAILED");
 
     /// <summary>
-    /// Code execution ran for too long, and was cancelled. There may or may not be a partial output
-    /// present.
+    /// Code execution ran for too long, and was cancelled. There may or may not be a partial
+    /// `output` present.
     /// </summary>
     public static Outcome OutcomeDeadlineExceeded { get; } = new("OUTCOME_DEADLINE_EXCEEDED");
 

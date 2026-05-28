@@ -85,13 +85,15 @@ namespace Google.GenAI
   public class HttpApiClient : ApiClient
   {
     public HttpApiClient(
+        bool? enterprise = null,
         bool? vertexAI = null,
         string? apiKey = null,
         string? project = null,
         string? location = null,
         ICredential? credentials = null,
-        Types.HttpOptions? httpOptions = null
-    ) : base(vertexAI, apiKey, project, location, credentials, httpOptions) { }
+        Types.HttpOptions? httpOptions = null,
+        Types.ClientOptions? clientOptions = null
+    ) : base(enterprise, vertexAI, apiKey, project, location, credentials, httpOptions, clientOptions) { }
 
     public override async Task<ApiResponse> RequestAsync(
         HttpMethod httpMethod,
@@ -298,7 +300,7 @@ namespace Google.GenAI
       response.EnsureSuccessStatusCode();
     }
 
-    private static readonly Regex ResponseLineRegex = new Regex(@"^data: (.*?)(?:\r\n\r\n|\n\n|\r\r)", RegexOptions.Singleline | RegexOptions.Compiled);
+    private static readonly Regex ResponseLineRegex = new Regex(@"^data: ?(.*?)(?:\r\n\r\n|\n\n|\r\r)", RegexOptions.Singleline | RegexOptions.Compiled);
 
     private async IAsyncEnumerable<string> ProcessStreamResponse(Stream stream,
         [EnumeratorCancellation] CancellationToken cancellationToken = default)
@@ -334,6 +336,7 @@ namespace Google.GenAI
           while (match.Success)
           {
             string processedChunkString = match.Groups[1].Value;
+            processedChunkString = Regex.Replace(processedChunkString, @"\r?\ndata: ?", "\n");
 
             string? validatedChunk = ValidateChunk(processedChunkString);
             if (validatedChunk != null)

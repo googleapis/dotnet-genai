@@ -28,7 +28,8 @@ namespace Google.GenAI.Types {
 
   public record DistillationSpec {
     /// <summary>
-    /// The GCS URI of the prompt dataset to use during distillation.
+    /// Optional. Cloud Storage path to file containing prompt dataset for distillation. The dataset
+    /// must be formatted as a JSONL file.
     /// </summary>
     [JsonPropertyName("promptDatasetUri")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -112,7 +113,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Tuning mode for tuning.
+    /// Optional. Specifies the tuning mode for distillation (sft part). This feature is only
+    /// available for open source models.
     /// </summary>
     [JsonPropertyName("tuningMode")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

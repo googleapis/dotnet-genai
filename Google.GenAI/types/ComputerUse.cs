@@ -48,6 +48,16 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Optional. Whether enable the prompt injection detection check on computer-use request.
+    /// </summary>
+    [JsonPropertyName("enablePromptInjectionDetection")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public bool
+        ? EnablePromptInjectionDetection {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a ComputerUse object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

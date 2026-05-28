@@ -23,7 +23,7 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Tool config.  This config is shared for all tools provided in the request.
+  /// Tool config. This config is shared for all tools provided in the request.
   /// </summary>
 
   public record ToolConfig {
@@ -45,8 +45,9 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// If true, the API response will include the server-side tool calls and responses within the
-    /// `Content` message. This allows clients to observe the server's tool invocations.
+    /// Optional. If true, the API response will include the server-side tool calls and responses
+    /// within the `Content` message. This allows clients to observe the server's tool interactions.
+    /// This field is not supported in Vertex AI.
     /// </summary>
     [JsonPropertyName("includeServerSideToolInvocations")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
