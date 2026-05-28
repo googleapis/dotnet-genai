@@ -56,6 +56,27 @@ public sealed class GoogleGenAIRealtimeClient : IRealtimeClient
     _defaultModelId = defaultModelId;
   }
 
+  /// <summary>Initializes a new instance using Vertex AI with a project and location.</summary>
+  /// <param name="project">The Google Cloud project ID.</param>
+  /// <param name="location">The Google Cloud location (e.g. "us-central1").</param>
+  /// <param name="defaultModelId">The default model to use for realtime sessions.</param>
+  /// <exception cref="ArgumentNullException"><paramref name="project"/> or <paramref name="location"/> is <see langword="null"/> or empty.</exception>
+  public GoogleGenAIRealtimeClient(string project, string location, string? defaultModelId = null)
+  {
+    if (string.IsNullOrEmpty(project))
+    {
+      throw new ArgumentNullException(nameof(project));
+    }
+
+    if (string.IsNullOrEmpty(location))
+    {
+      throw new ArgumentNullException(nameof(location));
+    }
+
+    _client = new Client(vertexAI: true, project: project, location: location);
+    _defaultModelId = defaultModelId;
+  }
+
   /// <inheritdoc />
   public async Task<IRealtimeClientSession> CreateSessionAsync(
     RealtimeSessionOptions? options = null,
