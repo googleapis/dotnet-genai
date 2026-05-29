@@ -26,7 +26,7 @@ namespace Google.GenAI.Types {
   /// Config for stream translation.
   /// </summary>
 
-  public record StreamTranslationConfig {
+  public record StreamingTranslationConfig {
     /// <summary>
     /// If true, the model will generate audio when the target language is spoken, essentially it
     /// will parrot the input. If false, we will not produce audio for the target language.
@@ -47,16 +47,16 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Deserializes a JSON string to a StreamTranslationConfig object.
+    /// Deserializes a JSON string to a StreamingTranslationConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized StreamTranslationConfig object, or null if deserialization
+    /// <returns>The deserialized StreamingTranslationConfig object, or null if deserialization
     /// fails.</returns>
-    public static StreamTranslationConfig
+    public static StreamingTranslationConfig
         ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<StreamTranslationConfig>(jsonString, options);
+        return JsonSerializer.Deserialize<StreamingTranslationConfig>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
