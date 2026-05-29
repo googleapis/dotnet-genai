@@ -290,12 +290,16 @@ IChatClient chatClient = new Client().AsIChatClient("gemini-2.0-flash")
 
 ChatOptions options = new()
 {
-    Tools = [AIFunctionFactory.Create(([Description("The name of the person whose age is to be retrieved")] string personName) => personName switch
-    {
-        "Alice" => 30,
-        "Bob" => 25,
-        _ => 35
-    }, "get_person_age", "Gets the age of the specified person");
+    Tools = [AIFunctionFactory.Create(
+        method: ([Description("The name of the person whose age is to be retrieved")] string personName) => personName switch
+        {
+            "Alice" => 30,
+            "Bob" => 25,
+            _ => 35
+        },
+        name: "get_person_age",
+        description: "Gets the age of the specified person")
+    ]
 };
 
 await foreach (var update in chatClient.GetStreamingResponseAsync("How much older is Alice than Bob?", options))

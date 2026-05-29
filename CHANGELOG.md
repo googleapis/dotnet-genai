@@ -1,5 +1,15 @@
 # Changelog
 
+## Version 1.8.0, released 2026-05-28
+
+
+### New features
+
+* additional computer_use field support for vertex. ([3c16fcd](https://github.com/googleapis/dotnet-genai/commit/3c16fcd26974efbe8cae3a492d480a320c9316f7))
+* Support Reinforcement Tuning in GenAI SDK ([c74822e](https://github.com/googleapis/dotnet-genai/commit/c74822eef68cf0a3581fbb20ac5270bdc738f2d6))
+* Update to Microsoft.Extensions.AI.Abstractions 10.6.0 ([81236bc](https://github.com/googleapis/dotnet-genai/commit/81236bc9f04d776dcb13a88d9ec3fca392edd557))
+* Update to Microsoft.Extensions.AI.Abstractions 10.6.0 ([81236bc](https://github.com/googleapis/dotnet-genai/commit/81236bc9f04d776dcb13a88d9ec3fca392edd557))
+
 ## Version 1.7.0, released 2026-05-21
 
 
