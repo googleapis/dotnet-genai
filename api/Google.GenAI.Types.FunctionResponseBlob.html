@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class FunctionResponseBlob | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Raw media bytes for function response.  Text should not be sent as raw bytes, use the FunctionResponse.response field.">
+      <meta name="description" content="Raw media bytes for function response. Text should not be sent as raw bytes, use the &#39;text&#39; field.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -93,8 +93,8 @@ Class FunctionResponseBlob  <a class="header-action link-secondary" title="View 
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Raw media bytes for function response.  Text should not be sent as raw bytes, use the
-FunctionResponse.response field.</p>
+  <div class="markdown summary"><p>Raw media bytes for function response. Text should not be sent as raw bytes, use the 'text'
+field.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -163,7 +163,7 @@ FunctionResponse.response field.</p>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseBlob.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Inline media bytes.</p>
+  <div class="markdown level1 summary"><p>Raw bytes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -194,11 +194,13 @@ public byte[]? Data { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_FunctionResponseBlob_DisplayName" data-uid="Google.GenAI.Types.FunctionResponseBlob.DisplayName">
   DisplayName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseBlob.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseBlob.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. Display name of the blob. Used to provide a label or filename to distinguish
-blobs.</p>
+blobs. This field is only returned in PromptMessage for prompt management. It is currently
+used in the Gemini GenerateContent calls only when server side tools (code_execution,
+google_search, and url_context) are enabled. This field is not supported in Gemini API.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -267,7 +269,7 @@ public string? MimeType { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_FunctionResponseBlob_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.FunctionResponseBlob.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseBlob.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseBlob.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a FunctionResponseBlob object.</p>

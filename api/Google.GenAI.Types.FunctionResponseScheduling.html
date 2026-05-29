@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Struct FunctionResponseScheduling | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Specifies how the response should be scheduled in the conversation.">
+      <meta name="description" content="Specifies how the response should be scheduled in the conversation. Only applicable to NON_BLOCKING function calls, is ignored otherwise. Defaults to WHEN_IDLE.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Types_FunctionResponseScheduling" data-uid="Google.GenAI.Types.FunctionResponseScheduling" class="text-break">
-Struct FunctionResponseScheduling  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L28"><i class="bi bi-code-slash"></i></a>
+Struct FunctionResponseScheduling  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,7 +93,8 @@ Struct FunctionResponseScheduling  <a class="header-action link-secondary" title
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Specifies how the response should be scheduled in the conversation.</p>
+  <div class="markdown summary"><p>Specifies how the response should be scheduled in the conversation. Only applicable to
+NON_BLOCKING function calls, is ignored otherwise. Defaults to WHEN_IDLE.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -144,7 +145,7 @@ public readonly record struct FunctionResponseScheduling : IEquatable&lt;Functio
 
   <h3 id="Google_GenAI_Types_FunctionResponseScheduling_AllValues" data-uid="Google.GenAI.Types.FunctionResponseScheduling.AllValues">
   AllValues
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -175,7 +176,7 @@ public readonly record struct FunctionResponseScheduling : IEquatable&lt;Functio
 
   <h3 id="Google_GenAI_Types_FunctionResponseScheduling_Interrupt" data-uid="Google.GenAI.Types.FunctionResponseScheduling.Interrupt">
   Interrupt
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Add the result to the conversation context, interrupt ongoing generation and prompt to
@@ -208,7 +209,7 @@ generate output.</p>
 
   <h3 id="Google_GenAI_Types_FunctionResponseScheduling_SchedulingUnspecified" data-uid="Google.GenAI.Types.FunctionResponseScheduling.SchedulingUnspecified">
   SchedulingUnspecified
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>This value is unused.</p>
@@ -240,7 +241,7 @@ generate output.</p>
 
   <h3 id="Google_GenAI_Types_FunctionResponseScheduling_Silent" data-uid="Google.GenAI.Types.FunctionResponseScheduling.Silent">
   Silent
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Only add the result to the conversation context, do not interrupt or trigger generation.</p>
@@ -272,7 +273,7 @@ generate output.</p>
 
   <h3 id="Google_GenAI_Types_FunctionResponseScheduling_Value" data-uid="Google.GenAI.Types.FunctionResponseScheduling.Value">
   Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -303,7 +304,7 @@ generate output.</p>
 
   <h3 id="Google_GenAI_Types_FunctionResponseScheduling_WhenIdle" data-uid="Google.GenAI.Types.FunctionResponseScheduling.WhenIdle">
   WhenIdle
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Add the result to the conversation context, and prompt to generate output without
@@ -340,7 +341,7 @@ interrupting ongoing generation.</p>
 
   <h3 id="Google_GenAI_Types_FunctionResponseScheduling_Equals_Google_GenAI_Types_FunctionResponseScheduling_" data-uid="Google.GenAI.Types.FunctionResponseScheduling.Equals(Google.GenAI.Types.FunctionResponseScheduling)">
   Equals(FunctionResponseScheduling)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -376,7 +377,7 @@ interrupting ongoing generation.</p>
 
   <h3 id="Google_GenAI_Types_FunctionResponseScheduling_FromString_System_String_" data-uid="Google.GenAI.Types.FunctionResponseScheduling.FromString(System.String)">
   FromString(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L66"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -412,7 +413,7 @@ interrupting ongoing generation.</p>
 
   <h3 id="Google_GenAI_Types_FunctionResponseScheduling_GetHashCode" data-uid="Google.GenAI.Types.FunctionResponseScheduling.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L86"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -443,7 +444,7 @@ interrupting ongoing generation.</p>
 
   <h3 id="Google_GenAI_Types_FunctionResponseScheduling_ToString" data-uid="Google.GenAI.Types.FunctionResponseScheduling.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L80"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -478,7 +479,7 @@ interrupting ongoing generation.</p>
 
   <h3 id="Google_GenAI_Types_FunctionResponseScheduling_op_Implicit_System_String__Google_GenAI_Types_FunctionResponseScheduling" data-uid="Google.GenAI.Types.FunctionResponseScheduling.op_Implicit(System.String)~Google.GenAI.Types.FunctionResponseScheduling">
   implicit operator FunctionResponseScheduling(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L82"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -514,7 +515,7 @@ interrupting ongoing generation.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L28" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponseScheduling.cs/#L29" class="edit-link">Edit this page</a>
         </div>
 
 

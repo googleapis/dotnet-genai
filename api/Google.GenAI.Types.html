@@ -721,26 +721,29 @@ the client.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.FunctionResponse.html">FunctionResponse</a></dt>
-      <dd><p>A function response.</p>
+      <dd><p>The result output from a FunctionCall that contains a string representing the
+FunctionDeclaration.name and a structured JSON object containing any output from the function
+is used as context to the model. This should contain the result of a <code>FunctionCall</code> made based
+on model prediction.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.FunctionResponseBlob.html">FunctionResponseBlob</a></dt>
-      <dd><p>Raw media bytes for function response.  Text should not be sent as raw bytes, use the
-FunctionResponse.response field.</p>
+      <dd><p>Raw media bytes for function response. Text should not be sent as raw bytes, use the 'text'
+field.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.FunctionResponseFileData.html">FunctionResponseFileData</a></dt>
-      <dd><p>URI based data for function response.</p>
+      <dd><p>URI based data for function response. This data type is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.FunctionResponsePart.html">FunctionResponsePart</a></dt>
-      <dd><p>A datatype containing media that is part of a <code>FunctionResponse</code> message.  A
+      <dd><p>A datatype containing media that is part of a <code>FunctionResponse</code> message. A
 <code>FunctionResponsePart</code> consists of data which has an associated datatype. A
 <code>FunctionResponsePart</code> can only contain one of the accepted types in
-<code>FunctionResponsePart.data</code>.  A <code>FunctionResponsePart</code> must have a fixed IANA MIME type
+<code>FunctionResponsePart.data</code>. A <code>FunctionResponsePart</code> must have a fixed IANA MIME type
 identifying the type and subtype of the media if the <code>inline_data</code> field is filled with raw
 bytes.</p>
 </dd>
@@ -2226,7 +2229,8 @@ stopped generating the tokens.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.FunctionResponseScheduling.html">FunctionResponseScheduling</a></dt>
-      <dd><p>Specifies how the response should be scheduled in the conversation.</p>
+      <dd><p>Specifies how the response should be scheduled in the conversation. Only applicable to
+NON_BLOCKING function calls, is ignored otherwise. Defaults to WHEN_IDLE.</p>
 </dd>
     </dl>
     <dl class="jumplist">

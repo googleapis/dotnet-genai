@@ -2278,7 +2278,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.FunctionResponse",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FunctionResponse.yml\" sourcestartlinenumber=\"1\">A function response.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FunctionResponse.yml\" sourcestartlinenumber=\"1\">The result output from a FunctionCall that contains a string representing the\nFunctionDeclaration.name and a structured JSON object containing any output from the function\nis used as context to the model. This should contain the result of a <code sourcefile=\"api/Google.GenAI.Types.FunctionResponse.yml\" sourcestartlinenumber=\"3\">FunctionCall</code> made based\non model prediction.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2292,7 +2292,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.FunctionResponseBlob",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FunctionResponseBlob.yml\" sourcestartlinenumber=\"1\">Raw media bytes for function response.  Text should not be sent as raw bytes, use the\nFunctionResponse.response field.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FunctionResponseBlob.yml\" sourcestartlinenumber=\"1\">Raw media bytes for function response. Text should not be sent as raw bytes, use the 'text'\nfield.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2306,7 +2306,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.FunctionResponseFileData",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FunctionResponseFileData.yml\" sourcestartlinenumber=\"1\">URI based data for function response.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FunctionResponseFileData.yml\" sourcestartlinenumber=\"1\">URI based data for function response. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2320,7 +2320,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.FunctionResponsePart",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"1\">A datatype containing media that is part of a <code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"1\">FunctionResponse</code> message.  A\n<code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"2\">FunctionResponsePart</code> consists of data which has an associated datatype. A\n<code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"3\">FunctionResponsePart</code> can only contain one of the accepted types in\n<code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"4\">FunctionResponsePart.data</code>.  A <code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"4\">FunctionResponsePart</code> must have a fixed IANA MIME type\nidentifying the type and subtype of the media if the <code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"5\">inline_data</code> field is filled with raw\nbytes.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"1\">A datatype containing media that is part of a <code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"1\">FunctionResponse</code> message. A\n<code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"2\">FunctionResponsePart</code> consists of data which has an associated datatype. A\n<code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"3\">FunctionResponsePart</code> can only contain one of the accepted types in\n<code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"4\">FunctionResponsePart.data</code>. A <code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"4\">FunctionResponsePart</code> must have a fixed IANA MIME type\nidentifying the type and subtype of the media if the <code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"5\">inline_data</code> field is filled with raw\nbytes.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2334,7 +2334,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.FunctionResponseScheduling",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FunctionResponseScheduling.yml\" sourcestartlinenumber=\"1\">Specifies how the response should be scheduled in the conversation.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FunctionResponseScheduling.yml\" sourcestartlinenumber=\"1\">Specifies how the response should be scheduled in the conversation. Only applicable to\nNON_BLOCKING function calls, is ignored otherwise. Defaults to WHEN_IDLE.</p>\n"
     },
     {
       "type": "ManagedReference",
