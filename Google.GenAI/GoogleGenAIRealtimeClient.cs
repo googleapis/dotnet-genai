@@ -56,7 +56,7 @@ public sealed class GoogleGenAIRealtimeClient : IRealtimeClient
     _defaultModelId = defaultModelId;
   }
 
-  /// <summary>Initializes a new instance using Vertex AI with a project and location.</summary>
+  /// <summary>Initializes a new instance using a Google Cloud project and location.</summary>
   /// <param name="project">The Google Cloud project ID.</param>
   /// <param name="location">The Google Cloud location (e.g. "us-central1").</param>
   /// <param name="defaultModelId">The default model to use for realtime sessions.</param>
@@ -73,7 +73,7 @@ public sealed class GoogleGenAIRealtimeClient : IRealtimeClient
       throw new ArgumentNullException(nameof(location));
     }
 
-    _client = new Client(vertexAI: true, project: project, location: location);
+    _client = new Client(enterprise: true, project: project, location: location);
     _defaultModelId = defaultModelId;
   }
 
