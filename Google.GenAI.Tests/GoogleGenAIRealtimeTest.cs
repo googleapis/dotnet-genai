@@ -80,6 +80,41 @@ public class GoogleGenAIRealtimeClientTest
     Assert.IsNotNull(realtimeClient);
   }
 
+  [TestMethod]
+  public void RealtimeClient_ProjectLocation_Succeeds()
+  {
+    var realtimeClient = new GoogleGenAIRealtimeClient("my-project", "us-central1", "model");
+    Assert.IsNotNull(realtimeClient);
+  }
+
+  [TestMethod]
+  public void RealtimeClient_ProjectLocation_NullProject_ThrowsArgumentNullException()
+  {
+    Assert.ThrowsException<ArgumentNullException>(
+      () => new GoogleGenAIRealtimeClient(null!, "us-central1", "model"));
+  }
+
+  [TestMethod]
+  public void RealtimeClient_ProjectLocation_EmptyProject_ThrowsArgumentNullException()
+  {
+    Assert.ThrowsException<ArgumentNullException>(
+      () => new GoogleGenAIRealtimeClient("", "us-central1", "model"));
+  }
+
+  [TestMethod]
+  public void RealtimeClient_ProjectLocation_NullLocation_ThrowsArgumentNullException()
+  {
+    Assert.ThrowsException<ArgumentNullException>(
+      () => new GoogleGenAIRealtimeClient("my-project", null!, "model"));
+  }
+
+  [TestMethod]
+  public void RealtimeClient_ProjectLocation_EmptyLocation_ThrowsArgumentNullException()
+  {
+    Assert.ThrowsException<ArgumentNullException>(
+      () => new GoogleGenAIRealtimeClient("my-project", "", "model"));
+  }
+
   #endregion
 
   #region Client GetService Tests
