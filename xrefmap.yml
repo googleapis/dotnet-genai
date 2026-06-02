@@ -22081,19 +22081,6 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.LiveConnectConfig.SpeechConfig
   nameWithType: LiveConnectConfig.SpeechConfig
-- uid: Google.GenAI.Types.LiveConnectConfig.StreamTranslationConfig
-  name: StreamTranslationConfig
-  href: api/Google.GenAI.Types.LiveConnectConfig.html#Google_GenAI_Types_LiveConnectConfig_StreamTranslationConfig
-  commentId: P:Google.GenAI.Types.LiveConnectConfig.StreamTranslationConfig
-  fullName: Google.GenAI.Types.LiveConnectConfig.StreamTranslationConfig
-  nameWithType: LiveConnectConfig.StreamTranslationConfig
-- uid: Google.GenAI.Types.LiveConnectConfig.StreamTranslationConfig*
-  name: StreamTranslationConfig
-  href: api/Google.GenAI.Types.LiveConnectConfig.html#Google_GenAI_Types_LiveConnectConfig_StreamTranslationConfig_
-  commentId: Overload:Google.GenAI.Types.LiveConnectConfig.StreamTranslationConfig
-  isSpec: "True"
-  fullName: Google.GenAI.Types.LiveConnectConfig.StreamTranslationConfig
-  nameWithType: LiveConnectConfig.StreamTranslationConfig
 - uid: Google.GenAI.Types.LiveConnectConfig.SystemInstruction
   name: SystemInstruction
   href: api/Google.GenAI.Types.LiveConnectConfig.html#Google_GenAI_Types_LiveConnectConfig_SystemInstruction
@@ -22172,6 +22159,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.LiveConnectConfig.TopP
   nameWithType: LiveConnectConfig.TopP
+- uid: Google.GenAI.Types.LiveConnectConfig.TranslationConfig
+  name: TranslationConfig
+  href: api/Google.GenAI.Types.LiveConnectConfig.html#Google_GenAI_Types_LiveConnectConfig_TranslationConfig
+  commentId: P:Google.GenAI.Types.LiveConnectConfig.TranslationConfig
+  fullName: Google.GenAI.Types.LiveConnectConfig.TranslationConfig
+  nameWithType: LiveConnectConfig.TranslationConfig
+- uid: Google.GenAI.Types.LiveConnectConfig.TranslationConfig*
+  name: TranslationConfig
+  href: api/Google.GenAI.Types.LiveConnectConfig.html#Google_GenAI_Types_LiveConnectConfig_TranslationConfig_
+  commentId: Overload:Google.GenAI.Types.LiveConnectConfig.TranslationConfig
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LiveConnectConfig.TranslationConfig
+  nameWithType: LiveConnectConfig.TranslationConfig
 - uid: Google.GenAI.Types.LiveConnectConstraints
   name: LiveConnectConstraints
   href: api/Google.GenAI.Types.LiveConnectConstraints.html
@@ -30928,54 +30928,6 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.StartSensitivityConverter.Write
   nameWithType: StartSensitivityConverter.Write
-- uid: Google.GenAI.Types.StreamTranslationConfig
-  name: StreamTranslationConfig
-  href: api/Google.GenAI.Types.StreamTranslationConfig.html
-  commentId: T:Google.GenAI.Types.StreamTranslationConfig
-  fullName: Google.GenAI.Types.StreamTranslationConfig
-  nameWithType: StreamTranslationConfig
-- uid: Google.GenAI.Types.StreamTranslationConfig.EchoTargetLanguage
-  name: EchoTargetLanguage
-  href: api/Google.GenAI.Types.StreamTranslationConfig.html#Google_GenAI_Types_StreamTranslationConfig_EchoTargetLanguage
-  commentId: P:Google.GenAI.Types.StreamTranslationConfig.EchoTargetLanguage
-  fullName: Google.GenAI.Types.StreamTranslationConfig.EchoTargetLanguage
-  nameWithType: StreamTranslationConfig.EchoTargetLanguage
-- uid: Google.GenAI.Types.StreamTranslationConfig.EchoTargetLanguage*
-  name: EchoTargetLanguage
-  href: api/Google.GenAI.Types.StreamTranslationConfig.html#Google_GenAI_Types_StreamTranslationConfig_EchoTargetLanguage_
-  commentId: Overload:Google.GenAI.Types.StreamTranslationConfig.EchoTargetLanguage
-  isSpec: "True"
-  fullName: Google.GenAI.Types.StreamTranslationConfig.EchoTargetLanguage
-  nameWithType: StreamTranslationConfig.EchoTargetLanguage
-- uid: Google.GenAI.Types.StreamTranslationConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name: FromJson(string, JsonSerializerOptions?)
-  href: api/Google.GenAI.Types.StreamTranslationConfig.html#Google_GenAI_Types_StreamTranslationConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
-  commentId: M:Google.GenAI.Types.StreamTranslationConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
-  name.vb: FromJson(String, JsonSerializerOptions)
-  fullName: Google.GenAI.Types.StreamTranslationConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
-  fullName.vb: Google.GenAI.Types.StreamTranslationConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
-  nameWithType: StreamTranslationConfig.FromJson(string, JsonSerializerOptions?)
-  nameWithType.vb: StreamTranslationConfig.FromJson(String, JsonSerializerOptions)
-- uid: Google.GenAI.Types.StreamTranslationConfig.FromJson*
-  name: FromJson
-  href: api/Google.GenAI.Types.StreamTranslationConfig.html#Google_GenAI_Types_StreamTranslationConfig_FromJson_
-  commentId: Overload:Google.GenAI.Types.StreamTranslationConfig.FromJson
-  isSpec: "True"
-  fullName: Google.GenAI.Types.StreamTranslationConfig.FromJson
-  nameWithType: StreamTranslationConfig.FromJson
-- uid: Google.GenAI.Types.StreamTranslationConfig.TargetLanguageCode
-  name: TargetLanguageCode
-  href: api/Google.GenAI.Types.StreamTranslationConfig.html#Google_GenAI_Types_StreamTranslationConfig_TargetLanguageCode
-  commentId: P:Google.GenAI.Types.StreamTranslationConfig.TargetLanguageCode
-  fullName: Google.GenAI.Types.StreamTranslationConfig.TargetLanguageCode
-  nameWithType: StreamTranslationConfig.TargetLanguageCode
-- uid: Google.GenAI.Types.StreamTranslationConfig.TargetLanguageCode*
-  name: TargetLanguageCode
-  href: api/Google.GenAI.Types.StreamTranslationConfig.html#Google_GenAI_Types_StreamTranslationConfig_TargetLanguageCode_
-  commentId: Overload:Google.GenAI.Types.StreamTranslationConfig.TargetLanguageCode
-  isSpec: "True"
-  fullName: Google.GenAI.Types.StreamTranslationConfig.TargetLanguageCode
-  nameWithType: StreamTranslationConfig.TargetLanguageCode
 - uid: Google.GenAI.Types.StreamableHttpTransport
   name: StreamableHttpTransport
   href: api/Google.GenAI.Types.StreamableHttpTransport.html
@@ -33471,6 +33423,54 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Transcription.Text
   nameWithType: Transcription.Text
+- uid: Google.GenAI.Types.TranslationConfig
+  name: TranslationConfig
+  href: api/Google.GenAI.Types.TranslationConfig.html
+  commentId: T:Google.GenAI.Types.TranslationConfig
+  fullName: Google.GenAI.Types.TranslationConfig
+  nameWithType: TranslationConfig
+- uid: Google.GenAI.Types.TranslationConfig.EchoTargetLanguage
+  name: EchoTargetLanguage
+  href: api/Google.GenAI.Types.TranslationConfig.html#Google_GenAI_Types_TranslationConfig_EchoTargetLanguage
+  commentId: P:Google.GenAI.Types.TranslationConfig.EchoTargetLanguage
+  fullName: Google.GenAI.Types.TranslationConfig.EchoTargetLanguage
+  nameWithType: TranslationConfig.EchoTargetLanguage
+- uid: Google.GenAI.Types.TranslationConfig.EchoTargetLanguage*
+  name: EchoTargetLanguage
+  href: api/Google.GenAI.Types.TranslationConfig.html#Google_GenAI_Types_TranslationConfig_EchoTargetLanguage_
+  commentId: Overload:Google.GenAI.Types.TranslationConfig.EchoTargetLanguage
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TranslationConfig.EchoTargetLanguage
+  nameWithType: TranslationConfig.EchoTargetLanguage
+- uid: Google.GenAI.Types.TranslationConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.TranslationConfig.html#Google_GenAI_Types_TranslationConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.TranslationConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.TranslationConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.TranslationConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: TranslationConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: TranslationConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.TranslationConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.TranslationConfig.html#Google_GenAI_Types_TranslationConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.TranslationConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TranslationConfig.FromJson
+  nameWithType: TranslationConfig.FromJson
+- uid: Google.GenAI.Types.TranslationConfig.TargetLanguageCode
+  name: TargetLanguageCode
+  href: api/Google.GenAI.Types.TranslationConfig.html#Google_GenAI_Types_TranslationConfig_TargetLanguageCode
+  commentId: P:Google.GenAI.Types.TranslationConfig.TargetLanguageCode
+  fullName: Google.GenAI.Types.TranslationConfig.TargetLanguageCode
+  nameWithType: TranslationConfig.TargetLanguageCode
+- uid: Google.GenAI.Types.TranslationConfig.TargetLanguageCode*
+  name: TargetLanguageCode
+  href: api/Google.GenAI.Types.TranslationConfig.html#Google_GenAI_Types_TranslationConfig_TargetLanguageCode_
+  commentId: Overload:Google.GenAI.Types.TranslationConfig.TargetLanguageCode
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TranslationConfig.TargetLanguageCode
+  nameWithType: TranslationConfig.TargetLanguageCode
 - uid: Google.GenAI.Types.TunedModel
   name: TunedModel
   href: api/Google.GenAI.Types.TunedModel.html
