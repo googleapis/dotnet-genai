@@ -1,5 +1,29 @@
 # Changelog
 
+## Version 1.9.0, released 2026-06-03
+
+
+### New features
+
+* Add Agent Platform MCP support to async generate_content ([cd69f04](https://github.com/googleapis/dotnet-genai/commit/cd69f04f56764c80121f9b5c8a89c21bd63dc694))
+* Add transcription language code. ([a5bd3a9](https://github.com/googleapis/dotnet-genai/commit/a5bd3a965ee430e35ee3e71132f6c81ce859473d))
+* Add TranslationConfig for live translation. ([7b99795](https://github.com/googleapis/dotnet-genai/commit/7b997958bd7993133b1cd47d084f8badb52073f4))
+* Support ReinforcementTuning in GenAI SDK including ValidateReward API method. ([68e5560](https://github.com/googleapis/dotnet-genai/commit/68e55600761bda0162b3e0d52662ad99f37eda43))
+
+
+### Bug fixes
+
+* Propagate CancellationToken in GoogleGenAIChatClient.GetResponseAsync ([67a9f78](https://github.com/googleapis/dotnet-genai/commit/67a9f784518fb3679bfd0cc25582c6459438a1bb))
+* Propagate CancellationToken in GoogleGenAIChatClient.GetResponseAsync ([67a9f78](https://github.com/googleapis/dotnet-genai/commit/67a9f784518fb3679bfd0cc25582c6459438a1bb))
+
+
+### Documentation improvements
+
+* A comment for field `enable_widget` in message `GoogleMaps` is changed ([89bd3db](https://github.com/googleapis/dotnet-genai/commit/89bd3db11ca5237daf8654ec83e85b2ba71f07e7))
+* A comment for field `google_maps_widget_context_token` in message `GroundingMetadata` is changed ([89bd3db](https://github.com/googleapis/dotnet-genai/commit/89bd3db11ca5237daf8654ec83e85b2ba71f07e7))
+* Fix ChatOptions setup in README.md ([2955411](https://github.com/googleapis/dotnet-genai/commit/295541159f2bde2581f112d3621843f4d7e19965))
+* Fix ChatOptions setup in README.md ([2955411](https://github.com/googleapis/dotnet-genai/commit/295541159f2bde2581f112d3621843f4d7e19965))
+
 ## Version 1.8.0, released 2026-05-28
 
 
