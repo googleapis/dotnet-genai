@@ -69,7 +69,7 @@ internal sealed class GoogleGenAIChatClient : IChatClient
     (string? modelId, List<Content> contents, GenerateContentConfig config) = CreateRequest(messages, options);
 
     // Send it.
-    GenerateContentResponse generateResult = await _models.GenerateContentAsync(modelId!, contents, config).ConfigureAwait(false);
+    GenerateContentResponse generateResult = await _models.GenerateContentAsync(modelId!, contents, config, cancellationToken).ConfigureAwait(false);
 
     // Create the response.
     ChatResponse chatResponse = new(new ChatMessage(ChatRole.Assistant, new List<AIContent>()) { MessageId = generateResult.ResponseId })
@@ -103,7 +103,7 @@ internal sealed class GoogleGenAIChatClient : IChatClient
 
     // Send it, and process the results.
     GenerateContentResponseUsageMetadata? lastUsageMetadata = null;
-    await foreach (GenerateContentResponse generateResult in _models.GenerateContentStreamAsync(modelId!, contents, config).WithCancellation(cancellationToken).ConfigureAwait(false))
+    await foreach (GenerateContentResponse generateResult in _models.GenerateContentStreamAsync(modelId!, contents, config, cancellationToken).WithCancellation(cancellationToken).ConfigureAwait(false))
     {
       // Create a response update for each result in the stream.
       ChatResponseUpdate responseUpdate = new(ChatRole.Assistant, new List<AIContent>())

@@ -74,7 +74,8 @@ internal sealed class GoogleGenAIEmbeddingGenerator : IEmbeddingGenerator<string
     EmbedContentResponse response = await _models.EmbedContentAsync(
       modelId,
       values.Select(value => new Content() { Parts = new List<Part>() { new() { Text = value } } }).ToList(),
-      config).ConfigureAwait(false);
+      config,
+      cancellationToken).ConfigureAwait(false);
 
     if (response.Embeddings is not null)
     {
