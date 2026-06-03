@@ -3976,6 +3976,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.MatchOperation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.MatchOperation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.MatchOperation",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.MatchOperation.yml\" sourcestartlinenumber=\"1\">Match operation to use for evaluation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.MatchOperationConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.MatchOperationConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.MatchOperationConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.McpServer.yml",
       "output": {
         ".html": {
@@ -4802,6 +4830,202 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ReinforcementTuningAutoraterScorerExactMatchScorer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ReinforcementTuningAutoraterScorerExactMatchScorer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ReinforcementTuningAutoraterScorerExactMatchScorer",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningAutoraterScorerExactMatchScorer.yml\" sourcestartlinenumber=\"1\">Scores autorater responses by using exact string match reward scorer.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ReinforcementTuningAutoraterScorerParsedResponseConversionScorer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ReinforcementTuningAutoraterScorerParsedResponseConversionScorer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ReinforcementTuningAutoraterScorerParsedResponseConversionScorer",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningAutoraterScorerParsedResponseConversionScorer.yml\" sourcestartlinenumber=\"1\">Scores responses by directly converting parsed autorater response to float reward (reward is\nclipped to be within [-1, 1]).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ReinforcementTuningCloudRunRewardScorer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ReinforcementTuningCloudRunRewardScorer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ReinforcementTuningCloudRunRewardScorer",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCloudRunRewardScorer.yml\" sourcestartlinenumber=\"1\">Scores parsed responses by calling a Cloud Run service.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ReinforcementTuningCodeExecutionRewardScorer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ReinforcementTuningCodeExecutionRewardScorer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ReinforcementTuningCodeExecutionRewardScorer",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCodeExecutionRewardScorer.yml\" sourcestartlinenumber=\"1\">Scores parsed responses for code execution use cases.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ReinforcementTuningExample.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ReinforcementTuningExample.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ReinforcementTuningExample",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningExample.yml\" sourcestartlinenumber=\"1\">User-facing format for Gemini Reinforcement Tuning examples on Vertex.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ReinforcementTuningHyperParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ReinforcementTuningHyperParameters.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ReinforcementTuningHyperParameters",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningHyperParameters.yml\" sourcestartlinenumber=\"1\">Hyperparameters for Reinforcement Tuning.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ReinforcementTuningParseResponseConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ReinforcementTuningParseResponseConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ReinforcementTuningParseResponseConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningParseResponseConfig.yml\" sourcestartlinenumber=\"1\">Defines how to parse sample response for reinforcement tuning.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ReinforcementTuningRewardInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ReinforcementTuningRewardInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ReinforcementTuningRewardInfo",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningRewardInfo.yml\" sourcestartlinenumber=\"1\">The reward info for a reward function.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ReinforcementTuningSpec.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ReinforcementTuningSpec.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ReinforcementTuningSpec",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningSpec.yml\" sourcestartlinenumber=\"1\">Reinforcement tuning spec for tuning.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorer",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorer.yml\" sourcestartlinenumber=\"1\">Scores parsed responses for string matching use cases.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorerJsonMatchExpression.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorerJsonMatchExpression.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorerJsonMatchExpression",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorerJsonMatchExpression.yml\" sourcestartlinenumber=\"1\">Converts parsed responses to JSON format, finds the first-level matching key, then performs\nStringMatchExpression on the value.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorerStringMatchExpression.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorerStringMatchExpression.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorerStringMatchExpression",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorerStringMatchExpression.yml\" sourcestartlinenumber=\"1\">Evaluates parsed response using match type against expression.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ReinforcementTuningThinkingLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ReinforcementTuningThinkingLevel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ReinforcementTuningThinkingLevel",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningThinkingLevel.yml\" sourcestartlinenumber=\"1\">Represents how much to think for the tuning job.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ReinforcementTuningThinkingLevelConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ReinforcementTuningThinkingLevelConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ReinforcementTuningThinkingLevelConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.ReplayFile.yml",
       "output": {
         ".html": {
@@ -4896,6 +5120,34 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ResourceScopeConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ResponseParseType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ResponseParseType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ResponseParseType",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ResponseParseType.yml\" sourcestartlinenumber=\"1\">Defines how to parse sample response.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ResponseParseTypeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ResponseParseTypeConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ResponseParseTypeConverter",
       "Summary": null
     },
     {
@@ -6297,6 +6549,34 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.VadSignalTypeConverter",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ValidateRewardConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ValidateRewardConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ValidateRewardConfig",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ValidateRewardConfig.yml\" sourcestartlinenumber=\"1\">Optional parameters for tunings.validate_reward.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ValidateRewardResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ValidateRewardResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ValidateRewardResponse",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ValidateRewardResponse.yml\" sourcestartlinenumber=\"1\">Response for the validate_reward method.  Contains the computed reward for a reinforcement\ntuning reward configuration.</p>\n"
     },
     {
       "type": "ManagedReference",

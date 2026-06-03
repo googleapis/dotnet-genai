@@ -162,7 +162,8 @@ Class SingleReinforcementTuningRewardConfig  <a class="header-action link-second
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SingleReinforcementTuningRewardConfig.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Scores parsed responses for autorater use cases by using a model to compute the reward.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -188,6 +189,177 @@ public ReinforcementTuningAutoraterScorer? AutoraterScorer { get; set; }</code><
 
 
 
+  <a id="Google_GenAI_Types_SingleReinforcementTuningRewardConfig_CloudRunRewardScorer_" data-uid="Google.GenAI.Types.SingleReinforcementTuningRewardConfig.CloudRunRewardScorer*"></a>
+
+  <h3 id="Google_GenAI_Types_SingleReinforcementTuningRewardConfig_CloudRunRewardScorer" data-uid="Google.GenAI.Types.SingleReinforcementTuningRewardConfig.CloudRunRewardScorer">
+  CloudRunRewardScorer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SingleReinforcementTuningRewardConfig.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scores parsed responses by calling a Cloud Run service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;cloudRunRewardScorer&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public ReinforcementTuningCloudRunRewardScorer? CloudRunRewardScorer { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.ReinforcementTuningCloudRunRewardScorer.html">ReinforcementTuningCloudRunRewardScorer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_SingleReinforcementTuningRewardConfig_CodeExecutionRewardScorer_" data-uid="Google.GenAI.Types.SingleReinforcementTuningRewardConfig.CodeExecutionRewardScorer*"></a>
+
+  <h3 id="Google_GenAI_Types_SingleReinforcementTuningRewardConfig_CodeExecutionRewardScorer" data-uid="Google.GenAI.Types.SingleReinforcementTuningRewardConfig.CodeExecutionRewardScorer">
+  CodeExecutionRewardScorer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SingleReinforcementTuningRewardConfig.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scores parsed responses for code execution use cases.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;codeExecutionRewardScorer&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public ReinforcementTuningCodeExecutionRewardScorer? CodeExecutionRewardScorer { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.ReinforcementTuningCodeExecutionRewardScorer.html">ReinforcementTuningCodeExecutionRewardScorer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_SingleReinforcementTuningRewardConfig_ParseResponseConfig_" data-uid="Google.GenAI.Types.SingleReinforcementTuningRewardConfig.ParseResponseConfig*"></a>
+
+  <h3 id="Google_GenAI_Types_SingleReinforcementTuningRewardConfig_ParseResponseConfig" data-uid="Google.GenAI.Types.SingleReinforcementTuningRewardConfig.ParseResponseConfig">
+  ParseResponseConfig
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SingleReinforcementTuningRewardConfig.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Defines how to parse sample response.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;parseResponseConfig&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public ReinforcementTuningParseResponseConfig? ParseResponseConfig { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.ReinforcementTuningParseResponseConfig.html">ReinforcementTuningParseResponseConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_SingleReinforcementTuningRewardConfig_RewardName_" data-uid="Google.GenAI.Types.SingleReinforcementTuningRewardConfig.RewardName*"></a>
+
+  <h3 id="Google_GenAI_Types_SingleReinforcementTuningRewardConfig_RewardName" data-uid="Google.GenAI.Types.SingleReinforcementTuningRewardConfig.RewardName">
+  RewardName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SingleReinforcementTuningRewardConfig.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A unique reward name used to identify each single reinforcement tuning reward.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;rewardName&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public string? RewardName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_SingleReinforcementTuningRewardConfig_StringMatchRewardScorer_" data-uid="Google.GenAI.Types.SingleReinforcementTuningRewardConfig.StringMatchRewardScorer*"></a>
+
+  <h3 id="Google_GenAI_Types_SingleReinforcementTuningRewardConfig_StringMatchRewardScorer" data-uid="Google.GenAI.Types.SingleReinforcementTuningRewardConfig.StringMatchRewardScorer">
+  StringMatchRewardScorer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SingleReinforcementTuningRewardConfig.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Scores parsed responses for simple string matching use cases against reference answer
+without writing python code.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;stringMatchRewardScorer&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public ReinforcementTuningStringMatchRewardScorer? StringMatchRewardScorer { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorer.html">ReinforcementTuningStringMatchRewardScorer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -196,7 +368,7 @@ public ReinforcementTuningAutoraterScorer? AutoraterScorer { get; set; }</code><
 
   <h3 id="Google_GenAI_Types_SingleReinforcementTuningRewardConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.SingleReinforcementTuningRewardConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SingleReinforcementTuningRewardConfig.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SingleReinforcementTuningRewardConfig.cs/#L95"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a SingleReinforcementTuningRewardConfig object.</p>
