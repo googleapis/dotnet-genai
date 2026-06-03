@@ -16,6 +16,7 @@
 
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.Text.Json.Serialization.Metadata;
 
 using Google.GenAI.Serialization;
 
@@ -26,16 +27,33 @@ namespace Google.GenAI
   /// </summary>
   internal static class JsonConfig
   {
-    public static readonly JsonSerializerOptions JsonSerializerOptions = new JsonSerializerOptions
+    /// <summary>
+    /// Options for external API output (indented, camelCase, no nulls).
+    /// </summary>
+    public static readonly JsonSerializerOptions JsonSerializerOptions = CreateOptions(writeIndented: true);
+
+    /// <summary>
+    /// Options for internal serialization (compact, camelCase, no nulls).
+    /// Used for intermediate serialize-then-parse round-trips where indentation is wasteful.
+    /// </summary>
+    internal static readonly JsonSerializerOptions InternalSerializerOptions = CreateOptions(writeIndented: false);
+
+    private static JsonSerializerOptions CreateOptions(bool writeIndented)
     {
-      PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-      WriteIndented = true,
-      DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
-      Converters =
-          {
-            new StringToLongConverter(),
-            new StringToNullableLongConverter(),
-          }
-    };
+      var options = new JsonSerializerOptions
+      {
+        PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+        WriteIndented = writeIndented,
+        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
+        Converters =
+            {
+              new StringToLongConverter(),
+              new StringToNullableLongConverter(),
+            }
+      };
+      options.TypeInfoResolverChain.Insert(0, GenAIJsonContext.Default);
+      options.TypeInfoResolverChain.Add(new DefaultJsonTypeInfoResolver());
+      return options;
+    }
   }
 }

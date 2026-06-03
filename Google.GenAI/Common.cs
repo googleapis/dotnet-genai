@@ -286,7 +286,7 @@ namespace Google.GenAI
         {
             return node.DeepClone();
         }
-        return JsonSerializer.SerializeToNode(value);
+        return JsonSerializer.SerializeToNode(value, JsonConfig.InternalSerializerOptions);
     }
 
     internal static string FormatQuery(JsonObject queryParams)
@@ -433,7 +433,7 @@ namespace Google.GenAI
           }
           return array;
         default:
-          return JsonNode.Parse(JsonSerializer.Serialize(value));
+          return JsonNode.Parse(JsonSerializer.Serialize(value, JsonConfig.InternalSerializerOptions));
       }
     }
 
