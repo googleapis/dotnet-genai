@@ -5471,6 +5471,30 @@ public class GoogleGenAIExtensionsTest
   }
 
   [TestMethod]
+  public async Task IEmbeddingGenerator_GenerateAsync_PropagatesCancellationToken()
+  {
+    using var cts = new CancellationTokenSource();
+    cts.Cancel();
+
+    var embeddingGenerator = CreateEmbeddingGenerator("", "");
+
+    await Assert.ThrowsExceptionAsync<OperationCanceledException>(
+      () => embeddingGenerator.GenerateAsync(["Hello"], cancellationToken: cts.Token));
+  }
+
+  [TestMethod]
+  public async Task IImageGenerator_GenerateAsync_PropagatesCancellationToken()
+  {
+    using var cts = new CancellationTokenSource();
+    cts.Cancel();
+
+    var imageGenerator = CreateImageGenerator("", "");
+
+    await Assert.ThrowsExceptionAsync<OperationCanceledException>(
+      () => imageGenerator.GenerateAsync(new ImageGenerationRequest { Prompt = "A cat" }, cancellationToken: cts.Token));
+  }
+
+  [TestMethod]
   public async Task IImageGeneration_BasicRequest()
   {
     IImageGenerator imageGenerator = CreateImageGenerator("""

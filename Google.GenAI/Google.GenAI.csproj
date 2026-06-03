@@ -21,7 +21,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <WarningsAsErrors>$(WarningsAsErrors);CS1570</WarningsAsErrors><NoWarn>$(NoWarn);CS1591</NoWarn>
+    <WarningsAsErrors>$(WarningsAsErrors);CS1570;CA2016</WarningsAsErrors><NoWarn>$(NoWarn);CS1591</NoWarn>
     <WarningsNotAsErrors>IDE0005</WarningsNotAsErrors>
     <NoWarn>$(NoWarn);MEAI001</NoWarn>
   </PropertyGroup>

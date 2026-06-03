@@ -41,6 +41,7 @@ dotnet_diagnostic.IDE0017.severity = none
 dotnet_diagnostic.IDE0028.severity = none
 dotnet_diagnostic.CS8603.severity = none
 dotnet_diagnostic.CS8424.severity = none
+dotnet_diagnostic.CA2016.severity = warning
 dotnet_diagnostic.CS0108.severity = none
 
 [*.csproj]
