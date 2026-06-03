@@ -33410,6 +33410,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Transcription.FromJson
   nameWithType: Transcription.FromJson
+- uid: Google.GenAI.Types.Transcription.LanguageCode
+  name: LanguageCode
+  href: api/Google.GenAI.Types.Transcription.html#Google_GenAI_Types_Transcription_LanguageCode
+  commentId: P:Google.GenAI.Types.Transcription.LanguageCode
+  fullName: Google.GenAI.Types.Transcription.LanguageCode
+  nameWithType: Transcription.LanguageCode
+- uid: Google.GenAI.Types.Transcription.LanguageCode*
+  name: LanguageCode
+  href: api/Google.GenAI.Types.Transcription.html#Google_GenAI_Types_Transcription_LanguageCode_
+  commentId: Overload:Google.GenAI.Types.Transcription.LanguageCode
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Transcription.LanguageCode
+  nameWithType: Transcription.LanguageCode
 - uid: Google.GenAI.Types.Transcription.Text
   name: Text
   href: api/Google.GenAI.Types.Transcription.html#Google_GenAI_Types_Transcription_Text
