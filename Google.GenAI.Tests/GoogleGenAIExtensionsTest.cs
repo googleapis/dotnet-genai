@@ -5445,6 +5445,32 @@ public class GoogleGenAIExtensionsTest
   }
 
   [TestMethod]
+  public async Task IChatClient_GetResponseAsync_PropagatesCancellationToken()
+  {
+    using var cts = new CancellationTokenSource();
+    cts.Cancel();
+
+    IChatClient client = CreateChatClient("", "");
+
+    await Assert.ThrowsExceptionAsync<OperationCanceledException>(
+      () => client.GetResponseAsync("Hello", cancellationToken: cts.Token));
+  }
+
+  [TestMethod]
+  public async Task IChatClient_GetStreamingResponseAsync_PropagatesCancellationToken()
+  {
+    using var cts = new CancellationTokenSource();
+    cts.Cancel();
+
+    IChatClient client = CreateChatClient("", "");
+
+    await Assert.ThrowsExceptionAsync<OperationCanceledException>(async () =>
+    {
+      await foreach (var _ in client.GetStreamingResponseAsync("Hello", cancellationToken: cts.Token)) { }
+    });
+  }
+
+  [TestMethod]
   public async Task IImageGeneration_BasicRequest()
   {
     IImageGenerator imageGenerator = CreateImageGenerator("""
@@ -5614,6 +5640,7 @@ public class GoogleGenAIExtensionsTest
     public override async Task<ApiResponse> RequestAsync(
       HttpMethod httpMethod, string path, string requestJson, HttpOptions? requestHttpOptions, CancellationToken cancellationToken = default)
     {
+      cancellationToken.ThrowIfCancellationRequested();
       string responseJson = _actualResponse;
 
       if (_makeRealRequest)
@@ -5635,6 +5662,7 @@ public class GoogleGenAIExtensionsTest
     public override async IAsyncEnumerable<ApiResponse> RequestStreamAsync(
       HttpMethod httpMethod, string path, string requestJson, HttpOptions? requestHttpOptions, [EnumeratorCancellation] CancellationToken cancellationToken = default)
     {
+      cancellationToken.ThrowIfCancellationRequested();
       string responseData = _actualResponse;
 
       if (_makeRealRequest)

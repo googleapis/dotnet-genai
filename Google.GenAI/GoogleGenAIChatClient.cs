@@ -69,7 +69,7 @@ internal sealed class GoogleGenAIChatClient : IChatClient
     (string? modelId, List<Content> contents, GenerateContentConfig config) = CreateRequest(messages, options);
 
     // Send it.
-    GenerateContentResponse generateResult = await _models.GenerateContentAsync(modelId!, contents, config).ConfigureAwait(false);
+    GenerateContentResponse generateResult = await _models.GenerateContentAsync(modelId!, contents, config, cancellationToken).ConfigureAwait(false);
 
     // Create the response.
     ChatResponse chatResponse = new(new ChatMessage(ChatRole.Assistant, new List<AIContent>()) { MessageId = generateResult.ResponseId })
