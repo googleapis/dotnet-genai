@@ -159,10 +159,11 @@ Class UsageMetadata  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Google_GenAI_Types_UsageMetadata_CacheTokensDetails" data-uid="Google.GenAI.Types.UsageMetadata.CacheTokensDetails">
   CacheTokensDetails
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UsageMetadata.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UsageMetadata.cs/#L106"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>List of modalities that were processed in the cache input.</p>
+  <div class="markdown level1 summary"><p>Output only. A detailed breakdown of the token count for each modality in the cached
+content.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -193,10 +194,10 @@ public List&lt;ModalityTokenCount&gt;? CacheTokensDetails { get; set; }</code></
 
   <h3 id="Google_GenAI_Types_UsageMetadata_CachedContentTokenCount" data-uid="Google.GenAI.Types.UsageMetadata.CachedContentTokenCount">
   CachedContentTokenCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UsageMetadata.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UsageMetadata.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Number of tokens in the cached part of the prompt (the cached content).</p>
+  <div class="markdown level1 summary"><p>Output only. The number of tokens in the cached content that was used for this request.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -227,11 +228,12 @@ public int? CachedContentTokenCount { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_UsageMetadata_PromptTokenCount" data-uid="Google.GenAI.Types.UsageMetadata.PromptTokenCount">
   PromptTokenCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UsageMetadata.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UsageMetadata.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Number of tokens in the prompt. When <code>cached_content</code> is set, this is still the total
-effective prompt size meaning this includes the number of tokens in the cached content.</p>
+  <div class="markdown level1 summary"><p>The total number of tokens in the prompt. This includes any text, images, or other media
+provided in the request. When <code>cached_content</code> is set, this also includes the number of
+tokens in the cached content.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -262,10 +264,10 @@ public int? PromptTokenCount { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_UsageMetadata_PromptTokensDetails" data-uid="Google.GenAI.Types.UsageMetadata.PromptTokensDetails">
   PromptTokensDetails
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UsageMetadata.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UsageMetadata.cs/#L95"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>List of modalities that were processed in the request input.</p>
+  <div class="markdown level1 summary"><p>Output only. A detailed breakdown of the token count for each modality in the prompt.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -296,7 +298,7 @@ public List&lt;ModalityTokenCount&gt;? PromptTokensDetails { get; set; }</code><
 
   <h3 id="Google_GenAI_Types_UsageMetadata_ResponseTokenCount" data-uid="Google.GenAI.Types.UsageMetadata.ResponseTokenCount">
   ResponseTokenCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UsageMetadata.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UsageMetadata.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Total number of tokens across all the generated response candidates.</p>
@@ -330,7 +332,7 @@ public int? ResponseTokenCount { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_UsageMetadata_ResponseTokensDetails" data-uid="Google.GenAI.Types.UsageMetadata.ResponseTokensDetails">
   ResponseTokensDetails
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UsageMetadata.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UsageMetadata.cs/#L116"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>List of modalities that were returned in the response.</p>
@@ -360,14 +362,49 @@ public List&lt;ModalityTokenCount&gt;? ResponseTokensDetails { get; set; }</code
 
 
 
+  <a id="Google_GenAI_Types_UsageMetadata_ServiceTier_" data-uid="Google.GenAI.Types.UsageMetadata.ServiceTier*"></a>
+
+  <h3 id="Google_GenAI_Types_UsageMetadata_ServiceTier" data-uid="Google.GenAI.Types.UsageMetadata.ServiceTier">
+  ServiceTier
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UsageMetadata.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Output only. Service tier of the request. This field is not supported in Vertex AI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;serviceTier&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public ServiceTier? ServiceTier { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.ServiceTier.html">ServiceTier</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_UsageMetadata_ThoughtsTokenCount_" data-uid="Google.GenAI.Types.UsageMetadata.ThoughtsTokenCount*"></a>
 
   <h3 id="Google_GenAI_Types_UsageMetadata_ThoughtsTokenCount" data-uid="Google.GenAI.Types.UsageMetadata.ThoughtsTokenCount">
   ThoughtsTokenCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UsageMetadata.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UsageMetadata.cs/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Number of tokens of thoughts for thinking models.</p>
+  <div class="markdown level1 summary"><p>Output only. The number of tokens that were part of the model's generated &quot;thoughts&quot; output,
+if applicable.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -398,10 +435,11 @@ public int? ThoughtsTokenCount { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_UsageMetadata_ToolUsePromptTokenCount" data-uid="Google.GenAI.Types.UsageMetadata.ToolUsePromptTokenCount">
   ToolUsePromptTokenCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UsageMetadata.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UsageMetadata.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Number of tokens present in tool-use prompt(s).</p>
+  <div class="markdown level1 summary"><p>Output only. The number of tokens in the results from tool executions, which are provided
+back to the model as input, if applicable.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -432,10 +470,11 @@ public int? ToolUsePromptTokenCount { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_UsageMetadata_ToolUsePromptTokensDetails" data-uid="Google.GenAI.Types.UsageMetadata.ToolUsePromptTokensDetails">
   ToolUsePromptTokensDetails
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UsageMetadata.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UsageMetadata.cs/#L127"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>List of modalities that were processed in the tool-use prompt.</p>
+  <div class="markdown level1 summary"><p>Output only. A detailed breakdown by modality of the token counts from the results of tool
+executions, which are provided back to the model as input.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -466,10 +505,11 @@ public List&lt;ModalityTokenCount&gt;? ToolUsePromptTokensDetails { get; set; }<
 
   <h3 id="Google_GenAI_Types_UsageMetadata_TotalTokenCount" data-uid="Google.GenAI.Types.UsageMetadata.TotalTokenCount">
   TotalTokenCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UsageMetadata.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UsageMetadata.cs/#L85"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Total token count for prompt, response candidates, and tool-use prompts(if present).</p>
+  <div class="markdown level1 summary"><p>The total number of tokens for the entire request. This is the sum of <code>prompt_token_count</code>,
+<code>candidates_token_count</code>, <code>tool_use_prompt_token_count</code>, and <code>thoughts_token_count</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -500,11 +540,10 @@ public int? TotalTokenCount { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_UsageMetadata_TrafficType" data-uid="Google.GenAI.Types.UsageMetadata.TrafficType">
   TrafficType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UsageMetadata.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UsageMetadata.cs/#L137"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Traffic type. This shows whether a request consumes Pay-As-You-Go or Provisioned Throughput
-quota.</p>
+  <div class="markdown level1 summary"><p>Output only. The traffic type for this request. This field is not supported in Gemini API.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -539,7 +578,7 @@ public TrafficType? TrafficType { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_UsageMetadata_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.UsageMetadata.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UsageMetadata.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/UsageMetadata.cs/#L160"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a UsageMetadata object.</p>

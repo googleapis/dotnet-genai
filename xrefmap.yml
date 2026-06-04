@@ -38778,6 +38778,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.UsageMetadata.ResponseTokensDetails
   nameWithType: UsageMetadata.ResponseTokensDetails
+- uid: Google.GenAI.Types.UsageMetadata.ServiceTier
+  name: ServiceTier
+  href: api/Google.GenAI.Types.UsageMetadata.html#Google_GenAI_Types_UsageMetadata_ServiceTier
+  commentId: P:Google.GenAI.Types.UsageMetadata.ServiceTier
+  fullName: Google.GenAI.Types.UsageMetadata.ServiceTier
+  nameWithType: UsageMetadata.ServiceTier
+- uid: Google.GenAI.Types.UsageMetadata.ServiceTier*
+  name: ServiceTier
+  href: api/Google.GenAI.Types.UsageMetadata.html#Google_GenAI_Types_UsageMetadata_ServiceTier_
+  commentId: Overload:Google.GenAI.Types.UsageMetadata.ServiceTier
+  isSpec: "True"
+  fullName: Google.GenAI.Types.UsageMetadata.ServiceTier
+  nameWithType: UsageMetadata.ServiceTier
 - uid: Google.GenAI.Types.UsageMetadata.ThoughtsTokenCount
   name: ThoughtsTokenCount
   href: api/Google.GenAI.Types.UsageMetadata.html#Google_GenAI_Types_UsageMetadata_ThoughtsTokenCount

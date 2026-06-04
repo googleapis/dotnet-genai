@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ModalityTokenCount | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Represents token counting info for a single modality.">
+      <meta name="description" content="Represents a breakdown of token usage by modality. This message is used in CountTokensResponse and GenerateContentResponse.UsageMetadata to provide a detailed view of how many tokens are used by each modality (e.g., text, image, video) in a request. This is particularly useful for multimodal models, allowing you to track and manage token consumption for billing and quota purposes.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Types_ModalityTokenCount" data-uid="Google.GenAI.Types.ModalityTokenCount" class="text-break">
-Class ModalityTokenCount  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ModalityTokenCount.cs/#L29"><i class="bi bi-code-slash"></i></a>
+Class ModalityTokenCount  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ModalityTokenCount.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,7 +93,11 @@ Class ModalityTokenCount  <a class="header-action link-secondary" title="View so
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents token counting info for a single modality.</p>
+  <div class="markdown summary"><p>Represents a breakdown of token usage by modality. This message is used in CountTokensResponse
+and GenerateContentResponse.UsageMetadata to provide a detailed view of how many tokens are
+used by each modality (e.g., text, image, video) in a request. This is particularly useful for
+multimodal models, allowing you to track and manage token consumption for billing and quota
+purposes.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -159,10 +163,10 @@ Class ModalityTokenCount  <a class="header-action link-secondary" title="View so
 
   <h3 id="Google_GenAI_Types_ModalityTokenCount_Modality" data-uid="Google.GenAI.Types.ModalityTokenCount.Modality">
   Modality
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ModalityTokenCount.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ModalityTokenCount.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The modality associated with this token count.</p>
+  <div class="markdown level1 summary"><p>The modality that this token count applies to.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -193,7 +197,7 @@ public MediaModality? Modality { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_ModalityTokenCount_TokenCount" data-uid="Google.GenAI.Types.ModalityTokenCount.TokenCount">
   TokenCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ModalityTokenCount.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ModalityTokenCount.cs/#L44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The number of tokens counted for this modality.</p>
@@ -231,7 +235,7 @@ public int? TokenCount { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_ModalityTokenCount_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.ModalityTokenCount.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ModalityTokenCount.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ModalityTokenCount.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a ModalityTokenCount object.</p>
@@ -274,7 +278,7 @@ fails.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ModalityTokenCount.cs/#L29" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ModalityTokenCount.cs/#L33" class="edit-link">Edit this page</a>
         </div>
 
 

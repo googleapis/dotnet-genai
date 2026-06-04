@@ -1348,7 +1348,11 @@ that implements the MCP protocol. Next ID: 6. This data type is not supported in
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ModalityTokenCount.html">ModalityTokenCount</a></dt>
-      <dd><p>Represents token counting info for a single modality.</p>
+      <dd><p>Represents a breakdown of token usage by modality. This message is used in CountTokensResponse
+and GenerateContentResponse.UsageMetadata to provide a detailed view of how many tokens are
+used by each modality (e.g., text, image, video) in a request. This is particularly useful for
+multimodal models, allowing you to track and manage token consumption for billing and quota
+purposes.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -2382,7 +2386,7 @@ content will be blocked.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.MediaModality.html">MediaModality</a></dt>
-      <dd><p>Server content modalities.</p>
+      <dd><p>The modality that this token count applies to.</p>
 </dd>
     </dl>
     <dl class="jumplist">

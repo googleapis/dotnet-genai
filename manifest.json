@@ -4028,7 +4028,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.MediaModality",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.MediaModality.yml\" sourcestartlinenumber=\"1\">Server content modalities.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.MediaModality.yml\" sourcestartlinenumber=\"1\">The modality that this token count applies to.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4112,7 +4112,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ModalityTokenCount",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ModalityTokenCount.yml\" sourcestartlinenumber=\"1\">Represents token counting info for a single modality.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ModalityTokenCount.yml\" sourcestartlinenumber=\"1\">Represents a breakdown of token usage by modality. This message is used in CountTokensResponse\nand GenerateContentResponse.UsageMetadata to provide a detailed view of how many tokens are\nused by each modality (e.g., text, image, video) in a request. This is particularly useful for\nmultimodal models, allowing you to track and manage token consumption for billing and quota\npurposes.</p>\n"
     },
     {
       "type": "ManagedReference",
