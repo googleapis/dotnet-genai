@@ -23,8 +23,8 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Raw media bytes for function response.  Text should not be sent as raw bytes, use the
-  /// FunctionResponse.response field.
+  /// Raw media bytes for function response. Text should not be sent as raw bytes, use the 'text'
+  /// field.
   /// </summary>
 
   public record FunctionResponseBlob {
@@ -36,7 +36,7 @@ namespace Google.GenAI.Types {
     public string ? MimeType { get; set; }
 
     /// <summary>
-    /// Inline media bytes.
+    /// Raw bytes.
     /// </summary>
     [JsonPropertyName("data")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -47,7 +47,9 @@ namespace Google.GenAI.Types {
 
     /// <summary>
     /// Optional. Display name of the blob. Used to provide a label or filename to distinguish
-    /// blobs.
+    /// blobs. This field is only returned in PromptMessage for prompt management. It is currently
+    /// used in the Gemini GenerateContent calls only when server side tools (code_execution,
+    /// google_search, and url_context) are enabled. This field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("displayName")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

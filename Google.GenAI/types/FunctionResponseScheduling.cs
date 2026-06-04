@@ -22,7 +22,8 @@ using System.Text.Json;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Specifies how the response should be scheduled in the conversation.
+  /// Specifies how the response should be scheduled in the conversation. Only applicable to
+  /// NON_BLOCKING function calls, is ignored otherwise. Defaults to WHEN_IDLE.
   /// </summary>
 
   [JsonConverter(typeof(FunctionResponseSchedulingConverter))]

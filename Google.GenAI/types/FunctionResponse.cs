@@ -23,26 +23,29 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// A function response.
+  /// The result output from a FunctionCall that contains a string representing the
+  /// FunctionDeclaration.name and a structured JSON object containing any output from the function
+  /// is used as context to the model. This should contain the result of a `FunctionCall` made based
+  /// on model prediction.
   /// </summary>
 
   public record FunctionResponse {
     /// <summary>
-    /// Signals that function call continues, and more responses will be returned, turning the
-    /// function call into a generator. Is only applicable to NON_BLOCKING function calls (see
-    /// FunctionDeclaration.behavior for details), ignored otherwise. If false, the default, future
-    /// responses will not be considered. Is only applicable to NON_BLOCKING function calls, is
+    /// Optional. Signals that function call continues, and more responses will be returned, turning
+    /// the function call into a generator. Is only applicable to NON_BLOCKING function calls, is
     /// ignored otherwise. If set to false, future responses will not be considered. It is allowed
     /// to return empty `response` with `will_continue=False` to signal that the function call is
-    /// finished.
+    /// finished. This may still trigger the model generation. To avoid triggering the generation
+    /// and finish the function call, additionally set `scheduling` to `SILENT`. This field is not
+    /// supported in Vertex AI.
     /// </summary>
     [JsonPropertyName("willContinue")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool ? WillContinue { get; set; }
 
     /// <summary>
-    /// Specifies how the response should be scheduled in the conversation. Only applicable to
-    /// NON_BLOCKING function calls, is ignored otherwise. Defaults to WHEN_IDLE.
+    /// Optional. Specifies how the response should be scheduled in the conversation. Only
+    /// applicable to NON_BLOCKING function calls, is ignored otherwise. Defaults to WHEN_IDLE.
     /// </summary>
     [JsonPropertyName("scheduling")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -52,8 +55,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// List of parts that constitute a function response. Each part may have a different IANA MIME
-    /// type.
+    /// Optional. Ordered `Parts` that constitute a function response. Parts may have different IANA
+    /// MIME types.
     /// </summary>
     [JsonPropertyName("parts")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

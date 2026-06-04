@@ -23,51 +23,50 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// URI based data for function response. This data type is not supported in Gemini API.
+  /// Scores autorater responses by using exact string match reward scorer.
   /// </summary>
 
-  public record FunctionResponseFileData {
+  public record ReinforcementTuningAutoraterScorerExactMatchScorer {
     /// <summary>
-    /// URI.
+    /// Assigns this reward score if parsed response string equals the expression.
     /// </summary>
-    [JsonPropertyName("fileUri")]
+    [JsonPropertyName("correctAnswerReward")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? FileUri { get; set; }
+    public double ? CorrectAnswerReward { get; set; }
 
     /// <summary>
-    /// The IANA standard MIME type of the source data.
+    /// Assigns this reward score if parsed reward value does not equal the expression.
     /// </summary>
-    [JsonPropertyName("mimeType")]
+    [JsonPropertyName("wrongAnswerReward")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string
-        ? MimeType {
+    public double
+        ? WrongAnswerReward {
             get; set;
           }
 
     /// <summary>
-    /// Optional. Display name of the file data. Used to provide a label or filename to distinguish
-    /// file datas. This field is only returned in PromptMessage for prompt management. It is
-    /// currently used in the Gemini GenerateContent calls only when server side tools
-    /// (code_execution, google_search, and url_context) are enabled.
+    /// The string expression to match against. Supports substitution in the format of
+    /// `references.reference` (wrapped in double curly braces) before matching. No regex support.
     /// </summary>
-    [JsonPropertyName("displayName")]
+    [JsonPropertyName("expression")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? DisplayName {
+        ? Expression {
             get; set;
           }
 
     /// <summary>
-    /// Deserializes a JSON string to a FunctionResponseFileData object.
+    /// Deserializes a JSON string to a ReinforcementTuningAutoraterScorerExactMatchScorer object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized FunctionResponseFileData object, or null if deserialization
-    /// fails.</returns>
-    public static FunctionResponseFileData
+    /// <returns>The deserialized ReinforcementTuningAutoraterScorerExactMatchScorer object, or null
+    /// if deserialization fails.</returns>
+    public static ReinforcementTuningAutoraterScorerExactMatchScorer
         ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<FunctionResponseFileData>(jsonString, options);
+        return JsonSerializer.Deserialize<ReinforcementTuningAutoraterScorerExactMatchScorer>(
+            jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;

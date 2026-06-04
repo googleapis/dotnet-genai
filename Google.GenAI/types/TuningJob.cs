@@ -179,6 +179,16 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    ///
+    /// </summary>
+    [JsonPropertyName("reinforcementTuningSpec")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public ReinforcementTuningSpec
+        ? ReinforcementTuningSpec {
+            get; set;
+          }
+
+    /// <summary>
     /// Output only. The tuning data statistics associated with this TuningJob.
     /// </summary>
     [JsonPropertyName("tuningDataStats")]

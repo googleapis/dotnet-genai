@@ -81,6 +81,50 @@ namespace Google.GenAI {
       return toObject;
     }
 
+    internal JsonNode CodeExecutionResultToVertex(JsonNode fromObject, JsonObject parentObject,
+                                                  JsonNode rootObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "outcome" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "outcome" },
+                              Common.GetValueByPath(fromObject, new string[] { "outcome" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "output" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "output" },
+                              Common.GetValueByPath(fromObject, new string[] { "output" }));
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "id" }))) {
+        throw new NotSupportedException(
+            "id parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode ContentToVertex(JsonNode fromObject, JsonObject parentObject,
+                                      JsonNode rootObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "parts" }) != null) {
+        JsonArray keyArray = (JsonArray)Common.GetValueByPath(fromObject, new string[] { "parts" });
+        JsonArray result = new JsonArray();
+
+        foreach (var record in keyArray) {
+          result.Add(PartToVertex(Common.ParseToJsonNode(record), toObject, rootObject));
+        }
+        Common.SetValueByPath(toObject, new string[] { "parts" }, result);
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "role" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "role" },
+                              Common.GetValueByPath(fromObject, new string[] { "role" }));
+      }
+
+      return toObject;
+    }
+
     internal JsonNode CreateTuningJobConfigToMldev(JsonNode fromObject, JsonObject parentObject,
                                                    JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
@@ -219,6 +263,17 @@ namespace Google.GenAI {
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "maxOutputTokens" }))) {
         throw new NotSupportedException(
             "maxOutputTokens parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "thinkingLevel" }))) {
+        throw new NotSupportedException(
+            "thinkingLevel parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
+      }
+
+      if (!Common.IsZero(
+              Common.GetValueByPath(fromObject, new string[] { "validationDatasetUri" }))) {
+        throw new NotSupportedException(
+            "validationDatasetUri parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
       }
 
       return toObject;
@@ -561,6 +616,19 @@ namespace Google.GenAI {
             Common.GetValueByPath(fromObject, new string[] { "maxOutputTokens" }));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "thinkingLevel" }) != null) {
+        Common.SetValueByPath(
+            parentObject,
+            new string[] { "reinforcementTuningSpec", "hyperParameters", "thinkingLevel" },
+            Common.GetValueByPath(fromObject, new string[] { "thinkingLevel" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "validationDatasetUri" }) != null) {
+        Common.SetValueByPath(
+            parentObject, new string[] { "reinforcementTuningSpec", "validationDatasetUri" },
+            Common.GetValueByPath(fromObject, new string[] { "validationDatasetUri" }));
+      }
+
       return toObject;
     }
 
@@ -762,6 +830,28 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "tuningMode" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "tuningMode" },
                               Common.GetValueByPath(fromObject, new string[] { "tuningMode" }));
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode ExecutableCodeToVertex(JsonNode fromObject, JsonObject parentObject,
+                                             JsonNode rootObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "code" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "code" },
+                              Common.GetValueByPath(fromObject, new string[] { "code" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "language" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "language" },
+                              Common.GetValueByPath(fromObject, new string[] { "language" }));
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "id" }))) {
+        throw new NotSupportedException(
+            "id parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       }
 
       return toObject;
@@ -976,6 +1066,124 @@ namespace Google.GenAI {
           result.Add(TuningJobFromVertex(Common.ParseToJsonNode(record), toObject, rootObject));
         }
         Common.SetValueByPath(toObject, new string[] { "tuningJobs" }, result);
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode PartToVertex(JsonNode fromObject, JsonObject parentObject,
+                                   JsonNode rootObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "mediaResolution" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "mediaResolution" },
+            Common.GetValueByPath(fromObject, new string[] { "mediaResolution" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "codeExecutionResult" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "codeExecutionResult" },
+            CodeExecutionResultToVertex(Common.ParseToJsonNode(Common.GetValueByPath(
+                                            fromObject, new string[] { "codeExecutionResult" })),
+                                        toObject, rootObject));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "executableCode" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "executableCode" },
+            ExecutableCodeToVertex(Common.ParseToJsonNode(Common.GetValueByPath(
+                                       fromObject, new string[] { "executableCode" })),
+                                   toObject, rootObject));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "fileData" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "fileData" },
+                              Common.GetValueByPath(fromObject, new string[] { "fileData" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "functionCall" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "functionCall" },
+                              Common.GetValueByPath(fromObject, new string[] { "functionCall" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "functionResponse" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "functionResponse" },
+            Common.GetValueByPath(fromObject, new string[] { "functionResponse" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "inlineData" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "inlineData" },
+                              Common.GetValueByPath(fromObject, new string[] { "inlineData" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "text" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "text" },
+                              Common.GetValueByPath(fromObject, new string[] { "text" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "thought" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "thought" },
+                              Common.GetValueByPath(fromObject, new string[] { "thought" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "thoughtSignature" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "thoughtSignature" },
+            Common.GetValueByPath(fromObject, new string[] { "thoughtSignature" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "videoMetadata" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "videoMetadata" },
+                              Common.GetValueByPath(fromObject, new string[] { "videoMetadata" }));
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "toolCall" }))) {
+        throw new NotSupportedException(
+            "toolCall parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "toolResponse" }))) {
+        throw new NotSupportedException(
+            "toolResponse parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "partMetadata" }))) {
+        throw new NotSupportedException(
+            "partMetadata parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode ReinforcementTuningExampleToVertex(JsonNode fromObject,
+                                                         JsonObject parentObject,
+                                                         JsonNode rootObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "contents" }) != null) {
+        JsonArray keyArray =
+            (JsonArray)Common.GetValueByPath(fromObject, new string[] { "contents" });
+        JsonArray result = new JsonArray();
+
+        foreach (var record in keyArray) {
+          result.Add(ContentToVertex(Common.ParseToJsonNode(record), toObject, rootObject));
+        }
+        Common.SetValueByPath(toObject, new string[] { "contents" }, result);
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "references" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "references" },
+                              Common.GetValueByPath(fromObject, new string[] { "references" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "systemInstruction" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "systemInstruction" },
+            ContentToVertex(Common.ParseToJsonNode(Common.GetValueByPath(
+                                fromObject, new string[] { "systemInstruction" })),
+                            toObject, rootObject));
       }
 
       return toObject;
@@ -1246,6 +1454,12 @@ namespace Google.GenAI {
                                        toObject, rootObject));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "reinforcementTuningSpec" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "reinforcementTuningSpec" },
+            Common.GetValueByPath(fromObject, new string[] { "reinforcementTuningSpec" }));
+      }
+
       if (Common.GetValueByPath(fromObject, new string[] { "tuningDataStats" }) != null) {
         Common.SetValueByPath(
             toObject, new string[] { "tuningDataStats" },
@@ -1391,6 +1605,74 @@ namespace Google.GenAI {
         Common.SetValueByPath(
             toObject, new string[] { "validationDatasetUri" },
             Common.GetValueByPath(fromObject, new string[] { "vertexDatasetResource" }));
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode ValidateRewardParametersToVertex(JsonNode fromObject, JsonObject parentObject,
+                                                       JsonNode rootObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "parent" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "_url", "parent" },
+                              Common.GetValueByPath(fromObject, new string[] { "parent" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "sampleResponse" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "sampleResponse" },
+                              ContentToVertex(Common.ParseToJsonNode(Common.GetValueByPath(
+                                                  fromObject, new string[] { "sampleResponse" })),
+                                              toObject, rootObject));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "example" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "example" },
+            ReinforcementTuningExampleToVertex(Common.ParseToJsonNode(Common.GetValueByPath(
+                                                   fromObject, new string[] { "example" })),
+                                               toObject, rootObject));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "singleRewardConfig" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "singleRewardConfig" },
+            Common.GetValueByPath(fromObject, new string[] { "singleRewardConfig" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "compositeRewardConfig" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "compositeRewardConfig" },
+            Common.GetValueByPath(fromObject, new string[] { "compositeRewardConfig" }));
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode ValidateRewardResponseFromVertex(JsonNode fromObject, JsonObject parentObject,
+                                                       JsonNode rootObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "sdkHttpResponse" },
+            Common.GetValueByPath(fromObject, new string[] { "sdkHttpResponse" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "overallReward" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "overallReward" },
+                              Common.GetValueByPath(fromObject, new string[] { "overallReward" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "error" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "error" },
+                              Common.GetValueByPath(fromObject, new string[] { "error" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "rewardInfoDetails" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "rewardInfoDetails" },
+            Common.GetValueByPath(fromObject, new string[] { "rewardInfoDetails" }));
       }
 
       return toObject;
@@ -1741,6 +2023,87 @@ namespace Google.GenAI {
 
       return responseNode.Deserialize<TuningOperation>() ??
              throw new InvalidOperationException("Failed to deserialize Task<TuningOperation>.");
+    }
+
+    public async Task<ValidateRewardResponse> ValidateRewardAsync(
+        string parent, Content sampleResponse, ReinforcementTuningExample example,
+        SingleReinforcementTuningRewardConfig? singleRewardConfig = null,
+        CompositeReinforcementTuningRewardConfig? compositeRewardConfig = null,
+        ValidateRewardConfig? config = null, CancellationToken cancellationToken = default) {
+      ValidateRewardParameters parameter = new ValidateRewardParameters();
+
+      if (!Common.IsZero(parent)) {
+        parameter.Parent = parent;
+      }
+      if (!Common.IsZero(sampleResponse)) {
+        parameter.SampleResponse = sampleResponse;
+      }
+      if (!Common.IsZero(example)) {
+        parameter.Example = example;
+      }
+      if (!Common.IsZero(singleRewardConfig)) {
+        parameter.SingleRewardConfig = singleRewardConfig;
+      }
+      if (!Common.IsZero(compositeRewardConfig)) {
+        parameter.CompositeRewardConfig = compositeRewardConfig;
+      }
+      if (!Common.IsZero(config)) {
+        parameter.Config = config;
+      }
+      string jsonString = JsonSerializer.Serialize(parameter);
+      JsonNode? parameterNode = JsonNode.Parse(jsonString);
+      if (parameterNode == null) {
+        throw new NotSupportedException("Failed to parse ValidateRewardParameters to JsonNode.");
+      }
+
+      JsonNode body;
+      string path;
+      if (this._apiClient.VertexAI) {
+        body = ValidateRewardParametersToVertex(parameterNode, new JsonObject(), parameterNode);
+        path =
+            Common.FormatMap("{parent}/tuningJobs:validateReinforcementTuningReward", body["_url"]);
+      } else {
+        throw new NotSupportedException(
+            "This method is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
+      }
+      JsonObject? bodyObj = body?.AsObject();
+      bodyObj?.Remove("_url");
+      if (bodyObj != null && bodyObj.ContainsKey("_query")) {
+        path = path + "?" + Common.FormatQuery((JsonObject)bodyObj["_query"]);
+        bodyObj.Remove("_query");
+      } else {
+        bodyObj?.Remove("_query");
+      }
+      HttpOptions? requestHttpOptions = config?.HttpOptions;
+
+      ApiResponse response =
+          await this._apiClient.RequestAsync(HttpMethod.Post, path, JsonSerializer.Serialize(body),
+                                             requestHttpOptions, cancellationToken);
+      HttpContent httpContent = response.GetEntity();
+#if NETSTANDARD2_0
+      string contentString = await httpContent.ReadAsStringAsync();
+#else
+      string contentString = await httpContent.ReadAsStringAsync(cancellationToken);
+#endif
+      JsonNode? httpContentNode = JsonNode.Parse(contentString);
+      if (httpContentNode == null) {
+        throw new NotSupportedException("Failed to parse response to JsonNode.");
+      }
+      JsonNode responseNode = httpContentNode;
+
+      if (this._apiClient.VertexAI) {
+        responseNode =
+            ValidateRewardResponseFromVertex(httpContentNode, new JsonObject(), parameterNode);
+      }
+
+      if (!this._apiClient.VertexAI) {
+        throw new NotSupportedException(
+            "This method is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
+      }
+
+      return responseNode.Deserialize<ValidateRewardResponse>() ??
+             throw new InvalidOperationException(
+                 "Failed to deserialize Task<ValidateRewardResponse>.");
     }
 
     /// <summary>

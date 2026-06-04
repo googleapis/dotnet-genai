@@ -23,80 +23,83 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Single reinforcement tuning reward config.
+  /// Parameters for the validate_reward method.  Validates a reinforcement tuning reward
+  /// configuration against a sample response and example before creating a reinforcement tuning
+  /// job.
   /// </summary>
 
-  public record SingleReinforcementTuningRewardConfig {
+  internal record ValidateRewardParameters {
     /// <summary>
-    /// Scores parsed responses for autorater use cases by using a model to compute the reward.
+    /// The resource name of the Location to validate the reward in, e.g.
+    /// `projects/{project}/locations/{location}`.
     /// </summary>
-    [JsonPropertyName("autoraterScorer")]
+    [JsonPropertyName("parent")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public ReinforcementTuningAutoraterScorer ? AutoraterScorer { get; set; }
+    public string ? Parent { get; set; }
 
     /// <summary>
-    /// A unique reward name used to identify each single reinforcement tuning reward.
+    /// The sample response for validating the reward configuration.
     /// </summary>
-    [JsonPropertyName("rewardName")]
+    [JsonPropertyName("sampleResponse")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string
-        ? RewardName {
+    public Content
+        ? SampleResponse {
             get; set;
           }
 
     /// <summary>
-    /// Defines how to parse sample response.
+    /// The example to validate the reward configuration.
     /// </summary>
-    [JsonPropertyName("parseResponseConfig")]
+    [JsonPropertyName("example")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public ReinforcementTuningParseResponseConfig
-        ? ParseResponseConfig {
+    public ReinforcementTuningExample
+        ? Example {
             get; set;
           }
 
     /// <summary>
-    /// Scores parsed responses for code execution use cases.
+    /// Single reward function configuration for reinforcement tuning. Mutually exclusive with
+    /// composite_reward_config.
     /// </summary>
-    [JsonPropertyName("codeExecutionRewardScorer")]
+    [JsonPropertyName("singleRewardConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public ReinforcementTuningCodeExecutionRewardScorer
-        ? CodeExecutionRewardScorer {
+    public SingleReinforcementTuningRewardConfig
+        ? SingleRewardConfig {
             get; set;
           }
 
     /// <summary>
-    /// Scores parsed responses for simple string matching use cases against reference answer
-    /// without writing python code.
+    /// Composite reward function configuration for reinforcement tuning. Mutually exclusive with
+    /// single_reward_config.
     /// </summary>
-    [JsonPropertyName("stringMatchRewardScorer")]
+    [JsonPropertyName("compositeRewardConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public ReinforcementTuningStringMatchRewardScorer
-        ? StringMatchRewardScorer {
+    public CompositeReinforcementTuningRewardConfig
+        ? CompositeRewardConfig {
             get; set;
           }
 
     /// <summary>
-    /// Scores parsed responses by calling a Cloud Run service.
+    /// Optional parameters for the request.
     /// </summary>
-    [JsonPropertyName("cloudRunRewardScorer")]
+    [JsonPropertyName("config")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public ReinforcementTuningCloudRunRewardScorer
-        ? CloudRunRewardScorer {
+    public ValidateRewardConfig
+        ? Config {
             get; set;
           }
 
     /// <summary>
-    /// Deserializes a JSON string to a SingleReinforcementTuningRewardConfig object.
+    /// Deserializes a JSON string to a ValidateRewardParameters object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized SingleReinforcementTuningRewardConfig object, or null if
-    /// deserialization fails.</returns>
-    public static SingleReinforcementTuningRewardConfig
+    /// <returns>The deserialized ValidateRewardParameters object, or null if deserialization
+    /// fails.</returns>
+    public static ValidateRewardParameters
         ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<SingleReinforcementTuningRewardConfig>(jsonString,
-                                                                                 options);
+        return JsonSerializer.Deserialize<ValidateRewardParameters>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;

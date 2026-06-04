@@ -23,51 +23,62 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// URI based data for function response. This data type is not supported in Gemini API.
+  /// Response for the validate_reward method.  Contains the computed reward for a reinforcement
+  /// tuning reward configuration.
   /// </summary>
 
-  public record FunctionResponseFileData {
+  public record ValidateRewardResponse {
     /// <summary>
-    /// URI.
+    /// Used to retain the full HTTP response.
     /// </summary>
-    [JsonPropertyName("fileUri")]
+    [JsonPropertyName("sdkHttpResponse")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? FileUri { get; set; }
+    public HttpResponse ? SdkHttpResponse { get; set; }
 
     /// <summary>
-    /// The IANA standard MIME type of the source data.
+    /// Output only. The overall weighted reward. For a `CompositeReinforcementTuningRewardConfig`,
+    /// this is the weighted average of all rewards. For a `SingleReinforcementTuningRewardConfig`,
+    /// this will be the value of the single reward.
     /// </summary>
-    [JsonPropertyName("mimeType")]
+    [JsonPropertyName("overallReward")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string
-        ? MimeType {
+    public double
+        ? OverallReward {
             get; set;
           }
 
     /// <summary>
-    /// Optional. Display name of the file data. Used to provide a label or filename to distinguish
-    /// file datas. This field is only returned in PromptMessage for prompt management. It is
-    /// currently used in the Gemini GenerateContent calls only when server side tools
-    /// (code_execution, google_search, and url_context) are enabled.
+    /// Output only. In case of an error, this field will be populated with a detailed error message
+    /// to help with debugging.
     /// </summary>
-    [JsonPropertyName("displayName")]
+    [JsonPropertyName("error")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? DisplayName {
+        ? Error {
             get; set;
           }
 
     /// <summary>
-    /// Deserializes a JSON string to a FunctionResponseFileData object.
+    /// A map from reward name to reward info.
+    /// </summary>
+    [JsonPropertyName("rewardInfoDetails")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public Dictionary<string, ReinforcementTuningRewardInfo>
+        ? RewardInfoDetails {
+            get; set;
+          }
+
+    /// <summary>
+    /// Deserializes a JSON string to a ValidateRewardResponse object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized FunctionResponseFileData object, or null if deserialization
+    /// <returns>The deserialized ValidateRewardResponse object, or null if deserialization
     /// fails.</returns>
-    public static FunctionResponseFileData
+    public static ValidateRewardResponse
         ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<FunctionResponseFileData>(jsonString, options);
+        return JsonSerializer.Deserialize<ValidateRewardResponse>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;

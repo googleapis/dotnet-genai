@@ -23,40 +23,33 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Tool to retrieve knowledge from Google Maps.
+  /// Scores parsed responses by calling a Cloud Run service.
   /// </summary>
 
-  public record GoogleMaps {
+  public record ReinforcementTuningCloudRunRewardScorer {
     /// <summary>
-    /// The authentication config to access the API. Only API key is supported. This field is not
-    /// supported in Gemini API.
+    /// URI of the Cloud Run service that will be used to compute the reward. The Vertex AI Secure
+    /// Fine Tuning Service Agent
+    /// (`service-PROJECT_NUMBER@gcp-sa-vertex-tune.iam.gserviceaccount.com`, where `PROJECT_NUMBER`
+    /// is the numeric project number) must be granted the permission (e.g. by granting
+    /// `roles/run.invoker` in IAM) to invoke the Cloud Run service.
     /// </summary>
-    [JsonPropertyName("authConfig")]
+    [JsonPropertyName("cloudRunUri")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public AuthConfig ? AuthConfig { get; set; }
+    public string ? CloudRunUri { get; set; }
 
     /// <summary>
-    /// Deprecated. The Google Maps contextual widget behavior in Grounding with Google Maps is
-    /// being deprecated; this field is planned for removal and no longer has any effect once
-    /// removed. Optional. Whether to return a widget context token in the GroundingMetadata of the
-    /// response.
-    /// </summary>
-    [JsonPropertyName("enableWidget")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public bool
-        ? EnableWidget {
-            get; set;
-          }
-
-    /// <summary>
-    /// Deserializes a JSON string to a GoogleMaps object.
+    /// Deserializes a JSON string to a ReinforcementTuningCloudRunRewardScorer object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized GoogleMaps object, or null if deserialization fails.</returns>
-    public static GoogleMaps ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
+    /// <returns>The deserialized ReinforcementTuningCloudRunRewardScorer object, or null if
+    /// deserialization fails.</returns>
+    public static ReinforcementTuningCloudRunRewardScorer
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<GoogleMaps>(jsonString, options);
+        return JsonSerializer.Deserialize<ReinforcementTuningCloudRunRewardScorer>(jsonString,
+                                                                                   options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;

@@ -23,40 +23,40 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Tool to retrieve knowledge from Google Maps.
+  /// Config for stream translation.
   /// </summary>
 
-  public record GoogleMaps {
+  public record TranslationConfig {
     /// <summary>
-    /// The authentication config to access the API. Only API key is supported. This field is not
-    /// supported in Gemini API.
+    /// If true, the model will generate audio when the target language is spoken, essentially it
+    /// will parrot the input. If false, we will not produce audio for the target language.
     /// </summary>
-    [JsonPropertyName("authConfig")]
+    [JsonPropertyName("echoTargetLanguage")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public AuthConfig ? AuthConfig { get; set; }
+    public bool ? EchoTargetLanguage { get; set; }
 
     /// <summary>
-    /// Deprecated. The Google Maps contextual widget behavior in Grounding with Google Maps is
-    /// being deprecated; this field is planned for removal and no longer has any effect once
-    /// removed. Optional. Whether to return a widget context token in the GroundingMetadata of the
-    /// response.
+    /// The target language for translation. Supported values are BCP-47 language codes (e.g. "en",
+    /// "es", "fr").
     /// </summary>
-    [JsonPropertyName("enableWidget")]
+    [JsonPropertyName("targetLanguageCode")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public bool
-        ? EnableWidget {
+    public string
+        ? TargetLanguageCode {
             get; set;
           }
 
     /// <summary>
-    /// Deserializes a JSON string to a GoogleMaps object.
+    /// Deserializes a JSON string to a TranslationConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized GoogleMaps object, or null if deserialization fails.</returns>
-    public static GoogleMaps ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
+    /// <returns>The deserialized TranslationConfig object, or null if deserialization
+    /// fails.</returns>
+    public static TranslationConfig
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<GoogleMaps>(jsonString, options);
+        return JsonSerializer.Deserialize<TranslationConfig>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;

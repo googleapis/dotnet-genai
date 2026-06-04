@@ -654,6 +654,23 @@ namespace Google.GenAI {
       return toObject;
     }
 
+    internal JsonNode McpServerToVertex(JsonNode fromObject, JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "name" }))) {
+        throw new NotSupportedException(
+            "name parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
+      }
+
+      if (!Common.IsZero(
+              Common.GetValueByPath(fromObject, new string[] { "streamableHttpTransport" }))) {
+        throw new NotSupportedException(
+            "streamableHttpTransport parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
+      }
+
+      return toObject;
+    }
+
     internal JsonNode PartToMldev(JsonNode fromObject, JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
@@ -1011,9 +1028,15 @@ namespace Google.GenAI {
                               Common.GetValueByPath(fromObject, new string[] { "urlContext" }));
       }
 
-      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "mcpServers" }))) {
-        throw new NotSupportedException(
-            "mcpServers parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
+      if (Common.GetValueByPath(fromObject, new string[] { "mcpServers" }) != null) {
+        JsonArray keyArray =
+            (JsonArray)Common.GetValueByPath(fromObject, new string[] { "mcpServers" });
+        JsonArray result = new JsonArray();
+
+        foreach (var record in keyArray) {
+          result.Add(McpServerToVertex(Common.ParseToJsonNode(record), toObject));
+        }
+        Common.SetValueByPath(toObject, new string[] { "mcpServers" }, result);
       }
 
       return toObject;

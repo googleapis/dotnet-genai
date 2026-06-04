@@ -23,12 +23,16 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Represents token counting info for a single modality.
+  /// Represents a breakdown of token usage by modality. This message is used in CountTokensResponse
+  /// and GenerateContentResponse.UsageMetadata to provide a detailed view of how many tokens are
+  /// used by each modality (e.g., text, image, video) in a request. This is particularly useful for
+  /// multimodal models, allowing you to track and manage token consumption for billing and quota
+  /// purposes.
   /// </summary>
 
   public record ModalityTokenCount {
     /// <summary>
-    /// The modality associated with this token count.
+    /// The modality that this token count applies to.
     /// </summary>
     [JsonPropertyName("modality")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

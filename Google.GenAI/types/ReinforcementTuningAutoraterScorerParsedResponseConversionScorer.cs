@@ -23,47 +23,25 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Audio transcription in Server Conent.
+  /// Scores responses by directly converting parsed autorater response to float reward (reward is
+  /// clipped to be within [-1, 1]).
   /// </summary>
 
-  public record Transcription {
+  public record ReinforcementTuningAutoraterScorerParsedResponseConversionScorer {
     /// <summary>
-    /// Optional. Transcription text.
-    /// </summary>
-    [JsonPropertyName("text")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? Text { get; set; }
-
-    /// <summary>
-    /// Optional. The bool indicates the end of the transcription.
-    /// </summary>
-    [JsonPropertyName("finished")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public bool
-        ? Finished {
-            get; set;
-          }
-
-    /// <summary>
-    /// The BCP-47 language code of the transcription.
-    /// </summary>
-    [JsonPropertyName("languageCode")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string
-        ? LanguageCode {
-            get; set;
-          }
-
-    /// <summary>
-    /// Deserializes a JSON string to a Transcription object.
+    /// Deserializes a JSON string to a
+    /// ReinforcementTuningAutoraterScorerParsedResponseConversionScorer object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized Transcription object, or null if deserialization fails.</returns>
-    public static Transcription
+    /// <returns>The deserialized ReinforcementTuningAutoraterScorerParsedResponseConversionScorer
+    /// object, or null if deserialization fails.</returns>
+    public static ReinforcementTuningAutoraterScorerParsedResponseConversionScorer
         ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<Transcription>(jsonString, options);
+        return JsonSerializer
+            .Deserialize<ReinforcementTuningAutoraterScorerParsedResponseConversionScorer>(
+                jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;

@@ -309,6 +309,30 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Indicates the maximum thinking depth. Use with earlier models shall result in error.
+    /// Reinforcement tuning only.
+    /// </summary>
+    [JsonPropertyName("thinkingLevel")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public ReinforcementTuningThinkingLevel
+        ? ThinkingLevel {
+            get; set;
+          }
+
+    /// <summary>
+    /// Cloud Storage path to file containing validation dataset for tuning. The dataset must be
+    /// formatted as a JSONL file. If no validation dataset is provided, by default the API splits
+    /// 25% of the training dataset or 50 examples, whichever is larger, as the validation dataset.
+    /// Reinforcement tuning only.
+    /// </summary>
+    [JsonPropertyName("validationDatasetUri")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string
+        ? ValidationDatasetUri {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a CreateTuningJobConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

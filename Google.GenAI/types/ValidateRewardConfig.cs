@@ -23,40 +23,28 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Config for stream translation.
+  /// Optional parameters for tunings.validate_reward.
   /// </summary>
 
-  public record StreamTranslationConfig {
+  public record ValidateRewardConfig {
     /// <summary>
-    /// If true, the model will generate audio when the target language is spoken, essentially it
-    /// will parrot the input. If false, we will not produce audio for the target language.
+    /// Used to override HTTP request options.
     /// </summary>
-    [JsonPropertyName("echoTargetLanguage")]
+    [JsonPropertyName("httpOptions")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public bool ? EchoTargetLanguage { get; set; }
+    public HttpOptions ? HttpOptions { get; set; }
 
     /// <summary>
-    /// The target language for translation. Supported values are BCP-47 language codes (e.g. "en",
-    /// "es", "fr").
-    /// </summary>
-    [JsonPropertyName("targetLanguageCode")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string
-        ? TargetLanguageCode {
-            get; set;
-          }
-
-    /// <summary>
-    /// Deserializes a JSON string to a StreamTranslationConfig object.
+    /// Deserializes a JSON string to a ValidateRewardConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized StreamTranslationConfig object, or null if deserialization
+    /// <returns>The deserialized ValidateRewardConfig object, or null if deserialization
     /// fails.</returns>
-    public static StreamTranslationConfig
+    public static ValidateRewardConfig
         ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<StreamTranslationConfig>(jsonString, options);
+        return JsonSerializer.Deserialize<ValidateRewardConfig>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;

@@ -23,40 +23,49 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Tool to retrieve knowledge from Google Maps.
+  /// User-facing format for Gemini Reinforcement Tuning examples on Vertex.
   /// </summary>
 
-  public record GoogleMaps {
+  public record ReinforcementTuningExample {
     /// <summary>
-    /// The authentication config to access the API. Only API key is supported. This field is not
-    /// supported in Gemini API.
+    /// Multi-turn contents that represents the Prompt.
     /// </summary>
-    [JsonPropertyName("authConfig")]
+    [JsonPropertyName("contents")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public AuthConfig ? AuthConfig { get; set; }
+    public List<Content> ? Contents { get; set; }
 
     /// <summary>
-    /// Deprecated. The Google Maps contextual widget behavior in Grounding with Google Maps is
-    /// being deprecated; this field is planned for removal and no longer has any effect once
-    /// removed. Optional. Whether to return a widget context token in the GroundingMetadata of the
-    /// response.
+    /// References for the given prompt. The key is the name of the reference, and the value is the
+    /// reference itself.
     /// </summary>
-    [JsonPropertyName("enableWidget")]
+    [JsonPropertyName("references")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public bool
-        ? EnableWidget {
+    public Dictionary<string, string>
+        ? References {
             get; set;
           }
 
     /// <summary>
-    /// Deserializes a JSON string to a GoogleMaps object.
+    /// Corresponds to `system_instruction` in user-facing GenerateContentRequest.
+    /// </summary>
+    [JsonPropertyName("systemInstruction")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public Content
+        ? SystemInstruction {
+            get; set;
+          }
+
+    /// <summary>
+    /// Deserializes a JSON string to a ReinforcementTuningExample object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized GoogleMaps object, or null if deserialization fails.</returns>
-    public static GoogleMaps ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
+    /// <returns>The deserialized ReinforcementTuningExample object, or null if deserialization
+    /// fails.</returns>
+    public static ReinforcementTuningExample
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<GoogleMaps>(jsonString, options);
+        return JsonSerializer.Deserialize<ReinforcementTuningExample>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;

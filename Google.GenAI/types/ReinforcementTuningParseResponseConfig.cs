@@ -23,40 +23,40 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Tool to retrieve knowledge from Google Maps.
+  /// Defines how to parse sample response for reinforcement tuning.
   /// </summary>
 
-  public record GoogleMaps {
+  public record ReinforcementTuningParseResponseConfig {
     /// <summary>
-    /// The authentication config to access the API. Only API key is supported. This field is not
-    /// supported in Gemini API.
+    /// Defines how to parse sample response.
     /// </summary>
-    [JsonPropertyName("authConfig")]
+    [JsonPropertyName("parseType")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public AuthConfig ? AuthConfig { get; set; }
+    public ResponseParseType ? ParseType { get; set; }
 
     /// <summary>
-    /// Deprecated. The Google Maps contextual widget behavior in Grounding with Google Maps is
-    /// being deprecated; this field is planned for removal and no longer has any effect once
-    /// removed. Optional. Whether to return a widget context token in the GroundingMetadata of the
-    /// response.
+    /// Defines the regex to extract the important part of sample response. This field is only used
+    /// when `parse_type` is `REGEX_EXTRACT`.
     /// </summary>
-    [JsonPropertyName("enableWidget")]
+    [JsonPropertyName("regexExtractExpression")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public bool
-        ? EnableWidget {
+    public string
+        ? RegexExtractExpression {
             get; set;
           }
 
     /// <summary>
-    /// Deserializes a JSON string to a GoogleMaps object.
+    /// Deserializes a JSON string to a ReinforcementTuningParseResponseConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized GoogleMaps object, or null if deserialization fails.</returns>
-    public static GoogleMaps ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
+    /// <returns>The deserialized ReinforcementTuningParseResponseConfig object, or null if
+    /// deserialization fails.</returns>
+    public static ReinforcementTuningParseResponseConfig
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<GoogleMaps>(jsonString, options);
+        return JsonSerializer.Deserialize<ReinforcementTuningParseResponseConfig>(jsonString,
+                                                                                  options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;

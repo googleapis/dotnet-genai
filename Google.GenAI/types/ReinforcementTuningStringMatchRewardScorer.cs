@@ -23,69 +23,61 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Reinforcement tuning autorater scorer.
+  /// Scores parsed responses for string matching use cases.
   /// </summary>
 
-  public record ReinforcementTuningAutoraterScorer {
+  public record ReinforcementTuningStringMatchRewardScorer {
     /// <summary>
-    /// Autorater config for evaluation.
+    /// Wrong answer reward is returned if evaluator evaluates to `false`. All wrong answers get the
+    /// same reward.
     /// </summary>
-    [JsonPropertyName("autoraterConfig")]
+    [JsonPropertyName("wrongAnswerReward")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public AutoraterConfig ? AutoraterConfig { get; set; }
+    public double ? WrongAnswerReward { get; set; }
 
     /// <summary>
-    /// Allows substituting `prompt`, `response`, `system_instruction` and `references.reference`
-    /// (each wrapped in double curly braces) into the autorater prompt.
+    /// Correct answer reward is returned if evaluator evaluates to `true`. All correct answers get
+    /// the same reward.
     /// </summary>
-    [JsonPropertyName("autoraterPrompt")]
+    [JsonPropertyName("correctAnswerReward")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string
-        ? AutoraterPrompt {
+    public double
+        ? CorrectAnswerReward {
             get; set;
           }
 
     /// <summary>
-    /// Parses autorater returned response.
+    /// Uses string match expression to evaluate parsed response.
     /// </summary>
-    [JsonPropertyName("autoraterResponseParseConfig")]
+    [JsonPropertyName("stringMatchExpression")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public ReinforcementTuningParseResponseConfig
-        ? AutoraterResponseParseConfig {
+    public ReinforcementTuningStringMatchRewardScorerStringMatchExpression
+        ? StringMatchExpression {
             get; set;
           }
 
     /// <summary>
-    /// Scores autorater responses by directly converting parsed autorater response to float reward.
+    /// Uses json match expression to evaluate parsed response.
     /// </summary>
-    [JsonPropertyName("parsedResponseConversionScorer")]
+    [JsonPropertyName("jsonMatchExpression")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public ReinforcementTuningAutoraterScorerParsedResponseConversionScorer
-        ? ParsedResponseConversionScorer {
+    public ReinforcementTuningStringMatchRewardScorerJsonMatchExpression
+        ? JsonMatchExpression {
             get; set;
           }
 
     /// <summary>
-    /// Scores autorater responses by using exact string match reward scorer.
-    /// </summary>
-    [JsonPropertyName("exactMatchScorer")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public ReinforcementTuningAutoraterScorerExactMatchScorer
-        ? ExactMatchScorer {
-            get; set;
-          }
-
-    /// <summary>
-    /// Deserializes a JSON string to a ReinforcementTuningAutoraterScorer object.
+    /// Deserializes a JSON string to a ReinforcementTuningStringMatchRewardScorer object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized ReinforcementTuningAutoraterScorer object, or null if
+    /// <returns>The deserialized ReinforcementTuningStringMatchRewardScorer object, or null if
     /// deserialization fails.</returns>
-    public static ReinforcementTuningAutoraterScorer
+    public static ReinforcementTuningStringMatchRewardScorer
         ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<ReinforcementTuningAutoraterScorer>(jsonString, options);
+        return JsonSerializer.Deserialize<ReinforcementTuningStringMatchRewardScorer>(jsonString,
+                                                                                      options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;

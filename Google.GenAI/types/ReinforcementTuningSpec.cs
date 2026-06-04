@@ -23,69 +23,71 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Reinforcement tuning autorater scorer.
+  /// Reinforcement tuning spec for tuning.
   /// </summary>
 
-  public record ReinforcementTuningAutoraterScorer {
+  public record ReinforcementTuningSpec {
     /// <summary>
-    /// Autorater config for evaluation.
+    ///
     /// </summary>
-    [JsonPropertyName("autoraterConfig")]
+    [JsonPropertyName("compositeRewardConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public AutoraterConfig ? AutoraterConfig { get; set; }
+    public CompositeReinforcementTuningRewardConfig ? CompositeRewardConfig { get; set; }
 
     /// <summary>
-    /// Allows substituting `prompt`, `response`, `system_instruction` and `references.reference`
-    /// (each wrapped in double curly braces) into the autorater prompt.
+    /// Cloud Storage path to file containing training dataset for tuning. The dataset must be
+    /// formatted as a JSONL file.
     /// </summary>
-    [JsonPropertyName("autoraterPrompt")]
+    [JsonPropertyName("trainingDatasetUri")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? AutoraterPrompt {
+        ? TrainingDatasetUri {
             get; set;
           }
 
     /// <summary>
-    /// Parses autorater returned response.
+    /// Cloud Storage path to file containing validation dataset for tuning. The dataset must be
+    /// formatted as a JSONL file. If no validation dataset is provided, by default the API splits
+    /// 25% of the training dataset or 50 examples, whichever is larger, as the validation dataset.
     /// </summary>
-    [JsonPropertyName("autoraterResponseParseConfig")]
+    [JsonPropertyName("validationDatasetUri")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public ReinforcementTuningParseResponseConfig
-        ? AutoraterResponseParseConfig {
+    public string
+        ? ValidationDatasetUri {
             get; set;
           }
 
     /// <summary>
-    /// Scores autorater responses by directly converting parsed autorater response to float reward.
+    /// Additional hyper-parameters to use during tuning.
     /// </summary>
-    [JsonPropertyName("parsedResponseConversionScorer")]
+    [JsonPropertyName("hyperParameters")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public ReinforcementTuningAutoraterScorerParsedResponseConversionScorer
-        ? ParsedResponseConversionScorer {
+    public ReinforcementTuningHyperParameters
+        ? HyperParameters {
             get; set;
           }
 
     /// <summary>
-    /// Scores autorater responses by using exact string match reward scorer.
+    /// Single reward function configuration for reinforcement tuning.
     /// </summary>
-    [JsonPropertyName("exactMatchScorer")]
+    [JsonPropertyName("singleRewardConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public ReinforcementTuningAutoraterScorerExactMatchScorer
-        ? ExactMatchScorer {
+    public SingleReinforcementTuningRewardConfig
+        ? SingleRewardConfig {
             get; set;
           }
 
     /// <summary>
-    /// Deserializes a JSON string to a ReinforcementTuningAutoraterScorer object.
+    /// Deserializes a JSON string to a ReinforcementTuningSpec object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized ReinforcementTuningAutoraterScorer object, or null if
-    /// deserialization fails.</returns>
-    public static ReinforcementTuningAutoraterScorer
+    /// <returns>The deserialized ReinforcementTuningSpec object, or null if deserialization
+    /// fails.</returns>
+    public static ReinforcementTuningSpec
         ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<ReinforcementTuningAutoraterScorer>(jsonString, options);
+        return JsonSerializer.Deserialize<ReinforcementTuningSpec>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;

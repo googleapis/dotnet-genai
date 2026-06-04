@@ -273,12 +273,12 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Config for stream translation.
+    /// Config for translation.
     /// </summary>
-    [JsonPropertyName("streamTranslationConfig")]
+    [JsonPropertyName("translationConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public StreamTranslationConfig
-        ? StreamTranslationConfig {
+    public TranslationConfig
+        ? TranslationConfig {
             get; set;
           }
 

@@ -23,24 +23,24 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// A datatype containing media that is part of a `FunctionResponse` message.  A
+  /// A datatype containing media that is part of a `FunctionResponse` message. A
   /// `FunctionResponsePart` consists of data which has an associated datatype. A
   /// `FunctionResponsePart` can only contain one of the accepted types in
-  /// `FunctionResponsePart.data`.  A `FunctionResponsePart` must have a fixed IANA MIME type
+  /// `FunctionResponsePart.data`. A `FunctionResponsePart` must have a fixed IANA MIME type
   /// identifying the type and subtype of the media if the `inline_data` field is filled with raw
   /// bytes.
   /// </summary>
 
   public record FunctionResponsePart {
     /// <summary>
-    /// Optional. Inline media bytes.
+    /// Inline media bytes.
     /// </summary>
     [JsonPropertyName("inlineData")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public FunctionResponseBlob ? InlineData { get; set; }
 
     /// <summary>
-    /// Optional. URI based data.
+    /// URI based data. This field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("fileData")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

@@ -65,7 +65,7 @@ internal sealed class GoogleGenAIImageGenerator : IImageGenerator
     config.OutputMimeType ??= options?.MediaType;
     config.AspectRatio ??= options?.ImageSize is { } imageSize && imageSize.Width > 0 && imageSize.Height > 0 ? GetClosestRatio(imageSize) : null;
 
-    var gir = await _models.GenerateImagesAsync(modelId, prompt, config).ConfigureAwait(false);
+    var gir = await _models.GenerateImagesAsync(modelId, prompt, config, cancellationToken).ConfigureAwait(false);
 
     ImageGenerationResponse response = new()
     {

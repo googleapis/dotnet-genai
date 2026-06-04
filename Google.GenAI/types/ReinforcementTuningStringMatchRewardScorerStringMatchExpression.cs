@@ -23,40 +23,43 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Tool to retrieve knowledge from Google Maps.
+  /// Evaluates parsed response using match type against expression.
   /// </summary>
 
-  public record GoogleMaps {
+  public record ReinforcementTuningStringMatchRewardScorerStringMatchExpression {
     /// <summary>
-    /// The authentication config to access the API. Only API key is supported. This field is not
-    /// supported in Gemini API.
+    /// Match operation to use for evaluation.
     /// </summary>
-    [JsonPropertyName("authConfig")]
+    [JsonPropertyName("matchOperation")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public AuthConfig ? AuthConfig { get; set; }
+    public MatchOperation ? MatchOperation { get; set; }
 
     /// <summary>
-    /// Deprecated. The Google Maps contextual widget behavior in Grounding with Google Maps is
-    /// being deprecated; this field is planned for removal and no longer has any effect once
-    /// removed. Optional. Whether to return a widget context token in the GroundingMetadata of the
-    /// response.
+    /// String or regular expression to match against. Customer can also provide a references map
+    /// (key/value pairs) whose value will be substituted into the expression by referencing
+    /// `references.key_name` (wrapped in double curly braces).
     /// </summary>
-    [JsonPropertyName("enableWidget")]
+    [JsonPropertyName("expression")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public bool
-        ? EnableWidget {
+    public string
+        ? Expression {
             get; set;
           }
 
     /// <summary>
-    /// Deserializes a JSON string to a GoogleMaps object.
+    /// Deserializes a JSON string to a
+    /// ReinforcementTuningStringMatchRewardScorerStringMatchExpression object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized GoogleMaps object, or null if deserialization fails.</returns>
-    public static GoogleMaps ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
+    /// <returns>The deserialized ReinforcementTuningStringMatchRewardScorerStringMatchExpression
+    /// object, or null if deserialization fails.</returns>
+    public static ReinforcementTuningStringMatchRewardScorerStringMatchExpression
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<GoogleMaps>(jsonString, options);
+        return JsonSerializer
+            .Deserialize<ReinforcementTuningStringMatchRewardScorerStringMatchExpression>(
+                jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;

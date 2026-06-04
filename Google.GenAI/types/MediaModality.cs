@@ -22,7 +22,7 @@ using System.Text.Json;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Server content modalities.
+  /// The modality that this token count applies to.
   /// </summary>
 
   [JsonConverter(typeof(MediaModalityConverter))]
@@ -34,32 +34,32 @@ namespace Google.GenAI.Types {
     }
 
     /// <summary>
-    /// The modality is unspecified.
+    /// When a modality is not specified, it is treated as `TEXT`.
     /// </summary>
     public static MediaModality ModalityUnspecified { get; } = new("MODALITY_UNSPECIFIED");
 
     /// <summary>
-    /// Plain text.
+    /// The `Part` contains plain text.
     /// </summary>
     public static MediaModality Text { get; } = new("TEXT");
 
     /// <summary>
-    /// Images.
+    /// The `Part` contains an image.
     /// </summary>
     public static MediaModality Image { get; } = new("IMAGE");
 
     /// <summary>
-    /// Video.
+    /// The `Part` contains a video.
     /// </summary>
     public static MediaModality Video { get; } = new("VIDEO");
 
     /// <summary>
-    /// Audio.
+    /// The `Part` contains audio.
     /// </summary>
     public static MediaModality Audio { get; } = new("AUDIO");
 
     /// <summary>
-    /// Document, e.g. PDF.
+    /// The `Part` contains a document, such as a PDF.
     /// </summary>
     public static MediaModality Document { get; } = new("DOCUMENT");
 
