@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class GoogleGenAIRealtimeClient | Google GenAI .NET SDK </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class GoogleGenAIRealtimeClient | Google GenAI .NET SDK ">
+      
+      <meta name="description" content="Provides an  implementation for Google GenAI&#39;s Live API.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/googleapis/dotnet-genai/new/main/apiSpec/new?filename=Microsoft_Extensions_AI_GoogleGenAIRealtimeClient.md&amp;value=---%0Auid%3A%20Microsoft.Extensions.AI.GoogleGenAIRealtimeClient%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Microsoft.Extensions.AI.GoogleGenAIRealtimeClient">
+
+
+
+  <h1 id="Microsoft_Extensions_AI_GoogleGenAIRealtimeClient" data-uid="Microsoft.Extensions.AI.GoogleGenAIRealtimeClient" class="text-break">
+Class GoogleGenAIRealtimeClient  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIRealtimeClient.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Microsoft.html">Microsoft</a>.<a class="xref" href="Microsoft.Extensions.html">Extensions</a>.<a class="xref" href="Microsoft.Extensions.AI.html">AI</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides an <span class="xref">Microsoft.Extensions.AI.IRealtimeClient</span> implementation for Google GenAI's Live API.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class GoogleGenAIRealtimeClient : IRealtimeClient, IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">GoogleGenAIRealtimeClient</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">IRealtimeClient</span></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Microsoft_Extensions_AI_GoogleGenAIRealtimeClient__ctor_" data-uid="Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.#ctor*"></a>
+
+  <h3 id="Microsoft_Extensions_AI_GoogleGenAIRealtimeClient__ctor_Google_GenAI_Client_System_String_" data-uid="Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.#ctor(Google.GenAI.Client,System.String)">
+  GoogleGenAIRealtimeClient(Client, string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIRealtimeClient.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance wrapping an existing <a class="xref" href="Google.GenAI.Client.html">Client</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GoogleGenAIRealtimeClient(Client client, string? defaultModelId = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>client</code> <a class="xref" href="Google.GenAI.Client.html">Client</a></dt>
+    <dd><p>The Google GenAI client.</p>
+</dd>
+    <dt><code>defaultModelId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The default model to use for realtime sessions (e.g. &quot;gemini-2.5-flash-native-audio-preview-12-2025&quot;).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">client</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Extensions_AI_GoogleGenAIRealtimeClient__ctor_" data-uid="Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.#ctor*"></a>
+
+  <h3 id="Microsoft_Extensions_AI_GoogleGenAIRealtimeClient__ctor_System_String_System_String_" data-uid="Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.#ctor(System.String,System.String)">
+  GoogleGenAIRealtimeClient(string, string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIRealtimeClient.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance using an API key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GoogleGenAIRealtimeClient(string apiKey, string? defaultModelId = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>apiKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The Google GenAI API key.</p>
+</dd>
+    <dt><code>defaultModelId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The default model to use for realtime sessions.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">apiKey</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> or empty.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Extensions_AI_GoogleGenAIRealtimeClient__ctor_" data-uid="Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.#ctor*"></a>
+
+  <h3 id="Microsoft_Extensions_AI_GoogleGenAIRealtimeClient__ctor_System_String_System_String_System_String_" data-uid="Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.#ctor(System.String,System.String,System.String)">
+  GoogleGenAIRealtimeClient(string, string, string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIRealtimeClient.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance using a Google Cloud project and location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GoogleGenAIRealtimeClient(string project, string location, string? defaultModelId = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>project</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The Google Cloud project ID.</p>
+</dd>
+    <dt><code>location</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The Google Cloud location (e.g. &quot;us-central1&quot;).</p>
+</dd>
+    <dt><code>defaultModelId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The default model to use for realtime sessions.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">project</code> or <code class="paramref">location</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> or empty.</p>
+</dd>
+  </dl>
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Microsoft_Extensions_AI_GoogleGenAIRealtimeClient_CreateSessionAsync_" data-uid="Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.CreateSessionAsync*"></a>
+
+  <h3 id="Microsoft_Extensions_AI_GoogleGenAIRealtimeClient_CreateSessionAsync_Microsoft_Extensions_AI_RealtimeSessionOptions_System_Threading_CancellationToken_" data-uid="Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.CreateSessionAsync(Microsoft.Extensions.AI.RealtimeSessionOptions,System.Threading.CancellationToken)">
+  CreateSessionAsync(RealtimeSessionOptions?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIRealtimeClient.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new real-time session with the specified options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IRealtimeClientSession&gt; CreateSessionAsync(RealtimeSessionOptions? options = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <span class="xref">RealtimeSessionOptions</span></dt>
+    <dd><p>The session options.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A token to cancel the operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">IRealtimeClientSession</span>&gt;</dt>
+    <dd><p>The created real-time session.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Extensions_AI_GoogleGenAIRealtimeClient_Dispose_" data-uid="Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.Dispose*"></a>
+
+  <h3 id="Microsoft_Extensions_AI_GoogleGenAIRealtimeClient_Dispose" data-uid="Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIRealtimeClient.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Extensions_AI_GoogleGenAIRealtimeClient_GetService_" data-uid="Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.GetService*"></a>
+
+  <h3 id="Microsoft_Extensions_AI_GoogleGenAIRealtimeClient_GetService_System_Type_System_Object_" data-uid="Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.GetService(System.Type,System.Object)">
+  GetService(Type, object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIRealtimeClient.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Asks the <span class="xref">Microsoft.Extensions.AI.IRealtimeClient</span> for an object of the specified type <code class="paramref">serviceType</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object? GetService(Type serviceType, object? serviceKey = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>serviceType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type of object being requested.</p>
+</dd>
+    <dt><code>serviceKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An optional key that can be used to help identify the target service.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The found object, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Extensions_AI_GoogleGenAIRealtimeClient_GetService_System_Type_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The purpose of this method is to allow for the retrieval of strongly typed services that might be provided by the <span class="xref">Microsoft.Extensions.AI.IRealtimeClient</span>,
+including itself or any services it might be wrapping.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">serviceType</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIRealtimeClient.cs/#L28" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

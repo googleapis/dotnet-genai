@@ -7000,6 +7000,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Microsoft.Extensions.AI.GoogleGenAIRealtimeClient",
+      "Summary": "<p sourcefile=\"api/Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.yml\" sourcestartlinenumber=\"1\">Provides an <xref href=\"Microsoft.Extensions.AI.IRealtimeClient\" data-throw-if-not-resolved=\"false\"></xref> implementation for Google GenAI's Live API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Microsoft.Extensions.AI.GoogleGenAIRealtimeSession",
+      "Summary": "<p sourcefile=\"api/Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.yml\" sourcestartlinenumber=\"1\">Provides an <xref href=\"Microsoft.Extensions.AI.IRealtimeClientSession\" data-throw-if-not-resolved=\"false\"></xref> implementation for Google GenAI's Live API,\nwrapping an <xref href=\"Google.GenAI.AsyncSession\" data-throw-if-not-resolved=\"false\"></xref> WebSocket connection.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Microsoft.Extensions.AI.yml",
       "output": {
         ".html": {

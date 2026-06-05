@@ -539,6 +539,55 @@ Class GoogleGenAIExtensions  <a class="header-action link-secondary" title="View
 
 
 
+  <a id="Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIRealtimeClient_" data-uid="Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIRealtimeClient*"></a>
+
+  <h3 id="Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIRealtimeClient_Google_GenAI_Client_System_String_" data-uid="Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIRealtimeClient(Google.GenAI.Client,System.String)">
+  AsIRealtimeClient(Client, string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIExtensions.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an <span class="xref">Microsoft.Extensions.AI.IRealtimeClient</span> wrapper around the specified <a class="xref" href="Google.GenAI.Client.html">Client</a>
+for use with the Google GenAI Live API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IRealtimeClient AsIRealtimeClient(this Client client, string? defaultModelId = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>client</code> <a class="xref" href="Google.GenAI.Client.html">Client</a></dt>
+    <dd><p>The <a class="xref" href="Google.GenAI.Client.html">Client</a> to wrap.</p>
+</dd>
+    <dt><code>defaultModelId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The default model ID to use for realtime sessions.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IRealtimeClient</span></dt>
+    <dd><p>An <span class="xref">Microsoft.Extensions.AI.IRealtimeClient</span> that wraps the specified client.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">client</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
 
 </article>
 

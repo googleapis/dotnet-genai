@@ -41110,3 +41110,200 @@ references:
   isSpec: "True"
   fullName: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIImageGenerator
   nameWithType: GoogleGenAIExtensions.AsIImageGenerator
+- uid: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIRealtimeClient(Google.GenAI.Client,System.String)
+  name: AsIRealtimeClient(Client, string?)
+  href: api/Microsoft.Extensions.AI.GoogleGenAIExtensions.html#Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIRealtimeClient_Google_GenAI_Client_System_String_
+  commentId: M:Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIRealtimeClient(Google.GenAI.Client,System.String)
+  name.vb: AsIRealtimeClient(Client, String)
+  fullName: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIRealtimeClient(Google.GenAI.Client, string?)
+  fullName.vb: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIRealtimeClient(Google.GenAI.Client, String)
+  nameWithType: GoogleGenAIExtensions.AsIRealtimeClient(Client, string?)
+  nameWithType.vb: GoogleGenAIExtensions.AsIRealtimeClient(Client, String)
+- uid: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIRealtimeClient*
+  name: AsIRealtimeClient
+  href: api/Microsoft.Extensions.AI.GoogleGenAIExtensions.html#Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIRealtimeClient_
+  commentId: Overload:Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIRealtimeClient
+  isSpec: "True"
+  fullName: Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIRealtimeClient
+  nameWithType: GoogleGenAIExtensions.AsIRealtimeClient
+- uid: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient
+  name: GoogleGenAIRealtimeClient
+  href: api/Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.html
+  commentId: T:Microsoft.Extensions.AI.GoogleGenAIRealtimeClient
+  fullName: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient
+  nameWithType: GoogleGenAIRealtimeClient
+- uid: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.#ctor(Google.GenAI.Client,System.String)
+  name: GoogleGenAIRealtimeClient(Client, string?)
+  href: api/Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.html#Microsoft_Extensions_AI_GoogleGenAIRealtimeClient__ctor_Google_GenAI_Client_System_String_
+  commentId: M:Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.#ctor(Google.GenAI.Client,System.String)
+  name.vb: New(Client, String)
+  fullName: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.GoogleGenAIRealtimeClient(Google.GenAI.Client, string?)
+  fullName.vb: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.New(Google.GenAI.Client, String)
+  nameWithType: GoogleGenAIRealtimeClient.GoogleGenAIRealtimeClient(Client, string?)
+  nameWithType.vb: GoogleGenAIRealtimeClient.New(Client, String)
+- uid: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.#ctor(System.String,System.String)
+  name: GoogleGenAIRealtimeClient(string, string?)
+  href: api/Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.html#Microsoft_Extensions_AI_GoogleGenAIRealtimeClient__ctor_System_String_System_String_
+  commentId: M:Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.#ctor(System.String,System.String)
+  name.vb: New(String, String)
+  fullName: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.GoogleGenAIRealtimeClient(string, string?)
+  fullName.vb: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.New(String, String)
+  nameWithType: GoogleGenAIRealtimeClient.GoogleGenAIRealtimeClient(string, string?)
+  nameWithType.vb: GoogleGenAIRealtimeClient.New(String, String)
+- uid: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.#ctor(System.String,System.String,System.String)
+  name: GoogleGenAIRealtimeClient(string, string, string?)
+  href: api/Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.html#Microsoft_Extensions_AI_GoogleGenAIRealtimeClient__ctor_System_String_System_String_System_String_
+  commentId: M:Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.#ctor(System.String,System.String,System.String)
+  name.vb: New(String, String, String)
+  fullName: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.GoogleGenAIRealtimeClient(string, string, string?)
+  fullName.vb: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.New(String, String, String)
+  nameWithType: GoogleGenAIRealtimeClient.GoogleGenAIRealtimeClient(string, string, string?)
+  nameWithType.vb: GoogleGenAIRealtimeClient.New(String, String, String)
+- uid: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.#ctor*
+  name: GoogleGenAIRealtimeClient
+  href: api/Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.html#Microsoft_Extensions_AI_GoogleGenAIRealtimeClient__ctor_
+  commentId: Overload:Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.GoogleGenAIRealtimeClient
+  fullName.vb: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.New
+  nameWithType: GoogleGenAIRealtimeClient.GoogleGenAIRealtimeClient
+  nameWithType.vb: GoogleGenAIRealtimeClient.New
+- uid: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.CreateSessionAsync(Microsoft.Extensions.AI.RealtimeSessionOptions,System.Threading.CancellationToken)
+  name: CreateSessionAsync(RealtimeSessionOptions?, CancellationToken)
+  href: api/Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.html#Microsoft_Extensions_AI_GoogleGenAIRealtimeClient_CreateSessionAsync_Microsoft_Extensions_AI_RealtimeSessionOptions_System_Threading_CancellationToken_
+  commentId: M:Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.CreateSessionAsync(Microsoft.Extensions.AI.RealtimeSessionOptions,System.Threading.CancellationToken)
+  name.vb: CreateSessionAsync(RealtimeSessionOptions, CancellationToken)
+  fullName: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.CreateSessionAsync(Microsoft.Extensions.AI.RealtimeSessionOptions?, System.Threading.CancellationToken)
+  fullName.vb: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.CreateSessionAsync(Microsoft.Extensions.AI.RealtimeSessionOptions, System.Threading.CancellationToken)
+  nameWithType: GoogleGenAIRealtimeClient.CreateSessionAsync(RealtimeSessionOptions?, CancellationToken)
+  nameWithType.vb: GoogleGenAIRealtimeClient.CreateSessionAsync(RealtimeSessionOptions, CancellationToken)
+- uid: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.CreateSessionAsync*
+  name: CreateSessionAsync
+  href: api/Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.html#Microsoft_Extensions_AI_GoogleGenAIRealtimeClient_CreateSessionAsync_
+  commentId: Overload:Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.CreateSessionAsync
+  isSpec: "True"
+  fullName: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.CreateSessionAsync
+  nameWithType: GoogleGenAIRealtimeClient.CreateSessionAsync
+- uid: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.Dispose
+  name: Dispose()
+  href: api/Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.html#Microsoft_Extensions_AI_GoogleGenAIRealtimeClient_Dispose
+  commentId: M:Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.Dispose
+  fullName: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.Dispose()
+  nameWithType: GoogleGenAIRealtimeClient.Dispose()
+- uid: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.Dispose*
+  name: Dispose
+  href: api/Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.html#Microsoft_Extensions_AI_GoogleGenAIRealtimeClient_Dispose_
+  commentId: Overload:Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.Dispose
+  isSpec: "True"
+  fullName: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.Dispose
+  nameWithType: GoogleGenAIRealtimeClient.Dispose
+- uid: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.GetService(System.Type,System.Object)
+  name: GetService(Type, object?)
+  href: api/Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.html#Microsoft_Extensions_AI_GoogleGenAIRealtimeClient_GetService_System_Type_System_Object_
+  commentId: M:Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.GetService(System.Type,System.Object)
+  name.vb: GetService(Type, Object)
+  fullName: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.GetService(System.Type, object?)
+  fullName.vb: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.GetService(System.Type, Object)
+  nameWithType: GoogleGenAIRealtimeClient.GetService(Type, object?)
+  nameWithType.vb: GoogleGenAIRealtimeClient.GetService(Type, Object)
+- uid: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.GetService*
+  name: GetService
+  href: api/Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.html#Microsoft_Extensions_AI_GoogleGenAIRealtimeClient_GetService_
+  commentId: Overload:Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.GetService
+  isSpec: "True"
+  fullName: Microsoft.Extensions.AI.GoogleGenAIRealtimeClient.GetService
+  nameWithType: GoogleGenAIRealtimeClient.GetService
+- uid: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession
+  name: GoogleGenAIRealtimeSession
+  href: api/Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.html
+  commentId: T:Microsoft.Extensions.AI.GoogleGenAIRealtimeSession
+  fullName: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession
+  nameWithType: GoogleGenAIRealtimeSession
+- uid: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.#ctor(Google.GenAI.AsyncSession,System.String,Microsoft.Extensions.AI.RealtimeSessionOptions)
+  name: GoogleGenAIRealtimeSession(AsyncSession, string, RealtimeSessionOptions?)
+  href: api/Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.html#Microsoft_Extensions_AI_GoogleGenAIRealtimeSession__ctor_Google_GenAI_AsyncSession_System_String_Microsoft_Extensions_AI_RealtimeSessionOptions_
+  commentId: M:Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.#ctor(Google.GenAI.AsyncSession,System.String,Microsoft.Extensions.AI.RealtimeSessionOptions)
+  name.vb: New(AsyncSession, String, RealtimeSessionOptions)
+  fullName: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.GoogleGenAIRealtimeSession(Google.GenAI.AsyncSession, string, Microsoft.Extensions.AI.RealtimeSessionOptions?)
+  fullName.vb: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.New(Google.GenAI.AsyncSession, String, Microsoft.Extensions.AI.RealtimeSessionOptions)
+  nameWithType: GoogleGenAIRealtimeSession.GoogleGenAIRealtimeSession(AsyncSession, string, RealtimeSessionOptions?)
+  nameWithType.vb: GoogleGenAIRealtimeSession.New(AsyncSession, String, RealtimeSessionOptions)
+- uid: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.#ctor*
+  name: GoogleGenAIRealtimeSession
+  href: api/Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.html#Microsoft_Extensions_AI_GoogleGenAIRealtimeSession__ctor_
+  commentId: Overload:Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.GoogleGenAIRealtimeSession
+  fullName.vb: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.New
+  nameWithType: GoogleGenAIRealtimeSession.GoogleGenAIRealtimeSession
+  nameWithType.vb: GoogleGenAIRealtimeSession.New
+- uid: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.DisposeAsync
+  name: DisposeAsync()
+  href: api/Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.html#Microsoft_Extensions_AI_GoogleGenAIRealtimeSession_DisposeAsync
+  commentId: M:Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.DisposeAsync
+  fullName: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.DisposeAsync()
+  nameWithType: GoogleGenAIRealtimeSession.DisposeAsync()
+- uid: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.DisposeAsync*
+  name: DisposeAsync
+  href: api/Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.html#Microsoft_Extensions_AI_GoogleGenAIRealtimeSession_DisposeAsync_
+  commentId: Overload:Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.DisposeAsync
+  isSpec: "True"
+  fullName: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.DisposeAsync
+  nameWithType: GoogleGenAIRealtimeSession.DisposeAsync
+- uid: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.GetService(System.Type,System.Object)
+  name: GetService(Type, object?)
+  href: api/Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.html#Microsoft_Extensions_AI_GoogleGenAIRealtimeSession_GetService_System_Type_System_Object_
+  commentId: M:Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.GetService(System.Type,System.Object)
+  name.vb: GetService(Type, Object)
+  fullName: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.GetService(System.Type, object?)
+  fullName.vb: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.GetService(System.Type, Object)
+  nameWithType: GoogleGenAIRealtimeSession.GetService(Type, object?)
+  nameWithType.vb: GoogleGenAIRealtimeSession.GetService(Type, Object)
+- uid: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.GetService*
+  name: GetService
+  href: api/Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.html#Microsoft_Extensions_AI_GoogleGenAIRealtimeSession_GetService_
+  commentId: Overload:Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.GetService
+  isSpec: "True"
+  fullName: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.GetService
+  nameWithType: GoogleGenAIRealtimeSession.GetService
+- uid: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.GetStreamingResponseAsync(System.Threading.CancellationToken)
+  name: GetStreamingResponseAsync(CancellationToken)
+  href: api/Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.html#Microsoft_Extensions_AI_GoogleGenAIRealtimeSession_GetStreamingResponseAsync_System_Threading_CancellationToken_
+  commentId: M:Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.GetStreamingResponseAsync(System.Threading.CancellationToken)
+  fullName: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.GetStreamingResponseAsync(System.Threading.CancellationToken)
+  nameWithType: GoogleGenAIRealtimeSession.GetStreamingResponseAsync(CancellationToken)
+- uid: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.GetStreamingResponseAsync*
+  name: GetStreamingResponseAsync
+  href: api/Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.html#Microsoft_Extensions_AI_GoogleGenAIRealtimeSession_GetStreamingResponseAsync_
+  commentId: Overload:Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.GetStreamingResponseAsync
+  isSpec: "True"
+  fullName: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.GetStreamingResponseAsync
+  nameWithType: GoogleGenAIRealtimeSession.GetStreamingResponseAsync
+- uid: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.Options
+  name: Options
+  href: api/Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.html#Microsoft_Extensions_AI_GoogleGenAIRealtimeSession_Options
+  commentId: P:Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.Options
+  fullName: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.Options
+  nameWithType: GoogleGenAIRealtimeSession.Options
+- uid: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.Options*
+  name: Options
+  href: api/Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.html#Microsoft_Extensions_AI_GoogleGenAIRealtimeSession_Options_
+  commentId: Overload:Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.Options
+  isSpec: "True"
+  fullName: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.Options
+  nameWithType: GoogleGenAIRealtimeSession.Options
+- uid: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.SendAsync(Microsoft.Extensions.AI.RealtimeClientMessage,System.Threading.CancellationToken)
+  name: SendAsync(RealtimeClientMessage, CancellationToken)
+  href: api/Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.html#Microsoft_Extensions_AI_GoogleGenAIRealtimeSession_SendAsync_Microsoft_Extensions_AI_RealtimeClientMessage_System_Threading_CancellationToken_
+  commentId: M:Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.SendAsync(Microsoft.Extensions.AI.RealtimeClientMessage,System.Threading.CancellationToken)
+  fullName: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.SendAsync(Microsoft.Extensions.AI.RealtimeClientMessage, System.Threading.CancellationToken)
+  nameWithType: GoogleGenAIRealtimeSession.SendAsync(RealtimeClientMessage, CancellationToken)
+- uid: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.SendAsync*
+  name: SendAsync
+  href: api/Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.html#Microsoft_Extensions_AI_GoogleGenAIRealtimeSession_SendAsync_
+  commentId: Overload:Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.SendAsync
+  isSpec: "True"
+  fullName: Microsoft.Extensions.AI.GoogleGenAIRealtimeSession.SendAsync
+  nameWithType: GoogleGenAIRealtimeSession.SendAsync
