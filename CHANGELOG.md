@@ -1,5 +1,21 @@
 # Changelog
 
+## Version 1.10.0, released 2026-06-08
+
+
+### New features
+
+* Add Gemini Realtime provider implementing IRealtimeClient/IRealtimeClientSession ([2b92e85](https://github.com/googleapis/dotnet-genai/commit/2b92e8588548a3fa578d5206b77dbd3717ee6296))
+* Add Gemini Realtime provider implementing IRealtimeClient/IRealtimeClientSession ([2b92e85](https://github.com/googleapis/dotnet-genai/commit/2b92e8588548a3fa578d5206b77dbd3717ee6296))
+* Add ServiceTier to UsageMetadata ([421dc32](https://github.com/googleapis/dotnet-genai/commit/421dc3271c0ec5d0c408d556a4a50a0d34184cba))
+* Add source-generated JSON serialization for AOT compatibility ([2b92e85](https://github.com/googleapis/dotnet-genai/commit/2b92e8588548a3fa578d5206b77dbd3717ee6296))
+* Add Vertex AI convenience constructor to GoogleGenAIRealtimeClient ([2b92e85](https://github.com/googleapis/dotnet-genai/commit/2b92e8588548a3fa578d5206b77dbd3717ee6296))
+
+
+### Documentation improvements
+
+* Fix typo in Dotnet README ([1dca45e](https://github.com/googleapis/dotnet-genai/commit/1dca45e6317f57a33c12bdce8dfb5d2fc4758a2c))
+
 ## Version 1.9.0, released 2026-06-03
 
 
