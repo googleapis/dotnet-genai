@@ -7,7 +7,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageVersion>
-    <PackageVersion Include="Microsoft.AspNetCore.StaticFiles" Version="2.3.0" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.10.0" />
     <PackageVersion Include="MimeTypes" Version="2.5.2" />
     <PackageVersion Include="MSTest.TestFramework" Version="3.4.3" />
@@ -16,7 +15,7 @@
     <PackageVersion Include="Microsoft.Extensions.AI.Abstractions" Version="10.6.0" />
     <PackageVersion Include="Microsoft.Testing.Extensions.CodeCoverage" Version="17.10.1" />
     <PackageVersion Include="System.Text.Json" Version="10.0.8" />
-    <PackageVersion Include="Google.Apis.Auth" Version="1.69.0" />
+    <PackageVersion Include="Google.Apis.Auth" Version="1.73.0" />
     <PackageVersion Include="NAudio" Version="2.2.1" />
     <PackageVersion Include="TestServerSdk" Version="0.1.5" />
     <PackageVersion Include="Microsoft.Bcl.AsyncInterfaces" Version="10.0.3" />
