@@ -414,5 +414,33 @@ namespace Google.GenAI.Tests {
 
       _mockWebSocket.Verify(ws => ws.Dispose(), Times.Once);
     }
+
+    [TestMethod]
+    public async Task CloseStatus_WhenServerSendsCloseMessage_ShouldReturnCorrectStatus() {
+      var closeStatus = WebSocketCloseStatus.PolicyViolation;
+      var closeStatusDescription = "Policy violation";
+      var closeResult = new WebSocketReceiveResult(0, WebSocketMessageType.Close, true, closeStatus, closeStatusDescription);
+
+      _mockWebSocket.Setup(ws => ws.State).Returns(WebSocketState.Open);
+      _mockWebSocket.Setup(ws => ws.CloseStatus).Returns(closeStatus);
+      _mockWebSocket.Setup(ws => ws.CloseStatusDescription).Returns(closeStatusDescription);
+      _mockWebSocket.Setup(ws => ws.ReceiveAsync(It.IsAny<ArraySegment<byte>>(), It.IsAny<CancellationToken>()))
+                    .ReturnsAsync(closeResult);
+
+      await _asyncSession.ReceiveAsync();
+
+      Assert.AreEqual(closeStatus, _asyncSession.CloseStatus);
+      Assert.AreEqual(closeStatusDescription, _asyncSession.CloseStatusDescription);
+    }
+
+    [TestMethod]
+    public async Task CloseStatus_WhenDisposed_ShouldReturnNull() {
+      _mockWebSocket.Setup(ws => ws.State).Returns(WebSocketState.Closed);
+
+      await _asyncSession.DisposeAsync();
+
+      Assert.IsNull(_asyncSession.CloseStatus);
+      Assert.IsNull(_asyncSession.CloseStatusDescription);
+    }
   }
 }

@@ -215,6 +215,9 @@ namespace Google.GenAI
     private readonly ApiClient _apiClient;
     private int _isDisposed = 0; // 0 = false, 1 = true. Used with Interlocked.
 
+    public WebSocketCloseStatus? CloseStatus => _isDisposed == 0 ? _webSocket.CloseStatus : null;
+    public string? CloseStatusDescription => _isDisposed == 0 ? _webSocket.CloseStatusDescription : null;
+
     public AsyncSession(WebSocket webSocket, ApiClient apiClient)
     {
       _webSocket = webSocket;
