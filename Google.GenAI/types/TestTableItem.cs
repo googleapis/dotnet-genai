@@ -105,6 +105,26 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Model to use when running against Vertex.
+    /// </summary>
+    [JsonPropertyName("vertexModel")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string
+        ? VertexModel {
+            get; set;
+          }
+
+    /// <summary>
+    /// Model to use when running against MLDev.
+    /// </summary>
+    [JsonPropertyName("mldevModel")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string
+        ? MldevModel {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a TestTableItem object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
