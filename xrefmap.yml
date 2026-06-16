@@ -3444,6 +3444,19 @@ references:
   commentId: T:Google.GenAI.Types.AudioTranscriptionConfig
   fullName: Google.GenAI.Types.AudioTranscriptionConfig
   nameWithType: AudioTranscriptionConfig
+- uid: Google.GenAI.Types.AudioTranscriptionConfig.AdaptationPhrases
+  name: AdaptationPhrases
+  href: api/Google.GenAI.Types.AudioTranscriptionConfig.html#Google_GenAI_Types_AudioTranscriptionConfig_AdaptationPhrases
+  commentId: P:Google.GenAI.Types.AudioTranscriptionConfig.AdaptationPhrases
+  fullName: Google.GenAI.Types.AudioTranscriptionConfig.AdaptationPhrases
+  nameWithType: AudioTranscriptionConfig.AdaptationPhrases
+- uid: Google.GenAI.Types.AudioTranscriptionConfig.AdaptationPhrases*
+  name: AdaptationPhrases
+  href: api/Google.GenAI.Types.AudioTranscriptionConfig.html#Google_GenAI_Types_AudioTranscriptionConfig_AdaptationPhrases_
+  commentId: Overload:Google.GenAI.Types.AudioTranscriptionConfig.AdaptationPhrases
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioTranscriptionConfig.AdaptationPhrases
+  nameWithType: AudioTranscriptionConfig.AdaptationPhrases
 - uid: Google.GenAI.Types.AudioTranscriptionConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
   name: FromJson(string, JsonSerializerOptions?)
   href: api/Google.GenAI.Types.AudioTranscriptionConfig.html#Google_GenAI_Types_AudioTranscriptionConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
@@ -3460,6 +3473,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.AudioTranscriptionConfig.FromJson
   nameWithType: AudioTranscriptionConfig.FromJson
+- uid: Google.GenAI.Types.AudioTranscriptionConfig.LanguageAuto
+  name: LanguageAuto
+  href: api/Google.GenAI.Types.AudioTranscriptionConfig.html#Google_GenAI_Types_AudioTranscriptionConfig_LanguageAuto
+  commentId: P:Google.GenAI.Types.AudioTranscriptionConfig.LanguageAuto
+  fullName: Google.GenAI.Types.AudioTranscriptionConfig.LanguageAuto
+  nameWithType: AudioTranscriptionConfig.LanguageAuto
+- uid: Google.GenAI.Types.AudioTranscriptionConfig.LanguageAuto*
+  name: LanguageAuto
+  href: api/Google.GenAI.Types.AudioTranscriptionConfig.html#Google_GenAI_Types_AudioTranscriptionConfig_LanguageAuto_
+  commentId: Overload:Google.GenAI.Types.AudioTranscriptionConfig.LanguageAuto
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioTranscriptionConfig.LanguageAuto
+  nameWithType: AudioTranscriptionConfig.LanguageAuto
 - uid: Google.GenAI.Types.AudioTranscriptionConfig.LanguageCodes
   name: LanguageCodes
   href: api/Google.GenAI.Types.AudioTranscriptionConfig.html#Google_GenAI_Types_AudioTranscriptionConfig_LanguageCodes
@@ -3473,6 +3499,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.AudioTranscriptionConfig.LanguageCodes
   nameWithType: AudioTranscriptionConfig.LanguageCodes
+- uid: Google.GenAI.Types.AudioTranscriptionConfig.LanguageHints
+  name: LanguageHints
+  href: api/Google.GenAI.Types.AudioTranscriptionConfig.html#Google_GenAI_Types_AudioTranscriptionConfig_LanguageHints
+  commentId: P:Google.GenAI.Types.AudioTranscriptionConfig.LanguageHints
+  fullName: Google.GenAI.Types.AudioTranscriptionConfig.LanguageHints
+  nameWithType: AudioTranscriptionConfig.LanguageHints
+- uid: Google.GenAI.Types.AudioTranscriptionConfig.LanguageHints*
+  name: LanguageHints
+  href: api/Google.GenAI.Types.AudioTranscriptionConfig.html#Google_GenAI_Types_AudioTranscriptionConfig_LanguageHints_
+  commentId: Overload:Google.GenAI.Types.AudioTranscriptionConfig.LanguageHints
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioTranscriptionConfig.LanguageHints
+  nameWithType: AudioTranscriptionConfig.LanguageHints
 - uid: Google.GenAI.Types.AuthConfig
   name: AuthConfig
   href: api/Google.GenAI.Types.AuthConfig.html
@@ -20661,6 +20700,28 @@ references:
   fullName.vb: Google.GenAI.Types.Language.CType
   nameWithType: Language.implicit operator
   nameWithType.vb: Language.CType
+- uid: Google.GenAI.Types.LanguageAuto
+  name: LanguageAuto
+  href: api/Google.GenAI.Types.LanguageAuto.html
+  commentId: T:Google.GenAI.Types.LanguageAuto
+  fullName: Google.GenAI.Types.LanguageAuto
+  nameWithType: LanguageAuto
+- uid: Google.GenAI.Types.LanguageAuto.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.LanguageAuto.html#Google_GenAI_Types_LanguageAuto_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.LanguageAuto.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.LanguageAuto.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.LanguageAuto.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: LanguageAuto.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: LanguageAuto.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.LanguageAuto.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.LanguageAuto.html#Google_GenAI_Types_LanguageAuto_FromJson_
+  commentId: Overload:Google.GenAI.Types.LanguageAuto.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LanguageAuto.FromJson
+  nameWithType: LanguageAuto.FromJson
 - uid: Google.GenAI.Types.LanguageConverter
   name: LanguageConverter
   href: api/Google.GenAI.Types.LanguageConverter.html
@@ -20696,6 +20757,41 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.LanguageConverter.Write
   nameWithType: LanguageConverter.Write
+- uid: Google.GenAI.Types.LanguageHints
+  name: LanguageHints
+  href: api/Google.GenAI.Types.LanguageHints.html
+  commentId: T:Google.GenAI.Types.LanguageHints
+  fullName: Google.GenAI.Types.LanguageHints
+  nameWithType: LanguageHints
+- uid: Google.GenAI.Types.LanguageHints.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.LanguageHints.html#Google_GenAI_Types_LanguageHints_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.LanguageHints.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.LanguageHints.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.LanguageHints.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: LanguageHints.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: LanguageHints.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.LanguageHints.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.LanguageHints.html#Google_GenAI_Types_LanguageHints_FromJson_
+  commentId: Overload:Google.GenAI.Types.LanguageHints.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LanguageHints.FromJson
+  nameWithType: LanguageHints.FromJson
+- uid: Google.GenAI.Types.LanguageHints.LanguageCodes
+  name: LanguageCodes
+  href: api/Google.GenAI.Types.LanguageHints.html#Google_GenAI_Types_LanguageHints_LanguageCodes
+  commentId: P:Google.GenAI.Types.LanguageHints.LanguageCodes
+  fullName: Google.GenAI.Types.LanguageHints.LanguageCodes
+  nameWithType: LanguageHints.LanguageCodes
+- uid: Google.GenAI.Types.LanguageHints.LanguageCodes*
+  name: LanguageCodes
+  href: api/Google.GenAI.Types.LanguageHints.html#Google_GenAI_Types_LanguageHints_LanguageCodes_
+  commentId: Overload:Google.GenAI.Types.LanguageHints.LanguageCodes
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LanguageHints.LanguageCodes
+  nameWithType: LanguageHints.LanguageCodes
 - uid: Google.GenAI.Types.LatLng
   name: LatLng
   href: api/Google.GenAI.Types.LatLng.html
@@ -22580,6 +22676,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.LiveServerContent.InputTranscription
   nameWithType: LiveServerContent.InputTranscription
+- uid: Google.GenAI.Types.LiveServerContent.InterimInputTranscription
+  name: InterimInputTranscription
+  href: api/Google.GenAI.Types.LiveServerContent.html#Google_GenAI_Types_LiveServerContent_InterimInputTranscription
+  commentId: P:Google.GenAI.Types.LiveServerContent.InterimInputTranscription
+  fullName: Google.GenAI.Types.LiveServerContent.InterimInputTranscription
+  nameWithType: LiveServerContent.InterimInputTranscription
+- uid: Google.GenAI.Types.LiveServerContent.InterimInputTranscription*
+  name: InterimInputTranscription
+  href: api/Google.GenAI.Types.LiveServerContent.html#Google_GenAI_Types_LiveServerContent_InterimInputTranscription_
+  commentId: Overload:Google.GenAI.Types.LiveServerContent.InterimInputTranscription
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LiveServerContent.InterimInputTranscription
+  nameWithType: LiveServerContent.InterimInputTranscription
 - uid: Google.GenAI.Types.LiveServerContent.Interrupted
   name: Interrupted
   href: api/Google.GenAI.Types.LiveServerContent.html#Google_GenAI_Types_LiveServerContent_Interrupted
@@ -40642,6 +40751,19 @@ references:
   commentId: T:Google.GenAI.Types.VoiceActivity
   fullName: Google.GenAI.Types.VoiceActivity
   nameWithType: VoiceActivity
+- uid: Google.GenAI.Types.VoiceActivity.AudioOffset
+  name: AudioOffset
+  href: api/Google.GenAI.Types.VoiceActivity.html#Google_GenAI_Types_VoiceActivity_AudioOffset
+  commentId: P:Google.GenAI.Types.VoiceActivity.AudioOffset
+  fullName: Google.GenAI.Types.VoiceActivity.AudioOffset
+  nameWithType: VoiceActivity.AudioOffset
+- uid: Google.GenAI.Types.VoiceActivity.AudioOffset*
+  name: AudioOffset
+  href: api/Google.GenAI.Types.VoiceActivity.html#Google_GenAI_Types_VoiceActivity_AudioOffset_
+  commentId: Overload:Google.GenAI.Types.VoiceActivity.AudioOffset
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VoiceActivity.AudioOffset
+  nameWithType: VoiceActivity.AudioOffset
 - uid: Google.GenAI.Types.VoiceActivity.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
   name: FromJson(string, JsonSerializerOptions?)
   href: api/Google.GenAI.Types.VoiceActivity.html#Google_GenAI_Types_VoiceActivity_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
