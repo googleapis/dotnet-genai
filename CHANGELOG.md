@@ -1,5 +1,24 @@
 # Changelog
 
+## Version 1.11.0, released 2026-06-17
+
+
+### New features
+
+* Add audioOffset to VoiceActivity ([aedb860](https://github.com/googleapis/dotnet-genai/commit/aedb86021ccfd95a68e2b4f630679c8612b00673))
+* Add interimInputTranscription to LiveServerContent ([aedb860](https://github.com/googleapis/dotnet-genai/commit/aedb86021ccfd95a68e2b4f630679c8612b00673))
+* Add LanguageAuto, LanguageHints, and adaptationPhrases to AudioTranscriptionConfig ([aedb860](https://github.com/googleapis/dotnet-genai/commit/aedb86021ccfd95a68e2b4f630679c8612b00673))
+
+
+### Bug fixes
+
+* receive async surface error to user ([b6ef5cd](https://github.com/googleapis/dotnet-genai/commit/b6ef5cde7654466123315eed496d1bd4e948957d))
+
+
+### Documentation improvements
+
+* Clarify Live API START/END_SENSITIVITY_HIGH/LOW defaults are different in Gemini Live and Gemini Enterprise Agent Platform Live API ([943d826](https://github.com/googleapis/dotnet-genai/commit/943d826f2798e8116b09c35b9a2bc2c347440a23)), closes [#2555](https://github.com/googleapis/dotnet-genai/issues/2555)
+
 ## Version 1.10.0, released 2026-06-08
 
 
