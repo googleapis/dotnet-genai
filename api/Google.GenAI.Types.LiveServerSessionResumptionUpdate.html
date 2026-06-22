@@ -168,10 +168,10 @@ SessionResumptionToken. Only sent when <code>SessionResumptionConfig.transparent
 Presence of this index allows users to transparently reconnect and avoid issue of losing
 some part of realtime audio input/video. If client wishes to temporarily disconnect (for
 example as result of receiving GoAway) they can do it without losing state by buffering
-messages sent since last <code>SessionResmumptionTokenUpdate</code>. This field will enable them to
+messages sent since last <code>SessionResumptionTokenUpdate</code>. This field will enable them to
 limit buffering (avoid keeping all requests in RAM).  Note: This should not be used for when
-resuming a session at some time later -- in those cases partial audio and video frames
-arelikely not needed.</p>
+resuming a session at some time later -- in those cases partial audio and video frames are
+likely not needed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

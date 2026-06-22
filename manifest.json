@@ -696,7 +696,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.BatchJobDestination",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.BatchJobDestination.yml\" sourcestartlinenumber=\"1\">Config for <code sourcefile=\"api/Google.GenAI.Types.BatchJobDestination.yml\" sourcestartlinenumber=\"1\">des</code> parameter.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.BatchJobDestination.yml\" sourcestartlinenumber=\"1\">Config for <code sourcefile=\"api/Google.GenAI.Types.BatchJobDestination.yml\" sourcestartlinenumber=\"1\">dest</code> parameter.</p>\n"
     },
     {
       "type": "ManagedReference",
