@@ -6,12 +6,12 @@
     <Nullable>enable</Nullable>
     <warningLevel>1</warningLevel>
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
-    <NoWarn>MEAI001</NoWarn>
+    <NoWarn>$(NoWarn);MEAI001;CS0618;GENAI_GAOS_001</NoWarn>
   </PropertyGroup>
 
   <!-- Include all test source files from parent directory -->
   <ItemGroup>
-    <Compile Include="../**/*.cs" Exclude="../Netstandard2_0Tests/**/*.cs;../bin/**;../obj/**" />
+    <Compile Include="../**/*.cs" Exclude="../Netstandard2_0Tests/**/*.cs;../bin/**;../obj/**;../AotTestApp/**" />
   </ItemGroup>
 
   <ItemGroup>

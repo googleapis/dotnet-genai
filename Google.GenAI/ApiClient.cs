@@ -164,7 +164,7 @@ namespace Google.GenAI
     private HttpClient? _httpClient;
     private readonly object _httpClientLock = new object();
 
-    protected HttpClient HttpClient
+    protected internal HttpClient HttpClient
     {
         get
         {
@@ -360,7 +360,6 @@ namespace Google.GenAI
       {
         this.HttpOptions = MergeHttpOptions(customHttpOptions);
       }
-
       // Must be assigned before anything reads this.HttpClient, whose getter caches
       // the client and consults ClientOptions.HttpClientFactory.
       this.ClientOptions = clientOptions ?? new Google.GenAI.Types.ClientOptions();

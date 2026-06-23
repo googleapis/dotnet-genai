@@ -4,6 +4,7 @@ Google's generative models into their .NET applications. It supports the
 [Gemini Enterprise Agent Platform](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
 APIs.
 
+New: The Genai SDK is working on support for the [interactions API](#interactions)!
 
 ## Supported .NET version
 
@@ -1676,5 +1677,41 @@ public class Files {
 
   }
 }
+```
 
+## Interactions
+
+> [!WARNING]
+> **Interactions API is Experimental (`GENAI_GAOS_001`)**
+>
+> The Interactions API (`client.Interactions`, `client.Agents`, `client.Environments`, `client.Triggers`, `client.Webhooks`) is currently an experimental preview.
+> While high-level service methods and method signatures will remain stable, the underlying serialization models and internal converters are actively evolving for Native AOT and trimming support in an upcoming release.
+> In .NET 8+, using these APIs produces compiler diagnostic `GENAI_GAOS_001`. You can suppress it with `#pragma warning disable GENAI_GAOS_001` or `<NoWarn>$(NoWarn);GENAI_GAOS_001</NoWarn>` in your project file.
+
+The Interactions API allows you to create and manage interactions with models.
+
+### Create an Interaction
+
+```csharp
+using Google.GenAI;
+using Google.GenAI.Gaos.Models.Interactions;
+using Google.GenAI.Gaos.Models.Requests;
+
+// Create a client (Gemini API or Vertex AI)
+var client = new Client();
+
+var parameters = new CreateModelInteraction
+{
+    Input = InteractionsInput.CreateStr("What is your name?"),
+    Model = "gemini-2.5-flash",
+};
+
+var response = await client.Interactions.CreateAsync(
+    CreateInteractionRequestBody.CreateCreateModelInteraction(parameters)
+);
+var interaction = response.Interaction;
+
+Console.WriteLine($"Interaction ID: {interaction.Id}");
+Console.WriteLine($"Status: {interaction.Status}");
+Console.WriteLine($"Output: {interaction.OutputText}");
 ```
