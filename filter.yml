@@ -1,0 +1,9 @@
+apiRules:
+- include:
+    uidRegex: ^Google\.GenAI\.Interactions\.Exceptions
+- include:
+    uidRegex: ^Google\.GenAI\.Interactions\.Models\.Interactions
+- include:
+    uidRegex: ^Google\.GenAI\.Interactions\.Services
+- exclude:
+    uidRegex: ^Google\.GenAI\.Interactions

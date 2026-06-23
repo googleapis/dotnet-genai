@@ -7,6 +7,8 @@
           "files": ["Google.GenAI/Google.GenAI.csproj"]
         }
       ],
+      "properties": { "TargetFramework": "net8.0" },
+      "filter": "filter.yml",
       "disableGitFeatures": false,
       "disableDefaultFilter": false,
       "warningsAsErrors": false,

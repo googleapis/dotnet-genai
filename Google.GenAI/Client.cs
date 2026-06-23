@@ -16,6 +16,10 @@
 
 using Google.Apis.Auth.OAuth2;
 
+#if !NETSTANDARD2_0
+using Google.GenAI.Gaos;
+#endif
+
 namespace Google.GenAI
 {
   /// <summary>
@@ -36,6 +40,41 @@ namespace Google.GenAI
     public Files Files { get; }
     public Tokens Tokens { get; }
 
+#if !NETSTANDARD2_0
+    /// <summary>
+    /// EXPERIMENTAL: The interactions service is experimental.
+    /// </summary>
+    public IInteractions Interactions 
+    {
+      get {
+        if (!_warnedInteractions) {
+          lock (_warnLock) {
+            if (!_warnedInteractions) {
+              System.Diagnostics.Trace.TraceWarning(
+                  "Warning: Interactions service is experimental and subject to change.");
+              _warnedInteractions = true;
+            }
+          }
+        }
+        return _interactionsClient.Interactions;
+      }
+    }
+
+    /// <summary>
+    /// EXPERIMENTAL: The webhooks service is experimental.
+    /// </summary>
+    public IWebhooks Webhooks => _interactionsClient.Webhooks;
+
+    /// <summary>
+    /// EXPERIMENTAL: The agents service is experimental.
+    /// </summary>
+    public IAgents Agents => _interactionsClient.Agents;
+
+    private readonly Google.GenAI.Gaos.GenAI _interactionsClient;
+#endif
+
+    private static volatile bool _warnedInteractions = false;
+    private static readonly object _warnLock = new object();
     private int _disposed = 0;
 
     /// <summary>
@@ -133,6 +172,44 @@ namespace Google.GenAI
       Operations = new Operations(_apiClient);
       Files = new Files(_apiClient);
       Tokens = new Tokens(_apiClient);
+#if !NETSTANDARD2_0
+      string? apiVersion = _apiClient.HttpOptions.ApiVersion;
+      if (_apiClient.VertexAI && !string.IsNullOrEmpty(_apiClient.Project) && !string.IsNullOrEmpty(_apiClient.Location))
+      {
+          apiVersion = $"{apiVersion}/projects/{_apiClient.Project}/locations/{_apiClient.Location}";
+      }
+
+      _interactionsClient = new Google.GenAI.Gaos.GenAI(
+          securitySource: () =>
+          {
+              var security = new Google.GenAI.Gaos.Models.Components.Security();
+              if (_apiClient.ApiKey != null)
+              {
+                  security.ApiKey = _apiClient.ApiKey;
+              }
+              else if (_apiClient.Credentials != null)
+              {
+                  security.AccessToken = _apiClient.Credentials.GetAccessTokenForRequestAsync()
+                      .GetAwaiter().GetResult();
+              }
+              if (_apiClient.HttpOptions.Headers != null)
+              {
+                  security.DefaultHeaders = new Dictionary<string, string>();
+                  foreach (var kvp in _apiClient.HttpOptions.Headers)
+                  {
+                      if (!kvp.Key.Equals("Content-Type", StringComparison.OrdinalIgnoreCase))
+                      {
+                          security.DefaultHeaders[kvp.Key] = kvp.Value;
+                      }
+                  }
+              }
+              return security;
+          },
+          serverUrl: _apiClient.HttpOptions.BaseUrl,
+          apiVersion: apiVersion,
+          client: new GaosHttpClient(_apiClient.HttpClient)
+      );
+#endif
     }
 
     static string? inferBaseUrl(bool vertexAI)
