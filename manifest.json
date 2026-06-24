@@ -5288,7 +5288,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.SafetyPolicy",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SafetyPolicy.yml\" sourcestartlinenumber=\"1\">Disabled safety policies for computer use.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SafetyPolicy.yml\" sourcestartlinenumber=\"1\">SafetyPolicy</p>\n"
     },
     {
       "type": "ManagedReference",
