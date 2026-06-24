@@ -1,5 +1,17 @@
 # Changelog
 
+## Version 1.12.0, released 2026-06-24
+
+
+### New features
+
+* Add ComputerUse.disabled_safety_policies ([e175c3e](https://github.com/googleapis/dotnet-genai/commit/e175c3e62f342141fa018877c123c68faf7e2c79))
+
+
+### Documentation improvements
+
+* fix typos across docstrings ([d617c05](https://github.com/googleapis/dotnet-genai/commit/d617c05d0f817d94ff9b98d38062ea28f25396e4))
+
 ## Version 1.11.0, released 2026-06-17
 
 
