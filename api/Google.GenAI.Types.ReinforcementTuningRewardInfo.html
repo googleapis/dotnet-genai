@@ -193,10 +193,13 @@ public double? Reward { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningRewardInfo_UserRequestedAuxInfo" data-uid="Google.GenAI.Types.ReinforcementTuningRewardInfo.UserRequestedAuxInfo">
   UserRequestedAuxInfo
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningRewardInfo.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningRewardInfo.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Output only. The user-requested auxiliary info for the reward function.</p>
+  <div class="markdown level1 summary"><p>Output only. The user-requested auxiliary info for the reward function. This field is set
+only if the Cloud Run reward function configured by user returns a
+&quot;user_requested_aux_info&quot;. Refer to ReinforcementTuningCloudRunRewardScorer for more
+details.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -231,7 +234,7 @@ public string? UserRequestedAuxInfo { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningRewardInfo_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.ReinforcementTuningRewardInfo.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningRewardInfo.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningRewardInfo.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a ReinforcementTuningRewardInfo object.</p>

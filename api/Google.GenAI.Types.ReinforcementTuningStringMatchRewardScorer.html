@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ReinforcementTuningStringMatchRewardScorer | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Scores parsed responses for string matching use cases.">
+      <meta name="description" content="ReinforcementTuningStringMatchRewardScorer is used to score parsed responses for string matching use cases. For example, for math problems, users can use string match scorer to check if the correct exact answer is generated. Note: Reward returned by the string match reward function is clipped to be within [-1, 1] if wrongAnswerReward or correctAnswerReward are beyond the range, i.e., reward = max(min(reward, 1.0), -1.0). This data type is not supported in Gemini API.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Types_ReinforcementTuningStringMatchRewardScorer" data-uid="Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorer" class="text-break">
-Class ReinforcementTuningStringMatchRewardScorer  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningStringMatchRewardScorer.cs/#L29"><i class="bi bi-code-slash"></i></a>
+Class ReinforcementTuningStringMatchRewardScorer  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningStringMatchRewardScorer.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,7 +93,12 @@ Class ReinforcementTuningStringMatchRewardScorer  <a class="header-action link-s
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Scores parsed responses for string matching use cases.</p>
+  <div class="markdown summary"><p>ReinforcementTuningStringMatchRewardScorer is used to score parsed responses for string
+matching use cases. For example, for math problems, users can use string match scorer to check
+if the correct exact answer is generated. Note: Reward returned by the string match reward
+function is clipped to be within <code>[-1, 1]</code> if wrongAnswerReward or correctAnswerReward are
+beyond the range, i.e., <code>reward = max(min(reward, 1.0), -1.0)</code>. This data type is not
+supported in Gemini API.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -159,11 +164,11 @@ Class ReinforcementTuningStringMatchRewardScorer  <a class="header-action link-s
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningStringMatchRewardScorer_CorrectAnswerReward" data-uid="Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorer.CorrectAnswerReward">
   CorrectAnswerReward
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningStringMatchRewardScorer.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningStringMatchRewardScorer.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Correct answer reward is returned if evaluator evaluates to <code>true</code>. All correct answers get
-the same reward.</p>
+  <div class="markdown level1 summary"><p>Correct answer rewawrd is returned if the parsed response is evaluated as <code>true</code>. All
+correct answers get the same reward.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -194,7 +199,7 @@ public double? CorrectAnswerReward { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningStringMatchRewardScorer_JsonMatchExpression" data-uid="Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorer.JsonMatchExpression">
   JsonMatchExpression
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningStringMatchRewardScorer.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningStringMatchRewardScorer.cs/#L67"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Uses json match expression to evaluate parsed response.</p>
@@ -228,7 +233,7 @@ public ReinforcementTuningStringMatchRewardScorerJsonMatchExpression? JsonMatchE
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningStringMatchRewardScorer_StringMatchExpression" data-uid="Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorer.StringMatchExpression">
   StringMatchExpression
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningStringMatchRewardScorer.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningStringMatchRewardScorer.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Uses string match expression to evaluate parsed response.</p>
@@ -262,11 +267,11 @@ public ReinforcementTuningStringMatchRewardScorerStringMatchExpression? StringMa
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningStringMatchRewardScorer_WrongAnswerReward" data-uid="Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorer.WrongAnswerReward">
   WrongAnswerReward
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningStringMatchRewardScorer.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningStringMatchRewardScorer.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Wrong answer reward is returned if evaluator evaluates to <code>false</code>. All wrong answers get the
-same reward.</p>
+  <div class="markdown level1 summary"><p>Wrong answer reward is returned if the parsed response is evaluated as <code>false</code>. All wrong
+answers get the same reward.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -301,7 +306,7 @@ public double? WrongAnswerReward { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningStringMatchRewardScorer_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorer.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningStringMatchRewardScorer.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningStringMatchRewardScorer.cs/#L81"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a ReinforcementTuningStringMatchRewardScorer object.</p>
@@ -344,7 +349,7 @@ deserialization fails.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningStringMatchRewardScorer.cs/#L29" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningStringMatchRewardScorer.cs/#L34" class="edit-link">Edit this page</a>
         </div>
 
 

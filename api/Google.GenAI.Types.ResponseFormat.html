@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class TranslationConfig | Google GenAI .NET SDK </title>
+      <title>Class ResponseFormat | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class TranslationConfig | Google GenAI .NET SDK ">
+      <meta name="title" content="Class ResponseFormat | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Config for stream translation.">
+      <meta name="description" content="Configuration for the model to configure output formatting and delivery. This data type is not supported in Gemini API.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/googleapis/dotnet-genai/new/main/apiSpec/new?filename=Google_GenAI_Types_TranslationConfig.md&amp;value=---%0Auid%3A%20Google.GenAI.Types.TranslationConfig%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/googleapis/dotnet-genai/new/main/apiSpec/new?filename=Google_GenAI_Types_ResponseFormat.md&amp;value=---%0Auid%3A%20Google.GenAI.Types.ResponseFormat%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -80,12 +80,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Google.GenAI.Types.TranslationConfig">
+        <article data-uid="Google.GenAI.Types.ResponseFormat">
 
 
 
-  <h1 id="Google_GenAI_Types_TranslationConfig" data-uid="Google.GenAI.Types.TranslationConfig" class="text-break">
-Class TranslationConfig  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TranslationConfig.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <h1 id="Google_GenAI_Types_ResponseFormat" data-uid="Google.GenAI.Types.ResponseFormat" class="text-break">
+Class ResponseFormat  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ResponseFormat.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,12 +93,13 @@ Class TranslationConfig  <a class="header-action link-secondary" title="View sou
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Config for stream translation.</p>
+  <div class="markdown summary"><p>Configuration for the model to configure output formatting and delivery. This data type is not
+supported in Gemini API.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public record TranslationConfig : IEquatable&lt;TranslationConfig&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public record ResponseFormat : IEquatable&lt;ResponseFormat&gt;</code></pre>
   </div>
 
 
@@ -108,14 +109,14 @@ Class TranslationConfig  <a class="header-action link-secondary" title="View sou
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">TranslationConfig</span></div>
+      <div><span class="xref">ResponseFormat</span></div>
     </dd>
   </dl>
 
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.TranslationConfig.html">TranslationConfig</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.ResponseFormat.html">ResponseFormat</a>&gt;</div>
     </dd>
   </dl>
 
@@ -155,23 +156,21 @@ Class TranslationConfig  <a class="header-action link-secondary" title="View sou
 </h2>
 
 
-  <a id="Google_GenAI_Types_TranslationConfig_EchoTargetLanguage_" data-uid="Google.GenAI.Types.TranslationConfig.EchoTargetLanguage*"></a>
+  <a id="Google_GenAI_Types_ResponseFormat_Audio_" data-uid="Google.GenAI.Types.ResponseFormat.Audio*"></a>
 
-  <h3 id="Google_GenAI_Types_TranslationConfig_EchoTargetLanguage" data-uid="Google.GenAI.Types.TranslationConfig.EchoTargetLanguage">
-  EchoTargetLanguage
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TranslationConfig.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Types_ResponseFormat_Audio" data-uid="Google.GenAI.Types.ResponseFormat.Audio">
+  Audio
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ResponseFormat.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. If true, the model will generate audio when the target language is spoken,
-essentially it will parrot the input. If false, we will not produce audio for the target
-language.</p>
+  <div class="markdown level1 summary"><p>Audio output format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;echoTargetLanguage&quot;)]
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;audio&quot;)]
 [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-public bool? EchoTargetLanguage { get; set; }</code></pre>
+public AudioResponseFormat? Audio { get; set; }</code></pre>
   </div>
 
 
@@ -180,7 +179,7 @@ public bool? EchoTargetLanguage { get; set; }</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dt><a class="xref" href="Google.GenAI.Types.AudioResponseFormat.html">AudioResponseFormat</a></dt>
     <dd></dd>
   </dl>
 
@@ -191,22 +190,21 @@ public bool? EchoTargetLanguage { get; set; }</code></pre>
 
 
 
-  <a id="Google_GenAI_Types_TranslationConfig_TargetLanguageCode_" data-uid="Google.GenAI.Types.TranslationConfig.TargetLanguageCode*"></a>
+  <a id="Google_GenAI_Types_ResponseFormat_Image_" data-uid="Google.GenAI.Types.ResponseFormat.Image*"></a>
 
-  <h3 id="Google_GenAI_Types_TranslationConfig_TargetLanguageCode" data-uid="Google.GenAI.Types.TranslationConfig.TargetLanguageCode">
-  TargetLanguageCode
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TranslationConfig.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Types_ResponseFormat_Image" data-uid="Google.GenAI.Types.ResponseFormat.Image">
+  Image
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ResponseFormat.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The target language for translation. Supported values are BCP-47 language codes (e.g. &quot;en&quot;,
-&quot;es&quot;, &quot;fr&quot;).</p>
+  <div class="markdown level1 summary"><p>Image output format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;targetLanguageCode&quot;)]
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;image&quot;)]
 [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-public string? TargetLanguageCode { get; set; }</code></pre>
+public ImageResponseFormat? Image { get; set; }</code></pre>
   </div>
 
 
@@ -215,7 +213,75 @@ public string? TargetLanguageCode { get; set; }</code></pre>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="Google.GenAI.Types.ImageResponseFormat.html">ImageResponseFormat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ResponseFormat_Text_" data-uid="Google.GenAI.Types.ResponseFormat.Text*"></a>
+
+  <h3 id="Google_GenAI_Types_ResponseFormat_Text" data-uid="Google.GenAI.Types.ResponseFormat.Text">
+  Text
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ResponseFormat.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Text output format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;text&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public TextResponseFormat? Text { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TextResponseFormat.html">TextResponseFormat</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ResponseFormat_Video_" data-uid="Google.GenAI.Types.ResponseFormat.Video*"></a>
+
+  <h3 id="Google_GenAI_Types_ResponseFormat_Video" data-uid="Google.GenAI.Types.ResponseFormat.Video">
+  Video
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ResponseFormat.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Video output format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;video&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public VideoResponseFormat? Video { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.VideoResponseFormat.html">VideoResponseFormat</a></dt>
     <dd></dd>
   </dl>
 
@@ -230,19 +296,19 @@ public string? TargetLanguageCode { get; set; }</code></pre>
 </h2>
 
 
-  <a id="Google_GenAI_Types_TranslationConfig_FromJson_" data-uid="Google.GenAI.Types.TranslationConfig.FromJson*"></a>
+  <a id="Google_GenAI_Types_ResponseFormat_FromJson_" data-uid="Google.GenAI.Types.ResponseFormat.FromJson*"></a>
 
-  <h3 id="Google_GenAI_Types_TranslationConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.TranslationConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
+  <h3 id="Google_GenAI_Types_ResponseFormat_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.ResponseFormat.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TranslationConfig.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ResponseFormat.cs/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Deserializes a JSON string to a TranslationConfig object.</p>
+  <div class="markdown level1 summary"><p>Deserializes a JSON string to a ResponseFormat object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static TranslationConfig? FromJson(string jsonString, JsonSerializerOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ResponseFormat? FromJson(string jsonString, JsonSerializerOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -257,9 +323,8 @@ public string? TargetLanguageCode { get; set; }</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Google.GenAI.Types.TranslationConfig.html">TranslationConfig</a></dt>
-    <dd><p>The deserialized TranslationConfig object, or null if deserialization
-fails.</p>
+    <dt><a class="xref" href="Google.GenAI.Types.ResponseFormat.html">ResponseFormat</a></dt>
+    <dd><p>The deserialized ResponseFormat object, or null if deserialization fails.</p>
 </dd>
   </dl>
 
@@ -277,7 +342,7 @@ fails.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/TranslationConfig.cs/#L29" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ResponseFormat.cs/#L30" class="edit-link">Edit this page</a>
         </div>
 
 

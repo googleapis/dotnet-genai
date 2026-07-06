@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ReinforcementTuningCloudRunRewardScorer | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Scores parsed responses by calling a Cloud Run service.">
+      <meta name="description" content="ReinforcementTuningCloudRunRewardScorer allows users to implement a reward function through GCP Cloud Run. Comparing with ReinforcementTuningCodeExecutionRewardScorer that runs in a Sandbox and has no internet access, Cloud Run reward scorer is fully controlled by users. The Cloud Run service should implement the following HTTP API: HTTP method: POST HTTP request body: { &amp;quot;example&amp;quot;: ReinforcementTuningExample, &amp;quot;response&amp;quot;: Content, &amp;quot;metadata&amp;quot;: { &amp;quot;step&amp;quot;: int &amp;quot;tuning_job_id&amp;quot;: int64 } } * example is a ReinforcementTuningExample in ProtoJSON format, (i.e., the format is the same as as one line in the training/validation dataset except that the keys must be in camel case). System instructions (i.e., example.get(&amp;quot;systemInstruction&amp;quot;)) and references (i.e., example.get(&amp;quot;references&amp;quot;)) are also included in the example provided that they are set in the training/validation dataset.  response is a Content in ProtoJSON format (i.e., keys must be in camel case), which is the same as the Online Prediction response for Gemini models. HTTP response body: { &amp;quot;reward&amp;quot;: float, &amp;quot;user_requested_aux_info&amp;quot;: str // Optional } where the field &amp;quot;user_requested_aux_info&amp;quot; is any (optional) string provided by users for assisting debugging. It&#39;s in snake case. This field is mostly useful when calling the GenAiTuningService.ValidateReinforcementTuningReward API, where the proto field (not Cloud Run HTTP response body) userRequestedAuxInfo will be populated if the Cloud Run reward function sets this field in the HTTP response. The following are examples for the HTTP request and response body. Example HTTP request body: { &amp;quot;example&amp;quot;: { &amp;quot;contents&amp;quot;: [ { &amp;quot;role&amp;quot;: &amp;quot;user&amp;quot;, &amp;quot;parts&amp;quot;: [ { &amp;quot;text&amp;quot;: &amp;quot;What is the capital of France?&amp;quot; } ] } ], &amp;quot;references&amp;quot;: { &amp;quot;answer&amp;quot;: &amp;quot;Paris&amp;quot; } }, &amp;quot;response&amp;quot;: { &amp;quot;parts&amp;quot;: [ { &amp;quot;text&amp;quot;: &amp;quot;London&amp;quot; } ] }, &amp;quot;metadata&amp;quot;: { &amp;quot;step&amp;quot;: 1, &amp;quot;tuning_job_id&amp;quot;: 123456789 } } Example HTTP response body: { &amp;quot;reward&amp;quot;: -1.0 } Note: Reward output by Cloud Run reward function is clipped to be within [-1, 1], i.e., reward = max(min(reward, 1.0), -1.0). This data type is not supported in Gemini API.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Types_ReinforcementTuningCloudRunRewardScorer" data-uid="Google.GenAI.Types.ReinforcementTuningCloudRunRewardScorer" class="text-break">
-Class ReinforcementTuningCloudRunRewardScorer  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningCloudRunRewardScorer.cs/#L29"><i class="bi bi-code-slash"></i></a>
+Class ReinforcementTuningCloudRunRewardScorer  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningCloudRunRewardScorer.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,7 +93,28 @@ Class ReinforcementTuningCloudRunRewardScorer  <a class="header-action link-seco
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Scores parsed responses by calling a Cloud Run service.</p>
+  <div class="markdown summary"><p>ReinforcementTuningCloudRunRewardScorer allows users to implement a reward function through
+GCP Cloud Run. Comparing with ReinforcementTuningCodeExecutionRewardScorer that runs in a
+Sandbox and has no internet access, Cloud Run reward scorer is fully controlled by users. The
+Cloud Run service should implement the following HTTP API: HTTP method: <code>POST</code> HTTP request
+body: <code>{ &quot;example&quot;: ReinforcementTuningExample, &quot;response&quot;: Content, &quot;metadata&quot;: { &quot;step&quot;: int &quot;tuning_job_id&quot;: int64 } }</code> * <code>example</code> is a ReinforcementTuningExample in ProtoJSON
+format, (i.e., the format is the same as as one line in the training/validation dataset except
+that the keys must be in camel case). System instructions (i.e.,
+<code>example.get(&quot;systemInstruction&quot;)</code>) and references (i.e., <code>example.get(&quot;references&quot;)</code>) are
+also included in the <code>example</code> provided that they are set in the training/validation dataset.</p>
+<ul>
+<li><code>response</code> is a Content in ProtoJSON format (i.e., keys must be in camel case), which is the
+same as the Online Prediction response for Gemini models. HTTP response body: { &quot;reward&quot;:
+float, &quot;user_requested_aux_info&quot;: str // Optional } where the field &quot;user_requested_aux_info&quot;
+is any (optional) string provided by users for assisting debugging. It's in snake case. This
+field is mostly useful when calling the GenAiTuningService.ValidateReinforcementTuningReward
+API, where the proto field (not Cloud Run HTTP response body) userRequestedAuxInfo will be
+populated if the Cloud Run reward function sets this field in the HTTP response. The following
+are examples for the HTTP request and response body. Example HTTP request body: <code>{ &quot;example&quot;: { &quot;contents&quot;: [ { &quot;role&quot;: &quot;user&quot;, &quot;parts&quot;: [ { &quot;text&quot;: &quot;What is the capital of France?&quot; } ] } ], &quot;references&quot;: { &quot;answer&quot;: &quot;Paris&quot; } }, &quot;response&quot;: { &quot;parts&quot;: [ { &quot;text&quot;: &quot;London&quot; } ] }, &quot;metadata&quot;: { &quot;step&quot;: 1, &quot;tuning_job_id&quot;: 123456789 } }</code> Example HTTP
+response body: <code>{ &quot;reward&quot;: -1.0 }</code> Note: Reward output by Cloud Run reward function is
+clipped to be within <code>[-1, 1]</code>, i.e., <code>reward = max(min(reward, 1.0), -1.0)</code>. This data type
+is not supported in Gemini API.</li>
+</ul>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -159,14 +180,14 @@ Class ReinforcementTuningCloudRunRewardScorer  <a class="header-action link-seco
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningCloudRunRewardScorer_CloudRunUri" data-uid="Google.GenAI.Types.ReinforcementTuningCloudRunRewardScorer.CloudRunUri">
   CloudRunUri
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningCloudRunRewardScorer.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningCloudRunRewardScorer.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>URI of the Cloud Run service that will be used to compute the reward. The Vertex AI Secure
 Fine Tuning Service Agent
-(<code>service-PROJECT_NUMBER@gcp-sa-vertex-tune.iam.gserviceaccount.com</code>, where <code>PROJECT_NUMBER</code>
-is the numeric project number) must be granted the permission (e.g. by granting
-<code>roles/run.invoker</code> in IAM) to invoke the Cloud Run service.</p>
+(<a href="https://docs.cloud.google.com/iam/docs/service-agents#vertex-ai-secure-fine-tuning-service-agent">https://docs.cloud.google.com/iam/docs/service-agents#vertex-ai-secure-fine-tuning-service-agent</a>)
+(<code>service-@gcp-sa-vertex-tune.iam.gserviceaccount.com</code>) must be granted the permission (e.g.
+by granting <code>roles/run.invoker</code> in IAM) to invoke the Cloud Run service.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -201,7 +222,7 @@ public string? CloudRunUri { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningCloudRunRewardScorer_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.ReinforcementTuningCloudRunRewardScorer.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningCloudRunRewardScorer.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningCloudRunRewardScorer.cs/#L71"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a ReinforcementTuningCloudRunRewardScorer object.</p>
@@ -244,7 +265,7 @@ deserialization fails.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningCloudRunRewardScorer.cs/#L29" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningCloudRunRewardScorer.cs/#L52" class="edit-link">Edit this page</a>
         </div>
 
 

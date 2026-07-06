@@ -267,7 +267,7 @@ public bool? EnableAffectiveDialog { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GenerationConfig_EnableEnhancedCivicAnswers" data-uid="Google.GenAI.Types.GenerationConfig.EnableEnhancedCivicAnswers">
   EnableEnhancedCivicAnswers
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfig.cs/#L301"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfig.cs/#L302"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. Enables enhanced civic answers. It may not be available for all models. This field
@@ -514,6 +514,41 @@ public double? PresencePenalty { get; set; }</code></pre>
 
 
 
+  <a id="Google_GenAI_Types_GenerationConfig_ResponseFormat_" data-uid="Google.GenAI.Types.GenerationConfig.ResponseFormat*"></a>
+
+  <h3 id="Google_GenAI_Types_GenerationConfig_ResponseFormat" data-uid="Google.GenAI.Types.GenerationConfig.ResponseFormat">
+  ResponseFormat
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfig.cs/#L313"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional. New response format field for the model to configure output formatting and
+delivery.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;responseFormat&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public List&lt;ResponseFormat&gt;? ResponseFormat { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Google.GenAI.Types.ResponseFormat.html">ResponseFormat</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_GenerationConfig_ResponseJsonSchema_" data-uid="Google.GenAI.Types.GenerationConfig.ResponseJsonSchema*"></a>
 
   <h3 id="Google_GenAI_Types_GenerationConfig_ResponseJsonSchema" data-uid="Google.GenAI.Types.GenerationConfig.ResponseJsonSchema">
@@ -596,7 +631,7 @@ public bool? ResponseLogprobs { get; set; }</code></pre>
   <div class="markdown level1 summary"><p>Optional. The IANA standard MIME type of the response. The model will generate output that
 conforms to this MIME type. Supported values include 'text/plain' (default) and
 'application/json'. The model needs to be prompted to output the appropriate response type,
-otherwise the behavior is undefined.</p>
+otherwise the behavior is undefined. Deprecated: Use <code>response_format</code> instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -663,14 +698,15 @@ public List&lt;Modality&gt;? ResponseModalities { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GenerationConfig_ResponseSchema" data-uid="Google.GenAI.Types.GenerationConfig.ResponseSchema">
   ResponseSchema
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfig.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfig.cs/#L192"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. Lets you to specify a schema for the model's response, ensuring that the output
 conforms to a particular structure. This is useful for generating structured data such as
 JSON. The schema is a subset of the OpenAPI 3.0 schema object
 (<a href="https://spec.openapis.org/oas/v3.0.3#schema">https://spec.openapis.org/oas/v3.0.3#schema</a>) object. When this field is set, you must also
-set the <code>response_mime_type</code> to <code>application/json</code>.</p>
+set the <code>response_mime_type</code> to <code>application/json</code>. Deprecated: Use <code>response_format</code>
+instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -701,7 +737,7 @@ public Schema? ResponseSchema { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GenerationConfig_RoutingConfig" data-uid="Google.GenAI.Types.GenerationConfig.RoutingConfig">
   RoutingConfig
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfig.cs/#L201"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfig.cs/#L202"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. Routing configuration. This field is not supported in Gemini API.</p>
@@ -735,7 +771,7 @@ public GenerationConfigRoutingConfig? RoutingConfig { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GenerationConfig_Seed" data-uid="Google.GenAI.Types.GenerationConfig.Seed">
   Seed
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfig.cs/#L217"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfig.cs/#L218"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. A seed for the random number generator. By setting a seed, you can make the
@@ -775,7 +811,7 @@ public int? Seed { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GenerationConfig_SpeechConfig" data-uid="Google.GenAI.Types.GenerationConfig.SpeechConfig">
   SpeechConfig
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfig.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfig.cs/#L228"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. The speech generation config.</p>
@@ -809,7 +845,7 @@ public SpeechConfig? SpeechConfig { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GenerationConfig_StopSequences" data-uid="Google.GenAI.Types.GenerationConfig.StopSequences">
   StopSequences
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfig.cs/#L240"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfig.cs/#L241"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. A list of character sequences that will stop the model from generating further
@@ -846,7 +882,7 @@ public List&lt;string&gt;? StopSequences { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GenerationConfig_Temperature" data-uid="Google.GenAI.Types.GenerationConfig.Temperature">
   Temperature
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfig.cs/#L252"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfig.cs/#L253"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. Controls the randomness of the output. A higher temperature results in more
@@ -882,7 +918,7 @@ public double? Temperature { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GenerationConfig_ThinkingConfig" data-uid="Google.GenAI.Types.GenerationConfig.ThinkingConfig">
   ThinkingConfig
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfig.cs/#L263"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfig.cs/#L264"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. Configuration for thinking features. An error will be returned if this field is
@@ -917,7 +953,7 @@ public ThinkingConfig? ThinkingConfig { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GenerationConfig_TopK" data-uid="Google.GenAI.Types.GenerationConfig.TopK">
   TopK
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfig.cs/#L276"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfig.cs/#L277"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. Specifies the top-k sampling threshold. The model considers only the top k most
@@ -954,7 +990,7 @@ public double? TopK { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GenerationConfig_TopP" data-uid="Google.GenAI.Types.GenerationConfig.TopP">
   TopP
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfig.cs/#L290"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfig.cs/#L291"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Optional. Specifies the nucleus sampling threshold. The model considers only the smallest
@@ -988,6 +1024,40 @@ public double? TopP { get; set; }</code></pre>
 
 
 
+  <a id="Google_GenAI_Types_GenerationConfig_TranslationConfig_" data-uid="Google.GenAI.Types.GenerationConfig.TranslationConfig*"></a>
+
+  <h3 id="Google_GenAI_Types_GenerationConfig_TranslationConfig" data-uid="Google.GenAI.Types.GenerationConfig.TranslationConfig">
+  TranslationConfig
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfig.cs/#L323"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional. Config for translation. This field is not supported in Vertex AI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;translationConfig&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public TranslationConfig? TranslationConfig { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.TranslationConfig.html">TranslationConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -996,7 +1066,7 @@ public double? TopP { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GenerationConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.GenerationConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfig.cs/#L315"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerationConfig.cs/#L337"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a GenerationConfig object.</p>

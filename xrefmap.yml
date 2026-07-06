@@ -3438,6 +3438,416 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ApiSpecConverter.Write
   nameWithType: ApiSpecConverter.Write
+- uid: Google.GenAI.Types.AspectRatio
+  name: AspectRatio
+  href: api/Google.GenAI.Types.AspectRatio.html
+  commentId: T:Google.GenAI.Types.AspectRatio
+  fullName: Google.GenAI.Types.AspectRatio
+  nameWithType: AspectRatio
+- uid: Google.GenAI.Types.AspectRatio.AllValues
+  name: AllValues
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AllValues
+  commentId: P:Google.GenAI.Types.AspectRatio.AllValues
+  fullName: Google.GenAI.Types.AspectRatio.AllValues
+  nameWithType: AspectRatio.AllValues
+- uid: Google.GenAI.Types.AspectRatio.AllValues*
+  name: AllValues
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AllValues_
+  commentId: Overload:Google.GenAI.Types.AspectRatio.AllValues
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AspectRatio.AllValues
+  nameWithType: AspectRatio.AllValues
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioEightByOne
+  name: AspectRatioEightByOne
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioEightByOne
+  commentId: P:Google.GenAI.Types.AspectRatio.AspectRatioEightByOne
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioEightByOne
+  nameWithType: AspectRatio.AspectRatioEightByOne
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioEightByOne*
+  name: AspectRatioEightByOne
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioEightByOne_
+  commentId: Overload:Google.GenAI.Types.AspectRatio.AspectRatioEightByOne
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioEightByOne
+  nameWithType: AspectRatio.AspectRatioEightByOne
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioFiveByFour
+  name: AspectRatioFiveByFour
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioFiveByFour
+  commentId: P:Google.GenAI.Types.AspectRatio.AspectRatioFiveByFour
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioFiveByFour
+  nameWithType: AspectRatio.AspectRatioFiveByFour
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioFiveByFour*
+  name: AspectRatioFiveByFour
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioFiveByFour_
+  commentId: Overload:Google.GenAI.Types.AspectRatio.AspectRatioFiveByFour
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioFiveByFour
+  nameWithType: AspectRatio.AspectRatioFiveByFour
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioFourByFive
+  name: AspectRatioFourByFive
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioFourByFive
+  commentId: P:Google.GenAI.Types.AspectRatio.AspectRatioFourByFive
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioFourByFive
+  nameWithType: AspectRatio.AspectRatioFourByFive
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioFourByFive*
+  name: AspectRatioFourByFive
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioFourByFive_
+  commentId: Overload:Google.GenAI.Types.AspectRatio.AspectRatioFourByFive
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioFourByFive
+  nameWithType: AspectRatio.AspectRatioFourByFive
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioFourByOne
+  name: AspectRatioFourByOne
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioFourByOne
+  commentId: P:Google.GenAI.Types.AspectRatio.AspectRatioFourByOne
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioFourByOne
+  nameWithType: AspectRatio.AspectRatioFourByOne
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioFourByOne*
+  name: AspectRatioFourByOne
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioFourByOne_
+  commentId: Overload:Google.GenAI.Types.AspectRatio.AspectRatioFourByOne
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioFourByOne
+  nameWithType: AspectRatio.AspectRatioFourByOne
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioFourByThree
+  name: AspectRatioFourByThree
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioFourByThree
+  commentId: P:Google.GenAI.Types.AspectRatio.AspectRatioFourByThree
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioFourByThree
+  nameWithType: AspectRatio.AspectRatioFourByThree
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioFourByThree*
+  name: AspectRatioFourByThree
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioFourByThree_
+  commentId: Overload:Google.GenAI.Types.AspectRatio.AspectRatioFourByThree
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioFourByThree
+  nameWithType: AspectRatio.AspectRatioFourByThree
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioNineBySixteen
+  name: AspectRatioNineBySixteen
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioNineBySixteen
+  commentId: P:Google.GenAI.Types.AspectRatio.AspectRatioNineBySixteen
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioNineBySixteen
+  nameWithType: AspectRatio.AspectRatioNineBySixteen
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioNineBySixteen*
+  name: AspectRatioNineBySixteen
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioNineBySixteen_
+  commentId: Overload:Google.GenAI.Types.AspectRatio.AspectRatioNineBySixteen
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioNineBySixteen
+  nameWithType: AspectRatio.AspectRatioNineBySixteen
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioOneByEight
+  name: AspectRatioOneByEight
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioOneByEight
+  commentId: P:Google.GenAI.Types.AspectRatio.AspectRatioOneByEight
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioOneByEight
+  nameWithType: AspectRatio.AspectRatioOneByEight
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioOneByEight*
+  name: AspectRatioOneByEight
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioOneByEight_
+  commentId: Overload:Google.GenAI.Types.AspectRatio.AspectRatioOneByEight
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioOneByEight
+  nameWithType: AspectRatio.AspectRatioOneByEight
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioOneByFour
+  name: AspectRatioOneByFour
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioOneByFour
+  commentId: P:Google.GenAI.Types.AspectRatio.AspectRatioOneByFour
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioOneByFour
+  nameWithType: AspectRatio.AspectRatioOneByFour
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioOneByFour*
+  name: AspectRatioOneByFour
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioOneByFour_
+  commentId: Overload:Google.GenAI.Types.AspectRatio.AspectRatioOneByFour
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioOneByFour
+  nameWithType: AspectRatio.AspectRatioOneByFour
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioOneByOne
+  name: AspectRatioOneByOne
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioOneByOne
+  commentId: P:Google.GenAI.Types.AspectRatio.AspectRatioOneByOne
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioOneByOne
+  nameWithType: AspectRatio.AspectRatioOneByOne
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioOneByOne*
+  name: AspectRatioOneByOne
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioOneByOne_
+  commentId: Overload:Google.GenAI.Types.AspectRatio.AspectRatioOneByOne
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioOneByOne
+  nameWithType: AspectRatio.AspectRatioOneByOne
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioSixteenByNine
+  name: AspectRatioSixteenByNine
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioSixteenByNine
+  commentId: P:Google.GenAI.Types.AspectRatio.AspectRatioSixteenByNine
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioSixteenByNine
+  nameWithType: AspectRatio.AspectRatioSixteenByNine
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioSixteenByNine*
+  name: AspectRatioSixteenByNine
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioSixteenByNine_
+  commentId: Overload:Google.GenAI.Types.AspectRatio.AspectRatioSixteenByNine
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioSixteenByNine
+  nameWithType: AspectRatio.AspectRatioSixteenByNine
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioThreeByFour
+  name: AspectRatioThreeByFour
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioThreeByFour
+  commentId: P:Google.GenAI.Types.AspectRatio.AspectRatioThreeByFour
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioThreeByFour
+  nameWithType: AspectRatio.AspectRatioThreeByFour
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioThreeByFour*
+  name: AspectRatioThreeByFour
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioThreeByFour_
+  commentId: Overload:Google.GenAI.Types.AspectRatio.AspectRatioThreeByFour
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioThreeByFour
+  nameWithType: AspectRatio.AspectRatioThreeByFour
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioThreeByTwo
+  name: AspectRatioThreeByTwo
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioThreeByTwo
+  commentId: P:Google.GenAI.Types.AspectRatio.AspectRatioThreeByTwo
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioThreeByTwo
+  nameWithType: AspectRatio.AspectRatioThreeByTwo
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioThreeByTwo*
+  name: AspectRatioThreeByTwo
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioThreeByTwo_
+  commentId: Overload:Google.GenAI.Types.AspectRatio.AspectRatioThreeByTwo
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioThreeByTwo
+  nameWithType: AspectRatio.AspectRatioThreeByTwo
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioTwentyOneByNine
+  name: AspectRatioTwentyOneByNine
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioTwentyOneByNine
+  commentId: P:Google.GenAI.Types.AspectRatio.AspectRatioTwentyOneByNine
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioTwentyOneByNine
+  nameWithType: AspectRatio.AspectRatioTwentyOneByNine
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioTwentyOneByNine*
+  name: AspectRatioTwentyOneByNine
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioTwentyOneByNine_
+  commentId: Overload:Google.GenAI.Types.AspectRatio.AspectRatioTwentyOneByNine
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioTwentyOneByNine
+  nameWithType: AspectRatio.AspectRatioTwentyOneByNine
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioTwoByThree
+  name: AspectRatioTwoByThree
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioTwoByThree
+  commentId: P:Google.GenAI.Types.AspectRatio.AspectRatioTwoByThree
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioTwoByThree
+  nameWithType: AspectRatio.AspectRatioTwoByThree
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioTwoByThree*
+  name: AspectRatioTwoByThree
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioTwoByThree_
+  commentId: Overload:Google.GenAI.Types.AspectRatio.AspectRatioTwoByThree
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioTwoByThree
+  nameWithType: AspectRatio.AspectRatioTwoByThree
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioUnspecified
+  name: AspectRatioUnspecified
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioUnspecified
+  commentId: P:Google.GenAI.Types.AspectRatio.AspectRatioUnspecified
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioUnspecified
+  nameWithType: AspectRatio.AspectRatioUnspecified
+- uid: Google.GenAI.Types.AspectRatio.AspectRatioUnspecified*
+  name: AspectRatioUnspecified
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_AspectRatioUnspecified_
+  commentId: Overload:Google.GenAI.Types.AspectRatio.AspectRatioUnspecified
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AspectRatio.AspectRatioUnspecified
+  nameWithType: AspectRatio.AspectRatioUnspecified
+- uid: Google.GenAI.Types.AspectRatio.Equals(Google.GenAI.Types.AspectRatio)
+  name: Equals(AspectRatio)
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_Equals_Google_GenAI_Types_AspectRatio_
+  commentId: M:Google.GenAI.Types.AspectRatio.Equals(Google.GenAI.Types.AspectRatio)
+  fullName: Google.GenAI.Types.AspectRatio.Equals(Google.GenAI.Types.AspectRatio)
+  nameWithType: AspectRatio.Equals(AspectRatio)
+- uid: Google.GenAI.Types.AspectRatio.Equals*
+  name: Equals
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_Equals_
+  commentId: Overload:Google.GenAI.Types.AspectRatio.Equals
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AspectRatio.Equals
+  nameWithType: AspectRatio.Equals
+- uid: Google.GenAI.Types.AspectRatio.FromString(System.String)
+  name: FromString(string)
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_FromString_System_String_
+  commentId: M:Google.GenAI.Types.AspectRatio.FromString(System.String)
+  name.vb: FromString(String)
+  fullName: Google.GenAI.Types.AspectRatio.FromString(string)
+  fullName.vb: Google.GenAI.Types.AspectRatio.FromString(String)
+  nameWithType: AspectRatio.FromString(string)
+  nameWithType.vb: AspectRatio.FromString(String)
+- uid: Google.GenAI.Types.AspectRatio.FromString*
+  name: FromString
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_FromString_
+  commentId: Overload:Google.GenAI.Types.AspectRatio.FromString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AspectRatio.FromString
+  nameWithType: AspectRatio.FromString
+- uid: Google.GenAI.Types.AspectRatio.GetHashCode
+  name: GetHashCode()
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_GetHashCode
+  commentId: M:Google.GenAI.Types.AspectRatio.GetHashCode
+  fullName: Google.GenAI.Types.AspectRatio.GetHashCode()
+  nameWithType: AspectRatio.GetHashCode()
+- uid: Google.GenAI.Types.AspectRatio.GetHashCode*
+  name: GetHashCode
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_GetHashCode_
+  commentId: Overload:Google.GenAI.Types.AspectRatio.GetHashCode
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AspectRatio.GetHashCode
+  nameWithType: AspectRatio.GetHashCode
+- uid: Google.GenAI.Types.AspectRatio.ToString
+  name: ToString()
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_ToString
+  commentId: M:Google.GenAI.Types.AspectRatio.ToString
+  fullName: Google.GenAI.Types.AspectRatio.ToString()
+  nameWithType: AspectRatio.ToString()
+- uid: Google.GenAI.Types.AspectRatio.ToString*
+  name: ToString
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_ToString_
+  commentId: Overload:Google.GenAI.Types.AspectRatio.ToString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AspectRatio.ToString
+  nameWithType: AspectRatio.ToString
+- uid: Google.GenAI.Types.AspectRatio.Value
+  name: Value
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_Value
+  commentId: P:Google.GenAI.Types.AspectRatio.Value
+  fullName: Google.GenAI.Types.AspectRatio.Value
+  nameWithType: AspectRatio.Value
+- uid: Google.GenAI.Types.AspectRatio.Value*
+  name: Value
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_Value_
+  commentId: Overload:Google.GenAI.Types.AspectRatio.Value
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AspectRatio.Value
+  nameWithType: AspectRatio.Value
+- uid: Google.GenAI.Types.AspectRatio.op_Implicit(System.String)~Google.GenAI.Types.AspectRatio
+  name: implicit operator AspectRatio(string)
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_op_Implicit_System_String__Google_GenAI_Types_AspectRatio
+  commentId: M:Google.GenAI.Types.AspectRatio.op_Implicit(System.String)~Google.GenAI.Types.AspectRatio
+  name.vb: CType(String)
+  fullName: Google.GenAI.Types.AspectRatio.implicit operator Google.GenAI.Types.AspectRatio(string)
+  fullName.vb: Google.GenAI.Types.AspectRatio.CType(String)
+  nameWithType: AspectRatio.implicit operator AspectRatio(string)
+  nameWithType.vb: AspectRatio.CType(String)
+- uid: Google.GenAI.Types.AspectRatio.op_Implicit*
+  name: implicit operator
+  href: api/Google.GenAI.Types.AspectRatio.html#Google_GenAI_Types_AspectRatio_op_Implicit_
+  commentId: Overload:Google.GenAI.Types.AspectRatio.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: Google.GenAI.Types.AspectRatio.implicit operator
+  fullName.vb: Google.GenAI.Types.AspectRatio.CType
+  nameWithType: AspectRatio.implicit operator
+  nameWithType.vb: AspectRatio.CType
+- uid: Google.GenAI.Types.AspectRatioConverter
+  name: AspectRatioConverter
+  href: api/Google.GenAI.Types.AspectRatioConverter.html
+  commentId: T:Google.GenAI.Types.AspectRatioConverter
+  fullName: Google.GenAI.Types.AspectRatioConverter
+  nameWithType: AspectRatioConverter
+- uid: Google.GenAI.Types.AspectRatioConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.AspectRatioConverter.html#Google_GenAI_Types_AspectRatioConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.AspectRatioConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name.vb: Read(Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.AspectRatioConverter.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: Google.GenAI.Types.AspectRatioConverter.Read(System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  nameWithType: AspectRatioConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: AspectRatioConverter.Read(Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Google.GenAI.Types.AspectRatioConverter.Read*
+  name: Read
+  href: api/Google.GenAI.Types.AspectRatioConverter.html#Google_GenAI_Types_AspectRatioConverter_Read_
+  commentId: Overload:Google.GenAI.Types.AspectRatioConverter.Read
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AspectRatioConverter.Read
+  nameWithType: AspectRatioConverter.Read
+- uid: Google.GenAI.Types.AspectRatioConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.AspectRatio,System.Text.Json.JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, AspectRatio, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.AspectRatioConverter.html#Google_GenAI_Types_AspectRatioConverter_Write_System_Text_Json_Utf8JsonWriter_Google_GenAI_Types_AspectRatio_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.AspectRatioConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.AspectRatio,System.Text.Json.JsonSerializerOptions)
+  fullName: Google.GenAI.Types.AspectRatioConverter.Write(System.Text.Json.Utf8JsonWriter, Google.GenAI.Types.AspectRatio, System.Text.Json.JsonSerializerOptions)
+  nameWithType: AspectRatioConverter.Write(Utf8JsonWriter, AspectRatio, JsonSerializerOptions)
+- uid: Google.GenAI.Types.AspectRatioConverter.Write*
+  name: Write
+  href: api/Google.GenAI.Types.AspectRatioConverter.html#Google_GenAI_Types_AspectRatioConverter_Write_
+  commentId: Overload:Google.GenAI.Types.AspectRatioConverter.Write
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AspectRatioConverter.Write
+  nameWithType: AspectRatioConverter.Write
+- uid: Google.GenAI.Types.AudioResponseFormat
+  name: AudioResponseFormat
+  href: api/Google.GenAI.Types.AudioResponseFormat.html
+  commentId: T:Google.GenAI.Types.AudioResponseFormat
+  fullName: Google.GenAI.Types.AudioResponseFormat
+  nameWithType: AudioResponseFormat
+- uid: Google.GenAI.Types.AudioResponseFormat.BitRate
+  name: BitRate
+  href: api/Google.GenAI.Types.AudioResponseFormat.html#Google_GenAI_Types_AudioResponseFormat_BitRate
+  commentId: P:Google.GenAI.Types.AudioResponseFormat.BitRate
+  fullName: Google.GenAI.Types.AudioResponseFormat.BitRate
+  nameWithType: AudioResponseFormat.BitRate
+- uid: Google.GenAI.Types.AudioResponseFormat.BitRate*
+  name: BitRate
+  href: api/Google.GenAI.Types.AudioResponseFormat.html#Google_GenAI_Types_AudioResponseFormat_BitRate_
+  commentId: Overload:Google.GenAI.Types.AudioResponseFormat.BitRate
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioResponseFormat.BitRate
+  nameWithType: AudioResponseFormat.BitRate
+- uid: Google.GenAI.Types.AudioResponseFormat.Delivery
+  name: Delivery
+  href: api/Google.GenAI.Types.AudioResponseFormat.html#Google_GenAI_Types_AudioResponseFormat_Delivery
+  commentId: P:Google.GenAI.Types.AudioResponseFormat.Delivery
+  fullName: Google.GenAI.Types.AudioResponseFormat.Delivery
+  nameWithType: AudioResponseFormat.Delivery
+- uid: Google.GenAI.Types.AudioResponseFormat.Delivery*
+  name: Delivery
+  href: api/Google.GenAI.Types.AudioResponseFormat.html#Google_GenAI_Types_AudioResponseFormat_Delivery_
+  commentId: Overload:Google.GenAI.Types.AudioResponseFormat.Delivery
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioResponseFormat.Delivery
+  nameWithType: AudioResponseFormat.Delivery
+- uid: Google.GenAI.Types.AudioResponseFormat.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.AudioResponseFormat.html#Google_GenAI_Types_AudioResponseFormat_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.AudioResponseFormat.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.AudioResponseFormat.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.AudioResponseFormat.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: AudioResponseFormat.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: AudioResponseFormat.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.AudioResponseFormat.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.AudioResponseFormat.html#Google_GenAI_Types_AudioResponseFormat_FromJson_
+  commentId: Overload:Google.GenAI.Types.AudioResponseFormat.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioResponseFormat.FromJson
+  nameWithType: AudioResponseFormat.FromJson
+- uid: Google.GenAI.Types.AudioResponseFormat.MimeType
+  name: MimeType
+  href: api/Google.GenAI.Types.AudioResponseFormat.html#Google_GenAI_Types_AudioResponseFormat_MimeType
+  commentId: P:Google.GenAI.Types.AudioResponseFormat.MimeType
+  fullName: Google.GenAI.Types.AudioResponseFormat.MimeType
+  nameWithType: AudioResponseFormat.MimeType
+- uid: Google.GenAI.Types.AudioResponseFormat.MimeType*
+  name: MimeType
+  href: api/Google.GenAI.Types.AudioResponseFormat.html#Google_GenAI_Types_AudioResponseFormat_MimeType_
+  commentId: Overload:Google.GenAI.Types.AudioResponseFormat.MimeType
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioResponseFormat.MimeType
+  nameWithType: AudioResponseFormat.MimeType
+- uid: Google.GenAI.Types.AudioResponseFormat.SampleRate
+  name: SampleRate
+  href: api/Google.GenAI.Types.AudioResponseFormat.html#Google_GenAI_Types_AudioResponseFormat_SampleRate
+  commentId: P:Google.GenAI.Types.AudioResponseFormat.SampleRate
+  fullName: Google.GenAI.Types.AudioResponseFormat.SampleRate
+  nameWithType: AudioResponseFormat.SampleRate
+- uid: Google.GenAI.Types.AudioResponseFormat.SampleRate*
+  name: SampleRate
+  href: api/Google.GenAI.Types.AudioResponseFormat.html#Google_GenAI_Types_AudioResponseFormat_SampleRate_
+  commentId: Overload:Google.GenAI.Types.AudioResponseFormat.SampleRate
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioResponseFormat.SampleRate
+  nameWithType: AudioResponseFormat.SampleRate
 - uid: Google.GenAI.Types.AudioTranscriptionConfig
   name: AudioTranscriptionConfig
   href: api/Google.GenAI.Types.AudioTranscriptionConfig.html
@@ -8247,6 +8657,19 @@ references:
   commentId: T:Google.GenAI.Types.DatasetStats
   fullName: Google.GenAI.Types.DatasetStats
   nameWithType: DatasetStats
+- uid: Google.GenAI.Types.DatasetStats.ContentsPerExampleDistribution
+  name: ContentsPerExampleDistribution
+  href: api/Google.GenAI.Types.DatasetStats.html#Google_GenAI_Types_DatasetStats_ContentsPerExampleDistribution
+  commentId: P:Google.GenAI.Types.DatasetStats.ContentsPerExampleDistribution
+  fullName: Google.GenAI.Types.DatasetStats.ContentsPerExampleDistribution
+  nameWithType: DatasetStats.ContentsPerExampleDistribution
+- uid: Google.GenAI.Types.DatasetStats.ContentsPerExampleDistribution*
+  name: ContentsPerExampleDistribution
+  href: api/Google.GenAI.Types.DatasetStats.html#Google_GenAI_Types_DatasetStats_ContentsPerExampleDistribution_
+  commentId: Overload:Google.GenAI.Types.DatasetStats.ContentsPerExampleDistribution
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DatasetStats.ContentsPerExampleDistribution
+  nameWithType: DatasetStats.ContentsPerExampleDistribution
 - uid: Google.GenAI.Types.DatasetStats.DroppedExampleIndices
   name: DroppedExampleIndices
   href: api/Google.GenAI.Types.DatasetStats.html#Google_GenAI_Types_DatasetStats_DroppedExampleIndices
@@ -8289,6 +8712,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.DatasetStats.FromJson
   nameWithType: DatasetStats.FromJson
+- uid: Google.GenAI.Types.DatasetStats.ReinforcementTuningUserDatasetExamples
+  name: ReinforcementTuningUserDatasetExamples
+  href: api/Google.GenAI.Types.DatasetStats.html#Google_GenAI_Types_DatasetStats_ReinforcementTuningUserDatasetExamples
+  commentId: P:Google.GenAI.Types.DatasetStats.ReinforcementTuningUserDatasetExamples
+  fullName: Google.GenAI.Types.DatasetStats.ReinforcementTuningUserDatasetExamples
+  nameWithType: DatasetStats.ReinforcementTuningUserDatasetExamples
+- uid: Google.GenAI.Types.DatasetStats.ReinforcementTuningUserDatasetExamples*
+  name: ReinforcementTuningUserDatasetExamples
+  href: api/Google.GenAI.Types.DatasetStats.html#Google_GenAI_Types_DatasetStats_ReinforcementTuningUserDatasetExamples_
+  commentId: Overload:Google.GenAI.Types.DatasetStats.ReinforcementTuningUserDatasetExamples
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DatasetStats.ReinforcementTuningUserDatasetExamples
+  nameWithType: DatasetStats.ReinforcementTuningUserDatasetExamples
 - uid: Google.GenAI.Types.DatasetStats.TotalBillableCharacterCount
   name: TotalBillableCharacterCount
   href: api/Google.GenAI.Types.DatasetStats.html#Google_GenAI_Types_DatasetStats_TotalBillableCharacterCount
@@ -8302,6 +8738,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.DatasetStats.TotalBillableCharacterCount
   nameWithType: DatasetStats.TotalBillableCharacterCount
+- uid: Google.GenAI.Types.DatasetStats.TotalBillableTokenCount
+  name: TotalBillableTokenCount
+  href: api/Google.GenAI.Types.DatasetStats.html#Google_GenAI_Types_DatasetStats_TotalBillableTokenCount
+  commentId: P:Google.GenAI.Types.DatasetStats.TotalBillableTokenCount
+  fullName: Google.GenAI.Types.DatasetStats.TotalBillableTokenCount
+  nameWithType: DatasetStats.TotalBillableTokenCount
+- uid: Google.GenAI.Types.DatasetStats.TotalBillableTokenCount*
+  name: TotalBillableTokenCount
+  href: api/Google.GenAI.Types.DatasetStats.html#Google_GenAI_Types_DatasetStats_TotalBillableTokenCount_
+  commentId: Overload:Google.GenAI.Types.DatasetStats.TotalBillableTokenCount
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DatasetStats.TotalBillableTokenCount
+  nameWithType: DatasetStats.TotalBillableTokenCount
 - uid: Google.GenAI.Types.DatasetStats.TotalTuningCharacterCount
   name: TotalTuningCharacterCount
   href: api/Google.GenAI.Types.DatasetStats.html#Google_GenAI_Types_DatasetStats_TotalTuningCharacterCount
@@ -8712,6 +9161,186 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.DeleteResourceJob.SdkHttpResponse
   nameWithType: DeleteResourceJob.SdkHttpResponse
+- uid: Google.GenAI.Types.Delivery
+  name: Delivery
+  href: api/Google.GenAI.Types.Delivery.html
+  commentId: T:Google.GenAI.Types.Delivery
+  fullName: Google.GenAI.Types.Delivery
+  nameWithType: Delivery
+- uid: Google.GenAI.Types.Delivery.AllValues
+  name: AllValues
+  href: api/Google.GenAI.Types.Delivery.html#Google_GenAI_Types_Delivery_AllValues
+  commentId: P:Google.GenAI.Types.Delivery.AllValues
+  fullName: Google.GenAI.Types.Delivery.AllValues
+  nameWithType: Delivery.AllValues
+- uid: Google.GenAI.Types.Delivery.AllValues*
+  name: AllValues
+  href: api/Google.GenAI.Types.Delivery.html#Google_GenAI_Types_Delivery_AllValues_
+  commentId: Overload:Google.GenAI.Types.Delivery.AllValues
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Delivery.AllValues
+  nameWithType: Delivery.AllValues
+- uid: Google.GenAI.Types.Delivery.DeliveryUnspecified
+  name: DeliveryUnspecified
+  href: api/Google.GenAI.Types.Delivery.html#Google_GenAI_Types_Delivery_DeliveryUnspecified
+  commentId: P:Google.GenAI.Types.Delivery.DeliveryUnspecified
+  fullName: Google.GenAI.Types.Delivery.DeliveryUnspecified
+  nameWithType: Delivery.DeliveryUnspecified
+- uid: Google.GenAI.Types.Delivery.DeliveryUnspecified*
+  name: DeliveryUnspecified
+  href: api/Google.GenAI.Types.Delivery.html#Google_GenAI_Types_Delivery_DeliveryUnspecified_
+  commentId: Overload:Google.GenAI.Types.Delivery.DeliveryUnspecified
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Delivery.DeliveryUnspecified
+  nameWithType: Delivery.DeliveryUnspecified
+- uid: Google.GenAI.Types.Delivery.Equals(Google.GenAI.Types.Delivery)
+  name: Equals(Delivery)
+  href: api/Google.GenAI.Types.Delivery.html#Google_GenAI_Types_Delivery_Equals_Google_GenAI_Types_Delivery_
+  commentId: M:Google.GenAI.Types.Delivery.Equals(Google.GenAI.Types.Delivery)
+  fullName: Google.GenAI.Types.Delivery.Equals(Google.GenAI.Types.Delivery)
+  nameWithType: Delivery.Equals(Delivery)
+- uid: Google.GenAI.Types.Delivery.Equals*
+  name: Equals
+  href: api/Google.GenAI.Types.Delivery.html#Google_GenAI_Types_Delivery_Equals_
+  commentId: Overload:Google.GenAI.Types.Delivery.Equals
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Delivery.Equals
+  nameWithType: Delivery.Equals
+- uid: Google.GenAI.Types.Delivery.FromString(System.String)
+  name: FromString(string)
+  href: api/Google.GenAI.Types.Delivery.html#Google_GenAI_Types_Delivery_FromString_System_String_
+  commentId: M:Google.GenAI.Types.Delivery.FromString(System.String)
+  name.vb: FromString(String)
+  fullName: Google.GenAI.Types.Delivery.FromString(string)
+  fullName.vb: Google.GenAI.Types.Delivery.FromString(String)
+  nameWithType: Delivery.FromString(string)
+  nameWithType.vb: Delivery.FromString(String)
+- uid: Google.GenAI.Types.Delivery.FromString*
+  name: FromString
+  href: api/Google.GenAI.Types.Delivery.html#Google_GenAI_Types_Delivery_FromString_
+  commentId: Overload:Google.GenAI.Types.Delivery.FromString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Delivery.FromString
+  nameWithType: Delivery.FromString
+- uid: Google.GenAI.Types.Delivery.GetHashCode
+  name: GetHashCode()
+  href: api/Google.GenAI.Types.Delivery.html#Google_GenAI_Types_Delivery_GetHashCode
+  commentId: M:Google.GenAI.Types.Delivery.GetHashCode
+  fullName: Google.GenAI.Types.Delivery.GetHashCode()
+  nameWithType: Delivery.GetHashCode()
+- uid: Google.GenAI.Types.Delivery.GetHashCode*
+  name: GetHashCode
+  href: api/Google.GenAI.Types.Delivery.html#Google_GenAI_Types_Delivery_GetHashCode_
+  commentId: Overload:Google.GenAI.Types.Delivery.GetHashCode
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Delivery.GetHashCode
+  nameWithType: Delivery.GetHashCode
+- uid: Google.GenAI.Types.Delivery.Inline
+  name: Inline
+  href: api/Google.GenAI.Types.Delivery.html#Google_GenAI_Types_Delivery_Inline
+  commentId: P:Google.GenAI.Types.Delivery.Inline
+  fullName: Google.GenAI.Types.Delivery.Inline
+  nameWithType: Delivery.Inline
+- uid: Google.GenAI.Types.Delivery.Inline*
+  name: Inline
+  href: api/Google.GenAI.Types.Delivery.html#Google_GenAI_Types_Delivery_Inline_
+  commentId: Overload:Google.GenAI.Types.Delivery.Inline
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Delivery.Inline
+  nameWithType: Delivery.Inline
+- uid: Google.GenAI.Types.Delivery.ToString
+  name: ToString()
+  href: api/Google.GenAI.Types.Delivery.html#Google_GenAI_Types_Delivery_ToString
+  commentId: M:Google.GenAI.Types.Delivery.ToString
+  fullName: Google.GenAI.Types.Delivery.ToString()
+  nameWithType: Delivery.ToString()
+- uid: Google.GenAI.Types.Delivery.ToString*
+  name: ToString
+  href: api/Google.GenAI.Types.Delivery.html#Google_GenAI_Types_Delivery_ToString_
+  commentId: Overload:Google.GenAI.Types.Delivery.ToString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Delivery.ToString
+  nameWithType: Delivery.ToString
+- uid: Google.GenAI.Types.Delivery.Uri
+  name: Uri
+  href: api/Google.GenAI.Types.Delivery.html#Google_GenAI_Types_Delivery_Uri
+  commentId: P:Google.GenAI.Types.Delivery.Uri
+  fullName: Google.GenAI.Types.Delivery.Uri
+  nameWithType: Delivery.Uri
+- uid: Google.GenAI.Types.Delivery.Uri*
+  name: Uri
+  href: api/Google.GenAI.Types.Delivery.html#Google_GenAI_Types_Delivery_Uri_
+  commentId: Overload:Google.GenAI.Types.Delivery.Uri
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Delivery.Uri
+  nameWithType: Delivery.Uri
+- uid: Google.GenAI.Types.Delivery.Value
+  name: Value
+  href: api/Google.GenAI.Types.Delivery.html#Google_GenAI_Types_Delivery_Value
+  commentId: P:Google.GenAI.Types.Delivery.Value
+  fullName: Google.GenAI.Types.Delivery.Value
+  nameWithType: Delivery.Value
+- uid: Google.GenAI.Types.Delivery.Value*
+  name: Value
+  href: api/Google.GenAI.Types.Delivery.html#Google_GenAI_Types_Delivery_Value_
+  commentId: Overload:Google.GenAI.Types.Delivery.Value
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Delivery.Value
+  nameWithType: Delivery.Value
+- uid: Google.GenAI.Types.Delivery.op_Implicit(System.String)~Google.GenAI.Types.Delivery
+  name: implicit operator Delivery(string)
+  href: api/Google.GenAI.Types.Delivery.html#Google_GenAI_Types_Delivery_op_Implicit_System_String__Google_GenAI_Types_Delivery
+  commentId: M:Google.GenAI.Types.Delivery.op_Implicit(System.String)~Google.GenAI.Types.Delivery
+  name.vb: CType(String)
+  fullName: Google.GenAI.Types.Delivery.implicit operator Google.GenAI.Types.Delivery(string)
+  fullName.vb: Google.GenAI.Types.Delivery.CType(String)
+  nameWithType: Delivery.implicit operator Delivery(string)
+  nameWithType.vb: Delivery.CType(String)
+- uid: Google.GenAI.Types.Delivery.op_Implicit*
+  name: implicit operator
+  href: api/Google.GenAI.Types.Delivery.html#Google_GenAI_Types_Delivery_op_Implicit_
+  commentId: Overload:Google.GenAI.Types.Delivery.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: Google.GenAI.Types.Delivery.implicit operator
+  fullName.vb: Google.GenAI.Types.Delivery.CType
+  nameWithType: Delivery.implicit operator
+  nameWithType.vb: Delivery.CType
+- uid: Google.GenAI.Types.DeliveryConverter
+  name: DeliveryConverter
+  href: api/Google.GenAI.Types.DeliveryConverter.html
+  commentId: T:Google.GenAI.Types.DeliveryConverter
+  fullName: Google.GenAI.Types.DeliveryConverter
+  nameWithType: DeliveryConverter
+- uid: Google.GenAI.Types.DeliveryConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.DeliveryConverter.html#Google_GenAI_Types_DeliveryConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.DeliveryConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name.vb: Read(Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.DeliveryConverter.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: Google.GenAI.Types.DeliveryConverter.Read(System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  nameWithType: DeliveryConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: DeliveryConverter.Read(Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Google.GenAI.Types.DeliveryConverter.Read*
+  name: Read
+  href: api/Google.GenAI.Types.DeliveryConverter.html#Google_GenAI_Types_DeliveryConverter_Read_
+  commentId: Overload:Google.GenAI.Types.DeliveryConverter.Read
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DeliveryConverter.Read
+  nameWithType: DeliveryConverter.Read
+- uid: Google.GenAI.Types.DeliveryConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.Delivery,System.Text.Json.JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, Delivery, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.DeliveryConverter.html#Google_GenAI_Types_DeliveryConverter_Write_System_Text_Json_Utf8JsonWriter_Google_GenAI_Types_Delivery_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.DeliveryConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.Delivery,System.Text.Json.JsonSerializerOptions)
+  fullName: Google.GenAI.Types.DeliveryConverter.Write(System.Text.Json.Utf8JsonWriter, Google.GenAI.Types.Delivery, System.Text.Json.JsonSerializerOptions)
+  nameWithType: DeliveryConverter.Write(Utf8JsonWriter, Delivery, JsonSerializerOptions)
+- uid: Google.GenAI.Types.DeliveryConverter.Write*
+  name: Write
+  href: api/Google.GenAI.Types.DeliveryConverter.html#Google_GenAI_Types_DeliveryConverter_Write_
+  commentId: Overload:Google.GenAI.Types.DeliveryConverter.Write
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DeliveryConverter.Write
+  nameWithType: DeliveryConverter.Write
 - uid: Google.GenAI.Types.DistillationDataStats
   name: DistillationDataStats
   href: api/Google.GenAI.Types.DistillationDataStats.html
@@ -15792,6 +16421,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerationConfig.PresencePenalty
   nameWithType: GenerationConfig.PresencePenalty
+- uid: Google.GenAI.Types.GenerationConfig.ResponseFormat
+  name: ResponseFormat
+  href: api/Google.GenAI.Types.GenerationConfig.html#Google_GenAI_Types_GenerationConfig_ResponseFormat
+  commentId: P:Google.GenAI.Types.GenerationConfig.ResponseFormat
+  fullName: Google.GenAI.Types.GenerationConfig.ResponseFormat
+  nameWithType: GenerationConfig.ResponseFormat
+- uid: Google.GenAI.Types.GenerationConfig.ResponseFormat*
+  name: ResponseFormat
+  href: api/Google.GenAI.Types.GenerationConfig.html#Google_GenAI_Types_GenerationConfig_ResponseFormat_
+  commentId: Overload:Google.GenAI.Types.GenerationConfig.ResponseFormat
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerationConfig.ResponseFormat
+  nameWithType: GenerationConfig.ResponseFormat
 - uid: Google.GenAI.Types.GenerationConfig.ResponseJsonSchema
   name: ResponseJsonSchema
   href: api/Google.GenAI.Types.GenerationConfig.html#Google_GenAI_Types_GenerationConfig_ResponseJsonSchema
@@ -15961,6 +16603,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerationConfig.TopP
   nameWithType: GenerationConfig.TopP
+- uid: Google.GenAI.Types.GenerationConfig.TranslationConfig
+  name: TranslationConfig
+  href: api/Google.GenAI.Types.GenerationConfig.html#Google_GenAI_Types_GenerationConfig_TranslationConfig
+  commentId: P:Google.GenAI.Types.GenerationConfig.TranslationConfig
+  fullName: Google.GenAI.Types.GenerationConfig.TranslationConfig
+  nameWithType: GenerationConfig.TranslationConfig
+- uid: Google.GenAI.Types.GenerationConfig.TranslationConfig*
+  name: TranslationConfig
+  href: api/Google.GenAI.Types.GenerationConfig.html#Google_GenAI_Types_GenerationConfig_TranslationConfig_
+  commentId: Overload:Google.GenAI.Types.GenerationConfig.TranslationConfig
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerationConfig.TranslationConfig
+  nameWithType: GenerationConfig.TranslationConfig
 - uid: Google.GenAI.Types.GenerationConfigRoutingConfig
   name: GenerationConfigRoutingConfig
   href: api/Google.GenAI.Types.GenerationConfigRoutingConfig.html
@@ -19809,6 +20464,80 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ImageResizeModeConverter.Write
   nameWithType: ImageResizeModeConverter.Write
+- uid: Google.GenAI.Types.ImageResponseFormat
+  name: ImageResponseFormat
+  href: api/Google.GenAI.Types.ImageResponseFormat.html
+  commentId: T:Google.GenAI.Types.ImageResponseFormat
+  fullName: Google.GenAI.Types.ImageResponseFormat
+  nameWithType: ImageResponseFormat
+- uid: Google.GenAI.Types.ImageResponseFormat.AspectRatio
+  name: AspectRatio
+  href: api/Google.GenAI.Types.ImageResponseFormat.html#Google_GenAI_Types_ImageResponseFormat_AspectRatio
+  commentId: P:Google.GenAI.Types.ImageResponseFormat.AspectRatio
+  fullName: Google.GenAI.Types.ImageResponseFormat.AspectRatio
+  nameWithType: ImageResponseFormat.AspectRatio
+- uid: Google.GenAI.Types.ImageResponseFormat.AspectRatio*
+  name: AspectRatio
+  href: api/Google.GenAI.Types.ImageResponseFormat.html#Google_GenAI_Types_ImageResponseFormat_AspectRatio_
+  commentId: Overload:Google.GenAI.Types.ImageResponseFormat.AspectRatio
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageResponseFormat.AspectRatio
+  nameWithType: ImageResponseFormat.AspectRatio
+- uid: Google.GenAI.Types.ImageResponseFormat.Delivery
+  name: Delivery
+  href: api/Google.GenAI.Types.ImageResponseFormat.html#Google_GenAI_Types_ImageResponseFormat_Delivery
+  commentId: P:Google.GenAI.Types.ImageResponseFormat.Delivery
+  fullName: Google.GenAI.Types.ImageResponseFormat.Delivery
+  nameWithType: ImageResponseFormat.Delivery
+- uid: Google.GenAI.Types.ImageResponseFormat.Delivery*
+  name: Delivery
+  href: api/Google.GenAI.Types.ImageResponseFormat.html#Google_GenAI_Types_ImageResponseFormat_Delivery_
+  commentId: Overload:Google.GenAI.Types.ImageResponseFormat.Delivery
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageResponseFormat.Delivery
+  nameWithType: ImageResponseFormat.Delivery
+- uid: Google.GenAI.Types.ImageResponseFormat.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ImageResponseFormat.html#Google_GenAI_Types_ImageResponseFormat_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ImageResponseFormat.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ImageResponseFormat.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ImageResponseFormat.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ImageResponseFormat.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ImageResponseFormat.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ImageResponseFormat.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ImageResponseFormat.html#Google_GenAI_Types_ImageResponseFormat_FromJson_
+  commentId: Overload:Google.GenAI.Types.ImageResponseFormat.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageResponseFormat.FromJson
+  nameWithType: ImageResponseFormat.FromJson
+- uid: Google.GenAI.Types.ImageResponseFormat.ImageSize
+  name: ImageSize
+  href: api/Google.GenAI.Types.ImageResponseFormat.html#Google_GenAI_Types_ImageResponseFormat_ImageSize
+  commentId: P:Google.GenAI.Types.ImageResponseFormat.ImageSize
+  fullName: Google.GenAI.Types.ImageResponseFormat.ImageSize
+  nameWithType: ImageResponseFormat.ImageSize
+- uid: Google.GenAI.Types.ImageResponseFormat.ImageSize*
+  name: ImageSize
+  href: api/Google.GenAI.Types.ImageResponseFormat.html#Google_GenAI_Types_ImageResponseFormat_ImageSize_
+  commentId: Overload:Google.GenAI.Types.ImageResponseFormat.ImageSize
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageResponseFormat.ImageSize
+  nameWithType: ImageResponseFormat.ImageSize
+- uid: Google.GenAI.Types.ImageResponseFormat.MimeType
+  name: MimeType
+  href: api/Google.GenAI.Types.ImageResponseFormat.html#Google_GenAI_Types_ImageResponseFormat_MimeType
+  commentId: P:Google.GenAI.Types.ImageResponseFormat.MimeType
+  fullName: Google.GenAI.Types.ImageResponseFormat.MimeType
+  nameWithType: ImageResponseFormat.MimeType
+- uid: Google.GenAI.Types.ImageResponseFormat.MimeType*
+  name: MimeType
+  href: api/Google.GenAI.Types.ImageResponseFormat.html#Google_GenAI_Types_ImageResponseFormat_MimeType_
+  commentId: Overload:Google.GenAI.Types.ImageResponseFormat.MimeType
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageResponseFormat.MimeType
+  nameWithType: ImageResponseFormat.MimeType
 - uid: Google.GenAI.Types.ImageSearch
   name: ImageSearch
   href: api/Google.GenAI.Types.ImageSearch.html
@@ -19831,6 +20560,212 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ImageSearch.FromJson
   nameWithType: ImageSearch.FromJson
+- uid: Google.GenAI.Types.ImageSize
+  name: ImageSize
+  href: api/Google.GenAI.Types.ImageSize.html
+  commentId: T:Google.GenAI.Types.ImageSize
+  fullName: Google.GenAI.Types.ImageSize
+  nameWithType: ImageSize
+- uid: Google.GenAI.Types.ImageSize.AllValues
+  name: AllValues
+  href: api/Google.GenAI.Types.ImageSize.html#Google_GenAI_Types_ImageSize_AllValues
+  commentId: P:Google.GenAI.Types.ImageSize.AllValues
+  fullName: Google.GenAI.Types.ImageSize.AllValues
+  nameWithType: ImageSize.AllValues
+- uid: Google.GenAI.Types.ImageSize.AllValues*
+  name: AllValues
+  href: api/Google.GenAI.Types.ImageSize.html#Google_GenAI_Types_ImageSize_AllValues_
+  commentId: Overload:Google.GenAI.Types.ImageSize.AllValues
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageSize.AllValues
+  nameWithType: ImageSize.AllValues
+- uid: Google.GenAI.Types.ImageSize.Equals(Google.GenAI.Types.ImageSize)
+  name: Equals(ImageSize)
+  href: api/Google.GenAI.Types.ImageSize.html#Google_GenAI_Types_ImageSize_Equals_Google_GenAI_Types_ImageSize_
+  commentId: M:Google.GenAI.Types.ImageSize.Equals(Google.GenAI.Types.ImageSize)
+  fullName: Google.GenAI.Types.ImageSize.Equals(Google.GenAI.Types.ImageSize)
+  nameWithType: ImageSize.Equals(ImageSize)
+- uid: Google.GenAI.Types.ImageSize.Equals*
+  name: Equals
+  href: api/Google.GenAI.Types.ImageSize.html#Google_GenAI_Types_ImageSize_Equals_
+  commentId: Overload:Google.GenAI.Types.ImageSize.Equals
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageSize.Equals
+  nameWithType: ImageSize.Equals
+- uid: Google.GenAI.Types.ImageSize.FromString(System.String)
+  name: FromString(string)
+  href: api/Google.GenAI.Types.ImageSize.html#Google_GenAI_Types_ImageSize_FromString_System_String_
+  commentId: M:Google.GenAI.Types.ImageSize.FromString(System.String)
+  name.vb: FromString(String)
+  fullName: Google.GenAI.Types.ImageSize.FromString(string)
+  fullName.vb: Google.GenAI.Types.ImageSize.FromString(String)
+  nameWithType: ImageSize.FromString(string)
+  nameWithType.vb: ImageSize.FromString(String)
+- uid: Google.GenAI.Types.ImageSize.FromString*
+  name: FromString
+  href: api/Google.GenAI.Types.ImageSize.html#Google_GenAI_Types_ImageSize_FromString_
+  commentId: Overload:Google.GenAI.Types.ImageSize.FromString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageSize.FromString
+  nameWithType: ImageSize.FromString
+- uid: Google.GenAI.Types.ImageSize.GetHashCode
+  name: GetHashCode()
+  href: api/Google.GenAI.Types.ImageSize.html#Google_GenAI_Types_ImageSize_GetHashCode
+  commentId: M:Google.GenAI.Types.ImageSize.GetHashCode
+  fullName: Google.GenAI.Types.ImageSize.GetHashCode()
+  nameWithType: ImageSize.GetHashCode()
+- uid: Google.GenAI.Types.ImageSize.GetHashCode*
+  name: GetHashCode
+  href: api/Google.GenAI.Types.ImageSize.html#Google_GenAI_Types_ImageSize_GetHashCode_
+  commentId: Overload:Google.GenAI.Types.ImageSize.GetHashCode
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageSize.GetHashCode
+  nameWithType: ImageSize.GetHashCode
+- uid: Google.GenAI.Types.ImageSize.ImageSizeFiveTwelve
+  name: ImageSizeFiveTwelve
+  href: api/Google.GenAI.Types.ImageSize.html#Google_GenAI_Types_ImageSize_ImageSizeFiveTwelve
+  commentId: P:Google.GenAI.Types.ImageSize.ImageSizeFiveTwelve
+  fullName: Google.GenAI.Types.ImageSize.ImageSizeFiveTwelve
+  nameWithType: ImageSize.ImageSizeFiveTwelve
+- uid: Google.GenAI.Types.ImageSize.ImageSizeFiveTwelve*
+  name: ImageSizeFiveTwelve
+  href: api/Google.GenAI.Types.ImageSize.html#Google_GenAI_Types_ImageSize_ImageSizeFiveTwelve_
+  commentId: Overload:Google.GenAI.Types.ImageSize.ImageSizeFiveTwelve
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageSize.ImageSizeFiveTwelve
+  nameWithType: ImageSize.ImageSizeFiveTwelve
+- uid: Google.GenAI.Types.ImageSize.ImageSizeFourK
+  name: ImageSizeFourK
+  href: api/Google.GenAI.Types.ImageSize.html#Google_GenAI_Types_ImageSize_ImageSizeFourK
+  commentId: P:Google.GenAI.Types.ImageSize.ImageSizeFourK
+  fullName: Google.GenAI.Types.ImageSize.ImageSizeFourK
+  nameWithType: ImageSize.ImageSizeFourK
+- uid: Google.GenAI.Types.ImageSize.ImageSizeFourK*
+  name: ImageSizeFourK
+  href: api/Google.GenAI.Types.ImageSize.html#Google_GenAI_Types_ImageSize_ImageSizeFourK_
+  commentId: Overload:Google.GenAI.Types.ImageSize.ImageSizeFourK
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageSize.ImageSizeFourK
+  nameWithType: ImageSize.ImageSizeFourK
+- uid: Google.GenAI.Types.ImageSize.ImageSizeOneK
+  name: ImageSizeOneK
+  href: api/Google.GenAI.Types.ImageSize.html#Google_GenAI_Types_ImageSize_ImageSizeOneK
+  commentId: P:Google.GenAI.Types.ImageSize.ImageSizeOneK
+  fullName: Google.GenAI.Types.ImageSize.ImageSizeOneK
+  nameWithType: ImageSize.ImageSizeOneK
+- uid: Google.GenAI.Types.ImageSize.ImageSizeOneK*
+  name: ImageSizeOneK
+  href: api/Google.GenAI.Types.ImageSize.html#Google_GenAI_Types_ImageSize_ImageSizeOneK_
+  commentId: Overload:Google.GenAI.Types.ImageSize.ImageSizeOneK
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageSize.ImageSizeOneK
+  nameWithType: ImageSize.ImageSizeOneK
+- uid: Google.GenAI.Types.ImageSize.ImageSizeTwoK
+  name: ImageSizeTwoK
+  href: api/Google.GenAI.Types.ImageSize.html#Google_GenAI_Types_ImageSize_ImageSizeTwoK
+  commentId: P:Google.GenAI.Types.ImageSize.ImageSizeTwoK
+  fullName: Google.GenAI.Types.ImageSize.ImageSizeTwoK
+  nameWithType: ImageSize.ImageSizeTwoK
+- uid: Google.GenAI.Types.ImageSize.ImageSizeTwoK*
+  name: ImageSizeTwoK
+  href: api/Google.GenAI.Types.ImageSize.html#Google_GenAI_Types_ImageSize_ImageSizeTwoK_
+  commentId: Overload:Google.GenAI.Types.ImageSize.ImageSizeTwoK
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageSize.ImageSizeTwoK
+  nameWithType: ImageSize.ImageSizeTwoK
+- uid: Google.GenAI.Types.ImageSize.ImageSizeUnspecified
+  name: ImageSizeUnspecified
+  href: api/Google.GenAI.Types.ImageSize.html#Google_GenAI_Types_ImageSize_ImageSizeUnspecified
+  commentId: P:Google.GenAI.Types.ImageSize.ImageSizeUnspecified
+  fullName: Google.GenAI.Types.ImageSize.ImageSizeUnspecified
+  nameWithType: ImageSize.ImageSizeUnspecified
+- uid: Google.GenAI.Types.ImageSize.ImageSizeUnspecified*
+  name: ImageSizeUnspecified
+  href: api/Google.GenAI.Types.ImageSize.html#Google_GenAI_Types_ImageSize_ImageSizeUnspecified_
+  commentId: Overload:Google.GenAI.Types.ImageSize.ImageSizeUnspecified
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageSize.ImageSizeUnspecified
+  nameWithType: ImageSize.ImageSizeUnspecified
+- uid: Google.GenAI.Types.ImageSize.ToString
+  name: ToString()
+  href: api/Google.GenAI.Types.ImageSize.html#Google_GenAI_Types_ImageSize_ToString
+  commentId: M:Google.GenAI.Types.ImageSize.ToString
+  fullName: Google.GenAI.Types.ImageSize.ToString()
+  nameWithType: ImageSize.ToString()
+- uid: Google.GenAI.Types.ImageSize.ToString*
+  name: ToString
+  href: api/Google.GenAI.Types.ImageSize.html#Google_GenAI_Types_ImageSize_ToString_
+  commentId: Overload:Google.GenAI.Types.ImageSize.ToString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageSize.ToString
+  nameWithType: ImageSize.ToString
+- uid: Google.GenAI.Types.ImageSize.Value
+  name: Value
+  href: api/Google.GenAI.Types.ImageSize.html#Google_GenAI_Types_ImageSize_Value
+  commentId: P:Google.GenAI.Types.ImageSize.Value
+  fullName: Google.GenAI.Types.ImageSize.Value
+  nameWithType: ImageSize.Value
+- uid: Google.GenAI.Types.ImageSize.Value*
+  name: Value
+  href: api/Google.GenAI.Types.ImageSize.html#Google_GenAI_Types_ImageSize_Value_
+  commentId: Overload:Google.GenAI.Types.ImageSize.Value
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageSize.Value
+  nameWithType: ImageSize.Value
+- uid: Google.GenAI.Types.ImageSize.op_Implicit(System.String)~Google.GenAI.Types.ImageSize
+  name: implicit operator ImageSize(string)
+  href: api/Google.GenAI.Types.ImageSize.html#Google_GenAI_Types_ImageSize_op_Implicit_System_String__Google_GenAI_Types_ImageSize
+  commentId: M:Google.GenAI.Types.ImageSize.op_Implicit(System.String)~Google.GenAI.Types.ImageSize
+  name.vb: CType(String)
+  fullName: Google.GenAI.Types.ImageSize.implicit operator Google.GenAI.Types.ImageSize(string)
+  fullName.vb: Google.GenAI.Types.ImageSize.CType(String)
+  nameWithType: ImageSize.implicit operator ImageSize(string)
+  nameWithType.vb: ImageSize.CType(String)
+- uid: Google.GenAI.Types.ImageSize.op_Implicit*
+  name: implicit operator
+  href: api/Google.GenAI.Types.ImageSize.html#Google_GenAI_Types_ImageSize_op_Implicit_
+  commentId: Overload:Google.GenAI.Types.ImageSize.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: Google.GenAI.Types.ImageSize.implicit operator
+  fullName.vb: Google.GenAI.Types.ImageSize.CType
+  nameWithType: ImageSize.implicit operator
+  nameWithType.vb: ImageSize.CType
+- uid: Google.GenAI.Types.ImageSizeConverter
+  name: ImageSizeConverter
+  href: api/Google.GenAI.Types.ImageSizeConverter.html
+  commentId: T:Google.GenAI.Types.ImageSizeConverter
+  fullName: Google.GenAI.Types.ImageSizeConverter
+  nameWithType: ImageSizeConverter
+- uid: Google.GenAI.Types.ImageSizeConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.ImageSizeConverter.html#Google_GenAI_Types_ImageSizeConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ImageSizeConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name.vb: Read(Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ImageSizeConverter.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: Google.GenAI.Types.ImageSizeConverter.Read(System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ImageSizeConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: ImageSizeConverter.Read(Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ImageSizeConverter.Read*
+  name: Read
+  href: api/Google.GenAI.Types.ImageSizeConverter.html#Google_GenAI_Types_ImageSizeConverter_Read_
+  commentId: Overload:Google.GenAI.Types.ImageSizeConverter.Read
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageSizeConverter.Read
+  nameWithType: ImageSizeConverter.Read
+- uid: Google.GenAI.Types.ImageSizeConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.ImageSize,System.Text.Json.JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, ImageSize, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.ImageSizeConverter.html#Google_GenAI_Types_ImageSizeConverter_Write_System_Text_Json_Utf8JsonWriter_Google_GenAI_Types_ImageSize_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ImageSizeConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.ImageSize,System.Text.Json.JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ImageSizeConverter.Write(System.Text.Json.Utf8JsonWriter, Google.GenAI.Types.ImageSize, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ImageSizeConverter.Write(Utf8JsonWriter, ImageSize, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ImageSizeConverter.Write*
+  name: Write
+  href: api/Google.GenAI.Types.ImageSizeConverter.html#Google_GenAI_Types_ImageSizeConverter_Write_
+  commentId: Overload:Google.GenAI.Types.ImageSizeConverter.Write
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ImageSizeConverter.Write
+  nameWithType: ImageSizeConverter.Write
 - uid: Google.GenAI.Types.ImportFileOperation
   name: ImportFileOperation
   href: api/Google.GenAI.Types.ImportFileOperation.html
@@ -28996,6 +29931,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ReinforcementTuningHyperParameters.SamplesPerPrompt
   nameWithType: ReinforcementTuningHyperParameters.SamplesPerPrompt
+- uid: Google.GenAI.Types.ReinforcementTuningHyperParameters.ThinkingBudget
+  name: ThinkingBudget
+  href: api/Google.GenAI.Types.ReinforcementTuningHyperParameters.html#Google_GenAI_Types_ReinforcementTuningHyperParameters_ThinkingBudget
+  commentId: P:Google.GenAI.Types.ReinforcementTuningHyperParameters.ThinkingBudget
+  fullName: Google.GenAI.Types.ReinforcementTuningHyperParameters.ThinkingBudget
+  nameWithType: ReinforcementTuningHyperParameters.ThinkingBudget
+- uid: Google.GenAI.Types.ReinforcementTuningHyperParameters.ThinkingBudget*
+  name: ThinkingBudget
+  href: api/Google.GenAI.Types.ReinforcementTuningHyperParameters.html#Google_GenAI_Types_ReinforcementTuningHyperParameters_ThinkingBudget_
+  commentId: Overload:Google.GenAI.Types.ReinforcementTuningHyperParameters.ThinkingBudget
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ReinforcementTuningHyperParameters.ThinkingBudget
+  nameWithType: ReinforcementTuningHyperParameters.ThinkingBudget
 - uid: Google.GenAI.Types.ReinforcementTuningHyperParameters.ThinkingLevel
   name: ThinkingLevel
   href: api/Google.GenAI.Types.ReinforcementTuningHyperParameters.html#Google_GenAI_Types_ReinforcementTuningHyperParameters_ThinkingLevel
@@ -29542,6 +30490,41 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ReinforcementTuningThinkingLevelConverter.Write
   nameWithType: ReinforcementTuningThinkingLevelConverter.Write
+- uid: Google.GenAI.Types.ReinforcementTuningUserDatasetExamples
+  name: ReinforcementTuningUserDatasetExamples
+  href: api/Google.GenAI.Types.ReinforcementTuningUserDatasetExamples.html
+  commentId: T:Google.GenAI.Types.ReinforcementTuningUserDatasetExamples
+  fullName: Google.GenAI.Types.ReinforcementTuningUserDatasetExamples
+  nameWithType: ReinforcementTuningUserDatasetExamples
+- uid: Google.GenAI.Types.ReinforcementTuningUserDatasetExamples.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ReinforcementTuningUserDatasetExamples.html#Google_GenAI_Types_ReinforcementTuningUserDatasetExamples_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ReinforcementTuningUserDatasetExamples.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ReinforcementTuningUserDatasetExamples.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ReinforcementTuningUserDatasetExamples.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ReinforcementTuningUserDatasetExamples.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ReinforcementTuningUserDatasetExamples.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ReinforcementTuningUserDatasetExamples.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ReinforcementTuningUserDatasetExamples.html#Google_GenAI_Types_ReinforcementTuningUserDatasetExamples_FromJson_
+  commentId: Overload:Google.GenAI.Types.ReinforcementTuningUserDatasetExamples.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ReinforcementTuningUserDatasetExamples.FromJson
+  nameWithType: ReinforcementTuningUserDatasetExamples.FromJson
+- uid: Google.GenAI.Types.ReinforcementTuningUserDatasetExamples.UserDatasetExamples
+  name: UserDatasetExamples
+  href: api/Google.GenAI.Types.ReinforcementTuningUserDatasetExamples.html#Google_GenAI_Types_ReinforcementTuningUserDatasetExamples_UserDatasetExamples
+  commentId: P:Google.GenAI.Types.ReinforcementTuningUserDatasetExamples.UserDatasetExamples
+  fullName: Google.GenAI.Types.ReinforcementTuningUserDatasetExamples.UserDatasetExamples
+  nameWithType: ReinforcementTuningUserDatasetExamples.UserDatasetExamples
+- uid: Google.GenAI.Types.ReinforcementTuningUserDatasetExamples.UserDatasetExamples*
+  name: UserDatasetExamples
+  href: api/Google.GenAI.Types.ReinforcementTuningUserDatasetExamples.html#Google_GenAI_Types_ReinforcementTuningUserDatasetExamples_UserDatasetExamples_
+  commentId: Overload:Google.GenAI.Types.ReinforcementTuningUserDatasetExamples.UserDatasetExamples
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ReinforcementTuningUserDatasetExamples.UserDatasetExamples
+  nameWithType: ReinforcementTuningUserDatasetExamples.UserDatasetExamples
 - uid: Google.GenAI.Types.ReplayFile
   name: ReplayFile
   href: api/Google.GenAI.Types.ReplayFile.html
@@ -29988,6 +30971,80 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ResourceScopeConverter.Write
   nameWithType: ResourceScopeConverter.Write
+- uid: Google.GenAI.Types.ResponseFormat
+  name: ResponseFormat
+  href: api/Google.GenAI.Types.ResponseFormat.html
+  commentId: T:Google.GenAI.Types.ResponseFormat
+  fullName: Google.GenAI.Types.ResponseFormat
+  nameWithType: ResponseFormat
+- uid: Google.GenAI.Types.ResponseFormat.Audio
+  name: Audio
+  href: api/Google.GenAI.Types.ResponseFormat.html#Google_GenAI_Types_ResponseFormat_Audio
+  commentId: P:Google.GenAI.Types.ResponseFormat.Audio
+  fullName: Google.GenAI.Types.ResponseFormat.Audio
+  nameWithType: ResponseFormat.Audio
+- uid: Google.GenAI.Types.ResponseFormat.Audio*
+  name: Audio
+  href: api/Google.GenAI.Types.ResponseFormat.html#Google_GenAI_Types_ResponseFormat_Audio_
+  commentId: Overload:Google.GenAI.Types.ResponseFormat.Audio
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ResponseFormat.Audio
+  nameWithType: ResponseFormat.Audio
+- uid: Google.GenAI.Types.ResponseFormat.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ResponseFormat.html#Google_GenAI_Types_ResponseFormat_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ResponseFormat.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ResponseFormat.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ResponseFormat.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ResponseFormat.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ResponseFormat.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ResponseFormat.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ResponseFormat.html#Google_GenAI_Types_ResponseFormat_FromJson_
+  commentId: Overload:Google.GenAI.Types.ResponseFormat.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ResponseFormat.FromJson
+  nameWithType: ResponseFormat.FromJson
+- uid: Google.GenAI.Types.ResponseFormat.Image
+  name: Image
+  href: api/Google.GenAI.Types.ResponseFormat.html#Google_GenAI_Types_ResponseFormat_Image
+  commentId: P:Google.GenAI.Types.ResponseFormat.Image
+  fullName: Google.GenAI.Types.ResponseFormat.Image
+  nameWithType: ResponseFormat.Image
+- uid: Google.GenAI.Types.ResponseFormat.Image*
+  name: Image
+  href: api/Google.GenAI.Types.ResponseFormat.html#Google_GenAI_Types_ResponseFormat_Image_
+  commentId: Overload:Google.GenAI.Types.ResponseFormat.Image
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ResponseFormat.Image
+  nameWithType: ResponseFormat.Image
+- uid: Google.GenAI.Types.ResponseFormat.Text
+  name: Text
+  href: api/Google.GenAI.Types.ResponseFormat.html#Google_GenAI_Types_ResponseFormat_Text
+  commentId: P:Google.GenAI.Types.ResponseFormat.Text
+  fullName: Google.GenAI.Types.ResponseFormat.Text
+  nameWithType: ResponseFormat.Text
+- uid: Google.GenAI.Types.ResponseFormat.Text*
+  name: Text
+  href: api/Google.GenAI.Types.ResponseFormat.html#Google_GenAI_Types_ResponseFormat_Text_
+  commentId: Overload:Google.GenAI.Types.ResponseFormat.Text
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ResponseFormat.Text
+  nameWithType: ResponseFormat.Text
+- uid: Google.GenAI.Types.ResponseFormat.Video
+  name: Video
+  href: api/Google.GenAI.Types.ResponseFormat.html#Google_GenAI_Types_ResponseFormat_Video
+  commentId: P:Google.GenAI.Types.ResponseFormat.Video
+  fullName: Google.GenAI.Types.ResponseFormat.Video
+  nameWithType: ResponseFormat.Video
+- uid: Google.GenAI.Types.ResponseFormat.Video*
+  name: Video
+  href: api/Google.GenAI.Types.ResponseFormat.html#Google_GenAI_Types_ResponseFormat_Video_
+  commentId: Overload:Google.GenAI.Types.ResponseFormat.Video
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ResponseFormat.Video
+  nameWithType: ResponseFormat.Video
 - uid: Google.GenAI.Types.ResponseParseType
   name: ResponseParseType
   href: api/Google.GenAI.Types.ResponseParseType.html
@@ -33976,6 +35033,54 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.TestTableItem.SkipInApiMode
   nameWithType: TestTableItem.SkipInApiMode
+- uid: Google.GenAI.Types.TextResponseFormat
+  name: TextResponseFormat
+  href: api/Google.GenAI.Types.TextResponseFormat.html
+  commentId: T:Google.GenAI.Types.TextResponseFormat
+  fullName: Google.GenAI.Types.TextResponseFormat
+  nameWithType: TextResponseFormat
+- uid: Google.GenAI.Types.TextResponseFormat.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.TextResponseFormat.html#Google_GenAI_Types_TextResponseFormat_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.TextResponseFormat.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.TextResponseFormat.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.TextResponseFormat.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: TextResponseFormat.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: TextResponseFormat.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.TextResponseFormat.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.TextResponseFormat.html#Google_GenAI_Types_TextResponseFormat_FromJson_
+  commentId: Overload:Google.GenAI.Types.TextResponseFormat.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TextResponseFormat.FromJson
+  nameWithType: TextResponseFormat.FromJson
+- uid: Google.GenAI.Types.TextResponseFormat.MimeType
+  name: MimeType
+  href: api/Google.GenAI.Types.TextResponseFormat.html#Google_GenAI_Types_TextResponseFormat_MimeType
+  commentId: P:Google.GenAI.Types.TextResponseFormat.MimeType
+  fullName: Google.GenAI.Types.TextResponseFormat.MimeType
+  nameWithType: TextResponseFormat.MimeType
+- uid: Google.GenAI.Types.TextResponseFormat.MimeType*
+  name: MimeType
+  href: api/Google.GenAI.Types.TextResponseFormat.html#Google_GenAI_Types_TextResponseFormat_MimeType_
+  commentId: Overload:Google.GenAI.Types.TextResponseFormat.MimeType
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TextResponseFormat.MimeType
+  nameWithType: TextResponseFormat.MimeType
+- uid: Google.GenAI.Types.TextResponseFormat.Schema
+  name: Schema
+  href: api/Google.GenAI.Types.TextResponseFormat.html#Google_GenAI_Types_TextResponseFormat_Schema
+  commentId: P:Google.GenAI.Types.TextResponseFormat.Schema
+  fullName: Google.GenAI.Types.TextResponseFormat.Schema
+  nameWithType: TextResponseFormat.Schema
+- uid: Google.GenAI.Types.TextResponseFormat.Schema*
+  name: Schema
+  href: api/Google.GenAI.Types.TextResponseFormat.html#Google_GenAI_Types_TextResponseFormat_Schema_
+  commentId: Overload:Google.GenAI.Types.TextResponseFormat.Schema
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TextResponseFormat.Schema
+  nameWithType: TextResponseFormat.Schema
 - uid: Google.GenAI.Types.ThinkingConfig
   name: ThinkingConfig
   href: api/Google.GenAI.Types.ThinkingConfig.html
@@ -34349,6 +35454,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Tool.EnterpriseWebSearch
   nameWithType: Tool.EnterpriseWebSearch
+- uid: Google.GenAI.Types.Tool.ExaAiSearch
+  name: ExaAiSearch
+  href: api/Google.GenAI.Types.Tool.html#Google_GenAI_Types_Tool_ExaAiSearch
+  commentId: P:Google.GenAI.Types.Tool.ExaAiSearch
+  fullName: Google.GenAI.Types.Tool.ExaAiSearch
+  nameWithType: Tool.ExaAiSearch
+- uid: Google.GenAI.Types.Tool.ExaAiSearch*
+  name: ExaAiSearch
+  href: api/Google.GenAI.Types.Tool.html#Google_GenAI_Types_Tool_ExaAiSearch_
+  commentId: Overload:Google.GenAI.Types.Tool.ExaAiSearch
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Tool.ExaAiSearch
+  nameWithType: Tool.ExaAiSearch
 - uid: Google.GenAI.Types.Tool.FileSearch
   name: FileSearch
   href: api/Google.GenAI.Types.Tool.html#Google_GenAI_Types_Tool_FileSearch
@@ -34626,6 +35744,54 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ToolConfig.RetrievalConfig
   nameWithType: ToolConfig.RetrievalConfig
+- uid: Google.GenAI.Types.ToolExaAiSearch
+  name: ToolExaAiSearch
+  href: api/Google.GenAI.Types.ToolExaAiSearch.html
+  commentId: T:Google.GenAI.Types.ToolExaAiSearch
+  fullName: Google.GenAI.Types.ToolExaAiSearch
+  nameWithType: ToolExaAiSearch
+- uid: Google.GenAI.Types.ToolExaAiSearch.ApiKey
+  name: ApiKey
+  href: api/Google.GenAI.Types.ToolExaAiSearch.html#Google_GenAI_Types_ToolExaAiSearch_ApiKey
+  commentId: P:Google.GenAI.Types.ToolExaAiSearch.ApiKey
+  fullName: Google.GenAI.Types.ToolExaAiSearch.ApiKey
+  nameWithType: ToolExaAiSearch.ApiKey
+- uid: Google.GenAI.Types.ToolExaAiSearch.ApiKey*
+  name: ApiKey
+  href: api/Google.GenAI.Types.ToolExaAiSearch.html#Google_GenAI_Types_ToolExaAiSearch_ApiKey_
+  commentId: Overload:Google.GenAI.Types.ToolExaAiSearch.ApiKey
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolExaAiSearch.ApiKey
+  nameWithType: ToolExaAiSearch.ApiKey
+- uid: Google.GenAI.Types.ToolExaAiSearch.CustomConfigs
+  name: CustomConfigs
+  href: api/Google.GenAI.Types.ToolExaAiSearch.html#Google_GenAI_Types_ToolExaAiSearch_CustomConfigs
+  commentId: P:Google.GenAI.Types.ToolExaAiSearch.CustomConfigs
+  fullName: Google.GenAI.Types.ToolExaAiSearch.CustomConfigs
+  nameWithType: ToolExaAiSearch.CustomConfigs
+- uid: Google.GenAI.Types.ToolExaAiSearch.CustomConfigs*
+  name: CustomConfigs
+  href: api/Google.GenAI.Types.ToolExaAiSearch.html#Google_GenAI_Types_ToolExaAiSearch_CustomConfigs_
+  commentId: Overload:Google.GenAI.Types.ToolExaAiSearch.CustomConfigs
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolExaAiSearch.CustomConfigs
+  nameWithType: ToolExaAiSearch.CustomConfigs
+- uid: Google.GenAI.Types.ToolExaAiSearch.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ToolExaAiSearch.html#Google_GenAI_Types_ToolExaAiSearch_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ToolExaAiSearch.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ToolExaAiSearch.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ToolExaAiSearch.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ToolExaAiSearch.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ToolExaAiSearch.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ToolExaAiSearch.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ToolExaAiSearch.html#Google_GenAI_Types_ToolExaAiSearch_FromJson_
+  commentId: Overload:Google.GenAI.Types.ToolExaAiSearch.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolExaAiSearch.FromJson
+  nameWithType: ToolExaAiSearch.FromJson
 - uid: Google.GenAI.Types.ToolParallelAiSearch
   name: ToolParallelAiSearch
   href: api/Google.GenAI.Types.ToolParallelAiSearch.html
@@ -35513,6 +36679,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.TuningDataStats.PreferenceOptimizationDataStats
   nameWithType: TuningDataStats.PreferenceOptimizationDataStats
+- uid: Google.GenAI.Types.TuningDataStats.ReinforcementTuningDataStats
+  name: ReinforcementTuningDataStats
+  href: api/Google.GenAI.Types.TuningDataStats.html#Google_GenAI_Types_TuningDataStats_ReinforcementTuningDataStats
+  commentId: P:Google.GenAI.Types.TuningDataStats.ReinforcementTuningDataStats
+  fullName: Google.GenAI.Types.TuningDataStats.ReinforcementTuningDataStats
+  nameWithType: TuningDataStats.ReinforcementTuningDataStats
+- uid: Google.GenAI.Types.TuningDataStats.ReinforcementTuningDataStats*
+  name: ReinforcementTuningDataStats
+  href: api/Google.GenAI.Types.TuningDataStats.html#Google_GenAI_Types_TuningDataStats_ReinforcementTuningDataStats_
+  commentId: Overload:Google.GenAI.Types.TuningDataStats.ReinforcementTuningDataStats
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TuningDataStats.ReinforcementTuningDataStats
+  nameWithType: TuningDataStats.ReinforcementTuningDataStats
 - uid: Google.GenAI.Types.TuningDataStats.SupervisedTuningDataStats
   name: SupervisedTuningDataStats
   href: api/Google.GenAI.Types.TuningDataStats.html#Google_GenAI_Types_TuningDataStats_SupervisedTuningDataStats
@@ -41003,6 +42182,80 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.VideoOrientationConverter.Write
   nameWithType: VideoOrientationConverter.Write
+- uid: Google.GenAI.Types.VideoResponseFormat
+  name: VideoResponseFormat
+  href: api/Google.GenAI.Types.VideoResponseFormat.html
+  commentId: T:Google.GenAI.Types.VideoResponseFormat
+  fullName: Google.GenAI.Types.VideoResponseFormat
+  nameWithType: VideoResponseFormat
+- uid: Google.GenAI.Types.VideoResponseFormat.AspectRatio
+  name: AspectRatio
+  href: api/Google.GenAI.Types.VideoResponseFormat.html#Google_GenAI_Types_VideoResponseFormat_AspectRatio
+  commentId: P:Google.GenAI.Types.VideoResponseFormat.AspectRatio
+  fullName: Google.GenAI.Types.VideoResponseFormat.AspectRatio
+  nameWithType: VideoResponseFormat.AspectRatio
+- uid: Google.GenAI.Types.VideoResponseFormat.AspectRatio*
+  name: AspectRatio
+  href: api/Google.GenAI.Types.VideoResponseFormat.html#Google_GenAI_Types_VideoResponseFormat_AspectRatio_
+  commentId: Overload:Google.GenAI.Types.VideoResponseFormat.AspectRatio
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VideoResponseFormat.AspectRatio
+  nameWithType: VideoResponseFormat.AspectRatio
+- uid: Google.GenAI.Types.VideoResponseFormat.Delivery
+  name: Delivery
+  href: api/Google.GenAI.Types.VideoResponseFormat.html#Google_GenAI_Types_VideoResponseFormat_Delivery
+  commentId: P:Google.GenAI.Types.VideoResponseFormat.Delivery
+  fullName: Google.GenAI.Types.VideoResponseFormat.Delivery
+  nameWithType: VideoResponseFormat.Delivery
+- uid: Google.GenAI.Types.VideoResponseFormat.Delivery*
+  name: Delivery
+  href: api/Google.GenAI.Types.VideoResponseFormat.html#Google_GenAI_Types_VideoResponseFormat_Delivery_
+  commentId: Overload:Google.GenAI.Types.VideoResponseFormat.Delivery
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VideoResponseFormat.Delivery
+  nameWithType: VideoResponseFormat.Delivery
+- uid: Google.GenAI.Types.VideoResponseFormat.Duration
+  name: Duration
+  href: api/Google.GenAI.Types.VideoResponseFormat.html#Google_GenAI_Types_VideoResponseFormat_Duration
+  commentId: P:Google.GenAI.Types.VideoResponseFormat.Duration
+  fullName: Google.GenAI.Types.VideoResponseFormat.Duration
+  nameWithType: VideoResponseFormat.Duration
+- uid: Google.GenAI.Types.VideoResponseFormat.Duration*
+  name: Duration
+  href: api/Google.GenAI.Types.VideoResponseFormat.html#Google_GenAI_Types_VideoResponseFormat_Duration_
+  commentId: Overload:Google.GenAI.Types.VideoResponseFormat.Duration
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VideoResponseFormat.Duration
+  nameWithType: VideoResponseFormat.Duration
+- uid: Google.GenAI.Types.VideoResponseFormat.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.VideoResponseFormat.html#Google_GenAI_Types_VideoResponseFormat_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.VideoResponseFormat.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.VideoResponseFormat.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.VideoResponseFormat.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: VideoResponseFormat.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: VideoResponseFormat.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.VideoResponseFormat.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.VideoResponseFormat.html#Google_GenAI_Types_VideoResponseFormat_FromJson_
+  commentId: Overload:Google.GenAI.Types.VideoResponseFormat.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VideoResponseFormat.FromJson
+  nameWithType: VideoResponseFormat.FromJson
+- uid: Google.GenAI.Types.VideoResponseFormat.GcsUri
+  name: GcsUri
+  href: api/Google.GenAI.Types.VideoResponseFormat.html#Google_GenAI_Types_VideoResponseFormat_GcsUri
+  commentId: P:Google.GenAI.Types.VideoResponseFormat.GcsUri
+  fullName: Google.GenAI.Types.VideoResponseFormat.GcsUri
+  nameWithType: VideoResponseFormat.GcsUri
+- uid: Google.GenAI.Types.VideoResponseFormat.GcsUri*
+  name: GcsUri
+  href: api/Google.GenAI.Types.VideoResponseFormat.html#Google_GenAI_Types_VideoResponseFormat_GcsUri_
+  commentId: Overload:Google.GenAI.Types.VideoResponseFormat.GcsUri
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VideoResponseFormat.GcsUri
+  nameWithType: VideoResponseFormat.GcsUri
 - uid: Google.GenAI.Types.VoiceActivity
   name: VoiceActivity
   href: api/Google.GenAI.Types.VoiceActivity.html

@@ -147,6 +147,15 @@ API.</p>
       <dd></dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.AspectRatioConverter.html">AspectRatioConverter</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.AudioResponseFormat.html">AudioResponseFormat</a></dt>
+      <dd><p>Configuration for audio-specific output formatting.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.AudioTranscriptionConfig.html">AudioTranscriptionConfig</a></dt>
       <dd><p>The audio transcription configuration in Setup.</p>
 </dd>
@@ -491,6 +500,10 @@ This data type is not supported in Gemini API.</p>
       <dt><a class="xref" href="Google.GenAI.Types.DeleteResourceJob.html">DeleteResourceJob</a></dt>
       <dd><p>The return value of delete operation.</p>
 </dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.DeliveryConverter.html">DeliveryConverter</a></dt>
+      <dd></dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.DistillationDataStats.html">DistillationDataStats</a></dt>
@@ -1072,9 +1085,18 @@ only when the grounding source is Google Maps. This data type is not supported i
       <dd></dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.ImageResponseFormat.html">ImageResponseFormat</a></dt>
+      <dd><p>Configuration for image-specific output formatting.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ImageSearch.html">ImageSearch</a></dt>
       <dd><p>Image search for grounding and related configurations.</p>
 </dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.ImageSizeConverter.html">ImageSizeConverter</a></dt>
+      <dd></dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ImportFileOperation.html">ImportFileOperation</a></dt>
@@ -1593,23 +1615,55 @@ activity detection is disabled.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ReinforcementTuningAutoraterScorerExactMatchScorer.html">ReinforcementTuningAutoraterScorerExactMatchScorer</a></dt>
-      <dd><p>Scores autorater responses by using exact string match reward scorer.</p>
+      <dd><p>Scores autorater responses by using exact string match reward scorer. This data type is not
+supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ReinforcementTuningAutoraterScorerParsedResponseConversionScorer.html">ReinforcementTuningAutoraterScorerParsedResponseConversionScorer</a></dt>
-      <dd><p>Scores responses by directly converting parsed autorater response to float reward (reward is
-clipped to be within [-1, 1]).</p>
+      <dd><p>Scores responses by directly converting the parsed autorater response to a float reward. Note:
+Reward is clipped to be within <code>[-1, 1]</code>, i.e., <code>reward = max(min(reward, 1.0), -1.0)</code>. This
+data type is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ReinforcementTuningCloudRunRewardScorer.html">ReinforcementTuningCloudRunRewardScorer</a></dt>
-      <dd><p>Scores parsed responses by calling a Cloud Run service.</p>
+      <dd><p>ReinforcementTuningCloudRunRewardScorer allows users to implement a reward function through
+GCP Cloud Run. Comparing with ReinforcementTuningCodeExecutionRewardScorer that runs in a
+Sandbox and has no internet access, Cloud Run reward scorer is fully controlled by users. The
+Cloud Run service should implement the following HTTP API: HTTP method: <code>POST</code> HTTP request
+body: <code>{ &quot;example&quot;: ReinforcementTuningExample, &quot;response&quot;: Content, &quot;metadata&quot;: { &quot;step&quot;: int &quot;tuning_job_id&quot;: int64 } }</code> * <code>example</code> is a ReinforcementTuningExample in ProtoJSON
+format, (i.e., the format is the same as as one line in the training/validation dataset except
+that the keys must be in camel case). System instructions (i.e.,
+<code>example.get(&quot;systemInstruction&quot;)</code>) and references (i.e., <code>example.get(&quot;references&quot;)</code>) are
+also included in the <code>example</code> provided that they are set in the training/validation dataset.</p>
+<ul>
+<li><code>response</code> is a Content in ProtoJSON format (i.e., keys must be in camel case), which is the
+same as the Online Prediction response for Gemini models. HTTP response body: { &quot;reward&quot;:
+float, &quot;user_requested_aux_info&quot;: str // Optional } where the field &quot;user_requested_aux_info&quot;
+is any (optional) string provided by users for assisting debugging. It's in snake case. This
+field is mostly useful when calling the GenAiTuningService.ValidateReinforcementTuningReward
+API, where the proto field (not Cloud Run HTTP response body) userRequestedAuxInfo will be
+populated if the Cloud Run reward function sets this field in the HTTP response. The following
+are examples for the HTTP request and response body. Example HTTP request body: <code>{ &quot;example&quot;: { &quot;contents&quot;: [ { &quot;role&quot;: &quot;user&quot;, &quot;parts&quot;: [ { &quot;text&quot;: &quot;What is the capital of France?&quot; } ] } ], &quot;references&quot;: { &quot;answer&quot;: &quot;Paris&quot; } }, &quot;response&quot;: { &quot;parts&quot;: [ { &quot;text&quot;: &quot;London&quot; } ] }, &quot;metadata&quot;: { &quot;step&quot;: 1, &quot;tuning_job_id&quot;: 123456789 } }</code> Example HTTP
+response body: <code>{ &quot;reward&quot;: -1.0 }</code> Note: Reward output by Cloud Run reward function is
+clipped to be within <code>[-1, 1]</code>, i.e., <code>reward = max(min(reward, 1.0), -1.0)</code>. This data type
+is not supported in Gemini API.</li>
+</ul>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ReinforcementTuningCodeExecutionRewardScorer.html">ReinforcementTuningCodeExecutionRewardScorer</a></dt>
-      <dd><p>Scores parsed responses for code execution use cases.</p>
+      <dd><p>ReinforcementTuningCodeExecutionRewardScorer allows users to implement a function to evaluate
+rewards for the sample response. The function signature is as follows: <code>def evaluate(example: dict[str, Any], response: dict[str, Any]) -&gt; float: ...</code> <code>example</code> is a
+ReinforcementTuningExample in ProtoJSON format, (i.e., the format is the same as as one line
+in the training/validation dataset except that the keys must be in camel case). System
+instructions (i.e., <code>example.get(&quot;systemInstruction&quot;)</code>) and references (i.e.,
+<code>example.get(&quot;references&quot;)</code>) are also included in the <code>example</code> provided that they are set in
+the training/validation dataset. <code>response</code> is a Content in ProtoJSON format (i.e., keys must
+be in camel case), which is the same as the Online Prediction response for Gemini models.
+Note: Reward output by the <code>evaluate</code> function is clipped to be within <code>[-1, 1]</code>, i.e.,
+<code>reward = max(min(reward, 1.0), -1.0)</code>. This data type is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -1624,7 +1678,13 @@ clipped to be within [-1, 1]).</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ReinforcementTuningParseResponseConfig.html">ReinforcementTuningParseResponseConfig</a></dt>
-      <dd><p>Defines how to parse sample response for reinforcement tuning.</p>
+      <dd><p>Defines how to parse sample response config for reinforcement tuning. The parsed response
+(i.e., substring) will be passed to the reward functions. For example, the input prompt might
+be: &gt; &quot;Perform step-by-step thoughts first to problem A, finally output answer in the
+&lt;ans&gt; &lt;/ans&gt; block.&quot; The sample response from the model under tuning might look
+like: &gt; &quot;&lt;ans&gt;Yes&lt;/ans&gt;&quot; Here, users can define the following parse config: <code>{ &quot;parseType&quot;: &quot;REGEX_EXTRACT&quot;, &quot;regexExtractExpression&quot;: &quot;.*(.*?)&quot; }</code> The resulting parsed
+response would be <code>&quot;Yes&quot;</code> and will be passed to the reward functions for evaluating rewards.
+This data type is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -1639,23 +1699,38 @@ clipped to be within [-1, 1]).</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorer.html">ReinforcementTuningStringMatchRewardScorer</a></dt>
-      <dd><p>Scores parsed responses for string matching use cases.</p>
+      <dd><p>ReinforcementTuningStringMatchRewardScorer is used to score parsed responses for string
+matching use cases. For example, for math problems, users can use string match scorer to check
+if the correct exact answer is generated. Note: Reward returned by the string match reward
+function is clipped to be within <code>[-1, 1]</code> if wrongAnswerReward or correctAnswerReward are
+beyond the range, i.e., <code>reward = max(min(reward, 1.0), -1.0)</code>. This data type is not
+supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorerJsonMatchExpression.html">ReinforcementTuningStringMatchRewardScorerJsonMatchExpression</a></dt>
-      <dd><p>Converts parsed responses to JSON format, finds the first-level matching key, then performs
-StringMatchExpression on the value.</p>
+      <dd><p>JsonMatchExpression supports converting the parsed responses to JSON format, finding the value
+in the JSON response that matches the key_name in the first level, and performing
+StringMatchExpression operation on the matched JSON value. This data type is not supported in
+Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorerStringMatchExpression.html">ReinforcementTuningStringMatchRewardScorerStringMatchExpression</a></dt>
-      <dd><p>Evaluates parsed response using match type against expression.</p>
+      <dd><p>Evaluates parsed response using match type against the expression. Returns <code>true</code> if
+<code>MatchOperation(target, expression)</code> evaluates to <code>true</code>, and <code>false</code> otherwise. This data
+type is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ReinforcementTuningThinkingLevelConverter.html">ReinforcementTuningThinkingLevelConverter</a></dt>
       <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.ReinforcementTuningUserDatasetExamples.html">ReinforcementTuningUserDatasetExamples</a></dt>
+      <dd><p>Sample reinforcement tuning user data in the training dataset. The contents are truncated for
+better UI showing. This data type is not supported in Gemini API.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ReplayFile.html">ReplayFile</a></dt>
@@ -1685,6 +1760,12 @@ StringMatchExpression on the value.</p>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ResourceScopeConverter.html">ResourceScopeConverter</a></dt>
       <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.ResponseFormat.html">ResponseFormat</a></dt>
+      <dd><p>Configuration for the model to configure output formatting and delivery. This data type is not
+supported in Gemini API.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ResponseParseTypeConverter.html">ResponseParseTypeConverter</a></dt>
@@ -1894,6 +1975,11 @@ This data type is not supported in Gemini API.</p>
       <dd></dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.TextResponseFormat.html">TextResponseFormat</a></dt>
+      <dd><p>Configuration for text-specific output formatting.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ThinkingConfig.html">ThinkingConfig</a></dt>
       <dd><p>The thinking features configuration.</p>
 </dd>
@@ -1930,6 +2016,12 @@ tool. This data type is not supported in Gemini API.</p>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ToolConfig.html">ToolConfig</a></dt>
       <dd><p>Tool config. This config is shared for all tools provided in the request.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.ToolExaAiSearch.html">ToolExaAiSearch</a></dt>
+      <dd><p>ExaAiSearch tool type. A tool that uses the Exa.ai search engine for grounding. This data type
+is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -2205,6 +2297,12 @@ rate.</p>
       <dd></dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.VideoResponseFormat.html">VideoResponseFormat</a></dt>
+      <dd><p>Configuration for video-specific output formatting. This data type is not supported in Gemini
+API.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.VoiceActivity.html">VoiceActivity</a></dt>
       <dd><p>Voice activity signal.</p>
 </dd>
@@ -2258,15 +2356,19 @@ Structs
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.AspectRatio.html">AspectRatio</a></dt>
+      <dd><p>The aspect ratio for the image output.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.AuthType.html">AuthType</a></dt>
       <dd><p>Type of auth scheme. This enum is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.Behavior.html">Behavior</a></dt>
-      <dd><p>Specifies the function Behavior. Currently only non-blocking functions are supported. If not
-specified, the system keeps the current function call behavior. This field is currently only
-supported by the BidiGenerateContent method.</p>
+      <dd><p>Specifies the function Behavior. If not specified, the system keeps the current function call
+behavior. This field is currently only supported by the BidiGenerateContent method.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -2277,6 +2379,11 @@ supported by the BidiGenerateContent method.</p>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ControlReferenceType.html">ControlReferenceType</a></dt>
       <dd><p>Enum representing the control type of a control reference image.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.Delivery.html">Delivery</a></dt>
+      <dd><p>Delivery mode for the generated content.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -2379,6 +2486,11 @@ content will be blocked.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.ImageSize.html">ImageSize</a></dt>
+      <dd><p>The size of the image output.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.JobState.html">JobState</a></dt>
       <dd><p>Job state.</p>
 </dd>
@@ -2395,7 +2507,7 @@ content will be blocked.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.MatchOperation.html">MatchOperation</a></dt>
-      <dd><p>Match operation to use for evaluation.</p>
+      <dd><p>Match operation to use for evaluating rewards. This enum is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -2464,7 +2576,7 @@ behavior is to allow prominent people. This enum is not supported in Gemini API.
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ResponseParseType.html">ResponseParseType</a></dt>
-      <dd><p>Defines how to parse sample response.</p>
+      <dd><p>Defines the type for parsing sample response. This enum is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">

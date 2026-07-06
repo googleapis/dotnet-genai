@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ReinforcementTuningStringMatchRewardScorerStringMatchExpression | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Evaluates parsed response using match type against expression.">
+      <meta name="description" content="Evaluates parsed response using match type against the expression. Returns true if MatchOperation(target, expression) evaluates to true, and false otherwise. This data type is not supported in Gemini API.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Types_ReinforcementTuningStringMatchRewardScorerStringMatchExpression" data-uid="Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorerStringMatchExpression" class="text-break">
-Class ReinforcementTuningStringMatchRewardScorerStringMatchExpression  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningStringMatchRewardScorerStringMatchExpression.cs/#L29"><i class="bi bi-code-slash"></i></a>
+Class ReinforcementTuningStringMatchRewardScorerStringMatchExpression  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningStringMatchRewardScorerStringMatchExpression.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,7 +93,9 @@ Class ReinforcementTuningStringMatchRewardScorerStringMatchExpression  <a class=
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Evaluates parsed response using match type against expression.</p>
+  <div class="markdown summary"><p>Evaluates parsed response using match type against the expression. Returns <code>true</code> if
+<code>MatchOperation(target, expression)</code> evaluates to <code>true</code>, and <code>false</code> otherwise. This data
+type is not supported in Gemini API.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -159,12 +161,15 @@ Class ReinforcementTuningStringMatchRewardScorerStringMatchExpression  <a class=
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningStringMatchRewardScorerStringMatchExpression_Expression" data-uid="Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorerStringMatchExpression.Expression">
   Expression
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningStringMatchRewardScorerStringMatchExpression.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningStringMatchRewardScorerStringMatchExpression.cs/#L50"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>String or regular expression to match against. Customer can also provide a references map
-(key/value pairs) whose value will be substituted into the expression by referencing
-<code>references.key_name</code> (wrapped in double curly braces).</p>
+  <div class="markdown level1 summary"><p>A string or a regular expression to match against for evaluating rewards. Users can also
+provide a references map of <code>{key: value}</code> whose <code>value</code> will be used to replace the
+placeholder {{references.key}} in the expression. For example, if the following <code>references</code>
+are defined in the training / validation dataset: <code>{ &quot;systemInstruction&quot;: ..., &quot;contents&quot;: ..., &quot;references&quot;: { &quot;concise_answer&quot;: &quot;Yes&quot;, &quot;verbose_answer&quot;: &quot;The answer is Yes&quot; } }</code> and if users define the following StringMatchExpression: { &quot;matchOperation&quot;:
+&quot;REGEX_CONTAINS&quot;, &quot;expression&quot;: &quot;.<em>{{references.concise_answer}}.</em>&quot; } On evaluating the
+reward for each sample response, this StringMatchExpression will be substituted as: <code>{ &quot;matchOperation&quot;: &quot;REGEX_CONTAINS&quot;, &quot;expression&quot;: &quot;.*Yes.*&quot; }</code></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -195,10 +200,10 @@ public string? Expression { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningStringMatchRewardScorerStringMatchExpression_MatchOperation" data-uid="Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorerStringMatchExpression.MatchOperation">
   MatchOperation
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningStringMatchRewardScorerStringMatchExpression.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningStringMatchRewardScorerStringMatchExpression.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Match operation to use for evaluation.</p>
+  <div class="markdown level1 summary"><p>Match operation to use for evaluating rewards.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -233,7 +238,7 @@ public MatchOperation? MatchOperation { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningStringMatchRewardScorerStringMatchExpression_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorerStringMatchExpression.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningStringMatchRewardScorerStringMatchExpression.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningStringMatchRewardScorerStringMatchExpression.cs/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a
@@ -277,7 +282,7 @@ object, or null if deserialization fails.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningStringMatchRewardScorerStringMatchExpression.cs/#L29" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningStringMatchRewardScorerStringMatchExpression.cs/#L31" class="edit-link">Edit this page</a>
         </div>
 
 

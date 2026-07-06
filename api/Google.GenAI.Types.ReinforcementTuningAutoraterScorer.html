@@ -193,11 +193,12 @@ public AutoraterConfig? AutoraterConfig { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningAutoraterScorer_AutoraterPrompt" data-uid="Google.GenAI.Types.ReinforcementTuningAutoraterScorer.AutoraterPrompt">
   AutoraterPrompt
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningAutoraterScorer.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningAutoraterScorer.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Allows substituting <code>prompt</code>, <code>response</code>, <code>system_instruction</code> and <code>references.reference</code>
-(each wrapped in double curly braces) into the autorater prompt.</p>
+  <div class="markdown level1 summary"><p>The prompt for an autorater to scorer the parsed sample response. This field supports the
+following placeholders that will be replaced before scoring: - {{prompt}} - {{response}} -
+{{system_instruction}} - {{references.key}}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -228,10 +229,12 @@ public string? AutoraterPrompt { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningAutoraterScorer_AutoraterResponseParseConfig" data-uid="Google.GenAI.Types.ReinforcementTuningAutoraterScorer.AutoraterResponseParseConfig">
   AutoraterResponseParseConfig
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningAutoraterScorer.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningAutoraterScorer.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Parses autorater returned response.</p>
+  <div class="markdown level1 summary"><p>Parses autorater returned response for scoring. For example, if the autorater response has
+reward stored in the <code>2.0</code> block, defining a parsing response config using regex <code>&quot;.*(.*?)&quot;</code>
+will return a score <code>&quot;2.0&quot;</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -262,10 +265,10 @@ public ReinforcementTuningParseResponseConfig? AutoraterResponseParseConfig { ge
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningAutoraterScorer_ExactMatchScorer" data-uid="Google.GenAI.Types.ReinforcementTuningAutoraterScorer.ExactMatchScorer">
   ExactMatchScorer
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningAutoraterScorer.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningAutoraterScorer.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Scores autorater responses by using exact string match reward scorer.</p>
+  <div class="markdown level1 summary"><p>Scores autorater responses by using string match reward scorer.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -296,10 +299,11 @@ public ReinforcementTuningAutoraterScorerExactMatchScorer? ExactMatchScorer { ge
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningAutoraterScorer_ParsedResponseConversionScorer" data-uid="Google.GenAI.Types.ReinforcementTuningAutoraterScorer.ParsedResponseConversionScorer">
   ParsedResponseConversionScorer
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningAutoraterScorer.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningAutoraterScorer.cs/#L66"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Scores autorater responses by directly converting parsed autorater response to float reward.</p>
+  <div class="markdown level1 summary"><p>Scores autorater responses by directly converting parsed autorater response to a float
+reward. Note: Reward is clipped to be within <code>[-1, 1]</code>, i.e., <code>reward = max(min(reward, 1.0), -1.0)</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -334,7 +338,7 @@ public ReinforcementTuningAutoraterScorerParsedResponseConversionScorer? ParsedR
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningAutoraterScorer_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.ReinforcementTuningAutoraterScorer.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningAutoraterScorer.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningAutoraterScorer.cs/#L90"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a ReinforcementTuningAutoraterScorer object.</p>

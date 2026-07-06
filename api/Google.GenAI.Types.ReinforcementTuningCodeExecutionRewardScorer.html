@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ReinforcementTuningCodeExecutionRewardScorer | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Scores parsed responses for code execution use cases.">
+      <meta name="description" content="ReinforcementTuningCodeExecutionRewardScorer allows users to implement a function to evaluate rewards for the sample response. The function signature is as follows: def evaluate(example: dict[str, Any], response: dict[str, Any]) -&amp;gt; float: ... example is a ReinforcementTuningExample in ProtoJSON format, (i.e., the format is the same as as one line in the training/validation dataset except that the keys must be in camel case). System instructions (i.e., example.get(&amp;quot;systemInstruction&amp;quot;)) and references (i.e., example.get(&amp;quot;references&amp;quot;)) are also included in the example provided that they are set in the training/validation dataset. response is a Content in ProtoJSON format (i.e., keys must be in camel case), which is the same as the Online Prediction response for Gemini models. Note: Reward output by the evaluate function is clipped to be within [-1, 1], i.e., reward = max(min(reward, 1.0), -1.0). This data type is not supported in Gemini API.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Types_ReinforcementTuningCodeExecutionRewardScorer" data-uid="Google.GenAI.Types.ReinforcementTuningCodeExecutionRewardScorer" class="text-break">
-Class ReinforcementTuningCodeExecutionRewardScorer  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningCodeExecutionRewardScorer.cs/#L29"><i class="bi bi-code-slash"></i></a>
+Class ReinforcementTuningCodeExecutionRewardScorer  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningCodeExecutionRewardScorer.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,7 +93,16 @@ Class ReinforcementTuningCodeExecutionRewardScorer  <a class="header-action link
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Scores parsed responses for code execution use cases.</p>
+  <div class="markdown summary"><p>ReinforcementTuningCodeExecutionRewardScorer allows users to implement a function to evaluate
+rewards for the sample response. The function signature is as follows: <code>def evaluate(example: dict[str, Any], response: dict[str, Any]) -&gt; float: ...</code> <code>example</code> is a
+ReinforcementTuningExample in ProtoJSON format, (i.e., the format is the same as as one line
+in the training/validation dataset except that the keys must be in camel case). System
+instructions (i.e., <code>example.get(&quot;systemInstruction&quot;)</code>) and references (i.e.,
+<code>example.get(&quot;references&quot;)</code>) are also included in the <code>example</code> provided that they are set in
+the training/validation dataset. <code>response</code> is a Content in ProtoJSON format (i.e., keys must
+be in camel case), which is the same as the Online Prediction response for Gemini models.
+Note: Reward output by the <code>evaluate</code> function is clipped to be within <code>[-1, 1]</code>, i.e.,
+<code>reward = max(min(reward, 1.0), -1.0)</code>. This data type is not supported in Gemini API.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -159,11 +168,13 @@ Class ReinforcementTuningCodeExecutionRewardScorer  <a class="header-action link
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningCodeExecutionRewardScorer_PythonCodeSnippet" data-uid="Google.GenAI.Types.ReinforcementTuningCodeExecutionRewardScorer.PythonCodeSnippet">
   PythonCodeSnippet
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningCodeExecutionRewardScorer.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningCodeExecutionRewardScorer.cs/#L49"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Example python code snippet which assigns reward of 1 to answer matching user provided
-reference answer in per prompt references map.</p>
+  <div class="markdown level1 summary"><p>The python code snippet as a string for evaluating rewards. The following is an example
+python code snippet that returns a reward <code>1.0</code> for a parsed response matching the
+user-provided reference answer in per prompt references map. <code>def evaluate(example, response) -&gt; float: response_str = response.get(&quot;parts&quot;, [])0 references = example.get(&quot;references&quot;, {}) if response_str == references.get(&quot;concise_answer&quot;): return 1.0 return -1.0</code> Note: Reward output by the evaluate function is clipped to be
+within <code>[-1, 1]</code>, i.e., <code>reward = max(min(reward, 1.0), -1.0)</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -198,7 +209,7 @@ public string? PythonCodeSnippet { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningCodeExecutionRewardScorer_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.ReinforcementTuningCodeExecutionRewardScorer.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningCodeExecutionRewardScorer.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningCodeExecutionRewardScorer.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a ReinforcementTuningCodeExecutionRewardScorer object.</p>
@@ -241,7 +252,7 @@ deserialization fails.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningCodeExecutionRewardScorer.cs/#L29" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningCodeExecutionRewardScorer.cs/#L39" class="edit-link">Edit this page</a>
         </div>
 
 

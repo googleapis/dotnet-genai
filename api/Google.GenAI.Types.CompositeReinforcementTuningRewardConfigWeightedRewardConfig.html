@@ -162,7 +162,8 @@ Class CompositeReinforcementTuningRewardConfigWeightedRewardConfig  <a class="he
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/CompositeReinforcementTuningRewardConfigWeightedRewardConfig.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Single reward configuration.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -192,10 +193,11 @@ public SingleReinforcementTuningRewardConfig? RewardConfig { get; set; }</code><
 
   <h3 id="Google_GenAI_Types_CompositeReinforcementTuningRewardConfigWeightedRewardConfig_Weight" data-uid="Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.Weight">
   Weight
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/CompositeReinforcementTuningRewardConfigWeightedRewardConfig.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/CompositeReinforcementTuningRewardConfigWeightedRewardConfig.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>How much this single reward contributes to the total overall reward.</p>
+  <div class="markdown level1 summary"><p>How much this single reward contributes to the total overall reward. Total reward is a
+linear combination of single rewards with their corresponding weights, i.e., <code>total_reward = ( weight_a * reward_a + weight_b * reward_b + ... ) / (weight_a + weight_b + ...)</code></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -230,7 +232,7 @@ public double? Weight { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_CompositeReinforcementTuningRewardConfigWeightedRewardConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/CompositeReinforcementTuningRewardConfigWeightedRewardConfig.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/CompositeReinforcementTuningRewardConfigWeightedRewardConfig.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a CompositeReinforcementTuningRewardConfigWeightedRewardConfig

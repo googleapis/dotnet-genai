@@ -504,6 +504,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.AspectRatio.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.AspectRatio.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.AspectRatio",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.AspectRatio.yml\" sourcestartlinenumber=\"1\">The aspect ratio for the image output.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.AspectRatioConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.AspectRatioConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.AspectRatioConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.AudioResponseFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.AudioResponseFormat.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.AudioResponseFormat",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.AudioResponseFormat.yml\" sourcestartlinenumber=\"1\">Configuration for audio-specific output formatting.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.AudioTranscriptionConfig.yml",
       "output": {
         ".html": {
@@ -738,7 +780,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Behavior",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Behavior.yml\" sourcestartlinenumber=\"1\">Specifies the function Behavior. Currently only non-blocking functions are supported. If not\nspecified, the system keeps the current function call behavior. This field is currently only\nsupported by the BidiGenerateContent method.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Behavior.yml\" sourcestartlinenumber=\"1\">Specifies the function Behavior. If not specified, the system keeps the current function call\nbehavior. This field is currently only supported by the BidiGenerateContent method.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1509,6 +1551,34 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.DeleteResourceJob",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DeleteResourceJob.yml\" sourcestartlinenumber=\"1\">The return value of delete operation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.Delivery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.Delivery.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.Delivery",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Delivery.yml\" sourcestartlinenumber=\"1\">Delivery mode for the generated content.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.DeliveryConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.DeliveryConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.DeliveryConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -3304,6 +3374,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ImageResponseFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ImageResponseFormat.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ImageResponseFormat",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ImageResponseFormat.yml\" sourcestartlinenumber=\"1\">Configuration for image-specific output formatting.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.ImageSearch.yml",
       "output": {
         ".html": {
@@ -3315,6 +3399,34 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ImageSearch",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ImageSearch.yml\" sourcestartlinenumber=\"1\">Image search for grounding and related configurations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ImageSize.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ImageSize.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ImageSize",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ImageSize.yml\" sourcestartlinenumber=\"1\">The size of the image output.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ImageSizeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ImageSizeConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ImageSizeConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -4014,7 +4126,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.MatchOperation",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.MatchOperation.yml\" sourcestartlinenumber=\"1\">Match operation to use for evaluation.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.MatchOperation.yml\" sourcestartlinenumber=\"1\">Match operation to use for evaluating rewards. This enum is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4868,7 +4980,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ReinforcementTuningAutoraterScorerExactMatchScorer",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningAutoraterScorerExactMatchScorer.yml\" sourcestartlinenumber=\"1\">Scores autorater responses by using exact string match reward scorer.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningAutoraterScorerExactMatchScorer.yml\" sourcestartlinenumber=\"1\">Scores autorater responses by using exact string match reward scorer. This data type is not\nsupported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4882,7 +4994,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ReinforcementTuningAutoraterScorerParsedResponseConversionScorer",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningAutoraterScorerParsedResponseConversionScorer.yml\" sourcestartlinenumber=\"1\">Scores responses by directly converting parsed autorater response to float reward (reward is\nclipped to be within [-1, 1]).</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningAutoraterScorerParsedResponseConversionScorer.yml\" sourcestartlinenumber=\"1\">Scores responses by directly converting the parsed autorater response to a float reward. Note:\nReward is clipped to be within <code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningAutoraterScorerParsedResponseConversionScorer.yml\" sourcestartlinenumber=\"2\">[-1, 1]</code>, i.e., <code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningAutoraterScorerParsedResponseConversionScorer.yml\" sourcestartlinenumber=\"2\">reward = max(min(reward, 1.0), -1.0)</code>. This\ndata type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4896,7 +5008,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ReinforcementTuningCloudRunRewardScorer",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCloudRunRewardScorer.yml\" sourcestartlinenumber=\"1\">Scores parsed responses by calling a Cloud Run service.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCloudRunRewardScorer.yml\" sourcestartlinenumber=\"1\">ReinforcementTuningCloudRunRewardScorer allows users to implement a reward function through\nGCP Cloud Run. Comparing with ReinforcementTuningCodeExecutionRewardScorer that runs in a\nSandbox and has no internet access, Cloud Run reward scorer is fully controlled by users. The\nCloud Run service should implement the following HTTP API: HTTP method: <code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCloudRunRewardScorer.yml\" sourcestartlinenumber=\"4\">POST</code> HTTP request\nbody: <code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCloudRunRewardScorer.yml\" sourcestartlinenumber=\"5\">{ &quot;example&quot;: ReinforcementTuningExample, &quot;response&quot;: Content, &quot;metadata&quot;: { &quot;step&quot;: int &quot;tuning_job_id&quot;: int64 } }</code> * <code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCloudRunRewardScorer.yml\" sourcestartlinenumber=\"6\">example</code> is a ReinforcementTuningExample in ProtoJSON\nformat, (i.e., the format is the same as as one line in the training/validation dataset except\nthat the keys must be in camel case). System instructions (i.e.,\n<code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCloudRunRewardScorer.yml\" sourcestartlinenumber=\"9\">example.get(&quot;systemInstruction&quot;)</code>) and references (i.e., <code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCloudRunRewardScorer.yml\" sourcestartlinenumber=\"9\">example.get(&quot;references&quot;)</code>) are\nalso included in the <code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCloudRunRewardScorer.yml\" sourcestartlinenumber=\"10\">example</code> provided that they are set in the training/validation dataset.</p>\n<ul sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCloudRunRewardScorer.yml\" sourcestartlinenumber=\"11\">\n<li sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCloudRunRewardScorer.yml\" sourcestartlinenumber=\"11\"><code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCloudRunRewardScorer.yml\" sourcestartlinenumber=\"11\">response</code> is a Content in ProtoJSON format (i.e., keys must be in camel case), which is the\nsame as the Online Prediction response for Gemini models. HTTP response body: { &quot;reward&quot;:\nfloat, &quot;user_requested_aux_info&quot;: str // Optional } where the field &quot;user_requested_aux_info&quot;\nis any (optional) string provided by users for assisting debugging. It's in snake case. This\nfield is mostly useful when calling the GenAiTuningService.ValidateReinforcementTuningReward\nAPI, where the proto field (not Cloud Run HTTP response body) userRequestedAuxInfo will be\npopulated if the Cloud Run reward function sets this field in the HTTP response. The following\nare examples for the HTTP request and response body. Example HTTP request body: <code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCloudRunRewardScorer.yml\" sourcestartlinenumber=\"18\">{ &quot;example&quot;: { &quot;contents&quot;: [ { &quot;role&quot;: &quot;user&quot;, &quot;parts&quot;: [ { &quot;text&quot;: &quot;What is the capital of France?&quot; } ] } ], &quot;references&quot;: { &quot;answer&quot;: &quot;Paris&quot; } }, &quot;response&quot;: { &quot;parts&quot;: [ { &quot;text&quot;: &quot;London&quot; } ] }, &quot;metadata&quot;: { &quot;step&quot;: 1, &quot;tuning_job_id&quot;: 123456789 } }</code> Example HTTP\nresponse body: <code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCloudRunRewardScorer.yml\" sourcestartlinenumber=\"22\">{ &quot;reward&quot;: -1.0 }</code> Note: Reward output by Cloud Run reward function is\nclipped to be within <code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCloudRunRewardScorer.yml\" sourcestartlinenumber=\"23\">[-1, 1]</code>, i.e., <code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCloudRunRewardScorer.yml\" sourcestartlinenumber=\"23\">reward = max(min(reward, 1.0), -1.0)</code>. This data type\nis not supported in Gemini API.</li>\n</ul>\n"
     },
     {
       "type": "ManagedReference",
@@ -4910,7 +5022,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ReinforcementTuningCodeExecutionRewardScorer",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCodeExecutionRewardScorer.yml\" sourcestartlinenumber=\"1\">Scores parsed responses for code execution use cases.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCodeExecutionRewardScorer.yml\" sourcestartlinenumber=\"1\">ReinforcementTuningCodeExecutionRewardScorer allows users to implement a function to evaluate\nrewards for the sample response. The function signature is as follows: <code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCodeExecutionRewardScorer.yml\" sourcestartlinenumber=\"2\">def evaluate(example: dict[str, Any], response: dict[str, Any]) -&gt; float: ...</code> <code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCodeExecutionRewardScorer.yml\" sourcestartlinenumber=\"3\">example</code> is a\nReinforcementTuningExample in ProtoJSON format, (i.e., the format is the same as as one line\nin the training/validation dataset except that the keys must be in camel case). System\ninstructions (i.e., <code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCodeExecutionRewardScorer.yml\" sourcestartlinenumber=\"6\">example.get(&quot;systemInstruction&quot;)</code>) and references (i.e.,\n<code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCodeExecutionRewardScorer.yml\" sourcestartlinenumber=\"7\">example.get(&quot;references&quot;)</code>) are also included in the <code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCodeExecutionRewardScorer.yml\" sourcestartlinenumber=\"7\">example</code> provided that they are set in\nthe training/validation dataset. <code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCodeExecutionRewardScorer.yml\" sourcestartlinenumber=\"8\">response</code> is a Content in ProtoJSON format (i.e., keys must\nbe in camel case), which is the same as the Online Prediction response for Gemini models.\nNote: Reward output by the <code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCodeExecutionRewardScorer.yml\" sourcestartlinenumber=\"10\">evaluate</code> function is clipped to be within <code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCodeExecutionRewardScorer.yml\" sourcestartlinenumber=\"10\">[-1, 1]</code>, i.e.,\n<code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningCodeExecutionRewardScorer.yml\" sourcestartlinenumber=\"11\">reward = max(min(reward, 1.0), -1.0)</code>. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4952,7 +5064,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ReinforcementTuningParseResponseConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningParseResponseConfig.yml\" sourcestartlinenumber=\"1\">Defines how to parse sample response for reinforcement tuning.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningParseResponseConfig.yml\" sourcestartlinenumber=\"1\">Defines how to parse sample response config for reinforcement tuning. The parsed response\n(i.e., substring) will be passed to the reward functions. For example, the input prompt might\nbe: &gt; &quot;Perform step-by-step thoughts first to problem A, finally output answer in the\n&lt;ans&gt; &lt;/ans&gt; block.&quot; The sample response from the model under tuning might look\nlike: &gt; &quot;&lt;ans&gt;Yes&lt;/ans&gt;&quot; Here, users can define the following parse config: <code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningParseResponseConfig.yml\" sourcestartlinenumber=\"5\">{ &quot;parseType&quot;: &quot;REGEX_EXTRACT&quot;, &quot;regexExtractExpression&quot;: &quot;.*(.*?)&quot; }</code> The resulting parsed\nresponse would be <code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningParseResponseConfig.yml\" sourcestartlinenumber=\"7\">&quot;Yes&quot;</code> and will be passed to the reward functions for evaluating rewards.\nThis data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4994,7 +5106,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorer",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorer.yml\" sourcestartlinenumber=\"1\">Scores parsed responses for string matching use cases.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorer.yml\" sourcestartlinenumber=\"1\">ReinforcementTuningStringMatchRewardScorer is used to score parsed responses for string\nmatching use cases. For example, for math problems, users can use string match scorer to check\nif the correct exact answer is generated. Note: Reward returned by the string match reward\nfunction is clipped to be within <code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorer.yml\" sourcestartlinenumber=\"4\">[-1, 1]</code> if wrongAnswerReward or correctAnswerReward are\nbeyond the range, i.e., <code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorer.yml\" sourcestartlinenumber=\"5\">reward = max(min(reward, 1.0), -1.0)</code>. This data type is not\nsupported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -5008,7 +5120,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorerJsonMatchExpression",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorerJsonMatchExpression.yml\" sourcestartlinenumber=\"1\">Converts parsed responses to JSON format, finds the first-level matching key, then performs\nStringMatchExpression on the value.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorerJsonMatchExpression.yml\" sourcestartlinenumber=\"1\">JsonMatchExpression supports converting the parsed responses to JSON format, finding the value\nin the JSON response that matches the key_name in the first level, and performing\nStringMatchExpression operation on the matched JSON value. This data type is not supported in\nGemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -5022,7 +5134,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorerStringMatchExpression",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorerStringMatchExpression.yml\" sourcestartlinenumber=\"1\">Evaluates parsed response using match type against expression.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorerStringMatchExpression.yml\" sourcestartlinenumber=\"1\">Evaluates parsed response using match type against the expression. Returns <code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorerStringMatchExpression.yml\" sourcestartlinenumber=\"1\">true</code> if\n<code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorerStringMatchExpression.yml\" sourcestartlinenumber=\"2\">MatchOperation(target, expression)</code> evaluates to <code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorerStringMatchExpression.yml\" sourcestartlinenumber=\"2\">true</code>, and <code sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningStringMatchRewardScorerStringMatchExpression.yml\" sourcestartlinenumber=\"2\">false</code> otherwise. This data\ntype is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -5051,6 +5163,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ReinforcementTuningThinkingLevelConverter",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ReinforcementTuningUserDatasetExamples.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ReinforcementTuningUserDatasetExamples.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ReinforcementTuningUserDatasetExamples",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningUserDatasetExamples.yml\" sourcestartlinenumber=\"1\">Sample reinforcement tuning user data in the training dataset. The contents are truncated for\nbetter UI showing. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -5152,6 +5278,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ResponseFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ResponseFormat.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ResponseFormat",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ResponseFormat.yml\" sourcestartlinenumber=\"1\">Configuration for the model to configure output formatting and delivery. This data type is not\nsupported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.ResponseParseType.yml",
       "output": {
         ".html": {
@@ -5162,7 +5302,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ResponseParseType",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ResponseParseType.yml\" sourcestartlinenumber=\"1\">Defines how to parse sample response.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ResponseParseType.yml\" sourcestartlinenumber=\"1\">Defines the type for parsing sample response. This enum is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -5810,6 +5950,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.TextResponseFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.TextResponseFormat.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.TextResponseFormat",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.TextResponseFormat.yml\" sourcestartlinenumber=\"1\">Configuration for text-specific output formatting.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.ThinkingConfig.yml",
       "output": {
         ".html": {
@@ -5919,6 +6073,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ToolConfig",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ToolConfig.yml\" sourcestartlinenumber=\"1\">Tool config. This config is shared for all tools provided in the request.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.ToolExaAiSearch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.ToolExaAiSearch.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.ToolExaAiSearch",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ToolExaAiSearch.yml\" sourcestartlinenumber=\"1\">ExaAiSearch tool type. A tool that uses the Exa.ai search engine for grounding. This data type\nis not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -6913,6 +7081,20 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.VideoOrientationConverter",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.VideoResponseFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.VideoResponseFormat.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.VideoResponseFormat",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VideoResponseFormat.yml\" sourcestartlinenumber=\"1\">Configuration for video-specific output formatting. This data type is not supported in Gemini\nAPI.</p>\n"
     },
     {
       "type": "ManagedReference",

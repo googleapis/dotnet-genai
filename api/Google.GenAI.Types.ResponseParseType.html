@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Struct ResponseParseType | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Defines how to parse sample response.">
+      <meta name="description" content="Defines the type for parsing sample response. This enum is not supported in Gemini API.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -93,7 +93,7 @@ Struct ResponseParseType  <a class="header-action link-secondary" title="View so
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Defines how to parse sample response.</p>
+  <div class="markdown summary"><p>Defines the type for parsing sample response. This enum is not supported in Gemini API.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -144,7 +144,7 @@ public readonly record struct ResponseParseType : IEquatable&lt;ResponseParseTyp
 
   <h3 id="Google_GenAI_Types_ResponseParseType_AllValues" data-uid="Google.GenAI.Types.ResponseParseType.AllValues">
   AllValues
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ResponseParseType.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ResponseParseType.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -178,7 +178,7 @@ public readonly record struct ResponseParseType : IEquatable&lt;ResponseParseTyp
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ResponseParseType.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Use the sample response as is.</p>
+  <div class="markdown level1 summary"><p>Returns the sample response as is.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -207,10 +207,13 @@ public readonly record struct ResponseParseType : IEquatable&lt;ResponseParseTyp
 
   <h3 id="Google_GenAI_Types_ResponseParseType_RegexExtract" data-uid="Google.GenAI.Types.ResponseParseType.RegexExtract">
   RegexExtract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ResponseParseType.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ResponseParseType.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Use regex to extract the important part of sample response.</p>
+  <div class="markdown level1 summary"><p>Uses regex to extract the important part of sample response. Similar to GoogleSQL
+(<a href="https://cloud.google.com/bigquery/docs/reference/standard-sql/string_functions#regexp_extract">https://cloud.google.com/bigquery/docs/reference/standard-sql/string_functions#regexp_extract</a>)
+<code>REGEX_EXTRACT(response, regex_extract_expression)</code>, but different in that if there are
+multiple matches, the last match will be returned.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -242,7 +245,7 @@ public readonly record struct ResponseParseType : IEquatable&lt;ResponseParseTyp
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ResponseParseType.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Default value. This value is unused.</p>
+  <div class="markdown level1 summary"><p>Default value. Fallback to IDENTITY</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -306,7 +309,7 @@ public readonly record struct ResponseParseType : IEquatable&lt;ResponseParseTyp
 
   <h3 id="Google_GenAI_Types_ResponseParseType_Equals_Google_GenAI_Types_ResponseParseType_" data-uid="Google.GenAI.Types.ResponseParseType.Equals(Google.GenAI.Types.ResponseParseType)">
   Equals(ResponseParseType)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ResponseParseType.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ResponseParseType.cs/#L78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -342,7 +345,7 @@ public readonly record struct ResponseParseType : IEquatable&lt;ResponseParseTyp
 
   <h3 id="Google_GenAI_Types_ResponseParseType_FromString_System_String_" data-uid="Google.GenAI.Types.ResponseParseType.FromString(System.String)">
   FromString(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ResponseParseType.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ResponseParseType.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -378,7 +381,7 @@ public readonly record struct ResponseParseType : IEquatable&lt;ResponseParseTyp
 
   <h3 id="Google_GenAI_Types_ResponseParseType_GetHashCode" data-uid="Google.GenAI.Types.ResponseParseType.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ResponseParseType.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ResponseParseType.cs/#L80"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -409,7 +412,7 @@ public readonly record struct ResponseParseType : IEquatable&lt;ResponseParseTyp
 
   <h3 id="Google_GenAI_Types_ResponseParseType_ToString" data-uid="Google.GenAI.Types.ResponseParseType.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ResponseParseType.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ResponseParseType.cs/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -444,7 +447,7 @@ public readonly record struct ResponseParseType : IEquatable&lt;ResponseParseTyp
 
   <h3 id="Google_GenAI_Types_ResponseParseType_op_Implicit_System_String__Google_GenAI_Types_ResponseParseType" data-uid="Google.GenAI.Types.ResponseParseType.op_Implicit(System.String)~Google.GenAI.Types.ResponseParseType">
   implicit operator ResponseParseType(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ResponseParseType.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ResponseParseType.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

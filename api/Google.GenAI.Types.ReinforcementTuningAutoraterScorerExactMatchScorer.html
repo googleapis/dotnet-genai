@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ReinforcementTuningAutoraterScorerExactMatchScorer | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Scores autorater responses by using exact string match reward scorer.">
+      <meta name="description" content="Scores autorater responses by using exact string match reward scorer. This data type is not supported in Gemini API.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Types_ReinforcementTuningAutoraterScorerExactMatchScorer" data-uid="Google.GenAI.Types.ReinforcementTuningAutoraterScorerExactMatchScorer" class="text-break">
-Class ReinforcementTuningAutoraterScorerExactMatchScorer  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningAutoraterScorerExactMatchScorer.cs/#L29"><i class="bi bi-code-slash"></i></a>
+Class ReinforcementTuningAutoraterScorerExactMatchScorer  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningAutoraterScorerExactMatchScorer.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,7 +93,8 @@ Class ReinforcementTuningAutoraterScorerExactMatchScorer  <a class="header-actio
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Scores autorater responses by using exact string match reward scorer.</p>
+  <div class="markdown summary"><p>Scores autorater responses by using exact string match reward scorer. This data type is not
+supported in Gemini API.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -159,10 +160,10 @@ Class ReinforcementTuningAutoraterScorerExactMatchScorer  <a class="header-actio
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningAutoraterScorerExactMatchScorer_CorrectAnswerReward" data-uid="Google.GenAI.Types.ReinforcementTuningAutoraterScorerExactMatchScorer.CorrectAnswerReward">
   CorrectAnswerReward
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningAutoraterScorerExactMatchScorer.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningAutoraterScorerExactMatchScorer.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Assigns this reward score if parsed response string equals the expression.</p>
+  <div class="markdown level1 summary"><p>Assigns this reward score if the parsed response string equals the expression.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -193,11 +194,18 @@ public double? CorrectAnswerReward { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningAutoraterScorerExactMatchScorer_Expression" data-uid="Google.GenAI.Types.ReinforcementTuningAutoraterScorerExactMatchScorer.Expression">
   Expression
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningAutoraterScorerExactMatchScorer.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningAutoraterScorerExactMatchScorer.cs/#L61"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The string expression to match against. Supports substitution in the format of
-<code>references.reference</code> (wrapped in double curly braces) before matching. No regex support.</p>
+  <div class="markdown level1 summary"><p>The string expression to match against for scoring. This field supports placeholders in the
+format of {{references.key}} that will be replaced before matching. Regex is not supported
+for this expression. For example, users can define an ExactMatchScorer as follows: {
+&quot;correctAnswerReward&quot;: 1.0, &quot;wrongAnswerReward&quot;: -1.0, &quot;expression&quot;:
+&quot;{{references.concise_answer}}&quot; } When evaluating the reward for each parsed autorater
+response, if the prompt references in the training/validation dataset has the following
+fields: <code>{ &quot;example&quot;: ..., &quot;references&quot;: { &quot;concise_ansser&quot;: &quot;Yes&quot;, &quot;verbose_answer&quot;: &quot;The answer is Yes&quot; } }</code> The above ExactMatchScorer will be replaced as follows for
+scoring: <code>{ &quot;correctAnswerReward&quot;: 1.0, &quot;wrongAnswerReward&quot;: -1.0, &quot;expression&quot;: &quot;Yes&quot; }</code> If the <em>parsed</em> autorater response is equal to the string <code>&quot;Yes&quot;</code>, then the reward is
+<code>1.0</code>, otherwise the reward is <code>-1.0</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -228,10 +236,10 @@ public string? Expression { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningAutoraterScorerExactMatchScorer_WrongAnswerReward" data-uid="Google.GenAI.Types.ReinforcementTuningAutoraterScorerExactMatchScorer.WrongAnswerReward">
   WrongAnswerReward
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningAutoraterScorerExactMatchScorer.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningAutoraterScorerExactMatchScorer.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Assigns this reward score if parsed reward value does not equal the expression.</p>
+  <div class="markdown level1 summary"><p>Assigns this reward score if the parsed reward value does not equal the expression.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -266,7 +274,7 @@ public double? WrongAnswerReward { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningAutoraterScorerExactMatchScorer_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.ReinforcementTuningAutoraterScorerExactMatchScorer.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningAutoraterScorerExactMatchScorer.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningAutoraterScorerExactMatchScorer.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a ReinforcementTuningAutoraterScorerExactMatchScorer object.</p>
@@ -309,7 +317,7 @@ if deserialization fails.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningAutoraterScorerExactMatchScorer.cs/#L29" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningAutoraterScorerExactMatchScorer.cs/#L30" class="edit-link">Edit this page</a>
         </div>
 
 

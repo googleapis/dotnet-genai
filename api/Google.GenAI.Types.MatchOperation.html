@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Struct MatchOperation | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Match operation to use for evaluation.">
+      <meta name="description" content="Match operation to use for evaluating rewards. This enum is not supported in Gemini API.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -93,7 +93,7 @@ Struct MatchOperation  <a class="header-action link-secondary" title="View sourc
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Match operation to use for evaluation.</p>
+  <div class="markdown summary"><p>Match operation to use for evaluating rewards. This enum is not supported in Gemini API.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -144,7 +144,7 @@ public readonly record struct MatchOperation : IEquatable&lt;MatchOperation&gt;<
 
   <h3 id="Google_GenAI_Types_MatchOperation_AllValues" data-uid="Google.GenAI.Types.MatchOperation.AllValues">
   AllValues
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MatchOperation.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MatchOperation.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -175,10 +175,10 @@ public readonly record struct MatchOperation : IEquatable&lt;MatchOperation&gt;<
 
   <h3 id="Google_GenAI_Types_MatchOperation_ExactMatch" data-uid="Google.GenAI.Types.MatchOperation.ExactMatch">
   ExactMatch
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MatchOperation.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MatchOperation.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><code>expression</code> is an exact match of target.</p>
+  <div class="markdown level1 summary"><p>The match operation returns <code>true</code> expression is an exact match of the target.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -210,7 +210,7 @@ public readonly record struct MatchOperation : IEquatable&lt;MatchOperation&gt;<
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MatchOperation.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Default value. This value is unused.</p>
+  <div class="markdown level1 summary"><p>Default value. A user error will be returned if not set.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -239,10 +239,10 @@ public readonly record struct MatchOperation : IEquatable&lt;MatchOperation&gt;<
 
   <h3 id="Google_GenAI_Types_MatchOperation_PartialMatch" data-uid="Google.GenAI.Types.MatchOperation.PartialMatch">
   PartialMatch
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MatchOperation.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MatchOperation.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><code>expression</code> is a substring of target.</p>
+  <div class="markdown level1 summary"><p>The match operation returns <code>true</code> if expression is a substring of the target.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -271,10 +271,12 @@ public readonly record struct MatchOperation : IEquatable&lt;MatchOperation&gt;<
 
   <h3 id="Google_GenAI_Types_MatchOperation_RegexContains" data-uid="Google.GenAI.Types.MatchOperation.RegexContains">
   RegexContains
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MatchOperation.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MatchOperation.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Equivalent to GoogleSQL <code>REGEX_CONTAINS(target, expression)</code>.</p>
+  <div class="markdown level1 summary"><p>Equivalent to GoogleSQL
+(<a href="https://cloud.google.com/bigquery/docs/reference/standard-sql/string_functions#regexp_contains">https://cloud.google.com/bigquery/docs/reference/standard-sql/string_functions#regexp_contains</a>)
+<code>REGEX_CONTAINS(target, expression)</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -338,7 +340,7 @@ public readonly record struct MatchOperation : IEquatable&lt;MatchOperation&gt;<
 
   <h3 id="Google_GenAI_Types_MatchOperation_Equals_Google_GenAI_Types_MatchOperation_" data-uid="Google.GenAI.Types.MatchOperation.Equals(Google.GenAI.Types.MatchOperation)">
   Equals(MatchOperation)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MatchOperation.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MatchOperation.cs/#L82"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -374,7 +376,7 @@ public readonly record struct MatchOperation : IEquatable&lt;MatchOperation&gt;<
 
   <h3 id="Google_GenAI_Types_MatchOperation_FromString_System_String_" data-uid="Google.GenAI.Types.MatchOperation.FromString(System.String)">
   FromString(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MatchOperation.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MatchOperation.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -410,7 +412,7 @@ public readonly record struct MatchOperation : IEquatable&lt;MatchOperation&gt;<
 
   <h3 id="Google_GenAI_Types_MatchOperation_GetHashCode" data-uid="Google.GenAI.Types.MatchOperation.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MatchOperation.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MatchOperation.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -441,7 +443,7 @@ public readonly record struct MatchOperation : IEquatable&lt;MatchOperation&gt;<
 
   <h3 id="Google_GenAI_Types_MatchOperation_ToString" data-uid="Google.GenAI.Types.MatchOperation.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MatchOperation.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MatchOperation.cs/#L78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -476,7 +478,7 @@ public readonly record struct MatchOperation : IEquatable&lt;MatchOperation&gt;<
 
   <h3 id="Google_GenAI_Types_MatchOperation_op_Implicit_System_String__Google_GenAI_Types_MatchOperation" data-uid="Google.GenAI.Types.MatchOperation.op_Implicit(System.String)~Google.GenAI.Types.MatchOperation">
   implicit operator MatchOperation(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MatchOperation.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MatchOperation.cs/#L80"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

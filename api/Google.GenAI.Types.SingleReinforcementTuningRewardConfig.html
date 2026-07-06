@@ -193,10 +193,11 @@ public ReinforcementTuningAutoraterScorer? AutoraterScorer { get; set; }</code><
 
   <h3 id="Google_GenAI_Types_SingleReinforcementTuningRewardConfig_CloudRunRewardScorer" data-uid="Google.GenAI.Types.SingleReinforcementTuningRewardConfig.CloudRunRewardScorer">
   CloudRunRewardScorer
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SingleReinforcementTuningRewardConfig.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SingleReinforcementTuningRewardConfig.cs/#L87"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Scores parsed responses by calling a Cloud Run service.</p>
+  <div class="markdown level1 summary"><p>ReinforcementTuningCloudRunRewardScorer is used to score parsed responses by calling a Cloud
+Run service.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -227,10 +228,11 @@ public ReinforcementTuningCloudRunRewardScorer? CloudRunRewardScorer { get; set;
 
   <h3 id="Google_GenAI_Types_SingleReinforcementTuningRewardConfig_CodeExecutionRewardScorer" data-uid="Google.GenAI.Types.SingleReinforcementTuningRewardConfig.CodeExecutionRewardScorer">
   CodeExecutionRewardScorer
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SingleReinforcementTuningRewardConfig.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SingleReinforcementTuningRewardConfig.cs/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Scores parsed responses for code execution use cases.</p>
+  <div class="markdown level1 summary"><p>ReinforcementTuningCodeExecutionRewardScorer is used to score parsed responses for code
+execution use cases.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -261,10 +263,14 @@ public ReinforcementTuningCodeExecutionRewardScorer? CodeExecutionRewardScorer {
 
   <h3 id="Google_GenAI_Types_SingleReinforcementTuningRewardConfig_ParseResponseConfig" data-uid="Google.GenAI.Types.SingleReinforcementTuningRewardConfig.ParseResponseConfig">
   ParseResponseConfig
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SingleReinforcementTuningRewardConfig.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SingleReinforcementTuningRewardConfig.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Defines how to parse sample response.</p>
+  <div class="markdown level1 summary"><p>Defines how to parse sample response. For example, given a sample response for evaluating
+the reward, users might want to extract the text only between <code>and</code> in the sample
+response, and keeps only the last one in case there are multiple such tags. To achieve such
+a purpose, they can define a regex <code>&quot;.*(.*?)&quot;</code> using the
+ReinforcementTuningParseResponseConfig.ResponseParseType.REGEX_EXTRACT parse type.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -298,7 +304,7 @@ public ReinforcementTuningParseResponseConfig? ParseResponseConfig { get; set; }
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SingleReinforcementTuningRewardConfig.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>A unique reward name used to identify each single reinforcement tuning reward.</p>
+  <div class="markdown level1 summary"><p>A unique reward name for identifying each single reinforcement tuning reward.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -329,11 +335,11 @@ public string? RewardName { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_SingleReinforcementTuningRewardConfig_StringMatchRewardScorer" data-uid="Google.GenAI.Types.SingleReinforcementTuningRewardConfig.StringMatchRewardScorer">
   StringMatchRewardScorer
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SingleReinforcementTuningRewardConfig.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SingleReinforcementTuningRewardConfig.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Scores parsed responses for simple string matching use cases against reference answer
-without writing python code.</p>
+  <div class="markdown level1 summary"><p>ReinforcementTuningStringMatchRewardScorer is used to score parsed responses for simple
+string matching use cases against reference answers.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -368,7 +374,7 @@ public ReinforcementTuningStringMatchRewardScorer? StringMatchRewardScorer { get
 
   <h3 id="Google_GenAI_Types_SingleReinforcementTuningRewardConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.SingleReinforcementTuningRewardConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SingleReinforcementTuningRewardConfig.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/SingleReinforcementTuningRewardConfig.cs/#L101"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a SingleReinforcementTuningRewardConfig object.</p>

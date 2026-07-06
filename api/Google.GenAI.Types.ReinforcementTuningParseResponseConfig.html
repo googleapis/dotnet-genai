@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ReinforcementTuningParseResponseConfig | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Defines how to parse sample response for reinforcement tuning.">
+      <meta name="description" content="Defines how to parse sample response config for reinforcement tuning. The parsed response (i.e., substring) will be passed to the reward functions. For example, the input prompt might be: &amp;gt; &amp;quot;Perform step-by-step thoughts first to problem A, finally output answer in the &amp;lt;ans&amp;gt; &amp;lt;/ans&amp;gt; block.&amp;quot; The sample response from the model under tuning might look like: &amp;gt; &amp;quot;&amp;lt;ans&amp;gt;Yes&amp;lt;/ans&amp;gt;&amp;quot; Here, users can define the following parse config: { &amp;quot;parseType&amp;quot;: &amp;quot;REGEX_EXTRACT&amp;quot;, &amp;quot;regexExtractExpression&amp;quot;: &amp;quot;.*(.*?)&amp;quot; } The resulting parsed response would be &amp;quot;Yes&amp;quot; and will be passed to the reward functions for evaluating rewards. This data type is not supported in Gemini API.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Types_ReinforcementTuningParseResponseConfig" data-uid="Google.GenAI.Types.ReinforcementTuningParseResponseConfig" class="text-break">
-Class ReinforcementTuningParseResponseConfig  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningParseResponseConfig.cs/#L29"><i class="bi bi-code-slash"></i></a>
+Class ReinforcementTuningParseResponseConfig  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningParseResponseConfig.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,7 +93,13 @@ Class ReinforcementTuningParseResponseConfig  <a class="header-action link-secon
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Defines how to parse sample response for reinforcement tuning.</p>
+  <div class="markdown summary"><p>Defines how to parse sample response config for reinforcement tuning. The parsed response
+(i.e., substring) will be passed to the reward functions. For example, the input prompt might
+be: &gt; &quot;Perform step-by-step thoughts first to problem A, finally output answer in the
+&lt;ans&gt; &lt;/ans&gt; block.&quot; The sample response from the model under tuning might look
+like: &gt; &quot;&lt;ans&gt;Yes&lt;/ans&gt;&quot; Here, users can define the following parse config: <code>{ &quot;parseType&quot;: &quot;REGEX_EXTRACT&quot;, &quot;regexExtractExpression&quot;: &quot;.*(.*?)&quot; }</code> The resulting parsed
+response would be <code>&quot;Yes&quot;</code> and will be passed to the reward functions for evaluating rewards.
+This data type is not supported in Gemini API.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -159,10 +165,10 @@ Class ReinforcementTuningParseResponseConfig  <a class="header-action link-secon
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningParseResponseConfig_ParseType" data-uid="Google.GenAI.Types.ReinforcementTuningParseResponseConfig.ParseType">
   ParseType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningParseResponseConfig.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningParseResponseConfig.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Defines how to parse sample response.</p>
+  <div class="markdown level1 summary"><p>Defines the type for parsing sample response.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -193,11 +199,11 @@ public ResponseParseType? ParseType { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningParseResponseConfig_RegexExtractExpression" data-uid="Google.GenAI.Types.ReinforcementTuningParseResponseConfig.RegexExtractExpression">
   RegexExtractExpression
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningParseResponseConfig.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningParseResponseConfig.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Defines the regex to extract the important part of sample response. This field is only used
-when <code>parse_type</code> is <code>REGEX_EXTRACT</code>.</p>
+  <div class="markdown level1 summary"><p>Defines the regex for extracting the important part of sample response. This field is only
+used when parse_type is ResponseParseType.REGEX_EXTRACT.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -232,7 +238,7 @@ public string? RegexExtractExpression { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningParseResponseConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.ReinforcementTuningParseResponseConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningParseResponseConfig.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningParseResponseConfig.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a ReinforcementTuningParseResponseConfig object.</p>
@@ -275,7 +281,7 @@ deserialization fails.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningParseResponseConfig.cs/#L29" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningParseResponseConfig.cs/#L36" class="edit-link">Edit this page</a>
         </div>
 
 
