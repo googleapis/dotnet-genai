@@ -46,7 +46,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Corresponds to system_instruction in user-facing GenerateContentRequest.
+    /// Corresponds to `system_instruction` in user-facing GenerateContentRequest.
     /// </summary>
     [JsonPropertyName("systemInstruction")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

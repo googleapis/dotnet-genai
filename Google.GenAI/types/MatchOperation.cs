@@ -22,7 +22,7 @@ using System.Text.Json;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Match operation to use for evaluating rewards. This enum is not supported in Gemini API.
+  /// Match operation to use for evaluation.
   /// </summary>
 
   [JsonConverter(typeof(MatchOperationConverter))]
@@ -34,26 +34,24 @@ namespace Google.GenAI.Types {
     }
 
     /// <summary>
-    /// Default value. A user error will be returned if not set.
+    /// Default value. This value is unused.
     /// </summary>
     public static MatchOperation MatchOperationUnspecified {
       get;
     } = new("MATCH_OPERATION_UNSPECIFIED");
 
     /// <summary>
-    /// Equivalent to GoogleSQL
-    /// (https://cloud.google.com/bigquery/docs/reference/standard-sql/string_functions#regexp_contains)
-    /// `REGEX_CONTAINS(target, expression)`.
+    /// Equivalent to GoogleSQL `REGEX_CONTAINS(target, expression)`.
     /// </summary>
     public static MatchOperation RegexContains { get; } = new("REGEX_CONTAINS");
 
     /// <summary>
-    /// The match operation returns `true` if expression is a substring of the target.
+    /// `expression` is a substring of target.
     /// </summary>
     public static MatchOperation PartialMatch { get; } = new("PARTIAL_MATCH");
 
     /// <summary>
-    /// The match operation returns `true` expression is an exact match of the target.
+    /// `expression` is an exact match of target.
     /// </summary>
     public static MatchOperation ExactMatch { get; } = new("EXACT_MATCH");
 

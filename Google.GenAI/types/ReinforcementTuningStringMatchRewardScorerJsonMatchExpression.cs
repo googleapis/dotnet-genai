@@ -23,24 +23,20 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// JsonMatchExpression supports converting the parsed responses to JSON format, finding the value
-  /// in the JSON response that matches the key_name in the first level, and performing
-  /// StringMatchExpression operation on the matched JSON value. This data type is not supported in
-  /// Gemini API.
+  /// Converts parsed responses to JSON format, finds the first-level matching key, then performs
+  /// StringMatchExpression on the value.
   /// </summary>
 
   public record ReinforcementTuningStringMatchRewardScorerJsonMatchExpression {
     /// <summary>
-    /// The key name to find the value in the parsed response that's in JSON format. Only
-    /// first-level key matching is supported.
+    /// Json key name to find the value to match against.
     /// </summary>
     [JsonPropertyName("keyName")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string ? KeyName { get; set; }
 
     /// <summary>
-    /// String match expression to match against the extracted value from the JSON representation of
-    /// the parsed response.
+    /// String match expression to match against the value of json key.
     /// </summary>
     [JsonPropertyName("valueStringMatchExpression")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

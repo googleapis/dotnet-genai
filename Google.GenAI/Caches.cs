@@ -994,11 +994,6 @@ namespace Google.GenAI {
                               Common.GetValueByPath(fromObject, new string[] { "mcpServers" }));
       }
 
-      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "exaAiSearch" }))) {
-        throw new NotSupportedException(
-            "exaAiSearch parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
-      }
-
       return toObject;
     }
 
@@ -1075,11 +1070,6 @@ namespace Google.GenAI {
           result.Add(McpServerToVertex(Common.ParseToJsonNode(record), toObject));
         }
         Common.SetValueByPath(toObject, new string[] { "mcpServers" }, result);
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "exaAiSearch" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "exaAiSearch" },
-                              Common.GetValueByPath(fromObject, new string[] { "exaAiSearch" }));
       }
 
       return toObject;

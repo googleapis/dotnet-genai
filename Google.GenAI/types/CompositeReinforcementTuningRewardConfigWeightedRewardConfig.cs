@@ -28,17 +28,14 @@ namespace Google.GenAI.Types {
 
   public record CompositeReinforcementTuningRewardConfigWeightedRewardConfig {
     /// <summary>
-    /// Single reward configuration.
+    ///
     /// </summary>
     [JsonPropertyName("rewardConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public SingleReinforcementTuningRewardConfig ? RewardConfig { get; set; }
 
     /// <summary>
-    /// How much this single reward contributes to the total overall reward. Total reward is a
-    /// linear combination of single rewards with their corresponding weights, i.e., ```
-    /// total_reward = ( weight_a * reward_a + weight_b * reward_b + ... ) / (weight_a + weight_b +
-    /// ...) ```
+    /// How much this single reward contributes to the total overall reward.
     /// </summary>
     [JsonPropertyName("weight")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

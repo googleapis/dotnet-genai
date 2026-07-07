@@ -28,7 +28,7 @@ namespace Google.GenAI.Types {
 
   public record CompositeReinforcementTuningRewardConfig {
     /// <summary>
-    /// List of reward function configurations with weights.
+    ///
     /// </summary>
     [JsonPropertyName("weightedRewardConfigs")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

@@ -23,20 +23,19 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Scores autorater responses by using exact string match reward scorer. This data type is not
-  /// supported in Gemini API.
+  /// Scores autorater responses by using exact string match reward scorer.
   /// </summary>
 
   public record ReinforcementTuningAutoraterScorerExactMatchScorer {
     /// <summary>
-    /// Assigns this reward score if the parsed response string equals the expression.
+    /// Assigns this reward score if parsed response string equals the expression.
     /// </summary>
     [JsonPropertyName("correctAnswerReward")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public double ? CorrectAnswerReward { get; set; }
 
     /// <summary>
-    /// Assigns this reward score if the parsed reward value does not equal the expression.
+    /// Assigns this reward score if parsed reward value does not equal the expression.
     /// </summary>
     [JsonPropertyName("wrongAnswerReward")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -46,17 +45,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// The string expression to match against for scoring. This field supports placeholders in the
-    /// format of {{references.key}} that will be replaced before matching. Regex is not supported
-    /// for this expression. For example, users can define an ExactMatchScorer as follows: {
-    /// "correctAnswerReward": 1.0, "wrongAnswerReward": -1.0, "expression":
-    /// "{{references.concise_answer}}" } When evaluating the reward for each parsed autorater
-    /// response, if the prompt references in the training/validation dataset has the following
-    /// fields: ``` { "example": ..., "references": { "concise_ansser": "Yes", "verbose_answer":
-    /// "The answer is Yes" } } ``` The above ExactMatchScorer will be replaced as follows for
-    /// scoring: ``` { "correctAnswerReward": 1.0, "wrongAnswerReward": -1.0, "expression": "Yes" }
-    /// ``` If the *parsed* autorater response is equal to the string `"Yes"`, then the reward is
-    /// `1.0`, otherwise the reward is `-1.0`.
+    /// The string expression to match against. Supports substitution in the format of
+    /// `references.reference` (wrapped in double curly braces) before matching. No regex support.
     /// </summary>
     [JsonPropertyName("expression")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

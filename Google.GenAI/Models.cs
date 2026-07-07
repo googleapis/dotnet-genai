@@ -2809,16 +2809,6 @@ namespace Google.GenAI {
             "enableEnhancedCivicAnswers parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       }
 
-      if (Common.GetValueByPath(fromObject, new string[] { "responseFormat" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "responseFormat" },
-                              Common.GetValueByPath(fromObject, new string[] { "responseFormat" }));
-      }
-
-      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "translationConfig" }))) {
-        throw new NotSupportedException(
-            "translationConfig parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
-      }
-
       return toObject;
     }
 
@@ -4102,11 +4092,6 @@ namespace Google.GenAI {
                               Common.GetValueByPath(fromObject, new string[] { "mcpServers" }));
       }
 
-      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "exaAiSearch" }))) {
-        throw new NotSupportedException(
-            "exaAiSearch parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
-      }
-
       return toObject;
     }
 
@@ -4184,11 +4169,6 @@ namespace Google.GenAI {
           result.Add(McpServerToVertex(Common.ParseToJsonNode(record), toObject, rootObject));
         }
         Common.SetValueByPath(toObject, new string[] { "mcpServers" }, result);
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "exaAiSearch" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "exaAiSearch" },
-                              Common.GetValueByPath(fromObject, new string[] { "exaAiSearch" }));
       }
 
       return toObject;

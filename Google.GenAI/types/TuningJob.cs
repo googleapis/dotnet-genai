@@ -179,7 +179,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Tuning Spec for Reinforcement Tuning.
+    ///
     /// </summary>
     [JsonPropertyName("reinforcementTuningSpec")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
