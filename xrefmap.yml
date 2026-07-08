@@ -415,6 +415,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.AsyncSession.SendToolResponseAsync
   nameWithType: AsyncSession.SendToolResponseAsync
+- uid: Google.GenAI.AsyncSession.SetupComplete
+  name: SetupComplete
+  href: api/Google.GenAI.AsyncSession.html#Google_GenAI_AsyncSession_SetupComplete
+  commentId: P:Google.GenAI.AsyncSession.SetupComplete
+  fullName: Google.GenAI.AsyncSession.SetupComplete
+  nameWithType: AsyncSession.SetupComplete
+- uid: Google.GenAI.AsyncSession.SetupComplete*
+  name: SetupComplete
+  href: api/Google.GenAI.AsyncSession.html#Google_GenAI_AsyncSession_SetupComplete_
+  commentId: Overload:Google.GenAI.AsyncSession.SetupComplete
+  isSpec: "True"
+  fullName: Google.GenAI.AsyncSession.SetupComplete
+  nameWithType: AsyncSession.SetupComplete
 - uid: Google.GenAI.Batches
   name: Batches
   href: api/Google.GenAI.Batches.html
@@ -23998,6 +24011,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.LiveServerSetupComplete.SessionId
   nameWithType: LiveServerSetupComplete.SessionId
+- uid: Google.GenAI.Types.LiveServerSetupComplete.VoiceConsentSignature
+  name: VoiceConsentSignature
+  href: api/Google.GenAI.Types.LiveServerSetupComplete.html#Google_GenAI_Types_LiveServerSetupComplete_VoiceConsentSignature
+  commentId: P:Google.GenAI.Types.LiveServerSetupComplete.VoiceConsentSignature
+  fullName: Google.GenAI.Types.LiveServerSetupComplete.VoiceConsentSignature
+  nameWithType: LiveServerSetupComplete.VoiceConsentSignature
+- uid: Google.GenAI.Types.LiveServerSetupComplete.VoiceConsentSignature*
+  name: VoiceConsentSignature
+  href: api/Google.GenAI.Types.LiveServerSetupComplete.html#Google_GenAI_Types_LiveServerSetupComplete_VoiceConsentSignature_
+  commentId: Overload:Google.GenAI.Types.LiveServerSetupComplete.VoiceConsentSignature
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LiveServerSetupComplete.VoiceConsentSignature
+  nameWithType: LiveServerSetupComplete.VoiceConsentSignature
 - uid: Google.GenAI.Types.LiveServerToolCall
   name: LiveServerToolCall
   href: api/Google.GenAI.Types.LiveServerToolCall.html
@@ -30775,6 +30801,19 @@ references:
   commentId: T:Google.GenAI.Types.ReplicatedVoiceConfig
   fullName: Google.GenAI.Types.ReplicatedVoiceConfig
   nameWithType: ReplicatedVoiceConfig
+- uid: Google.GenAI.Types.ReplicatedVoiceConfig.ConsentAudio
+  name: ConsentAudio
+  href: api/Google.GenAI.Types.ReplicatedVoiceConfig.html#Google_GenAI_Types_ReplicatedVoiceConfig_ConsentAudio
+  commentId: P:Google.GenAI.Types.ReplicatedVoiceConfig.ConsentAudio
+  fullName: Google.GenAI.Types.ReplicatedVoiceConfig.ConsentAudio
+  nameWithType: ReplicatedVoiceConfig.ConsentAudio
+- uid: Google.GenAI.Types.ReplicatedVoiceConfig.ConsentAudio*
+  name: ConsentAudio
+  href: api/Google.GenAI.Types.ReplicatedVoiceConfig.html#Google_GenAI_Types_ReplicatedVoiceConfig_ConsentAudio_
+  commentId: Overload:Google.GenAI.Types.ReplicatedVoiceConfig.ConsentAudio
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ReplicatedVoiceConfig.ConsentAudio
+  nameWithType: ReplicatedVoiceConfig.ConsentAudio
 - uid: Google.GenAI.Types.ReplicatedVoiceConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
   name: FromJson(string, JsonSerializerOptions?)
   href: api/Google.GenAI.Types.ReplicatedVoiceConfig.html#Google_GenAI_Types_ReplicatedVoiceConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
@@ -30804,6 +30843,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ReplicatedVoiceConfig.MimeType
   nameWithType: ReplicatedVoiceConfig.MimeType
+- uid: Google.GenAI.Types.ReplicatedVoiceConfig.VoiceConsentSignature
+  name: VoiceConsentSignature
+  href: api/Google.GenAI.Types.ReplicatedVoiceConfig.html#Google_GenAI_Types_ReplicatedVoiceConfig_VoiceConsentSignature
+  commentId: P:Google.GenAI.Types.ReplicatedVoiceConfig.VoiceConsentSignature
+  fullName: Google.GenAI.Types.ReplicatedVoiceConfig.VoiceConsentSignature
+  nameWithType: ReplicatedVoiceConfig.VoiceConsentSignature
+- uid: Google.GenAI.Types.ReplicatedVoiceConfig.VoiceConsentSignature*
+  name: VoiceConsentSignature
+  href: api/Google.GenAI.Types.ReplicatedVoiceConfig.html#Google_GenAI_Types_ReplicatedVoiceConfig_VoiceConsentSignature_
+  commentId: Overload:Google.GenAI.Types.ReplicatedVoiceConfig.VoiceConsentSignature
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ReplicatedVoiceConfig.VoiceConsentSignature
+  nameWithType: ReplicatedVoiceConfig.VoiceConsentSignature
 - uid: Google.GenAI.Types.ReplicatedVoiceConfig.VoiceSampleAudio
   name: VoiceSampleAudio
   href: api/Google.GenAI.Types.ReplicatedVoiceConfig.html#Google_GenAI_Types_ReplicatedVoiceConfig_VoiceSampleAudio
@@ -42567,6 +42619,41 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.VoiceConfig.ReplicatedVoiceConfig
   nameWithType: VoiceConfig.ReplicatedVoiceConfig
+- uid: Google.GenAI.Types.VoiceConsentSignature
+  name: VoiceConsentSignature
+  href: api/Google.GenAI.Types.VoiceConsentSignature.html
+  commentId: T:Google.GenAI.Types.VoiceConsentSignature
+  fullName: Google.GenAI.Types.VoiceConsentSignature
+  nameWithType: VoiceConsentSignature
+- uid: Google.GenAI.Types.VoiceConsentSignature.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.VoiceConsentSignature.html#Google_GenAI_Types_VoiceConsentSignature_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.VoiceConsentSignature.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.VoiceConsentSignature.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.VoiceConsentSignature.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: VoiceConsentSignature.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: VoiceConsentSignature.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.VoiceConsentSignature.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.VoiceConsentSignature.html#Google_GenAI_Types_VoiceConsentSignature_FromJson_
+  commentId: Overload:Google.GenAI.Types.VoiceConsentSignature.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VoiceConsentSignature.FromJson
+  nameWithType: VoiceConsentSignature.FromJson
+- uid: Google.GenAI.Types.VoiceConsentSignature.Signature
+  name: Signature
+  href: api/Google.GenAI.Types.VoiceConsentSignature.html#Google_GenAI_Types_VoiceConsentSignature_Signature
+  commentId: P:Google.GenAI.Types.VoiceConsentSignature.Signature
+  fullName: Google.GenAI.Types.VoiceConsentSignature.Signature
+  nameWithType: VoiceConsentSignature.Signature
+- uid: Google.GenAI.Types.VoiceConsentSignature.Signature*
+  name: Signature
+  href: api/Google.GenAI.Types.VoiceConsentSignature.html#Google_GenAI_Types_VoiceConsentSignature_Signature_
+  commentId: Overload:Google.GenAI.Types.VoiceConsentSignature.Signature
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VoiceConsentSignature.Signature
+  nameWithType: VoiceConsentSignature.Signature
 - uid: Google.GenAI.Types.WebSearch
   name: WebSearch
   href: api/Google.GenAI.Types.WebSearch.html
