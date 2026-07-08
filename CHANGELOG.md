@@ -1,5 +1,15 @@
 # Changelog
 
+## Version 1.13.0, released 2026-07-08
+
+
+### New features
+
+* Add response_format and Translation_config in GenerationConfig ([de24c0d](https://github.com/googleapis/dotnet-genai/commit/de24c0d0447dc6b640721248892e8c318d2148b3))
+* Add Tool.exa_ai_search for Gemini Enterprise API ([de24c0d](https://github.com/googleapis/dotnet-genai/commit/de24c0d0447dc6b640721248892e8c318d2148b3))
+* Support GEMINI_API_KEY in dotnet. If both keys are supplied, use GOOGLE_API_KEY ([92fad5c](https://github.com/googleapis/dotnet-genai/commit/92fad5c9533288b635e8d9f83cfce9639503e646))
+* voice consent signature types across all SDK languages. ([273a79d](https://github.com/googleapis/dotnet-genai/commit/273a79dcd97de3b5a85211ce22ebf46420c5753e))
+
 ## Version 1.12.0, released 2026-06-24
 
 
