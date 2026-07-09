@@ -23,67 +23,46 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Audio transcription in Server Content.
+  /// Information about a single recognized word.
   /// </summary>
 
-  public record Transcription {
+  public record WordInfo {
     /// <summary>
-    /// Optional. Transcription text.
+    /// Transcript of the word.
     /// </summary>
-    [JsonPropertyName("text")]
+    [JsonPropertyName("word")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? Text { get; set; }
+    public string ? Word { get; set; }
 
     /// <summary>
-    /// Optional. The bool indicates the end of the transcription.
+    /// Start offset in time of the word relative to the start of the audio.
     /// </summary>
-    [JsonPropertyName("finished")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public bool
-        ? Finished {
-            get; set;
-          }
-
-    /// <summary>
-    /// The BCP-47 language code of the transcription.
-    /// </summary>
-    [JsonPropertyName("languageCode")]
+    [JsonPropertyName("startOffset")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? LanguageCode {
+        ? StartOffset {
             get; set;
           }
 
     /// <summary>
-    /// A label identifying the speaker of this audio segment (e.g. "spk_1", "spk_2").
+    /// End offset in time of the word relative to the start of the audio.
     /// </summary>
-    [JsonPropertyName("speakerLabel")]
+    [JsonPropertyName("endOffset")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? SpeakerLabel {
+        ? EndOffset {
             get; set;
           }
 
     /// <summary>
-    /// Detailed word-level transcriptions and timing details.
-    /// </summary>
-    [JsonPropertyName("words")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public List<WordInfo>
-        ? Words {
-            get; set;
-          }
-
-    /// <summary>
-    /// Deserializes a JSON string to a Transcription object.
+    /// Deserializes a JSON string to a WordInfo object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized Transcription object, or null if deserialization fails.</returns>
-    public static Transcription
-        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
+    /// <returns>The deserialized WordInfo object, or null if deserialization fails.</returns>
+    public static WordInfo ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize<Transcription>(jsonString, options);
+        return JsonSerializer.Deserialize<WordInfo>(jsonString, options);
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
