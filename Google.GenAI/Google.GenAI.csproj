@@ -35,9 +35,6 @@
     <InternalsVisibleTo Include="Google.GenAI.Netstandard2_0.Tests" />
   </ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
-    <Compile Remove="Gaos/**/*.cs" />
-  </ItemGroup>
 
   <ItemGroup>
     <None Include="README.md" Pack="true" PackagePath="/" />
