@@ -985,6 +985,12 @@ namespace Google.GenAI {
                               Common.GetValueByPath(fromObject, new string[] { "responseFormat" }));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "audioTranscriptionConfig" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "audioTranscriptionConfig" },
+            Common.GetValueByPath(fromObject, new string[] { "audioTranscriptionConfig" }));
+      }
+
       return toObject;
     }
 
@@ -1157,6 +1163,12 @@ namespace Google.GenAI {
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "partMetadata" }))) {
         throw new NotSupportedException(
             "partMetadata parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "audioTranscription" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "audioTranscription" },
+            Common.GetValueByPath(fromObject, new string[] { "audioTranscription" }));
       }
 
       return toObject;
