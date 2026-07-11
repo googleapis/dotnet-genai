@@ -6944,6 +6944,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ContentEmbeddingStatistics.TokenCount
   nameWithType: ContentEmbeddingStatistics.TokenCount
+- uid: Google.GenAI.Types.ContentEmbeddingStatistics.TokensDetails
+  name: TokensDetails
+  href: api/Google.GenAI.Types.ContentEmbeddingStatistics.html#Google_GenAI_Types_ContentEmbeddingStatistics_TokensDetails
+  commentId: P:Google.GenAI.Types.ContentEmbeddingStatistics.TokensDetails
+  fullName: Google.GenAI.Types.ContentEmbeddingStatistics.TokensDetails
+  nameWithType: ContentEmbeddingStatistics.TokensDetails
+- uid: Google.GenAI.Types.ContentEmbeddingStatistics.TokensDetails*
+  name: TokensDetails
+  href: api/Google.GenAI.Types.ContentEmbeddingStatistics.html#Google_GenAI_Types_ContentEmbeddingStatistics_TokensDetails_
+  commentId: Overload:Google.GenAI.Types.ContentEmbeddingStatistics.TokensDetails
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ContentEmbeddingStatistics.TokensDetails
+  nameWithType: ContentEmbeddingStatistics.TokensDetails
 - uid: Google.GenAI.Types.ContentEmbeddingStatistics.Truncated
   name: Truncated
   href: api/Google.GenAI.Types.ContentEmbeddingStatistics.html#Google_GenAI_Types_ContentEmbeddingStatistics_Truncated
