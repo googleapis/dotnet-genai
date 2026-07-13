@@ -65,6 +65,16 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    ///
+    /// </summary>
+    [JsonPropertyName("updateMask")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string
+        ? UpdateMask {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a UpdateModelConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

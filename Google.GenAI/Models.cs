@@ -4349,6 +4349,11 @@ namespace Google.GenAI {
             Common.GetValueByPath(fromObject, new string[] { "defaultCheckpointId" }));
       }
 
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "updateMask" }))) {
+        throw new NotSupportedException(
+            "updateMask parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
+      }
+
       return toObject;
     }
 
@@ -4370,6 +4375,11 @@ namespace Google.GenAI {
         Common.SetValueByPath(
             parentObject, new string[] { "defaultCheckpointId" },
             Common.GetValueByPath(fromObject, new string[] { "defaultCheckpointId" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "updateMask" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "_query", "updateMask" },
+                              Common.GetValueByPath(fromObject, new string[] { "updateMask" }));
       }
 
       return toObject;
