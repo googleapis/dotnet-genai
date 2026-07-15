@@ -1,5 +1,14 @@
 # Changelog
 
+## Version 1.14.0, released 2026-07-15
+
+
+### New features
+
+* Add history config. ([c6e26d3](https://github.com/googleapis/dotnet-genai/commit/c6e26d3c205af0201cfe6564b92361b8270cd473))
+* Pass in serializer options to be AOT compliant ([6020fe5](https://github.com/googleapis/dotnet-genai/commit/6020fe5575f1b75bfb3c9d031bc99fb90aa904b0))
+* Populate per-modality prompt token count in embedding responses for gemini-embedding-2 ([ab46864](https://github.com/googleapis/dotnet-genai/commit/ab46864b384c831ea976271362a507b7bed4e5d5))
+
 ## Version 1.13.0, released 2026-07-08
 
 
