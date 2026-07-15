@@ -19480,6 +19480,41 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.HarmSeverityConverter.Write
   nameWithType: HarmSeverityConverter.Write
+- uid: Google.GenAI.Types.HistoryConfig
+  name: HistoryConfig
+  href: api/Google.GenAI.Types.HistoryConfig.html
+  commentId: T:Google.GenAI.Types.HistoryConfig
+  fullName: Google.GenAI.Types.HistoryConfig
+  nameWithType: HistoryConfig
+- uid: Google.GenAI.Types.HistoryConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.HistoryConfig.html#Google_GenAI_Types_HistoryConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.HistoryConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.HistoryConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.HistoryConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: HistoryConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: HistoryConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.HistoryConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.HistoryConfig.html#Google_GenAI_Types_HistoryConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.HistoryConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.HistoryConfig.FromJson
+  nameWithType: HistoryConfig.FromJson
+- uid: Google.GenAI.Types.HistoryConfig.InitialHistoryInClientContent
+  name: InitialHistoryInClientContent
+  href: api/Google.GenAI.Types.HistoryConfig.html#Google_GenAI_Types_HistoryConfig_InitialHistoryInClientContent
+  commentId: P:Google.GenAI.Types.HistoryConfig.InitialHistoryInClientContent
+  fullName: Google.GenAI.Types.HistoryConfig.InitialHistoryInClientContent
+  nameWithType: HistoryConfig.InitialHistoryInClientContent
+- uid: Google.GenAI.Types.HistoryConfig.InitialHistoryInClientContent*
+  name: InitialHistoryInClientContent
+  href: api/Google.GenAI.Types.HistoryConfig.html#Google_GenAI_Types_HistoryConfig_InitialHistoryInClientContent_
+  commentId: Overload:Google.GenAI.Types.HistoryConfig.InitialHistoryInClientContent
+  isSpec: "True"
+  fullName: Google.GenAI.Types.HistoryConfig.InitialHistoryInClientContent
+  nameWithType: HistoryConfig.InitialHistoryInClientContent
 - uid: Google.GenAI.Types.HttpElementLocation
   name: HttpElementLocation
   href: api/Google.GenAI.Types.HttpElementLocation.html
@@ -22798,6 +22833,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.LiveClientSetup.GenerationConfig
   nameWithType: LiveClientSetup.GenerationConfig
+- uid: Google.GenAI.Types.LiveClientSetup.HistoryConfig
+  name: HistoryConfig
+  href: api/Google.GenAI.Types.LiveClientSetup.html#Google_GenAI_Types_LiveClientSetup_HistoryConfig
+  commentId: P:Google.GenAI.Types.LiveClientSetup.HistoryConfig
+  fullName: Google.GenAI.Types.LiveClientSetup.HistoryConfig
+  nameWithType: LiveClientSetup.HistoryConfig
+- uid: Google.GenAI.Types.LiveClientSetup.HistoryConfig*
+  name: HistoryConfig
+  href: api/Google.GenAI.Types.LiveClientSetup.html#Google_GenAI_Types_LiveClientSetup_HistoryConfig_
+  commentId: Overload:Google.GenAI.Types.LiveClientSetup.HistoryConfig
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LiveClientSetup.HistoryConfig
+  nameWithType: LiveClientSetup.HistoryConfig
 - uid: Google.GenAI.Types.LiveClientSetup.InputAudioTranscription
   name: InputAudioTranscription
   href: api/Google.GenAI.Types.LiveClientSetup.html#Google_GenAI_Types_LiveClientSetup_InputAudioTranscription
