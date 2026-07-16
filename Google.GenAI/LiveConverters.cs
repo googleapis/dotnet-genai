@@ -62,6 +62,16 @@ namespace Google.GenAI {
             Common.GetValueByPath(fromObject, new string[] { "adaptationPhrases" }));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "wordTimestamp" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "wordTimestamp" },
+                              Common.GetValueByPath(fromObject, new string[] { "wordTimestamp" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "diarization" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "diarization" },
+                              Common.GetValueByPath(fromObject, new string[] { "diarization" }));
+      }
+
       return toObject;
     }
 
@@ -436,6 +446,12 @@ namespace Google.GenAI {
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "translationConfig" }))) {
         throw new NotSupportedException(
             "translationConfig parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "audioTranscriptionConfig" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "audioTranscriptionConfig" },
+            Common.GetValueByPath(fromObject, new string[] { "audioTranscriptionConfig" }));
       }
 
       return toObject;
@@ -1588,6 +1604,12 @@ namespace Google.GenAI {
                               Common.GetValueByPath(fromObject, new string[] { "partMetadata" }));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "audioTranscription" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "audioTranscription" },
+            Common.GetValueByPath(fromObject, new string[] { "audioTranscription" }));
+      }
+
       return toObject;
     }
 
@@ -1671,6 +1693,12 @@ namespace Google.GenAI {
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "partMetadata" }))) {
         throw new NotSupportedException(
             "partMetadata parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "audioTranscription" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "audioTranscription" },
+            Common.GetValueByPath(fromObject, new string[] { "audioTranscription" }));
       }
 
       return toObject;

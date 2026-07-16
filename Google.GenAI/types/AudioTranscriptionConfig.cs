@@ -77,6 +77,26 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Configures word-level timestamp generation.
+    /// </summary>
+    [JsonPropertyName("wordTimestamp")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public bool
+        ? WordTimestamp {
+            get; set;
+          }
+
+    /// <summary>
+    /// Configures speaker diarization.
+    /// </summary>
+    [JsonPropertyName("diarization")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public bool
+        ? Diarization {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a AudioTranscriptionConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
