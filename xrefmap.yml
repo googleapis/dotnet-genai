@@ -3880,6 +3880,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.AudioTranscriptionConfig.AdaptationPhrases
   nameWithType: AudioTranscriptionConfig.AdaptationPhrases
+- uid: Google.GenAI.Types.AudioTranscriptionConfig.CustomVocabulary
+  name: CustomVocabulary
+  href: api/Google.GenAI.Types.AudioTranscriptionConfig.html#Google_GenAI_Types_AudioTranscriptionConfig_CustomVocabulary
+  commentId: P:Google.GenAI.Types.AudioTranscriptionConfig.CustomVocabulary
+  fullName: Google.GenAI.Types.AudioTranscriptionConfig.CustomVocabulary
+  nameWithType: AudioTranscriptionConfig.CustomVocabulary
+- uid: Google.GenAI.Types.AudioTranscriptionConfig.CustomVocabulary*
+  name: CustomVocabulary
+  href: api/Google.GenAI.Types.AudioTranscriptionConfig.html#Google_GenAI_Types_AudioTranscriptionConfig_CustomVocabulary_
+  commentId: Overload:Google.GenAI.Types.AudioTranscriptionConfig.CustomVocabulary
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioTranscriptionConfig.CustomVocabulary
+  nameWithType: AudioTranscriptionConfig.CustomVocabulary
 - uid: Google.GenAI.Types.AudioTranscriptionConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
   name: FromJson(string, JsonSerializerOptions?)
   href: api/Google.GenAI.Types.AudioTranscriptionConfig.html#Google_GenAI_Types_AudioTranscriptionConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
