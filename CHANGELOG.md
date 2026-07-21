@@ -1,5 +1,18 @@
 # Changelog
 
+## Version 1.15.0, released 2026-07-21
+
+
+### New features
+
+* A new field `custom_vocabulary` is added to message `.google.cloud.aiplatform.v1beta1.BidiGenerateContentSetup` ([56ed30c](https://github.com/googleapis/dotnet-genai/commit/56ed30cadd25c15a06d228e689b45ab17806faa6))
+
+
+### Bug fixes
+
+* add deprecation warnings to Imagen generate_images, edit_images, generate_videos (if using prompt/text/image args), LiveConnectConfig.GenerationConfig which will be removed in the next major version ([97cd617](https://github.com/googleapis/dotnet-genai/commit/97cd6170ccd69f03ff480d18e3238957e969c460))
+* Gracefully handle protected headers in Live.ConnectAsync ([b4d4050](https://github.com/googleapis/dotnet-genai/commit/b4d4050c6ef5a27972586334d783ae6531cf8d34)), closes [#377](https://github.com/googleapis/dotnet-genai/issues/377)
+
 ## Version 1.14.0, released 2026-07-15
 
 
