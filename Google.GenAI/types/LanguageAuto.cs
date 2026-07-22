@@ -23,7 +23,8 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Indicates the language of the audio should be automatically detected.
+  /// Indicates the language of the audio should be automatically detected. This data type is not
+  /// supported in Vertex AI.
   /// </summary>
 
   public record LanguageAuto {

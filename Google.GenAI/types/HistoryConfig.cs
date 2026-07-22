@@ -23,14 +23,16 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Configuration for history exchange between client and server.
+  /// History configuration. This message is included in the session configuration as
+  /// `BidiGenerateContentSetup.history_config`. Configures the exchange of history messages. This
+  /// data type is not supported in Vertex AI.
   /// </summary>
 
   public record HistoryConfig {
     /// <summary>
-    /// If true, after sending `setup_complete`, the server will wait and at first process
+    /// Optional. If true, after sending `setup_complete`, the server will wait and at first process
     /// `client_content` messages until `turn_complete` is `true`. This initial history will not
-    /// trigger a model call and may end with model content. After `turn_complete` is `true`, the
+    /// trigger a model call and may end with role `MODEL`. After `turn_complete` is `true`, the
     /// client can start the realtime conversation via `realtime_input`.
     /// </summary>
     [JsonPropertyName("initialHistoryInClientContent")]

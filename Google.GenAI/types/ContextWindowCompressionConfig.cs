@@ -23,13 +23,18 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Enables context window compression -- mechanism managing model context window so it does not
-  /// exceed given length.
+  /// Enables context window compression — a mechanism for managing the model's context window so
+  /// that it does not exceed a given length. This data type is not supported in Vertex AI.
   /// </summary>
 
   public record ContextWindowCompressionConfig {
     /// <summary>
-    /// Number of tokens (before running turn) that triggers context window compression mechanism.
+    /// The number of tokens (before running a turn) required to trigger a context window
+    /// compression. This can be used to balance quality against latency as shorter context windows
+    /// may result in faster model responses. However, any compression operation will cause a
+    /// temporary latency increase, so they should not be triggered frequently. If not set, the
+    /// default is 80% of the model's context window limit. This leaves 20% for the next user
+    /// request/model response.
     /// </summary>
     [JsonPropertyName("triggerTokens")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -37,7 +42,7 @@ namespace Google.GenAI.Types {
     public long ? TriggerTokens { get; set; }
 
     /// <summary>
-    /// Sliding window compression mechanism.
+    /// A sliding-window mechanism.
     /// </summary>
     [JsonPropertyName("slidingWindow")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

@@ -23,20 +23,20 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Configures automatic detection of activity.
+  /// Configures automatic detection of activity. This data type is not supported in Vertex AI.
   /// </summary>
 
   public record AutomaticActivityDetection {
     /// <summary>
-    /// If enabled, detected voice and text input count as activity. If disabled, the client must
-    /// send activity signals.
+    /// Optional. If enabled (the default), detected voice and text input count as activity. If
+    /// disabled, the client must send activity signals.
     /// </summary>
     [JsonPropertyName("disabled")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public bool ? Disabled { get; set; }
 
     /// <summary>
-    /// Determines how likely speech is to be detected.
+    /// Optional. Determines how likely speech is to be detected.
     /// </summary>
     [JsonPropertyName("startOfSpeechSensitivity")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -46,7 +46,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Determines how likely detected speech is ended.
+    /// Optional. Determines how likely detected speech is ended.
     /// </summary>
     [JsonPropertyName("endOfSpeechSensitivity")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -56,9 +56,9 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// The required duration of detected speech before start-of-speech is committed. The lower this
-    /// value the more sensitive the start-of-speech detection is and the shorter speech can be
-    /// recognized. However, this also increases the probability of false positives.
+    /// Optional. The required duration of detected speech before start-of-speech is committed. The
+    /// lower this value, the more sensitive the start-of-speech detection is and shorter speech can
+    /// be recognized. However, this also increases the probability of false positives.
     /// </summary>
     [JsonPropertyName("prefixPaddingMs")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -68,8 +68,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// The required duration of detected non-speech (e.g. silence) before end-of-speech is
-    /// committed. The larger this value, the longer speech gaps can be without interrupting the
+    /// Optional. The required duration of detected non-speech (e.g. silence) before end-of-speech
+    /// is committed. The larger this value, the longer speech gaps can be without interrupting the
     /// user's activity but this will increase the model's latency.
     /// </summary>
     [JsonPropertyName("silenceDurationMs")]

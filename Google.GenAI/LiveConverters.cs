@@ -65,6 +65,43 @@ namespace Google.GenAI {
       return toObject;
     }
 
+    internal JsonNode AudioTranscriptionConfigToVertex(JsonNode fromObject,
+                                                       JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "languageCodes" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "languageCodes" },
+                              Common.GetValueByPath(fromObject, new string[] { "languageCodes" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "languageAuto" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "languageAuto" },
+                              Common.GetValueByPath(fromObject, new string[] { "languageAuto" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "languageHints" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "languageHints" },
+            LanguageHintsToVertex(Common.ParseToJsonNode(Common.GetValueByPath(
+                                      fromObject, new string[] { "languageHints" })),
+                                  toObject));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "customVocabulary" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "customVocabulary" },
+            Common.GetValueByPath(fromObject, new string[] { "customVocabulary" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "adaptationPhrases" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "adaptationPhrases" },
+            Common.GetValueByPath(fromObject, new string[] { "adaptationPhrases" }));
+      }
+
+      return toObject;
+    }
+
     internal JsonNode AuthConfigToMldev(JsonNode fromObject, JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
@@ -218,6 +255,23 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "role" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "role" },
                               Common.GetValueByPath(fromObject, new string[] { "role" }));
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode ContextWindowCompressionConfigToVertex(JsonNode fromObject,
+                                                             JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "triggerTokens" }))) {
+        throw new NotSupportedException(
+            "triggerTokens parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "slidingWindow" }))) {
+        throw new NotSupportedException(
+            "slidingWindow parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       }
 
       return toObject;
@@ -482,6 +536,29 @@ namespace Google.GenAI {
         Common.SetValueByPath(
             toObject, new string[] { "timeRangeFilter" },
             Common.GetValueByPath(fromObject, new string[] { "timeRangeFilter" }));
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode HistoryConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject,
+                                               new string[] { "initialHistoryInClientContent" }))) {
+        throw new NotSupportedException(
+            "initialHistoryInClientContent parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode LanguageHintsToVertex(JsonNode fromObject, JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "languageCodes" }))) {
+        throw new NotSupportedException(
+            "languageCodes parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       }
 
       return toObject;
@@ -847,31 +924,41 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "realtimeInputConfig" }) != null) {
         Common.SetValueByPath(
             toObject, new string[] { "realtimeInputConfig" },
-            Common.GetValueByPath(fromObject, new string[] { "realtimeInputConfig" }));
+            RealtimeInputConfigToVertex(Common.ParseToJsonNode(Common.GetValueByPath(
+                                            fromObject, new string[] { "realtimeInputConfig" })),
+                                        toObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "sessionResumption" }) != null) {
         Common.SetValueByPath(
             toObject, new string[] { "sessionResumption" },
-            Common.GetValueByPath(fromObject, new string[] { "sessionResumption" }));
+            SessionResumptionConfigToVertex(Common.ParseToJsonNode(Common.GetValueByPath(
+                                                fromObject, new string[] { "sessionResumption" })),
+                                            toObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "contextWindowCompression" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "contextWindowCompression" },
-            Common.GetValueByPath(fromObject, new string[] { "contextWindowCompression" }));
+        Common.SetValueByPath(toObject, new string[] { "contextWindowCompression" },
+                              ContextWindowCompressionConfigToVertex(
+                                  Common.ParseToJsonNode(Common.GetValueByPath(
+                                      fromObject, new string[] { "contextWindowCompression" })),
+                                  toObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "inputAudioTranscription" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "inputAudioTranscription" },
-            Common.GetValueByPath(fromObject, new string[] { "inputAudioTranscription" }));
+        Common.SetValueByPath(toObject, new string[] { "inputAudioTranscription" },
+                              AudioTranscriptionConfigToVertex(
+                                  Common.ParseToJsonNode(Common.GetValueByPath(
+                                      fromObject, new string[] { "inputAudioTranscription" })),
+                                  toObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "outputAudioTranscription" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "outputAudioTranscription" },
-            Common.GetValueByPath(fromObject, new string[] { "outputAudioTranscription" }));
+        Common.SetValueByPath(toObject, new string[] { "outputAudioTranscription" },
+                              AudioTranscriptionConfigToVertex(
+                                  Common.ParseToJsonNode(Common.GetValueByPath(
+                                      fromObject, new string[] { "outputAudioTranscription" })),
+                                  toObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "proactivity" }) != null) {
@@ -896,8 +983,11 @@ namespace Google.GenAI {
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "historyConfig" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "historyConfig" },
-                              Common.GetValueByPath(fromObject, new string[] { "historyConfig" }));
+        Common.SetValueByPath(
+            toObject, new string[] { "historyConfig" },
+            HistoryConfigToVertex(Common.ParseToJsonNode(Common.GetValueByPath(
+                                      fromObject, new string[] { "historyConfig" })),
+                                  toObject));
       }
 
       return toObject;
@@ -1153,31 +1243,41 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "sessionResumption" }) != null) {
         Common.SetValueByPath(
             parentObject, new string[] { "setup", "sessionResumption" },
-            Common.GetValueByPath(fromObject, new string[] { "sessionResumption" }));
+            SessionResumptionConfigToVertex(Common.ParseToJsonNode(Common.GetValueByPath(
+                                                fromObject, new string[] { "sessionResumption" })),
+                                            toObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "inputAudioTranscription" }) != null) {
-        Common.SetValueByPath(
-            parentObject, new string[] { "setup", "inputAudioTranscription" },
-            Common.GetValueByPath(fromObject, new string[] { "inputAudioTranscription" }));
+        Common.SetValueByPath(parentObject, new string[] { "setup", "inputAudioTranscription" },
+                              AudioTranscriptionConfigToVertex(
+                                  Common.ParseToJsonNode(Common.GetValueByPath(
+                                      fromObject, new string[] { "inputAudioTranscription" })),
+                                  toObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "outputAudioTranscription" }) != null) {
-        Common.SetValueByPath(
-            parentObject, new string[] { "setup", "outputAudioTranscription" },
-            Common.GetValueByPath(fromObject, new string[] { "outputAudioTranscription" }));
+        Common.SetValueByPath(parentObject, new string[] { "setup", "outputAudioTranscription" },
+                              AudioTranscriptionConfigToVertex(
+                                  Common.ParseToJsonNode(Common.GetValueByPath(
+                                      fromObject, new string[] { "outputAudioTranscription" })),
+                                  toObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "realtimeInputConfig" }) != null) {
         Common.SetValueByPath(
             parentObject, new string[] { "setup", "realtimeInputConfig" },
-            Common.GetValueByPath(fromObject, new string[] { "realtimeInputConfig" }));
+            RealtimeInputConfigToVertex(Common.ParseToJsonNode(Common.GetValueByPath(
+                                            fromObject, new string[] { "realtimeInputConfig" })),
+                                        toObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "contextWindowCompression" }) != null) {
-        Common.SetValueByPath(
-            parentObject, new string[] { "setup", "contextWindowCompression" },
-            Common.GetValueByPath(fromObject, new string[] { "contextWindowCompression" }));
+        Common.SetValueByPath(parentObject, new string[] { "setup", "contextWindowCompression" },
+                              ContextWindowCompressionConfigToVertex(
+                                  Common.ParseToJsonNode(Common.GetValueByPath(
+                                      fromObject, new string[] { "contextWindowCompression" })),
+                                  toObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "proactivity" }) != null) {
@@ -1676,6 +1776,28 @@ namespace Google.GenAI {
       return toObject;
     }
 
+    internal JsonNode RealtimeInputConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (!Common.IsZero(
+              Common.GetValueByPath(fromObject, new string[] { "automaticActivityDetection" }))) {
+        throw new NotSupportedException(
+            "automaticActivityDetection parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "activityHandling" }))) {
+        throw new NotSupportedException(
+            "activityHandling parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "turnCoverage" }))) {
+        throw new NotSupportedException(
+            "turnCoverage parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
+      }
+
+      return toObject;
+    }
+
     internal JsonNode ReplicatedVoiceConfigToVertex(JsonNode fromObject, JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
@@ -1736,6 +1858,23 @@ namespace Google.GenAI {
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "transparent" }))) {
         throw new NotSupportedException(
             "transparent parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode SessionResumptionConfigToVertex(JsonNode fromObject,
+                                                      JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "handle" }))) {
+        throw new NotSupportedException(
+            "handle parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "transparent" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "transparent" },
+                              Common.GetValueByPath(fromObject, new string[] { "transparent" }));
       }
 
       return toObject;

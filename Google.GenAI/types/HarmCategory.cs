@@ -71,6 +71,11 @@ namespace Google.GenAI.Types {
     } = new("HARM_CATEGORY_CIVIC_INTEGRITY");
 
     /// <summary>
+    /// Prompts designed to bypass safety filters.
+    /// </summary>
+    public static HarmCategory HarmCategoryJailbreak { get; } = new("HARM_CATEGORY_JAILBREAK");
+
+    /// <summary>
     /// Images that contain hate speech. This enum value is not supported in Gemini API.
     /// </summary>
     public static HarmCategory HarmCategoryImageHate { get; } = new("HARM_CATEGORY_IMAGE_HATE");
@@ -97,19 +102,19 @@ namespace Google.GenAI.Types {
       get;
     } = new("HARM_CATEGORY_IMAGE_SEXUALLY_EXPLICIT");
 
-    /// <summary>
-    /// Prompts designed to bypass safety filters. This enum value is not supported in Gemini API.
-    /// </summary>
-    public static HarmCategory HarmCategoryJailbreak { get; } = new("HARM_CATEGORY_JAILBREAK");
-
     public static IReadOnlyList<HarmCategory> AllValues {
       get;
-    } = new[] { HarmCategoryUnspecified,      HarmCategoryHarassment,
-                HarmCategoryHateSpeech,       HarmCategorySexuallyExplicit,
-                HarmCategoryDangerousContent, HarmCategoryCivicIntegrity,
-                HarmCategoryImageHate,        HarmCategoryImageDangerousContent,
-                HarmCategoryImageHarassment,  HarmCategoryImageSexuallyExplicit,
-                HarmCategoryJailbreak };
+    } = new[] { HarmCategoryUnspecified,
+                HarmCategoryHarassment,
+                HarmCategoryHateSpeech,
+                HarmCategorySexuallyExplicit,
+                HarmCategoryDangerousContent,
+                HarmCategoryCivicIntegrity,
+                HarmCategoryJailbreak,
+                HarmCategoryImageHate,
+                HarmCategoryImageDangerousContent,
+                HarmCategoryImageHarassment,
+                HarmCategoryImageSexuallyExplicit };
 
     public static HarmCategory FromString(string value) {
       if (string.IsNullOrEmpty(value)) {

@@ -22,7 +22,7 @@ using System.Text.Json;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// The different ways of handling user activity.
+  /// Defines what effect activity has. This enum is not supported in Vertex AI.
   /// </summary>
 
   [JsonConverter(typeof(ActivityHandlingConverter))]

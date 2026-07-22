@@ -22,7 +22,7 @@ using System.Text.Json;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Start of speech sensitivity.
+  /// Determines how likely speech is to be detected. This enum is not supported in Vertex AI.
   /// </summary>
 
   [JsonConverter(typeof(StartSensitivityConverter))]
@@ -34,8 +34,7 @@ namespace Google.GenAI.Types {
     }
 
     /// <summary>
-    /// The default is START_SENSITIVITY_LOW for Gemini Enterprise Agent Platform and
-    /// START_SENSITIVITY_HIGH for Gemini Live.
+    /// The default is START_SENSITIVITY_HIGH.
     /// </summary>
     public static StartSensitivity StartSensitivityUnspecified {
       get;

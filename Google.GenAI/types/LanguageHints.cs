@@ -23,12 +23,13 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Provides hints to the model about possible languages present in the audio.
+  /// Provides hints to the model about possible languages present in the audio. This data type is
+  /// not supported in Vertex AI.
   /// </summary>
 
   public record LanguageHints {
     /// <summary>
-    /// BCP-47 language codes. At least one must be specified.
+    /// BCP-47 language codes.
     /// </summary>
     [JsonPropertyName("languageCodes")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

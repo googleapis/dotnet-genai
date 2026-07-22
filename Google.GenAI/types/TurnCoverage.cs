@@ -22,7 +22,7 @@ using System.Text.Json;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Options about which input is included in the user's turn.
+  /// Defines which input is included in the user's turn. This enum is not supported in Vertex AI.
   /// </summary>
 
   [JsonConverter(typeof(TurnCoverageConverter))]
@@ -34,21 +34,23 @@ namespace Google.GenAI.Types {
     }
 
     /// <summary>
-    /// If unspecified, the default behavior is `TURN_INCLUDES_ONLY_ACTIVITY`.
+    /// If unspecified, a default behavior is selected based on the model. E.g., for Gemini 2.5, the
+    /// default is `TURN_INCLUDES_ONLY_ACTIVITY`, while for Gemini 3.1 and onwards, it's
+    /// `TURN_INCLUDES_AUDIO_ACTIVITY_AND_ALL_VIDEO`.
     /// </summary>
     public static TurnCoverage TurnCoverageUnspecified { get; } = new("TURN_COVERAGE_UNSPECIFIED");
 
     /// <summary>
-    /// The users turn only includes activity since the last turn, excluding inactivity (e.g.
-    /// silence on the audio stream). This is the default behavior.
+    /// Includes activity since the last turn, excluding inactivity (e.g. silence on the audio
+    /// stream).
     /// </summary>
     public static TurnCoverage TurnIncludesOnlyActivity {
       get;
     } = new("TURN_INCLUDES_ONLY_ACTIVITY");
 
     /// <summary>
-    /// The users turn includes all realtime input since the last turn, including inactivity (e.g.
-    /// silence on the audio stream).
+    /// Includes all realtime input since the last turn, including inactivity (e.g. silence on the
+    /// audio stream).
     /// </summary>
     public static TurnCoverage TurnIncludesAllInput { get; } = new("TURN_INCLUDES_ALL_INPUT");
 

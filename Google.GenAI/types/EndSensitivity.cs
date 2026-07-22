@@ -22,7 +22,7 @@ using System.Text.Json;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// End of speech sensitivity.
+  /// Determines how likely detected speech is ended. This enum is not supported in Vertex AI.
   /// </summary>
 
   [JsonConverter(typeof(EndSensitivityConverter))]
@@ -34,8 +34,7 @@ namespace Google.GenAI.Types {
     }
 
     /// <summary>
-    /// The default is END_SENSITIVITY_LOW for Gemini Enterprise Agent Platform and
-    /// END_SENSITIVITY_HIGH for Gemini Live.
+    /// The default is END_SENSITIVITY_HIGH.
     /// </summary>
     public static EndSensitivity EndSensitivityUnspecified {
       get;

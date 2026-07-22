@@ -72,7 +72,7 @@ namespace Google.GenAI.Types {
     /// <summary>
     /// Optional. If enabled, the model will detect emotions and adapt its responses accordingly.
     /// For example, if the model detects that the user is frustrated, it may provide a more
-    /// empathetic response. This field is not supported in Gemini API.
+    /// empathetic response.
     /// </summary>
     [JsonPropertyName("enableAffectiveDialog")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

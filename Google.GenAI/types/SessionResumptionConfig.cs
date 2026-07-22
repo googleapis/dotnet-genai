@@ -30,8 +30,8 @@ namespace Google.GenAI.Types {
 
   public record SessionResumptionConfig {
     /// <summary>
-    /// Session resumption handle of previous session (session to restore).  If not present new
-    /// session will be started.
+    /// The handle of a previous session. If not present then a new session is created. Session
+    /// handles come from `SessionResumptionUpdate.token` values in previous connections.
     /// </summary>
     [JsonPropertyName("handle")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

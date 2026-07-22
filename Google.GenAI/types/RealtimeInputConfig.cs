@@ -23,21 +23,21 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Marks the end of user activity.  This can only be sent if automatic (i.e. server-side)
-  /// activity detection is disabled.
+  /// Configures the realtime input behavior in `BidiGenerateContent`. This data type is not
+  /// supported in Vertex AI.
   /// </summary>
 
   public record RealtimeInputConfig {
     /// <summary>
-    /// If not set, automatic activity detection is enabled by default. If automatic voice detection
-    /// is disabled, the client must send activity signals.
+    /// Optional. If not set, automatic activity detection is enabled by default. If automatic voice
+    /// detection is disabled, the client must send activity signals.
     /// </summary>
     [JsonPropertyName("automaticActivityDetection")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public AutomaticActivityDetection ? AutomaticActivityDetection { get; set; }
 
     /// <summary>
-    /// Defines what effect activity has.
+    /// Optional. Defines what effect activity has.
     /// </summary>
     [JsonPropertyName("activityHandling")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -47,7 +47,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Defines which input is included in the user's turn.
+    /// Optional. Defines which input is included in the user's turn.
     /// </summary>
     [JsonPropertyName("turnCoverage")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
