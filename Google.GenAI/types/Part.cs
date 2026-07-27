@@ -180,6 +180,16 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Output only. The transcription of the audio part.
+    /// </summary>
+    [JsonPropertyName("audioTranscription")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public Transcription
+        ? AudioTranscription {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a Part object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

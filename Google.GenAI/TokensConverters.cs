@@ -62,6 +62,16 @@ namespace Google.GenAI {
             Common.GetValueByPath(fromObject, new string[] { "adaptationPhrases" }));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "diarization" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "diarization" },
+                              Common.GetValueByPath(fromObject, new string[] { "diarization" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "wordTimestamp" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "wordTimestamp" },
+                              Common.GetValueByPath(fromObject, new string[] { "wordTimestamp" }));
+      }
+
       return toObject;
     }
 
@@ -573,6 +583,12 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "partMetadata" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "partMetadata" },
                               Common.GetValueByPath(fromObject, new string[] { "partMetadata" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "audioTranscription" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "audioTranscription" },
+            Common.GetValueByPath(fromObject, new string[] { "audioTranscription" }));
       }
 
       return toObject;

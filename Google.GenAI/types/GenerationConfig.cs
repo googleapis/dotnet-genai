@@ -328,6 +328,16 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Optional. Configuration for audio transcription (speech recognition).
+    /// </summary>
+    [JsonPropertyName("audioTranscriptionConfig")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public AudioTranscriptionConfig
+        ? AudioTranscriptionConfig {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a GenerationConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
