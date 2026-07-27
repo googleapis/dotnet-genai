@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class Transcription | Google GenAI .NET SDK </title>
+      <title>Class WordInfo | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class Transcription | Google GenAI .NET SDK ">
+      <meta name="title" content="Class WordInfo | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Audio transcription in Server Content.">
+      <meta name="description" content="Information about a single recognized word.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/googleapis/dotnet-genai/new/main/apiSpec/new?filename=Google_GenAI_Types_Transcription.md&amp;value=---%0Auid%3A%20Google.GenAI.Types.Transcription%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/googleapis/dotnet-genai/new/main/apiSpec/new?filename=Google_GenAI_Types_WordInfo.md&amp;value=---%0Auid%3A%20Google.GenAI.Types.WordInfo%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -80,12 +80,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Google.GenAI.Types.Transcription">
+        <article data-uid="Google.GenAI.Types.WordInfo">
 
 
 
-  <h1 id="Google_GenAI_Types_Transcription" data-uid="Google.GenAI.Types.Transcription" class="text-break">
-Class Transcription  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Transcription.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <h1 id="Google_GenAI_Types_WordInfo" data-uid="Google.GenAI.Types.WordInfo" class="text-break">
+Class WordInfo  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/WordInfo.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,12 +93,12 @@ Class Transcription  <a class="header-action link-secondary" title="View source"
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Audio transcription in Server Content.</p>
+  <div class="markdown summary"><p>Information about a single recognized word.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public record Transcription : IEquatable&lt;Transcription&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public record WordInfo : IEquatable&lt;WordInfo&gt;</code></pre>
   </div>
 
 
@@ -108,14 +108,14 @@ Class Transcription  <a class="header-action link-secondary" title="View source"
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">Transcription</span></div>
+      <div><span class="xref">WordInfo</span></div>
     </dd>
   </dl>
 
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.Transcription.html">Transcription</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Google.GenAI.Types.WordInfo.html">WordInfo</a>&gt;</div>
     </dd>
   </dl>
 
@@ -155,55 +155,21 @@ Class Transcription  <a class="header-action link-secondary" title="View source"
 </h2>
 
 
-  <a id="Google_GenAI_Types_Transcription_Finished_" data-uid="Google.GenAI.Types.Transcription.Finished*"></a>
+  <a id="Google_GenAI_Types_WordInfo_EndOffset_" data-uid="Google.GenAI.Types.WordInfo.EndOffset*"></a>
 
-  <h3 id="Google_GenAI_Types_Transcription_Finished" data-uid="Google.GenAI.Types.Transcription.Finished">
-  Finished
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Transcription.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Types_WordInfo_EndOffset" data-uid="Google.GenAI.Types.WordInfo.EndOffset">
+  EndOffset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/WordInfo.cs/#L50"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. The bool indicates the end of the transcription.</p>
+  <div class="markdown level1 summary"><p>End offset in time of the word relative to the start of the audio.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;finished&quot;)]
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;endOffset&quot;)]
 [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-public bool? Finished { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Google_GenAI_Types_Transcription_LanguageCode_" data-uid="Google.GenAI.Types.Transcription.LanguageCode*"></a>
-
-  <h3 id="Google_GenAI_Types_Transcription_LanguageCode" data-uid="Google.GenAI.Types.Transcription.LanguageCode">
-  LanguageCode
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Transcription.cs/#L50"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The BCP-47 language code of the transcription.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;languageCode&quot;)]
-[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-public string? LanguageCode { get; set; }</code></pre>
+public string? EndOffset { get; set; }</code></pre>
   </div>
 
 
@@ -223,21 +189,21 @@ public string? LanguageCode { get; set; }</code></pre>
 
 
 
-  <a id="Google_GenAI_Types_Transcription_SpeakerLabel_" data-uid="Google.GenAI.Types.Transcription.SpeakerLabel*"></a>
+  <a id="Google_GenAI_Types_WordInfo_StartOffset_" data-uid="Google.GenAI.Types.WordInfo.StartOffset*"></a>
 
-  <h3 id="Google_GenAI_Types_Transcription_SpeakerLabel" data-uid="Google.GenAI.Types.Transcription.SpeakerLabel">
-  SpeakerLabel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Transcription.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Types_WordInfo_StartOffset" data-uid="Google.GenAI.Types.WordInfo.StartOffset">
+  StartOffset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/WordInfo.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>A label identifying the speaker of this audio segment (e.g. &quot;spk_1&quot;, &quot;spk_2&quot;).</p>
+  <div class="markdown level1 summary"><p>Start offset in time of the word relative to the start of the audio.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;speakerLabel&quot;)]
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;startOffset&quot;)]
 [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-public string? SpeakerLabel { get; set; }</code></pre>
+public string? StartOffset { get; set; }</code></pre>
   </div>
 
 
@@ -257,21 +223,21 @@ public string? SpeakerLabel { get; set; }</code></pre>
 
 
 
-  <a id="Google_GenAI_Types_Transcription_Text_" data-uid="Google.GenAI.Types.Transcription.Text*"></a>
+  <a id="Google_GenAI_Types_WordInfo_Word_" data-uid="Google.GenAI.Types.WordInfo.Word*"></a>
 
-  <h3 id="Google_GenAI_Types_Transcription_Text" data-uid="Google.GenAI.Types.Transcription.Text">
-  Text
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Transcription.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_Types_WordInfo_Word" data-uid="Google.GenAI.Types.WordInfo.Word">
+  Word
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/WordInfo.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. Transcription text.</p>
+  <div class="markdown level1 summary"><p>Transcript of the word.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;text&quot;)]
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;word&quot;)]
 [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-public string? Text { get; set; }</code></pre>
+public string? Word { get; set; }</code></pre>
   </div>
 
 
@@ -281,40 +247,6 @@ public string? Text { get; set; }</code></pre>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Google_GenAI_Types_Transcription_Words_" data-uid="Google.GenAI.Types.Transcription.Words*"></a>
-
-  <h3 id="Google_GenAI_Types_Transcription_Words" data-uid="Google.GenAI.Types.Transcription.Words">
-  Words
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Transcription.cs/#L70"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Detailed word-level transcriptions and timing details.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;words&quot;)]
-[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-public List&lt;WordInfo&gt;? Words { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Google.GenAI.Types.WordInfo.html">WordInfo</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -329,19 +261,19 @@ public List&lt;WordInfo&gt;? Words { get; set; }</code></pre>
 </h2>
 
 
-  <a id="Google_GenAI_Types_Transcription_FromJson_" data-uid="Google.GenAI.Types.Transcription.FromJson*"></a>
+  <a id="Google_GenAI_Types_WordInfo_FromJson_" data-uid="Google.GenAI.Types.WordInfo.FromJson*"></a>
 
-  <h3 id="Google_GenAI_Types_Transcription_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.Transcription.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
+  <h3 id="Google_GenAI_Types_WordInfo_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.WordInfo.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Transcription.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/WordInfo.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Deserializes a JSON string to a Transcription object.</p>
+  <div class="markdown level1 summary"><p>Deserializes a JSON string to a WordInfo object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Transcription? FromJson(string jsonString, JsonSerializerOptions? options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static WordInfo? FromJson(string jsonString, JsonSerializerOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -356,8 +288,8 @@ public List&lt;WordInfo&gt;? Words { get; set; }</code></pre>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Google.GenAI.Types.Transcription.html">Transcription</a></dt>
-    <dd><p>The deserialized Transcription object, or null if deserialization fails.</p>
+    <dt><a class="xref" href="Google.GenAI.Types.WordInfo.html">WordInfo</a></dt>
+    <dd><p>The deserialized WordInfo object, or null if deserialization fails.</p>
 </dd>
   </dl>
 
@@ -375,7 +307,7 @@ public List&lt;WordInfo&gt;? Words { get; set; }</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/Transcription.cs/#L29" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/WordInfo.cs/#L29" class="edit-link">Edit this page</a>
         </div>
 
 

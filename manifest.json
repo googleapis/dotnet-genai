@@ -7224,6 +7224,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.WordInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.WordInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.WordInfo",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.WordInfo.yml\" sourcestartlinenumber=\"1\">Information about a single recognized word.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.yml",
       "output": {
         ".html": {

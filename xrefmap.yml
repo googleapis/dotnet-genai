@@ -3893,6 +3893,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.AudioTranscriptionConfig.CustomVocabulary
   nameWithType: AudioTranscriptionConfig.CustomVocabulary
+- uid: Google.GenAI.Types.AudioTranscriptionConfig.Diarization
+  name: Diarization
+  href: api/Google.GenAI.Types.AudioTranscriptionConfig.html#Google_GenAI_Types_AudioTranscriptionConfig_Diarization
+  commentId: P:Google.GenAI.Types.AudioTranscriptionConfig.Diarization
+  fullName: Google.GenAI.Types.AudioTranscriptionConfig.Diarization
+  nameWithType: AudioTranscriptionConfig.Diarization
+- uid: Google.GenAI.Types.AudioTranscriptionConfig.Diarization*
+  name: Diarization
+  href: api/Google.GenAI.Types.AudioTranscriptionConfig.html#Google_GenAI_Types_AudioTranscriptionConfig_Diarization_
+  commentId: Overload:Google.GenAI.Types.AudioTranscriptionConfig.Diarization
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioTranscriptionConfig.Diarization
+  nameWithType: AudioTranscriptionConfig.Diarization
 - uid: Google.GenAI.Types.AudioTranscriptionConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
   name: FromJson(string, JsonSerializerOptions?)
   href: api/Google.GenAI.Types.AudioTranscriptionConfig.html#Google_GenAI_Types_AudioTranscriptionConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
@@ -3948,6 +3961,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.AudioTranscriptionConfig.LanguageHints
   nameWithType: AudioTranscriptionConfig.LanguageHints
+- uid: Google.GenAI.Types.AudioTranscriptionConfig.WordTimestamp
+  name: WordTimestamp
+  href: api/Google.GenAI.Types.AudioTranscriptionConfig.html#Google_GenAI_Types_AudioTranscriptionConfig_WordTimestamp
+  commentId: P:Google.GenAI.Types.AudioTranscriptionConfig.WordTimestamp
+  fullName: Google.GenAI.Types.AudioTranscriptionConfig.WordTimestamp
+  nameWithType: AudioTranscriptionConfig.WordTimestamp
+- uid: Google.GenAI.Types.AudioTranscriptionConfig.WordTimestamp*
+  name: WordTimestamp
+  href: api/Google.GenAI.Types.AudioTranscriptionConfig.html#Google_GenAI_Types_AudioTranscriptionConfig_WordTimestamp_
+  commentId: Overload:Google.GenAI.Types.AudioTranscriptionConfig.WordTimestamp
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioTranscriptionConfig.WordTimestamp
+  nameWithType: AudioTranscriptionConfig.WordTimestamp
 - uid: Google.GenAI.Types.AuthConfig
   name: AuthConfig
   href: api/Google.GenAI.Types.AuthConfig.html
@@ -14543,6 +14569,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerateContentConfig.AudioTimestamp
   nameWithType: GenerateContentConfig.AudioTimestamp
+- uid: Google.GenAI.Types.GenerateContentConfig.AudioTranscriptionConfig
+  name: AudioTranscriptionConfig
+  href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_AudioTranscriptionConfig
+  commentId: P:Google.GenAI.Types.GenerateContentConfig.AudioTranscriptionConfig
+  fullName: Google.GenAI.Types.GenerateContentConfig.AudioTranscriptionConfig
+  nameWithType: GenerateContentConfig.AudioTranscriptionConfig
+- uid: Google.GenAI.Types.GenerateContentConfig.AudioTranscriptionConfig*
+  name: AudioTranscriptionConfig
+  href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_AudioTranscriptionConfig_
+  commentId: Overload:Google.GenAI.Types.GenerateContentConfig.AudioTranscriptionConfig
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateContentConfig.AudioTranscriptionConfig
+  nameWithType: GenerateContentConfig.AudioTranscriptionConfig
 - uid: Google.GenAI.Types.GenerateContentConfig.CachedContent
   name: CachedContent
   href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_CachedContent
@@ -16327,6 +16366,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerationConfig.AudioTimestamp
   nameWithType: GenerationConfig.AudioTimestamp
+- uid: Google.GenAI.Types.GenerationConfig.AudioTranscriptionConfig
+  name: AudioTranscriptionConfig
+  href: api/Google.GenAI.Types.GenerationConfig.html#Google_GenAI_Types_GenerationConfig_AudioTranscriptionConfig
+  commentId: P:Google.GenAI.Types.GenerationConfig.AudioTranscriptionConfig
+  fullName: Google.GenAI.Types.GenerationConfig.AudioTranscriptionConfig
+  nameWithType: GenerationConfig.AudioTranscriptionConfig
+- uid: Google.GenAI.Types.GenerationConfig.AudioTranscriptionConfig*
+  name: AudioTranscriptionConfig
+  href: api/Google.GenAI.Types.GenerationConfig.html#Google_GenAI_Types_GenerationConfig_AudioTranscriptionConfig_
+  commentId: Overload:Google.GenAI.Types.GenerationConfig.AudioTranscriptionConfig
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerationConfig.AudioTranscriptionConfig
+  nameWithType: GenerationConfig.AudioTranscriptionConfig
 - uid: Google.GenAI.Types.GenerationConfig.CandidateCount
   name: CandidateCount
   href: api/Google.GenAI.Types.GenerationConfig.html#Google_GenAI_Types_GenerationConfig_CandidateCount
@@ -26823,6 +26875,19 @@ references:
   commentId: T:Google.GenAI.Types.Part
   fullName: Google.GenAI.Types.Part
   nameWithType: Part
+- uid: Google.GenAI.Types.Part.AudioTranscription
+  name: AudioTranscription
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_AudioTranscription
+  commentId: P:Google.GenAI.Types.Part.AudioTranscription
+  fullName: Google.GenAI.Types.Part.AudioTranscription
+  nameWithType: Part.AudioTranscription
+- uid: Google.GenAI.Types.Part.AudioTranscription*
+  name: AudioTranscription
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_AudioTranscription_
+  commentId: Overload:Google.GenAI.Types.Part.AudioTranscription
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Part.AudioTranscription
+  nameWithType: Part.AudioTranscription
 - uid: Google.GenAI.Types.Part.CodeExecutionResult
   name: CodeExecutionResult
   href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_CodeExecutionResult
@@ -36500,6 +36565,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Transcription.LanguageCode
   nameWithType: Transcription.LanguageCode
+- uid: Google.GenAI.Types.Transcription.SpeakerLabel
+  name: SpeakerLabel
+  href: api/Google.GenAI.Types.Transcription.html#Google_GenAI_Types_Transcription_SpeakerLabel
+  commentId: P:Google.GenAI.Types.Transcription.SpeakerLabel
+  fullName: Google.GenAI.Types.Transcription.SpeakerLabel
+  nameWithType: Transcription.SpeakerLabel
+- uid: Google.GenAI.Types.Transcription.SpeakerLabel*
+  name: SpeakerLabel
+  href: api/Google.GenAI.Types.Transcription.html#Google_GenAI_Types_Transcription_SpeakerLabel_
+  commentId: Overload:Google.GenAI.Types.Transcription.SpeakerLabel
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Transcription.SpeakerLabel
+  nameWithType: Transcription.SpeakerLabel
 - uid: Google.GenAI.Types.Transcription.Text
   name: Text
   href: api/Google.GenAI.Types.Transcription.html#Google_GenAI_Types_Transcription_Text
@@ -36513,6 +36591,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Transcription.Text
   nameWithType: Transcription.Text
+- uid: Google.GenAI.Types.Transcription.Words
+  name: Words
+  href: api/Google.GenAI.Types.Transcription.html#Google_GenAI_Types_Transcription_Words
+  commentId: P:Google.GenAI.Types.Transcription.Words
+  fullName: Google.GenAI.Types.Transcription.Words
+  nameWithType: Transcription.Words
+- uid: Google.GenAI.Types.Transcription.Words*
+  name: Words
+  href: api/Google.GenAI.Types.Transcription.html#Google_GenAI_Types_Transcription_Words_
+  commentId: Overload:Google.GenAI.Types.Transcription.Words
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Transcription.Words
+  nameWithType: Transcription.Words
 - uid: Google.GenAI.Types.TranslationConfig
   name: TranslationConfig
   href: api/Google.GenAI.Types.TranslationConfig.html
@@ -42798,6 +42889,67 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.WebhookConfig.UserMetadata
   nameWithType: WebhookConfig.UserMetadata
+- uid: Google.GenAI.Types.WordInfo
+  name: WordInfo
+  href: api/Google.GenAI.Types.WordInfo.html
+  commentId: T:Google.GenAI.Types.WordInfo
+  fullName: Google.GenAI.Types.WordInfo
+  nameWithType: WordInfo
+- uid: Google.GenAI.Types.WordInfo.EndOffset
+  name: EndOffset
+  href: api/Google.GenAI.Types.WordInfo.html#Google_GenAI_Types_WordInfo_EndOffset
+  commentId: P:Google.GenAI.Types.WordInfo.EndOffset
+  fullName: Google.GenAI.Types.WordInfo.EndOffset
+  nameWithType: WordInfo.EndOffset
+- uid: Google.GenAI.Types.WordInfo.EndOffset*
+  name: EndOffset
+  href: api/Google.GenAI.Types.WordInfo.html#Google_GenAI_Types_WordInfo_EndOffset_
+  commentId: Overload:Google.GenAI.Types.WordInfo.EndOffset
+  isSpec: "True"
+  fullName: Google.GenAI.Types.WordInfo.EndOffset
+  nameWithType: WordInfo.EndOffset
+- uid: Google.GenAI.Types.WordInfo.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.WordInfo.html#Google_GenAI_Types_WordInfo_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.WordInfo.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.WordInfo.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.WordInfo.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: WordInfo.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: WordInfo.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.WordInfo.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.WordInfo.html#Google_GenAI_Types_WordInfo_FromJson_
+  commentId: Overload:Google.GenAI.Types.WordInfo.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.WordInfo.FromJson
+  nameWithType: WordInfo.FromJson
+- uid: Google.GenAI.Types.WordInfo.StartOffset
+  name: StartOffset
+  href: api/Google.GenAI.Types.WordInfo.html#Google_GenAI_Types_WordInfo_StartOffset
+  commentId: P:Google.GenAI.Types.WordInfo.StartOffset
+  fullName: Google.GenAI.Types.WordInfo.StartOffset
+  nameWithType: WordInfo.StartOffset
+- uid: Google.GenAI.Types.WordInfo.StartOffset*
+  name: StartOffset
+  href: api/Google.GenAI.Types.WordInfo.html#Google_GenAI_Types_WordInfo_StartOffset_
+  commentId: Overload:Google.GenAI.Types.WordInfo.StartOffset
+  isSpec: "True"
+  fullName: Google.GenAI.Types.WordInfo.StartOffset
+  nameWithType: WordInfo.StartOffset
+- uid: Google.GenAI.Types.WordInfo.Word
+  name: Word
+  href: api/Google.GenAI.Types.WordInfo.html#Google_GenAI_Types_WordInfo_Word
+  commentId: P:Google.GenAI.Types.WordInfo.Word
+  fullName: Google.GenAI.Types.WordInfo.Word
+  nameWithType: WordInfo.Word
+- uid: Google.GenAI.Types.WordInfo.Word*
+  name: Word
+  href: api/Google.GenAI.Types.WordInfo.html#Google_GenAI_Types_WordInfo_Word_
+  commentId: Overload:Google.GenAI.Types.WordInfo.Word
+  isSpec: "True"
+  fullName: Google.GenAI.Types.WordInfo.Word
+  nameWithType: WordInfo.Word
 - uid: Microsoft.Extensions.AI
   name: Microsoft.Extensions.AI
   href: api/Microsoft.Extensions.AI.html
