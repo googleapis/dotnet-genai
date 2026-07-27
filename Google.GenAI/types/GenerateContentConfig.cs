@@ -187,8 +187,9 @@ namespace Google.GenAI.Types {
     /// objects, but also primitives and arrays. Represents a select subset of an OpenAPI 3.0 schema
     /// object (https://spec.openapis.org/oas/v3.0.3#schema). If set, a compatible
     /// response_mime_type must also be set. Compatible mimetypes: `application/json`: Schema for
-    /// JSON response.  If `response_schema` doesn't process your schema correctly, try using
-    /// `response_json_schema` instead.
+    /// JSON response.  NOTE: For .NET SDK, `response_schema` is in feature freeze. Please use
+    /// `response_json_schema` instead.  If `response_schema` doesn't process your schema correctly,
+    /// try using `response_json_schema` instead.
     /// </summary>
     [JsonPropertyName("responseSchema")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -200,16 +201,20 @@ namespace Google.GenAI.Types {
     /// <summary>
     /// Optional. Output schema of the generated response. This is an alternative to
     /// `response_schema` that accepts JSON Schema (https://json-schema.org/). If set,
-    /// `response_schema` must be omitted, but `response_mime_type` is required. While the full JSON
-    /// Schema may be sent, not all features are supported. Specifically, only the following
-    /// properties are supported: - `$id` - `$defs` - `$ref` - `$anchor` - `type` - `format` -
-    /// `title` - `description` - `enum` (for strings and numbers) - `items` - `prefixItems` -
-    /// `minItems` - `maxItems` - `minimum` - `maximum` - `anyOf` - `oneOf` (interpreted the same as
-    /// `anyOf`) - `properties` - `additionalProperties` - `required` The non-standard
-    /// `propertyOrdering` property may also be set. Cyclic references are unrolled to a limited
-    /// degree and, as such, may only be used within non-required properties. (Nullable properties
-    /// are not sufficient.) If `$ref` is set on a sub-schema, no other properties, except for than
-    /// those starting as a `$`, may be set.
+    /// `response_schema` must be omitted, but `response_mime_type` is required.  NOTE: For .NET
+    /// SDK, you must pass a `System.Text.Json.Nodes.JsonNode` or `System.Text.Json.JsonDocument`
+    /// object (not a raw JSON string) to this field. Passing a raw string will cause serialization
+    /// errors.  To mitigate hallucinations in Gemini 3.5 Flash, it is highly recommended to specify
+    /// the non-standard `propertyOrdering` property in your schema to match the order of properties
+    /// in the prompt.  While the full JSON Schema may be sent, not all features are supported.
+    /// Specifically, only the following properties are supported: - `$id` - `$defs` - `$ref` -
+    /// `$anchor` - `type` - `format` - `title` - `description` - `enum` (for strings and numbers) -
+    /// `items` - `prefixItems` - `minItems` - `maxItems` - `minimum` - `maximum` - `anyOf` -
+    /// `oneOf` (interpreted the same as `anyOf`) - `properties` - `additionalProperties` -
+    /// `required` The non-standard `propertyOrdering` property may also be set. Cyclic references
+    /// are unrolled to a limited degree and, as such, may only be used within non-required
+    /// properties. (Nullable properties are not sufficient.) If `$ref` is set on a sub-schema, no
+    /// other properties, except for than those starting as a `$`, may be set.
     /// </summary>
     [JsonPropertyName("responseJsonSchema")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

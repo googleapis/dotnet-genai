@@ -248,6 +248,57 @@ public class GenerateContentWithJsonSchema {
 
 ```
 
+#### JSON Response Schema with ResponseJsonSchema (.NET SDK specific)
+
+For .NET SDK, `ResponseSchema` is in feature freeze. To use custom or complex schemas, you should use `ResponseJsonSchema` instead.
+
+> [!IMPORTANT]
+> When using `ResponseJsonSchema` in .NET, you **must** pass a `System.Text.Json.Nodes.JsonNode` or `System.Text.Json.JsonDocument` object (not a raw JSON string) to the configuration. If you pass a raw string, the SDK will serialize it as a string primitive instead of a JSON object, causing API validation errors.
+
+Additionally, to mitigate hallucinations in Gemini 3.5 Flash, it is highly recommended to specify the non-standard `propertyOrdering` property in your schema to match the order of properties in your prompt.
+
+Here is an example of using `ResponseJsonSchema` with `JsonNode`:
+
+```csharp
+using System.Text.Json.Nodes;
+using System.Threading.Tasks;
+using Google.GenAI;
+using Google.GenAI.Types;
+
+public class GenerateContentWithResponseJsonSchema {
+  public static async Task main() {
+    var client = new Client();
+
+    // Define the schema using JsonNode
+    var schemaJson = @"{
+      ""type"": ""object"",
+      ""properties"": {
+        ""title"": { ""type"": ""string"" },
+        ""population"": { ""type"": ""integer"" },
+        ""capital"": { ""type"": ""string"" },
+        ""continent"": { ""type"": ""string"" },
+        ""language"": { ""type"": ""string"" }
+      },
+      ""required"": [""title"", ""population"", ""capital"", ""continent"", ""language""],
+      ""propertyOrdering"": [""title"", ""population"", ""capital"", ""continent"", ""language""]
+    }";
+
+    JsonNode responseSchemaNode = JsonNode.Parse(schemaJson);
+
+    var response = await client.Models.GenerateContentAsync(
+        model: "gemini-2.0-flash",
+        contents: "Give me information about Australia",
+        config: new GenerateContentConfig {
+            ResponseMimeType = "application/json",
+            ResponseJsonSchema = responseSchemaNode
+        }
+    );
+
+    Console.WriteLine(response.Candidates[0].Content.Parts[0].Text);
+  }
+}
+```
+
 ### Generate Content Stream
 
 The usage of GenerateContentStreamAsync is similar to GenerateContentAsync, this section shows one simple example to showcase the nuance in the usage.
