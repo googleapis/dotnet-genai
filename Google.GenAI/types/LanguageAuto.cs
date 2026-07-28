@@ -23,7 +23,7 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Indicates the language of the audio should be automatically detected.
+  /// Deprecated: Language auto-detection is now the default when language_codes is omitted.
   /// </summary>
 
   public record LanguageAuto {

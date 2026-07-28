@@ -28,14 +28,16 @@ namespace Google.GenAI.Types {
 
   public record AudioTranscriptionConfig {
     /// <summary>
-    /// Deprecated: use LanguageAuto or LanguageHints instead.
+    /// BCP-47 language codes providing hints about the languages present in the audio. If omitted
+    /// or empty, defaults to automatic language detection.
     /// </summary>
     [JsonPropertyName("languageCodes")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<string> ? LanguageCodes { get; set; }
 
     /// <summary>
-    /// The model will detect the language automatically. Do not use together with LanguageHints.
+    /// Deprecated: Auto-detection is now the default when language_codes is omitted. This field
+    /// will be removed in a future version.
     /// </summary>
     [JsonPropertyName("languageAuto")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -45,7 +47,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Specifies one or more languages in the audio. Do not use together with LanguageAuto.
+    /// Deprecated: Use top-level language_codes instead. This field will be removed in a future
+    /// version.
     /// </summary>
     [JsonPropertyName("languageHints")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

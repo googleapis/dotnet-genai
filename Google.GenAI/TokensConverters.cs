@@ -31,50 +31,6 @@ namespace Google.GenAI {
       _apiClient = apiClient;
     }
 
-    internal JsonNode AudioTranscriptionConfigToMldev(JsonNode fromObject,
-                                                      JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "languageCodes" }))) {
-        throw new NotSupportedException(
-            "languageCodes parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "languageAuto" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "languageAuto" },
-                              Common.GetValueByPath(fromObject, new string[] { "languageAuto" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "languageHints" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "languageHints" },
-                              Common.GetValueByPath(fromObject, new string[] { "languageHints" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "customVocabulary" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "customVocabulary" },
-            Common.GetValueByPath(fromObject, new string[] { "customVocabulary" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "adaptationPhrases" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "adaptationPhrases" },
-            Common.GetValueByPath(fromObject, new string[] { "adaptationPhrases" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "diarization" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "diarization" },
-                              Common.GetValueByPath(fromObject, new string[] { "diarization" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "wordTimestamp" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "wordTimestamp" },
-                              Common.GetValueByPath(fromObject, new string[] { "wordTimestamp" }));
-      }
-
-      return toObject;
-    }
-
     internal JsonNode AuthConfigToMldev(JsonNode fromObject, JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
@@ -419,19 +375,15 @@ namespace Google.GenAI {
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "inputAudioTranscription" }) != null) {
-        Common.SetValueByPath(parentObject, new string[] { "setup", "inputAudioTranscription" },
-                              AudioTranscriptionConfigToMldev(
-                                  Common.ParseToJsonNode(Common.GetValueByPath(
-                                      fromObject, new string[] { "inputAudioTranscription" })),
-                                  toObject));
+        Common.SetValueByPath(
+            parentObject, new string[] { "setup", "inputAudioTranscription" },
+            Common.GetValueByPath(fromObject, new string[] { "inputAudioTranscription" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "outputAudioTranscription" }) != null) {
-        Common.SetValueByPath(parentObject, new string[] { "setup", "outputAudioTranscription" },
-                              AudioTranscriptionConfigToMldev(
-                                  Common.ParseToJsonNode(Common.GetValueByPath(
-                                      fromObject, new string[] { "outputAudioTranscription" })),
-                                  toObject));
+        Common.SetValueByPath(
+            parentObject, new string[] { "setup", "outputAudioTranscription" },
+            Common.GetValueByPath(fromObject, new string[] { "outputAudioTranscription" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "realtimeInputConfig" }) != null) {
