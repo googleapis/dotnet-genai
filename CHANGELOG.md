@@ -1,5 +1,13 @@
 # Changelog
 
+## Version 1.16.0, released 2026-07-28
+
+
+### New features
+
+* [GenerateContentConfig] Add GenerationConfig.audio_transcription_config and Part.audio_transcription. ([f7234c6](https://github.com/googleapis/dotnet-genai/commit/f7234c64ec35f0c2419d8a640be8f13fe8f38c46))
+* Add flat `language_codes` field to `AudioTranscriptionConfig`. ([5e7e99e](https://github.com/googleapis/dotnet-genai/commit/5e7e99efe8bb0353f089ece50d380e55b29d91aa))
+
 ## Version 1.15.0, released 2026-07-21
 
 
