@@ -3594,7 +3594,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.LanguageAuto",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LanguageAuto.yml\" sourcestartlinenumber=\"1\">Indicates the language of the audio should be automatically detected.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LanguageAuto.yml\" sourcestartlinenumber=\"1\">Deprecated: Language auto-detection is now the default when language_codes is omitted.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3622,7 +3622,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.LanguageHints",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LanguageHints.yml\" sourcestartlinenumber=\"1\">Provides hints to the model about possible languages present in the audio.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LanguageHints.yml\" sourcestartlinenumber=\"1\">Deprecated: Use AudioTranscriptionConfig.language_codes instead.</p>\n"
     },
     {
       "type": "ManagedReference",
