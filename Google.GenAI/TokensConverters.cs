@@ -249,6 +249,11 @@ namespace Google.GenAI {
                               Common.GetValueByPath(fromObject, new string[] { "enableWidget" }));
       }
 
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "groundingTypes" }))) {
+        throw new NotSupportedException(
+            "groundingTypes parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
+      }
+
       return toObject;
     }
 
