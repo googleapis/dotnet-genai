@@ -17105,6 +17105,111 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GoogleMaps.FromJson
   nameWithType: GoogleMaps.FromJson
+- uid: Google.GenAI.Types.GoogleMaps.GroundingTypes
+  name: GroundingTypes
+  href: api/Google.GenAI.Types.GoogleMaps.html#Google_GenAI_Types_GoogleMaps_GroundingTypes
+  commentId: P:Google.GenAI.Types.GoogleMaps.GroundingTypes
+  fullName: Google.GenAI.Types.GoogleMaps.GroundingTypes
+  nameWithType: GoogleMaps.GroundingTypes
+- uid: Google.GenAI.Types.GoogleMaps.GroundingTypes*
+  name: GroundingTypes
+  href: api/Google.GenAI.Types.GoogleMaps.html#Google_GenAI_Types_GoogleMaps_GroundingTypes_
+  commentId: Overload:Google.GenAI.Types.GoogleMaps.GroundingTypes
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GoogleMaps.GroundingTypes
+  nameWithType: GoogleMaps.GroundingTypes
+- uid: Google.GenAI.Types.GoogleMapsGroundingTypes
+  name: GoogleMapsGroundingTypes
+  href: api/Google.GenAI.Types.GoogleMapsGroundingTypes.html
+  commentId: T:Google.GenAI.Types.GoogleMapsGroundingTypes
+  fullName: Google.GenAI.Types.GoogleMapsGroundingTypes
+  nameWithType: GoogleMapsGroundingTypes
+- uid: Google.GenAI.Types.GoogleMapsGroundingTypes.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.GoogleMapsGroundingTypes.html#Google_GenAI_Types_GoogleMapsGroundingTypes_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.GoogleMapsGroundingTypes.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.GoogleMapsGroundingTypes.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.GoogleMapsGroundingTypes.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: GoogleMapsGroundingTypes.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: GoogleMapsGroundingTypes.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.GoogleMapsGroundingTypes.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.GoogleMapsGroundingTypes.html#Google_GenAI_Types_GoogleMapsGroundingTypes_FromJson_
+  commentId: Overload:Google.GenAI.Types.GoogleMapsGroundingTypes.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GoogleMapsGroundingTypes.FromJson
+  nameWithType: GoogleMapsGroundingTypes.FromJson
+- uid: Google.GenAI.Types.GoogleMapsGroundingTypes.Places
+  name: Places
+  href: api/Google.GenAI.Types.GoogleMapsGroundingTypes.html#Google_GenAI_Types_GoogleMapsGroundingTypes_Places
+  commentId: P:Google.GenAI.Types.GoogleMapsGroundingTypes.Places
+  fullName: Google.GenAI.Types.GoogleMapsGroundingTypes.Places
+  nameWithType: GoogleMapsGroundingTypes.Places
+- uid: Google.GenAI.Types.GoogleMapsGroundingTypes.Places*
+  name: Places
+  href: api/Google.GenAI.Types.GoogleMapsGroundingTypes.html#Google_GenAI_Types_GoogleMapsGroundingTypes_Places_
+  commentId: Overload:Google.GenAI.Types.GoogleMapsGroundingTypes.Places
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GoogleMapsGroundingTypes.Places
+  nameWithType: GoogleMapsGroundingTypes.Places
+- uid: Google.GenAI.Types.GoogleMapsGroundingTypes.Routing
+  name: Routing
+  href: api/Google.GenAI.Types.GoogleMapsGroundingTypes.html#Google_GenAI_Types_GoogleMapsGroundingTypes_Routing
+  commentId: P:Google.GenAI.Types.GoogleMapsGroundingTypes.Routing
+  fullName: Google.GenAI.Types.GoogleMapsGroundingTypes.Routing
+  nameWithType: GoogleMapsGroundingTypes.Routing
+- uid: Google.GenAI.Types.GoogleMapsGroundingTypes.Routing*
+  name: Routing
+  href: api/Google.GenAI.Types.GoogleMapsGroundingTypes.html#Google_GenAI_Types_GoogleMapsGroundingTypes_Routing_
+  commentId: Overload:Google.GenAI.Types.GoogleMapsGroundingTypes.Routing
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GoogleMapsGroundingTypes.Routing
+  nameWithType: GoogleMapsGroundingTypes.Routing
+- uid: Google.GenAI.Types.GoogleMapsPlaces
+  name: GoogleMapsPlaces
+  href: api/Google.GenAI.Types.GoogleMapsPlaces.html
+  commentId: T:Google.GenAI.Types.GoogleMapsPlaces
+  fullName: Google.GenAI.Types.GoogleMapsPlaces
+  nameWithType: GoogleMapsPlaces
+- uid: Google.GenAI.Types.GoogleMapsPlaces.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.GoogleMapsPlaces.html#Google_GenAI_Types_GoogleMapsPlaces_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.GoogleMapsPlaces.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.GoogleMapsPlaces.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.GoogleMapsPlaces.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: GoogleMapsPlaces.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: GoogleMapsPlaces.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.GoogleMapsPlaces.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.GoogleMapsPlaces.html#Google_GenAI_Types_GoogleMapsPlaces_FromJson_
+  commentId: Overload:Google.GenAI.Types.GoogleMapsPlaces.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GoogleMapsPlaces.FromJson
+  nameWithType: GoogleMapsPlaces.FromJson
+- uid: Google.GenAI.Types.GoogleMapsRouting
+  name: GoogleMapsRouting
+  href: api/Google.GenAI.Types.GoogleMapsRouting.html
+  commentId: T:Google.GenAI.Types.GoogleMapsRouting
+  fullName: Google.GenAI.Types.GoogleMapsRouting
+  nameWithType: GoogleMapsRouting
+- uid: Google.GenAI.Types.GoogleMapsRouting.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.GoogleMapsRouting.html#Google_GenAI_Types_GoogleMapsRouting_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.GoogleMapsRouting.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.GoogleMapsRouting.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.GoogleMapsRouting.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: GoogleMapsRouting.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: GoogleMapsRouting.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.GoogleMapsRouting.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.GoogleMapsRouting.html#Google_GenAI_Types_GoogleMapsRouting_FromJson_
+  commentId: Overload:Google.GenAI.Types.GoogleMapsRouting.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GoogleMapsRouting.FromJson
+  nameWithType: GoogleMapsRouting.FromJson
 - uid: Google.GenAI.Types.GoogleRpcStatus
   name: GoogleRpcStatus
   href: api/Google.GenAI.Types.GoogleRpcStatus.html

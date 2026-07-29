@@ -2814,6 +2814,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.GoogleMapsGroundingTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.GoogleMapsGroundingTypes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.GoogleMapsGroundingTypes",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GoogleMapsGroundingTypes.yml\" sourcestartlinenumber=\"1\">Defines the types of Google Maps grounding that can be enabled and their configurations. This\ndata type is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.GoogleMapsPlaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.GoogleMapsPlaces.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.GoogleMapsPlaces",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GoogleMapsPlaces.yml\" sourcestartlinenumber=\"1\">Grounding with Google Maps Places data (e.g. QueryPlaces). This is the default Google Maps\ngrounding type when no other type is specified. This data type is not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.GoogleMapsRouting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.GoogleMapsRouting.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.GoogleMapsRouting",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.GoogleMapsRouting.yml\" sourcestartlinenumber=\"1\">Grounding with Google Maps Routing APIs (ComputeRoutes and SearchAlongRoute). This data type\nis not supported in Gemini API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.GoogleRpcStatus.yml",
       "output": {
         ".html": {
