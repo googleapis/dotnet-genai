@@ -36,38 +36,6 @@ namespace Google.GenAI.Types {
     public string ? Model { get; set; }
 
     /// <summary>
-    /// The text prompt for generating the videos. Optional if image or video is provided.
-    /// </summary>
-    [JsonPropertyName("prompt")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string
-        ? Prompt {
-            get; set;
-          }
-
-    /// <summary>
-    /// The input image for generating the videos. Optional if prompt is provided. Not allowed if
-    /// video is provided.
-    /// </summary>
-    [JsonPropertyName("image")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public Image
-        ? Image {
-            get; set;
-          }
-
-    /// <summary>
-    /// The input video for video extension use cases. Optional if prompt is provided. Not allowed
-    /// if image is provided.
-    /// </summary>
-    [JsonPropertyName("video")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public Video
-        ? Video {
-            get; set;
-          }
-
-    /// <summary>
     /// A set of source input(s) for video generation.
     /// </summary>
     [JsonPropertyName("source")]

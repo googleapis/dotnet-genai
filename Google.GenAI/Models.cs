@@ -2402,25 +2402,6 @@ namespace Google.GenAI {
                                 Common.GetValueByPath(fromObject, new string[] { "model" })));
       }
 
-      if (Common.GetValueByPath(fromObject, new string[] { "prompt" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "instances[0]", "prompt" },
-                              Common.GetValueByPath(fromObject, new string[] { "prompt" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "image" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "instances[0]", "image" },
-                              ImageToMldev(Common.ParseToJsonNode(Common.GetValueByPath(
-                                               fromObject, new string[] { "image" })),
-                                           toObject, rootObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "video" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "instances[0]", "video" },
-                              VideoToMldev(Common.ParseToJsonNode(Common.GetValueByPath(
-                                               fromObject, new string[] { "video" })),
-                                           toObject, rootObject));
-      }
-
       if (Common.GetValueByPath(fromObject, new string[] { "source" }) != null) {
         _ = GenerateVideosSourceToMldev(
             Common.ParseToJsonNode(Common.GetValueByPath(fromObject, new string[] { "source" })),
@@ -2446,25 +2427,6 @@ namespace Google.GenAI {
             toObject, new string[] { "_url", "model" },
             Transformers.TModel(this._apiClient,
                                 Common.GetValueByPath(fromObject, new string[] { "model" })));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "prompt" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "instances[0]", "prompt" },
-                              Common.GetValueByPath(fromObject, new string[] { "prompt" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "image" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "instances[0]", "image" },
-                              ImageToVertex(Common.ParseToJsonNode(Common.GetValueByPath(
-                                                fromObject, new string[] { "image" })),
-                                            toObject, rootObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "video" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "instances[0]", "video" },
-                              VideoToVertex(Common.ParseToJsonNode(Common.GetValueByPath(
-                                                fromObject, new string[] { "video" })),
-                                            toObject, rootObject));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "source" }) != null) {
@@ -5802,21 +5764,12 @@ namespace Google.GenAI {
     }
 
     private async Task<GenerateVideosOperation> PrivateGenerateVideosAsync(
-        string model, string? prompt, Image? image, Video? video, GenerateVideosSource? source,
-        GenerateVideosConfig? config, CancellationToken cancellationToken = default) {
+        string model, GenerateVideosSource source, GenerateVideosConfig? config,
+        CancellationToken cancellationToken = default) {
       GenerateVideosParameters parameter = new GenerateVideosParameters();
 
       if (!Common.IsZero(model)) {
         parameter.Model = model;
-      }
-      if (!Common.IsZero(prompt)) {
-        parameter.Prompt = prompt;
-      }
-      if (!Common.IsZero(image)) {
-        parameter.Image = image;
-      }
-      if (!Common.IsZero(video)) {
-        parameter.Video = video;
       }
       if (!Common.IsZero(source)) {
         parameter.Source = source;
@@ -6222,8 +6175,7 @@ namespace Google.GenAI {
     public async Task<GenerateVideosOperation> GenerateVideosAsync(
         String model, GenerateVideosSource source, GenerateVideosConfig? config = null,
         CancellationToken cancellationToken = default) {
-      return await PrivateGenerateVideosAsync(model, null, null, null, source, config,
-                                              cancellationToken);
+      return await PrivateGenerateVideosAsync(model, source, config, cancellationToken);
     }
 
     /// <summary>
