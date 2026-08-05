@@ -13348,6 +13348,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.FinishReason.ToString
   nameWithType: FinishReason.ToString
+- uid: Google.GenAI.Types.FinishReason.TooManyToolCalls
+  name: TooManyToolCalls
+  href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_TooManyToolCalls
+  commentId: P:Google.GenAI.Types.FinishReason.TooManyToolCalls
+  fullName: Google.GenAI.Types.FinishReason.TooManyToolCalls
+  nameWithType: FinishReason.TooManyToolCalls
+- uid: Google.GenAI.Types.FinishReason.TooManyToolCalls*
+  name: TooManyToolCalls
+  href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_TooManyToolCalls_
+  commentId: Overload:Google.GenAI.Types.FinishReason.TooManyToolCalls
+  isSpec: "True"
+  fullName: Google.GenAI.Types.FinishReason.TooManyToolCalls
+  nameWithType: FinishReason.TooManyToolCalls
 - uid: Google.GenAI.Types.FinishReason.UnexpectedToolCall
   name: UnexpectedToolCall
   href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_UnexpectedToolCall

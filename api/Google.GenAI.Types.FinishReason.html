@@ -145,7 +145,7 @@ public readonly record struct FinishReason : IEquatable&lt;FinishReason&gt;</cod
 
   <h3 id="Google_GenAI_Types_FinishReason_AllValues" data-uid="Google.GenAI.Types.FinishReason.AllValues">
   AllValues
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L129"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -240,7 +240,7 @@ public readonly record struct FinishReason : IEquatable&lt;FinishReason&gt;</cod
 
   <h3 id="Google_GenAI_Types_FinishReason_ImageOther" data-uid="Google.GenAI.Types.FinishReason.ImageOther">
   ImageOther
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L127"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Image generation stopped for a reason not otherwise specified.</p>
@@ -272,7 +272,7 @@ public readonly record struct FinishReason : IEquatable&lt;FinishReason&gt;</cod
 
   <h3 id="Google_GenAI_Types_FinishReason_ImageProhibitedContent" data-uid="Google.GenAI.Types.FinishReason.ImageProhibitedContent">
   ImageProhibitedContent
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L112"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Image generation stopped because the generated images have prohibited content.</p>
@@ -304,7 +304,7 @@ public readonly record struct FinishReason : IEquatable&lt;FinishReason&gt;</cod
 
   <h3 id="Google_GenAI_Types_FinishReason_ImageRecitation" data-uid="Google.GenAI.Types.FinishReason.ImageRecitation">
   ImageRecitation
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L122"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Image generation stopped because the generated image may be a recitation from a source.</p>
@@ -464,7 +464,7 @@ public readonly record struct FinishReason : IEquatable&lt;FinishReason&gt;</cod
 
   <h3 id="Google_GenAI_Types_FinishReason_NoImage" data-uid="Google.GenAI.Types.FinishReason.NoImage">
   NoImage
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L117"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The model was expected to generate an image, but none was generated.</p>
@@ -686,6 +686,38 @@ Identifiable Information (SPII).</p>
 
 
 
+  <a id="Google_GenAI_Types_FinishReason_TooManyToolCalls_" data-uid="Google.GenAI.Types.FinishReason.TooManyToolCalls*"></a>
+
+  <h3 id="Google_GenAI_Types_FinishReason_TooManyToolCalls" data-uid="Google.GenAI.Types.FinishReason.TooManyToolCalls">
+  TooManyToolCalls
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Model called too many tools consecutively, thus the system exited execution.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FinishReason TooManyToolCalls { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FinishReason.html">FinishReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_FinishReason_UnexpectedToolCall_" data-uid="Google.GenAI.Types.FinishReason.UnexpectedToolCall*"></a>
 
   <h3 id="Google_GenAI_Types_FinishReason_UnexpectedToolCall" data-uid="Google.GenAI.Types.FinishReason.UnexpectedToolCall">
@@ -757,7 +789,7 @@ Identifiable Information (SPII).</p>
 
   <h3 id="Google_GenAI_Types_FinishReason_Equals_Google_GenAI_Types_FinishReason_" data-uid="Google.GenAI.Types.FinishReason.Equals(Google.GenAI.Types.FinishReason)">
   Equals(FinishReason)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L168"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -793,7 +825,7 @@ Identifiable Information (SPII).</p>
 
   <h3 id="Google_GenAI_Types_FinishReason_FromString_System_String_" data-uid="Google.GenAI.Types.FinishReason.FromString(System.String)">
   FromString(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L150"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -829,7 +861,7 @@ Identifiable Information (SPII).</p>
 
   <h3 id="Google_GenAI_Types_FinishReason_GetHashCode" data-uid="Google.GenAI.Types.FinishReason.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L164"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L170"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -860,7 +892,7 @@ Identifiable Information (SPII).</p>
 
   <h3 id="Google_GenAI_Types_FinishReason_ToString" data-uid="Google.GenAI.Types.FinishReason.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L158"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L164"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -895,7 +927,7 @@ Identifiable Information (SPII).</p>
 
   <h3 id="Google_GenAI_Types_FinishReason_op_Implicit_System_String__Google_GenAI_Types_FinishReason" data-uid="Google.GenAI.Types.FinishReason.op_Implicit(System.String)~Google.GenAI.Types.FinishReason">
   implicit operator FinishReason(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L166"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
