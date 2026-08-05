@@ -102,6 +102,11 @@ namespace Google.GenAI.Types {
     public static FinishReason UnexpectedToolCall { get; } = new("UNEXPECTED_TOOL_CALL");
 
     /// <summary>
+    /// Model called too many tools consecutively, thus the system exited execution.
+    /// </summary>
+    public static FinishReason TooManyToolCalls { get; } = new("TOO_MANY_TOOL_CALLS");
+
+    /// <summary>
     /// Image generation stopped because the generated images have prohibited content.
     /// </summary>
     public static FinishReason ImageProhibitedContent { get; } = new("IMAGE_PROHIBITED_CONTENT");
@@ -136,6 +141,7 @@ namespace Google.GenAI.Types {
                 MalformedFunctionCall,
                 ImageSafety,
                 UnexpectedToolCall,
+                TooManyToolCalls,
                 ImageProhibitedContent,
                 NoImage,
                 ImageRecitation,
