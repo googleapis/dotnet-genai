@@ -220,6 +220,47 @@ class GenerateContentWithSafetySettings {
 <p>However you define your schema, don't duplicate it in your input prompt,
 including by giving examples of expected JSON output. If you do, the generated
 output might be lower in quality.</p>
+<p><strong>Important Note on Ordering:</strong> The <code>ResponseSchema</code> property relies on <code>Dictionary&lt;string, Schema&gt;</code>, which in .NET does not contractually guarantee order preservation. The Gemini model's JSON generation is sensitive to property ordering. Therefore, when using <code>ResponseSchema</code>, it is highly recommended to explicitly set the <code>PropertyOrdering</code> field to ensure the model aligns its output correctly. Alternatively, it is recommended to use <code>ResponseJsonSchema</code> with a parsed <code>JsonNode</code>, as <code>System.Text.Json</code>'s <code>JsonObject</code> naturally preserves parsing order.</p>
+<pre><code class="lang-csharp">using System.Text.Json.Nodes;
+using System.Threading.Tasks;
+using Google.GenAI;
+using Google.GenAI.Types;
+
+public class GenerateContentWithJsonSchema {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client();
+
+    // Recommended approach: using ResponseJsonSchema which preserves ordering naturally
+    string schemaString = @&quot;
+    {
+      &quot;&quot;type&quot;&quot;: &quot;&quot;object&quot;&quot;,
+      &quot;&quot;properties&quot;&quot;: {
+        &quot;&quot;title&quot;&quot;: { &quot;&quot;type&quot;&quot;: &quot;&quot;string&quot;&quot;, &quot;&quot;title&quot;&quot;: &quot;&quot;Title&quot;&quot; },
+        &quot;&quot;population&quot;&quot;: { &quot;&quot;type&quot;&quot;: &quot;&quot;integer&quot;&quot;, &quot;&quot;title&quot;&quot;: &quot;&quot;Population&quot;&quot; },
+        &quot;&quot;capital&quot;&quot;: { &quot;&quot;type&quot;&quot;: &quot;&quot;string&quot;&quot;, &quot;&quot;title&quot;&quot;: &quot;&quot;Capital&quot;&quot; },
+        &quot;&quot;continent&quot;&quot;: { &quot;&quot;type&quot;&quot;: &quot;&quot;string&quot;&quot;, &quot;&quot;title&quot;&quot;: &quot;&quot;Continent&quot;&quot; },
+        &quot;&quot;language&quot;&quot;: { &quot;&quot;type&quot;&quot;: &quot;&quot;string&quot;&quot;, &quot;&quot;title&quot;&quot;: &quot;&quot;Language&quot;&quot; }
+      },
+      &quot;&quot;required&quot;&quot;: [&quot;&quot;title&quot;&quot;, &quot;&quot;population&quot;&quot;, &quot;&quot;capital&quot;&quot;, &quot;&quot;continent&quot;&quot;, &quot;&quot;language&quot;&quot;]
+    }&quot;;
+
+    var response = await client.Models.GenerateContentAsync(
+        model: &quot;gemini-3.5-flash&quot;,
+        contents: &quot;Give me information about Australia&quot;,
+        config: new GenerateContentConfig {
+            ResponseMimeType = &quot;application/json&quot;,
+            ResponseJsonSchema = JsonNode.Parse(schemaString)
+        }
+    );
+
+    string text = response.Candidates[0].Content.Parts[0].Text;
+    var parsedText = JsonSerializer.Deserialize&lt;Dictionary&lt;string, object&gt;&gt;(text);
+    Console.WriteLine(parsedText);
+  }
+}
+</code></pre>
+<p>Example using the legacy <code>ResponseSchema</code> approach (explicit <code>PropertyOrdering</code> required if you are generating schemas dynamically):</p>
 <pre><code class="lang-csharp">using System.Threading.Tasks;
 using Google.GenAI;
 using Google.GenAI.Types;
