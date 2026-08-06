@@ -150,4 +150,176 @@ public class GenerateContentToolsTest {
     Assert.IsNotNull(geminiResponse.Text);
     Assert.IsNotNull(geminiResponse.Candidates.First().GroundingMetadata);
   }
+
+  [TestMethod]
+  public async Task GenerateContentSchemaPropertyOrderingResponseSchemaGeminiTest() {
+    var schema = new GoogleTypes.Schema {
+      Type = GoogleTypes.Type.Object,
+      Properties = new Dictionary<string, GoogleTypes.Schema> {
+        { "companyName", new GoogleTypes.Schema { Type = GoogleTypes.Type.String } },
+        { "companyShortName", new GoogleTypes.Schema { Type = GoogleTypes.Type.String } },
+        { "person", new GoogleTypes.Schema {
+            Type = GoogleTypes.Type.Object,
+            Properties = new Dictionary<string, GoogleTypes.Schema> {
+              { "gender", new GoogleTypes.Schema { Type = GoogleTypes.Type.String } },
+              { "firstName", new GoogleTypes.Schema { Type = GoogleTypes.Type.String } },
+              { "lastName", new GoogleTypes.Schema { Type = GoogleTypes.Type.String } }
+            }
+        } }
+      }
+    };
+
+    string systemInstruction = "Analyze the input and extract the company and person details. The person object should contain gender, firstName, and lastName.";
+    string input = "Hauswart-Service AG (short name Hauswart-Service) is represented by Mr. R. Zürcher.";
+
+    var config = new GoogleTypes.GenerateContentConfig {
+      ResponseMimeType = "application/json",
+      ResponseSchema = schema,
+      SystemInstruction = new GoogleTypes.Content {
+        Parts = new List<GoogleTypes.Part> { new GoogleTypes.Part { Text = systemInstruction } }
+      },
+      Temperature = 0,
+      MaxOutputTokens = 5000
+    };
+
+    var response = await geminiClient.Models.GenerateContentAsync(
+        model: "gemini-3.5-flash",
+        contents: input,
+        config: config
+    );
+
+    string responseText = response.Candidates[0].Content.Parts[0].Text;
+    Assert.IsNotNull(responseText);
+    Assert.IsTrue(responseText.Contains("Zürcher"), "The response should contain the correctly extracted last name.");
+    Assert.IsFalse(responseText.Contains("Zürcher2"), "The response should not contain hallucinated timestamps attached to the name.");
+  }
+
+  [TestMethod]
+  public async Task GenerateContentSchemaPropertyOrderingResponseSchemaVertexTest() {
+    var schema = new GoogleTypes.Schema {
+      Type = GoogleTypes.Type.Object,
+      Properties = new Dictionary<string, GoogleTypes.Schema> {
+        { "companyName", new GoogleTypes.Schema { Type = GoogleTypes.Type.String } },
+        { "companyShortName", new GoogleTypes.Schema { Type = GoogleTypes.Type.String } },
+        { "person", new GoogleTypes.Schema {
+            Type = GoogleTypes.Type.Object,
+            Properties = new Dictionary<string, GoogleTypes.Schema> {
+              { "gender", new GoogleTypes.Schema { Type = GoogleTypes.Type.String } },
+              { "firstName", new GoogleTypes.Schema { Type = GoogleTypes.Type.String } },
+              { "lastName", new GoogleTypes.Schema { Type = GoogleTypes.Type.String } }
+            }
+        } }
+      }
+    };
+
+    string systemInstruction = "Analyze the input and extract the company and person details. The person object should contain gender, firstName, and lastName.";
+    string input = "Hauswart-Service AG (short name Hauswart-Service) is represented by Mr. R. Zürcher.";
+
+    var config = new GoogleTypes.GenerateContentConfig {
+      ResponseMimeType = "application/json",
+      ResponseSchema = schema,
+      SystemInstruction = new GoogleTypes.Content {
+        Parts = new List<GoogleTypes.Part> { new GoogleTypes.Part { Text = systemInstruction } }
+      },
+      Temperature = 0,
+      MaxOutputTokens = 5000
+    };
+
+    var response = await vertexClient.Models.GenerateContentAsync(
+        model: "gemini-3.5-flash",
+        contents: input,
+        config: config
+    );
+
+    string responseText = response.Candidates[0].Content.Parts[0].Text;
+    Assert.IsNotNull(responseText);
+    Assert.IsTrue(responseText.Contains("Zürcher"), "The response should contain the correctly extracted last name.");
+    Assert.IsFalse(responseText.Contains("Zürcher2"), "The response should not contain hallucinated timestamps attached to the name.");
+  }
+
+  [TestMethod]
+  public async Task GenerateContentSchemaPropertyOrderingResponseJsonSchemaGeminiTest() {
+    string schemaString = @"
+    {
+        ""type"": ""object"",
+        ""properties"": {
+            ""companyName"": { ""type"": ""string"" },
+            ""companyShortName"": { ""type"": ""string"" },
+            ""person"": {
+                ""type"": ""object"",
+                ""properties"": {
+                    ""gender"": { ""type"": ""string"" },
+                    ""firstName"": { ""type"": ""string"" },
+                    ""lastName"": { ""type"": ""string"" }
+                }
+            }
+        }
+    }";
+
+    string systemInstruction = "Analyze the input and extract the company and person details. The person object should contain gender, firstName, and lastName.";
+    string input = "Hauswart-Service AG (short name Hauswart-Service) is represented by Mr. R. Zürcher.";
+
+    var config = new GoogleTypes.GenerateContentConfig {
+      ResponseMimeType = "application/json",
+      ResponseJsonSchema = System.Text.Json.Nodes.JsonNode.Parse(schemaString),
+      SystemInstruction = new GoogleTypes.Content {
+        Parts = new List<GoogleTypes.Part> { new GoogleTypes.Part { Text = systemInstruction } }
+      },
+      Temperature = 0,
+      MaxOutputTokens = 5000
+    };
+
+    var response = await geminiClient.Models.GenerateContentAsync(
+        model: "gemini-3.5-flash",
+        contents: input,
+        config: config
+    );
+
+    string responseText = response.Candidates[0].Content.Parts[0].Text;
+    Assert.IsNotNull(responseText);
+    Assert.IsTrue(responseText.Contains("Zürcher"), "The response should contain the correctly extracted last name.");
+  }
+
+  [TestMethod]
+  public async Task GenerateContentSchemaPropertyOrderingResponseJsonSchemaVertexTest() {
+    string schemaString = @"
+    {
+        ""type"": ""object"",
+        ""properties"": {
+            ""companyName"": { ""type"": ""string"" },
+            ""companyShortName"": { ""type"": ""string"" },
+            ""person"": {
+                ""type"": ""object"",
+                ""properties"": {
+                    ""gender"": { ""type"": ""string"" },
+                    ""firstName"": { ""type"": ""string"" },
+                    ""lastName"": { ""type"": ""string"" }
+                }
+            }
+        }
+    }";
+
+    string systemInstruction = "Analyze the input and extract the company and person details. The person object should contain gender, firstName, and lastName.";
+    string input = "Hauswart-Service AG (short name Hauswart-Service) is represented by Mr. R. Zürcher.";
+
+    var config = new GoogleTypes.GenerateContentConfig {
+      ResponseMimeType = "application/json",
+      ResponseJsonSchema = System.Text.Json.Nodes.JsonNode.Parse(schemaString),
+      SystemInstruction = new GoogleTypes.Content {
+        Parts = new List<GoogleTypes.Part> { new GoogleTypes.Part { Text = systemInstruction } }
+      },
+      Temperature = 0,
+      MaxOutputTokens = 5000
+    };
+
+    var response = await vertexClient.Models.GenerateContentAsync(
+        model: "gemini-3.5-flash",
+        contents: input,
+        config: config
+    );
+
+    string responseText = response.Candidates[0].Content.Parts[0].Text;
+    Assert.IsNotNull(responseText);
+    Assert.IsTrue(responseText.Contains("Zürcher"), "The response should contain the correctly extracted last name.");
+  }
 }

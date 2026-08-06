@@ -1283,9 +1283,9 @@ namespace Google.GenAI {
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "responseJsonSchema" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "responseJsonSchema" },
-            Common.GetValueByPath(fromObject, new string[] { "responseJsonSchema" }));
+        Common.SetValueByPath(toObject, new string[] { "responseJsonSchema" },
+                              Transformers.TJsonSchema(Common.GetValueByPath(
+                                  fromObject, new string[] { "responseJsonSchema" })));
       }
 
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "routingConfig" }))) {
@@ -1487,9 +1487,9 @@ namespace Google.GenAI {
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "responseJsonSchema" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "responseJsonSchema" },
-            Common.GetValueByPath(fromObject, new string[] { "responseJsonSchema" }));
+        Common.SetValueByPath(toObject, new string[] { "responseJsonSchema" },
+                              Transformers.TJsonSchema(Common.GetValueByPath(
+                                  fromObject, new string[] { "responseJsonSchema" })));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "routingConfig" }) != null) {
@@ -2714,9 +2714,9 @@ namespace Google.GenAI {
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "responseJsonSchema" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "responseJsonSchema" },
-            Common.GetValueByPath(fromObject, new string[] { "responseJsonSchema" }));
+        Common.SetValueByPath(toObject, new string[] { "responseJsonSchema" },
+                              Transformers.TJsonSchema(Common.GetValueByPath(
+                                  fromObject, new string[] { "responseJsonSchema" })));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "audioTimestamp" }) != null) {

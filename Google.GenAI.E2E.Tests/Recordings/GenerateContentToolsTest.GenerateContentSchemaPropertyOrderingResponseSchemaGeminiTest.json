@@ -1,0 +1,133 @@
+{
+  "recordID": "GenerateContentToolsTest.GenerateContentSchemaPropertyOrderingResponseSchemaGeminiTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1beta/models/gemini-3.5-flash:generateContent",
+        "request": "POST /v1beta/models/gemini-3.5-flash:generateContent HTTP/1.1",
+        "headers": {
+          "Content-Length": "772",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test-Name": "GenerateContentToolsTest.GenerateContentSchemaPropertyOrderingResponseSchemaGeminiTest"
+        },
+        "bodySegments": [
+          {
+            "contents": [
+              {
+                "parts": [
+                  {
+                    "text": "Hauswart-Service AG (short name Hauswart-Service) is represented by Mr. R. Zürcher."
+                  }
+                ],
+                "role": "user"
+              }
+            ],
+            "generationConfig": {
+              "maxOutputTokens": 5000,
+              "responseMimeType": "application/json",
+              "responseSchema": {
+                "properties": {
+                  "companyName": {
+                    "type": "STRING"
+                  },
+                  "companyShortName": {
+                    "type": "STRING"
+                  },
+                  "person": {
+                    "properties": {
+                      "firstName": {
+                        "type": "STRING"
+                      },
+                      "gender": {
+                        "type": "STRING"
+                      },
+                      "lastName": {
+                        "type": "STRING"
+                      }
+                    },
+                    "propertyOrdering": [
+                      "gender",
+                      "firstName",
+                      "lastName"
+                    ],
+                    "type": "OBJECT"
+                  }
+                },
+                "propertyOrdering": [
+                  "companyName",
+                  "companyShortName",
+                  "person"
+                ],
+                "type": "OBJECT"
+              },
+              "temperature": 0
+            },
+            "systemInstruction": {
+              "parts": [
+                {
+                  "text": "Analyze the input and extract the company and person details. The person object should contain gender, firstName, and lastName."
+                }
+              ]
+            }
+          }
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "generativelanguage.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "e88d7e95e5ede3ecf4efc8401eac01e939e99ffa5cb51ef5783c2cdcb1b99f92",
+      "response": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=UTF-8",
+          "Date": "Wed, 05 Aug 2026 19:43:27 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Server-Timing": "gfet4t7; dur=5819",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Gemini-Service-Tier": "standard",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "candidates": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "{\"companyName\":\"Hauswart-Service AG\",\"companyShortName\":\"Hauswart-Service\",\"person\":{\"gender\":\"male\",\"firstName\":\"R.\",\"lastName\":\"Zürcher\"}}",
+                      "thoughtSignature": "EuQKCuEKARFNMg9cB6CQxPJ0Ra9gu1DgDxgVMuBQaYLDwxaDDquigtMfKSnKzBhoS2Dzu2+WwWe8MovaxwNlYLAZGoOLhSkuj6zZ3ryxWHNBCBHiIuRYOEYK14bCy03wnDS2j1qyuiddiWnNuf9c9uEM0I4yerhgiJbo8KXIokAo0fXmJ+xvAPfem4DYk+AEvksRVOqHvK6X5R5trZWXHnBg49BlILFsZaTsvzJMj09mfTTTaQkvPmQAc88izK2pMAIDlRgKGQUgMhPlCXn8ZtMRO12A97lgzC29xNPkolhB6BVqBNT8AZt+QyCpudQtjtwPxGw5LqajIzHFfi+2hNjJJgRpTB/lJmmMolo4ubwHYw7iIy/NHiwty8mMI3PUcNoF1q2ETaGLgL8yzEH4EAMo08KQ8UpnkWIjQLIGf/eOPWrd9RPcwpDjG4jG+zAK7hJFYqzlzwyPHFPTSTTNr+9Q9y9MO7XeMVVwCs+w/hr7Kz/3OnqOmADSjjavrTmGheYHH/8wBPmqh+MOpZq+BUc12t9ASKRnPY6YhHVVAYI9qeC0c09h8xc1j6Ju5uZC9T62qZGSPFq96xDmJ59+jxaqNskk7b/nqCCjKBPhX8tdAN2mv/Gd8f/jcI4LxVGghlelJGf+I4ZtRuMIVWMxEvXPaX+fOGpWbDV6PmJAKyD/EvIGBg3th9PWSwI4G7bfo0/Drpi9MpmXPxPGhPWsOCrNIGVlOWkUURtXJvjCd1G2SjtI9+amhAKb0qSiSv5QMactfv6UfmCWQJDp2VdOuqvW6bLBEJB8QLdGmgi+zW4AKJXSq8KlNujuPmGSp+fCbYjTS0FgZ7kVNuZfOAVHysAuKbsyyh5PhosBB7iLwC4Mge6YVxKpy31VWd7qr02zL/oHek0yLz8/y6DDetgoeGyp0Nd8JNT0bUcO/RQ1TLOdHO4vuL8i8gm3TexO2mM/MFFJCwEyLl4Xp7n47TMuyDx7mz+h5MzX/+YW2E3/DIekux5R8ZjT/4D8DesZQOH1/SapQxrN0QMG/W+H/zFlQd31qBzrlW+Wr7ISOQAF4dFGJhnSElnumcDSW/HqVqBm/lh41GMUrZF8e38UHyvb61qHF3CuJa6H09pLSrk6fXgK8GGmMp9Fk9iCpIzLcm7D/4WnHLaBf++BJGUF7vFseVs7cDdanrE8ns+e5h1qnCTnLKZO1YbsZoqUOg9xZL/a1SuWIIrxVjr7pbP60bqzcgGfiK9hxz8WshvYef3BQJhrzNMmK7lO8TISVftMR+tlGt6WXIgXblcKiH4fYMujmEfC8qf72LHLSjLBk1Pda+B/9y7JL5UPjaqtQqFuoueqnzUZApBLnlkPChxcVVB6JnRZjzllXU324foES9aoAoWyYCSmM+U2EFjoQTH8cqBwFhXQw5iBUOf0nKf0piL0NcHtvU/rAonSXhDx8py6TUQUWRQO7cMZK7yV9UkHrz8VZboL7p8uMb4hnRCMBTCiQfYlqflGU+AeAbYWgxJmWcDRTnqcD/+wBzzIBv3V0ntg37gTXrtBJJsUH+h4/yAy59aUdmN13PqBYeP6NvtLstGLgcPiCgCLu4snH560lKgo+fTl/LxmAKaz49fzarsgEgxtkUfmS51kiISL5Bzfw54eNEne6HDYIgtF/KOZZfQz1M/Xu5YPyvPofc0HVu21s7wQkQzqihb6dkqq373R5fb0gB924JtTXGHUuvONCbuxhtcnqsiOMIJiJKnyC0y+LyfEDaUYW9K73q5HrVwMeqDUkJNU+w4oopR5XOzYXLHW9g3qZ79x3nMDcc1BY1JQwGpN3Um6D5AI8NSApxzB8zInBasVgovl"
+                    }
+                  ],
+                  "role": "model"
+                },
+                "finishReason": "STOP",
+                "index": 0
+              }
+            ],
+            "modelVersion": "gemini-3.5-flash",
+            "responseId": "WZJzaufeNO3Tz7IP7bCeqAo",
+            "turnToken": "v1_ChdXWkp6YXVmZU5PM1R6N0lQN2JDZXFBbxIXV1pKemF1ZmVOTzNUejdJUDdiQ2VxQW8",
+            "usageMetadata": {
+              "candidatesTokenCount": 36,
+              "promptTokenCount": 48,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 48
+                }
+              ],
+              "rawPromptTokenCount": 322,
+              "serviceTier": "standard",
+              "thoughtsTokenCount": 399,
+              "totalTokenCount": 483
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

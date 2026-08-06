@@ -207,14 +207,187 @@ namespace Google.GenAI
       }
       else if (origin is Schema schema)
       {
-        return schema;
+        return ProcessSchema(schema);
       }
       else if (origin is JsonObject jsonObject)
       {
-        return JsonSerializer.Deserialize(jsonObject.ToString(), JsonConfig.TypeInfo<Schema>());
+        Schema? deserializedSchema = JsonSerializer.Deserialize(jsonObject.ToString(), JsonConfig.TypeInfo<Schema>());
+        return ProcessSchema(deserializedSchema);
+      }
+      else if (origin is JsonNode jsonNode)
+      {
+        Schema? deserializedSchema = JsonSerializer.Deserialize(jsonNode.ToString(), JsonConfig.TypeInfo<Schema>());
+        return ProcessSchema(deserializedSchema);
+      }
+      else if (origin is string jsonString)
+      {
+        Schema? deserializedSchema = Schema.FromJson(jsonString);
+        return ProcessSchema(deserializedSchema);
       }
       throw new ArgumentException($"Unsupported schema type: {origin.GetType()}");
     }
+
+    /// <summary>Transforms a JSON schema object for the API, ensuring propertyOrdering is set when properties are present.</summary>
+    internal static object? TJsonSchema(object? origin)
+    {
+      if (origin == null)
+      {
+        return null;
+      }
+      if (origin is Schema schema)
+      {
+        return ProcessSchema(schema);
+      }
+      if (origin is JsonNode jsonNode)
+      {
+        return ProcessJsonNode(jsonNode);
+      }
+      if (origin is string jsonString)
+      {
+        try
+        {
+          var node = JsonNode.Parse(jsonString);
+          return ProcessJsonNode(node);
+        }
+        catch
+        {
+          return origin;
+        }
+      }
+      return origin;
+    }
+
+    internal static Schema? ProcessSchema(Schema? schema, HashSet<object>? visited = null)
+    {
+      if (schema == null)
+      {
+        return null;
+      }
+
+      visited ??= new HashSet<object>();
+      if (!visited.Add(schema))
+      {
+        return schema; // Already visited, prevent infinite loop
+      }
+
+      if (schema.Properties != null && schema.Properties.Count > 0)
+      {
+        foreach (var subSchema in schema.Properties.Values)
+        {
+          ProcessSchema(subSchema, visited);
+        }
+
+        if (schema.Properties.Count > 1 && (schema.PropertyOrdering == null || schema.PropertyOrdering.Count == 0))
+        {
+          schema.PropertyOrdering = new List<string>(schema.Properties.Keys);
+        }
+      }
+
+      if (schema.Items != null)
+      {
+        ProcessSchema(schema.Items, visited);
+      }
+
+      if (schema.AnyOf != null)
+      {
+        foreach (var subSchema in schema.AnyOf)
+        {
+          ProcessSchema(subSchema, visited);
+        }
+      }
+
+      if (schema.Defs != null)
+      {
+        foreach (var subSchema in schema.Defs.Values)
+        {
+          ProcessSchema(subSchema, visited);
+        }
+      }
+
+      return schema;
+    }
+
+    internal static JsonNode? ProcessJsonNode(JsonNode? node, HashSet<object>? visited = null)
+    {
+      if (node == null)
+      {
+        return null;
+      }
+
+      visited ??= new HashSet<object>();
+      if (!visited.Add(node))
+      {
+        return node; // Already visited, prevent infinite loop
+      }
+
+      if (node is JsonObject obj)
+      {
+        if (obj["properties"] is JsonObject props)
+        {
+          foreach (var kvp in props)
+          {
+            ProcessJsonNode(kvp.Value, visited);
+          }
+
+          if (props.Count > 1 && obj["propertyOrdering"] == null && obj["property_ordering"] == null)
+          {
+            var ordering = new JsonArray();
+            foreach (var kvp in props)
+            {
+              ordering.Add(kvp.Key);
+            }
+            obj["propertyOrdering"] = ordering;
+          }
+        }
+
+        if (obj["items"] != null)
+        {
+          ProcessJsonNode(obj["items"], visited);
+        }
+
+        if (obj["anyOf"] is JsonArray anyOf)
+        {
+          foreach (var item in anyOf)
+          {
+            ProcessJsonNode(item, visited);
+          }
+        }
+
+        if (obj["oneOf"] is JsonArray oneOf)
+        {
+          foreach (var item in oneOf)
+          {
+            ProcessJsonNode(item, visited);
+          }
+        }
+
+        if (obj["$defs"] is JsonObject defs1)
+        {
+          foreach (var def in defs1)
+          {
+            ProcessJsonNode(def.Value, visited);
+          }
+        }
+
+        if (obj["defs"] is JsonObject defs2)
+        {
+          foreach (var def in defs2)
+          {
+            ProcessJsonNode(def.Value, visited);
+          }
+        }
+      }
+      else if (node is JsonArray arr)
+      {
+        foreach (var item in arr)
+        {
+          ProcessJsonNode(item, visited);
+        }
+      }
+
+      return node;
+    }
+
 
     internal static SpeechConfig? TSpeechConfig(object speechConfig)
     {

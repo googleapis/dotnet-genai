@@ -195,6 +195,51 @@ However you define your schema, don't duplicate it in your input prompt,
 including by giving examples of expected JSON output. If you do, the generated
 output might be lower in quality.
 
+**Important Note on Ordering:** The `ResponseSchema` property relies on `Dictionary<string, Schema>`, which in .NET does not contractually guarantee order preservation. The Gemini model's JSON generation is sensitive to property ordering. Therefore, when using `ResponseSchema`, it is highly recommended to explicitly set the `PropertyOrdering` field to ensure the model aligns its output correctly. Alternatively, it is recommended to use `ResponseJsonSchema` with a parsed `JsonNode`, as `System.Text.Json`'s `JsonObject` naturally preserves parsing order.
+
+```csharp
+using System.Text.Json.Nodes;
+using System.Threading.Tasks;
+using Google.GenAI;
+using Google.GenAI.Types;
+
+public class GenerateContentWithJsonSchema {
+  public static async Task main() {
+    // assuming credentials are set up in environment variables as instructed above.
+    var client = new Client();
+
+    // Recommended approach: using ResponseJsonSchema which preserves ordering naturally
+    string schemaString = @"
+    {
+      ""type"": ""object"",
+      ""properties"": {
+        ""title"": { ""type"": ""string"", ""title"": ""Title"" },
+        ""population"": { ""type"": ""integer"", ""title"": ""Population"" },
+        ""capital"": { ""type"": ""string"", ""title"": ""Capital"" },
+        ""continent"": { ""type"": ""string"", ""title"": ""Continent"" },
+        ""language"": { ""type"": ""string"", ""title"": ""Language"" }
+      },
+      ""required"": [""title"", ""population"", ""capital"", ""continent"", ""language""]
+    }";
+
+    var response = await client.Models.GenerateContentAsync(
+        model: "gemini-3.5-flash",
+        contents: "Give me information about Australia",
+        config: new GenerateContentConfig {
+            ResponseMimeType = "application/json",
+            ResponseJsonSchema = JsonNode.Parse(schemaString)
+        }
+    );
+
+    string text = response.Candidates[0].Content.Parts[0].Text;
+    var parsedText = JsonSerializer.Deserialize<Dictionary<string, object>>(text);
+    Console.WriteLine(parsedText);
+  }
+}
+```
+
+Example using the legacy `ResponseSchema` approach (explicit `PropertyOrdering` required if you are generating schemas dynamically):
+
 ```csharp
 using System.Threading.Tasks;
 using Google.GenAI;
