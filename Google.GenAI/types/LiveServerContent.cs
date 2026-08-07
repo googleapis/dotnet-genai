@@ -149,6 +149,16 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// The current activity status of the live session. Always sent alongside `turn_complete`.
+    /// </summary>
+    [JsonPropertyName("interactionStatus")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public InteractionStatus
+        ? InteractionStatus {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a LiveServerContent object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
