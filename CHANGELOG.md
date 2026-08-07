@@ -1,18 +1,5 @@
 # Changelog
 
-## Version 1.17.0, released 2026-08-06
-
-
-### New features
-
-* Add TOO_MANY_TOOL_CALLS to FinishReason enum. ([c5d5a53](https://github.com/googleapis/dotnet-genai/commit/c5d5a53d820c63d299bfae0f16b69001a1da98f7))
-* Support GoogleMaps Tool grounding_types places and routing ([056b631](https://github.com/googleapis/dotnet-genai/commit/056b631a8d197714feebf11e7a5ebc65b677c12b))
-
-
-### Bug fixes
-
-* Add propertyOrdering auto-population for ResponseSchema and ResponseJsonSchema for Dotnet SDK ([e765485](https://github.com/googleapis/dotnet-genai/commit/e765485e13e58e07176744dfb0e4532e856310b8))
-
 ## Version 1.16.0, released 2026-07-28
 
 
