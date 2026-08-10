@@ -23,76 +23,84 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// HTTP options to be used in each of the requests.
+  /// HTTP retry options to be used in each of the requests.
   /// </summary>
 
-  public record HttpOptions {
+  public record HttpRetryOptions {
     /// <summary>
-    /// The base URL for the AI platform service endpoint.
+    /// Maximum number of attempts, including the original request. If 0 or 1, it means no retries.
+    /// If not specified, default to 5.
     /// </summary>
-    [JsonPropertyName("baseUrl")]
+    [JsonPropertyName("attempts")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string ? BaseUrl { get; set; }
+    public int ? Attempts { get; set; }
 
     /// <summary>
-    /// The resource scope used to constructing the resource name when base_url is set
+    /// Initial delay before the first retry, in fractions of a second. If not specified, default
+    /// to 1.0 second.
     /// </summary>
-    [JsonPropertyName("baseUrlResourceScope")]
+    [JsonPropertyName("initialDelay")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public ResourceScope
-        ? BaseUrlResourceScope {
+    public double
+        ? InitialDelay {
             get; set;
           }
 
     /// <summary>
-    /// Specifies the version of the API to use.
+    /// Maximum delay between retries, in fractions of a second. If not specified, default to 60.0
+    /// seconds.
     /// </summary>
-    [JsonPropertyName("apiVersion")]
+    [JsonPropertyName("maxDelay")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string
-        ? ApiVersion {
+    public double
+        ? MaxDelay {
             get; set;
           }
 
     /// <summary>
-    /// Additional HTTP headers to be sent with the request.
+    /// Multiplier by which the delay increases after each attempt. If not specified, default
+    /// to 2.0.
     /// </summary>
-    [JsonPropertyName("headers")]
+    [JsonPropertyName("expBase")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public Dictionary<string, string>
-        ? Headers {
+    public double
+        ? ExpBase {
             get; set;
           }
 
     /// <summary>
-    /// Timeout for the request in milliseconds.
+    /// Randomness factor for the delay. If not specified, default to 1.0.
     /// </summary>
-    [JsonPropertyName("timeout")]
+    [JsonPropertyName("jitter")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public int
-        ? Timeout {
+    public double
+        ? Jitter {
             get; set;
           }
 
     /// <summary>
-    /// HTTP retry options for the request.
+    /// List of HTTP status codes that should trigger a retry. If not specified, a default set of
+    /// retryable codes (408, 429, and 5xx) may be used.
     /// </summary>
-    [JsonPropertyName("retryOptions")]
+    [JsonPropertyName("httpStatusCodes")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public HttpRetryOptions
-        ? RetryOptions {
+    public List<int>
+        ? HttpStatusCodes {
             get; set;
           }
 
     /// <summary>
-    /// Deserializes a JSON string to a HttpOptions object.
+    /// Deserializes a JSON string to a HttpRetryOptions object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized HttpOptions object, or null if deserialization fails.</returns>
-    public static HttpOptions ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
+    /// <returns>The deserialized HttpRetryOptions object, or null if deserialization
+    /// fails.</returns>
+    public static HttpRetryOptions
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize(jsonString, JsonConfig.TypeInfo<HttpOptions>(options));
+        return JsonSerializer.Deserialize(jsonString,
+                                          JsonConfig.TypeInfo<HttpRetryOptions>(options));
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;

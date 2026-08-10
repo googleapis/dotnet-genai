@@ -102,8 +102,11 @@ namespace Google.GenAI
         Types.HttpOptions? requestHttpOptions,
         CancellationToken cancellationToken = default)
     {
-      HttpRequestMessage request = await CreateHttpRequestAsync(httpMethod, path, requestJson, requestHttpOptions);
-      HttpResponseMessage response = await HttpClient.SendAsync(request, cancellationToken);
+      HttpResponseMessage response = await SendWithRetryAsync(
+          () => CreateHttpRequestAsync(httpMethod, path, requestJson, requestHttpOptions),
+          HttpCompletionOption.ResponseContentRead,
+          MergeHttpOptions(requestHttpOptions).RetryOptions,
+          cancellationToken);
       if (!response.IsSuccessStatusCode)
       {
         try
@@ -126,8 +129,11 @@ namespace Google.GenAI
         Types.HttpOptions? requestHttpOptions,
         CancellationToken cancellationToken = default)
     {
-      HttpRequestMessage request = await CreateHttpRequestAsync(httpMethod, url, requestBytes, requestHttpOptions);
-      HttpResponseMessage response = await HttpClient.SendAsync(request, cancellationToken);
+      HttpResponseMessage response = await SendWithRetryAsync(
+          () => CreateHttpRequestAsync(httpMethod, url, requestBytes, requestHttpOptions),
+          HttpCompletionOption.ResponseContentRead,
+          MergeHttpOptions(requestHttpOptions).RetryOptions,
+          cancellationToken);
       if (!response.IsSuccessStatusCode)
       {
         try
@@ -150,13 +156,12 @@ namespace Google.GenAI
         Types.HttpOptions? requestHttpOptions,
         [EnumeratorCancellation] CancellationToken cancellationToken = default)
     {
-      HttpRequestMessage request =
-          await CreateHttpRequestAsync(httpMethod, path, requestJson, requestHttpOptions);
-
-      HttpResponseMessage response = await HttpClient.SendAsync(
-        request,
+      // Only the initial send is retried; a stream cannot be restarted mid-flight.
+      HttpResponseMessage response = await SendWithRetryAsync(
+        () => CreateHttpRequestAsync(httpMethod, path, requestJson, requestHttpOptions),
         // Use ResponseHeadersRead to avoid buffering the entire response
         HttpCompletionOption.ResponseHeadersRead,
+        MergeHttpOptions(requestHttpOptions).RetryOptions,
         cancellationToken);
       if (!response.IsSuccessStatusCode)
       {

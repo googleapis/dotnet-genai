@@ -870,10 +870,12 @@ namespace Google.GenAI.Tests {
 
     [TestMethod]
     public void Constructor_ClientOptionsProvided_HttpClientFactory() {
-      var proxyAddress = "http://your-proxy-address:port";
-      var options =
-          new ClientOptions { HttpClientFactory = () => new HttpClient(
-                                  new HttpClientHandler { Proxy = new WebProxy(proxyAddress) }) };
+      var proxyAddress = "http://your-proxy-address:8080";
+      var options = new ClientOptions {
+        HttpClientFactory = () => {
+          return new HttpClient(new HttpClientHandler { Proxy = new WebProxy(proxyAddress) });
+        }
+      };
 
       var client = new Client(vertexAI: true, project: "project", location: "location",
                               clientOptions: options);

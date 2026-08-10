@@ -168,6 +168,8 @@ namespace Google.GenAI
           }
       }
 
+      // Disjoint from the API client's retry: this handles only a 2xx response
+      // missing X-Goog-Upload-Status.
       for (int retryCount = 0; retryCount < MAX_RETRY_COUNT; retryCount++)
       {
         var response = await _apiClient.RequestAsync(
