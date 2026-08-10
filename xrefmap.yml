@@ -219,6 +219,22 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.ApiClient.RequestStreamAsync
   nameWithType: ApiClient.RequestStreamAsync
+- uid: Google.GenAI.ApiClient.SendWithRetryAsync(System.Func{System.Threading.Tasks.Task{System.Net.Http.HttpRequestMessage}},System.Net.Http.HttpCompletionOption,Google.GenAI.Types.HttpRetryOptions,System.Threading.CancellationToken)
+  name: SendWithRetryAsync(Func<Task<HttpRequestMessage>>, HttpCompletionOption, HttpRetryOptions?, CancellationToken)
+  href: api/Google.GenAI.ApiClient.html#Google_GenAI_ApiClient_SendWithRetryAsync_System_Func_System_Threading_Tasks_Task_System_Net_Http_HttpRequestMessage___System_Net_Http_HttpCompletionOption_Google_GenAI_Types_HttpRetryOptions_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.ApiClient.SendWithRetryAsync(System.Func{System.Threading.Tasks.Task{System.Net.Http.HttpRequestMessage}},System.Net.Http.HttpCompletionOption,Google.GenAI.Types.HttpRetryOptions,System.Threading.CancellationToken)
+  name.vb: SendWithRetryAsync(Func(Of Task(Of HttpRequestMessage)), HttpCompletionOption, HttpRetryOptions, CancellationToken)
+  fullName: Google.GenAI.ApiClient.SendWithRetryAsync(System.Func<System.Threading.Tasks.Task<System.Net.Http.HttpRequestMessage>>, System.Net.Http.HttpCompletionOption, Google.GenAI.Types.HttpRetryOptions?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.ApiClient.SendWithRetryAsync(System.Func(Of System.Threading.Tasks.Task(Of System.Net.Http.HttpRequestMessage)), System.Net.Http.HttpCompletionOption, Google.GenAI.Types.HttpRetryOptions, System.Threading.CancellationToken)
+  nameWithType: ApiClient.SendWithRetryAsync(Func<Task<HttpRequestMessage>>, HttpCompletionOption, HttpRetryOptions?, CancellationToken)
+  nameWithType.vb: ApiClient.SendWithRetryAsync(Func(Of Task(Of HttpRequestMessage)), HttpCompletionOption, HttpRetryOptions, CancellationToken)
+- uid: Google.GenAI.ApiClient.SendWithRetryAsync*
+  name: SendWithRetryAsync
+  href: api/Google.GenAI.ApiClient.html#Google_GenAI_ApiClient_SendWithRetryAsync_
+  commentId: Overload:Google.GenAI.ApiClient.SendWithRetryAsync
+  isSpec: "True"
+  fullName: Google.GenAI.ApiClient.SendWithRetryAsync
+  nameWithType: ApiClient.SendWithRetryAsync
 - uid: Google.GenAI.ApiClient.VertexAI
   name: VertexAI
   href: api/Google.GenAI.ApiClient.html#Google_GenAI_ApiClient_VertexAI
@@ -19991,6 +20007,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.HttpOptions.Headers
   nameWithType: HttpOptions.Headers
+- uid: Google.GenAI.Types.HttpOptions.RetryOptions
+  name: RetryOptions
+  href: api/Google.GenAI.Types.HttpOptions.html#Google_GenAI_Types_HttpOptions_RetryOptions
+  commentId: P:Google.GenAI.Types.HttpOptions.RetryOptions
+  fullName: Google.GenAI.Types.HttpOptions.RetryOptions
+  nameWithType: HttpOptions.RetryOptions
+- uid: Google.GenAI.Types.HttpOptions.RetryOptions*
+  name: RetryOptions
+  href: api/Google.GenAI.Types.HttpOptions.html#Google_GenAI_Types_HttpOptions_RetryOptions_
+  commentId: Overload:Google.GenAI.Types.HttpOptions.RetryOptions
+  isSpec: "True"
+  fullName: Google.GenAI.Types.HttpOptions.RetryOptions
+  nameWithType: HttpOptions.RetryOptions
 - uid: Google.GenAI.Types.HttpOptions.Timeout
   name: Timeout
   href: api/Google.GenAI.Types.HttpOptions.html#Google_GenAI_Types_HttpOptions_Timeout
@@ -20052,6 +20081,106 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.HttpResponse.Headers
   nameWithType: HttpResponse.Headers
+- uid: Google.GenAI.Types.HttpRetryOptions
+  name: HttpRetryOptions
+  href: api/Google.GenAI.Types.HttpRetryOptions.html
+  commentId: T:Google.GenAI.Types.HttpRetryOptions
+  fullName: Google.GenAI.Types.HttpRetryOptions
+  nameWithType: HttpRetryOptions
+- uid: Google.GenAI.Types.HttpRetryOptions.Attempts
+  name: Attempts
+  href: api/Google.GenAI.Types.HttpRetryOptions.html#Google_GenAI_Types_HttpRetryOptions_Attempts
+  commentId: P:Google.GenAI.Types.HttpRetryOptions.Attempts
+  fullName: Google.GenAI.Types.HttpRetryOptions.Attempts
+  nameWithType: HttpRetryOptions.Attempts
+- uid: Google.GenAI.Types.HttpRetryOptions.Attempts*
+  name: Attempts
+  href: api/Google.GenAI.Types.HttpRetryOptions.html#Google_GenAI_Types_HttpRetryOptions_Attempts_
+  commentId: Overload:Google.GenAI.Types.HttpRetryOptions.Attempts
+  isSpec: "True"
+  fullName: Google.GenAI.Types.HttpRetryOptions.Attempts
+  nameWithType: HttpRetryOptions.Attempts
+- uid: Google.GenAI.Types.HttpRetryOptions.ExpBase
+  name: ExpBase
+  href: api/Google.GenAI.Types.HttpRetryOptions.html#Google_GenAI_Types_HttpRetryOptions_ExpBase
+  commentId: P:Google.GenAI.Types.HttpRetryOptions.ExpBase
+  fullName: Google.GenAI.Types.HttpRetryOptions.ExpBase
+  nameWithType: HttpRetryOptions.ExpBase
+- uid: Google.GenAI.Types.HttpRetryOptions.ExpBase*
+  name: ExpBase
+  href: api/Google.GenAI.Types.HttpRetryOptions.html#Google_GenAI_Types_HttpRetryOptions_ExpBase_
+  commentId: Overload:Google.GenAI.Types.HttpRetryOptions.ExpBase
+  isSpec: "True"
+  fullName: Google.GenAI.Types.HttpRetryOptions.ExpBase
+  nameWithType: HttpRetryOptions.ExpBase
+- uid: Google.GenAI.Types.HttpRetryOptions.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.HttpRetryOptions.html#Google_GenAI_Types_HttpRetryOptions_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.HttpRetryOptions.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.HttpRetryOptions.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.HttpRetryOptions.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: HttpRetryOptions.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: HttpRetryOptions.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.HttpRetryOptions.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.HttpRetryOptions.html#Google_GenAI_Types_HttpRetryOptions_FromJson_
+  commentId: Overload:Google.GenAI.Types.HttpRetryOptions.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.HttpRetryOptions.FromJson
+  nameWithType: HttpRetryOptions.FromJson
+- uid: Google.GenAI.Types.HttpRetryOptions.HttpStatusCodes
+  name: HttpStatusCodes
+  href: api/Google.GenAI.Types.HttpRetryOptions.html#Google_GenAI_Types_HttpRetryOptions_HttpStatusCodes
+  commentId: P:Google.GenAI.Types.HttpRetryOptions.HttpStatusCodes
+  fullName: Google.GenAI.Types.HttpRetryOptions.HttpStatusCodes
+  nameWithType: HttpRetryOptions.HttpStatusCodes
+- uid: Google.GenAI.Types.HttpRetryOptions.HttpStatusCodes*
+  name: HttpStatusCodes
+  href: api/Google.GenAI.Types.HttpRetryOptions.html#Google_GenAI_Types_HttpRetryOptions_HttpStatusCodes_
+  commentId: Overload:Google.GenAI.Types.HttpRetryOptions.HttpStatusCodes
+  isSpec: "True"
+  fullName: Google.GenAI.Types.HttpRetryOptions.HttpStatusCodes
+  nameWithType: HttpRetryOptions.HttpStatusCodes
+- uid: Google.GenAI.Types.HttpRetryOptions.InitialDelay
+  name: InitialDelay
+  href: api/Google.GenAI.Types.HttpRetryOptions.html#Google_GenAI_Types_HttpRetryOptions_InitialDelay
+  commentId: P:Google.GenAI.Types.HttpRetryOptions.InitialDelay
+  fullName: Google.GenAI.Types.HttpRetryOptions.InitialDelay
+  nameWithType: HttpRetryOptions.InitialDelay
+- uid: Google.GenAI.Types.HttpRetryOptions.InitialDelay*
+  name: InitialDelay
+  href: api/Google.GenAI.Types.HttpRetryOptions.html#Google_GenAI_Types_HttpRetryOptions_InitialDelay_
+  commentId: Overload:Google.GenAI.Types.HttpRetryOptions.InitialDelay
+  isSpec: "True"
+  fullName: Google.GenAI.Types.HttpRetryOptions.InitialDelay
+  nameWithType: HttpRetryOptions.InitialDelay
+- uid: Google.GenAI.Types.HttpRetryOptions.Jitter
+  name: Jitter
+  href: api/Google.GenAI.Types.HttpRetryOptions.html#Google_GenAI_Types_HttpRetryOptions_Jitter
+  commentId: P:Google.GenAI.Types.HttpRetryOptions.Jitter
+  fullName: Google.GenAI.Types.HttpRetryOptions.Jitter
+  nameWithType: HttpRetryOptions.Jitter
+- uid: Google.GenAI.Types.HttpRetryOptions.Jitter*
+  name: Jitter
+  href: api/Google.GenAI.Types.HttpRetryOptions.html#Google_GenAI_Types_HttpRetryOptions_Jitter_
+  commentId: Overload:Google.GenAI.Types.HttpRetryOptions.Jitter
+  isSpec: "True"
+  fullName: Google.GenAI.Types.HttpRetryOptions.Jitter
+  nameWithType: HttpRetryOptions.Jitter
+- uid: Google.GenAI.Types.HttpRetryOptions.MaxDelay
+  name: MaxDelay
+  href: api/Google.GenAI.Types.HttpRetryOptions.html#Google_GenAI_Types_HttpRetryOptions_MaxDelay
+  commentId: P:Google.GenAI.Types.HttpRetryOptions.MaxDelay
+  fullName: Google.GenAI.Types.HttpRetryOptions.MaxDelay
+  nameWithType: HttpRetryOptions.MaxDelay
+- uid: Google.GenAI.Types.HttpRetryOptions.MaxDelay*
+  name: MaxDelay
+  href: api/Google.GenAI.Types.HttpRetryOptions.html#Google_GenAI_Types_HttpRetryOptions_MaxDelay_
+  commentId: Overload:Google.GenAI.Types.HttpRetryOptions.MaxDelay
+  isSpec: "True"
+  fullName: Google.GenAI.Types.HttpRetryOptions.MaxDelay
+  nameWithType: HttpRetryOptions.MaxDelay
 - uid: Google.GenAI.Types.IReferenceImage
   name: IReferenceImage
   href: api/Google.GenAI.Types.IReferenceImage.html
