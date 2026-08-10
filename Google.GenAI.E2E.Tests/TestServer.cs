@@ -15,6 +15,7 @@
  */
 
 using System.IO;
+using System.Linq;
 
 using Google.Apis.Auth.OAuth2;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -50,12 +51,17 @@ public class TestServer {
     var recordingDir = RecordingDirectory;
     Directory.CreateDirectory(recordingDir);
 
+    // Only pass secrets that are actually set. The agent platform job has no API key,
+    // and an empty entry in this comma-separated list risks the redactor treating the
+    // empty string as a match-everything token.
+    var secrets = string.Join(",", new[] { _project, _apiKey }.Where(s => !string.IsNullOrEmpty(s)));
+
     var options = new TestServerOptions {
       ConfigPath = Path.GetFullPath("../test-server.yml"),
       RecordingDir = recordingDir,
       Mode = IsReplayMode ? "replay" : "record",
       BinaryPath = Path.GetFullPath("./test-server"),
-      TestServerSecrets = $"{_project},{_apiKey}",
+      TestServerSecrets = secrets,
       OnStdOut = (msg) => {
         try { File.AppendAllText(logPath, $"[STDOUT] {msg}\n"); } catch {}
       },

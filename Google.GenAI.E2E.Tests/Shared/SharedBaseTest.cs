@@ -13,11 +13,29 @@ namespace Google.GenAI.E2E.Tests.Shared
     /// </summary>
     public abstract class SharedBaseTest
     {
+        // test-server proxy endpoints (see test-server.yml). The port determines which
+        // upstream host the request is forwarded to, so it must agree with the location:
+        // "global" resolves to aiplatform.googleapis.com, a region to
+        // <region>-aiplatform.googleapis.com.
+        private const string MldevProxyUrl = "http://localhost:1453";
+        private const string VertexRegionalProxyUrl = "http://localhost:1454";
+        private const string VertexGlobalProxyUrl = "http://localhost:1455";
+
         protected Client vertexClient;
         protected Client geminiClient;
 
         /// <summary>Flash is cheaper and faster than the corpus GEMINI_MODEL for API-mode runs.</summary>
         protected string modelName = "gemini-3.6-flash";
+
+        /// <summary>
+        /// Region a test class needs its Vertex client pinned to, or null to use
+        /// GOOGLE_CLOUD_LOCATION as-is.
+        ///
+        /// Only applied when the configured location is "global", mirroring the Python
+        /// shared suite (tests/conftest.py). Tuning is the one module that needs this:
+        /// tuning jobs are not supported on the global endpoint.
+        /// </summary>
+        protected virtual string VertexLocationOverride => null;
 
         public TestContext TestContext { get; set; }
 
@@ -38,19 +56,33 @@ namespace Google.GenAI.E2E.Tests.Shared
             // across feature folders cannot overwrite each other's recording.
             var recordingKey = $"{GetType().FullName}.{TestContext.TestName}";
 
+            string project = System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_PROJECT") ?? "cloud-llm-preview1";
+            string location = System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_LOCATION") ?? "us-central1";
+
+            // Pin to a region when this class requires one and the job is configured for
+            // global (the nightly agent platform job). Leaves an already-regional
+            // configuration untouched.
+            if (!string.IsNullOrEmpty(VertexLocationOverride)
+                && location.Equals("global", StringComparison.OrdinalIgnoreCase))
+            {
+                location = VertexLocationOverride;
+            }
+
+            // Route through the proxy endpoint that matches the resolved location.
+            string vertexProxyUrl = location.Equals("global", StringComparison.OrdinalIgnoreCase)
+                ? VertexGlobalProxyUrl
+                : VertexRegionalProxyUrl;
+
             var geminiClientHttpOptions = new HttpOptions
             {
                 Headers = new Dictionary<string, string> { { "Test-Name", recordingKey } },
-                BaseUrl = "http://localhost:1453"
+                BaseUrl = MldevProxyUrl
             };
             var vertexClientHttpOptions = new HttpOptions
             {
                 Headers = new Dictionary<string, string> { { "Test-Name", recordingKey } },
-                BaseUrl = "http://localhost:1454"
+                BaseUrl = vertexProxyUrl
             };
-
-            string project = System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_PROJECT") ?? "cloud-llm-preview1";
-            string location = System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_LOCATION") ?? "us-central1";
 
             // GOOGLE_API_KEY is the variable every other GenAI SDK uses.
             string apiKey = System.Environment.GetEnvironmentVariable("GEMINI_API_KEY");
@@ -61,13 +93,19 @@ namespace Google.GenAI.E2E.Tests.Shared
             if (string.IsNullOrEmpty(apiKey))
             {
                 // Never fall back to a placeholder: that records 400 API_KEY_INVALID.
-                if (!TestServer.IsReplayMode)
+                //
+                // The agent platform job runs Vertex only, with no API key at all, so the
+                // key is only required when the Gemini API backend will actually be used.
+                bool vertexOnly = !string.IsNullOrEmpty(
+                    System.Environment.GetEnvironmentVariable("GOOGLE_GENAI_RUN_VERTEX_ONLY_IN_API_MODE"));
+                if (!TestServer.IsReplayMode && !vertexOnly)
                 {
                     Assert.Fail(
                         "GEMINI_API_KEY (or GOOGLE_API_KEY) must be set when running against the live API.");
                 }
-                // Replay mode never reaches the network; the proxy serves recorded responses.
-                apiKey = "replay-mode-placeholder";
+                // Unused: replay mode is served from recordings, and Vertex-only runs never
+                // touch the Gemini API client.
+                apiKey = "unused-placeholder";
             }
 
             vertexClient = new Client(project: project, location: location, vertexAI: true,

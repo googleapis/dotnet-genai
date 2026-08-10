@@ -20,9 +20,33 @@ endpoints:
       - header: X-Goog-Upload-Url
         regex: "^https://generativelanguage.googleapis.com/"
         replace: "http://localhost:1453/"
+  # Regional Vertex AI endpoint (GOOGLE_CLOUD_LOCATION=us-central1). Used by the
+  # legacy E2E tests, and by the shared tunings tests, which must run against a
+  # region because tuning is not supported on the global endpoint.
   - target_host: us-central1-aiplatform.googleapis.com
     target_port: 443
     source_port: 1454
+    source_type: http
+    target_type: https
+    health: /healthz
+    redact_request_headers:
+      - X-Goog-Api-Key
+      - Authorization
+      - X-Goog-User-Project
+      - User-Agent
+      - X-Goog-Api-Client
+      - x-goog-api-key
+      - authorization
+      - x-goog-user-project
+      - user-agent
+      - x-goog-api-client
+  # Global Vertex AI / Gemini Enterprise Agent Platform endpoint
+  # (GOOGLE_CLOUD_LOCATION=global), which is what the nightly agent platform job
+  # uses. See ApiClient.cs: "global" resolves to aiplatform.googleapis.com rather
+  # than a <region>-aiplatform host.
+  - target_host: aiplatform.googleapis.com
+    target_port: 443
+    source_port: 1455
     source_type: http
     target_type: https
     health: /healthz

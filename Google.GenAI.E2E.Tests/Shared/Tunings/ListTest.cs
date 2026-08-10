@@ -9,6 +9,9 @@ namespace Google.GenAI.E2E.Tests.Shared.Tunings
     {
         // Canonical tunings/list test: test_default.
 
+        /// <summary>Tuning jobs are not supported on the global endpoint.</summary>
+        protected override string VertexLocationOverride => "us-central1";
+
         [TestMethod]
         public async Task TestDefaultVertex()
         {

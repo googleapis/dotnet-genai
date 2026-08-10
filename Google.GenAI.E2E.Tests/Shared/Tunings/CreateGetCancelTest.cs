@@ -11,6 +11,10 @@ namespace Google.GenAI.E2E.Tests.Shared.Tunings
         private const string TunableModelName = "gemini-3.1-flash-lite";
         private const string TrainingDatasetUri =
             "gs://cloud-samples-data/ai-platform/generative_ai/gemini-2_0/text/sft_train_data.jsonl";
+
+        /// <summary>Tuning jobs are not supported on the global endpoint.</summary>
+        protected override string VertexLocationOverride => "us-central1";
+
         private static TuningDataset NewTrainingDataset() =>
             new TuningDataset { GcsUri = TrainingDatasetUri };
 
