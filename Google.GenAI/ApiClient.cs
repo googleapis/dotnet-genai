@@ -277,7 +277,7 @@ namespace Google.GenAI
             "base_url must be set when base_url_resource_scope is set.");
       }
 
-      if ((project != null || location != null) && apiKey != null)
+      if ((project != null || location != null) && apiKey != null && !this.VertexAI)
       {
         throw new ArgumentException(
             "Project/location and API key are mutually exclusive in the client initializer.");
@@ -290,22 +290,27 @@ namespace Google.GenAI
 
       if (this.VertexAI)
       {
-        if (credentials != null && !string.IsNullOrEmpty(envApiKey))
+        bool explicitApiKeyAndProject = apiKey != null && (project != null || location != null);
+
+        if (!explicitApiKeyAndProject)
         {
-          this.ApiKey = null;
-        }
-        else if ((!string.IsNullOrEmpty(envLocation) || !string.IsNullOrEmpty(envProject)) && !string.IsNullOrEmpty(apiKey))
-        {
-          this.Project = null;
-          this.Location = null;
-        }
-        else if ((!string.IsNullOrEmpty(project) || !string.IsNullOrEmpty(location)) && !string.IsNullOrEmpty(envApiKey))
-        {
-          this.ApiKey = null;
-        }
-        else if ((!string.IsNullOrEmpty(envLocation) || !string.IsNullOrEmpty(envProject)) && !string.IsNullOrEmpty(envApiKey))
-        {
-          this.ApiKey = null;
+          if (credentials != null && !string.IsNullOrEmpty(envApiKey))
+          {
+            this.ApiKey = null;
+          }
+          else if ((!string.IsNullOrEmpty(envLocation) || !string.IsNullOrEmpty(envProject)) && !string.IsNullOrEmpty(apiKey))
+          {
+            this.Project = null;
+            this.Location = null;
+          }
+          else if ((!string.IsNullOrEmpty(project) || !string.IsNullOrEmpty(location)) && !string.IsNullOrEmpty(envApiKey))
+          {
+            this.ApiKey = null;
+          }
+          else if ((!string.IsNullOrEmpty(envLocation) || !string.IsNullOrEmpty(envProject)) && !string.IsNullOrEmpty(envApiKey))
+          {
+            this.ApiKey = null;
+          }
         }
 
         if (string.IsNullOrEmpty(this.Location) && string.IsNullOrEmpty(this.ApiKey))
@@ -331,7 +336,7 @@ namespace Google.GenAI
           this.ApiKey = null;
         }
 
-        if (!string.IsNullOrEmpty(this.Project) && !string.IsNullOrEmpty(this.Location))
+        if (!string.IsNullOrEmpty(this.Project) && !string.IsNullOrEmpty(this.Location) && string.IsNullOrEmpty(this.ApiKey))
         {
           this.Credentials ??= GetDefaultCredentials();
         }
