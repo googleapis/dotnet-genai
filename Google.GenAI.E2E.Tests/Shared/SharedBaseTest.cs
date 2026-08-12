@@ -37,6 +37,21 @@ namespace Google.GenAI.E2E.Tests.Shared
         /// </summary>
         protected virtual string VertexLocationOverride => null;
 
+        /// <summary>
+        /// Retry options applied to every request both test clients make, so that a transient
+        /// 5xx or 429 does not fail the nightly. Keep aligned with conftest.py in the Python
+        /// SDK tests.
+        /// </summary>
+        private static HttpRetryOptions NewSharedTestRetryOptions() =>
+            new HttpRetryOptions
+            {
+                Attempts = 3,
+                InitialDelay = 1.0,
+                MaxDelay = 10.0,
+                ExpBase = 2.0,
+                HttpStatusCodes = new List<int> { 408, 429, 500, 502, 503, 504 },
+            };
+
         public TestContext TestContext { get; set; }
 
         [TestInitialize]
@@ -76,12 +91,14 @@ namespace Google.GenAI.E2E.Tests.Shared
             var geminiClientHttpOptions = new HttpOptions
             {
                 Headers = new Dictionary<string, string> { { "Test-Name", recordingKey } },
-                BaseUrl = MldevProxyUrl
+                BaseUrl = MldevProxyUrl,
+                RetryOptions = NewSharedTestRetryOptions()
             };
             var vertexClientHttpOptions = new HttpOptions
             {
                 Headers = new Dictionary<string, string> { { "Test-Name", recordingKey } },
-                BaseUrl = vertexProxyUrl
+                BaseUrl = vertexProxyUrl,
+                RetryOptions = NewSharedTestRetryOptions()
             };
 
             // GOOGLE_API_KEY is the variable every other GenAI SDK uses.
