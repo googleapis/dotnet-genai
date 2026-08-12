@@ -1,5 +1,14 @@
 # Changelog
 
+## Version 1.18.0, released 2026-08-12
+
+
+### New features
+
+* add HTTP retry support via HttpOptions.RetryOptions ([1479fff](https://github.com/googleapis/dotnet-genai/commit/1479fffec906814ec07ce8dc26ca6a9b7e4a159f))
+* Add interaction_status to LiveServerContent ([e621622](https://github.com/googleapis/dotnet-genai/commit/e6216222b547d546ce2aed9ec970ba5c21e6cca8))
+* support API key with project/location in Vertex AI mode (Express Mode) ([f01e173](https://github.com/googleapis/dotnet-genai/commit/f01e173216442ac9a100f4be3712e314ce8058c7))
+
 ## Version 1.17.0, released 2026-08-06
 
 
