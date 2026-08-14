@@ -4275,6 +4275,19 @@ references:
   commentId: T:Google.GenAI.Types.AuthToken
   fullName: Google.GenAI.Types.AuthToken
   nameWithType: AuthToken
+- uid: Google.GenAI.Types.AuthToken.ExpireTime
+  name: ExpireTime
+  href: api/Google.GenAI.Types.AuthToken.html#Google_GenAI_Types_AuthToken_ExpireTime
+  commentId: P:Google.GenAI.Types.AuthToken.ExpireTime
+  fullName: Google.GenAI.Types.AuthToken.ExpireTime
+  nameWithType: AuthToken.ExpireTime
+- uid: Google.GenAI.Types.AuthToken.ExpireTime*
+  name: ExpireTime
+  href: api/Google.GenAI.Types.AuthToken.html#Google_GenAI_Types_AuthToken_ExpireTime_
+  commentId: Overload:Google.GenAI.Types.AuthToken.ExpireTime
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AuthToken.ExpireTime
+  nameWithType: AuthToken.ExpireTime
 - uid: Google.GenAI.Types.AuthToken.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
   name: FromJson(string, JsonSerializerOptions?)
   href: api/Google.GenAI.Types.AuthToken.html#Google_GenAI_Types_AuthToken_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
@@ -4304,6 +4317,32 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.AuthToken.Name
   nameWithType: AuthToken.Name
+- uid: Google.GenAI.Types.AuthToken.NewSessionExpireTime
+  name: NewSessionExpireTime
+  href: api/Google.GenAI.Types.AuthToken.html#Google_GenAI_Types_AuthToken_NewSessionExpireTime
+  commentId: P:Google.GenAI.Types.AuthToken.NewSessionExpireTime
+  fullName: Google.GenAI.Types.AuthToken.NewSessionExpireTime
+  nameWithType: AuthToken.NewSessionExpireTime
+- uid: Google.GenAI.Types.AuthToken.NewSessionExpireTime*
+  name: NewSessionExpireTime
+  href: api/Google.GenAI.Types.AuthToken.html#Google_GenAI_Types_AuthToken_NewSessionExpireTime_
+  commentId: Overload:Google.GenAI.Types.AuthToken.NewSessionExpireTime
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AuthToken.NewSessionExpireTime
+  nameWithType: AuthToken.NewSessionExpireTime
+- uid: Google.GenAI.Types.AuthToken.Uses
+  name: Uses
+  href: api/Google.GenAI.Types.AuthToken.html#Google_GenAI_Types_AuthToken_Uses
+  commentId: P:Google.GenAI.Types.AuthToken.Uses
+  fullName: Google.GenAI.Types.AuthToken.Uses
+  nameWithType: AuthToken.Uses
+- uid: Google.GenAI.Types.AuthToken.Uses*
+  name: Uses
+  href: api/Google.GenAI.Types.AuthToken.html#Google_GenAI_Types_AuthToken_Uses_
+  commentId: Overload:Google.GenAI.Types.AuthToken.Uses
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AuthToken.Uses
+  nameWithType: AuthToken.Uses
 - uid: Google.GenAI.Types.AuthType
   name: AuthType
   href: api/Google.GenAI.Types.AuthType.html
@@ -30536,6 +30575,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ReinforcementTuningHyperParameters.SamplesPerPrompt
   nameWithType: ReinforcementTuningHyperParameters.SamplesPerPrompt
+- uid: Google.GenAI.Types.ReinforcementTuningHyperParameters.StepCount
+  name: StepCount
+  href: api/Google.GenAI.Types.ReinforcementTuningHyperParameters.html#Google_GenAI_Types_ReinforcementTuningHyperParameters_StepCount
+  commentId: P:Google.GenAI.Types.ReinforcementTuningHyperParameters.StepCount
+  fullName: Google.GenAI.Types.ReinforcementTuningHyperParameters.StepCount
+  nameWithType: ReinforcementTuningHyperParameters.StepCount
+- uid: Google.GenAI.Types.ReinforcementTuningHyperParameters.StepCount*
+  name: StepCount
+  href: api/Google.GenAI.Types.ReinforcementTuningHyperParameters.html#Google_GenAI_Types_ReinforcementTuningHyperParameters_StepCount_
+  commentId: Overload:Google.GenAI.Types.ReinforcementTuningHyperParameters.StepCount
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ReinforcementTuningHyperParameters.StepCount
+  nameWithType: ReinforcementTuningHyperParameters.StepCount
 - uid: Google.GenAI.Types.ReinforcementTuningHyperParameters.ThinkingBudget
   name: ThinkingBudget
   href: api/Google.GenAI.Types.ReinforcementTuningHyperParameters.html#Google_GenAI_Types_ReinforcementTuningHyperParameters_ThinkingBudget
@@ -36455,6 +36507,32 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ToolParallelAiSearch.CustomConfigs
   nameWithType: ToolParallelAiSearch.CustomConfigs
+- uid: Google.GenAI.Types.ToolParallelAiSearch.EnableDataRetention
+  name: EnableDataRetention
+  href: api/Google.GenAI.Types.ToolParallelAiSearch.html#Google_GenAI_Types_ToolParallelAiSearch_EnableDataRetention
+  commentId: P:Google.GenAI.Types.ToolParallelAiSearch.EnableDataRetention
+  fullName: Google.GenAI.Types.ToolParallelAiSearch.EnableDataRetention
+  nameWithType: ToolParallelAiSearch.EnableDataRetention
+- uid: Google.GenAI.Types.ToolParallelAiSearch.EnableDataRetention*
+  name: EnableDataRetention
+  href: api/Google.GenAI.Types.ToolParallelAiSearch.html#Google_GenAI_Types_ToolParallelAiSearch_EnableDataRetention_
+  commentId: Overload:Google.GenAI.Types.ToolParallelAiSearch.EnableDataRetention
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolParallelAiSearch.EnableDataRetention
+  nameWithType: ToolParallelAiSearch.EnableDataRetention
+- uid: Google.GenAI.Types.ToolParallelAiSearch.EnableZeroDataRetention
+  name: EnableZeroDataRetention
+  href: api/Google.GenAI.Types.ToolParallelAiSearch.html#Google_GenAI_Types_ToolParallelAiSearch_EnableZeroDataRetention
+  commentId: P:Google.GenAI.Types.ToolParallelAiSearch.EnableZeroDataRetention
+  fullName: Google.GenAI.Types.ToolParallelAiSearch.EnableZeroDataRetention
+  nameWithType: ToolParallelAiSearch.EnableZeroDataRetention
+- uid: Google.GenAI.Types.ToolParallelAiSearch.EnableZeroDataRetention*
+  name: EnableZeroDataRetention
+  href: api/Google.GenAI.Types.ToolParallelAiSearch.html#Google_GenAI_Types_ToolParallelAiSearch_EnableZeroDataRetention_
+  commentId: Overload:Google.GenAI.Types.ToolParallelAiSearch.EnableZeroDataRetention
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolParallelAiSearch.EnableZeroDataRetention
+  nameWithType: ToolParallelAiSearch.EnableZeroDataRetention
 - uid: Google.GenAI.Types.ToolParallelAiSearch.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
   name: FromJson(string, JsonSerializerOptions?)
   href: api/Google.GenAI.Types.ToolParallelAiSearch.html#Google_GenAI_Types_ToolParallelAiSearch_FromJson_System_String_System_Text_Json_JsonSerializerOptions_

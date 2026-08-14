@@ -431,6 +431,41 @@ public int? SamplesPerPrompt { get; set; }</code></pre>
 
 
 
+  <a id="Google_GenAI_Types_ReinforcementTuningHyperParameters_StepCount_" data-uid="Google.GenAI.Types.ReinforcementTuningHyperParameters.StepCount*"></a>
+
+  <h3 id="Google_GenAI_Types_ReinforcementTuningHyperParameters_StepCount" data-uid="Google.GenAI.Types.ReinforcementTuningHyperParameters.StepCount">
+  StepCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningHyperParameters.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional. Number of steps for the tuning job (mutually exclusive with epoch_count).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;stepCount&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+[JsonConverter(typeof(StringToNullableLongConverter))]
+public long? StepCount { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_ReinforcementTuningHyperParameters_ThinkingBudget_" data-uid="Google.GenAI.Types.ReinforcementTuningHyperParameters.ThinkingBudget*"></a>
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningHyperParameters_ThinkingBudget" data-uid="Google.GenAI.Types.ReinforcementTuningHyperParameters.ThinkingBudget">
@@ -511,7 +546,7 @@ public ReinforcementTuningThinkingLevel? ThinkingLevel { get; set; }</code></pre
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningHyperParameters_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.ReinforcementTuningHyperParameters.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningHyperParameters.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningHyperParameters.cs/#L155"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a ReinforcementTuningHyperParameters object.</p>
