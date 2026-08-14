@@ -175,28 +175,6 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode CodeExecutionResultToVertex(JsonNode fromObject, JsonObject parentObject,
-                                                  JsonNode rootObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "outcome" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "outcome" },
-                              Common.GetValueByPath(fromObject, new string[] { "outcome" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "output" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "output" },
-                              Common.GetValueByPath(fromObject, new string[] { "output" }));
-      }
-
-      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "id" }))) {
-        throw new NotSupportedException(
-            "id parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
-      }
-
-      return toObject;
-    }
-
     internal JsonNode ComputeTokensParametersToVertex(ApiClient apiClient, JsonNode fromObject,
                                                       JsonObject parentObject,
                                                       JsonNode rootObject) {
@@ -1094,28 +1072,6 @@ namespace Google.GenAI {
         Common.SetValueByPath(
             toObject, new string[] { "deployedModelId" },
             Common.GetValueByPath(fromObject, new string[] { "deployedModelId" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode ExecutableCodeToVertex(JsonNode fromObject, JsonObject parentObject,
-                                             JsonNode rootObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "code" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "code" },
-                              Common.GetValueByPath(fromObject, new string[] { "code" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "language" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "language" },
-                              Common.GetValueByPath(fromObject, new string[] { "language" }));
-      }
-
-      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "id" }))) {
-        throw new NotSupportedException(
-            "id parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       }
 
       return toObject;
@@ -3560,17 +3516,12 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "codeExecutionResult" }) != null) {
         Common.SetValueByPath(
             toObject, new string[] { "codeExecutionResult" },
-            CodeExecutionResultToVertex(Common.ParseToJsonNode(Common.GetValueByPath(
-                                            fromObject, new string[] { "codeExecutionResult" })),
-                                        toObject, rootObject));
+            Common.GetValueByPath(fromObject, new string[] { "codeExecutionResult" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "executableCode" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "executableCode" },
-            ExecutableCodeToVertex(Common.ParseToJsonNode(Common.GetValueByPath(
-                                       fromObject, new string[] { "executableCode" })),
-                                   toObject, rootObject));
+        Common.SetValueByPath(toObject, new string[] { "executableCode" },
+                              Common.GetValueByPath(fromObject, new string[] { "executableCode" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "fileData" }) != null) {

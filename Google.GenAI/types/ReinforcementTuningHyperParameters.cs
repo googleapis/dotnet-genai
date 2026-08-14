@@ -135,6 +135,17 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Optional. Number of steps for the tuning job (mutually exclusive with epoch_count).
+    /// </summary>
+    [JsonPropertyName("stepCount")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    [JsonConverter(typeof(StringToNullableLongConverter))]
+    public long
+        ? StepCount {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a ReinforcementTuningHyperParameters object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

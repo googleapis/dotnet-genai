@@ -47,7 +47,7 @@ namespace Google.GenAI.Types {
 
     /// <summary>
     /// Optional. The identifier of the `ExecutableCode` part this result is for. Only populated if
-    /// the corresponding `ExecutableCode` has an id. This field is not supported in Vertex AI.
+    /// the corresponding `ExecutableCode` has an id.
     /// </summary>
     [JsonPropertyName("id")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
