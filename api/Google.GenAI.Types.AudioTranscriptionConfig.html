@@ -364,6 +364,43 @@ public LanguageHints? LanguageHints { get; set; }</code></pre>
 
 
 
+  <a id="Google_GenAI_Types_AudioTranscriptionConfig_Mode_" data-uid="Google.GenAI.Types.AudioTranscriptionConfig.Mode*"></a>
+
+  <h3 id="Google_GenAI_Types_AudioTranscriptionConfig_Mode" data-uid="Google.GenAI.Types.AudioTranscriptionConfig.Mode">
+  Mode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AudioTranscriptionConfig.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional. Transcription mode.  When set to <code>SMART</code>, the model performs disfluency removal
+(eliminating filler words, repetitions, and false starts), light grammatical cleanup,
+automatic formatting (paragraphs, bullet points, numbered lists), and minor user edits
+(inline self-corrections). Incompatible with <code>word_timestamp</code> and <code>diarization</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;mode&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public AudioTranscriptionConfigMode? Mode { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.AudioTranscriptionConfigMode.html">AudioTranscriptionConfigMode</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_AudioTranscriptionConfig_WordTimestamp_" data-uid="Google.GenAI.Types.AudioTranscriptionConfig.WordTimestamp*"></a>
 
   <h3 id="Google_GenAI_Types_AudioTranscriptionConfig_WordTimestamp" data-uid="Google.GenAI.Types.AudioTranscriptionConfig.WordTimestamp">
@@ -406,7 +443,7 @@ public bool? WordTimestamp { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_AudioTranscriptionConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.AudioTranscriptionConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AudioTranscriptionConfig.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AudioTranscriptionConfig.cs/#L122"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a AudioTranscriptionConfig object.</p>

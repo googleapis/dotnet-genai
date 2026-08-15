@@ -3977,6 +3977,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.AudioTranscriptionConfig.LanguageHints
   nameWithType: AudioTranscriptionConfig.LanguageHints
+- uid: Google.GenAI.Types.AudioTranscriptionConfig.Mode
+  name: Mode
+  href: api/Google.GenAI.Types.AudioTranscriptionConfig.html#Google_GenAI_Types_AudioTranscriptionConfig_Mode
+  commentId: P:Google.GenAI.Types.AudioTranscriptionConfig.Mode
+  fullName: Google.GenAI.Types.AudioTranscriptionConfig.Mode
+  nameWithType: AudioTranscriptionConfig.Mode
+- uid: Google.GenAI.Types.AudioTranscriptionConfig.Mode*
+  name: Mode
+  href: api/Google.GenAI.Types.AudioTranscriptionConfig.html#Google_GenAI_Types_AudioTranscriptionConfig_Mode_
+  commentId: Overload:Google.GenAI.Types.AudioTranscriptionConfig.Mode
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioTranscriptionConfig.Mode
+  nameWithType: AudioTranscriptionConfig.Mode
 - uid: Google.GenAI.Types.AudioTranscriptionConfig.WordTimestamp
   name: WordTimestamp
   href: api/Google.GenAI.Types.AudioTranscriptionConfig.html#Google_GenAI_Types_AudioTranscriptionConfig_WordTimestamp
@@ -3990,6 +4003,186 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.AudioTranscriptionConfig.WordTimestamp
   nameWithType: AudioTranscriptionConfig.WordTimestamp
+- uid: Google.GenAI.Types.AudioTranscriptionConfigMode
+  name: AudioTranscriptionConfigMode
+  href: api/Google.GenAI.Types.AudioTranscriptionConfigMode.html
+  commentId: T:Google.GenAI.Types.AudioTranscriptionConfigMode
+  fullName: Google.GenAI.Types.AudioTranscriptionConfigMode
+  nameWithType: AudioTranscriptionConfigMode
+- uid: Google.GenAI.Types.AudioTranscriptionConfigMode.AllValues
+  name: AllValues
+  href: api/Google.GenAI.Types.AudioTranscriptionConfigMode.html#Google_GenAI_Types_AudioTranscriptionConfigMode_AllValues
+  commentId: P:Google.GenAI.Types.AudioTranscriptionConfigMode.AllValues
+  fullName: Google.GenAI.Types.AudioTranscriptionConfigMode.AllValues
+  nameWithType: AudioTranscriptionConfigMode.AllValues
+- uid: Google.GenAI.Types.AudioTranscriptionConfigMode.AllValues*
+  name: AllValues
+  href: api/Google.GenAI.Types.AudioTranscriptionConfigMode.html#Google_GenAI_Types_AudioTranscriptionConfigMode_AllValues_
+  commentId: Overload:Google.GenAI.Types.AudioTranscriptionConfigMode.AllValues
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioTranscriptionConfigMode.AllValues
+  nameWithType: AudioTranscriptionConfigMode.AllValues
+- uid: Google.GenAI.Types.AudioTranscriptionConfigMode.Equals(Google.GenAI.Types.AudioTranscriptionConfigMode)
+  name: Equals(AudioTranscriptionConfigMode)
+  href: api/Google.GenAI.Types.AudioTranscriptionConfigMode.html#Google_GenAI_Types_AudioTranscriptionConfigMode_Equals_Google_GenAI_Types_AudioTranscriptionConfigMode_
+  commentId: M:Google.GenAI.Types.AudioTranscriptionConfigMode.Equals(Google.GenAI.Types.AudioTranscriptionConfigMode)
+  fullName: Google.GenAI.Types.AudioTranscriptionConfigMode.Equals(Google.GenAI.Types.AudioTranscriptionConfigMode)
+  nameWithType: AudioTranscriptionConfigMode.Equals(AudioTranscriptionConfigMode)
+- uid: Google.GenAI.Types.AudioTranscriptionConfigMode.Equals*
+  name: Equals
+  href: api/Google.GenAI.Types.AudioTranscriptionConfigMode.html#Google_GenAI_Types_AudioTranscriptionConfigMode_Equals_
+  commentId: Overload:Google.GenAI.Types.AudioTranscriptionConfigMode.Equals
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioTranscriptionConfigMode.Equals
+  nameWithType: AudioTranscriptionConfigMode.Equals
+- uid: Google.GenAI.Types.AudioTranscriptionConfigMode.FromString(System.String)
+  name: FromString(string)
+  href: api/Google.GenAI.Types.AudioTranscriptionConfigMode.html#Google_GenAI_Types_AudioTranscriptionConfigMode_FromString_System_String_
+  commentId: M:Google.GenAI.Types.AudioTranscriptionConfigMode.FromString(System.String)
+  name.vb: FromString(String)
+  fullName: Google.GenAI.Types.AudioTranscriptionConfigMode.FromString(string)
+  fullName.vb: Google.GenAI.Types.AudioTranscriptionConfigMode.FromString(String)
+  nameWithType: AudioTranscriptionConfigMode.FromString(string)
+  nameWithType.vb: AudioTranscriptionConfigMode.FromString(String)
+- uid: Google.GenAI.Types.AudioTranscriptionConfigMode.FromString*
+  name: FromString
+  href: api/Google.GenAI.Types.AudioTranscriptionConfigMode.html#Google_GenAI_Types_AudioTranscriptionConfigMode_FromString_
+  commentId: Overload:Google.GenAI.Types.AudioTranscriptionConfigMode.FromString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioTranscriptionConfigMode.FromString
+  nameWithType: AudioTranscriptionConfigMode.FromString
+- uid: Google.GenAI.Types.AudioTranscriptionConfigMode.GetHashCode
+  name: GetHashCode()
+  href: api/Google.GenAI.Types.AudioTranscriptionConfigMode.html#Google_GenAI_Types_AudioTranscriptionConfigMode_GetHashCode
+  commentId: M:Google.GenAI.Types.AudioTranscriptionConfigMode.GetHashCode
+  fullName: Google.GenAI.Types.AudioTranscriptionConfigMode.GetHashCode()
+  nameWithType: AudioTranscriptionConfigMode.GetHashCode()
+- uid: Google.GenAI.Types.AudioTranscriptionConfigMode.GetHashCode*
+  name: GetHashCode
+  href: api/Google.GenAI.Types.AudioTranscriptionConfigMode.html#Google_GenAI_Types_AudioTranscriptionConfigMode_GetHashCode_
+  commentId: Overload:Google.GenAI.Types.AudioTranscriptionConfigMode.GetHashCode
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioTranscriptionConfigMode.GetHashCode
+  nameWithType: AudioTranscriptionConfigMode.GetHashCode
+- uid: Google.GenAI.Types.AudioTranscriptionConfigMode.ModeUnspecified
+  name: ModeUnspecified
+  href: api/Google.GenAI.Types.AudioTranscriptionConfigMode.html#Google_GenAI_Types_AudioTranscriptionConfigMode_ModeUnspecified
+  commentId: P:Google.GenAI.Types.AudioTranscriptionConfigMode.ModeUnspecified
+  fullName: Google.GenAI.Types.AudioTranscriptionConfigMode.ModeUnspecified
+  nameWithType: AudioTranscriptionConfigMode.ModeUnspecified
+- uid: Google.GenAI.Types.AudioTranscriptionConfigMode.ModeUnspecified*
+  name: ModeUnspecified
+  href: api/Google.GenAI.Types.AudioTranscriptionConfigMode.html#Google_GenAI_Types_AudioTranscriptionConfigMode_ModeUnspecified_
+  commentId: Overload:Google.GenAI.Types.AudioTranscriptionConfigMode.ModeUnspecified
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioTranscriptionConfigMode.ModeUnspecified
+  nameWithType: AudioTranscriptionConfigMode.ModeUnspecified
+- uid: Google.GenAI.Types.AudioTranscriptionConfigMode.Smart
+  name: Smart
+  href: api/Google.GenAI.Types.AudioTranscriptionConfigMode.html#Google_GenAI_Types_AudioTranscriptionConfigMode_Smart
+  commentId: P:Google.GenAI.Types.AudioTranscriptionConfigMode.Smart
+  fullName: Google.GenAI.Types.AudioTranscriptionConfigMode.Smart
+  nameWithType: AudioTranscriptionConfigMode.Smart
+- uid: Google.GenAI.Types.AudioTranscriptionConfigMode.Smart*
+  name: Smart
+  href: api/Google.GenAI.Types.AudioTranscriptionConfigMode.html#Google_GenAI_Types_AudioTranscriptionConfigMode_Smart_
+  commentId: Overload:Google.GenAI.Types.AudioTranscriptionConfigMode.Smart
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioTranscriptionConfigMode.Smart
+  nameWithType: AudioTranscriptionConfigMode.Smart
+- uid: Google.GenAI.Types.AudioTranscriptionConfigMode.ToString
+  name: ToString()
+  href: api/Google.GenAI.Types.AudioTranscriptionConfigMode.html#Google_GenAI_Types_AudioTranscriptionConfigMode_ToString
+  commentId: M:Google.GenAI.Types.AudioTranscriptionConfigMode.ToString
+  fullName: Google.GenAI.Types.AudioTranscriptionConfigMode.ToString()
+  nameWithType: AudioTranscriptionConfigMode.ToString()
+- uid: Google.GenAI.Types.AudioTranscriptionConfigMode.ToString*
+  name: ToString
+  href: api/Google.GenAI.Types.AudioTranscriptionConfigMode.html#Google_GenAI_Types_AudioTranscriptionConfigMode_ToString_
+  commentId: Overload:Google.GenAI.Types.AudioTranscriptionConfigMode.ToString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioTranscriptionConfigMode.ToString
+  nameWithType: AudioTranscriptionConfigMode.ToString
+- uid: Google.GenAI.Types.AudioTranscriptionConfigMode.Value
+  name: Value
+  href: api/Google.GenAI.Types.AudioTranscriptionConfigMode.html#Google_GenAI_Types_AudioTranscriptionConfigMode_Value
+  commentId: P:Google.GenAI.Types.AudioTranscriptionConfigMode.Value
+  fullName: Google.GenAI.Types.AudioTranscriptionConfigMode.Value
+  nameWithType: AudioTranscriptionConfigMode.Value
+- uid: Google.GenAI.Types.AudioTranscriptionConfigMode.Value*
+  name: Value
+  href: api/Google.GenAI.Types.AudioTranscriptionConfigMode.html#Google_GenAI_Types_AudioTranscriptionConfigMode_Value_
+  commentId: Overload:Google.GenAI.Types.AudioTranscriptionConfigMode.Value
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioTranscriptionConfigMode.Value
+  nameWithType: AudioTranscriptionConfigMode.Value
+- uid: Google.GenAI.Types.AudioTranscriptionConfigMode.Verbatim
+  name: Verbatim
+  href: api/Google.GenAI.Types.AudioTranscriptionConfigMode.html#Google_GenAI_Types_AudioTranscriptionConfigMode_Verbatim
+  commentId: P:Google.GenAI.Types.AudioTranscriptionConfigMode.Verbatim
+  fullName: Google.GenAI.Types.AudioTranscriptionConfigMode.Verbatim
+  nameWithType: AudioTranscriptionConfigMode.Verbatim
+- uid: Google.GenAI.Types.AudioTranscriptionConfigMode.Verbatim*
+  name: Verbatim
+  href: api/Google.GenAI.Types.AudioTranscriptionConfigMode.html#Google_GenAI_Types_AudioTranscriptionConfigMode_Verbatim_
+  commentId: Overload:Google.GenAI.Types.AudioTranscriptionConfigMode.Verbatim
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioTranscriptionConfigMode.Verbatim
+  nameWithType: AudioTranscriptionConfigMode.Verbatim
+- uid: Google.GenAI.Types.AudioTranscriptionConfigMode.op_Implicit(System.String)~Google.GenAI.Types.AudioTranscriptionConfigMode
+  name: implicit operator AudioTranscriptionConfigMode(string)
+  href: api/Google.GenAI.Types.AudioTranscriptionConfigMode.html#Google_GenAI_Types_AudioTranscriptionConfigMode_op_Implicit_System_String__Google_GenAI_Types_AudioTranscriptionConfigMode
+  commentId: M:Google.GenAI.Types.AudioTranscriptionConfigMode.op_Implicit(System.String)~Google.GenAI.Types.AudioTranscriptionConfigMode
+  name.vb: CType(String)
+  fullName: Google.GenAI.Types.AudioTranscriptionConfigMode.implicit operator Google.GenAI.Types.AudioTranscriptionConfigMode(string)
+  fullName.vb: Google.GenAI.Types.AudioTranscriptionConfigMode.CType(String)
+  nameWithType: AudioTranscriptionConfigMode.implicit operator AudioTranscriptionConfigMode(string)
+  nameWithType.vb: AudioTranscriptionConfigMode.CType(String)
+- uid: Google.GenAI.Types.AudioTranscriptionConfigMode.op_Implicit*
+  name: implicit operator
+  href: api/Google.GenAI.Types.AudioTranscriptionConfigMode.html#Google_GenAI_Types_AudioTranscriptionConfigMode_op_Implicit_
+  commentId: Overload:Google.GenAI.Types.AudioTranscriptionConfigMode.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: Google.GenAI.Types.AudioTranscriptionConfigMode.implicit operator
+  fullName.vb: Google.GenAI.Types.AudioTranscriptionConfigMode.CType
+  nameWithType: AudioTranscriptionConfigMode.implicit operator
+  nameWithType.vb: AudioTranscriptionConfigMode.CType
+- uid: Google.GenAI.Types.AudioTranscriptionConfigModeConverter
+  name: AudioTranscriptionConfigModeConverter
+  href: api/Google.GenAI.Types.AudioTranscriptionConfigModeConverter.html
+  commentId: T:Google.GenAI.Types.AudioTranscriptionConfigModeConverter
+  fullName: Google.GenAI.Types.AudioTranscriptionConfigModeConverter
+  nameWithType: AudioTranscriptionConfigModeConverter
+- uid: Google.GenAI.Types.AudioTranscriptionConfigModeConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.AudioTranscriptionConfigModeConverter.html#Google_GenAI_Types_AudioTranscriptionConfigModeConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.AudioTranscriptionConfigModeConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name.vb: Read(Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.AudioTranscriptionConfigModeConverter.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: Google.GenAI.Types.AudioTranscriptionConfigModeConverter.Read(System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  nameWithType: AudioTranscriptionConfigModeConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: AudioTranscriptionConfigModeConverter.Read(Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Google.GenAI.Types.AudioTranscriptionConfigModeConverter.Read*
+  name: Read
+  href: api/Google.GenAI.Types.AudioTranscriptionConfigModeConverter.html#Google_GenAI_Types_AudioTranscriptionConfigModeConverter_Read_
+  commentId: Overload:Google.GenAI.Types.AudioTranscriptionConfigModeConverter.Read
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioTranscriptionConfigModeConverter.Read
+  nameWithType: AudioTranscriptionConfigModeConverter.Read
+- uid: Google.GenAI.Types.AudioTranscriptionConfigModeConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.AudioTranscriptionConfigMode,System.Text.Json.JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, AudioTranscriptionConfigMode, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.AudioTranscriptionConfigModeConverter.html#Google_GenAI_Types_AudioTranscriptionConfigModeConverter_Write_System_Text_Json_Utf8JsonWriter_Google_GenAI_Types_AudioTranscriptionConfigMode_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.AudioTranscriptionConfigModeConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.AudioTranscriptionConfigMode,System.Text.Json.JsonSerializerOptions)
+  fullName: Google.GenAI.Types.AudioTranscriptionConfigModeConverter.Write(System.Text.Json.Utf8JsonWriter, Google.GenAI.Types.AudioTranscriptionConfigMode, System.Text.Json.JsonSerializerOptions)
+  nameWithType: AudioTranscriptionConfigModeConverter.Write(Utf8JsonWriter, AudioTranscriptionConfigMode, JsonSerializerOptions)
+- uid: Google.GenAI.Types.AudioTranscriptionConfigModeConverter.Write*
+  name: Write
+  href: api/Google.GenAI.Types.AudioTranscriptionConfigModeConverter.html#Google_GenAI_Types_AudioTranscriptionConfigModeConverter_Write_
+  commentId: Overload:Google.GenAI.Types.AudioTranscriptionConfigModeConverter.Write
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioTranscriptionConfigModeConverter.Write
+  nameWithType: AudioTranscriptionConfigModeConverter.Write
 - uid: Google.GenAI.Types.AuthConfig
   name: AuthConfig
   href: api/Google.GenAI.Types.AuthConfig.html
