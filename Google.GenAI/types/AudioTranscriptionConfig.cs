@@ -100,6 +100,19 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Optional. Transcription mode.  When set to `SMART`, the model performs disfluency removal
+    /// (eliminating filler words, repetitions, and false starts), light grammatical cleanup,
+    /// automatic formatting (paragraphs, bullet points, numbered lists), and minor user edits
+    /// (inline self-corrections). Incompatible with `word_timestamp` and `diarization`.
+    /// </summary>
+    [JsonPropertyName("mode")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public AudioTranscriptionConfigMode
+        ? Mode {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a AudioTranscriptionConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
