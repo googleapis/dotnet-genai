@@ -21776,6 +21776,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.InteractionStatus.GetHashCode
   nameWithType: InteractionStatus.GetHashCode
+- uid: Google.GenAI.Types.InteractionStatus.Idle
+  name: Idle
+  href: api/Google.GenAI.Types.InteractionStatus.html#Google_GenAI_Types_InteractionStatus_Idle
+  commentId: P:Google.GenAI.Types.InteractionStatus.Idle
+  fullName: Google.GenAI.Types.InteractionStatus.Idle
+  nameWithType: InteractionStatus.Idle
+- uid: Google.GenAI.Types.InteractionStatus.Idle*
+  name: Idle
+  href: api/Google.GenAI.Types.InteractionStatus.html#Google_GenAI_Types_InteractionStatus_Idle_
+  commentId: Overload:Google.GenAI.Types.InteractionStatus.Idle
+  isSpec: "True"
+  fullName: Google.GenAI.Types.InteractionStatus.Idle
+  nameWithType: InteractionStatus.Idle
 - uid: Google.GenAI.Types.InteractionStatus.InProgress
   name: InProgress
   href: api/Google.GenAI.Types.InteractionStatus.html#Google_GenAI_Types_InteractionStatus_InProgress
