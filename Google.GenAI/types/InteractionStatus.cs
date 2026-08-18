@@ -47,13 +47,18 @@ namespace Google.GenAI.Types {
     public static InteractionStatus InProgress { get; } = new("IN_PROGRESS");
 
     /// <summary>
-    /// The server has completed all processing and background reasoning.
+    /// Deprecated: Use IDLE instead.
     /// </summary>
     public static InteractionStatus RequiresAction { get; } = new("REQUIRES_ACTION");
 
+    /// <summary>
+    /// The server has completed all processing and background reasoning.
+    /// </summary>
+    public static InteractionStatus Idle { get; } = new("IDLE");
+
     public static IReadOnlyList<InteractionStatus> AllValues {
       get;
-    } = new[] { InteractionStatusUnspecified, InProgress, RequiresAction };
+    } = new[] { InteractionStatusUnspecified, InProgress, RequiresAction, Idle };
 
     public static InteractionStatus FromString(string value) {
       if (string.IsNullOrEmpty(value)) {
