@@ -1,5 +1,14 @@
 # Changelog
 
+## Version 1.19.0, released 2026-08-19
+
+
+### New features
+
+* Add `mode` enum (`VERBATIM`, `SMART`) to `AudioTranscriptionConfig` and `TranscriptionConfig`. ([ef959af](https://github.com/googleapis/dotnet-genai/commit/ef959af2c6a06e6893013ca4f67ad6a7f594e873))
+* Add enable_data_retention to ToolParallelAiSearch, Add step_count to ReinforcementTuningHyperParameters, Add BidiGenerateContentSetup ([1b9d1d4](https://github.com/googleapis/dotnet-genai/commit/1b9d1d402e6bfd50017135924cae93caff5dc77f))
+* Add IDLE state to live connection status enum and mark REQUIRES_ACTION as deprecated. ([2120ad1](https://github.com/googleapis/dotnet-genai/commit/2120ad1d9fbd7472753b4324568d4e0f1c6d1970))
+
 ## Version 1.18.0, released 2026-08-12
 
 
