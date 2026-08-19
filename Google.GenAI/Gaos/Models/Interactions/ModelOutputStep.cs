@@ -32,7 +32,7 @@ namespace Google.GenAI.Gaos.Models.Interactions
         /// <a href="https://cloud.google.com/apis/design/errors">API Design Guide</a>.
         /// </summary>
         [JsonProperty("error", Required = Newtonsoft.Json.Required.DisallowNull)]
-        public Status? Error { get; set; }
+        public Models.Interactions.Status? Error { get; set; }
 
         [JsonProperty("type", Required = Newtonsoft.Json.Required.Always)]
         public string Type { get; } = "model_output";

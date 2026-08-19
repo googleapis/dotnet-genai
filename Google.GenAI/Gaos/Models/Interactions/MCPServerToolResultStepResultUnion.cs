@@ -95,7 +95,7 @@ namespace Google.GenAI.Gaos.Models.Interactions
     }
 
     /// <summary>
-    /// The output from the MCP server call. Can be simple text or rich content.
+    /// Required. The output from the MCP server call. Can be simple text or rich content.
     /// </summary>
     [JsonConverter(typeof(MCPServerToolResultStepResultUnion.MCPServerToolResultStepResultUnionConverter))]
     public class MCPServerToolResultStepResultUnion : Google.GenAI.Gaos.Utils.IOpenUnion

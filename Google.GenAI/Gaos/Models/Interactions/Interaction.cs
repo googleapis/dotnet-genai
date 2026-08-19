@@ -74,6 +74,12 @@ namespace Google.GenAI.Gaos.Models.Interactions
         public List<Tool>? Tools { get; set; }
 
         /// <summary>
+        /// Output only. Diagnostic faults / platform errors recorded on the interaction.
+        /// </summary>
+        [JsonProperty("errors", Required = Newtonsoft.Json.Required.DisallowNull)]
+        public List<Error>? Errors { get; set; }
+
+        /// <summary>
         /// Statistics on the interaction request's token usage.
         /// </summary>
         [JsonProperty("usage", Required = Newtonsoft.Json.Required.DisallowNull)]
@@ -82,6 +88,7 @@ namespace Google.GenAI.Gaos.Models.Interactions
         /// <summary>
         /// The requested modalities of the response (TEXT, IMAGE, AUDIO).
         /// </summary>
+        [Obsolete("This field will be removed in a future release, please migrate away from it as soon as possible")]
         [JsonProperty("response_modalities", Required = Newtonsoft.Json.Required.DisallowNull)]
         public List<ResponseModality>? ResponseModalities { get; set; }
 
@@ -139,16 +146,6 @@ namespace Google.GenAI.Gaos.Models.Interactions
         public GenerationConfig? GenerationConfig { get; set; }
 
         /// <summary>
-        /// The name of the cached content used as context to serve the prediction.<br/>
-        /// Note: only used in explicit caching, where users can have control over<br/>
-        /// caching (e.g. what content to cache) and enjoy guaranteed cost savings.<br/>
-        /// Format:<br/>
-        /// `projects/{project}/locations/{location}/cachedContents/{cachedContent}`
-        /// </summary>
-        [JsonProperty("cached_content", Required = Newtonsoft.Json.Required.DisallowNull)]
-        public string? CachedContent { get; set; }
-
-        /// <summary>
         /// Configuration parameters for the agent interaction.
         /// </summary>
         [JsonProperty("agent_config", Required = Newtonsoft.Json.Required.DisallowNull)]
@@ -173,12 +170,6 @@ namespace Google.GenAI.Gaos.Models.Interactions
         {
             return AgentConfig != null ? AgentConfig.AntigravityAgentConfig : null;
         }
-
-        /// <summary>
-        /// Max total tokens for the agent run.
-        /// </summary>
-        [JsonProperty("max_total_tokens", Required = Newtonsoft.Json.Required.DisallowNull)]
-        public string? MaxTotalTokens { get; set; }
 
         /// <summary>
         /// Safety settings for the interaction.

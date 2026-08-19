@@ -25,6 +25,12 @@ namespace Google.GenAI.Gaos.Models.Interactions
         [JsonProperty("max_total_tokens", Required = Newtonsoft.Json.Required.DisallowNull)]
         public string? MaxTotalTokens { get; set; }
 
+        /// <summary>
+        /// The model to use for agent reasoning.
+        /// </summary>
+        [JsonProperty("model", Required = Newtonsoft.Json.Required.DisallowNull)]
+        public string? Model { get; set; }
+
         [JsonProperty("type", Required = Newtonsoft.Json.Required.Always)]
         public string Type { get; } = "antigravity";
     }

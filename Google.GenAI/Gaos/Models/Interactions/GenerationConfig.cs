@@ -43,22 +43,10 @@ namespace Google.GenAI.Gaos.Models.Interactions
         public int? Seed { get; set; }
 
         /// <summary>
-        /// Configuration for speech interaction.
-        /// </summary>
-        [JsonProperty("speech_config", Required = Newtonsoft.Json.Required.DisallowNull)]
-        public List<SpeechConfig>? SpeechConfig { get; set; }
-
-        /// <summary>
         /// A list of character sequences that will stop output interaction.
         /// </summary>
         [JsonProperty("stop_sequences", Required = Newtonsoft.Json.Required.DisallowNull)]
         public List<string>? StopSequences { get; set; }
-
-        /// <summary>
-        /// Controls the randomness of the output.
-        /// </summary>
-        [JsonProperty("temperature", Required = Newtonsoft.Json.Required.DisallowNull)]
-        public float? Temperature { get; set; }
 
         [JsonProperty("thinking_level", Required = Newtonsoft.Json.Required.DisallowNull)]
         public ThinkingLevel? ThinkingLevel { get; set; }
@@ -73,15 +61,21 @@ namespace Google.GenAI.Gaos.Models.Interactions
         public ToolChoice? ToolChoice { get; set; }
 
         /// <summary>
-        /// The maximum cumulative probability of tokens to consider when sampling.
+        /// Configuration for speech recognition (transcription).
         /// </summary>
-        [JsonProperty("top_p", Required = Newtonsoft.Json.Required.DisallowNull)]
-        public float? TopP { get; set; }
+        [JsonProperty("transcription_config", Required = Newtonsoft.Json.Required.DisallowNull)]
+        public TranscriptionConfig? TranscriptionConfig { get; set; }
 
         /// <summary>
         /// Configuration options for video generation.
         /// </summary>
         [JsonProperty("video_config", Required = Newtonsoft.Json.Required.DisallowNull)]
         public VideoConfig? VideoConfig { get; set; }
+
+        /// <summary>
+        /// Optional. Speech and multi-speaker configuration.
+        /// </summary>
+        [JsonProperty("speech_config", Required = Newtonsoft.Json.Required.DisallowNull)]
+        public SpeechConfigUnion? SpeechConfig { get; set; }
     }
 }

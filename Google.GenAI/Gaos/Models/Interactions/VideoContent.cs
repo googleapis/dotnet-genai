@@ -9,6 +9,7 @@
 #nullable enable
 namespace Google.GenAI.Gaos.Models.Interactions
 {
+    using Google.GenAI.Gaos.Models.Components;
     using Google.GenAI.Gaos.Models.Interactions;
     using Google.GenAI.Gaos.Utils;
     using Newtonsoft.Json;
@@ -29,10 +30,10 @@ namespace Google.GenAI.Gaos.Models.Interactions
         public string? Data { get; set; }
 
         /// <summary>
-        /// The mime type of the video.
+        /// How the model processes this video for understanding.
         /// </summary>
-        [JsonProperty("mime_type", Required = Newtonsoft.Json.Required.DisallowNull)]
-        public VideoContentMimeType? MimeType { get; set; }
+        [JsonProperty("processing", Required = Newtonsoft.Json.Required.DisallowNull)]
+        public Processing? Processing { get; set; }
 
         [JsonProperty("resolution", Required = Newtonsoft.Json.Required.DisallowNull)]
         public MediaResolution? Resolution { get; set; }
@@ -45,5 +46,11 @@ namespace Google.GenAI.Gaos.Models.Interactions
         /// </summary>
         [JsonProperty("uri", Required = Newtonsoft.Json.Required.DisallowNull)]
         public string? Uri { get; set; }
+
+        /// <summary>
+        /// The mime type of the video.
+        /// </summary>
+        [JsonProperty("mime_type", Required = Newtonsoft.Json.Required.DisallowNull)]
+        public VideoContentMimeType? MimeType { get; set; }
     }
 }

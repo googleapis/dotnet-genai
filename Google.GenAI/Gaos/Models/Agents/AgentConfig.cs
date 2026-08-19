@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 #nullable enable
-namespace Google.GenAI.Gaos.Models.Interactions
+namespace Google.GenAI.Gaos.Models.Agents
 {
     using Google.GenAI.Gaos.Models.Interactions;
     using Google.GenAI.Gaos.Utils;
@@ -18,33 +18,26 @@ namespace Google.GenAI.Gaos.Models.Interactions
     using System.Numerics;
     using System.Reflection;
 
-    public class TurnContentType
+    public class AgentConfigType
     {
-        private TurnContentType(string value)
+        private AgentConfigType(string value)
         {
             Value = value;
         }
 
         public string Value { get; private set; }
 
-        public static TurnContentType ArrayOfContent
+        public static AgentConfigType AntigravityAgentConfig
         {
             get {
-                return new TurnContentType("arrayOfContent");
+                return new AgentConfigType("AntigravityAgentConfig");
             }
         }
 
-        public static TurnContentType Str
+        public static AgentConfigType Unknown
         {
             get {
-                return new TurnContentType("str");
-            }
-        }
-
-        public static TurnContentType Unknown
-        {
-            get {
-                return new TurnContentType("UNKNOWN");
+                return new AgentConfigType("UNKNOWN");
             }
         }
 
@@ -52,22 +45,20 @@ namespace Google.GenAI.Gaos.Models.Interactions
         {
             return Value;
         }
-        public static implicit operator String(TurnContentType v)
+        public static implicit operator String(AgentConfigType v)
         {
             return v.Value;
         }
-        public static TurnContentType FromString(string v)
+        public static AgentConfigType FromString(string v)
         {
             switch (v)
             {
-                case "arrayOfContent":
-                    return ArrayOfContent;
-                case "str":
-                    return Str;
+                case "AntigravityAgentConfig":
+                    return AntigravityAgentConfig;
                 case "UNKNOWN":
                     return Unknown;
                 default:
-                    throw new ArgumentException("Invalid value for TurnContentType");
+                    throw new ArgumentException("Invalid value for AgentConfigType");
             }
         }
         public override bool Equals(object? obj)
@@ -76,7 +67,7 @@ namespace Google.GenAI.Gaos.Models.Interactions
             {
                 return false;
             }
-            return Value.Equals(((TurnContentType)obj).Value);
+            return Value.Equals(((AgentConfigType)obj).Value);
         }
 
         public override int GetHashCode()
@@ -85,59 +76,50 @@ namespace Google.GenAI.Gaos.Models.Interactions
         }
     }
 
-    [JsonConverter(typeof(TurnContent.TurnContentConverter))]
-    public class TurnContent : Google.GenAI.Gaos.Utils.IOpenUnion
+    /// <summary>
+    /// Configuration parameters for the agent.
+    /// </summary>
+    [JsonConverter(typeof(AgentConfig.AgentConfigConverter))]
+    public class AgentConfig : Google.GenAI.Gaos.Utils.IOpenUnion
     {
-        public TurnContent(TurnContentType type)
+        public AgentConfig(AgentConfigType type)
         {
             Type = type;
         }
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
-        public List<Content>? ArrayOfContent { get; set; }
+        public AntigravityAgentConfig? AntigravityAgentConfig { get; set; }
 
-        [UnionVariant]
-        [SpeakeasyMetadata("form:explode=true")]
-        public string? Str { get; set; }
-
-        public TurnContentType Type { get; set; }
+        public AgentConfigType Type { get; set; }
 
         [JsonIgnore]
         public JToken? UnknownRaw { get; private set; }
 
-        public static TurnContent CreateUnknown(JToken raw)
+        public static AgentConfig CreateUnknown(JToken raw)
         {
-            return new TurnContent(TurnContentType.Unknown) { UnknownRaw = raw };
+            return new AgentConfig(AgentConfigType.Unknown) { UnknownRaw = raw };
         }
 
         public bool IsUnknown()
         {
-            return Type.Equals(TurnContentType.Unknown);
+            return Type.Equals(AgentConfigType.Unknown);
         }
 
         bool Google.GenAI.Gaos.Utils.IOpenUnion.IsUnknown() => IsUnknown();
 
-        public static TurnContent CreateArrayOfContent(List<Content> arrayOfContent)
+        public static AgentConfig CreateAntigravityAgentConfig(AntigravityAgentConfig antigravityAgentConfig)
         {
-            TurnContentType typ = TurnContentType.ArrayOfContent;
+            AgentConfigType typ = AgentConfigType.AntigravityAgentConfig;
 
-            TurnContent res = new TurnContent(typ);
-            res.ArrayOfContent = arrayOfContent;
-            return res;
-        }
-        public static TurnContent CreateStr(string str)
-        {
-            TurnContentType typ = TurnContentType.Str;
-
-            TurnContent res = new TurnContent(typ);
-            res.Str = str;
+            AgentConfig res = new AgentConfig(typ);
+            res.AntigravityAgentConfig = antigravityAgentConfig;
             return res;
         }
 
-        public class TurnContentConverter : JsonConverter
+        public class AgentConfigConverter : JsonConverter
         {
-            public override bool CanConvert(System.Type objectType) => objectType == typeof(TurnContent);
+            public override bool CanConvert(System.Type objectType) => objectType == typeof(AgentConfig);
 
             public override bool CanRead => true;
 
@@ -149,9 +131,8 @@ namespace Google.GenAI.Gaos.Models.Interactions
                 }
 
                 JToken jt = JToken.Load(reader);
-                var unionCandidates = new UnionCandidatePool<TurnContentType>();
-                unionCandidates.Add<List<Content>>("ArrayOfContent", 0, TurnContentType.ArrayOfContent);
-                unionCandidates.Add<string>("Str", 1, TurnContentType.Str);
+                var unionCandidates = new UnionCandidatePool<AgentConfigType>();
+                unionCandidates.Add<AntigravityAgentConfig>("AntigravityAgentConfig", 0, AgentConfigType.AntigravityAgentConfig);
 
                 var (winner, winnerValue) = unionCandidates.PickBest(
                     jt,
@@ -162,8 +143,8 @@ namespace Google.GenAI.Gaos.Models.Interactions
                     return CreateUnknown(jt);
                 }
 
-                var result = new TurnContent(winner.TypeName);
-                typeof(TurnContent).GetProperty(winner.PropertyName)!.SetValue(result, winnerValue);
+                var result = new AgentConfig(winner.TypeName);
+                typeof(AgentConfig).GetProperty(winner.PropertyName)!.SetValue(result, winnerValue);
                 return result;
             }
 
@@ -174,7 +155,7 @@ namespace Google.GenAI.Gaos.Models.Interactions
                     throw new InvalidOperationException("Unexpected null JSON value.");
                 }
 
-                TurnContent res = (TurnContent)value;
+                AgentConfig res = (AgentConfig)value;
 
                 if (res.IsUnknown())
                 {
@@ -186,15 +167,9 @@ namespace Google.GenAI.Gaos.Models.Interactions
                     throw new InvalidOperationException("Unknown union value has no raw payload; construct via CreateUnknown(JToken).");
                 }
 
-                if (res.ArrayOfContent != null)
+                if (res.AntigravityAgentConfig != null)
                 {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.ArrayOfContent));
-                    return;
-                }
-
-                if (res.Str != null)
-                {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.Str));
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.AntigravityAgentConfig));
                     return;
                 }
 

@@ -36,7 +36,7 @@ namespace Google.GenAI.Gaos.Models.Interactions
 
         /// <summary>
         /// The source of the environment.<br/>
-        /// For GCS, this is the GCS path.<br/>
+        /// For Cloud Storage, this is the Cloud Storage path.<br/>
         /// For GitHub, this is the GitHub path.
         /// </summary>
         [JsonProperty("source", Required = Newtonsoft.Json.Required.DisallowNull)]

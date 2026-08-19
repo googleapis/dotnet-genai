@@ -62,6 +62,7 @@ namespace Google.GenAI.Gaos.Models.Interactions
         /// <summary>
         /// The requested modalities of the response (TEXT, IMAGE, AUDIO).
         /// </summary>
+        [Obsolete("This field will be removed in a future release, please migrate away from it as soon as possible")]
         [JsonProperty("response_modalities", Required = Newtonsoft.Json.Required.DisallowNull)]
         public List<ResponseModality>? ResponseModalities { get; set; }
 
@@ -104,16 +105,6 @@ namespace Google.GenAI.Gaos.Models.Interactions
         /// </summary>
         [JsonProperty("generation_config", Required = Newtonsoft.Json.Required.DisallowNull)]
         public GenerationConfig? GenerationConfig { get; set; }
-
-        /// <summary>
-        /// The name of the cached content used as context to serve the prediction.<br/>
-        /// Note: only used in explicit caching, where users can have control over<br/>
-        /// caching (e.g. what content to cache) and enjoy guaranteed cost savings.<br/>
-        /// Format:<br/>
-        /// `projects/{project}/locations/{location}/cachedContents/{cachedContent}`
-        /// </summary>
-        [JsonProperty("cached_content", Required = Newtonsoft.Json.Required.DisallowNull)]
-        public string? CachedContent { get; set; }
 
         /// <summary>
         /// Safety settings for the interaction.

@@ -62,6 +62,7 @@ namespace Google.GenAI.Gaos.Models.Interactions
         /// <summary>
         /// The requested modalities of the response (TEXT, IMAGE, AUDIO).
         /// </summary>
+        [Obsolete("This field will be removed in a future release, please migrate away from it as soon as possible")]
         [JsonProperty("response_modalities", Required = Newtonsoft.Json.Required.DisallowNull)]
         public List<ResponseModality>? ResponseModalities { get; set; }
 
@@ -124,12 +125,6 @@ namespace Google.GenAI.Gaos.Models.Interactions
         {
             return AgentConfig != null ? AgentConfig.AntigravityAgentConfig : null;
         }
-
-        /// <summary>
-        /// Max total tokens for the agent run.
-        /// </summary>
-        [JsonProperty("max_total_tokens", Required = Newtonsoft.Json.Required.DisallowNull)]
-        public string? MaxTotalTokens { get; set; }
 
         /// <summary>
         /// Safety settings for the interaction.

@@ -39,9 +39,12 @@ namespace Google.GenAI.Gaos.Models.Interactions
         public static readonly Model NanoBananaProPreview = new Model("nano-banana-pro-preview");
         public static readonly Model Gemini31FlashImage = new Model("gemini-3.1-flash-image");
         public static readonly Model Gemini35Flash = new Model("gemini-3.5-flash");
+        public static readonly Model Gemini36Flash = new Model("gemini-3.6-flash");
+        public static readonly Model Gemini37Flash = new Model("gemini-3.7-flash");
         public static readonly Model Lyria3ClipPreview = new Model("lyria-3-clip-preview");
         public static readonly Model Lyria3ProPreview = new Model("lyria-3-pro-preview");
         public static readonly Model GeminiRoboticsEr16Preview = new Model("gemini-robotics-er-1.6-preview");
+        public static readonly Model GeminiRoboticsEr2Preview = new Model("gemini-robotics-er-2-preview");
 
         private static readonly Dictionary<string, Model> _knownValues =
             new Dictionary<string, Model>() {
@@ -62,9 +65,12 @@ namespace Google.GenAI.Gaos.Models.Interactions
                 ["nano-banana-pro-preview"] = NanoBananaProPreview,
                 ["gemini-3.1-flash-image"] = Gemini31FlashImage,
                 ["gemini-3.5-flash"] = Gemini35Flash,
+                ["gemini-3.6-flash"] = Gemini36Flash,
+                ["gemini-3.7-flash"] = Gemini37Flash,
                 ["lyria-3-clip-preview"] = Lyria3ClipPreview,
                 ["lyria-3-pro-preview"] = Lyria3ProPreview,
-                ["gemini-robotics-er-1.6-preview"] = GeminiRoboticsEr16Preview
+                ["gemini-robotics-er-1.6-preview"] = GeminiRoboticsEr16Preview,
+                ["gemini-robotics-er-2-preview"] = GeminiRoboticsEr2Preview
             };
 
         private static readonly ConcurrentDictionary<string, Model> _values =

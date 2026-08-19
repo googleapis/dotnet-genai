@@ -27,24 +27,10 @@ namespace Google.GenAI.Gaos.Models.Interactions
 
         public string Value { get; private set; }
 
-        public static ToolType Function
-        {
-            get {
-                return new ToolType("function");
-            }
-        }
-
         public static ToolType CodeExecution
         {
             get {
                 return new ToolType("code_execution");
-            }
-        }
-
-        public static ToolType UrlContext
-        {
-            get {
-                return new ToolType("url_context");
             }
         }
 
@@ -55,24 +41,17 @@ namespace Google.GenAI.Gaos.Models.Interactions
             }
         }
 
-        public static ToolType McpServer
-        {
-            get {
-                return new ToolType("mcp_server");
-            }
-        }
-
-        public static ToolType GoogleSearch
-        {
-            get {
-                return new ToolType("google_search");
-            }
-        }
-
         public static ToolType FileSearch
         {
             get {
                 return new ToolType("file_search");
+            }
+        }
+
+        public static ToolType Function
+        {
+            get {
+                return new ToolType("function");
             }
         }
 
@@ -83,10 +62,31 @@ namespace Google.GenAI.Gaos.Models.Interactions
             }
         }
 
+        public static ToolType GoogleSearch
+        {
+            get {
+                return new ToolType("google_search");
+            }
+        }
+
+        public static ToolType McpServer
+        {
+            get {
+                return new ToolType("mcp_server");
+            }
+        }
+
         public static ToolType Retrieval
         {
             get {
                 return new ToolType("retrieval");
+            }
+        }
+
+        public static ToolType UrlContext
+        {
+            get {
+                return new ToolType("url_context");
             }
         }
 
@@ -109,24 +109,24 @@ namespace Google.GenAI.Gaos.Models.Interactions
         {
             switch (v)
             {
-                case "function":
-                    return Function;
                 case "code_execution":
                     return CodeExecution;
-                case "url_context":
-                    return UrlContext;
                 case "computer_use":
                     return ComputerUse;
-                case "mcp_server":
-                    return McpServer;
-                case "google_search":
-                    return GoogleSearch;
                 case "file_search":
                     return FileSearch;
+                case "function":
+                    return Function;
                 case "google_maps":
                     return GoogleMaps;
+                case "google_search":
+                    return GoogleSearch;
+                case "mcp_server":
+                    return McpServer;
                 case "retrieval":
                     return Retrieval;
+                case "url_context":
+                    return UrlContext;
                 case "UNKNOWN":
                     return Unknown;
                 default:
@@ -161,15 +161,7 @@ namespace Google.GenAI.Gaos.Models.Interactions
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
-        public Function? Function { get; set; }
-
-        [UnionVariant]
-        [SpeakeasyMetadata("form:explode=true")]
         public CodeExecution? CodeExecution { get; set; }
-
-        [UnionVariant]
-        [SpeakeasyMetadata("form:explode=true")]
-        public URLContext? URLContext { get; set; }
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
@@ -177,15 +169,11 @@ namespace Google.GenAI.Gaos.Models.Interactions
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
-        public MCPServer? MCPServer { get; set; }
-
-        [UnionVariant]
-        [SpeakeasyMetadata("form:explode=true")]
-        public GoogleSearch? GoogleSearch { get; set; }
-
-        [UnionVariant]
-        [SpeakeasyMetadata("form:explode=true")]
         public FileSearch? FileSearch { get; set; }
+
+        [UnionVariant]
+        [SpeakeasyMetadata("form:explode=true")]
+        public Function? Function { get; set; }
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
@@ -193,7 +181,19 @@ namespace Google.GenAI.Gaos.Models.Interactions
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
+        public GoogleSearch? GoogleSearch { get; set; }
+
+        [UnionVariant]
+        [SpeakeasyMetadata("form:explode=true")]
+        public MCPServer? MCPServer { get; set; }
+
+        [UnionVariant]
+        [SpeakeasyMetadata("form:explode=true")]
         public Retrieval? Retrieval { get; set; }
+
+        [UnionVariant]
+        [SpeakeasyMetadata("form:explode=true")]
+        public URLContext? URLContext { get; set; }
 
         public ToolType Type { get; set; }
 
@@ -212,27 +212,11 @@ namespace Google.GenAI.Gaos.Models.Interactions
 
         bool Google.GenAI.Gaos.Utils.IOpenUnion.IsUnknown() => IsUnknown();
 
-        public static Tool CreateFunction(Function function)
-        {
-            ToolType typ = ToolType.Function;
-            Tool res = new Tool(typ);
-            res.Function = function;
-            return res;
-        }
-
         public static Tool CreateCodeExecution(CodeExecution codeExecution)
         {
             ToolType typ = ToolType.CodeExecution;
             Tool res = new Tool(typ);
             res.CodeExecution = codeExecution;
-            return res;
-        }
-
-        public static Tool CreateUrlContext(URLContext urlContext)
-        {
-            ToolType typ = ToolType.UrlContext;
-            Tool res = new Tool(typ);
-            res.URLContext = urlContext;
             return res;
         }
 
@@ -244,27 +228,19 @@ namespace Google.GenAI.Gaos.Models.Interactions
             return res;
         }
 
-        public static Tool CreateMcpServer(MCPServer mcpServer)
-        {
-            ToolType typ = ToolType.McpServer;
-            Tool res = new Tool(typ);
-            res.MCPServer = mcpServer;
-            return res;
-        }
-
-        public static Tool CreateGoogleSearch(GoogleSearch googleSearch)
-        {
-            ToolType typ = ToolType.GoogleSearch;
-            Tool res = new Tool(typ);
-            res.GoogleSearch = googleSearch;
-            return res;
-        }
-
         public static Tool CreateFileSearch(FileSearch fileSearch)
         {
             ToolType typ = ToolType.FileSearch;
             Tool res = new Tool(typ);
             res.FileSearch = fileSearch;
+            return res;
+        }
+
+        public static Tool CreateFunction(Function function)
+        {
+            ToolType typ = ToolType.Function;
+            Tool res = new Tool(typ);
+            res.Function = function;
             return res;
         }
 
@@ -276,11 +252,35 @@ namespace Google.GenAI.Gaos.Models.Interactions
             return res;
         }
 
+        public static Tool CreateGoogleSearch(GoogleSearch googleSearch)
+        {
+            ToolType typ = ToolType.GoogleSearch;
+            Tool res = new Tool(typ);
+            res.GoogleSearch = googleSearch;
+            return res;
+        }
+
+        public static Tool CreateMcpServer(MCPServer mcpServer)
+        {
+            ToolType typ = ToolType.McpServer;
+            Tool res = new Tool(typ);
+            res.MCPServer = mcpServer;
+            return res;
+        }
+
         public static Tool CreateRetrieval(Retrieval retrieval)
         {
             ToolType typ = ToolType.Retrieval;
             Tool res = new Tool(typ);
             res.Retrieval = retrieval;
+            return res;
+        }
+
+        public static Tool CreateUrlContext(URLContext urlContext)
+        {
+            ToolType typ = ToolType.UrlContext;
+            Tool res = new Tool(typ);
+            res.URLContext = urlContext;
             return res;
         }
 
@@ -311,22 +311,6 @@ namespace Google.GenAI.Gaos.Models.Interactions
                 }
 
                 string discriminator = discriminatorToken.ToString();
-                if (discriminator == ToolType.Function.ToString())
-                {
-                    Function function;
-                    try
-                    {
-                        function = ResponseBodyDeserializer.DeserializeNotNull<Function>(jo.ToString());
-                    }
-                    catch (Exception)
-                    {
-                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<Function>(jo.ToString(), out function))
-                        {
-                            throw;
-                        }
-                    }
-                    return CreateFunction(function);
-                }
                 if (discriminator == ToolType.CodeExecution.ToString())
                 {
                     CodeExecution codeExecution;
@@ -342,22 +326,6 @@ namespace Google.GenAI.Gaos.Models.Interactions
                         }
                     }
                     return CreateCodeExecution(codeExecution);
-                }
-                if (discriminator == ToolType.UrlContext.ToString())
-                {
-                    URLContext urlContext;
-                    try
-                    {
-                        urlContext = ResponseBodyDeserializer.DeserializeNotNull<URLContext>(jo.ToString());
-                    }
-                    catch (Exception)
-                    {
-                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<URLContext>(jo.ToString(), out urlContext))
-                        {
-                            throw;
-                        }
-                    }
-                    return CreateUrlContext(urlContext);
                 }
                 if (discriminator == ToolType.ComputerUse.ToString())
                 {
@@ -375,38 +343,6 @@ namespace Google.GenAI.Gaos.Models.Interactions
                     }
                     return CreateComputerUse(computerUse);
                 }
-                if (discriminator == ToolType.McpServer.ToString())
-                {
-                    MCPServer mcpServer;
-                    try
-                    {
-                        mcpServer = ResponseBodyDeserializer.DeserializeNotNull<MCPServer>(jo.ToString());
-                    }
-                    catch (Exception)
-                    {
-                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<MCPServer>(jo.ToString(), out mcpServer))
-                        {
-                            throw;
-                        }
-                    }
-                    return CreateMcpServer(mcpServer);
-                }
-                if (discriminator == ToolType.GoogleSearch.ToString())
-                {
-                    GoogleSearch googleSearch;
-                    try
-                    {
-                        googleSearch = ResponseBodyDeserializer.DeserializeNotNull<GoogleSearch>(jo.ToString());
-                    }
-                    catch (Exception)
-                    {
-                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<GoogleSearch>(jo.ToString(), out googleSearch))
-                        {
-                            throw;
-                        }
-                    }
-                    return CreateGoogleSearch(googleSearch);
-                }
                 if (discriminator == ToolType.FileSearch.ToString())
                 {
                     FileSearch fileSearch;
@@ -422,6 +358,22 @@ namespace Google.GenAI.Gaos.Models.Interactions
                         }
                     }
                     return CreateFileSearch(fileSearch);
+                }
+                if (discriminator == ToolType.Function.ToString())
+                {
+                    Function function;
+                    try
+                    {
+                        function = ResponseBodyDeserializer.DeserializeNotNull<Function>(jo.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<Function>(jo.ToString(), out function))
+                        {
+                            throw;
+                        }
+                    }
+                    return CreateFunction(function);
                 }
                 if (discriminator == ToolType.GoogleMaps.ToString())
                 {
@@ -439,6 +391,38 @@ namespace Google.GenAI.Gaos.Models.Interactions
                     }
                     return CreateGoogleMaps(googleMaps);
                 }
+                if (discriminator == ToolType.GoogleSearch.ToString())
+                {
+                    GoogleSearch googleSearch;
+                    try
+                    {
+                        googleSearch = ResponseBodyDeserializer.DeserializeNotNull<GoogleSearch>(jo.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<GoogleSearch>(jo.ToString(), out googleSearch))
+                        {
+                            throw;
+                        }
+                    }
+                    return CreateGoogleSearch(googleSearch);
+                }
+                if (discriminator == ToolType.McpServer.ToString())
+                {
+                    MCPServer mcpServer;
+                    try
+                    {
+                        mcpServer = ResponseBodyDeserializer.DeserializeNotNull<MCPServer>(jo.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<MCPServer>(jo.ToString(), out mcpServer))
+                        {
+                            throw;
+                        }
+                    }
+                    return CreateMcpServer(mcpServer);
+                }
                 if (discriminator == ToolType.Retrieval.ToString())
                 {
                     Retrieval retrieval;
@@ -454,6 +438,22 @@ namespace Google.GenAI.Gaos.Models.Interactions
                         }
                     }
                     return CreateRetrieval(retrieval);
+                }
+                if (discriminator == ToolType.UrlContext.ToString())
+                {
+                    URLContext urlContext;
+                    try
+                    {
+                        urlContext = ResponseBodyDeserializer.DeserializeNotNull<URLContext>(jo.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<URLContext>(jo.ToString(), out urlContext))
+                        {
+                            throw;
+                        }
+                    }
+                    return CreateUrlContext(urlContext);
                 }
 
                 return CreateUnknown(jo);
@@ -478,21 +478,9 @@ namespace Google.GenAI.Gaos.Models.Interactions
                     throw new InvalidOperationException("Unknown union value has no raw payload; construct via CreateUnknown(JToken).");
                 }
 
-                if (res.Function != null)
-                {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.Function));
-                    return;
-                }
-
                 if (res.CodeExecution != null)
                 {
                     writer.WriteRawValue(Utilities.SerializeJSON(res.CodeExecution));
-                    return;
-                }
-
-                if (res.URLContext != null)
-                {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.URLContext));
                     return;
                 }
 
@@ -502,21 +490,15 @@ namespace Google.GenAI.Gaos.Models.Interactions
                     return;
                 }
 
-                if (res.MCPServer != null)
-                {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.MCPServer));
-                    return;
-                }
-
-                if (res.GoogleSearch != null)
-                {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.GoogleSearch));
-                    return;
-                }
-
                 if (res.FileSearch != null)
                 {
                     writer.WriteRawValue(Utilities.SerializeJSON(res.FileSearch));
+                    return;
+                }
+
+                if (res.Function != null)
+                {
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.Function));
                     return;
                 }
 
@@ -526,9 +508,27 @@ namespace Google.GenAI.Gaos.Models.Interactions
                     return;
                 }
 
+                if (res.GoogleSearch != null)
+                {
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.GoogleSearch));
+                    return;
+                }
+
+                if (res.MCPServer != null)
+                {
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.MCPServer));
+                    return;
+                }
+
                 if (res.Retrieval != null)
                 {
                     writer.WriteRawValue(Utilities.SerializeJSON(res.Retrieval));
+                    return;
+                }
+
+                if (res.URLContext != null)
+                {
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.URLContext));
                     return;
                 }
 

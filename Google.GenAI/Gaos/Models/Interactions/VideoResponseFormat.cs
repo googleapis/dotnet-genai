@@ -41,11 +41,17 @@ namespace Google.GenAI.Gaos.Models.Interactions
         public string? Duration { get; set; }
 
         /// <summary>
-        /// The GCS URI to store the video output. Required for Vertex if delivery mode<br/>
-        /// is URI.
+        /// The Cloud Storage URI to store the video output. Required for Vertex if<br/>
+        /// delivery mode is URI.
         /// </summary>
         [JsonProperty("gcs_uri", Required = Newtonsoft.Json.Required.DisallowNull)]
         public string? GcsUri { get; set; }
+
+        /// <summary>
+        /// The video output resolution. Defaults to 720p.
+        /// </summary>
+        [JsonProperty("resolution", Required = Newtonsoft.Json.Required.DisallowNull)]
+        public Resolution? Resolution { get; set; }
 
         [JsonProperty("type", Required = Newtonsoft.Json.Required.Always)]
         public string Type { get; } = "video";

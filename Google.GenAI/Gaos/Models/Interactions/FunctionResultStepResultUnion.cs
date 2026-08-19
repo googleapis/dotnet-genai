@@ -95,7 +95,7 @@ namespace Google.GenAI.Gaos.Models.Interactions
     }
 
     /// <summary>
-    /// The result of the tool call.
+    /// Required. The result of the tool call.
     /// </summary>
     [JsonConverter(typeof(FunctionResultStepResultUnion.FunctionResultStepResultUnionConverter))]
     public class FunctionResultStepResultUnion : Google.GenAI.Gaos.Utils.IOpenUnion

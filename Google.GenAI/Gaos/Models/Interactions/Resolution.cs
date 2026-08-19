@@ -16,26 +16,29 @@ namespace Google.GenAI.Gaos.Models.Interactions
     using System.Collections.Generic;
     using System.Linq;
 
+    /// <summary>
+    /// The video output resolution. Defaults to 720p.
+    /// </summary>
     [JsonConverter(typeof(OpenEnumConverter))]
-    public class ServiceTier : IEquatable<ServiceTier>, IOpenEnum<string>
+    public class Resolution : IEquatable<Resolution>, IOpenEnum<string>
     {
-        public static readonly ServiceTier Flex = new ServiceTier("flex");
-        public static readonly ServiceTier Standard = new ServiceTier("standard");
-        public static readonly ServiceTier Priority = new ServiceTier("priority");
-        public static readonly ServiceTier Deferred = new ServiceTier("deferred");
+        public static readonly Resolution ThreeHundredAndSixtyp = new Resolution("360p");
+        public static readonly Resolution SevenHundredAndTwentyp = new Resolution("720p");
+        public static readonly Resolution OneThousandAndEightyp = new Resolution("1080p");
+        public static readonly Resolution Fourk = new Resolution("4k");
 
-        private static readonly Dictionary<string, ServiceTier> _knownValues =
-            new Dictionary<string, ServiceTier>() {
-                ["flex"] = Flex,
-                ["standard"] = Standard,
-                ["priority"] = Priority,
-                ["deferred"] = Deferred
+        private static readonly Dictionary<string, Resolution> _knownValues =
+            new Dictionary<string, Resolution>() {
+                ["360p"] = ThreeHundredAndSixtyp,
+                ["720p"] = SevenHundredAndTwentyp,
+                ["1080p"] = OneThousandAndEightyp,
+                ["4k"] = Fourk
             };
 
-        private static readonly ConcurrentDictionary<string, ServiceTier> _values =
-            new ConcurrentDictionary<string, ServiceTier>(_knownValues);
+        private static readonly ConcurrentDictionary<string, Resolution> _values =
+            new ConcurrentDictionary<string, Resolution>(_knownValues);
 
-        private ServiceTier(string value)
+        private Resolution(string value)
         {
             if (value == null) throw new ArgumentNullException(nameof(value));
             Value = value;
@@ -43,16 +46,16 @@ namespace Google.GenAI.Gaos.Models.Interactions
 
         public string Value { get; }
 
-        public static ServiceTier Of(string value)
+        public static Resolution Of(string value)
         {
             return _values.GetOrAdd(value,
-                                    _ => new ServiceTier(value));
+                                    _ => new Resolution(value));
         }
 
-        public static implicit operator ServiceTier(string value) => Of(value);
-        public static implicit operator string(ServiceTier servicetier) => servicetier.Value;
+        public static implicit operator Resolution(string value) => Of(value);
+        public static implicit operator string(Resolution resolution) => resolution.Value;
 
-        public static ServiceTier[] Values()
+        public static Resolution[] Values()
         {
             return _values.Values.ToArray();
         }
@@ -64,9 +67,9 @@ namespace Google.GenAI.Gaos.Models.Interactions
             return _knownValues.ContainsKey(Value);
         }
 
-        public override bool Equals(object? obj) => Equals(obj as ServiceTier);
+        public override bool Equals(object? obj) => Equals(obj as Resolution);
 
-        public bool Equals(ServiceTier? other)
+        public bool Equals(Resolution? other)
         {
             if (ReferenceEquals(this, other)) return true;
             if (other is null) return false;

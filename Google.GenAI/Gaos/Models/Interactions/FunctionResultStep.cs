@@ -38,7 +38,7 @@ namespace Google.GenAI.Gaos.Models.Interactions
         public string? Name { get; set; }
 
         /// <summary>
-        /// The result of the tool call.
+        /// Required. The result of the tool call.
         /// </summary>
         [JsonProperty("result", Required = Newtonsoft.Json.Required.Always, NullValueHandling = NullValueHandling.Include)]
         public FunctionResultStepResultUnion Result { get; set; } = default!;

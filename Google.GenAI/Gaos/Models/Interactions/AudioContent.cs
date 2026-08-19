@@ -35,12 +35,6 @@ namespace Google.GenAI.Gaos.Models.Interactions
         public string? Data { get; set; }
 
         /// <summary>
-        /// The mime type of the audio.
-        /// </summary>
-        [JsonProperty("mime_type", Required = Newtonsoft.Json.Required.DisallowNull)]
-        public AudioContentMimeType? MimeType { get; set; }
-
-        /// <summary>
         /// The sample rate of the audio.
         /// </summary>
         [JsonProperty("sample_rate", Required = Newtonsoft.Json.Required.DisallowNull)]
@@ -54,5 +48,11 @@ namespace Google.GenAI.Gaos.Models.Interactions
         /// </summary>
         [JsonProperty("uri", Required = Newtonsoft.Json.Required.DisallowNull)]
         public string? Uri { get; set; }
+
+        /// <summary>
+        /// The mime type of the audio.
+        /// </summary>
+        [JsonProperty("mime_type", Required = Newtonsoft.Json.Required.DisallowNull)]
+        public AudioContentMimeType? MimeType { get; set; }
     }
 }

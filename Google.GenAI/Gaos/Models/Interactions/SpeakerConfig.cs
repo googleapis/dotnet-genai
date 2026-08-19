@@ -12,13 +12,17 @@ namespace Google.GenAI.Gaos.Models.Interactions
     using Google.GenAI.Gaos.Models.Interactions;
     using Google.GenAI.Gaos.Utils;
     using Newtonsoft.Json;
+    using System.Collections.Generic;
 
-    public class StreamMetadata
+    /// <summary>
+    /// Configuration for multi-speaker and speech generation.
+    /// </summary>
+    public class SpeakerConfig
     {
         /// <summary>
-        /// Statistics on the interaction request's token usage.
+        /// Individual speaker configurations.
         /// </summary>
-        [JsonProperty("total_usage", Required = Newtonsoft.Json.Required.DisallowNull)]
-        public Usage? TotalUsage { get; set; }
+        [JsonProperty("speakers", Required = Newtonsoft.Json.Required.DisallowNull)]
+        public List<SpeechConfig>? Speakers { get; set; }
     }
 }

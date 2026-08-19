@@ -29,9 +29,6 @@ namespace Google.GenAI.Gaos.Models.Interactions
         [JsonProperty("index", Required = Newtonsoft.Json.Required.Always)]
         public int Index { get; set; } = default!;
 
-        [JsonProperty("metadata", Required = Newtonsoft.Json.Required.DisallowNull)]
-        public StreamMetadata? Metadata { get; set; }
-
         /// <summary>
         /// A step in the interaction.
         /// </summary>

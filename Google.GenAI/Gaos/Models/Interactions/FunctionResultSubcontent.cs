@@ -27,17 +27,17 @@ namespace Google.GenAI.Gaos.Models.Interactions
 
         public string Value { get; private set; }
 
-        public static FunctionResultSubcontentType Text
-        {
-            get {
-                return new FunctionResultSubcontentType("text");
-            }
-        }
-
         public static FunctionResultSubcontentType Image
         {
             get {
                 return new FunctionResultSubcontentType("image");
+            }
+        }
+
+        public static FunctionResultSubcontentType Text
+        {
+            get {
+                return new FunctionResultSubcontentType("text");
             }
         }
 
@@ -60,10 +60,10 @@ namespace Google.GenAI.Gaos.Models.Interactions
         {
             switch (v)
             {
-                case "text":
-                    return Text;
                 case "image":
                     return Image;
+                case "text":
+                    return Text;
                 case "UNKNOWN":
                     return Unknown;
                 default:
@@ -95,11 +95,11 @@ namespace Google.GenAI.Gaos.Models.Interactions
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
-        public TextContent? TextContent { get; set; }
+        public ImageContent? ImageContent { get; set; }
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
-        public ImageContent? ImageContent { get; set; }
+        public TextContent? TextContent { get; set; }
 
         public FunctionResultSubcontentType Type { get; set; }
 
@@ -118,19 +118,19 @@ namespace Google.GenAI.Gaos.Models.Interactions
 
         bool Google.GenAI.Gaos.Utils.IOpenUnion.IsUnknown() => IsUnknown();
 
-        public static FunctionResultSubcontent CreateText(TextContent text)
-        {
-            FunctionResultSubcontentType typ = FunctionResultSubcontentType.Text;
-            FunctionResultSubcontent res = new FunctionResultSubcontent(typ);
-            res.TextContent = text;
-            return res;
-        }
-
         public static FunctionResultSubcontent CreateImage(ImageContent image)
         {
             FunctionResultSubcontentType typ = FunctionResultSubcontentType.Image;
             FunctionResultSubcontent res = new FunctionResultSubcontent(typ);
             res.ImageContent = image;
+            return res;
+        }
+
+        public static FunctionResultSubcontent CreateText(TextContent text)
+        {
+            FunctionResultSubcontentType typ = FunctionResultSubcontentType.Text;
+            FunctionResultSubcontent res = new FunctionResultSubcontent(typ);
+            res.TextContent = text;
             return res;
         }
 
@@ -161,22 +161,6 @@ namespace Google.GenAI.Gaos.Models.Interactions
                 }
 
                 string discriminator = discriminatorToken.ToString();
-                if (discriminator == FunctionResultSubcontentType.Text.ToString())
-                {
-                    TextContent textContent;
-                    try
-                    {
-                        textContent = ResponseBodyDeserializer.DeserializeNotNull<TextContent>(jo.ToString());
-                    }
-                    catch (Exception)
-                    {
-                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<TextContent>(jo.ToString(), out textContent))
-                        {
-                            throw;
-                        }
-                    }
-                    return CreateText(textContent);
-                }
                 if (discriminator == FunctionResultSubcontentType.Image.ToString())
                 {
                     ImageContent imageContent;
@@ -192,6 +176,22 @@ namespace Google.GenAI.Gaos.Models.Interactions
                         }
                     }
                     return CreateImage(imageContent);
+                }
+                if (discriminator == FunctionResultSubcontentType.Text.ToString())
+                {
+                    TextContent textContent;
+                    try
+                    {
+                        textContent = ResponseBodyDeserializer.DeserializeNotNull<TextContent>(jo.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<TextContent>(jo.ToString(), out textContent))
+                        {
+                            throw;
+                        }
+                    }
+                    return CreateText(textContent);
                 }
 
                 return CreateUnknown(jo);
@@ -216,15 +216,15 @@ namespace Google.GenAI.Gaos.Models.Interactions
                     throw new InvalidOperationException("Unknown union value has no raw payload; construct via CreateUnknown(JToken).");
                 }
 
-                if (res.TextContent != null)
-                {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.TextContent));
-                    return;
-                }
-
                 if (res.ImageContent != null)
                 {
                     writer.WriteRawValue(Utilities.SerializeJSON(res.ImageContent));
+                    return;
+                }
+
+                if (res.TextContent != null)
+                {
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.TextContent));
                     return;
                 }
 

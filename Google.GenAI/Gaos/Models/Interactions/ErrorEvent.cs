@@ -30,8 +30,5 @@ namespace Google.GenAI.Gaos.Models.Interactions
 
         [JsonProperty("event_type", Required = Newtonsoft.Json.Required.Always)]
         public string EventType { get; } = "error";
-
-        [JsonProperty("metadata", Required = Newtonsoft.Json.Required.DisallowNull)]
-        public StreamMetadata? Metadata { get; set; }
     }
 }

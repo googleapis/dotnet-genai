@@ -34,17 +34,17 @@ namespace Google.GenAI.Gaos.Models.Interactions
             }
         }
 
-        public static ResponseFormatType TextResponseFormat
-        {
-            get {
-                return new ResponseFormatType("TextResponseFormat");
-            }
-        }
-
         public static ResponseFormatType ImageResponseFormat
         {
             get {
                 return new ResponseFormatType("ImageResponseFormat");
+            }
+        }
+
+        public static ResponseFormatType TextResponseFormat
+        {
+            get {
+                return new ResponseFormatType("TextResponseFormat");
             }
         }
 
@@ -83,10 +83,10 @@ namespace Google.GenAI.Gaos.Models.Interactions
             {
                 case "AudioResponseFormat":
                     return AudioResponseFormat;
-                case "TextResponseFormat":
-                    return TextResponseFormat;
                 case "ImageResponseFormat":
                     return ImageResponseFormat;
+                case "TextResponseFormat":
+                    return TextResponseFormat;
                 case "VideoResponseFormat":
                     return VideoResponseFormat;
                 case "mapOfAny":
@@ -126,11 +126,11 @@ namespace Google.GenAI.Gaos.Models.Interactions
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
-        public TextResponseFormat? TextResponseFormat { get; set; }
+        public ImageResponseFormat? ImageResponseFormat { get; set; }
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
-        public ImageResponseFormat? ImageResponseFormat { get; set; }
+        public TextResponseFormat? TextResponseFormat { get; set; }
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
@@ -165,20 +165,20 @@ namespace Google.GenAI.Gaos.Models.Interactions
             res.AudioResponseFormat = audioResponseFormat;
             return res;
         }
-        public static ResponseFormat CreateTextResponseFormat(TextResponseFormat textResponseFormat)
-        {
-            ResponseFormatType typ = ResponseFormatType.TextResponseFormat;
-
-            ResponseFormat res = new ResponseFormat(typ);
-            res.TextResponseFormat = textResponseFormat;
-            return res;
-        }
         public static ResponseFormat CreateImageResponseFormat(ImageResponseFormat imageResponseFormat)
         {
             ResponseFormatType typ = ResponseFormatType.ImageResponseFormat;
 
             ResponseFormat res = new ResponseFormat(typ);
             res.ImageResponseFormat = imageResponseFormat;
+            return res;
+        }
+        public static ResponseFormat CreateTextResponseFormat(TextResponseFormat textResponseFormat)
+        {
+            ResponseFormatType typ = ResponseFormatType.TextResponseFormat;
+
+            ResponseFormat res = new ResponseFormat(typ);
+            res.TextResponseFormat = textResponseFormat;
             return res;
         }
         public static ResponseFormat CreateVideoResponseFormat(VideoResponseFormat videoResponseFormat)
@@ -214,8 +214,8 @@ namespace Google.GenAI.Gaos.Models.Interactions
                 JToken jt = JToken.Load(reader);
                 var unionCandidates = new UnionCandidatePool<ResponseFormatType>();
                 unionCandidates.Add<AudioResponseFormat>("AudioResponseFormat", 0, ResponseFormatType.AudioResponseFormat);
-                unionCandidates.Add<TextResponseFormat>("TextResponseFormat", 1, ResponseFormatType.TextResponseFormat);
-                unionCandidates.Add<ImageResponseFormat>("ImageResponseFormat", 2, ResponseFormatType.ImageResponseFormat);
+                unionCandidates.Add<ImageResponseFormat>("ImageResponseFormat", 1, ResponseFormatType.ImageResponseFormat);
+                unionCandidates.Add<TextResponseFormat>("TextResponseFormat", 2, ResponseFormatType.TextResponseFormat);
                 unionCandidates.Add<VideoResponseFormat>("VideoResponseFormat", 3, ResponseFormatType.VideoResponseFormat);
                 unionCandidates.Add<Dictionary<string, object>>("MapOfAny", 4, ResponseFormatType.MapOfAny);
 
@@ -258,15 +258,15 @@ namespace Google.GenAI.Gaos.Models.Interactions
                     return;
                 }
 
-                if (res.TextResponseFormat != null)
-                {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.TextResponseFormat));
-                    return;
-                }
-
                 if (res.ImageResponseFormat != null)
                 {
                     writer.WriteRawValue(Utilities.SerializeJSON(res.ImageResponseFormat));
+                    return;
+                }
+
+                if (res.TextResponseFormat != null)
+                {
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.TextResponseFormat));
                     return;
                 }
 

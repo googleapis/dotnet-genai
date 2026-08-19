@@ -7,25 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 #nullable enable
-namespace Google.GenAI.Gaos.Models.Interactions
+namespace Google.GenAI.Gaos.Models.Requests
 {
     using Google.GenAI.Gaos.Models.Components;
     using Google.GenAI.Gaos.Models.Interactions;
     using Google.GenAI.Gaos.Utils;
     using Newtonsoft.Json;
-    using System;
 
-    [Obsolete("This will be removed in a future release, please migrate away from it as soon as possible")]
-    public class Turn
+    public class DeleteEnvironmentResponse
     {
-        [JsonProperty("content", Required = Newtonsoft.Json.Required.DisallowNull)]
-        public TurnContent? Content { get; set; }
+        [JsonIgnore]
+        public HTTPMetadata HttpMeta { get; set; } = new();
 
         /// <summary>
-        /// The originator of this turn. Must be user for input or model for<br/>
-        /// model output.
+        /// Successful operation.
         /// </summary>
-        [JsonProperty("role", Required = Newtonsoft.Json.Required.DisallowNull)]
-        public string? Role { get; set; }
+        public Empty? Empty { get; set; }
     }
 }

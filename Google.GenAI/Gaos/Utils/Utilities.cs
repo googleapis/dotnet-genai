@@ -143,6 +143,7 @@ namespace Google.GenAI.Gaos.Utils
                 "Google.GenAI.Gaos.Models.Webhooks",
                 "Google.GenAI.Gaos.Models.Agents",
                 "Google.GenAI.Gaos.Models.Triggers",
+                "Google.GenAI.Gaos.Models.Environments",
             };
 
             return modelNamespaces.Contains(ns);

@@ -32,9 +32,6 @@ namespace Google.GenAI.Gaos.Models.Interactions
         [JsonProperty("interaction_id", Required = Newtonsoft.Json.Required.Always)]
         public string InteractionId { get; set; } = default!;
 
-        [JsonProperty("metadata", Required = Newtonsoft.Json.Required.DisallowNull)]
-        public StreamMetadata? Metadata { get; set; }
-
         [JsonProperty("status", Required = Newtonsoft.Json.Required.Always)]
         public InteractionStatusUpdateStatus Status { get; set; } = default!;
     }

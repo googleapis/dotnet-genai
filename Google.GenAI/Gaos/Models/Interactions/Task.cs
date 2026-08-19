@@ -28,13 +28,15 @@ namespace Google.GenAI.Gaos.Models.Interactions
         public static readonly Task ImageToVideo = new Task("image_to_video");
         public static readonly Task ReferenceToVideo = new Task("reference_to_video");
         public static readonly Task Edit = new Task("edit");
+        public static readonly Task Extend = new Task("extend");
 
         private static readonly Dictionary<string, Task> _knownValues =
             new Dictionary<string, Task>() {
                 ["text_to_video"] = TextToVideo,
                 ["image_to_video"] = ImageToVideo,
                 ["reference_to_video"] = ReferenceToVideo,
-                ["edit"] = Edit
+                ["edit"] = Edit,
+                ["extend"] = Extend
             };
 
         private static readonly ConcurrentDictionary<string, Task> _values =

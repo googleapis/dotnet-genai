@@ -28,12 +28,6 @@ namespace Google.GenAI.Gaos.Models.Interactions
         [JsonProperty("data", Required = Newtonsoft.Json.Required.DisallowNull)]
         public string? Data { get; set; }
 
-        /// <summary>
-        /// The mime type of the image.
-        /// </summary>
-        [JsonProperty("mime_type", Required = Newtonsoft.Json.Required.DisallowNull)]
-        public ImageContentMimeType? MimeType { get; set; }
-
         [JsonProperty("resolution", Required = Newtonsoft.Json.Required.DisallowNull)]
         public MediaResolution? Resolution { get; set; }
 
@@ -45,5 +39,11 @@ namespace Google.GenAI.Gaos.Models.Interactions
         /// </summary>
         [JsonProperty("uri", Required = Newtonsoft.Json.Required.DisallowNull)]
         public string? Uri { get; set; }
+
+        /// <summary>
+        /// The mime type of the image.
+        /// </summary>
+        [JsonProperty("mime_type", Required = Newtonsoft.Json.Required.DisallowNull)]
+        public ImageContentMimeType? MimeType { get; set; }
     }
 }

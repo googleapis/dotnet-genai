@@ -26,6 +26,7 @@ namespace Google.GenAI.Gaos.Models.Interactions
         public static readonly InteractionStatusUpdateStatus Cancelled = new InteractionStatusUpdateStatus("cancelled");
         public static readonly InteractionStatusUpdateStatus Incomplete = new InteractionStatusUpdateStatus("incomplete");
         public static readonly InteractionStatusUpdateStatus BudgetExceeded = new InteractionStatusUpdateStatus("budget_exceeded");
+        public static readonly InteractionStatusUpdateStatus Queued = new InteractionStatusUpdateStatus("queued");
 
         private static readonly Dictionary<string, InteractionStatusUpdateStatus> _knownValues =
             new Dictionary<string, InteractionStatusUpdateStatus>() {
@@ -35,7 +36,8 @@ namespace Google.GenAI.Gaos.Models.Interactions
                 ["failed"] = Failed,
                 ["cancelled"] = Cancelled,
                 ["incomplete"] = Incomplete,
-                ["budget_exceeded"] = BudgetExceeded
+                ["budget_exceeded"] = BudgetExceeded,
+                ["queued"] = Queued
             };
 
         private static readonly ConcurrentDictionary<string, InteractionStatusUpdateStatus> _values =

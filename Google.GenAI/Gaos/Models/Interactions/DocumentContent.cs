@@ -28,12 +28,6 @@ namespace Google.GenAI.Gaos.Models.Interactions
         [JsonProperty("data", Required = Newtonsoft.Json.Required.DisallowNull)]
         public string? Data { get; set; }
 
-        /// <summary>
-        /// The mime type of the document.
-        /// </summary>
-        [JsonProperty("mime_type", Required = Newtonsoft.Json.Required.DisallowNull)]
-        public DocumentContentMimeType? MimeType { get; set; }
-
         [JsonProperty("type", Required = Newtonsoft.Json.Required.Always)]
         public string Type { get; } = "document";
 
@@ -42,5 +36,11 @@ namespace Google.GenAI.Gaos.Models.Interactions
         /// </summary>
         [JsonProperty("uri", Required = Newtonsoft.Json.Required.DisallowNull)]
         public string? Uri { get; set; }
+
+        /// <summary>
+        /// The mime type of the document.
+        /// </summary>
+        [JsonProperty("mime_type", Required = Newtonsoft.Json.Required.DisallowNull)]
+        public DocumentContentMimeType? MimeType { get; set; }
     }
 }

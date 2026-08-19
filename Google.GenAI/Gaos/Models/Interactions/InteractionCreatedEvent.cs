@@ -25,9 +25,6 @@ namespace Google.GenAI.Gaos.Models.Interactions
         [JsonProperty("event_id", Required = Newtonsoft.Json.Required.DisallowNull)]
         public string? EventId { get; set; }
 
-        [JsonProperty("metadata", Required = Newtonsoft.Json.Required.DisallowNull)]
-        public StreamMetadata? Metadata { get; set; }
-
         /// <summary>
         /// Partial interaction resource emitted by interaction lifecycle SSE events.<br/>
         /// Streaming lifecycle payloads may omit fields that are only available on<br/>

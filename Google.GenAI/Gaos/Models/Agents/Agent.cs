@@ -30,6 +30,12 @@ namespace Google.GenAI.Gaos.Models.Agents
     public class Agent
     {
         /// <summary>
+        /// Configuration parameters for the agent.
+        /// </summary>
+        [JsonProperty("agent_config", Required = Newtonsoft.Json.Required.DisallowNull)]
+        public AgentConfig? AgentConfig { get; set; }
+
+        /// <summary>
         /// The base agent to extend.
         /// </summary>
         [JsonProperty("base_agent", Required = Newtonsoft.Json.Required.DisallowNull)]

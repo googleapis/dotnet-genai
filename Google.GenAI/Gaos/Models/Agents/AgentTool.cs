@@ -34,17 +34,17 @@ namespace Google.GenAI.Gaos.Models.Agents
             }
         }
 
+        public static AgentToolType Function
+        {
+            get {
+                return new AgentToolType("function");
+            }
+        }
+
         public static AgentToolType GoogleSearch
         {
             get {
                 return new AgentToolType("google_search");
-            }
-        }
-
-        public static AgentToolType UrlContext
-        {
-            get {
-                return new AgentToolType("url_context");
             }
         }
 
@@ -55,10 +55,10 @@ namespace Google.GenAI.Gaos.Models.Agents
             }
         }
 
-        public static AgentToolType Function
+        public static AgentToolType UrlContext
         {
             get {
-                return new AgentToolType("function");
+                return new AgentToolType("url_context");
             }
         }
 
@@ -83,14 +83,14 @@ namespace Google.GenAI.Gaos.Models.Agents
             {
                 case "code_execution":
                     return CodeExecution;
-                case "google_search":
-                    return GoogleSearch;
-                case "url_context":
-                    return UrlContext;
-                case "mcp_server":
-                    return McpServer;
                 case "function":
                     return Function;
+                case "google_search":
+                    return GoogleSearch;
+                case "mcp_server":
+                    return McpServer;
+                case "url_context":
+                    return UrlContext;
                 case "UNKNOWN":
                     return Unknown;
                 default:
@@ -129,11 +129,11 @@ namespace Google.GenAI.Gaos.Models.Agents
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
-        public GoogleSearch? GoogleSearch { get; set; }
+        public Function? Function { get; set; }
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
-        public URLContext? URLContext { get; set; }
+        public GoogleSearch? GoogleSearch { get; set; }
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
@@ -141,7 +141,7 @@ namespace Google.GenAI.Gaos.Models.Agents
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
-        public Function? Function { get; set; }
+        public URLContext? URLContext { get; set; }
 
         public AgentToolType Type { get; set; }
 
@@ -168,19 +168,19 @@ namespace Google.GenAI.Gaos.Models.Agents
             return res;
         }
 
+        public static AgentTool CreateFunction(Function function)
+        {
+            AgentToolType typ = AgentToolType.Function;
+            AgentTool res = new AgentTool(typ);
+            res.Function = function;
+            return res;
+        }
+
         public static AgentTool CreateGoogleSearch(GoogleSearch googleSearch)
         {
             AgentToolType typ = AgentToolType.GoogleSearch;
             AgentTool res = new AgentTool(typ);
             res.GoogleSearch = googleSearch;
-            return res;
-        }
-
-        public static AgentTool CreateUrlContext(URLContext urlContext)
-        {
-            AgentToolType typ = AgentToolType.UrlContext;
-            AgentTool res = new AgentTool(typ);
-            res.URLContext = urlContext;
             return res;
         }
 
@@ -192,11 +192,11 @@ namespace Google.GenAI.Gaos.Models.Agents
             return res;
         }
 
-        public static AgentTool CreateFunction(Function function)
+        public static AgentTool CreateUrlContext(URLContext urlContext)
         {
-            AgentToolType typ = AgentToolType.Function;
+            AgentToolType typ = AgentToolType.UrlContext;
             AgentTool res = new AgentTool(typ);
-            res.Function = function;
+            res.URLContext = urlContext;
             return res;
         }
 
@@ -243,6 +243,22 @@ namespace Google.GenAI.Gaos.Models.Agents
                     }
                     return CreateCodeExecution(codeExecution);
                 }
+                if (discriminator == AgentToolType.Function.ToString())
+                {
+                    Function function;
+                    try
+                    {
+                        function = ResponseBodyDeserializer.DeserializeNotNull<Function>(jo.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<Function>(jo.ToString(), out function))
+                        {
+                            throw;
+                        }
+                    }
+                    return CreateFunction(function);
+                }
                 if (discriminator == AgentToolType.GoogleSearch.ToString())
                 {
                     GoogleSearch googleSearch;
@@ -258,22 +274,6 @@ namespace Google.GenAI.Gaos.Models.Agents
                         }
                     }
                     return CreateGoogleSearch(googleSearch);
-                }
-                if (discriminator == AgentToolType.UrlContext.ToString())
-                {
-                    URLContext urlContext;
-                    try
-                    {
-                        urlContext = ResponseBodyDeserializer.DeserializeNotNull<URLContext>(jo.ToString());
-                    }
-                    catch (Exception)
-                    {
-                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<URLContext>(jo.ToString(), out urlContext))
-                        {
-                            throw;
-                        }
-                    }
-                    return CreateUrlContext(urlContext);
                 }
                 if (discriminator == AgentToolType.McpServer.ToString())
                 {
@@ -291,21 +291,21 @@ namespace Google.GenAI.Gaos.Models.Agents
                     }
                     return CreateMcpServer(mcpServer);
                 }
-                if (discriminator == AgentToolType.Function.ToString())
+                if (discriminator == AgentToolType.UrlContext.ToString())
                 {
-                    Function function;
+                    URLContext urlContext;
                     try
                     {
-                        function = ResponseBodyDeserializer.DeserializeNotNull<Function>(jo.ToString());
+                        urlContext = ResponseBodyDeserializer.DeserializeNotNull<URLContext>(jo.ToString());
                     }
                     catch (Exception)
                     {
-                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<Function>(jo.ToString(), out function))
+                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<URLContext>(jo.ToString(), out urlContext))
                         {
                             throw;
                         }
                     }
-                    return CreateFunction(function);
+                    return CreateUrlContext(urlContext);
                 }
 
                 return CreateUnknown(jo);
@@ -336,15 +336,15 @@ namespace Google.GenAI.Gaos.Models.Agents
                     return;
                 }
 
-                if (res.GoogleSearch != null)
+                if (res.Function != null)
                 {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.GoogleSearch));
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.Function));
                     return;
                 }
 
-                if (res.URLContext != null)
+                if (res.GoogleSearch != null)
                 {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.URLContext));
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.GoogleSearch));
                     return;
                 }
 
@@ -354,9 +354,9 @@ namespace Google.GenAI.Gaos.Models.Agents
                     return;
                 }
 
-                if (res.Function != null)
+                if (res.URLContext != null)
                 {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.Function));
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.URLContext));
                     return;
                 }
 

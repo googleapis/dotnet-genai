@@ -19,14 +19,9 @@ namespace Google.GenAI.Gaos.Models.Interactions
         [JsonProperty("delta", Required = Newtonsoft.Json.Required.Always, NullValueHandling = NullValueHandling.Include)]
         public StepDeltaData Delta { get; set; } = default!;
 
-        public TextDelta? GetDeltaText()
+        public ArgumentsDelta? GetDeltaArgumentsDelta()
         {
-            return Delta.TextDelta;
-        }
-
-        public ImageDelta? GetDeltaImage()
-        {
-            return Delta.ImageDelta;
+            return Delta.ArgumentsDelta;
         }
 
         public AudioDelta? GetDeltaAudio()
@@ -34,69 +29,9 @@ namespace Google.GenAI.Gaos.Models.Interactions
             return Delta.AudioDelta;
         }
 
-        public DocumentDelta? GetDeltaDocument()
-        {
-            return Delta.DocumentDelta;
-        }
-
-        public VideoDelta? GetDeltaVideo()
-        {
-            return Delta.VideoDelta;
-        }
-
-        public ThoughtSummaryDelta? GetDeltaThoughtSummary()
-        {
-            return Delta.ThoughtSummaryDelta;
-        }
-
-        public ThoughtSignatureDelta? GetDeltaThoughtSignature()
-        {
-            return Delta.ThoughtSignatureDelta;
-        }
-
-        public TextAnnotationDelta? GetDeltaTextAnnotationDelta()
-        {
-            return Delta.TextAnnotationDelta;
-        }
-
-        public ArgumentsDelta? GetDeltaArgumentsDelta()
-        {
-            return Delta.ArgumentsDelta;
-        }
-
         public CodeExecutionCallDelta? GetDeltaCodeExecutionCall()
         {
             return Delta.CodeExecutionCallDelta;
-        }
-
-        public URLContextCallDelta? GetDeltaUrlContextCall()
-        {
-            return Delta.URLContextCallDelta;
-        }
-
-        public GoogleSearchCallDelta? GetDeltaGoogleSearchCall()
-        {
-            return Delta.GoogleSearchCallDelta;
-        }
-
-        public MCPServerToolCallDelta? GetDeltaMcpServerToolCall()
-        {
-            return Delta.MCPServerToolCallDelta;
-        }
-
-        public FileSearchCallDelta? GetDeltaFileSearchCall()
-        {
-            return Delta.FileSearchCallDelta;
-        }
-
-        public GoogleMapsCallDelta? GetDeltaGoogleMapsCall()
-        {
-            return Delta.GoogleMapsCallDelta;
-        }
-
-        public RetrievalCallDelta? GetDeltaRetrievalCall()
-        {
-            return Delta.RetrievalCallDelta;
         }
 
         public CodeExecutionResultDelta? GetDeltaCodeExecutionResult()
@@ -104,19 +39,14 @@ namespace Google.GenAI.Gaos.Models.Interactions
             return Delta.CodeExecutionResultDelta;
         }
 
-        public URLContextResultDelta? GetDeltaUrlContextResult()
+        public DocumentDelta? GetDeltaDocument()
         {
-            return Delta.URLContextResultDelta;
+            return Delta.DocumentDelta;
         }
 
-        public GoogleSearchResultDelta? GetDeltaGoogleSearchResult()
+        public FileSearchCallDelta? GetDeltaFileSearchCall()
         {
-            return Delta.GoogleSearchResultDelta;
-        }
-
-        public MCPServerToolResultDelta? GetDeltaMcpServerToolResult()
-        {
-            return Delta.MCPServerToolResultDelta;
+            return Delta.FileSearchCallDelta;
         }
 
         public FileSearchResultDelta? GetDeltaFileSearchResult()
@@ -124,9 +54,49 @@ namespace Google.GenAI.Gaos.Models.Interactions
             return Delta.FileSearchResultDelta;
         }
 
+        public FunctionResultDelta? GetDeltaFunctionResult()
+        {
+            return Delta.FunctionResultDelta;
+        }
+
+        public GoogleMapsCallDelta? GetDeltaGoogleMapsCall()
+        {
+            return Delta.GoogleMapsCallDelta;
+        }
+
         public GoogleMapsResultDelta? GetDeltaGoogleMapsResult()
         {
             return Delta.GoogleMapsResultDelta;
+        }
+
+        public GoogleSearchCallDelta? GetDeltaGoogleSearchCall()
+        {
+            return Delta.GoogleSearchCallDelta;
+        }
+
+        public GoogleSearchResultDelta? GetDeltaGoogleSearchResult()
+        {
+            return Delta.GoogleSearchResultDelta;
+        }
+
+        public ImageDelta? GetDeltaImage()
+        {
+            return Delta.ImageDelta;
+        }
+
+        public MCPServerToolCallDelta? GetDeltaMcpServerToolCall()
+        {
+            return Delta.MCPServerToolCallDelta;
+        }
+
+        public MCPServerToolResultDelta? GetDeltaMcpServerToolResult()
+        {
+            return Delta.MCPServerToolResultDelta;
+        }
+
+        public RetrievalCallDelta? GetDeltaRetrievalCall()
+        {
+            return Delta.RetrievalCallDelta;
         }
 
         public RetrievalResultDelta? GetDeltaRetrievalResult()
@@ -134,9 +104,39 @@ namespace Google.GenAI.Gaos.Models.Interactions
             return Delta.RetrievalResultDelta;
         }
 
-        public FunctionResultDelta? GetDeltaFunctionResult()
+        public TextAnnotationDelta? GetDeltaTextAnnotationDelta()
         {
-            return Delta.FunctionResultDelta;
+            return Delta.TextAnnotationDelta;
+        }
+
+        public TextDelta? GetDeltaText()
+        {
+            return Delta.TextDelta;
+        }
+
+        public ThoughtSignatureDelta? GetDeltaThoughtSignature()
+        {
+            return Delta.ThoughtSignatureDelta;
+        }
+
+        public ThoughtSummaryDelta? GetDeltaThoughtSummary()
+        {
+            return Delta.ThoughtSummaryDelta;
+        }
+
+        public URLContextCallDelta? GetDeltaUrlContextCall()
+        {
+            return Delta.URLContextCallDelta;
+        }
+
+        public URLContextResultDelta? GetDeltaUrlContextResult()
+        {
+            return Delta.URLContextResultDelta;
+        }
+
+        public VideoDelta? GetDeltaVideo()
+        {
+            return Delta.VideoDelta;
         }
 
         /// <summary>

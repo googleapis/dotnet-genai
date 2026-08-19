@@ -32,6 +32,8 @@ namespace Google.GenAI.Gaos
         public IAgents Agents { get; }
 
         public ITriggers Triggers { get; }
+
+        public IEnvironments Environments { get; }
     }
 
     /// <summary>
@@ -59,6 +61,10 @@ namespace Google.GenAI.Gaos
         /// The Triggers sub-SDK.
         /// </summary>
         public ITriggers Triggers { get; private set; }
+        /// <summary>
+        /// The Environments sub-SDK.
+        /// </summary>
+        public IEnvironments Environments { get; private set; }
 
         /// <summary>
         /// Initializes a new instance of the SDK based on a <see cref="SDKConfig"/> configuration object.
@@ -76,6 +82,8 @@ namespace Google.GenAI.Gaos
             Agents = new Agents(SDKConfiguration);
 
             Triggers = new Triggers(SDKConfiguration);
+
+            Environments = new Environments(SDKConfiguration);
         }
 
         /// <summary>
@@ -152,6 +160,8 @@ namespace Google.GenAI.Gaos
             Agents = new Agents(SDKConfiguration);
 
             Triggers = new Triggers(SDKConfiguration);
+
+            Environments = new Environments(SDKConfiguration);
         }
 
         private void InitHooks()

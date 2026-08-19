@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 #nullable enable
-namespace Google.GenAI.Gaos.Models.Interactions
+namespace Google.GenAI.Gaos.Models.Environments
 {
     using Google.GenAI.Gaos.Utils;
     using Newtonsoft.Json;
@@ -16,26 +16,25 @@ namespace Google.GenAI.Gaos.Models.Interactions
     using System.Collections.Generic;
     using System.Linq;
 
+    /// <summary>
+    /// Output only. The status of the environment container.
+    /// </summary>
     [JsonConverter(typeof(OpenEnumConverter))]
-    public class ServiceTier : IEquatable<ServiceTier>, IOpenEnum<string>
+    public class Status : IEquatable<Status>, IOpenEnum<string>
     {
-        public static readonly ServiceTier Flex = new ServiceTier("flex");
-        public static readonly ServiceTier Standard = new ServiceTier("standard");
-        public static readonly ServiceTier Priority = new ServiceTier("priority");
-        public static readonly ServiceTier Deferred = new ServiceTier("deferred");
+        public static readonly Status Active = new Status("active");
+        public static readonly Status Expired = new Status("expired");
 
-        private static readonly Dictionary<string, ServiceTier> _knownValues =
-            new Dictionary<string, ServiceTier>() {
-                ["flex"] = Flex,
-                ["standard"] = Standard,
-                ["priority"] = Priority,
-                ["deferred"] = Deferred
+        private static readonly Dictionary<string, Status> _knownValues =
+            new Dictionary<string, Status>() {
+                ["active"] = Active,
+                ["expired"] = Expired
             };
 
-        private static readonly ConcurrentDictionary<string, ServiceTier> _values =
-            new ConcurrentDictionary<string, ServiceTier>(_knownValues);
+        private static readonly ConcurrentDictionary<string, Status> _values =
+            new ConcurrentDictionary<string, Status>(_knownValues);
 
-        private ServiceTier(string value)
+        private Status(string value)
         {
             if (value == null) throw new ArgumentNullException(nameof(value));
             Value = value;
@@ -43,16 +42,16 @@ namespace Google.GenAI.Gaos.Models.Interactions
 
         public string Value { get; }
 
-        public static ServiceTier Of(string value)
+        public static Status Of(string value)
         {
             return _values.GetOrAdd(value,
-                                    _ => new ServiceTier(value));
+                                    _ => new Status(value));
         }
 
-        public static implicit operator ServiceTier(string value) => Of(value);
-        public static implicit operator string(ServiceTier servicetier) => servicetier.Value;
+        public static implicit operator Status(string value) => Of(value);
+        public static implicit operator string(Status status) => status.Value;
 
-        public static ServiceTier[] Values()
+        public static Status[] Values()
         {
             return _values.Values.ToArray();
         }
@@ -64,9 +63,9 @@ namespace Google.GenAI.Gaos.Models.Interactions
             return _knownValues.ContainsKey(Value);
         }
 
-        public override bool Equals(object? obj) => Equals(obj as ServiceTier);
+        public override bool Equals(object? obj) => Equals(obj as Status);
 
-        public bool Equals(ServiceTier? other)
+        public bool Equals(Status? other)
         {
             if (ReferenceEquals(this, other)) return true;
             if (other is null) return false;

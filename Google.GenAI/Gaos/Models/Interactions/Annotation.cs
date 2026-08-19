@@ -27,13 +27,6 @@ namespace Google.GenAI.Gaos.Models.Interactions
 
         public string Value { get; private set; }
 
-        public static AnnotationType UrlCitation
-        {
-            get {
-                return new AnnotationType("url_citation");
-            }
-        }
-
         public static AnnotationType FileCitation
         {
             get {
@@ -45,6 +38,20 @@ namespace Google.GenAI.Gaos.Models.Interactions
         {
             get {
                 return new AnnotationType("place_citation");
+            }
+        }
+
+        public static AnnotationType UrlCitation
+        {
+            get {
+                return new AnnotationType("url_citation");
+            }
+        }
+
+        public static AnnotationType WordInfo
+        {
+            get {
+                return new AnnotationType("word_info");
             }
         }
 
@@ -67,12 +74,14 @@ namespace Google.GenAI.Gaos.Models.Interactions
         {
             switch (v)
             {
-                case "url_citation":
-                    return UrlCitation;
                 case "file_citation":
                     return FileCitation;
                 case "place_citation":
                     return PlaceCitation;
+                case "url_citation":
+                    return UrlCitation;
+                case "word_info":
+                    return WordInfo;
                 case "UNKNOWN":
                     return Unknown;
                 default:
@@ -107,15 +116,19 @@ namespace Google.GenAI.Gaos.Models.Interactions
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
-        public URLCitation? URLCitation { get; set; }
-
-        [UnionVariant]
-        [SpeakeasyMetadata("form:explode=true")]
         public FileCitation? FileCitation { get; set; }
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
         public PlaceCitation? PlaceCitation { get; set; }
+
+        [UnionVariant]
+        [SpeakeasyMetadata("form:explode=true")]
+        public URLCitation? URLCitation { get; set; }
+
+        [UnionVariant]
+        [SpeakeasyMetadata("form:explode=true")]
+        public WordInfo? WordInfo { get; set; }
 
         public AnnotationType Type { get; set; }
 
@@ -134,14 +147,6 @@ namespace Google.GenAI.Gaos.Models.Interactions
 
         bool Google.GenAI.Gaos.Utils.IOpenUnion.IsUnknown() => IsUnknown();
 
-        public static Annotation CreateUrlCitation(URLCitation urlCitation)
-        {
-            AnnotationType typ = AnnotationType.UrlCitation;
-            Annotation res = new Annotation(typ);
-            res.URLCitation = urlCitation;
-            return res;
-        }
-
         public static Annotation CreateFileCitation(FileCitation fileCitation)
         {
             AnnotationType typ = AnnotationType.FileCitation;
@@ -155,6 +160,22 @@ namespace Google.GenAI.Gaos.Models.Interactions
             AnnotationType typ = AnnotationType.PlaceCitation;
             Annotation res = new Annotation(typ);
             res.PlaceCitation = placeCitation;
+            return res;
+        }
+
+        public static Annotation CreateUrlCitation(URLCitation urlCitation)
+        {
+            AnnotationType typ = AnnotationType.UrlCitation;
+            Annotation res = new Annotation(typ);
+            res.URLCitation = urlCitation;
+            return res;
+        }
+
+        public static Annotation CreateWordInfo(WordInfo wordInfo)
+        {
+            AnnotationType typ = AnnotationType.WordInfo;
+            Annotation res = new Annotation(typ);
+            res.WordInfo = wordInfo;
             return res;
         }
 
@@ -185,22 +206,6 @@ namespace Google.GenAI.Gaos.Models.Interactions
                 }
 
                 string discriminator = discriminatorToken.ToString();
-                if (discriminator == AnnotationType.UrlCitation.ToString())
-                {
-                    URLCitation urlCitation;
-                    try
-                    {
-                        urlCitation = ResponseBodyDeserializer.DeserializeNotNull<URLCitation>(jo.ToString());
-                    }
-                    catch (Exception)
-                    {
-                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<URLCitation>(jo.ToString(), out urlCitation))
-                        {
-                            throw;
-                        }
-                    }
-                    return CreateUrlCitation(urlCitation);
-                }
                 if (discriminator == AnnotationType.FileCitation.ToString())
                 {
                     FileCitation fileCitation;
@@ -233,6 +238,38 @@ namespace Google.GenAI.Gaos.Models.Interactions
                     }
                     return CreatePlaceCitation(placeCitation);
                 }
+                if (discriminator == AnnotationType.UrlCitation.ToString())
+                {
+                    URLCitation urlCitation;
+                    try
+                    {
+                        urlCitation = ResponseBodyDeserializer.DeserializeNotNull<URLCitation>(jo.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<URLCitation>(jo.ToString(), out urlCitation))
+                        {
+                            throw;
+                        }
+                    }
+                    return CreateUrlCitation(urlCitation);
+                }
+                if (discriminator == AnnotationType.WordInfo.ToString())
+                {
+                    WordInfo wordInfo;
+                    try
+                    {
+                        wordInfo = ResponseBodyDeserializer.DeserializeNotNull<WordInfo>(jo.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<WordInfo>(jo.ToString(), out wordInfo))
+                        {
+                            throw;
+                        }
+                    }
+                    return CreateWordInfo(wordInfo);
+                }
 
                 return CreateUnknown(jo);
             }
@@ -256,12 +293,6 @@ namespace Google.GenAI.Gaos.Models.Interactions
                     throw new InvalidOperationException("Unknown union value has no raw payload; construct via CreateUnknown(JToken).");
                 }
 
-                if (res.URLCitation != null)
-                {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.URLCitation));
-                    return;
-                }
-
                 if (res.FileCitation != null)
                 {
                     writer.WriteRawValue(Utilities.SerializeJSON(res.FileCitation));
@@ -271,6 +302,18 @@ namespace Google.GenAI.Gaos.Models.Interactions
                 if (res.PlaceCitation != null)
                 {
                     writer.WriteRawValue(Utilities.SerializeJSON(res.PlaceCitation));
+                    return;
+                }
+
+                if (res.URLCitation != null)
+                {
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.URLCitation));
+                    return;
+                }
+
+                if (res.WordInfo != null)
+                {
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.WordInfo));
                     return;
                 }
 

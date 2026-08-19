@@ -20,33 +20,33 @@ namespace Google.GenAI.Gaos.Models.Interactions
     using System.Numerics;
     using System.Reflection;
 
-    public class ToolChoiceUnionType
+    public class ProcessingType
     {
-        private ToolChoiceUnionType(string value)
+        private ProcessingType(string value)
         {
             Value = value;
         }
 
         public string Value { get; private set; }
 
-        public static ToolChoiceUnionType ToolChoiceConfig
+        public static ProcessingType MediaProcessing
         {
             get {
-                return new ToolChoiceUnionType("ToolChoiceConfig");
+                return new ProcessingType("MediaProcessing");
             }
         }
 
-        public static ToolChoiceUnionType ToolChoiceType
+        public static ProcessingType ProcessingEnum
         {
             get {
-                return new ToolChoiceUnionType("ToolChoiceType");
+                return new ProcessingType("processing_enum");
             }
         }
 
-        public static ToolChoiceUnionType Unknown
+        public static ProcessingType Unknown
         {
             get {
-                return new ToolChoiceUnionType("UNKNOWN");
+                return new ProcessingType("UNKNOWN");
             }
         }
 
@@ -54,22 +54,22 @@ namespace Google.GenAI.Gaos.Models.Interactions
         {
             return Value;
         }
-        public static implicit operator String(ToolChoiceUnionType v)
+        public static implicit operator String(ProcessingType v)
         {
             return v.Value;
         }
-        public static ToolChoiceUnionType FromString(string v)
+        public static ProcessingType FromString(string v)
         {
             switch (v)
             {
-                case "ToolChoiceConfig":
-                    return ToolChoiceConfig;
-                case "ToolChoiceType":
-                    return ToolChoiceType;
+                case "MediaProcessing":
+                    return MediaProcessing;
+                case "processing_enum":
+                    return ProcessingEnum;
                 case "UNKNOWN":
                     return Unknown;
                 default:
-                    throw new ArgumentException("Invalid value for ToolChoiceUnionType");
+                    throw new ArgumentException("Invalid value for ProcessingType");
             }
         }
         public override bool Equals(object? obj)
@@ -78,7 +78,7 @@ namespace Google.GenAI.Gaos.Models.Interactions
             {
                 return false;
             }
-            return Value.Equals(((ToolChoiceUnionType)obj).Value);
+            return Value.Equals(((ProcessingType)obj).Value);
         }
 
         public override int GetHashCode()
@@ -88,61 +88,61 @@ namespace Google.GenAI.Gaos.Models.Interactions
     }
 
     /// <summary>
-    /// The tool choice configuration.
+    /// How the model processes this video for understanding.
     /// </summary>
-    [JsonConverter(typeof(ToolChoice.ToolChoiceConverter))]
-    public class ToolChoice : Google.GenAI.Gaos.Utils.IOpenUnion
+    [JsonConverter(typeof(Processing.ProcessingConverter))]
+    public class Processing : Google.GenAI.Gaos.Utils.IOpenUnion
     {
-        public ToolChoice(ToolChoiceUnionType type)
+        public Processing(ProcessingType type)
         {
             Type = type;
         }
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
-        public ToolChoiceConfig? ToolChoiceConfig { get; set; }
+        public MediaProcessing? MediaProcessing { get; set; }
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
-        public ToolChoiceType? ToolChoiceType { get; set; }
+        public ProcessingEnum? ProcessingEnum { get; set; }
 
-        public ToolChoiceUnionType Type { get; set; }
+        public ProcessingType Type { get; set; }
 
         [JsonIgnore]
         public JToken? UnknownRaw { get; private set; }
 
-        public static ToolChoice CreateUnknown(JToken raw)
+        public static Processing CreateUnknown(JToken raw)
         {
-            return new ToolChoice(ToolChoiceUnionType.Unknown) { UnknownRaw = raw };
+            return new Processing(ProcessingType.Unknown) { UnknownRaw = raw };
         }
 
         public bool IsUnknown()
         {
-            return Type.Equals(ToolChoiceUnionType.Unknown);
+            return Type.Equals(ProcessingType.Unknown);
         }
 
         bool Google.GenAI.Gaos.Utils.IOpenUnion.IsUnknown() => IsUnknown();
 
-        public static ToolChoice CreateToolChoiceConfig(ToolChoiceConfig toolChoiceConfig)
+        public static Processing CreateMediaProcessing(MediaProcessing mediaProcessing)
         {
-            ToolChoiceUnionType typ = ToolChoiceUnionType.ToolChoiceConfig;
+            ProcessingType typ = ProcessingType.MediaProcessing;
 
-            ToolChoice res = new ToolChoice(typ);
-            res.ToolChoiceConfig = toolChoiceConfig;
+            Processing res = new Processing(typ);
+            res.MediaProcessing = mediaProcessing;
             return res;
         }
-        public static ToolChoice CreateToolChoiceType(ToolChoiceType toolChoiceType)
+        public static Processing CreateProcessingEnum(ProcessingEnum processingEnum)
         {
-            ToolChoiceUnionType typ = ToolChoiceUnionType.ToolChoiceType;
+            ProcessingType typ = ProcessingType.ProcessingEnum;
 
-            ToolChoice res = new ToolChoice(typ);
-            res.ToolChoiceType = toolChoiceType;
+            Processing res = new Processing(typ);
+            res.ProcessingEnum = processingEnum;
             return res;
         }
 
-        public class ToolChoiceConverter : JsonConverter
+        public class ProcessingConverter : JsonConverter
         {
-            public override bool CanConvert(System.Type objectType) => objectType == typeof(ToolChoice);
+            public override bool CanConvert(System.Type objectType) => objectType == typeof(Processing);
 
             public override bool CanRead => true;
 
@@ -154,9 +154,9 @@ namespace Google.GenAI.Gaos.Models.Interactions
                 }
 
                 JToken jt = JToken.Load(reader);
-                var unionCandidates = new UnionCandidatePool<ToolChoiceUnionType>();
-                unionCandidates.Add<ToolChoiceConfig>("ToolChoiceConfig", 0, ToolChoiceUnionType.ToolChoiceConfig);
-                unionCandidates.Add<ToolChoiceType>("ToolChoiceType", 1, ToolChoiceUnionType.ToolChoiceType);
+                var unionCandidates = new UnionCandidatePool<ProcessingType>();
+                unionCandidates.Add<MediaProcessing>("MediaProcessing", 0, ProcessingType.MediaProcessing);
+                unionCandidates.Add<ProcessingEnum>("ProcessingEnum", 1, ProcessingType.ProcessingEnum);
 
                 var (winner, winnerValue) = unionCandidates.PickBest(
                     jt,
@@ -167,8 +167,8 @@ namespace Google.GenAI.Gaos.Models.Interactions
                     return CreateUnknown(jt);
                 }
 
-                var result = new ToolChoice(winner.TypeName);
-                typeof(ToolChoice).GetProperty(winner.PropertyName)!.SetValue(result, winnerValue);
+                var result = new Processing(winner.TypeName);
+                typeof(Processing).GetProperty(winner.PropertyName)!.SetValue(result, winnerValue);
                 return result;
             }
 
@@ -179,7 +179,7 @@ namespace Google.GenAI.Gaos.Models.Interactions
                     throw new InvalidOperationException("Unexpected null JSON value.");
                 }
 
-                ToolChoice res = (ToolChoice)value;
+                Processing res = (Processing)value;
 
                 if (res.IsUnknown())
                 {
@@ -191,15 +191,15 @@ namespace Google.GenAI.Gaos.Models.Interactions
                     throw new InvalidOperationException("Unknown union value has no raw payload; construct via CreateUnknown(JToken).");
                 }
 
-                if (res.ToolChoiceConfig != null)
+                if (res.MediaProcessing != null)
                 {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.ToolChoiceConfig));
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.MediaProcessing));
                     return;
                 }
 
-                if (res.ToolChoiceType != null)
+                if (res.ProcessingEnum != null)
                 {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.ToolChoiceType));
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.ProcessingEnum));
                     return;
                 }
 

@@ -17,25 +17,21 @@ namespace Google.GenAI.Gaos.Models.Interactions
     using System.Linq;
 
     [JsonConverter(typeof(OpenEnumConverter))]
-    public class ServiceTier : IEquatable<ServiceTier>, IOpenEnum<string>
+    public class ProcessingEnum : IEquatable<ProcessingEnum>, IOpenEnum<string>
     {
-        public static readonly ServiceTier Flex = new ServiceTier("flex");
-        public static readonly ServiceTier Standard = new ServiceTier("standard");
-        public static readonly ServiceTier Priority = new ServiceTier("priority");
-        public static readonly ServiceTier Deferred = new ServiceTier("deferred");
+        public static readonly ProcessingEnum Static = new ProcessingEnum("static");
+        public static readonly ProcessingEnum Agentic = new ProcessingEnum("agentic");
 
-        private static readonly Dictionary<string, ServiceTier> _knownValues =
-            new Dictionary<string, ServiceTier>() {
-                ["flex"] = Flex,
-                ["standard"] = Standard,
-                ["priority"] = Priority,
-                ["deferred"] = Deferred
+        private static readonly Dictionary<string, ProcessingEnum> _knownValues =
+            new Dictionary<string, ProcessingEnum>() {
+                ["static"] = Static,
+                ["agentic"] = Agentic
             };
 
-        private static readonly ConcurrentDictionary<string, ServiceTier> _values =
-            new ConcurrentDictionary<string, ServiceTier>(_knownValues);
+        private static readonly ConcurrentDictionary<string, ProcessingEnum> _values =
+            new ConcurrentDictionary<string, ProcessingEnum>(_knownValues);
 
-        private ServiceTier(string value)
+        private ProcessingEnum(string value)
         {
             if (value == null) throw new ArgumentNullException(nameof(value));
             Value = value;
@@ -43,16 +39,16 @@ namespace Google.GenAI.Gaos.Models.Interactions
 
         public string Value { get; }
 
-        public static ServiceTier Of(string value)
+        public static ProcessingEnum Of(string value)
         {
             return _values.GetOrAdd(value,
-                                    _ => new ServiceTier(value));
+                                    _ => new ProcessingEnum(value));
         }
 
-        public static implicit operator ServiceTier(string value) => Of(value);
-        public static implicit operator string(ServiceTier servicetier) => servicetier.Value;
+        public static implicit operator ProcessingEnum(string value) => Of(value);
+        public static implicit operator string(ProcessingEnum processingenum) => processingenum.Value;
 
-        public static ServiceTier[] Values()
+        public static ProcessingEnum[] Values()
         {
             return _values.Values.ToArray();
         }
@@ -64,9 +60,9 @@ namespace Google.GenAI.Gaos.Models.Interactions
             return _knownValues.ContainsKey(Value);
         }
 
-        public override bool Equals(object? obj) => Equals(obj as ServiceTier);
+        public override bool Equals(object? obj) => Equals(obj as ProcessingEnum);
 
-        public bool Equals(ServiceTier? other)
+        public bool Equals(ProcessingEnum? other)
         {
             if (ReferenceEquals(this, other)) return true;
             if (other is null) return false;

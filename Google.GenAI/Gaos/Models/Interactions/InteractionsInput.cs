@@ -48,13 +48,6 @@ namespace Google.GenAI.Gaos.Models.Interactions
             }
         }
 
-        public static InteractionsInputType ArrayOfTurn
-        {
-            get {
-                return new InteractionsInputType("arrayOfTurn");
-            }
-        }
-
         public static InteractionsInputType Content
         {
             get {
@@ -87,8 +80,6 @@ namespace Google.GenAI.Gaos.Models.Interactions
                     return ArrayOfStep;
                 case "arrayOfContent":
                     return ArrayOfContent;
-                case "arrayOfTurn":
-                    return ArrayOfTurn;
                 case "Content":
                     return Content;
                 case "UNKNOWN":
@@ -137,10 +128,6 @@ namespace Google.GenAI.Gaos.Models.Interactions
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
-        public List<Turn>? ArrayOfTurn { get; set; }
-
-        [UnionVariant]
-        [SpeakeasyMetadata("form:explode=true")]
         public Content? Content { get; set; }
 
         public InteractionsInputType Type { get; set; }
@@ -184,14 +171,6 @@ namespace Google.GenAI.Gaos.Models.Interactions
             res.ArrayOfContent = arrayOfContent;
             return res;
         }
-        public static InteractionsInput CreateArrayOfTurn(List<Turn> arrayOfTurn)
-        {
-            InteractionsInputType typ = InteractionsInputType.ArrayOfTurn;
-
-            InteractionsInput res = new InteractionsInput(typ);
-            res.ArrayOfTurn = arrayOfTurn;
-            return res;
-        }
         public static InteractionsInput CreateContent(Content content)
         {
             InteractionsInputType typ = InteractionsInputType.Content;
@@ -219,8 +198,7 @@ namespace Google.GenAI.Gaos.Models.Interactions
                 unionCandidates.Add<string>("Str", 0, InteractionsInputType.Str);
                 unionCandidates.Add<List<Step>>("ArrayOfStep", 1, InteractionsInputType.ArrayOfStep);
                 unionCandidates.Add<List<Content>>("ArrayOfContent", 2, InteractionsInputType.ArrayOfContent);
-                unionCandidates.Add<List<Turn>>("ArrayOfTurn", 3, InteractionsInputType.ArrayOfTurn);
-                unionCandidates.Add<Content>("Content", 4, InteractionsInputType.Content);
+                unionCandidates.Add<Content>("Content", 3, InteractionsInputType.Content);
 
                 var (winner, winnerValue) = unionCandidates.PickBest(
                     jt,
@@ -270,12 +248,6 @@ namespace Google.GenAI.Gaos.Models.Interactions
                 if (res.ArrayOfContent != null)
                 {
                     writer.WriteRawValue(Utilities.SerializeJSON(res.ArrayOfContent));
-                    return;
-                }
-
-                if (res.ArrayOfTurn != null)
-                {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.ArrayOfTurn));
                     return;
                 }
 

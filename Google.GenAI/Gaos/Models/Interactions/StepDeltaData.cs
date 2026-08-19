@@ -27,17 +27,10 @@ namespace Google.GenAI.Gaos.Models.Interactions
 
         public string Value { get; private set; }
 
-        public static StepDeltaDataType Text
+        public static StepDeltaDataType ArgumentsDelta
         {
             get {
-                return new StepDeltaDataType("text");
-            }
-        }
-
-        public static StepDeltaDataType Image
-        {
-            get {
-                return new StepDeltaDataType("image");
+                return new StepDeltaDataType("arguments_delta");
             }
         }
 
@@ -48,94 +41,10 @@ namespace Google.GenAI.Gaos.Models.Interactions
             }
         }
 
-        public static StepDeltaDataType Document
-        {
-            get {
-                return new StepDeltaDataType("document");
-            }
-        }
-
-        public static StepDeltaDataType Video
-        {
-            get {
-                return new StepDeltaDataType("video");
-            }
-        }
-
-        public static StepDeltaDataType ThoughtSummary
-        {
-            get {
-                return new StepDeltaDataType("thought_summary");
-            }
-        }
-
-        public static StepDeltaDataType ThoughtSignature
-        {
-            get {
-                return new StepDeltaDataType("thought_signature");
-            }
-        }
-
-        public static StepDeltaDataType TextAnnotationDelta
-        {
-            get {
-                return new StepDeltaDataType("text_annotation_delta");
-            }
-        }
-
-        public static StepDeltaDataType ArgumentsDelta
-        {
-            get {
-                return new StepDeltaDataType("arguments_delta");
-            }
-        }
-
         public static StepDeltaDataType CodeExecutionCall
         {
             get {
                 return new StepDeltaDataType("code_execution_call");
-            }
-        }
-
-        public static StepDeltaDataType UrlContextCall
-        {
-            get {
-                return new StepDeltaDataType("url_context_call");
-            }
-        }
-
-        public static StepDeltaDataType GoogleSearchCall
-        {
-            get {
-                return new StepDeltaDataType("google_search_call");
-            }
-        }
-
-        public static StepDeltaDataType McpServerToolCall
-        {
-            get {
-                return new StepDeltaDataType("mcp_server_tool_call");
-            }
-        }
-
-        public static StepDeltaDataType FileSearchCall
-        {
-            get {
-                return new StepDeltaDataType("file_search_call");
-            }
-        }
-
-        public static StepDeltaDataType GoogleMapsCall
-        {
-            get {
-                return new StepDeltaDataType("google_maps_call");
-            }
-        }
-
-        public static StepDeltaDataType RetrievalCall
-        {
-            get {
-                return new StepDeltaDataType("retrieval_call");
             }
         }
 
@@ -146,24 +55,17 @@ namespace Google.GenAI.Gaos.Models.Interactions
             }
         }
 
-        public static StepDeltaDataType UrlContextResult
+        public static StepDeltaDataType Document
         {
             get {
-                return new StepDeltaDataType("url_context_result");
+                return new StepDeltaDataType("document");
             }
         }
 
-        public static StepDeltaDataType GoogleSearchResult
+        public static StepDeltaDataType FileSearchCall
         {
             get {
-                return new StepDeltaDataType("google_search_result");
-            }
-        }
-
-        public static StepDeltaDataType McpServerToolResult
-        {
-            get {
-                return new StepDeltaDataType("mcp_server_tool_result");
+                return new StepDeltaDataType("file_search_call");
             }
         }
 
@@ -174,10 +76,66 @@ namespace Google.GenAI.Gaos.Models.Interactions
             }
         }
 
+        public static StepDeltaDataType FunctionResult
+        {
+            get {
+                return new StepDeltaDataType("function_result");
+            }
+        }
+
+        public static StepDeltaDataType GoogleMapsCall
+        {
+            get {
+                return new StepDeltaDataType("google_maps_call");
+            }
+        }
+
         public static StepDeltaDataType GoogleMapsResult
         {
             get {
                 return new StepDeltaDataType("google_maps_result");
+            }
+        }
+
+        public static StepDeltaDataType GoogleSearchCall
+        {
+            get {
+                return new StepDeltaDataType("google_search_call");
+            }
+        }
+
+        public static StepDeltaDataType GoogleSearchResult
+        {
+            get {
+                return new StepDeltaDataType("google_search_result");
+            }
+        }
+
+        public static StepDeltaDataType Image
+        {
+            get {
+                return new StepDeltaDataType("image");
+            }
+        }
+
+        public static StepDeltaDataType McpServerToolCall
+        {
+            get {
+                return new StepDeltaDataType("mcp_server_tool_call");
+            }
+        }
+
+        public static StepDeltaDataType McpServerToolResult
+        {
+            get {
+                return new StepDeltaDataType("mcp_server_tool_result");
+            }
+        }
+
+        public static StepDeltaDataType RetrievalCall
+        {
+            get {
+                return new StepDeltaDataType("retrieval_call");
             }
         }
 
@@ -188,10 +146,52 @@ namespace Google.GenAI.Gaos.Models.Interactions
             }
         }
 
-        public static StepDeltaDataType FunctionResult
+        public static StepDeltaDataType TextAnnotationDelta
         {
             get {
-                return new StepDeltaDataType("function_result");
+                return new StepDeltaDataType("text_annotation_delta");
+            }
+        }
+
+        public static StepDeltaDataType Text
+        {
+            get {
+                return new StepDeltaDataType("text");
+            }
+        }
+
+        public static StepDeltaDataType ThoughtSignature
+        {
+            get {
+                return new StepDeltaDataType("thought_signature");
+            }
+        }
+
+        public static StepDeltaDataType ThoughtSummary
+        {
+            get {
+                return new StepDeltaDataType("thought_summary");
+            }
+        }
+
+        public static StepDeltaDataType UrlContextCall
+        {
+            get {
+                return new StepDeltaDataType("url_context_call");
+            }
+        }
+
+        public static StepDeltaDataType UrlContextResult
+        {
+            get {
+                return new StepDeltaDataType("url_context_result");
+            }
+        }
+
+        public static StepDeltaDataType Video
+        {
+            get {
+                return new StepDeltaDataType("video");
             }
         }
 
@@ -214,54 +214,54 @@ namespace Google.GenAI.Gaos.Models.Interactions
         {
             switch (v)
             {
-                case "text":
-                    return Text;
-                case "image":
-                    return Image;
-                case "audio":
-                    return Audio;
-                case "document":
-                    return Document;
-                case "video":
-                    return Video;
-                case "thought_summary":
-                    return ThoughtSummary;
-                case "thought_signature":
-                    return ThoughtSignature;
-                case "text_annotation_delta":
-                    return TextAnnotationDelta;
                 case "arguments_delta":
                     return ArgumentsDelta;
+                case "audio":
+                    return Audio;
                 case "code_execution_call":
                     return CodeExecutionCall;
-                case "url_context_call":
-                    return UrlContextCall;
-                case "google_search_call":
-                    return GoogleSearchCall;
-                case "mcp_server_tool_call":
-                    return McpServerToolCall;
-                case "file_search_call":
-                    return FileSearchCall;
-                case "google_maps_call":
-                    return GoogleMapsCall;
-                case "retrieval_call":
-                    return RetrievalCall;
                 case "code_execution_result":
                     return CodeExecutionResult;
-                case "url_context_result":
-                    return UrlContextResult;
-                case "google_search_result":
-                    return GoogleSearchResult;
-                case "mcp_server_tool_result":
-                    return McpServerToolResult;
+                case "document":
+                    return Document;
+                case "file_search_call":
+                    return FileSearchCall;
                 case "file_search_result":
                     return FileSearchResult;
-                case "google_maps_result":
-                    return GoogleMapsResult;
-                case "retrieval_result":
-                    return RetrievalResult;
                 case "function_result":
                     return FunctionResult;
+                case "google_maps_call":
+                    return GoogleMapsCall;
+                case "google_maps_result":
+                    return GoogleMapsResult;
+                case "google_search_call":
+                    return GoogleSearchCall;
+                case "google_search_result":
+                    return GoogleSearchResult;
+                case "image":
+                    return Image;
+                case "mcp_server_tool_call":
+                    return McpServerToolCall;
+                case "mcp_server_tool_result":
+                    return McpServerToolResult;
+                case "retrieval_call":
+                    return RetrievalCall;
+                case "retrieval_result":
+                    return RetrievalResult;
+                case "text_annotation_delta":
+                    return TextAnnotationDelta;
+                case "text":
+                    return Text;
+                case "thought_signature":
+                    return ThoughtSignature;
+                case "thought_summary":
+                    return ThoughtSummary;
+                case "url_context_call":
+                    return UrlContextCall;
+                case "url_context_result":
+                    return UrlContextResult;
+                case "video":
+                    return Video;
                 case "UNKNOWN":
                     return Unknown;
                 default:
@@ -293,11 +293,7 @@ namespace Google.GenAI.Gaos.Models.Interactions
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
-        public TextDelta? TextDelta { get; set; }
-
-        [UnionVariant]
-        [SpeakeasyMetadata("form:explode=true")]
-        public ImageDelta? ImageDelta { get; set; }
+        public ArgumentsDelta? ArgumentsDelta { get; set; }
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
@@ -305,55 +301,7 @@ namespace Google.GenAI.Gaos.Models.Interactions
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
-        public DocumentDelta? DocumentDelta { get; set; }
-
-        [UnionVariant]
-        [SpeakeasyMetadata("form:explode=true")]
-        public VideoDelta? VideoDelta { get; set; }
-
-        [UnionVariant]
-        [SpeakeasyMetadata("form:explode=true")]
-        public ThoughtSummaryDelta? ThoughtSummaryDelta { get; set; }
-
-        [UnionVariant]
-        [SpeakeasyMetadata("form:explode=true")]
-        public ThoughtSignatureDelta? ThoughtSignatureDelta { get; set; }
-
-        [UnionVariant]
-        [SpeakeasyMetadata("form:explode=true")]
-        public TextAnnotationDelta? TextAnnotationDelta { get; set; }
-
-        [UnionVariant]
-        [SpeakeasyMetadata("form:explode=true")]
-        public ArgumentsDelta? ArgumentsDelta { get; set; }
-
-        [UnionVariant]
-        [SpeakeasyMetadata("form:explode=true")]
         public CodeExecutionCallDelta? CodeExecutionCallDelta { get; set; }
-
-        [UnionVariant]
-        [SpeakeasyMetadata("form:explode=true")]
-        public URLContextCallDelta? URLContextCallDelta { get; set; }
-
-        [UnionVariant]
-        [SpeakeasyMetadata("form:explode=true")]
-        public GoogleSearchCallDelta? GoogleSearchCallDelta { get; set; }
-
-        [UnionVariant]
-        [SpeakeasyMetadata("form:explode=true")]
-        public MCPServerToolCallDelta? MCPServerToolCallDelta { get; set; }
-
-        [UnionVariant]
-        [SpeakeasyMetadata("form:explode=true")]
-        public FileSearchCallDelta? FileSearchCallDelta { get; set; }
-
-        [UnionVariant]
-        [SpeakeasyMetadata("form:explode=true")]
-        public GoogleMapsCallDelta? GoogleMapsCallDelta { get; set; }
-
-        [UnionVariant]
-        [SpeakeasyMetadata("form:explode=true")]
-        public RetrievalCallDelta? RetrievalCallDelta { get; set; }
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
@@ -361,15 +309,11 @@ namespace Google.GenAI.Gaos.Models.Interactions
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
-        public URLContextResultDelta? URLContextResultDelta { get; set; }
+        public DocumentDelta? DocumentDelta { get; set; }
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
-        public GoogleSearchResultDelta? GoogleSearchResultDelta { get; set; }
-
-        [UnionVariant]
-        [SpeakeasyMetadata("form:explode=true")]
-        public MCPServerToolResultDelta? MCPServerToolResultDelta { get; set; }
+        public FileSearchCallDelta? FileSearchCallDelta { get; set; }
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
@@ -377,7 +321,39 @@ namespace Google.GenAI.Gaos.Models.Interactions
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
+        public FunctionResultDelta? FunctionResultDelta { get; set; }
+
+        [UnionVariant]
+        [SpeakeasyMetadata("form:explode=true")]
+        public GoogleMapsCallDelta? GoogleMapsCallDelta { get; set; }
+
+        [UnionVariant]
+        [SpeakeasyMetadata("form:explode=true")]
         public GoogleMapsResultDelta? GoogleMapsResultDelta { get; set; }
+
+        [UnionVariant]
+        [SpeakeasyMetadata("form:explode=true")]
+        public GoogleSearchCallDelta? GoogleSearchCallDelta { get; set; }
+
+        [UnionVariant]
+        [SpeakeasyMetadata("form:explode=true")]
+        public GoogleSearchResultDelta? GoogleSearchResultDelta { get; set; }
+
+        [UnionVariant]
+        [SpeakeasyMetadata("form:explode=true")]
+        public ImageDelta? ImageDelta { get; set; }
+
+        [UnionVariant]
+        [SpeakeasyMetadata("form:explode=true")]
+        public MCPServerToolCallDelta? MCPServerToolCallDelta { get; set; }
+
+        [UnionVariant]
+        [SpeakeasyMetadata("form:explode=true")]
+        public MCPServerToolResultDelta? MCPServerToolResultDelta { get; set; }
+
+        [UnionVariant]
+        [SpeakeasyMetadata("form:explode=true")]
+        public RetrievalCallDelta? RetrievalCallDelta { get; set; }
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
@@ -385,7 +361,31 @@ namespace Google.GenAI.Gaos.Models.Interactions
 
         [UnionVariant]
         [SpeakeasyMetadata("form:explode=true")]
-        public FunctionResultDelta? FunctionResultDelta { get; set; }
+        public TextAnnotationDelta? TextAnnotationDelta { get; set; }
+
+        [UnionVariant]
+        [SpeakeasyMetadata("form:explode=true")]
+        public TextDelta? TextDelta { get; set; }
+
+        [UnionVariant]
+        [SpeakeasyMetadata("form:explode=true")]
+        public ThoughtSignatureDelta? ThoughtSignatureDelta { get; set; }
+
+        [UnionVariant]
+        [SpeakeasyMetadata("form:explode=true")]
+        public ThoughtSummaryDelta? ThoughtSummaryDelta { get; set; }
+
+        [UnionVariant]
+        [SpeakeasyMetadata("form:explode=true")]
+        public URLContextCallDelta? URLContextCallDelta { get; set; }
+
+        [UnionVariant]
+        [SpeakeasyMetadata("form:explode=true")]
+        public URLContextResultDelta? URLContextResultDelta { get; set; }
+
+        [UnionVariant]
+        [SpeakeasyMetadata("form:explode=true")]
+        public VideoDelta? VideoDelta { get; set; }
 
         public StepDeltaDataType Type { get; set; }
 
@@ -404,19 +404,11 @@ namespace Google.GenAI.Gaos.Models.Interactions
 
         bool Google.GenAI.Gaos.Utils.IOpenUnion.IsUnknown() => IsUnknown();
 
-        public static StepDeltaData CreateText(TextDelta text)
+        public static StepDeltaData CreateArgumentsDelta(ArgumentsDelta argumentsDelta)
         {
-            StepDeltaDataType typ = StepDeltaDataType.Text;
+            StepDeltaDataType typ = StepDeltaDataType.ArgumentsDelta;
             StepDeltaData res = new StepDeltaData(typ);
-            res.TextDelta = text;
-            return res;
-        }
-
-        public static StepDeltaData CreateImage(ImageDelta image)
-        {
-            StepDeltaDataType typ = StepDeltaDataType.Image;
-            StepDeltaData res = new StepDeltaData(typ);
-            res.ImageDelta = image;
+            res.ArgumentsDelta = argumentsDelta;
             return res;
         }
 
@@ -428,107 +420,11 @@ namespace Google.GenAI.Gaos.Models.Interactions
             return res;
         }
 
-        public static StepDeltaData CreateDocument(DocumentDelta document)
-        {
-            StepDeltaDataType typ = StepDeltaDataType.Document;
-            StepDeltaData res = new StepDeltaData(typ);
-            res.DocumentDelta = document;
-            return res;
-        }
-
-        public static StepDeltaData CreateVideo(VideoDelta video)
-        {
-            StepDeltaDataType typ = StepDeltaDataType.Video;
-            StepDeltaData res = new StepDeltaData(typ);
-            res.VideoDelta = video;
-            return res;
-        }
-
-        public static StepDeltaData CreateThoughtSummary(ThoughtSummaryDelta thoughtSummary)
-        {
-            StepDeltaDataType typ = StepDeltaDataType.ThoughtSummary;
-            StepDeltaData res = new StepDeltaData(typ);
-            res.ThoughtSummaryDelta = thoughtSummary;
-            return res;
-        }
-
-        public static StepDeltaData CreateThoughtSignature(ThoughtSignatureDelta thoughtSignature)
-        {
-            StepDeltaDataType typ = StepDeltaDataType.ThoughtSignature;
-            StepDeltaData res = new StepDeltaData(typ);
-            res.ThoughtSignatureDelta = thoughtSignature;
-            return res;
-        }
-
-        public static StepDeltaData CreateTextAnnotationDelta(TextAnnotationDelta textAnnotationDelta)
-        {
-            StepDeltaDataType typ = StepDeltaDataType.TextAnnotationDelta;
-            StepDeltaData res = new StepDeltaData(typ);
-            res.TextAnnotationDelta = textAnnotationDelta;
-            return res;
-        }
-
-        public static StepDeltaData CreateArgumentsDelta(ArgumentsDelta argumentsDelta)
-        {
-            StepDeltaDataType typ = StepDeltaDataType.ArgumentsDelta;
-            StepDeltaData res = new StepDeltaData(typ);
-            res.ArgumentsDelta = argumentsDelta;
-            return res;
-        }
-
         public static StepDeltaData CreateCodeExecutionCall(CodeExecutionCallDelta codeExecutionCall)
         {
             StepDeltaDataType typ = StepDeltaDataType.CodeExecutionCall;
             StepDeltaData res = new StepDeltaData(typ);
             res.CodeExecutionCallDelta = codeExecutionCall;
-            return res;
-        }
-
-        public static StepDeltaData CreateUrlContextCall(URLContextCallDelta urlContextCall)
-        {
-            StepDeltaDataType typ = StepDeltaDataType.UrlContextCall;
-            StepDeltaData res = new StepDeltaData(typ);
-            res.URLContextCallDelta = urlContextCall;
-            return res;
-        }
-
-        public static StepDeltaData CreateGoogleSearchCall(GoogleSearchCallDelta googleSearchCall)
-        {
-            StepDeltaDataType typ = StepDeltaDataType.GoogleSearchCall;
-            StepDeltaData res = new StepDeltaData(typ);
-            res.GoogleSearchCallDelta = googleSearchCall;
-            return res;
-        }
-
-        public static StepDeltaData CreateMcpServerToolCall(MCPServerToolCallDelta mcpServerToolCall)
-        {
-            StepDeltaDataType typ = StepDeltaDataType.McpServerToolCall;
-            StepDeltaData res = new StepDeltaData(typ);
-            res.MCPServerToolCallDelta = mcpServerToolCall;
-            return res;
-        }
-
-        public static StepDeltaData CreateFileSearchCall(FileSearchCallDelta fileSearchCall)
-        {
-            StepDeltaDataType typ = StepDeltaDataType.FileSearchCall;
-            StepDeltaData res = new StepDeltaData(typ);
-            res.FileSearchCallDelta = fileSearchCall;
-            return res;
-        }
-
-        public static StepDeltaData CreateGoogleMapsCall(GoogleMapsCallDelta googleMapsCall)
-        {
-            StepDeltaDataType typ = StepDeltaDataType.GoogleMapsCall;
-            StepDeltaData res = new StepDeltaData(typ);
-            res.GoogleMapsCallDelta = googleMapsCall;
-            return res;
-        }
-
-        public static StepDeltaData CreateRetrievalCall(RetrievalCallDelta retrievalCall)
-        {
-            StepDeltaDataType typ = StepDeltaDataType.RetrievalCall;
-            StepDeltaData res = new StepDeltaData(typ);
-            res.RetrievalCallDelta = retrievalCall;
             return res;
         }
 
@@ -540,27 +436,19 @@ namespace Google.GenAI.Gaos.Models.Interactions
             return res;
         }
 
-        public static StepDeltaData CreateUrlContextResult(URLContextResultDelta urlContextResult)
+        public static StepDeltaData CreateDocument(DocumentDelta document)
         {
-            StepDeltaDataType typ = StepDeltaDataType.UrlContextResult;
+            StepDeltaDataType typ = StepDeltaDataType.Document;
             StepDeltaData res = new StepDeltaData(typ);
-            res.URLContextResultDelta = urlContextResult;
+            res.DocumentDelta = document;
             return res;
         }
 
-        public static StepDeltaData CreateGoogleSearchResult(GoogleSearchResultDelta googleSearchResult)
+        public static StepDeltaData CreateFileSearchCall(FileSearchCallDelta fileSearchCall)
         {
-            StepDeltaDataType typ = StepDeltaDataType.GoogleSearchResult;
+            StepDeltaDataType typ = StepDeltaDataType.FileSearchCall;
             StepDeltaData res = new StepDeltaData(typ);
-            res.GoogleSearchResultDelta = googleSearchResult;
-            return res;
-        }
-
-        public static StepDeltaData CreateMcpServerToolResult(MCPServerToolResultDelta mcpServerToolResult)
-        {
-            StepDeltaDataType typ = StepDeltaDataType.McpServerToolResult;
-            StepDeltaData res = new StepDeltaData(typ);
-            res.MCPServerToolResultDelta = mcpServerToolResult;
+            res.FileSearchCallDelta = fileSearchCall;
             return res;
         }
 
@@ -572,11 +460,75 @@ namespace Google.GenAI.Gaos.Models.Interactions
             return res;
         }
 
+        public static StepDeltaData CreateFunctionResult(FunctionResultDelta functionResult)
+        {
+            StepDeltaDataType typ = StepDeltaDataType.FunctionResult;
+            StepDeltaData res = new StepDeltaData(typ);
+            res.FunctionResultDelta = functionResult;
+            return res;
+        }
+
+        public static StepDeltaData CreateGoogleMapsCall(GoogleMapsCallDelta googleMapsCall)
+        {
+            StepDeltaDataType typ = StepDeltaDataType.GoogleMapsCall;
+            StepDeltaData res = new StepDeltaData(typ);
+            res.GoogleMapsCallDelta = googleMapsCall;
+            return res;
+        }
+
         public static StepDeltaData CreateGoogleMapsResult(GoogleMapsResultDelta googleMapsResult)
         {
             StepDeltaDataType typ = StepDeltaDataType.GoogleMapsResult;
             StepDeltaData res = new StepDeltaData(typ);
             res.GoogleMapsResultDelta = googleMapsResult;
+            return res;
+        }
+
+        public static StepDeltaData CreateGoogleSearchCall(GoogleSearchCallDelta googleSearchCall)
+        {
+            StepDeltaDataType typ = StepDeltaDataType.GoogleSearchCall;
+            StepDeltaData res = new StepDeltaData(typ);
+            res.GoogleSearchCallDelta = googleSearchCall;
+            return res;
+        }
+
+        public static StepDeltaData CreateGoogleSearchResult(GoogleSearchResultDelta googleSearchResult)
+        {
+            StepDeltaDataType typ = StepDeltaDataType.GoogleSearchResult;
+            StepDeltaData res = new StepDeltaData(typ);
+            res.GoogleSearchResultDelta = googleSearchResult;
+            return res;
+        }
+
+        public static StepDeltaData CreateImage(ImageDelta image)
+        {
+            StepDeltaDataType typ = StepDeltaDataType.Image;
+            StepDeltaData res = new StepDeltaData(typ);
+            res.ImageDelta = image;
+            return res;
+        }
+
+        public static StepDeltaData CreateMcpServerToolCall(MCPServerToolCallDelta mcpServerToolCall)
+        {
+            StepDeltaDataType typ = StepDeltaDataType.McpServerToolCall;
+            StepDeltaData res = new StepDeltaData(typ);
+            res.MCPServerToolCallDelta = mcpServerToolCall;
+            return res;
+        }
+
+        public static StepDeltaData CreateMcpServerToolResult(MCPServerToolResultDelta mcpServerToolResult)
+        {
+            StepDeltaDataType typ = StepDeltaDataType.McpServerToolResult;
+            StepDeltaData res = new StepDeltaData(typ);
+            res.MCPServerToolResultDelta = mcpServerToolResult;
+            return res;
+        }
+
+        public static StepDeltaData CreateRetrievalCall(RetrievalCallDelta retrievalCall)
+        {
+            StepDeltaDataType typ = StepDeltaDataType.RetrievalCall;
+            StepDeltaData res = new StepDeltaData(typ);
+            res.RetrievalCallDelta = retrievalCall;
             return res;
         }
 
@@ -588,11 +540,59 @@ namespace Google.GenAI.Gaos.Models.Interactions
             return res;
         }
 
-        public static StepDeltaData CreateFunctionResult(FunctionResultDelta functionResult)
+        public static StepDeltaData CreateTextAnnotationDelta(TextAnnotationDelta textAnnotationDelta)
         {
-            StepDeltaDataType typ = StepDeltaDataType.FunctionResult;
+            StepDeltaDataType typ = StepDeltaDataType.TextAnnotationDelta;
             StepDeltaData res = new StepDeltaData(typ);
-            res.FunctionResultDelta = functionResult;
+            res.TextAnnotationDelta = textAnnotationDelta;
+            return res;
+        }
+
+        public static StepDeltaData CreateText(TextDelta text)
+        {
+            StepDeltaDataType typ = StepDeltaDataType.Text;
+            StepDeltaData res = new StepDeltaData(typ);
+            res.TextDelta = text;
+            return res;
+        }
+
+        public static StepDeltaData CreateThoughtSignature(ThoughtSignatureDelta thoughtSignature)
+        {
+            StepDeltaDataType typ = StepDeltaDataType.ThoughtSignature;
+            StepDeltaData res = new StepDeltaData(typ);
+            res.ThoughtSignatureDelta = thoughtSignature;
+            return res;
+        }
+
+        public static StepDeltaData CreateThoughtSummary(ThoughtSummaryDelta thoughtSummary)
+        {
+            StepDeltaDataType typ = StepDeltaDataType.ThoughtSummary;
+            StepDeltaData res = new StepDeltaData(typ);
+            res.ThoughtSummaryDelta = thoughtSummary;
+            return res;
+        }
+
+        public static StepDeltaData CreateUrlContextCall(URLContextCallDelta urlContextCall)
+        {
+            StepDeltaDataType typ = StepDeltaDataType.UrlContextCall;
+            StepDeltaData res = new StepDeltaData(typ);
+            res.URLContextCallDelta = urlContextCall;
+            return res;
+        }
+
+        public static StepDeltaData CreateUrlContextResult(URLContextResultDelta urlContextResult)
+        {
+            StepDeltaDataType typ = StepDeltaDataType.UrlContextResult;
+            StepDeltaData res = new StepDeltaData(typ);
+            res.URLContextResultDelta = urlContextResult;
+            return res;
+        }
+
+        public static StepDeltaData CreateVideo(VideoDelta video)
+        {
+            StepDeltaDataType typ = StepDeltaDataType.Video;
+            StepDeltaData res = new StepDeltaData(typ);
+            res.VideoDelta = video;
             return res;
         }
 
@@ -623,37 +623,21 @@ namespace Google.GenAI.Gaos.Models.Interactions
                 }
 
                 string discriminator = discriminatorToken.ToString();
-                if (discriminator == StepDeltaDataType.Text.ToString())
+                if (discriminator == StepDeltaDataType.ArgumentsDelta.ToString())
                 {
-                    TextDelta textDelta;
+                    ArgumentsDelta argumentsDelta;
                     try
                     {
-                        textDelta = ResponseBodyDeserializer.DeserializeNotNull<TextDelta>(jo.ToString());
+                        argumentsDelta = ResponseBodyDeserializer.DeserializeNotNull<ArgumentsDelta>(jo.ToString());
                     }
                     catch (Exception)
                     {
-                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<TextDelta>(jo.ToString(), out textDelta))
+                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<ArgumentsDelta>(jo.ToString(), out argumentsDelta))
                         {
                             throw;
                         }
                     }
-                    return CreateText(textDelta);
-                }
-                if (discriminator == StepDeltaDataType.Image.ToString())
-                {
-                    ImageDelta imageDelta;
-                    try
-                    {
-                        imageDelta = ResponseBodyDeserializer.DeserializeNotNull<ImageDelta>(jo.ToString());
-                    }
-                    catch (Exception)
-                    {
-                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<ImageDelta>(jo.ToString(), out imageDelta))
-                        {
-                            throw;
-                        }
-                    }
-                    return CreateImage(imageDelta);
+                    return CreateArgumentsDelta(argumentsDelta);
                 }
                 if (discriminator == StepDeltaDataType.Audio.ToString())
                 {
@@ -671,102 +655,6 @@ namespace Google.GenAI.Gaos.Models.Interactions
                     }
                     return CreateAudio(audioDelta);
                 }
-                if (discriminator == StepDeltaDataType.Document.ToString())
-                {
-                    DocumentDelta documentDelta;
-                    try
-                    {
-                        documentDelta = ResponseBodyDeserializer.DeserializeNotNull<DocumentDelta>(jo.ToString());
-                    }
-                    catch (Exception)
-                    {
-                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<DocumentDelta>(jo.ToString(), out documentDelta))
-                        {
-                            throw;
-                        }
-                    }
-                    return CreateDocument(documentDelta);
-                }
-                if (discriminator == StepDeltaDataType.Video.ToString())
-                {
-                    VideoDelta videoDelta;
-                    try
-                    {
-                        videoDelta = ResponseBodyDeserializer.DeserializeNotNull<VideoDelta>(jo.ToString());
-                    }
-                    catch (Exception)
-                    {
-                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<VideoDelta>(jo.ToString(), out videoDelta))
-                        {
-                            throw;
-                        }
-                    }
-                    return CreateVideo(videoDelta);
-                }
-                if (discriminator == StepDeltaDataType.ThoughtSummary.ToString())
-                {
-                    ThoughtSummaryDelta thoughtSummaryDelta;
-                    try
-                    {
-                        thoughtSummaryDelta = ResponseBodyDeserializer.DeserializeNotNull<ThoughtSummaryDelta>(jo.ToString());
-                    }
-                    catch (Exception)
-                    {
-                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<ThoughtSummaryDelta>(jo.ToString(), out thoughtSummaryDelta))
-                        {
-                            throw;
-                        }
-                    }
-                    return CreateThoughtSummary(thoughtSummaryDelta);
-                }
-                if (discriminator == StepDeltaDataType.ThoughtSignature.ToString())
-                {
-                    ThoughtSignatureDelta thoughtSignatureDelta;
-                    try
-                    {
-                        thoughtSignatureDelta = ResponseBodyDeserializer.DeserializeNotNull<ThoughtSignatureDelta>(jo.ToString());
-                    }
-                    catch (Exception)
-                    {
-                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<ThoughtSignatureDelta>(jo.ToString(), out thoughtSignatureDelta))
-                        {
-                            throw;
-                        }
-                    }
-                    return CreateThoughtSignature(thoughtSignatureDelta);
-                }
-                if (discriminator == StepDeltaDataType.TextAnnotationDelta.ToString())
-                {
-                    TextAnnotationDelta textAnnotationDelta;
-                    try
-                    {
-                        textAnnotationDelta = ResponseBodyDeserializer.DeserializeNotNull<TextAnnotationDelta>(jo.ToString());
-                    }
-                    catch (Exception)
-                    {
-                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<TextAnnotationDelta>(jo.ToString(), out textAnnotationDelta))
-                        {
-                            throw;
-                        }
-                    }
-                    return CreateTextAnnotationDelta(textAnnotationDelta);
-                }
-                if (discriminator == StepDeltaDataType.ArgumentsDelta.ToString())
-                {
-                    ArgumentsDelta argumentsDelta;
-                    try
-                    {
-                        argumentsDelta = ResponseBodyDeserializer.DeserializeNotNull<ArgumentsDelta>(jo.ToString());
-                    }
-                    catch (Exception)
-                    {
-                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<ArgumentsDelta>(jo.ToString(), out argumentsDelta))
-                        {
-                            throw;
-                        }
-                    }
-                    return CreateArgumentsDelta(argumentsDelta);
-                }
                 if (discriminator == StepDeltaDataType.CodeExecutionCall.ToString())
                 {
                     CodeExecutionCallDelta codeExecutionCallDelta;
@@ -782,102 +670,6 @@ namespace Google.GenAI.Gaos.Models.Interactions
                         }
                     }
                     return CreateCodeExecutionCall(codeExecutionCallDelta);
-                }
-                if (discriminator == StepDeltaDataType.UrlContextCall.ToString())
-                {
-                    URLContextCallDelta urlContextCallDelta;
-                    try
-                    {
-                        urlContextCallDelta = ResponseBodyDeserializer.DeserializeNotNull<URLContextCallDelta>(jo.ToString());
-                    }
-                    catch (Exception)
-                    {
-                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<URLContextCallDelta>(jo.ToString(), out urlContextCallDelta))
-                        {
-                            throw;
-                        }
-                    }
-                    return CreateUrlContextCall(urlContextCallDelta);
-                }
-                if (discriminator == StepDeltaDataType.GoogleSearchCall.ToString())
-                {
-                    GoogleSearchCallDelta googleSearchCallDelta;
-                    try
-                    {
-                        googleSearchCallDelta = ResponseBodyDeserializer.DeserializeNotNull<GoogleSearchCallDelta>(jo.ToString());
-                    }
-                    catch (Exception)
-                    {
-                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<GoogleSearchCallDelta>(jo.ToString(), out googleSearchCallDelta))
-                        {
-                            throw;
-                        }
-                    }
-                    return CreateGoogleSearchCall(googleSearchCallDelta);
-                }
-                if (discriminator == StepDeltaDataType.McpServerToolCall.ToString())
-                {
-                    MCPServerToolCallDelta mcpServerToolCallDelta;
-                    try
-                    {
-                        mcpServerToolCallDelta = ResponseBodyDeserializer.DeserializeNotNull<MCPServerToolCallDelta>(jo.ToString());
-                    }
-                    catch (Exception)
-                    {
-                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<MCPServerToolCallDelta>(jo.ToString(), out mcpServerToolCallDelta))
-                        {
-                            throw;
-                        }
-                    }
-                    return CreateMcpServerToolCall(mcpServerToolCallDelta);
-                }
-                if (discriminator == StepDeltaDataType.FileSearchCall.ToString())
-                {
-                    FileSearchCallDelta fileSearchCallDelta;
-                    try
-                    {
-                        fileSearchCallDelta = ResponseBodyDeserializer.DeserializeNotNull<FileSearchCallDelta>(jo.ToString());
-                    }
-                    catch (Exception)
-                    {
-                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<FileSearchCallDelta>(jo.ToString(), out fileSearchCallDelta))
-                        {
-                            throw;
-                        }
-                    }
-                    return CreateFileSearchCall(fileSearchCallDelta);
-                }
-                if (discriminator == StepDeltaDataType.GoogleMapsCall.ToString())
-                {
-                    GoogleMapsCallDelta googleMapsCallDelta;
-                    try
-                    {
-                        googleMapsCallDelta = ResponseBodyDeserializer.DeserializeNotNull<GoogleMapsCallDelta>(jo.ToString());
-                    }
-                    catch (Exception)
-                    {
-                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<GoogleMapsCallDelta>(jo.ToString(), out googleMapsCallDelta))
-                        {
-                            throw;
-                        }
-                    }
-                    return CreateGoogleMapsCall(googleMapsCallDelta);
-                }
-                if (discriminator == StepDeltaDataType.RetrievalCall.ToString())
-                {
-                    RetrievalCallDelta retrievalCallDelta;
-                    try
-                    {
-                        retrievalCallDelta = ResponseBodyDeserializer.DeserializeNotNull<RetrievalCallDelta>(jo.ToString());
-                    }
-                    catch (Exception)
-                    {
-                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<RetrievalCallDelta>(jo.ToString(), out retrievalCallDelta))
-                        {
-                            throw;
-                        }
-                    }
-                    return CreateRetrievalCall(retrievalCallDelta);
                 }
                 if (discriminator == StepDeltaDataType.CodeExecutionResult.ToString())
                 {
@@ -895,53 +687,37 @@ namespace Google.GenAI.Gaos.Models.Interactions
                     }
                     return CreateCodeExecutionResult(codeExecutionResultDelta);
                 }
-                if (discriminator == StepDeltaDataType.UrlContextResult.ToString())
+                if (discriminator == StepDeltaDataType.Document.ToString())
                 {
-                    URLContextResultDelta urlContextResultDelta;
+                    DocumentDelta documentDelta;
                     try
                     {
-                        urlContextResultDelta = ResponseBodyDeserializer.DeserializeNotNull<URLContextResultDelta>(jo.ToString());
+                        documentDelta = ResponseBodyDeserializer.DeserializeNotNull<DocumentDelta>(jo.ToString());
                     }
                     catch (Exception)
                     {
-                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<URLContextResultDelta>(jo.ToString(), out urlContextResultDelta))
+                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<DocumentDelta>(jo.ToString(), out documentDelta))
                         {
                             throw;
                         }
                     }
-                    return CreateUrlContextResult(urlContextResultDelta);
+                    return CreateDocument(documentDelta);
                 }
-                if (discriminator == StepDeltaDataType.GoogleSearchResult.ToString())
+                if (discriminator == StepDeltaDataType.FileSearchCall.ToString())
                 {
-                    GoogleSearchResultDelta googleSearchResultDelta;
+                    FileSearchCallDelta fileSearchCallDelta;
                     try
                     {
-                        googleSearchResultDelta = ResponseBodyDeserializer.DeserializeNotNull<GoogleSearchResultDelta>(jo.ToString());
+                        fileSearchCallDelta = ResponseBodyDeserializer.DeserializeNotNull<FileSearchCallDelta>(jo.ToString());
                     }
                     catch (Exception)
                     {
-                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<GoogleSearchResultDelta>(jo.ToString(), out googleSearchResultDelta))
+                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<FileSearchCallDelta>(jo.ToString(), out fileSearchCallDelta))
                         {
                             throw;
                         }
                     }
-                    return CreateGoogleSearchResult(googleSearchResultDelta);
-                }
-                if (discriminator == StepDeltaDataType.McpServerToolResult.ToString())
-                {
-                    MCPServerToolResultDelta mcpServerToolResultDelta;
-                    try
-                    {
-                        mcpServerToolResultDelta = ResponseBodyDeserializer.DeserializeNotNull<MCPServerToolResultDelta>(jo.ToString());
-                    }
-                    catch (Exception)
-                    {
-                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<MCPServerToolResultDelta>(jo.ToString(), out mcpServerToolResultDelta))
-                        {
-                            throw;
-                        }
-                    }
-                    return CreateMcpServerToolResult(mcpServerToolResultDelta);
+                    return CreateFileSearchCall(fileSearchCallDelta);
                 }
                 if (discriminator == StepDeltaDataType.FileSearchResult.ToString())
                 {
@@ -959,6 +735,38 @@ namespace Google.GenAI.Gaos.Models.Interactions
                     }
                     return CreateFileSearchResult(fileSearchResultDelta);
                 }
+                if (discriminator == StepDeltaDataType.FunctionResult.ToString())
+                {
+                    FunctionResultDelta functionResultDelta;
+                    try
+                    {
+                        functionResultDelta = ResponseBodyDeserializer.DeserializeNotNull<FunctionResultDelta>(jo.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<FunctionResultDelta>(jo.ToString(), out functionResultDelta))
+                        {
+                            throw;
+                        }
+                    }
+                    return CreateFunctionResult(functionResultDelta);
+                }
+                if (discriminator == StepDeltaDataType.GoogleMapsCall.ToString())
+                {
+                    GoogleMapsCallDelta googleMapsCallDelta;
+                    try
+                    {
+                        googleMapsCallDelta = ResponseBodyDeserializer.DeserializeNotNull<GoogleMapsCallDelta>(jo.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<GoogleMapsCallDelta>(jo.ToString(), out googleMapsCallDelta))
+                        {
+                            throw;
+                        }
+                    }
+                    return CreateGoogleMapsCall(googleMapsCallDelta);
+                }
                 if (discriminator == StepDeltaDataType.GoogleMapsResult.ToString())
                 {
                     GoogleMapsResultDelta googleMapsResultDelta;
@@ -974,6 +782,102 @@ namespace Google.GenAI.Gaos.Models.Interactions
                         }
                     }
                     return CreateGoogleMapsResult(googleMapsResultDelta);
+                }
+                if (discriminator == StepDeltaDataType.GoogleSearchCall.ToString())
+                {
+                    GoogleSearchCallDelta googleSearchCallDelta;
+                    try
+                    {
+                        googleSearchCallDelta = ResponseBodyDeserializer.DeserializeNotNull<GoogleSearchCallDelta>(jo.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<GoogleSearchCallDelta>(jo.ToString(), out googleSearchCallDelta))
+                        {
+                            throw;
+                        }
+                    }
+                    return CreateGoogleSearchCall(googleSearchCallDelta);
+                }
+                if (discriminator == StepDeltaDataType.GoogleSearchResult.ToString())
+                {
+                    GoogleSearchResultDelta googleSearchResultDelta;
+                    try
+                    {
+                        googleSearchResultDelta = ResponseBodyDeserializer.DeserializeNotNull<GoogleSearchResultDelta>(jo.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<GoogleSearchResultDelta>(jo.ToString(), out googleSearchResultDelta))
+                        {
+                            throw;
+                        }
+                    }
+                    return CreateGoogleSearchResult(googleSearchResultDelta);
+                }
+                if (discriminator == StepDeltaDataType.Image.ToString())
+                {
+                    ImageDelta imageDelta;
+                    try
+                    {
+                        imageDelta = ResponseBodyDeserializer.DeserializeNotNull<ImageDelta>(jo.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<ImageDelta>(jo.ToString(), out imageDelta))
+                        {
+                            throw;
+                        }
+                    }
+                    return CreateImage(imageDelta);
+                }
+                if (discriminator == StepDeltaDataType.McpServerToolCall.ToString())
+                {
+                    MCPServerToolCallDelta mcpServerToolCallDelta;
+                    try
+                    {
+                        mcpServerToolCallDelta = ResponseBodyDeserializer.DeserializeNotNull<MCPServerToolCallDelta>(jo.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<MCPServerToolCallDelta>(jo.ToString(), out mcpServerToolCallDelta))
+                        {
+                            throw;
+                        }
+                    }
+                    return CreateMcpServerToolCall(mcpServerToolCallDelta);
+                }
+                if (discriminator == StepDeltaDataType.McpServerToolResult.ToString())
+                {
+                    MCPServerToolResultDelta mcpServerToolResultDelta;
+                    try
+                    {
+                        mcpServerToolResultDelta = ResponseBodyDeserializer.DeserializeNotNull<MCPServerToolResultDelta>(jo.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<MCPServerToolResultDelta>(jo.ToString(), out mcpServerToolResultDelta))
+                        {
+                            throw;
+                        }
+                    }
+                    return CreateMcpServerToolResult(mcpServerToolResultDelta);
+                }
+                if (discriminator == StepDeltaDataType.RetrievalCall.ToString())
+                {
+                    RetrievalCallDelta retrievalCallDelta;
+                    try
+                    {
+                        retrievalCallDelta = ResponseBodyDeserializer.DeserializeNotNull<RetrievalCallDelta>(jo.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<RetrievalCallDelta>(jo.ToString(), out retrievalCallDelta))
+                        {
+                            throw;
+                        }
+                    }
+                    return CreateRetrievalCall(retrievalCallDelta);
                 }
                 if (discriminator == StepDeltaDataType.RetrievalResult.ToString())
                 {
@@ -991,21 +895,117 @@ namespace Google.GenAI.Gaos.Models.Interactions
                     }
                     return CreateRetrievalResult(retrievalResultDelta);
                 }
-                if (discriminator == StepDeltaDataType.FunctionResult.ToString())
+                if (discriminator == StepDeltaDataType.TextAnnotationDelta.ToString())
                 {
-                    FunctionResultDelta functionResultDelta;
+                    TextAnnotationDelta textAnnotationDelta;
                     try
                     {
-                        functionResultDelta = ResponseBodyDeserializer.DeserializeNotNull<FunctionResultDelta>(jo.ToString());
+                        textAnnotationDelta = ResponseBodyDeserializer.DeserializeNotNull<TextAnnotationDelta>(jo.ToString());
                     }
                     catch (Exception)
                     {
-                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<FunctionResultDelta>(jo.ToString(), out functionResultDelta))
+                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<TextAnnotationDelta>(jo.ToString(), out textAnnotationDelta))
                         {
                             throw;
                         }
                     }
-                    return CreateFunctionResult(functionResultDelta);
+                    return CreateTextAnnotationDelta(textAnnotationDelta);
+                }
+                if (discriminator == StepDeltaDataType.Text.ToString())
+                {
+                    TextDelta textDelta;
+                    try
+                    {
+                        textDelta = ResponseBodyDeserializer.DeserializeNotNull<TextDelta>(jo.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<TextDelta>(jo.ToString(), out textDelta))
+                        {
+                            throw;
+                        }
+                    }
+                    return CreateText(textDelta);
+                }
+                if (discriminator == StepDeltaDataType.ThoughtSignature.ToString())
+                {
+                    ThoughtSignatureDelta thoughtSignatureDelta;
+                    try
+                    {
+                        thoughtSignatureDelta = ResponseBodyDeserializer.DeserializeNotNull<ThoughtSignatureDelta>(jo.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<ThoughtSignatureDelta>(jo.ToString(), out thoughtSignatureDelta))
+                        {
+                            throw;
+                        }
+                    }
+                    return CreateThoughtSignature(thoughtSignatureDelta);
+                }
+                if (discriminator == StepDeltaDataType.ThoughtSummary.ToString())
+                {
+                    ThoughtSummaryDelta thoughtSummaryDelta;
+                    try
+                    {
+                        thoughtSummaryDelta = ResponseBodyDeserializer.DeserializeNotNull<ThoughtSummaryDelta>(jo.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<ThoughtSummaryDelta>(jo.ToString(), out thoughtSummaryDelta))
+                        {
+                            throw;
+                        }
+                    }
+                    return CreateThoughtSummary(thoughtSummaryDelta);
+                }
+                if (discriminator == StepDeltaDataType.UrlContextCall.ToString())
+                {
+                    URLContextCallDelta urlContextCallDelta;
+                    try
+                    {
+                        urlContextCallDelta = ResponseBodyDeserializer.DeserializeNotNull<URLContextCallDelta>(jo.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<URLContextCallDelta>(jo.ToString(), out urlContextCallDelta))
+                        {
+                            throw;
+                        }
+                    }
+                    return CreateUrlContextCall(urlContextCallDelta);
+                }
+                if (discriminator == StepDeltaDataType.UrlContextResult.ToString())
+                {
+                    URLContextResultDelta urlContextResultDelta;
+                    try
+                    {
+                        urlContextResultDelta = ResponseBodyDeserializer.DeserializeNotNull<URLContextResultDelta>(jo.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<URLContextResultDelta>(jo.ToString(), out urlContextResultDelta))
+                        {
+                            throw;
+                        }
+                    }
+                    return CreateUrlContextResult(urlContextResultDelta);
+                }
+                if (discriminator == StepDeltaDataType.Video.ToString())
+                {
+                    VideoDelta videoDelta;
+                    try
+                    {
+                        videoDelta = ResponseBodyDeserializer.DeserializeNotNull<VideoDelta>(jo.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        if (!ResponseBodyDeserializer.TryConstructUnvalidated<VideoDelta>(jo.ToString(), out videoDelta))
+                        {
+                            throw;
+                        }
+                    }
+                    return CreateVideo(videoDelta);
                 }
 
                 return CreateUnknown(jo);
@@ -1030,15 +1030,9 @@ namespace Google.GenAI.Gaos.Models.Interactions
                     throw new InvalidOperationException("Unknown union value has no raw payload; construct via CreateUnknown(JToken).");
                 }
 
-                if (res.TextDelta != null)
+                if (res.ArgumentsDelta != null)
                 {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.TextDelta));
-                    return;
-                }
-
-                if (res.ImageDelta != null)
-                {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.ImageDelta));
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.ArgumentsDelta));
                     return;
                 }
 
@@ -1048,81 +1042,9 @@ namespace Google.GenAI.Gaos.Models.Interactions
                     return;
                 }
 
-                if (res.DocumentDelta != null)
-                {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.DocumentDelta));
-                    return;
-                }
-
-                if (res.VideoDelta != null)
-                {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.VideoDelta));
-                    return;
-                }
-
-                if (res.ThoughtSummaryDelta != null)
-                {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.ThoughtSummaryDelta));
-                    return;
-                }
-
-                if (res.ThoughtSignatureDelta != null)
-                {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.ThoughtSignatureDelta));
-                    return;
-                }
-
-                if (res.TextAnnotationDelta != null)
-                {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.TextAnnotationDelta));
-                    return;
-                }
-
-                if (res.ArgumentsDelta != null)
-                {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.ArgumentsDelta));
-                    return;
-                }
-
                 if (res.CodeExecutionCallDelta != null)
                 {
                     writer.WriteRawValue(Utilities.SerializeJSON(res.CodeExecutionCallDelta));
-                    return;
-                }
-
-                if (res.URLContextCallDelta != null)
-                {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.URLContextCallDelta));
-                    return;
-                }
-
-                if (res.GoogleSearchCallDelta != null)
-                {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.GoogleSearchCallDelta));
-                    return;
-                }
-
-                if (res.MCPServerToolCallDelta != null)
-                {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.MCPServerToolCallDelta));
-                    return;
-                }
-
-                if (res.FileSearchCallDelta != null)
-                {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.FileSearchCallDelta));
-                    return;
-                }
-
-                if (res.GoogleMapsCallDelta != null)
-                {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.GoogleMapsCallDelta));
-                    return;
-                }
-
-                if (res.RetrievalCallDelta != null)
-                {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.RetrievalCallDelta));
                     return;
                 }
 
@@ -1132,21 +1054,15 @@ namespace Google.GenAI.Gaos.Models.Interactions
                     return;
                 }
 
-                if (res.URLContextResultDelta != null)
+                if (res.DocumentDelta != null)
                 {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.URLContextResultDelta));
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.DocumentDelta));
                     return;
                 }
 
-                if (res.GoogleSearchResultDelta != null)
+                if (res.FileSearchCallDelta != null)
                 {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.GoogleSearchResultDelta));
-                    return;
-                }
-
-                if (res.MCPServerToolResultDelta != null)
-                {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.MCPServerToolResultDelta));
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.FileSearchCallDelta));
                     return;
                 }
 
@@ -1156,9 +1072,57 @@ namespace Google.GenAI.Gaos.Models.Interactions
                     return;
                 }
 
+                if (res.FunctionResultDelta != null)
+                {
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.FunctionResultDelta));
+                    return;
+                }
+
+                if (res.GoogleMapsCallDelta != null)
+                {
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.GoogleMapsCallDelta));
+                    return;
+                }
+
                 if (res.GoogleMapsResultDelta != null)
                 {
                     writer.WriteRawValue(Utilities.SerializeJSON(res.GoogleMapsResultDelta));
+                    return;
+                }
+
+                if (res.GoogleSearchCallDelta != null)
+                {
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.GoogleSearchCallDelta));
+                    return;
+                }
+
+                if (res.GoogleSearchResultDelta != null)
+                {
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.GoogleSearchResultDelta));
+                    return;
+                }
+
+                if (res.ImageDelta != null)
+                {
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.ImageDelta));
+                    return;
+                }
+
+                if (res.MCPServerToolCallDelta != null)
+                {
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.MCPServerToolCallDelta));
+                    return;
+                }
+
+                if (res.MCPServerToolResultDelta != null)
+                {
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.MCPServerToolResultDelta));
+                    return;
+                }
+
+                if (res.RetrievalCallDelta != null)
+                {
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.RetrievalCallDelta));
                     return;
                 }
 
@@ -1168,9 +1132,45 @@ namespace Google.GenAI.Gaos.Models.Interactions
                     return;
                 }
 
-                if (res.FunctionResultDelta != null)
+                if (res.TextAnnotationDelta != null)
                 {
-                    writer.WriteRawValue(Utilities.SerializeJSON(res.FunctionResultDelta));
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.TextAnnotationDelta));
+                    return;
+                }
+
+                if (res.TextDelta != null)
+                {
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.TextDelta));
+                    return;
+                }
+
+                if (res.ThoughtSignatureDelta != null)
+                {
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.ThoughtSignatureDelta));
+                    return;
+                }
+
+                if (res.ThoughtSummaryDelta != null)
+                {
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.ThoughtSummaryDelta));
+                    return;
+                }
+
+                if (res.URLContextCallDelta != null)
+                {
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.URLContextCallDelta));
+                    return;
+                }
+
+                if (res.URLContextResultDelta != null)
+                {
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.URLContextResultDelta));
+                    return;
+                }
+
+                if (res.VideoDelta != null)
+                {
+                    writer.WriteRawValue(Utilities.SerializeJSON(res.VideoDelta));
                     return;
                 }
 

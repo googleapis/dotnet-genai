@@ -32,7 +32,7 @@ namespace Google.GenAI.Gaos.Models.Interactions
         public string? Name { get; set; }
 
         /// <summary>
-        /// The output from the MCP server call. Can be simple text or rich content.
+        /// Required. The output from the MCP server call. Can be simple text or rich content.
         /// </summary>
         [JsonProperty("result", Required = Newtonsoft.Json.Required.Always, NullValueHandling = NullValueHandling.Include)]
         public MCPServerToolResultStepResultUnion Result { get; set; } = default!;
