@@ -41,7 +41,7 @@ namespace Google.GenAI
     /// <summary>
     /// EXPERIMENTAL: The interactions service is experimental.
     /// </summary>
-    public IInteractions Interactions 
+    public IInteractions Interactions
     {
       get {
         if (!_warnedInteractions) {
@@ -174,6 +174,24 @@ namespace Google.GenAI
           apiVersion = $"{apiVersion}/projects/{_apiClient.Project}/locations/{_apiClient.Location}";
       }
 
+      Google.GenAI.Gaos.Utils.Retries.RetryConfig? gaosRetryConfig = null;
+      var retryOptions = _apiClient.HttpOptions.RetryOptions;
+      if (retryOptions != null)
+      {
+          var backoff = new Google.GenAI.Gaos.Utils.Retries.BackoffStrategy(
+              initialIntervalMs: (long)((retryOptions.InitialDelay ?? 1.0) * 1000),
+              maxIntervalMs: (long)((retryOptions.MaxDelay ?? 60.0) * 1000),
+              maxElapsedTimeMs: 30000L,
+              exponent: retryOptions.ExpBase ?? 2.0
+          );
+          gaosRetryConfig = new Google.GenAI.Gaos.Utils.Retries.RetryConfig(
+              strategy: Google.GenAI.Gaos.Utils.Retries.RetryConfig.RetryStrategy.ATTEMPT_COUNT_BACKOFF,
+              backoff: backoff,
+              retryConnectionErrors: true,
+              maxRetries: Math.Max(0, (retryOptions.Attempts ?? 5) - 1)
+          );
+      }
+
       _interactionsClient = new Google.GenAI.Gaos.GenAI(
           securitySource: () =>
           {
@@ -202,7 +220,8 @@ namespace Google.GenAI
           },
           serverUrl: _apiClient.HttpOptions.BaseUrl,
           apiVersion: apiVersion,
-          client: new GaosHttpClient(_apiClient.HttpClient)
+          client: new GaosHttpClient(_apiClient.HttpClient),
+          retryConfig: gaosRetryConfig
       );
     }
 
