@@ -149,6 +149,15 @@ namespace Google.GenAI.Gaos.Hooks
                 length = -1;
                 return false;
             }
+
+            protected override void Dispose(bool disposing)
+            {
+                if (disposing)
+                {
+                    _shimStream.Dispose();
+                }
+                base.Dispose(disposing);
+            }
         }
 
         private class LegacyLyriaShimStream : Stream
@@ -190,7 +199,46 @@ namespace Google.GenAI.Gaos.Hooks
 
             public override int Read(byte[] buffer, int offset, int count)
             {
-                return ReadAsync(buffer, offset, count, CancellationToken.None).GetAwaiter().GetResult();
+                if (_bufferStream.Position >= _bufferStream.Length)
+                {
+                    _bufferStream.SetLength(0);
+                    _bufferStream.Position = 0;
+
+                    var lines = new List<string>();
+                    string? line;
+                    while ((line = _reader.ReadLine()) != null)
+                    {
+                        if (string.IsNullOrWhiteSpace(line))
+                        {
+                            if (lines.Count > 0)
+                            {
+                                break;
+                            }
+                            continue;
+                        }
+                        lines.Add(line);
+                    }
+
+                    if (lines.Count == 0)
+                    {
+                        return 0; // EOF
+                    }
+
+                    var rewrittenLines = ProcessMessageLines(lines);
+
+                    using (var writer = new StreamWriter(_bufferStream, Encoding.UTF8, 1024, leaveOpen: true))
+                    {
+                        foreach (var rl in rewrittenLines)
+                        {
+                            writer.WriteLine(rl);
+                        }
+                        writer.WriteLine(); // double newline separator
+                        writer.Flush();
+                    }
+                    _bufferStream.Position = 0;
+                }
+
+                return _bufferStream.Read(buffer, offset, count);
             }
 
             public override async Task<int> ReadAsync(byte[] buffer, int offset, int count, CancellationToken cancellationToken)
@@ -203,9 +251,9 @@ namespace Google.GenAI.Gaos.Hooks
                     var lines = new List<string>();
                     string? line;
 #if NETSTANDARD2_0
-                    while ((line = await _reader.ReadLineAsync()) != null)
+                    while ((line = await _reader.ReadLineAsync().ConfigureAwait(false)) != null)
 #else
-                    while ((line = await _reader.ReadLineAsync(cancellationToken)) != null)
+                    while ((line = await _reader.ReadLineAsync(cancellationToken).ConfigureAwait(false)) != null)
 #endif
                     {
                         if (string.IsNullOrWhiteSpace(line))
@@ -230,19 +278,19 @@ namespace Google.GenAI.Gaos.Hooks
                     {
                         foreach (var rl in rewrittenLines)
                         {
-                            await writer.WriteLineAsync(rl);
+                            await writer.WriteLineAsync(rl).ConfigureAwait(false);
                         }
-                        await writer.WriteLineAsync(); // double newline separator
+                        await writer.WriteLineAsync().ConfigureAwait(false); // double newline separator
 #if NETSTANDARD2_0
-                        await writer.FlushAsync();
+                        await writer.FlushAsync().ConfigureAwait(false);
 #else
-                        await writer.FlushAsync(cancellationToken);
+                        await writer.FlushAsync(cancellationToken).ConfigureAwait(false);
 #endif
                     }
                     _bufferStream.Position = 0;
                 }
 
-                int read = await _bufferStream.ReadAsync(buffer, offset, count, cancellationToken);
+                int read = await _bufferStream.ReadAsync(buffer, offset, count, cancellationToken).ConfigureAwait(false);
                 return read;
             }
 
