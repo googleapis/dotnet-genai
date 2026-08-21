@@ -5590,7 +5590,7 @@ public class GoogleGenAIExtensionsTest
 
   private static IImageGenerator CreateImageGenerator(string expectedRequest, string actualResponse, bool makeRealRequest = false)
   {
-    Models models = new(new MockApiClient(expectedRequest, actualResponse, makeRealRequest));
+    Models models = new(new MockApiClient(expectedRequest, actualResponse, makeRealRequest, vertexAI: true));
     return models.AsIImageGenerator("imagen-3.0-generate-001");
   }
 
@@ -5611,7 +5611,13 @@ public class GoogleGenAIExtensionsTest
     private readonly string _actualResponse;
     private readonly bool _makeRealRequest;
 
-    public MockApiClient(string expectedRequest, string actualResponse, bool makeRealRequest = false) : base(apiKey: "fake_api_key", customHttpOptions: new() { BaseUrl = "http://localhost/" })
+    public MockApiClient(string expectedRequest, string actualResponse, bool makeRealRequest = false, bool vertexAI = false)
+        : base(
+            vertexAI: vertexAI,
+            apiKey: vertexAI ? null : "fake_api_key",
+            project: vertexAI ? "fake-project" : null,
+            location: vertexAI ? "us-central1" : null,
+            customHttpOptions: new() { BaseUrl = "http://localhost/" })
     {
       _expectedRequest = expectedRequest;
       _actualResponse = actualResponse;

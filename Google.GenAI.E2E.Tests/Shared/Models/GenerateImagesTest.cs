@@ -13,19 +13,6 @@ namespace Google.GenAI.E2E.Tests.Shared.Models
             new GenerateImagesConfig { NumberOfImages = 1, OutputMimeType = "image/jpeg" };
 
         [TestMethod]
-        public async Task TestSimplePromptMldev()
-        {
-            SkipGeminiInApiMode();
-            await RunLive(async () =>
-            {
-                var response = await geminiClient.Models.GenerateImagesAsync(
-                    ImagenModel, "Red skateboard", NewConfig());
-                Assert.IsNotNull(response);
-                Assert.IsNotNull(response.GeneratedImages);
-            });
-        }
-
-        [TestMethod]
         public async Task TestSimplePromptVertex()
         {
             SkipVertexInApiMode();

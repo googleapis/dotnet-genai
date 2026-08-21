@@ -87,11 +87,12 @@ public class GenerateImagesTest {
 
   [TestMethod]
   public async Task GenerateImagesSimpleTextGeminiTest() {
-    var geminiResponse = await geminiClient.Models.GenerateImagesAsync(
-        model: modelName, prompt: "Robot holding a red skateboard", config: null);
+    var ex = await Assert.ThrowsExceptionAsync<NotSupportedException>(async () => {
+      await geminiClient.Models.GenerateImagesAsync(
+          model: modelName, prompt: "Robot holding a red skateboard", config: null);
+    });
 
-    Assert.IsNotNull(geminiResponse.GeneratedImages);
-    Assert.IsNotNull(geminiResponse.GeneratedImages.First().Image.ImageBytes);
+    StringAssert.Contains(ex.Message, "is only supported in Gemini Enterprise Agent Platform mode");
   }
 
   [TestMethod]
@@ -122,28 +123,5 @@ public class GenerateImagesTest {
     Assert.AreEqual(vertexResponse.GeneratedImages.Count, 1, "Expected 1 generated image.");
     Assert.IsNotNull(vertexResponse.GeneratedImages.First().Image.ImageBytes);
     Assert.IsNotNull(vertexResponse.PositivePromptSafetyAttributes);
-  }
-
-  [TestMethod]
-  public async Task GenerateImagesAllConfigParamsGeminiTest() {
-    var generateImagesConfig = new GenerateImagesConfig {
-      AspectRatio = "1:1",
-      GuidanceScale = 15.0,
-      SafetyFilterLevel = SafetyFilterLevel.BlockLowAndAbove,
-      NumberOfImages = 1,
-      PersonGeneration = PersonGeneration.DontAllow,
-      IncludeSafetyAttributes = true,
-      IncludeRaiReason = true,
-      OutputMimeType = "image/jpeg",
-      OutputCompressionQuality = 80,
-    };
-
-    var geminiResponse = await geminiClient.Models.GenerateImagesAsync(
-        model: modelName, prompt: "Red skateboard", config: generateImagesConfig);
-
-    Assert.IsNotNull(geminiResponse.GeneratedImages);
-    Assert.AreEqual(geminiResponse.GeneratedImages.Count, 1, "Expected 1 generated image.");
-    Assert.IsNotNull(geminiResponse.GeneratedImages.First().Image.ImageBytes);
-    Assert.IsNotNull(geminiResponse.PositivePromptSafetyAttributes);
   }
 }
