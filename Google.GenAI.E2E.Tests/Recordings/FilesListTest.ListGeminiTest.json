@@ -4,8 +4,8 @@
     {
       "request": {
         "method": "GET",
-        "url": "/v1beta/files",
-        "request": "GET /v1beta/files HTTP/1.1",
+        "url": "/v1/files",
+        "request": "GET /v1/files HTTP/1.1",
         "headers": {
           "Test-Name": "FilesListTest.ListGeminiTest"
         },
@@ -17,7 +17,7 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "c0d57cc814394114646ede3071b6276306ea49ea3c359e4c51092d7a5c3b089c",
+      "shaSum": "f8fdab5a860165282f3e0232d1f4c0a3b422f6cfb45d8fdf2ae221f70f186e9b",
       "response": {
         "statusCode": 200,
         "headers": {
@@ -168,20 +168,20 @@
     {
       "request": {
         "method": "GET",
-        "url": "/v1beta/files?pageToken=ciEKD4IBDAi8hYXJBhDw7q__AQoOQgxvaTV3dXB3aTB5N2U",
-        "request": "GET /v1beta/files?pageToken=ciEKD4IBDAi8hYXJBhDw7q__AQoOQgxvaTV3dXB3aTB5N2U HTTP/1.1",
+        "url": "/v1/files?pageToken=ciEKD4IBDAi8hYXJBhDw7q__AQoOQgxvaTV3dXB3aTB5N2U",
+        "request": "GET /v1/files?pageToken=ciEKD4IBDAi8hYXJBhDw7q__AQoOQgxvaTV3dXB3aTB5N2U HTTP/1.1",
         "headers": {
           "Test-Name": "FilesListTest.ListGeminiTest"
         },
         "bodySegments": [
           null
         ],
-        "previousRequest": "c0d57cc814394114646ede3071b6276306ea49ea3c359e4c51092d7a5c3b089c",
+        "previousRequest": "f8fdab5a860165282f3e0232d1f4c0a3b422f6cfb45d8fdf2ae221f70f186e9b",
         "serverAddress": "generativelanguage.googleapis.com",
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "7c3cf89890e0f2dc0adc7290d7b1879de99fe7c3daf97ad2320ad1b088395b1b",
+      "shaSum": "c27e4e9c11ec65141a78beff6b43d336d34f8aa75751e09ef42531918b95da5c",
       "response": {
         "statusCode": 200,
         "headers": {

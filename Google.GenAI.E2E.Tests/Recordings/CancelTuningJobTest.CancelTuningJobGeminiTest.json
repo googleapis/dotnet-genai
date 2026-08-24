@@ -4,8 +4,8 @@
     {
       "request": {
         "method": "POST",
-        "url": "/v1beta/tunedModels/model-display-name-q8v2dc37tfzy:cancel",
-        "request": "POST /v1beta/tunedModels/model-display-name-q8v2dc37tfzy:cancel HTTP/1.1",
+        "url": "/v1/tunedModels/model-display-name-q8v2dc37tfzy:cancel",
+        "request": "POST /v1/tunedModels/model-display-name-q8v2dc37tfzy:cancel HTTP/1.1",
         "headers": {
           "Content-Length": "2",
           "Content-Type": "application/json; charset=utf-8",
@@ -19,7 +19,7 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "5f8d42e8fbdafcffe143429e24a95a425038cc3f0cd7c6fe696917f4d9f4afd0",
+      "shaSum": "f3072bc32d379852c370e3842f4382aebd9f449c8b5df697a87be0a430dced3d",
       "response": {
         "statusCode": 404,
         "headers": {

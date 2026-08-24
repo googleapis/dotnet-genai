@@ -4,8 +4,8 @@
     {
       "request": {
         "method": "DELETE",
-        "url": "/v1beta/batches/4wx2b2bhmmzp5hskgd9go4opiexg87dajucf",
-        "request": "DELETE /v1beta/batches/4wx2b2bhmmzp5hskgd9go4opiexg87dajucf HTTP/1.1",
+        "url": "/v1/batches/4wx2b2bhmmzp5hskgd9go4opiexg87dajucf",
+        "request": "DELETE /v1/batches/4wx2b2bhmmzp5hskgd9go4opiexg87dajucf HTTP/1.1",
         "headers": {
           "Test-Name": "DeleteBatchTest.DeleteBatchJobGeminiTest"
         },
@@ -17,7 +17,7 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "99b6390b1bc0fbcfcac585e6f0f7641c8c2ca0973672dbc98d2f2e3199778793",
+      "shaSum": "d238df418993e01a553ee6e1a364bafc1eed8f2b9bc643de061bed08e8e1ac9e",
       "response": {
         "statusCode": 200,
         "headers": {

@@ -4,8 +4,8 @@
     {
       "request": {
         "method": "GET",
-        "url": "/v1beta/tunedModels?pageSize=3",
-        "request": "GET /v1beta/tunedModels?pageSize=3 HTTP/1.1",
+        "url": "/v1/tunedModels?pageSize=3",
+        "request": "GET /v1/tunedModels?pageSize=3 HTTP/1.1",
         "headers": {
           "Test-Name": "ListModelsTest.ListTunedModelsGemini"
         },
@@ -17,7 +17,7 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "8fd07199b3d58c54da82838f38105bcdb7c69da8b1a0b41bd0b7ae3a7f773ba2",
+      "shaSum": "99d2ecb1eb9390ae96fa823e6e8f1b26669926a02562108d9651691e11be64be",
       "response": {
         "statusCode": 200,
         "headers": {
@@ -228,20 +228,20 @@
     {
       "request": {
         "method": "GET",
-        "url": "/v1beta/tunedModels?pageSize=3\u0026pageToken=chEKD4IBDAip1fK6BhCI05v3Ag",
-        "request": "GET /v1beta/tunedModels?pageSize=3\u0026pageToken=chEKD4IBDAip1fK6BhCI05v3Ag HTTP/1.1",
+        "url": "/v1/tunedModels?pageSize=3\u0026pageToken=chEKD4IBDAip1fK6BhCI05v3Ag",
+        "request": "GET /v1/tunedModels?pageSize=3\u0026pageToken=chEKD4IBDAip1fK6BhCI05v3Ag HTTP/1.1",
         "headers": {
           "Test-Name": "ListModelsTest.ListTunedModelsGemini"
         },
         "bodySegments": [
           null
         ],
-        "previousRequest": "8fd07199b3d58c54da82838f38105bcdb7c69da8b1a0b41bd0b7ae3a7f773ba2",
+        "previousRequest": "99d2ecb1eb9390ae96fa823e6e8f1b26669926a02562108d9651691e11be64be",
         "serverAddress": "generativelanguage.googleapis.com",
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "07c8a8206b4e8b8b5fbcb51c6ce9c1b799d5f28250cc7207d23f11ec6105201a",
+      "shaSum": "127f38a4965a205c5a001bf64495bf36a49648baea7f9dbd3a58cbaf955ff291",
       "response": {
         "statusCode": 200,
         "headers": {

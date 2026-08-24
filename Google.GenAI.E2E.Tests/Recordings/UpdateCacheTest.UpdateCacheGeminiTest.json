@@ -4,8 +4,8 @@
     {
       "request": {
         "method": "POST",
-        "url": "/v1beta/cachedContents",
-        "request": "POST /v1beta/cachedContents HTTP/1.1",
+        "url": "/v1/cachedContents",
+        "request": "POST /v1/cachedContents HTTP/1.1",
         "headers": {
           "Content-Length": "748",
           "Content-Type": "application/json; charset=utf-8",
@@ -60,7 +60,7 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "f55b05fb47abf5ced640ee6162185d387ebbc68dc5e36c2796c2c7f5fef4e802",
+      "shaSum": "c08eb7abdbcb953e87393c64c6bdfbc6908bd1a893b97d5690345b4a199d8adb",
       "response": {
         "statusCode": 200,
         "headers": {
@@ -91,8 +91,8 @@
     {
       "request": {
         "method": "PATCH",
-        "url": "/v1beta/cachedContents/uz3wmwu22n5evazfi2cn8h7tgewx66t1wnf29zmg",
-        "request": "PATCH /v1beta/cachedContents/uz3wmwu22n5evazfi2cn8h7tgewx66t1wnf29zmg HTTP/1.1",
+        "url": "/v1/cachedContents/uz3wmwu22n5evazfi2cn8h7tgewx66t1wnf29zmg",
+        "request": "PATCH /v1/cachedContents/uz3wmwu22n5evazfi2cn8h7tgewx66t1wnf29zmg HTTP/1.1",
         "headers": {
           "Content-Length": "15",
           "Content-Type": "application/json; charset=utf-8",
@@ -103,12 +103,12 @@
             "ttl": "1200s"
           }
         ],
-        "previousRequest": "f55b05fb47abf5ced640ee6162185d387ebbc68dc5e36c2796c2c7f5fef4e802",
+        "previousRequest": "c08eb7abdbcb953e87393c64c6bdfbc6908bd1a893b97d5690345b4a199d8adb",
         "serverAddress": "generativelanguage.googleapis.com",
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "8e2f85fa1def4c49c2b5b57cf878bbc1c11e75b4563464b54a4708cb109c51e2",
+      "shaSum": "f47f2d301aa0ed069d8707f92c6666bcbb73d3fec8617e2d45f2cee9d30f023a",
       "response": {
         "statusCode": 200,
         "headers": {

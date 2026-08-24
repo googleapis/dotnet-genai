@@ -4,8 +4,8 @@
     {
       "request": {
         "method": "POST",
-        "url": "/v1beta/models/wrong-model-name:streamGenerateContent?alt=sse",
-        "request": "POST /v1beta/models/wrong-model-name:streamGenerateContent?alt=sse HTTP/1.1",
+        "url": "/v1/models/wrong-model-name:streamGenerateContent?alt=sse",
+        "request": "POST /v1/models/wrong-model-name:streamGenerateContent?alt=sse HTTP/1.1",
         "headers": {
           "Content-Length": "82",
           "Content-Type": "application/json; charset=utf-8",
@@ -30,7 +30,7 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "1771d148ce4a68a0b485fe6367473a99eecce5306585eb58928b21106bde08fd",
+      "shaSum": "4cdce8cb22e01373b45da2a5e53926152f1204d87cb0053cac686c3605756ae9",
       "response": {
         "statusCode": 404,
         "headers": {
