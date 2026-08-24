@@ -528,7 +528,7 @@ namespace Google.GenAI
       else
       {
         defaultHttpOptions.BaseUrl = "https://generativelanguage.googleapis.com";
-        defaultHttpOptions.ApiVersion = "v1beta";
+        defaultHttpOptions.ApiVersion = "v1";
       }
       return defaultHttpOptions;
     }
