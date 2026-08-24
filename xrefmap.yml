@@ -25670,6 +25670,186 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.MediaModalityConverter.Write
   nameWithType: MediaModalityConverter.Write
+- uid: Google.GenAI.Types.MediaProcessing
+  name: MediaProcessing
+  href: api/Google.GenAI.Types.MediaProcessing.html
+  commentId: T:Google.GenAI.Types.MediaProcessing
+  fullName: Google.GenAI.Types.MediaProcessing
+  nameWithType: MediaProcessing
+- uid: Google.GenAI.Types.MediaProcessing.Agentic
+  name: Agentic
+  href: api/Google.GenAI.Types.MediaProcessing.html#Google_GenAI_Types_MediaProcessing_Agentic
+  commentId: P:Google.GenAI.Types.MediaProcessing.Agentic
+  fullName: Google.GenAI.Types.MediaProcessing.Agentic
+  nameWithType: MediaProcessing.Agentic
+- uid: Google.GenAI.Types.MediaProcessing.Agentic*
+  name: Agentic
+  href: api/Google.GenAI.Types.MediaProcessing.html#Google_GenAI_Types_MediaProcessing_Agentic_
+  commentId: Overload:Google.GenAI.Types.MediaProcessing.Agentic
+  isSpec: "True"
+  fullName: Google.GenAI.Types.MediaProcessing.Agentic
+  nameWithType: MediaProcessing.Agentic
+- uid: Google.GenAI.Types.MediaProcessing.AllValues
+  name: AllValues
+  href: api/Google.GenAI.Types.MediaProcessing.html#Google_GenAI_Types_MediaProcessing_AllValues
+  commentId: P:Google.GenAI.Types.MediaProcessing.AllValues
+  fullName: Google.GenAI.Types.MediaProcessing.AllValues
+  nameWithType: MediaProcessing.AllValues
+- uid: Google.GenAI.Types.MediaProcessing.AllValues*
+  name: AllValues
+  href: api/Google.GenAI.Types.MediaProcessing.html#Google_GenAI_Types_MediaProcessing_AllValues_
+  commentId: Overload:Google.GenAI.Types.MediaProcessing.AllValues
+  isSpec: "True"
+  fullName: Google.GenAI.Types.MediaProcessing.AllValues
+  nameWithType: MediaProcessing.AllValues
+- uid: Google.GenAI.Types.MediaProcessing.Equals(Google.GenAI.Types.MediaProcessing)
+  name: Equals(MediaProcessing)
+  href: api/Google.GenAI.Types.MediaProcessing.html#Google_GenAI_Types_MediaProcessing_Equals_Google_GenAI_Types_MediaProcessing_
+  commentId: M:Google.GenAI.Types.MediaProcessing.Equals(Google.GenAI.Types.MediaProcessing)
+  fullName: Google.GenAI.Types.MediaProcessing.Equals(Google.GenAI.Types.MediaProcessing)
+  nameWithType: MediaProcessing.Equals(MediaProcessing)
+- uid: Google.GenAI.Types.MediaProcessing.Equals*
+  name: Equals
+  href: api/Google.GenAI.Types.MediaProcessing.html#Google_GenAI_Types_MediaProcessing_Equals_
+  commentId: Overload:Google.GenAI.Types.MediaProcessing.Equals
+  isSpec: "True"
+  fullName: Google.GenAI.Types.MediaProcessing.Equals
+  nameWithType: MediaProcessing.Equals
+- uid: Google.GenAI.Types.MediaProcessing.FromString(System.String)
+  name: FromString(string)
+  href: api/Google.GenAI.Types.MediaProcessing.html#Google_GenAI_Types_MediaProcessing_FromString_System_String_
+  commentId: M:Google.GenAI.Types.MediaProcessing.FromString(System.String)
+  name.vb: FromString(String)
+  fullName: Google.GenAI.Types.MediaProcessing.FromString(string)
+  fullName.vb: Google.GenAI.Types.MediaProcessing.FromString(String)
+  nameWithType: MediaProcessing.FromString(string)
+  nameWithType.vb: MediaProcessing.FromString(String)
+- uid: Google.GenAI.Types.MediaProcessing.FromString*
+  name: FromString
+  href: api/Google.GenAI.Types.MediaProcessing.html#Google_GenAI_Types_MediaProcessing_FromString_
+  commentId: Overload:Google.GenAI.Types.MediaProcessing.FromString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.MediaProcessing.FromString
+  nameWithType: MediaProcessing.FromString
+- uid: Google.GenAI.Types.MediaProcessing.GetHashCode
+  name: GetHashCode()
+  href: api/Google.GenAI.Types.MediaProcessing.html#Google_GenAI_Types_MediaProcessing_GetHashCode
+  commentId: M:Google.GenAI.Types.MediaProcessing.GetHashCode
+  fullName: Google.GenAI.Types.MediaProcessing.GetHashCode()
+  nameWithType: MediaProcessing.GetHashCode()
+- uid: Google.GenAI.Types.MediaProcessing.GetHashCode*
+  name: GetHashCode
+  href: api/Google.GenAI.Types.MediaProcessing.html#Google_GenAI_Types_MediaProcessing_GetHashCode_
+  commentId: Overload:Google.GenAI.Types.MediaProcessing.GetHashCode
+  isSpec: "True"
+  fullName: Google.GenAI.Types.MediaProcessing.GetHashCode
+  nameWithType: MediaProcessing.GetHashCode
+- uid: Google.GenAI.Types.MediaProcessing.MediaProcessingUnspecified
+  name: MediaProcessingUnspecified
+  href: api/Google.GenAI.Types.MediaProcessing.html#Google_GenAI_Types_MediaProcessing_MediaProcessingUnspecified
+  commentId: P:Google.GenAI.Types.MediaProcessing.MediaProcessingUnspecified
+  fullName: Google.GenAI.Types.MediaProcessing.MediaProcessingUnspecified
+  nameWithType: MediaProcessing.MediaProcessingUnspecified
+- uid: Google.GenAI.Types.MediaProcessing.MediaProcessingUnspecified*
+  name: MediaProcessingUnspecified
+  href: api/Google.GenAI.Types.MediaProcessing.html#Google_GenAI_Types_MediaProcessing_MediaProcessingUnspecified_
+  commentId: Overload:Google.GenAI.Types.MediaProcessing.MediaProcessingUnspecified
+  isSpec: "True"
+  fullName: Google.GenAI.Types.MediaProcessing.MediaProcessingUnspecified
+  nameWithType: MediaProcessing.MediaProcessingUnspecified
+- uid: Google.GenAI.Types.MediaProcessing.Static
+  name: Static
+  href: api/Google.GenAI.Types.MediaProcessing.html#Google_GenAI_Types_MediaProcessing_Static
+  commentId: P:Google.GenAI.Types.MediaProcessing.Static
+  fullName: Google.GenAI.Types.MediaProcessing.Static
+  nameWithType: MediaProcessing.Static
+- uid: Google.GenAI.Types.MediaProcessing.Static*
+  name: Static
+  href: api/Google.GenAI.Types.MediaProcessing.html#Google_GenAI_Types_MediaProcessing_Static_
+  commentId: Overload:Google.GenAI.Types.MediaProcessing.Static
+  isSpec: "True"
+  fullName: Google.GenAI.Types.MediaProcessing.Static
+  nameWithType: MediaProcessing.Static
+- uid: Google.GenAI.Types.MediaProcessing.ToString
+  name: ToString()
+  href: api/Google.GenAI.Types.MediaProcessing.html#Google_GenAI_Types_MediaProcessing_ToString
+  commentId: M:Google.GenAI.Types.MediaProcessing.ToString
+  fullName: Google.GenAI.Types.MediaProcessing.ToString()
+  nameWithType: MediaProcessing.ToString()
+- uid: Google.GenAI.Types.MediaProcessing.ToString*
+  name: ToString
+  href: api/Google.GenAI.Types.MediaProcessing.html#Google_GenAI_Types_MediaProcessing_ToString_
+  commentId: Overload:Google.GenAI.Types.MediaProcessing.ToString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.MediaProcessing.ToString
+  nameWithType: MediaProcessing.ToString
+- uid: Google.GenAI.Types.MediaProcessing.Value
+  name: Value
+  href: api/Google.GenAI.Types.MediaProcessing.html#Google_GenAI_Types_MediaProcessing_Value
+  commentId: P:Google.GenAI.Types.MediaProcessing.Value
+  fullName: Google.GenAI.Types.MediaProcessing.Value
+  nameWithType: MediaProcessing.Value
+- uid: Google.GenAI.Types.MediaProcessing.Value*
+  name: Value
+  href: api/Google.GenAI.Types.MediaProcessing.html#Google_GenAI_Types_MediaProcessing_Value_
+  commentId: Overload:Google.GenAI.Types.MediaProcessing.Value
+  isSpec: "True"
+  fullName: Google.GenAI.Types.MediaProcessing.Value
+  nameWithType: MediaProcessing.Value
+- uid: Google.GenAI.Types.MediaProcessing.op_Implicit(System.String)~Google.GenAI.Types.MediaProcessing
+  name: implicit operator MediaProcessing(string)
+  href: api/Google.GenAI.Types.MediaProcessing.html#Google_GenAI_Types_MediaProcessing_op_Implicit_System_String__Google_GenAI_Types_MediaProcessing
+  commentId: M:Google.GenAI.Types.MediaProcessing.op_Implicit(System.String)~Google.GenAI.Types.MediaProcessing
+  name.vb: CType(String)
+  fullName: Google.GenAI.Types.MediaProcessing.implicit operator Google.GenAI.Types.MediaProcessing(string)
+  fullName.vb: Google.GenAI.Types.MediaProcessing.CType(String)
+  nameWithType: MediaProcessing.implicit operator MediaProcessing(string)
+  nameWithType.vb: MediaProcessing.CType(String)
+- uid: Google.GenAI.Types.MediaProcessing.op_Implicit*
+  name: implicit operator
+  href: api/Google.GenAI.Types.MediaProcessing.html#Google_GenAI_Types_MediaProcessing_op_Implicit_
+  commentId: Overload:Google.GenAI.Types.MediaProcessing.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: Google.GenAI.Types.MediaProcessing.implicit operator
+  fullName.vb: Google.GenAI.Types.MediaProcessing.CType
+  nameWithType: MediaProcessing.implicit operator
+  nameWithType.vb: MediaProcessing.CType
+- uid: Google.GenAI.Types.MediaProcessingConverter
+  name: MediaProcessingConverter
+  href: api/Google.GenAI.Types.MediaProcessingConverter.html
+  commentId: T:Google.GenAI.Types.MediaProcessingConverter
+  fullName: Google.GenAI.Types.MediaProcessingConverter
+  nameWithType: MediaProcessingConverter
+- uid: Google.GenAI.Types.MediaProcessingConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.MediaProcessingConverter.html#Google_GenAI_Types_MediaProcessingConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.MediaProcessingConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name.vb: Read(Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.MediaProcessingConverter.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: Google.GenAI.Types.MediaProcessingConverter.Read(System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  nameWithType: MediaProcessingConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: MediaProcessingConverter.Read(Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Google.GenAI.Types.MediaProcessingConverter.Read*
+  name: Read
+  href: api/Google.GenAI.Types.MediaProcessingConverter.html#Google_GenAI_Types_MediaProcessingConverter_Read_
+  commentId: Overload:Google.GenAI.Types.MediaProcessingConverter.Read
+  isSpec: "True"
+  fullName: Google.GenAI.Types.MediaProcessingConverter.Read
+  nameWithType: MediaProcessingConverter.Read
+- uid: Google.GenAI.Types.MediaProcessingConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.MediaProcessing,System.Text.Json.JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, MediaProcessing, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.MediaProcessingConverter.html#Google_GenAI_Types_MediaProcessingConverter_Write_System_Text_Json_Utf8JsonWriter_Google_GenAI_Types_MediaProcessing_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.MediaProcessingConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.MediaProcessing,System.Text.Json.JsonSerializerOptions)
+  fullName: Google.GenAI.Types.MediaProcessingConverter.Write(System.Text.Json.Utf8JsonWriter, Google.GenAI.Types.MediaProcessing, System.Text.Json.JsonSerializerOptions)
+  nameWithType: MediaProcessingConverter.Write(Utf8JsonWriter, MediaProcessing, JsonSerializerOptions)
+- uid: Google.GenAI.Types.MediaProcessingConverter.Write*
+  name: Write
+  href: api/Google.GenAI.Types.MediaProcessingConverter.html#Google_GenAI_Types_MediaProcessingConverter_Write_
+  commentId: Overload:Google.GenAI.Types.MediaProcessingConverter.Write
+  isSpec: "True"
+  fullName: Google.GenAI.Types.MediaProcessingConverter.Write
+  nameWithType: MediaProcessingConverter.Write
 - uid: Google.GenAI.Types.MediaResolution
   name: MediaResolution
   href: api/Google.GenAI.Types.MediaResolution.html
@@ -27586,6 +27766,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Part.InlineData
   nameWithType: Part.InlineData
+- uid: Google.GenAI.Types.Part.MediaProcessing
+  name: MediaProcessing
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_MediaProcessing
+  commentId: P:Google.GenAI.Types.Part.MediaProcessing
+  fullName: Google.GenAI.Types.Part.MediaProcessing
+  nameWithType: Part.MediaProcessing
+- uid: Google.GenAI.Types.Part.MediaProcessing*
+  name: MediaProcessing
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_MediaProcessing_
+  commentId: Overload:Google.GenAI.Types.Part.MediaProcessing
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Part.MediaProcessing
+  nameWithType: Part.MediaProcessing
 - uid: Google.GenAI.Types.Part.MediaResolution
   name: MediaResolution
   href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_MediaResolution
@@ -36736,6 +36929,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ToolType.GoogleSearchWeb
   nameWithType: ToolType.GoogleSearchWeb
+- uid: Google.GenAI.Types.ToolType.MediaProcessing
+  name: MediaProcessing
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_MediaProcessing
+  commentId: P:Google.GenAI.Types.ToolType.MediaProcessing
+  fullName: Google.GenAI.Types.ToolType.MediaProcessing
+  nameWithType: ToolType.MediaProcessing
+- uid: Google.GenAI.Types.ToolType.MediaProcessing*
+  name: MediaProcessing
+  href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_MediaProcessing_
+  commentId: Overload:Google.GenAI.Types.ToolType.MediaProcessing
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ToolType.MediaProcessing
+  nameWithType: ToolType.MediaProcessing
 - uid: Google.GenAI.Types.ToolType.ToString
   name: ToString()
   href: api/Google.GenAI.Types.ToolType.html#Google_GenAI_Types_ToolType_ToString

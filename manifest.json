@@ -4284,6 +4284,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.MediaProcessing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.MediaProcessing.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.MediaProcessing",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.MediaProcessing.yml\" sourcestartlinenumber=\"1\">How the model processes input media for understanding.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.MediaProcessingConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.MediaProcessingConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.MediaProcessingConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.MediaResolution.yml",
       "output": {
         ".html": {
