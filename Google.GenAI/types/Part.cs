@@ -190,6 +190,16 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// How the model processes this part's media for understanding.
+    /// </summary>
+    [JsonPropertyName("mediaProcessing")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public MediaProcessing
+        ? MediaProcessing {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a Part object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

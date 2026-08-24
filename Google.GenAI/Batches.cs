@@ -1622,6 +1622,12 @@ namespace Google.GenAI {
             Common.GetValueByPath(fromObject, new string[] { "audioTranscription" }));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "mediaProcessing" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "mediaProcessing" },
+            Common.GetValueByPath(fromObject, new string[] { "mediaProcessing" }));
+      }
+
       return toObject;
     }
 

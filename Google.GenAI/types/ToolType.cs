@@ -63,10 +63,15 @@ namespace Google.GenAI.Types {
     /// </summary>
     public static ToolType FileSearch { get; } = new("FILE_SEARCH");
 
+    /// <summary>
+    /// Media processing tool.
+    /// </summary>
+    public static ToolType MediaProcessing { get; } = new("MEDIA_PROCESSING");
+
     public static IReadOnlyList<ToolType> AllValues {
       get;
-    } = new[] { ToolTypeUnspecified, GoogleSearchWeb, GoogleSearchImage,
-                UrlContext,          GoogleMaps,      FileSearch };
+    } = new[] { ToolTypeUnspecified, GoogleSearchWeb, GoogleSearchImage, UrlContext,
+                GoogleMaps,          FileSearch,      MediaProcessing };
 
     public static ToolType FromString(string value) {
       if (string.IsNullOrEmpty(value)) {
