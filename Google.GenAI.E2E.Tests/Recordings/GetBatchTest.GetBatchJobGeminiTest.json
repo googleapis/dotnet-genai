@@ -4,8 +4,8 @@
     {
       "request": {
         "method": "POST",
-        "url": "/v1beta/models/gemini-2.5-flash:batchGenerateContent",
-        "request": "POST /v1beta/models/gemini-2.5-flash:batchGenerateContent HTTP/1.1",
+        "url": "/v1/models/gemini-2.5-flash:batchGenerateContent",
+        "request": "POST /v1/models/gemini-2.5-flash:batchGenerateContent HTTP/1.1",
         "headers": {
           "Content-Length": "95",
           "Content-Type": "application/json; charset=utf-8",
@@ -26,7 +26,7 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "5986830cfd6e2652b8c75996ceacf54b574c134d41f03797be3160ab6945476f",
+      "shaSum": "b040c436aca49aaa08d2e7459fef62f4e92bf6cd7f47a84b668742d6a5443534",
       "response": {
         "statusCode": 200,
         "headers": {
@@ -65,20 +65,20 @@
     {
       "request": {
         "method": "GET",
-        "url": "/v1beta/batches/zywfstu5w17d4mv2uchir5rw0xlazy3ts9rt",
-        "request": "GET /v1beta/batches/zywfstu5w17d4mv2uchir5rw0xlazy3ts9rt HTTP/1.1",
+        "url": "/v1/batches/zywfstu5w17d4mv2uchir5rw0xlazy3ts9rt",
+        "request": "GET /v1/batches/zywfstu5w17d4mv2uchir5rw0xlazy3ts9rt HTTP/1.1",
         "headers": {
           "Test-Name": "GetBatchTest.GetBatchJobGeminiTest"
         },
         "bodySegments": [
           null
         ],
-        "previousRequest": "5986830cfd6e2652b8c75996ceacf54b574c134d41f03797be3160ab6945476f",
+        "previousRequest": "b040c436aca49aaa08d2e7459fef62f4e92bf6cd7f47a84b668742d6a5443534",
         "serverAddress": "generativelanguage.googleapis.com",
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "61143b00bd38285e2841fa168693ea9233ddffe3671c82a7e7d8a1e62deba5da",
+      "shaSum": "56fcbc969c951a405e451d934172b27781920c13600cb4a78188e0789b0e33cb",
       "response": {
         "statusCode": 200,
         "headers": {

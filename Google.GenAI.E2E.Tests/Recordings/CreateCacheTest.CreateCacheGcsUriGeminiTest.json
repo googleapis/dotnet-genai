@@ -4,8 +4,8 @@
     {
       "request": {
         "method": "POST",
-        "url": "/v1beta/cachedContents",
-        "request": "POST /v1beta/cachedContents HTTP/1.1",
+        "url": "/v1/cachedContents",
+        "request": "POST /v1/cachedContents HTTP/1.1",
         "headers": {
           "Content-Length": "420",
           "Content-Type": "application/json; charset=utf-8",
@@ -49,7 +49,7 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "079cd663279eee07eb5275d72920bb45a02bf90a0408129c72a4223a2254bc7d",
+      "shaSum": "bd4dab316948b442ee5e06bd85ac0a34adca9da5bb3c2623dd253215fe841d16",
       "response": {
         "statusCode": 400,
         "headers": {
