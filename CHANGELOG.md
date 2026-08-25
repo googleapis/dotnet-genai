@@ -1,5 +1,12 @@
 # Changelog
 
+## Version 1.20.0, released 2026-08-25
+
+
+### New features
+
+* Add AudioTranscriptionConfigMode ([cc087b0](https://github.com/googleapis/dotnet-genai/commit/cc087b0456bf4584a803c4ca36ba021bcf31cf1a))
+
 ## Version 1.19.0, released 2026-08-19
 
 
