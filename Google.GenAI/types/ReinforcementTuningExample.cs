@@ -56,6 +56,16 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Optional. Corresponds to tools in user-facing GenerateContentRequest.
+    /// </summary>
+    [JsonPropertyName("tools")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public List<Tool>
+        ? Tools {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a ReinforcementTuningExample object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
