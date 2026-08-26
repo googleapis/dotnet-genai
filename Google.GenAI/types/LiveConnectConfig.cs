@@ -283,6 +283,16 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Saves live audio data to session and artifact service.
+    /// </summary>
+    [JsonPropertyName("saveLiveBlob")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public bool
+        ? SaveLiveBlob {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a LiveConnectConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
