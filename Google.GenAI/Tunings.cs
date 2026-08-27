@@ -81,6 +81,38 @@ namespace Google.GenAI {
       return toObject;
     }
 
+    internal JsonNode ComputerUseToVertex(JsonNode fromObject, JsonObject parentObject,
+                                          JsonNode rootObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "environment" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "environment" },
+                              Common.GetValueByPath(fromObject, new string[] { "environment" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "excludedPredefinedFunctions" }) !=
+          null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "excludedPredefinedFunctions" },
+            Common.GetValueByPath(fromObject, new string[] { "excludedPredefinedFunctions" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "enablePromptInjectionDetection" }) !=
+          null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "enablePromptInjectionDetection" },
+            Common.GetValueByPath(fromObject, new string[] { "enablePromptInjectionDetection" }));
+      }
+
+      if (!Common.IsZero(
+              Common.GetValueByPath(fromObject, new string[] { "disabledSafetyPolicies" }))) {
+        throw new NotSupportedException(
+            "disabledSafetyPolicies parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
+      }
+
+      return toObject;
+    }
+
     internal JsonNode ContentToVertex(JsonNode fromObject, JsonObject parentObject,
                                       JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
@@ -1038,6 +1070,24 @@ namespace Google.GenAI {
       return toObject;
     }
 
+    internal JsonNode McpServerToVertex(JsonNode fromObject, JsonObject parentObject,
+                                        JsonNode rootObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "name" }))) {
+        throw new NotSupportedException(
+            "name parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
+      }
+
+      if (!Common.IsZero(
+              Common.GetValueByPath(fromObject, new string[] { "streamableHttpTransport" }))) {
+        throw new NotSupportedException(
+            "streamableHttpTransport parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
+      }
+
+      return toObject;
+    }
+
     internal JsonNode PartToVertex(JsonNode fromObject, JsonObject parentObject,
                                    JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
@@ -1158,6 +1208,100 @@ namespace Google.GenAI {
             ContentToVertex(Common.ParseToJsonNode(Common.GetValueByPath(
                                 fromObject, new string[] { "systemInstruction" })),
                             toObject, rootObject));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "tools" }) != null) {
+        JsonArray keyArray = (JsonArray)Common.GetValueByPath(fromObject, new string[] { "tools" });
+        JsonArray result = new JsonArray();
+
+        foreach (var record in keyArray) {
+          result.Add(ToolToVertex(Common.ParseToJsonNode(record), toObject, rootObject));
+        }
+        Common.SetValueByPath(toObject, new string[] { "tools" }, result);
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode ToolToVertex(JsonNode fromObject, JsonObject parentObject,
+                                   JsonNode rootObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "retrieval" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "retrieval" },
+                              Common.GetValueByPath(fromObject, new string[] { "retrieval" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "computerUse" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "computerUse" },
+                              ComputerUseToVertex(Common.ParseToJsonNode(Common.GetValueByPath(
+                                                      fromObject, new string[] { "computerUse" })),
+                                                  toObject, rootObject));
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "fileSearch" }))) {
+        throw new NotSupportedException(
+            "fileSearch parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "googleSearch" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "googleSearch" },
+                              Common.GetValueByPath(fromObject, new string[] { "googleSearch" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "googleMaps" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "googleMaps" },
+                              Common.GetValueByPath(fromObject, new string[] { "googleMaps" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "codeExecution" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "codeExecution" },
+                              Common.GetValueByPath(fromObject, new string[] { "codeExecution" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "enterpriseWebSearch" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "enterpriseWebSearch" },
+            Common.GetValueByPath(fromObject, new string[] { "enterpriseWebSearch" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "functionDeclarations" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "functionDeclarations" },
+            Common.GetValueByPath(fromObject, new string[] { "functionDeclarations" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "googleSearchRetrieval" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "googleSearchRetrieval" },
+            Common.GetValueByPath(fromObject, new string[] { "googleSearchRetrieval" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "parallelAiSearch" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "parallelAiSearch" },
+            Common.GetValueByPath(fromObject, new string[] { "parallelAiSearch" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "urlContext" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "urlContext" },
+                              Common.GetValueByPath(fromObject, new string[] { "urlContext" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "mcpServers" }) != null) {
+        JsonArray keyArray =
+            (JsonArray)Common.GetValueByPath(fromObject, new string[] { "mcpServers" });
+        JsonArray result = new JsonArray();
+
+        foreach (var record in keyArray) {
+          result.Add(McpServerToVertex(Common.ParseToJsonNode(record), toObject, rootObject));
+        }
+        Common.SetValueByPath(toObject, new string[] { "mcpServers" }, result);
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "exaAiSearch" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "exaAiSearch" },
+                              Common.GetValueByPath(fromObject, new string[] { "exaAiSearch" }));
       }
 
       return toObject;

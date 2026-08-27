@@ -48,6 +48,17 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Output only. In case of an error for this reward, this field will be populated with a
+    /// detailed error status.
+    /// </summary>
+    [JsonPropertyName("errorStatus")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public GoogleRpcStatus
+        ? ErrorStatus {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a ReinforcementTuningRewardInfo object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
