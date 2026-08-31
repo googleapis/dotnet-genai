@@ -1128,9 +1128,10 @@ namespace Google.GenAI {
                               Common.GetValueByPath(fromObject, new string[] { "safetySettings" }));
       }
 
-      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "translationConfig" }))) {
-        throw new NotSupportedException(
-            "translationConfig parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
+      if (Common.GetValueByPath(fromObject, new string[] { "translationConfig" }) != null) {
+        Common.SetValueByPath(
+            parentObject, new string[] { "setup", "generationConfig", "translationConfig" },
+            Common.GetValueByPath(fromObject, new string[] { "translationConfig" }));
       }
 
       return toObject;
