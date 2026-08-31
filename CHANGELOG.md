@@ -1,5 +1,12 @@
 # Changelog
 
+## Version 1.21.0, released 2026-08-31
+
+
+### New features
+
+* Add translation_config SDK support for GEAP. ([87555fd](https://github.com/googleapis/dotnet-genai/commit/87555fdde3fc63a934000f259f73eaf8c1021911))
+
 ## Version 1.20.0, released 2026-08-25
 
 
