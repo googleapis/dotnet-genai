@@ -16,6 +16,8 @@
 
 using Google.Apis.Auth.OAuth2;
 
+using Google.GenAI.Gaos;
+
 namespace Google.GenAI
 {
   /// <summary>
@@ -36,6 +38,39 @@ namespace Google.GenAI
     public Files Files { get; }
     public Tokens Tokens { get; }
 
+    /// <summary>
+    /// EXPERIMENTAL: The interactions service is experimental.
+    /// </summary>
+    public IInteractions Interactions
+    {
+      get {
+        if (!_warnedInteractions) {
+          lock (_warnLock) {
+            if (!_warnedInteractions) {
+              System.Diagnostics.Trace.TraceWarning(
+                  "Warning: Interactions service is experimental and subject to change.");
+              _warnedInteractions = true;
+            }
+          }
+        }
+        return _interactionsClient.Interactions;
+      }
+    }
+
+    /// <summary>
+    /// EXPERIMENTAL: The webhooks service is experimental.
+    /// </summary>
+    public IWebhooks Webhooks => _interactionsClient.Webhooks;
+
+    /// <summary>
+    /// EXPERIMENTAL: The agents service is experimental.
+    /// </summary>
+    public IAgents Agents => _interactionsClient.Agents;
+
+    private readonly Google.GenAI.Gaos.GenAI _interactionsClient;
+
+    private static volatile bool _warnedInteractions = false;
+    private static readonly object _warnLock = new object();
     private int _disposed = 0;
 
     /// <summary>
@@ -133,6 +168,61 @@ namespace Google.GenAI
       Operations = new Operations(_apiClient);
       Files = new Files(_apiClient);
       Tokens = new Tokens(_apiClient);
+      string? apiVersion = _apiClient.HttpOptions.ApiVersion;
+      if (_apiClient.VertexAI && !string.IsNullOrEmpty(_apiClient.Project) && !string.IsNullOrEmpty(_apiClient.Location))
+      {
+          apiVersion = $"{apiVersion}/projects/{_apiClient.Project}/locations/{_apiClient.Location}";
+      }
+
+      Google.GenAI.Gaos.Utils.Retries.RetryConfig? gaosRetryConfig = null;
+      var retryOptions = _apiClient.HttpOptions.RetryOptions;
+      if (retryOptions != null)
+      {
+          var backoff = new Google.GenAI.Gaos.Utils.Retries.BackoffStrategy(
+              initialIntervalMs: (long)((retryOptions.InitialDelay ?? 1.0) * 1000),
+              maxIntervalMs: (long)((retryOptions.MaxDelay ?? 60.0) * 1000),
+              maxElapsedTimeMs: 30000L,
+              exponent: retryOptions.ExpBase ?? 2.0
+          );
+          gaosRetryConfig = new Google.GenAI.Gaos.Utils.Retries.RetryConfig(
+              strategy: Google.GenAI.Gaos.Utils.Retries.RetryConfig.RetryStrategy.ATTEMPT_COUNT_BACKOFF,
+              backoff: backoff,
+              retryConnectionErrors: true,
+              maxRetries: Math.Max(0, (retryOptions.Attempts ?? 5) - 1)
+          );
+      }
+
+      _interactionsClient = new Google.GenAI.Gaos.GenAI(
+          securitySource: () =>
+          {
+              var security = new Google.GenAI.Gaos.Models.Components.Security();
+              if (_apiClient.ApiKey != null)
+              {
+                  security.ApiKey = _apiClient.ApiKey;
+              }
+              else if (_apiClient.Credentials != null)
+              {
+                  security.AccessToken = _apiClient.Credentials.GetAccessTokenForRequestAsync()
+                      .GetAwaiter().GetResult();
+              }
+              if (_apiClient.HttpOptions.Headers != null)
+              {
+                  security.DefaultHeaders = new Dictionary<string, string>();
+                  foreach (var kvp in _apiClient.HttpOptions.Headers)
+                  {
+                      if (!kvp.Key.Equals("Content-Type", StringComparison.OrdinalIgnoreCase))
+                      {
+                          security.DefaultHeaders[kvp.Key] = kvp.Value;
+                      }
+                  }
+              }
+              return security;
+          },
+          serverUrl: _apiClient.HttpOptions.BaseUrl,
+          apiVersion: apiVersion,
+          client: new GaosHttpClient(_apiClient.HttpClient),
+          retryConfig: gaosRetryConfig
+      );
     }
 
     static string? inferBaseUrl(bool vertexAI)
