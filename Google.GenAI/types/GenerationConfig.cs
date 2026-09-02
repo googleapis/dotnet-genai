@@ -318,7 +318,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Optional. Config for translation. This field is not supported in Vertex AI.
+    /// Optional. Config for translation.
     /// </summary>
     [JsonPropertyName("translationConfig")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

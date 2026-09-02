@@ -74,27 +74,6 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode BlobToMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "data" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "data" },
-                              Common.GetValueByPath(fromObject, new string[] { "data" }));
-      }
-
-      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "displayName" }))) {
-        throw new NotSupportedException(
-            "displayName parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "mimeType" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "mimeType" },
-                              Common.GetValueByPath(fromObject, new string[] { "mimeType" }));
-      }
-
-      return toObject;
-    }
-
     internal JsonNode ComputerUseToVertex(JsonNode fromObject, JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
@@ -163,27 +142,6 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "role" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "role" },
                               Common.GetValueByPath(fromObject, new string[] { "role" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode FileDataToMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "displayName" }))) {
-        throw new NotSupportedException(
-            "displayName parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "fileUri" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "fileUri" },
-                              Common.GetValueByPath(fromObject, new string[] { "fileUri" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "mimeType" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "mimeType" },
-                              Common.GetValueByPath(fromObject, new string[] { "mimeType" }));
       }
 
       return toObject;
@@ -357,9 +315,10 @@ namespace Google.GenAI {
                               Common.GetValueByPath(fromObject, new string[] { "responseFormat" }));
       }
 
-      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "translationConfig" }))) {
-        throw new NotSupportedException(
-            "translationConfig parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
+      if (Common.GetValueByPath(fromObject, new string[] { "translationConfig" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "translationConfig" },
+            Common.GetValueByPath(fromObject, new string[] { "translationConfig" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "audioTranscriptionConfig" }) != null) {
@@ -483,11 +442,8 @@ namespace Google.GenAI {
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "realtimeInput" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "realtimeInput" },
-            LiveClientRealtimeInputToMldev(Common.ParseToJsonNode(Common.GetValueByPath(
-                                               fromObject, new string[] { "realtimeInput" })),
-                                           toObject));
+        Common.SetValueByPath(toObject, new string[] { "realtimeInput" },
+                              Common.GetValueByPath(fromObject, new string[] { "realtimeInput" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "realtimeInputParameters" }) != null) {
@@ -543,57 +499,6 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "toolResponse" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "toolResponse" },
                               Common.GetValueByPath(fromObject, new string[] { "toolResponse" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode LiveClientRealtimeInputToMldev(JsonNode fromObject, JsonObject parentObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "mediaChunks" }) != null) {
-        JsonArray keyArray =
-            (JsonArray)Common.GetValueByPath(fromObject, new string[] { "mediaChunks" });
-        JsonArray result = new JsonArray();
-
-        foreach (var record in keyArray) {
-          result.Add(BlobToMldev(Common.ParseToJsonNode(record), toObject));
-        }
-        Common.SetValueByPath(toObject, new string[] { "mediaChunks" }, result);
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "audio" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "audio" },
-                              BlobToMldev(Common.ParseToJsonNode(Common.GetValueByPath(
-                                              fromObject, new string[] { "audio" })),
-                                          toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "audioStreamEnd" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "audioStreamEnd" },
-                              Common.GetValueByPath(fromObject, new string[] { "audioStreamEnd" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "video" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "video" },
-                              BlobToMldev(Common.ParseToJsonNode(Common.GetValueByPath(
-                                              fromObject, new string[] { "video" })),
-                                          toObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "text" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "text" },
-                              Common.GetValueByPath(fromObject, new string[] { "text" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "activityStart" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "activityStart" },
-                              Common.GetValueByPath(fromObject, new string[] { "activityStart" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "activityEnd" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "activityEnd" },
-                              Common.GetValueByPath(fromObject, new string[] { "activityEnd" }));
       }
 
       return toObject;
@@ -1185,22 +1090,15 @@ namespace Google.GenAI {
       JsonObject toObject = new JsonObject();
 
       if (Common.GetValueByPath(fromObject, new string[] { "media" }) != null) {
-        JsonArray keyArray = (JsonArray)Transformers.TBlobs(
-            Common.GetValueByPath(fromObject, new string[] { "media" }));
-        JsonArray result = new JsonArray();
-
-        foreach (var record in keyArray) {
-          result.Add(BlobToMldev(Common.ParseToJsonNode(record), toObject));
-        }
-        Common.SetValueByPath(toObject, new string[] { "mediaChunks" }, result);
+        Common.SetValueByPath(
+            toObject, new string[] { "mediaChunks" },
+            Transformers.TBlobs(Common.GetValueByPath(fromObject, new string[] { "media" })));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "audio" }) != null) {
         Common.SetValueByPath(
             toObject, new string[] { "audio" },
-            BlobToMldev(Common.ParseToJsonNode(Transformers.TAudioBlob(
-                            Common.GetValueByPath(fromObject, new string[] { "audio" }))),
-                        toObject));
+            Transformers.TAudioBlob(Common.GetValueByPath(fromObject, new string[] { "audio" })));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "audioStreamEnd" }) != null) {
@@ -1211,9 +1109,7 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "video" }) != null) {
         Common.SetValueByPath(
             toObject, new string[] { "video" },
-            BlobToMldev(Common.ParseToJsonNode(Transformers.TImageBlob(
-                            Common.GetValueByPath(fromObject, new string[] { "video" }))),
-                        toObject));
+            Transformers.TImageBlob(Common.GetValueByPath(fromObject, new string[] { "video" })));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "text" }) != null) {
@@ -1455,9 +1351,7 @@ namespace Google.GenAI {
 
       if (Common.GetValueByPath(fromObject, new string[] { "fileData" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "fileData" },
-                              FileDataToMldev(Common.ParseToJsonNode(Common.GetValueByPath(
-                                                  fromObject, new string[] { "fileData" })),
-                                              toObject));
+                              Common.GetValueByPath(fromObject, new string[] { "fileData" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "functionCall" }) != null) {
@@ -1475,9 +1369,7 @@ namespace Google.GenAI {
 
       if (Common.GetValueByPath(fromObject, new string[] { "inlineData" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "inlineData" },
-                              BlobToMldev(Common.ParseToJsonNode(Common.GetValueByPath(
-                                              fromObject, new string[] { "inlineData" })),
-                                          toObject));
+                              Common.GetValueByPath(fromObject, new string[] { "inlineData" }));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "text" }) != null) {

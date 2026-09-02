@@ -67,6 +67,16 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Optional. The video output resolution. Supported values: "360p", "720p", "1080p", "4k".
+    /// </summary>
+    [JsonPropertyName("resolution")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string
+        ? Resolution {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a VideoResponseFormat object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

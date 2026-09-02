@@ -28,8 +28,8 @@ namespace Google.GenAI.Types {
 
   public record AudioTranscriptionConfig {
     /// <summary>
-    /// BCP-47 language codes providing hints about the languages present in the audio. If omitted
-    /// or empty, defaults to automatic language detection.
+    /// Optional. BCP-47 language codes providing hints about the languages present in the audio. If
+    /// omitted or empty, defaults to automatic language detection.
     /// </summary>
     [JsonPropertyName("languageCodes")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
