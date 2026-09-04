@@ -110,7 +110,7 @@ public class GenerateContentSimpleText {
     // assuming credentials are set up in environment variables as instructed above.
     var client = new Client();
     var response = await client.Models.GenerateContentAsync(
-      model: "gemini-2.0-flash", contents: "why is the sky blue?"
+      model: "gemini-flash-latest", contents: "why is the sky blue?"
     );
     Console.WriteLine(response.Candidates[0].Content.Parts[0].Text);
   }
@@ -147,7 +147,7 @@ public class GenerateContentWithConfig {
         MaxOutputTokens = 3
     };
     var response = await client.Models.GenerateContentAsync(
-        model: "gemini-2.0-flash",
+        model: "gemini-flash-latest",
         contents: "high",
         config: generateContentConfig
     );
@@ -180,7 +180,7 @@ class GenerateContentWithSafetySettings {
       SafetySettings =  new List<SafetySetting>(safetySettings)
     };
     var response = await client.Models.GenerateContentAsync(
-        model: "gemini-2.0-flash",
+        model: "gemini-flash-latest",
         contents: "say something hateful",
         config: generateContentConfig
     );
@@ -223,7 +223,7 @@ public class GenerateContentWithJsonSchema {
     }";
 
     var response = await client.Models.GenerateContentAsync(
-        model: "gemini-3.5-flash",
+        model: "gemini-flash-latest",
         contents: "Give me information about Australia",
         config: new GenerateContentConfig {
             ResponseMimeType = "application/json",
@@ -277,7 +277,7 @@ public class GenerateContentWithJsonSchema {
     };
 
     var response = await client.Models.GenerateContentAsync(
-        model: "gemini-2.0-flash",
+        model: "gemini-flash-latest",
         contents: "Give me information about Australia",
         config: new GenerateContentConfig {
             ResponseMimeType = "application/json",
@@ -308,7 +308,7 @@ class GenerateContentStreamSimpleText {
     // assuming credentials are set up in environment variables as instructed above.
     var client = new Client();
     await foreach (var chunk in client.Models.GenerateContentStreamAsync(
-        model: "gemini-2.0-flash",
+        model: "gemini-flash-latest",
         contents: "why is the sky blue?"
     )) {
         Console.WriteLine(chunk.Candidates[0].Content.Parts[0].Text);
@@ -328,7 +328,7 @@ using Microsoft.Extensions.AI;
 using System.ComponentModel
 
 // assuming credentials are set up in environment variables as instructed above.
-IChatClient chatClient = new Client().AsIChatClient("gemini-2.0-flash")
+IChatClient chatClient = new Client().AsIChatClient("gemini-flash-latest")
     .AsBuilder()
     .UseFunctionInvocation()
     .UseOpenTelemetry()
@@ -787,7 +787,7 @@ public class CountTokensExample {
     var client = new Client();
 
     var response = await client.Models.CountTokensAsync(
-      model: "gemini-2.0-flash",
+      model: "gemini-flash-latest",
       contents: "What is the capital of France?"
     );
 
@@ -809,7 +809,7 @@ public class ComputeTokensExample {
     var client = new Client();
 
     var response = await client.Models.ComputeTokensAsync(
-      model: "gemini-2.0-flash",
+      model: "gemini-flash-latest",
       contents: "What is the capital of France?"
     );
 
@@ -877,7 +877,7 @@ public class GetModelExample {
 
     // get a base model
     var baseModelResponse = await client.Models.GetAsync(
-      model: "gemini-2.5-flash"
+      model: "gemini-flash-latest"
     );
 
     // get a tuned model
@@ -996,7 +996,7 @@ public class CreateBatchWithGcs {
                 Format = "jsonl"
             }
         };
-        var response = await client.Batches.CreateAsync("gemini-2.5-flash", src, config);
+        var response = await client.Batches.CreateAsync("gemini-flash-latest", src, config);
         Console.WriteLine($"Created Gemini Enterprise Agent Platform batch job: {response.Name}");
     }
 }
@@ -1029,7 +1029,7 @@ public class CreateBatchWithBigQuery {
                 Format = "bigquery"
             }
         };
-        var response = await client.Batches.CreateAsync("gemini-2.5-flash", src, config);
+        var response = await client.Batches.CreateAsync("gemini-flash-latest", src, config);
         Console.WriteLine($"Created Gemini Enterprise Agent Platform batch job: {response.Name}");
     }
 }
@@ -1076,7 +1076,7 @@ public class CreateBatchWithInlinedRequests {
         {
             DisplayName = "test_batch_inlined"
         };
-        var response = await client.Batches.CreateAsync("gemini-2.5-flash", src, config);
+        var response = await client.Batches.CreateAsync("gemini-flash-latest", src, config);
         Console.WriteLine($"Created Gemini API batch job: {response.Name}");
     }
 }
@@ -1103,7 +1103,7 @@ public class CreateBatchWithFile {
         {
             DisplayName = "test_batch_file"
         };
-        var response = await client.Batches.CreateAsync("gemini-2.5-flash", src, config);
+        var response = await client.Batches.CreateAsync("gemini-flash-latest", src, config);
         Console.WriteLine($"Created Gemini API batch job: {response.Name}");
     }
 }
@@ -1289,7 +1289,7 @@ public class CreateCache {
             DisplayName = "my-enterprise-cache",
             Ttl = "600s"
         };
-        var enterpriseResponse = await agenterpriseClient.Caches.CreateAsync(model: "gemini-2.5-flash", config: enterpriseConfig);
+        var enterpriseResponse = await agenterpriseClient.Caches.CreateAsync(model: "gemini-flash-latest", config: enterpriseConfig);
         Console.WriteLine($"Created Gemini Enterprise Agent Platform cache: {enterpriseResponse.Name}");
 
         // Example for Gemini API with File URIs:
@@ -1306,7 +1306,7 @@ public class CreateCache {
             DisplayName = "my-gemini-cache",
             Ttl = "600s"
         };
-        var geminiResponse = await geminiClient.Caches.CreateAsync(model: "gemini-2.5-flash", config: geminiConfig);
+        var geminiResponse = await geminiClient.Caches.CreateAsync(model: "gemini-flash-latest", config: geminiConfig);
         Console.WriteLine($"Created Gemini API cache: {geminiResponse.Name}");
     }
 }
@@ -1409,7 +1409,7 @@ public class CreateTuningJobSimple {
       GcsUri = "gs://cloud-samples-data/ai-platform/generative_ai/gemini-2_0/text/sft_train_data.jsonl"
     };
     var tuningJob = await client.Tunings.TuneAsync(
-      baseModel: "gemini-2.5-flash",
+      baseModel: "gemini-flash-latest",
       trainingDataset: trainingDataset,
     );
     Console.WriteLine(tuningJob.State);
@@ -1445,7 +1445,7 @@ public class CreateTuningJobWithConfig {
       ValidationDataset = validationDataset,
     };
     var tuningJob = await client.Tunings.TuneAsync(
-      baseModel: "gemini-2.5-flash",
+      baseModel: "gemini-flash-latest",
       trainingDataset: trainingDataset,
       config: config,
     );
@@ -1476,7 +1476,7 @@ public class PreferenceTuningJob {
       EpochCount = 1,
     };
     var tuningJob = await client.Tunings.TuneAsync(
-      baseModel: "gemini-2.5-flash",
+      baseModel: "gemini-flash-latest",
       trainingDataset: trainingDataset,
       config: config,
     );
