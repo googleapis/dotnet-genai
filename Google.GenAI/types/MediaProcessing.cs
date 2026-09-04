@@ -22,7 +22,8 @@ using System.Text.Json;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// How the model processes input media for understanding.
+  /// How the model processes this part's media for understanding. Only meaningful for video parts
+  /// (`inline_data` or `file_data` with video mime). Non-video parts ignore this field.
   /// </summary>
 
   [JsonConverter(typeof(MediaProcessingConverter))]
@@ -34,7 +35,7 @@ namespace Google.GenAI.Types {
     }
 
     /// <summary>
-    /// Default. Uses model-specific processing
+    /// Default. Uses model-specific processing (3.5 Pro+ -> `AGENTIC`, older models -> `STATIC`).
     /// </summary>
     public static MediaProcessing MediaProcessingUnspecified {
       get;
