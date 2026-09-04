@@ -27,59 +27,74 @@ using Google.Apis.Auth.OAuth2;
 namespace Google.GenAI
 {
   /// <summary>
-  /// Represents a client error (4xx HTTP status codes) from the API.
+  /// Base class for API exceptions from the GenAI API.
   /// </summary>
-  public class ClientError : HttpRequestException
+  public class ApiException : HttpRequestException
   {
     public int StatusCode { get; }
     public string? Status { get; }
 
+    public ApiException(string message) : base(message)
+    {
+    }
+
+    public ApiException(string message, int statusCode, string? status = null) : base(message)
+    {
+      StatusCode = statusCode;
+      Status = status;
+    }
+
+    public ApiException(string message, Exception innerException) : base(message, innerException)
+    {
+    }
+
+    public ApiException(string message, int statusCode, string? status, Exception innerException) : base(message, innerException)
+    {
+      StatusCode = statusCode;
+      Status = status;
+    }
+  }
+
+  /// <summary>
+  /// Represents a client error (4xx HTTP status codes) from the API.
+  /// </summary>
+  public class ClientError : ApiException
+  {
     public ClientError(string message) : base(message)
     {
     }
 
-    public ClientError(string message, int statusCode, string? status = null) : base(message)
+    public ClientError(string message, int statusCode, string? status = null) : base(message, statusCode, status)
     {
-      StatusCode = statusCode;
-      Status = status;
     }
 
     public ClientError(string message, Exception innerException) : base(message, innerException)
     {
     }
 
-    public ClientError(string message, int statusCode, string? status, Exception innerException) : base(message, innerException)
+    public ClientError(string message, int statusCode, string? status, Exception innerException) : base(message, statusCode, status, innerException)
     {
-      StatusCode = statusCode;
-      Status = status;
     }
   }
   /// <summary>
   /// Represents a server error (5xx HTTP status codes) from the API.
   /// </summary>
-  public class ServerError : HttpRequestException
+  public class ServerError : ApiException
   {
-    public int StatusCode { get; }
-    public string? Status { get; }
-
     public ServerError(string message) : base(message)
     {
     }
 
-    public ServerError(string message, int statusCode, string? status = null) : base(message)
+    public ServerError(string message, int statusCode, string? status = null) : base(message, statusCode, status)
     {
-      StatusCode = statusCode;
-      Status = status;
     }
 
     public ServerError(string message, Exception innerException) : base(message, innerException)
     {
     }
 
-    public ServerError(string message, int statusCode, string? status, Exception innerException) : base(message, innerException)
+    public ServerError(string message, int statusCode, string? status, Exception innerException) : base(message, statusCode, status, innerException)
     {
-      StatusCode = statusCode;
-      Status = status;
     }
   }
   public class HttpApiClient : ApiClient
