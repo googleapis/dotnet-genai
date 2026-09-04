@@ -29,57 +29,27 @@ namespace Google.GenAI
   /// <summary>
   /// Represents a client error (4xx HTTP status codes) from the API.
   /// </summary>
-  public class ClientError : HttpRequestException
+  public class ClientError : ApiException
   {
-    public int StatusCode { get; }
-    public string? Status { get; }
-
-    public ClientError(string message) : base(message)
+    public ClientError(string message, Exception? innerException = null) : base(message, innerException)
     {
     }
 
-    public ClientError(string message, int statusCode, string? status = null) : base(message)
+    public ClientError(string message, int statusCode, string? status = null, Exception? innerException = null) : base(message, statusCode, status, innerException)
     {
-      StatusCode = statusCode;
-      Status = status;
-    }
-
-    public ClientError(string message, Exception innerException) : base(message, innerException)
-    {
-    }
-
-    public ClientError(string message, int statusCode, string? status, Exception innerException) : base(message, innerException)
-    {
-      StatusCode = statusCode;
-      Status = status;
     }
   }
   /// <summary>
   /// Represents a server error (5xx HTTP status codes) from the API.
   /// </summary>
-  public class ServerError : HttpRequestException
+  public class ServerError : ApiException
   {
-    public int StatusCode { get; }
-    public string? Status { get; }
-
-    public ServerError(string message) : base(message)
+    public ServerError(string message, Exception? innerException = null) : base(message, innerException)
     {
     }
 
-    public ServerError(string message, int statusCode, string? status = null) : base(message)
+    public ServerError(string message, int statusCode, string? status = null, Exception? innerException = null) : base(message, statusCode, status, innerException)
     {
-      StatusCode = statusCode;
-      Status = status;
-    }
-
-    public ServerError(string message, Exception innerException) : base(message, innerException)
-    {
-    }
-
-    public ServerError(string message, int statusCode, string? status, Exception innerException) : base(message, innerException)
-    {
-      StatusCode = statusCode;
-      Status = status;
     }
   }
   public class HttpApiClient : ApiClient
