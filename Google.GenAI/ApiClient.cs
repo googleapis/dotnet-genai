@@ -164,7 +164,7 @@ namespace Google.GenAI
     private HttpClient? _httpClient;
     private readonly object _httpClientLock = new object();
 
-    protected HttpClient HttpClient
+    internal HttpClient HttpClient
     {
         get
         {
