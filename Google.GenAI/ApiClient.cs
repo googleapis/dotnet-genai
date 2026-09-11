@@ -364,6 +364,7 @@ namespace Google.GenAI
       // Must be assigned before anything reads this.HttpClient, whose getter caches
       // the client and consults ClientOptions.HttpClientFactory.
       this.ClientOptions = clientOptions ?? new Google.GenAI.Types.ClientOptions();
+
     }
 
     private static HttpClient CreateHttpClient(

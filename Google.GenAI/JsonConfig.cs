@@ -15,6 +15,7 @@
  */
 
 using System;
+using System.Runtime.CompilerServices;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Text.Json.Serialization.Metadata;
@@ -61,12 +62,43 @@ namespace Google.GenAI
     /// Gets the source-generated TypeInfo for a given type T to ensure AOT compliance.
     /// </summary>
     internal static JsonTypeInfo<T> TypeInfo<T>(JsonSerializerOptions? options = null)
-        => (JsonTypeInfo<T>)(options ?? InternalSerializerOptions).GetTypeInfo(typeof(T));
+        => (JsonTypeInfo<T>)EnsureResolver(options).GetTypeInfo(typeof(T));
 
     /// <summary>
     /// Gets the source-generated TypeInfo for a given Type to ensure AOT compliance.
     /// </summary>
     internal static JsonTypeInfo TypeInfo(Type type, JsonSerializerOptions? options = null)
-        => (options ?? InternalSerializerOptions).GetTypeInfo(type);
+        => EnsureResolver(options).GetTypeInfo(type);
+
+    private static readonly ConditionalWeakTable<JsonSerializerOptions, JsonSerializerOptions> _resolverCache = new();
+
+    private static JsonSerializerOptions EnsureResolver(JsonSerializerOptions? options)
+    {
+      if (options == null)
+      {
+        return InternalSerializerOptions;
+      }
+      if (!options.IsReadOnly)
+      {
+        lock (options)
+        {
+          if (!options.TypeInfoResolverChain.Contains(GenAIJsonContext.Default))
+          {
+            options.TypeInfoResolverChain.Add(GenAIJsonContext.Default);
+          }
+        }
+        return options;
+      }
+      if (options.TypeInfoResolverChain.Contains(GenAIJsonContext.Default))
+      {
+        return options;
+      }
+      return _resolverCache.GetValue(options, opt =>
+      {
+        var copy = new JsonSerializerOptions(opt);
+        copy.TypeInfoResolverChain.Add(GenAIJsonContext.Default);
+        return copy;
+      });
+    }
   }
 }
