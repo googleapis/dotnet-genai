@@ -36,49 +36,121 @@ namespace Google.GenAI.E2E.Tests.LiveTestMode
     public class LiveApiTest
     {
         /// <summary>
-        /// The only live model family currently served on the Gemini API. It is audio-native and
-        /// rejects a TEXT response modality, so these tests request AUDIO and enable output
-        /// transcription for an assertable text signal.
+        /// The live model served on the Gemini API. It is audio-native and rejects a TEXT
+        /// response modality, so these tests request AUDIO and enable output transcription.
         /// </summary>
-        private const string LiveModel = "gemini-3.1-flash-live-preview";
+        private const string GeminiLiveModel = "gemini-3.1-flash-live-preview";
+
+        /// <summary>
+        /// The Vertex counterpart, audio-native in the same way, so the two backends share the
+        /// whole test body.
+        ///
+        /// It is not served on the global endpoint, where setup is rejected with 1008 "Publisher
+        /// model ... was not found"; it is available in us-central1, us-east5 and europe-west4.
+        /// </summary>
+        private const string VertexLiveModel = "gemini-live-2.5-flash-native-audio";
+
+        /// <summary>
+        /// Region the Vertex live model is pinned to, overriding the GOOGLE_CLOUD_LOCATION the
+        /// Agent Platform wrapper sets to global for the shared suite.
+        /// </summary>
+        private const string VertexLiveLocation = "us-central1";
+
+        // test-server proxy endpoints (see test-server.yml). The port must agree with the
+        // location: a region resolves to <region>-aiplatform.googleapis.com, so the regional
+        // endpoint is the right one for this model.
+        private const string MldevProxyUrl = "http://localhost:1453";
+        private const string VertexRegionalProxyUrl = "http://localhost:1454";
 
         /// <summary>Caps how many messages a single turn may produce before we give up.</summary>
         private const int MaxMessagesPerTurn = 200;
 
-        private Client geminiClient;
+        private string apiKey = string.Empty;
 
         public TestContext TestContext { get; set; }
 
         [TestInitialize]
         public void SetupClient()
         {
-            // This suite ships no recordings; it exists to exercise the live backend nightly.
+            // This suite ships no recordings; it exists to exercise the live backends nightly.
             if (TestServer.IsReplayMode)
             {
                 Assert.Inconclusive(
                     "Skipping live API tests in replay mode: this suite ships no recordings and "
-                        + "runs live in the nightly job.");
+                        + "runs live in the nightly jobs.");
             }
 
-            string apiKey = System.Environment.GetEnvironmentVariable("GEMINI_API_KEY");
+            apiKey = System.Environment.GetEnvironmentVariable("GEMINI_API_KEY") ?? string.Empty;
             if (string.IsNullOrEmpty(apiKey))
             {
-                apiKey = System.Environment.GetEnvironmentVariable("GOOGLE_API_KEY");
+                apiKey = System.Environment.GetEnvironmentVariable("GOOGLE_API_KEY") ?? string.Empty;
             }
             if (string.IsNullOrEmpty(apiKey))
             {
-                Assert.Fail("GEMINI_API_KEY (or GOOGLE_API_KEY) must be set to run the live tests.");
+                // The Agent Platform live job runs Vertex only, with no API key at all.
+                bool vertexOnly = !string.IsNullOrEmpty(
+                    System.Environment.GetEnvironmentVariable("GOOGLE_GENAI_RUN_VERTEX_ONLY_IN_API_MODE"));
+                if (!vertexOnly)
+                {
+                    Assert.Fail(
+                        "GEMINI_API_KEY (or GOOGLE_API_KEY) must be set to run the live tests.");
+                }
+                // Unused: Vertex-only runs never touch the Gemini API client.
+                apiKey = "unused-placeholder";
             }
+        }
 
+        /// <summary>
+        /// Skips the current test when the running job has selected the other backend. Required,
+        /// not cosmetic: each live job only has credentials for its own backend.
+        /// </summary>
+        private static void SkipIfBackendDisabled(bool isVertex)
+        {
+            bool vertexOnly = !string.IsNullOrEmpty(
+                System.Environment.GetEnvironmentVariable("GOOGLE_GENAI_RUN_VERTEX_ONLY_IN_API_MODE"));
+            bool geminiOnly = !string.IsNullOrEmpty(
+                System.Environment.GetEnvironmentVariable("GOOGLE_GENAI_RUN_GEMINI_ONLY_IN_API_MODE"));
+
+            if (isVertex && geminiOnly)
+            {
+                Assert.Inconclusive("Skipping Vertex AI live tests (GEMINI ONLY config enabled).");
+            }
+            else if (!isVertex && vertexOnly)
+            {
+                Assert.Inconclusive("Skipping Gemini API live tests (VERTEX ONLY config enabled).");
+            }
+        }
+
+        private static string ModelFor(bool isVertex) =>
+            isVertex ? VertexLiveModel : GeminiLiveModel;
+
+        /// <summary>
+        /// Builds a client for the given backend, routed through the matching proxy endpoint.
+        /// The recording key carries the backend suffix so the two DataRows cannot collide.
+        /// </summary>
+        private Client CreateClient(bool isVertex)
+        {
+            var recordingKey =
+                $"{GetType().FullName}.{TestContext.TestName}.{(isVertex ? "vertex" : "mldev")}";
             var httpOptions = new GoogleType.HttpOptions
             {
-                Headers = new Dictionary<string, string>
-                {
-                    { "Test-Name", $"{GetType().FullName}.{TestContext.TestName}" }
-                },
-                BaseUrl = "http://localhost:1453"
+                Headers = new Dictionary<string, string> { { "Test-Name", recordingKey } },
+                BaseUrl = isVertex ? VertexRegionalProxyUrl : MldevProxyUrl
             };
-            geminiClient = new Client(apiKey: apiKey, enterprise: false, httpOptions: httpOptions);
+
+            if (!isVertex)
+            {
+                return new Client(apiKey: apiKey, enterprise: false, httpOptions: httpOptions);
+            }
+
+            string project =
+                System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_PROJECT") ?? "cloud-llm-preview1";
+            return new Client(
+                project: project,
+                location: VertexLiveLocation,
+                enterprise: true,
+                credential: TestServer.GetCredentialForTestMode(),
+                httpOptions: httpOptions);
         }
 
         private static GoogleType.LiveConnectConfig NewConfig(
@@ -164,11 +236,15 @@ namespace Google.GenAI.E2E.Tests.LiveTestMode
             return null;
         }
 
-        [TestMethod]
+        [DataTestMethod]
+        [DataRow(false)]
+        [DataRow(true)]
         [Timeout(180000)]
-        public async Task TextInputProducesAudioAndTranscription()
+        public async Task TextInputProducesAudioAndTranscription(bool isVertex)
         {
-            var session = new SessionWithQueue(geminiClient, LiveModel, NewConfig());
+            SkipIfBackendDisabled(isVertex);
+            var session = new SessionWithQueue(
+                CreateClient(isVertex), ModelFor(isVertex), NewConfig());
             await session.InitializeSessionAsync();
             try
             {
@@ -186,11 +262,15 @@ namespace Google.GenAI.E2E.Tests.LiveTestMode
             }
         }
 
-        [TestMethod]
+        [DataTestMethod]
+        [DataRow(false)]
+        [DataRow(true)]
         [Timeout(180000)]
-        public async Task MultiTurnRetainsContext()
+        public async Task MultiTurnRetainsContext(bool isVertex)
         {
-            var session = new SessionWithQueue(geminiClient, LiveModel, NewConfig());
+            SkipIfBackendDisabled(isVertex);
+            var session = new SessionWithQueue(
+                CreateClient(isVertex), ModelFor(isVertex), NewConfig());
             await session.InitializeSessionAsync();
             try
             {
@@ -218,10 +298,13 @@ namespace Google.GenAI.E2E.Tests.LiveTestMode
             }
         }
 
-        [TestMethod]
+        [DataTestMethod]
+        [DataRow(false)]
+        [DataRow(true)]
         [Timeout(180000)]
-        public async Task FunctionCallingCompletesRoundTrip()
+        public async Task FunctionCallingCompletesRoundTrip(bool isVertex)
         {
+            SkipIfBackendDisabled(isVertex);
             var tools = new List<GoogleType.Tool>
             {
                 new GoogleType.Tool
@@ -242,7 +325,8 @@ namespace Google.GenAI.E2E.Tests.LiveTestMode
                 }
             };
 
-            var session = new SessionWithQueue(geminiClient, LiveModel, NewConfig(tools));
+            var session = new SessionWithQueue(
+                CreateClient(isVertex), ModelFor(isVertex), NewConfig(tools));
             await session.InitializeSessionAsync();
             try
             {
@@ -267,10 +351,15 @@ namespace Google.GenAI.E2E.Tests.LiveTestMode
                         }
                     });
 
+                // Both backends must accept the tool result and complete the turn, but only the
+                // Gemini API returns assertable content: Vertex emits an empty transcription.
                 var followUp = await ReceiveTurnAsync(session);
-                Assert.IsFalse(
-                    string.IsNullOrWhiteSpace(followUp.Transcript),
-                    "Expected the model to respond after the tool result.");
+                if (!isVertex)
+                {
+                    Assert.IsFalse(
+                        string.IsNullOrWhiteSpace(followUp.Transcript),
+                        "Expected the model to respond after the tool result.");
+                }
             }
             finally
             {
@@ -282,11 +371,15 @@ namespace Google.GenAI.E2E.Tests.LiveTestMode
         /// This SDK does not validate FunctionResponse ids, so the error pathway covered here is
         /// session lifecycle: sending on a closed session must fail fast rather than hang.
         /// </summary>
-        [TestMethod]
+        [DataTestMethod]
+        [DataRow(false)]
+        [DataRow(true)]
         [Timeout(180000)]
-        public async Task SendAfterCloseThrows()
+        public async Task SendAfterCloseThrows(bool isVertex)
         {
-            var session = new SessionWithQueue(geminiClient, LiveModel, NewConfig());
+            SkipIfBackendDisabled(isVertex);
+            var session = new SessionWithQueue(
+                CreateClient(isVertex), ModelFor(isVertex), NewConfig());
             await session.InitializeSessionAsync();
             await session.CloseAsync();
 
