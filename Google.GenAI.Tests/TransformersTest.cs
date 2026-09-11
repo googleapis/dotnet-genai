@@ -241,5 +241,68 @@ namespace Google.GenAI.Tests
 
             Assert.IsNotNull(processed);
         }
+
+        [TestMethod]
+        public void CreateStringNode_ReturnsValidJsonNode()
+        {
+            var node = Transformers.CreateStringNode("test-value");
+            Assert.IsNotNull(node);
+            Assert.AreEqual("test-value", node.GetValue<string>());
+        }
+
+        [TestMethod]
+        public void TTuningJobStatus_MapsStatusesCorrectly()
+        {
+            Assert.AreEqual("JOB_STATE_SUCCEEDED", Transformers.TTuningJobStatus(Transformers.CreateStringNode("ACTIVE")).GetValue<string>());
+            Assert.AreEqual("JOB_STATE_RUNNING", Transformers.TTuningJobStatus(Transformers.CreateStringNode("CREATING")).GetValue<string>());
+            Assert.AreEqual("JOB_STATE_FAILED", Transformers.TTuningJobStatus(Transformers.CreateStringNode("FAILED")).GetValue<string>());
+            Assert.AreEqual("JOB_STATE_UNSPECIFIED", Transformers.TTuningJobStatus(Transformers.CreateStringNode("STATE_UNSPECIFIED")).GetValue<string>());
+
+            var unknown = Transformers.CreateStringNode("UNKNOWN_STATUS");
+            Assert.AreSame(unknown, Transformers.TTuningJobStatus(unknown));
+        }
+
+        [TestMethod]
+        public void TBatchJobName_Gemini_ReturnsLastSegment()
+        {
+            var node = Transformers.CreateStringNode("batches/12345");
+            var result = Transformers.TBatchJobName(geminiClient, node);
+            Assert.AreEqual("12345", result.GetValue<string>());
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void TBatchJobName_Gemini_InvalidName_Throws()
+        {
+            var node = Transformers.CreateStringNode("invalid/name/format");
+            Transformers.TBatchJobName(geminiClient, node);
+        }
+
+        [TestMethod]
+        public void TBatchJobName_Vertex_ReturnsLastSegmentOrDigits()
+        {
+            var node = Transformers.CreateStringNode("projects/test-project/locations/test-location/batchPredictionJobs/67890");
+            var result = Transformers.TBatchJobName(vertexClient, node);
+            Assert.AreEqual("67890", result.GetValue<string>());
+
+            var digitsOnly = Transformers.CreateStringNode("123456");
+            var digitsResult = Transformers.TBatchJobName(vertexClient, digitsOnly);
+            Assert.AreEqual("123456", digitsResult.GetValue<string>());
+        }
+
+        [TestMethod]
+        public void TJobState_MapsStatesCorrectly()
+        {
+            Assert.AreEqual("JOB_STATE_UNSPECIFIED", Transformers.TJobState(Transformers.CreateStringNode("BATCH_STATE_UNSPECIFIED")).GetValue<string>());
+            Assert.AreEqual("JOB_STATE_PENDING", Transformers.TJobState(Transformers.CreateStringNode("BATCH_STATE_PENDING")).GetValue<string>());
+            Assert.AreEqual("JOB_STATE_RUNNING", Transformers.TJobState(Transformers.CreateStringNode("BATCH_STATE_RUNNING")).GetValue<string>());
+            Assert.AreEqual("JOB_STATE_SUCCEEDED", Transformers.TJobState(Transformers.CreateStringNode("BATCH_STATE_SUCCEEDED")).GetValue<string>());
+            Assert.AreEqual("JOB_STATE_FAILED", Transformers.TJobState(Transformers.CreateStringNode("BATCH_STATE_FAILED")).GetValue<string>());
+            Assert.AreEqual("JOB_STATE_CANCELLED", Transformers.TJobState(Transformers.CreateStringNode("BATCH_STATE_CANCELLED")).GetValue<string>());
+            Assert.AreEqual("JOB_STATE_EXPIRED", Transformers.TJobState(Transformers.CreateStringNode("BATCH_STATE_EXPIRED")).GetValue<string>());
+
+            var unknown = Transformers.CreateStringNode("UNKNOWN_STATE");
+            Assert.AreSame(unknown, Transformers.TJobState(unknown));
+        }
     }
 }

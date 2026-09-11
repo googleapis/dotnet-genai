@@ -108,19 +108,19 @@ namespace Google.GenAI
     /// <returns>The transformed model name</returns>
     internal static string TModelsUrl(ApiClient apiClient, object? baseModels)
     {
-        bool queryBase = true;
-        if (baseModels is JsonValue val)
-        {
-            queryBase = val.GetValue<bool>();
-        }
-        if (queryBase)
-        {
-            return apiClient.VertexAI ? "publishers/google/models" : "models";
-        }
-        else
-        {
-            return apiClient.VertexAI ? "models" : "tunedModels";
-        }
+      bool queryBase = true;
+      if (baseModels is JsonValue val)
+      {
+        queryBase = val.GetValue<bool>();
+      }
+      if (queryBase)
+      {
+        return apiClient.VertexAI ? "publishers/google/models" : "models";
+      }
+      else
+      {
+        return apiClient.VertexAI ? "models" : "tunedModels";
+      }
     }
 
     /// <summary>
@@ -307,6 +307,11 @@ namespace Google.GenAI
       return schema;
     }
 
+    internal static JsonNode CreateStringNode(string value)
+    {
+      return JsonSerializer.SerializeToNode(value, JsonConfig.TypeInfo<string>())!;
+    }
+
     internal static JsonNode? ProcessJsonNode(JsonNode? node, HashSet<object>? visited = null)
     {
       if (node == null)
@@ -334,7 +339,7 @@ namespace Google.GenAI
             var ordering = new JsonArray();
             foreach (var kvp in props)
             {
-              ordering.Add(kvp.Key);
+              ordering.Add(CreateStringNode(kvp.Key));
             }
             obj["propertyOrdering"] = ordering;
           }
@@ -430,15 +435,15 @@ namespace Google.GenAI
       }
       else if (origin is JsonArray jsonArray)
       {
-          List<Tool> toolList = new List<Tool>();
-          foreach(JsonNode? toolNode in jsonArray)
+        List<Tool> toolList = new List<Tool>();
+        foreach (JsonNode? toolNode in jsonArray)
+        {
+          if (toolNode != null)
           {
-            if(toolNode != null)
-            {
-              toolList.Add(TTool(toolNode)!);
-            }
+            toolList.Add(TTool(toolNode)!);
           }
-          return toolList;
+        }
+        return toolList;
       }
       else if (origin is JsonNode jsonNode)
       {
@@ -462,7 +467,7 @@ namespace Google.GenAI
       }
       else if (origin is JsonNode jsonNode)
       {
-         return JsonSerializer.Deserialize(jsonNode.ToJsonString(), JsonConfig.TypeInfo<Tool>());
+        return JsonSerializer.Deserialize(jsonNode.ToJsonString(), JsonConfig.TypeInfo<Tool>());
       }
       throw new ArgumentException($"Unsupported tool type: {origin.GetType()}");
     }
@@ -554,26 +559,26 @@ namespace Google.GenAI
     /// <summary>Transforms a list models response object to a list of models.</summary>
     internal static JsonArray TExtractModels(JsonNode models)
     {
-        if (models == null)
-        {
-            return new JsonArray();
-        }
-        if (models is JsonObject modelsObj)
-        {
-            if (modelsObj.ContainsKey("models"))
-            {
-                return (JsonArray)modelsObj["models"]!;
-            }
-            if (modelsObj.ContainsKey("tunedModels"))
-            {
-                return (JsonArray)modelsObj["tunedModels"]!;
-            }
-            if (modelsObj.ContainsKey("publisherModels"))
-            {
-                return (JsonArray)modelsObj["publisherModels"]!;
-            }
-        }
+      if (models == null)
+      {
         return new JsonArray();
+      }
+      if (models is JsonObject modelsObj)
+      {
+        if (modelsObj.ContainsKey("models"))
+        {
+          return (JsonArray)modelsObj["models"]!;
+        }
+        if (modelsObj.ContainsKey("tunedModels"))
+        {
+          return (JsonArray)modelsObj["tunedModels"]!;
+        }
+        if (modelsObj.ContainsKey("publisherModels"))
+        {
+          return (JsonArray)modelsObj["publisherModels"]!;
+        }
+      }
+      return new JsonArray();
     }
 
     /// <summary>Transforms an object to a cached content name for the API.</summary>
@@ -601,50 +606,50 @@ namespace Google.GenAI
     /// <summary>Transforms an object to a list of Content for the embedding API.</summary>
     internal static List<object>? TContentsForEmbed(ApiClient apiClient, object origin)
     {
-        if (origin == null)
-        {
-            return null;
-        }
+      if (origin == null)
+      {
+        return null;
+      }
 
-        List<Content>? contents;
-        if (origin is List<Content> contentList)
-        {
-            contents = contentList;
-        }
-        else if (origin is JsonNode jsonNode)
-        {
-            contents = JsonSerializer.Deserialize(jsonNode.ToJsonString(), JsonConfig.TypeInfo<List<Content>>());
-        }
-        else
-        {
-            throw new ArgumentException($"Unsupported contents type: {origin.GetType()}");
-        }
+      List<Content>? contents;
+      if (origin is List<Content> contentList)
+      {
+        contents = contentList;
+      }
+      else if (origin is JsonNode jsonNode)
+      {
+        contents = JsonSerializer.Deserialize(jsonNode.ToJsonString(), JsonConfig.TypeInfo<List<Content>>());
+      }
+      else
+      {
+        throw new ArgumentException($"Unsupported contents type: {origin.GetType()}");
+      }
 
-        List<object> result = new List<object>();
-        if (contents != null)
+      List<object> result = new List<object>();
+      if (contents != null)
+      {
+        foreach (Content content in contents)
         {
-            foreach (Content content in contents)
+          if (!apiClient.VertexAI)
+          {
+            result.Add(content);
+          }
+          else
+          {
+            if (content.Parts != null)
             {
-                if (!apiClient.VertexAI)
+              foreach (Part part in content.Parts)
+              {
+                if (part.Text != null)
                 {
-                    result.Add(content);
+                  result.Add(part.Text);
                 }
-                else
-                {
-                    if (content.Parts != null)
-                    {
-                        foreach (Part part in content.Parts)
-                        {
-                            if (part.Text != null)
-                            {
-                                result.Add(part.Text);
-                            }
-                        }
-                    }
-                }
+              }
             }
+          }
         }
-        return result;
+      }
+      return result;
     }
 
     /// <summary>
@@ -733,10 +738,10 @@ namespace Google.GenAI
 
     internal static bool TIsVertexEmbedContentModel(string model)
     {
-        // Gemini Embeddings except gemini-embedding-001.
-        return (model.Contains("gemini") && model != "gemini-embedding-001")
-            // Open-source MaaS embedding models.
-            || model.Contains("maas");
+      // Gemini Embeddings except gemini-embedding-001.
+      return (model.Contains("gemini") && model != "gemini-embedding-001")
+          // Open-source MaaS embedding models.
+          || model.Contains("maas");
     }
 
     /// <summary>Formats a resource name given the resource name and resource prefix.</summary>
@@ -784,13 +789,13 @@ namespace Google.GenAI
       switch (status)
       {
         case "ACTIVE":
-          return JsonValue.Create("JOB_STATE_SUCCEEDED")!;
+          return CreateStringNode("JOB_STATE_SUCCEEDED");
         case "CREATING":
-          return JsonValue.Create("JOB_STATE_RUNNING")!;
+          return CreateStringNode("JOB_STATE_RUNNING");
         case "FAILED":
-          return JsonValue.Create("JOB_STATE_FAILED")!;
+          return CreateStringNode("JOB_STATE_FAILED");
         case "STATE_UNSPECIFIED":
-          return JsonValue.Create("JOB_STATE_UNSPECIFIED")!;
+          return CreateStringNode("JOB_STATE_UNSPECIFIED");
         default:
           return origin;
       }
@@ -804,7 +809,7 @@ namespace Google.GenAI
         Regex mldevRegex = new Regex(@"batches/[^/]+$");
         if (mldevRegex.IsMatch(nameStr))
         {
-          return JsonValue.Create(nameStr.Split('/').Last());
+          return CreateStringNode(nameStr.Split('/').Last());
         }
         else
         {
@@ -816,11 +821,11 @@ namespace Google.GenAI
       nameStr = GetResourceName(apiClient, nameStr, "batchPredictionJobs");
       if (vertexRegex.IsMatch(nameStr))
       {
-        return JsonValue.Create(nameStr.Split('/').Last());
+        return CreateStringNode(nameStr.Split('/').Last());
       }
       else if (nameStr.All(char.IsDigit))
       {
-        return JsonValue.Create(nameStr);
+        return CreateStringNode(nameStr);
       }
       else
       {
@@ -840,26 +845,26 @@ namespace Google.GenAI
 
     internal static JsonNode TJobState(JsonNode origin)
     {
-        string? stateStr = origin.GetValue<string>();
-        switch (stateStr)
-        {
-            case "BATCH_STATE_UNSPECIFIED":
-                return JsonValue.Create("JOB_STATE_UNSPECIFIED");
-            case "BATCH_STATE_PENDING":
-                return JsonValue.Create("JOB_STATE_PENDING");
-            case "BATCH_STATE_RUNNING":
-                return JsonValue.Create("JOB_STATE_RUNNING");
-            case "BATCH_STATE_SUCCEEDED":
-                return JsonValue.Create("JOB_STATE_SUCCEEDED");
-            case "BATCH_STATE_FAILED":
-                return JsonValue.Create("JOB_STATE_FAILED");
-            case "BATCH_STATE_CANCELLED":
-                return JsonValue.Create("JOB_STATE_CANCELLED");
-            case "BATCH_STATE_EXPIRED":
-                return JsonValue.Create("JOB_STATE_EXPIRED");
-            default:
-                return origin;
-        }
+      string? stateStr = origin.GetValue<string>();
+      switch (stateStr)
+      {
+        case "BATCH_STATE_UNSPECIFIED":
+          return CreateStringNode("JOB_STATE_UNSPECIFIED");
+        case "BATCH_STATE_PENDING":
+          return CreateStringNode("JOB_STATE_PENDING");
+        case "BATCH_STATE_RUNNING":
+          return CreateStringNode("JOB_STATE_RUNNING");
+        case "BATCH_STATE_SUCCEEDED":
+          return CreateStringNode("JOB_STATE_SUCCEEDED");
+        case "BATCH_STATE_FAILED":
+          return CreateStringNode("JOB_STATE_FAILED");
+        case "BATCH_STATE_CANCELLED":
+          return CreateStringNode("JOB_STATE_CANCELLED");
+        case "BATCH_STATE_EXPIRED":
+          return CreateStringNode("JOB_STATE_EXPIRED");
+        default:
+          return origin;
+      }
     }
 
     internal static JsonNode TRecvBatchJobDestination(JsonNode origin)
