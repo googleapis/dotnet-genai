@@ -1,5 +1,12 @@
 # Changelog
 
+## Version 1.21.1, released 2026-09-11
+
+
+### Bug fixes
+
+* Supply options with a resolver that covers System.String in Transformers ([68fa69f](https://github.com/googleapis/dotnet-genai/commit/68fa69f10aa07f46e966fed6985cd57558a623d0)), refs [#421](https://github.com/googleapis/dotnet-genai/issues/421)
+
 ## Version 1.21.0, released 2026-08-31
 
 
