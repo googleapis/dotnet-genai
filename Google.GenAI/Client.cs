@@ -15,6 +15,9 @@
  */
 
 using Google.Apis.Auth.OAuth2;
+using System.Diagnostics.CodeAnalysis;
+
+using Google.GenAI.Gaos;
 
 namespace Google.GenAI
 {
@@ -36,6 +39,127 @@ namespace Google.GenAI
     public Files Files { get; }
     public Tokens Tokens { get; }
 
+    /// <summary>
+    /// The interactions service.
+    /// </summary>
+    /// <remarks>
+    /// <b>WARNING: EXPERIMENTAL PREVIEW (<c>GENAI_GAOS_001</c>)</b><br/>
+    /// The Interactions API is an experimental preview. While high-level method signatures
+    /// are intended to remain stable, underlying serialization models and converters are actively
+    /// evolving for Native AOT support and may change in upcoming releases.<br/>
+    /// Tracking issue: <see href="https://github.com/googleapis/dotnet-genai/issues/159"/>
+    /// </remarks>
+#if NET8_0_OR_GREATER
+    [Experimental("GENAI_GAOS_001", UrlFormat = "https://github.com/googleapis/dotnet-genai/issues/159")]
+#else
+    [Obsolete("The Interactions API is an experimental preview (GENAI_GAOS_001). Serialization models and internal converters are actively evolving for Native AOT and may undergo breaking changes. See https://github.com/googleapis/dotnet-genai/issues/159")]
+#endif
+    public IInteractions Interactions
+    {
+#if NET8_0_OR_GREATER
+      [RequiresUnreferencedCode("Interactions is experimental and not compatible with Native AOT trimming.")]
+      [RequiresDynamicCode("Interactions is experimental and not compatible with Native AOT.")]
+#endif
+      get => GetInteractionsClient().Interactions;
+    }
+
+    /// <summary>
+    /// The webhooks service.
+    /// </summary>
+    /// <remarks>
+    /// <b>WARNING: EXPERIMENTAL PREVIEW (<c>GENAI_GAOS_001</c>)</b><br/>
+    /// The Webhooks API is an experimental preview. While high-level method signatures
+    /// are intended to remain stable, underlying serialization models and converters are actively
+    /// evolving for Native AOT support and may change in upcoming releases.<br/>
+    /// Tracking issue: <see href="https://github.com/googleapis/dotnet-genai/issues/159"/>
+    /// </remarks>
+#if NET8_0_OR_GREATER
+    [Experimental("GENAI_GAOS_001", UrlFormat = "https://github.com/googleapis/dotnet-genai/issues/159")]
+#else
+    [Obsolete("The Webhooks API is an experimental preview (GENAI_GAOS_001). Serialization models and internal converters are actively evolving for Native AOT and may undergo breaking changes. See https://github.com/googleapis/dotnet-genai/issues/159")]
+#endif
+    public IWebhooks Webhooks
+    {
+#if NET8_0_OR_GREATER
+      [RequiresUnreferencedCode("Interactions is experimental and not compatible with Native AOT trimming.")]
+      [RequiresDynamicCode("Interactions is experimental and not compatible with Native AOT.")]
+#endif
+      get => GetInteractionsClient().Webhooks;
+    }
+
+    /// <summary>
+    /// The agents service.
+    /// </summary>
+    /// <remarks>
+    /// <b>WARNING: EXPERIMENTAL PREVIEW (<c>GENAI_GAOS_001</c>)</b><br/>
+    /// The Agents API is an experimental preview. While high-level method signatures
+    /// are intended to remain stable, underlying serialization models and converters are actively
+    /// evolving for Native AOT support and may change in upcoming releases.<br/>
+    /// Tracking issue: <see href="https://github.com/googleapis/dotnet-genai/issues/159"/>
+    /// </remarks>
+#if NET8_0_OR_GREATER
+    [Experimental("GENAI_GAOS_001", UrlFormat = "https://github.com/googleapis/dotnet-genai/issues/159")]
+#else
+    [Obsolete("The Agents API is an experimental preview (GENAI_GAOS_001). Serialization models and internal converters are actively evolving for Native AOT and may undergo breaking changes. See https://github.com/googleapis/dotnet-genai/issues/159")]
+#endif
+    public IAgents Agents
+    {
+#if NET8_0_OR_GREATER
+      [RequiresUnreferencedCode("Interactions is experimental and not compatible with Native AOT trimming.")]
+      [RequiresDynamicCode("Interactions is experimental and not compatible with Native AOT.")]
+#endif
+      get => GetInteractionsClient().Agents;
+    }
+
+    /// <summary>
+    /// The environments service.
+    /// </summary>
+    /// <remarks>
+    /// <b>WARNING: EXPERIMENTAL PREVIEW (<c>GENAI_GAOS_001</c>)</b><br/>
+    /// The Environments API is an experimental preview. While high-level method signatures
+    /// are intended to remain stable, underlying serialization models and converters are actively
+    /// evolving for Native AOT support and may change in upcoming releases.<br/>
+    /// Tracking issue: <see href="https://github.com/googleapis/dotnet-genai/issues/159"/>
+    /// </remarks>
+#if NET8_0_OR_GREATER
+    [Experimental("GENAI_GAOS_001", UrlFormat = "https://github.com/googleapis/dotnet-genai/issues/159")]
+#else
+    [Obsolete("The Environments API is an experimental preview (GENAI_GAOS_001). Serialization models and internal converters are actively evolving for Native AOT and may undergo breaking changes. See https://github.com/googleapis/dotnet-genai/issues/159")]
+#endif
+    public IEnvironments Environments
+    {
+#if NET8_0_OR_GREATER
+      [RequiresUnreferencedCode("Interactions is experimental and not compatible with Native AOT trimming.")]
+      [RequiresDynamicCode("Interactions is experimental and not compatible with Native AOT.")]
+#endif
+      get => GetInteractionsClient().Environments;
+    }
+
+    /// <summary>
+    /// The triggers service.
+    /// </summary>
+    /// <remarks>
+    /// <b>WARNING: EXPERIMENTAL PREVIEW (<c>GENAI_GAOS_001</c>)</b><br/>
+    /// The Triggers API is an experimental preview. While high-level method signatures
+    /// are intended to remain stable, underlying serialization models and converters are actively
+    /// evolving for Native AOT support and may change in upcoming releases.<br/>
+    /// Tracking issue: <see href="https://github.com/googleapis/dotnet-genai/issues/159"/>
+    /// </remarks>
+#if NET8_0_OR_GREATER
+    [Experimental("GENAI_GAOS_001", UrlFormat = "https://github.com/googleapis/dotnet-genai/issues/159")]
+#else
+    [Obsolete("The Triggers API is an experimental preview (GENAI_GAOS_001). Serialization models and internal converters are actively evolving for Native AOT and may undergo breaking changes. See https://github.com/googleapis/dotnet-genai/issues/159")]
+#endif
+    public ITriggers Triggers
+    {
+#if NET8_0_OR_GREATER
+      [RequiresUnreferencedCode("Interactions is experimental and not compatible with Native AOT trimming.")]
+      [RequiresDynamicCode("Interactions is experimental and not compatible with Native AOT.")]
+#endif
+      get => GetInteractionsClient().Triggers;
+    }
+
+    private readonly object _interactionsLock = new object();
     private int _disposed = 0;
 
     /// <summary>
@@ -134,6 +258,79 @@ namespace Google.GenAI
       Files = new Files(_apiClient);
       Tokens = new Tokens(_apiClient);
     }
+
+#pragma warning disable CS0618, GENAI_GAOS_001
+    private volatile Google.GenAI.Gaos.GenAI? _interactionsClient;
+    private static int _interactionsWarned = 0;
+
+#if NET8_0_OR_GREATER
+    [RequiresUnreferencedCode("Interactions is experimental and not compatible with Native AOT trimming.")]
+    [RequiresDynamicCode("Interactions is experimental and not compatible with Native AOT.")]
+#endif
+    private Google.GenAI.Gaos.GenAI GetInteractionsClient()
+    {
+      if (System.Threading.Interlocked.Exchange(ref _interactionsWarned, 1) == 0)
+      {
+        System.Diagnostics.Trace.TraceWarning(
+            "Google.GenAI: Interactions API is an experimental preview (GENAI_GAOS_001). " +
+            "Underlying models and converters are actively evolving for Native AOT and may change in upcoming releases. " +
+            "See https://github.com/googleapis/dotnet-genai/issues/159");
+      }
+
+      if (_interactionsClient == null)
+      {
+        lock (_interactionsLock)
+        {
+          _interactionsClient ??= CreateInteractionsClient();
+        }
+      }
+      return _interactionsClient;
+    }
+
+#if NET8_0_OR_GREATER
+    [RequiresUnreferencedCode("Interactions is experimental and not compatible with Native AOT trimming.")]
+    [RequiresDynamicCode("Interactions is experimental and not compatible with Native AOT.")]
+#endif
+    private Google.GenAI.Gaos.GenAI CreateInteractionsClient()
+    {
+      string? apiVersion = _apiClient.HttpOptions.ApiVersion;
+      if (_apiClient.VertexAI && !string.IsNullOrEmpty(_apiClient.Project) && !string.IsNullOrEmpty(_apiClient.Location))
+      {
+        apiVersion = $"{apiVersion}/projects/{_apiClient.Project}/locations/{_apiClient.Location}";
+      }
+
+      return new Google.GenAI.Gaos.GenAI(
+          securitySource: () =>
+          {
+              var security = new Google.GenAI.Gaos.Models.Components.Security();
+              if (_apiClient.ApiKey != null)
+              {
+                  security.ApiKey = _apiClient.ApiKey;
+              }
+              else if (_apiClient.Credentials != null)
+              {
+                  security.AccessToken = _apiClient.Credentials.GetAccessTokenForRequestAsync()
+                      .GetAwaiter().GetResult();
+              }
+              if (_apiClient.HttpOptions.Headers != null)
+              {
+                  security.DefaultHeaders = new Dictionary<string, string>();
+                  foreach (var kvp in _apiClient.HttpOptions.Headers)
+                  {
+                      if (!kvp.Key.Equals("Content-Type", StringComparison.OrdinalIgnoreCase))
+                      {
+                          security.DefaultHeaders[kvp.Key] = kvp.Value;
+                      }
+                  }
+              }
+              return security;
+          },
+          serverUrl: _apiClient.HttpOptions.BaseUrl,
+          apiVersion: apiVersion,
+          client: new GaosHttpClient(_apiClient.HttpClient)
+      );
+    }
+#pragma warning restore GENAI_GAOS_001
 
     static string? inferBaseUrl(bool vertexAI)
     {
