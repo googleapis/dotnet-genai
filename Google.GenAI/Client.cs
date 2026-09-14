@@ -15,6 +15,7 @@
  */
 
 using Google.Apis.Auth.OAuth2;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Google.GenAI
 {

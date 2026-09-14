@@ -7,7 +7,7 @@
     <warningLevel>1</warningLevel>
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
     <LangVersion>latest</LangVersion>
-    <NoWarn>$(NoWarn);MEAI001</NoWarn>
+    <NoWarn>$(NoWarn);MEAI001;GENAI_GAOS_001</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,6 +16,8 @@
 
   <ItemGroup>
     <Compile Remove="Netstandard2_0Tests\**" />
+    <Compile Remove="AotTestApp\**" />
+    <Compile Remove="bin\**;obj\**" />
     
     <PackageReference Include="coverlet.collector">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

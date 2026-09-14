@@ -4,7 +4,6 @@ Google's generative models into their .NET applications. It supports the
 [Gemini Enterprise Agent Platform](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
 APIs.
 
-
 ## Supported .NET version
 
 This library is built for net8.0 and netstandard2.0.
@@ -1676,5 +1675,4 @@ public class Files {
 
   }
 }
-
 ```
