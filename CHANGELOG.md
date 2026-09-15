@@ -1,5 +1,12 @@
 # Changelog
 
+## Version 1.22.0, released 2026-09-15
+
+
+### New features
+
+* **dotnet:** unify exception hierarchy ([9994576](https://github.com/googleapis/dotnet-genai/commit/99945768d08321457d4ee92ff3f16776478d9f25))
+
 ## Version 1.21.1, released 2026-09-11
 
 
