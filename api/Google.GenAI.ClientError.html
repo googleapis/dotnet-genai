@@ -98,7 +98,7 @@ Class ClientError  <a class="header-action link-secondary" title="View source" h
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ClientError : HttpRequestException, ISerializable</code></pre>
+    <pre><code class="lang-csharp hljs">public class ClientError : ApiException, ISerializable</code></pre>
   </div>
 
 
@@ -110,6 +110,7 @@ Class ClientError  <a class="header-action link-secondary" title="View source" h
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httprequestexception">HttpRequestException</a></div>
+      <div><a class="xref" href="Google.GenAI.ApiException.html">ApiException</a></div>
       <div><span class="xref">ClientError</span></div>
     </dd>
   </dl>
@@ -125,6 +126,12 @@ Class ClientError  <a class="header-action link-secondary" title="View source" h
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="Google.GenAI.ApiException.html#Google_GenAI_ApiException_StatusCode">ApiException.StatusCode</a>
+    </div>
+    <div>
+      <a class="xref" href="Google.GenAI.ApiException.html#Google_GenAI_ApiException_Status">ApiException.Status</a>
+    </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.getbaseexception">Exception.GetBaseException()</a>
     </div>
@@ -192,47 +199,16 @@ Class ClientError  <a class="header-action link-secondary" title="View source" h
 
   <a id="Google_GenAI_ClientError__ctor_" data-uid="Google.GenAI.ClientError.#ctor*"></a>
 
-  <h3 id="Google_GenAI_ClientError__ctor_System_String_" data-uid="Google.GenAI.ClientError.#ctor(System.String)">
-  ClientError(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/HttpApiClient.cs/#L37"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ClientError(string message)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Google_GenAI_ClientError__ctor_" data-uid="Google.GenAI.ClientError.#ctor*"></a>
-
   <h3 id="Google_GenAI_ClientError__ctor_System_String_System_Exception_" data-uid="Google.GenAI.ClientError.#ctor(System.String,System.Exception)">
-  ClientError(string, Exception)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/HttpApiClient.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  ClientError(string, Exception?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/HttpApiClient.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ClientError(string message, Exception innerException)</code></pre>
+    <pre><code class="lang-csharp hljs">public ClientError(string message, Exception? innerException = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -240,41 +216,6 @@ Class ClientError  <a class="header-action link-secondary" title="View source" h
     <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
     <dt><code>innerException</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Google_GenAI_ClientError__ctor_" data-uid="Google.GenAI.ClientError.#ctor*"></a>
-
-  <h3 id="Google_GenAI_ClientError__ctor_System_String_System_Int32_System_String_" data-uid="Google.GenAI.ClientError.#ctor(System.String,System.Int32,System.String)">
-  ClientError(string, int, string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/HttpApiClient.cs/#L41"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ClientError(string message, int statusCode, string? status = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>statusCode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-    <dt><code>status</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
 
@@ -292,15 +233,15 @@ Class ClientError  <a class="header-action link-secondary" title="View source" h
   <a id="Google_GenAI_ClientError__ctor_" data-uid="Google.GenAI.ClientError.#ctor*"></a>
 
   <h3 id="Google_GenAI_ClientError__ctor_System_String_System_Int32_System_String_System_Exception_" data-uid="Google.GenAI.ClientError.#ctor(System.String,System.Int32,System.String,System.Exception)">
-  ClientError(string, int, string?, Exception)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/HttpApiClient.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  ClientError(string, int, string?, Exception?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/HttpApiClient.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ClientError(string message, int statusCode, string? status, Exception innerException)</code></pre>
+    <pre><code class="lang-csharp hljs">public ClientError(string message, int statusCode, string? status = null, Exception? innerException = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -318,72 +259,6 @@ Class ClientError  <a class="header-action link-secondary" title="View source" h
 
 
 
-
-
-
-
-
-
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="Google_GenAI_ClientError_Status_" data-uid="Google.GenAI.ClientError.Status*"></a>
-
-  <h3 id="Google_GenAI_ClientError_Status" data-uid="Google.GenAI.ClientError.Status">
-  Status
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/HttpApiClient.cs/#L35"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string? Status { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Google_GenAI_ClientError_StatusCode_" data-uid="Google.GenAI.ClientError.StatusCode*"></a>
-
-  <h3 id="Google_GenAI_ClientError_StatusCode" data-uid="Google.GenAI.ClientError.StatusCode">
-  StatusCode
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/HttpApiClient.cs/#L34"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int StatusCode { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
 
 
 

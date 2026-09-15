@@ -248,6 +248,66 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.ApiClient.VertexAI
   nameWithType: ApiClient.VertexAI
+- uid: Google.GenAI.ApiException
+  name: ApiException
+  href: api/Google.GenAI.ApiException.html
+  commentId: T:Google.GenAI.ApiException
+  fullName: Google.GenAI.ApiException
+  nameWithType: ApiException
+- uid: Google.GenAI.ApiException.#ctor(System.String,System.Exception)
+  name: ApiException(string, Exception?)
+  href: api/Google.GenAI.ApiException.html#Google_GenAI_ApiException__ctor_System_String_System_Exception_
+  commentId: M:Google.GenAI.ApiException.#ctor(System.String,System.Exception)
+  name.vb: New(String, Exception)
+  fullName: Google.GenAI.ApiException.ApiException(string, System.Exception?)
+  fullName.vb: Google.GenAI.ApiException.New(String, System.Exception)
+  nameWithType: ApiException.ApiException(string, Exception?)
+  nameWithType.vb: ApiException.New(String, Exception)
+- uid: Google.GenAI.ApiException.#ctor(System.String,System.Int32,System.String,System.Exception)
+  name: ApiException(string, int, string?, Exception?)
+  href: api/Google.GenAI.ApiException.html#Google_GenAI_ApiException__ctor_System_String_System_Int32_System_String_System_Exception_
+  commentId: M:Google.GenAI.ApiException.#ctor(System.String,System.Int32,System.String,System.Exception)
+  name.vb: New(String, Integer, String, Exception)
+  fullName: Google.GenAI.ApiException.ApiException(string, int, string?, System.Exception?)
+  fullName.vb: Google.GenAI.ApiException.New(String, Integer, String, System.Exception)
+  nameWithType: ApiException.ApiException(string, int, string?, Exception?)
+  nameWithType.vb: ApiException.New(String, Integer, String, Exception)
+- uid: Google.GenAI.ApiException.#ctor*
+  name: ApiException
+  href: api/Google.GenAI.ApiException.html#Google_GenAI_ApiException__ctor_
+  commentId: Overload:Google.GenAI.ApiException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Google.GenAI.ApiException.ApiException
+  fullName.vb: Google.GenAI.ApiException.New
+  nameWithType: ApiException.ApiException
+  nameWithType.vb: ApiException.New
+- uid: Google.GenAI.ApiException.Status
+  name: Status
+  href: api/Google.GenAI.ApiException.html#Google_GenAI_ApiException_Status
+  commentId: P:Google.GenAI.ApiException.Status
+  fullName: Google.GenAI.ApiException.Status
+  nameWithType: ApiException.Status
+- uid: Google.GenAI.ApiException.Status*
+  name: Status
+  href: api/Google.GenAI.ApiException.html#Google_GenAI_ApiException_Status_
+  commentId: Overload:Google.GenAI.ApiException.Status
+  isSpec: "True"
+  fullName: Google.GenAI.ApiException.Status
+  nameWithType: ApiException.Status
+- uid: Google.GenAI.ApiException.StatusCode
+  name: StatusCode
+  href: api/Google.GenAI.ApiException.html#Google_GenAI_ApiException_StatusCode
+  commentId: P:Google.GenAI.ApiException.StatusCode
+  fullName: Google.GenAI.ApiException.StatusCode
+  nameWithType: ApiException.StatusCode
+- uid: Google.GenAI.ApiException.StatusCode*
+  name: StatusCode
+  href: api/Google.GenAI.ApiException.html#Google_GenAI_ApiException_StatusCode_
+  commentId: Overload:Google.GenAI.ApiException.StatusCode
+  isSpec: "True"
+  fullName: Google.GenAI.ApiException.StatusCode
+  nameWithType: ApiException.StatusCode
 - uid: Google.GenAI.ApiResponse
   name: ApiResponse
   href: api/Google.GenAI.ApiResponse.html
@@ -847,41 +907,23 @@ references:
   commentId: T:Google.GenAI.ClientError
   fullName: Google.GenAI.ClientError
   nameWithType: ClientError
-- uid: Google.GenAI.ClientError.#ctor(System.String)
-  name: ClientError(string)
-  href: api/Google.GenAI.ClientError.html#Google_GenAI_ClientError__ctor_System_String_
-  commentId: M:Google.GenAI.ClientError.#ctor(System.String)
-  name.vb: New(String)
-  fullName: Google.GenAI.ClientError.ClientError(string)
-  fullName.vb: Google.GenAI.ClientError.New(String)
-  nameWithType: ClientError.ClientError(string)
-  nameWithType.vb: ClientError.New(String)
 - uid: Google.GenAI.ClientError.#ctor(System.String,System.Exception)
-  name: ClientError(string, Exception)
+  name: ClientError(string, Exception?)
   href: api/Google.GenAI.ClientError.html#Google_GenAI_ClientError__ctor_System_String_System_Exception_
   commentId: M:Google.GenAI.ClientError.#ctor(System.String,System.Exception)
   name.vb: New(String, Exception)
-  fullName: Google.GenAI.ClientError.ClientError(string, System.Exception)
+  fullName: Google.GenAI.ClientError.ClientError(string, System.Exception?)
   fullName.vb: Google.GenAI.ClientError.New(String, System.Exception)
-  nameWithType: ClientError.ClientError(string, Exception)
+  nameWithType: ClientError.ClientError(string, Exception?)
   nameWithType.vb: ClientError.New(String, Exception)
-- uid: Google.GenAI.ClientError.#ctor(System.String,System.Int32,System.String)
-  name: ClientError(string, int, string?)
-  href: api/Google.GenAI.ClientError.html#Google_GenAI_ClientError__ctor_System_String_System_Int32_System_String_
-  commentId: M:Google.GenAI.ClientError.#ctor(System.String,System.Int32,System.String)
-  name.vb: New(String, Integer, String)
-  fullName: Google.GenAI.ClientError.ClientError(string, int, string?)
-  fullName.vb: Google.GenAI.ClientError.New(String, Integer, String)
-  nameWithType: ClientError.ClientError(string, int, string?)
-  nameWithType.vb: ClientError.New(String, Integer, String)
 - uid: Google.GenAI.ClientError.#ctor(System.String,System.Int32,System.String,System.Exception)
-  name: ClientError(string, int, string?, Exception)
+  name: ClientError(string, int, string?, Exception?)
   href: api/Google.GenAI.ClientError.html#Google_GenAI_ClientError__ctor_System_String_System_Int32_System_String_System_Exception_
   commentId: M:Google.GenAI.ClientError.#ctor(System.String,System.Int32,System.String,System.Exception)
   name.vb: New(String, Integer, String, Exception)
-  fullName: Google.GenAI.ClientError.ClientError(string, int, string?, System.Exception)
+  fullName: Google.GenAI.ClientError.ClientError(string, int, string?, System.Exception?)
   fullName.vb: Google.GenAI.ClientError.New(String, Integer, String, System.Exception)
-  nameWithType: ClientError.ClientError(string, int, string?, Exception)
+  nameWithType: ClientError.ClientError(string, int, string?, Exception?)
   nameWithType.vb: ClientError.New(String, Integer, String, Exception)
 - uid: Google.GenAI.ClientError.#ctor*
   name: ClientError
@@ -893,32 +935,6 @@ references:
   fullName.vb: Google.GenAI.ClientError.New
   nameWithType: ClientError.ClientError
   nameWithType.vb: ClientError.New
-- uid: Google.GenAI.ClientError.Status
-  name: Status
-  href: api/Google.GenAI.ClientError.html#Google_GenAI_ClientError_Status
-  commentId: P:Google.GenAI.ClientError.Status
-  fullName: Google.GenAI.ClientError.Status
-  nameWithType: ClientError.Status
-- uid: Google.GenAI.ClientError.Status*
-  name: Status
-  href: api/Google.GenAI.ClientError.html#Google_GenAI_ClientError_Status_
-  commentId: Overload:Google.GenAI.ClientError.Status
-  isSpec: "True"
-  fullName: Google.GenAI.ClientError.Status
-  nameWithType: ClientError.Status
-- uid: Google.GenAI.ClientError.StatusCode
-  name: StatusCode
-  href: api/Google.GenAI.ClientError.html#Google_GenAI_ClientError_StatusCode
-  commentId: P:Google.GenAI.ClientError.StatusCode
-  fullName: Google.GenAI.ClientError.StatusCode
-  nameWithType: ClientError.StatusCode
-- uid: Google.GenAI.ClientError.StatusCode*
-  name: StatusCode
-  href: api/Google.GenAI.ClientError.html#Google_GenAI_ClientError_StatusCode_
-  commentId: Overload:Google.GenAI.ClientError.StatusCode
-  isSpec: "True"
-  fullName: Google.GenAI.ClientError.StatusCode
-  nameWithType: ClientError.StatusCode
 - uid: Google.GenAI.Common
   name: Common
   href: api/Google.GenAI.Common.html
@@ -1960,41 +1976,23 @@ references:
   commentId: T:Google.GenAI.ServerError
   fullName: Google.GenAI.ServerError
   nameWithType: ServerError
-- uid: Google.GenAI.ServerError.#ctor(System.String)
-  name: ServerError(string)
-  href: api/Google.GenAI.ServerError.html#Google_GenAI_ServerError__ctor_System_String_
-  commentId: M:Google.GenAI.ServerError.#ctor(System.String)
-  name.vb: New(String)
-  fullName: Google.GenAI.ServerError.ServerError(string)
-  fullName.vb: Google.GenAI.ServerError.New(String)
-  nameWithType: ServerError.ServerError(string)
-  nameWithType.vb: ServerError.New(String)
 - uid: Google.GenAI.ServerError.#ctor(System.String,System.Exception)
-  name: ServerError(string, Exception)
+  name: ServerError(string, Exception?)
   href: api/Google.GenAI.ServerError.html#Google_GenAI_ServerError__ctor_System_String_System_Exception_
   commentId: M:Google.GenAI.ServerError.#ctor(System.String,System.Exception)
   name.vb: New(String, Exception)
-  fullName: Google.GenAI.ServerError.ServerError(string, System.Exception)
+  fullName: Google.GenAI.ServerError.ServerError(string, System.Exception?)
   fullName.vb: Google.GenAI.ServerError.New(String, System.Exception)
-  nameWithType: ServerError.ServerError(string, Exception)
+  nameWithType: ServerError.ServerError(string, Exception?)
   nameWithType.vb: ServerError.New(String, Exception)
-- uid: Google.GenAI.ServerError.#ctor(System.String,System.Int32,System.String)
-  name: ServerError(string, int, string?)
-  href: api/Google.GenAI.ServerError.html#Google_GenAI_ServerError__ctor_System_String_System_Int32_System_String_
-  commentId: M:Google.GenAI.ServerError.#ctor(System.String,System.Int32,System.String)
-  name.vb: New(String, Integer, String)
-  fullName: Google.GenAI.ServerError.ServerError(string, int, string?)
-  fullName.vb: Google.GenAI.ServerError.New(String, Integer, String)
-  nameWithType: ServerError.ServerError(string, int, string?)
-  nameWithType.vb: ServerError.New(String, Integer, String)
 - uid: Google.GenAI.ServerError.#ctor(System.String,System.Int32,System.String,System.Exception)
-  name: ServerError(string, int, string?, Exception)
+  name: ServerError(string, int, string?, Exception?)
   href: api/Google.GenAI.ServerError.html#Google_GenAI_ServerError__ctor_System_String_System_Int32_System_String_System_Exception_
   commentId: M:Google.GenAI.ServerError.#ctor(System.String,System.Int32,System.String,System.Exception)
   name.vb: New(String, Integer, String, Exception)
-  fullName: Google.GenAI.ServerError.ServerError(string, int, string?, System.Exception)
+  fullName: Google.GenAI.ServerError.ServerError(string, int, string?, System.Exception?)
   fullName.vb: Google.GenAI.ServerError.New(String, Integer, String, System.Exception)
-  nameWithType: ServerError.ServerError(string, int, string?, Exception)
+  nameWithType: ServerError.ServerError(string, int, string?, Exception?)
   nameWithType.vb: ServerError.New(String, Integer, String, Exception)
 - uid: Google.GenAI.ServerError.#ctor*
   name: ServerError
@@ -2006,32 +2004,6 @@ references:
   fullName.vb: Google.GenAI.ServerError.New
   nameWithType: ServerError.ServerError
   nameWithType.vb: ServerError.New
-- uid: Google.GenAI.ServerError.Status
-  name: Status
-  href: api/Google.GenAI.ServerError.html#Google_GenAI_ServerError_Status
-  commentId: P:Google.GenAI.ServerError.Status
-  fullName: Google.GenAI.ServerError.Status
-  nameWithType: ServerError.Status
-- uid: Google.GenAI.ServerError.Status*
-  name: Status
-  href: api/Google.GenAI.ServerError.html#Google_GenAI_ServerError_Status_
-  commentId: Overload:Google.GenAI.ServerError.Status
-  isSpec: "True"
-  fullName: Google.GenAI.ServerError.Status
-  nameWithType: ServerError.Status
-- uid: Google.GenAI.ServerError.StatusCode
-  name: StatusCode
-  href: api/Google.GenAI.ServerError.html#Google_GenAI_ServerError_StatusCode
-  commentId: P:Google.GenAI.ServerError.StatusCode
-  fullName: Google.GenAI.ServerError.StatusCode
-  nameWithType: ServerError.StatusCode
-- uid: Google.GenAI.ServerError.StatusCode*
-  name: StatusCode
-  href: api/Google.GenAI.ServerError.html#Google_GenAI_ServerError_StatusCode_
-  commentId: Overload:Google.GenAI.ServerError.StatusCode
-  isSpec: "True"
-  fullName: Google.GenAI.ServerError.StatusCode
-  nameWithType: ServerError.StatusCode
 - uid: Google.GenAI.StreamingApiResponse
   name: StreamingApiResponse
   href: api/Google.GenAI.StreamingApiResponse.html

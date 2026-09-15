@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class ServerError | Google GenAI .NET SDK </title>
+      <title>Class ApiException | Google GenAI .NET SDK </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class ServerError | Google GenAI .NET SDK ">
+      <meta name="title" content="Class ApiException | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Represents a server error (5xx HTTP status codes) from the API.">
+      <meta name="description" content="Base exception for API errors. Root of the unified error hierarchy: both the native / tree (model calls) and the embedded gaos error tree derive from it, so a single catch (ApiException) covers every API error.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/googleapis/dotnet-genai/new/main/apiSpec/new?filename=Google_GenAI_ServerError.md&amp;value=---%0Auid%3A%20Google.GenAI.ServerError%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/googleapis/dotnet-genai/new/main/apiSpec/new?filename=Google_GenAI_ApiException.md&amp;value=---%0Auid%3A%20Google.GenAI.ApiException%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -80,12 +80,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Google.GenAI.ServerError">
+        <article data-uid="Google.GenAI.ApiException">
 
 
 
-  <h1 id="Google_GenAI_ServerError" data-uid="Google.GenAI.ServerError" class="text-break">
-Class ServerError  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/HttpApiClient.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  <h1 id="Google_GenAI_ApiException" data-uid="Google.GenAI.ApiException" class="text-break">
+Class ApiException  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/ApiException.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,12 +93,15 @@ Class ServerError  <a class="header-action link-secondary" title="View source" h
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a server error (5xx HTTP status codes) from the API.</p>
+  <div class="markdown summary"><p>Base exception for API errors. Root of the unified error hierarchy: both the
+native <a class="xref" href="Google.GenAI.ClientError.html">ClientError</a>/<a class="xref" href="Google.GenAI.ServerError.html">ServerError</a> tree (model calls)
+and the embedded gaos error tree derive from it, so a single
+<code>catch (ApiException)</code> covers every API error.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ServerError : ApiException, ISerializable</code></pre>
+    <pre><code class="lang-csharp hljs">public class ApiException : HttpRequestException, ISerializable</code></pre>
   </div>
 
 
@@ -110,8 +113,7 @@ Class ServerError  <a class="header-action link-secondary" title="View source" h
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httprequestexception">HttpRequestException</a></div>
-      <div><a class="xref" href="Google.GenAI.ApiException.html">ApiException</a></div>
-      <div><span class="xref">ServerError</span></div>
+      <div><span class="xref">ApiException</span></div>
     </dd>
   </dl>
 
@@ -122,16 +124,17 @@ Class ServerError  <a class="header-action link-secondary" title="View source" h
     </dd>
   </dl>
 
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Google.GenAI.ClientError.html">ClientError</a></div>
+      <div><a class="xref" href="Google.GenAI.ServerError.html">ServerError</a></div>
+    </dd>
+  </dl>
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
-    <div>
-      <a class="xref" href="Google.GenAI.ApiException.html#Google_GenAI_ApiException_StatusCode">ApiException.StatusCode</a>
-    </div>
-    <div>
-      <a class="xref" href="Google.GenAI.ApiException.html#Google_GenAI_ApiException_Status">ApiException.Status</a>
-    </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception.getbaseexception">Exception.GetBaseException()</a>
     </div>
@@ -197,18 +200,18 @@ Class ServerError  <a class="header-action link-secondary" title="View source" h
 </h2>
 
 
-  <a id="Google_GenAI_ServerError__ctor_" data-uid="Google.GenAI.ServerError.#ctor*"></a>
+  <a id="Google_GenAI_ApiException__ctor_" data-uid="Google.GenAI.ApiException.#ctor*"></a>
 
-  <h3 id="Google_GenAI_ServerError__ctor_System_String_System_Exception_" data-uid="Google.GenAI.ServerError.#ctor(System.String,System.Exception)">
-  ServerError(string, Exception?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/HttpApiClient.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_ApiException__ctor_System_String_System_Exception_" data-uid="Google.GenAI.ApiException.#ctor(System.String,System.Exception)">
+  ApiException(string, Exception?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/ApiException.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ServerError(string message, Exception? innerException = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ApiException(string message, Exception? innerException = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -230,18 +233,18 @@ Class ServerError  <a class="header-action link-secondary" title="View source" h
 
 
 
-  <a id="Google_GenAI_ServerError__ctor_" data-uid="Google.GenAI.ServerError.#ctor*"></a>
+  <a id="Google_GenAI_ApiException__ctor_" data-uid="Google.GenAI.ApiException.#ctor*"></a>
 
-  <h3 id="Google_GenAI_ServerError__ctor_System_String_System_Int32_System_String_System_Exception_" data-uid="Google.GenAI.ServerError.#ctor(System.String,System.Int32,System.String,System.Exception)">
-  ServerError(string, int, string?, Exception?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/HttpApiClient.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Google_GenAI_ApiException__ctor_System_String_System_Int32_System_String_System_Exception_" data-uid="Google.GenAI.ApiException.#ctor(System.String,System.Int32,System.String,System.Exception)">
+  ApiException(string, int, string?, Exception?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/ApiException.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ServerError(string message, int statusCode, string? status = null, Exception? innerException = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ApiException(string message, int statusCode, string? status = null, Exception? innerException = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -267,11 +270,77 @@ Class ServerError  <a class="header-action link-secondary" title="View source" h
 
 
 
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Google_GenAI_ApiException_Status_" data-uid="Google.GenAI.ApiException.Status*"></a>
+
+  <h3 id="Google_GenAI_ApiException_Status" data-uid="Google.GenAI.ApiException.Status">
+  Status
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/ApiException.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Status { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_ApiException_StatusCode_" data-uid="Google.GenAI.ApiException.StatusCode*"></a>
+
+  <h3 id="Google_GenAI_ApiException_StatusCode" data-uid="Google.GenAI.ApiException.StatusCode">
+  StatusCode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/ApiException.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int StatusCode { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/HttpApiClient.cs/#L45" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/ApiException.cs/#L27" class="edit-link">Edit this page</a>
         </div>
 
 

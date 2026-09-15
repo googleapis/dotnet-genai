@@ -28,6 +28,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.ApiException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.ApiException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.ApiException",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.ApiException.yml\" sourcestartlinenumber=\"1\">Base exception for API errors. Root of the unified error hierarchy: both the\nnative <xref href=\"Google.GenAI.ClientError\" data-throw-if-not-resolved=\"false\"></xref>/<xref href=\"Google.GenAI.ServerError\" data-throw-if-not-resolved=\"false\"></xref> tree (model calls)\nand the embedded gaos error tree derive from it, so a single\n<code>catch (ApiException)</code> covers every API error.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.ApiResponse.yml",
       "output": {
         ".html": {

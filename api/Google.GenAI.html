@@ -96,6 +96,14 @@ Classes
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.ApiException.html">ApiException</a></dt>
+      <dd><p>Base exception for API errors. Root of the unified error hierarchy: both the
+native <a class="xref" href="Google.GenAI.ClientError.html">ClientError</a>/<a class="xref" href="Google.GenAI.ServerError.html">ServerError</a> tree (model calls)
+and the embedded gaos error tree derive from it, so a single
+<code>catch (ApiException)</code> covers every API error.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.ApiResponse.html">ApiResponse</a></dt>
       <dd><p>The API response contains a response to a call to the GenAI APIs.
 This class is abstract and implements IDisposable for resource management.</p>
