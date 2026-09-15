@@ -39,7 +39,7 @@ namespace Google.GenAI.Types {
     /// Optional. The display name of the blob. Used to provide a label or filename to distinguish
     /// blobs. This field is only returned in `PromptMessage` for prompt management. It is used in
     /// the Gemini calls only when server-side tools (`code_execution`, `google_search`, and
-    /// `url_context`) are enabled. This field is not supported in Gemini API.
+    /// `url_context`) are enabled.
     /// </summary>
     [JsonPropertyName("displayName")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
