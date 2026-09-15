@@ -37,11 +37,11 @@ namespace Google.GenAI
     };
 
     // Default HTTP retry configuration. Keep aligned with _api_client.py in the Python SDK.
-    private const int DefaultRetryAttempts = 5;  // Including the initial call.
-    private const double DefaultRetryInitialDelay = 1.0;  // Seconds.
-    private const double DefaultRetryMaxDelay = 60.0;  // Seconds.
-    private const double DefaultRetryExpBase = 2.0;
-    private const double DefaultRetryJitter = 1.0;
+    internal const int DefaultRetryAttempts = 5;  // Including the initial call.
+    internal const double DefaultRetryInitialDelay = 1.0;  // Seconds.
+    internal const double DefaultRetryMaxDelay = 60.0;  // Seconds.
+    internal const double DefaultRetryExpBase = 2.0;
+    internal const double DefaultRetryJitter = 1.0;  // Seconds.
 
     private static readonly IReadOnlyList<int> DefaultRetryHttpStatusCodes = new List<int>
     {
