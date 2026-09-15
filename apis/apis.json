@@ -1,9 +1,0 @@
-{
-  "apis": [
-    {
-      "id": "Google.GenAI",
-      "path": "Google.GenAI",
-      "version": "1.21.1"
-    }
-  ]
-}
