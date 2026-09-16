@@ -262,5 +262,48 @@ namespace Google.GenAI.Tests
       Assert.AreEqual("gemini-2.0-flash", deserialized.Model);
       Assert.AreEqual(1, deserialized.Contents?.Count);
     }
+
+    /// <summary>
+    /// Verifies that Client can be instantiated without triggering reflection-based
+    /// serialization exceptions when IsReflectionEnabledByDefault is false.
+    /// </summary>
+    [TestMethod]
+    public void Client_Initialization_DoesNotTriggerReflectionException()
+    {
+      var client = new Client(apiKey: "fake-test-key");
+      Assert.IsNotNull(client);
+      Assert.IsNotNull(client.Models);
+      Assert.IsNotNull(client.Live);
+      Assert.IsNotNull(client.Files);
+      Assert.IsNotNull(client.Caches);
+      Assert.IsNotNull(client.Batches);
+      Assert.IsNotNull(client.Tunings);
+    }
+
+    /// <summary>
+    /// Verifies that Type.FromJson works with custom JsonSerializerOptions
+    /// (both mutable and read-only) without triggering reflection exceptions.
+    /// </summary>
+    [TestMethod]
+    public void FromJson_WithCustomOptions_DoesNotTriggerReflectionException()
+    {
+      const string json = "{\"parts\":[{\"text\":\"Hello AOT\"}]}";
+
+      // 1. Mutable options
+      var mutableOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+      var content1 = Content.FromJson(json, mutableOptions);
+      Assert.IsNotNull(content1);
+      Assert.AreEqual("Hello AOT", content1.Parts?[0]?.Text);
+
+      // 2. Read-only options (such as JsonSerializerOptions.Default)
+      var content2 = Content.FromJson(json, JsonSerializerOptions.Default);
+      Assert.IsNotNull(content2);
+      Assert.AreEqual("Hello AOT", content2.Parts?[0]?.Text);
+
+      // 3. Repeated call with read-only options (verifies caching)
+      var content3 = Content.FromJson(json, JsonSerializerOptions.Default);
+      Assert.IsNotNull(content3);
+      Assert.AreEqual("Hello AOT", content3.Parts?[0]?.Text);
+    }
   }
 }
