@@ -30820,6 +30820,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ReinforcementTuningExample.SystemInstruction
   nameWithType: ReinforcementTuningExample.SystemInstruction
+- uid: Google.GenAI.Types.ReinforcementTuningExample.Tools
+  name: Tools
+  href: api/Google.GenAI.Types.ReinforcementTuningExample.html#Google_GenAI_Types_ReinforcementTuningExample_Tools
+  commentId: P:Google.GenAI.Types.ReinforcementTuningExample.Tools
+  fullName: Google.GenAI.Types.ReinforcementTuningExample.Tools
+  nameWithType: ReinforcementTuningExample.Tools
+- uid: Google.GenAI.Types.ReinforcementTuningExample.Tools*
+  name: Tools
+  href: api/Google.GenAI.Types.ReinforcementTuningExample.html#Google_GenAI_Types_ReinforcementTuningExample_Tools_
+  commentId: Overload:Google.GenAI.Types.ReinforcementTuningExample.Tools
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ReinforcementTuningExample.Tools
+  nameWithType: ReinforcementTuningExample.Tools
 - uid: Google.GenAI.Types.ReinforcementTuningHyperParameters
   name: ReinforcementTuningHyperParameters
   href: api/Google.GenAI.Types.ReinforcementTuningHyperParameters.html
@@ -31039,6 +31052,19 @@ references:
   commentId: T:Google.GenAI.Types.ReinforcementTuningRewardInfo
   fullName: Google.GenAI.Types.ReinforcementTuningRewardInfo
   nameWithType: ReinforcementTuningRewardInfo
+- uid: Google.GenAI.Types.ReinforcementTuningRewardInfo.ErrorStatus
+  name: ErrorStatus
+  href: api/Google.GenAI.Types.ReinforcementTuningRewardInfo.html#Google_GenAI_Types_ReinforcementTuningRewardInfo_ErrorStatus
+  commentId: P:Google.GenAI.Types.ReinforcementTuningRewardInfo.ErrorStatus
+  fullName: Google.GenAI.Types.ReinforcementTuningRewardInfo.ErrorStatus
+  nameWithType: ReinforcementTuningRewardInfo.ErrorStatus
+- uid: Google.GenAI.Types.ReinforcementTuningRewardInfo.ErrorStatus*
+  name: ErrorStatus
+  href: api/Google.GenAI.Types.ReinforcementTuningRewardInfo.html#Google_GenAI_Types_ReinforcementTuningRewardInfo_ErrorStatus_
+  commentId: Overload:Google.GenAI.Types.ReinforcementTuningRewardInfo.ErrorStatus
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ReinforcementTuningRewardInfo.ErrorStatus
+  nameWithType: ReinforcementTuningRewardInfo.ErrorStatus
 - uid: Google.GenAI.Types.ReinforcementTuningRewardInfo.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
   name: FromJson(string, JsonSerializerOptions?)
   href: api/Google.GenAI.Types.ReinforcementTuningRewardInfo.html#Google_GenAI_Types_ReinforcementTuningRewardInfo_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
@@ -37300,6 +37326,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.TrafficType.OnDemandFlex
   nameWithType: TrafficType.OnDemandFlex
+- uid: Google.GenAI.Types.TrafficType.OnDemandOffpeak
+  name: OnDemandOffpeak
+  href: api/Google.GenAI.Types.TrafficType.html#Google_GenAI_Types_TrafficType_OnDemandOffpeak
+  commentId: P:Google.GenAI.Types.TrafficType.OnDemandOffpeak
+  fullName: Google.GenAI.Types.TrafficType.OnDemandOffpeak
+  nameWithType: TrafficType.OnDemandOffpeak
+- uid: Google.GenAI.Types.TrafficType.OnDemandOffpeak*
+  name: OnDemandOffpeak
+  href: api/Google.GenAI.Types.TrafficType.html#Google_GenAI_Types_TrafficType_OnDemandOffpeak_
+  commentId: Overload:Google.GenAI.Types.TrafficType.OnDemandOffpeak
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TrafficType.OnDemandOffpeak
+  nameWithType: TrafficType.OnDemandOffpeak
 - uid: Google.GenAI.Types.TrafficType.OnDemandPriority
   name: OnDemandPriority
   href: api/Google.GenAI.Types.TrafficType.html#Google_GenAI_Types_TrafficType_OnDemandPriority
@@ -43375,6 +43414,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.VideoResponseFormat.GcsUri
   nameWithType: VideoResponseFormat.GcsUri
+- uid: Google.GenAI.Types.VideoResponseFormat.Resolution
+  name: Resolution
+  href: api/Google.GenAI.Types.VideoResponseFormat.html#Google_GenAI_Types_VideoResponseFormat_Resolution
+  commentId: P:Google.GenAI.Types.VideoResponseFormat.Resolution
+  fullName: Google.GenAI.Types.VideoResponseFormat.Resolution
+  nameWithType: VideoResponseFormat.Resolution
+- uid: Google.GenAI.Types.VideoResponseFormat.Resolution*
+  name: Resolution
+  href: api/Google.GenAI.Types.VideoResponseFormat.html#Google_GenAI_Types_VideoResponseFormat_Resolution_
+  commentId: Overload:Google.GenAI.Types.VideoResponseFormat.Resolution
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VideoResponseFormat.Resolution
+  nameWithType: VideoResponseFormat.Resolution
 - uid: Google.GenAI.Types.VoiceActivity
   name: VoiceActivity
   href: api/Google.GenAI.Types.VoiceActivity.html
