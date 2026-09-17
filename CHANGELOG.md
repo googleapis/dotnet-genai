@@ -1,5 +1,19 @@
 # Changelog
 
+## Version 1.22.0, released 2026-09-17
+
+
+### New features
+
+* **dotnet:** unify exception hierarchy ([9994576](https://github.com/googleapis/dotnet-genai/commit/99945768d08321457d4ee92ff3f16776478d9f25))
+* pass RetryOptions (backoff timing + num attempts) to gaos ([b45b7a9](https://github.com/googleapis/dotnet-genai/commit/b45b7a921d05f7cff66847c0754e6220eb8b4247))
+* update discovery doc ([3078fc9](https://github.com/googleapis/dotnet-genai/commit/3078fc9e3558d27d4c91c57190686023449fef96))
+
+
+### Documentation improvements
+
+* update GenAI SDK README files to use gemini-flash-latest ([009ce28](https://github.com/googleapis/dotnet-genai/commit/009ce287d80fdc9b2c851bc1aab01e40eb17e2bb))
+
 ## Version 1.21.1, released 2026-09-11
 
 
