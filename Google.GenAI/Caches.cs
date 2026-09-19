@@ -714,6 +714,11 @@ namespace Google.GenAI {
             Common.GetValueByPath(fromObject, new string[] { "mediaProcessing" }));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "speechMetadata" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "speechMetadata" },
+                              Common.GetValueByPath(fromObject, new string[] { "speechMetadata" }));
+      }
+
       return toObject;
     }
 
@@ -804,6 +809,11 @@ namespace Google.GenAI {
         Common.SetValueByPath(
             toObject, new string[] { "mediaProcessing" },
             Common.GetValueByPath(fromObject, new string[] { "mediaProcessing" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "speechMetadata" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "speechMetadata" },
+                              Common.GetValueByPath(fromObject, new string[] { "speechMetadata" }));
       }
 
       return toObject;

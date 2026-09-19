@@ -200,6 +200,17 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Extra metadata associated with the part for speech synthesis, such as speaker and style.
+    /// Only valid when `Part.data` is set to `text`.
+    /// </summary>
+    [JsonPropertyName("speechMetadata")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public SpeechMetadata
+        ? SpeechMetadata {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a Part object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
