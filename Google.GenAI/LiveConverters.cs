@@ -642,6 +642,11 @@ namespace Google.GenAI {
                               Common.GetValueByPath(fromObject, new string[] { "historyConfig" }));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "labels" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "labels" },
+                              Common.GetValueByPath(fromObject, new string[] { "labels" }));
+      }
+
       return toObject;
     }
 
@@ -734,6 +739,11 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "historyConfig" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "historyConfig" },
                               Common.GetValueByPath(fromObject, new string[] { "historyConfig" }));
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "labels" }))) {
+        throw new NotSupportedException(
+            "labels parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       }
 
       return toObject;
