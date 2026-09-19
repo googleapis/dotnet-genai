@@ -23,47 +23,38 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// The configuration for the voice to use.
+  /// Extra metadata associated with the part for speech synthesis.
   /// </summary>
 
-  public record VoiceConfig {
+  public record SpeechMetadata {
     /// <summary>
-    /// The configuration for a replicated voice, which is a clone of a user's voice that can be
-    /// used for speech synthesis. If this is unset, a default voice is used.
+    /// The speaker for this part, which must match a `speaker` name in
+    /// `MultiSpeakerVoiceConfig.speaker_voice_configs`.
     /// </summary>
-    [JsonPropertyName("replicatedVoiceConfig")]
+    [JsonPropertyName("speaker")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public ReplicatedVoiceConfig ? ReplicatedVoiceConfig { get; set; }
+    public string ? Speaker { get; set; }
 
     /// <summary>
-    /// The configuration for a prebuilt voice.
+    /// The style instruction for how the voice should be synthesized (e.g. "excited, fast-paced").
     /// </summary>
-    [JsonPropertyName("prebuiltVoiceConfig")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public PrebuiltVoiceConfig
-        ? PrebuiltVoiceConfig {
-            get; set;
-          }
-
-    /// <summary>
-    /// The speaker identifier for synthesis.
-    /// </summary>
-    [JsonPropertyName("voice")]
+    [JsonPropertyName("style")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string
-        ? Voice {
+        ? Style {
             get; set;
           }
 
     /// <summary>
-    /// Deserializes a JSON string to a VoiceConfig object.
+    /// Deserializes a JSON string to a SpeechMetadata object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
     /// <param name="options">Optional JsonSerializerOptions.</param>
-    /// <returns>The deserialized VoiceConfig object, or null if deserialization fails.</returns>
-    public static VoiceConfig ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
+    /// <returns>The deserialized SpeechMetadata object, or null if deserialization fails.</returns>
+    public static SpeechMetadata
+        ? FromJson(string jsonString, JsonSerializerOptions? options = null) {
       try {
-        return JsonSerializer.Deserialize(jsonString, JsonConfig.TypeInfo<VoiceConfig>(options));
+        return JsonSerializer.Deserialize(jsonString, JsonConfig.TypeInfo<SpeechMetadata>(options));
       } catch (JsonException e) {
         Console.Error.WriteLine($"Error deserializing JSON: {e.ToString()}");
         return null;
