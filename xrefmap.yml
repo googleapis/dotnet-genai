@@ -27970,6 +27970,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Part.PartMetadata
   nameWithType: Part.PartMetadata
+- uid: Google.GenAI.Types.Part.SpeechMetadata
+  name: SpeechMetadata
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_SpeechMetadata
+  commentId: P:Google.GenAI.Types.Part.SpeechMetadata
+  fullName: Google.GenAI.Types.Part.SpeechMetadata
+  nameWithType: Part.SpeechMetadata
+- uid: Google.GenAI.Types.Part.SpeechMetadata*
+  name: SpeechMetadata
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_SpeechMetadata_
+  commentId: Overload:Google.GenAI.Types.Part.SpeechMetadata
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Part.SpeechMetadata
+  nameWithType: Part.SpeechMetadata
 - uid: Google.GenAI.Types.Part.Text
   name: Text
   href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_Text
@@ -34670,6 +34683,54 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.SpeechConfig.VoiceConfig
   nameWithType: SpeechConfig.VoiceConfig
+- uid: Google.GenAI.Types.SpeechMetadata
+  name: SpeechMetadata
+  href: api/Google.GenAI.Types.SpeechMetadata.html
+  commentId: T:Google.GenAI.Types.SpeechMetadata
+  fullName: Google.GenAI.Types.SpeechMetadata
+  nameWithType: SpeechMetadata
+- uid: Google.GenAI.Types.SpeechMetadata.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.SpeechMetadata.html#Google_GenAI_Types_SpeechMetadata_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.SpeechMetadata.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.SpeechMetadata.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.SpeechMetadata.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: SpeechMetadata.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: SpeechMetadata.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.SpeechMetadata.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.SpeechMetadata.html#Google_GenAI_Types_SpeechMetadata_FromJson_
+  commentId: Overload:Google.GenAI.Types.SpeechMetadata.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SpeechMetadata.FromJson
+  nameWithType: SpeechMetadata.FromJson
+- uid: Google.GenAI.Types.SpeechMetadata.Speaker
+  name: Speaker
+  href: api/Google.GenAI.Types.SpeechMetadata.html#Google_GenAI_Types_SpeechMetadata_Speaker
+  commentId: P:Google.GenAI.Types.SpeechMetadata.Speaker
+  fullName: Google.GenAI.Types.SpeechMetadata.Speaker
+  nameWithType: SpeechMetadata.Speaker
+- uid: Google.GenAI.Types.SpeechMetadata.Speaker*
+  name: Speaker
+  href: api/Google.GenAI.Types.SpeechMetadata.html#Google_GenAI_Types_SpeechMetadata_Speaker_
+  commentId: Overload:Google.GenAI.Types.SpeechMetadata.Speaker
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SpeechMetadata.Speaker
+  nameWithType: SpeechMetadata.Speaker
+- uid: Google.GenAI.Types.SpeechMetadata.Style
+  name: Style
+  href: api/Google.GenAI.Types.SpeechMetadata.html#Google_GenAI_Types_SpeechMetadata_Style
+  commentId: P:Google.GenAI.Types.SpeechMetadata.Style
+  fullName: Google.GenAI.Types.SpeechMetadata.Style
+  nameWithType: SpeechMetadata.Style
+- uid: Google.GenAI.Types.SpeechMetadata.Style*
+  name: Style
+  href: api/Google.GenAI.Types.SpeechMetadata.html#Google_GenAI_Types_SpeechMetadata_Style_
+  commentId: Overload:Google.GenAI.Types.SpeechMetadata.Style
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SpeechMetadata.Style
+  nameWithType: SpeechMetadata.Style
 - uid: Google.GenAI.Types.StartSensitivity
   name: StartSensitivity
   href: api/Google.GenAI.Types.StartSensitivity.html
@@ -43738,6 +43799,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.VoiceConfig.ReplicatedVoiceConfig
   nameWithType: VoiceConfig.ReplicatedVoiceConfig
+- uid: Google.GenAI.Types.VoiceConfig.Voice
+  name: Voice
+  href: api/Google.GenAI.Types.VoiceConfig.html#Google_GenAI_Types_VoiceConfig_Voice
+  commentId: P:Google.GenAI.Types.VoiceConfig.Voice
+  fullName: Google.GenAI.Types.VoiceConfig.Voice
+  nameWithType: VoiceConfig.Voice
+- uid: Google.GenAI.Types.VoiceConfig.Voice*
+  name: Voice
+  href: api/Google.GenAI.Types.VoiceConfig.html#Google_GenAI_Types_VoiceConfig_Voice_
+  commentId: Overload:Google.GenAI.Types.VoiceConfig.Voice
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VoiceConfig.Voice
+  nameWithType: VoiceConfig.Voice
 - uid: Google.GenAI.Types.VoiceConsentSignature
   name: VoiceConsentSignature
   href: api/Google.GenAI.Types.VoiceConsentSignature.html

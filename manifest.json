@@ -5894,6 +5894,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.SpeechMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.SpeechMetadata.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.SpeechMetadata",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SpeechMetadata.yml\" sourcestartlinenumber=\"1\">Extra metadata associated with the part for speech synthesis.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.StartSensitivity.yml",
       "output": {
         ".html": {
