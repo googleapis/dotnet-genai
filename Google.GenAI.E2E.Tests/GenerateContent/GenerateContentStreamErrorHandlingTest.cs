@@ -154,18 +154,4 @@ public class GenerateContentStreamErrorHandlingTest {
       Assert.IsNotNull(chunk.Candidates[0].Content.Parts[0].Text);
     }
   }
-
-  [TestMethod]
-  public async Task GenerateContentLabelsGeminiTest() {
-    var ex = await Assert.ThrowsExceptionAsync<NotSupportedException>(async () => {
-      await foreach (var chunk in geminiClient.Models.GenerateContentStreamAsync(
-                         model: modelName, contents: "What is the capital of France?",
-                         config: new GenerateContentConfig {
-                           Labels = new Dictionary<string, string> { { "test-label-key",
-                                                                       "test-label-value" } }
-                         })) {}
-    });
-
-    StringAssert.Contains(ex.Message, "only supported in Gemini Enterprise Agent Platform mode");
-  }
 }

@@ -149,17 +149,4 @@ public class GenerateContentErrorHandlingTest {
     Assert.IsTrue(vertexResponse.Candidates.Count >= 1);
     Assert.IsNotNull(vertexResponse.Candidates[0].Content.Parts[0].Text);
   }
-
-  [TestMethod]
-  public async Task GenerateContentLabelsGeminiTest() {
-    var ex = await Assert.ThrowsExceptionAsync<NotSupportedException>(async () => {
-      await geminiClient.Models.GenerateContentAsync(
-          model: modelName, contents: "What is the capital of France?",
-          config: new GenerateContentConfig {
-            Labels = new Dictionary<string, string> { { "test-label-key", "test-label-value" } }
-          });
-    });
-
-    StringAssert.Contains(ex.Message, "only supported in Gemini Enterprise Agent Platform mode,");
-  }
 }

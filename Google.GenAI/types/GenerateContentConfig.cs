@@ -270,7 +270,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Labels with user-defined metadata to break down billed charges.
+    /// Labels with user-defined metadata for the request.
     /// </summary>
     [JsonPropertyName("labels")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
