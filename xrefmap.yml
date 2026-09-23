@@ -23568,6 +23568,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.LiveClientSetup.InputAudioTranscription
   nameWithType: LiveClientSetup.InputAudioTranscription
+- uid: Google.GenAI.Types.LiveClientSetup.Labels
+  name: Labels
+  href: api/Google.GenAI.Types.LiveClientSetup.html#Google_GenAI_Types_LiveClientSetup_Labels
+  commentId: P:Google.GenAI.Types.LiveClientSetup.Labels
+  fullName: Google.GenAI.Types.LiveClientSetup.Labels
+  nameWithType: LiveClientSetup.Labels
+- uid: Google.GenAI.Types.LiveClientSetup.Labels*
+  name: Labels
+  href: api/Google.GenAI.Types.LiveClientSetup.html#Google_GenAI_Types_LiveClientSetup_Labels_
+  commentId: Overload:Google.GenAI.Types.LiveClientSetup.Labels
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LiveClientSetup.Labels
+  nameWithType: LiveClientSetup.Labels
 - uid: Google.GenAI.Types.LiveClientSetup.Model
   name: Model
   href: api/Google.GenAI.Types.LiveClientSetup.html#Google_GenAI_Types_LiveClientSetup_Model
