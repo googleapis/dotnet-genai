@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <PublishAot>true</PublishAot>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsNotAsErrors>NU1900</WarningsNotAsErrors>
+    <DefineConstants Condition="'$(TestInteractions)' == 'true'">$(DefineConstants);TEST_INTERACTIONS</DefineConstants>
+    <NoWarn Condition="'$(TestInteractions)' == 'true'">$(NoWarn);GENAI_GAOS_001;CS0618</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Google.GenAI\Google.GenAI.csproj" />
+  </ItemGroup>
+</Project>

@@ -17,6 +17,9 @@
 using Google.Apis.Auth.OAuth2;
 using System.Diagnostics.CodeAnalysis;
 
+using Google.GenAI.Interactions;
+using Google.GenAI.Interactions.Utils.Retries;
+
 namespace Google.GenAI
 {
   /// <summary>
@@ -135,6 +138,96 @@ namespace Google.GenAI
       Files = new Files(_apiClient);
       Tokens = new Tokens(_apiClient);
     }
+
+#pragma warning disable CS0618, GENAI_GAOS_001
+    private volatile Google.GenAI.Interactions.GenAI? _interactionsClient;
+    private static int _interactionsWarned = 0;
+
+#if NET8_0_OR_GREATER
+    [RequiresUnreferencedCode("Interactions is experimental and not compatible with Native AOT trimming.")]
+    [RequiresDynamicCode("Interactions is experimental and not compatible with Native AOT.")]
+#endif
+    internal Google.GenAI.Interactions.GenAI GetInteractionsClient()
+    {
+      if (System.Threading.Interlocked.Exchange(ref _interactionsWarned, 1) == 0)
+      {
+        System.Diagnostics.Trace.TraceWarning(
+            "Google.GenAI: Interactions API is an experimental preview (GENAI_GAOS_001). " +
+            "Underlying models and converters are actively evolving for Native AOT and may change in upcoming releases. " +
+            "See https://github.com/googleapis/dotnet-genai/issues/159");
+      }
+
+      if (_interactionsClient == null)
+      {
+        lock (_interactionsLock)
+        {
+          _interactionsClient ??= CreateInteractionsClient();
+        }
+      }
+      return _interactionsClient;
+    }
+
+#if NET8_0_OR_GREATER
+    [RequiresUnreferencedCode("Interactions is experimental and not compatible with Native AOT trimming.")]
+    [RequiresDynamicCode("Interactions is experimental and not compatible with Native AOT.")]
+#endif
+    private Google.GenAI.Interactions.GenAI CreateInteractionsClient()
+    {
+      string? apiVersion = _apiClient.HttpOptions.ApiVersion;
+      if (_apiClient.VertexAI && !string.IsNullOrEmpty(_apiClient.Project) && !string.IsNullOrEmpty(_apiClient.Location))
+      {
+        apiVersion = $"{apiVersion}/projects/{_apiClient.Project}/locations/{_apiClient.Location}";
+      }
+
+      RetryConfig? gaosRetryConfig = null;
+      var retryOptions = _apiClient.HttpOptions.RetryOptions;
+      if (retryOptions != null)
+      {
+          int maxRetries = Math.Max(0, (retryOptions.Attempts ?? ApiClient.DefaultRetryAttempts) - 1);
+          long maxIntervalMs = Math.Max(0L, (long)((retryOptions.MaxDelay ?? ApiClient.DefaultRetryMaxDelay) * 1000));
+          var backoff = new BackoffStrategy(
+              initialIntervalMs: Math.Max(0L, (long)((retryOptions.InitialDelay ?? ApiClient.DefaultRetryInitialDelay) * 1000)),
+              maxIntervalMs: maxIntervalMs,
+              maxElapsedTimeMs: maxRetries * maxIntervalMs,
+              exponent: retryOptions.ExpBase ?? ApiClient.DefaultRetryExpBase
+          );
+          gaosRetryConfig = new RetryConfig(
+              strategy: RetryConfig.RetryStrategy.ATTEMPT_COUNT_BACKOFF,
+              backoff: backoff,
+              retryConnectionErrors: true,
+              maxRetries: maxRetries
+          );
+      }
+
+      return new Google.GenAI.Interactions.GenAI(
+          securitySource: () =>
+          {
+              var security = new Google.GenAI.Interactions.Models.Components.Security();
+              if (_apiClient.ApiKey != null)
+              {
+                  security.ApiKey = _apiClient.ApiKey;
+              }
+              if (_apiClient.HttpOptions.Headers != null)
+              {
+                  security.DefaultHeaders = new Dictionary<string, string>();
+                  foreach (var kvp in _apiClient.HttpOptions.Headers)
+                  {
+                      if (!kvp.Key.Equals("Content-Type", StringComparison.OrdinalIgnoreCase))
+                      {
+                          security.DefaultHeaders[kvp.Key] = kvp.Value;
+                      }
+                  }
+              }
+              return security;
+          },
+          serverUrl: _apiClient.HttpOptions.BaseUrl,
+          apiVersion: apiVersion,
+          userProject: (_apiClient.Credentials as GoogleCredential)?.QuotaProject,
+          client: new GaosHttpClient(_apiClient.HttpClient, _apiClient.ApiKey != null ? null : _apiClient.Credentials),
+          retryConfig: gaosRetryConfig
+      );
+    }
+#pragma warning restore GENAI_GAOS_001
 
     static string? inferBaseUrl(bool vertexAI)
     {
