@@ -173,6 +173,21 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Optional. Labels with user-defined metadata for the request. Optional. Labels must follow
+    /// standard unified Cloud label requirements: - Label keys must start with a letter. - Label
+    /// keys and values can be no longer than 63 characters (Unicode codepoints) and can only
+    /// contain lowercase letters, numeric characters, underscores, and dashes. - International
+    /// characters are allowed. Usage: - Safety identifiers from aggregators: Use the key
+    /// `safety_identifier` (e.g. `{"safety_identifier": "user_session_123"}`)
+    /// </summary>
+    [JsonPropertyName("labels")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public Dictionary<string, string>
+        ? Labels {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a LiveClientSetup object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
