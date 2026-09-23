@@ -1,5 +1,12 @@
 # Changelog
 
+## Version 1.23.0, released 2026-09-23
+
+
+### New features
+
+* include labels for LiveClientSetup ([1714599](https://github.com/googleapis/dotnet-genai/commit/1714599d6553038c31cb6c251c854584672c2866))
+
 ## Version 1.22.0, released 2026-09-22
 
 
