@@ -1685,6 +1685,11 @@ namespace Google.GenAI {
                                   toObject, rootObject));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "gcsMetricsUri" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "gcsMetricsUri" },
+                              Common.GetValueByPath(fromObject, new string[] { "gcsMetricsUri" }));
+      }
+
       return toObject;
     }
 
