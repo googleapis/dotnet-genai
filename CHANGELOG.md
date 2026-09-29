@@ -1,5 +1,13 @@
 # Changelog
 
+## Version 1.23.0, released 2026-09-29
+
+
+### New features
+
+* add gcs_metrics_uri for exporting tuning job metrics. ([f50cea2](https://github.com/googleapis/dotnet-genai/commit/f50cea2e8a0454e8d8d360448b2ed5c06a91ee81))
+* include labels for LiveClientSetup ([1714599](https://github.com/googleapis/dotnet-genai/commit/1714599d6553038c31cb6c251c854584672c2866))
+
 ## Version 1.22.0, released 2026-09-22
 
 
