@@ -38224,6 +38224,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.TuningJob.FullFineTuningSpec
   nameWithType: TuningJob.FullFineTuningSpec
+- uid: Google.GenAI.Types.TuningJob.GcsMetricsUri
+  name: GcsMetricsUri
+  href: api/Google.GenAI.Types.TuningJob.html#Google_GenAI_Types_TuningJob_GcsMetricsUri
+  commentId: P:Google.GenAI.Types.TuningJob.GcsMetricsUri
+  fullName: Google.GenAI.Types.TuningJob.GcsMetricsUri
+  nameWithType: TuningJob.GcsMetricsUri
+- uid: Google.GenAI.Types.TuningJob.GcsMetricsUri*
+  name: GcsMetricsUri
+  href: api/Google.GenAI.Types.TuningJob.html#Google_GenAI_Types_TuningJob_GcsMetricsUri_
+  commentId: Overload:Google.GenAI.Types.TuningJob.GcsMetricsUri
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TuningJob.GcsMetricsUri
+  nameWithType: TuningJob.GcsMetricsUri
 - uid: Google.GenAI.Types.TuningJob.Labels
   name: Labels
   href: api/Google.GenAI.Types.TuningJob.html#Google_GenAI_Types_TuningJob_Labels
