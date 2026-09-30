@@ -22,7 +22,11 @@ using System.Text.Json;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// The media resolution to use.
+  /// The token resolution at which input media content is sampled. This is used to control the
+  /// trade-off between the quality of the response and the number of tokens used to represent the
+  /// media. A higher resolution allows the model to perceive more detail, which can lead to a more
+  /// nuanced response, but it will also use more tokens. This does not affect the image dimensions
+  /// sent to the model.
   /// </summary>
 
   [JsonConverter(typeof(MediaResolutionConverter))]
@@ -34,7 +38,7 @@ namespace Google.GenAI.Types {
     }
 
     /// <summary>
-    /// Media resolution has not been set
+    /// Media resolution has not been set.
     /// </summary>
     public static MediaResolution MediaResolutionUnspecified {
       get;
