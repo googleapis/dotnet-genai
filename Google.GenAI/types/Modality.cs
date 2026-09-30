@@ -34,22 +34,22 @@ namespace Google.GenAI.Types {
     }
 
     /// <summary>
-    /// The modality is unspecified.
+    /// Unspecified modality. Will be processed as text.
     /// </summary>
     public static Modality ModalityUnspecified { get; } = new("MODALITY_UNSPECIFIED");
 
     /// <summary>
-    /// Indicates the model should return text
+    /// Text modality.
     /// </summary>
     public static Modality Text { get; } = new("TEXT");
 
     /// <summary>
-    /// Indicates the model should return images.
+    /// Image modality.
     /// </summary>
     public static Modality Image { get; } = new("IMAGE");
 
     /// <summary>
-    /// Indicates the model should return audio.
+    /// Audio modality.
     /// </summary>
     public static Modality Audio { get; } = new("AUDIO");
 
