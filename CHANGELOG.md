@@ -1,5 +1,12 @@
 # Changelog
 
+## Version 1.24.0, released 2026-10-01
+
+
+### New features
+
+* support continuation_token in GenerateContent ([8aeda26](https://github.com/googleapis/dotnet-genai/commit/8aeda26a35eb53fbd9fbe1b97ba512af4837ad3f))
+
 ## Version 1.23.0, released 2026-09-29
 
 
