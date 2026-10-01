@@ -23,8 +23,7 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Configuration for the model to configure output formatting and delivery. This data type is not
-  /// supported in Gemini API.
+  /// Configuration for the model to configure output formatting and delivery.
   /// </summary>
 
   public record ResponseFormat {
@@ -56,7 +55,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Video output format.
+    /// Video output format. This field is not supported in Gemini API.
     /// </summary>
     [JsonPropertyName("video")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
