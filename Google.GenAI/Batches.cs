@@ -523,12 +523,6 @@ namespace Google.GenAI {
             Common.GetValueByPath(fromObject, new string[] { "urlContextMetadata" }));
       }
 
-      if (Common.GetValueByPath(fromObject, new string[] { "continuationToken" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "continuationToken" },
-            Common.GetValueByPath(fromObject, new string[] { "continuationToken" }));
-      }
-
       return toObject;
     }
 
@@ -1132,12 +1126,6 @@ namespace Google.GenAI {
         Common.SetValueByPath(
             toObject, new string[] { "audioTranscriptionConfig" },
             Common.GetValueByPath(fromObject, new string[] { "audioTranscriptionConfig" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "continuationToken" }) != null) {
-        Common.SetValueByPath(
-            parentObject, new string[] { "continuationToken" },
-            Common.GetValueByPath(fromObject, new string[] { "continuationToken" }));
       }
 
       return toObject;
