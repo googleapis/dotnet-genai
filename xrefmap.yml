@@ -6346,6 +6346,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Candidate.Content
   nameWithType: Candidate.Content
+- uid: Google.GenAI.Types.Candidate.ContinuationToken
+  name: ContinuationToken
+  href: api/Google.GenAI.Types.Candidate.html#Google_GenAI_Types_Candidate_ContinuationToken
+  commentId: P:Google.GenAI.Types.Candidate.ContinuationToken
+  fullName: Google.GenAI.Types.Candidate.ContinuationToken
+  nameWithType: Candidate.ContinuationToken
+- uid: Google.GenAI.Types.Candidate.ContinuationToken*
+  name: ContinuationToken
+  href: api/Google.GenAI.Types.Candidate.html#Google_GenAI_Types_Candidate_ContinuationToken_
+  commentId: Overload:Google.GenAI.Types.Candidate.ContinuationToken
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Candidate.ContinuationToken
+  nameWithType: Candidate.ContinuationToken
 - uid: Google.GenAI.Types.Candidate.FinishMessage
   name: FinishMessage
   href: api/Google.GenAI.Types.Candidate.html#Google_GenAI_Types_Candidate_FinishMessage
@@ -13318,6 +13331,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.FinishReason.Blocklist
   nameWithType: FinishReason.Blocklist
+- uid: Google.GenAI.Types.FinishReason.Continuation
+  name: Continuation
+  href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_Continuation
+  commentId: P:Google.GenAI.Types.FinishReason.Continuation
+  fullName: Google.GenAI.Types.FinishReason.Continuation
+  nameWithType: FinishReason.Continuation
+- uid: Google.GenAI.Types.FinishReason.Continuation*
+  name: Continuation
+  href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_Continuation_
+  commentId: Overload:Google.GenAI.Types.FinishReason.Continuation
+  isSpec: "True"
+  fullName: Google.GenAI.Types.FinishReason.Continuation
+  nameWithType: FinishReason.Continuation
 - uid: Google.GenAI.Types.FinishReason.Equals(Google.GenAI.Types.FinishReason)
   name: Equals(FinishReason)
   href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_Equals_Google_GenAI_Types_FinishReason_
@@ -14841,6 +14867,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerateContentConfig.CandidateCount
   nameWithType: GenerateContentConfig.CandidateCount
+- uid: Google.GenAI.Types.GenerateContentConfig.ContinuationToken
+  name: ContinuationToken
+  href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_ContinuationToken
+  commentId: P:Google.GenAI.Types.GenerateContentConfig.ContinuationToken
+  fullName: Google.GenAI.Types.GenerateContentConfig.ContinuationToken
+  nameWithType: GenerateContentConfig.ContinuationToken
+- uid: Google.GenAI.Types.GenerateContentConfig.ContinuationToken*
+  name: ContinuationToken
+  href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_ContinuationToken_
+  commentId: Overload:Google.GenAI.Types.GenerateContentConfig.ContinuationToken
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateContentConfig.ContinuationToken
+  nameWithType: GenerateContentConfig.ContinuationToken
 - uid: Google.GenAI.Types.GenerateContentConfig.EnableEnhancedCivicAnswers
   name: EnableEnhancedCivicAnswers
   href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_EnableEnhancedCivicAnswers
