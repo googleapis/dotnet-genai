@@ -126,13 +126,6 @@ namespace Google.GenAI.Types {
     /// </summary>
     public static FinishReason ImageOther { get; } = new("IMAGE_OTHER");
 
-    /// <summary>
-    /// Token generation stopped because the response reached the per-request token limit, but
-    /// generation is not yet complete. The response can be continued by passing the returned
-    /// `continuation_token` in a subsequent request.
-    /// </summary>
-    public static FinishReason Continuation { get; } = new("CONTINUATION");
-
     public static IReadOnlyList<FinishReason> AllValues {
       get;
     } = new[] { FinishReasonUnspecified,
@@ -152,8 +145,7 @@ namespace Google.GenAI.Types {
                 ImageProhibitedContent,
                 NoImage,
                 ImageRecitation,
-                ImageOther,
-                Continuation };
+                ImageOther };
 
     public static FinishReason FromString(string value) {
       if (string.IsNullOrEmpty(value)) {

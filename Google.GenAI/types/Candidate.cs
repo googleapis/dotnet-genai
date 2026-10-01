@@ -144,17 +144,6 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// An opaque continuation token returned when `finish_reason` is `CONTINUATION`. Pass it in a
-    /// subsequent request to continue generation.
-    /// </summary>
-    [JsonPropertyName("continuationToken")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public byte[]
-        ? ContinuationToken {
-            get; set;
-          }
-
-    /// <summary>
     /// Deserializes a JSON string to a Candidate object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

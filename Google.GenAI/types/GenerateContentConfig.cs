@@ -393,17 +393,6 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// An opaque continuation token used to resume generation from a previous response that stopped
-    /// with `finish_reason` set to `CONTINUATION`.
-    /// </summary>
-    [JsonPropertyName("continuationToken")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public byte[]
-        ? ContinuationToken {
-            get; set;
-          }
-
-    /// <summary>
     /// Deserializes a JSON string to a GenerateContentConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
