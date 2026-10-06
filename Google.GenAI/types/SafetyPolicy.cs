@@ -34,44 +34,44 @@ namespace Google.GenAI.Types {
     }
 
     /// <summary>
-    /// Unspecified safety policy.
+    /// Unspecified safety policy. This value should not be used.
     /// </summary>
     public static SafetyPolicy SafetyPolicyUnspecified { get; } = new("SAFETY_POLICY_UNSPECIFIED");
 
     /// <summary>
-    /// Safety policy for financial transactions.
+    /// Financial transactions safety policy.
     /// </summary>
     public static SafetyPolicy FinancialTransactions { get; } = new("FINANCIAL_TRANSACTIONS");
 
     /// <summary>
-    /// Safety policy for sensitive data modification.
+    /// Sensitive data modification safety policy.
     /// </summary>
     public static SafetyPolicy SensitiveDataModification {
       get;
     } = new("SENSITIVE_DATA_MODIFICATION");
 
     /// <summary>
-    /// Safety policy for communication tools (e.g. Gmail, Chat, Meet).
+    /// Communication tool safety policy.
     /// </summary>
     public static SafetyPolicy CommunicationTool { get; } = new("COMMUNICATION_TOOL");
 
     /// <summary>
-    /// Safety policy for account creation.
+    /// Account creation safety policy.
     /// </summary>
     public static SafetyPolicy AccountCreation { get; } = new("ACCOUNT_CREATION");
 
     /// <summary>
-    /// Safety policy for data modification.
+    /// Data modification safety policy.
     /// </summary>
     public static SafetyPolicy DataModification { get; } = new("DATA_MODIFICATION");
 
     /// <summary>
-    /// Safety policy for user consent management.
+    /// User consent management safety policy.
     /// </summary>
     public static SafetyPolicy UserConsentManagement { get; } = new("USER_CONSENT_MANAGEMENT");
 
     /// <summary>
-    /// Safety policy for legal terms and agreements.
+    /// Legal terms and agreements safety policy.
     /// </summary>
     public static SafetyPolicy LegalTermsAndAgreements { get; } = new("LEGAL_TERMS_AND_AGREEMENTS");
 

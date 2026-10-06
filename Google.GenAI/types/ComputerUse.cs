@@ -59,8 +59,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Optional. Disabled safety policies for computer use. This field is not supported in Vertex
-    /// AI.
+    /// Optional. Disabled safety policies for computer use.
     /// </summary>
     [JsonPropertyName("disabledSafetyPolicies")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

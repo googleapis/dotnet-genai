@@ -377,7 +377,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// The Cloud Storage metrics URI associated with this tuning job.
+    /// Output only. The Cloud Storage metrics URI associated with this TuningJob.
     /// </summary>
     [JsonPropertyName("gcsMetricsUri")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
