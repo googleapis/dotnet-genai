@@ -1,5 +1,17 @@
 # Changelog
 
+## Version 1.25.0, released 2026-10-07
+
+
+### New features
+
+* update discovery doc ([3facc36](https://github.com/googleapis/dotnet-genai/commit/3facc36efb5da2dbda7e1e57e6cae8bd23bc218e))
+
+
+### Documentation improvements
+
+* update generated SDK docstring examples to use gemini-flash-latest ([002b76b](https://github.com/googleapis/dotnet-genai/commit/002b76b5427b5a9c955863e2526bc63377dad3f5))
+
 ## Version 1.24.0, released 2026-10-01
 
 
