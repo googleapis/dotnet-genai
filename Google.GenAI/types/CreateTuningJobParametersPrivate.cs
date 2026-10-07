@@ -28,7 +28,7 @@ namespace Google.GenAI.Types {
 
   internal record CreateTuningJobParametersPrivate {
     /// <summary>
-    /// The base model that is being tuned, e.g., "gemini-2.5-flash".
+    /// The base model that is being tuned, e.g., "gemini-flash-latest".
     /// </summary>
     [JsonPropertyName("baseModel")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
