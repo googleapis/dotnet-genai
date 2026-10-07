@@ -78,6 +78,16 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Updates to the context of the current session.
+    /// </summary>
+    [JsonPropertyName("contextUpdate")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public LiveClientContextUpdate
+        ? ContextUpdate {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a LiveClientMessage object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
