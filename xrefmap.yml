@@ -30201,6 +30201,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.RealtimeInputConfig.FromJson
   nameWithType: RealtimeInputConfig.FromJson
+- uid: Google.GenAI.Types.RealtimeInputConfig.InterimTranscriptTimestampEnabled
+  name: InterimTranscriptTimestampEnabled
+  href: api/Google.GenAI.Types.RealtimeInputConfig.html#Google_GenAI_Types_RealtimeInputConfig_InterimTranscriptTimestampEnabled
+  commentId: P:Google.GenAI.Types.RealtimeInputConfig.InterimTranscriptTimestampEnabled
+  fullName: Google.GenAI.Types.RealtimeInputConfig.InterimTranscriptTimestampEnabled
+  nameWithType: RealtimeInputConfig.InterimTranscriptTimestampEnabled
+- uid: Google.GenAI.Types.RealtimeInputConfig.InterimTranscriptTimestampEnabled*
+  name: InterimTranscriptTimestampEnabled
+  href: api/Google.GenAI.Types.RealtimeInputConfig.html#Google_GenAI_Types_RealtimeInputConfig_InterimTranscriptTimestampEnabled_
+  commentId: Overload:Google.GenAI.Types.RealtimeInputConfig.InterimTranscriptTimestampEnabled
+  isSpec: "True"
+  fullName: Google.GenAI.Types.RealtimeInputConfig.InterimTranscriptTimestampEnabled
+  nameWithType: RealtimeInputConfig.InterimTranscriptTimestampEnabled
 - uid: Google.GenAI.Types.RealtimeInputConfig.TurnCoverage
   name: TurnCoverage
   href: api/Google.GenAI.Types.RealtimeInputConfig.html#Google_GenAI_Types_RealtimeInputConfig_TurnCoverage
@@ -37577,6 +37590,19 @@ references:
   commentId: T:Google.GenAI.Types.Transcription
   fullName: Google.GenAI.Types.Transcription
   nameWithType: Transcription
+- uid: Google.GenAI.Types.Transcription.EndOffset
+  name: EndOffset
+  href: api/Google.GenAI.Types.Transcription.html#Google_GenAI_Types_Transcription_EndOffset
+  commentId: P:Google.GenAI.Types.Transcription.EndOffset
+  fullName: Google.GenAI.Types.Transcription.EndOffset
+  nameWithType: Transcription.EndOffset
+- uid: Google.GenAI.Types.Transcription.EndOffset*
+  name: EndOffset
+  href: api/Google.GenAI.Types.Transcription.html#Google_GenAI_Types_Transcription_EndOffset_
+  commentId: Overload:Google.GenAI.Types.Transcription.EndOffset
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Transcription.EndOffset
+  nameWithType: Transcription.EndOffset
 - uid: Google.GenAI.Types.Transcription.Finished
   name: Finished
   href: api/Google.GenAI.Types.Transcription.html#Google_GenAI_Types_Transcription_Finished
@@ -37632,6 +37658,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Transcription.SpeakerLabel
   nameWithType: Transcription.SpeakerLabel
+- uid: Google.GenAI.Types.Transcription.StartOffset
+  name: StartOffset
+  href: api/Google.GenAI.Types.Transcription.html#Google_GenAI_Types_Transcription_StartOffset
+  commentId: P:Google.GenAI.Types.Transcription.StartOffset
+  fullName: Google.GenAI.Types.Transcription.StartOffset
+  nameWithType: Transcription.StartOffset
+- uid: Google.GenAI.Types.Transcription.StartOffset*
+  name: StartOffset
+  href: api/Google.GenAI.Types.Transcription.html#Google_GenAI_Types_Transcription_StartOffset_
+  commentId: Overload:Google.GenAI.Types.Transcription.StartOffset
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Transcription.StartOffset
+  nameWithType: Transcription.StartOffset
 - uid: Google.GenAI.Types.Transcription.Text
   name: Text
   href: api/Google.GenAI.Types.Transcription.html#Google_GenAI_Types_Transcription_Text
