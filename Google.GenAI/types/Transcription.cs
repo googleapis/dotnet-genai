@@ -75,6 +75,26 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Start offset in time of the transcription relative to the start of the audio.
+    /// </summary>
+    [JsonPropertyName("startOffset")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string
+        ? StartOffset {
+            get; set;
+          }
+
+    /// <summary>
+    /// End offset in time of the transcription relative to the start of the audio.
+    /// </summary>
+    [JsonPropertyName("endOffset")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string
+        ? EndOffset {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a Transcription object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

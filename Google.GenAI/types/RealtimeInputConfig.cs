@@ -57,6 +57,16 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// If true, enables interim transcript timestamps.
+    /// </summary>
+    [JsonPropertyName("interimTranscriptTimestampEnabled")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public bool
+        ? InterimTranscriptTimestampEnabled {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a RealtimeInputConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
