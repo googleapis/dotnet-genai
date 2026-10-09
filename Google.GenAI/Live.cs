@@ -323,6 +323,24 @@ namespace Google.GenAI
     }
 
     /// <summary>
+    /// Sends a context update to the model.
+    /// Updates to the context of the current session. Only fields that are set will
+    /// be updated. Updates are guaranteed to be processed in order with the rest of
+    /// the inputs.
+    /// </summary>
+    /// <param name="contextUpdate">
+    /// The context update to send to the model.
+    /// </param>
+    /// <param name="cancellationToken">The cancellation token to use for the send operation.</param>
+    /// <returns></returns>
+    public async Task SendContextUpdateAsync(LiveClientContextUpdate contextUpdate, CancellationToken cancellationToken = default)
+    {
+      LiveClientMessage liveClientMessage = new LiveClientMessage();
+      liveClientMessage.ContextUpdate = contextUpdate;
+      await send(liveClientMessage, cancellationToken);
+    }
+
+    /// <summary>
     /// Receives model responses from the server.
     /// </summary>
     /// <returns>
