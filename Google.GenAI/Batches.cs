@@ -1140,6 +1140,14 @@ namespace Google.GenAI {
             Common.GetValueByPath(fromObject, new string[] { "continuationToken" }));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "responseFormat" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "responseFormat" },
+            ResponseFormatToMldev(Common.ParseToJsonNode(Common.GetValueByPath(
+                                      fromObject, new string[] { "responseFormat" })),
+                                  toObject));
+      }
+
       return toObject;
     }
 
@@ -1597,6 +1605,32 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "speechMetadata" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "speechMetadata" },
                               Common.GetValueByPath(fromObject, new string[] { "speechMetadata" }));
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode ResponseFormatToMldev(JsonNode fromObject, JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "audio" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "audio" },
+                              Common.GetValueByPath(fromObject, new string[] { "audio" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "image" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "image" },
+                              Common.GetValueByPath(fromObject, new string[] { "image" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "text" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "text" },
+                              Common.GetValueByPath(fromObject, new string[] { "text" }));
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "video" }))) {
+        throw new NotSupportedException(
+            "video parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
       }
 
       return toObject;

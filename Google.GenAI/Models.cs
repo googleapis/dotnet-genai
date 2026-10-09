@@ -1292,6 +1292,14 @@ namespace Google.GenAI {
             Common.GetValueByPath(fromObject, new string[] { "continuationToken" }));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "responseFormat" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "responseFormat" },
+            ResponseFormatToMldev(Common.ParseToJsonNode(Common.GetValueByPath(
+                                      fromObject, new string[] { "responseFormat" })),
+                                  toObject, rootObject));
+      }
+
       return toObject;
     }
 
@@ -1497,6 +1505,11 @@ namespace Google.GenAI {
         Common.SetValueByPath(
             parentObject, new string[] { "continuationToken" },
             Common.GetValueByPath(fromObject, new string[] { "continuationToken" }));
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "responseFormat" }))) {
+        throw new NotSupportedException(
+            "responseFormat parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       }
 
       return toObject;
@@ -3580,6 +3593,33 @@ namespace Google.GenAI {
               Common.GetValueByPath(fromObject, new string[] { "voiceConsentSignature" }))) {
         throw new NotSupportedException(
             "voiceConsentSignature parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode ResponseFormatToMldev(JsonNode fromObject, JsonObject parentObject,
+                                            JsonNode rootObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "audio" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "audio" },
+                              Common.GetValueByPath(fromObject, new string[] { "audio" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "image" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "image" },
+                              Common.GetValueByPath(fromObject, new string[] { "image" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "text" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "text" },
+                              Common.GetValueByPath(fromObject, new string[] { "text" }));
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "video" }))) {
+        throw new NotSupportedException(
+            "video parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
       }
 
       return toObject;

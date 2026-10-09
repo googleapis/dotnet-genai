@@ -404,6 +404,17 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Optional. Configuration for the response output format. Allows specifying output
+    /// configuration per modality (text, audio, image) in a flat structure.
+    /// </summary>
+    [JsonPropertyName("responseFormat")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public ResponseFormat
+        ? ResponseFormat {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a GenerateContentConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
