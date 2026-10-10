@@ -14841,6 +14841,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerateContentConfig.AudioTranscriptionConfig
   nameWithType: GenerateContentConfig.AudioTranscriptionConfig
+- uid: Google.GenAI.Types.GenerateContentConfig.AutomaticContinuation
+  name: AutomaticContinuation
+  href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_AutomaticContinuation
+  commentId: P:Google.GenAI.Types.GenerateContentConfig.AutomaticContinuation
+  fullName: Google.GenAI.Types.GenerateContentConfig.AutomaticContinuation
+  nameWithType: GenerateContentConfig.AutomaticContinuation
+- uid: Google.GenAI.Types.GenerateContentConfig.AutomaticContinuation*
+  name: AutomaticContinuation
+  href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_AutomaticContinuation_
+  commentId: Overload:Google.GenAI.Types.GenerateContentConfig.AutomaticContinuation
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateContentConfig.AutomaticContinuation
+  nameWithType: GenerateContentConfig.AutomaticContinuation
 - uid: Google.GenAI.Types.GenerateContentConfig.CachedContent
   name: CachedContent
   href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_CachedContent

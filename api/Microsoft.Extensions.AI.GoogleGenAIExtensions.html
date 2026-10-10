@@ -85,7 +85,7 @@
 
 
   <h1 id="Microsoft_Extensions_AI_GoogleGenAIExtensions" data-uid="Microsoft.Extensions.AI.GoogleGenAIExtensions" class="text-break">
-Class GoogleGenAIExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIExtensions.cs/#L23"><i class="bi bi-code-slash"></i></a>
+Class GoogleGenAIExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIExtensions.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -153,7 +153,7 @@ Class GoogleGenAIExtensions  <a class="header-action link-secondary" title="View
 
   <h3 id="Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIChatClient_Google_GenAI_Client_System_String_" data-uid="Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIChatClient(Google.GenAI.Client,System.String)">
   AsIChatClient(Client, string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIExtensions.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIExtensions.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates an <span class="xref">Microsoft.Extensions.AI.IChatClient</span> wrapper around the specified <a class="xref" href="Google.GenAI.Client.html">Client</a>.</p>
@@ -187,6 +187,15 @@ Class GoogleGenAIExtensions  <a class="header-action link-secondary" title="View
 
 
 
+  <h4 class="section" id="Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIChatClient_Google_GenAI_Client_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+In chat sessions created by this method, a response that stops before the model finishes is
+continued automatically: the same request is sent again with the response's continuation token
+until the model finishes, and the response is returned once, with the whole answer. Each of
+those requests is billed. Set <a class="xref" href="Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_AutomaticContinuation">AutomaticContinuation</a> to
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> via <span class="xref">Microsoft.Extensions.AI.ChatOptions.RawRepresentationFactory</span> to turn this off.
+</p>
+</div>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
@@ -201,7 +210,7 @@ Class GoogleGenAIExtensions  <a class="header-action link-secondary" title="View
 
   <h3 id="Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIChatClient_Google_GenAI_Models_System_String_" data-uid="Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIChatClient(Google.GenAI.Models,System.String)">
   AsIChatClient(Models, string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIExtensions.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIExtensions.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates an <span class="xref">Microsoft.Extensions.AI.IChatClient</span> wrapper around the specified <a class="xref" href="Google.GenAI.Models.html">Models</a>.</p>
@@ -235,6 +244,15 @@ Class GoogleGenAIExtensions  <a class="header-action link-secondary" title="View
 
 
 
+  <h4 class="section" id="Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIChatClient_Google_GenAI_Models_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+In chat sessions created by this method, a response that stops before the model finishes is
+continued automatically: the same request is sent again with the response's continuation token
+until the model finishes, and the response is returned once, with the whole answer. Each of
+those requests is billed. Set <a class="xref" href="Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_AutomaticContinuation">AutomaticContinuation</a> to
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> via <span class="xref">Microsoft.Extensions.AI.ChatOptions.RawRepresentationFactory</span> to turn this off.
+</p>
+</div>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
@@ -249,7 +267,7 @@ Class GoogleGenAIExtensions  <a class="header-action link-secondary" title="View
 
   <h3 id="Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIEmbeddingGenerator_Google_GenAI_Client_System_String_System_Nullable_System_Int32__" data-uid="Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIEmbeddingGenerator(Google.GenAI.Client,System.String,System.Nullable{System.Int32})">
   AsIEmbeddingGenerator(Client, string?, int?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIExtensions.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIExtensions.cs/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates an <span class="xref">Microsoft.Extensions.AI.IEmbeddingGenerator</span> wrapper around the specified <a class="xref" href="Google.GenAI.Client.html">Client</a>.</p>
@@ -300,7 +318,7 @@ Class GoogleGenAIExtensions  <a class="header-action link-secondary" title="View
 
   <h3 id="Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIEmbeddingGenerator_Google_GenAI_Models_System_String_System_Nullable_System_Int32__" data-uid="Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIEmbeddingGenerator(Google.GenAI.Models,System.String,System.Nullable{System.Int32})">
   AsIEmbeddingGenerator(Models, string?, int?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIExtensions.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIExtensions.cs/#L119"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates an <span class="xref">Microsoft.Extensions.AI.IEmbeddingGenerator</span> wrapper around the specified <a class="xref" href="Google.GenAI.Models.html">Models</a>.</p>
@@ -351,7 +369,7 @@ Class GoogleGenAIExtensions  <a class="header-action link-secondary" title="View
 
   <h3 id="Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIHostedFileClient_Google_GenAI_Client_" data-uid="Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIHostedFileClient(Google.GenAI.Client)">
   AsIHostedFileClient(Client)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIExtensions.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIExtensions.cs/#L133"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates an <span class="xref">Microsoft.Extensions.AI.IHostedFileClient</span> wrapper around the specified <a class="xref" href="Google.GenAI.Client.html">Client</a>.</p>
@@ -399,7 +417,7 @@ Class GoogleGenAIExtensions  <a class="header-action link-secondary" title="View
 
   <h3 id="Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIHostedFileClient_Google_GenAI_Files_" data-uid="Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIHostedFileClient(Google.GenAI.Files)">
   AsIHostedFileClient(Files)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIExtensions.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIExtensions.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates an <span class="xref">Microsoft.Extensions.AI.IHostedFileClient</span> wrapper around the specified <a class="xref" href="Google.GenAI.Files.html">Files</a>.</p>
@@ -447,7 +465,7 @@ Class GoogleGenAIExtensions  <a class="header-action link-secondary" title="View
 
   <h3 id="Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIImageGenerator_Google_GenAI_Client_System_String_" data-uid="Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIImageGenerator(Google.GenAI.Client,System.String)">
   AsIImageGenerator(Client, string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIExtensions.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIExtensions.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates an <span class="xref">Microsoft.Extensions.AI.IImageGenerator</span> wrapper around the specified <a class="xref" href="Google.GenAI.Client.html">Client</a>.</p>
@@ -495,7 +513,7 @@ Class GoogleGenAIExtensions  <a class="header-action link-secondary" title="View
 
   <h3 id="Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIImageGenerator_Google_GenAI_Models_System_String_" data-uid="Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIImageGenerator(Google.GenAI.Models,System.String)">
   AsIImageGenerator(Models, string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIExtensions.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIExtensions.cs/#L90"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates an <span class="xref">Microsoft.Extensions.AI.IImageGenerator</span> wrapper around the specified <a class="xref" href="Google.GenAI.Models.html">Models</a>.</p>
@@ -543,7 +561,7 @@ Class GoogleGenAIExtensions  <a class="header-action link-secondary" title="View
 
   <h3 id="Microsoft_Extensions_AI_GoogleGenAIExtensions_AsIRealtimeClient_Google_GenAI_Client_System_String_" data-uid="Microsoft.Extensions.AI.GoogleGenAIExtensions.AsIRealtimeClient(Google.GenAI.Client,System.String)">
   AsIRealtimeClient(Client, string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIExtensions.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIExtensions.cs/#L163"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates an <span class="xref">Microsoft.Extensions.AI.IRealtimeClient</span> wrapper around the specified <a class="xref" href="Google.GenAI.Client.html">Client</a>
@@ -592,7 +610,7 @@ for use with the Google GenAI Live API.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIExtensions.cs/#L23" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/GoogleGenAIExtensions.cs/#L24" class="edit-link">Edit this page</a>
         </div>
 
 
