@@ -5691,14 +5691,31 @@ namespace Google.GenAI {
         hopFinishReason = null;
         hopContinuationToken = null;
 
-        await foreach (var chunk in PrivateGenerateContentStreamAsync(model, contents, callConfig,
-                                                                      cancellationToken)) {
+        await using var enumerator =
+            PrivateGenerateContentStreamAsync(model, contents, callConfig, cancellationToken)
+                .GetAsyncEnumerator(cancellationToken);
+        while (true) {
+          GenerateContentResponse chunk;
+          try {
+            if (!await enumerator.MoveNextAsync()) {
+              break;
+            }
+            chunk = enumerator.Current;
+          } catch (Exception)
+              when (!cancellationToken.IsCancellationRequested && enableContinuation &&
+                    hopContinuationToken is { Length : > 0 } &&
+                    ContinuationHelper.IsResumableFinishReason(hopFinishReason)) {
+            // If a mid-stream error occurs after an intermediate checkpoint
+            // continuationToken was received, resume from that checkpoint.
+            break;
+          }
+
           if (chunk.Candidates is { Count : > 0 } candidates) {
             var cand = candidates[0];
             if (cand.FinishReason != null) {
               hopFinishReason = cand.FinishReason;
             }
-            if (cand.ContinuationToken != null) {
+            if (cand.ContinuationToken is { Length : > 0 }) {
               hopContinuationToken = cand.ContinuationToken;
             } else if (cand.FinishReason != null &&
                        !ContinuationHelper.IsResumableFinishReason(cand.FinishReason)) {
