@@ -5579,11 +5579,42 @@ namespace Google.GenAI {
     /// cref="CancellationToken"/> to cancel the operation.</param> <returns>A <see
     /// cref="Task{GenerateContentResponse}"/> that represents the asynchronous operation. The task
     /// result contains a <see cref="GenerateContentResponse"/> instance with response contents and
-    /// other metadata.</returns>
+    /// other metadata.</returns> <remarks> A response that stops with finish reason <see
+    /// cref="FinishReason.Continuation"/> is continued automatically: the same request is sent
+    /// again with the response's continuation token until the model finishes. The responses are
+    /// returned merged into one, with their parts concatenated and their usage metadata summed.
+    /// Each request is billed, including any that succeeded before a later one failed. Set <see
+    /// cref="GenerateContentConfig.AutomaticContinuation"/> to <see langword="false"/> to turn this
+    /// off.
+    /// </remarks>
     public async Task<GenerateContentResponse> GenerateContentAsync(
         string model, List<Content> contents, GenerateContentConfig? config = null,
         CancellationToken cancellationToken = default) {
-      return await PrivateGenerateContentAsync(model, contents, config, cancellationToken);
+      bool enableContinuation =
+          ContinuationHelper.ShouldEnableAutomaticContinuation(config, defaultEnabled: true);
+
+      GenerateContentResponse response =
+          await PrivateGenerateContentAsync(model, contents, config, cancellationToken);
+
+      if (!enableContinuation) {
+        return response;
+      }
+
+      List<GenerateContentResponse> hopResponses = new() { response };
+      byte[]? nextToken;
+      while ((nextToken = ContinuationHelper.ShouldContinueGeneration(response)) != null) {
+        GenerateContentConfig callConfig =
+            ContinuationHelper.PrepareContinuationConfig(config, nextToken);
+        response =
+            await PrivateGenerateContentAsync(model, contents, callConfig, cancellationToken);
+        hopResponses.Add(response);
+      }
+
+      if (hopResponses.Count > 1) {
+        response = ContinuationHelper.MergeContinuationResponses(hopResponses);
+      }
+
+      return response;
     }
 
     /// <summary>
@@ -5596,7 +5627,9 @@ namespace Google.GenAI {
     /// cref="CancellationToken"/> to cancel the operation.</param> <returns>A <see
     /// cref="Task{GenerateContentResponse}"/> that represents the asynchronous operation. The task
     /// result contains a <see cref="GenerateContentResponse"/> instance with response contents and
-    /// other metadata.</returns>
+    /// other metadata.</returns> <remarks> Automatic continuation works as described on the
+    /// overload taking a list of content.
+    /// </remarks>
     public async Task<GenerateContentResponse> GenerateContentAsync(
         string model, Content contents, GenerateContentConfig? config = null,
         CancellationToken cancellationToken = default) {
@@ -5614,7 +5647,9 @@ namespace Google.GenAI {
     /// cref="CancellationToken"/> to cancel the operation.</param> <returns>A <see
     /// cref="Task{GenerateContentResponse}"/> that represents the asynchronous operation. The task
     /// result contains a <see cref="GenerateContentResponse"/> instance with response contents and
-    /// other metadata.</returns>
+    /// other metadata.</returns> <remarks> Automatic continuation works as described on the
+    /// overload taking a list of content.
+    /// </remarks>
     public async Task<GenerateContentResponse> GenerateContentAsync(
         string model, string contents, GenerateContentConfig? config = null,
         CancellationToken cancellationToken = default) {
@@ -5630,13 +5665,48 @@ namespace Google.GenAI {
     /// model.</param> <param name="config">A <see cref="GenerateContentConfig"/> instance that
     /// specifies the optional configurations.</param> <param name="cancellationToken">A <see
     /// cref="CancellationToken"/> to cancel the operation.</param> <returns>An async enumerable of
-    /// <see cref="GenerateContentResponse"/> chunks.</returns>
+    /// <see cref="GenerateContentResponse"/> chunks.</returns> <remarks> A response that stops with
+    /// finish reason <see cref="FinishReason.Continuation"/> is continued automatically: the same
+    /// request is sent again with the response's continuation token until the model finishes, and
+    /// the chunks of every request are emitted in order. The usage metadata in a chunk covers only
+    /// the request it came from. Each request is billed, including any that succeeded before a
+    /// later one failed. Set <see cref="GenerateContentConfig.AutomaticContinuation"/> to <see
+    /// langword="false"/> to turn this off.
+    /// </remarks>
     public async IAsyncEnumerable<GenerateContentResponse> GenerateContentStreamAsync(
         string model, List<Content> contents, GenerateContentConfig? config = null,
         [EnumeratorCancellation] CancellationToken cancellationToken = default) {
-      await foreach (var response in PrivateGenerateContentStreamAsync(model, contents, config,
-                                                                       cancellationToken)) {
-        yield return response;
+      bool enableContinuation =
+          ContinuationHelper.ShouldEnableAutomaticContinuation(config, defaultEnabled: true);
+      byte[]? hopContinuationToken = null;
+      FinishReason? hopFinishReason = null;
+      bool isFirstHop = true;
+
+      while (isFirstHop || (enableContinuation && hopContinuationToken is { Length : > 0 } &&
+                            ContinuationHelper.IsResumableFinishReason(hopFinishReason))) {
+        GenerateContentConfig? callConfig =
+            isFirstHop ? config
+                       : ContinuationHelper.PrepareContinuationConfig(config, hopContinuationToken);
+        isFirstHop = false;
+        hopFinishReason = null;
+        hopContinuationToken = null;
+
+        await foreach (var chunk in PrivateGenerateContentStreamAsync(model, contents, callConfig,
+                                                                      cancellationToken)) {
+          if (chunk.Candidates is { Count : > 0 } candidates) {
+            var cand = candidates[0];
+            if (cand.FinishReason != null) {
+              hopFinishReason = cand.FinishReason;
+            }
+            if (cand.ContinuationToken != null) {
+              hopContinuationToken = cand.ContinuationToken;
+            } else if (cand.FinishReason != null &&
+                       !ContinuationHelper.IsResumableFinishReason(cand.FinishReason)) {
+              hopContinuationToken = null;
+            }
+          }
+          yield return chunk;
+        }
       }
     }
 
@@ -5648,7 +5718,9 @@ namespace Google.GenAI {
     /// model.</param> <param name="config">A <see cref="GenerateContentConfig"/> instance that
     /// specifies the optional configurations.</param> <param name="cancellationToken">A <see
     /// cref="CancellationToken"/> to cancel the operation.</param> <returns>An async enumerable of
-    /// <see cref="GenerateContentResponse"/> chunks.</returns>
+    /// <see cref="GenerateContentResponse"/> chunks.</returns> <remarks> Automatic continuation
+    /// works as described on the overload taking a list of content.
+    /// </remarks>
     public async IAsyncEnumerable<GenerateContentResponse> GenerateContentStreamAsync(
         string model, Content contents, GenerateContentConfig? config = null,
         [EnumeratorCancellation] CancellationToken cancellationToken = default) {
@@ -5667,7 +5739,9 @@ namespace Google.GenAI {
     /// <param name="config">A <see cref="GenerateContentConfig"/> instance that specifies the
     /// optional configurations.</param> <param name="cancellationToken">A <see
     /// cref="CancellationToken"/> to cancel the operation.</param> <returns>An async enumerable of
-    /// <see cref="GenerateContentResponse"/> chunks.</returns>
+    /// <see cref="GenerateContentResponse"/> chunks.</returns> <remarks> Automatic continuation
+    /// works as described on the overload taking a list of content.
+    /// </remarks>
     public async IAsyncEnumerable<GenerateContentResponse> GenerateContentStreamAsync(
         string model, string contents, GenerateContentConfig? config = null,
         [EnumeratorCancellation] CancellationToken cancellationToken = default) {

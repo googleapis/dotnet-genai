@@ -404,6 +404,18 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Defaults to true. When a response ends with finish reason `CONTINUATION`, the SDK sends the
+    /// same request again with the response's continuation token until the model finishes.
+    /// Timeouts, retries and billing apply to each request. Set to false to turn this off.
+    /// </summary>
+    [JsonPropertyName("automaticContinuation")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public bool
+        ? AutomaticContinuation {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a GenerateContentConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

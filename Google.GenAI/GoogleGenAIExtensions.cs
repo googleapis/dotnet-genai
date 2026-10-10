@@ -16,6 +16,7 @@
 
 using Google.Apis.Util;
 using Google.GenAI;
+using Google.GenAI.Types;
 
 namespace Microsoft.Extensions.AI;
 
@@ -29,6 +30,15 @@ public static class GoogleGenAIExtensions
   /// <param name="defaultModelId">The default model ID to use for chat requests if not specified in <see cref="ChatOptions.ModelId"/>.</param>
   /// <returns>An <see cref="IChatClient"/> that wraps the specified client.</returns>
   /// <exception cref="ArgumentNullException"><paramref name="client"/> is <see langword="null"/>.</exception>
+  /// <remarks>
+  /// <para>
+  /// In chat sessions created by this method, a response that stops before the model finishes is
+  /// continued automatically: the same request is sent again with the response's continuation token
+  /// until the model finishes, and the response is returned once, with the whole answer. Each of
+  /// those requests is billed. Set <see cref="GenerateContentConfig.AutomaticContinuation"/> to
+  /// <see langword="false"/> via <see cref="ChatOptions.RawRepresentationFactory"/> to turn this off.
+  /// </para>
+  /// </remarks>
   public static IChatClient AsIChatClient(this Client client, string? defaultModelId = null)
   {
     Utilities.ThrowIfNull(client, nameof(client));
@@ -42,6 +52,15 @@ public static class GoogleGenAIExtensions
   /// <param name="defaultModelId">The default model ID to use for chat requests if not specified in <see cref="ChatOptions.ModelId"/>.</param>
   /// <returns>An <see cref="IChatClient"/> that wraps the specified <see cref="Models"/> client.</returns>
   /// <exception cref="ArgumentNullException"><paramref name="models"/> is <see langword="null"/>.</exception>
+  /// <remarks>
+  /// <para>
+  /// In chat sessions created by this method, a response that stops before the model finishes is
+  /// continued automatically: the same request is sent again with the response's continuation token
+  /// until the model finishes, and the response is returned once, with the whole answer. Each of
+  /// those requests is billed. Set <see cref="GenerateContentConfig.AutomaticContinuation"/> to
+  /// <see langword="false"/> via <see cref="ChatOptions.RawRepresentationFactory"/> to turn this off.
+  /// </para>
+  /// </remarks>
   public static IChatClient AsIChatClient(this Models models, string? defaultModelId = null)
   {
     Utilities.ThrowIfNull(models, nameof(models));

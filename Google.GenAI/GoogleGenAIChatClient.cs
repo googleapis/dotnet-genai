@@ -24,6 +24,14 @@ using Google.GenAI.Types;
 namespace Microsoft.Extensions.AI;
 
 /// <summary>Provides an <see cref="IChatClient"/> implementation based on <see cref="Client"/>.</summary>
+/// <remarks>
+/// <para>
+/// A response that stops before the model finishes is continued automatically: the same request is
+/// sent again with the response's continuation token until the model finishes, and the response is
+/// returned once, with the whole answer. Each of those requests is billed. Set
+/// <see cref="GenerateContentConfig.AutomaticContinuation"/> to <see langword="false"/> to turn this off.
+/// </para>
+/// </remarks>
 internal sealed class GoogleGenAIChatClient : IChatClient
 {
   /// <summary>A thought signature that can be used to skip thought validation when sending foreign function calls.</summary>
@@ -61,6 +69,15 @@ internal sealed class GoogleGenAIChatClient : IChatClient
   }
 
   /// <inheritdoc />
+  /// <remarks>
+  /// <para>
+  /// A response that stops before the model finishes is continued automatically: the same request is
+  /// sent again with the response's continuation token until the model finishes, and the responses
+  /// are returned merged into one, with their parts concatenated and their usage metadata summed.
+  /// Each of those requests is billed. Set <see cref="GenerateContentConfig.AutomaticContinuation"/>
+  /// to <see langword="false"/> to turn this off.
+  /// </para>
+  /// </remarks>
   public async Task<ChatResponse> GetResponseAsync(IEnumerable<ChatMessage> messages, ChatOptions? options = null, CancellationToken cancellationToken = default)
   {
     Utilities.ThrowIfNull(messages, nameof(messages));
@@ -94,6 +111,14 @@ internal sealed class GoogleGenAIChatClient : IChatClient
   }
 
   /// <inheritdoc />
+  /// <remarks>
+  /// <para>
+  /// A response that the model stopped early and the session continues is not cut off: the chunks of
+  /// every request are emitted in order. The usage metadata in a chunk covers only the request it came
+  /// from. Each of those requests is billed. Set <see cref="GenerateContentConfig.AutomaticContinuation"/>
+  /// to <see langword="false"/> to turn this off.
+  /// </para>
+  /// </remarks>
   public async IAsyncEnumerable<ChatResponseUpdate> GetStreamingResponseAsync(IEnumerable<ChatMessage> messages, ChatOptions? options = null, [EnumeratorCancellation] CancellationToken cancellationToken = default)
   {
     Utilities.ThrowIfNull(messages, nameof(messages));
@@ -187,6 +212,9 @@ internal sealed class GoogleGenAIChatClient : IChatClient
     string? model = _defaultModelId;
     List<Content> contents = new();
     GenerateContentConfig config = options?.RawRepresentationFactory?.Invoke(this) as GenerateContentConfig ?? new();
+
+    // Automatic continuation is enabled by default in Chat sessions.
+    config.AutomaticContinuation ??= true;
 
     if (options is not null)
     {
