@@ -1,5 +1,13 @@
 # Changelog
 
+## Version 1.26.0, released 2026-10-10
+
+
+### New features
+
+* Add startOffset/endOffset to Transcription and interimTranscriptTimestampEnabled to RealtimeInputConfig ([57dc2b0](https://github.com/googleapis/dotnet-genai/commit/57dc2b045caab11596047ec8bafc42f5f74d3d8d))
+* Support automatic continuation (long decoding) ([0f18069](https://github.com/googleapis/dotnet-genai/commit/0f18069b5f6713ac33c7cb1a04ce669f239d88be))
+
 ## Version 1.25.0, released 2026-10-07
 
 
