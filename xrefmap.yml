@@ -15373,6 +15373,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerateContentResponse.FunctionCalls
   nameWithType: GenerateContentResponse.FunctionCalls
+- uid: Google.GenAI.Types.GenerateContentResponse.InitialPromptTokenCount
+  name: InitialPromptTokenCount
+  href: api/Google.GenAI.Types.GenerateContentResponse.html#Google_GenAI_Types_GenerateContentResponse_InitialPromptTokenCount
+  commentId: P:Google.GenAI.Types.GenerateContentResponse.InitialPromptTokenCount
+  fullName: Google.GenAI.Types.GenerateContentResponse.InitialPromptTokenCount
+  nameWithType: GenerateContentResponse.InitialPromptTokenCount
+- uid: Google.GenAI.Types.GenerateContentResponse.InitialPromptTokenCount*
+  name: InitialPromptTokenCount
+  href: api/Google.GenAI.Types.GenerateContentResponse.html#Google_GenAI_Types_GenerateContentResponse_InitialPromptTokenCount_
+  commentId: Overload:Google.GenAI.Types.GenerateContentResponse.InitialPromptTokenCount
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateContentResponse.InitialPromptTokenCount
+  nameWithType: GenerateContentResponse.InitialPromptTokenCount
 - uid: Google.GenAI.Types.GenerateContentResponse.ModelStatus
   name: ModelStatus
   href: api/Google.GenAI.Types.GenerateContentResponse.html#Google_GenAI_Types_GenerateContentResponse_ModelStatus
@@ -15612,6 +15625,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerateContentResponseUsageMetadata.FromJson
   nameWithType: GenerateContentResponseUsageMetadata.FromJson
+- uid: Google.GenAI.Types.GenerateContentResponseUsageMetadata.InitialPromptTokenCount
+  name: InitialPromptTokenCount
+  href: api/Google.GenAI.Types.GenerateContentResponseUsageMetadata.html#Google_GenAI_Types_GenerateContentResponseUsageMetadata_InitialPromptTokenCount
+  commentId: P:Google.GenAI.Types.GenerateContentResponseUsageMetadata.InitialPromptTokenCount
+  fullName: Google.GenAI.Types.GenerateContentResponseUsageMetadata.InitialPromptTokenCount
+  nameWithType: GenerateContentResponseUsageMetadata.InitialPromptTokenCount
+- uid: Google.GenAI.Types.GenerateContentResponseUsageMetadata.InitialPromptTokenCount*
+  name: InitialPromptTokenCount
+  href: api/Google.GenAI.Types.GenerateContentResponseUsageMetadata.html#Google_GenAI_Types_GenerateContentResponseUsageMetadata_InitialPromptTokenCount_
+  commentId: Overload:Google.GenAI.Types.GenerateContentResponseUsageMetadata.InitialPromptTokenCount
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateContentResponseUsageMetadata.InitialPromptTokenCount
+  nameWithType: GenerateContentResponseUsageMetadata.InitialPromptTokenCount
 - uid: Google.GenAI.Types.GenerateContentResponseUsageMetadata.PromptTokenCount
   name: PromptTokenCount
   href: api/Google.GenAI.Types.GenerateContentResponseUsageMetadata.html#Google_GenAI_Types_GenerateContentResponseUsageMetadata_PromptTokenCount
