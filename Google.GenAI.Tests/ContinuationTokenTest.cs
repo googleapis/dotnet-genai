@@ -1309,6 +1309,12 @@ namespace Google.GenAI.Tests
       Assert.AreEqual("Stream chunk 2", chunks[1].Candidates?[0].Content?.Parts?[0].Text);
       Assert.AreEqual("Stream chunk 3", chunks[2].Candidates?[0].Content?.Parts?[0].Text);
       Assert.AreEqual("Stream chunk 4", chunks[3].Candidates?[0].Content?.Parts?[0].Text);
+
+      // Intermediate CONTINUATION FinishReason is cleared when resuming; final STOP is preserved
+      Assert.IsNull(chunks[0].Candidates?[0].FinishReason);
+      Assert.IsNull(chunks[1].Candidates?[0].FinishReason);
+      Assert.IsNull(chunks[2].Candidates?[0].FinishReason);
+      Assert.AreEqual(FinishReason.Stop, chunks[3].Candidates?[0].FinishReason);
     }
 
     [TestMethod]
@@ -1334,6 +1340,7 @@ namespace Google.GenAI.Tests
 
       Assert.AreEqual(2, chunks.Count);
       Assert.AreEqual(1, apiClient.RequestsReceived.Count);
+      Assert.AreEqual(FinishReason.Continuation, chunks[1].Candidates?[0].FinishReason);
     }
 
     [TestMethod]
@@ -1407,7 +1414,10 @@ namespace Google.GenAI.Tests
       Assert.IsTrue(apiClient.RequestsReceived[2].Contains("dG9rZW5faG9wXzI="));
       Assert.IsTrue(apiClient.RequestsReceived[3].Contains("dG9rZW5faG9wXzM="));
 
-      // Final chunk has finishReason STOP and null continuationToken
+      // Intermediate hop end chunks have FinishReason cleared; final chunk has FinishReason STOP
+      Assert.IsNull(chunks[1].Candidates?[0].FinishReason);
+      Assert.IsNull(chunks[3].Candidates?[0].FinishReason);
+      Assert.IsNull(chunks[5].Candidates?[0].FinishReason);
       Assert.AreEqual(FinishReason.Stop, chunks[7].Candidates?[0].FinishReason);
       Assert.IsNull(chunks[7].Candidates?[0].ContinuationToken);
     }
@@ -1718,6 +1728,10 @@ namespace Google.GenAI.Tests
       var fullText = string.Concat(updates.Select(u => u.Text));
       Assert.AreEqual("Chat stream chunk 1. Chat stream chunk 2. Chat stream chunk 3. Chat stream chunk 4.", fullText);
 
+      // Intermediate hop FinishReason is cleared; only the final update carries a FinishReason
+      Assert.AreEqual(1, updates.Count(u => u.FinishReason != null));
+      Assert.AreEqual(ChatFinishReason.Stop, updates.Single(u => u.FinishReason != null).FinishReason);
+
       var usageContent = updates.SelectMany(u => u.Contents).OfType<UsageContent>().SingleOrDefault();
       Assert.IsNotNull(usageContent);
       Assert.AreEqual(45, usageContent.Details.InputTokenCount);
@@ -1753,6 +1767,7 @@ namespace Google.GenAI.Tests
       Assert.AreEqual(1, apiClient.RequestsReceived.Count);
       var fullText = string.Concat(updates.Select(u => u.Text));
       Assert.AreEqual("Chat stream chunk 1. Chat stream chunk 2.", fullText);
+      Assert.IsNotNull(updates.Last(u => u.FinishReason != null).FinishReason);
     }
 
     [TestMethod]

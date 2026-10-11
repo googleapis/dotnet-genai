@@ -66,6 +66,44 @@ namespace Google.GenAI
     }
 
     /// <summary>
+    /// Checks whether a streaming hop can resume with the given continuation state.
+    /// </summary>
+    public static bool CanResumeStream(
+        bool enableContinuation,
+        byte[]? continuationToken,
+        FinishReason? finishReason)
+    {
+      return enableContinuation
+          && continuationToken is { Length: > 0 }
+          && IsResumableFinishReason(finishReason);
+    }
+
+    /// <summary>
+    /// Clears FinishReason on intermediate streaming chunks that will automatically resume.
+    /// </summary>
+    public static GenerateContentResponse ClearIntermediateFinishReason(
+        GenerateContentResponse chunk,
+        bool enableContinuation,
+        byte[]? continuationToken)
+    {
+      if (chunk.Candidates is not { Count: > 0 } candidates)
+      {
+        return chunk;
+      }
+      var firstCandidate = candidates[0];
+      if (firstCandidate.FinishReason != null
+          && CanResumeStream(enableContinuation, continuationToken, firstCandidate.FinishReason))
+      {
+        var updatedCandidates = new List<Candidate>(candidates)
+        {
+          [0] = firstCandidate with { FinishReason = null }
+        };
+        return chunk with { Candidates = updatedCandidates };
+      }
+      return chunk;
+    }
+
+    /// <summary>
     /// Checks candidate 0 for a valid continuation_token when finish_reason is CONTINUATION.
     /// </summary>
     public static byte[]? ShouldContinueGeneration(GenerateContentResponse? response)

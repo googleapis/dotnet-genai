@@ -5684,8 +5684,8 @@ namespace Google.GenAI {
       GenerateContentResponseUsageMetadata? accumulatedUsage = null;
       bool isFirstHop = true;
 
-      while (isFirstHop || (enableContinuation && hopContinuationToken is { Length : > 0 } &&
-                            ContinuationHelper.IsResumableFinishReason(hopFinishReason))) {
+      while (isFirstHop || ContinuationHelper.CanResumeStream(
+                               enableContinuation, hopContinuationToken, hopFinishReason)) {
         GenerateContentConfig? callConfig =
             isFirstHop ? config
                        : ContinuationHelper.PrepareContinuationConfig(config, hopContinuationToken);
@@ -5705,9 +5705,9 @@ namespace Google.GenAI {
             }
             chunk = enumerator.Current;
           } catch (Exception)
-              when (!cancellationToken.IsCancellationRequested && enableContinuation &&
-                    hopContinuationToken is { Length : > 0 } &&
-                    ContinuationHelper.IsResumableFinishReason(hopFinishReason)) {
+              when (!cancellationToken.IsCancellationRequested &&
+                    ContinuationHelper.CanResumeStream(enableContinuation, hopContinuationToken,
+                                                       hopFinishReason)) {
             // If a mid-stream error occurs after an intermediate checkpoint
             // continuationToken was received, resume from that checkpoint.
             break;
@@ -5724,6 +5724,8 @@ namespace Google.GenAI {
                        !ContinuationHelper.IsResumableFinishReason(cand.FinishReason)) {
               hopContinuationToken = null;
             }
+            chunk = ContinuationHelper.ClearIntermediateFinishReason(chunk, enableContinuation,
+                                                                     hopContinuationToken);
           }
           if (chunk.UsageMetadata != null) {
             if (accumulatedUsage != null) {
