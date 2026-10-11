@@ -101,15 +101,15 @@ namespace Google.GenAI.Tests
     [TestMethod]
     public void IsResumableFinishReason_ValidatesCorrectly()
     {
-      // Only CONTINUATION is resumable.
+      // Null (intermediate checkpoint chunk) and CONTINUATION are resumable.
       Assert.IsTrue(ContinuationHelper.IsResumableFinishReason(FinishReason.Continuation));
+      Assert.IsTrue(ContinuationHelper.IsResumableFinishReason(null));
 
-      // MAX_TOKENS and other finish reasons are not resumable.
+      // MAX_TOKENS and other terminal finish reasons are not resumable.
       Assert.IsFalse(ContinuationHelper.IsResumableFinishReason(FinishReason.MaxTokens));
       Assert.IsFalse(ContinuationHelper.IsResumableFinishReason(FinishReason.Stop));
       Assert.IsFalse(ContinuationHelper.IsResumableFinishReason(FinishReason.Safety));
       Assert.IsFalse(ContinuationHelper.IsResumableFinishReason(FinishReason.Recitation));
-      Assert.IsFalse(ContinuationHelper.IsResumableFinishReason(null));
     }
 
     [TestMethod]
@@ -1390,6 +1390,44 @@ namespace Google.GenAI.Tests
       Assert.AreEqual(2, chunks.Count);
       Assert.AreEqual(1, apiClient.RequestsReceived.Count);
       Assert.AreEqual(FinishReason.MaxTokens, chunks[1].Candidates?[0].FinishReason);
+    }
+
+    [TestMethod]
+    public async Task Models_GenerateContentStreamAsync_ResumesFromCheckpointTokenOnCutoffOrMidStreamError()
+    {
+      // Hop 1: intermediate checkpoint chunk (finishReason is null), then stream ends early (cutoff)
+      string hop1Stream = """
+      {"candidates":[{"content":{"role":"model","parts":[{"text":"Ckpt 1, "}]},"continuationToken":"dG9rX2NrcHRfMQ=="}]}
+      """;
+
+      // Hop 2: intermediate checkpoint chunk (finishReason is null), then invalid JSON triggers mid-stream exception
+      string hop2Stream = """
+      {"candidates":[{"content":{"role":"model","parts":[{"text":"Ckpt 2, "}]},"continuationToken":"dG9rX2NrcHRfMg=="}]}
+      {invalid_json_mid_stream
+      """;
+
+      // Hop 3: earlier checkpoint chunk followed by terminal STOP without token (should clear stale token and stop)
+      string hop3Stream = """
+      {"candidates":[{"content":{"role":"model","parts":[{"text":"Ckpt 3, "}]},"continuationToken":"c3RhbGVfdG9r"}]}
+      {"candidates":[{"content":{"role":"model","parts":[{"text":"Done."}]},"finishReason":"STOP"}]}
+      """;
+
+      var apiClient = new MockContinuationApiClient(hop1Stream, hop2Stream, hop3Stream);
+      var models = new Models(apiClient);
+
+      var chunks = new List<GenerateContentResponse>();
+      await foreach (var chunk in models.GenerateContentStreamAsync("gemini-2.5-pro", "Prompt"))
+      {
+        chunks.Add(chunk);
+      }
+
+      Assert.AreEqual(4, chunks.Count);
+      Assert.AreEqual(3, apiClient.RequestsReceived.Count);
+      Assert.IsTrue(apiClient.RequestsReceived[1].Contains("dG9rX2NrcHRfMQ=="));
+      Assert.IsTrue(apiClient.RequestsReceived[2].Contains("dG9rX2NrcHRfMg=="));
+      Assert.AreEqual(
+          "Ckpt 1, Ckpt 2, Ckpt 3, Done.",
+          string.Concat(chunks.Select(c => c.Candidates?[0].Content?.Parts?[0].Text)));
     }
 
     #endregion

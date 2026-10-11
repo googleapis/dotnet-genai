@@ -55,11 +55,14 @@ namespace Google.GenAI
     }
 
     /// <summary>
-    /// Checks whether finish_reason permits resumption (solely CONTINUATION).
+    /// Checks whether finish_reason permits resumption.
+    /// Per the continuation protocol, when a continuation_token is present the
+    /// backend only sets finish_reason to null (intermediate checkpoint chunk)
+    /// or CONTINUATION (stream end).
     /// </summary>
     public static bool IsResumableFinishReason(FinishReason? finishReason)
     {
-      return finishReason == FinishReason.Continuation;
+      return finishReason == null || finishReason == FinishReason.Continuation;
     }
 
     /// <summary>
