@@ -95,6 +95,31 @@ namespace Google.GenAI
     }
 
     /// <summary>
+    /// Merges two <see cref="GenerateContentResponseUsageMetadata"/> instances across continuation hops.
+    /// Token counts and modality details are summed across hops, while
+    /// <see cref="GenerateContentResponseUsageMetadata.InitialPromptTokenCount"/> preserves the initial hop's prompt token count.
+    /// </summary>
+    public static GenerateContentResponseUsageMetadata? MergeUsageMetadata(
+        GenerateContentResponseUsageMetadata? prev,
+        GenerateContentResponseUsageMetadata? curr)
+    {
+      if (prev == null) return curr;
+      if (curr == null) return prev;
+
+      JsonNode? prevNode = JsonNode.Parse(
+          JsonSerializer.Serialize(prev, JsonConfig.TypeInfo<GenerateContentResponseUsageMetadata>()));
+      JsonNode? currNode = JsonNode.Parse(
+          JsonSerializer.Serialize(curr, JsonConfig.TypeInfo<GenerateContentResponseUsageMetadata>()));
+      JsonNode? mergedNode = MergeJsonNodes(prevNode, currNode, fieldName: "usageMetadata");
+      string mergedJson = mergedNode?.ToJsonString(JsonConfig.InternalSerializerOptions) ?? "{}";
+      var merged = GenerateContentResponseUsageMetadata.FromJson(mergedJson)
+          ?? mergedNode?.Deserialize(JsonConfig.TypeInfo<GenerateContentResponseUsageMetadata>())
+          ?? new GenerateContentResponseUsageMetadata();
+      merged.InitialPromptTokenCount = prev.InitialPromptTokenCount ?? curr.InitialPromptTokenCount;
+      return merged;
+    }
+
+    /// <summary>
     /// Merges multiple continuation hop responses into a single combined response.
     /// </summary>
     public static GenerateContentResponse MergeContinuationResponses(
@@ -116,13 +141,21 @@ namespace Google.GenAI
       {
         string nextJson = JsonSerializer.Serialize(responses[i], JsonConfig.TypeInfo<GenerateContentResponse>());
         JsonNode? nextNode = JsonNode.Parse(nextJson);
-        mergedNode = MergeJsonNodes(mergedNode, nextNode, fieldName: null, isInsideUsageMetadata: false);
+        mergedNode = MergeJsonNodes(mergedNode, nextNode, fieldName: null);
       }
 
       string mergedJson = mergedNode?.ToJsonString(JsonConfig.InternalSerializerOptions) ?? "{}";
       var finalResponse = GenerateContentResponse.FromJson(mergedJson)
           ?? mergedNode?.Deserialize(JsonConfig.TypeInfo<GenerateContentResponse>())
           ?? throw new InvalidOperationException("Failed to deserialize merged GenerateContentResponse.");
+
+      int? firstInitialPrompt = responses
+          .Select(r => r.UsageMetadata?.InitialPromptTokenCount)
+          .FirstOrDefault(v => v != null);
+      if (finalResponse.UsageMetadata != null && firstInitialPrompt != null)
+      {
+        finalResponse.UsageMetadata.InitialPromptTokenCount = firstInitialPrompt;
+      }
 
       // SdkHttpResponse is [JsonIgnore], retain from the latest hop
       finalResponse.SdkHttpResponse = responses[responses.Count - 1].SdkHttpResponse;
@@ -132,8 +165,7 @@ namespace Google.GenAI
     private static JsonNode? MergeJsonNodes(
         JsonNode? prev,
         JsonNode? curr,
-        string? fieldName,
-        bool isInsideUsageMetadata)
+        string? fieldName)
     {
       // Terminal hop fields always overwrite with curr (even if null)
       if (fieldName != null && TerminalHopFields.Contains(fieldName))
@@ -148,9 +180,6 @@ namespace Google.GenAI
       // Nested Objects
       if (prev is JsonObject prevObj && curr is JsonObject currObj)
       {
-        bool inUsage = isInsideUsageMetadata ||
-            string.Equals(fieldName, "usageMetadata", StringComparison.OrdinalIgnoreCase);
-
         var mergedObj = new JsonObject();
         var allKeys = new HashSet<string>(
             prevObj.Select(kv => kv.Key).Concat(currObj.Select(kv => kv.Key)));
@@ -159,7 +188,7 @@ namespace Google.GenAI
         {
           prevObj.TryGetPropertyValue(key, out var pVal);
           currObj.TryGetPropertyValue(key, out var cVal);
-          mergedObj[key] = MergeJsonNodes(pVal, cVal, key, inUsage);
+          mergedObj[key] = MergeJsonNodes(pVal, cVal, key);
         }
         return mergedObj;
       }
@@ -176,7 +205,7 @@ namespace Google.GenAI
           {
             var p = i < prevArr.Count ? prevArr[i] : null;
             var c = i < currArr.Count ? currArr[i] : null;
-            mergedArr.Add(MergeJsonNodes(p, c, "candidate", isInsideUsageMetadata));
+            mergedArr.Add(MergeJsonNodes(p, c, "candidate"));
           }
           return mergedArr;
         }
@@ -203,11 +232,11 @@ namespace Google.GenAI
         return concatenated;
       }
 
-      // Numbers (sum inside usageMetadata or tokenCount / *Count / *Sum)
+      // Numbers (sum tokenCount / *Count / *Sum)
       if (prev is JsonValue prevVal && curr is JsonValue currVal &&
           prev.GetValueKind() == JsonValueKind.Number && curr.GetValueKind() == JsonValueKind.Number)
       {
-        bool shouldSum = isInsideUsageMetadata ||
+        bool shouldSum =
             string.Equals(fieldName, "tokenCount", StringComparison.OrdinalIgnoreCase) ||
             string.Equals(fieldName, "token_count", StringComparison.OrdinalIgnoreCase) ||
             (fieldName != null && (

@@ -171,5 +171,11 @@ namespace Google.GenAI.Types {
     /// Returns null if there are no candidates or no content.
     /// </summary>
     public List<Part>? Parts => Candidates?.FirstOrDefault()?.Content?.Parts;
+
+    /// <summary>
+    /// Returns the prompt token count from the initial request prior to any continuation hops.
+    /// </summary>
+    [JsonIgnore]
+    public int? InitialPromptTokenCount => UsageMetadata?.InitialPromptTokenCount;
   }
 }

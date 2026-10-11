@@ -5668,10 +5668,11 @@ namespace Google.GenAI {
     /// <see cref="GenerateContentResponse"/> chunks.</returns> <remarks> A response that stops with
     /// finish reason <see cref="FinishReason.Continuation"/> is continued automatically: the same
     /// request is sent again with the response's continuation token until the model finishes, and
-    /// the chunks of every request are emitted in order. The usage metadata in a chunk covers only
-    /// the request it came from. Each request is billed, including any that succeeded before a
-    /// later one failed. Set <see cref="GenerateContentConfig.AutomaticContinuation"/> to <see
-    /// langword="false"/> to turn this off.
+    /// the chunks of every request are emitted in order. The usage metadata in a chunk is
+    /// accumulated across continuation requests. Each request is billed, including any that
+    /// succeeded before a later one failed. Set <see
+    /// cref="GenerateContentConfig.AutomaticContinuation"/> to <see langword="false"/> to turn this
+    /// off.
     /// </remarks>
     public async IAsyncEnumerable<GenerateContentResponse> GenerateContentStreamAsync(
         string model, List<Content> contents, GenerateContentConfig? config = null,
@@ -5680,6 +5681,7 @@ namespace Google.GenAI {
           ContinuationHelper.ShouldEnableAutomaticContinuation(config, defaultEnabled: true);
       byte[]? hopContinuationToken = null;
       FinishReason? hopFinishReason = null;
+      GenerateContentResponseUsageMetadata? accumulatedUsage = null;
       bool isFirstHop = true;
 
       while (isFirstHop || (enableContinuation && hopContinuationToken is { Length : > 0 } &&
@@ -5690,6 +5692,7 @@ namespace Google.GenAI {
         isFirstHop = false;
         hopFinishReason = null;
         hopContinuationToken = null;
+        GenerateContentResponseUsageMetadata? hopUsage = null;
 
         await using var enumerator =
             PrivateGenerateContentStreamAsync(model, contents, callConfig, cancellationToken)
@@ -5722,7 +5725,21 @@ namespace Google.GenAI {
               hopContinuationToken = null;
             }
           }
+          if (chunk.UsageMetadata != null) {
+            if (accumulatedUsage != null) {
+              var mergedUsage =
+                  ContinuationHelper.MergeUsageMetadata(accumulatedUsage, chunk.UsageMetadata);
+              chunk = chunk with { UsageMetadata = mergedUsage };
+              hopUsage = mergedUsage;
+            } else {
+              hopUsage = chunk.UsageMetadata;
+            }
+          }
           yield return chunk;
+        }
+
+        if (hopUsage != null) {
+          accumulatedUsage = hopUsage;
         }
       }
     }

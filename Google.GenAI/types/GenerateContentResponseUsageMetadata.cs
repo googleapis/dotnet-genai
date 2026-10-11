@@ -161,5 +161,17 @@ namespace Google.GenAI.Types {
         return null;
       }
     }
+
+    private int? _initialPromptTokenCount;
+
+    /// <summary>
+    /// Returns the prompt token count from the initial request prior to any continuation hops.
+    /// </summary>
+    [JsonIgnore]
+    public int ? InitialPromptTokenCount {
+      get => _initialPromptTokenCount ?? PromptTokenCount;
+    internal
+      set => _initialPromptTokenCount = value;
+    }
   }
 }
