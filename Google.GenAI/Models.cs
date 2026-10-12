@@ -5681,17 +5681,24 @@ namespace Google.GenAI {
           ContinuationHelper.ShouldEnableAutomaticContinuation(config, defaultEnabled: true);
       byte[]? hopContinuationToken = null;
       FinishReason? hopFinishReason = null;
+      bool hopHasPromptFeedback = false;
       GenerateContentResponseUsageMetadata? accumulatedUsage = null;
       bool isFirstHop = true;
+      int reconnectsWithoutProgress = 0;
 
-      while (isFirstHop || ContinuationHelper.CanResumeStream(
-                               enableContinuation, hopContinuationToken, hopFinishReason)) {
+      while (isFirstHop ||
+             ContinuationHelper.CanResumeStream(enableContinuation, hopContinuationToken,
+                                                hopFinishReason, hopHasPromptFeedback)) {
         GenerateContentConfig? callConfig =
             isFirstHop ? config
                        : ContinuationHelper.PrepareContinuationConfig(config, hopContinuationToken);
         isFirstHop = false;
+        byte[]? hopStartToken = hopContinuationToken;
         hopFinishReason = null;
         hopContinuationToken = null;
+        hopHasPromptFeedback = false;
+        bool hopHasYieldedContent = false;
+        System.Runtime.ExceptionServices.ExceptionDispatchInfo? hopError = null;
         GenerateContentResponseUsageMetadata? hopUsage = null;
 
         await using var enumerator =
@@ -5704,17 +5711,20 @@ namespace Google.GenAI {
               break;
             }
             chunk = enumerator.Current;
-          } catch (Exception)
-              when (!cancellationToken.IsCancellationRequested &&
-                    ContinuationHelper.CanResumeStream(enableContinuation, hopContinuationToken,
-                                                       hopFinishReason)) {
-            // If a mid-stream error occurs after an intermediate checkpoint
-            // continuationToken was received, resume from that checkpoint.
+          } catch (Exception ex) when (!cancellationToken.IsCancellationRequested &&
+                                       ex is not OperationCanceledException) {
+            hopError = System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(ex);
             break;
           }
 
+          if (chunk.PromptFeedback != null) {
+            hopHasPromptFeedback = true;
+          }
           if (chunk.Candidates is { Count : > 0 } candidates) {
             var cand = candidates[0];
+            if (cand.Content?.Parts is { Count : > 0 }) {
+              hopHasYieldedContent = true;
+            }
             if (cand.FinishReason != null) {
               hopFinishReason = cand.FinishReason;
             }
@@ -5742,6 +5752,23 @@ namespace Google.GenAI {
 
         if (hopUsage != null) {
           accumulatedUsage = hopUsage;
+        }
+        // If the stream fails or ends without a terminal finishReason, resume
+        // from the latest checkpoint token. If the hop failed before emitting a
+        // checkpoint of its own, retry from the token the hop started with.
+        (hopContinuationToken, reconnectsWithoutProgress) =
+            ContinuationHelper.NextStreamContinuationToken(
+                hopStartToken, hopContinuationToken, hopFinishReason, reconnectsWithoutProgress,
+                hopHasPromptFeedback, hopHasYieldedContent);
+        if (!ContinuationHelper.CanResumeStream(enableContinuation, hopContinuationToken,
+                                                hopFinishReason, hopHasPromptFeedback)) {
+          if (hopError != null) {
+            hopError.Throw();
+          } else if (enableContinuation && hopStartToken is { Length : > 0 } &&
+                     hopFinishReason == null && !hopHasPromptFeedback) {
+            throw new ApiException(
+                "Automatic continuation stream ended prematurely without a FinishReason.");
+          }
         }
       }
     }

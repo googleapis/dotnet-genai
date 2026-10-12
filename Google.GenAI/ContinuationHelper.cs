@@ -66,16 +66,66 @@ namespace Google.GenAI
     }
 
     /// <summary>
+    /// Maximum number of consecutive streaming reconnects that do not receive a new
+    /// checkpoint continuation token before the error is surfaced to the caller.
+    /// </summary>
+    public const int MaxStreamReconnectsWithoutProgress = 3;
+
+    /// <summary>
     /// Checks whether a streaming hop can resume with the given continuation state.
     /// </summary>
     public static bool CanResumeStream(
         bool enableContinuation,
         byte[]? continuationToken,
-        FinishReason? finishReason)
+        FinishReason? finishReason,
+        bool hasPromptFeedback = false)
     {
       return enableContinuation
+          && !hasPromptFeedback
           && continuationToken is { Length: > 0 }
           && IsResumableFinishReason(finishReason);
+    }
+
+    /// <summary>
+    /// Returns the token to resume the next streaming hop from.
+    /// Long-decode checkpoints are only emitted part way through each hop, so a
+    /// connection can drop before the hop has produced a checkpoint of its own.
+    /// In that case the hop can be retried from the token it was started with,
+    /// provided no candidate content parts have been yielded yet.
+    /// </summary>
+    public static (byte[]? ContinuationToken, int ReconnectsWithoutProgress)
+        NextStreamContinuationToken(
+            byte[]? hopStartToken,
+            byte[]? hopToken,
+            FinishReason? finishReason,
+            int reconnectsWithoutProgress,
+            bool hasPromptFeedback = false,
+            bool hopHasYieldedContent = false)
+    {
+      if ((finishReason != null && finishReason != FinishReason.FinishReasonUnspecified)
+          || hasPromptFeedback)
+      {
+        if (finishReason == FinishReason.Continuation
+            && !hasPromptFeedback
+            && hopToken is { Length: > 0 }
+            && (hopStartToken == null || !hopToken.AsSpan().SequenceEqual(hopStartToken)))
+        {
+          return (hopToken, 0);
+        }
+        // The server ended the hop without a new token or with PromptFeedback;
+        // replaying the same token would only repeat the hop.
+        return (null, 0);
+      }
+      if (hopToken is { Length: > 0 }
+          && (hopStartToken == null || !hopToken.AsSpan().SequenceEqual(hopStartToken)))
+      {
+        return (hopToken, 0);
+      }
+      if (hopHasYieldedContent || reconnectsWithoutProgress >= MaxStreamReconnectsWithoutProgress)
+      {
+        return (null, reconnectsWithoutProgress);
+      }
+      return (hopStartToken, reconnectsWithoutProgress + 1);
     }
 
     /// <summary>
@@ -200,6 +250,39 @@ namespace Google.GenAI
       return finalResponse;
     }
 
+    private static JsonNode? ClearStaleContinuationOnCandidate(JsonNode? candNode)
+    {
+      if (candNode?.DeepClone() is not JsonObject obj)
+      {
+        return candNode?.DeepClone();
+      }
+      obj.Remove("continuationToken");
+      if (string.Equals(
+              obj["finishReason"]?.GetValue<string>(),
+              "CONTINUATION",
+              StringComparison.OrdinalIgnoreCase))
+      {
+        obj.Remove("finishReason");
+        obj.Remove("finishMessage");
+      }
+      return obj;
+    }
+
+    private static JsonArray MergeCandidates(JsonArray prevArr, JsonArray currArr)
+    {
+      var mergedArr = new JsonArray();
+      int maxCount = Math.Max(prevArr.Count, currArr.Count);
+      for (int i = 0; i < maxCount; i++)
+      {
+        var p = i < prevArr.Count ? prevArr[i] : null;
+        var c = i < currArr.Count ? currArr[i] : null;
+        mergedArr.Add(c == null
+            ? ClearStaleContinuationOnCandidate(p)
+            : MergeJsonNodes(p, c, "candidate"));
+      }
+      return mergedArr;
+    }
+
     private static JsonNode? MergeJsonNodes(
         JsonNode? prev,
         JsonNode? curr,
@@ -212,7 +295,19 @@ namespace Google.GenAI
       }
 
       // Null / absent handling: keep non-null side
-      if (curr == null) return prev?.DeepClone();
+      if (curr == null)
+      {
+        if (string.Equals(fieldName, "candidates", StringComparison.OrdinalIgnoreCase) &&
+            prev is JsonArray prevCandidatesArr)
+        {
+          return MergeCandidates(prevCandidatesArr, new JsonArray());
+        }
+        if (string.Equals(fieldName, "candidate", StringComparison.OrdinalIgnoreCase))
+        {
+          return ClearStaleContinuationOnCandidate(prev);
+        }
+        return prev?.DeepClone();
+      }
       if (prev == null) return curr?.DeepClone();
 
       // Nested Objects
@@ -237,15 +332,7 @@ namespace Google.GenAI
         // candidates: merge element-wise (Candidate 0 with Candidate 0)
         if (string.Equals(fieldName, "candidates", StringComparison.OrdinalIgnoreCase))
         {
-          var mergedArr = new JsonArray();
-          int maxCount = Math.Max(prevArr.Count, currArr.Count);
-          for (int i = 0; i < maxCount; i++)
-          {
-            var p = i < prevArr.Count ? prevArr[i] : null;
-            var c = i < currArr.Count ? currArr[i] : null;
-            mergedArr.Add(MergeJsonNodes(p, c, "candidate"));
-          }
-          return mergedArr;
+          return MergeCandidates(prevArr, currArr);
         }
 
         // ModalityTokenCount lists (*TokensDetails): group by modality and sum tokenCount
