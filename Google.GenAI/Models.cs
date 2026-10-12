@@ -5568,6 +5568,69 @@ namespace Google.GenAI {
 
     private static int _loggedGenerateImagesWarning = 0;
     private static int _loggedEditImageWarning = 0;
+    private static int _loggedTemperatureWarning = 0;
+    private static int _loggedTopPWarning = 0;
+    private static int _loggedTopKWarning = 0;
+    private static int _loggedThinkingBudgetWarning = 0;
+
+    internal static bool IsGemini36OrNewer(string? model) {
+      if (string.IsNullOrEmpty(model)) {
+        return false;
+      }
+      int lastSlash = model.LastIndexOf('/');
+      string modelId = (lastSlash >= 0 ? model.Substring(lastSlash + 1) : model).ToLowerInvariant();
+      const string prefix = "gemini-";
+      if (!modelId.StartsWith(prefix, StringComparison.Ordinal)) {
+        return false;
+      }
+      string rest = modelId.Substring(prefix.Length);
+      int i = 0;
+      while (i < rest.Length && char.IsDigit(rest[i])) {
+        i++;
+      }
+      if (i == 0 || !int.TryParse(rest.Substring(0, i), out int major)) {
+        return false;
+      }
+      rest = rest.Substring(i);
+      int minor = 0;
+      if (rest.Length > 0 && rest[0] == '.') {
+        rest = rest.Substring(1);
+        int j = 0;
+        while (j < rest.Length && char.IsDigit(rest[j])) {
+          j++;
+        }
+        if (j == 0 || !int.TryParse(rest.Substring(0, j), out minor)) {
+          return false;
+        }
+        rest = rest.Substring(j);
+      }
+      if (rest.Length > 0 && rest[0] != '-') {
+        return false;
+      }
+      return major > 3 || (major == 3 && minor >= 6);
+    }
+
+    private static void WarnUnsupportedParameters(string model, GenerateContentConfig? config) {
+      if (config == null || !IsGemini36OrNewer(model)) {
+        return;
+      }
+      if (config.Temperature != null &&
+          Interlocked.CompareExchange(ref _loggedTemperatureWarning, 1, 0) == 0) {
+        Console.WriteLine(
+            "temperature is not supported on Gemini 3.6 and newer models and is ignored.");
+      }
+      if (config.TopP != null && Interlocked.CompareExchange(ref _loggedTopPWarning, 1, 0) == 0) {
+        Console.WriteLine("top_p is not supported on Gemini 3.6 and newer models and is ignored.");
+      }
+      if (config.TopK != null && Interlocked.CompareExchange(ref _loggedTopKWarning, 1, 0) == 0) {
+        Console.WriteLine("top_k is not supported on Gemini 3.6 and newer models and is ignored.");
+      }
+      if (config.ThinkingConfig?.ThinkingBudget != null &&
+          Interlocked.CompareExchange(ref _loggedThinkingBudgetWarning, 1, 0) == 0) {
+        Console.WriteLine(
+            "thinking_budget is not supported on Gemini 3.6 and newer models and is ignored. Please use thinking_level instead.");
+      }
+    }
 
     /// <summary>
     /// Generates content given a GenAI model and a list of content.
@@ -5590,6 +5653,7 @@ namespace Google.GenAI {
     public async Task<GenerateContentResponse> GenerateContentAsync(
         string model, List<Content> contents, GenerateContentConfig? config = null,
         CancellationToken cancellationToken = default) {
+      WarnUnsupportedParameters(model, config);
       bool enableContinuation =
           ContinuationHelper.ShouldEnableAutomaticContinuation(config, defaultEnabled: true);
 
@@ -5677,6 +5741,7 @@ namespace Google.GenAI {
     public async IAsyncEnumerable<GenerateContentResponse> GenerateContentStreamAsync(
         string model, List<Content> contents, GenerateContentConfig? config = null,
         [EnumeratorCancellation] CancellationToken cancellationToken = default) {
+      WarnUnsupportedParameters(model, config);
       bool enableContinuation =
           ContinuationHelper.ShouldEnableAutomaticContinuation(config, defaultEnabled: true);
       byte[]? hopContinuationToken = null;
