@@ -173,5 +173,77 @@ namespace Google.GenAI.Types {
     internal
       set => _initialPromptTokenCount = value;
     }
+
+    /// <summary>
+    /// Output only. Cumulative billable token usage summed across all continuation hops.
+    /// </summary>
+    [JsonPropertyName("billableUsage")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public BillableUsage
+        ? BillableUsage {
+            get; set;
+          }
+  }
+
+  /// <summary>
+  /// Cumulative billable token usage summed across all continuation hops.
+  /// </summary>
+  public record BillableUsage {
+    /// <summary>
+    /// Cumulative billed prompt token count summed across all continuation hops.
+    /// </summary>
+    [JsonPropertyName("promptTokenCount")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public int ? PromptTokenCount { get; set; }
+
+    /// <summary>
+    /// Cumulative billed cached content token count summed across all continuation hops.
+    /// </summary>
+    [JsonPropertyName("cachedContentTokenCount")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public int
+        ? CachedContentTokenCount {
+            get; set;
+          }
+
+    /// <summary>
+    /// Cumulative billed output token count summed across all continuation hops.
+    /// </summary>
+    [JsonPropertyName("candidatesTokenCount")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public int
+        ? CandidatesTokenCount {
+            get; set;
+          }
+
+    /// <summary>
+    /// Cumulative billed thoughts token count summed across all continuation hops.
+    /// </summary>
+    [JsonPropertyName("thoughtsTokenCount")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public int
+        ? ThoughtsTokenCount {
+            get; set;
+          }
+
+    /// <summary>
+    /// Cumulative billed tool-use prompt token count summed across all continuation hops.
+    /// </summary>
+    [JsonPropertyName("toolUsePromptTokenCount")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public int
+        ? ToolUsePromptTokenCount {
+            get; set;
+          }
+
+    /// <summary>
+    /// Cumulative billed total token count summed across all continuation hops.
+    /// </summary>
+    [JsonPropertyName("totalTokenCount")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public int
+        ? TotalTokenCount {
+            get; set;
+          }
   }
 }

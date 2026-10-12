@@ -422,14 +422,20 @@ namespace Google.GenAI.Tests
       var merged = ContinuationHelper.MergeContinuationResponses(new[] { hop1, hop2 });
 
       Assert.IsNotNull(merged.UsageMetadata);
-      // All token counts and modality details are summed across hops
-      Assert.AreEqual(45, merged.UsageMetadata.PromptTokenCount);
-      Assert.AreEqual(34, merged.UsageMetadata.CachedContentTokenCount);
-      Assert.AreEqual(45, merged.UsageMetadata.PromptTokensDetails?[0].TokenCount);
-      Assert.AreEqual(34, merged.UsageMetadata.CacheTokensDetails?[0].TokenCount);
+      // Initial prompt context fields preserved on top-level UsageMetadata; cumulative billed usage in BillableUsage
+      Assert.AreEqual(10, merged.UsageMetadata.PromptTokenCount);
+      Assert.AreEqual(4, merged.UsageMetadata.CachedContentTokenCount);
+      Assert.AreEqual(10, merged.UsageMetadata.PromptTokensDetails?[0].TokenCount);
+      Assert.AreEqual(4, merged.UsageMetadata.CacheTokensDetails?[0].TokenCount);
       Assert.AreEqual(50, merged.UsageMetadata.CandidatesTokenCount);
       Assert.AreEqual(20, merged.UsageMetadata.ThoughtsTokenCount);
-      Assert.AreEqual(115, merged.UsageMetadata.TotalTokenCount);
+      Assert.AreEqual(80, merged.UsageMetadata.TotalTokenCount);
+      Assert.IsNotNull(merged.UsageMetadata.BillableUsage);
+      Assert.AreEqual(45, merged.UsageMetadata.BillableUsage.PromptTokenCount);
+      Assert.AreEqual(34, merged.UsageMetadata.BillableUsage.CachedContentTokenCount);
+      Assert.AreEqual(50, merged.UsageMetadata.BillableUsage.CandidatesTokenCount);
+      Assert.AreEqual(20, merged.UsageMetadata.BillableUsage.ThoughtsTokenCount);
+      Assert.AreEqual(115, merged.UsageMetadata.BillableUsage.TotalTokenCount);
       Assert.AreEqual(50, merged.Candidates![0].TokenCount);
       // InitialPromptTokenCount preserves Hop 1's PromptTokenCount
       Assert.AreEqual(10, merged.UsageMetadata.InitialPromptTokenCount);
@@ -438,13 +444,19 @@ namespace Google.GenAI.Tests
       // Direct MergeUsageMetadata produces identical results
       var directMergedUsage = ContinuationHelper.MergeUsageMetadata(hop1.UsageMetadata, hop2.UsageMetadata);
       Assert.IsNotNull(directMergedUsage);
-      Assert.AreEqual(45, directMergedUsage.PromptTokenCount);
-      Assert.AreEqual(34, directMergedUsage.CachedContentTokenCount);
-      Assert.AreEqual(45, directMergedUsage.PromptTokensDetails?[0].TokenCount);
-      Assert.AreEqual(34, directMergedUsage.CacheTokensDetails?[0].TokenCount);
+      Assert.AreEqual(10, directMergedUsage.PromptTokenCount);
+      Assert.AreEqual(4, directMergedUsage.CachedContentTokenCount);
+      Assert.AreEqual(10, directMergedUsage.PromptTokensDetails?[0].TokenCount);
+      Assert.AreEqual(4, directMergedUsage.CacheTokensDetails?[0].TokenCount);
       Assert.AreEqual(50, directMergedUsage.CandidatesTokenCount);
       Assert.AreEqual(20, directMergedUsage.ThoughtsTokenCount);
-      Assert.AreEqual(115, directMergedUsage.TotalTokenCount);
+      Assert.AreEqual(80, directMergedUsage.TotalTokenCount);
+      Assert.IsNotNull(directMergedUsage.BillableUsage);
+      Assert.AreEqual(45, directMergedUsage.BillableUsage.PromptTokenCount);
+      Assert.AreEqual(34, directMergedUsage.BillableUsage.CachedContentTokenCount);
+      Assert.AreEqual(50, directMergedUsage.BillableUsage.CandidatesTokenCount);
+      Assert.AreEqual(20, directMergedUsage.BillableUsage.ThoughtsTokenCount);
+      Assert.AreEqual(115, directMergedUsage.BillableUsage.TotalTokenCount);
       Assert.AreEqual(10, directMergedUsage.InitialPromptTokenCount);
     }
 
@@ -843,10 +855,13 @@ namespace Google.GenAI.Tests
       CollectionAssert.AreEqual(new[] { "query 1", "query 2" }, cand.GroundingMetadata?.WebSearchQueries?.ToArray());
       Assert.AreEqual(-3.5f, cand.LogprobsResult?.LogProbabilitySum);
       Assert.AreEqual(2, cand.LogprobsResult?.ChosenCandidates?.Count);
-      Assert.AreEqual(140, merged.UsageMetadata?.PromptTokenCount);
+      Assert.AreEqual(20, merged.UsageMetadata?.PromptTokenCount);
       Assert.AreEqual(150, merged.UsageMetadata?.CandidatesTokenCount);
-      Assert.AreEqual(290, merged.UsageMetadata?.TotalTokenCount);
-      Assert.AreEqual(140, merged.UsageMetadata?.PromptTokensDetails?[0].TokenCount);
+      Assert.AreEqual(170, merged.UsageMetadata?.TotalTokenCount);
+      Assert.AreEqual(20, merged.UsageMetadata?.PromptTokensDetails?[0].TokenCount);
+      Assert.AreEqual(140, merged.UsageMetadata?.BillableUsage?.PromptTokenCount);
+      Assert.AreEqual(150, merged.UsageMetadata?.BillableUsage?.CandidatesTokenCount);
+      Assert.AreEqual(290, merged.UsageMetadata?.BillableUsage?.TotalTokenCount);
       Assert.AreEqual(20, merged.UsageMetadata?.InitialPromptTokenCount);
       Assert.AreEqual(20, merged.InitialPromptTokenCount);
     }
@@ -920,10 +935,13 @@ namespace Google.GenAI.Tests
       Assert.AreEqual(FinishReason.Stop, candidate.FinishReason);
       Assert.IsNull(candidate.ContinuationToken);
 
-      // Verify token counts summed and InitialPromptTokenCount preserved
-      Assert.AreEqual(10, response.UsageMetadata?.PromptTokenCount);
+      // Verify context window usage and BillableUsage
+      Assert.AreEqual(5, response.UsageMetadata?.PromptTokenCount);
       Assert.AreEqual(22, response.UsageMetadata?.CandidatesTokenCount);
-      Assert.AreEqual(32, response.UsageMetadata?.TotalTokenCount);
+      Assert.AreEqual(27, response.UsageMetadata?.TotalTokenCount);
+      Assert.AreEqual(10, response.UsageMetadata?.BillableUsage?.PromptTokenCount);
+      Assert.AreEqual(22, response.UsageMetadata?.BillableUsage?.CandidatesTokenCount);
+      Assert.AreEqual(32, response.UsageMetadata?.BillableUsage?.TotalTokenCount);
       Assert.AreEqual(5, response.UsageMetadata?.InitialPromptTokenCount);
       Assert.AreEqual(5, response.InitialPromptTokenCount);
     }
@@ -1176,12 +1194,17 @@ namespace Google.GenAI.Tests
       // Verify parts
       Assert.AreEqual(4, response.Candidates?[0].Content?.Parts?.Count);
 
-      // Verify summed usage metadata and preserved initial prompt token count
+      // Verify context window usage metadata, BillableUsage, and preserved initial prompt token count
       Assert.IsNotNull(response.UsageMetadata);
-      Assert.AreEqual(10 + 32778 + 65546 + 98314, response.UsageMetadata.PromptTokenCount);
+      Assert.AreEqual(10, response.UsageMetadata.PromptTokenCount);
       Assert.AreEqual(32768 * 3 + 1024, response.UsageMetadata.CandidatesTokenCount);
       Assert.AreEqual(500 + 300 + 200 + 100, response.UsageMetadata.ThoughtsTokenCount);
-      Assert.AreEqual(33278 + 65846 + 98514 + 99438, response.UsageMetadata.TotalTokenCount);
+      Assert.AreEqual(10 + (32768 * 3 + 1024) + (500 + 300 + 200 + 100), response.UsageMetadata.TotalTokenCount);
+      Assert.IsNotNull(response.UsageMetadata.BillableUsage);
+      Assert.AreEqual(10 + 32778 + 65546 + 98314, response.UsageMetadata.BillableUsage.PromptTokenCount);
+      Assert.AreEqual(32768 * 3 + 1024, response.UsageMetadata.BillableUsage.CandidatesTokenCount);
+      Assert.AreEqual(500 + 300 + 200 + 100, response.UsageMetadata.BillableUsage.ThoughtsTokenCount);
+      Assert.AreEqual(33278 + 65846 + 98514 + 99438, response.UsageMetadata.BillableUsage.TotalTokenCount);
       Assert.AreEqual(10, response.UsageMetadata.InitialPromptTokenCount);
       Assert.AreEqual(10, response.InitialPromptTokenCount);
 
@@ -1521,25 +1544,35 @@ namespace Google.GenAI.Tests
       Assert.AreEqual(5, chunks[1].UsageMetadata?.ThoughtsTokenCount);
       Assert.AreEqual(35, chunks[1].UsageMetadata?.TotalTokenCount);
 
-      // Hop 2 chunk 1 accumulates onto Hop 1's final usage (without double-counting later chunks)
-      Assert.AreEqual(45, chunks[2].UsageMetadata?.PromptTokenCount);
-      Assert.AreEqual(34, chunks[2].UsageMetadata?.CachedContentTokenCount);
-      Assert.AreEqual(45, chunks[2].UsageMetadata?.PromptTokensDetails?[0].TokenCount);
+      // Hop 2 chunk 1 preserves Hop 1 initial prompt context and accumulates BillableUsage
+      Assert.AreEqual(10, chunks[2].UsageMetadata?.PromptTokenCount);
+      Assert.AreEqual(4, chunks[2].UsageMetadata?.CachedContentTokenCount);
+      Assert.AreEqual(10, chunks[2].UsageMetadata?.PromptTokensDetails?[0].TokenCount);
       Assert.AreEqual(32, chunks[2].UsageMetadata?.CandidatesTokenCount);
       Assert.AreEqual(8, chunks[2].UsageMetadata?.ThoughtsTokenCount);
-      Assert.AreEqual(85, chunks[2].UsageMetadata?.TotalTokenCount);
+      Assert.AreEqual(50, chunks[2].UsageMetadata?.TotalTokenCount);
       Assert.AreEqual(32, chunks[2].UsageMetadata?.CandidatesTokensDetails?[0].TokenCount);
+      Assert.AreEqual(45, chunks[2].UsageMetadata?.BillableUsage?.PromptTokenCount);
+      Assert.AreEqual(34, chunks[2].UsageMetadata?.BillableUsage?.CachedContentTokenCount);
+      Assert.AreEqual(32, chunks[2].UsageMetadata?.BillableUsage?.CandidatesTokenCount);
+      Assert.AreEqual(8, chunks[2].UsageMetadata?.BillableUsage?.ThoughtsTokenCount);
+      Assert.AreEqual(85, chunks[2].UsageMetadata?.BillableUsage?.TotalTokenCount);
       Assert.AreEqual(10, chunks[2].UsageMetadata?.InitialPromptTokenCount);
       Assert.AreEqual(10, chunks[2].InitialPromptTokenCount);
 
-      // Hop 2 final chunk has total accumulated usage across both hops and preserves Hop 1's InitialPromptTokenCount
-      Assert.AreEqual(45, chunks[3].UsageMetadata?.PromptTokenCount);
-      Assert.AreEqual(34, chunks[3].UsageMetadata?.CachedContentTokenCount);
-      Assert.AreEqual(45, chunks[3].UsageMetadata?.PromptTokensDetails?[0].TokenCount);
+      // Hop 2 final chunk preserves Hop 1 initial prompt context and accumulates BillableUsage
+      Assert.AreEqual(10, chunks[3].UsageMetadata?.PromptTokenCount);
+      Assert.AreEqual(4, chunks[3].UsageMetadata?.CachedContentTokenCount);
+      Assert.AreEqual(10, chunks[3].UsageMetadata?.PromptTokensDetails?[0].TokenCount);
       Assert.AreEqual(50, chunks[3].UsageMetadata?.CandidatesTokenCount);
       Assert.AreEqual(20, chunks[3].UsageMetadata?.ThoughtsTokenCount);
-      Assert.AreEqual(115, chunks[3].UsageMetadata?.TotalTokenCount);
+      Assert.AreEqual(80, chunks[3].UsageMetadata?.TotalTokenCount);
       Assert.AreEqual(50, chunks[3].UsageMetadata?.CandidatesTokensDetails?[0].TokenCount);
+      Assert.AreEqual(45, chunks[3].UsageMetadata?.BillableUsage?.PromptTokenCount);
+      Assert.AreEqual(34, chunks[3].UsageMetadata?.BillableUsage?.CachedContentTokenCount);
+      Assert.AreEqual(50, chunks[3].UsageMetadata?.BillableUsage?.CandidatesTokenCount);
+      Assert.AreEqual(20, chunks[3].UsageMetadata?.BillableUsage?.ThoughtsTokenCount);
+      Assert.AreEqual(115, chunks[3].UsageMetadata?.BillableUsage?.TotalTokenCount);
       Assert.AreEqual(10, chunks[3].UsageMetadata?.InitialPromptTokenCount);
       Assert.AreEqual(10, chunks[3].InitialPromptTokenCount);
     }
@@ -1734,11 +1767,11 @@ namespace Google.GenAI.Tests
 
       var usageContent = updates.SelectMany(u => u.Contents).OfType<UsageContent>().SingleOrDefault();
       Assert.IsNotNull(usageContent);
-      Assert.AreEqual(45, usageContent.Details.InputTokenCount);
-      Assert.AreEqual(34, usageContent.Details.CachedInputTokenCount);
+      Assert.AreEqual(10, usageContent.Details.InputTokenCount);
+      Assert.AreEqual(4, usageContent.Details.CachedInputTokenCount);
       Assert.AreEqual(50, usageContent.Details.OutputTokenCount);
       Assert.AreEqual(20, usageContent.Details.ReasoningTokenCount);
-      Assert.AreEqual(115, usageContent.Details.TotalTokenCount);
+      Assert.AreEqual(80, usageContent.Details.TotalTokenCount);
     }
 
     [TestMethod]

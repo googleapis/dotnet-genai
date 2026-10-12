@@ -132,10 +132,34 @@ namespace Google.GenAI
       return baseConfig with { ContinuationToken = continuationToken };
     }
 
+    private static int? AddNullableInt(int? a, int? b)
+    {
+      if (a == null) return b;
+      if (b == null) return a;
+      return a.Value + b.Value;
+    }
+
+    private static BillableUsage ExtractBillableUsage(GenerateContentResponseUsageMetadata usage)
+    {
+      if (usage.BillableUsage != null)
+      {
+        return usage.BillableUsage;
+      }
+      return new BillableUsage
+      {
+        PromptTokenCount = usage.PromptTokenCount,
+        CachedContentTokenCount = usage.CachedContentTokenCount,
+        CandidatesTokenCount = usage.CandidatesTokenCount,
+        ThoughtsTokenCount = usage.ThoughtsTokenCount,
+        ToolUsePromptTokenCount = usage.ToolUsePromptTokenCount,
+        TotalTokenCount = usage.TotalTokenCount
+      };
+    }
+
     /// <summary>
     /// Merges two <see cref="GenerateContentResponseUsageMetadata"/> instances across continuation hops.
-    /// Token counts and modality details are summed across hops, while
-    /// <see cref="GenerateContentResponseUsageMetadata.InitialPromptTokenCount"/> preserves the initial hop's prompt token count.
+    /// Initial prompt context window fields are preserved on top-level fields, while cumulative billed
+    /// token counts across hops are accumulated in <see cref="GenerateContentResponseUsageMetadata.BillableUsage"/>.
     /// </summary>
     public static GenerateContentResponseUsageMetadata? MergeUsageMetadata(
         GenerateContentResponseUsageMetadata? prev,
@@ -143,6 +167,9 @@ namespace Google.GenAI
     {
       if (prev == null) return curr;
       if (curr == null) return prev;
+
+      BillableUsage prevBillable = ExtractBillableUsage(prev);
+      BillableUsage currBillable = ExtractBillableUsage(curr);
 
       JsonNode? prevNode = JsonNode.Parse(
           JsonSerializer.Serialize(prev, JsonConfig.TypeInfo<GenerateContentResponseUsageMetadata>()));
@@ -153,6 +180,42 @@ namespace Google.GenAI
       var merged = GenerateContentResponseUsageMetadata.FromJson(mergedJson)
           ?? mergedNode?.Deserialize(JsonConfig.TypeInfo<GenerateContentResponseUsageMetadata>())
           ?? new GenerateContentResponseUsageMetadata();
+
+      // Preserve initial prompt context fields from the first hop that reported them.
+      merged.PromptTokenCount = prev.PromptTokenCount ?? curr.PromptTokenCount;
+      merged.CachedContentTokenCount = prev.CachedContentTokenCount ?? curr.CachedContentTokenCount;
+      merged.PromptTokensDetails = prev.PromptTokensDetails is { Count: > 0 }
+          ? prev.PromptTokensDetails.Select(d => d with { }).ToList()
+          : curr.PromptTokensDetails?.Select(d => d with { }).ToList();
+      merged.CacheTokensDetails = prev.CacheTokensDetails is { Count: > 0 }
+          ? prev.CacheTokensDetails.Select(d => d with { }).ToList()
+          : curr.CacheTokensDetails?.Select(d => d with { }).ToList();
+
+      // Recompute context-window TotalTokenCount from preserved initial prompt + accumulated output/thought/tool tokens.
+      if (merged.PromptTokenCount != null ||
+          merged.CandidatesTokenCount != null ||
+          merged.ThoughtsTokenCount != null ||
+          merged.ToolUsePromptTokenCount != null ||
+          prev.TotalTokenCount != null ||
+          curr.TotalTokenCount != null)
+      {
+        merged.TotalTokenCount =
+            (merged.PromptTokenCount ?? 0) +
+            (merged.CandidatesTokenCount ?? 0) +
+            (merged.ThoughtsTokenCount ?? 0) +
+            (merged.ToolUsePromptTokenCount ?? 0);
+      }
+
+      merged.BillableUsage = new BillableUsage
+      {
+        PromptTokenCount = AddNullableInt(prevBillable.PromptTokenCount, currBillable.PromptTokenCount),
+        CachedContentTokenCount = AddNullableInt(prevBillable.CachedContentTokenCount, currBillable.CachedContentTokenCount),
+        CandidatesTokenCount = AddNullableInt(prevBillable.CandidatesTokenCount, currBillable.CandidatesTokenCount),
+        ThoughtsTokenCount = AddNullableInt(prevBillable.ThoughtsTokenCount, currBillable.ThoughtsTokenCount),
+        ToolUsePromptTokenCount = AddNullableInt(prevBillable.ToolUsePromptTokenCount, currBillable.ToolUsePromptTokenCount),
+        TotalTokenCount = AddNullableInt(prevBillable.TotalTokenCount, currBillable.TotalTokenCount)
+      };
+
       merged.InitialPromptTokenCount = prev.InitialPromptTokenCount ?? curr.InitialPromptTokenCount;
       return merged;
     }
@@ -187,13 +250,15 @@ namespace Google.GenAI
           ?? mergedNode?.Deserialize(JsonConfig.TypeInfo<GenerateContentResponse>())
           ?? throw new InvalidOperationException("Failed to deserialize merged GenerateContentResponse.");
 
-      int? firstInitialPrompt = responses
-          .Select(r => r.UsageMetadata?.InitialPromptTokenCount)
-          .FirstOrDefault(v => v != null);
-      if (finalResponse.UsageMetadata != null && firstInitialPrompt != null)
+      GenerateContentResponseUsageMetadata? mergedUsage = null;
+      foreach (var resp in responses)
       {
-        finalResponse.UsageMetadata.InitialPromptTokenCount = firstInitialPrompt;
+        if (resp.UsageMetadata != null)
+        {
+          mergedUsage = MergeUsageMetadata(mergedUsage, resp.UsageMetadata);
+        }
       }
+      finalResponse.UsageMetadata = mergedUsage;
 
       // SdkHttpResponse is [JsonIgnore], retain from the latest hop
       finalResponse.SdkHttpResponse = responses[responses.Count - 1].SdkHttpResponse;
