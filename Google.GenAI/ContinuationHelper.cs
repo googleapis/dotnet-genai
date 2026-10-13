@@ -211,6 +211,21 @@ namespace Google.GenAI
         return curr?.DeepClone();
       }
 
+      // Merge preserved candidates against an empty Candidate when curr.Candidates
+      // is null/empty so terminal continuation state is cleared before null fallback.
+      if (string.Equals(fieldName, "candidates", StringComparison.OrdinalIgnoreCase) &&
+          prev is JsonArray prevCandidates &&
+          prevCandidates.Count > 0 &&
+          (curr is not JsonArray currCandidates || currCandidates.Count == 0))
+      {
+        var mergedCandidates = new JsonArray();
+        foreach (var item in prevCandidates)
+        {
+          mergedCandidates.Add(MergeJsonNodes(item, new JsonObject(), "candidate"));
+        }
+        return mergedCandidates;
+      }
+
       // Null / absent handling: keep non-null side
       if (curr == null) return prev?.DeepClone();
       if (prev == null) return curr?.DeepClone();

@@ -597,6 +597,67 @@ namespace Google.GenAI.Tests
     }
 
     [TestMethod]
+    public void MergeContinuationResponses_EmptyCandidatesHop_ClearsFinishReasonAndPreservesPromptFeedback()
+    {
+      var hop1 = new GenerateContentResponse
+      {
+        Candidates = new List<Candidate>
+        {
+          new Candidate
+          {
+            Content = new Content
+            {
+              Role = "model",
+              Parts = new List<Part> { new Part { Text = "Partial output before block." } }
+            },
+            FinishReason = FinishReason.Continuation,
+            ContinuationToken = new byte[] { 1, 2, 3 },
+            FinishMessage = "Continuing"
+          }
+        },
+        UsageMetadata = new GenerateContentResponseUsageMetadata
+        {
+          PromptTokenCount = 10,
+          CandidatesTokenCount = 100,
+          TotalTokenCount = 110
+        }
+      };
+
+      foreach (var emptyCandidates in new List<Candidate>?[] { null, new List<Candidate>() })
+      {
+        var hop2 = new GenerateContentResponse
+        {
+          Candidates = emptyCandidates,
+          PromptFeedback = new GenerateContentResponsePromptFeedback
+          {
+            BlockReason = BlockedReason.Other,
+            BlockReasonMessage = "Blocked on continuation hop"
+          },
+          UsageMetadata = new GenerateContentResponseUsageMetadata
+          {
+            PromptTokenCount = 110,
+            TotalTokenCount = 110
+          }
+        };
+
+        var merged = ContinuationHelper.MergeContinuationResponses(new[] { hop1, hop2 });
+
+        Assert.AreEqual("Partial output before block.", merged.Text);
+        Assert.IsNotNull(merged.Candidates);
+        Assert.AreEqual(1, merged.Candidates.Count);
+        Assert.IsNull(merged.Candidates[0].FinishReason);
+        Assert.IsNull(merged.Candidates[0].ContinuationToken);
+        Assert.IsNull(merged.Candidates[0].FinishMessage);
+        Assert.IsNotNull(merged.PromptFeedback);
+        Assert.AreEqual(BlockedReason.Other, merged.PromptFeedback.BlockReason);
+        Assert.AreEqual("Blocked on continuation hop", merged.PromptFeedback.BlockReasonMessage);
+        Assert.IsNotNull(merged.UsageMetadata);
+        Assert.AreEqual(120, merged.UsageMetadata.PromptTokenCount);
+        Assert.AreEqual(10, merged.UsageMetadata.InitialPromptTokenCount);
+      }
+    }
+
+    [TestMethod]
     public void MergeContinuationResponses_EmptyListAndSingleHop_HandledCorrectly()
     {
       var emptyResult = ContinuationHelper.MergeContinuationResponses(Array.Empty<GenerateContentResponse>());
