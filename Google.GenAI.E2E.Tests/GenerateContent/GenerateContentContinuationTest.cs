@@ -51,8 +51,7 @@ public class GenerateContentContinuationTest {
     var geminiClientHttpOptions = new HttpOptions {
       Headers = new Dictionary<string, string> { { "Test-Name",
                                                    $"{GetType().Name}.{TestContext.TestName}" } },
-      BaseUrl = "http://localhost:1453",
-      Timeout = 600000
+      BaseUrl = "http://localhost:1453"
     };
 
     // Common setup for both clients.
@@ -68,8 +67,7 @@ public class GenerateContentContinuationTest {
     var vertexClientHttpOptions = new HttpOptions {
       Headers = new Dictionary<string, string> { { "Test-Name",
                                                    $"{GetType().Name}.{TestContext.TestName}" } },
-      BaseUrl = vertexBaseUrl,
-      Timeout = 600000
+      BaseUrl = vertexBaseUrl
     };
 
     vertexClient = new Client(project: project, location: location, vertexAI: true,

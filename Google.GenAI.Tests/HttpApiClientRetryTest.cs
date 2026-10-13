@@ -76,6 +76,34 @@ namespace Google.GenAI.Tests {
       }
     }
 
+    /// <summary>
+    /// Waits a scripted delay per request (honouring cancellation), then answers with a scripted
+    /// status. <see cref="Body"/> overrides the default JSON error body.
+    /// </summary>
+    private sealed class DelayedHandler : HttpMessageHandler {
+      private readonly IReadOnlyList<(TimeSpan Delay, HttpStatusCode Status)> _script;
+      private int _calls;
+
+      public string? Body { get; set; }
+
+      public DelayedHandler(params (TimeSpan Delay, HttpStatusCode Status)[] script) {
+        _script = script;
+      }
+
+      public int Calls => Volatile.Read(ref _calls);
+
+      protected override async Task<HttpResponseMessage> SendAsync(
+          HttpRequestMessage request, CancellationToken cancellationToken) {
+        int index = Interlocked.Increment(ref _calls) - 1;
+        var (delay, status) = index < _script.Count ? _script[index] : _script[_script.Count - 1];
+        await Task.Delay(delay, cancellationToken);
+        return new HttpResponseMessage(status) {
+          Content = new StringContent(
+              Body ?? "{\"error\": {\"code\": " + (int)status + ", \"message\": \"scripted\"}}"),
+        };
+      }
+    }
+
     /// <summary>Retry options with the backoff zeroed, so tests do not sleep.</summary>
     private static HttpRetryOptions NoBackoff(int attempts, params int[] statusCodes) {
       return new HttpRetryOptions {
@@ -251,6 +279,79 @@ namespace Google.GenAI.Tests {
           () => client.RequestAsync(HttpMethod.Post, "test-path", "{}", null, cts.Token));
 
       Assert.AreEqual(1, handler.Calls);
+    }
+
+    private static readonly TimeSpan Hang = TimeSpan.FromSeconds(30);
+
+    [TestMethod]
+    public async Task TimedOutAttempt_IsRetried() {
+      var handler = new DelayedHandler((Hang, HttpStatusCode.OK),
+                                       (TimeSpan.Zero, HttpStatusCode.OK));
+      var client = NewClient(handler, NoBackoff(attempts: 3));
+
+      ApiResponse response = await PostAsync(client, new HttpOptions { Timeout = 200 });
+
+      Assert.IsNotNull(response);
+      Assert.AreEqual(2, handler.Calls);
+    }
+
+    [TestMethod]
+    public async Task Timeout_AppliesToEachAttemptNotTheWholeLoop() {
+      var step = TimeSpan.FromMilliseconds(300);
+      var handler = new DelayedHandler((step, HttpStatusCode.ServiceUnavailable),
+                                       (step, HttpStatusCode.ServiceUnavailable),
+                                       (step, HttpStatusCode.OK));
+      var client = NewClient(handler, NoBackoff(attempts: 3));
+
+      // Each 300ms attempt fits in the 600ms timeout, but the three together (900ms) don't.
+      ApiResponse response = await PostAsync(client, new HttpOptions { Timeout = 600 });
+
+      Assert.IsNotNull(response);
+      Assert.AreEqual(3, handler.Calls);
+    }
+
+    [TestMethod]
+    public async Task EveryAttemptTimingOut_ThrowsAfterConfiguredAttempts() {
+      var handler = new DelayedHandler((Hang, HttpStatusCode.OK));
+      var client = NewClient(handler, NoBackoff(attempts: 3));
+
+      await Assert.ThrowsExceptionAsync<TaskCanceledException>(
+          () => PostAsync(client, new HttpOptions { Timeout = 100 }));
+
+      Assert.AreEqual(3, handler.Calls);
+    }
+
+    [TestMethod]
+    public async Task CallerCancellationDuringAttempt_IsNotRetried() {
+      var handler = new DelayedHandler((Hang, HttpStatusCode.OK));
+      var client = NewClient(handler, NoBackoff(attempts: 5));
+      using var cts = new CancellationTokenSource();
+      cts.CancelAfter(TimeSpan.FromMilliseconds(100));
+
+      await Assert.ThrowsExceptionAsync<TaskCanceledException>(
+          () => client.RequestAsync(HttpMethod.Post, "test-path", "{}",
+                                    new HttpOptions { Timeout = 60000 }, cts.Token));
+
+      Assert.AreEqual(1, handler.Calls);
+    }
+
+    [TestMethod]
+    public async Task Stream_TimedOutAttempt_IsRetriedAndBodyIsRead() {
+      var handler = new DelayedHandler((Hang, HttpStatusCode.OK),
+                                       (TimeSpan.Zero, HttpStatusCode.OK)) {
+        Body = "data: {\"foo\": \"bar\"}\n\n",
+      };
+      var client = NewClient(handler, NoBackoff(attempts: 3));
+
+      // The body of the successful (second) attempt is read under that attempt's deadline.
+      int chunks = 0;
+      await foreach (var _ in client.RequestStreamAsync(
+                         HttpMethod.Post, "test-path", "{}", new HttpOptions { Timeout = 200 })) {
+        chunks++;
+      }
+
+      Assert.AreEqual(1, chunks);
+      Assert.AreEqual(2, handler.Calls);
     }
 
     [TestMethod]

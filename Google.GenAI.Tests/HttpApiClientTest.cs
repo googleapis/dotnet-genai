@@ -445,5 +445,166 @@ namespace Google.GenAI.Tests {
         Assert.AreEqual(1, results.Count);
         Assert.AreEqual("{\n  \"foo\": \"bar\"\n}", results[0]);
     }
+
+    private static HttpClient GetInternalHttpClient(HttpApiClient client) {
+      var prop = typeof(ApiClient).GetProperty(
+          "HttpClient", BindingFlags.NonPublic | BindingFlags.Instance);
+      Assert.IsNotNull(prop);
+      return (HttpClient)prop!.GetValue(client)!;
+    }
+
+    [TestMethod]
+    public void CreateHttpClient_DefaultClient_HasInfiniteTimeout() {
+      var options = new Types.HttpOptions { Timeout = 12500 };
+      var client = new HttpApiClient(vertexAI: false, apiKey: TestApiKey, httpOptions: options);
+      var httpClient = GetInternalHttpClient(client);
+
+      Assert.AreEqual(System.Threading.Timeout.InfiniteTimeSpan, httpClient.Timeout);
+    }
+
+    [TestMethod]
+    public void GetEffectiveTimeout_Default_IsNoTimeout() {
+      var client = new HttpApiClient(vertexAI: false, apiKey: TestApiKey);
+
+      Assert.IsNull(client.GetEffectiveTimeout(null));
+      Assert.AreEqual(System.Threading.Timeout.InfiniteTimeSpan,
+                      GetInternalHttpClient(client).Timeout);
+    }
+
+    [TestMethod]
+    public void GetEffectiveTimeout_RequestOverridesClient() {
+      var options = new Types.HttpOptions { Timeout = 12500 };
+      var client = new HttpApiClient(vertexAI: false, apiKey: TestApiKey, httpOptions: options);
+
+      Assert.AreEqual(TimeSpan.FromMilliseconds(12500), client.GetEffectiveTimeout(null));
+      Assert.AreEqual(
+          TimeSpan.FromMilliseconds(600000),
+          client.GetEffectiveTimeout(new Types.HttpOptions { Timeout = 600000 }));
+    }
+
+    [TestMethod]
+    public void GetEffectiveTimeout_FactoryClient_UsesItsOwnTimeout() {
+      var clientOptions = new Types.ClientOptions {
+        HttpClientFactory = () => new HttpClient { Timeout = TimeSpan.FromMinutes(45) }
+      };
+      var client = new HttpApiClient(
+          vertexAI: false, apiKey: TestApiKey, clientOptions: clientOptions);
+
+      Assert.IsNull(client.GetEffectiveTimeout(null));
+    }
+
+    [TestMethod]
+    public async Task CreateHttpRequestAsync_ClientTimeout_SetsXServerTimeoutHeaderCeilingSeconds() {
+      var options = new Types.HttpOptions { Timeout = 5500 };
+      var client = new HttpApiClient(vertexAI: false, apiKey: TestApiKey, httpOptions: options);
+
+      var request = await InvokeCreateHttpRequestAsync(
+          client, HttpMethod.Post, "models/gemini-2.5-flash:generateContent", "{}", null);
+
+      Assert.IsTrue(request.Headers.TryGetValues("X-Server-Timeout", out var values));
+      Assert.AreEqual("6", System.Linq.Enumerable.Single(values));
+    }
+
+    [TestMethod]
+    public async Task CreateHttpRequestAsync_RequestTimeout_OverridesClientXServerTimeoutHeader() {
+      var clientOptions = new Types.HttpOptions { Timeout = 5500 };
+      var client = new HttpApiClient(vertexAI: false, apiKey: TestApiKey, httpOptions: clientOptions);
+      var requestOptions = new Types.HttpOptions { Timeout = 1200 };
+
+      var request = await InvokeCreateHttpRequestAsync(
+          client, HttpMethod.Post, "models/gemini-2.5-flash:generateContent", "{}", requestOptions);
+
+      Assert.IsTrue(request.Headers.TryGetValues("X-Server-Timeout", out var values));
+      Assert.AreEqual("2", System.Linq.Enumerable.Single(values));
+    }
+
+    [TestMethod]
+    public async Task CreateHttpRequestAsync_ExplicitXServerTimeoutHeader_IsNotOverwrittenByTimeout() {
+      var client = new HttpApiClient(vertexAI: false, apiKey: TestApiKey);
+      var requestOptions = new Types.HttpOptions {
+        Timeout = 5000,
+        Headers = new Dictionary<string, string> { { "X-Server-Timeout", "42" } }
+      };
+
+      var request = await InvokeCreateHttpRequestAsync(
+          client, HttpMethod.Post, "models/gemini-2.5-flash:generateContent", "{}", requestOptions);
+
+      Assert.IsTrue(request.Headers.TryGetValues("X-Server-Timeout", out var values));
+      Assert.AreEqual("42", System.Linq.Enumerable.Single(values));
+    }
+
+    private sealed class DelayedHttpMessageHandler : HttpMessageHandler {
+      private readonly TimeSpan _delay;
+
+      public DelayedHttpMessageHandler(TimeSpan delay) {
+        _delay = delay;
+      }
+
+      protected override async Task<HttpResponseMessage> SendAsync(
+          HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) {
+        await Task.Delay(_delay, cancellationToken);
+        return new HttpResponseMessage(System.Net.HttpStatusCode.OK) {
+          Content = new StringContent("{}")
+        };
+      }
+    }
+
+    private static void SetInternalHttpClient(HttpApiClient client, HttpClient httpClient) {
+      var field = typeof(ApiClient).GetField(
+          "_httpClient", BindingFlags.NonPublic | BindingFlags.Instance);
+      Assert.IsNotNull(field);
+      field!.SetValue(client, httpClient);
+    }
+
+    [TestMethod]
+    public async Task RequestAsync_PerRequestTimeout_CancelsSlowRequest() {
+      var client = new HttpApiClient(vertexAI: false, apiKey: TestApiKey);
+      using var customHttpClient = new HttpClient(new DelayedHttpMessageHandler(TimeSpan.FromSeconds(5))) {
+        Timeout = TimeSpan.FromMinutes(30)
+      };
+      SetInternalHttpClient(client, customHttpClient);
+
+      var requestOptions = new Types.HttpOptions { Timeout = 50 };
+
+      await Assert.ThrowsExceptionAsync<TaskCanceledException>(async () => {
+        await client.RequestAsync(
+            HttpMethod.Post, "models/gemini-2.5-flash:generateContent", "{}", requestOptions);
+      });
+    }
+
+    [TestMethod]
+    public async Task RequestStreamAsync_PerRequestTimeout_CancelsSlowRequest() {
+      var client = new HttpApiClient(vertexAI: false, apiKey: TestApiKey);
+      using var customHttpClient = new HttpClient(new DelayedHttpMessageHandler(TimeSpan.FromSeconds(5))) {
+        Timeout = System.Threading.Timeout.InfiniteTimeSpan
+      };
+      SetInternalHttpClient(client, customHttpClient);
+
+      var requestOptions = new Types.HttpOptions { Timeout = 50 };
+
+      await Assert.ThrowsExceptionAsync<TaskCanceledException>(async () => {
+        await foreach (var _ in client.RequestStreamAsync(
+            HttpMethod.Post, "models/gemini-2.5-flash:streamGenerateContent", "{}", requestOptions)) {
+        }
+      });
+    }
+
+    [TestMethod]
+    public async Task RequestAsync_PerRequestTimeout_CanExceedClientTimeout() {
+      var clientOptions = new Types.HttpOptions { Timeout = 50 };
+      var client = new HttpApiClient(vertexAI: false, apiKey: TestApiKey, httpOptions: clientOptions);
+      // Same as the SDK-created client: no HttpClient.Timeout of its own.
+      using var customHttpClient = new HttpClient(new DelayedHttpMessageHandler(TimeSpan.FromMilliseconds(300))) {
+        Timeout = System.Threading.Timeout.InfiniteTimeSpan
+      };
+      SetInternalHttpClient(client, customHttpClient);
+
+      var response = await client.RequestAsync(
+          HttpMethod.Post, "models/gemini-2.5-flash:generateContent", "{}",
+          new Types.HttpOptions { Timeout = 10000 });
+
+      Assert.IsNotNull(response);
+    }
   }
 }
+

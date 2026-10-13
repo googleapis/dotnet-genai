@@ -68,11 +68,23 @@ namespace Google.GenAI
     /// value means a single attempt. <paramref name="requestFactory"/> builds a fresh message
     /// per attempt, since an HttpRequestMessage cannot be sent twice.
     /// </summary>
-    protected async Task<HttpResponseMessage> SendWithRetryAsync(
-        Func<Task<HttpRequestMessage>> requestFactory,
-        HttpCompletionOption completionOption,
-        Types.HttpRetryOptions? retryOptions,
-        CancellationToken cancellationToken)
+    /// <param name="attemptTimeout">
+    /// Deadline for each attempt (like <c>HttpClient.Timeout</c>), or null for none. An attempt
+    /// that times out is retried like any other transport failure; a cancellation of
+    /// <paramref name="cancellationToken"/> is not.
+    /// </param>
+    /// <returns>
+    /// The response, and the timeout source of the attempt that produced it (null if
+    /// <paramref name="attemptTimeout"/> is null). The caller owns the source: it keeps the
+    /// deadline running for later reads of a streamed body, and must dispose it.
+    /// </returns>
+    protected async Task<(HttpResponseMessage Response, CancellationTokenSource? AttemptTimeout)>
+        SendWithRetryAsync(
+            Func<Task<HttpRequestMessage>> requestFactory,
+            HttpCompletionOption completionOption,
+            Types.HttpRetryOptions? retryOptions,
+            TimeSpan? attemptTimeout,
+            CancellationToken cancellationToken)
     {
       int attempts;
       if (retryOptions == null)
@@ -99,30 +111,40 @@ namespace Google.GenAI
         HttpRequestMessage request = await requestFactory();
         HttpResponseMessage? response = null;
         Exception? transportFailure = null;
+        // Each attempt gets its own deadline, linked to the caller's token.
+        CancellationTokenSource? attemptCts = CreateTimeoutCancellationTokenSource(
+            attemptTimeout, cancellationToken, out CancellationToken attemptToken);
         try
         {
-          response = await HttpClient.SendAsync(request, completionOption, cancellationToken);
+          response = await HttpClient.SendAsync(request, completionOption, attemptToken);
         }
         catch (Exception e) when (IsRetryableTransportFailure(e, cancellationToken))
         {
           transportFailure = e;
+        }
+        catch
+        {
+          attemptCts?.Dispose();
+          throw;
         }
 
         if (attempt >= attempts)
         {
           if (transportFailure != null)
           {
+            attemptCts?.Dispose();
             throw transportFailure;
           }
-          return response!;
+          return (response!, attemptCts);
         }
 
         if (transportFailure == null &&
             (response!.IsSuccessStatusCode || !retryableCodes.Contains((int)response.StatusCode)))
         {
-          return response;
+          return (response, attemptCts);
         }
 
+        attemptCts?.Dispose();
         response?.Dispose();
 
         await Task.Delay(ComputeRetryDelay(attempt, retryOptions!), cancellationToken)
@@ -131,7 +153,9 @@ namespace Google.GenAI
     }
 
     /// <summary>
-    /// Reports whether a failed send is worth repeating. A caller cancellation is not.
+    /// Reports whether a failed send is worth repeating. A caller cancellation is not; a
+    /// per-attempt timeout (an OperationCanceledException while the caller's token is still
+    /// live) is.
     /// </summary>
     private static bool IsRetryableTransportFailure(Exception e, CancellationToken cancellationToken)
     {
@@ -140,6 +164,26 @@ namespace Google.GenAI
         return false;
       }
       return e is HttpRequestException || e is OperationCanceledException;
+    }
+
+    /// <summary>
+    /// Returns a source that cancels after <paramref name="timeout"/> or when
+    /// <paramref name="cancellationToken"/> is cancelled, or null (with
+    /// <paramref name="effectiveToken"/> = <paramref name="cancellationToken"/>) if
+    /// <paramref name="timeout"/> is null.
+    /// </summary>
+    internal static CancellationTokenSource? CreateTimeoutCancellationTokenSource(
+        TimeSpan? timeout, CancellationToken cancellationToken, out CancellationToken effectiveToken)
+    {
+      if (timeout.HasValue)
+      {
+        var cts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
+        cts.CancelAfter(timeout.Value);
+        effectiveToken = cts.Token;
+        return cts;
+      }
+      effectiveToken = cancellationToken;
+      return null;
     }
 
     /// <summary>
@@ -375,16 +419,35 @@ namespace Google.GenAI
       {
         client = clientOptions.HttpClientFactory?.Invoke();
       }
-      // If no factory was provided, create a default client and apply SDK options
+      // If no factory was provided, create a default client with no timeout of its
+      // own, matching the other SDKs (the server bounds requests: 10 min unary,
+      // 20 min streaming). HttpClient.Timeout is fixed after the first request, so
+      // it can't be changed per request; an explicit HttpOptions.Timeout is
+      // enforced per request via GetEffectiveTimeout() + a CancellationToken.
       if (client == null)
       {
-        client = new HttpClient();
-        if (httpOptions.Timeout != null)
+        client = new HttpClient
         {
-          client.Timeout = System.TimeSpan.FromMilliseconds(httpOptions.Timeout.Value);
-        }
+          Timeout = System.Threading.Timeout.InfiniteTimeSpan,
+        };
       }
       return client;
+    }
+
+    /// <summary>
+    /// Returns the timeout to enforce for a request, or null to rely on the
+    /// HttpClient's own Timeout.
+    /// </summary>
+    /// <remarks>
+    /// An explicit (per-request, else client-level) <c>HttpOptions.Timeout</c> wins.
+    /// Otherwise there is no SDK timeout: the SDK-created HttpClient has none, and a
+    /// user-supplied HttpClient (from <c>ClientOptions.HttpClientFactory</c>) keeps
+    /// its own Timeout.
+    /// </remarks>
+    internal TimeSpan? GetEffectiveTimeout(HttpOptions? requestHttpOptions)
+    {
+      int? timeoutMs = requestHttpOptions?.Timeout ?? this.HttpOptions.Timeout;
+      return timeoutMs.HasValue ? TimeSpan.FromMilliseconds(timeoutMs.Value) : null;
     }
 
     /// <summary>
@@ -471,6 +534,12 @@ namespace Google.GenAI
       foreach (var header in currentHeaders)
       {
         headersBuilder[header.Key] = header.Value;
+      }
+      if (optionsToApply?.Timeout != null)
+      {
+        headersBuilder["X-Server-Timeout"] =
+            ((int)Math.Ceiling(optionsToApply.Timeout.Value / 1000.0))
+                .ToString(System.Globalization.CultureInfo.InvariantCulture);
       }
       foreach (var header in newHeaders)
       {
