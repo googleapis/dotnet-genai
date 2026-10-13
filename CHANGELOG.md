@@ -1,5 +1,22 @@
 # Changelog
 
+## Version 1.26.0, released 2026-10-13
+
+
+### New features
+
+* accumulate streaming continuation usage and expose InitialPromptTokenCount ([77bb16c](https://github.com/googleapis/dotnet-genai/commit/77bb16c45c477a222201e28f8f2e760c21883ef9))
+* Add startOffset/endOffset to Transcription and interimTranscriptTimestampEnabled to RealtimeInputConfig ([57dc2b0](https://github.com/googleapis/dotnet-genai/commit/57dc2b045caab11596047ec8bafc42f5f74d3d8d))
+* **cli:** update Speakeasy generator to v2.948.0, bump CLI to v0.4.2, and apply CLI overlay fixes ([1398a5c](https://github.com/googleapis/dotnet-genai/commit/1398a5c28864fbad946a63bbc07227b7b6a01c08))
+* Support automatic continuation (long decoding) ([0f18069](https://github.com/googleapis/dotnet-genai/commit/0f18069b5f6713ac33c7cb1a04ce669f239d88be))
+
+
+### Bug fixes
+
+* clear intermediate CONTINUATION FinishReason in streaming continuation ([b5d5ee4](https://github.com/googleapis/dotnet-genai/commit/b5d5ee4e19c76d619458a1575c19667287c652e6))
+* Raise default HTTP timeouts so long-running requests aren't killed client-side ([53e4ea1](https://github.com/googleapis/dotnet-genai/commit/53e4ea17687ab1fdf2e9c26771f9cdc093d0faf4))
+* resume streaming generation from the latest checkpoint continuation token on mid-stream errors or cutoffs ([eefb99d](https://github.com/googleapis/dotnet-genai/commit/eefb99deea084aa999ba36d79de99bf52029aefb))
+
 ## Version 1.25.0, released 2026-10-07
 
 
