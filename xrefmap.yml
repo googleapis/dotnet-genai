@@ -219,15 +219,15 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.ApiClient.RequestStreamAsync
   nameWithType: ApiClient.RequestStreamAsync
-- uid: Google.GenAI.ApiClient.SendWithRetryAsync(System.Func{System.Threading.Tasks.Task{System.Net.Http.HttpRequestMessage}},System.Net.Http.HttpCompletionOption,Google.GenAI.Types.HttpRetryOptions,System.Threading.CancellationToken)
-  name: SendWithRetryAsync(Func<Task<HttpRequestMessage>>, HttpCompletionOption, HttpRetryOptions?, CancellationToken)
-  href: api/Google.GenAI.ApiClient.html#Google_GenAI_ApiClient_SendWithRetryAsync_System_Func_System_Threading_Tasks_Task_System_Net_Http_HttpRequestMessage___System_Net_Http_HttpCompletionOption_Google_GenAI_Types_HttpRetryOptions_System_Threading_CancellationToken_
-  commentId: M:Google.GenAI.ApiClient.SendWithRetryAsync(System.Func{System.Threading.Tasks.Task{System.Net.Http.HttpRequestMessage}},System.Net.Http.HttpCompletionOption,Google.GenAI.Types.HttpRetryOptions,System.Threading.CancellationToken)
-  name.vb: SendWithRetryAsync(Func(Of Task(Of HttpRequestMessage)), HttpCompletionOption, HttpRetryOptions, CancellationToken)
-  fullName: Google.GenAI.ApiClient.SendWithRetryAsync(System.Func<System.Threading.Tasks.Task<System.Net.Http.HttpRequestMessage>>, System.Net.Http.HttpCompletionOption, Google.GenAI.Types.HttpRetryOptions?, System.Threading.CancellationToken)
-  fullName.vb: Google.GenAI.ApiClient.SendWithRetryAsync(System.Func(Of System.Threading.Tasks.Task(Of System.Net.Http.HttpRequestMessage)), System.Net.Http.HttpCompletionOption, Google.GenAI.Types.HttpRetryOptions, System.Threading.CancellationToken)
-  nameWithType: ApiClient.SendWithRetryAsync(Func<Task<HttpRequestMessage>>, HttpCompletionOption, HttpRetryOptions?, CancellationToken)
-  nameWithType.vb: ApiClient.SendWithRetryAsync(Func(Of Task(Of HttpRequestMessage)), HttpCompletionOption, HttpRetryOptions, CancellationToken)
+- uid: Google.GenAI.ApiClient.SendWithRetryAsync(System.Func{System.Threading.Tasks.Task{System.Net.Http.HttpRequestMessage}},System.Net.Http.HttpCompletionOption,Google.GenAI.Types.HttpRetryOptions,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)
+  name: SendWithRetryAsync(Func<Task<HttpRequestMessage>>, HttpCompletionOption, HttpRetryOptions?, TimeSpan?, CancellationToken)
+  href: api/Google.GenAI.ApiClient.html#Google_GenAI_ApiClient_SendWithRetryAsync_System_Func_System_Threading_Tasks_Task_System_Net_Http_HttpRequestMessage___System_Net_Http_HttpCompletionOption_Google_GenAI_Types_HttpRetryOptions_System_Nullable_System_TimeSpan__System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.ApiClient.SendWithRetryAsync(System.Func{System.Threading.Tasks.Task{System.Net.Http.HttpRequestMessage}},System.Net.Http.HttpCompletionOption,Google.GenAI.Types.HttpRetryOptions,System.Nullable{System.TimeSpan},System.Threading.CancellationToken)
+  name.vb: SendWithRetryAsync(Func(Of Task(Of HttpRequestMessage)), HttpCompletionOption, HttpRetryOptions, TimeSpan?, CancellationToken)
+  fullName: Google.GenAI.ApiClient.SendWithRetryAsync(System.Func<System.Threading.Tasks.Task<System.Net.Http.HttpRequestMessage>>, System.Net.Http.HttpCompletionOption, Google.GenAI.Types.HttpRetryOptions?, System.TimeSpan?, System.Threading.CancellationToken)
+  fullName.vb: Google.GenAI.ApiClient.SendWithRetryAsync(System.Func(Of System.Threading.Tasks.Task(Of System.Net.Http.HttpRequestMessage)), System.Net.Http.HttpCompletionOption, Google.GenAI.Types.HttpRetryOptions, System.TimeSpan?, System.Threading.CancellationToken)
+  nameWithType: ApiClient.SendWithRetryAsync(Func<Task<HttpRequestMessage>>, HttpCompletionOption, HttpRetryOptions?, TimeSpan?, CancellationToken)
+  nameWithType.vb: ApiClient.SendWithRetryAsync(Func(Of Task(Of HttpRequestMessage)), HttpCompletionOption, HttpRetryOptions, TimeSpan?, CancellationToken)
 - uid: Google.GenAI.ApiClient.SendWithRetryAsync*
   name: SendWithRetryAsync
   href: api/Google.GenAI.ApiClient.html#Google_GenAI_ApiClient_SendWithRetryAsync_
