@@ -5677,22 +5677,10 @@ namespace Google.GenAI {
     public async IAsyncEnumerable<GenerateContentResponse> GenerateContentStreamAsync(
         string model, List<Content> contents, GenerateContentConfig? config = null,
         [EnumeratorCancellation] CancellationToken cancellationToken = default) {
-      bool enableContinuation =
-          ContinuationHelper.ShouldEnableAutomaticContinuation(config, defaultEnabled: true);
-      byte[]? hopContinuationToken = null;
-      FinishReason? hopFinishReason = null;
-      GenerateContentResponseUsageMetadata? accumulatedUsage = null;
-      bool isFirstHop = true;
-
-      while (isFirstHop || ContinuationHelper.CanResumeStream(
-                               enableContinuation, hopContinuationToken, hopFinishReason)) {
-        GenerateContentConfig? callConfig =
-            isFirstHop ? config
-                       : ContinuationHelper.PrepareContinuationConfig(config, hopContinuationToken);
-        isFirstHop = false;
-        hopFinishReason = null;
-        hopContinuationToken = null;
-        GenerateContentResponseUsageMetadata? hopUsage = null;
+      var state = new StreamContinuation(config);
+      while (true) {
+        GenerateContentConfig? callConfig = state.StartHop();
+        System.Runtime.ExceptionServices.ExceptionDispatchInfo? error = null;
 
         await using var enumerator =
             PrivateGenerateContentStreamAsync(model, contents, callConfig, cancellationToken)
@@ -5704,44 +5692,18 @@ namespace Google.GenAI {
               break;
             }
             chunk = enumerator.Current;
-          } catch (Exception)
-              when (!cancellationToken.IsCancellationRequested &&
-                    ContinuationHelper.CanResumeStream(enableContinuation, hopContinuationToken,
-                                                       hopFinishReason)) {
-            // If a mid-stream error occurs after an intermediate checkpoint
-            // continuationToken was received, resume from that checkpoint.
+          } catch (Exception ex) when (!cancellationToken.IsCancellationRequested) {
+            // An OperationCanceledException here, with the caller's token not cancelled,
+            // is the HttpOptions.Timeout deadline firing mid-stream: treat it as a dropped hop.
+            error = System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(ex);
             break;
           }
-
-          if (chunk.Candidates is { Count : > 0 } candidates) {
-            var cand = candidates[0];
-            if (cand.FinishReason != null) {
-              hopFinishReason = cand.FinishReason;
-            }
-            if (cand.ContinuationToken is { Length : > 0 }) {
-              hopContinuationToken = cand.ContinuationToken;
-            } else if (cand.FinishReason != null &&
-                       !ContinuationHelper.IsResumableFinishReason(cand.FinishReason)) {
-              hopContinuationToken = null;
-            }
-            chunk = ContinuationHelper.ClearIntermediateFinishReason(chunk, enableContinuation,
-                                                                     hopContinuationToken);
-          }
-          if (chunk.UsageMetadata != null) {
-            if (accumulatedUsage != null) {
-              var mergedUsage =
-                  ContinuationHelper.MergeUsageMetadata(accumulatedUsage, chunk.UsageMetadata);
-              chunk = chunk with { UsageMetadata = mergedUsage };
-              hopUsage = mergedUsage;
-            } else {
-              hopUsage = chunk.UsageMetadata;
-            }
-          }
-          yield return chunk;
+          yield return state.Observe(chunk);
         }
 
-        if (hopUsage != null) {
-          accumulatedUsage = hopUsage;
+        // Rethrows error if the stream can't be resumed.
+        if (!state.EndHop(error)) {
+          yield break;
         }
       }
     }

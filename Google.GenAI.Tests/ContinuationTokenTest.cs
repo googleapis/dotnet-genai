@@ -1698,6 +1698,50 @@ namespace Google.GenAI.Tests
       CollectionAssert.AreEqual(Convert.FromBase64String("AQID"), response.Candidates?[0].ContinuationToken);
     }
 
+    [TestMethod]
+    public async Task Models_GenerateContentAsync_Hop2ReturnsPromptFeedbackAndNullCandidates_ClearsStaleContinuationFields()
+    {
+      string hop1Json = """
+      {
+        "candidates": [
+          {
+            "content": {
+              "role": "model",
+              "parts": [{ "text": "First hop text." }]
+            },
+            "finishReason": "CONTINUATION",
+            "finishMessage": "Token limit reached",
+            "continuationToken": "AQID"
+          }
+        ]
+      }
+      """;
+
+      string hop2Json = """
+      {
+        "promptFeedback": {
+          "blockReason": "SAFETY"
+        }
+      }
+      """;
+
+      var apiClient = new MockContinuationApiClient(hop1Json, hop2Json);
+      var models = new Models(apiClient);
+
+      var response = await models.GenerateContentAsync("gemini-2.5-pro", "Prompt");
+
+      Assert.IsNotNull(response);
+      Assert.AreEqual(2, apiClient.RequestsReceived.Count);
+      Assert.IsNotNull(response.Candidates);
+      Assert.AreEqual(1, response.Candidates.Count);
+      Assert.IsNull(response.Candidates[0].FinishReason);
+      Assert.IsNull(response.Candidates[0].FinishMessage);
+      Assert.IsNull(response.Candidates[0].ContinuationToken);
+      Assert.AreEqual("First hop text.", response.Text);
+      Assert.IsNotNull(response.PromptFeedback);
+      Assert.AreEqual(BlockedReason.Safety, response.PromptFeedback.BlockReason);
+    }
+
     #endregion
 
     #region E2E Models Streaming Continuation Tests
@@ -1919,6 +1963,34 @@ namespace Google.GenAI.Tests
     }
 
     [TestMethod]
+    public async Task Models_GenerateContentStreamAsync_BlockedChunkAfterCheckpoint_DoesNotResume()
+    {
+      // Hop 1: text chunk, checkpoint chunk (token, no finishReason), then a blocked chunk
+      // with no candidates and only promptFeedback.blockReason.
+      string hop1Stream = """
+      {"candidates":[{"content":{"role":"model","parts":[{"text":"Partial "}]}}]}
+      {"candidates":[{"content":{"role":"model","parts":[{"text":"output"}]},"continuationToken":"dG9rX2NrcHQ="}]}
+      {"promptFeedback":{"blockReason":"SAFETY"}}
+      """;
+
+      var apiClient = new MockContinuationApiClient(hop1Stream);
+      var models = new Models(apiClient);
+
+      var chunks = new List<GenerateContentResponse>();
+      await foreach (var chunk in models.GenerateContentStreamAsync("gemini-2.5-pro", "Prompt"))
+      {
+        chunks.Add(chunk);
+      }
+
+      Assert.AreEqual(1, apiClient.RequestsReceived.Count);
+      Assert.AreEqual(3, chunks.Count);
+      Assert.AreEqual("Partial ", chunks[0].Candidates?[0].Content?.Parts?[0].Text);
+      Assert.AreEqual("output", chunks[1].Candidates?[0].Content?.Parts?[0].Text);
+      Assert.IsNull(chunks[2].Candidates);
+      Assert.AreEqual(BlockedReason.Safety, chunks[2].PromptFeedback?.BlockReason);
+    }
+
+    [TestMethod]
     public async Task Models_GenerateContentStreamAsync_AccumulatesUsageMetadataAcrossHops()
     {
       string hop1Stream = """
@@ -2021,6 +2093,568 @@ namespace Google.GenAI.Tests
       Assert.AreEqual("hop 1 grounded. ", cand.Content!.Parts![gm.GroundingSupports[0].Segment!.PartIndex!.Value].Text);
       Assert.AreEqual("https://source2.example", gm.GroundingChunks![gm.GroundingSupports[1].GroundingChunkIndices![0]].Web?.Uri);
       Assert.AreEqual("hop 2 grounded.", cand.Content!.Parts![gm.GroundingSupports[1].Segment!.PartIndex!.Value].Text);
+    }
+
+    private static (byte[]? ContinuationToken, int ReconnectsWithoutProgress) NextResumeToken(
+        byte[]? hopStartToken,
+        byte[]? hopToken,
+        FinishReason? finishReason,
+        int reconnectsWithoutProgress,
+        bool hasPromptFeedback = false,
+        bool hopHasYieldedContent = false)
+    {
+      var state = new StreamContinuation(config: null)
+      {
+        ReconnectsWithoutProgress = reconnectsWithoutProgress,
+        CurrentHop = new StreamContinuation.Hop
+        {
+          StartToken = hopStartToken,
+          Token = hopToken,
+          FinishReason = finishReason,
+          HasPromptFeedback = hasPromptFeedback,
+          HasYieldedContent = hopHasYieldedContent,
+        },
+      };
+      return state.NextResumeToken();
+    }
+
+    [TestMethod]
+    public void NextStreamContinuationToken_ValidatesProgressAndRetryBudget()
+    {
+      byte[] tok1 = new byte[] { 1, 2, 3 };
+      byte[] tok1Copy = new byte[] { 1, 2, 3 };
+      byte[] tok2 = new byte[] { 4, 5, 6 };
+
+      // 1. New checkpoint token resets reconnectsWithoutProgress to 0
+      var (nextTok, reconnects) = NextResumeToken(
+          hopStartToken: tok1,
+          hopToken: tok2,
+          finishReason: FinishReason.Continuation,
+          reconnectsWithoutProgress: 2);
+      CollectionAssert.AreEqual(tok2, nextTok);
+      Assert.AreEqual(0, reconnects);
+
+      // 2. Hop 1 failure before any checkpoint returns null token (cannot resume)
+      (nextTok, reconnects) = NextResumeToken(
+          hopStartToken: null,
+          hopToken: null,
+          finishReason: null,
+          reconnectsWithoutProgress: 0);
+      Assert.IsNull(nextTok);
+      Assert.AreEqual(1, reconnects);
+
+      // 3. Resumed hop drops before emitting its first checkpoint (and before yielding content) -> retries from hopStartToken
+      (nextTok, reconnects) = NextResumeToken(
+          hopStartToken: tok1,
+          hopToken: null,
+          finishReason: null,
+          reconnectsWithoutProgress: 0,
+          hopHasYieldedContent: false);
+      CollectionAssert.AreEqual(tok1, nextTok);
+      Assert.AreEqual(1, reconnects);
+
+      // 4. Resumed hop echoes same hopStartToken without FinishReason (and before yielding content) -> counts as no progress
+      (nextTok, reconnects) = NextResumeToken(
+          hopStartToken: tok1,
+          hopToken: tok1Copy,
+          finishReason: null,
+          reconnectsWithoutProgress: 1,
+          hopHasYieldedContent: false);
+      CollectionAssert.AreEqual(tok1, nextTok);
+      Assert.AreEqual(2, reconnects);
+
+      // 5. Resumed hop ends with FinishReason (e.g. CONTINUATION) but no new token -> stops
+      (nextTok, reconnects) = NextResumeToken(
+          hopStartToken: tok1,
+          hopToken: null,
+          finishReason: FinishReason.Continuation,
+          reconnectsWithoutProgress: 0);
+      Assert.IsNull(nextTok);
+      Assert.AreEqual(0, reconnects);
+
+      // 6. Resumed hop drops after yielding content parts but before a new checkpoint token -> stops to avoid duplicate chunks
+      (nextTok, reconnects) = NextResumeToken(
+          hopStartToken: tok1,
+          hopToken: null,
+          finishReason: null,
+          reconnectsWithoutProgress: 0,
+          hopHasYieldedContent: true);
+      Assert.IsNull(nextTok);
+      Assert.AreEqual(0, reconnects);
+
+      // 7. Resumed hop with a new checkpoint token still resumes even if it yielded content parts
+      (nextTok, reconnects) = NextResumeToken(
+          hopStartToken: tok1,
+          hopToken: tok2,
+          finishReason: null,
+          reconnectsWithoutProgress: 1,
+          hopHasYieldedContent: true);
+      CollectionAssert.AreEqual(tok2, nextTok);
+      Assert.AreEqual(0, reconnects);
+
+      // 8. Retry budget exhausted -> stops
+      (nextTok, reconnects) = NextResumeToken(
+          hopStartToken: tok1,
+          hopToken: null,
+          finishReason: null,
+          reconnectsWithoutProgress: ContinuationHelper.MaxStreamReconnectsWithoutProgress);
+      Assert.IsNull(nextTok);
+      Assert.AreEqual(ContinuationHelper.MaxStreamReconnectsWithoutProgress, reconnects);
+    }
+
+    [TestMethod]
+    public async Task Models_GenerateContentStreamAsync_ResumedHopDropsBeforeFirstCheckpoint_RetriesFromHopStartToken()
+    {
+      // Hop 1 completes with CONTINUATION and token "dG9rX2hvcF8x"
+      string hop1Stream = """
+      {"candidates":[{"content":{"role":"model","parts":[{"text":"Hop 1. "}]},"finishReason":"CONTINUATION","continuationToken":"dG9rX2hvcF8x"}]}
+      """;
+
+      // Hop 2 attempt 1: drops during prefill (only metadata/empty candidate, no content parts) with mid-stream error
+      string hop2Attempt1Stream = """
+      {"candidates":[{"content":{"role":"model"}}]}
+      {invalid_json_mid_stream
+      """;
+
+      // Hop 2 attempt 2: drops during prefill (zero chunks) without FinishReason
+      string hop2Attempt2Stream = "";
+
+      // Hop 2 attempt 3: succeeds and finishes with STOP
+      string hop2Attempt3Stream = """
+      {"candidates":[{"content":{"role":"model","parts":[{"text":"Hop 2 done."}]},"finishReason":"STOP"}]}
+      """;
+
+      var apiClient = new MockContinuationApiClient(
+          hop1Stream, hop2Attempt1Stream, hop2Attempt2Stream, hop2Attempt3Stream);
+      var models = new Models(apiClient);
+
+      var chunks = new List<GenerateContentResponse>();
+      await foreach (var chunk in models.GenerateContentStreamAsync("gemini-2.5-pro", "Prompt"))
+      {
+        chunks.Add(chunk);
+      }
+
+      Assert.AreEqual(3, chunks.Count);
+      Assert.AreEqual(4, apiClient.RequestsReceived.Count);
+      Assert.IsTrue(apiClient.RequestsReceived[1].Contains("dG9rX2hvcF8x"));
+      Assert.IsTrue(apiClient.RequestsReceived[2].Contains("dG9rX2hvcF8x"));
+      Assert.IsTrue(apiClient.RequestsReceived[3].Contains("dG9rX2hvcF8x"));
+      Assert.AreEqual(
+          "Hop 1. Hop 2 done.",
+          string.Concat(chunks.Select(c => c.Candidates?[0].Content?.Parts?[0].Text)));
+      Assert.AreEqual(FinishReason.Stop, chunks[2].Candidates?[0].FinishReason);
+    }
+
+    [TestMethod]
+    public async Task Models_GenerateContentStreamAsync_ResumedHopDropsAfterYieldingContentBeforeCheckpoint_DoesNotRetryToAvoidDuplicateChunks()
+    {
+      // Hop 1 completes with CONTINUATION and token "dG9rX2hvcF8x"
+      string hop1Stream = """
+      {"candidates":[{"content":{"role":"model","parts":[{"text":"Hop 1. "}]},"finishReason":"CONTINUATION","continuationToken":"dG9rX2hvcF8x"}]}
+      """;
+
+      // Hop 2 yields candidate content parts without a new checkpoint token, then fails mid-stream
+      string hop2FailingStream = """
+      {"candidates":[{"content":{"role":"model","parts":[{"text":"Partial hop 2, "}]}}]}
+      {invalid_json_mid_stream
+      """;
+
+      // Even if a subsequent response were queued, it must NOT be requested because retrying
+      // from hopStartToken would replay Hop 2 from the beginning and emit duplicate chunks.
+      string unexpectedRetryStream = """
+      {"candidates":[{"content":{"role":"model","parts":[{"text":"Partial hop 2, done."}]},"finishReason":"STOP"}]}
+      """;
+
+      var apiClient = new MockContinuationApiClient(
+          hop1Stream, hop2FailingStream, unexpectedRetryStream);
+      var models = new Models(apiClient);
+
+      var chunks = new List<GenerateContentResponse>();
+      bool threwJsonException = false;
+      try
+      {
+        await foreach (var chunk in models.GenerateContentStreamAsync("gemini-2.5-pro", "Prompt"))
+        {
+          chunks.Add(chunk);
+        }
+      }
+      catch (JsonException)
+      {
+        threwJsonException = true;
+      }
+
+      Assert.IsTrue(threwJsonException, "Expected JsonException immediately without retrying from hopStartToken.");
+      Assert.AreEqual(2, chunks.Count);
+      Assert.AreEqual(2, apiClient.RequestsReceived.Count);
+      Assert.AreEqual(
+          "Hop 1. Partial hop 2, ",
+          string.Concat(chunks.Select(c => c.Candidates?[0].Content?.Parts?[0].Text)));
+
+      // Also verify that an EOF without FinishReason after yielding candidate content parts ends
+      // the stream normally (no SDK-invented error) without retrying.
+      string hop2CutoffStream = """
+      {"candidates":[{"content":{"role":"model","parts":[{"text":"Partial hop 2 cutoff"}]}}]}
+      """;
+      var cutoffClient = new MockContinuationApiClient(
+          hop1Stream, hop2CutoffStream, unexpectedRetryStream);
+      var cutoffModels = new Models(cutoffClient);
+
+      var cutoffChunks = new List<GenerateContentResponse>();
+      await foreach (var chunk in cutoffModels.GenerateContentStreamAsync("gemini-2.5-pro", "Prompt"))
+      {
+        cutoffChunks.Add(chunk);
+      }
+
+      Assert.AreEqual(2, cutoffChunks.Count);
+      Assert.AreEqual(2, cutoffClient.RequestsReceived.Count);
+      Assert.AreEqual(
+          "Hop 1. Partial hop 2 cutoff",
+          string.Concat(cutoffChunks.Select(c => c.Candidates?[0].Content?.Parts?[0].Text)));
+    }
+
+    [TestMethod]
+    public async Task Models_GenerateContentStreamAsync_ResumedHopExhaustsReconnectBudget_ThrowsError()
+    {
+      string hop1Stream = """
+      {"candidates":[{"content":{"role":"model","parts":[{"text":"Hop 1. "}]},"finishReason":"CONTINUATION","continuationToken":"dG9rX2hvcF8x"}]}
+      """;
+
+      // Fails before yielding candidate content parts (e.g. during prefill)
+      string failingHop2Stream = """
+      {"candidates":[{"content":{"role":"model"}}]}
+      {invalid_json_mid_stream
+      """;
+
+      var responses = new List<string> { hop1Stream };
+      for (int i = 0; i < ContinuationHelper.MaxStreamReconnectsWithoutProgress + 1; i++)
+      {
+        responses.Add(failingHop2Stream);
+      }
+
+      var apiClient = new MockContinuationApiClient(responses.ToArray());
+      var models = new Models(apiClient);
+
+      var chunks = new List<GenerateContentResponse>();
+      bool threwJsonException = false;
+      try
+      {
+        await foreach (var chunk in models.GenerateContentStreamAsync("gemini-2.5-pro", "Prompt"))
+        {
+          chunks.Add(chunk);
+        }
+      }
+      catch (JsonException)
+      {
+        threwJsonException = true;
+      }
+      Assert.IsTrue(threwJsonException, "Expected JsonException after exhausting reconnect budget.");
+
+      // 1 initial hop + 1 first Hop 2 attempt + MaxStreamReconnectsWithoutProgress retries
+      Assert.AreEqual(
+          ContinuationHelper.MaxStreamReconnectsWithoutProgress + 2,
+          apiClient.RequestsReceived.Count);
+    }
+
+    [TestMethod]
+    public async Task Models_GenerateContentStreamAsync_ResumedHopEndsWithContinuationWithoutNewToken_StopsWithoutReplayingStartToken()
+    {
+      string hop1Stream = """
+      {"candidates":[{"content":{"role":"model","parts":[{"text":"Hop 1. "}]},"finishReason":"CONTINUATION","continuationToken":"dG9rX2hvcF8x"}]}
+      """;
+
+      // Hop 2 ends with CONTINUATION but no continuationToken -> must not replay hop1's token
+      string hop2Stream = """
+      {"candidates":[{"content":{"role":"model","parts":[{"text":"Hop 2 no token."}]},"finishReason":"CONTINUATION"}]}
+      """;
+
+      var apiClient = new MockContinuationApiClient(hop1Stream, hop2Stream);
+      var models = new Models(apiClient);
+
+      var chunks = new List<GenerateContentResponse>();
+      await foreach (var chunk in models.GenerateContentStreamAsync("gemini-2.5-pro", "Prompt"))
+      {
+        chunks.Add(chunk);
+      }
+
+      Assert.AreEqual(2, chunks.Count);
+      Assert.AreEqual(2, apiClient.RequestsReceived.Count);
+    }
+
+    [TestMethod]
+    public async Task Models_GenerateContentStreamAsync_Hop2ReturnsPromptFeedback_DoesNotRetryAndFinishesCleanly()
+    {
+      string hop1Stream = """
+      {"candidates":[{"content":{"role":"model","parts":[{"text":"Hop 1. "}]},"finishReason":"CONTINUATION","continuationToken":"dG9rX2hvcF8x"}]}
+      """;
+
+      string hop2Stream = """
+      {"promptFeedback":{"blockReason":"SAFETY"}}
+      """;
+
+      var apiClient = new MockContinuationApiClient(hop1Stream, hop2Stream);
+      var models = new Models(apiClient);
+
+      var chunks = new List<GenerateContentResponse>();
+      await foreach (var chunk in models.GenerateContentStreamAsync("gemini-2.5-pro", "Prompt"))
+      {
+        chunks.Add(chunk);
+      }
+
+      Assert.AreEqual(2, chunks.Count);
+      Assert.AreEqual(2, apiClient.RequestsReceived.Count);
+      Assert.AreEqual("Hop 1. ", chunks[0].Text);
+      Assert.IsNull(chunks[1].Candidates);
+      Assert.IsNotNull(chunks[1].PromptFeedback);
+      Assert.AreEqual(BlockedReason.Safety, chunks[1].PromptFeedback.BlockReason);
+    }
+
+    [TestMethod]
+    public async Task Models_GenerateContentStreamAsync_Hop2EndsWithZeroChunks_RetriesThenEndsNormally()
+    {
+      string hop1Stream = """
+      {"candidates":[{"content":{"role":"model","parts":[{"text":"Hop 1. "}]},"finishReason":"CONTINUATION","continuationToken":"dG9rX2hvcF8x"}]}
+      """;
+
+      var responses = new List<string> { hop1Stream };
+      for (int i = 0; i < ContinuationHelper.MaxStreamReconnectsWithoutProgress + 1; i++)
+      {
+        responses.Add("");
+      }
+
+      var apiClient = new MockContinuationApiClient(responses.ToArray());
+      var models = new Models(apiClient);
+
+      // The API returned no error, so the SDK must not invent one: after the reconnect budget is
+      // exhausted the stream ends normally and the caller keeps the chunks already yielded.
+      var chunks = new List<GenerateContentResponse>();
+      await foreach (var chunk in models.GenerateContentStreamAsync("gemini-2.5-pro", "Prompt"))
+      {
+        chunks.Add(chunk);
+      }
+
+      Assert.AreEqual(1, chunks.Count);
+      Assert.AreEqual("Hop 1. ", chunks[0].Text);
+      // 1 initial hop + 1 first Hop 2 attempt + MaxStreamReconnectsWithoutProgress retries
+      Assert.AreEqual(
+          ContinuationHelper.MaxStreamReconnectsWithoutProgress + 2,
+          apiClient.RequestsReceived.Count);
+    }
+
+    private const string ContinuationHop1Stream = """
+      {"candidates":[{"content":{"role":"model","parts":[{"text":"Hop 1. "}]},"finishReason":"CONTINUATION","continuationToken":"dG9rX2hvcF8x"}]}
+      """;
+
+    [TestMethod]
+    public async Task Models_GenerateContentStreamAsync_ResumedHopTransportDropBeforeAnyChunk_RetriesFromHopStartToken()
+    {
+      // A transport drop (not an API error) before the hop received anything is retried.
+      string hop2Stream = """
+      {"candidates":[{"content":{"role":"model","parts":[{"text":"Hop 2 done."}]},"finishReason":"STOP"}]}
+      """;
+      var apiClient = new MockContinuationApiClient(ContinuationHop1Stream, TransportDrop, hop2Stream);
+      var models = new Models(apiClient);
+
+      var chunks = new List<GenerateContentResponse>();
+      await foreach (var chunk in models.GenerateContentStreamAsync("gemini-2.5-pro", "Prompt"))
+      {
+        chunks.Add(chunk);
+      }
+
+      Assert.AreEqual(3, apiClient.RequestsReceived.Count);
+      Assert.IsTrue(apiClient.RequestsReceived[1].Contains("dG9rX2hvcF8x"));
+      Assert.IsTrue(apiClient.RequestsReceived[2].Contains("dG9rX2hvcF8x"));
+      Assert.AreEqual("Hop 1. Hop 2 done.", string.Concat(chunks.Select(c => c.Text)));
+    }
+
+    [TestMethod]
+    public async Task Models_GenerateContentStreamAsync_ResumedHopTransportDropsExhaustReconnectBudget_ThrowsDrop()
+    {
+      var responses = new List<string> { ContinuationHop1Stream };
+      for (int i = 0; i < ContinuationHelper.MaxStreamReconnectsWithoutProgress + 1; i++)
+      {
+        responses.Add(TransportDrop);
+      }
+      var apiClient = new MockContinuationApiClient(responses.ToArray());
+      var models = new Models(apiClient);
+
+      var chunks = new List<GenerateContentResponse>();
+      var ex = await Assert.ThrowsExceptionAsync<HttpRequestException>(async () =>
+      {
+        await foreach (var chunk in models.GenerateContentStreamAsync("gemini-2.5-pro", "Prompt"))
+        {
+          chunks.Add(chunk);
+        }
+      });
+      Assert.IsNotInstanceOfType(ex, typeof(ApiException));
+      Assert.AreEqual(1, chunks.Count);
+      // 1 initial hop + 1 first Hop 2 attempt + MaxStreamReconnectsWithoutProgress retries
+      Assert.AreEqual(
+          ContinuationHelper.MaxStreamReconnectsWithoutProgress + 2,
+          apiClient.RequestsReceived.Count);
+    }
+
+    [TestMethod]
+    public async Task Models_GenerateContentStreamAsync_TimeoutMidStreamAfterCheckpoint_ResumesFromCheckpoint()
+    {
+      // The HttpOptions.Timeout deadline firing while reading the body throws an
+      // OperationCanceledException with the caller's token still live: that is a dropped hop.
+      string hop1Stream = """
+      {"candidates":[{"content":{"role":"model","parts":[{"text":"Ckpt 1, "}]},"continuationToken":"dG9rX2NrcHRfMQ=="}]}
+      """ + "\n" + TimeoutDrop;
+      string hop2Stream = """
+      {"candidates":[{"content":{"role":"model","parts":[{"text":"Done."}]},"finishReason":"STOP"}]}
+      """;
+      var apiClient = new MockContinuationApiClient(hop1Stream, hop2Stream);
+      var models = new Models(apiClient);
+
+      var chunks = new List<GenerateContentResponse>();
+      await foreach (var chunk in models.GenerateContentStreamAsync("gemini-2.5-pro", "Prompt"))
+      {
+        chunks.Add(chunk);
+      }
+
+      Assert.AreEqual(2, apiClient.RequestsReceived.Count);
+      Assert.IsTrue(apiClient.RequestsReceived[1].Contains("dG9rX2NrcHRfMQ=="));
+      Assert.AreEqual("Ckpt 1, Done.", string.Concat(chunks.Select(c => c.Text)));
+    }
+
+    [TestMethod]
+    public async Task Models_GenerateContentStreamAsync_CallerCancellationMidStream_PropagatesWithoutResume()
+    {
+      string hop1Stream = """
+      {"candidates":[{"content":{"role":"model","parts":[{"text":"Ckpt 1, "}]},"continuationToken":"dG9rX2NrcHRfMQ=="}]}
+      {"candidates":[{"content":{"role":"model","parts":[{"text":"more"}]}}]}
+      """;
+      var apiClient = new MockContinuationApiClient(hop1Stream, hop1Stream);
+      var models = new Models(apiClient);
+      using var cts = new CancellationTokenSource();
+
+      Exception? thrown = null;
+      try
+      {
+        await foreach (var _ in models.GenerateContentStreamAsync(
+            "gemini-2.5-pro", "Prompt", cancellationToken: cts.Token))
+        {
+          cts.Cancel();
+        }
+      }
+      catch (Exception e)
+      {
+        thrown = e;
+      }
+      Assert.IsInstanceOfType(thrown, typeof(OperationCanceledException));
+      Assert.AreEqual(1, apiClient.RequestsReceived.Count);
+    }
+
+    [TestMethod]
+    public async Task Models_GenerateContentStreamAsync_RequestRejectedBeforeAnyChunk_ThrowsWithoutRetry()
+    {
+      // Retrying a rejected request (HTTP error status / error event before any chunk) is left to
+      // HttpOptions.RetryOptions, so the continuation loop must not retry it.
+      string unexpectedRetryStream = """
+      {"candidates":[{"content":{"role":"model","parts":[{"text":"Hop 2 done."}]},"finishReason":"STOP"}]}
+      """;
+
+      // Resumed hop rejected.
+      var apiClient = new MockContinuationApiClient(
+          ContinuationHop1Stream, ServerError503, unexpectedRetryStream);
+      var models = new Models(apiClient);
+      var chunks = new List<GenerateContentResponse>();
+      var ex = await Assert.ThrowsExceptionAsync<ServerError>(async () =>
+      {
+        await foreach (var chunk in models.GenerateContentStreamAsync("gemini-2.5-pro", "Prompt"))
+        {
+          chunks.Add(chunk);
+        }
+      });
+      Assert.AreEqual(503, ex.StatusCode);
+      Assert.AreEqual(1, chunks.Count);
+      Assert.AreEqual(2, apiClient.RequestsReceived.Count);
+
+      // Initial request rejected.
+      var initialClient = new MockContinuationApiClient(ServerError503, unexpectedRetryStream);
+      var initialModels = new Models(initialClient);
+      await Assert.ThrowsExceptionAsync<ServerError>(async () =>
+      {
+        await foreach (var _ in initialModels.GenerateContentStreamAsync("gemini-2.5-pro", "Prompt"))
+        {
+        }
+      });
+      Assert.AreEqual(1, initialClient.RequestsReceived.Count);
+    }
+
+    [TestMethod]
+    public async Task Models_GenerateContentStreamAsync_ApiErrorAfterHopReceivedChunk_RetriesFromHopStartToken()
+    {
+      // An API error (error event) after the hop received a chunk is still handled by the
+      // continuation loop: no content was yielded, so the hop is retried from its start token.
+      string hop2Attempt1Stream = """
+      {"candidates":[{"content":{"role":"model"}}]}
+      """ + "\n" + ServerError503;
+      string hop2Attempt2Stream = """
+      {"candidates":[{"content":{"role":"model","parts":[{"text":"Hop 2 done."}]},"finishReason":"STOP"}]}
+      """;
+      var apiClient = new MockContinuationApiClient(
+          ContinuationHop1Stream, hop2Attempt1Stream, hop2Attempt2Stream);
+      var models = new Models(apiClient);
+
+      var chunks = new List<GenerateContentResponse>();
+      await foreach (var chunk in models.GenerateContentStreamAsync("gemini-2.5-pro", "Prompt"))
+      {
+        chunks.Add(chunk);
+      }
+
+      Assert.AreEqual(3, apiClient.RequestsReceived.Count);
+      Assert.IsTrue(apiClient.RequestsReceived[2].Contains("dG9rX2hvcF8x"));
+      Assert.AreEqual("Hop 1. Hop 2 done.", string.Concat(chunks.Select(c => c.Text)));
+    }
+
+    [TestMethod]
+    public async Task Models_GenerateContentStreamAsync_DropThenCleanEmptyClosesExhaustBudget_ThrowsDrop()
+    {
+      // The drop must not be hidden by later retries that end cleanly without progress.
+      var responses = new List<string> { ContinuationHop1Stream, TransportDrop };
+      for (int i = 0; i < ContinuationHelper.MaxStreamReconnectsWithoutProgress; i++)
+      {
+        responses.Add("");
+      }
+      var apiClient = new MockContinuationApiClient(responses.ToArray());
+      var models = new Models(apiClient);
+
+      var chunks = new List<GenerateContentResponse>();
+      var ex = await Assert.ThrowsExceptionAsync<HttpRequestException>(async () =>
+      {
+        await foreach (var chunk in models.GenerateContentStreamAsync("gemini-2.5-pro", "Prompt"))
+        {
+          chunks.Add(chunk);
+        }
+      });
+      Assert.AreEqual("Simulated connection reset.", ex.Message);
+      Assert.AreEqual(1, chunks.Count);
+      // 1 initial hop + 1 dropped Hop 2 attempt + MaxStreamReconnectsWithoutProgress retries
+      Assert.AreEqual(
+          ContinuationHelper.MaxStreamReconnectsWithoutProgress + 2,
+          apiClient.RequestsReceived.Count);
+    }
+
+    [TestMethod]
+    public async Task Models_GenerateContentStreamAsync_DropThenHopEndsWithFinishReason_EndsNormally()
+    {
+      // A stale error is never thrown when the API ended the hop with a finish reason.
+      string hop2Stream = """
+      {"candidates":[{"content":{"role":"model"},"finishReason":"CONTINUATION"}]}
+      """;
+      var apiClient = new MockContinuationApiClient(ContinuationHop1Stream, TransportDrop, hop2Stream);
+      var models = new Models(apiClient);
+
+      var chunks = new List<GenerateContentResponse>();
+      await foreach (var chunk in models.GenerateContentStreamAsync("gemini-2.5-pro", "Prompt"))
+      {
+        chunks.Add(chunk);
+      }
+
+      Assert.AreEqual(3, apiClient.RequestsReceived.Count);
+      Assert.AreEqual(2, chunks.Count);
     }
 
     #endregion
@@ -2360,6 +2994,11 @@ namespace Google.GenAI.Tests
 
     #region Mock ApiClient
 
+    // Stream payload lines that make MockContinuationApiClient.RequestStreamAsync throw.
+    private const string TransportDrop = "!transport_drop";
+    private const string ServerError503 = "!server_error_503";
+    private const string TimeoutDrop = "!timeout_drop";
+
     private sealed class MockContinuationApiClient : ApiClient
     {
       private readonly Queue<string> _responses;
@@ -2392,11 +3031,13 @@ namespace Google.GenAI.Tests
           HttpMethod httpMethod, string path, string requestJson, HttpOptions? requestHttpOptions,
           [EnumeratorCancellation] CancellationToken cancellationToken = default)
       {
+        cancellationToken.ThrowIfCancellationRequested();
         RequestsReceived.Add(requestJson);
         string responsePayload = _responses.Count > 0 ? _responses.Dequeue() : "{}";
         await Task.Yield();
         foreach (var chunk in responsePayload.Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries))
         {
+          cancellationToken.ThrowIfCancellationRequested();
           var trimmed = chunk.Trim();
           if (trimmed.StartsWith("data:", StringComparison.OrdinalIgnoreCase))
           {
@@ -2404,6 +3045,21 @@ namespace Google.GenAI.Tests
           }
           if (!string.IsNullOrEmpty(trimmed))
           {
+            // Simulated failures: a transport drop (connection reset, unexpected EOF), or an
+            // API error (HTTP error status or error event; an ApiException) at this point.
+            if (trimmed == TransportDrop)
+            {
+              throw new HttpRequestException("Simulated connection reset.");
+            }
+            if (trimmed == TimeoutDrop)
+            {
+              // What an HttpOptions.Timeout deadline looks like while reading the body.
+              throw new TaskCanceledException("Simulated HttpOptions.Timeout.");
+            }
+            if (trimmed == ServerError503)
+            {
+              throw new ServerError("Simulated 503 Service Unavailable.", 503, "UNAVAILABLE");
+            }
             yield return new StreamingApiResponse(trimmed, new HttpResponseMessage());
           }
         }
