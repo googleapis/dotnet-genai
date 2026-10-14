@@ -14,6 +14,9 @@
  * limitations under the License.
  */
 
+using System;
+using System.IO;
+using System.Reflection;
 using System.Text.Json.Nodes;
 
 using Google.GenAI.Types;
@@ -34,6 +37,83 @@ namespace Google.GenAI.Tests {
 
       var result = models.GenerateContentParametersToVertex(client, JsonObject.Parse(body), null, null);
       Assert.IsNotNull(result);
+    }
+
+    [TestMethod]
+    public void IsGemini36OrNewer_MatchesExpectedModels() {
+      Assert.IsTrue(Models.IsGemini36OrNewer("gemini-3.6-flash"));
+      Assert.IsTrue(Models.IsGemini36OrNewer("publishers/google/models/gemini-3.6-pro"));
+      Assert.IsTrue(Models.IsGemini36OrNewer("models/gemini-3.6-flash-001"));
+      Assert.IsTrue(Models.IsGemini36OrNewer("gemini-3.8-flash"));
+      Assert.IsTrue(Models.IsGemini36OrNewer("GEMINI-3.6-FLASH"));
+
+      Assert.IsFalse(Models.IsGemini36OrNewer("gemini-3.1-pro"));
+      Assert.IsFalse(Models.IsGemini36OrNewer("gemini-3-flash"));
+      Assert.IsFalse(Models.IsGemini36OrNewer("gemini-2.5-flash"));
+      Assert.IsFalse(Models.IsGemini36OrNewer("gemini-flash-latest"));
+      Assert.IsFalse(Models.IsGemini36OrNewer(null));
+      Assert.IsFalse(Models.IsGemini36OrNewer(""));
+    }
+
+    [TestMethod]
+    public void WarnUnsupportedParameters_LogsOnceForGemini36AndNewer() {
+      var warnMethod = typeof(Models).GetMethod(
+          "WarnUnsupportedParameters", BindingFlags.NonPublic | BindingFlags.Static);
+      Assert.IsNotNull(warnMethod);
+
+      void ResetFlags() {
+        foreach (var fieldName in new[] {
+          "_loggedTemperatureWarning",
+          "_loggedTopPWarning",
+          "_loggedTopKWarning",
+          "_loggedThinkingBudgetWarning",
+        }) {
+          var field = typeof(Models).GetField(fieldName, BindingFlags.NonPublic | BindingFlags.Static);
+          Assert.IsNotNull(field, $"Expected field {fieldName}");
+          field.SetValue(null, 0);
+        }
+      }
+
+      var originalOut = Console.Out;
+      using var sw = new StringWriter();
+      Console.SetOut(sw);
+      try {
+        ResetFlags();
+
+        var config = new GenerateContentConfig {
+          Temperature = 0.7f,
+          TopP = 0.9f,
+          TopK = 40f,
+          ThinkingConfig = new ThinkingConfig { ThinkingBudget = 1024 },
+        };
+
+        // Older models or null config should not log warnings.
+        warnMethod.Invoke(null, new object?[] { "gemini-3.1-pro", config });
+        warnMethod.Invoke(null, new object?[] { "gemini-2.5-flash", config });
+        warnMethod.Invoke(null, new object?[] { "gemini-3.6-flash", null });
+        Assert.AreEqual("", sw.ToString());
+
+        // Gemini 3.6+ should log each warning once.
+        warnMethod.Invoke(null, new object?[] { "gemini-3.6-flash", config });
+        string output = sw.ToString();
+        StringAssert.Contains(
+            output, "temperature is not supported on Gemini 3.6 and newer models and is ignored.");
+        StringAssert.Contains(
+            output, "top_p is not supported on Gemini 3.6 and newer models and is ignored.");
+        StringAssert.Contains(
+            output, "top_k is not supported on Gemini 3.6 and newer models and is ignored.");
+        StringAssert.Contains(
+            output,
+            "thinking_budget is not supported on Gemini 3.6 and newer models and is ignored. Please use thinking_level instead.");
+
+        // Second call should not log again.
+        sw.GetStringBuilder().Clear();
+        warnMethod.Invoke(null, new object?[] { "gemini-3.6-pro", config });
+        Assert.AreEqual("", sw.ToString());
+      } finally {
+        Console.SetOut(originalOut);
+        ResetFlags();
+      }
     }
   }
 }
