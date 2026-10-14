@@ -331,6 +331,7 @@ namespace Google.GenAI
             string? validatedChunk = ValidateChunk(processedChunkString);
             if (validatedChunk != null)
             {
+              CheckForStreamErrors(validatedChunk);
               yield return validatedChunk;
             }
 
