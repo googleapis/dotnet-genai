@@ -25,7 +25,7 @@ namespace Google.GenAI.E2E.Tests.Shared
         protected Client geminiClient;
 
         /// <summary>Flash is cheaper and faster than the corpus GEMINI_MODEL for API-mode runs.</summary>
-        protected string modelName = "gemini-3.6-flash";
+        protected string modelName = "gemini-3.8-flash";
 
         /// <summary>
         /// Region a test class needs its Vertex client pinned to, or null to use
