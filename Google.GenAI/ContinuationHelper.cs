@@ -258,6 +258,10 @@ namespace Google.GenAI
           {
             var p = i < prevArr.Count ? prevArr[i] : null;
             var c = i < currArr.Count ? currArr[i] : null;
+            if (p is JsonObject prevCand && c is JsonObject currCand)
+            {
+              c = ShiftGroundingSupports(prevCand, currCand);
+            }
             mergedArr.Add(MergeJsonNodes(p, c, "candidate"));
           }
           return mergedArr;
@@ -314,6 +318,79 @@ namespace Google.GenAI
 
       // Other Scalars (strings, booleans, enums) - latest hop wins
       return curr.DeepClone();
+    }
+
+    private static JsonObject ShiftGroundingSupports(JsonObject prevCandidate, JsonObject currCandidate)
+    {
+      if (!currCandidate.TryGetPropertyValue("groundingMetadata", out var currGmNode) ||
+          currGmNode is not JsonObject currGmObj ||
+          !currGmObj.TryGetPropertyValue("groundingSupports", out var currSupportsNode) ||
+          currSupportsNode is not JsonArray currSupportsArr ||
+          currSupportsArr.Count == 0)
+      {
+        return currCandidate;
+      }
+
+      int partOffset = 0;
+      if (prevCandidate.TryGetPropertyValue("content", out var prevContentNode) &&
+          prevContentNode is JsonObject prevContentObj &&
+          prevContentObj.TryGetPropertyValue("parts", out var prevPartsNode) &&
+          prevPartsNode is JsonArray prevPartsArr)
+      {
+        partOffset = prevPartsArr.Count;
+      }
+
+      int chunkOffset = 0;
+      if (prevCandidate.TryGetPropertyValue("groundingMetadata", out var prevGmNode) &&
+          prevGmNode is JsonObject prevGmObj &&
+          prevGmObj.TryGetPropertyValue("groundingChunks", out var prevChunksNode) &&
+          prevChunksNode is JsonArray prevChunksArr)
+      {
+        chunkOffset = prevChunksArr.Count;
+      }
+
+      if (partOffset == 0 && chunkOffset == 0)
+      {
+        return currCandidate;
+      }
+
+      var shiftedCandidate = (JsonObject)currCandidate.DeepClone();
+      var shiftedGm = (JsonObject)shiftedCandidate["groundingMetadata"]!;
+      var shiftedSupports = (JsonArray)shiftedGm["groundingSupports"]!;
+
+      foreach (var supportNode in shiftedSupports)
+      {
+        if (supportNode is not JsonObject supportObj) continue;
+
+        if (chunkOffset > 0 &&
+            supportObj.TryGetPropertyValue("groundingChunkIndices", out var indicesNode) &&
+            indicesNode is JsonArray indicesArr)
+        {
+          for (int i = 0; i < indicesArr.Count; i++)
+          {
+            if (indicesArr[i] is JsonValue idxVal && idxVal.TryGetValue<int>(out int idx))
+            {
+              indicesArr[i] = JsonValue.Create(idx + chunkOffset);
+            }
+          }
+        }
+
+        if (partOffset > 0 &&
+            supportObj.TryGetPropertyValue("segment", out var segmentNode) &&
+            segmentNode is JsonObject segmentObj)
+        {
+          int prevPartIndex = 0;
+          if (segmentObj.TryGetPropertyValue("partIndex", out var partIdxNode) &&
+              partIdxNode is JsonValue partIdxVal &&
+              partIdxVal.TryGetValue<int>(out int parsedPartIdx))
+          {
+            prevPartIndex = parsedPartIdx;
+          }
+          segmentObj["partIndex"] = JsonValue.Create(prevPartIndex + partOffset);
+        }
+      }
+
+      return shiftedCandidate;
     }
 
     private static JsonArray MergeModalityTokenCounts(JsonArray prevArr, JsonArray currArr)

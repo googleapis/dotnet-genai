@@ -912,6 +912,308 @@ namespace Google.GenAI.Tests
       Assert.AreEqual(20, merged.InitialPromptTokenCount);
     }
 
+    [TestMethod]
+    public void MergeContinuationResponses_ShiftsGroundingSupportChunkAndPartIndices()
+    {
+      var hop1 = new GenerateContentResponse
+      {
+        Candidates = new List<Candidate>
+        {
+          new Candidate
+          {
+            Index = 0,
+            Content = new Content
+            {
+              Role = "model",
+              Parts = new List<Part>
+              {
+                new Part { Text = "Thinking...", Thought = true },
+                new Part { Text = "part 1 " }
+              }
+            },
+            FinishReason = FinishReason.Continuation,
+            ContinuationToken = new byte[] { 1 },
+            GroundingMetadata = new GroundingMetadata
+            {
+              GroundingChunks = new List<GroundingChunk>
+              {
+                new GroundingChunk
+                {
+                  Image = new GroundingChunkImage
+                  {
+                    ImageUri = "https://img1.example/a.png",
+                    SourceUri = "https://source1.example/img",
+                    Title = "Image 1",
+                    Domain = "source1.example"
+                  }
+                },
+                new GroundingChunk
+                {
+                  Web = new GroundingChunkWeb
+                  {
+                    Uri = "https://source1.example",
+                    Title = "Source 1"
+                  }
+                }
+              },
+              GroundingSupports = new List<GroundingSupport>
+              {
+                new GroundingSupport
+                {
+                  GroundingChunkIndices = new List<int> { 0, 1 },
+                  ConfidenceScores = new List<double> { 0.9, 0.8 },
+                  Segment = new Segment
+                  {
+                    PartIndex = 1,
+                    StartIndex = 0,
+                    EndIndex = 7,
+                    Text = "part 1 "
+                  }
+                }
+              }
+            }
+          }
+        }
+      };
+
+      var hop2 = new GenerateContentResponse
+      {
+        Candidates = new List<Candidate>
+        {
+          new Candidate
+          {
+            Index = 0,
+            Content = new Content
+            {
+              Role = "model",
+              Parts = new List<Part>
+              {
+                new Part { Text = "part 2 " }
+              }
+            },
+            FinishReason = FinishReason.Stop,
+            GroundingMetadata = new GroundingMetadata
+            {
+              GroundingChunks = new List<GroundingChunk>
+              {
+                new GroundingChunk
+                {
+                  Web = new GroundingChunkWeb
+                  {
+                    Uri = "https://source2.example",
+                    Title = "Source 2"
+                  }
+                }
+              },
+              GroundingSupports = new List<GroundingSupport>
+              {
+                new GroundingSupport
+                {
+                  GroundingChunkIndices = new List<int> { 0 },
+                  ConfidenceScores = new List<double> { 0.95 },
+                  Segment = new Segment
+                  {
+                    PartIndex = 0,
+                    StartIndex = 0,
+                    EndIndex = 7,
+                    Text = "part 2 "
+                  }
+                },
+                new GroundingSupport
+                {
+                  GroundingChunkIndices = new List<int> { 0 },
+                  Segment = new Segment
+                  {
+                    StartIndex = 0,
+                    EndIndex = 7,
+                    Text = "part 2 "
+                  }
+                }
+              }
+            }
+          }
+        }
+      };
+
+      var merged = ContinuationHelper.MergeContinuationResponses(new[] { hop1, hop2 });
+      var cand = merged.Candidates?[0];
+      Assert.IsNotNull(cand);
+      var gm = cand.GroundingMetadata;
+      Assert.IsNotNull(gm);
+      Assert.AreEqual(3, gm.GroundingChunks?.Count);
+      Assert.AreEqual(3, gm.GroundingSupports?.Count);
+
+      var s0 = gm.GroundingSupports![0];
+      CollectionAssert.AreEqual(new[] { 0, 1 }, s0.GroundingChunkIndices?.ToArray());
+      Assert.AreEqual(1, s0.Segment?.PartIndex);
+
+      var s1 = gm.GroundingSupports[1];
+      CollectionAssert.AreEqual(new[] { 2 }, s1.GroundingChunkIndices?.ToArray());
+      Assert.AreEqual(2, s1.Segment?.PartIndex);
+      Assert.AreEqual("https://source2.example", gm.GroundingChunks![s1.GroundingChunkIndices![0]].Web?.Uri);
+      Assert.AreEqual("part 2 ", cand.Content?.Parts?[s1.Segment!.PartIndex!.Value].Text);
+
+      var s2 = gm.GroundingSupports[2];
+      CollectionAssert.AreEqual(new[] { 2 }, s2.GroundingChunkIndices?.ToArray());
+      Assert.AreEqual(2, s2.Segment?.PartIndex);
+    }
+
+    [TestMethod]
+    public void MergeContinuationResponses_GroundingSupportsCornerCases()
+    {
+      var hop1 = new GenerateContentResponse
+      {
+        Candidates = new List<Candidate>
+        {
+          new Candidate
+          {
+            Index = 0,
+            Content = new Content
+            {
+              Role = "model",
+              Parts = new List<Part> { new Part { Text = "c0-h1-p0 " }, new Part { Text = "c0-h1-p1 " } }
+            },
+            GroundingMetadata = null,
+            FinishReason = FinishReason.Continuation,
+            ContinuationToken = new byte[] { 1 }
+          },
+          new Candidate
+          {
+            Index = 1,
+            Content = new Content
+            {
+              Role = "model",
+              Parts = new List<Part> { new Part { Text = "c1-h1-p0 " } }
+            },
+            GroundingMetadata = new GroundingMetadata
+            {
+              GroundingChunks = new List<GroundingChunk>
+              {
+                new GroundingChunk { Web = new GroundingChunkWeb { Uri = "https://c1-s0.example" } }
+              }
+            },
+            FinishReason = FinishReason.Continuation,
+            ContinuationToken = new byte[] { 1 }
+          }
+        }
+      };
+
+      var hop2 = new GenerateContentResponse
+      {
+        Candidates = new List<Candidate>
+        {
+          new Candidate
+          {
+            Index = 0,
+            Content = new Content
+            {
+              Role = "model",
+              Parts = new List<Part> { new Part { Text = "c0-h2-p0 " } }
+            },
+            GroundingMetadata = new GroundingMetadata
+            {
+              GroundingChunks = new List<GroundingChunk>
+              {
+                new GroundingChunk { Web = new GroundingChunkWeb { Uri = "https://c0-s0.example" } },
+                new GroundingChunk { Web = new GroundingChunkWeb { Uri = "https://c0-s1.example" } }
+              }
+            },
+            FinishReason = FinishReason.Continuation,
+            ContinuationToken = new byte[] { 2 }
+          },
+          new Candidate
+          {
+            Index = 1,
+            Content = new Content
+            {
+              Role = "model",
+              Parts = new List<Part> { new Part { Text = "c1-h2-p0 " } }
+            },
+            GroundingMetadata = new GroundingMetadata
+            {
+              GroundingChunks = new List<GroundingChunk>
+              {
+                new GroundingChunk { Web = new GroundingChunkWeb { Uri = "https://c1-s1.example" } }
+              },
+              GroundingSupports = new List<GroundingSupport>
+              {
+                new GroundingSupport
+                {
+                  GroundingChunkIndices = new List<int> { 0 },
+                  Segment = new Segment { PartIndex = 0, Text = "c1-h2-p0 " }
+                }
+              }
+            },
+            FinishReason = FinishReason.Stop
+          }
+        }
+      };
+
+      var hop3 = new GenerateContentResponse
+      {
+        Candidates = new List<Candidate>
+        {
+          new Candidate
+          {
+            Index = 0,
+            Content = new Content
+            {
+              Role = "model",
+              Parts = new List<Part> { new Part { Text = "c0-h3-p0." } }
+            },
+            GroundingMetadata = new GroundingMetadata
+            {
+              GroundingChunks = new List<GroundingChunk>
+              {
+                new GroundingChunk { Web = new GroundingChunkWeb { Uri = "https://c0-s2.example" } }
+              },
+              GroundingSupports = new List<GroundingSupport>
+              {
+                new GroundingSupport
+                {
+                  GroundingChunkIndices = new List<int> { 0 },
+                  Segment = null
+                },
+                new GroundingSupport
+                {
+                  GroundingChunkIndices = new List<int>(),
+                  Segment = new Segment { PartIndex = 0, Text = "c0-h3-p0." }
+                },
+                new GroundingSupport
+                {
+                  GroundingChunkIndices = new List<int> { 0 },
+                  Segment = new Segment { PartIndex = 0, Text = "c0-h3-p0." }
+                }
+              }
+            },
+            FinishReason = FinishReason.Stop
+          }
+        }
+      };
+
+      var merged = ContinuationHelper.MergeContinuationResponses(new[] { hop1, hop2, hop3 });
+      Assert.IsNotNull(merged);
+      var cand0 = merged.Candidates![0];
+      var gm0 = cand0.GroundingMetadata!;
+      Assert.AreEqual(4, cand0.Content?.Parts?.Count);
+      Assert.AreEqual(3, gm0.GroundingChunks?.Count);
+      Assert.AreEqual(3, gm0.GroundingSupports?.Count);
+      Assert.IsNull(gm0.GroundingSupports![0].Segment);
+      CollectionAssert.AreEqual(new[] { 2 }, gm0.GroundingSupports[0].GroundingChunkIndices?.ToArray());
+      Assert.AreEqual(0, gm0.GroundingSupports[1].GroundingChunkIndices?.Count ?? 0);
+      Assert.AreEqual(3, gm0.GroundingSupports[1].Segment?.PartIndex);
+      var s2 = gm0.GroundingSupports[2];
+      Assert.AreEqual("https://c0-s2.example", gm0.GroundingChunks![s2.GroundingChunkIndices![0]].Web?.Uri);
+      Assert.AreEqual("c0-h3-p0.", cand0.Content?.Parts?[s2.Segment!.PartIndex!.Value].Text);
+
+      var cand1 = merged.Candidates[1];
+      var gm1 = cand1.GroundingMetadata!;
+      CollectionAssert.AreEqual(new[] { 1 }, gm1.GroundingSupports![0].GroundingChunkIndices?.ToArray());
+      Assert.AreEqual(1, gm1.GroundingSupports[0].Segment?.PartIndex);
+      Assert.AreEqual("https://c1-s1.example", gm1.GroundingChunks![gm1.GroundingSupports[0].GroundingChunkIndices![0]].Web?.Uri);
+      Assert.AreEqual("c1-h2-p0 ", cand1.Content?.Parts?[gm1.GroundingSupports[0].Segment!.PartIndex!.Value].Text);
+    }
+
     #endregion
 
     #region E2E Models Unary Continuation Tests
@@ -987,6 +1289,73 @@ namespace Google.GenAI.Tests
       Assert.AreEqual(32, response.UsageMetadata?.TotalTokenCount);
       Assert.AreEqual(5, response.UsageMetadata?.InitialPromptTokenCount);
       Assert.AreEqual(5, response.InitialPromptTokenCount);
+    }
+
+    [TestMethod]
+    public async Task Models_GenerateContentAsync_GroundingMetadataMergedAcrossHops()
+    {
+      string hop1Json = """
+      {
+        "candidates": [
+          {
+            "content": {
+              "role": "model",
+              "parts": [{ "text": "part 1 " }]
+            },
+            "finishReason": "CONTINUATION",
+            "continuationToken": "AQID",
+            "groundingMetadata": {
+              "groundingChunks": [
+                { "web": { "uri": "https://source1.example" } }
+              ],
+              "groundingSupports": [
+                {
+                  "groundingChunkIndices": [0],
+                  "segment": { "partIndex": 0, "text": "part 1 " }
+                }
+              ]
+            }
+          }
+        ]
+      }
+      """;
+
+      string hop2Json = """
+      {
+        "candidates": [
+          {
+            "content": {
+              "role": "model",
+              "parts": [{ "text": "part 2 " }]
+            },
+            "finishReason": "STOP",
+            "groundingMetadata": {
+              "groundingChunks": [
+                { "web": { "uri": "https://source2.example" } }
+              ],
+              "groundingSupports": [
+                {
+                  "groundingChunkIndices": [0],
+                  "segment": { "partIndex": 0, "text": "part 2 " }
+                }
+              ]
+            }
+          }
+        ]
+      }
+      """;
+
+      var apiClient = new MockContinuationApiClient(hop1Json, hop2Json);
+      var models = new Models(apiClient);
+      var response = await models.GenerateContentAsync("gemini-2.5-pro", "hi");
+
+      Assert.IsNotNull(response);
+      var cand = response.Candidates![0];
+      var gm = cand.GroundingMetadata!;
+      Assert.AreEqual(2, gm.GroundingSupports?.Count);
+      var s = gm.GroundingSupports![1];
+      Assert.AreEqual("https://source2.example", gm.GroundingChunks![s.GroundingChunkIndices![0]].Web?.Uri);
+      Assert.AreEqual("part 2 ", cand.Content?.Parts?[s.Segment!.PartIndex!.Value].Text);
     }
 
     [TestMethod]
@@ -1603,6 +1972,55 @@ namespace Google.GenAI.Tests
       Assert.AreEqual(50, chunks[3].UsageMetadata?.CandidatesTokensDetails?[0].TokenCount);
       Assert.AreEqual(10, chunks[3].UsageMetadata?.InitialPromptTokenCount);
       Assert.AreEqual(10, chunks[3].InitialPromptTokenCount);
+    }
+
+    [TestMethod]
+    public async Task Models_GenerateContentStreamAsync_GroundingMetadataAcrossHopsAndMerged()
+    {
+      string hop1Stream = string.Join("\n", new[]
+      {
+        "data: {\"candidates\": [{\"content\": {\"role\": \"model\", \"parts\": [{\"text\": \"hop 1 intro, \"}]}}]}",
+        "",
+        "data: {\"candidates\": [{\"content\": {\"role\": \"model\", \"parts\": [{\"text\": \"hop 1 grounded. \"}]}, \"finishReason\": \"CONTINUATION\", \"continuationToken\": \"AQID\", \"groundingMetadata\": {\"groundingChunks\": [{\"web\": {\"uri\": \"https://source1.example\"}}], \"groundingSupports\": [{\"groundingChunkIndices\": [0], \"segment\": {\"partIndex\": 0, \"text\": \"hop 1 grounded. \"}}]}}]}",
+        ""
+      });
+
+      string hop2Stream = string.Join("\n", new[]
+      {
+        "data: {\"candidates\": [{\"content\": {\"role\": \"model\", \"parts\": [{\"text\": \"hop 2 intro, \"}]}}]}",
+        "",
+        "data: {\"candidates\": [{\"content\": {\"role\": \"model\", \"parts\": [{\"text\": \"hop 2 grounded.\"}]}, \"finishReason\": \"STOP\", \"groundingMetadata\": {\"groundingChunks\": [{\"web\": {\"uri\": \"https://source2.example\"}}], \"groundingSupports\": [{\"groundingChunkIndices\": [0], \"segment\": {\"partIndex\": 0, \"text\": \"hop 2 grounded.\"}}]}}]}",
+        ""
+      });
+
+      var apiClient = new MockContinuationApiClient(hop1Stream, hop2Stream);
+      var models = new Models(apiClient);
+
+      var chunks = new List<GenerateContentResponse>();
+      await foreach (var chunk in models.GenerateContentStreamAsync("gemini-2.5-pro", "Prompt"))
+      {
+        chunks.Add(chunk);
+      }
+
+      Assert.AreEqual(4, chunks.Count);
+      var sHop1 = chunks[1].Candidates![0].GroundingMetadata!.GroundingSupports![0];
+      Assert.AreEqual("https://source1.example", chunks[1].Candidates![0].GroundingMetadata!.GroundingChunks![sHop1.GroundingChunkIndices![0]].Web?.Uri);
+      Assert.AreEqual("hop 1 grounded. ", chunks[1].Candidates![0].Content!.Parts![sHop1.Segment!.PartIndex!.Value].Text);
+      Assert.IsNull(chunks[1].Candidates![0].FinishReason);
+
+      var sHop2 = chunks[3].Candidates![0].GroundingMetadata!.GroundingSupports![0];
+      Assert.AreEqual("https://source2.example", chunks[3].Candidates![0].GroundingMetadata!.GroundingChunks![sHop2.GroundingChunkIndices![0]].Web?.Uri);
+      Assert.AreEqual("hop 2 grounded.", chunks[3].Candidates![0].Content!.Parts![sHop2.Segment!.PartIndex!.Value].Text);
+      Assert.AreEqual(FinishReason.Stop, chunks[3].Candidates![0].FinishReason);
+
+      var merged = ContinuationHelper.MergeContinuationResponses(chunks)!;
+      var cand = merged.Candidates![0];
+      var gm = cand.GroundingMetadata!;
+      Assert.AreEqual(2, gm.GroundingSupports?.Count);
+      Assert.AreEqual("https://source1.example", gm.GroundingChunks![gm.GroundingSupports![0].GroundingChunkIndices![0]].Web?.Uri);
+      Assert.AreEqual("hop 1 grounded. ", cand.Content!.Parts![gm.GroundingSupports[0].Segment!.PartIndex!.Value].Text);
+      Assert.AreEqual("https://source2.example", gm.GroundingChunks![gm.GroundingSupports[1].GroundingChunkIndices![0]].Web?.Uri);
+      Assert.AreEqual("hop 2 grounded.", cand.Content!.Parts![gm.GroundingSupports[1].Segment!.PartIndex!.Value].Text);
     }
 
     #endregion
