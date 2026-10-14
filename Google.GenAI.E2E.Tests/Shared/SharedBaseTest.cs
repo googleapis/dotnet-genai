@@ -45,9 +45,9 @@ namespace Google.GenAI.E2E.Tests.Shared
         private static HttpRetryOptions NewSharedTestRetryOptions() =>
             new HttpRetryOptions
             {
-                Attempts = 3,
-                InitialDelay = 1.0,
-                MaxDelay = 10.0,
+                Attempts = 5,
+                InitialDelay = 2.0,
+                MaxDelay = 16.0,
                 ExpBase = 2.0,
                 HttpStatusCodes = new List<int> { 408, 429, 500, 502, 503, 504 },
             };
