@@ -416,6 +416,16 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Optional. Configuration for persisting output assets to external storage.
+    /// </summary>
+    [JsonPropertyName("generationOutputConfig")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public GenerationOutputConfig
+        ? GenerationOutputConfig {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a GenerateContentConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

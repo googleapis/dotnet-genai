@@ -1140,6 +1140,12 @@ namespace Google.GenAI {
             Common.GetValueByPath(fromObject, new string[] { "continuationToken" }));
       }
 
+      if (!Common.IsZero(
+              Common.GetValueByPath(fromObject, new string[] { "generationOutputConfig" }))) {
+        throw new NotSupportedException(
+            "generationOutputConfig parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
+      }
+
       return toObject;
     }
 
