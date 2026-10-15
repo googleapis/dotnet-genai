@@ -1,5 +1,14 @@
 # Changelog
 
+## Version 1.26.1, released 2026-10-14
+
+
+### Bug fixes
+
+* clear continuation state and preserve prompt feedback when continuation hop returns no candidates ([6b4a712](https://github.com/googleapis/dotnet-genai/commit/6b4a7123e15a92b0cb661a3648ab7032cb00bff3))
+* fix the grounding metadata merging for automatic continuation in generate content and generate content stream ([24e77d2](https://github.com/googleapis/dotnet-genai/commit/24e77d2df49ab5f311fac5e0d1ece7e0bb3f620a))
+* make continuation streams retry dropped hops, stop on prompt_feedback, and keep real errors in generate_content ([71b3539](https://github.com/googleapis/dotnet-genai/commit/71b3539b1671626027b0fece1a8c1987ac4b1845))
+
 ## Version 1.26.0, released 2026-10-13
 
 
