@@ -5443,6 +5443,79 @@ public class GoogleGenAIExtensionsTest
   }
 
   [TestMethod]
+  public async Task IChatClient_ResponseWithMultipleCitations()
+  {
+    IChatClient client = CreateChatClient("""
+      {
+        "contents": [
+          {
+            "parts": [
+              {
+                "text": "Cite your sources"
+              }
+            ],
+            "role": "user"
+          }
+        ],
+        "generationConfig": {}
+      }
+      """, """
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "This is cited content from two sources."
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "citationMetadata": {
+              "citationSources": [
+                {
+                  "startIndex": 0,
+                  "endIndex": 10,
+                  "uri": "https://example.com/first",
+                  "title": "First Source"
+                },
+                {
+                  "startIndex": 11,
+                  "endIndex": 20,
+                  "uri": "https://example.com/second",
+                  "title": "Second Source"
+                }
+              ]
+            }
+          }
+        ],
+        "modelVersion": "gemini-2.0-flash"
+      }
+      """);
+
+    var response = await client.GetResponseAsync("Cite your sources");
+
+    var textContent = (TextContent)response.Messages[0].Contents[0];
+    Assert.IsNotNull(textContent.Annotations);
+    Assert.AreEqual(2, textContent.Annotations.Count);
+
+    var first = (CitationAnnotation)textContent.Annotations[0];
+    Assert.AreEqual("First Source", first.Title);
+    Assert.AreEqual("https://example.com/first", first.Url?.ToString());
+    var firstRegion = (TextSpanAnnotatedRegion)first.AnnotatedRegions![0];
+    Assert.AreEqual(0, firstRegion.StartIndex);
+    Assert.AreEqual(10, firstRegion.EndIndex);
+
+    var second = (CitationAnnotation)textContent.Annotations[1];
+    Assert.AreEqual("Second Source", second.Title);
+    Assert.AreEqual("https://example.com/second", second.Url?.ToString());
+    var secondRegion = (TextSpanAnnotatedRegion)second.AnnotatedRegions![0];
+    Assert.AreEqual(11, secondRegion.StartIndex);
+    Assert.AreEqual(20, secondRegion.EndIndex);
+  }
+
+  [TestMethod]
   public async Task IChatClient_GetResponseAsync_PropagatesCancellationToken()
   {
     using var cts = new CancellationTokenSource();
