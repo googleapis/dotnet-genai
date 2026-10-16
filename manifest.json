@@ -3921,6 +3921,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.LiveClientContextUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.LiveClientContextUpdate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.LiveClientContextUpdate",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LiveClientContextUpdate.yml\" sourcestartlinenumber=\"1\">Updates to the context of the current session.  Only fields that are set will be updated.\nUpdates are guaranteed to be processed <em sourcefile=\"api/Google.GenAI.Types.LiveClientContextUpdate.yml\" sourcestartlinenumber=\"2\">in order</em> with the rest of the inputs.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.LiveClientContextUpdateTools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.LiveClientContextUpdateTools.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.LiveClientContextUpdateTools",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.LiveClientContextUpdateTools.yml\" sourcestartlinenumber=\"1\">A wrapper around the list of tools.  This wrapper exists because a bare <code sourcefile=\"api/Google.GenAI.Types.LiveClientContextUpdateTools.yml\" sourcestartlinenumber=\"1\">repeated Tool</code> field\ncannot tell apart &quot;not sending a tools update&quot; from &quot;clearing all tools&quot;: an unset repeated\nfield and an empty repeated field look identical on the wire. Wrapping the list in a message\nadds a presence bit, so the two cases become: - <code sourcefile=\"api/Google.GenAI.Types.LiveClientContextUpdateTools.yml\" sourcestartlinenumber=\"4\">tools</code> field unset: no update; keep the\npreviously provided tools. - <code sourcefile=\"api/Google.GenAI.Types.LiveClientContextUpdateTools.yml\" sourcestartlinenumber=\"5\">tools</code> field set (even with an empty list): replace the current\ntools with the provided list, which may be empty to clear all tools.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.LiveClientMessage.yml",
       "output": {
         ".html": {

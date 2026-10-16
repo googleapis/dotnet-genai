@@ -465,6 +465,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.AsyncSession.SendClientContentAsync
   nameWithType: AsyncSession.SendClientContentAsync
+- uid: Google.GenAI.AsyncSession.SendContextUpdateAsync(Google.GenAI.Types.LiveClientContextUpdate,System.Threading.CancellationToken)
+  name: SendContextUpdateAsync(LiveClientContextUpdate, CancellationToken)
+  href: api/Google.GenAI.AsyncSession.html#Google_GenAI_AsyncSession_SendContextUpdateAsync_Google_GenAI_Types_LiveClientContextUpdate_System_Threading_CancellationToken_
+  commentId: M:Google.GenAI.AsyncSession.SendContextUpdateAsync(Google.GenAI.Types.LiveClientContextUpdate,System.Threading.CancellationToken)
+  fullName: Google.GenAI.AsyncSession.SendContextUpdateAsync(Google.GenAI.Types.LiveClientContextUpdate, System.Threading.CancellationToken)
+  nameWithType: AsyncSession.SendContextUpdateAsync(LiveClientContextUpdate, CancellationToken)
+- uid: Google.GenAI.AsyncSession.SendContextUpdateAsync*
+  name: SendContextUpdateAsync
+  href: api/Google.GenAI.AsyncSession.html#Google_GenAI_AsyncSession_SendContextUpdateAsync_
+  commentId: Overload:Google.GenAI.AsyncSession.SendContextUpdateAsync
+  isSpec: "True"
+  fullName: Google.GenAI.AsyncSession.SendContextUpdateAsync
+  nameWithType: AsyncSession.SendContextUpdateAsync
 - uid: Google.GenAI.AsyncSession.SendRealtimeInputAsync(Google.GenAI.Types.LiveSendRealtimeInputParameters,System.Threading.CancellationToken)
   name: SendRealtimeInputAsync(LiveSendRealtimeInputParameters, CancellationToken)
   href: api/Google.GenAI.AsyncSession.html#Google_GenAI_AsyncSession_SendRealtimeInputAsync_Google_GenAI_Types_LiveSendRealtimeInputParameters_System_Threading_CancellationToken_
@@ -23346,6 +23359,89 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.LiveClientContent.Turns
   nameWithType: LiveClientContent.Turns
+- uid: Google.GenAI.Types.LiveClientContextUpdate
+  name: LiveClientContextUpdate
+  href: api/Google.GenAI.Types.LiveClientContextUpdate.html
+  commentId: T:Google.GenAI.Types.LiveClientContextUpdate
+  fullName: Google.GenAI.Types.LiveClientContextUpdate
+  nameWithType: LiveClientContextUpdate
+- uid: Google.GenAI.Types.LiveClientContextUpdate.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.LiveClientContextUpdate.html#Google_GenAI_Types_LiveClientContextUpdate_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.LiveClientContextUpdate.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.LiveClientContextUpdate.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.LiveClientContextUpdate.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: LiveClientContextUpdate.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: LiveClientContextUpdate.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.LiveClientContextUpdate.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.LiveClientContextUpdate.html#Google_GenAI_Types_LiveClientContextUpdate_FromJson_
+  commentId: Overload:Google.GenAI.Types.LiveClientContextUpdate.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LiveClientContextUpdate.FromJson
+  nameWithType: LiveClientContextUpdate.FromJson
+- uid: Google.GenAI.Types.LiveClientContextUpdate.SystemInstruction
+  name: SystemInstruction
+  href: api/Google.GenAI.Types.LiveClientContextUpdate.html#Google_GenAI_Types_LiveClientContextUpdate_SystemInstruction
+  commentId: P:Google.GenAI.Types.LiveClientContextUpdate.SystemInstruction
+  fullName: Google.GenAI.Types.LiveClientContextUpdate.SystemInstruction
+  nameWithType: LiveClientContextUpdate.SystemInstruction
+- uid: Google.GenAI.Types.LiveClientContextUpdate.SystemInstruction*
+  name: SystemInstruction
+  href: api/Google.GenAI.Types.LiveClientContextUpdate.html#Google_GenAI_Types_LiveClientContextUpdate_SystemInstruction_
+  commentId: Overload:Google.GenAI.Types.LiveClientContextUpdate.SystemInstruction
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LiveClientContextUpdate.SystemInstruction
+  nameWithType: LiveClientContextUpdate.SystemInstruction
+- uid: Google.GenAI.Types.LiveClientContextUpdate.Tools
+  name: Tools
+  href: api/Google.GenAI.Types.LiveClientContextUpdate.html#Google_GenAI_Types_LiveClientContextUpdate_Tools
+  commentId: P:Google.GenAI.Types.LiveClientContextUpdate.Tools
+  fullName: Google.GenAI.Types.LiveClientContextUpdate.Tools
+  nameWithType: LiveClientContextUpdate.Tools
+- uid: Google.GenAI.Types.LiveClientContextUpdate.Tools*
+  name: Tools
+  href: api/Google.GenAI.Types.LiveClientContextUpdate.html#Google_GenAI_Types_LiveClientContextUpdate_Tools_
+  commentId: Overload:Google.GenAI.Types.LiveClientContextUpdate.Tools
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LiveClientContextUpdate.Tools
+  nameWithType: LiveClientContextUpdate.Tools
+- uid: Google.GenAI.Types.LiveClientContextUpdateTools
+  name: LiveClientContextUpdateTools
+  href: api/Google.GenAI.Types.LiveClientContextUpdateTools.html
+  commentId: T:Google.GenAI.Types.LiveClientContextUpdateTools
+  fullName: Google.GenAI.Types.LiveClientContextUpdateTools
+  nameWithType: LiveClientContextUpdateTools
+- uid: Google.GenAI.Types.LiveClientContextUpdateTools.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.LiveClientContextUpdateTools.html#Google_GenAI_Types_LiveClientContextUpdateTools_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.LiveClientContextUpdateTools.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.LiveClientContextUpdateTools.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.LiveClientContextUpdateTools.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: LiveClientContextUpdateTools.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: LiveClientContextUpdateTools.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.LiveClientContextUpdateTools.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.LiveClientContextUpdateTools.html#Google_GenAI_Types_LiveClientContextUpdateTools_FromJson_
+  commentId: Overload:Google.GenAI.Types.LiveClientContextUpdateTools.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LiveClientContextUpdateTools.FromJson
+  nameWithType: LiveClientContextUpdateTools.FromJson
+- uid: Google.GenAI.Types.LiveClientContextUpdateTools.Tools
+  name: Tools
+  href: api/Google.GenAI.Types.LiveClientContextUpdateTools.html#Google_GenAI_Types_LiveClientContextUpdateTools_Tools
+  commentId: P:Google.GenAI.Types.LiveClientContextUpdateTools.Tools
+  fullName: Google.GenAI.Types.LiveClientContextUpdateTools.Tools
+  nameWithType: LiveClientContextUpdateTools.Tools
+- uid: Google.GenAI.Types.LiveClientContextUpdateTools.Tools*
+  name: Tools
+  href: api/Google.GenAI.Types.LiveClientContextUpdateTools.html#Google_GenAI_Types_LiveClientContextUpdateTools_Tools_
+  commentId: Overload:Google.GenAI.Types.LiveClientContextUpdateTools.Tools
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LiveClientContextUpdateTools.Tools
+  nameWithType: LiveClientContextUpdateTools.Tools
 - uid: Google.GenAI.Types.LiveClientMessage
   name: LiveClientMessage
   href: api/Google.GenAI.Types.LiveClientMessage.html
@@ -23365,6 +23461,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.LiveClientMessage.ClientContent
   nameWithType: LiveClientMessage.ClientContent
+- uid: Google.GenAI.Types.LiveClientMessage.ContextUpdate
+  name: ContextUpdate
+  href: api/Google.GenAI.Types.LiveClientMessage.html#Google_GenAI_Types_LiveClientMessage_ContextUpdate
+  commentId: P:Google.GenAI.Types.LiveClientMessage.ContextUpdate
+  fullName: Google.GenAI.Types.LiveClientMessage.ContextUpdate
+  nameWithType: LiveClientMessage.ContextUpdate
+- uid: Google.GenAI.Types.LiveClientMessage.ContextUpdate*
+  name: ContextUpdate
+  href: api/Google.GenAI.Types.LiveClientMessage.html#Google_GenAI_Types_LiveClientMessage_ContextUpdate_
+  commentId: Overload:Google.GenAI.Types.LiveClientMessage.ContextUpdate
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LiveClientMessage.ContextUpdate
+  nameWithType: LiveClientMessage.ContextUpdate
 - uid: Google.GenAI.Types.LiveClientMessage.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
   name: FromJson(string, JsonSerializerOptions?)
   href: api/Google.GenAI.Types.LiveClientMessage.html#Google_GenAI_Types_LiveClientMessage_FromJson_System_String_System_Text_Json_JsonSerializerOptions_

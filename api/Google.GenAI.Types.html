@@ -1253,6 +1253,22 @@ generation.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.LiveClientContextUpdate.html">LiveClientContextUpdate</a></dt>
+      <dd><p>Updates to the context of the current session.  Only fields that are set will be updated.
+Updates are guaranteed to be processed <em>in order</em> with the rest of the inputs.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.LiveClientContextUpdateTools.html">LiveClientContextUpdateTools</a></dt>
+      <dd><p>A wrapper around the list of tools.  This wrapper exists because a bare <code>repeated Tool</code> field
+cannot tell apart &quot;not sending a tools update&quot; from &quot;clearing all tools&quot;: an unset repeated
+field and an empty repeated field look identical on the wire. Wrapping the list in a message
+adds a presence bit, so the two cases become: - <code>tools</code> field unset: no update; keep the
+previously provided tools. - <code>tools</code> field set (even with an empty list): replace the current
+tools with the provided list, which may be empty to clear all tools.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.LiveClientMessage.html">LiveClientMessage</a></dt>
       <dd><p>Messages sent by the client in the API call.</p>
 </dd>

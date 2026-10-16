@@ -233,7 +233,7 @@ Instead, use <a class="xref" href="Google.GenAI.Live.html#Google_GenAI_Live_Conn
 
   <h3 id="Google_GenAI_AsyncSession_CloseAsync" data-uid="Google.GenAI.AsyncSession.CloseAsync">
   CloseAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L417"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L435"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Closes the WebSocket connection gracefully. This method is thread-safe and idempotent.</p>
@@ -265,7 +265,7 @@ Instead, use <a class="xref" href="Google.GenAI.Live.html#Google_GenAI_Live_Conn
 
   <h3 id="Google_GenAI_AsyncSession_DisposeAsync" data-uid="Google.GenAI.AsyncSession.DisposeAsync">
   DisposeAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L456"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L474"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Asynchronously disposes the session by closing the WebSocket connection.</p>
@@ -297,7 +297,7 @@ Instead, use <a class="xref" href="Google.GenAI.Live.html#Google_GenAI_Live_Conn
 
   <h3 id="Google_GenAI_AsyncSession_ReceiveAsync_System_Threading_CancellationToken_" data-uid="Google.GenAI.AsyncSession.ReceiveAsync(System.Threading.CancellationToken)">
   ReceiveAsync(CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L334"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L352"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Receives model responses from the server.</p>
@@ -389,6 +389,50 @@ can lead to unexpected behavior.
   <dl class="parameters">
     <dt><code>clientContent</code> <a class="xref" href="Google.GenAI.Types.LiveSendClientContentParameters.html">LiveSendClientContentParameters</a></dt>
     <dd><p>The client content to send to the model.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation token to use for the send operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_AsyncSession_SendContextUpdateAsync_" data-uid="Google.GenAI.AsyncSession.SendContextUpdateAsync*"></a>
+
+  <h3 id="Google_GenAI_AsyncSession_SendContextUpdateAsync_Google_GenAI_Types_LiveClientContextUpdate_System_Threading_CancellationToken_" data-uid="Google.GenAI.AsyncSession.SendContextUpdateAsync(Google.GenAI.Types.LiveClientContextUpdate,System.Threading.CancellationToken)">
+  SendContextUpdateAsync(LiveClientContextUpdate, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/Live.cs/#L336"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sends a context update to the model.
+Updates to the context of the current session. Only fields that are set will
+be updated. Updates are guaranteed to be processed in order with the rest of
+the inputs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task SendContextUpdateAsync(LiveClientContextUpdate contextUpdate, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>contextUpdate</code> <a class="xref" href="Google.GenAI.Types.LiveClientContextUpdate.html">LiveClientContextUpdate</a></dt>
+    <dd><p>The context update to send to the model.</p>
 </dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
     <dd><p>The cancellation token to use for the send operation.</p>
