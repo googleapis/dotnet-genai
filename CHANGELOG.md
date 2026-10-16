@@ -1,5 +1,12 @@
 # Changelog
 
+## Version 1.27.0, released 2026-10-16
+
+
+### New features
+
+* Add Live API in-session context updates (`send_context_update`) and types across GenAI SDKs. ([dcde8ab](https://github.com/googleapis/dotnet-genai/commit/dcde8ab01e38bbebd9282ad0f8ed3f36cf376409))
+
 ## Version 1.26.1, released 2026-10-14
 
 
