@@ -363,6 +363,161 @@ namespace Google.GenAI.Tests {
       Assert.IsNotNull(sentToken);
     }
 
+    [DataTestMethod]
+    [DataRow(false)]
+    [DataRow(true)]
+    public async Task SendContextUpdateAsync_WithSystemInstruction_ShouldSendCorrectMessage(bool vertexAI) {
+      var session = new AsyncSession(_mockWebSocket.Object, new TestApiClient(vertexAI));
+      var contextUpdate = new LiveClientContextUpdate {
+        SystemInstruction = new Types.Content {
+          Parts = new List<Part> { new Part { Text = "You are a helpful assistant." } }
+        }
+      };
+      string? sentMessage = null;
+
+      _mockWebSocket
+          .Setup(ws => ws.SendAsync(It.IsAny<ArraySegment<byte>>(), WebSocketMessageType.Text, true,
+                                    It.IsAny<CancellationToken>()))
+          .Callback<ArraySegment<byte>, WebSocketMessageType, bool, CancellationToken>(
+              (buffer, messageType, endOfMessage, token) => {
+                sentMessage = Encoding.UTF8.GetString(buffer.Array, buffer.Offset, buffer.Count);
+              })
+          .Returns(Task.CompletedTask);
+      _mockWebSocket.Setup(ws => ws.State).Returns(WebSocketState.Open);
+
+      await session.SendContextUpdateAsync(contextUpdate);
+
+      Assert.IsNotNull(sentMessage);
+      var sentObject = JsonNode.Parse(sentMessage);
+      Assert.IsNotNull(sentObject["contextUpdate"]);
+      Assert.AreEqual(
+          "You are a helpful assistant.",
+          (string)sentObject["contextUpdate"]["systemInstruction"]["parts"][0]["text"]);
+    }
+
+    [DataTestMethod]
+    [DataRow(false)]
+    [DataRow(true)]
+    public async Task SendContextUpdateAsync_WithClearTools_ShouldSendCorrectMessage(bool vertexAI) {
+      var session = new AsyncSession(_mockWebSocket.Object, new TestApiClient(vertexAI));
+      var contextUpdate = new LiveClientContextUpdate {
+        Tools = new LiveClientContextUpdateTools {
+          Tools = new List<Types.Tool>()
+        }
+      };
+      string? sentMessage = null;
+
+      _mockWebSocket
+          .Setup(ws => ws.SendAsync(It.IsAny<ArraySegment<byte>>(), WebSocketMessageType.Text, true,
+                                    It.IsAny<CancellationToken>()))
+          .Callback<ArraySegment<byte>, WebSocketMessageType, bool, CancellationToken>(
+              (buffer, messageType, endOfMessage, token) => {
+                sentMessage = Encoding.UTF8.GetString(buffer.Array, buffer.Offset, buffer.Count);
+              })
+          .Returns(Task.CompletedTask);
+      _mockWebSocket.Setup(ws => ws.State).Returns(WebSocketState.Open);
+
+      await session.SendContextUpdateAsync(contextUpdate);
+
+      Assert.IsNotNull(sentMessage);
+      var sentObject = JsonNode.Parse(sentMessage);
+      Assert.IsNotNull(sentObject["contextUpdate"]);
+      Assert.IsNotNull(sentObject["contextUpdate"]["tools"]);
+      Assert.AreEqual(0, sentObject["contextUpdate"]["tools"]["tools"].AsArray().Count);
+    }
+
+    [DataTestMethod]
+    [DataRow(false)]
+    [DataRow(true)]
+    public async Task SendContextUpdateAsync_WithFunctionDeclaration_ShouldSendCorrectMessage(bool vertexAI) {
+      var session = new AsyncSession(_mockWebSocket.Object, new TestApiClient(vertexAI));
+      var contextUpdate = new LiveClientContextUpdate {
+        Tools = new LiveClientContextUpdateTools {
+          Tools = new List<Types.Tool> {
+            new Types.Tool {
+              FunctionDeclarations = new List<FunctionDeclaration> {
+                new FunctionDeclaration {
+                  Name = "get_current_weather",
+                  Description = "Gets the weather for a location."
+                }
+              }
+            }
+          }
+        }
+      };
+      string? sentMessage = null;
+
+      _mockWebSocket
+          .Setup(ws => ws.SendAsync(It.IsAny<ArraySegment<byte>>(), WebSocketMessageType.Text, true,
+                                    It.IsAny<CancellationToken>()))
+          .Callback<ArraySegment<byte>, WebSocketMessageType, bool, CancellationToken>(
+              (buffer, messageType, endOfMessage, token) => {
+                sentMessage = Encoding.UTF8.GetString(buffer.Array, buffer.Offset, buffer.Count);
+              })
+          .Returns(Task.CompletedTask);
+      _mockWebSocket.Setup(ws => ws.State).Returns(WebSocketState.Open);
+
+      await session.SendContextUpdateAsync(contextUpdate);
+
+      Assert.IsNotNull(sentMessage);
+      var sentObject = JsonNode.Parse(sentMessage);
+      Assert.IsNotNull(sentObject["contextUpdate"]);
+      var toolsArray = sentObject["contextUpdate"]["tools"]["tools"].AsArray();
+      Assert.AreEqual(1, toolsArray.Count);
+      Assert.AreEqual(
+          "get_current_weather",
+          (string)toolsArray[0]["functionDeclarations"][0]["name"]);
+    }
+
+    [DataTestMethod]
+    [DataRow(false)]
+    [DataRow(true)]
+    public async Task SendContextUpdateAsync_WithBothSystemInstructionAndTools_ShouldSendCorrectMessage(bool vertexAI) {
+      var session = new AsyncSession(_mockWebSocket.Object, new TestApiClient(vertexAI));
+      var contextUpdate = new LiveClientContextUpdate {
+        SystemInstruction = new Types.Content {
+          Parts = new List<Part> { new Part { Text = "Updated instruction." } }
+        },
+        Tools = new LiveClientContextUpdateTools {
+          Tools = new List<Types.Tool> {
+            new Types.Tool {
+              FunctionDeclarations = new List<FunctionDeclaration> {
+                new FunctionDeclaration {
+                  Name = "get_current_weather",
+                  Description = "Gets the weather for a location."
+                }
+              }
+            }
+          }
+        }
+      };
+      string? sentMessage = null;
+
+      _mockWebSocket
+          .Setup(ws => ws.SendAsync(It.IsAny<ArraySegment<byte>>(), WebSocketMessageType.Text, true,
+                                    It.IsAny<CancellationToken>()))
+          .Callback<ArraySegment<byte>, WebSocketMessageType, bool, CancellationToken>(
+              (buffer, messageType, endOfMessage, token) => {
+                sentMessage = Encoding.UTF8.GetString(buffer.Array, buffer.Offset, buffer.Count);
+              })
+          .Returns(Task.CompletedTask);
+      _mockWebSocket.Setup(ws => ws.State).Returns(WebSocketState.Open);
+
+      await session.SendContextUpdateAsync(contextUpdate);
+
+      Assert.IsNotNull(sentMessage);
+      var sentObject = JsonNode.Parse(sentMessage);
+      Assert.IsNotNull(sentObject["contextUpdate"]);
+      Assert.AreEqual(
+          "Updated instruction.",
+          (string)sentObject["contextUpdate"]["systemInstruction"]["parts"][0]["text"]);
+      var toolsArray = sentObject["contextUpdate"]["tools"]["tools"].AsArray();
+      Assert.AreEqual(1, toolsArray.Count);
+      Assert.AreEqual(
+          "get_current_weather",
+          (string)toolsArray[0]["functionDeclarations"][0]["name"]);
+    }
+
     [TestMethod]
     public async Task SendAsync_WhenWebSocketNotOpen_ShouldThrowInvalidOperationException() {
       var clientContent = new LiveSendClientContentParameters();

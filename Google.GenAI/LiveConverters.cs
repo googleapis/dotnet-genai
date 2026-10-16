@@ -392,6 +392,87 @@ namespace Google.GenAI {
       return toObject;
     }
 
+    internal JsonNode LiveClientContextUpdateToMldev(JsonNode fromObject, JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "systemInstruction" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "systemInstruction" },
+            ContentToMldev(Common.ParseToJsonNode(Transformers.TContent(Common.GetValueByPath(
+                               fromObject, new string[] { "systemInstruction" }))),
+                           toObject));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "tools" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "tools" },
+            LiveClientContextUpdateToolsToMldev(
+                Common.ParseToJsonNode(Common.GetValueByPath(fromObject, new string[] { "tools" })),
+                toObject));
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode LiveClientContextUpdateToVertex(JsonNode fromObject,
+                                                      JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "systemInstruction" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "systemInstruction" },
+            ContentToVertex(Common.ParseToJsonNode(Transformers.TContent(Common.GetValueByPath(
+                                fromObject, new string[] { "systemInstruction" }))),
+                            toObject));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "tools" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "tools" },
+            LiveClientContextUpdateToolsToVertex(
+                Common.ParseToJsonNode(Common.GetValueByPath(fromObject, new string[] { "tools" })),
+                toObject));
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode LiveClientContextUpdateToolsToMldev(JsonNode fromObject,
+                                                          JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "tools" }) != null) {
+        var keyList =
+            Transformers.TTools(Common.GetValueByPath(fromObject, new string[] { "tools" }));
+        JsonArray result = new JsonArray();
+
+        foreach (var record in keyList) {
+          result.Add(ToolToMldev(Common.ParseToJsonNode(Transformers.TTool(record)), toObject));
+        }
+        Common.SetValueByPath(toObject, new string[] { "tools" }, result);
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode LiveClientContextUpdateToolsToVertex(JsonNode fromObject,
+                                                           JsonObject parentObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "tools" }) != null) {
+        var keyList =
+            Transformers.TTools(Common.GetValueByPath(fromObject, new string[] { "tools" }));
+        JsonArray result = new JsonArray();
+
+        foreach (var record in keyList) {
+          result.Add(ToolToVertex(Common.ParseToJsonNode(Transformers.TTool(record)), toObject));
+        }
+        Common.SetValueByPath(toObject, new string[] { "tools" }, result);
+      }
+
+      return toObject;
+    }
+
     internal JsonNode LiveClientMessageToMldev(JsonNode fromObject, JsonObject parentObject) {
       JsonObject toObject = new JsonObject();
 
@@ -426,6 +507,14 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "toolResponse" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "toolResponse" },
                               Common.GetValueByPath(fromObject, new string[] { "toolResponse" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "contextUpdate" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "contextUpdate" },
+            LiveClientContextUpdateToMldev(Common.ParseToJsonNode(Common.GetValueByPath(
+                                               fromObject, new string[] { "contextUpdate" })),
+                                           toObject));
       }
 
       return toObject;
@@ -468,6 +557,14 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "toolResponse" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "toolResponse" },
                               Common.GetValueByPath(fromObject, new string[] { "toolResponse" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "contextUpdate" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "contextUpdate" },
+            LiveClientContextUpdateToVertex(Common.ParseToJsonNode(Common.GetValueByPath(
+                                                fromObject, new string[] { "contextUpdate" })),
+                                            toObject));
       }
 
       return toObject;
