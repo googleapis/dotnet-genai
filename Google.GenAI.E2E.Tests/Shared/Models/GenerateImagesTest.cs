@@ -7,7 +7,7 @@ namespace Google.GenAI.E2E.Tests.Shared.Models
     [TestClass]
     public class GenerateImagesTest : SharedBaseTest
     {
-        private const string ImagenModel = "imagen-4.0-generate-001";
+        private const string ImagenModel = "imagen-4.0-fast-generate-001";
 
         private static GenerateImagesConfig NewConfig() =>
             new GenerateImagesConfig { NumberOfImages = 1, OutputMimeType = "image/jpeg" };
