@@ -144,8 +144,9 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// An opaque continuation token returned when `finish_reason` is `CONTINUATION`. Pass it in a
-    /// subsequent request to continue generation.
+    /// Output only. An optional opaque continuation token returned when `finish_reason` is
+    /// `CONTINUATION`. Clients can pass this token in a subsequent `GenerateContentRequest` to
+    /// continue generation.
     /// </summary>
     [JsonPropertyName("continuationToken")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

@@ -22,7 +22,7 @@ using System.Text.Json;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// The environment being operated.
+  /// The target environment where the computer use tool operates.
   /// </summary>
 
   [JsonConverter(typeof(EnvironmentConverter))]
@@ -34,22 +34,22 @@ namespace Google.GenAI.Types {
     }
 
     /// <summary>
-    /// Defaults to browser.
+    /// The environment is unspecified.
     /// </summary>
     public static Environment EnvironmentUnspecified { get; } = new("ENVIRONMENT_UNSPECIFIED");
 
     /// <summary>
-    /// Operates in a web browser.
+    /// The tool operates in a web browser.
     /// </summary>
     public static Environment EnvironmentBrowser { get; } = new("ENVIRONMENT_BROWSER");
 
     /// <summary>
-    /// Operates in a mobile environment.
+    /// The tool operates in a mobile environment.
     /// </summary>
     public static Environment EnvironmentMobile { get; } = new("ENVIRONMENT_MOBILE");
 
     /// <summary>
-    /// Operates in a desktop environment.
+    /// The tool operates in a desktop environment.
     /// </summary>
     public static Environment EnvironmentDesktop { get; } = new("ENVIRONMENT_DESKTOP");
 

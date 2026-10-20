@@ -23,23 +23,23 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Tool to support computer use.
+  /// A tool that enables the model to interact directly with a computer environment.
   /// </summary>
 
   public record ComputerUse {
     /// <summary>
-    /// The environment being operated.
+    /// The target environment where the computer use tool operates.
     /// </summary>
     [JsonPropertyName("environment")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public Environment ? Environment { get; set; }
 
     /// <summary>
-    /// Optional. By default, predefined functions
+    /// Optional. A list of predefined functions to explicitly exclude from the model call. By
+    /// default, predefined functions
     /// (https://cloud.google.com/vertex-ai/generative-ai/docs/computer-use#supported-actions) are
-    /// included in the final model call. Some of them can be explicitly excluded from being
-    /// automatically included. This can serve two purposes: 1. Using a more restricted / different
-    /// action space. 2. Improving the definitions / instructions of predefined functions.
+    /// included. Excluding functions allows for a more restricted action space or custom
+    /// definitions for predefined functions.
     /// </summary>
     [JsonPropertyName("excludedPredefinedFunctions")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -49,7 +49,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Optional. Enables the prompt injection detection check on computer-use request.
+    /// Optional. Whether to enable the prompt injection detection check on the computer use
+    /// request.
     /// </summary>
     [JsonPropertyName("enablePromptInjectionDetection")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -59,7 +60,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Optional. Disabled safety policies for computer use.
+    /// Optional. A list of safety policies to disable for the computer use tool.
     /// </summary>
     [JsonPropertyName("disabledSafetyPolicies")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
