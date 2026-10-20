@@ -1292,6 +1292,12 @@ namespace Google.GenAI {
             Common.GetValueByPath(fromObject, new string[] { "continuationToken" }));
       }
 
+      if (!Common.IsZero(
+              Common.GetValueByPath(fromObject, new string[] { "generationOutputConfig" }))) {
+        throw new NotSupportedException(
+            "generationOutputConfig parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
+      }
+
       return toObject;
     }
 
@@ -1497,6 +1503,12 @@ namespace Google.GenAI {
         Common.SetValueByPath(
             parentObject, new string[] { "continuationToken" },
             Common.GetValueByPath(fromObject, new string[] { "continuationToken" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "generationOutputConfig" }) != null) {
+        Common.SetValueByPath(
+            parentObject, new string[] { "outputConfig" },
+            Common.GetValueByPath(fromObject, new string[] { "generationOutputConfig" }));
       }
 
       return toObject;
