@@ -1145,7 +1145,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ComputerUse",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ComputerUse.yml\" sourcestartlinenumber=\"1\">Tool to support computer use.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ComputerUse.yml\" sourcestartlinenumber=\"1\">A tool that enables the model to interact directly with a computer environment.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1985,7 +1985,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.Environment",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Environment.yml\" sourcestartlinenumber=\"1\">The environment being operated.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.Environment.yml\" sourcestartlinenumber=\"1\">The target environment where the computer use tool operates.</p>\n"
     },
     {
       "type": "ManagedReference",
