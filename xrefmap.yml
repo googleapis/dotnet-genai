@@ -14948,6 +14948,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerateContentConfig.FromJson
   nameWithType: GenerateContentConfig.FromJson
+- uid: Google.GenAI.Types.GenerateContentConfig.GenerationOutputConfig
+  name: GenerationOutputConfig
+  href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_GenerationOutputConfig
+  commentId: P:Google.GenAI.Types.GenerateContentConfig.GenerationOutputConfig
+  fullName: Google.GenAI.Types.GenerateContentConfig.GenerationOutputConfig
+  nameWithType: GenerateContentConfig.GenerationOutputConfig
+- uid: Google.GenAI.Types.GenerateContentConfig.GenerationOutputConfig*
+  name: GenerationOutputConfig
+  href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_GenerationOutputConfig_
+  commentId: Overload:Google.GenAI.Types.GenerateContentConfig.GenerationOutputConfig
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateContentConfig.GenerationOutputConfig
+  nameWithType: GenerateContentConfig.GenerationOutputConfig
 - uid: Google.GenAI.Types.GenerateContentConfig.HttpOptions
   name: HttpOptions
   href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_HttpOptions
@@ -17171,6 +17184,41 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerationConfigThinkingConfig.FromJson
   nameWithType: GenerationConfigThinkingConfig.FromJson
+- uid: Google.GenAI.Types.GenerationOutputConfig
+  name: GenerationOutputConfig
+  href: api/Google.GenAI.Types.GenerationOutputConfig.html
+  commentId: T:Google.GenAI.Types.GenerationOutputConfig
+  fullName: Google.GenAI.Types.GenerationOutputConfig
+  nameWithType: GenerationOutputConfig
+- uid: Google.GenAI.Types.GenerationOutputConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.GenerationOutputConfig.html#Google_GenAI_Types_GenerationOutputConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.GenerationOutputConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.GenerationOutputConfig.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.GenerationOutputConfig.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: GenerationOutputConfig.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: GenerationOutputConfig.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.GenerationOutputConfig.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.GenerationOutputConfig.html#Google_GenAI_Types_GenerationOutputConfig_FromJson_
+  commentId: Overload:Google.GenAI.Types.GenerationOutputConfig.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerationOutputConfig.FromJson
+  nameWithType: GenerationOutputConfig.FromJson
+- uid: Google.GenAI.Types.GenerationOutputConfig.OutputUriPrefix
+  name: OutputUriPrefix
+  href: api/Google.GenAI.Types.GenerationOutputConfig.html#Google_GenAI_Types_GenerationOutputConfig_OutputUriPrefix
+  commentId: P:Google.GenAI.Types.GenerationOutputConfig.OutputUriPrefix
+  fullName: Google.GenAI.Types.GenerationOutputConfig.OutputUriPrefix
+  nameWithType: GenerationOutputConfig.OutputUriPrefix
+- uid: Google.GenAI.Types.GenerationOutputConfig.OutputUriPrefix*
+  name: OutputUriPrefix
+  href: api/Google.GenAI.Types.GenerationOutputConfig.html#Google_GenAI_Types_GenerationOutputConfig_OutputUriPrefix_
+  commentId: Overload:Google.GenAI.Types.GenerationOutputConfig.OutputUriPrefix
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerationOutputConfig.OutputUriPrefix
+  nameWithType: GenerationOutputConfig.OutputUriPrefix
 - uid: Google.GenAI.Types.GetBatchJobConfig
   name: GetBatchJobConfig
   href: api/Google.GenAI.Types.GetBatchJobConfig.html
