@@ -283,6 +283,17 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Labels with user-defined metadata for the session. In Gemini Enterprise Agent Platform, they
+    /// are used for billing and reporting.
+    /// </summary>
+    [JsonPropertyName("labels")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public Dictionary<string, string>
+        ? Labels {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a LiveConnectConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

@@ -965,6 +965,11 @@ namespace Google.GenAI {
             Common.GetValueByPath(fromObject, new string[] { "translationConfig" }));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "labels" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "setup", "labels" },
+                              Common.GetValueByPath(fromObject, new string[] { "labels" }));
+      }
+
       return toObject;
     }
 
@@ -1113,6 +1118,11 @@ namespace Google.GenAI {
         Common.SetValueByPath(
             parentObject, new string[] { "setup", "generationConfig", "translationConfig" },
             Common.GetValueByPath(fromObject, new string[] { "translationConfig" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "labels" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "setup", "labels" },
+                              Common.GetValueByPath(fromObject, new string[] { "labels" }));
       }
 
       return toObject;

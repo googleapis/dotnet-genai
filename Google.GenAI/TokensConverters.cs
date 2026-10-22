@@ -393,6 +393,11 @@ namespace Google.GenAI {
             Common.GetValueByPath(fromObject, new string[] { "translationConfig" }));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "labels" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "setup", "labels" },
+                              Common.GetValueByPath(fromObject, new string[] { "labels" }));
+      }
+
       return toObject;
     }
 

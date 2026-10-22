@@ -426,6 +426,18 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Configures the logging behavior for a given request. If set, it takes precedence over the
+    /// project-level logging config. This field is not supported in Gemini Enterprise Agent
+    /// Platform.
+    /// </summary>
+    [JsonPropertyName("store")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public bool
+        ? Store {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a GenerateContentConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

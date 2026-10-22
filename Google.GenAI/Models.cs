@@ -1298,6 +1298,11 @@ namespace Google.GenAI {
             "generationOutputConfig parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "store" }) != null) {
+        Common.SetValueByPath(parentObject, new string[] { "store" },
+                              Common.GetValueByPath(fromObject, new string[] { "store" }));
+      }
+
       return toObject;
     }
 
@@ -1509,6 +1514,11 @@ namespace Google.GenAI {
         Common.SetValueByPath(
             parentObject, new string[] { "outputConfig" },
             Common.GetValueByPath(fromObject, new string[] { "generationOutputConfig" }));
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "store" }))) {
+        throw new NotSupportedException(
+            "store parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       }
 
       return toObject;
