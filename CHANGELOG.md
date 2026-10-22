@@ -1,5 +1,20 @@
 # Changelog
 
+## Version 1.27.0, released 2026-10-22
+
+
+### New features
+
+* Add `store` to `GenerateContentConfig` (Gemini Developer API only) and `labels` to `LiveConnectConfig`. ([36588f2](https://github.com/googleapis/dotnet-genai/commit/36588f2aa12cea7c19af4976c0537b0d4954cb3d))
+* Add generation_output_config to GenerateContentConfig ([943c088](https://github.com/googleapis/dotnet-genai/commit/943c088c96247f53abc3f22f4e021e0b11fc6a5e))
+* Add Live API in-session context updates (`send_context_update`) and types across GenAI SDKs. ([dcde8ab](https://github.com/googleapis/dotnet-genai/commit/dcde8ab01e38bbebd9282ad0f8ed3f36cf376409))
+* update discovery doc ([5f7c93d](https://github.com/googleapis/dotnet-genai/commit/5f7c93d60aa475343dc3b36fe3035d99a183ff09))
+
+
+### Bug fixes
+
+* **genai:** raise mid-stream SSE errors and dropped connections consistently across SDKs; add continuation conformance tests ([312550c](https://github.com/googleapis/dotnet-genai/commit/312550cc46b908b997483052ea436225e86f04c5))
+
 ## Version 1.26.1, released 2026-10-14
 
 
