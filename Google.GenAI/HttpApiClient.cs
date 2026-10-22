@@ -328,10 +328,11 @@ namespace Google.GenAI
             string processedChunkString = match.Groups[1].Value;
             processedChunkString = Regex.Replace(processedChunkString, @"\r?\ndata: ?", "\n");
 
-            string? validatedChunk = ValidateChunk(processedChunkString);
+            JsonNode? validatedChunk = ValidateChunk(processedChunkString);
             if (validatedChunk != null)
             {
-              yield return validatedChunk;
+              CheckForStreamErrors(validatedChunk);
+              yield return processedChunkString;
             }
 
             buffer.Remove(0, match.Length);
@@ -345,7 +346,7 @@ namespace Google.GenAI
         decoder.Reset();
       }
     }
-    private static string? ValidateChunk(string processedChunkString)
+    private static JsonNode? ValidateChunk(string processedChunkString)
     {
       try
       {
@@ -361,8 +362,7 @@ namespace Google.GenAI
             return null;
           }
 
-          JsonNode.Parse(processedChunkString);
-          return processedChunkString;
+          return JsonNode.Parse(processedChunkString);
         }
         return null;
       }
@@ -376,28 +376,7 @@ namespace Google.GenAI
     {
       try
       {
-        var chunkJson = JsonNode.Parse(chunkString);
-        if (chunkJson?["error"] != null)
-        {
-          var errorJson = chunkJson["error"];
-          var status = errorJson?["status"]?.GetValue<string>();
-          var code = errorJson?["code"]?.GetValue<int>() ?? 0;
-
-          var baseChunk = chunkJson.ToJsonString();
-          var detailsText = (errorJson as JsonObject) != null ? GetErrorDetailsText((JsonObject)errorJson!) : null;
-          var errorMessage = !string.IsNullOrEmpty(detailsText)
-            ? $"got status: {status}. {baseChunk}\nDetails: {detailsText}"
-            : $"got status: {status}. {baseChunk}";
-
-          if (code >= 400 && code < 500)
-          {
-            throw new ClientError(errorMessage, code, status);
-          }
-          else if (code >= 500 && code < 600)
-          {
-            throw new ServerError(errorMessage, code, status);
-          }
-        }
+        CheckForStreamErrors(JsonNode.Parse(chunkString));
       }
       catch (JsonException)
       {
@@ -407,6 +386,30 @@ namespace Google.GenAI
       catch (HttpRequestException)
       {
         throw;
+      }
+    }
+    private void CheckForStreamErrors(JsonNode? chunkJson)
+    {
+      if (chunkJson?["error"] != null)
+      {
+        var errorJson = chunkJson["error"];
+        var status = errorJson?["status"]?.GetValue<string>();
+        var code = errorJson?["code"]?.GetValue<int>() ?? 0;
+
+        var baseChunk = chunkJson.ToJsonString();
+        var detailsText = (errorJson as JsonObject) != null ? GetErrorDetailsText((JsonObject)errorJson!) : null;
+        var errorMessage = !string.IsNullOrEmpty(detailsText)
+          ? $"got status: {status}. {baseChunk}\nDetails: {detailsText}"
+          : $"got status: {status}. {baseChunk}";
+
+        if (code >= 400 && code < 500)
+        {
+          throw new ClientError(errorMessage, code, status);
+        }
+        else if (code >= 500 && code < 600)
+        {
+          throw new ServerError(errorMessage, code, status);
+        }
       }
     }
 
