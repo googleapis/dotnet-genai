@@ -15221,6 +15221,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.GenerateContentConfig.StopSequences
   nameWithType: GenerateContentConfig.StopSequences
+- uid: Google.GenAI.Types.GenerateContentConfig.Store
+  name: Store
+  href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_Store
+  commentId: P:Google.GenAI.Types.GenerateContentConfig.Store
+  fullName: Google.GenAI.Types.GenerateContentConfig.Store
+  nameWithType: GenerateContentConfig.Store
+- uid: Google.GenAI.Types.GenerateContentConfig.Store*
+  name: Store
+  href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_Store_
+  commentId: Overload:Google.GenAI.Types.GenerateContentConfig.Store
+  isSpec: "True"
+  fullName: Google.GenAI.Types.GenerateContentConfig.Store
+  nameWithType: GenerateContentConfig.Store
 - uid: Google.GenAI.Types.GenerateContentConfig.SystemInstruction
   name: SystemInstruction
   href: api/Google.GenAI.Types.GenerateContentConfig.html#Google_GenAI_Types_GenerateContentConfig_SystemInstruction
@@ -24068,6 +24081,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.LiveConnectConfig.InputAudioTranscription
   nameWithType: LiveConnectConfig.InputAudioTranscription
+- uid: Google.GenAI.Types.LiveConnectConfig.Labels
+  name: Labels
+  href: api/Google.GenAI.Types.LiveConnectConfig.html#Google_GenAI_Types_LiveConnectConfig_Labels
+  commentId: P:Google.GenAI.Types.LiveConnectConfig.Labels
+  fullName: Google.GenAI.Types.LiveConnectConfig.Labels
+  nameWithType: LiveConnectConfig.Labels
+- uid: Google.GenAI.Types.LiveConnectConfig.Labels*
+  name: Labels
+  href: api/Google.GenAI.Types.LiveConnectConfig.html#Google_GenAI_Types_LiveConnectConfig_Labels_
+  commentId: Overload:Google.GenAI.Types.LiveConnectConfig.Labels
+  isSpec: "True"
+  fullName: Google.GenAI.Types.LiveConnectConfig.Labels
+  nameWithType: LiveConnectConfig.Labels
 - uid: Google.GenAI.Types.LiveConnectConfig.MaxOutputTokens
   name: MaxOutputTokens
   href: api/Google.GenAI.Types.LiveConnectConfig.html#Google_GenAI_Types_LiveConnectConfig_MaxOutputTokens

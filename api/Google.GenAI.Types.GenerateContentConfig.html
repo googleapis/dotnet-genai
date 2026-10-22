@@ -1173,6 +1173,42 @@ public List&lt;string&gt;? StopSequences { get; set; }</code></pre>
 
 
 
+  <a id="Google_GenAI_Types_GenerateContentConfig_Store_" data-uid="Google.GenAI.Types.GenerateContentConfig.Store*"></a>
+
+  <h3 id="Google_GenAI_Types_GenerateContentConfig_Store" data-uid="Google.GenAI.Types.GenerateContentConfig.Store">
+  Store
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentConfig.cs/#L433"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures the logging behavior for a given request. If set, it takes precedence over the
+project-level logging config. This field is not supported in Gemini Enterprise Agent
+Platform.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;store&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public bool? Store { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_GenerateContentConfig_SystemInstruction_" data-uid="Google.GenAI.Types.GenerateContentConfig.SystemInstruction*"></a>
 
   <h3 id="Google_GenAI_Types_GenerateContentConfig_SystemInstruction" data-uid="Google.GenAI.Types.GenerateContentConfig.SystemInstruction">
@@ -1428,7 +1464,7 @@ public double? TopP { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_GenerateContentConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.GenerateContentConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentConfig.cs/#L435"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/GenerateContentConfig.cs/#L447"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a GenerateContentConfig object.</p>
