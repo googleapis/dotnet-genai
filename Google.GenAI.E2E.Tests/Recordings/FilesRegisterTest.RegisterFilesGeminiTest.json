@@ -4,8 +4,8 @@
     {
       "request": {
         "method": "POST",
-        "url": "/v1beta/files:register",
-        "request": "POST /v1beta/files:register HTTP/1.1",
+        "url": "/v1/files:register",
+        "request": "POST /v1/files:register HTTP/1.1",
         "headers": {
           "Content-Length": "43",
           "Content-Type": "application/json; charset=utf-8",
@@ -23,7 +23,7 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "6ee39fb519f39a385a4b532eb68c74cfb3bea927b2167fd5e2d7996f8f3d41cf",
+      "shaSum": "0d7b0cd1024cfec6463bf2e3c611b1b8e24eac9ee3b4db2d99f4682d673e246b",
       "response": {
         "statusCode": 200,
         "headers": {

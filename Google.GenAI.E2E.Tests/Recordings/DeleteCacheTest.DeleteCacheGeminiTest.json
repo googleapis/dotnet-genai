@@ -4,8 +4,8 @@
     {
       "request": {
         "method": "POST",
-        "url": "/v1beta/cachedContents",
-        "request": "POST /v1beta/cachedContents HTTP/1.1",
+        "url": "/v1/cachedContents",
+        "request": "POST /v1/cachedContents HTTP/1.1",
         "headers": {
           "Content-Length": "718",
           "Content-Type": "application/json; charset=utf-8",
@@ -60,7 +60,7 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "f08e92027068f9031df1776a0de8db0180975d821d4d3d788797404a2d8bed36",
+      "shaSum": "3a976eaa49072a8628592189c8597b6a2aced32b12eecd004cb7645a9b88f980",
       "response": {
         "statusCode": 200,
         "headers": {
@@ -91,20 +91,20 @@
     {
       "request": {
         "method": "DELETE",
-        "url": "/v1beta/cachedContents/832gnmtxiy5vjgqqq27hupqze6glh33gtg5od780",
-        "request": "DELETE /v1beta/cachedContents/832gnmtxiy5vjgqqq27hupqze6glh33gtg5od780 HTTP/1.1",
+        "url": "/v1/cachedContents/832gnmtxiy5vjgqqq27hupqze6glh33gtg5od780",
+        "request": "DELETE /v1/cachedContents/832gnmtxiy5vjgqqq27hupqze6glh33gtg5od780 HTTP/1.1",
         "headers": {
           "Test-Name": "DeleteCacheTest.DeleteCacheGeminiTest"
         },
         "bodySegments": [
           null
         ],
-        "previousRequest": "f08e92027068f9031df1776a0de8db0180975d821d4d3d788797404a2d8bed36",
+        "previousRequest": "3a976eaa49072a8628592189c8597b6a2aced32b12eecd004cb7645a9b88f980",
         "serverAddress": "generativelanguage.googleapis.com",
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "42353367b3a0bd8e1ea708cb3cee21cf42b4ecdabc3f1dfc658e7cca7973c8dc",
+      "shaSum": "8a9955902d657c6d95706a44f47b6b9e1f5d16cffc5e192ee23bab5733d12405",
       "response": {
         "statusCode": 200,
         "headers": {

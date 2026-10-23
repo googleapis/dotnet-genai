@@ -4,10 +4,10 @@
     {
       "request": {
         "method": "POST",
-        "url": "/v1beta/models/gemini-3.5-flash:generateContent",
-        "request": "POST /v1beta/models/gemini-3.5-flash:generateContent HTTP/1.1",
+        "url": "/v1/models/gemini-3.5-flash:generateContent",
+        "request": "POST /v1/models/gemini-3.5-flash:generateContent HTTP/1.1",
         "headers": {
-          "Content-Length": "660",
+          "Content-Length": "776",
           "Content-Type": "application/json; charset=utf-8",
           "Test-Name": "GenerateContentToolsTest.GenerateContentSchemaPropertyOrderingResponseJsonSchemaGeminiTest"
         },
@@ -77,7 +77,7 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "1dceed6848910bb9f5c66c322c26a1c72a6d526a6e3cc4606863d1f72e70e312",
+      "shaSum": "0a169eda6d78fd8907b49642c6ff1f611d6f741a504f346f201249d16e2cbabe",
       "response": {
         "statusCode": 200,
         "headers": {

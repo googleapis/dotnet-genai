@@ -4,8 +4,8 @@
     {
       "request": {
         "method": "POST",
-        "url": "/v1beta/files:register",
-        "request": "POST /v1beta/files:register HTTP/1.1",
+        "url": "/v1/files:register",
+        "request": "POST /v1/files:register HTTP/1.1",
         "headers": {
           "Content-Length": "43",
           "Content-Type": "application/json; charset=utf-8",
@@ -23,7 +23,7 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "eaad6a9439ce22d23974811d32ff0492b780038afef98e1ad38312865665b058",
+      "shaSum": "cac570119697898e19810c48989f86220ef348967e78334b167d8d2b03f41e5f",
       "response": {
         "statusCode": 200,
         "headers": {
@@ -55,20 +55,20 @@
     {
       "request": {
         "method": "GET",
-        "url": "/v1beta/files/nxsb2u1twh7m",
-        "request": "GET /v1beta/files/nxsb2u1twh7m HTTP/1.1",
+        "url": "/v1/files/nxsb2u1twh7m",
+        "request": "GET /v1/files/nxsb2u1twh7m HTTP/1.1",
         "headers": {
           "Test-Name": "FilesRegisterTest.RegisterAndGenerateGeminiTest"
         },
         "bodySegments": [
           null
         ],
-        "previousRequest": "eaad6a9439ce22d23974811d32ff0492b780038afef98e1ad38312865665b058",
+        "previousRequest": "cac570119697898e19810c48989f86220ef348967e78334b167d8d2b03f41e5f",
         "serverAddress": "generativelanguage.googleapis.com",
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "ae8fc849c09751ae7aad8ef608b4d117624f091e7ffc475954111e72229f40fb",
+      "shaSum": "188b598ca0986ea0f0d484cacd0e3e27d5510897b0af4db62fc90d0e4363ffbc",
       "response": {
         "statusCode": 200,
         "headers": {
@@ -99,8 +99,8 @@
     {
       "request": {
         "method": "POST",
-        "url": "/v1beta/models/gemini-2.5-flash:generateContent",
-        "request": "POST /v1beta/models/gemini-2.5-flash:generateContent HTTP/1.1",
+        "url": "/v1/models/gemini-2.5-flash:generateContent",
+        "request": "POST /v1/models/gemini-2.5-flash:generateContent HTTP/1.1",
         "headers": {
           "Content-Length": "193",
           "Content-Type": "application/json; charset=utf-8",
@@ -126,12 +126,12 @@
             ]
           }
         ],
-        "previousRequest": "ae8fc849c09751ae7aad8ef608b4d117624f091e7ffc475954111e72229f40fb",
+        "previousRequest": "188b598ca0986ea0f0d484cacd0e3e27d5510897b0af4db62fc90d0e4363ffbc",
         "serverAddress": "generativelanguage.googleapis.com",
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "7291691531a7d2dbfedec46a421e6b771afd1fda956154c05f24b8c34584e695",
+      "shaSum": "504f8d228c150150f009c82509c22dd26ae617cc48136529cdda77bc9f3f7339",
       "response": {
         "statusCode": 200,
         "headers": {

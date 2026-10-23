@@ -4,8 +4,8 @@
     {
       "request": {
         "method": "POST",
-        "url": "/v1beta/models/gemini-embedding-001:batchEmbedContents",
-        "request": "POST /v1beta/models/gemini-embedding-001:batchEmbedContents HTTP/1.1",
+        "url": "/v1/models/gemini-embedding-001:batchEmbedContents",
+        "request": "POST /v1/models/gemini-embedding-001:batchEmbedContents HTTP/1.1",
         "headers": {
           "Content-Length": "351",
           "Content-Type": "application/json; charset=utf-8",
@@ -48,7 +48,7 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "2da9e795ef60e639f9f070fea9a6736bd1be0d0358809e2b5510e4c63466fa48",
+      "shaSum": "33ddc4f54d65f067a5c56e1c67587da95b10c98ade771bea938a2e8c96fb2dcf",
       "response": {
         "statusCode": 200,
         "headers": {

@@ -4,8 +4,8 @@
     {
       "request": {
         "method": "GET",
-        "url": "/v1beta/tunedModels/generate-num-8498",
-        "request": "GET /v1beta/tunedModels/generate-num-8498 HTTP/1.1",
+        "url": "/v1/tunedModels/generate-num-8498",
+        "request": "GET /v1/tunedModels/generate-num-8498 HTTP/1.1",
         "headers": {
           "Test-Name": "GetModelTest.GetModelTunedGeminiTest"
         },
@@ -17,7 +17,7 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "7ac7d107ec9c461436c207eb915be15275f6a08d1697b4a199836b0ff54d36cb",
+      "shaSum": "07c6ca7fc703c09e7d28508614cc474e93c504e49cf6ee337af6791079568ec0",
       "response": {
         "statusCode": 200,
         "headers": {

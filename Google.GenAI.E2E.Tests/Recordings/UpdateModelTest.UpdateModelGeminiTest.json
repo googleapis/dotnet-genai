@@ -4,8 +4,8 @@
     {
       "request": {
         "method": "PATCH",
-        "url": "/v1beta/tunedModels/generate-num-9131",
-        "request": "PATCH /v1beta/tunedModels/generate-num-9131 HTTP/1.1",
+        "url": "/v1/tunedModels/generate-num-9131",
+        "request": "PATCH /v1/tunedModels/generate-num-9131 HTTP/1.1",
         "headers": {
           "Content-Length": "38",
           "Content-Type": "application/json; charset=utf-8",
@@ -21,7 +21,7 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "43f857040fdcbe396f9d1a9394558676f0762c371dfa6b5103568b5777578761",
+      "shaSum": "ee951ccef44986ebc940e8d6f4c2851f79813075e56ab88bc3acf39262d42c07",
       "response": {
         "statusCode": 400,
         "headers": {

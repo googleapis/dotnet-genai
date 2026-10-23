@@ -4,8 +4,8 @@
     {
       "request": {
         "method": "DELETE",
-        "url": "/v1beta/tunedModels/generate-num-1896",
-        "request": "DELETE /v1beta/tunedModels/generate-num-1896 HTTP/1.1",
+        "url": "/v1/tunedModels/generate-num-1896",
+        "request": "DELETE /v1/tunedModels/generate-num-1896 HTTP/1.1",
         "headers": {
           "Test-Name": "DeleteModelTest.DeleteModelGeminiTest"
         },
@@ -17,7 +17,7 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "109e107c0ee8f3ae7e6f1e6f98fc813b2d6f0b40a65e20a91408d7cee10ae1f8",
+      "shaSum": "07460196aad2830a87b7abe6147f2efb502aa5491abaa8f8fbd57da04fedd947",
       "response": {
         "statusCode": 200,
         "headers": {

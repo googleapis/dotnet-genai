@@ -4,8 +4,8 @@
     {
       "request": {
         "method": "POST",
-        "url": "/v1beta/models/veo-3.1-generate-preview:predictLongRunning",
-        "request": "POST /v1beta/models/veo-3.1-generate-preview:predictLongRunning HTTP/1.1",
+        "url": "/v1/models/veo-3.1-generate-preview:predictLongRunning",
+        "request": "POST /v1/models/veo-3.1-generate-preview:predictLongRunning HTTP/1.1",
         "headers": {
           "Content-Length": "74",
           "Content-Type": "application/json; charset=utf-8",
@@ -28,7 +28,7 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "18bc6d0e3b786045d838775a494c4a7ec45becea0d888cbea70e39ebd16f268a",
+      "shaSum": "8c354f8b3643711914c20a402fdcde6acc248b34fb3c3fb411c8db3cca9433e7",
       "response": {
         "statusCode": 200,
         "headers": {
@@ -51,20 +51,20 @@
     {
       "request": {
         "method": "GET",
-        "url": "/v1beta/models/veo-3.1-generate-preview/operations/5z38kpsltygc",
-        "request": "GET /v1beta/models/veo-3.1-generate-preview/operations/5z38kpsltygc HTTP/1.1",
+        "url": "/v1/models/veo-3.1-generate-preview/operations/5z38kpsltygc",
+        "request": "GET /v1/models/veo-3.1-generate-preview/operations/5z38kpsltygc HTTP/1.1",
         "headers": {
           "Test-Name": "GenerateVideosTest.GenerateVideosSourceGeneratedVideoExtensionGeminiTest"
         },
         "bodySegments": [
           null
         ],
-        "previousRequest": "18bc6d0e3b786045d838775a494c4a7ec45becea0d888cbea70e39ebd16f268a",
+        "previousRequest": "8c354f8b3643711914c20a402fdcde6acc248b34fb3c3fb411c8db3cca9433e7",
         "serverAddress": "generativelanguage.googleapis.com",
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "2632717c878cadaf5f1811dacc69c0e67830cf3d418b5d1f1d0764f75c601ec4",
+      "shaSum": "b270c81541c62c2fa1e4d3e7d502ee08cb5f4af7cb7796a62f5da90685ab4050",
       "response": {
         "statusCode": 200,
         "headers": {
@@ -87,20 +87,20 @@
     {
       "request": {
         "method": "GET",
-        "url": "/v1beta/models/veo-3.1-generate-preview/operations/5z38kpsltygc",
-        "request": "GET /v1beta/models/veo-3.1-generate-preview/operations/5z38kpsltygc HTTP/1.1",
+        "url": "/v1/models/veo-3.1-generate-preview/operations/5z38kpsltygc",
+        "request": "GET /v1/models/veo-3.1-generate-preview/operations/5z38kpsltygc HTTP/1.1",
         "headers": {
           "Test-Name": "GenerateVideosTest.GenerateVideosSourceGeneratedVideoExtensionGeminiTest"
         },
         "bodySegments": [
           null
         ],
-        "previousRequest": "2632717c878cadaf5f1811dacc69c0e67830cf3d418b5d1f1d0764f75c601ec4",
+        "previousRequest": "b270c81541c62c2fa1e4d3e7d502ee08cb5f4af7cb7796a62f5da90685ab4050",
         "serverAddress": "generativelanguage.googleapis.com",
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "5ce02eb7db88f4fc6eb4e23a98cde5db41113f75d894c437879f0cad80226770",
+      "shaSum": "2d2407340e309591dbcb62b3fc99c64a214b729f5ed6fb7fb44a9d49d2ef8532",
       "response": {
         "statusCode": 200,
         "headers": {
@@ -123,20 +123,20 @@
     {
       "request": {
         "method": "GET",
-        "url": "/v1beta/models/veo-3.1-generate-preview/operations/5z38kpsltygc",
-        "request": "GET /v1beta/models/veo-3.1-generate-preview/operations/5z38kpsltygc HTTP/1.1",
+        "url": "/v1/models/veo-3.1-generate-preview/operations/5z38kpsltygc",
+        "request": "GET /v1/models/veo-3.1-generate-preview/operations/5z38kpsltygc HTTP/1.1",
         "headers": {
           "Test-Name": "GenerateVideosTest.GenerateVideosSourceGeneratedVideoExtensionGeminiTest"
         },
         "bodySegments": [
           null
         ],
-        "previousRequest": "5ce02eb7db88f4fc6eb4e23a98cde5db41113f75d894c437879f0cad80226770",
+        "previousRequest": "2d2407340e309591dbcb62b3fc99c64a214b729f5ed6fb7fb44a9d49d2ef8532",
         "serverAddress": "generativelanguage.googleapis.com",
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "7d574b15222de5d20893eb0a25e743bea5e782159d9d3714ae51b35416cfe75e",
+      "shaSum": "004dd754d06662e34072b81aa010411394fc4c5949f81a4fea74e7fff5251fad",
       "response": {
         "statusCode": 200,
         "headers": {
@@ -159,20 +159,20 @@
     {
       "request": {
         "method": "GET",
-        "url": "/v1beta/models/veo-3.1-generate-preview/operations/5z38kpsltygc",
-        "request": "GET /v1beta/models/veo-3.1-generate-preview/operations/5z38kpsltygc HTTP/1.1",
+        "url": "/v1/models/veo-3.1-generate-preview/operations/5z38kpsltygc",
+        "request": "GET /v1/models/veo-3.1-generate-preview/operations/5z38kpsltygc HTTP/1.1",
         "headers": {
           "Test-Name": "GenerateVideosTest.GenerateVideosSourceGeneratedVideoExtensionGeminiTest"
         },
         "bodySegments": [
           null
         ],
-        "previousRequest": "7d574b15222de5d20893eb0a25e743bea5e782159d9d3714ae51b35416cfe75e",
+        "previousRequest": "004dd754d06662e34072b81aa010411394fc4c5949f81a4fea74e7fff5251fad",
         "serverAddress": "generativelanguage.googleapis.com",
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "67e2bc86f060c69ad3e3142c61953c9a94d6f514ba9d7afb57bb9c7605d205d9",
+      "shaSum": "6ae9fe57bb96189c3c7784c48bb14b354082e438a63b7fdc49df89fa4127ba01",
       "response": {
         "statusCode": 200,
         "headers": {
@@ -195,20 +195,20 @@
     {
       "request": {
         "method": "GET",
-        "url": "/v1beta/models/veo-3.1-generate-preview/operations/5z38kpsltygc",
-        "request": "GET /v1beta/models/veo-3.1-generate-preview/operations/5z38kpsltygc HTTP/1.1",
+        "url": "/v1/models/veo-3.1-generate-preview/operations/5z38kpsltygc",
+        "request": "GET /v1/models/veo-3.1-generate-preview/operations/5z38kpsltygc HTTP/1.1",
         "headers": {
           "Test-Name": "GenerateVideosTest.GenerateVideosSourceGeneratedVideoExtensionGeminiTest"
         },
         "bodySegments": [
           null
         ],
-        "previousRequest": "67e2bc86f060c69ad3e3142c61953c9a94d6f514ba9d7afb57bb9c7605d205d9",
+        "previousRequest": "6ae9fe57bb96189c3c7784c48bb14b354082e438a63b7fdc49df89fa4127ba01",
         "serverAddress": "generativelanguage.googleapis.com",
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "395d08a473992c850416339af623de7a80a58e30f6c721f9f43a71350eb97deb",
+      "shaSum": "89ccbe925510a67194cbadcf5700c460d62b8f8333c8b238edbe87660d22b27a",
       "response": {
         "statusCode": 200,
         "headers": {
@@ -231,20 +231,20 @@
     {
       "request": {
         "method": "GET",
-        "url": "/v1beta/models/veo-3.1-generate-preview/operations/5z38kpsltygc",
-        "request": "GET /v1beta/models/veo-3.1-generate-preview/operations/5z38kpsltygc HTTP/1.1",
+        "url": "/v1/models/veo-3.1-generate-preview/operations/5z38kpsltygc",
+        "request": "GET /v1/models/veo-3.1-generate-preview/operations/5z38kpsltygc HTTP/1.1",
         "headers": {
           "Test-Name": "GenerateVideosTest.GenerateVideosSourceGeneratedVideoExtensionGeminiTest"
         },
         "bodySegments": [
           null
         ],
-        "previousRequest": "395d08a473992c850416339af623de7a80a58e30f6c721f9f43a71350eb97deb",
+        "previousRequest": "89ccbe925510a67194cbadcf5700c460d62b8f8333c8b238edbe87660d22b27a",
         "serverAddress": "generativelanguage.googleapis.com",
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "5a41d73f53b0f175d6c7bbbb4a49de3f951d8e15da0dfaad06c1abbd60043e77",
+      "shaSum": "cd15793d8ddc8c7b6d07ffb261ffe42c915f6802fcca06e7b0222e275f85452b",
       "response": {
         "statusCode": 200,
         "headers": {
@@ -280,20 +280,20 @@
     {
       "request": {
         "method": "GET",
-        "url": "/v1beta/files/oom6njgidqgc:download?alt=media",
-        "request": "GET /v1beta/files/oom6njgidqgc:download?alt=media HTTP/1.1",
+        "url": "/v1/files/oom6njgidqgc:download?alt=media",
+        "request": "GET /v1/files/oom6njgidqgc:download?alt=media HTTP/1.1",
         "headers": {
           "Test-Name": "GenerateVideosTest.GenerateVideosSourceGeneratedVideoExtensionGeminiTest"
         },
         "bodySegments": [
           null
         ],
-        "previousRequest": "5a41d73f53b0f175d6c7bbbb4a49de3f951d8e15da0dfaad06c1abbd60043e77",
+        "previousRequest": "cd15793d8ddc8c7b6d07ffb261ffe42c915f6802fcca06e7b0222e275f85452b",
         "serverAddress": "generativelanguage.googleapis.com",
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "2ebbf637f453c4370bf511a22f6aac94ba8132717243a8959cbff5606cb69b07",
+      "shaSum": "135890f6868995ae9e3589fd02586699cc66a9473ba968026d3eaa9e1190b566",
       "response": {
         "statusCode": 200,
         "headers": {
@@ -313,8 +313,8 @@
     {
       "request": {
         "method": "POST",
-        "url": "/v1beta/models/veo-3.1-generate-preview:predictLongRunning",
-        "request": "POST /v1beta/models/veo-3.1-generate-preview:predictLongRunning HTTP/1.1",
+        "url": "/v1/models/veo-3.1-generate-preview:predictLongRunning",
+        "request": "POST /v1/models/veo-3.1-generate-preview:predictLongRunning HTTP/1.1",
         "headers": {
           "Content-Length": "190",
           "Content-Type": "application/json; charset=utf-8",
@@ -335,12 +335,12 @@
             }
           }
         ],
-        "previousRequest": "2ebbf637f453c4370bf511a22f6aac94ba8132717243a8959cbff5606cb69b07",
+        "previousRequest": "135890f6868995ae9e3589fd02586699cc66a9473ba968026d3eaa9e1190b566",
         "serverAddress": "generativelanguage.googleapis.com",
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "ae5fe458c4b28836f23fbaeef7dadb7d95634bf36f66652567c569d93784a3ea",
+      "shaSum": "21b93b6799f427785d733156c4b8d9312e3eb674c831a8978814f2aa77ab8733",
       "response": {
         "statusCode": 200,
         "headers": {
@@ -363,20 +363,20 @@
     {
       "request": {
         "method": "GET",
-        "url": "/v1beta/models/veo-3.1-generate-preview/operations/x2cqbeh4eeej",
-        "request": "GET /v1beta/models/veo-3.1-generate-preview/operations/x2cqbeh4eeej HTTP/1.1",
+        "url": "/v1/models/veo-3.1-generate-preview/operations/x2cqbeh4eeej",
+        "request": "GET /v1/models/veo-3.1-generate-preview/operations/x2cqbeh4eeej HTTP/1.1",
         "headers": {
           "Test-Name": "GenerateVideosTest.GenerateVideosSourceGeneratedVideoExtensionGeminiTest"
         },
         "bodySegments": [
           null
         ],
-        "previousRequest": "ae5fe458c4b28836f23fbaeef7dadb7d95634bf36f66652567c569d93784a3ea",
+        "previousRequest": "21b93b6799f427785d733156c4b8d9312e3eb674c831a8978814f2aa77ab8733",
         "serverAddress": "generativelanguage.googleapis.com",
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "4f4f93be2376591f49874d36af31a58acfe8b87fc435584df60e604bc4a7b029",
+      "shaSum": "d80a16db4f434c2f8248c868010a2c14c554fae898e957d31a08a2686dc4c046",
       "response": {
         "statusCode": 200,
         "headers": {
@@ -399,20 +399,20 @@
     {
       "request": {
         "method": "GET",
-        "url": "/v1beta/models/veo-3.1-generate-preview/operations/x2cqbeh4eeej",
-        "request": "GET /v1beta/models/veo-3.1-generate-preview/operations/x2cqbeh4eeej HTTP/1.1",
+        "url": "/v1/models/veo-3.1-generate-preview/operations/x2cqbeh4eeej",
+        "request": "GET /v1/models/veo-3.1-generate-preview/operations/x2cqbeh4eeej HTTP/1.1",
         "headers": {
           "Test-Name": "GenerateVideosTest.GenerateVideosSourceGeneratedVideoExtensionGeminiTest"
         },
         "bodySegments": [
           null
         ],
-        "previousRequest": "4f4f93be2376591f49874d36af31a58acfe8b87fc435584df60e604bc4a7b029",
+        "previousRequest": "d80a16db4f434c2f8248c868010a2c14c554fae898e957d31a08a2686dc4c046",
         "serverAddress": "generativelanguage.googleapis.com",
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "bee70baf9f831c585c3b7bd3265a2db66f064bc7e6c78ac715b22af627b2fd71",
+      "shaSum": "a1e8760e9acbce5cbfd7a1817285546b4127c65f030c0459b8b720defdef9c5d",
       "response": {
         "statusCode": 200,
         "headers": {
@@ -435,20 +435,20 @@
     {
       "request": {
         "method": "GET",
-        "url": "/v1beta/models/veo-3.1-generate-preview/operations/x2cqbeh4eeej",
-        "request": "GET /v1beta/models/veo-3.1-generate-preview/operations/x2cqbeh4eeej HTTP/1.1",
+        "url": "/v1/models/veo-3.1-generate-preview/operations/x2cqbeh4eeej",
+        "request": "GET /v1/models/veo-3.1-generate-preview/operations/x2cqbeh4eeej HTTP/1.1",
         "headers": {
           "Test-Name": "GenerateVideosTest.GenerateVideosSourceGeneratedVideoExtensionGeminiTest"
         },
         "bodySegments": [
           null
         ],
-        "previousRequest": "bee70baf9f831c585c3b7bd3265a2db66f064bc7e6c78ac715b22af627b2fd71",
+        "previousRequest": "a1e8760e9acbce5cbfd7a1817285546b4127c65f030c0459b8b720defdef9c5d",
         "serverAddress": "generativelanguage.googleapis.com",
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "4f3d8b7b346bd4389d7276dff7cef07082bb64459d32ec42629b78a163b5b96c",
+      "shaSum": "09bb3644216e2c9dd1ed1090484db7f582e1368bcb18fdaa7d1ec2dc80d2ef5f",
       "response": {
         "statusCode": 200,
         "headers": {
@@ -471,20 +471,20 @@
     {
       "request": {
         "method": "GET",
-        "url": "/v1beta/models/veo-3.1-generate-preview/operations/x2cqbeh4eeej",
-        "request": "GET /v1beta/models/veo-3.1-generate-preview/operations/x2cqbeh4eeej HTTP/1.1",
+        "url": "/v1/models/veo-3.1-generate-preview/operations/x2cqbeh4eeej",
+        "request": "GET /v1/models/veo-3.1-generate-preview/operations/x2cqbeh4eeej HTTP/1.1",
         "headers": {
           "Test-Name": "GenerateVideosTest.GenerateVideosSourceGeneratedVideoExtensionGeminiTest"
         },
         "bodySegments": [
           null
         ],
-        "previousRequest": "4f3d8b7b346bd4389d7276dff7cef07082bb64459d32ec42629b78a163b5b96c",
+        "previousRequest": "09bb3644216e2c9dd1ed1090484db7f582e1368bcb18fdaa7d1ec2dc80d2ef5f",
         "serverAddress": "generativelanguage.googleapis.com",
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "f7f85874c3c85d38b2266b1e415dae97198ee2b2497d374bb9de6c81f963baad",
+      "shaSum": "2ae48cf63327b092e972c20466623f6fb031c133e66c821f1ca45d3670661b96",
       "response": {
         "statusCode": 200,
         "headers": {
@@ -507,20 +507,20 @@
     {
       "request": {
         "method": "GET",
-        "url": "/v1beta/models/veo-3.1-generate-preview/operations/x2cqbeh4eeej",
-        "request": "GET /v1beta/models/veo-3.1-generate-preview/operations/x2cqbeh4eeej HTTP/1.1",
+        "url": "/v1/models/veo-3.1-generate-preview/operations/x2cqbeh4eeej",
+        "request": "GET /v1/models/veo-3.1-generate-preview/operations/x2cqbeh4eeej HTTP/1.1",
         "headers": {
           "Test-Name": "GenerateVideosTest.GenerateVideosSourceGeneratedVideoExtensionGeminiTest"
         },
         "bodySegments": [
           null
         ],
-        "previousRequest": "f7f85874c3c85d38b2266b1e415dae97198ee2b2497d374bb9de6c81f963baad",
+        "previousRequest": "2ae48cf63327b092e972c20466623f6fb031c133e66c821f1ca45d3670661b96",
         "serverAddress": "generativelanguage.googleapis.com",
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "39a099db91d0a149e8b26538e54b268db786f8b1f60ae624762a1495fd5380ba",
+      "shaSum": "c3137c56a98395473422e4af3737d58809aa7478ee6ee2516b024354e996a1ce",
       "response": {
         "statusCode": 200,
         "headers": {
@@ -543,20 +543,20 @@
     {
       "request": {
         "method": "GET",
-        "url": "/v1beta/models/veo-3.1-generate-preview/operations/x2cqbeh4eeej",
-        "request": "GET /v1beta/models/veo-3.1-generate-preview/operations/x2cqbeh4eeej HTTP/1.1",
+        "url": "/v1/models/veo-3.1-generate-preview/operations/x2cqbeh4eeej",
+        "request": "GET /v1/models/veo-3.1-generate-preview/operations/x2cqbeh4eeej HTTP/1.1",
         "headers": {
           "Test-Name": "GenerateVideosTest.GenerateVideosSourceGeneratedVideoExtensionGeminiTest"
         },
         "bodySegments": [
           null
         ],
-        "previousRequest": "39a099db91d0a149e8b26538e54b268db786f8b1f60ae624762a1495fd5380ba",
+        "previousRequest": "c3137c56a98395473422e4af3737d58809aa7478ee6ee2516b024354e996a1ce",
         "serverAddress": "generativelanguage.googleapis.com",
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "946adc6173debfefe6da04162c04b4e0b3573c6ef799790e9927870074ed4477",
+      "shaSum": "1870f1bbe18b0fd0ec0b87ebaaa9fc293e28cce75e63b628bd8a7029782388a3",
       "response": {
         "statusCode": 200,
         "headers": {

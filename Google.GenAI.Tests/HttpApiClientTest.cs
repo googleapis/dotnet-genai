@@ -55,7 +55,7 @@ namespace Google.GenAI.Tests {
       Assert.IsNull(client.Location);
       Assert.IsNull(client.Credentials);
       Assert.AreEqual("https://generativelanguage.googleapis.com", client.HttpOptions.BaseUrl);
-      Assert.AreEqual("v1beta", client.HttpOptions.ApiVersion);
+      Assert.AreEqual("v1", client.HttpOptions.ApiVersion);
       Assert.IsNull(client.HttpOptions.Timeout);
     }
 
@@ -71,7 +71,7 @@ namespace Google.GenAI.Tests {
       Assert.IsNull(client.Location);
       Assert.IsNull(client.Credentials);
       Assert.AreEqual("https://generativelanguage.googleapis.com", client.HttpOptions.BaseUrl);
-      Assert.AreEqual("v1beta", client.HttpOptions.ApiVersion);
+      Assert.AreEqual("v1", client.HttpOptions.ApiVersion);
       Assert.IsNull(client.HttpOptions.Timeout);
     }
 

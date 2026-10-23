@@ -1027,6 +1027,22 @@ namespace Google.GenAI.Tests {
       StringAssert.Contains(vertexHeaders["x-goog-api-client"], "custom-api-client");
     }
 
+    [TestMethod]
+    public void Constructor_WithApiVersion_SetsApiVersionInHttpOptions() {
+      var client = new Client(apiKey: "test-key", apiVersion: "v1beta");
+      Assert.AreEqual("v1beta", client._apiClient.HttpOptions.ApiVersion);
+    }
+
+    [TestMethod]
+    public void Constructor_WithApiVersionConflict_ThrowsArgumentException() {
+      var options = new HttpOptions { ApiVersion = "v1" };
+      var ex = Assert.ThrowsException<ArgumentException>(
+          () => new Client(apiKey: "test-key", apiVersion: "v1beta", httpOptions: options));
+      Assert.AreEqual(
+          "apiVersion is set in both client options and httpOptions. Please specify apiVersion in only one place.",
+          ex.Message);
+    }
+
 #endregion
   }
 }
