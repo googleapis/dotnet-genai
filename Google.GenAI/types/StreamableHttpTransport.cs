@@ -23,8 +23,8 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// A transport that can stream HTTP requests and responses. Next ID: 6. This data type is not
-  /// supported in Vertex AI.
+  /// A transport that can stream HTTP requests and responses. This data type is not supported in
+  /// Vertex AI.
   /// </summary>
 
   public record StreamableHttpTransport {

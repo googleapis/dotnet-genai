@@ -40,12 +40,24 @@ namespace Google.GenAI.Types {
     public FunctionResponseBlob ? InlineData { get; set; }
 
     /// <summary>
-    /// URI based data. This field is not supported in Gemini API.
+    /// URI based data.
     /// </summary>
     [JsonPropertyName("fileData")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public FunctionResponseFileData
         ? FileData {
+            get; set;
+          }
+
+    /// <summary>
+    /// Optional. How the model processes this part's media for understanding. Only meaningful for
+    /// video parts (`inline_data` or `file_data` with video mime). Non-video parts ignore this
+    /// field. This field is not supported in Vertex AI.
+    /// </summary>
+    [JsonPropertyName("mediaProcessing")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public MediaProcessing
+        ? MediaProcessing {
             get; set;
           }
 

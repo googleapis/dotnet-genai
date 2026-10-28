@@ -23,7 +23,7 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// URI based data for function response. This data type is not supported in Gemini API.
+  /// URI based data for function response.
   /// </summary>
 
   public record FunctionResponseFileData {
