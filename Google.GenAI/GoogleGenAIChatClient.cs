@@ -702,22 +702,19 @@ internal sealed class GoogleGenAIChatClient : IChatClient
       {
         foreach (var citation in citations)
         {
-          textContent.Annotations = new List<AIAnnotation>()
+          (textContent.Annotations ??= new List<AIAnnotation>()).Add(new CitationAnnotation()
           {
-              new CitationAnnotation()
+              Title = citation.Title,
+              Url = Uri.TryCreate(citation.Uri, UriKind.Absolute, out Uri? uri) ? uri : null,
+              AnnotatedRegions = new List<AnnotatedRegion>()
               {
-                  Title = citation.Title,
-                  Url = Uri.TryCreate(citation.Uri, UriKind.Absolute, out Uri? uri) ? uri : null,
-                  AnnotatedRegions = new List<AnnotatedRegion>()
+                  new TextSpanAnnotatedRegion()
                   {
-                      new TextSpanAnnotatedRegion()
-                      {
-                          StartIndex = citation.StartIndex,
-                          EndIndex = citation.EndIndex,
-                      }
-                  },
-              }
-          };
+                      StartIndex = citation.StartIndex,
+                      EndIndex = citation.EndIndex,
+                  }
+              },
+          });
         }
       }
 
