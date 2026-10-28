@@ -167,7 +167,7 @@ bytes.</p>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponsePart.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>URI based data. This field is not supported in Gemini API.</p>
+  <div class="markdown level1 summary"><p>URI based data.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -228,6 +228,42 @@ public FunctionResponseBlob? InlineData { get; set; }</code></pre>
 
 
 
+  <a id="Google_GenAI_Types_FunctionResponsePart_MediaProcessing_" data-uid="Google.GenAI.Types.FunctionResponsePart.MediaProcessing*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionResponsePart_MediaProcessing" data-uid="Google.GenAI.Types.FunctionResponsePart.MediaProcessing">
+  MediaProcessing
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponsePart.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional. How the model processes this part's media for understanding. Only meaningful for
+video parts (<code>inline_data</code> or <code>file_data</code> with video mime). Non-video parts ignore this
+field. This field is not supported in Vertex AI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;mediaProcessing&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public MediaProcessing? MediaProcessing { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.MediaProcessing.html">MediaProcessing</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -236,7 +272,7 @@ public FunctionResponseBlob? InlineData { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_FunctionResponsePart_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.FunctionResponsePart.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponsePart.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponsePart.cs/#L71"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a FunctionResponsePart object.</p>

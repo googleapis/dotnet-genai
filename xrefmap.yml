@@ -14498,6 +14498,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.FunctionResponsePart.InlineData
   nameWithType: FunctionResponsePart.InlineData
+- uid: Google.GenAI.Types.FunctionResponsePart.MediaProcessing
+  name: MediaProcessing
+  href: api/Google.GenAI.Types.FunctionResponsePart.html#Google_GenAI_Types_FunctionResponsePart_MediaProcessing
+  commentId: P:Google.GenAI.Types.FunctionResponsePart.MediaProcessing
+  fullName: Google.GenAI.Types.FunctionResponsePart.MediaProcessing
+  nameWithType: FunctionResponsePart.MediaProcessing
+- uid: Google.GenAI.Types.FunctionResponsePart.MediaProcessing*
+  name: MediaProcessing
+  href: api/Google.GenAI.Types.FunctionResponsePart.html#Google_GenAI_Types_FunctionResponsePart_MediaProcessing_
+  commentId: Overload:Google.GenAI.Types.FunctionResponsePart.MediaProcessing
+  isSpec: "True"
+  fullName: Google.GenAI.Types.FunctionResponsePart.MediaProcessing
+  nameWithType: FunctionResponsePart.MediaProcessing
 - uid: Google.GenAI.Types.FunctionResponseScheduling
   name: FunctionResponseScheduling
   href: api/Google.GenAI.Types.FunctionResponseScheduling.html
