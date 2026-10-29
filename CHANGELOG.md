@@ -1,5 +1,12 @@
 # Changelog
 
+## Version 1.28.0, released 2026-10-28
+
+
+### New features
+
+* support video understanding in Gemini Developer API ([02081ea](https://github.com/googleapis/dotnet-genai/commit/02081ea110dc6f9fe1efa41c5317afa6ace3a49d))
+
 ## Version 1.27.0, released 2026-10-22
 
 
