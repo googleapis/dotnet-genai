@@ -15,6 +15,9 @@
  */
 
 using System;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Net.Http.Headers;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -516,6 +519,289 @@ namespace Google.GenAI
         {
             return url;
         }
+    }
+
+    private const string AgentMessageHeader = "agent-message";
+    internal const string AgentMessageWarningPrefix = "Warning: [Gemini API] ";
+    private static readonly Regex AgentMessageTokenRegex = new Regex(
+        @"^[A-Za-z*][A-Za-z0-9!#$%&'*+.^_`|~:/-]*$",
+        RegexOptions.Compiled);
+    internal static readonly ConcurrentDictionary<string, byte> SeenAgentMessages =
+        new ConcurrentDictionary<string, byte>(StringComparer.Ordinal);
+
+    internal static void ClearSeenAgentMessages()
+    {
+      SeenAgentMessages.Clear();
+    }
+
+    private static List<string>? SplitUnquoted(string text, char delimiter)
+    {
+      var parts = new List<string>();
+      int start = 0;
+      bool inQuotes = false;
+      bool isDisplayString = false;
+      bool escaped = false;
+
+      for (int i = 0; i < text.Length; i++)
+      {
+        char ch = text[i];
+        if (inQuotes)
+        {
+          if (!isDisplayString)
+          {
+            if (escaped)
+            {
+              escaped = false;
+              continue;
+            }
+            if (ch == '\\')
+            {
+              escaped = true;
+              continue;
+            }
+          }
+          if (ch == '"')
+          {
+            inQuotes = false;
+            isDisplayString = false;
+          }
+        }
+        else
+        {
+          if (ch == '"')
+          {
+            inQuotes = true;
+            isDisplayString = i > 0 && text[i - 1] == '%';
+          }
+          else if (ch == delimiter)
+          {
+            parts.Add(text.Substring(start, i - start));
+            start = i + 1;
+          }
+        }
+      }
+
+      if (inQuotes)
+      {
+        return null;
+      }
+      parts.Add(text.Substring(start));
+      return parts;
+    }
+
+    private static string? UnescapeQuotedString(string inner)
+    {
+      var sb = new StringBuilder(inner.Length);
+      bool escaped = false;
+      foreach (char ch in inner)
+      {
+        if (escaped)
+        {
+          if (ch != '"' && ch != '\\')
+          {
+            return null;
+          }
+          sb.Append(ch);
+          escaped = false;
+        }
+        else if (ch == '\\')
+        {
+          escaped = true;
+        }
+        else if (ch == '"')
+        {
+          return null;
+        }
+        else
+        {
+          sb.Append(ch);
+        }
+      }
+      if (escaped)
+      {
+        return null;
+      }
+      return sb.ToString();
+    }
+
+    private static int HexDigitValue(char c)
+    {
+      if (c >= '0' && c <= '9') return c - '0';
+      if (c >= 'a' && c <= 'f') return c - 'a' + 10;
+      if (c >= 'A' && c <= 'F') return c - 'A' + 10;
+      return -1;
+    }
+
+    private static string UnquoteDisplayString(string inner)
+    {
+      var bytes = new List<byte>(inner.Length);
+      for (int i = 0; i < inner.Length; i++)
+      {
+        if (inner[i] == '%' && i + 2 < inner.Length)
+        {
+          int hi = HexDigitValue(inner[i + 1]);
+          int lo = HexDigitValue(inner[i + 2]);
+          if (hi >= 0 && lo >= 0)
+          {
+            bytes.Add((byte)((hi << 4) | lo));
+            i += 2;
+            continue;
+          }
+        }
+        byte[] charBytes = Encoding.UTF8.GetBytes(new[] { inner[i] });
+        bytes.AddRange(charBytes);
+      }
+      return Encoding.UTF8.GetString(bytes.ToArray());
+    }
+
+    private static string? ParseStructuredAgentMessageItem(string rawItem)
+    {
+      string item = rawItem.Trim();
+      if (string.IsNullOrEmpty(item))
+      {
+        return null;
+      }
+
+      List<string>? parts = SplitUnquoted(item, ';');
+      if (parts == null || parts.Count < 2)
+      {
+        return null;
+      }
+
+      string code = parts[0].Trim();
+      if (!AgentMessageTokenRegex.IsMatch(code))
+      {
+        return null;
+      }
+
+      string? msgValue = null;
+      for (int i = 1; i < parts.Count; i++)
+      {
+        string param = parts[i].Trim();
+        if (string.IsNullOrEmpty(param))
+        {
+          return null;
+        }
+        int eqIndex = param.IndexOf('=');
+        if (eqIndex < 0)
+        {
+          if (!AgentMessageTokenRegex.IsMatch(param))
+          {
+            return null;
+          }
+          continue;
+        }
+
+        string key = param.Substring(0, eqIndex).Trim();
+        string val = param.Substring(eqIndex + 1).Trim();
+        if (!AgentMessageTokenRegex.IsMatch(key) || string.IsNullOrEmpty(val))
+        {
+          return null;
+        }
+
+        if (key == "msg")
+        {
+          if (val.StartsWith("%\"", StringComparison.Ordinal) &&
+              val.EndsWith("\"", StringComparison.Ordinal) &&
+              val.Length >= 3)
+          {
+            string inner = val.Substring(2, val.Length - 3);
+            if (inner.IndexOf('"') >= 0)
+            {
+              return null;
+            }
+            msgValue = UnquoteDisplayString(inner);
+          }
+          else if (val.StartsWith("\"", StringComparison.Ordinal) &&
+                   val.EndsWith("\"", StringComparison.Ordinal) &&
+                   val.Length >= 2)
+          {
+            msgValue = UnescapeQuotedString(val.Substring(1, val.Length - 2));
+            if (msgValue == null)
+            {
+              return null;
+            }
+          }
+          else
+          {
+            return null;
+          }
+        }
+      }
+
+      return !string.IsNullOrEmpty(msgValue) ? msgValue : null;
+    }
+
+    internal static IReadOnlyList<string> ParseAgentMessageHeader(string? headerValue)
+    {
+      if (string.IsNullOrWhiteSpace(headerValue))
+      {
+        return Array.Empty<string>();
+      }
+      string stripped = headerValue!.Trim();
+      if (string.IsNullOrEmpty(stripped))
+      {
+        return Array.Empty<string>();
+      }
+
+      // Plain-text fallback for headers that aren't RFC 9651 structured items.
+      if (!stripped.Contains(";") && !stripped.Contains("=") && stripped.Contains(" "))
+      {
+        if (!stripped.StartsWith("\"") && !stripped.EndsWith("\""))
+        {
+          return new List<string> { stripped };
+        }
+      }
+
+      List<string>? items = SplitUnquoted(stripped, ',');
+      if (items == null)
+      {
+        return Array.Empty<string>();
+      }
+
+      var messages = new List<string>();
+      foreach (string rawItem in items)
+      {
+        string? msg = ParseStructuredAgentMessageItem(rawItem);
+        if (!string.IsNullOrEmpty(msg))
+        {
+          messages.Add(msg!);
+        }
+      }
+      return messages;
+    }
+
+    /// <summary>
+    /// Writes each message in the response's <c>Agent-Message</c> header to
+    /// <see cref="Console.Error"/> once per process, prefixed with
+    /// <see cref="AgentMessageWarningPrefix"/>. Console output (rather than
+    /// <see cref="Trace"/>) keeps the warning visible without a configured trace listener.
+    /// Shared by the GenerateContent client and the Interactions (GAOS) after-success hook so
+    /// both use one dedup set. Never throws.
+    /// </summary>
+    internal static void WarnFromAgentMessageHeaders(HttpResponseHeaders headers)
+    {
+      try
+      {
+        if (!headers.TryGetValues(AgentMessageHeader, out var values))
+        {
+          return;
+        }
+        foreach (string headerVal in values)
+        {
+          foreach (string msg in ParseAgentMessageHeader(headerVal))
+          {
+            if (SeenAgentMessages.TryAdd(msg, 0))
+            {
+              Console.Error.WriteLine(AgentMessageWarningPrefix + msg);
+            }
+          }
+        }
+      }
+      catch
+      {
+        // Never fail a request due to a malformed Agent-Message header.
+      }
     }
   }
 }
