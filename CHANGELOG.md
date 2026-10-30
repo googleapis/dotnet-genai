@@ -1,5 +1,17 @@
 # Changelog
 
+## Version 1.29.0, released 2026-10-30
+
+
+### New features
+
+* Disable GenerateVideos for Gemini API, update tests/READMEs ([e468b92](https://github.com/googleapis/dotnet-genai/commit/e468b927c7798696159f12f934da46b7fc44aa14))
+
+
+### Bug fixes
+
+* **interactions:** align SDK User-Agent and x-goog-api-client headers ([a854c0f](https://github.com/googleapis/dotnet-genai/commit/a854c0f8a0bd43f7f9ce9738b32e099ad334d33c))
+
 ## Version 1.28.0, released 2026-10-28
 
 
