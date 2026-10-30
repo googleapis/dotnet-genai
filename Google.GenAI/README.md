@@ -471,7 +471,7 @@ using Google.GenAI.Types;
 public class GenerateVideosFromText {
   public static async Task main() {
     // assuming credentials are set up in environment variables as instructed above.
-    var client = new Client();
+    var client = new Client(enterprise: true);
     var source = new GenerateVideosSource {
       Prompt = "Man with a dog",
     };
@@ -481,7 +481,7 @@ public class GenerateVideosFromText {
     };
 
     var operation = await client.Models.GenerateVideosAsync(
-        model: "veo-3.1-generate-preview", source: source, config: config);
+        model: "veo-3.1-generate-001", source: source, config: config);
 
     while (operation.Done != true) {
       try {
@@ -508,7 +508,7 @@ using Google.GenAI.Types;
 public class GenerateVideosFromText {
   public static async Task main() {
     // assuming credentials are set up in environment variables as instructed above.
-    var client = new Client();
+    var client = new Client(enterprise: true);
     var source = new GenerateVideosSource {
       // Prompt is optional if Image is provided
       Prompt = "Man with a dog",
@@ -520,7 +520,7 @@ public class GenerateVideosFromText {
     };
 
     var operation = await client.Models.GenerateVideosAsync(
-        model: "veo-3.1-generate-preview", source: source, config: config);
+        model: "veo-3.1-generate-001", source: source, config: config);
 
     while (operation.Done != true) {
       try {
@@ -547,7 +547,7 @@ using Google.GenAI.Types;
 public class GenerateVideosFrameInterpolation {
   public static async Task main() {
     // assuming credentials are set up in environment variables as instructed above.
-    var client = new Client();
+    var client = new Client(enterprise: true);
     var source = new GenerateVideosSource {
       Prompt = "At the park",
       Image = Image.FromFile("images/man.jpg"),
@@ -557,7 +557,7 @@ public class GenerateVideosFrameInterpolation {
       LastFrame = Image.FromFile("images/dog.jpg"),
     };
     var operation = await client.Models.GenerateVideosAsync(
-        model: "veo-3.1-generate-preview", source: source, config: config);
+        model: "veo-3.1-generate-001", source: source, config: config);
 
     while (operation.Done != true) {
       try {
@@ -585,7 +585,7 @@ using Google.GenAI.Types;
 public class GenerateVideosReferenceImages{
   public static async Task main() {
     // assuming credentials are set up in environment variables as instructed above.
-    var client = new Client();
+    var client = new Client(enterprise: true);
 
     var source = new GenerateVideosSource {
       Prompt = "Chirping birds in a colorful forest",
@@ -600,7 +600,7 @@ public class GenerateVideosReferenceImages{
       ReferenceImages = referenceImages,
     };
     var operation = await client.Models.GenerateVideosAsync(
-        model: "veo-3.1-generate-preview", source: source, config: config);
+        model: "veo-3.1-generate-001", source: source, config: config);
 
     while (operation.Done != true) {
       try {
@@ -631,13 +631,13 @@ using Google.GenAI.Types;
 public class GenerateVideosFromVideo {
   public static async Task main() {
     // assuming credentials are set up in environment variables as instructed above.
-    var client = new Client();
+    var client = new Client(enterprise: true);
 
     var source1 = new GenerateVideosSource {
       Prompt = "Man with a dog",
     };
     var operation1 = await client.Models.GenerateVideosAsync(
-        model: modelName, source: source1, config: new GenerateVideosConfig{
+        model: "veo-3.1-generate-001", source: source1, config: new GenerateVideosConfig{
           NumberOfVideos = 1,
     });
 
@@ -656,7 +656,7 @@ public class GenerateVideosFromVideo {
       Video = operation1.Response.GeneratedVideos.First().Video,
     };
     var operation2 = await client.Models.GenerateVideosAsync(
-        model: "veo-3.1-generate-preview", source: source2, config: new GenerateVideosConfig{
+        model: "veo-3.1-generate-001", source: source2, config: new GenerateVideosConfig{
           NumberOfVideos = 1,
     });
 
@@ -686,7 +686,7 @@ using Google.GenAI.Types;
 public class EditVideoOutpaint {
   public static async Task main() {
     // assuming credentials are set up in environment variables as instructed above.
-    var client = new Client();
+    var client = new Client(enterprise: true);
 
     var source = new GenerateVideosSource {
       Prompt = "A mountain landscape",

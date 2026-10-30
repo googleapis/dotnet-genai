@@ -1911,121 +1911,6 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode GenerateVideosConfigToMldev(JsonNode fromObject, JsonObject parentObject,
-                                                  JsonNode rootObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "numberOfVideos" }) != null) {
-        Common.SetValueByPath(parentObject, new string[] { "parameters", "sampleCount" },
-                              Common.GetValueByPath(fromObject, new string[] { "numberOfVideos" }));
-      }
-
-      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "outputGcsUri" }))) {
-        throw new NotSupportedException(
-            "outputGcsUri parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
-      }
-
-      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "fps" }))) {
-        throw new NotSupportedException(
-            "fps parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "durationSeconds" }) != null) {
-        Common.SetValueByPath(
-            parentObject, new string[] { "parameters", "durationSeconds" },
-            Common.GetValueByPath(fromObject, new string[] { "durationSeconds" }));
-      }
-
-      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "seed" }))) {
-        throw new NotSupportedException(
-            "seed parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "aspectRatio" }) != null) {
-        Common.SetValueByPath(parentObject, new string[] { "parameters", "aspectRatio" },
-                              Common.GetValueByPath(fromObject, new string[] { "aspectRatio" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "resolution" }) != null) {
-        Common.SetValueByPath(parentObject, new string[] { "parameters", "resolution" },
-                              Common.GetValueByPath(fromObject, new string[] { "resolution" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "personGeneration" }) != null) {
-        Common.SetValueByPath(
-            parentObject, new string[] { "parameters", "personGeneration" },
-            Common.GetValueByPath(fromObject, new string[] { "personGeneration" }));
-      }
-
-      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "pubsubTopic" }))) {
-        throw new NotSupportedException(
-            "pubsubTopic parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "negativePrompt" }) != null) {
-        Common.SetValueByPath(parentObject, new string[] { "parameters", "negativePrompt" },
-                              Common.GetValueByPath(fromObject, new string[] { "negativePrompt" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "enhancePrompt" }) != null) {
-        Common.SetValueByPath(parentObject, new string[] { "parameters", "enhancePrompt" },
-                              Common.GetValueByPath(fromObject, new string[] { "enhancePrompt" }));
-      }
-
-      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "generateAudio" }))) {
-        throw new NotSupportedException(
-            "generateAudio parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "lastFrame" }) != null) {
-        Common.SetValueByPath(parentObject, new string[] { "instances[0]", "lastFrame" },
-                              ImageToMldev(Common.ParseToJsonNode(Common.GetValueByPath(
-                                               fromObject, new string[] { "lastFrame" })),
-                                           toObject, rootObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "referenceImages" }) != null) {
-        JsonArray keyArray =
-            (JsonArray)Common.GetValueByPath(fromObject, new string[] { "referenceImages" });
-        JsonArray result = new JsonArray();
-
-        foreach (var record in keyArray) {
-          result.Add(VideoGenerationReferenceImageToMldev(Common.ParseToJsonNode(record), toObject,
-                                                          rootObject));
-        }
-        Common.SetValueByPath(parentObject, new string[] { "instances[0]", "referenceImages" },
-                              result);
-      }
-
-      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "mask" }))) {
-        throw new NotSupportedException(
-            "mask parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
-      }
-
-      if (!Common.IsZero(
-              Common.GetValueByPath(fromObject, new string[] { "compressionQuality" }))) {
-        throw new NotSupportedException(
-            "compressionQuality parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
-      }
-
-      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "labels" }))) {
-        throw new NotSupportedException(
-            "labels parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "webhookConfig" }) != null) {
-        Common.SetValueByPath(parentObject, new string[] { "webhookConfig" },
-                              Common.GetValueByPath(fromObject, new string[] { "webhookConfig" }));
-      }
-
-      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "resizeMode" }))) {
-        throw new NotSupportedException(
-            "resizeMode parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
-      }
-
-      return toObject;
-    }
-
     internal JsonNode GenerateVideosConfigToVertex(JsonNode fromObject, JsonObject parentObject,
                                                    JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
@@ -2144,43 +2029,6 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode GenerateVideosOperationFromMldev(JsonNode fromObject, JsonObject parentObject,
-                                                       JsonNode rootObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "name" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "name" },
-                              Common.GetValueByPath(fromObject, new string[] { "name" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "metadata" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "metadata" },
-                              Common.GetValueByPath(fromObject, new string[] { "metadata" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "done" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "done" },
-                              Common.GetValueByPath(fromObject, new string[] { "done" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "error" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "error" },
-                              Common.GetValueByPath(fromObject, new string[] { "error" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "response", "generateVideoResponse" }) !=
-          null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "response" },
-            GenerateVideosResponseFromMldev(
-                Common.ParseToJsonNode(Common.GetValueByPath(
-                    fromObject, new string[] { "response", "generateVideoResponse" })),
-                toObject, rootObject));
-      }
-
-      return toObject;
-    }
-
     internal JsonNode GenerateVideosOperationFromVertex(JsonNode fromObject,
                                                         JsonObject parentObject,
                                                         JsonNode rootObject) {
@@ -2212,52 +2060,6 @@ namespace Google.GenAI {
             GenerateVideosResponseFromVertex(Common.ParseToJsonNode(Common.GetValueByPath(
                                                  fromObject, new string[] { "response" })),
                                              toObject, rootObject));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode GenerateVideosParametersToMldev(ApiClient apiClient, JsonNode fromObject,
-                                                      JsonObject parentObject,
-                                                      JsonNode rootObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "model" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "_url", "model" },
-            Transformers.TModel(this._apiClient,
-                                Common.GetValueByPath(fromObject, new string[] { "model" })));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "prompt" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "instances[0]", "prompt" },
-                              Common.GetValueByPath(fromObject, new string[] { "prompt" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "image" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "instances[0]", "image" },
-                              ImageToMldev(Common.ParseToJsonNode(Common.GetValueByPath(
-                                               fromObject, new string[] { "image" })),
-                                           toObject, rootObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "video" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "instances[0]", "video" },
-                              VideoToMldev(Common.ParseToJsonNode(Common.GetValueByPath(
-                                               fromObject, new string[] { "video" })),
-                                           toObject, rootObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "source" }) != null) {
-        _ = GenerateVideosSourceToMldev(
-            Common.ParseToJsonNode(Common.GetValueByPath(fromObject, new string[] { "source" })),
-            toObject, rootObject);
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "config" }) != null) {
-        _ = GenerateVideosConfigToMldev(
-            Common.ParseToJsonNode(Common.GetValueByPath(fromObject, new string[] { "config" })),
-            toObject, rootObject);
       }
 
       return toObject;
@@ -2309,36 +2111,6 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode GenerateVideosResponseFromMldev(JsonNode fromObject, JsonObject parentObject,
-                                                      JsonNode rootObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "generatedSamples" }) != null) {
-        JsonArray keyArray =
-            (JsonArray)Common.GetValueByPath(fromObject, new string[] { "generatedSamples" });
-        JsonArray result = new JsonArray();
-
-        foreach (var record in keyArray) {
-          result.Add(GeneratedVideoFromMldev(Common.ParseToJsonNode(record), toObject, rootObject));
-        }
-        Common.SetValueByPath(toObject, new string[] { "generatedVideos" }, result);
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "raiMediaFilteredCount" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "raiMediaFilteredCount" },
-            Common.GetValueByPath(fromObject, new string[] { "raiMediaFilteredCount" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "raiMediaFilteredReasons" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "raiMediaFilteredReasons" },
-            Common.GetValueByPath(fromObject, new string[] { "raiMediaFilteredReasons" }));
-      }
-
-      return toObject;
-    }
-
     internal JsonNode GenerateVideosResponseFromVertex(JsonNode fromObject, JsonObject parentObject,
                                                        JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
@@ -2365,32 +2137,6 @@ namespace Google.GenAI {
         Common.SetValueByPath(
             toObject, new string[] { "raiMediaFilteredReasons" },
             Common.GetValueByPath(fromObject, new string[] { "raiMediaFilteredReasons" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode GenerateVideosSourceToMldev(JsonNode fromObject, JsonObject parentObject,
-                                                  JsonNode rootObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "prompt" }) != null) {
-        Common.SetValueByPath(parentObject, new string[] { "instances[0]", "prompt" },
-                              Common.GetValueByPath(fromObject, new string[] { "prompt" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "image" }) != null) {
-        Common.SetValueByPath(parentObject, new string[] { "instances[0]", "image" },
-                              ImageToMldev(Common.ParseToJsonNode(Common.GetValueByPath(
-                                               fromObject, new string[] { "image" })),
-                                           toObject, rootObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "video" }) != null) {
-        Common.SetValueByPath(parentObject, new string[] { "instances[0]", "video" },
-                              VideoToMldev(Common.ParseToJsonNode(Common.GetValueByPath(
-                                               fromObject, new string[] { "video" })),
-                                           toObject, rootObject));
       }
 
       return toObject;
@@ -2469,20 +2215,6 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "labels" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "labels" },
                               Common.GetValueByPath(fromObject, new string[] { "labels" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode GeneratedVideoFromMldev(JsonNode fromObject, JsonObject parentObject,
-                                              JsonNode rootObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "video" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "video" },
-                              VideoFromMldev(Common.ParseToJsonNode(Common.GetValueByPath(
-                                                 fromObject, new string[] { "video" })),
-                                             toObject, rootObject));
       }
 
       return toObject;
@@ -2839,29 +2571,6 @@ namespace Google.GenAI {
         Common.SetValueByPath(toObject, new string[] { "imageBytes" },
                               Transformers.TBytes(Common.GetValueByPath(
                                   fromObject, new string[] { "bytesBase64Encoded" })));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "mimeType" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "mimeType" },
-                              Common.GetValueByPath(fromObject, new string[] { "mimeType" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode ImageToMldev(JsonNode fromObject, JsonObject parentObject,
-                                   JsonNode rootObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "gcsUri" }))) {
-        throw new NotSupportedException(
-            "gcsUri parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "imageBytes" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "bytesBase64Encoded" },
-            Transformers.TBytes(Common.GetValueByPath(fromObject, new string[] { "imageBytes" })));
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "mimeType" }) != null) {
@@ -4347,29 +4056,6 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode VideoFromMldev(JsonNode fromObject, JsonObject parentObject,
-                                     JsonNode rootObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "uri" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "uri" },
-                              Common.GetValueByPath(fromObject, new string[] { "uri" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "encodedVideo" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "videoBytes" },
-                              Transformers.TBytes(Common.GetValueByPath(
-                                  fromObject, new string[] { "encodedVideo" })));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "encoding" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "mimeType" },
-                              Common.GetValueByPath(fromObject, new string[] { "encoding" }));
-      }
-
-      return toObject;
-    }
-
     internal JsonNode VideoFromVertex(JsonNode fromObject, JsonObject parentObject,
                                       JsonNode rootObject) {
       JsonObject toObject = new JsonObject();
@@ -4412,26 +4098,6 @@ namespace Google.GenAI {
       return toObject;
     }
 
-    internal JsonNode VideoGenerationReferenceImageToMldev(JsonNode fromObject,
-                                                           JsonObject parentObject,
-                                                           JsonNode rootObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "image" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "image" },
-                              ImageToMldev(Common.ParseToJsonNode(Common.GetValueByPath(
-                                               fromObject, new string[] { "image" })),
-                                           toObject, rootObject));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "referenceType" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "referenceType" },
-                              Common.GetValueByPath(fromObject, new string[] { "referenceType" }));
-      }
-
-      return toObject;
-    }
-
     internal JsonNode VideoGenerationReferenceImageToVertex(JsonNode fromObject,
                                                             JsonObject parentObject,
                                                             JsonNode rootObject) {
@@ -4447,29 +4113,6 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "referenceType" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "referenceType" },
                               Common.GetValueByPath(fromObject, new string[] { "referenceType" }));
-      }
-
-      return toObject;
-    }
-
-    internal JsonNode VideoToMldev(JsonNode fromObject, JsonObject parentObject,
-                                   JsonNode rootObject) {
-      JsonObject toObject = new JsonObject();
-
-      if (Common.GetValueByPath(fromObject, new string[] { "uri" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "uri" },
-                              Common.GetValueByPath(fromObject, new string[] { "uri" }));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "videoBytes" }) != null) {
-        Common.SetValueByPath(
-            toObject, new string[] { "encodedVideo" },
-            Transformers.TBytes(Common.GetValueByPath(fromObject, new string[] { "videoBytes" })));
-      }
-
-      if (Common.GetValueByPath(fromObject, new string[] { "mimeType" }) != null) {
-        Common.SetValueByPath(toObject, new string[] { "encoding" },
-                              Common.GetValueByPath(fromObject, new string[] { "mimeType" }));
       }
 
       return toObject;
@@ -5611,9 +5254,8 @@ namespace Google.GenAI {
                                                 parameterNode);
         path = Common.FormatMap("{model}:predictLongRunning", body["_url"]);
       } else {
-        body = GenerateVideosParametersToMldev(this._apiClient, parameterNode, new JsonObject(),
-                                               parameterNode);
-        path = Common.FormatMap("{model}:predictLongRunning", body["_url"]);
+        throw new NotSupportedException(
+            "This method is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
       }
       JsonObject? bodyObj = body?.AsObject();
       bodyObj?.Remove("_url");
@@ -5646,8 +5288,8 @@ namespace Google.GenAI {
       }
 
       if (!this._apiClient.VertexAI) {
-        responseNode =
-            GenerateVideosOperationFromMldev(httpContentNode, new JsonObject(), parameterNode);
+        throw new NotSupportedException(
+            "This method is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
       }
 
       return responseNode.Deserialize(JsonConfig.TypeInfo<GenerateVideosOperation>()) ??
