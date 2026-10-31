@@ -4,8 +4,8 @@
     {
       "request": {
         "method": "GET",
-        "url": "/v1beta/files/p1crkz5nfru4:download?alt=media",
-        "request": "GET /v1beta/files/p1crkz5nfru4:download?alt=media HTTP/1.1",
+        "url": "/v1/files/p1crkz5nfru4:download?alt=media",
+        "request": "GET /v1/files/p1crkz5nfru4:download?alt=media HTTP/1.1",
         "headers": {
           "Test-Name": "FilesDownloadTest.DownloadToFileGeneratedVideoGeminiTest"
         },
@@ -17,7 +17,7 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "90d3378561db7a42c770bb29b2c7506c8e738787da0f1f4185bb1c7b28d7ed9a",
+      "shaSum": "d34a4d10196bbe0a9641d1c122b01bc67d32159185b9354de64a0f692d199ce2",
       "response": {
         "statusCode": 200,
         "headers": {

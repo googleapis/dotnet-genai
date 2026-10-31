@@ -4,8 +4,8 @@
     {
       "request": {
         "method": "GET",
-        "url": "/v1beta/files/s0pa54alni6w",
-        "request": "GET /v1beta/files/s0pa54alni6w HTTP/1.1",
+        "url": "/v1/files/s0pa54alni6w",
+        "request": "GET /v1/files/s0pa54alni6w HTTP/1.1",
         "headers": {
           "Test-Name": "FilesGetTest.GetFullFileNameGeminiTest"
         },
@@ -17,7 +17,7 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "440521d2478235e8ef67d5663ef78078e2c862e66fa125ba6014f21beb81a00d",
+      "shaSum": "6200d1420cda0f0b818bfad6958e3f9ea5461709e243ffae0c42b24210b30f5d",
       "response": {
         "statusCode": 200,
         "headers": {

@@ -25,7 +25,7 @@ namespace Google.GenAI.Tests {
   public class GenerateContentParametersTest {
     [TestMethod]
     public void TestExerciseGenerateContentParameters() {
-      ApiClient client = new HttpApiClient(project: "test-project-id", location: "us-central1",
+      ApiClient client = new HttpApiClient(vertexAI: true, project: "test-project-id", location: "us-central1",
                                            credentials: null, httpOptions: null);
       Models models = new Models(client);
       string body = "{\"contents\":[{\"parts\":[{\"text\":\"Explain how AI works\"}]}]}";

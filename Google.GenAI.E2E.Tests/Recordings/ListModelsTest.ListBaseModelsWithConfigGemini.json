@@ -4,8 +4,8 @@
     {
       "request": {
         "method": "GET",
-        "url": "/v1beta/models?pageSize=5",
-        "request": "GET /v1beta/models?pageSize=5 HTTP/1.1",
+        "url": "/v1/models?pageSize=5",
+        "request": "GET /v1/models?pageSize=5 HTTP/1.1",
         "headers": {
           "Test-Name": "ListModelsTest.ListBaseModelsWithConfigGemini"
         },
@@ -17,7 +17,7 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "6fe8a7d6b7ee26ea0e1e326b5610b9f97d5ef81f68aaaf1efca11ce301a0eb7d",
+      "shaSum": "d1f1be0165f6ea8ce49359a9622e95c18a95b12b840511a24cf7379dcd3ad00f",
       "response": {
         "statusCode": 200,
         "headers": {

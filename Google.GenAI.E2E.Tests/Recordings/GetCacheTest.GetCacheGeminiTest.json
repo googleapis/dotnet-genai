@@ -4,8 +4,8 @@
     {
       "request": {
         "method": "POST",
-        "url": "/v1beta/cachedContents",
-        "request": "POST /v1beta/cachedContents HTTP/1.1",
+        "url": "/v1/cachedContents",
+        "request": "POST /v1/cachedContents HTTP/1.1",
         "headers": {
           "Content-Length": "745",
           "Content-Type": "application/json; charset=utf-8",
@@ -60,7 +60,7 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "649cab9a2d832c7aafbd536a04b6f5e463a47efa93671f012efc21e103c20bac",
+      "shaSum": "4fe32b6d79287a009e71efad2cde68d13d758cb8a3f6165fac58830983804551",
       "response": {
         "statusCode": 200,
         "headers": {
@@ -91,20 +91,20 @@
     {
       "request": {
         "method": "GET",
-        "url": "/v1beta/cachedContents/ewgpa05ztaq37efgn6tbdcqwi84kebdj3hc5yr5j",
-        "request": "GET /v1beta/cachedContents/ewgpa05ztaq37efgn6tbdcqwi84kebdj3hc5yr5j HTTP/1.1",
+        "url": "/v1/cachedContents/ewgpa05ztaq37efgn6tbdcqwi84kebdj3hc5yr5j",
+        "request": "GET /v1/cachedContents/ewgpa05ztaq37efgn6tbdcqwi84kebdj3hc5yr5j HTTP/1.1",
         "headers": {
           "Test-Name": "GetCacheTest.GetCacheGeminiTest"
         },
         "bodySegments": [
           null
         ],
-        "previousRequest": "649cab9a2d832c7aafbd536a04b6f5e463a47efa93671f012efc21e103c20bac",
+        "previousRequest": "4fe32b6d79287a009e71efad2cde68d13d758cb8a3f6165fac58830983804551",
         "serverAddress": "generativelanguage.googleapis.com",
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "6bf6445fad81585a3f079804c9091732b32e26f64d05c2070fb34ee9ef0482dd",
+      "shaSum": "2f61f743c8c22463601ba8aacca1a6e993cee4c8d596441100be65621e4e54ab",
       "response": {
         "statusCode": 200,
         "headers": {

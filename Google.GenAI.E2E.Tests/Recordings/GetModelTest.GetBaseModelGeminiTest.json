@@ -4,8 +4,8 @@
     {
       "request": {
         "method": "GET",
-        "url": "/v1beta/models/gemini-3-pro-preview",
-        "request": "GET /v1beta/models/gemini-3-pro-preview HTTP/1.1",
+        "url": "/v1/models/gemini-3-pro-preview",
+        "request": "GET /v1/models/gemini-3-pro-preview HTTP/1.1",
         "headers": {
           "Test-Name": "GetModelTest.GetBaseModelGeminiTest"
         },
@@ -17,7 +17,7 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "3aeeb3b1735b2216533db1fef09073048cfe00d413d4764a7ac3ae7a32dbfb82",
+      "shaSum": "812e3bbd7a359735aa7327cb0162cb4537f6f0158027a98cf12134dceb28940b",
       "response": {
         "statusCode": 200,
         "headers": {

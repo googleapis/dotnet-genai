@@ -29,6 +29,7 @@ namespace Google.GenAI
   public abstract class ApiClient : IDisposable, IAsyncDisposable
   {
     private static readonly string SdkVersion = GetSdkVersion();
+    internal static string GoogleAiApiDefaultVersion { get; set; } = "v1";
 
     private static readonly HashSet<string> MultiRegionalLocations = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
     {
@@ -567,6 +568,7 @@ namespace Google.GenAI
 
     internal static HttpOptions GetDefaultHttpOptions(bool vertexAI, string? location)
     {
+      string? envApiVersion = System.Environment.GetEnvironmentVariable("GOOGLE_GENAI_API_VERSION");
 
       var defaultHttpOptions = new HttpOptions
       {
@@ -592,12 +594,12 @@ namespace Google.GenAI
         {
           defaultHttpOptions.BaseUrl = $"https://{location}-aiplatform.googleapis.com";
         }
-        defaultHttpOptions.ApiVersion = "v1beta1";
+        defaultHttpOptions.ApiVersion = !string.IsNullOrEmpty(envApiVersion) ? envApiVersion : "v1beta1";
       }
       else
       {
         defaultHttpOptions.BaseUrl = "https://generativelanguage.googleapis.com";
-        defaultHttpOptions.ApiVersion = "v1beta";
+        defaultHttpOptions.ApiVersion = !string.IsNullOrEmpty(envApiVersion) ? envApiVersion : GoogleAiApiDefaultVersion;
       }
       return defaultHttpOptions;
     }

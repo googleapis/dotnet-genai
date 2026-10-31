@@ -4,8 +4,8 @@
     {
       "request": {
         "method": "GET",
-        "url": "/v1beta/models",
-        "request": "GET /v1beta/models HTTP/1.1",
+        "url": "/v1/models",
+        "request": "GET /v1/models HTTP/1.1",
         "headers": {
           "Test-Name": "ListModelsTest.ListBaseModelsGemini"
         },
@@ -17,7 +17,7 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "8928fbbd7e5a5fe4d8aa5a1739b9eff5a57261260fde450281650c81520a503d",
+      "shaSum": "ec63caf3cbadae829727832143ddbce295fa0b918cd01d12ca2088df7eacb3e4",
       "response": {
         "statusCode": 200,
         "headers": {

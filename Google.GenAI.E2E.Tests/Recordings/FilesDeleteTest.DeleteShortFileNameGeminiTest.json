@@ -4,8 +4,8 @@
     {
       "request": {
         "method": "DELETE",
-        "url": "/v1beta/files/widgre2dosi5",
-        "request": "DELETE /v1beta/files/widgre2dosi5 HTTP/1.1",
+        "url": "/v1/files/widgre2dosi5",
+        "request": "DELETE /v1/files/widgre2dosi5 HTTP/1.1",
         "headers": {
           "Test-Name": "FilesDeleteTest.DeleteShortFileNameGeminiTest"
         },
@@ -17,7 +17,7 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "431e324861688a0ecc7c4deabcf80e5013d74b5a2e152b0f21b0e0d5e2446148",
+      "shaSum": "cbc8dc9bb4b5b7842dd3abd99ea0f5b209c6dc7d3f40f3cff6ea1ae161be0a23",
       "response": {
         "statusCode": 200,
         "headers": {

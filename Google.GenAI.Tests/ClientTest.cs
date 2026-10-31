@@ -37,6 +37,7 @@ namespace Google.GenAI.Tests {
     private string? _originalGoogleApiKeyEnv;
     private string? _originalVertexBaseUrlEnv;
     private string? _originalGeminiBaseUrlEnv;
+    private string? _originalApiVersionEnv;
 
     [TestInitialize]
     public void TestInitialize() {
@@ -50,6 +51,8 @@ namespace Google.GenAI.Tests {
           System.Environment.GetEnvironmentVariable("GOOGLE_VERTEX_BASE_URL");
       _originalGeminiBaseUrlEnv =
           System.Environment.GetEnvironmentVariable("GOOGLE_GEMINI_BASE_URL");
+      _originalApiVersionEnv =
+          System.Environment.GetEnvironmentVariable("GOOGLE_GENAI_API_VERSION");
 
       System.Environment.SetEnvironmentVariable("GOOGLE_GENAI_USE_VERTEXAI", null);
       System.Environment.SetEnvironmentVariable("GOOGLE_GENAI_USE_ENTERPRISE", null);
@@ -59,6 +62,7 @@ namespace Google.GenAI.Tests {
       System.Environment.SetEnvironmentVariable("GOOGLE_API_KEY", null);
       System.Environment.SetEnvironmentVariable("GOOGLE_VERTEX_BASE_URL", null);
       System.Environment.SetEnvironmentVariable("GOOGLE_GEMINI_BASE_URL", null);
+      System.Environment.SetEnvironmentVariable("GOOGLE_GENAI_API_VERSION", null);
 
       Client.setDefaultBaseUrl(null, null);
     }
@@ -75,6 +79,8 @@ namespace Google.GenAI.Tests {
                                                 _originalVertexBaseUrlEnv);
       System.Environment.SetEnvironmentVariable("GOOGLE_GEMINI_BASE_URL",
                                                 _originalGeminiBaseUrlEnv);
+      System.Environment.SetEnvironmentVariable("GOOGLE_GENAI_API_VERSION",
+                                                _originalApiVersionEnv);
 
       Client.setDefaultBaseUrl(null, null);
     }
@@ -1025,6 +1031,55 @@ namespace Google.GenAI.Tests {
       StringAssert.Contains(vertexHeaders["x-goog-api-client"], "gl-dotnet");
       StringAssert.Contains(geminiHeaders["x-goog-api-client"], "custom-api-client");
       StringAssert.Contains(vertexHeaders["x-goog-api-client"], "custom-api-client");
+    }
+
+    [TestMethod]
+    public void Constructor_WithApiVersion_SetsApiVersionInHttpOptions() {
+      var client = new Client(apiKey: "test-key", apiVersion: "v1beta");
+      Assert.AreEqual("v1beta", client._apiClient.HttpOptions.ApiVersion);
+    }
+
+    [TestMethod]
+    public void Constructor_WithApiVersionConflict_ThrowsArgumentException() {
+      var options = new HttpOptions { ApiVersion = "v1" };
+      var ex = Assert.ThrowsException<ArgumentException>(
+          () => new Client(apiKey: "test-key", apiVersion: "v1beta", httpOptions: options));
+      Assert.AreEqual(
+          "apiVersion is set in both client options and httpOptions. Please specify apiVersion in only one place.",
+          ex.Message);
+    }
+
+    [TestMethod]
+    public void Constructor_WithEnvApiVersion_SetsApiVersionForGeminiAndVertex() {
+      System.Environment.SetEnvironmentVariable("GOOGLE_GENAI_API_VERSION", "v1alpha");
+      var geminiClient = new Client(vertexAI: false, apiKey: "test-key");
+      var vertexClient = new Client(vertexAI: true, project: "project", location: "location");
+
+      Assert.AreEqual("v1alpha", geminiClient._apiClient.HttpOptions.ApiVersion);
+      Assert.AreEqual("v1alpha", vertexClient._apiClient.HttpOptions.ApiVersion);
+    }
+
+    [TestMethod]
+    public void Constructor_ExplicitApiVersion_OverridesEnvApiVersion() {
+      System.Environment.SetEnvironmentVariable("GOOGLE_GENAI_API_VERSION", "v1alpha");
+      var geminiClient = new Client(vertexAI: false, apiKey: "test-key", apiVersion: "v1");
+      var vertexClient =
+          new Client(vertexAI: true, project: "project", location: "location", apiVersion: "v1");
+
+      Assert.AreEqual("v1", geminiClient._apiClient.HttpOptions.ApiVersion);
+      Assert.AreEqual("v1", vertexClient._apiClient.HttpOptions.ApiVersion);
+    }
+
+    [TestMethod]
+    public void Constructor_HttpOptionsApiVersion_OverridesEnvApiVersion() {
+      System.Environment.SetEnvironmentVariable("GOOGLE_GENAI_API_VERSION", "v1alpha");
+      var geminiClient = new Client(vertexAI: false, apiKey: "test-key",
+                                    httpOptions: new HttpOptions { ApiVersion = "v1" });
+      var vertexClient = new Client(vertexAI: true, project: "project", location: "location",
+                                    httpOptions: new HttpOptions { ApiVersion = "v1" });
+
+      Assert.AreEqual("v1", geminiClient._apiClient.HttpOptions.ApiVersion);
+      Assert.AreEqual("v1", vertexClient._apiClient.HttpOptions.ApiVersion);
     }
 
 #endregion

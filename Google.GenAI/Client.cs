@@ -63,12 +63,23 @@ namespace Google.GenAI
     /// project/location and API key are set together.</exception>
     /// <param name="clientOptions">Optional <see cref="Google.GenAI.Types.ClientOptions"/> for
     /// configuring the client.</param>
+    /// <param name="apiVersion">Optional String for specifying the API version to use (e.g. "v1" or "v1beta").</param>
     public Client(bool? enterprise = null, bool? vertexAI = null, string? apiKey = null, ICredential? credential = null,
                   string? project = null, string? location = null,
                   Types.HttpOptions? httpOptions = null,
-                  Types.ClientOptions? clientOptions = null)
+                  Types.ClientOptions? clientOptions = null,
+                  string? apiVersion = null)
     {
+      if (apiVersion != null && httpOptions?.ApiVersion != null)
+      {
+        throw new ArgumentException("apiVersion is set in both client options and httpOptions. Please specify apiVersion in only one place.");
+      }
+
       httpOptions ??= new();
+      if (apiVersion != null)
+      {
+        httpOptions.ApiVersion = apiVersion;
+      }
 
       if (enterprise.HasValue && vertexAI.HasValue && enterprise.Value != vertexAI.Value)
       {
