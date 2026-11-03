@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PublishAot>true</PublishAot>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <IsPackable>false</IsPackable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <!--
+      Keep NuGet audit findings as warnings. A new advisory for the AOT toolchain packages (e.g.
+      Microsoft.DotNet.ILCompiler from an older SDK) would otherwise fail restore and hide the AOT
+      results. CI installs the latest .NET 8 SDK, which brings the patched toolchain.
+    -->
+    <WarningsNotAsErrors>NU1900;NU1901;NU1902;NU1903;NU1904</WarningsNotAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../Google.GenAI/Google.GenAI.csproj" />
+    <!--
+      Analyze the whole AOT-compatible surface of Google.GenAI, not only the code paths this app
+      calls. Experimental APIs live in other namespaces and are not rooted: they are not AOT
+      compatible by design, and the members that expose them are annotated with
+      RequiresUnreferencedCode/RequiresDynamicCode.
+    -->
+    <TrimmerRootDescriptor Include="TrimmerRoots.xml" />
+  </ItemGroup>
+
+  <!-- Project references do not apply the package's buildTransitive targets, so import them directly. -->
+  <Import Project="../../Google.GenAI/buildTransitive/Google.GenAI.targets" />
+
+  <!--
+    Report every trim/AOT warning in Google.GenAI against the member that causes it, so
+    verify_aot.sh can attribute it. Other assemblies keep the default single summary warning.
+    Passed to the AOT compiler directly: setting TrimmerSingleWarn=false metadata on the
+    ManagedAssemblyToLink item doesn't work, because the ILC targets apply %(Filename) twice
+    and pass "Google" instead of "Google.GenAI".
+  -->
+  <ItemGroup>
+    <IlcArg Include="--nosinglewarnassembly:Google.GenAI" />
+  </ItemGroup>
+
+</Project>

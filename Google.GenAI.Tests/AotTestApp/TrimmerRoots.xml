@@ -1,0 +1,13 @@
+<!--
+  Roots every type in the AOT-compatible namespaces of Google.GenAI so the AOT compiler analyzes
+  all of them, regardless of which members Program.cs happens to call.
+  Sub-namespaces are not included implicitly; list new public namespaces here.
+-->
+<linker>
+  <assembly fullname="Google.GenAI">
+    <namespace fullname="Google.GenAI" />
+    <namespace fullname="Google.GenAI.Types" />
+    <namespace fullname="Google.GenAI.Serialization" />
+    <namespace fullname="Microsoft.Extensions.AI" />
+  </assembly>
+</linker>
