@@ -52,6 +52,13 @@ jobs:
       if: github.repository == 'googleapis/dotnet-genai' || github.repository == 'google-gemini/private-dotnet-genai'
       run: dotnet test ./Google.GenAI.Tests/Netstandard2_0Tests/Google.GenAI.Netstandard2_0.Tests.csproj
 
+    - name: Verify Native AOT compatibility
+      if: github.repository == 'googleapis/dotnet-genai' || github.repository == 'google-gemini/private-dotnet-genai'
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y clang zlib1g-dev
+        ./verify_aot.sh
+
     - name: Run E2E Tests against net8.0 build
       if: github.repository == 'googleapis/dotnet-genai' || github.repository == 'google-gemini/private-dotnet-genai'
       run: dotnet test ./Google.GenAI.E2E.Tests/Google.GenAI.E2E.Tests.csproj
