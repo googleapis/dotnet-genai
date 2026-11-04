@@ -117,5 +117,43 @@ namespace Google.GenAI.Tests
       var apiKeyHeader = GetHeaderValue(clientWebSocket.Options, "x-goog-api-key");
       Assert.IsNull(apiKeyHeader, "The x-goog-api-key header should not be present for Vertex AI.");
     }
+
+    private static Uri InvokeGetServerUri(Live live)
+    {
+      var method = typeof(Live).GetMethod("GetServerUri", BindingFlags.Instance | BindingFlags.NonPublic);
+      Assert.IsNotNull(method, "Live.GetServerUri not found.");
+      return (Uri)method.Invoke(live, null)!;
+    }
+
+    [TestMethod]
+    public void GetServerUri_GeminiDefault_UsesDefaultApiVersion()
+    {
+      using var client = new Client(vertexAI: false, apiKey: "test-api-key");
+
+      Assert.AreEqual(
+          $"wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.{ApiClient.GoogleAiApiDefaultVersion}.GenerativeService.BidiGenerateContent",
+          InvokeGetServerUri(client.Live).ToString());
+    }
+
+    [TestMethod]
+    public void GetServerUri_GeminiExplicitApiVersion_UsesApiVersion()
+    {
+      using var client = new Client(vertexAI: false, apiKey: "test-api-key", httpOptions: new HttpOptions { ApiVersion = "v1alpha" });
+
+      Assert.AreEqual(
+          "wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1alpha.GenerativeService.BidiGenerateContent",
+          InvokeGetServerUri(client.Live).ToString());
+    }
+
+    [TestMethod]
+    public void GetServerUri_VertexDefault_UsesV1beta1()
+    {
+      var mockCredential = new Mock<ICredential>();
+      using var client = new Client(vertexAI: true, project: "test-project", location: "us-central1", credential: mockCredential.Object);
+
+      Assert.AreEqual(
+          "wss://us-central1-aiplatform.googleapis.com/ws/google.cloud.aiplatform.v1beta1.LlmBidiService/BidiGenerateContent",
+          InvokeGetServerUri(client.Live).ToString());
+    }
   }
 }

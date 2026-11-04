@@ -152,7 +152,7 @@ namespace Google.GenAI
         }
         else
         {
-            string apiVersion = _apiClient.HttpOptions?.ApiVersion ?? "v1beta";
+            string apiVersion = _apiClient.HttpOptions?.ApiVersion ?? ApiClient.GoogleAiApiDefaultVersion;
             string method;
             if (_apiClient.ApiKey != null && _apiClient.ApiKey.StartsWith("auth_tokens/"))
             {

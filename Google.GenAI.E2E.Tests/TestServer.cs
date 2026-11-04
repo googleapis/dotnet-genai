@@ -18,6 +18,7 @@ using System.IO;
 using System.Linq;
 
 using Google.Apis.Auth.OAuth2;
+using Google.GenAI;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TestServerSdk;
 
@@ -39,6 +40,10 @@ public class TestServer {
           : Path.GetFullPath("../../Recordings");
 
   public static TestServerProcess StartTestServer() {
+    // Checked-in Gemini API recordings were recorded against v1beta.
+    if (IsReplayMode) {
+      ApiClient.GoogleAiApiDefaultVersion = "v1beta";
+    }
     var _project = System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_PROJECT");
     string _apiKey = System.Environment.GetEnvironmentVariable("GEMINI_API_KEY");
     var logPath = Path.GetFullPath("../../../test-server.log");

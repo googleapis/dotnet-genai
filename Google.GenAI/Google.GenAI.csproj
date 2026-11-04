@@ -37,6 +37,8 @@
     <PackageReference Include="System.Text.Json" />
     <InternalsVisibleTo Include="Google.GenAI.Tests" />
     <InternalsVisibleTo Include="Google.GenAI.Netstandard2_0.Tests" />
+    <InternalsVisibleTo Include="Google.GenAI.E2E.Tests" />
+    <InternalsVisibleTo Include="Google.GenAI.E2E.Netstandard2_0Tests" />
   </ItemGroup>
 
 
