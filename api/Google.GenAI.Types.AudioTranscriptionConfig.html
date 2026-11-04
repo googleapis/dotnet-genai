@@ -403,6 +403,42 @@ public AudioTranscriptionConfigMode? Mode { get; set; }</code></pre>
 
 
 
+  <a id="Google_GenAI_Types_AudioTranscriptionConfig_SourceText_" data-uid="Google.GenAI.Types.AudioTranscriptionConfig.SourceText*"></a>
+
+  <h3 id="Google_GenAI_Types_AudioTranscriptionConfig_SourceText" data-uid="Google.GenAI.Types.AudioTranscriptionConfig.SourceText">
+  SourceText
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AudioTranscriptionConfig.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional. The source text to be edited or rewritten via voice instructions. When provided in
+<code>SMART</code> mode, the model evaluates the audio input against this text and emits the complete
+replacement text in the candidate response rather than appending to it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;sourceText&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public string? SourceText { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_AudioTranscriptionConfig_WordTimestamp_" data-uid="Google.GenAI.Types.AudioTranscriptionConfig.WordTimestamp*"></a>
 
   <h3 id="Google_GenAI_Types_AudioTranscriptionConfig_WordTimestamp" data-uid="Google.GenAI.Types.AudioTranscriptionConfig.WordTimestamp">
@@ -445,7 +481,7 @@ public bool? WordTimestamp { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_AudioTranscriptionConfig_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.AudioTranscriptionConfig.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AudioTranscriptionConfig.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/AudioTranscriptionConfig.cs/#L136"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a AudioTranscriptionConfig object.</p>

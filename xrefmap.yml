@@ -3975,6 +3975,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.AudioTranscriptionConfig.Mode
   nameWithType: AudioTranscriptionConfig.Mode
+- uid: Google.GenAI.Types.AudioTranscriptionConfig.SourceText
+  name: SourceText
+  href: api/Google.GenAI.Types.AudioTranscriptionConfig.html#Google_GenAI_Types_AudioTranscriptionConfig_SourceText
+  commentId: P:Google.GenAI.Types.AudioTranscriptionConfig.SourceText
+  fullName: Google.GenAI.Types.AudioTranscriptionConfig.SourceText
+  nameWithType: AudioTranscriptionConfig.SourceText
+- uid: Google.GenAI.Types.AudioTranscriptionConfig.SourceText*
+  name: SourceText
+  href: api/Google.GenAI.Types.AudioTranscriptionConfig.html#Google_GenAI_Types_AudioTranscriptionConfig_SourceText_
+  commentId: Overload:Google.GenAI.Types.AudioTranscriptionConfig.SourceText
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioTranscriptionConfig.SourceText
+  nameWithType: AudioTranscriptionConfig.SourceText
 - uid: Google.GenAI.Types.AudioTranscriptionConfig.WordTimestamp
   name: WordTimestamp
   href: api/Google.GenAI.Types.AudioTranscriptionConfig.html#Google_GenAI_Types_AudioTranscriptionConfig_WordTimestamp
