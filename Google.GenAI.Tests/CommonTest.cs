@@ -348,7 +348,7 @@ namespace Google.GenAI.Tests
         [TestMethod]
         public void ParseToJsonNode_WithClrObjectInput_SerializesCorrectly()
         {
-            var clrObject = new { mimeType = "image/png", width = 3840 };
+            var clrObject = new Dictionary<string, object> { ["mimeType"] = "image/png", ["width"] = 3840 };
 
             var result = Common.ParseToJsonNode(clrObject) as JsonObject;
 

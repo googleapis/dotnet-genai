@@ -50,8 +50,8 @@ namespace Google.GenAI.Tests
             var original = PersonGeneration.AllowAdult;
             Assert.AreEqual("ALLOW_ADULT", original.Value);
 
-            var json = JsonSerializer.Serialize(original);
-            var deserialized = JsonSerializer.Deserialize<PersonGeneration>(json);
+            var json = JsonSerializer.Serialize(original, JsonConfig.TypeInfo<PersonGeneration>());
+            var deserialized = JsonSerializer.Deserialize(json, JsonConfig.TypeInfo<PersonGeneration>());
 
             Assert.AreEqual("\"ALLOW_ADULT\"", json);
             Assert.AreEqual(original, deserialized);
@@ -64,8 +64,8 @@ namespace Google.GenAI.Tests
             PersonGeneration original = unknownValue;
             Assert.AreEqual(unknownValue, original.Value);
 
-            var json = JsonSerializer.Serialize(original);
-            var deserialized = JsonSerializer.Deserialize<PersonGeneration>(json);
+            var json = JsonSerializer.Serialize(original, JsonConfig.TypeInfo<PersonGeneration>());
+            var deserialized = JsonSerializer.Deserialize(json, JsonConfig.TypeInfo<PersonGeneration>());
 
             Assert.AreEqual("\"ALLOW_ROBOTS\"", json);
             Assert.AreEqual(original, deserialized);

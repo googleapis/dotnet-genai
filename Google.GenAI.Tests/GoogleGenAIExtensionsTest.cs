@@ -18,6 +18,15 @@ namespace Google.GenAI.Tests;
 [TestClass]
 public class GoogleGenAIExtensionsTest
 {
+  // The tool functions below return anonymous types, which only reflection can serialize. The test
+  // project disables reflection by default (as under Native AOT), so opt in for these test helpers.
+  private static readonly JsonSerializerOptions ReflectionJsonOptions =
+      new() { TypeInfoResolver = new System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver() };
+
+  // Function results are anonymous types too. The SDK only serializes types it knows without
+  // reflection, so pass them as JsonElement, as a Native AOT app would.
+  private static JsonElement ToJson(object value) => JsonSerializer.SerializeToElement(value, ReflectionJsonOptions);
+
   [TestMethod]
   public void AsIChatClient_NullModels_ThrowsArgumentNullException()
   {
@@ -1464,7 +1473,7 @@ public class GoogleGenAIExtensionsTest
 
     ChatOptions options = new()
     {
-      Tools = [AIFunctionFactory.Create((string location) => "sunny", "get_weather", "Gets the current weather")]
+      Tools = [AIFunctionFactory.Create((string location) => "sunny", "get_weather", "Gets the current weather", serializerOptions: ReflectionJsonOptions)]
     };
 
     var response = await client.GetResponseAsync("What's the weather?", options);
@@ -2120,17 +2129,17 @@ public class GoogleGenAIExtensionsTest
         ? new { symbol = "GOOGL", price = 142.50 }
         : new { symbol = "MSFT", price = 378.91 },
       "get_stock_price",
-      "Gets current stock price");
+      "Gets current stock price", serializerOptions: ReflectionJsonOptions);
 
     ChatMessage[] messages =
     [
       new(ChatRole.User, "Check the stock price for GOOGL"),
       new(ChatRole.Assistant, [new FunctionCallContent("get_stock_price", "get_stock_price", new Dictionary<string, object?> { ["symbol"] = "GOOGL" })]),
-      new(ChatRole.User, [new FunctionResultContent("get_stock_price", new { symbol = "GOOGL", price = 142.50 })]),
+      new(ChatRole.User, [new FunctionResultContent("get_stock_price", ToJson(new { symbol = "GOOGL", price = 142.50 }))]),
       new(ChatRole.Assistant, "GOOGL is currently trading at $142.50."),
       new(ChatRole.User, "Now check MSFT"),
       new(ChatRole.Assistant, [new FunctionCallContent("get_stock_price", "get_stock_price", new Dictionary<string, object?> { ["symbol"] = "MSFT" })]),
-      new(ChatRole.User, [new FunctionResultContent("get_stock_price", new { symbol = "MSFT", price = 378.91 })])
+      new(ChatRole.User, [new FunctionResultContent("get_stock_price", ToJson(new { symbol = "MSFT", price = 378.91 }))])
     ];
 
     ChatOptions options = new()
@@ -2298,16 +2307,16 @@ public class GoogleGenAIExtensionsTest
     [
       new(ChatRole.User, "I need to schedule a meeting and send an email about it"),
       new(ChatRole.Assistant, [new FunctionCallContent("schedule_meeting", "schedule_meeting", new Dictionary<string, object?> { ["title"] = "Team Sync", ["date"] = "2025-11-01", ["duration"] = 60 })]),
-      new(ChatRole.User, [new FunctionResultContent("schedule_meeting", new { meetingId = "MTG123", status = "scheduled" })]),
+      new(ChatRole.User, [new FunctionResultContent("schedule_meeting", ToJson(new { meetingId = "MTG123", status = "scheduled" }))]),
       new(ChatRole.Assistant, [new FunctionCallContent("send_email", "send_email", new Dictionary<string, object?> { ["to"] = "team@example.com", ["subject"] = "Team Sync Scheduled", ["body"] = "Meeting scheduled for Nov 1, 2025" })]),
-      new(ChatRole.User, [new FunctionResultContent("send_email", new { messageId = "MSG456", sent = true })])
+      new(ChatRole.User, [new FunctionResultContent("send_email", ToJson(new { messageId = "MSG456", sent = true }))])
     ];
 
     ChatOptions options = new()
     {
       Tools = [
-        AIFunctionFactory.Create((string title, string date, int duration) => new { meetingId = "MTG123", status = "scheduled" }, "schedule_meeting", "Schedules a meeting"),
-        AIFunctionFactory.Create((string to, string subject, string body) => new { messageId = "MSG456", sent = true }, "send_email", "Sends an email")
+        AIFunctionFactory.Create((string title, string date, int duration) => new { meetingId = "MTG123", status = "scheduled" }, "schedule_meeting", "Schedules a meeting", serializerOptions: ReflectionJsonOptions),
+        AIFunctionFactory.Create((string to, string subject, string body) => new { messageId = "MSG456", sent = true }, "send_email", "Sends an email", serializerOptions: ReflectionJsonOptions)
       ]
     };
 
@@ -2587,23 +2596,23 @@ public class GoogleGenAIExtensionsTest
       new(ChatRole.Assistant, "Excellent choice! When are you planning to travel?"),
       new(ChatRole.User, "Next month"),
       new(ChatRole.Assistant, [new FunctionCallContent("search_flights", "search_flights", new Dictionary<string, object?> { ["destination"] = "Paris", ["month"] = "December" })]),
-      new(ChatRole.User, [new FunctionResultContent("search_flights", new { flights = new[] { new { airline = "Air France", price = 750 }, new { airline = "Delta", price = 820 } } })]),
+      new(ChatRole.User, [new FunctionResultContent("search_flights", ToJson(new { flights = new[] { new { airline = "Air France", price = 750 }, new { airline = "Delta", price = 820 } } }))]),
       new(ChatRole.Assistant, "I found flights for you. Air France has flights for $750 and Delta for $820. Which would you prefer?"),
       new(ChatRole.User, "Air France please"),
       new(ChatRole.Assistant, [new FunctionCallContent("book_flight", "book_flight", new Dictionary<string, object?> { ["airline"] = "Air France", ["price"] = 750 })]),
-      new(ChatRole.User, [new FunctionResultContent("book_flight", new { confirmationNumber = "AF789XYZ", status = "confirmed" })]),
+      new(ChatRole.User, [new FunctionResultContent("book_flight", ToJson(new { confirmationNumber = "AF789XYZ", status = "confirmed" }))]),
       new(ChatRole.Assistant, "Great! Your flight is booked. Confirmation: AF789XYZ. Would you like me to help find a hotel?"),
       new(ChatRole.User, "Yes, something near the Eiffel Tower"),
       new(ChatRole.Assistant, [new FunctionCallContent("search_hotels", "search_hotels", new Dictionary<string, object?> { ["location"] = "Eiffel Tower", ["city"] = "Paris" })]),
-      new(ChatRole.User, [new FunctionResultContent("search_hotels", new { hotels = new[] { new { name = "Hotel Eiffel Seine", price = 200 }, new { name = "Pullman Paris Tour Eiffel", price = 350 } } })])
+      new(ChatRole.User, [new FunctionResultContent("search_hotels", ToJson(new { hotels = new[] { new { name = "Hotel Eiffel Seine", price = 200 }, new { name = "Pullman Paris Tour Eiffel", price = 350 } } }))])
     ];
 
     ChatOptions options = new()
     {
       Tools = [
-        AIFunctionFactory.Create((string destination, string month) => new { flights = new[] { new { airline = "Air France", price = 750 } } }, "search_flights", "Searches for flights"),
-        AIFunctionFactory.Create((string airline, double price) => new { confirmationNumber = "AF789XYZ", status = "confirmed" }, "book_flight", "Books a flight"),
-        AIFunctionFactory.Create((string location, string city) => new { hotels = new[] { new { name = "Hotel Eiffel Seine", price = 200 } } }, "search_hotels", "Searches for hotels")
+        AIFunctionFactory.Create((string destination, string month) => new { flights = new[] { new { airline = "Air France", price = 750 } } }, "search_flights", "Searches for flights", serializerOptions: ReflectionJsonOptions),
+        AIFunctionFactory.Create((string airline, double price) => new { confirmationNumber = "AF789XYZ", status = "confirmed" }, "book_flight", "Books a flight", serializerOptions: ReflectionJsonOptions),
+        AIFunctionFactory.Create((string location, string city) => new { hotels = new[] { new { name = "Hotel Eiffel Seine", price = 200 } } }, "search_hotels", "Searches for hotels", serializerOptions: ReflectionJsonOptions)
       ]
     };
 
@@ -2771,9 +2780,9 @@ public class GoogleGenAIExtensionsTest
         new FunctionCallContent("get_weather", "get_weather", new Dictionary<string, object?> { ["city"] = "Tokyo" })
       ]),
       new(ChatRole.User, [
-        new FunctionResultContent("get_weather", new { city = "New York", temp = 45, condition = "cloudy" }),
-        new FunctionResultContent("get_weather", new { city = "London", temp = 50, condition = "rainy" }),
-        new FunctionResultContent("get_weather", new { city = "Tokyo", temp = 65, condition = "sunny" })
+        new FunctionResultContent("get_weather", ToJson(new { city = "New York", temp = 45, condition = "cloudy" })),
+        new FunctionResultContent("get_weather", ToJson(new { city = "London", temp = 50, condition = "rainy" })),
+        new FunctionResultContent("get_weather", ToJson(new { city = "Tokyo", temp = 65, condition = "sunny" }))
       ])
     ];
 
@@ -2783,7 +2792,7 @@ public class GoogleGenAIExtensionsTest
         city == "New York" ? new { city = "New York", temp = 45, condition = "cloudy" } :
         city == "London" ? new { city = "London", temp = 50, condition = "rainy" } :
         new { city = "Tokyo", temp = 65, condition = "sunny" },
-        "get_weather", "Gets weather for a city")]
+        "get_weather", "Gets weather for a city", serializerOptions: ReflectionJsonOptions)]
     };
 
     var response = await client.GetResponseAsync(messages, options);
@@ -3283,7 +3292,7 @@ public class GoogleGenAIExtensionsTest
         ? new { temperature = 55, condition = "rainy" }
         : new { temperature = 72, condition = "sunny" },
       "get_weather",
-      "Gets weather for a location");
+      "Gets weather for a location", serializerOptions: ReflectionJsonOptions);
 
     ChatMessage[] messages =
     [
@@ -3293,8 +3302,8 @@ public class GoogleGenAIExtensionsTest
         new FunctionCallContent("get_weather", "get_weather", new Dictionary<string, object?> { ["location"] = "San Francisco" })
       ]),
       new(ChatRole.User, [
-        new FunctionResultContent("get_weather", new { temperature = 55, condition = "rainy" }),
-        new FunctionResultContent("get_weather", new { temperature = 72, condition = "sunny" })
+        new FunctionResultContent("get_weather", ToJson(new { temperature = 55, condition = "rainy" })),
+        new FunctionResultContent("get_weather", ToJson(new { temperature = 72, condition = "sunny" }))
       ])
     ];
 
@@ -3478,18 +3487,18 @@ public class GoogleGenAIExtensionsTest
     [
       new(ChatRole.User, "Book me a flight to Paris"),
       new(ChatRole.Assistant, [new FunctionCallContent("search_flights", "search_flights", new Dictionary<string, object?> { ["destination"] = "Paris", ["date"] = "2025-11-01" })]),
-      new(ChatRole.User, [new FunctionResultContent("search_flights", new { flights = new[] { new { airline = "Air France", price = 850, duration = "11h" }, new { airline = "United", price = 920, duration = "12h" } } })]),
+      new(ChatRole.User, [new FunctionResultContent("search_flights", ToJson(new { flights = new[] { new { airline = "Air France", price = 850, duration = "11h" }, new { airline = "United", price = 920, duration = "12h" } } }))]),
       new(ChatRole.Assistant, "I found 2 flights for you. Air France for $850 (11h) and United for $920 (12h). Which would you prefer?"),
       new(ChatRole.User, "Book the Air France flight"),
       new(ChatRole.Assistant, [new FunctionCallContent("book_flight", "book_flight", new Dictionary<string, object?> { ["airline"] = "Air France", ["price"] = 850 })]),
-      new(ChatRole.User, [new FunctionResultContent("book_flight", new { confirmationNumber = "AF12345", status = "confirmed" })])
+      new(ChatRole.User, [new FunctionResultContent("book_flight", ToJson(new { confirmationNumber = "AF12345", status = "confirmed" }))])
     ];
 
     ChatOptions options = new()
     {
       Tools = [
-        AIFunctionFactory.Create((string destination, string? date) => new { flights = new[] { new { airline = "Air France", price = 850 } } }, "search_flights", "Searches for flights"),
-        AIFunctionFactory.Create((string airline, double price) => new { confirmationNumber = "AF12345", status = "confirmed" }, "book_flight", "Books a flight")
+        AIFunctionFactory.Create((string destination, string? date) => new { flights = new[] { new { airline = "Air France", price = 850 } } }, "search_flights", "Searches for flights", serializerOptions: ReflectionJsonOptions),
+        AIFunctionFactory.Create((string airline, double price) => new { confirmationNumber = "AF12345", status = "confirmed" }, "book_flight", "Books a flight", serializerOptions: ReflectionJsonOptions)
       ]
     };
 
@@ -3591,7 +3600,7 @@ public class GoogleGenAIExtensionsTest
     var weatherFunc = AIFunctionFactory.Create(
       (string location) => $"72°F and sunny in {location}",
       "get_weather",
-      "Gets the weather for a location");
+      "Gets the weather for a location", serializerOptions: ReflectionJsonOptions);
 
     IChatClient client = CreateChatClient("""
       {
@@ -4077,7 +4086,7 @@ public class GoogleGenAIExtensionsTest
     AIFunction weatherFunc = AIFunctionFactory.Create(
       (string city) => new { city, temp = 72, condition = "sunny" },
       "get_weather",
-      "Gets weather");
+      "Gets weather", serializerOptions: ReflectionJsonOptions);
 
     ChatOptions options = new() { Tools = [weatherFunc] };
 
