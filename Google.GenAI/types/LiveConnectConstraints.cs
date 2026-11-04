@@ -29,7 +29,7 @@ namespace Google.GenAI.Types {
   public record LiveConnectConstraints {
     /// <summary>
     /// ID of the model to configure in the ephemeral token for Live API. For a list of models, see
-    /// `Gemini models &lt;https://ai.google.dev/gemini-api/docs/models&gt;`.
+    /// `Gemini models &lt;https://aistudio.google.com/docs/models&gt;`.
     /// </summary>
     [JsonPropertyName("model")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

@@ -5497,7 +5497,7 @@ namespace Google.GenAI {
         CancellationToken cancellationToken = default) {
       if (Interlocked.CompareExchange(ref _loggedGenerateImagesWarning, 1, 0) == 0) {
         Console.WriteLine(
-            "The GenerateImagesAsync method is deprecated and will be removed in the next major release (not before Jan. 1 2027). Please use the GenerateContentAsync method with image models instead. See https://ai.google.dev/gemini-api/docs/deprecations#imagen-models and https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/capabilities/image-generation#generate-images");
+            "The GenerateImagesAsync method is deprecated and will be removed in the next major release (not before Jan. 1 2027). Please use the GenerateContentAsync method with image models instead. See https://aistudio.google.com/docs/deprecations#imagen-models and https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/capabilities/image-generation#generate-images");
       }
       GenerateImagesResponse apiResponse =
           await PrivateGenerateImagesAsync(model, prompt, config, cancellationToken);
