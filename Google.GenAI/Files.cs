@@ -265,7 +265,7 @@ namespace Google.GenAI {
             "This method is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       } else {
         body = CreateFileParametersToMldev(parameterNode, new JsonObject());
-        path = Common.FormatMap("upload/v1beta/files", body["_url"]);
+        path = Common.FormatMap("upload/{api_version}/files", body["_url"]);
       }
       JsonObject? bodyObj = body?.AsObject();
       bodyObj?.Remove("_url");

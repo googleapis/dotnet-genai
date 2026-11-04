@@ -200,6 +200,13 @@ namespace Google.GenAI
             // ensure it is rewritten to use the custom BaseUrl if one is provided.
             requestUrl = RewriteIfAbsoluteUrl(path, mergedHttpOptions);
         }
+        else if (path.Contains(ApiVersionPlaceholder))
+        {
+            string? effectiveApiVersion = mergedHttpOptions.BaseUrlResourceScope == Types.ResourceScope.Collection
+                ? string.Empty
+                : mergedHttpOptions.ApiVersion;
+            requestUrl = $"{mergedHttpOptions.BaseUrl}/{ResolveApiVersionInPath(path, effectiveApiVersion)}";
+        }
         else if (string.IsNullOrEmpty(mergedHttpOptions.ApiVersion) || mergedHttpOptions.BaseUrlResourceScope == Types.ResourceScope.Collection)
         {
             requestUrl = $"{mergedHttpOptions.BaseUrl}/{path}";

@@ -81,9 +81,11 @@ namespace Google.GenAI
         mergedHeaders[header.Key] = header.Value;
       }
 
+      // ApiVersion is passed through (null keeps the client's version): the API client puts
+      // the resolved version after the "upload/" prefix of the upload path.
       return new HttpOptions
       {
-        ApiVersion = "",
+        ApiVersion = userOptions?.ApiVersion,
         Headers = mergedHeaders,
         BaseUrl = userOptions?.BaseUrl,
         Timeout = userOptions?.Timeout

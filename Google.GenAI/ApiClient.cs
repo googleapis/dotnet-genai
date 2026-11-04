@@ -31,6 +31,8 @@ namespace Google.GenAI
     private static readonly string SdkVersion = GetSdkVersion();
     internal static string GoogleAiApiDefaultVersion { get; set; } = "v1";
 
+    internal const string ApiVersionPlaceholder = "{api_version}";
+
     private static readonly HashSet<string> MultiRegionalLocations = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
     {
         "us",
@@ -564,6 +566,26 @@ namespace Google.GenAI
       mergedOptions.Headers = headersBuilder;
 
       return mergedOptions;
+    }
+
+    /// <summary>
+    /// Substitutes <c>{api_version}</c> in a path template such as
+    /// <c>upload/{api_version}/files</c>.
+    /// </summary>
+    /// <remarks>
+    /// When <paramref name="apiVersion"/> is null or empty, the placeholder segment is omitted
+    /// without leaving a double slash (e.g. <c>upload/files</c>).
+    /// </remarks>
+    internal static string ResolveApiVersionInPath(string path, string? apiVersion)
+    {
+      if (!string.IsNullOrEmpty(apiVersion))
+      {
+        return path.Replace(ApiVersionPlaceholder, apiVersion);
+      }
+      return path
+          .Replace($"{ApiVersionPlaceholder}/", string.Empty)
+          .Replace($"/{ApiVersionPlaceholder}", string.Empty)
+          .Replace(ApiVersionPlaceholder, string.Empty);
     }
 
     internal static HttpOptions GetDefaultHttpOptions(bool vertexAI, string? location)
