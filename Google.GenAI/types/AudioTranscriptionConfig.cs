@@ -115,6 +115,18 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Optional. The source text to be edited or rewritten via voice instructions. When provided in
+    /// `SMART` mode, the model evaluates the audio input against this text and emits the complete
+    /// replacement text in the candidate response rather than appending to it.
+    /// </summary>
+    [JsonPropertyName("sourceText")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string
+        ? SourceText {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a AudioTranscriptionConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
