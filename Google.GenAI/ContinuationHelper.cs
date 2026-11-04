@@ -708,7 +708,7 @@ namespace Google.GenAI
       var result = new JsonArray();
       foreach (var mod in order)
       {
-        result.Add(new JsonObject
+        result.Add((JsonNode)new JsonObject
         {
           ["modality"] = mod,
           ["tokenCount"] = countsByModality[mod]

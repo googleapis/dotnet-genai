@@ -11,7 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <RuntimeHostConfigurationOption Include="System.Text.Json.Serialization.IsReflectionEnabledByDefault" Value="false" />
+    <RuntimeHostConfigurationOption Include="System.Text.Json.JsonSerializer.IsReflectionEnabledByDefault" Value="false" />
   </ItemGroup>
 
   <ItemGroup>

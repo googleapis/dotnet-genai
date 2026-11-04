@@ -2811,7 +2811,7 @@ public class GoogleGenAIRealtimeSessionTest
   [TestMethod]
   public void NormalizeToolPayload_JsonElement_DecomposesCorrectly()
   {
-    var json = JsonSerializer.SerializeToElement(new { name = "test", count = 42 });
+    var json = JsonDocument.Parse("""{"name":"test","count":42}""").RootElement;
     var result = GoogleGenAIRealtimeSession.NormalizeToolPayload(json) as Dictionary<string, object?>;
     Assert.IsNotNull(result);
     Assert.AreEqual("test", result["name"]);
@@ -2840,7 +2840,7 @@ public class GoogleGenAIRealtimeSessionTest
   [TestMethod]
   public void NormalizeToolArguments_NormalizesNestedJsonElements()
   {
-    var jsonElement = JsonSerializer.SerializeToElement("hello");
+    var jsonElement = JsonDocument.Parse("\"hello\"").RootElement;
     var args = new Dictionary<string, object?> { ["key"] = jsonElement };
     var result = GoogleGenAIRealtimeSession.NormalizeToolArguments(args);
     Assert.AreEqual("hello", result["key"]);
