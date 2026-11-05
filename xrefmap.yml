@@ -13655,6 +13655,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.FinishReason.MalformedFunctionCall
   nameWithType: FinishReason.MalformedFunctionCall
+- uid: Google.GenAI.Types.FinishReason.MalformedResponse
+  name: MalformedResponse
+  href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_MalformedResponse
+  commentId: P:Google.GenAI.Types.FinishReason.MalformedResponse
+  fullName: Google.GenAI.Types.FinishReason.MalformedResponse
+  nameWithType: FinishReason.MalformedResponse
+- uid: Google.GenAI.Types.FinishReason.MalformedResponse*
+  name: MalformedResponse
+  href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_MalformedResponse_
+  commentId: Overload:Google.GenAI.Types.FinishReason.MalformedResponse
+  isSpec: "True"
+  fullName: Google.GenAI.Types.FinishReason.MalformedResponse
+  nameWithType: FinishReason.MalformedResponse
 - uid: Google.GenAI.Types.FinishReason.MaxTokens
   name: MaxTokens
   href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_MaxTokens
