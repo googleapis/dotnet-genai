@@ -133,6 +133,11 @@ namespace Google.GenAI.Types {
     /// </summary>
     public static FinishReason Continuation { get; } = new("CONTINUATION");
 
+    /// <summary>
+    /// Token generation stopped because the response was malformed.
+    /// </summary>
+    public static FinishReason MalformedResponse { get; } = new("MALFORMED_RESPONSE");
+
     public static IReadOnlyList<FinishReason> AllValues {
       get;
     } = new[] { FinishReasonUnspecified,
@@ -153,7 +158,8 @@ namespace Google.GenAI.Types {
                 NoImage,
                 ImageRecitation,
                 ImageOther,
-                Continuation };
+                Continuation,
+                MalformedResponse };
 
     public static FinishReason FromString(string value) {
       if (string.IsNullOrEmpty(value)) {
