@@ -948,6 +948,11 @@ namespace Google.GenAI {
                               Common.GetValueByPath(fromObject, new string[] { "metadata" }));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "usageMetadata" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "usageMetadata" },
+                              Common.GetValueByPath(fromObject, new string[] { "usageMetadata" }));
+      }
+
       return toObject;
     }
 
@@ -977,6 +982,19 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "metadata" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "metadata" },
                               Common.GetValueByPath(fromObject, new string[] { "metadata" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "truncated" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "truncated" },
+                              Common.GetValueByPath(fromObject, new string[] { "truncated" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "usageMetadata" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "usageMetadata" },
+            UsageMetadataFromVertex(Common.ParseToJsonNode(Common.GetValueByPath(
+                                        fromObject, new string[] { "usageMetadata" })),
+                                    toObject, rootObject));
       }
 
       if (rootObject != null &&
@@ -4051,6 +4069,79 @@ namespace Google.GenAI {
               GeneratedImageFromVertex(Common.ParseToJsonNode(record), toObject, rootObject));
         }
         Common.SetValueByPath(toObject, new string[] { "generatedImages" }, result);
+      }
+
+      return toObject;
+    }
+
+    internal JsonNode UsageMetadataFromVertex(JsonNode fromObject, JsonObject parentObject,
+                                              JsonNode rootObject) {
+      JsonObject toObject = new JsonObject();
+
+      if (Common.GetValueByPath(fromObject, new string[] { "promptTokenCount" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "promptTokenCount" },
+            Common.GetValueByPath(fromObject, new string[] { "promptTokenCount" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "cachedContentTokenCount" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "cachedContentTokenCount" },
+            Common.GetValueByPath(fromObject, new string[] { "cachedContentTokenCount" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "candidatesTokenCount" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "responseTokenCount" },
+            Common.GetValueByPath(fromObject, new string[] { "candidatesTokenCount" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "toolUsePromptTokenCount" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "toolUsePromptTokenCount" },
+            Common.GetValueByPath(fromObject, new string[] { "toolUsePromptTokenCount" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "thoughtsTokenCount" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "thoughtsTokenCount" },
+            Common.GetValueByPath(fromObject, new string[] { "thoughtsTokenCount" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "totalTokenCount" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "totalTokenCount" },
+            Common.GetValueByPath(fromObject, new string[] { "totalTokenCount" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "promptTokensDetails" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "promptTokensDetails" },
+            Common.GetValueByPath(fromObject, new string[] { "promptTokensDetails" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "cacheTokensDetails" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "cacheTokensDetails" },
+            Common.GetValueByPath(fromObject, new string[] { "cacheTokensDetails" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "candidatesTokensDetails" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "responseTokensDetails" },
+            Common.GetValueByPath(fromObject, new string[] { "candidatesTokensDetails" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "toolUsePromptTokensDetails" }) !=
+          null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "toolUsePromptTokensDetails" },
+            Common.GetValueByPath(fromObject, new string[] { "toolUsePromptTokensDetails" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "trafficType" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "trafficType" },
+                              Common.GetValueByPath(fromObject, new string[] { "trafficType" }));
       }
 
       return toObject;

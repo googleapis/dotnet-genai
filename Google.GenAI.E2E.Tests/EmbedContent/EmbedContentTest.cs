@@ -335,4 +335,25 @@ public class EmbedContentTest {
         Assert.IsNotNull(vertexResponse);
         Assert.IsNotNull(vertexResponse.Embeddings);
     }
+
+    [TestMethod]
+    public async Task EmbedContentTrafficTypeVertexTest()
+    {
+        // gemini-embedding-2 is served only from the global endpoint.
+        var globalVertexClient = new Client(
+            project: System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_PROJECT"),
+            location: "global", vertexAI: true,
+            credential: TestServer.GetCredentialForTestMode(),
+            httpOptions: new HttpOptions {
+                Headers = new Dictionary<string, string> { { "Test-Name",
+                                                             $"{GetType().Name}.{TestContext.TestName}" } },
+                BaseUrl = "http://localhost:1455"
+            });
+        var vertexResponse = await globalVertexClient.Models.EmbedContentAsync(
+            model: "gemini-embedding-2", contents: "What is your name?",
+            config: new EmbedContentConfig { OutputDimensionality = 10 });
+
+        Assert.IsNotNull(vertexResponse.Embeddings);
+        Assert.IsNotNull(vertexResponse.UsageMetadata?.TrafficType);
+    }
 }
