@@ -35,7 +35,8 @@ namespace Google.GenAI.Types {
     public HttpResponse ? SdkHttpResponse { get; set; }
 
     /// <summary>
-    /// A token that can be sent as a `page_token` into a subsequent `ListFiles` call.
+    /// A token that can be sent as a `page_token` into a subsequent `ListFiles` call. This field is
+    /// not supported in Vertex AI.
     /// </summary>
     [JsonPropertyName("nextPageToken")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -45,12 +46,33 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// The list of `File`s.
+    /// The list of `File`s. This field is not supported in Vertex AI.
     /// </summary>
     [JsonPropertyName("files")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public List<Google.GenAI.Types.File>
         ? Files {
+            get; set;
+          }
+
+    /// <summary>
+    /// The files. This field is not supported in Gemini API.
+    /// </summary>
+    [JsonPropertyName("data")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public List<ClaudeFile>
+        ? Data {
+            get; set;
+          }
+
+    /// <summary>
+    /// Opaque cursor for the next page. Unset on the last page, and always unset when `ids` was
+    /// supplied, since batch fetch is single-page. This field is not supported in Gemini API.
+    /// </summary>
+    [JsonPropertyName("nextPage")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string
+        ? NextPage {
             get; set;
           }
 

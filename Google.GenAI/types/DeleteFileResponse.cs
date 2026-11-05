@@ -35,6 +35,26 @@ namespace Google.GenAI.Types {
     public HttpResponse ? SdkHttpResponse { get; set; }
 
     /// <summary>
+    /// The ID of the deleted file.
+    /// </summary>
+    [JsonPropertyName("id")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string
+        ? Id {
+            get; set;
+          }
+
+    /// <summary>
+    /// The object type. Always `file_deleted`.
+    /// </summary>
+    [JsonPropertyName("type")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string
+        ? Type {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a DeleteFileResponse object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
