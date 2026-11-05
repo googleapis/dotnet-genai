@@ -6701,6 +6701,132 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.CitationMetadata.FromJson
   nameWithType: CitationMetadata.FromJson
+- uid: Google.GenAI.Types.ClaudeFile
+  name: ClaudeFile
+  href: api/Google.GenAI.Types.ClaudeFile.html
+  commentId: T:Google.GenAI.Types.ClaudeFile
+  fullName: Google.GenAI.Types.ClaudeFile
+  nameWithType: ClaudeFile
+- uid: Google.GenAI.Types.ClaudeFile.CreatedAt
+  name: CreatedAt
+  href: api/Google.GenAI.Types.ClaudeFile.html#Google_GenAI_Types_ClaudeFile_CreatedAt
+  commentId: P:Google.GenAI.Types.ClaudeFile.CreatedAt
+  fullName: Google.GenAI.Types.ClaudeFile.CreatedAt
+  nameWithType: ClaudeFile.CreatedAt
+- uid: Google.GenAI.Types.ClaudeFile.CreatedAt*
+  name: CreatedAt
+  href: api/Google.GenAI.Types.ClaudeFile.html#Google_GenAI_Types_ClaudeFile_CreatedAt_
+  commentId: Overload:Google.GenAI.Types.ClaudeFile.CreatedAt
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ClaudeFile.CreatedAt
+  nameWithType: ClaudeFile.CreatedAt
+- uid: Google.GenAI.Types.ClaudeFile.Downloadable
+  name: Downloadable
+  href: api/Google.GenAI.Types.ClaudeFile.html#Google_GenAI_Types_ClaudeFile_Downloadable
+  commentId: P:Google.GenAI.Types.ClaudeFile.Downloadable
+  fullName: Google.GenAI.Types.ClaudeFile.Downloadable
+  nameWithType: ClaudeFile.Downloadable
+- uid: Google.GenAI.Types.ClaudeFile.Downloadable*
+  name: Downloadable
+  href: api/Google.GenAI.Types.ClaudeFile.html#Google_GenAI_Types_ClaudeFile_Downloadable_
+  commentId: Overload:Google.GenAI.Types.ClaudeFile.Downloadable
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ClaudeFile.Downloadable
+  nameWithType: ClaudeFile.Downloadable
+- uid: Google.GenAI.Types.ClaudeFile.ExpiresAt
+  name: ExpiresAt
+  href: api/Google.GenAI.Types.ClaudeFile.html#Google_GenAI_Types_ClaudeFile_ExpiresAt
+  commentId: P:Google.GenAI.Types.ClaudeFile.ExpiresAt
+  fullName: Google.GenAI.Types.ClaudeFile.ExpiresAt
+  nameWithType: ClaudeFile.ExpiresAt
+- uid: Google.GenAI.Types.ClaudeFile.ExpiresAt*
+  name: ExpiresAt
+  href: api/Google.GenAI.Types.ClaudeFile.html#Google_GenAI_Types_ClaudeFile_ExpiresAt_
+  commentId: Overload:Google.GenAI.Types.ClaudeFile.ExpiresAt
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ClaudeFile.ExpiresAt
+  nameWithType: ClaudeFile.ExpiresAt
+- uid: Google.GenAI.Types.ClaudeFile.Filename
+  name: Filename
+  href: api/Google.GenAI.Types.ClaudeFile.html#Google_GenAI_Types_ClaudeFile_Filename
+  commentId: P:Google.GenAI.Types.ClaudeFile.Filename
+  fullName: Google.GenAI.Types.ClaudeFile.Filename
+  nameWithType: ClaudeFile.Filename
+- uid: Google.GenAI.Types.ClaudeFile.Filename*
+  name: Filename
+  href: api/Google.GenAI.Types.ClaudeFile.html#Google_GenAI_Types_ClaudeFile_Filename_
+  commentId: Overload:Google.GenAI.Types.ClaudeFile.Filename
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ClaudeFile.Filename
+  nameWithType: ClaudeFile.Filename
+- uid: Google.GenAI.Types.ClaudeFile.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.ClaudeFile.html#Google_GenAI_Types_ClaudeFile_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.ClaudeFile.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.ClaudeFile.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.ClaudeFile.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ClaudeFile.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: ClaudeFile.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.ClaudeFile.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.ClaudeFile.html#Google_GenAI_Types_ClaudeFile_FromJson_
+  commentId: Overload:Google.GenAI.Types.ClaudeFile.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ClaudeFile.FromJson
+  nameWithType: ClaudeFile.FromJson
+- uid: Google.GenAI.Types.ClaudeFile.Id
+  name: Id
+  href: api/Google.GenAI.Types.ClaudeFile.html#Google_GenAI_Types_ClaudeFile_Id
+  commentId: P:Google.GenAI.Types.ClaudeFile.Id
+  fullName: Google.GenAI.Types.ClaudeFile.Id
+  nameWithType: ClaudeFile.Id
+- uid: Google.GenAI.Types.ClaudeFile.Id*
+  name: Id
+  href: api/Google.GenAI.Types.ClaudeFile.html#Google_GenAI_Types_ClaudeFile_Id_
+  commentId: Overload:Google.GenAI.Types.ClaudeFile.Id
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ClaudeFile.Id
+  nameWithType: ClaudeFile.Id
+- uid: Google.GenAI.Types.ClaudeFile.MimeType
+  name: MimeType
+  href: api/Google.GenAI.Types.ClaudeFile.html#Google_GenAI_Types_ClaudeFile_MimeType
+  commentId: P:Google.GenAI.Types.ClaudeFile.MimeType
+  fullName: Google.GenAI.Types.ClaudeFile.MimeType
+  nameWithType: ClaudeFile.MimeType
+- uid: Google.GenAI.Types.ClaudeFile.MimeType*
+  name: MimeType
+  href: api/Google.GenAI.Types.ClaudeFile.html#Google_GenAI_Types_ClaudeFile_MimeType_
+  commentId: Overload:Google.GenAI.Types.ClaudeFile.MimeType
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ClaudeFile.MimeType
+  nameWithType: ClaudeFile.MimeType
+- uid: Google.GenAI.Types.ClaudeFile.SizeBytes
+  name: SizeBytes
+  href: api/Google.GenAI.Types.ClaudeFile.html#Google_GenAI_Types_ClaudeFile_SizeBytes
+  commentId: P:Google.GenAI.Types.ClaudeFile.SizeBytes
+  fullName: Google.GenAI.Types.ClaudeFile.SizeBytes
+  nameWithType: ClaudeFile.SizeBytes
+- uid: Google.GenAI.Types.ClaudeFile.SizeBytes*
+  name: SizeBytes
+  href: api/Google.GenAI.Types.ClaudeFile.html#Google_GenAI_Types_ClaudeFile_SizeBytes_
+  commentId: Overload:Google.GenAI.Types.ClaudeFile.SizeBytes
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ClaudeFile.SizeBytes
+  nameWithType: ClaudeFile.SizeBytes
+- uid: Google.GenAI.Types.ClaudeFile.Type
+  name: Type
+  href: api/Google.GenAI.Types.ClaudeFile.html#Google_GenAI_Types_ClaudeFile_Type
+  commentId: P:Google.GenAI.Types.ClaudeFile.Type
+  fullName: Google.GenAI.Types.ClaudeFile.Type
+  nameWithType: ClaudeFile.Type
+- uid: Google.GenAI.Types.ClaudeFile.Type*
+  name: Type
+  href: api/Google.GenAI.Types.ClaudeFile.html#Google_GenAI_Types_ClaudeFile_Type_
+  commentId: Overload:Google.GenAI.Types.ClaudeFile.Type
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ClaudeFile.Type
+  nameWithType: ClaudeFile.Type
 - uid: Google.GenAI.Types.ClientOptions
   name: ClientOptions
   href: api/Google.GenAI.Types.ClientOptions.html
@@ -9328,6 +9454,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.DeleteFileResponse.FromJson
   nameWithType: DeleteFileResponse.FromJson
+- uid: Google.GenAI.Types.DeleteFileResponse.Id
+  name: Id
+  href: api/Google.GenAI.Types.DeleteFileResponse.html#Google_GenAI_Types_DeleteFileResponse_Id
+  commentId: P:Google.GenAI.Types.DeleteFileResponse.Id
+  fullName: Google.GenAI.Types.DeleteFileResponse.Id
+  nameWithType: DeleteFileResponse.Id
+- uid: Google.GenAI.Types.DeleteFileResponse.Id*
+  name: Id
+  href: api/Google.GenAI.Types.DeleteFileResponse.html#Google_GenAI_Types_DeleteFileResponse_Id_
+  commentId: Overload:Google.GenAI.Types.DeleteFileResponse.Id
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DeleteFileResponse.Id
+  nameWithType: DeleteFileResponse.Id
 - uid: Google.GenAI.Types.DeleteFileResponse.SdkHttpResponse
   name: SdkHttpResponse
   href: api/Google.GenAI.Types.DeleteFileResponse.html#Google_GenAI_Types_DeleteFileResponse_SdkHttpResponse
@@ -9341,6 +9480,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.DeleteFileResponse.SdkHttpResponse
   nameWithType: DeleteFileResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.DeleteFileResponse.Type
+  name: Type
+  href: api/Google.GenAI.Types.DeleteFileResponse.html#Google_GenAI_Types_DeleteFileResponse_Type
+  commentId: P:Google.GenAI.Types.DeleteFileResponse.Type
+  fullName: Google.GenAI.Types.DeleteFileResponse.Type
+  nameWithType: DeleteFileResponse.Type
+- uid: Google.GenAI.Types.DeleteFileResponse.Type*
+  name: Type
+  href: api/Google.GenAI.Types.DeleteFileResponse.html#Google_GenAI_Types_DeleteFileResponse_Type_
+  commentId: Overload:Google.GenAI.Types.DeleteFileResponse.Type
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DeleteFileResponse.Type
+  nameWithType: DeleteFileResponse.Type
 - uid: Google.GenAI.Types.DeleteModelConfig
   name: DeleteModelConfig
   href: api/Google.GenAI.Types.DeleteModelConfig.html
@@ -23060,6 +23212,19 @@ references:
   commentId: T:Google.GenAI.Types.ListFilesResponse
   fullName: Google.GenAI.Types.ListFilesResponse
   nameWithType: ListFilesResponse
+- uid: Google.GenAI.Types.ListFilesResponse.Data
+  name: Data
+  href: api/Google.GenAI.Types.ListFilesResponse.html#Google_GenAI_Types_ListFilesResponse_Data
+  commentId: P:Google.GenAI.Types.ListFilesResponse.Data
+  fullName: Google.GenAI.Types.ListFilesResponse.Data
+  nameWithType: ListFilesResponse.Data
+- uid: Google.GenAI.Types.ListFilesResponse.Data*
+  name: Data
+  href: api/Google.GenAI.Types.ListFilesResponse.html#Google_GenAI_Types_ListFilesResponse_Data_
+  commentId: Overload:Google.GenAI.Types.ListFilesResponse.Data
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListFilesResponse.Data
+  nameWithType: ListFilesResponse.Data
 - uid: Google.GenAI.Types.ListFilesResponse.Files
   name: Files
   href: api/Google.GenAI.Types.ListFilesResponse.html#Google_GenAI_Types_ListFilesResponse_Files
@@ -23089,6 +23254,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ListFilesResponse.FromJson
   nameWithType: ListFilesResponse.FromJson
+- uid: Google.GenAI.Types.ListFilesResponse.NextPage
+  name: NextPage
+  href: api/Google.GenAI.Types.ListFilesResponse.html#Google_GenAI_Types_ListFilesResponse_NextPage
+  commentId: P:Google.GenAI.Types.ListFilesResponse.NextPage
+  fullName: Google.GenAI.Types.ListFilesResponse.NextPage
+  nameWithType: ListFilesResponse.NextPage
+- uid: Google.GenAI.Types.ListFilesResponse.NextPage*
+  name: NextPage
+  href: api/Google.GenAI.Types.ListFilesResponse.html#Google_GenAI_Types_ListFilesResponse_NextPage_
+  commentId: Overload:Google.GenAI.Types.ListFilesResponse.NextPage
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ListFilesResponse.NextPage
+  nameWithType: ListFilesResponse.NextPage
 - uid: Google.GenAI.Types.ListFilesResponse.NextPageToken
   name: NextPageToken
   href: api/Google.GenAI.Types.ListFilesResponse.html#Google_GenAI_Types_ListFilesResponse_NextPageToken

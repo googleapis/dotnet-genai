@@ -155,14 +155,48 @@ Class ListFilesResponse  <a class="header-action link-secondary" title="View sou
 </h2>
 
 
+  <a id="Google_GenAI_Types_ListFilesResponse_Data_" data-uid="Google.GenAI.Types.ListFilesResponse.Data*"></a>
+
+  <h3 id="Google_GenAI_Types_ListFilesResponse_Data" data-uid="Google.GenAI.Types.ListFilesResponse.Data">
+  Data
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ListFilesResponse.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The files. This field is not supported in Gemini API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;data&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public List&lt;ClaudeFile&gt;? Data { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Google.GenAI.Types.ClaudeFile.html">ClaudeFile</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_ListFilesResponse_Files_" data-uid="Google.GenAI.Types.ListFilesResponse.Files*"></a>
 
   <h3 id="Google_GenAI_Types_ListFilesResponse_Files" data-uid="Google.GenAI.Types.ListFilesResponse.Files">
   Files
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ListFilesResponse.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ListFilesResponse.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The list of <code>File</code>s.</p>
+  <div class="markdown level1 summary"><p>The list of <code>File</code>s. This field is not supported in Vertex AI.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -189,14 +223,50 @@ public List&lt;File&gt;? Files { get; set; }</code></pre>
 
 
 
+  <a id="Google_GenAI_Types_ListFilesResponse_NextPage_" data-uid="Google.GenAI.Types.ListFilesResponse.NextPage*"></a>
+
+  <h3 id="Google_GenAI_Types_ListFilesResponse_NextPage" data-uid="Google.GenAI.Types.ListFilesResponse.NextPage">
+  NextPage
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ListFilesResponse.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Opaque cursor for the next page. Unset on the last page, and always unset when <code>ids</code> was
+supplied, since batch fetch is single-page. This field is not supported in Gemini API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;nextPage&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public string? NextPage { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_ListFilesResponse_NextPageToken_" data-uid="Google.GenAI.Types.ListFilesResponse.NextPageToken*"></a>
 
   <h3 id="Google_GenAI_Types_ListFilesResponse_NextPageToken" data-uid="Google.GenAI.Types.ListFilesResponse.NextPageToken">
   NextPageToken
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ListFilesResponse.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ListFilesResponse.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>A token that can be sent as a <code>page_token</code> into a subsequent <code>ListFiles</code> call.</p>
+  <div class="markdown level1 summary"><p>A token that can be sent as a <code>page_token</code> into a subsequent <code>ListFiles</code> call. This field is
+not supported in Vertex AI.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -265,7 +335,7 @@ public HttpResponse? SdkHttpResponse { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_ListFilesResponse_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.ListFilesResponse.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ListFilesResponse.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ListFilesResponse.cs/#L86"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a ListFilesResponse object.</p>
