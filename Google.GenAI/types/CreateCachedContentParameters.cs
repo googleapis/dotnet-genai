@@ -28,7 +28,7 @@ namespace Google.GenAI.Types {
 
   internal record CreateCachedContentParameters {
     /// <summary>
-    /// ID of the model to use. Example: gemini-flash-latest
+    /// ID of the model to use. Example: gemini-3.8-flash
     /// </summary>
     [JsonPropertyName("model")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
