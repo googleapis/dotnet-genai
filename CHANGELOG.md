@@ -1,5 +1,27 @@
 # Changelog
 
+## Version 2.0.0, released 2026-11-06
+
+
+### ⚠ BREAKING CHANGES
+
+* default Gemini API version to v1 instead of v1beta across SDKs
+
+### New features
+
+* Add `source_text` to `AudioTranscriptionConfig` and `SmartTranscriptionMode`. ([e1a2660](https://github.com/googleapis/dotnet-genai/commit/e1a26603a1cf96a7e9149b5a850bc112f997c053))
+* Add MALFORMED_RESPONSE to FinishReason ([2afcef2](https://github.com/googleapis/dotnet-genai/commit/2afcef2dbd6d8371660b9c0d88b98645e4e7716f)), refs [#2937](https://github.com/googleapis/dotnet-genai/issues/2937)
+* default Gemini API version to v1 instead of v1beta across SDKs ([010dbea](https://github.com/googleapis/dotnet-genai/commit/010dbea89671a70d3632efd5c9982be36e760dad))
+* Disable GenerateVideos for Gemini API, update tests/READMEs ([e468b92](https://github.com/googleapis/dotnet-genai/commit/e468b927c7798696159f12f934da46b7fc44aa14))
+* support GOOGLE_GENAI_API_VERSION environment variable across SDKs ([010dbea](https://github.com/googleapis/dotnet-genai/commit/010dbea89671a70d3632efd5c9982be36e760dad))
+* update discovery doc ([d4b483a](https://github.com/googleapis/dotnet-genai/commit/d4b483a69f1caa26396e7eb6bb9870d82ccaa42b))
+
+
+### Bug fixes
+
+* **interactions:** align SDK User-Agent and x-goog-api-client headers ([a854c0f](https://github.com/googleapis/dotnet-genai/commit/a854c0f8a0bd43f7f9ce9738b32e099ad334d33c))
+* respect configured and default API version for Gemini API file uploads across SDKs ([ae09e97](https://github.com/googleapis/dotnet-genai/commit/ae09e97eb72762ebe23b4f34d2b1ae2e7d41860b))
+
 ## Version 1.28.0, released 2026-10-28
 
 
