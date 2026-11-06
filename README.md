@@ -75,6 +75,46 @@ using Google.GenAI;
 client = new Client();
 ```
 
+## Native AOT and trimming
+
+The `net8.0` build of this library supports
+[Native AOT](https://learn.microsoft.com/dotnet/core/deploying/native-aot/) and
+trimmed deployments.
+
+Authentication with OAuth credentials (application default credentials,
+service account keys, user credentials) goes through `Google.Apis.Auth`, which
+relies on reflection. When an application is published with `PublishAot` or
+`PublishTrimmed`, this package roots `Google.Apis.Auth`, `Google.Apis.Core` and
+`Newtonsoft.Json` so those credentials keep working. This adds about 3 MB to a
+Native AOT application. Those libraries are not trim-annotated, so publishing
+reports `IL2104`/`IL3053` warnings for them whether or not they are rooted; the
+warnings are expected. If you only authenticate with an API
+key, an access token (`GoogleCredential.FromAccessToken`) or your own
+`ICredential` implementation, you can opt out:
+
+```xml
+<PropertyGroup>
+  <GoogleGenAIRootAuthAssemblies>false</GoogleGenAIRootAuthAssemblies>
+</PropertyGroup>
+```
+
+In Native AOT applications, `object`-typed properties such as
+`FunctionDeclaration.ParametersJsonSchema` or
+`GenerateContentConfig.ResponseJsonSchema`, and the values of
+`Dictionary<string, object>` properties such as `FunctionResponse.Response`,
+accept `string`, `bool` and numeric primitives, `Dictionary<string, object>`,
+`List<object>`, `object[]`, `JsonElement` and `JsonNode`. Convert other types,
+including your own, to a `JsonElement` first, using
+a [source-generated](https://learn.microsoft.com/dotnet/standard/serialization/system-text-json/source-generation)
+`JsonSerializerContext`:
+
+```csharp
+Response = new Dictionary<string, object>
+{
+    ["report"] = JsonSerializer.SerializeToElement(report, MyJsonContext.Default.WeatherReport),
+}
+```
+
 ## Types
 Parameter types are specified in the `Google.GenAI.Types` namespace.
 

@@ -1,0 +1,16 @@
+<Project>
+  <!--
+    Google.Apis.Auth and its dependencies serialize credentials, token requests and JWTs with
+    reflection (Newtonsoft.Json, and Google.Apis.Requests.Parameters.ParameterUtils in
+    Google.Apis.Core). Trimming
+    removes the members they reflect over, so application default credentials, service account
+    and user credentials fail or produce invalid requests in trimmed and Native AOT applications.
+    Rooting these assemblies keeps that metadata. Set GoogleGenAIRootAuthAssemblies to false to
+    opt out, for example when only API key authentication is used.
+  -->
+  <ItemGroup Condition="('$(PublishAot)' == 'true' or '$(PublishTrimmed)' == 'true') and '$(GoogleGenAIRootAuthAssemblies)' != 'false'">
+    <TrimmerRootAssembly Include="Google.Apis.Auth" />
+    <TrimmerRootAssembly Include="Google.Apis.Core" />
+    <TrimmerRootAssembly Include="Newtonsoft.Json" />
+  </ItemGroup>
+</Project>
