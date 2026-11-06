@@ -22,7 +22,10 @@ using System.Text.Json;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Represents how much to think for the tuning job.
+  /// Indicates the maximum thinking depth during tuning. Starting from Gemini 3.5 models, the old
+  /// thinking_budget will no longer be supported and will result in a user error if set. Instead,
+  /// users should use the thinking_level parameter to control the maximum thinking depth. This enum
+  /// is not supported in Gemini API.
   /// </summary>
 
   [JsonConverter(typeof(ReinforcementTuningThinkingLevelConverter))]
@@ -47,13 +50,23 @@ namespace Google.GenAI.Types {
     public static ReinforcementTuningThinkingLevel Minimal { get; } = new("MINIMAL");
 
     /// <summary>
+    /// Low thinking level.
+    /// </summary>
+    public static ReinforcementTuningThinkingLevel Low { get; } = new("LOW");
+
+    /// <summary>
+    /// Medium thinking level.
+    /// </summary>
+    public static ReinforcementTuningThinkingLevel Medium { get; } = new("MEDIUM");
+
+    /// <summary>
     /// High thinking level.
     /// </summary>
     public static ReinforcementTuningThinkingLevel High { get; } = new("HIGH");
 
     public static IReadOnlyList<ReinforcementTuningThinkingLevel> AllValues {
       get;
-    } = new[] { ReinforcementTuningThinkingLevelUnspecified, Minimal, High };
+    } = new[] { ReinforcementTuningThinkingLevelUnspecified, Minimal, Low, Medium, High };
 
     public static ReinforcementTuningThinkingLevel FromString(string value) {
       if (string.IsNullOrEmpty(value)) {
