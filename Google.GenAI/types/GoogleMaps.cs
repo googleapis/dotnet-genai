@@ -36,10 +36,9 @@ namespace Google.GenAI.Types {
     public AuthConfig ? AuthConfig { get; set; }
 
     /// <summary>
-    /// Deprecated. The Google Maps contextual widget behavior in Grounding with Google Maps is
-    /// being deprecated; this field is planned for removal and no longer has any effect once
-    /// removed. Optional. Whether to return a widget context token in the GroundingMetadata of the
-    /// response.
+    /// Optional. Deprecated: The Google Maps contextual widget behavior in Grounding with Google
+    /// Maps is being deprecated; this field is planned for removal and no longer has any effect
+    /// once removed. If true, include the widget context token in the response.
     /// </summary>
     [JsonPropertyName("enableWidget")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

@@ -58,8 +58,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// A list of custom vocabulary phrases, which biases the ASR model to improve recognition of
-    /// these specific terms.
+    /// Optional. A list of custom vocabulary phrases to bias the speech recognition model toward
+    /// recognizing specific terms.
     /// </summary>
     [JsonPropertyName("customVocabulary")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -69,8 +69,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Deprecated. A list of phrases used for speech adaptation, which biases the ASR model to
-    /// improve recognition of these specific terms.
+    /// Optional. Deprecated: Use `custom_vocabulary` instead. A list of phrases to bias the speech
+    /// recognition model towards.
     /// </summary>
     [JsonPropertyName("adaptationPhrases")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -80,7 +80,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Configures speaker diarization.
+    /// Optional. Configures speaker diarization.
     /// </summary>
     [JsonPropertyName("diarization")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -90,7 +90,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Configures word-level timestamp generation.
+    /// Optional. Configures word-level timestamp generation.
     /// </summary>
     [JsonPropertyName("wordTimestamp")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

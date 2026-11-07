@@ -28,8 +28,10 @@ namespace Google.GenAI.Types {
 
   public record ThinkingConfig {
     /// <summary>
-    /// Indicates whether to include thoughts in the response. If true, thoughts are returned only
-    /// if the model supports thought and thoughts are available.
+    /// Optional. If true, the model will include its thoughts in the response. "Thoughts" are the
+    /// intermediate steps the model takes to arrive at the final response. They can provide
+    /// insights into the model's reasoning process and help with debugging. If this is true,
+    /// thoughts are returned only when available.
     /// </summary>
     [JsonPropertyName("includeThoughts")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

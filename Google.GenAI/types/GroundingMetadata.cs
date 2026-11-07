@@ -58,7 +58,7 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Metadata related to retrieval in the grounding flow.
+    /// Optional. Output only. Metadata related to the retrieval grounding source.
     /// </summary>
     [JsonPropertyName("retrievalMetadata")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -68,7 +68,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Optional. Google search entry for the following-up web searches.
+    /// Optional. A web search entry point that can be used to display search results. This field is
+    /// populated only when the grounding source is Google Search.
     /// </summary>
     [JsonPropertyName("searchEntryPoint")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -78,7 +79,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Web search queries for the following-up web search.
+    /// Optional. The web search queries that were used to generate the content. This field is
+    /// populated only when the grounding source is Google Search.
     /// </summary>
     [JsonPropertyName("webSearchQueries")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

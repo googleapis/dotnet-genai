@@ -45,7 +45,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Timestamp when the request is made to the server.
+    /// Output only. Timestamp when the request is made to the server. This field is not supported
+    /// in Gemini API.
     /// </summary>
     [JsonPropertyName("createTime")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
