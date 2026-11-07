@@ -36,7 +36,7 @@ namespace Google.GenAI.Types {
     public string ? Speaker { get; set; }
 
     /// <summary>
-    /// The style instruction for how the voice should be synthesized (e.g. "excited, fast-paced").
+    /// Optional. Natural language description of the vocal style (e.g., "cheerful").
     /// </summary>
     [JsonPropertyName("style")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

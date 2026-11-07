@@ -46,7 +46,9 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// The speaker identifier for synthesis.
+    /// Optional. The speaker identifier for synthesis. Supported formats: * Speaker name for
+    /// prebuilt voices (for example, `Orus` or `Kore`). * Voice ID for stored voices (for example,
+    /// `voice_xxx`). * Voice replication key (for example, `voicekey_xxx`).
     /// </summary>
     [JsonPropertyName("voice")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

@@ -36,7 +36,7 @@ namespace Google.GenAI.Types {
     public string ? BigqueryDestination { get; set; }
 
     /// <summary>
-    /// The display name of the multimodal dataset.
+    /// Optional. Display name of the output dataset.
     /// </summary>
     [JsonPropertyName("displayName")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
