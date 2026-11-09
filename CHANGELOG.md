@@ -1,5 +1,18 @@
 # Changelog
 
+## Version 2.1.0, released 2026-11-09
+
+
+### New features
+
+* Add `proactive_video` to `ProactivityConfig` for the Live API. ([b3f0f16](https://github.com/googleapis/dotnet-genai/commit/b3f0f163758376351a517eaeb1ad290716789438))
+* add usage_metadata (including traffic_type) and truncated to EmbedContentResponse for Gemini Enterprise API ([52e1f54](https://github.com/googleapis/dotnet-genai/commit/52e1f541254a45f6f10d51318fd36214dd93c252))
+
+
+### Documentation improvements
+
+* update documentation links from ai.google.dev to aistudio.google.com. ([6501bf6](https://github.com/googleapis/dotnet-genai/commit/6501bf63cb640dab77039269aabdd8ab3296f778))
+
 ## Version 2.0.0, released 2026-11-06
 
 ### ⚠ BREAKING CHANGES
