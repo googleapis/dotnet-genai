@@ -11247,6 +11247,32 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.EmbedContentResponse.SdkHttpResponse
   nameWithType: EmbedContentResponse.SdkHttpResponse
+- uid: Google.GenAI.Types.EmbedContentResponse.Truncated
+  name: Truncated
+  href: api/Google.GenAI.Types.EmbedContentResponse.html#Google_GenAI_Types_EmbedContentResponse_Truncated
+  commentId: P:Google.GenAI.Types.EmbedContentResponse.Truncated
+  fullName: Google.GenAI.Types.EmbedContentResponse.Truncated
+  nameWithType: EmbedContentResponse.Truncated
+- uid: Google.GenAI.Types.EmbedContentResponse.Truncated*
+  name: Truncated
+  href: api/Google.GenAI.Types.EmbedContentResponse.html#Google_GenAI_Types_EmbedContentResponse_Truncated_
+  commentId: Overload:Google.GenAI.Types.EmbedContentResponse.Truncated
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EmbedContentResponse.Truncated
+  nameWithType: EmbedContentResponse.Truncated
+- uid: Google.GenAI.Types.EmbedContentResponse.UsageMetadata
+  name: UsageMetadata
+  href: api/Google.GenAI.Types.EmbedContentResponse.html#Google_GenAI_Types_EmbedContentResponse_UsageMetadata
+  commentId: P:Google.GenAI.Types.EmbedContentResponse.UsageMetadata
+  fullName: Google.GenAI.Types.EmbedContentResponse.UsageMetadata
+  nameWithType: EmbedContentResponse.UsageMetadata
+- uid: Google.GenAI.Types.EmbedContentResponse.UsageMetadata*
+  name: UsageMetadata
+  href: api/Google.GenAI.Types.EmbedContentResponse.html#Google_GenAI_Types_EmbedContentResponse_UsageMetadata_
+  commentId: Overload:Google.GenAI.Types.EmbedContentResponse.UsageMetadata
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EmbedContentResponse.UsageMetadata
+  nameWithType: EmbedContentResponse.UsageMetadata
 - uid: Google.GenAI.Types.EmbeddingApiType
   name: EmbeddingApiType
   href: api/Google.GenAI.Types.EmbeddingApiType.html
