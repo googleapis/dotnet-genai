@@ -29897,6 +29897,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ProactivityConfig.ProactiveAudio
   nameWithType: ProactivityConfig.ProactiveAudio
+- uid: Google.GenAI.Types.ProactivityConfig.ProactiveVideo
+  name: ProactiveVideo
+  href: api/Google.GenAI.Types.ProactivityConfig.html#Google_GenAI_Types_ProactivityConfig_ProactiveVideo
+  commentId: P:Google.GenAI.Types.ProactivityConfig.ProactiveVideo
+  fullName: Google.GenAI.Types.ProactivityConfig.ProactiveVideo
+  nameWithType: ProactivityConfig.ProactiveVideo
+- uid: Google.GenAI.Types.ProactivityConfig.ProactiveVideo*
+  name: ProactiveVideo
+  href: api/Google.GenAI.Types.ProactivityConfig.html#Google_GenAI_Types_ProactivityConfig_ProactiveVideo_
+  commentId: Overload:Google.GenAI.Types.ProactivityConfig.ProactiveVideo
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ProactivityConfig.ProactiveVideo
+  nameWithType: ProactivityConfig.ProactiveVideo
 - uid: Google.GenAI.Types.ProductImage
   name: ProductImage
   href: api/Google.GenAI.Types.ProductImage.html
