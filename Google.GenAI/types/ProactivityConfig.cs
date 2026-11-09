@@ -37,6 +37,18 @@ namespace Google.GenAI.Types {
     public bool ? ProactiveAudio { get; set; }
 
     /// <summary>
+    /// If enabled, the system might trigger a generation on each received image. This requires that
+    /// `proactive_audio` is enabled. The rate of generation depends on the rate of incoming images
+    /// and can cause a significant increase in cost.
+    /// </summary>
+    [JsonPropertyName("proactiveVideo")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public bool
+        ? ProactiveVideo {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a ProactivityConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
