@@ -55,6 +55,27 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Whether the input content was truncated before generating the embedding. This field is not
+    /// supported in Gemini API.
+    /// </summary>
+    [JsonPropertyName("truncated")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public bool
+        ? Truncated {
+            get; set;
+          }
+
+    /// <summary>
+    /// Usage metadata about the response(s).
+    /// </summary>
+    [JsonPropertyName("usageMetadata")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public UsageMetadata
+        ? UsageMetadata {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a EmbedContentResponse object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
