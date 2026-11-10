@@ -716,6 +716,59 @@ public class GoogleGenAIExtensionsTest
   }
 
   [TestMethod]
+  public async Task IEmbeddingGenerator_VertexBatchUsesResponseUsageMetadata()
+  {
+    IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator = CreateEmbeddingGenerator("""
+      {
+        "requests": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "First text"
+                }
+              ]
+            }
+          },
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "Second text"
+                }
+              ]
+            }
+          }
+        ]
+      }
+      """, """
+      {
+        "embeddings": [
+          {
+            "values": [0.1, 0.2, 0.3]
+          },
+          {
+            "values": [0.4, 0.5, 0.6]
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 12,
+          "totalTokenCount": 12
+        }
+      }
+      """, defaultModelId: "gemini-embedding-001", vertexAI: true);
+
+    var response = await embeddingGenerator.GenerateAsync(["First text", "Second text"]);
+
+    Assert.AreEqual(2, response.Count);
+    CollectionAssert.AreEqual(new[] { 0.1f, 0.2f, 0.3f }, response[0].Vector.ToArray());
+    CollectionAssert.AreEqual(new[] { 0.4f, 0.5f, 0.6f }, response[1].Vector.ToArray());
+    Assert.IsNotNull(response.Usage);
+    Assert.AreEqual(12, response.Usage.InputTokenCount);
+    Assert.AreEqual(12, response.Usage.TotalTokenCount);
+  }
+
+  [TestMethod]
   public async Task IEmbeddingGenerator_GenerateAsync_NullValues_ThrowsArgumentNullException()
   {
     var embeddingGenerator = CreateEmbeddingGenerator("{}", "{}");
@@ -5608,9 +5661,10 @@ public class GoogleGenAIExtensionsTest
     string actualResponse,
     string defaultModelId = "text-embedding-004",
     int? defaultDimensions = null,
-    bool makeRealRequest = false)
+    bool makeRealRequest = false,
+    bool vertexAI = false)
   {
-    Models models = new(new MockApiClient(expectedRequest, actualResponse, makeRealRequest));
+    Models models = new(new MockApiClient(expectedRequest, actualResponse, makeRealRequest, vertexAI));
     return models.AsIEmbeddingGenerator(defaultModelId, defaultDimensions);
   }
 

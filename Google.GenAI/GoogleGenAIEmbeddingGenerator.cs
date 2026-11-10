@@ -98,6 +98,12 @@ internal sealed class GoogleGenAIEmbeddingGenerator : IEmbeddingGenerator<string
       }
     }
 
+    // batchEmbedContents responses report token usage only for the whole request.
+    if (result.Usage is null && response.UsageMetadata?.PromptTokenCount is { } promptTokens)
+    {
+      result.Usage = new() { InputTokenCount = promptTokens };
+    }
+
     if (result.Usage is not null)
     {
       result.Usage.TotalTokenCount = result.Usage.InputTokenCount;

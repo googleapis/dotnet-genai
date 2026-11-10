@@ -1069,7 +1069,7 @@ namespace Google.GenAI {
           JsonNode truncated = Common.GetValueByPath(fromObject, new string[] { "truncated" });
           JsonObject stats = new JsonObject();
           if (usageMetadata != null && usageMetadata["promptTokenCount"] != null) {
-            stats.Add("token_count",
+            stats.Add("tokenCount",
                       JsonNode.Parse(usageMetadata["promptTokenCount"].ToJsonString()));
           }
           if (usageMetadata != null && usageMetadata["promptTokensDetails"] != null) {
@@ -5963,10 +5963,16 @@ namespace Google.GenAI {
       }
       if (Transformers.TIsVertexEmbedContentModel(model)) {
         if (contents.Count > 1) {
-          throw new ArgumentException(
-              "The embedContent API for this model only supports one content at a time.");
+          if (Transformers.TIsVertexMaasModel(model)) {
+            throw new ArgumentException(
+                "The embedContent API for this model only supports one content at a time.");
+          }
+          return await PrivateEmbedContentAsync(model, null, null,
+                                                EmbeddingApiType.BatchEmbedContents, contents,
+                                                config, cancellationToken);
         }
-        return await PrivateEmbedContentAsync(model, contents, contents[0],
+        Content? singleContent = contents.Count > 0 ? contents[0] : null;
+        return await PrivateEmbedContentAsync(model, null, singleContent,
                                               EmbeddingApiType.EmbedContent, null, config,
                                               cancellationToken);
       } else {
