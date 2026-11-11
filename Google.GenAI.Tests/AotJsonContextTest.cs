@@ -195,6 +195,121 @@ namespace Google.GenAI.Tests
     }
 
     /// <summary>
+    /// Verifies that values commonly placed in object-typed properties and Dictionary&lt;string, object&gt;
+    /// values, such as FunctionResponse.Response, resolve without reflection.
+    /// </summary>
+    [TestMethod]
+    public void GenAIJsonContext_ResolvesObjectValues()
+    {
+      var valueTypes = new[]
+      {
+        typeof(Dictionary<string, object>), typeof(List<object>), typeof(object[]),
+        typeof(string), typeof(bool), typeof(byte), typeof(sbyte), typeof(short), typeof(ushort),
+        typeof(int), typeof(uint), typeof(long), typeof(ulong), typeof(float), typeof(double),
+        typeof(decimal), typeof(JsonElement), typeof(System.Text.Json.Nodes.JsonNode),
+      };
+      var missing = valueTypes.Where(t => GenAIJsonContext.Default.GetTypeInfo(t) == null).ToList();
+      Assert.AreEqual(0, missing.Count, $"Missing from GenAIJsonContext: {string.Join(", ", missing.Select(t => t.Name))}");
+    }
+
+    /// <summary>
+    /// Verifies that every serializable type in Google.GenAI.Types (any type with a FromJson method
+    /// or JsonPropertyName-annotated properties) resolves through GenAIJsonContext. Under Native AOT
+    /// a missing type throws NotSupportedException at runtime, and the AOT compiler can't warn about it.
+    /// </summary>
+    [TestMethod]
+    public void GenAIJsonContext_ResolvesEveryTypesNamespaceType()
+    {
+      var serializableTypes = typeof(Client).Assembly.GetTypes()
+          .Where(t => t.Namespace == "Google.GenAI.Types" && t.IsClass && !t.IsAbstract && !t.IsNested
+                      && !t.IsGenericTypeDefinition && !t.Name.StartsWith("<"))
+          .Where(t => t.GetMethod("FromJson", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static) != null
+                      || t.GetProperties().Any(p => p.IsDefined(typeof(System.Text.Json.Serialization.JsonPropertyNameAttribute), true)))
+          // Replay and test table records are only read by the test harness, not by the SDK, so they
+          // are kept out of GenAIJsonContext to avoid shipping their serialization code to every app.
+          .Where(t => !t.Name.StartsWith("Replay") && !t.Name.StartsWith("TestTable"))
+          .ToList();
+      Assert.IsTrue(serializableTypes.Count > 300, $"Expected to find the Types namespace, found {serializableTypes.Count} types");
+
+      var missing = serializableTypes.Where(t => GenAIJsonContext.Default.GetTypeInfo(t) == null).Select(t => t.Name).OrderBy(n => n).ToList();
+      Assert.AreEqual(0, missing.Count, $"Add [JsonSerializable] to GenAIJsonContext for: {string.Join(", ", missing)}");
+    }
+
+    /// <summary>
+    /// Verifies that SDK types resolve through GenAIJsonContext when caller-supplied options
+    /// carry a resolver that does not know them, without modifying the caller's options.
+    /// </summary>
+    [TestMethod]
+    public void FromJson_ResolvesSdkTypesWithCallerOptionsThatLackThem()
+    {
+      var options = new JsonSerializerOptions
+      {
+        PropertyNameCaseInsensitive = true,
+        TypeInfoResolver = JsonTypeInfoResolver.Combine(),
+      };
+      options.MakeReadOnly();
+
+      var content = Content.FromJson("{\"PARTS\":[{\"text\":\"Hello\"}]}", options);
+
+      Assert.AreEqual("Hello", content?.Parts?[0].Text);
+      Assert.AreEqual(0, options.TypeInfoResolverChain.Count);
+      // Repeated calls with read-only options use the cached copy.
+      Assert.AreEqual("Hello", Content.FromJson("{\"PARTS\":[{\"text\":\"Hello\"}]}", options)?.Parts?[0].Text);
+    }
+
+    /// <summary>
+    /// Verifies that FromJson works with caller-supplied options that have no resolver at all.
+    /// JsonSerializerOptions.GetTypeInfo doesn't fall back to reflection for such options, even when
+    /// reflection-based serialization is enabled, so this used to throw outside Native AOT too.
+    /// </summary>
+    [TestMethod]
+    public void FromJson_ResolvesSdkTypesWithCallerOptionsWithoutResolver()
+    {
+      var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+
+      var content = Content.FromJson("{\"PARTS\":[{\"text\":\"Hello\"}]}", options);
+
+      Assert.AreEqual("Hello", content?.Parts?[0].Text);
+      Assert.IsNull(options.TypeInfoResolver);
+      Assert.IsFalse(options.IsReadOnly);
+    }
+
+    /// <summary>
+    /// Verifies that mutable caller-supplied options with a resolver are locked on first use, as
+    /// System.Text.Json does, so the copy extended with GenAIJsonContext can be cached.
+    /// </summary>
+    [TestMethod]
+    public void FromJson_LocksMutableCallerOptionsWithResolver()
+    {
+      var options = new JsonSerializerOptions
+      {
+        PropertyNameCaseInsensitive = true,
+        TypeInfoResolver = JsonTypeInfoResolver.Combine(),
+      };
+
+      Assert.AreEqual("Hello", Content.FromJson("{\"PARTS\":[{\"text\":\"Hello\"}]}", options)?.Parts?[0].Text);
+
+      Assert.IsTrue(options.IsReadOnly);
+      Assert.AreEqual(0, options.TypeInfoResolverChain.Count);
+      Assert.ThrowsException<InvalidOperationException>(() => options.PropertyNameCaseInsensitive = false);
+    }
+
+    /// <summary>
+    /// Verifies that changes to mutable caller-supplied options without a resolver, made after a
+    /// FromJson call, are honored rather than served from a stale cached copy.
+    /// </summary>
+    [TestMethod]
+    public void FromJson_HonorsLaterChangesToMutableCallerOptions()
+    {
+      var options = new JsonSerializerOptions();
+      Assert.IsNull(Content.FromJson("{\"PARTS\":[{\"text\":\"Hello\"}]}", options)?.Parts);
+
+      options.PropertyNameCaseInsensitive = true;
+
+      Assert.AreEqual("Hello", Content.FromJson("{\"PARTS\":[{\"text\":\"Hello\"}]}", options)?.Parts?[0].Text);
+    }
+
+    /// <summary>
     /// Verifies that serializing and deserializing a realtime message round-trips correctly
     /// using only the source-generated context (no reflection fallback).
     /// </summary>
