@@ -44,6 +44,7 @@
 
   <ItemGroup>
     <None Include="README.md" Pack="true" PackagePath="/" />
+    <None Include="buildTransitive/Google.GenAI.targets" Pack="true" PackagePath="buildTransitive/" />
   </ItemGroup>
 
 </Project>
