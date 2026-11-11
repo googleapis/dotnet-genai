@@ -60,9 +60,14 @@ namespace Google.GenAI.Types {
     /// </summary>
     public static ThinkingLevel High { get; } = new("HIGH");
 
+    /// <summary>
+    /// XHIGH thinking level.
+    /// </summary>
+    public static ThinkingLevel Xhigh { get; } = new("XHIGH");
+
     public static IReadOnlyList<ThinkingLevel> AllValues {
       get;
-    } = new[] { ThinkingLevelUnspecified, Minimal, Low, Medium, High };
+    } = new[] { ThinkingLevelUnspecified, Minimal, Low, Medium, High, Xhigh };
 
     public static ThinkingLevel FromString(string value) {
       if (string.IsNullOrEmpty(value)) {
