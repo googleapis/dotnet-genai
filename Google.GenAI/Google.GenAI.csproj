@@ -22,6 +22,12 @@
 
   <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0'">
     <IsAotCompatible>true</IsAotCompatible>
+    <!--
+      Fail the build on trim/AOT analyzer warnings, so regressions show up before the Native AOT
+      publish in verify_aot.sh. The publish check is still needed: it analyzes the whole program,
+      including dependencies, which the build-time analyzers don't.
+    -->
+    <WarningsAsErrors>$(WarningsAsErrors);IL2026;IL2046;IL2057;IL2067;IL2070;IL2072;IL2075;IL2087;IL2091;IL3050;IL3051</WarningsAsErrors>
   </PropertyGroup>
 
   <PropertyGroup>
