@@ -118,6 +118,38 @@ export GOOGLE_CLOUD_LOCATION='us-central1'
 
 client = new Client();
 </code></pre>
+<h2 id="native-aot-and-trimming">Native AOT and trimming</h2>
+<p>The <code>net8.0</code> build of this library supports
+<a href="https://learn.microsoft.com/dotnet/core/deploying/native-aot/">Native AOT</a> and
+trimmed deployments.</p>
+<p>Authentication with OAuth credentials (application default credentials,
+service account keys, user credentials) goes through <code>Google.Apis.Auth</code>, which
+relies on reflection. When an application is published with <code>PublishAot</code> or
+<code>PublishTrimmed</code>, this package roots <code>Google.Apis.Auth</code>, <code>Google.Apis.Core</code> and
+<code>Newtonsoft.Json</code> so those credentials keep working. This adds about 3 MB to a
+Native AOT application. Those libraries are not trim-annotated, so publishing
+reports <code>IL2104</code>/<code>IL3053</code> warnings for them whether or not they are rooted; the
+warnings are expected. If you only authenticate with an API
+key, an access token (<code>GoogleCredential.FromAccessToken</code>) or your own
+<code>ICredential</code> implementation, you can opt out:</p>
+<pre><code class="lang-xml">&lt;PropertyGroup&gt;
+  &lt;GoogleGenAIRootAuthAssemblies&gt;false&lt;/GoogleGenAIRootAuthAssemblies&gt;
+&lt;/PropertyGroup&gt;
+</code></pre>
+<p>In Native AOT applications, <code>object</code>-typed properties such as
+<code>FunctionDeclaration.ParametersJsonSchema</code> or
+<code>GenerateContentConfig.ResponseJsonSchema</code>, and the values of
+<code>Dictionary&lt;string, object&gt;</code> properties such as <code>FunctionResponse.Response</code>,
+accept <code>string</code>, <code>bool</code> and numeric primitives, <code>Dictionary&lt;string, object&gt;</code>,
+<code>List&lt;object&gt;</code>, <code>object[]</code>, <code>JsonElement</code> and <code>JsonNode</code>. Convert other types,
+including your own, to a <code>JsonElement</code> first, using
+a <a href="https://learn.microsoft.com/dotnet/standard/serialization/system-text-json/source-generation">source-generated</a>
+<code>JsonSerializerContext</code>:</p>
+<pre><code class="lang-csharp">Response = new Dictionary&lt;string, object&gt;
+{
+    [&quot;report&quot;] = JsonSerializer.SerializeToElement(report, MyJsonContext.Default.WeatherReport),
+}
+</code></pre>
 <h2 id="types">Types</h2>
 <p>Parameter types are specified in the <code>Google.GenAI.Types</code> namespace.</p>
 <h3 id="enums">Enums</h3>
