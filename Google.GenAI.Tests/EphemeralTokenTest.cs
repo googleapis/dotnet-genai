@@ -107,7 +107,7 @@ namespace Google.GenAI.Tests
         {
           ["setup"] = new JsonObject { ["model"] = "gemini-2.5-flash" }
         },
-        ["fieldMask"] = new JsonArray { "temperature" }
+        ["fieldMask"] = new JsonArray { JsonValue.Create("temperature") }
       };
       var config = new CreateAuthTokenConfig
       {
@@ -146,7 +146,7 @@ namespace Google.GenAI.Tests
     {
       var body = new JsonObject
       {
-        ["fieldMask"] = new JsonArray { "model" }
+        ["fieldMask"] = new JsonArray { JsonValue.Create("model") }
       };
 
       var tokens = new Tokens(null);
