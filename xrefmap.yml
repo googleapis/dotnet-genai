@@ -36978,6 +36978,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ThinkingLevel.Value
   nameWithType: ThinkingLevel.Value
+- uid: Google.GenAI.Types.ThinkingLevel.Xhigh
+  name: Xhigh
+  href: api/Google.GenAI.Types.ThinkingLevel.html#Google_GenAI_Types_ThinkingLevel_Xhigh
+  commentId: P:Google.GenAI.Types.ThinkingLevel.Xhigh
+  fullName: Google.GenAI.Types.ThinkingLevel.Xhigh
+  nameWithType: ThinkingLevel.Xhigh
+- uid: Google.GenAI.Types.ThinkingLevel.Xhigh*
+  name: Xhigh
+  href: api/Google.GenAI.Types.ThinkingLevel.html#Google_GenAI_Types_ThinkingLevel_Xhigh_
+  commentId: Overload:Google.GenAI.Types.ThinkingLevel.Xhigh
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ThinkingLevel.Xhigh
+  nameWithType: ThinkingLevel.Xhigh
 - uid: Google.GenAI.Types.ThinkingLevel.op_Implicit(System.String)~Google.GenAI.Types.ThinkingLevel
   name: implicit operator ThinkingLevel(string)
   href: api/Google.GenAI.Types.ThinkingLevel.html#Google_GenAI_Types_ThinkingLevel_op_Implicit_System_String__Google_GenAI_Types_ThinkingLevel
