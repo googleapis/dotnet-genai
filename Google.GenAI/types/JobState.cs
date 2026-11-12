@@ -85,8 +85,8 @@ namespace Google.GenAI.Types {
     public static JobState JobStateExpired { get; } = new("JOB_STATE_EXPIRED");
 
     /// <summary>
-    /// The job is being updated. Only jobs in the `JOB_STATE_RUNNING` state can be updated. After
-    /// updating, the job goes back to the `JOB_STATE_RUNNING` state.
+    /// The job is being updated. Only jobs in the `RUNNING` state can be updated. After updating,
+    /// the job goes back to the `RUNNING` state.
     /// </summary>
     public static JobState JobStateUpdating { get; } = new("JOB_STATE_UPDATING");
 

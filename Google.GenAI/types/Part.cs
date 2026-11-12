@@ -190,7 +190,9 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// How the model processes this part's media for understanding.
+    /// Optional. How the model processes this part's media for understanding. Only meaningful for
+    /// video parts (`inline_data` or `file_data` with video mime). Non-video parts ignore this
+    /// field.
     /// </summary>
     [JsonPropertyName("mediaProcessing")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
