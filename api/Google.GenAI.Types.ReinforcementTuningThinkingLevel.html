@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Struct ReinforcementTuningThinkingLevel | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Represents how much to think for the tuning job.">
+      <meta name="description" content="Indicates the maximum thinking depth during tuning. Starting from Gemini 3.5 models, the old thinking_budget will no longer be supported and will result in a user error if set. Instead, users should use the thinking_level parameter to control the maximum thinking depth. This enum is not supported in Gemini API.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Types_ReinforcementTuningThinkingLevel" data-uid="Google.GenAI.Types.ReinforcementTuningThinkingLevel" class="text-break">
-Struct ReinforcementTuningThinkingLevel  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningThinkingLevel.cs/#L28"><i class="bi bi-code-slash"></i></a>
+Struct ReinforcementTuningThinkingLevel  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningThinkingLevel.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,7 +93,10 @@ Struct ReinforcementTuningThinkingLevel  <a class="header-action link-secondary"
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents how much to think for the tuning job.</p>
+  <div class="markdown summary"><p>Indicates the maximum thinking depth during tuning. Starting from Gemini 3.5 models, the old
+thinking_budget will no longer be supported and will result in a user error if set. Instead,
+users should use the thinking_level parameter to control the maximum thinking depth. This enum
+is not supported in Gemini API.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -144,7 +147,7 @@ public readonly record struct ReinforcementTuningThinkingLevel : IEquatable&lt;R
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningThinkingLevel_AllValues" data-uid="Google.GenAI.Types.ReinforcementTuningThinkingLevel.AllValues">
   AllValues
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningThinkingLevel.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningThinkingLevel.cs/#L67"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -175,7 +178,7 @@ public readonly record struct ReinforcementTuningThinkingLevel : IEquatable&lt;R
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningThinkingLevel_High" data-uid="Google.GenAI.Types.ReinforcementTuningThinkingLevel.High">
   High
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningThinkingLevel.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningThinkingLevel.cs/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>High thinking level.</p>
@@ -203,11 +206,75 @@ public readonly record struct ReinforcementTuningThinkingLevel : IEquatable&lt;R
 
 
 
+  <a id="Google_GenAI_Types_ReinforcementTuningThinkingLevel_Low_" data-uid="Google.GenAI.Types.ReinforcementTuningThinkingLevel.Low*"></a>
+
+  <h3 id="Google_GenAI_Types_ReinforcementTuningThinkingLevel_Low" data-uid="Google.GenAI.Types.ReinforcementTuningThinkingLevel.Low">
+  Low
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningThinkingLevel.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Low thinking level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ReinforcementTuningThinkingLevel Low { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.ReinforcementTuningThinkingLevel.html">ReinforcementTuningThinkingLevel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_ReinforcementTuningThinkingLevel_Medium_" data-uid="Google.GenAI.Types.ReinforcementTuningThinkingLevel.Medium*"></a>
+
+  <h3 id="Google_GenAI_Types_ReinforcementTuningThinkingLevel_Medium" data-uid="Google.GenAI.Types.ReinforcementTuningThinkingLevel.Medium">
+  Medium
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningThinkingLevel.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Medium thinking level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ReinforcementTuningThinkingLevel Medium { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.ReinforcementTuningThinkingLevel.html">ReinforcementTuningThinkingLevel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_ReinforcementTuningThinkingLevel_Minimal_" data-uid="Google.GenAI.Types.ReinforcementTuningThinkingLevel.Minimal*"></a>
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningThinkingLevel_Minimal" data-uid="Google.GenAI.Types.ReinforcementTuningThinkingLevel.Minimal">
   Minimal
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningThinkingLevel.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningThinkingLevel.cs/#L50"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Little to no thinking.</p>
@@ -239,7 +306,7 @@ public readonly record struct ReinforcementTuningThinkingLevel : IEquatable&lt;R
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningThinkingLevel_ReinforcementTuningThinkingLevelUnspecified" data-uid="Google.GenAI.Types.ReinforcementTuningThinkingLevel.ReinforcementTuningThinkingLevelUnspecified">
   ReinforcementTuningThinkingLevelUnspecified
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningThinkingLevel.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningThinkingLevel.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Unspecified thinking level.</p>
@@ -271,7 +338,7 @@ public readonly record struct ReinforcementTuningThinkingLevel : IEquatable&lt;R
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningThinkingLevel_Value" data-uid="Google.GenAI.Types.ReinforcementTuningThinkingLevel.Value">
   Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningThinkingLevel.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningThinkingLevel.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -306,7 +373,7 @@ public readonly record struct ReinforcementTuningThinkingLevel : IEquatable&lt;R
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningThinkingLevel_Equals_Google_GenAI_Types_ReinforcementTuningThinkingLevel_" data-uid="Google.GenAI.Types.ReinforcementTuningThinkingLevel.Equals(Google.GenAI.Types.ReinforcementTuningThinkingLevel)">
   Equals(ReinforcementTuningThinkingLevel)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningThinkingLevel.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningThinkingLevel.cs/#L91"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -342,7 +409,7 @@ public readonly record struct ReinforcementTuningThinkingLevel : IEquatable&lt;R
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningThinkingLevel_FromString_System_String_" data-uid="Google.GenAI.Types.ReinforcementTuningThinkingLevel.FromString(System.String)">
   FromString(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningThinkingLevel.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningThinkingLevel.cs/#L71"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -378,7 +445,7 @@ public readonly record struct ReinforcementTuningThinkingLevel : IEquatable&lt;R
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningThinkingLevel_GetHashCode" data-uid="Google.GenAI.Types.ReinforcementTuningThinkingLevel.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningThinkingLevel.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningThinkingLevel.cs/#L93"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -409,7 +476,7 @@ public readonly record struct ReinforcementTuningThinkingLevel : IEquatable&lt;R
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningThinkingLevel_ToString" data-uid="Google.GenAI.Types.ReinforcementTuningThinkingLevel.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningThinkingLevel.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningThinkingLevel.cs/#L86"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -444,7 +511,7 @@ public readonly record struct ReinforcementTuningThinkingLevel : IEquatable&lt;R
 
   <h3 id="Google_GenAI_Types_ReinforcementTuningThinkingLevel_op_Implicit_System_String__Google_GenAI_Types_ReinforcementTuningThinkingLevel" data-uid="Google.GenAI.Types.ReinforcementTuningThinkingLevel.op_Implicit(System.String)~Google.GenAI.Types.ReinforcementTuningThinkingLevel">
   implicit operator ReinforcementTuningThinkingLevel(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningThinkingLevel.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningThinkingLevel.cs/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -480,7 +547,7 @@ public readonly record struct ReinforcementTuningThinkingLevel : IEquatable&lt;R
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningThinkingLevel.cs/#L28" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/ReinforcementTuningThinkingLevel.cs/#L31" class="edit-link">Edit this page</a>
         </div>
 
 

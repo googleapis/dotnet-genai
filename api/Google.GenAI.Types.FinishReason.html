@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Struct FinishReason | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Output only. The reason why the model stopped generating tokens.  If empty, the model has not stopped generating the tokens.">
+      <meta name="description" content="Output only. The reason why the model stopped generating tokens. If empty, the model has not stopped generating.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -93,8 +93,8 @@ Struct FinishReason  <a class="header-action link-secondary" title="View source"
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Output only. The reason why the model stopped generating tokens.  If empty, the model has not
-stopped generating the tokens.</p>
+  <div class="markdown summary"><p>Output only. The reason why the model stopped generating tokens. If empty, the model has not
+stopped generating.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -145,7 +145,7 @@ public readonly record struct FinishReason : IEquatable&lt;FinishReason&gt;</cod
 
   <h3 id="Google_GenAI_Types_FinishReason_AllValues" data-uid="Google.GenAI.Types.FinishReason.AllValues">
   AllValues
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L170"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -176,10 +176,11 @@ public readonly record struct FinishReason : IEquatable&lt;FinishReason&gt;</cod
 
   <h3 id="Google_GenAI_Types_FinishReason_Blocklist" data-uid="Google.GenAI.Types.FinishReason.Blocklist">
   Blocklist
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Token generation stopped because the content contains forbidden terms.</p>
+  <div class="markdown level1 summary"><p>The model stopped generating because the content contains a term from a configured
+blocklist.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -208,17 +209,49 @@ public readonly record struct FinishReason : IEquatable&lt;FinishReason&gt;</cod
 
   <h3 id="Google_GenAI_Types_FinishReason_Continuation" data-uid="Google.GenAI.Types.FinishReason.Continuation">
   Continuation
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L162"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Token generation stopped because the response reached the per-request token limit, but
-generation is not yet complete. The response can be continued by passing the returned
-<code>continuation_token</code> in a subsequent request.</p>
+  <div class="markdown level1 summary"><p>Token generation was stopped because the response reached the per-request token limit, but
+generation is not yet complete. The model response can be continued via a subsequent request
+using the returned <code>continuation_token</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static FinishReason Continuation { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FinishReason.html">FinishReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FinishReason_Escalation_" data-uid="Google.GenAI.Types.FinishReason.Escalation*"></a>
+
+  <h3 id="Google_GenAI_Types_FinishReason_Escalation" data-uid="Google.GenAI.Types.FinishReason.Escalation">
+  Escalation
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Request was filtered by an escalation rule. This enum value is not supported in Vertex AI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FinishReason Escalation { get; }</code></pre>
   </div>
 
 
@@ -274,10 +307,10 @@ generation is not yet complete. The response can be continued by passing the ret
 
   <h3 id="Google_GenAI_Types_FinishReason_ImageOther" data-uid="Google.GenAI.Types.FinishReason.ImageOther">
   ImageOther
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L110"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Image generation stopped for a reason not otherwise specified.</p>
+  <div class="markdown level1 summary"><p>The image generation stopped for a reason not otherwise specified.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -306,10 +339,10 @@ generation is not yet complete. The response can be continued by passing the ret
 
   <h3 id="Google_GenAI_Types_FinishReason_ImageProhibitedContent" data-uid="Google.GenAI.Types.FinishReason.ImageProhibitedContent">
   ImageProhibitedContent
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L105"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Image generation stopped because the generated images have prohibited content.</p>
+  <div class="markdown level1 summary"><p>The generated image may contain prohibited content.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -338,10 +371,10 @@ generation is not yet complete. The response can be continued by passing the ret
 
   <h3 id="Google_GenAI_Types_FinishReason_ImageRecitation" data-uid="Google.GenAI.Types.FinishReason.ImageRecitation">
   ImageRecitation
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L120"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Image generation stopped because the generated image may be a recitation from a source.</p>
+  <div class="markdown level1 summary"><p>The generated image may be a recitation from a source.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -370,10 +403,10 @@ generation is not yet complete. The response can be continued by passing the ret
 
   <h3 id="Google_GenAI_Types_FinishReason_ImageSafety" data-uid="Google.GenAI.Types.FinishReason.ImageSafety">
   ImageSafety
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L100"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Token generation stopped because generated images have safety violations.</p>
+  <div class="markdown level1 summary"><p>The generated image potentially violates safety policies.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -402,10 +435,11 @@ generation is not yet complete. The response can be continued by passing the ret
 
   <h3 id="Google_GenAI_Types_FinishReason_Language" data-uid="Google.GenAI.Types.FinishReason.Language">
   Language
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The token generation stopped because of using an unsupported language.</p>
+  <div class="markdown level1 summary"><p>The response candidate content was flagged for using an unsupported language. This enum
+value is not supported in Vertex AI.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -434,10 +468,10 @@ generation is not yet complete. The response can be continued by passing the ret
 
   <h3 id="Google_GenAI_Types_FinishReason_MalformedFunctionCall" data-uid="Google.GenAI.Types.FinishReason.MalformedFunctionCall">
   MalformedFunctionCall
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L95"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The function call generated by the model is invalid.</p>
+  <div class="markdown level1 summary"><p>The model generated a function call that is syntactically invalid and can't be parsed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -466,10 +500,10 @@ generation is not yet complete. The response can be continued by passing the ret
 
   <h3 id="Google_GenAI_Types_FinishReason_MalformedResponse" data-uid="Google.GenAI.Types.FinishReason.MalformedResponse">
   MalformedResponse
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L144"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Token generation stopped because the response was malformed.</p>
+  <div class="markdown level1 summary"><p>Finishes due to malformed response.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -498,10 +532,11 @@ generation is not yet complete. The response can be continued by passing the ret
 
   <h3 id="Google_GenAI_Types_FinishReason_MaxTokens" data-uid="Google.GenAI.Types.FinishReason.MaxTokens">
   MaxTokens
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Token generation reached the configured maximum output tokens.</p>
+  <div class="markdown level1 summary"><p>The model generated the maximum number of tokens allowed by the <code>max_output_tokens</code>
+parameter.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -526,14 +561,80 @@ generation is not yet complete. The response can be continued by passing the ret
 
 
 
+  <a id="Google_GenAI_Types_FinishReason_MissingThoughtSignature_" data-uid="Google.GenAI.Types.FinishReason.MissingThoughtSignature*"></a>
+
+  <h3 id="Google_GenAI_Types_FinishReason_MissingThoughtSignature" data-uid="Google.GenAI.Types.FinishReason.MissingThoughtSignature">
+  MissingThoughtSignature
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Request has at least one thought signature missing. This enum value is not supported in
+Vertex AI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FinishReason MissingThoughtSignature { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FinishReason.html">FinishReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FinishReason_ModelArmor_" data-uid="Google.GenAI.Types.FinishReason.ModelArmor*"></a>
+
+  <h3 id="Google_GenAI_Types_FinishReason_ModelArmor" data-uid="Google.GenAI.Types.FinishReason.ModelArmor">
+  ModelArmor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The model response was blocked by Model Armor. This enum value is not supported in Gemini
+API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FinishReason ModelArmor { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FinishReason.html">FinishReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_FinishReason_NoImage_" data-uid="Google.GenAI.Types.FinishReason.NoImage*"></a>
 
   <h3 id="Google_GenAI_Types_FinishReason_NoImage" data-uid="Google.GenAI.Types.FinishReason.NoImage">
   NoImage
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L115"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The model was expected to generate an image, but none was generated.</p>
+  <div class="markdown level1 summary"><p>The model was expected to generate an image, but didn't.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -562,10 +663,10 @@ generation is not yet complete. The response can be continued by passing the ret
 
   <h3 id="Google_GenAI_Types_FinishReason_Other" data-uid="Google.GenAI.Types.FinishReason.Other">
   Other
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L73"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>All other reasons that stopped the token generation.</p>
+  <div class="markdown level1 summary"><p>The model stopped generating for a reason not otherwise specified.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -594,10 +695,10 @@ generation is not yet complete. The response can be continued by passing the ret
 
   <h3 id="Google_GenAI_Types_FinishReason_ProhibitedContent" data-uid="Google.GenAI.Types.FinishReason.ProhibitedContent">
   ProhibitedContent
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Token generation stopped for potentially containing prohibited content.</p>
+  <div class="markdown level1 summary"><p>The model stopped generating because the content may be prohibited.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -622,14 +723,47 @@ generation is not yet complete. The response can be continued by passing the ret
 
 
 
+  <a id="Google_GenAI_Types_FinishReason_PupLimitedDisabled_" data-uid="Google.GenAI.Types.FinishReason.PupLimitedDisabled*"></a>
+
+  <h3 id="Google_GenAI_Types_FinishReason_PupLimitedDisabled" data-uid="Google.GenAI.Types.FinishReason.PupLimitedDisabled">
+  PupLimitedDisabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates that token generation stopped because the user account is limited or disabled due
+to Prohibited Use Policy (PUP) violations. This enum value is not supported in Vertex AI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FinishReason PupLimitedDisabled { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.FinishReason.html">FinishReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Google_GenAI_Types_FinishReason_Recitation_" data-uid="Google.GenAI.Types.FinishReason.Recitation*"></a>
 
   <h3 id="Google_GenAI_Types_FinishReason_Recitation" data-uid="Google.GenAI.Types.FinishReason.Recitation">
   Recitation
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The token generation stopped because of potential recitation.</p>
+  <div class="markdown level1 summary"><p>The model stopped generating because the content may be a recitation from a source.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -658,11 +792,11 @@ generation is not yet complete. The response can be continued by passing the ret
 
   <h3 id="Google_GenAI_Types_FinishReason_Safety" data-uid="Google.GenAI.Types.FinishReason.Safety">
   Safety
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Token generation stopped because the content potentially contains safety violations. NOTE:
-When streaming, [content][] is empty if content filters blocks the output.</p>
+  <div class="markdown level1 summary"><p>The model stopped generating because the content potentially violates safety policies. NOTE:
+When streaming, the <code>content</code> field is empty if content filters block the output.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -691,11 +825,11 @@ When streaming, [content][] is empty if content filters blocks the output.</p>
 
   <h3 id="Google_GenAI_Types_FinishReason_Spii" data-uid="Google.GenAI.Types.FinishReason.Spii">
   Spii
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L90"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Token generation stopped because the content potentially contains Sensitive Personally
-Identifiable Information (SPII).</p>
+  <div class="markdown level1 summary"><p>The model stopped generating because the content may contain sensitive personally
+identifiable information (SPII).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -727,7 +861,7 @@ Identifiable Information (SPII).</p>
   <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Token generation reached a natural stopping point or a configured stop sequence.</p>
+  <div class="markdown level1 summary"><p>The model reached a natural stopping point or a configured stop sequence.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -756,10 +890,11 @@ Identifiable Information (SPII).</p>
 
   <h3 id="Google_GenAI_Types_FinishReason_TooManyToolCalls" data-uid="Google.GenAI.Types.FinishReason.TooManyToolCalls">
   TooManyToolCalls
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L133"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Model called too many tools consecutively, thus the system exited execution.</p>
+  <div class="markdown level1 summary"><p>The model made too many tool calls in a single request, so the server-side tool loop stopped
+before the model returned a final answer.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -788,10 +923,12 @@ Identifiable Information (SPII).</p>
 
   <h3 id="Google_GenAI_Types_FinishReason_UnexpectedToolCall" data-uid="Google.GenAI.Types.FinishReason.UnexpectedToolCall">
   UnexpectedToolCall
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L127"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The tool call generated by the model is invalid.</p>
+  <div class="markdown level1 summary"><p>The model generated a function call that is semantically invalid. This can happen, for
+example, if function calling is not enabled or the generated function is not in the function
+declaration.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -855,7 +992,7 @@ Identifiable Information (SPII).</p>
 
   <h3 id="Google_GenAI_Types_FinishReason_Equals_Google_GenAI_Types_FinishReason_" data-uid="Google.GenAI.Types.FinishReason.Equals(Google.GenAI.Types.FinishReason)">
   Equals(FinishReason)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L215"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -891,7 +1028,7 @@ Identifiable Information (SPII).</p>
 
   <h3 id="Google_GenAI_Types_FinishReason_FromString_System_String_" data-uid="Google.GenAI.Types.FinishReason.FromString(System.String)">
   FromString(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L164"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L197"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -927,7 +1064,7 @@ Identifiable Information (SPII).</p>
 
   <h3 id="Google_GenAI_Types_FinishReason_GetHashCode" data-uid="Google.GenAI.Types.FinishReason.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L184"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L217"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -958,7 +1095,7 @@ Identifiable Information (SPII).</p>
 
   <h3 id="Google_GenAI_Types_FinishReason_ToString" data-uid="Google.GenAI.Types.FinishReason.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L211"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -993,7 +1130,7 @@ Identifiable Information (SPII).</p>
 
   <h3 id="Google_GenAI_Types_FinishReason_op_Implicit_System_String__Google_GenAI_Types_FinishReason" data-uid="Google.GenAI.Types.FinishReason.op_Implicit(System.String)~Google.GenAI.Types.FinishReason">
   implicit operator FinishReason(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FinishReason.cs/#L213"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

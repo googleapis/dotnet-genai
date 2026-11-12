@@ -2293,7 +2293,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.FinishReason",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FinishReason.yml\" sourcestartlinenumber=\"1\">Output only. The reason why the model stopped generating tokens.  If empty, the model has not\nstopped generating the tokens.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FinishReason.yml\" sourcestartlinenumber=\"1\">Output only. The reason why the model stopped generating tokens. If empty, the model has not\nstopped generating.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4393,7 +4393,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.MediaProcessing",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.MediaProcessing.yml\" sourcestartlinenumber=\"1\">How the model processes input media for understanding.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.MediaProcessing.yml\" sourcestartlinenumber=\"1\">How the model processes this part's media for understanding. Only meaningful for video parts\n(<code sourcefile=\"api/Google.GenAI.Types.MediaProcessing.yml\" sourcestartlinenumber=\"2\">inline_data</code> or <code sourcefile=\"api/Google.GenAI.Types.MediaProcessing.yml\" sourcestartlinenumber=\"2\">file_data</code> with video mime). Non-video parts ignore this field.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4421,7 +4421,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.MediaResolution",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.MediaResolution.yml\" sourcestartlinenumber=\"1\">The media resolution to use.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.MediaResolution.yml\" sourcestartlinenumber=\"1\">The token resolution at which input media content is sampled. This is used to control the\ntrade-off between the quality of the response and the number of tokens used to represent the\nmedia. A higher resolution allows the model to perceive more detail, which can lead to a more\nnuanced response, but it will also use more tokens. This does not affect the image dimensions\nsent to the model.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -5373,7 +5373,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.ReinforcementTuningThinkingLevel",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningThinkingLevel.yml\" sourcestartlinenumber=\"1\">Represents how much to think for the tuning job.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.ReinforcementTuningThinkingLevel.yml\" sourcestartlinenumber=\"1\">Indicates the maximum thinking depth during tuning. Starting from Gemini 3.5 models, the old\nthinking_budget will no longer be supported and will result in a user error if set. Instead,\nusers should use the thinking_level parameter to control the maximum thinking depth. This enum\nis not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",

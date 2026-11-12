@@ -2517,8 +2517,8 @@ behavior. This field is currently only supported by the BidiGenerateContent meth
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.FinishReason.html">FinishReason</a></dt>
-      <dd><p>Output only. The reason why the model stopped generating tokens.  If empty, the model has not
-stopped generating the tokens.</p>
+      <dd><p>Output only. The reason why the model stopped generating tokens. If empty, the model has not
+stopped generating.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -2611,12 +2611,17 @@ content will be blocked.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.MediaProcessing.html">MediaProcessing</a></dt>
-      <dd><p>How the model processes input media for understanding.</p>
+      <dd><p>How the model processes this part's media for understanding. Only meaningful for video parts
+(<code>inline_data</code> or <code>file_data</code> with video mime). Non-video parts ignore this field.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.MediaResolution.html">MediaResolution</a></dt>
-      <dd><p>The media resolution to use.</p>
+      <dd><p>The token resolution at which input media content is sampled. This is used to control the
+trade-off between the quality of the response and the number of tokens used to represent the
+media. A higher resolution allows the model to perceive more detail, which can lead to a more
+nuanced response, but it will also use more tokens. This does not affect the image dimensions
+sent to the model.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -2665,7 +2670,10 @@ behavior is to allow prominent people. This enum is not supported in Gemini API.
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.ReinforcementTuningThinkingLevel.html">ReinforcementTuningThinkingLevel</a></dt>
-      <dd><p>Represents how much to think for the tuning job.</p>
+      <dd><p>Indicates the maximum thinking depth during tuning. Starting from Gemini 3.5 models, the old
+thinking_budget will no longer be supported and will result in a user error if set. Instead,
+users should use the thinking_level parameter to control the maximum thinking depth. This enum
+is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">

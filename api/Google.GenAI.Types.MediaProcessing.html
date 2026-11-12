@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Struct MediaProcessing | Google GenAI .NET SDK ">
       
-      <meta name="description" content="How the model processes input media for understanding.">
+      <meta name="description" content="How the model processes this part&#39;s media for understanding. Only meaningful for video parts (inline_data or file_data with video mime). Non-video parts ignore this field.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Types_MediaProcessing" data-uid="Google.GenAI.Types.MediaProcessing" class="text-break">
-Struct MediaProcessing  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaProcessing.cs/#L28"><i class="bi bi-code-slash"></i></a>
+Struct MediaProcessing  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaProcessing.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,7 +93,8 @@ Struct MediaProcessing  <a class="header-action link-secondary" title="View sour
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>How the model processes input media for understanding.</p>
+  <div class="markdown summary"><p>How the model processes this part's media for understanding. Only meaningful for video parts
+(<code>inline_data</code> or <code>file_data</code> with video mime). Non-video parts ignore this field.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -144,7 +145,7 @@ public readonly record struct MediaProcessing : IEquatable&lt;MediaProcessing&gt
 
   <h3 id="Google_GenAI_Types_MediaProcessing_Agentic" data-uid="Google.GenAI.Types.MediaProcessing.Agentic">
   Agentic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaProcessing.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaProcessing.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Model-driven dynamic navigation. Recommended for most use cases.</p>
@@ -176,7 +177,7 @@ public readonly record struct MediaProcessing : IEquatable&lt;MediaProcessing&gt
 
   <h3 id="Google_GenAI_Types_MediaProcessing_AllValues" data-uid="Google.GenAI.Types.MediaProcessing.AllValues">
   AllValues
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaProcessing.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaProcessing.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -207,10 +208,10 @@ public readonly record struct MediaProcessing : IEquatable&lt;MediaProcessing&gt
 
   <h3 id="Google_GenAI_Types_MediaProcessing_MediaProcessingUnspecified" data-uid="Google.GenAI.Types.MediaProcessing.MediaProcessingUnspecified">
   MediaProcessingUnspecified
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaProcessing.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaProcessing.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Default. Uses model-specific processing</p>
+  <div class="markdown level1 summary"><p>Defaults to model-specific processing.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -239,7 +240,7 @@ public readonly record struct MediaProcessing : IEquatable&lt;MediaProcessing&gt
 
   <h3 id="Google_GenAI_Types_MediaProcessing_Static" data-uid="Google.GenAI.Types.MediaProcessing.Static">
   Static
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaProcessing.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaProcessing.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fixed-rate frame extraction. All frames placed in context.</p>
@@ -271,7 +272,7 @@ public readonly record struct MediaProcessing : IEquatable&lt;MediaProcessing&gt
 
   <h3 id="Google_GenAI_Types_MediaProcessing_Value" data-uid="Google.GenAI.Types.MediaProcessing.Value">
   Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaProcessing.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaProcessing.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -306,7 +307,7 @@ public readonly record struct MediaProcessing : IEquatable&lt;MediaProcessing&gt
 
   <h3 id="Google_GenAI_Types_MediaProcessing_Equals_Google_GenAI_Types_MediaProcessing_" data-uid="Google.GenAI.Types.MediaProcessing.Equals(Google.GenAI.Types.MediaProcessing)">
   Equals(MediaProcessing)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaProcessing.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaProcessing.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -342,7 +343,7 @@ public readonly record struct MediaProcessing : IEquatable&lt;MediaProcessing&gt
 
   <h3 id="Google_GenAI_Types_MediaProcessing_FromString_System_String_" data-uid="Google.GenAI.Types.MediaProcessing.FromString(System.String)">
   FromString(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaProcessing.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaProcessing.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -378,7 +379,7 @@ public readonly record struct MediaProcessing : IEquatable&lt;MediaProcessing&gt
 
   <h3 id="Google_GenAI_Types_MediaProcessing_GetHashCode" data-uid="Google.GenAI.Types.MediaProcessing.GetHashCode">
   GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaProcessing.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaProcessing.cs/#L78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -409,7 +410,7 @@ public readonly record struct MediaProcessing : IEquatable&lt;MediaProcessing&gt
 
   <h3 id="Google_GenAI_Types_MediaProcessing_ToString" data-uid="Google.GenAI.Types.MediaProcessing.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaProcessing.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaProcessing.cs/#L72"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -444,7 +445,7 @@ public readonly record struct MediaProcessing : IEquatable&lt;MediaProcessing&gt
 
   <h3 id="Google_GenAI_Types_MediaProcessing_op_Implicit_System_String__Google_GenAI_Types_MediaProcessing" data-uid="Google.GenAI.Types.MediaProcessing.op_Implicit(System.String)~Google.GenAI.Types.MediaProcessing">
   implicit operator MediaProcessing(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaProcessing.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaProcessing.cs/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -480,7 +481,7 @@ public readonly record struct MediaProcessing : IEquatable&lt;MediaProcessing&gt
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaProcessing.cs/#L28" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/MediaProcessing.cs/#L29" class="edit-link">Edit this page</a>
         </div>
 
 

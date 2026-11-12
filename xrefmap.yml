@@ -13561,6 +13561,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.FinishReason.Equals
   nameWithType: FinishReason.Equals
+- uid: Google.GenAI.Types.FinishReason.Escalation
+  name: Escalation
+  href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_Escalation
+  commentId: P:Google.GenAI.Types.FinishReason.Escalation
+  fullName: Google.GenAI.Types.FinishReason.Escalation
+  nameWithType: FinishReason.Escalation
+- uid: Google.GenAI.Types.FinishReason.Escalation*
+  name: Escalation
+  href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_Escalation_
+  commentId: Overload:Google.GenAI.Types.FinishReason.Escalation
+  isSpec: "True"
+  fullName: Google.GenAI.Types.FinishReason.Escalation
+  nameWithType: FinishReason.Escalation
 - uid: Google.GenAI.Types.FinishReason.FinishReasonUnspecified
   name: FinishReasonUnspecified
   href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_FinishReasonUnspecified
@@ -13707,6 +13720,32 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.FinishReason.MaxTokens
   nameWithType: FinishReason.MaxTokens
+- uid: Google.GenAI.Types.FinishReason.MissingThoughtSignature
+  name: MissingThoughtSignature
+  href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_MissingThoughtSignature
+  commentId: P:Google.GenAI.Types.FinishReason.MissingThoughtSignature
+  fullName: Google.GenAI.Types.FinishReason.MissingThoughtSignature
+  nameWithType: FinishReason.MissingThoughtSignature
+- uid: Google.GenAI.Types.FinishReason.MissingThoughtSignature*
+  name: MissingThoughtSignature
+  href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_MissingThoughtSignature_
+  commentId: Overload:Google.GenAI.Types.FinishReason.MissingThoughtSignature
+  isSpec: "True"
+  fullName: Google.GenAI.Types.FinishReason.MissingThoughtSignature
+  nameWithType: FinishReason.MissingThoughtSignature
+- uid: Google.GenAI.Types.FinishReason.ModelArmor
+  name: ModelArmor
+  href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_ModelArmor
+  commentId: P:Google.GenAI.Types.FinishReason.ModelArmor
+  fullName: Google.GenAI.Types.FinishReason.ModelArmor
+  nameWithType: FinishReason.ModelArmor
+- uid: Google.GenAI.Types.FinishReason.ModelArmor*
+  name: ModelArmor
+  href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_ModelArmor_
+  commentId: Overload:Google.GenAI.Types.FinishReason.ModelArmor
+  isSpec: "True"
+  fullName: Google.GenAI.Types.FinishReason.ModelArmor
+  nameWithType: FinishReason.ModelArmor
 - uid: Google.GenAI.Types.FinishReason.NoImage
   name: NoImage
   href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_NoImage
@@ -13746,6 +13785,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.FinishReason.ProhibitedContent
   nameWithType: FinishReason.ProhibitedContent
+- uid: Google.GenAI.Types.FinishReason.PupLimitedDisabled
+  name: PupLimitedDisabled
+  href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_PupLimitedDisabled
+  commentId: P:Google.GenAI.Types.FinishReason.PupLimitedDisabled
+  fullName: Google.GenAI.Types.FinishReason.PupLimitedDisabled
+  nameWithType: FinishReason.PupLimitedDisabled
+- uid: Google.GenAI.Types.FinishReason.PupLimitedDisabled*
+  name: PupLimitedDisabled
+  href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_PupLimitedDisabled_
+  commentId: Overload:Google.GenAI.Types.FinishReason.PupLimitedDisabled
+  isSpec: "True"
+  fullName: Google.GenAI.Types.FinishReason.PupLimitedDisabled
+  nameWithType: FinishReason.PupLimitedDisabled
 - uid: Google.GenAI.Types.FinishReason.Recitation
   name: Recitation
   href: api/Google.GenAI.Types.FinishReason.html#Google_GenAI_Types_FinishReason_Recitation
@@ -31994,6 +32046,32 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.ReinforcementTuningThinkingLevel.High
   nameWithType: ReinforcementTuningThinkingLevel.High
+- uid: Google.GenAI.Types.ReinforcementTuningThinkingLevel.Low
+  name: Low
+  href: api/Google.GenAI.Types.ReinforcementTuningThinkingLevel.html#Google_GenAI_Types_ReinforcementTuningThinkingLevel_Low
+  commentId: P:Google.GenAI.Types.ReinforcementTuningThinkingLevel.Low
+  fullName: Google.GenAI.Types.ReinforcementTuningThinkingLevel.Low
+  nameWithType: ReinforcementTuningThinkingLevel.Low
+- uid: Google.GenAI.Types.ReinforcementTuningThinkingLevel.Low*
+  name: Low
+  href: api/Google.GenAI.Types.ReinforcementTuningThinkingLevel.html#Google_GenAI_Types_ReinforcementTuningThinkingLevel_Low_
+  commentId: Overload:Google.GenAI.Types.ReinforcementTuningThinkingLevel.Low
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ReinforcementTuningThinkingLevel.Low
+  nameWithType: ReinforcementTuningThinkingLevel.Low
+- uid: Google.GenAI.Types.ReinforcementTuningThinkingLevel.Medium
+  name: Medium
+  href: api/Google.GenAI.Types.ReinforcementTuningThinkingLevel.html#Google_GenAI_Types_ReinforcementTuningThinkingLevel_Medium
+  commentId: P:Google.GenAI.Types.ReinforcementTuningThinkingLevel.Medium
+  fullName: Google.GenAI.Types.ReinforcementTuningThinkingLevel.Medium
+  nameWithType: ReinforcementTuningThinkingLevel.Medium
+- uid: Google.GenAI.Types.ReinforcementTuningThinkingLevel.Medium*
+  name: Medium
+  href: api/Google.GenAI.Types.ReinforcementTuningThinkingLevel.html#Google_GenAI_Types_ReinforcementTuningThinkingLevel_Medium_
+  commentId: Overload:Google.GenAI.Types.ReinforcementTuningThinkingLevel.Medium
+  isSpec: "True"
+  fullName: Google.GenAI.Types.ReinforcementTuningThinkingLevel.Medium
+  nameWithType: ReinforcementTuningThinkingLevel.Medium
 - uid: Google.GenAI.Types.ReinforcementTuningThinkingLevel.Minimal
   name: Minimal
   href: api/Google.GenAI.Types.ReinforcementTuningThinkingLevel.html#Google_GenAI_Types_ReinforcementTuningThinkingLevel_Minimal
