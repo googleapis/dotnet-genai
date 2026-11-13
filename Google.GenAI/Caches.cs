@@ -408,6 +408,34 @@ namespace Google.GenAI {
             "mediaProcessing parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "mediaResolution" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "mediaResolution" },
+            Common.GetValueByPath(fromObject, new string[] { "mediaResolution" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "videoMetadata" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "videoMetadata" },
+                              Common.GetValueByPath(fromObject, new string[] { "videoMetadata" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "documentMetadata" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "documentMetadata" },
+            Common.GetValueByPath(fromObject, new string[] { "documentMetadata" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "spreadsheetMetadata" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "spreadsheetMetadata" },
+            Common.GetValueByPath(fromObject, new string[] { "spreadsheetMetadata" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "audioMetadata" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "audioMetadata" },
+                              Common.GetValueByPath(fromObject, new string[] { "audioMetadata" }));
+      }
+
       return toObject;
     }
 
@@ -750,6 +778,23 @@ namespace Google.GenAI {
                               Common.GetValueByPath(fromObject, new string[] { "speechMetadata" }));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "documentMetadata" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "documentMetadata" },
+            Common.GetValueByPath(fromObject, new string[] { "documentMetadata" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "spreadsheetMetadata" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "spreadsheetMetadata" },
+            Common.GetValueByPath(fromObject, new string[] { "spreadsheetMetadata" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "audioMetadata" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "audioMetadata" },
+                              Common.GetValueByPath(fromObject, new string[] { "audioMetadata" }));
+      }
+
       return toObject;
     }
 
@@ -847,6 +892,23 @@ namespace Google.GenAI {
       if (Common.GetValueByPath(fromObject, new string[] { "speechMetadata" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "speechMetadata" },
                               Common.GetValueByPath(fromObject, new string[] { "speechMetadata" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "documentMetadata" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "documentMetadata" },
+            Common.GetValueByPath(fromObject, new string[] { "documentMetadata" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "spreadsheetMetadata" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "spreadsheetMetadata" },
+            Common.GetValueByPath(fromObject, new string[] { "spreadsheetMetadata" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "audioMetadata" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "audioMetadata" },
+                              Common.GetValueByPath(fromObject, new string[] { "audioMetadata" }));
       }
 
       return toObject;
