@@ -23,7 +23,8 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Composite reinforcement tuning reward config.
+  /// Composite reward function configuration for reinforcement tuning. This data type is not
+  /// supported in Gemini API.
   /// </summary>
 
   public record CompositeReinforcementTuningRewardConfig {
