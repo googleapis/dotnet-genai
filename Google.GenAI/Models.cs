@@ -1487,6 +1487,12 @@ namespace Google.GenAI {
                               Common.GetValueByPath(fromObject, new string[] { "store" }));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "testGithubActionsField" }) != null) {
+        Common.SetValueByPath(
+            parentObject, new string[] { "testGithubActionsField" },
+            Common.GetValueByPath(fromObject, new string[] { "testGithubActionsField" }));
+      }
+
       return toObject;
     }
 
@@ -1703,6 +1709,12 @@ namespace Google.GenAI {
       if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "store" }))) {
         throw new NotSupportedException(
             "store parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "testGithubActionsField" }) != null) {
+        Common.SetValueByPath(
+            parentObject, new string[] { "testGithubActionsField" },
+            Common.GetValueByPath(fromObject, new string[] { "testGithubActionsField" }));
       }
 
       return toObject;

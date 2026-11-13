@@ -438,6 +438,16 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Temporary test field to trigger Copybara GitHub PRs and verify GitHub Actions.
+    /// </summary>
+    [JsonPropertyName("testGithubActionsField")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string
+        ? TestGithubActionsField {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a GenerateContentConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
