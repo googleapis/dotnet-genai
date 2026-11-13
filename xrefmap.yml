@@ -11292,6 +11292,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.EmbeddingApiType.AllValues
   nameWithType: EmbeddingApiType.AllValues
+- uid: Google.GenAI.Types.EmbeddingApiType.BatchEmbedContents
+  name: BatchEmbedContents
+  href: api/Google.GenAI.Types.EmbeddingApiType.html#Google_GenAI_Types_EmbeddingApiType_BatchEmbedContents
+  commentId: P:Google.GenAI.Types.EmbeddingApiType.BatchEmbedContents
+  fullName: Google.GenAI.Types.EmbeddingApiType.BatchEmbedContents
+  nameWithType: EmbeddingApiType.BatchEmbedContents
+- uid: Google.GenAI.Types.EmbeddingApiType.BatchEmbedContents*
+  name: BatchEmbedContents
+  href: api/Google.GenAI.Types.EmbeddingApiType.html#Google_GenAI_Types_EmbeddingApiType_BatchEmbedContents_
+  commentId: Overload:Google.GenAI.Types.EmbeddingApiType.BatchEmbedContents
+  isSpec: "True"
+  fullName: Google.GenAI.Types.EmbeddingApiType.BatchEmbedContents
+  nameWithType: EmbeddingApiType.BatchEmbedContents
 - uid: Google.GenAI.Types.EmbeddingApiType.EmbedContent
   name: EmbedContent
   href: api/Google.GenAI.Types.EmbeddingApiType.html#Google_GenAI_Types_EmbeddingApiType_EmbedContent
