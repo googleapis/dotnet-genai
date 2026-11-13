@@ -66,6 +66,16 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// The multiple contents to embed.
+    /// </summary>
+    [JsonPropertyName("batchContents")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public List<Content>
+        ? BatchContents {
+            get; set;
+          }
+
+    /// <summary>
     /// Configuration that contains optional parameters.
     /// </summary>
     [JsonPropertyName("config")]

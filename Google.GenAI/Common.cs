@@ -75,6 +75,24 @@ namespace Google.GenAI
                   listValue[j]);
             }
           }
+          else if (value is JsonArray jsonArrayValue)
+          {
+            if (arrayNode.Count != jsonArrayValue.Count)
+            {
+              arrayNode.Clear();
+              for (int j = 0; j < jsonArrayValue.Count; j++)
+              {
+                arrayNode.Add((JsonNode)new JsonObject());
+              }
+            }
+            for (int j = 0; j < arrayNode.Count; j++)
+            {
+              SetValueByPath(
+                  (JsonObject)arrayNode[j],
+                  path.Skip(i + 1).ToArray(),
+                  jsonArrayValue[j]);
+            }
+          }
           else
           {
             if (arrayNode.Count == 0)

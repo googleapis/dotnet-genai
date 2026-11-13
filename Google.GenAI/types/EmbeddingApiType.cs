@@ -43,9 +43,14 @@ namespace Google.GenAI.Types {
     /// </summary>
     public static EmbeddingApiType EmbedContent { get; } = new("EMBED_CONTENT");
 
+    /// <summary>
+    /// batchEmbedContents API Endpoint
+    /// </summary>
+    public static EmbeddingApiType BatchEmbedContents { get; } = new("BATCH_EMBED_CONTENTS");
+
     public static IReadOnlyList<EmbeddingApiType> AllValues {
       get;
-    } = new[] { Predict, EmbedContent };
+    } = new[] { Predict, EmbedContent, BatchEmbedContents };
 
     public static EmbeddingApiType FromString(string value) {
       if (string.IsNullOrEmpty(value)) {

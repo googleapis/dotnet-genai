@@ -745,6 +745,12 @@ namespace Google.GenAI {
           Common.SetValueByPath(parentObject, new string[] { "embedContentConfig", "taskType" },
                                 Common.GetValueByPath(fromObject, new string[] { "taskType" }));
         }
+      } else if (discriminatorValueTaskType == "BATCH_EMBED_CONTENTS") {
+        if (Common.GetValueByPath(fromObject, new string[] { "taskType" }) != null) {
+          Common.SetValueByPath(parentObject,
+                                new string[] { "requests[]", "embedContentConfig", "taskType" },
+                                Common.GetValueByPath(fromObject, new string[] { "taskType" }));
+        }
       }
 
       JsonNode discriminatorTitle =
@@ -759,6 +765,12 @@ namespace Google.GenAI {
       } else if (discriminatorValueTitle == "EMBED_CONTENT") {
         if (Common.GetValueByPath(fromObject, new string[] { "title" }) != null) {
           Common.SetValueByPath(parentObject, new string[] { "embedContentConfig", "title" },
+                                Common.GetValueByPath(fromObject, new string[] { "title" }));
+        }
+      } else if (discriminatorValueTitle == "BATCH_EMBED_CONTENTS") {
+        if (Common.GetValueByPath(fromObject, new string[] { "title" }) != null) {
+          Common.SetValueByPath(parentObject,
+                                new string[] { "requests[]", "embedContentConfig", "title" },
                                 Common.GetValueByPath(fromObject, new string[] { "title" }));
         }
       }
@@ -779,6 +791,13 @@ namespace Google.GenAI {
         if (Common.GetValueByPath(fromObject, new string[] { "outputDimensionality" }) != null) {
           Common.SetValueByPath(
               parentObject, new string[] { "embedContentConfig", "outputDimensionality" },
+              Common.GetValueByPath(fromObject, new string[] { "outputDimensionality" }));
+        }
+      } else if (discriminatorValueOutputDimensionality == "BATCH_EMBED_CONTENTS") {
+        if (Common.GetValueByPath(fromObject, new string[] { "outputDimensionality" }) != null) {
+          Common.SetValueByPath(
+              parentObject,
+              new string[] { "requests[]", "embedContentConfig", "outputDimensionality" },
               Common.GetValueByPath(fromObject, new string[] { "outputDimensionality" }));
         }
       }
@@ -809,6 +828,12 @@ namespace Google.GenAI {
           Common.SetValueByPath(parentObject, new string[] { "embedContentConfig", "autoTruncate" },
                                 Common.GetValueByPath(fromObject, new string[] { "autoTruncate" }));
         }
+      } else if (discriminatorValueAutoTruncate == "BATCH_EMBED_CONTENTS") {
+        if (Common.GetValueByPath(fromObject, new string[] { "autoTruncate" }) != null) {
+          Common.SetValueByPath(parentObject,
+                                new string[] { "requests[]", "embedContentConfig", "autoTruncate" },
+                                Common.GetValueByPath(fromObject, new string[] { "autoTruncate" }));
+        }
       }
 
       JsonNode discriminatorDocumentOcr =
@@ -819,6 +844,12 @@ namespace Google.GenAI {
       if (discriminatorValueDocumentOcr == "EMBED_CONTENT") {
         if (Common.GetValueByPath(fromObject, new string[] { "documentOcr" }) != null) {
           Common.SetValueByPath(parentObject, new string[] { "embedContentConfig", "documentOcr" },
+                                Common.GetValueByPath(fromObject, new string[] { "documentOcr" }));
+        }
+      } else if (discriminatorValueDocumentOcr == "BATCH_EMBED_CONTENTS") {
+        if (Common.GetValueByPath(fromObject, new string[] { "documentOcr" }) != null) {
+          Common.SetValueByPath(parentObject,
+                                new string[] { "requests[]", "embedContentConfig", "documentOcr" },
                                 Common.GetValueByPath(fromObject, new string[] { "documentOcr" }));
         }
       }
@@ -833,6 +864,13 @@ namespace Google.GenAI {
         if (Common.GetValueByPath(fromObject, new string[] { "audioTrackExtraction" }) != null) {
           Common.SetValueByPath(
               parentObject, new string[] { "embedContentConfig", "audioTrackExtraction" },
+              Common.GetValueByPath(fromObject, new string[] { "audioTrackExtraction" }));
+        }
+      } else if (discriminatorValueAudioTrackExtraction == "BATCH_EMBED_CONTENTS") {
+        if (Common.GetValueByPath(fromObject, new string[] { "audioTrackExtraction" }) != null) {
+          Common.SetValueByPath(
+              parentObject,
+              new string[] { "requests[]", "embedContentConfig", "audioTrackExtraction" },
               Common.GetValueByPath(fromObject, new string[] { "audioTrackExtraction" }));
         }
       }
@@ -863,6 +901,11 @@ namespace Google.GenAI {
         _ = ContentToMldev(Common.ParseToJsonNode(Transformers.TContent(
                                Common.GetValueByPath(fromObject, new string[] { "content" }))),
                            toObject, rootObject);
+      }
+
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "batchContents" }))) {
+        throw new NotSupportedException(
+            "batchContents parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode.");
       }
 
       if (Common.GetValueByPath(fromObject, new string[] { "config" }) != null) {
@@ -919,6 +962,23 @@ namespace Google.GenAI {
         }
       }
 
+      JsonNode discriminatorBatchContents =
+          Common.GetValueByPath(rootObject, new string[] { "embeddingApiType" });
+      string discriminatorValueBatchContents = discriminatorBatchContents == null
+                                                   ? "PREDICT"
+                                                   : discriminatorBatchContents.GetValue<string>();
+      if (discriminatorValueBatchContents == "BATCH_EMBED_CONTENTS") {
+        if (Common.GetValueByPath(fromObject, new string[] { "batchContents" }) != null) {
+          var keyList = Transformers.TContents(
+              Common.GetValueByPath(fromObject, new string[] { "batchContents" }));
+          JsonArray result = new JsonArray();
+
+          foreach (var record in keyList) {
+            result.Add(ContentToVertex(Common.ParseToJsonNode(record), toObject, rootObject));
+          }
+          Common.SetValueByPath(toObject, new string[] { "requests[]", "content" }, result);
+        }
+      }
       if (Common.GetValueByPath(fromObject, new string[] { "config" }) != null) {
         _ = EmbedContentConfigToVertex(
             Common.ParseToJsonNode(Common.GetValueByPath(fromObject, new string[] { "config" })),
@@ -1023,6 +1083,19 @@ namespace Google.GenAI {
           JsonArray embeddings = new JsonArray();
           embeddings.Add(embedding);
           Common.SetValueByPath(toObject, new string[] { "embeddings" }, embeddings);
+        }
+      } else if (rootObject != null &&
+                 Common.GetValueByPath(rootObject, new string[] { "embeddingApiType" }) != null &&
+                 Common.GetValueByPath(rootObject, new string[] { "embeddingApiType" })
+                         .GetValue<string>() == "BATCH_EMBED_CONTENTS") {
+        JsonNode? embeddingsNode = Common.GetValueByPath(fromObject, new string[] { "embeddings" });
+        if (embeddingsNode is JsonArray embeddingsArray) {
+          JsonArray result = new JsonArray();
+          foreach (var record in embeddingsArray) {
+            result.Add(
+                ContentEmbeddingFromVertex(Common.ParseToJsonNode(record), toObject, rootObject));
+          }
+          Common.SetValueByPath(toObject, new string[] { "embeddings" }, result);
         }
       }
 
@@ -4409,16 +4482,18 @@ namespace Google.GenAI {
     /// <param name="contents">A <see cref="List{Content}"/> to calculate embeddings for.</param>
     /// <param name="content">A <see cref="Content"/> to calculate embeddings for.</param>
     /// <param name="embeddingApiType">The <see cref="EmbeddingApiType"/> to use.</param>
-    /// <param name="config">An <see cref="EmbedContentConfig"/> instance that specifies the
-    /// optional configurations.</param>
-    /// <param name="cancellationToken">A <see cref="CancellationToken"/> to cancel the
-    /// operation.</param> <returns>A <see cref="Task{EmbedContentResponse}"/> that represents the
-    /// asynchronous operation. The task result contains a <see cref="EmbedContentResponse"/>
-    /// instance with embeddings and other metadata.</returns>
+    /// <param name="batchContents">A <see cref="List{Content}"/> to calculate batch embeddings
+    /// for.</param> <param name="config">An <see cref="EmbedContentConfig"/> instance that
+    /// specifies the optional configurations.</param> <param name="cancellationToken">A <see
+    /// cref="CancellationToken"/> to cancel the operation.</param> <returns>A <see
+    /// cref="Task{EmbedContentResponse}"/> that represents the asynchronous operation. The task
+    /// result contains a <see cref="EmbedContentResponse"/> instance with embeddings and other
+    /// metadata.</returns>
 
     private async Task<EmbedContentResponse> PrivateEmbedContentAsync(
         string model, List<Content>? contents, Content? content, EmbeddingApiType? embeddingApiType,
-        EmbedContentConfig? config, CancellationToken cancellationToken = default) {
+        List<Content>? batchContents, EmbedContentConfig? config,
+        CancellationToken cancellationToken = default) {
       EmbedContentParametersPrivate parameter = new EmbedContentParametersPrivate();
 
       if (!Common.IsZero(model)) {
@@ -4432,6 +4507,9 @@ namespace Google.GenAI {
       }
       if (!Common.IsZero(embeddingApiType)) {
         parameter.EmbeddingApiType = embeddingApiType;
+      }
+      if (!Common.IsZero(batchContents)) {
+        parameter.BatchContents = batchContents;
       }
       if (!Common.IsZero(config)) {
         parameter.Config = config;
@@ -4449,10 +4527,11 @@ namespace Google.GenAI {
       if (this._apiClient.VertexAI) {
         body = EmbedContentParametersPrivateToVertex(this._apiClient, parameterNode,
                                                      new JsonObject(), parameterNode);
+        string? apiType = parameterNode["embeddingApiType"]?.GetValue<string>();
         string endpointUrl =
-            Transformers.TIsVertexEmbedContentModel(parameterNode["model"].ToString())
-                ? "{model}:embedContent"
-                : "{model}:predict";
+            apiType == "BATCH_EMBED_CONTENTS"
+                ? "{model}:batchEmbedContents"
+                : (apiType == "EMBED_CONTENT" ? "{model}:embedContent" : "{model}:predict");
         path = Common.FormatMap(endpointUrl, body["_url"]);
       } else {
         body = EmbedContentParametersPrivateToMldev(this._apiClient, parameterNode,
@@ -5817,7 +5896,7 @@ namespace Google.GenAI {
         string model, List<Content> contents, EmbedContentConfig? config = null,
         CancellationToken cancellationToken = default) {
       if (!_apiClient.VertexAI) {
-        return await PrivateEmbedContentAsync(model, contents, null, null, config,
+        return await PrivateEmbedContentAsync(model, contents, null, null, null, config,
                                               cancellationToken);
       }
       if (Transformers.TIsVertexEmbedContentModel(model)) {
@@ -5825,10 +5904,11 @@ namespace Google.GenAI {
           throw new ArgumentException(
               "The embedContent API for this model only supports one content at a time.");
         }
-        return await PrivateEmbedContentAsync(
-            model, contents, contents[0], EmbeddingApiType.EmbedContent, config, cancellationToken);
+        return await PrivateEmbedContentAsync(model, contents, contents[0],
+                                              EmbeddingApiType.EmbedContent, null, config,
+                                              cancellationToken);
       } else {
-        return await PrivateEmbedContentAsync(model, contents, null, EmbeddingApiType.Predict,
+        return await PrivateEmbedContentAsync(model, contents, null, EmbeddingApiType.Predict, null,
                                               config, cancellationToken);
       }
     }

@@ -378,5 +378,27 @@ namespace Google.GenAI.Tests
             Assert.AreEqual(1, parts.Count);
             Assert.AreEqual("Why is the sky blue?", parts[0]["text"].GetValue<string>());
         }
+
+        [TestMethod]
+        public void SetValueByPath_JsonArrayParallel()
+        {
+            var data = new JsonObject();
+            var contents = new JsonArray
+            {
+                new JsonObject { ["text"] = "first" },
+                new JsonObject { ["text"] = "second" }
+            };
+
+            Common.SetValueByPath(data, new string[] { "requests[]", "content" }, contents);
+            Common.SetValueByPath(data, new string[] { "requests[]", "embedContentConfig", "outputDimensionality" }, 10);
+
+            var requests = data["requests"] as JsonArray;
+            Assert.IsNotNull(requests);
+            Assert.AreEqual(2, requests.Count);
+            Assert.AreEqual("first", requests[0]["content"]["text"].GetValue<string>());
+            Assert.AreEqual("second", requests[1]["content"]["text"].GetValue<string>());
+            Assert.AreEqual(10, requests[0]["embedContentConfig"]["outputDimensionality"].GetValue<int>());
+            Assert.AreEqual(10, requests[1]["embedContentConfig"]["outputDimensionality"].GetValue<int>());
+        }
     }
 }
