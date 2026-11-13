@@ -329,12 +329,14 @@ structured data rows) in batch. This data type is not supported in Gemini API.</
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.CompositeReinforcementTuningRewardConfig.html">CompositeReinforcementTuningRewardConfig</a></dt>
-      <dd><p>Composite reinforcement tuning reward config.</p>
+      <dd><p>Composite reward function configuration for reinforcement tuning. This data type is not
+supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.html">CompositeReinforcementTuningRewardConfigWeightedRewardConfig</a></dt>
-      <dd><p>Composite reinforcement tuning reward config weighted reward config.</p>
+      <dd><p>Reward function configuration with a weight. The weight is used to combine the reward with
+other rewards. This data type is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -1853,7 +1855,8 @@ not supported in Gemini API.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.RetrievalMetadata.html">RetrievalMetadata</a></dt>
-      <dd><p>Metadata returned to client when grounding is enabled.</p>
+      <dd><p>Metadata related to the retrieval grounding source. This is part of the <code>GroundingMetadata</code>
+returned when grounding is enabled.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -1900,7 +1903,9 @@ may be added in the future as needed.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.SearchEntryPoint.html">SearchEntryPoint</a></dt>
-      <dd><p>The entry point used to search for grounding sources.</p>
+      <dd><p>An entry point for displaying Google Search results. A <code>SearchEntryPoint</code> is populated when
+the grounding source for a model's response is Google Search. It provides information that you
+can use to display the search results in your application.</p>
 </dd>
     </dl>
     <dl class="jumplist">

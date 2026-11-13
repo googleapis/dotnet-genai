@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class RetrievalMetadata | Google GenAI .NET SDK ">
       
-      <meta name="description" content="Metadata returned to client when grounding is enabled.">
+      <meta name="description" content="Metadata related to the retrieval grounding source. This is part of the GroundingMetadata returned when grounding is enabled.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Google_GenAI_Types_RetrievalMetadata" data-uid="Google.GenAI.Types.RetrievalMetadata" class="text-break">
-Class RetrievalMetadata  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/RetrievalMetadata.cs/#L29"><i class="bi bi-code-slash"></i></a>
+Class RetrievalMetadata  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/RetrievalMetadata.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -93,7 +93,8 @@ Class RetrievalMetadata  <a class="header-action link-secondary" title="View sou
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Metadata returned to client when grounding is enabled.</p>
+  <div class="markdown summary"><p>Metadata related to the retrieval grounding source. This is part of the <code>GroundingMetadata</code>
+returned when grounding is enabled.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -159,13 +160,14 @@ Class RetrievalMetadata  <a class="header-action link-secondary" title="View sou
 
   <h3 id="Google_GenAI_Types_RetrievalMetadata_GoogleSearchDynamicRetrievalScore" data-uid="Google.GenAI.Types.RetrievalMetadata.GoogleSearchDynamicRetrievalScore">
   GoogleSearchDynamicRetrievalScore
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/RetrievalMetadata.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/RetrievalMetadata.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Optional. Score indicating how likely information from google search could help answer the
-prompt. The score is in the range [0, 1], where 0 is the least likely and 1 is the most
-likely. This score is only populated when google search grounding and dynamic retrieval is
-enabled. It will be compared to the threshold to determine whether to trigger Google search.</p>
+  <div class="markdown level1 summary"><p>Optional. A score indicating how likely it is that a Google Search query could help answer
+the prompt. The score is in the range of <code>[0, 1]</code>. A score of 1 means the model is confident
+that a search will be helpful, and 0 means it is not. This score is populated only when
+Google Search grounding and dynamic retrieval are enabled. The score is used to determine
+whether to trigger a search.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -200,7 +202,7 @@ public double? GoogleSearchDynamicRetrievalScore { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_RetrievalMetadata_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.RetrievalMetadata.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/RetrievalMetadata.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/RetrievalMetadata.cs/#L49"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a RetrievalMetadata object.</p>
@@ -243,7 +245,7 @@ fails.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/RetrievalMetadata.cs/#L29" class="edit-link">Edit this page</a>
+          <a href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/RetrievalMetadata.cs/#L30" class="edit-link">Edit this page</a>
         </div>
 
 

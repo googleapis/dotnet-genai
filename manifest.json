@@ -1103,7 +1103,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.CompositeReinforcementTuningRewardConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CompositeReinforcementTuningRewardConfig.yml\" sourcestartlinenumber=\"1\">Composite reinforcement tuning reward config.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CompositeReinforcementTuningRewardConfig.yml\" sourcestartlinenumber=\"1\">Composite reward function configuration for reinforcement tuning. This data type is not\nsupported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1117,7 +1117,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.yml\" sourcestartlinenumber=\"1\">Composite reinforcement tuning reward config weighted reward config.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.CompositeReinforcementTuningRewardConfigWeightedRewardConfig.yml\" sourcestartlinenumber=\"1\">Reward function configuration with a weight. The weight is used to combine the reward with\nother rewards. This data type is not supported in Gemini API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -5583,7 +5583,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.RetrievalMetadata",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RetrievalMetadata.yml\" sourcestartlinenumber=\"1\">Metadata returned to client when grounding is enabled.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.RetrievalMetadata.yml\" sourcestartlinenumber=\"1\">Metadata related to the retrieval grounding source. This is part of the <code sourcefile=\"api/Google.GenAI.Types.RetrievalMetadata.yml\" sourcestartlinenumber=\"1\">GroundingMetadata</code>\nreturned when grounding is enabled.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -5737,7 +5737,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.SearchEntryPoint",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SearchEntryPoint.yml\" sourcestartlinenumber=\"1\">The entry point used to search for grounding sources.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SearchEntryPoint.yml\" sourcestartlinenumber=\"1\">An entry point for displaying Google Search results. A <code sourcefile=\"api/Google.GenAI.Types.SearchEntryPoint.yml\" sourcestartlinenumber=\"1\">SearchEntryPoint</code> is populated when\nthe grounding source for a model's response is Google Search. It provides information that you\ncan use to display the search results in your application.</p>\n"
     },
     {
       "type": "ManagedReference",
