@@ -935,6 +935,70 @@ public class GoogleGenAIRealtimeSessionTest
     Assert.AreEqual(1, responseDoneMessages.Count, "Should only have one ResponseDone");
   }
 
+  // An interruption-only server message surfaces as RawContentOnly so callers can stop playback.
+  [TestMethod]
+  public async Task GetStreamingResponseAsync_Interrupted_EmitsRawContentOnly()
+  {
+    SetupReceiveOnce(new LiveServerMessage
+    {
+      ServerContent = new LiveServerContent { Interrupted = true }
+    });
+
+    var messages = await CollectMessages();
+
+    Assert.AreEqual(1, messages.Count);
+    Assert.AreEqual(RealtimeServerMessageType.RawContentOnly, messages[0].Type);
+    var raw = messages[0].RawRepresentation as LiveServerMessage;
+    Assert.IsNotNull(raw);
+    Assert.AreEqual(true, raw.ServerContent?.Interrupted);
+  }
+
+  // An interruption after model output follows the deltas already emitted.
+  [TestMethod]
+  public async Task GetStreamingResponseAsync_InterruptedMidResponse_EmitsRawContentOnlyAfterDeltas()
+  {
+    SetupReceiveSequence(new[]
+    {
+      new LiveServerMessage
+      {
+        ServerContent = new LiveServerContent
+        {
+          ModelTurn = new Content
+          {
+            Parts = new List<Part> { new Part { Text = "Hi" } }
+          }
+        }
+      },
+      new LiveServerMessage
+      {
+        ServerContent = new LiveServerContent { Interrupted = true }
+      }
+    });
+
+    var messages = await CollectMessages();
+
+    Assert.AreEqual(3, messages.Count);
+    Assert.AreEqual(RealtimeServerMessageType.ResponseCreated, messages[0].Type);
+    Assert.AreEqual(RealtimeServerMessageType.OutputTextDelta, messages[1].Type);
+    Assert.AreEqual(RealtimeServerMessageType.RawContentOnly, messages[2].Type);
+    var raw = messages[2].RawRepresentation as LiveServerMessage;
+    Assert.AreEqual(true, raw?.ServerContent?.Interrupted);
+  }
+
+  // An explicit Interrupted = false produces no message.
+  [TestMethod]
+  public async Task GetStreamingResponseAsync_InterruptedFalse_EmitsNothing()
+  {
+    SetupReceiveOnce(new LiveServerMessage
+    {
+      ServerContent = new LiveServerContent { Interrupted = false }
+    });
+
+    var messages = await CollectMessages();
+
+    Assert.AreEqual(0, messages.Count);
+  }
+
   #endregion
 
   #region ConversationItemCreate Tests
