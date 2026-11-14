@@ -294,6 +294,16 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Configures the exchange of history between the client and the server.
+    /// </summary>
+    [JsonPropertyName("historyConfig")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public HistoryConfig
+        ? HistoryConfig {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a LiveConnectConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
