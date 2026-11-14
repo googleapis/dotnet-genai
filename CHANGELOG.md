@@ -1,5 +1,23 @@
 # Changelog
 
+## Version 2.2.0, released 2026-11-14
+
+
+### New features
+
+* Add `XHIGH` and `xhigh` to `ThinkingLevel` across GenAI SDKs and CLI. ([0940673](https://github.com/googleapis/dotnet-genai/commit/094067347b919b745d867ca68c9e0de92fb73c2c))
+* Add missing enum values to FinishReason and ReinforcementTuningThinkingLevel ([ad83e13](https://github.com/googleapis/dotnet-genai/commit/ad83e13e9a656ee970b171c7410e8e65a5613296))
+
+
+### Bug fixes
+
+* make Google.GenAI work in Native AOT apps ([57d9df3](https://github.com/googleapis/dotnet-genai/commit/57d9df38b97f6ec966f929d4b819333397029f73))
+
+
+### Documentation improvements
+
+* note that some models are not available on v1 ([2df8681](https://github.com/googleapis/dotnet-genai/commit/2df86819b86f5751d9b0dfe3e0130a78be0ec861))
+
 ## Version 2.1.0, released 2026-11-09
 
 
