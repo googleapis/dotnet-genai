@@ -930,6 +930,16 @@ public sealed class GoogleGenAIRealtimeSession : IRealtimeClientSession
       };
     }
 
+    // MEAI has no interruption message type, so surface it as raw content.
+    if (serverContent.Interrupted == true)
+    {
+      yield return new RealtimeServerMessage
+      {
+        Type = RealtimeServerMessageType.RawContentOnly,
+        RawRepresentation = rawMessage,
+      };
+    }
+
     // Turn complete or generation complete — reset response tracking and emit ResponseDone
     if (serverContent.TurnComplete == true || serverContent.GenerationComplete == true)
     {
