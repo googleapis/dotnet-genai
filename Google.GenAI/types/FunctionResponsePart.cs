@@ -23,7 +23,7 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// A datatype containing media that is part of a `FunctionResponse` message. A
+  /// A datatype containing media that is part of a `FunctionResponse` message.  A
   /// `FunctionResponsePart` consists of data which has an associated datatype. A
   /// `FunctionResponsePart` can only contain one of the accepted types in
   /// `FunctionResponsePart.data`. A `FunctionResponsePart` must have a fixed IANA MIME type
@@ -58,6 +58,60 @@ namespace Google.GenAI.Types {
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public MediaProcessing
         ? MediaProcessing {
+            get; set;
+          }
+
+    /// <summary>
+    /// Media resolution for the input media.
+    /// </summary>
+    [JsonPropertyName("mediaResolution")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public PartMediaResolution
+        ? MediaResolution {
+            get; set;
+          }
+
+    /// <summary>
+    /// Video metadata. The metadata should only be specified while the video data is presented in
+    /// inline_data or file_data.
+    /// </summary>
+    [JsonPropertyName("videoMetadata")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public VideoMetadata
+        ? VideoMetadata {
+            get; set;
+          }
+
+    /// <summary>
+    /// Document metadata. The metadata should only be specified while the document data is
+    /// presented in inline_data or file_data.
+    /// </summary>
+    [JsonPropertyName("documentMetadata")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public DocumentMetadata
+        ? DocumentMetadata {
+            get; set;
+          }
+
+    /// <summary>
+    /// Spreadsheet metadata. The metadata should only be specified while the spreadsheet data is
+    /// presented in inline_data or file_data.
+    /// </summary>
+    [JsonPropertyName("spreadsheetMetadata")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public SpreadsheetMetadata
+        ? SpreadsheetMetadata {
+            get; set;
+          }
+
+    /// <summary>
+    /// Audio metadata. The metadata should only be specified while the audio data is presented in
+    /// inline_data or file_data.
+    /// </summary>
+    [JsonPropertyName("audioMetadata")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public AudioMetadata
+        ? AudioMetadata {
             get; set;
           }
 
