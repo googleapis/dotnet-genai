@@ -23,8 +23,9 @@ using Google.GenAI.Serialization;
 
 namespace Google.GenAI.Types {
   /// <summary>
-  /// Grounding with Google Maps Routing APIs (ComputeRoutes and SearchAlongRoute). This data type
-  /// is not supported in Gemini API.
+  /// Grounding with Google Maps Routing APIs (ComputeRoutes and SearchAlongRoute). Also enabled by
+  /// default for Gemini 4 and later models when no grounding type is specified. This data type is
+  /// not supported in Gemini API.
   /// </summary>
 
   public record GoogleMapsRouting {

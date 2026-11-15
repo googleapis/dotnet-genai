@@ -387,6 +387,16 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Optional. Tuning Spec for Omni LoRA Tuning.
+    /// </summary>
+    [JsonPropertyName("omniLoraTuningSpec")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public OmniLoraTuningSpec
+        ? OmniLoraTuningSpec {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a TuningJob object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

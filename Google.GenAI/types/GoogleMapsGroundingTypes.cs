@@ -38,7 +38,8 @@ namespace Google.GenAI.Types {
 
     /// <summary>
     /// Optional. Enables grounding with Google Maps Routing APIs (ComputeRoutes and
-    /// SearchAlongRoute).
+    /// SearchAlongRoute). Also enabled by default for Gemini 4 and later models when no
+    /// `GroundingTypes` are specified.
     /// </summary>
     [JsonPropertyName("routing")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
