@@ -11,6 +11,15 @@ namespace Google.GenAI.E2E.Tests.Shared.Models
         private const string EmbeddingModel = "gemini-embedding-001";
         private const string EmbeddingModel2 = "gemini-embedding-2";
 
+        /// <summary>
+        /// gemini-embedding-001 is not served on the Vertex global endpoint, so its Vertex case
+        /// runs in us-central1. gemini-embedding-2 is served only on global.
+        /// </summary>
+        protected override string VertexLocationOverride =>
+            TestContext.TestName == nameof(TestEmbedContentGeminiEmbedding001Vertex)
+                ? "us-central1"
+                : null;
+
         private static EmbedContentConfig NewConfig() =>
             new EmbedContentConfig { OutputDimensionality = 10 };
 

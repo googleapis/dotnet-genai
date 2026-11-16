@@ -28,12 +28,13 @@ namespace Google.GenAI.E2E.Tests.Shared
         protected string modelName = "gemini-3.8-flash";
 
         /// <summary>
-        /// Region a test class needs its Vertex client pinned to, or null to use
-        /// GOOGLE_CLOUD_LOCATION as-is.
+        /// Region the current test needs its Vertex client pinned to, or null to use
+        /// GOOGLE_CLOUD_LOCATION as-is. Read in SetupClients, after TestContext is set, so an
+        /// override can depend on TestContext.TestName.
         ///
         /// Only applied when the configured location is "global", mirroring the Python
-        /// shared suite (tests/conftest.py). Tuning is the one module that needs this:
-        /// tuning jobs are not supported on the global endpoint.
+        /// shared suite (tests/conftest.py). Tuning jobs and gemini-embedding-001 are not
+        /// supported on the global endpoint.
         /// </summary>
         protected virtual string VertexLocationOverride => null;
 
