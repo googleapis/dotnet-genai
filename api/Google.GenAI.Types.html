@@ -151,6 +151,13 @@ API.</p>
       <dd></dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.AudioMetadata.html">AudioMetadata</a></dt>
+      <dd><p>Metadata describes the input audio content.  Set this in <code>Part.audio_metadata</code> or
+<code>FunctionResponsePart.audio_metadata</code> when <code>inline_data</code> or <code>file_data</code> contains audio to
+configure static audio preprocessing.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.AudioResponseFormat.html">AudioResponseFormat</a></dt>
       <dd><p>Configuration for audio-specific output formatting.</p>
 </dd>
@@ -541,6 +548,17 @@ sampled from the teacher model. This data type is not supported in Gemini API.</
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.DocumentMetadata.html">DocumentMetadata</a></dt>
+      <dd><p>Metadata describes the input document content.  Set this in <code>Part.document_metadata</code> or
+<code>FunctionResponsePart.document_metadata</code> when <code>inline_data</code> or <code>file_data</code> contains a document
+to configure static document preprocessing.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.DocumentMetadataContentLayerConverter.html">DocumentMetadataContentLayerConverter</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.DownloadFileConfig.html">DownloadFileConfig</a></dt>
       <dd><p>Used to override the default configuration.</p>
 </dd>
@@ -767,7 +785,7 @@ field.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.FunctionResponsePart.html">FunctionResponsePart</a></dt>
-      <dd><p>A datatype containing media that is part of a <code>FunctionResponse</code> message. A
+      <dd><p>A datatype containing media that is part of a <code>FunctionResponse</code> message.  A
 <code>FunctionResponsePart</code> consists of data which has an associated datatype. A
 <code>FunctionResponsePart</code> can only contain one of the accepted types in
 <code>FunctionResponsePart.data</code>. A <code>FunctionResponsePart</code> must have a fixed IANA MIME type
@@ -1982,6 +2000,17 @@ they will always stay at the beginning of context window.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.SpreadsheetMetadata.html">SpreadsheetMetadata</a></dt>
+      <dd><p>Metadata describes the input spreadsheet content.  Set this in <code>Part.spreadsheet_metadata</code> or
+<code>FunctionResponsePart.spreadsheet_metadata</code> when <code>inline_data</code> or <code>file_data</code> contains a
+spreadsheet to configure static spreadsheet preprocessing.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.SpreadsheetMetadataContentLayerConverter.html">SpreadsheetMetadataContentLayerConverter</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.StartSensitivityConverter.html">StartSensitivityConverter</a></dt>
       <dd></dd>
     </dl>
@@ -2372,6 +2401,10 @@ rate.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.VideoMetadataContentLayerConverter.html">VideoMetadataContentLayerConverter</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.VideoOrientationConverter.html">VideoOrientationConverter</a></dt>
       <dd></dd>
     </dl>
@@ -2478,6 +2511,11 @@ behavior. This field is currently only supported by the BidiGenerateContent meth
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.Delivery.html">Delivery</a></dt>
       <dd><p>Delivery mode for the generated content.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.DocumentMetadataContentLayer.html">DocumentMetadataContentLayer</a></dt>
+      <dd><p>Content layers to extract from a document.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -2712,6 +2750,11 @@ is not supported in Gemini API.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.SpreadsheetMetadataContentLayer.html">SpreadsheetMetadataContentLayer</a></dt>
+      <dd><p>Content layers to extract from a spreadsheet.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.StartSensitivity.html">StartSensitivity</a></dt>
       <dd><p>Start of speech sensitivity.</p>
 </dd>
@@ -2801,6 +2844,11 @@ Gemini API.</p>
     <dl class="jumplist">
       <dt><a class="xref" href="Google.GenAI.Types.VideoGenerationReferenceType.html">VideoGenerationReferenceType</a></dt>
       <dd><p>Enum for the reference type of a video generation reference image.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Google.GenAI.Types.VideoMetadataContentLayer.html">VideoMetadataContentLayer</a></dt>
+      <dd><p>Content layers to extract from a video.</p>
 </dd>
     </dl>
     <dl class="jumplist">

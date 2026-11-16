@@ -3788,6 +3788,54 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.AspectRatioConverter.Write
   nameWithType: AspectRatioConverter.Write
+- uid: Google.GenAI.Types.AudioMetadata
+  name: AudioMetadata
+  href: api/Google.GenAI.Types.AudioMetadata.html
+  commentId: T:Google.GenAI.Types.AudioMetadata
+  fullName: Google.GenAI.Types.AudioMetadata
+  nameWithType: AudioMetadata
+- uid: Google.GenAI.Types.AudioMetadata.EndOffset
+  name: EndOffset
+  href: api/Google.GenAI.Types.AudioMetadata.html#Google_GenAI_Types_AudioMetadata_EndOffset
+  commentId: P:Google.GenAI.Types.AudioMetadata.EndOffset
+  fullName: Google.GenAI.Types.AudioMetadata.EndOffset
+  nameWithType: AudioMetadata.EndOffset
+- uid: Google.GenAI.Types.AudioMetadata.EndOffset*
+  name: EndOffset
+  href: api/Google.GenAI.Types.AudioMetadata.html#Google_GenAI_Types_AudioMetadata_EndOffset_
+  commentId: Overload:Google.GenAI.Types.AudioMetadata.EndOffset
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioMetadata.EndOffset
+  nameWithType: AudioMetadata.EndOffset
+- uid: Google.GenAI.Types.AudioMetadata.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.AudioMetadata.html#Google_GenAI_Types_AudioMetadata_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.AudioMetadata.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.AudioMetadata.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.AudioMetadata.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: AudioMetadata.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: AudioMetadata.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.AudioMetadata.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.AudioMetadata.html#Google_GenAI_Types_AudioMetadata_FromJson_
+  commentId: Overload:Google.GenAI.Types.AudioMetadata.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioMetadata.FromJson
+  nameWithType: AudioMetadata.FromJson
+- uid: Google.GenAI.Types.AudioMetadata.StartOffset
+  name: StartOffset
+  href: api/Google.GenAI.Types.AudioMetadata.html#Google_GenAI_Types_AudioMetadata_StartOffset
+  commentId: P:Google.GenAI.Types.AudioMetadata.StartOffset
+  fullName: Google.GenAI.Types.AudioMetadata.StartOffset
+  nameWithType: AudioMetadata.StartOffset
+- uid: Google.GenAI.Types.AudioMetadata.StartOffset*
+  name: StartOffset
+  href: api/Google.GenAI.Types.AudioMetadata.html#Google_GenAI_Types_AudioMetadata_StartOffset_
+  commentId: Overload:Google.GenAI.Types.AudioMetadata.StartOffset
+  isSpec: "True"
+  fullName: Google.GenAI.Types.AudioMetadata.StartOffset
+  nameWithType: AudioMetadata.StartOffset
 - uid: Google.GenAI.Types.AudioResponseFormat
   name: AudioResponseFormat
   href: api/Google.GenAI.Types.AudioResponseFormat.html
@@ -10178,6 +10226,247 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.DistillationSpec.ValidationDatasetUri
   nameWithType: DistillationSpec.ValidationDatasetUri
+- uid: Google.GenAI.Types.DocumentMetadata
+  name: DocumentMetadata
+  href: api/Google.GenAI.Types.DocumentMetadata.html
+  commentId: T:Google.GenAI.Types.DocumentMetadata
+  fullName: Google.GenAI.Types.DocumentMetadata
+  nameWithType: DocumentMetadata
+- uid: Google.GenAI.Types.DocumentMetadata.ContentLayers
+  name: ContentLayers
+  href: api/Google.GenAI.Types.DocumentMetadata.html#Google_GenAI_Types_DocumentMetadata_ContentLayers
+  commentId: P:Google.GenAI.Types.DocumentMetadata.ContentLayers
+  fullName: Google.GenAI.Types.DocumentMetadata.ContentLayers
+  nameWithType: DocumentMetadata.ContentLayers
+- uid: Google.GenAI.Types.DocumentMetadata.ContentLayers*
+  name: ContentLayers
+  href: api/Google.GenAI.Types.DocumentMetadata.html#Google_GenAI_Types_DocumentMetadata_ContentLayers_
+  commentId: Overload:Google.GenAI.Types.DocumentMetadata.ContentLayers
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DocumentMetadata.ContentLayers
+  nameWithType: DocumentMetadata.ContentLayers
+- uid: Google.GenAI.Types.DocumentMetadata.EndPage
+  name: EndPage
+  href: api/Google.GenAI.Types.DocumentMetadata.html#Google_GenAI_Types_DocumentMetadata_EndPage
+  commentId: P:Google.GenAI.Types.DocumentMetadata.EndPage
+  fullName: Google.GenAI.Types.DocumentMetadata.EndPage
+  nameWithType: DocumentMetadata.EndPage
+- uid: Google.GenAI.Types.DocumentMetadata.EndPage*
+  name: EndPage
+  href: api/Google.GenAI.Types.DocumentMetadata.html#Google_GenAI_Types_DocumentMetadata_EndPage_
+  commentId: Overload:Google.GenAI.Types.DocumentMetadata.EndPage
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DocumentMetadata.EndPage
+  nameWithType: DocumentMetadata.EndPage
+- uid: Google.GenAI.Types.DocumentMetadata.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.DocumentMetadata.html#Google_GenAI_Types_DocumentMetadata_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.DocumentMetadata.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.DocumentMetadata.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.DocumentMetadata.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: DocumentMetadata.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: DocumentMetadata.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.DocumentMetadata.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.DocumentMetadata.html#Google_GenAI_Types_DocumentMetadata_FromJson_
+  commentId: Overload:Google.GenAI.Types.DocumentMetadata.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DocumentMetadata.FromJson
+  nameWithType: DocumentMetadata.FromJson
+- uid: Google.GenAI.Types.DocumentMetadata.StartPage
+  name: StartPage
+  href: api/Google.GenAI.Types.DocumentMetadata.html#Google_GenAI_Types_DocumentMetadata_StartPage
+  commentId: P:Google.GenAI.Types.DocumentMetadata.StartPage
+  fullName: Google.GenAI.Types.DocumentMetadata.StartPage
+  nameWithType: DocumentMetadata.StartPage
+- uid: Google.GenAI.Types.DocumentMetadata.StartPage*
+  name: StartPage
+  href: api/Google.GenAI.Types.DocumentMetadata.html#Google_GenAI_Types_DocumentMetadata_StartPage_
+  commentId: Overload:Google.GenAI.Types.DocumentMetadata.StartPage
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DocumentMetadata.StartPage
+  nameWithType: DocumentMetadata.StartPage
+- uid: Google.GenAI.Types.DocumentMetadataContentLayer
+  name: DocumentMetadataContentLayer
+  href: api/Google.GenAI.Types.DocumentMetadataContentLayer.html
+  commentId: T:Google.GenAI.Types.DocumentMetadataContentLayer
+  fullName: Google.GenAI.Types.DocumentMetadataContentLayer
+  nameWithType: DocumentMetadataContentLayer
+- uid: Google.GenAI.Types.DocumentMetadataContentLayer.AllValues
+  name: AllValues
+  href: api/Google.GenAI.Types.DocumentMetadataContentLayer.html#Google_GenAI_Types_DocumentMetadataContentLayer_AllValues
+  commentId: P:Google.GenAI.Types.DocumentMetadataContentLayer.AllValues
+  fullName: Google.GenAI.Types.DocumentMetadataContentLayer.AllValues
+  nameWithType: DocumentMetadataContentLayer.AllValues
+- uid: Google.GenAI.Types.DocumentMetadataContentLayer.AllValues*
+  name: AllValues
+  href: api/Google.GenAI.Types.DocumentMetadataContentLayer.html#Google_GenAI_Types_DocumentMetadataContentLayer_AllValues_
+  commentId: Overload:Google.GenAI.Types.DocumentMetadataContentLayer.AllValues
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DocumentMetadataContentLayer.AllValues
+  nameWithType: DocumentMetadataContentLayer.AllValues
+- uid: Google.GenAI.Types.DocumentMetadataContentLayer.ContentLayerUnspecified
+  name: ContentLayerUnspecified
+  href: api/Google.GenAI.Types.DocumentMetadataContentLayer.html#Google_GenAI_Types_DocumentMetadataContentLayer_ContentLayerUnspecified
+  commentId: P:Google.GenAI.Types.DocumentMetadataContentLayer.ContentLayerUnspecified
+  fullName: Google.GenAI.Types.DocumentMetadataContentLayer.ContentLayerUnspecified
+  nameWithType: DocumentMetadataContentLayer.ContentLayerUnspecified
+- uid: Google.GenAI.Types.DocumentMetadataContentLayer.ContentLayerUnspecified*
+  name: ContentLayerUnspecified
+  href: api/Google.GenAI.Types.DocumentMetadataContentLayer.html#Google_GenAI_Types_DocumentMetadataContentLayer_ContentLayerUnspecified_
+  commentId: Overload:Google.GenAI.Types.DocumentMetadataContentLayer.ContentLayerUnspecified
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DocumentMetadataContentLayer.ContentLayerUnspecified
+  nameWithType: DocumentMetadataContentLayer.ContentLayerUnspecified
+- uid: Google.GenAI.Types.DocumentMetadataContentLayer.Equals(Google.GenAI.Types.DocumentMetadataContentLayer)
+  name: Equals(DocumentMetadataContentLayer)
+  href: api/Google.GenAI.Types.DocumentMetadataContentLayer.html#Google_GenAI_Types_DocumentMetadataContentLayer_Equals_Google_GenAI_Types_DocumentMetadataContentLayer_
+  commentId: M:Google.GenAI.Types.DocumentMetadataContentLayer.Equals(Google.GenAI.Types.DocumentMetadataContentLayer)
+  fullName: Google.GenAI.Types.DocumentMetadataContentLayer.Equals(Google.GenAI.Types.DocumentMetadataContentLayer)
+  nameWithType: DocumentMetadataContentLayer.Equals(DocumentMetadataContentLayer)
+- uid: Google.GenAI.Types.DocumentMetadataContentLayer.Equals*
+  name: Equals
+  href: api/Google.GenAI.Types.DocumentMetadataContentLayer.html#Google_GenAI_Types_DocumentMetadataContentLayer_Equals_
+  commentId: Overload:Google.GenAI.Types.DocumentMetadataContentLayer.Equals
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DocumentMetadataContentLayer.Equals
+  nameWithType: DocumentMetadataContentLayer.Equals
+- uid: Google.GenAI.Types.DocumentMetadataContentLayer.FromString(System.String)
+  name: FromString(string)
+  href: api/Google.GenAI.Types.DocumentMetadataContentLayer.html#Google_GenAI_Types_DocumentMetadataContentLayer_FromString_System_String_
+  commentId: M:Google.GenAI.Types.DocumentMetadataContentLayer.FromString(System.String)
+  name.vb: FromString(String)
+  fullName: Google.GenAI.Types.DocumentMetadataContentLayer.FromString(string)
+  fullName.vb: Google.GenAI.Types.DocumentMetadataContentLayer.FromString(String)
+  nameWithType: DocumentMetadataContentLayer.FromString(string)
+  nameWithType.vb: DocumentMetadataContentLayer.FromString(String)
+- uid: Google.GenAI.Types.DocumentMetadataContentLayer.FromString*
+  name: FromString
+  href: api/Google.GenAI.Types.DocumentMetadataContentLayer.html#Google_GenAI_Types_DocumentMetadataContentLayer_FromString_
+  commentId: Overload:Google.GenAI.Types.DocumentMetadataContentLayer.FromString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DocumentMetadataContentLayer.FromString
+  nameWithType: DocumentMetadataContentLayer.FromString
+- uid: Google.GenAI.Types.DocumentMetadataContentLayer.GetHashCode
+  name: GetHashCode()
+  href: api/Google.GenAI.Types.DocumentMetadataContentLayer.html#Google_GenAI_Types_DocumentMetadataContentLayer_GetHashCode
+  commentId: M:Google.GenAI.Types.DocumentMetadataContentLayer.GetHashCode
+  fullName: Google.GenAI.Types.DocumentMetadataContentLayer.GetHashCode()
+  nameWithType: DocumentMetadataContentLayer.GetHashCode()
+- uid: Google.GenAI.Types.DocumentMetadataContentLayer.GetHashCode*
+  name: GetHashCode
+  href: api/Google.GenAI.Types.DocumentMetadataContentLayer.html#Google_GenAI_Types_DocumentMetadataContentLayer_GetHashCode_
+  commentId: Overload:Google.GenAI.Types.DocumentMetadataContentLayer.GetHashCode
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DocumentMetadataContentLayer.GetHashCode
+  nameWithType: DocumentMetadataContentLayer.GetHashCode
+- uid: Google.GenAI.Types.DocumentMetadataContentLayer.PageImage
+  name: PageImage
+  href: api/Google.GenAI.Types.DocumentMetadataContentLayer.html#Google_GenAI_Types_DocumentMetadataContentLayer_PageImage
+  commentId: P:Google.GenAI.Types.DocumentMetadataContentLayer.PageImage
+  fullName: Google.GenAI.Types.DocumentMetadataContentLayer.PageImage
+  nameWithType: DocumentMetadataContentLayer.PageImage
+- uid: Google.GenAI.Types.DocumentMetadataContentLayer.PageImage*
+  name: PageImage
+  href: api/Google.GenAI.Types.DocumentMetadataContentLayer.html#Google_GenAI_Types_DocumentMetadataContentLayer_PageImage_
+  commentId: Overload:Google.GenAI.Types.DocumentMetadataContentLayer.PageImage
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DocumentMetadataContentLayer.PageImage
+  nameWithType: DocumentMetadataContentLayer.PageImage
+- uid: Google.GenAI.Types.DocumentMetadataContentLayer.PageText
+  name: PageText
+  href: api/Google.GenAI.Types.DocumentMetadataContentLayer.html#Google_GenAI_Types_DocumentMetadataContentLayer_PageText
+  commentId: P:Google.GenAI.Types.DocumentMetadataContentLayer.PageText
+  fullName: Google.GenAI.Types.DocumentMetadataContentLayer.PageText
+  nameWithType: DocumentMetadataContentLayer.PageText
+- uid: Google.GenAI.Types.DocumentMetadataContentLayer.PageText*
+  name: PageText
+  href: api/Google.GenAI.Types.DocumentMetadataContentLayer.html#Google_GenAI_Types_DocumentMetadataContentLayer_PageText_
+  commentId: Overload:Google.GenAI.Types.DocumentMetadataContentLayer.PageText
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DocumentMetadataContentLayer.PageText
+  nameWithType: DocumentMetadataContentLayer.PageText
+- uid: Google.GenAI.Types.DocumentMetadataContentLayer.ToString
+  name: ToString()
+  href: api/Google.GenAI.Types.DocumentMetadataContentLayer.html#Google_GenAI_Types_DocumentMetadataContentLayer_ToString
+  commentId: M:Google.GenAI.Types.DocumentMetadataContentLayer.ToString
+  fullName: Google.GenAI.Types.DocumentMetadataContentLayer.ToString()
+  nameWithType: DocumentMetadataContentLayer.ToString()
+- uid: Google.GenAI.Types.DocumentMetadataContentLayer.ToString*
+  name: ToString
+  href: api/Google.GenAI.Types.DocumentMetadataContentLayer.html#Google_GenAI_Types_DocumentMetadataContentLayer_ToString_
+  commentId: Overload:Google.GenAI.Types.DocumentMetadataContentLayer.ToString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DocumentMetadataContentLayer.ToString
+  nameWithType: DocumentMetadataContentLayer.ToString
+- uid: Google.GenAI.Types.DocumentMetadataContentLayer.Value
+  name: Value
+  href: api/Google.GenAI.Types.DocumentMetadataContentLayer.html#Google_GenAI_Types_DocumentMetadataContentLayer_Value
+  commentId: P:Google.GenAI.Types.DocumentMetadataContentLayer.Value
+  fullName: Google.GenAI.Types.DocumentMetadataContentLayer.Value
+  nameWithType: DocumentMetadataContentLayer.Value
+- uid: Google.GenAI.Types.DocumentMetadataContentLayer.Value*
+  name: Value
+  href: api/Google.GenAI.Types.DocumentMetadataContentLayer.html#Google_GenAI_Types_DocumentMetadataContentLayer_Value_
+  commentId: Overload:Google.GenAI.Types.DocumentMetadataContentLayer.Value
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DocumentMetadataContentLayer.Value
+  nameWithType: DocumentMetadataContentLayer.Value
+- uid: Google.GenAI.Types.DocumentMetadataContentLayer.op_Implicit(System.String)~Google.GenAI.Types.DocumentMetadataContentLayer
+  name: implicit operator DocumentMetadataContentLayer(string)
+  href: api/Google.GenAI.Types.DocumentMetadataContentLayer.html#Google_GenAI_Types_DocumentMetadataContentLayer_op_Implicit_System_String__Google_GenAI_Types_DocumentMetadataContentLayer
+  commentId: M:Google.GenAI.Types.DocumentMetadataContentLayer.op_Implicit(System.String)~Google.GenAI.Types.DocumentMetadataContentLayer
+  name.vb: CType(String)
+  fullName: Google.GenAI.Types.DocumentMetadataContentLayer.implicit operator Google.GenAI.Types.DocumentMetadataContentLayer(string)
+  fullName.vb: Google.GenAI.Types.DocumentMetadataContentLayer.CType(String)
+  nameWithType: DocumentMetadataContentLayer.implicit operator DocumentMetadataContentLayer(string)
+  nameWithType.vb: DocumentMetadataContentLayer.CType(String)
+- uid: Google.GenAI.Types.DocumentMetadataContentLayer.op_Implicit*
+  name: implicit operator
+  href: api/Google.GenAI.Types.DocumentMetadataContentLayer.html#Google_GenAI_Types_DocumentMetadataContentLayer_op_Implicit_
+  commentId: Overload:Google.GenAI.Types.DocumentMetadataContentLayer.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: Google.GenAI.Types.DocumentMetadataContentLayer.implicit operator
+  fullName.vb: Google.GenAI.Types.DocumentMetadataContentLayer.CType
+  nameWithType: DocumentMetadataContentLayer.implicit operator
+  nameWithType.vb: DocumentMetadataContentLayer.CType
+- uid: Google.GenAI.Types.DocumentMetadataContentLayerConverter
+  name: DocumentMetadataContentLayerConverter
+  href: api/Google.GenAI.Types.DocumentMetadataContentLayerConverter.html
+  commentId: T:Google.GenAI.Types.DocumentMetadataContentLayerConverter
+  fullName: Google.GenAI.Types.DocumentMetadataContentLayerConverter
+  nameWithType: DocumentMetadataContentLayerConverter
+- uid: Google.GenAI.Types.DocumentMetadataContentLayerConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.DocumentMetadataContentLayerConverter.html#Google_GenAI_Types_DocumentMetadataContentLayerConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.DocumentMetadataContentLayerConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name.vb: Read(Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.DocumentMetadataContentLayerConverter.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: Google.GenAI.Types.DocumentMetadataContentLayerConverter.Read(System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  nameWithType: DocumentMetadataContentLayerConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: DocumentMetadataContentLayerConverter.Read(Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Google.GenAI.Types.DocumentMetadataContentLayerConverter.Read*
+  name: Read
+  href: api/Google.GenAI.Types.DocumentMetadataContentLayerConverter.html#Google_GenAI_Types_DocumentMetadataContentLayerConverter_Read_
+  commentId: Overload:Google.GenAI.Types.DocumentMetadataContentLayerConverter.Read
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DocumentMetadataContentLayerConverter.Read
+  nameWithType: DocumentMetadataContentLayerConverter.Read
+- uid: Google.GenAI.Types.DocumentMetadataContentLayerConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.DocumentMetadataContentLayer,System.Text.Json.JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, DocumentMetadataContentLayer, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.DocumentMetadataContentLayerConverter.html#Google_GenAI_Types_DocumentMetadataContentLayerConverter_Write_System_Text_Json_Utf8JsonWriter_Google_GenAI_Types_DocumentMetadataContentLayer_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.DocumentMetadataContentLayerConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.DocumentMetadataContentLayer,System.Text.Json.JsonSerializerOptions)
+  fullName: Google.GenAI.Types.DocumentMetadataContentLayerConverter.Write(System.Text.Json.Utf8JsonWriter, Google.GenAI.Types.DocumentMetadataContentLayer, System.Text.Json.JsonSerializerOptions)
+  nameWithType: DocumentMetadataContentLayerConverter.Write(Utf8JsonWriter, DocumentMetadataContentLayer, JsonSerializerOptions)
+- uid: Google.GenAI.Types.DocumentMetadataContentLayerConverter.Write*
+  name: Write
+  href: api/Google.GenAI.Types.DocumentMetadataContentLayerConverter.html#Google_GenAI_Types_DocumentMetadataContentLayerConverter_Write_
+  commentId: Overload:Google.GenAI.Types.DocumentMetadataContentLayerConverter.Write
+  isSpec: "True"
+  fullName: Google.GenAI.Types.DocumentMetadataContentLayerConverter.Write
+  nameWithType: DocumentMetadataContentLayerConverter.Write
 - uid: Google.GenAI.Types.DownloadFileConfig
   name: DownloadFileConfig
   href: api/Google.GenAI.Types.DownloadFileConfig.html
@@ -14725,6 +15014,32 @@ references:
   commentId: T:Google.GenAI.Types.FunctionResponsePart
   fullName: Google.GenAI.Types.FunctionResponsePart
   nameWithType: FunctionResponsePart
+- uid: Google.GenAI.Types.FunctionResponsePart.AudioMetadata
+  name: AudioMetadata
+  href: api/Google.GenAI.Types.FunctionResponsePart.html#Google_GenAI_Types_FunctionResponsePart_AudioMetadata
+  commentId: P:Google.GenAI.Types.FunctionResponsePart.AudioMetadata
+  fullName: Google.GenAI.Types.FunctionResponsePart.AudioMetadata
+  nameWithType: FunctionResponsePart.AudioMetadata
+- uid: Google.GenAI.Types.FunctionResponsePart.AudioMetadata*
+  name: AudioMetadata
+  href: api/Google.GenAI.Types.FunctionResponsePart.html#Google_GenAI_Types_FunctionResponsePart_AudioMetadata_
+  commentId: Overload:Google.GenAI.Types.FunctionResponsePart.AudioMetadata
+  isSpec: "True"
+  fullName: Google.GenAI.Types.FunctionResponsePart.AudioMetadata
+  nameWithType: FunctionResponsePart.AudioMetadata
+- uid: Google.GenAI.Types.FunctionResponsePart.DocumentMetadata
+  name: DocumentMetadata
+  href: api/Google.GenAI.Types.FunctionResponsePart.html#Google_GenAI_Types_FunctionResponsePart_DocumentMetadata
+  commentId: P:Google.GenAI.Types.FunctionResponsePart.DocumentMetadata
+  fullName: Google.GenAI.Types.FunctionResponsePart.DocumentMetadata
+  nameWithType: FunctionResponsePart.DocumentMetadata
+- uid: Google.GenAI.Types.FunctionResponsePart.DocumentMetadata*
+  name: DocumentMetadata
+  href: api/Google.GenAI.Types.FunctionResponsePart.html#Google_GenAI_Types_FunctionResponsePart_DocumentMetadata_
+  commentId: Overload:Google.GenAI.Types.FunctionResponsePart.DocumentMetadata
+  isSpec: "True"
+  fullName: Google.GenAI.Types.FunctionResponsePart.DocumentMetadata
+  nameWithType: FunctionResponsePart.DocumentMetadata
 - uid: Google.GenAI.Types.FunctionResponsePart.FileData
   name: FileData
   href: api/Google.GenAI.Types.FunctionResponsePart.html#Google_GenAI_Types_FunctionResponsePart_FileData
@@ -14780,6 +15095,45 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.FunctionResponsePart.MediaProcessing
   nameWithType: FunctionResponsePart.MediaProcessing
+- uid: Google.GenAI.Types.FunctionResponsePart.MediaResolution
+  name: MediaResolution
+  href: api/Google.GenAI.Types.FunctionResponsePart.html#Google_GenAI_Types_FunctionResponsePart_MediaResolution
+  commentId: P:Google.GenAI.Types.FunctionResponsePart.MediaResolution
+  fullName: Google.GenAI.Types.FunctionResponsePart.MediaResolution
+  nameWithType: FunctionResponsePart.MediaResolution
+- uid: Google.GenAI.Types.FunctionResponsePart.MediaResolution*
+  name: MediaResolution
+  href: api/Google.GenAI.Types.FunctionResponsePart.html#Google_GenAI_Types_FunctionResponsePart_MediaResolution_
+  commentId: Overload:Google.GenAI.Types.FunctionResponsePart.MediaResolution
+  isSpec: "True"
+  fullName: Google.GenAI.Types.FunctionResponsePart.MediaResolution
+  nameWithType: FunctionResponsePart.MediaResolution
+- uid: Google.GenAI.Types.FunctionResponsePart.SpreadsheetMetadata
+  name: SpreadsheetMetadata
+  href: api/Google.GenAI.Types.FunctionResponsePart.html#Google_GenAI_Types_FunctionResponsePart_SpreadsheetMetadata
+  commentId: P:Google.GenAI.Types.FunctionResponsePart.SpreadsheetMetadata
+  fullName: Google.GenAI.Types.FunctionResponsePart.SpreadsheetMetadata
+  nameWithType: FunctionResponsePart.SpreadsheetMetadata
+- uid: Google.GenAI.Types.FunctionResponsePart.SpreadsheetMetadata*
+  name: SpreadsheetMetadata
+  href: api/Google.GenAI.Types.FunctionResponsePart.html#Google_GenAI_Types_FunctionResponsePart_SpreadsheetMetadata_
+  commentId: Overload:Google.GenAI.Types.FunctionResponsePart.SpreadsheetMetadata
+  isSpec: "True"
+  fullName: Google.GenAI.Types.FunctionResponsePart.SpreadsheetMetadata
+  nameWithType: FunctionResponsePart.SpreadsheetMetadata
+- uid: Google.GenAI.Types.FunctionResponsePart.VideoMetadata
+  name: VideoMetadata
+  href: api/Google.GenAI.Types.FunctionResponsePart.html#Google_GenAI_Types_FunctionResponsePart_VideoMetadata
+  commentId: P:Google.GenAI.Types.FunctionResponsePart.VideoMetadata
+  fullName: Google.GenAI.Types.FunctionResponsePart.VideoMetadata
+  nameWithType: FunctionResponsePart.VideoMetadata
+- uid: Google.GenAI.Types.FunctionResponsePart.VideoMetadata*
+  name: VideoMetadata
+  href: api/Google.GenAI.Types.FunctionResponsePart.html#Google_GenAI_Types_FunctionResponsePart_VideoMetadata_
+  commentId: Overload:Google.GenAI.Types.FunctionResponsePart.VideoMetadata
+  isSpec: "True"
+  fullName: Google.GenAI.Types.FunctionResponsePart.VideoMetadata
+  nameWithType: FunctionResponsePart.VideoMetadata
 - uid: Google.GenAI.Types.FunctionResponseScheduling
   name: FunctionResponseScheduling
   href: api/Google.GenAI.Types.FunctionResponseScheduling.html
@@ -28294,6 +28648,19 @@ references:
   commentId: T:Google.GenAI.Types.Part
   fullName: Google.GenAI.Types.Part
   nameWithType: Part
+- uid: Google.GenAI.Types.Part.AudioMetadata
+  name: AudioMetadata
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_AudioMetadata
+  commentId: P:Google.GenAI.Types.Part.AudioMetadata
+  fullName: Google.GenAI.Types.Part.AudioMetadata
+  nameWithType: Part.AudioMetadata
+- uid: Google.GenAI.Types.Part.AudioMetadata*
+  name: AudioMetadata
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_AudioMetadata_
+  commentId: Overload:Google.GenAI.Types.Part.AudioMetadata
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Part.AudioMetadata
+  nameWithType: Part.AudioMetadata
 - uid: Google.GenAI.Types.Part.AudioTranscription
   name: AudioTranscription
   href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_AudioTranscription
@@ -28320,6 +28687,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Part.CodeExecutionResult
   nameWithType: Part.CodeExecutionResult
+- uid: Google.GenAI.Types.Part.DocumentMetadata
+  name: DocumentMetadata
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_DocumentMetadata
+  commentId: P:Google.GenAI.Types.Part.DocumentMetadata
+  fullName: Google.GenAI.Types.Part.DocumentMetadata
+  nameWithType: Part.DocumentMetadata
+- uid: Google.GenAI.Types.Part.DocumentMetadata*
+  name: DocumentMetadata
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_DocumentMetadata_
+  commentId: Overload:Google.GenAI.Types.Part.DocumentMetadata
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Part.DocumentMetadata
+  nameWithType: Part.DocumentMetadata
 - uid: Google.GenAI.Types.Part.ExecutableCode
   name: ExecutableCode
   href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_ExecutableCode
@@ -28565,6 +28945,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.Part.SpeechMetadata
   nameWithType: Part.SpeechMetadata
+- uid: Google.GenAI.Types.Part.SpreadsheetMetadata
+  name: SpreadsheetMetadata
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_SpreadsheetMetadata
+  commentId: P:Google.GenAI.Types.Part.SpreadsheetMetadata
+  fullName: Google.GenAI.Types.Part.SpreadsheetMetadata
+  nameWithType: Part.SpreadsheetMetadata
+- uid: Google.GenAI.Types.Part.SpreadsheetMetadata*
+  name: SpreadsheetMetadata
+  href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_SpreadsheetMetadata_
+  commentId: Overload:Google.GenAI.Types.Part.SpreadsheetMetadata
+  isSpec: "True"
+  fullName: Google.GenAI.Types.Part.SpreadsheetMetadata
+  nameWithType: Part.SpreadsheetMetadata
 - uid: Google.GenAI.Types.Part.Text
   name: Text
   href: api/Google.GenAI.Types.Part.html#Google_GenAI_Types_Part_Text
@@ -35365,6 +35758,260 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.SpeechMetadata.Style
   nameWithType: SpeechMetadata.Style
+- uid: Google.GenAI.Types.SpreadsheetMetadata
+  name: SpreadsheetMetadata
+  href: api/Google.GenAI.Types.SpreadsheetMetadata.html
+  commentId: T:Google.GenAI.Types.SpreadsheetMetadata
+  fullName: Google.GenAI.Types.SpreadsheetMetadata
+  nameWithType: SpreadsheetMetadata
+- uid: Google.GenAI.Types.SpreadsheetMetadata.ContentLayers
+  name: ContentLayers
+  href: api/Google.GenAI.Types.SpreadsheetMetadata.html#Google_GenAI_Types_SpreadsheetMetadata_ContentLayers
+  commentId: P:Google.GenAI.Types.SpreadsheetMetadata.ContentLayers
+  fullName: Google.GenAI.Types.SpreadsheetMetadata.ContentLayers
+  nameWithType: SpreadsheetMetadata.ContentLayers
+- uid: Google.GenAI.Types.SpreadsheetMetadata.ContentLayers*
+  name: ContentLayers
+  href: api/Google.GenAI.Types.SpreadsheetMetadata.html#Google_GenAI_Types_SpreadsheetMetadata_ContentLayers_
+  commentId: Overload:Google.GenAI.Types.SpreadsheetMetadata.ContentLayers
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SpreadsheetMetadata.ContentLayers
+  nameWithType: SpreadsheetMetadata.ContentLayers
+- uid: Google.GenAI.Types.SpreadsheetMetadata.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name: FromJson(string, JsonSerializerOptions?)
+  href: api/Google.GenAI.Types.SpreadsheetMetadata.html#Google_GenAI_Types_SpreadsheetMetadata_FromJson_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.SpreadsheetMetadata.FromJson(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: FromJson(String, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.SpreadsheetMetadata.FromJson(string, System.Text.Json.JsonSerializerOptions?)
+  fullName.vb: Google.GenAI.Types.SpreadsheetMetadata.FromJson(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: SpreadsheetMetadata.FromJson(string, JsonSerializerOptions?)
+  nameWithType.vb: SpreadsheetMetadata.FromJson(String, JsonSerializerOptions)
+- uid: Google.GenAI.Types.SpreadsheetMetadata.FromJson*
+  name: FromJson
+  href: api/Google.GenAI.Types.SpreadsheetMetadata.html#Google_GenAI_Types_SpreadsheetMetadata_FromJson_
+  commentId: Overload:Google.GenAI.Types.SpreadsheetMetadata.FromJson
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SpreadsheetMetadata.FromJson
+  nameWithType: SpreadsheetMetadata.FromJson
+- uid: Google.GenAI.Types.SpreadsheetMetadata.SheetIndex
+  name: SheetIndex
+  href: api/Google.GenAI.Types.SpreadsheetMetadata.html#Google_GenAI_Types_SpreadsheetMetadata_SheetIndex
+  commentId: P:Google.GenAI.Types.SpreadsheetMetadata.SheetIndex
+  fullName: Google.GenAI.Types.SpreadsheetMetadata.SheetIndex
+  nameWithType: SpreadsheetMetadata.SheetIndex
+- uid: Google.GenAI.Types.SpreadsheetMetadata.SheetIndex*
+  name: SheetIndex
+  href: api/Google.GenAI.Types.SpreadsheetMetadata.html#Google_GenAI_Types_SpreadsheetMetadata_SheetIndex_
+  commentId: Overload:Google.GenAI.Types.SpreadsheetMetadata.SheetIndex
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SpreadsheetMetadata.SheetIndex
+  nameWithType: SpreadsheetMetadata.SheetIndex
+- uid: Google.GenAI.Types.SpreadsheetMetadata.VisibleCells
+  name: VisibleCells
+  href: api/Google.GenAI.Types.SpreadsheetMetadata.html#Google_GenAI_Types_SpreadsheetMetadata_VisibleCells
+  commentId: P:Google.GenAI.Types.SpreadsheetMetadata.VisibleCells
+  fullName: Google.GenAI.Types.SpreadsheetMetadata.VisibleCells
+  nameWithType: SpreadsheetMetadata.VisibleCells
+- uid: Google.GenAI.Types.SpreadsheetMetadata.VisibleCells*
+  name: VisibleCells
+  href: api/Google.GenAI.Types.SpreadsheetMetadata.html#Google_GenAI_Types_SpreadsheetMetadata_VisibleCells_
+  commentId: Overload:Google.GenAI.Types.SpreadsheetMetadata.VisibleCells
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SpreadsheetMetadata.VisibleCells
+  nameWithType: SpreadsheetMetadata.VisibleCells
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayer
+  name: SpreadsheetMetadataContentLayer
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayer.html
+  commentId: T:Google.GenAI.Types.SpreadsheetMetadataContentLayer
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayer
+  nameWithType: SpreadsheetMetadataContentLayer
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayer.AllValues
+  name: AllValues
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayer.html#Google_GenAI_Types_SpreadsheetMetadataContentLayer_AllValues
+  commentId: P:Google.GenAI.Types.SpreadsheetMetadataContentLayer.AllValues
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayer.AllValues
+  nameWithType: SpreadsheetMetadataContentLayer.AllValues
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayer.AllValues*
+  name: AllValues
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayer.html#Google_GenAI_Types_SpreadsheetMetadataContentLayer_AllValues_
+  commentId: Overload:Google.GenAI.Types.SpreadsheetMetadataContentLayer.AllValues
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayer.AllValues
+  nameWithType: SpreadsheetMetadataContentLayer.AllValues
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayer.ContentLayerUnspecified
+  name: ContentLayerUnspecified
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayer.html#Google_GenAI_Types_SpreadsheetMetadataContentLayer_ContentLayerUnspecified
+  commentId: P:Google.GenAI.Types.SpreadsheetMetadataContentLayer.ContentLayerUnspecified
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayer.ContentLayerUnspecified
+  nameWithType: SpreadsheetMetadataContentLayer.ContentLayerUnspecified
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayer.ContentLayerUnspecified*
+  name: ContentLayerUnspecified
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayer.html#Google_GenAI_Types_SpreadsheetMetadataContentLayer_ContentLayerUnspecified_
+  commentId: Overload:Google.GenAI.Types.SpreadsheetMetadataContentLayer.ContentLayerUnspecified
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayer.ContentLayerUnspecified
+  nameWithType: SpreadsheetMetadataContentLayer.ContentLayerUnspecified
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayer.Data
+  name: Data
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayer.html#Google_GenAI_Types_SpreadsheetMetadataContentLayer_Data
+  commentId: P:Google.GenAI.Types.SpreadsheetMetadataContentLayer.Data
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayer.Data
+  nameWithType: SpreadsheetMetadataContentLayer.Data
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayer.Data*
+  name: Data
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayer.html#Google_GenAI_Types_SpreadsheetMetadataContentLayer_Data_
+  commentId: Overload:Google.GenAI.Types.SpreadsheetMetadataContentLayer.Data
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayer.Data
+  nameWithType: SpreadsheetMetadataContentLayer.Data
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayer.Equals(Google.GenAI.Types.SpreadsheetMetadataContentLayer)
+  name: Equals(SpreadsheetMetadataContentLayer)
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayer.html#Google_GenAI_Types_SpreadsheetMetadataContentLayer_Equals_Google_GenAI_Types_SpreadsheetMetadataContentLayer_
+  commentId: M:Google.GenAI.Types.SpreadsheetMetadataContentLayer.Equals(Google.GenAI.Types.SpreadsheetMetadataContentLayer)
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayer.Equals(Google.GenAI.Types.SpreadsheetMetadataContentLayer)
+  nameWithType: SpreadsheetMetadataContentLayer.Equals(SpreadsheetMetadataContentLayer)
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayer.Equals*
+  name: Equals
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayer.html#Google_GenAI_Types_SpreadsheetMetadataContentLayer_Equals_
+  commentId: Overload:Google.GenAI.Types.SpreadsheetMetadataContentLayer.Equals
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayer.Equals
+  nameWithType: SpreadsheetMetadataContentLayer.Equals
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayer.Formulas
+  name: Formulas
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayer.html#Google_GenAI_Types_SpreadsheetMetadataContentLayer_Formulas
+  commentId: P:Google.GenAI.Types.SpreadsheetMetadataContentLayer.Formulas
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayer.Formulas
+  nameWithType: SpreadsheetMetadataContentLayer.Formulas
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayer.Formulas*
+  name: Formulas
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayer.html#Google_GenAI_Types_SpreadsheetMetadataContentLayer_Formulas_
+  commentId: Overload:Google.GenAI.Types.SpreadsheetMetadataContentLayer.Formulas
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayer.Formulas
+  nameWithType: SpreadsheetMetadataContentLayer.Formulas
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayer.FromString(System.String)
+  name: FromString(string)
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayer.html#Google_GenAI_Types_SpreadsheetMetadataContentLayer_FromString_System_String_
+  commentId: M:Google.GenAI.Types.SpreadsheetMetadataContentLayer.FromString(System.String)
+  name.vb: FromString(String)
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayer.FromString(string)
+  fullName.vb: Google.GenAI.Types.SpreadsheetMetadataContentLayer.FromString(String)
+  nameWithType: SpreadsheetMetadataContentLayer.FromString(string)
+  nameWithType.vb: SpreadsheetMetadataContentLayer.FromString(String)
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayer.FromString*
+  name: FromString
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayer.html#Google_GenAI_Types_SpreadsheetMetadataContentLayer_FromString_
+  commentId: Overload:Google.GenAI.Types.SpreadsheetMetadataContentLayer.FromString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayer.FromString
+  nameWithType: SpreadsheetMetadataContentLayer.FromString
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayer.GetHashCode
+  name: GetHashCode()
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayer.html#Google_GenAI_Types_SpreadsheetMetadataContentLayer_GetHashCode
+  commentId: M:Google.GenAI.Types.SpreadsheetMetadataContentLayer.GetHashCode
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayer.GetHashCode()
+  nameWithType: SpreadsheetMetadataContentLayer.GetHashCode()
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayer.GetHashCode*
+  name: GetHashCode
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayer.html#Google_GenAI_Types_SpreadsheetMetadataContentLayer_GetHashCode_
+  commentId: Overload:Google.GenAI.Types.SpreadsheetMetadataContentLayer.GetHashCode
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayer.GetHashCode
+  nameWithType: SpreadsheetMetadataContentLayer.GetHashCode
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayer.ToString
+  name: ToString()
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayer.html#Google_GenAI_Types_SpreadsheetMetadataContentLayer_ToString
+  commentId: M:Google.GenAI.Types.SpreadsheetMetadataContentLayer.ToString
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayer.ToString()
+  nameWithType: SpreadsheetMetadataContentLayer.ToString()
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayer.ToString*
+  name: ToString
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayer.html#Google_GenAI_Types_SpreadsheetMetadataContentLayer_ToString_
+  commentId: Overload:Google.GenAI.Types.SpreadsheetMetadataContentLayer.ToString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayer.ToString
+  nameWithType: SpreadsheetMetadataContentLayer.ToString
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayer.Value
+  name: Value
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayer.html#Google_GenAI_Types_SpreadsheetMetadataContentLayer_Value
+  commentId: P:Google.GenAI.Types.SpreadsheetMetadataContentLayer.Value
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayer.Value
+  nameWithType: SpreadsheetMetadataContentLayer.Value
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayer.Value*
+  name: Value
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayer.html#Google_GenAI_Types_SpreadsheetMetadataContentLayer_Value_
+  commentId: Overload:Google.GenAI.Types.SpreadsheetMetadataContentLayer.Value
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayer.Value
+  nameWithType: SpreadsheetMetadataContentLayer.Value
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayer.Visual
+  name: Visual
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayer.html#Google_GenAI_Types_SpreadsheetMetadataContentLayer_Visual
+  commentId: P:Google.GenAI.Types.SpreadsheetMetadataContentLayer.Visual
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayer.Visual
+  nameWithType: SpreadsheetMetadataContentLayer.Visual
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayer.Visual*
+  name: Visual
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayer.html#Google_GenAI_Types_SpreadsheetMetadataContentLayer_Visual_
+  commentId: Overload:Google.GenAI.Types.SpreadsheetMetadataContentLayer.Visual
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayer.Visual
+  nameWithType: SpreadsheetMetadataContentLayer.Visual
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayer.op_Implicit(System.String)~Google.GenAI.Types.SpreadsheetMetadataContentLayer
+  name: implicit operator SpreadsheetMetadataContentLayer(string)
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayer.html#Google_GenAI_Types_SpreadsheetMetadataContentLayer_op_Implicit_System_String__Google_GenAI_Types_SpreadsheetMetadataContentLayer
+  commentId: M:Google.GenAI.Types.SpreadsheetMetadataContentLayer.op_Implicit(System.String)~Google.GenAI.Types.SpreadsheetMetadataContentLayer
+  name.vb: CType(String)
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayer.implicit operator Google.GenAI.Types.SpreadsheetMetadataContentLayer(string)
+  fullName.vb: Google.GenAI.Types.SpreadsheetMetadataContentLayer.CType(String)
+  nameWithType: SpreadsheetMetadataContentLayer.implicit operator SpreadsheetMetadataContentLayer(string)
+  nameWithType.vb: SpreadsheetMetadataContentLayer.CType(String)
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayer.op_Implicit*
+  name: implicit operator
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayer.html#Google_GenAI_Types_SpreadsheetMetadataContentLayer_op_Implicit_
+  commentId: Overload:Google.GenAI.Types.SpreadsheetMetadataContentLayer.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayer.implicit operator
+  fullName.vb: Google.GenAI.Types.SpreadsheetMetadataContentLayer.CType
+  nameWithType: SpreadsheetMetadataContentLayer.implicit operator
+  nameWithType.vb: SpreadsheetMetadataContentLayer.CType
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayerConverter
+  name: SpreadsheetMetadataContentLayerConverter
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayerConverter.html
+  commentId: T:Google.GenAI.Types.SpreadsheetMetadataContentLayerConverter
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayerConverter
+  nameWithType: SpreadsheetMetadataContentLayerConverter
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayerConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayerConverter.html#Google_GenAI_Types_SpreadsheetMetadataContentLayerConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.SpreadsheetMetadataContentLayerConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name.vb: Read(Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayerConverter.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: Google.GenAI.Types.SpreadsheetMetadataContentLayerConverter.Read(System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  nameWithType: SpreadsheetMetadataContentLayerConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: SpreadsheetMetadataContentLayerConverter.Read(Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayerConverter.Read*
+  name: Read
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayerConverter.html#Google_GenAI_Types_SpreadsheetMetadataContentLayerConverter_Read_
+  commentId: Overload:Google.GenAI.Types.SpreadsheetMetadataContentLayerConverter.Read
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayerConverter.Read
+  nameWithType: SpreadsheetMetadataContentLayerConverter.Read
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayerConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.SpreadsheetMetadataContentLayer,System.Text.Json.JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, SpreadsheetMetadataContentLayer, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayerConverter.html#Google_GenAI_Types_SpreadsheetMetadataContentLayerConverter_Write_System_Text_Json_Utf8JsonWriter_Google_GenAI_Types_SpreadsheetMetadataContentLayer_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.SpreadsheetMetadataContentLayerConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.SpreadsheetMetadataContentLayer,System.Text.Json.JsonSerializerOptions)
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayerConverter.Write(System.Text.Json.Utf8JsonWriter, Google.GenAI.Types.SpreadsheetMetadataContentLayer, System.Text.Json.JsonSerializerOptions)
+  nameWithType: SpreadsheetMetadataContentLayerConverter.Write(Utf8JsonWriter, SpreadsheetMetadataContentLayer, JsonSerializerOptions)
+- uid: Google.GenAI.Types.SpreadsheetMetadataContentLayerConverter.Write*
+  name: Write
+  href: api/Google.GenAI.Types.SpreadsheetMetadataContentLayerConverter.html#Google_GenAI_Types_SpreadsheetMetadataContentLayerConverter_Write_
+  commentId: Overload:Google.GenAI.Types.SpreadsheetMetadataContentLayerConverter.Write
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SpreadsheetMetadataContentLayerConverter.Write
+  nameWithType: SpreadsheetMetadataContentLayerConverter.Write
 - uid: Google.GenAI.Types.StartSensitivity
   name: StartSensitivity
   href: api/Google.GenAI.Types.StartSensitivity.html
@@ -43852,6 +44499,19 @@ references:
   commentId: T:Google.GenAI.Types.VideoMetadata
   fullName: Google.GenAI.Types.VideoMetadata
   nameWithType: VideoMetadata
+- uid: Google.GenAI.Types.VideoMetadata.ContentLayers
+  name: ContentLayers
+  href: api/Google.GenAI.Types.VideoMetadata.html#Google_GenAI_Types_VideoMetadata_ContentLayers
+  commentId: P:Google.GenAI.Types.VideoMetadata.ContentLayers
+  fullName: Google.GenAI.Types.VideoMetadata.ContentLayers
+  nameWithType: VideoMetadata.ContentLayers
+- uid: Google.GenAI.Types.VideoMetadata.ContentLayers*
+  name: ContentLayers
+  href: api/Google.GenAI.Types.VideoMetadata.html#Google_GenAI_Types_VideoMetadata_ContentLayers_
+  commentId: Overload:Google.GenAI.Types.VideoMetadata.ContentLayers
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VideoMetadata.ContentLayers
+  nameWithType: VideoMetadata.ContentLayers
 - uid: Google.GenAI.Types.VideoMetadata.EndOffset
   name: EndOffset
   href: api/Google.GenAI.Types.VideoMetadata.html#Google_GenAI_Types_VideoMetadata_EndOffset
@@ -43907,6 +44567,199 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.VideoMetadata.StartOffset
   nameWithType: VideoMetadata.StartOffset
+- uid: Google.GenAI.Types.VideoMetadataContentLayer
+  name: VideoMetadataContentLayer
+  href: api/Google.GenAI.Types.VideoMetadataContentLayer.html
+  commentId: T:Google.GenAI.Types.VideoMetadataContentLayer
+  fullName: Google.GenAI.Types.VideoMetadataContentLayer
+  nameWithType: VideoMetadataContentLayer
+- uid: Google.GenAI.Types.VideoMetadataContentLayer.AllValues
+  name: AllValues
+  href: api/Google.GenAI.Types.VideoMetadataContentLayer.html#Google_GenAI_Types_VideoMetadataContentLayer_AllValues
+  commentId: P:Google.GenAI.Types.VideoMetadataContentLayer.AllValues
+  fullName: Google.GenAI.Types.VideoMetadataContentLayer.AllValues
+  nameWithType: VideoMetadataContentLayer.AllValues
+- uid: Google.GenAI.Types.VideoMetadataContentLayer.AllValues*
+  name: AllValues
+  href: api/Google.GenAI.Types.VideoMetadataContentLayer.html#Google_GenAI_Types_VideoMetadataContentLayer_AllValues_
+  commentId: Overload:Google.GenAI.Types.VideoMetadataContentLayer.AllValues
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VideoMetadataContentLayer.AllValues
+  nameWithType: VideoMetadataContentLayer.AllValues
+- uid: Google.GenAI.Types.VideoMetadataContentLayer.Audio
+  name: Audio
+  href: api/Google.GenAI.Types.VideoMetadataContentLayer.html#Google_GenAI_Types_VideoMetadataContentLayer_Audio
+  commentId: P:Google.GenAI.Types.VideoMetadataContentLayer.Audio
+  fullName: Google.GenAI.Types.VideoMetadataContentLayer.Audio
+  nameWithType: VideoMetadataContentLayer.Audio
+- uid: Google.GenAI.Types.VideoMetadataContentLayer.Audio*
+  name: Audio
+  href: api/Google.GenAI.Types.VideoMetadataContentLayer.html#Google_GenAI_Types_VideoMetadataContentLayer_Audio_
+  commentId: Overload:Google.GenAI.Types.VideoMetadataContentLayer.Audio
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VideoMetadataContentLayer.Audio
+  nameWithType: VideoMetadataContentLayer.Audio
+- uid: Google.GenAI.Types.VideoMetadataContentLayer.ContentLayerUnspecified
+  name: ContentLayerUnspecified
+  href: api/Google.GenAI.Types.VideoMetadataContentLayer.html#Google_GenAI_Types_VideoMetadataContentLayer_ContentLayerUnspecified
+  commentId: P:Google.GenAI.Types.VideoMetadataContentLayer.ContentLayerUnspecified
+  fullName: Google.GenAI.Types.VideoMetadataContentLayer.ContentLayerUnspecified
+  nameWithType: VideoMetadataContentLayer.ContentLayerUnspecified
+- uid: Google.GenAI.Types.VideoMetadataContentLayer.ContentLayerUnspecified*
+  name: ContentLayerUnspecified
+  href: api/Google.GenAI.Types.VideoMetadataContentLayer.html#Google_GenAI_Types_VideoMetadataContentLayer_ContentLayerUnspecified_
+  commentId: Overload:Google.GenAI.Types.VideoMetadataContentLayer.ContentLayerUnspecified
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VideoMetadataContentLayer.ContentLayerUnspecified
+  nameWithType: VideoMetadataContentLayer.ContentLayerUnspecified
+- uid: Google.GenAI.Types.VideoMetadataContentLayer.Equals(Google.GenAI.Types.VideoMetadataContentLayer)
+  name: Equals(VideoMetadataContentLayer)
+  href: api/Google.GenAI.Types.VideoMetadataContentLayer.html#Google_GenAI_Types_VideoMetadataContentLayer_Equals_Google_GenAI_Types_VideoMetadataContentLayer_
+  commentId: M:Google.GenAI.Types.VideoMetadataContentLayer.Equals(Google.GenAI.Types.VideoMetadataContentLayer)
+  fullName: Google.GenAI.Types.VideoMetadataContentLayer.Equals(Google.GenAI.Types.VideoMetadataContentLayer)
+  nameWithType: VideoMetadataContentLayer.Equals(VideoMetadataContentLayer)
+- uid: Google.GenAI.Types.VideoMetadataContentLayer.Equals*
+  name: Equals
+  href: api/Google.GenAI.Types.VideoMetadataContentLayer.html#Google_GenAI_Types_VideoMetadataContentLayer_Equals_
+  commentId: Overload:Google.GenAI.Types.VideoMetadataContentLayer.Equals
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VideoMetadataContentLayer.Equals
+  nameWithType: VideoMetadataContentLayer.Equals
+- uid: Google.GenAI.Types.VideoMetadataContentLayer.Frames
+  name: Frames
+  href: api/Google.GenAI.Types.VideoMetadataContentLayer.html#Google_GenAI_Types_VideoMetadataContentLayer_Frames
+  commentId: P:Google.GenAI.Types.VideoMetadataContentLayer.Frames
+  fullName: Google.GenAI.Types.VideoMetadataContentLayer.Frames
+  nameWithType: VideoMetadataContentLayer.Frames
+- uid: Google.GenAI.Types.VideoMetadataContentLayer.Frames*
+  name: Frames
+  href: api/Google.GenAI.Types.VideoMetadataContentLayer.html#Google_GenAI_Types_VideoMetadataContentLayer_Frames_
+  commentId: Overload:Google.GenAI.Types.VideoMetadataContentLayer.Frames
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VideoMetadataContentLayer.Frames
+  nameWithType: VideoMetadataContentLayer.Frames
+- uid: Google.GenAI.Types.VideoMetadataContentLayer.FromString(System.String)
+  name: FromString(string)
+  href: api/Google.GenAI.Types.VideoMetadataContentLayer.html#Google_GenAI_Types_VideoMetadataContentLayer_FromString_System_String_
+  commentId: M:Google.GenAI.Types.VideoMetadataContentLayer.FromString(System.String)
+  name.vb: FromString(String)
+  fullName: Google.GenAI.Types.VideoMetadataContentLayer.FromString(string)
+  fullName.vb: Google.GenAI.Types.VideoMetadataContentLayer.FromString(String)
+  nameWithType: VideoMetadataContentLayer.FromString(string)
+  nameWithType.vb: VideoMetadataContentLayer.FromString(String)
+- uid: Google.GenAI.Types.VideoMetadataContentLayer.FromString*
+  name: FromString
+  href: api/Google.GenAI.Types.VideoMetadataContentLayer.html#Google_GenAI_Types_VideoMetadataContentLayer_FromString_
+  commentId: Overload:Google.GenAI.Types.VideoMetadataContentLayer.FromString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VideoMetadataContentLayer.FromString
+  nameWithType: VideoMetadataContentLayer.FromString
+- uid: Google.GenAI.Types.VideoMetadataContentLayer.GetHashCode
+  name: GetHashCode()
+  href: api/Google.GenAI.Types.VideoMetadataContentLayer.html#Google_GenAI_Types_VideoMetadataContentLayer_GetHashCode
+  commentId: M:Google.GenAI.Types.VideoMetadataContentLayer.GetHashCode
+  fullName: Google.GenAI.Types.VideoMetadataContentLayer.GetHashCode()
+  nameWithType: VideoMetadataContentLayer.GetHashCode()
+- uid: Google.GenAI.Types.VideoMetadataContentLayer.GetHashCode*
+  name: GetHashCode
+  href: api/Google.GenAI.Types.VideoMetadataContentLayer.html#Google_GenAI_Types_VideoMetadataContentLayer_GetHashCode_
+  commentId: Overload:Google.GenAI.Types.VideoMetadataContentLayer.GetHashCode
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VideoMetadataContentLayer.GetHashCode
+  nameWithType: VideoMetadataContentLayer.GetHashCode
+- uid: Google.GenAI.Types.VideoMetadataContentLayer.ToString
+  name: ToString()
+  href: api/Google.GenAI.Types.VideoMetadataContentLayer.html#Google_GenAI_Types_VideoMetadataContentLayer_ToString
+  commentId: M:Google.GenAI.Types.VideoMetadataContentLayer.ToString
+  fullName: Google.GenAI.Types.VideoMetadataContentLayer.ToString()
+  nameWithType: VideoMetadataContentLayer.ToString()
+- uid: Google.GenAI.Types.VideoMetadataContentLayer.ToString*
+  name: ToString
+  href: api/Google.GenAI.Types.VideoMetadataContentLayer.html#Google_GenAI_Types_VideoMetadataContentLayer_ToString_
+  commentId: Overload:Google.GenAI.Types.VideoMetadataContentLayer.ToString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VideoMetadataContentLayer.ToString
+  nameWithType: VideoMetadataContentLayer.ToString
+- uid: Google.GenAI.Types.VideoMetadataContentLayer.Transcript
+  name: Transcript
+  href: api/Google.GenAI.Types.VideoMetadataContentLayer.html#Google_GenAI_Types_VideoMetadataContentLayer_Transcript
+  commentId: P:Google.GenAI.Types.VideoMetadataContentLayer.Transcript
+  fullName: Google.GenAI.Types.VideoMetadataContentLayer.Transcript
+  nameWithType: VideoMetadataContentLayer.Transcript
+- uid: Google.GenAI.Types.VideoMetadataContentLayer.Transcript*
+  name: Transcript
+  href: api/Google.GenAI.Types.VideoMetadataContentLayer.html#Google_GenAI_Types_VideoMetadataContentLayer_Transcript_
+  commentId: Overload:Google.GenAI.Types.VideoMetadataContentLayer.Transcript
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VideoMetadataContentLayer.Transcript
+  nameWithType: VideoMetadataContentLayer.Transcript
+- uid: Google.GenAI.Types.VideoMetadataContentLayer.Value
+  name: Value
+  href: api/Google.GenAI.Types.VideoMetadataContentLayer.html#Google_GenAI_Types_VideoMetadataContentLayer_Value
+  commentId: P:Google.GenAI.Types.VideoMetadataContentLayer.Value
+  fullName: Google.GenAI.Types.VideoMetadataContentLayer.Value
+  nameWithType: VideoMetadataContentLayer.Value
+- uid: Google.GenAI.Types.VideoMetadataContentLayer.Value*
+  name: Value
+  href: api/Google.GenAI.Types.VideoMetadataContentLayer.html#Google_GenAI_Types_VideoMetadataContentLayer_Value_
+  commentId: Overload:Google.GenAI.Types.VideoMetadataContentLayer.Value
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VideoMetadataContentLayer.Value
+  nameWithType: VideoMetadataContentLayer.Value
+- uid: Google.GenAI.Types.VideoMetadataContentLayer.op_Implicit(System.String)~Google.GenAI.Types.VideoMetadataContentLayer
+  name: implicit operator VideoMetadataContentLayer(string)
+  href: api/Google.GenAI.Types.VideoMetadataContentLayer.html#Google_GenAI_Types_VideoMetadataContentLayer_op_Implicit_System_String__Google_GenAI_Types_VideoMetadataContentLayer
+  commentId: M:Google.GenAI.Types.VideoMetadataContentLayer.op_Implicit(System.String)~Google.GenAI.Types.VideoMetadataContentLayer
+  name.vb: CType(String)
+  fullName: Google.GenAI.Types.VideoMetadataContentLayer.implicit operator Google.GenAI.Types.VideoMetadataContentLayer(string)
+  fullName.vb: Google.GenAI.Types.VideoMetadataContentLayer.CType(String)
+  nameWithType: VideoMetadataContentLayer.implicit operator VideoMetadataContentLayer(string)
+  nameWithType.vb: VideoMetadataContentLayer.CType(String)
+- uid: Google.GenAI.Types.VideoMetadataContentLayer.op_Implicit*
+  name: implicit operator
+  href: api/Google.GenAI.Types.VideoMetadataContentLayer.html#Google_GenAI_Types_VideoMetadataContentLayer_op_Implicit_
+  commentId: Overload:Google.GenAI.Types.VideoMetadataContentLayer.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: Google.GenAI.Types.VideoMetadataContentLayer.implicit operator
+  fullName.vb: Google.GenAI.Types.VideoMetadataContentLayer.CType
+  nameWithType: VideoMetadataContentLayer.implicit operator
+  nameWithType.vb: VideoMetadataContentLayer.CType
+- uid: Google.GenAI.Types.VideoMetadataContentLayerConverter
+  name: VideoMetadataContentLayerConverter
+  href: api/Google.GenAI.Types.VideoMetadataContentLayerConverter.html
+  commentId: T:Google.GenAI.Types.VideoMetadataContentLayerConverter
+  fullName: Google.GenAI.Types.VideoMetadataContentLayerConverter
+  nameWithType: VideoMetadataContentLayerConverter
+- uid: Google.GenAI.Types.VideoMetadataContentLayerConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.VideoMetadataContentLayerConverter.html#Google_GenAI_Types_VideoMetadataContentLayerConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.VideoMetadataContentLayerConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name.vb: Read(Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.VideoMetadataContentLayerConverter.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: Google.GenAI.Types.VideoMetadataContentLayerConverter.Read(System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  nameWithType: VideoMetadataContentLayerConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: VideoMetadataContentLayerConverter.Read(Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Google.GenAI.Types.VideoMetadataContentLayerConverter.Read*
+  name: Read
+  href: api/Google.GenAI.Types.VideoMetadataContentLayerConverter.html#Google_GenAI_Types_VideoMetadataContentLayerConverter_Read_
+  commentId: Overload:Google.GenAI.Types.VideoMetadataContentLayerConverter.Read
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VideoMetadataContentLayerConverter.Read
+  nameWithType: VideoMetadataContentLayerConverter.Read
+- uid: Google.GenAI.Types.VideoMetadataContentLayerConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.VideoMetadataContentLayer,System.Text.Json.JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, VideoMetadataContentLayer, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.VideoMetadataContentLayerConverter.html#Google_GenAI_Types_VideoMetadataContentLayerConverter_Write_System_Text_Json_Utf8JsonWriter_Google_GenAI_Types_VideoMetadataContentLayer_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.VideoMetadataContentLayerConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.VideoMetadataContentLayer,System.Text.Json.JsonSerializerOptions)
+  fullName: Google.GenAI.Types.VideoMetadataContentLayerConverter.Write(System.Text.Json.Utf8JsonWriter, Google.GenAI.Types.VideoMetadataContentLayer, System.Text.Json.JsonSerializerOptions)
+  nameWithType: VideoMetadataContentLayerConverter.Write(Utf8JsonWriter, VideoMetadataContentLayer, JsonSerializerOptions)
+- uid: Google.GenAI.Types.VideoMetadataContentLayerConverter.Write*
+  name: Write
+  href: api/Google.GenAI.Types.VideoMetadataContentLayerConverter.html#Google_GenAI_Types_VideoMetadataContentLayerConverter_Write_
+  commentId: Overload:Google.GenAI.Types.VideoMetadataContentLayerConverter.Write
+  isSpec: "True"
+  fullName: Google.GenAI.Types.VideoMetadataContentLayerConverter.Write
+  nameWithType: VideoMetadataContentLayerConverter.Write
 - uid: Google.GenAI.Types.VideoOrientation
   name: VideoOrientation
   href: api/Google.GenAI.Types.VideoOrientation.html

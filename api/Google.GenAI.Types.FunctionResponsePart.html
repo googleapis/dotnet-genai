@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class FunctionResponsePart | Google GenAI .NET SDK ">
       
-      <meta name="description" content="A datatype containing media that is part of a FunctionResponse message. A FunctionResponsePart consists of data which has an associated datatype. A FunctionResponsePart can only contain one of the accepted types in FunctionResponsePart.data. A FunctionResponsePart must have a fixed IANA MIME type identifying the type and subtype of the media if the inline_data field is filled with raw bytes.">
+      <meta name="description" content="A datatype containing media that is part of a FunctionResponse message.  A FunctionResponsePart consists of data which has an associated datatype. A FunctionResponsePart can only contain one of the accepted types in FunctionResponsePart.data. A FunctionResponsePart must have a fixed IANA MIME type identifying the type and subtype of the media if the inline_data field is filled with raw bytes.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -93,7 +93,7 @@ Class FunctionResponsePart  <a class="header-action link-secondary" title="View 
   <dl><dt>Assembly</dt><dd>Google.GenAI.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>A datatype containing media that is part of a <code>FunctionResponse</code> message. A
+  <div class="markdown summary"><p>A datatype containing media that is part of a <code>FunctionResponse</code> message.  A
 <code>FunctionResponsePart</code> consists of data which has an associated datatype. A
 <code>FunctionResponsePart</code> can only contain one of the accepted types in
 <code>FunctionResponsePart.data</code>. A <code>FunctionResponsePart</code> must have a fixed IANA MIME type
@@ -158,6 +158,76 @@ bytes.</p>
 
   <h2 class="section" id="properties">Properties
 </h2>
+
+
+  <a id="Google_GenAI_Types_FunctionResponsePart_AudioMetadata_" data-uid="Google.GenAI.Types.FunctionResponsePart.AudioMetadata*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionResponsePart_AudioMetadata" data-uid="Google.GenAI.Types.FunctionResponsePart.AudioMetadata">
+  AudioMetadata
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponsePart.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Audio metadata. The metadata should only be specified while the audio data is presented in
+inline_data or file_data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;audioMetadata&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public AudioMetadata? AudioMetadata { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.AudioMetadata.html">AudioMetadata</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FunctionResponsePart_DocumentMetadata_" data-uid="Google.GenAI.Types.FunctionResponsePart.DocumentMetadata*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionResponsePart_DocumentMetadata" data-uid="Google.GenAI.Types.FunctionResponsePart.DocumentMetadata">
+  DocumentMetadata
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponsePart.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Document metadata. The metadata should only be specified while the document data is
+presented in inline_data or file_data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;documentMetadata&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public DocumentMetadata? DocumentMetadata { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.DocumentMetadata.html">DocumentMetadata</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
 
 
   <a id="Google_GenAI_Types_FunctionResponsePart_FileData_" data-uid="Google.GenAI.Types.FunctionResponsePart.FileData*"></a>
@@ -264,6 +334,110 @@ public MediaProcessing? MediaProcessing { get; set; }</code></pre>
 
 
 
+  <a id="Google_GenAI_Types_FunctionResponsePart_MediaResolution_" data-uid="Google.GenAI.Types.FunctionResponsePart.MediaResolution*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionResponsePart_MediaResolution" data-uid="Google.GenAI.Types.FunctionResponsePart.MediaResolution">
+  MediaResolution
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponsePart.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Media resolution for the input media.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;mediaResolution&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public PartMediaResolution? MediaResolution { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.PartMediaResolution.html">PartMediaResolution</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FunctionResponsePart_SpreadsheetMetadata_" data-uid="Google.GenAI.Types.FunctionResponsePart.SpreadsheetMetadata*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionResponsePart_SpreadsheetMetadata" data-uid="Google.GenAI.Types.FunctionResponsePart.SpreadsheetMetadata">
+  SpreadsheetMetadata
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponsePart.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Spreadsheet metadata. The metadata should only be specified while the spreadsheet data is
+presented in inline_data or file_data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;spreadsheetMetadata&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public SpreadsheetMetadata? SpreadsheetMetadata { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.SpreadsheetMetadata.html">SpreadsheetMetadata</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Google_GenAI_Types_FunctionResponsePart_VideoMetadata_" data-uid="Google.GenAI.Types.FunctionResponsePart.VideoMetadata*"></a>
+
+  <h3 id="Google_GenAI_Types_FunctionResponsePart_VideoMetadata" data-uid="Google.GenAI.Types.FunctionResponsePart.VideoMetadata">
+  VideoMetadata
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponsePart.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Video metadata. The metadata should only be specified while the video data is presented in
+inline_data or file_data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;videoMetadata&quot;)]
+[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+public VideoMetadata? VideoMetadata { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Google.GenAI.Types.VideoMetadata.html">VideoMetadata</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -272,7 +446,7 @@ public MediaProcessing? MediaProcessing { get; set; }</code></pre>
 
   <h3 id="Google_GenAI_Types_FunctionResponsePart_FromJson_System_String_System_Text_Json_JsonSerializerOptions_" data-uid="Google.GenAI.Types.FunctionResponsePart.FromJson(System.String,System.Text.Json.JsonSerializerOptions)">
   FromJson(string, JsonSerializerOptions?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponsePart.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/googleapis/dotnet-genai/blob/main/Google.GenAI/types/FunctionResponsePart.cs/#L125"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deserializes a JSON string to a FunctionResponsePart object.</p>

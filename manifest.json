@@ -547,6 +547,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.AudioMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.AudioMetadata.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.AudioMetadata",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.AudioMetadata.yml\" sourcestartlinenumber=\"1\">Metadata describes the input audio content.  Set this in <code sourcefile=\"api/Google.GenAI.Types.AudioMetadata.yml\" sourcestartlinenumber=\"1\">Part.audio_metadata</code> or\n<code sourcefile=\"api/Google.GenAI.Types.AudioMetadata.yml\" sourcestartlinenumber=\"2\">FunctionResponsePart.audio_metadata</code> when <code sourcefile=\"api/Google.GenAI.Types.AudioMetadata.yml\" sourcestartlinenumber=\"2\">inline_data</code> or <code sourcefile=\"api/Google.GenAI.Types.AudioMetadata.yml\" sourcestartlinenumber=\"2\">file_data</code> contains audio to\nconfigure static audio preprocessing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.AudioResponseFormat.yml",
       "output": {
         ".html": {
@@ -1695,6 +1709,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.DocumentMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.DocumentMetadata.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.DocumentMetadata",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DocumentMetadata.yml\" sourcestartlinenumber=\"1\">Metadata describes the input document content.  Set this in <code sourcefile=\"api/Google.GenAI.Types.DocumentMetadata.yml\" sourcestartlinenumber=\"1\">Part.document_metadata</code> or\n<code sourcefile=\"api/Google.GenAI.Types.DocumentMetadata.yml\" sourcestartlinenumber=\"2\">FunctionResponsePart.document_metadata</code> when <code sourcefile=\"api/Google.GenAI.Types.DocumentMetadata.yml\" sourcestartlinenumber=\"2\">inline_data</code> or <code sourcefile=\"api/Google.GenAI.Types.DocumentMetadata.yml\" sourcestartlinenumber=\"2\">file_data</code> contains a document\nto configure static document preprocessing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.DocumentMetadataContentLayer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.DocumentMetadataContentLayer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.DocumentMetadataContentLayer",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.DocumentMetadataContentLayer.yml\" sourcestartlinenumber=\"1\">Content layers to extract from a document.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.DocumentMetadataContentLayerConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.DocumentMetadataContentLayerConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.DocumentMetadataContentLayerConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.DownloadFileConfig.yml",
       "output": {
         ".html": {
@@ -2447,7 +2503,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Google.GenAI.Types.FunctionResponsePart",
-      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"1\">A datatype containing media that is part of a <code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"1\">FunctionResponse</code> message. A\n<code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"2\">FunctionResponsePart</code> consists of data which has an associated datatype. A\n<code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"3\">FunctionResponsePart</code> can only contain one of the accepted types in\n<code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"4\">FunctionResponsePart.data</code>. A <code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"4\">FunctionResponsePart</code> must have a fixed IANA MIME type\nidentifying the type and subtype of the media if the <code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"5\">inline_data</code> field is filled with raw\nbytes.</p>\n"
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"1\">A datatype containing media that is part of a <code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"1\">FunctionResponse</code> message.  A\n<code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"2\">FunctionResponsePart</code> consists of data which has an associated datatype. A\n<code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"3\">FunctionResponsePart</code> can only contain one of the accepted types in\n<code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"4\">FunctionResponsePart.data</code>. A <code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"4\">FunctionResponsePart</code> must have a fixed IANA MIME type\nidentifying the type and subtype of the media if the <code sourcefile=\"api/Google.GenAI.Types.FunctionResponsePart.yml\" sourcestartlinenumber=\"5\">inline_data</code> field is filled with raw\nbytes.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -5965,6 +6021,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.SpreadsheetMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.SpreadsheetMetadata.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.SpreadsheetMetadata",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SpreadsheetMetadata.yml\" sourcestartlinenumber=\"1\">Metadata describes the input spreadsheet content.  Set this in <code sourcefile=\"api/Google.GenAI.Types.SpreadsheetMetadata.yml\" sourcestartlinenumber=\"1\">Part.spreadsheet_metadata</code> or\n<code sourcefile=\"api/Google.GenAI.Types.SpreadsheetMetadata.yml\" sourcestartlinenumber=\"2\">FunctionResponsePart.spreadsheet_metadata</code> when <code sourcefile=\"api/Google.GenAI.Types.SpreadsheetMetadata.yml\" sourcestartlinenumber=\"2\">inline_data</code> or <code sourcefile=\"api/Google.GenAI.Types.SpreadsheetMetadata.yml\" sourcestartlinenumber=\"2\">file_data</code> contains a\nspreadsheet to configure static spreadsheet preprocessing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.SpreadsheetMetadataContentLayer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.SpreadsheetMetadataContentLayer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.SpreadsheetMetadataContentLayer",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.SpreadsheetMetadataContentLayer.yml\" sourcestartlinenumber=\"1\">Content layers to extract from a spreadsheet.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.SpreadsheetMetadataContentLayerConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.SpreadsheetMetadataContentLayerConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.SpreadsheetMetadataContentLayerConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.StartSensitivity.yml",
       "output": {
         ".html": {
@@ -7292,6 +7390,34 @@
       "IsMRef": true,
       "Title": "Google.GenAI.Types.VideoMetadata",
       "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VideoMetadata.yml\" sourcestartlinenumber=\"1\">Provides metadata for a video, including the start and end offsets for clipping and the frame\nrate.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.VideoMetadataContentLayer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.VideoMetadataContentLayer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.VideoMetadataContentLayer",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.VideoMetadataContentLayer.yml\" sourcestartlinenumber=\"1\">Content layers to extract from a video.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.VideoMetadataContentLayerConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.VideoMetadataContentLayerConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.VideoMetadataContentLayerConverter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
