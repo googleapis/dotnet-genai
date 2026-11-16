@@ -213,6 +213,39 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Document metadata. The metadata should only be specified while the document data is
+    /// presented in inline_data or file_data.
+    /// </summary>
+    [JsonPropertyName("documentMetadata")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public DocumentMetadata
+        ? DocumentMetadata {
+            get; set;
+          }
+
+    /// <summary>
+    /// Spreadsheet metadata. The metadata should only be specified while the spreadsheet data is
+    /// presented in inline_data or file_data.
+    /// </summary>
+    [JsonPropertyName("spreadsheetMetadata")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public SpreadsheetMetadata
+        ? SpreadsheetMetadata {
+            get; set;
+          }
+
+    /// <summary>
+    /// Audio metadata. The metadata should only be specified while the audio data is presented in
+    /// inline_data or file_data.
+    /// </summary>
+    [JsonPropertyName("audioMetadata")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public AudioMetadata
+        ? AudioMetadata {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a Part object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

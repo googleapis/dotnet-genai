@@ -518,6 +518,23 @@ namespace Google.GenAI {
                               Common.GetValueByPath(fromObject, new string[] { "speechMetadata" }));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "documentMetadata" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "documentMetadata" },
+            Common.GetValueByPath(fromObject, new string[] { "documentMetadata" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "spreadsheetMetadata" }) != null) {
+        Common.SetValueByPath(
+            toObject, new string[] { "spreadsheetMetadata" },
+            Common.GetValueByPath(fromObject, new string[] { "spreadsheetMetadata" }));
+      }
+
+      if (Common.GetValueByPath(fromObject, new string[] { "audioMetadata" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "audioMetadata" },
+                              Common.GetValueByPath(fromObject, new string[] { "audioMetadata" }));
+      }
+
       return toObject;
     }
 

@@ -57,6 +57,16 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Content layers to return. If empty, defaults to [FRAMES, AUDIO].
+    /// </summary>
+    [JsonPropertyName("contentLayers")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public List<VideoMetadataContentLayer>
+        ? ContentLayers {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a VideoMetadata object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>
