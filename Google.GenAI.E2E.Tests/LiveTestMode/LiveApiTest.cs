@@ -135,7 +135,9 @@ namespace Google.GenAI.E2E.Tests.LiveTestMode
             var httpOptions = new GoogleType.HttpOptions
             {
                 Headers = new Dictionary<string, string> { { "Test-Name", recordingKey } },
-                BaseUrl = isVertex ? VertexRegionalProxyUrl : MldevProxyUrl
+                BaseUrl = isVertex ? VertexRegionalProxyUrl : MldevProxyUrl,
+                // The Gemini API only serves the Live WebSocket on v1beta.
+                ApiVersion = isVertex ? null : "v1beta"
             };
 
             if (!isVertex)

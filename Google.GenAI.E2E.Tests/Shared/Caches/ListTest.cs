@@ -7,6 +7,8 @@ namespace Google.GenAI.E2E.Tests.Shared.Caches
     [TestClass]
     public class ListTest : SharedBaseTest
     {
+        /// <summary>The Gemini API only serves cachedContents on v1beta.</summary>
+        protected override string GeminiApiVersionOverride => "v1beta";
         [TestMethod]
         public async Task TestListCachedContentsMldev()
         {

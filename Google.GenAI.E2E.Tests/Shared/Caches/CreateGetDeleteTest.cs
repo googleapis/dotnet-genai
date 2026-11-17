@@ -10,6 +10,8 @@ namespace Google.GenAI.E2E.Tests.Shared.Caches
     [TestClass]
     public class CreateGetDeleteTest : SharedBaseTest
     {
+        /// <summary>The Gemini API only serves cachedContents on v1beta.</summary>
+        protected override string GeminiApiVersionOverride => "v1beta";
         /// <summary>
         /// Document uploaded for the Gemini API half of the cache lifecycle. The canonical
         /// fixture is an image, but the test-server proxy aborts on any non-JSON request

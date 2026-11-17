@@ -39,6 +39,12 @@ namespace Google.GenAI.E2E.Tests.Shared
         protected virtual string VertexLocationOverride => null;
 
         /// <summary>
+        /// API version a test class needs its Gemini API client pinned to, or null to use the SDK
+        /// default. Caching is only served on v1beta in the Gemini API.
+        /// </summary>
+        protected virtual string GeminiApiVersionOverride => null;
+
+        /// <summary>
         /// Retry options applied to every request both test clients make, so that a transient
         /// 5xx or 429 does not fail the nightly. Keep aligned with conftest.py in the Python
         /// SDK tests.
@@ -93,6 +99,7 @@ namespace Google.GenAI.E2E.Tests.Shared
             {
                 Headers = new Dictionary<string, string> { { "Test-Name", recordingKey } },
                 BaseUrl = MldevProxyUrl,
+                ApiVersion = GeminiApiVersionOverride,
                 RetryOptions = NewSharedTestRetryOptions()
             };
             var vertexClientHttpOptions = new HttpOptions
