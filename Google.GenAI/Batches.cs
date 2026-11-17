@@ -481,6 +481,11 @@ namespace Google.GenAI {
                                       toObject));
       }
 
+      if (Common.GetValueByPath(fromObject, new string[] { "finishMessage" }) != null) {
+        Common.SetValueByPath(toObject, new string[] { "finishMessage" },
+                              Common.GetValueByPath(fromObject, new string[] { "finishMessage" }));
+      }
+
       if (Common.GetValueByPath(fromObject, new string[] { "tokenCount" }) != null) {
         Common.SetValueByPath(toObject, new string[] { "tokenCount" },
                               Common.GetValueByPath(fromObject, new string[] { "tokenCount" }));
