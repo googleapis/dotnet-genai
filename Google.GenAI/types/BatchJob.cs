@@ -116,7 +116,8 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
-    /// Configuration for the input data. This field is for Gemini Enterprise Agent Platform only.
+    /// Configuration for the input data. In Gemini Developer API responses, only `file_name` is
+    /// populated.
     /// </summary>
     [JsonPropertyName("src")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
