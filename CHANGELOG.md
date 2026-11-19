@@ -1,5 +1,17 @@
 # Changelog
 
+## Version 2.3.0, released 2026-11-19
+
+
+### New features
+
+* Add `text_normalization` to `SpeechConfig` (Gemini API). ([f1d4bde](https://github.com/googleapis/dotnet-genai/commit/f1d4bde9cf850c01344b462a9bcb93790cc03c94))
+
+
+### Documentation improvements
+
+* note that the Live API and caches are not available on v1 ([b93953b](https://github.com/googleapis/dotnet-genai/commit/b93953b4e1582642cc0d819a64af758d1e7f7537))
+
 ## Version 2.2.0, released 2026-11-16
 
 
