@@ -35697,6 +35697,19 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.SpeechConfig.MultiSpeakerVoiceConfig
   nameWithType: SpeechConfig.MultiSpeakerVoiceConfig
+- uid: Google.GenAI.Types.SpeechConfig.TextNormalization
+  name: TextNormalization
+  href: api/Google.GenAI.Types.SpeechConfig.html#Google_GenAI_Types_SpeechConfig_TextNormalization
+  commentId: P:Google.GenAI.Types.SpeechConfig.TextNormalization
+  fullName: Google.GenAI.Types.SpeechConfig.TextNormalization
+  nameWithType: SpeechConfig.TextNormalization
+- uid: Google.GenAI.Types.SpeechConfig.TextNormalization*
+  name: TextNormalization
+  href: api/Google.GenAI.Types.SpeechConfig.html#Google_GenAI_Types_SpeechConfig_TextNormalization_
+  commentId: Overload:Google.GenAI.Types.SpeechConfig.TextNormalization
+  isSpec: "True"
+  fullName: Google.GenAI.Types.SpeechConfig.TextNormalization
+  nameWithType: SpeechConfig.TextNormalization
 - uid: Google.GenAI.Types.SpeechConfig.VoiceConfig
   name: VoiceConfig
   href: api/Google.GenAI.Types.SpeechConfig.html#Google_GenAI_Types_SpeechConfig_VoiceConfig
@@ -37455,6 +37468,199 @@ references:
   isSpec: "True"
   fullName: Google.GenAI.Types.TestTableItem.SkipInApiMode
   nameWithType: TestTableItem.SkipInApiMode
+- uid: Google.GenAI.Types.TextNormalization
+  name: TextNormalization
+  href: api/Google.GenAI.Types.TextNormalization.html
+  commentId: T:Google.GenAI.Types.TextNormalization
+  fullName: Google.GenAI.Types.TextNormalization
+  nameWithType: TextNormalization
+- uid: Google.GenAI.Types.TextNormalization.AllValues
+  name: AllValues
+  href: api/Google.GenAI.Types.TextNormalization.html#Google_GenAI_Types_TextNormalization_AllValues
+  commentId: P:Google.GenAI.Types.TextNormalization.AllValues
+  fullName: Google.GenAI.Types.TextNormalization.AllValues
+  nameWithType: TextNormalization.AllValues
+- uid: Google.GenAI.Types.TextNormalization.AllValues*
+  name: AllValues
+  href: api/Google.GenAI.Types.TextNormalization.html#Google_GenAI_Types_TextNormalization_AllValues_
+  commentId: Overload:Google.GenAI.Types.TextNormalization.AllValues
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TextNormalization.AllValues
+  nameWithType: TextNormalization.AllValues
+- uid: Google.GenAI.Types.TextNormalization.Auto
+  name: Auto
+  href: api/Google.GenAI.Types.TextNormalization.html#Google_GenAI_Types_TextNormalization_Auto
+  commentId: P:Google.GenAI.Types.TextNormalization.Auto
+  fullName: Google.GenAI.Types.TextNormalization.Auto
+  nameWithType: TextNormalization.Auto
+- uid: Google.GenAI.Types.TextNormalization.Auto*
+  name: Auto
+  href: api/Google.GenAI.Types.TextNormalization.html#Google_GenAI_Types_TextNormalization_Auto_
+  commentId: Overload:Google.GenAI.Types.TextNormalization.Auto
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TextNormalization.Auto
+  nameWithType: TextNormalization.Auto
+- uid: Google.GenAI.Types.TextNormalization.Disabled
+  name: Disabled
+  href: api/Google.GenAI.Types.TextNormalization.html#Google_GenAI_Types_TextNormalization_Disabled
+  commentId: P:Google.GenAI.Types.TextNormalization.Disabled
+  fullName: Google.GenAI.Types.TextNormalization.Disabled
+  nameWithType: TextNormalization.Disabled
+- uid: Google.GenAI.Types.TextNormalization.Disabled*
+  name: Disabled
+  href: api/Google.GenAI.Types.TextNormalization.html#Google_GenAI_Types_TextNormalization_Disabled_
+  commentId: Overload:Google.GenAI.Types.TextNormalization.Disabled
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TextNormalization.Disabled
+  nameWithType: TextNormalization.Disabled
+- uid: Google.GenAI.Types.TextNormalization.Enabled
+  name: Enabled
+  href: api/Google.GenAI.Types.TextNormalization.html#Google_GenAI_Types_TextNormalization_Enabled
+  commentId: P:Google.GenAI.Types.TextNormalization.Enabled
+  fullName: Google.GenAI.Types.TextNormalization.Enabled
+  nameWithType: TextNormalization.Enabled
+- uid: Google.GenAI.Types.TextNormalization.Enabled*
+  name: Enabled
+  href: api/Google.GenAI.Types.TextNormalization.html#Google_GenAI_Types_TextNormalization_Enabled_
+  commentId: Overload:Google.GenAI.Types.TextNormalization.Enabled
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TextNormalization.Enabled
+  nameWithType: TextNormalization.Enabled
+- uid: Google.GenAI.Types.TextNormalization.Equals(Google.GenAI.Types.TextNormalization)
+  name: Equals(TextNormalization)
+  href: api/Google.GenAI.Types.TextNormalization.html#Google_GenAI_Types_TextNormalization_Equals_Google_GenAI_Types_TextNormalization_
+  commentId: M:Google.GenAI.Types.TextNormalization.Equals(Google.GenAI.Types.TextNormalization)
+  fullName: Google.GenAI.Types.TextNormalization.Equals(Google.GenAI.Types.TextNormalization)
+  nameWithType: TextNormalization.Equals(TextNormalization)
+- uid: Google.GenAI.Types.TextNormalization.Equals*
+  name: Equals
+  href: api/Google.GenAI.Types.TextNormalization.html#Google_GenAI_Types_TextNormalization_Equals_
+  commentId: Overload:Google.GenAI.Types.TextNormalization.Equals
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TextNormalization.Equals
+  nameWithType: TextNormalization.Equals
+- uid: Google.GenAI.Types.TextNormalization.FromString(System.String)
+  name: FromString(string)
+  href: api/Google.GenAI.Types.TextNormalization.html#Google_GenAI_Types_TextNormalization_FromString_System_String_
+  commentId: M:Google.GenAI.Types.TextNormalization.FromString(System.String)
+  name.vb: FromString(String)
+  fullName: Google.GenAI.Types.TextNormalization.FromString(string)
+  fullName.vb: Google.GenAI.Types.TextNormalization.FromString(String)
+  nameWithType: TextNormalization.FromString(string)
+  nameWithType.vb: TextNormalization.FromString(String)
+- uid: Google.GenAI.Types.TextNormalization.FromString*
+  name: FromString
+  href: api/Google.GenAI.Types.TextNormalization.html#Google_GenAI_Types_TextNormalization_FromString_
+  commentId: Overload:Google.GenAI.Types.TextNormalization.FromString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TextNormalization.FromString
+  nameWithType: TextNormalization.FromString
+- uid: Google.GenAI.Types.TextNormalization.GetHashCode
+  name: GetHashCode()
+  href: api/Google.GenAI.Types.TextNormalization.html#Google_GenAI_Types_TextNormalization_GetHashCode
+  commentId: M:Google.GenAI.Types.TextNormalization.GetHashCode
+  fullName: Google.GenAI.Types.TextNormalization.GetHashCode()
+  nameWithType: TextNormalization.GetHashCode()
+- uid: Google.GenAI.Types.TextNormalization.GetHashCode*
+  name: GetHashCode
+  href: api/Google.GenAI.Types.TextNormalization.html#Google_GenAI_Types_TextNormalization_GetHashCode_
+  commentId: Overload:Google.GenAI.Types.TextNormalization.GetHashCode
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TextNormalization.GetHashCode
+  nameWithType: TextNormalization.GetHashCode
+- uid: Google.GenAI.Types.TextNormalization.TextNormalizationUnspecified
+  name: TextNormalizationUnspecified
+  href: api/Google.GenAI.Types.TextNormalization.html#Google_GenAI_Types_TextNormalization_TextNormalizationUnspecified
+  commentId: P:Google.GenAI.Types.TextNormalization.TextNormalizationUnspecified
+  fullName: Google.GenAI.Types.TextNormalization.TextNormalizationUnspecified
+  nameWithType: TextNormalization.TextNormalizationUnspecified
+- uid: Google.GenAI.Types.TextNormalization.TextNormalizationUnspecified*
+  name: TextNormalizationUnspecified
+  href: api/Google.GenAI.Types.TextNormalization.html#Google_GenAI_Types_TextNormalization_TextNormalizationUnspecified_
+  commentId: Overload:Google.GenAI.Types.TextNormalization.TextNormalizationUnspecified
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TextNormalization.TextNormalizationUnspecified
+  nameWithType: TextNormalization.TextNormalizationUnspecified
+- uid: Google.GenAI.Types.TextNormalization.ToString
+  name: ToString()
+  href: api/Google.GenAI.Types.TextNormalization.html#Google_GenAI_Types_TextNormalization_ToString
+  commentId: M:Google.GenAI.Types.TextNormalization.ToString
+  fullName: Google.GenAI.Types.TextNormalization.ToString()
+  nameWithType: TextNormalization.ToString()
+- uid: Google.GenAI.Types.TextNormalization.ToString*
+  name: ToString
+  href: api/Google.GenAI.Types.TextNormalization.html#Google_GenAI_Types_TextNormalization_ToString_
+  commentId: Overload:Google.GenAI.Types.TextNormalization.ToString
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TextNormalization.ToString
+  nameWithType: TextNormalization.ToString
+- uid: Google.GenAI.Types.TextNormalization.Value
+  name: Value
+  href: api/Google.GenAI.Types.TextNormalization.html#Google_GenAI_Types_TextNormalization_Value
+  commentId: P:Google.GenAI.Types.TextNormalization.Value
+  fullName: Google.GenAI.Types.TextNormalization.Value
+  nameWithType: TextNormalization.Value
+- uid: Google.GenAI.Types.TextNormalization.Value*
+  name: Value
+  href: api/Google.GenAI.Types.TextNormalization.html#Google_GenAI_Types_TextNormalization_Value_
+  commentId: Overload:Google.GenAI.Types.TextNormalization.Value
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TextNormalization.Value
+  nameWithType: TextNormalization.Value
+- uid: Google.GenAI.Types.TextNormalization.op_Implicit(System.String)~Google.GenAI.Types.TextNormalization
+  name: implicit operator TextNormalization(string)
+  href: api/Google.GenAI.Types.TextNormalization.html#Google_GenAI_Types_TextNormalization_op_Implicit_System_String__Google_GenAI_Types_TextNormalization
+  commentId: M:Google.GenAI.Types.TextNormalization.op_Implicit(System.String)~Google.GenAI.Types.TextNormalization
+  name.vb: CType(String)
+  fullName: Google.GenAI.Types.TextNormalization.implicit operator Google.GenAI.Types.TextNormalization(string)
+  fullName.vb: Google.GenAI.Types.TextNormalization.CType(String)
+  nameWithType: TextNormalization.implicit operator TextNormalization(string)
+  nameWithType.vb: TextNormalization.CType(String)
+- uid: Google.GenAI.Types.TextNormalization.op_Implicit*
+  name: implicit operator
+  href: api/Google.GenAI.Types.TextNormalization.html#Google_GenAI_Types_TextNormalization_op_Implicit_
+  commentId: Overload:Google.GenAI.Types.TextNormalization.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: Google.GenAI.Types.TextNormalization.implicit operator
+  fullName.vb: Google.GenAI.Types.TextNormalization.CType
+  nameWithType: TextNormalization.implicit operator
+  nameWithType.vb: TextNormalization.CType
+- uid: Google.GenAI.Types.TextNormalizationConverter
+  name: TextNormalizationConverter
+  href: api/Google.GenAI.Types.TextNormalizationConverter.html
+  commentId: T:Google.GenAI.Types.TextNormalizationConverter
+  fullName: Google.GenAI.Types.TextNormalizationConverter
+  nameWithType: TextNormalizationConverter
+- uid: Google.GenAI.Types.TextNormalizationConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.TextNormalizationConverter.html#Google_GenAI_Types_TextNormalizationConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.TextNormalizationConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name.vb: Read(Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Google.GenAI.Types.TextNormalizationConverter.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: Google.GenAI.Types.TextNormalizationConverter.Read(System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  nameWithType: TextNormalizationConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: TextNormalizationConverter.Read(Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Google.GenAI.Types.TextNormalizationConverter.Read*
+  name: Read
+  href: api/Google.GenAI.Types.TextNormalizationConverter.html#Google_GenAI_Types_TextNormalizationConverter_Read_
+  commentId: Overload:Google.GenAI.Types.TextNormalizationConverter.Read
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TextNormalizationConverter.Read
+  nameWithType: TextNormalizationConverter.Read
+- uid: Google.GenAI.Types.TextNormalizationConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.TextNormalization,System.Text.Json.JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, TextNormalization, JsonSerializerOptions)
+  href: api/Google.GenAI.Types.TextNormalizationConverter.html#Google_GenAI_Types_TextNormalizationConverter_Write_System_Text_Json_Utf8JsonWriter_Google_GenAI_Types_TextNormalization_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Google.GenAI.Types.TextNormalizationConverter.Write(System.Text.Json.Utf8JsonWriter,Google.GenAI.Types.TextNormalization,System.Text.Json.JsonSerializerOptions)
+  fullName: Google.GenAI.Types.TextNormalizationConverter.Write(System.Text.Json.Utf8JsonWriter, Google.GenAI.Types.TextNormalization, System.Text.Json.JsonSerializerOptions)
+  nameWithType: TextNormalizationConverter.Write(Utf8JsonWriter, TextNormalization, JsonSerializerOptions)
+- uid: Google.GenAI.Types.TextNormalizationConverter.Write*
+  name: Write
+  href: api/Google.GenAI.Types.TextNormalizationConverter.html#Google_GenAI_Types_TextNormalizationConverter_Write_
+  commentId: Overload:Google.GenAI.Types.TextNormalizationConverter.Write
+  isSpec: "True"
+  fullName: Google.GenAI.Types.TextNormalizationConverter.Write
+  nameWithType: TextNormalizationConverter.Write
 - uid: Google.GenAI.Types.TextResponseFormat
   name: TextResponseFormat
   href: api/Google.GenAI.Types.TextResponseFormat.html

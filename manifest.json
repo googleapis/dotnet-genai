@@ -6287,6 +6287,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.TextNormalization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.TextNormalization.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.TextNormalization",
+      "Summary": "<p sourcefile=\"api/Google.GenAI.Types.TextNormalization.yml\" sourcestartlinenumber=\"1\">Text normalization mode for speech synthesis.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Google.GenAI.Types.TextNormalizationConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Google.GenAI.Types.TextNormalizationConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Google.GenAI.Types.TextNormalizationConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Google.GenAI.Types.TextResponseFormat.yml",
       "output": {
         ".html": {
