@@ -56,6 +56,17 @@ namespace Google.GenAI.Types {
           }
 
     /// <summary>
+    /// Optional. Controls text normalization before speech synthesis. This field is not supported
+    /// in Vertex AI.
+    /// </summary>
+    [JsonPropertyName("textNormalization")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public TextNormalization
+        ? TextNormalization {
+            get; set;
+          }
+
+    /// <summary>
     /// Deserializes a JSON string to a SpeechConfig object.
     /// </summary>
     /// <param name="jsonString">The JSON string to deserialize.</param>

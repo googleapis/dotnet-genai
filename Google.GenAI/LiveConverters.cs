@@ -1863,6 +1863,11 @@ namespace Google.GenAI {
                                   toObject));
       }
 
+      if (!Common.IsZero(Common.GetValueByPath(fromObject, new string[] { "textNormalization" }))) {
+        throw new NotSupportedException(
+            "textNormalization parameter is only supported in Gemini Developer API mode, not in Gemini Enterprise Agent Platform mode.");
+      }
+
       return toObject;
     }
 
