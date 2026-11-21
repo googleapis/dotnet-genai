@@ -304,5 +304,25 @@ namespace Google.GenAI.Tests
             var unknown = Transformers.CreateStringNode("UNKNOWN_STATE");
             Assert.AreSame(unknown, Transformers.TJobState(unknown));
         }
+
+        [TestMethod]
+        public void TIsVertexEmbedContentModel_RoutesGeminiAndMaasByModelId()
+        {
+            Assert.IsTrue(Transformers.TIsVertexEmbedContentModel("gemini-embedding-001"));
+            Assert.IsTrue(Transformers.TIsVertexEmbedContentModel("gemini-embedding-2"));
+            Assert.IsTrue(Transformers.TIsVertexEmbedContentModel("publishers/intfloat/models/multilingual-e5-large-instruct-maas"));
+            Assert.IsFalse(Transformers.TIsVertexEmbedContentModel("text-embedding-005"));
+            Assert.IsFalse(Transformers.TIsVertexEmbedContentModel("text-embedding-004"));
+            Assert.IsFalse(Transformers.TIsVertexEmbedContentModel("textembedding-gecko@003"));
+            Assert.IsFalse(Transformers.TIsVertexEmbedContentModel(
+                "projects/my-gemini-app/locations/us-central1/publishers/google/models/text-embedding-005"));
+            Assert.IsFalse(Transformers.TIsVertexEmbedContentModel(
+                "projects/my-gemini-app/locations/us-central1/endpoints/12345"));
+            Assert.IsTrue(Transformers.TIsVertexMaasModel(
+                "publishers/intfloat/models/multilingual-e5-large-instruct-maas"));
+            Assert.IsFalse(Transformers.TIsVertexMaasModel("gemini-embedding-001"));
+            Assert.IsFalse(Transformers.TIsVertexMaasModel(
+                "projects/my-maas-app/locations/us-central1/publishers/google/models/gemini-embedding-001"));
+        }
     }
 }
