@@ -241,6 +241,12 @@ namespace Google.GenAI {
                 toObject));
       }
 
+      JsonNode? fromSrcFileName =
+          Common.GetValueByPath(fromObject, new string[] { "metadata", "inputConfig", "fileName" });
+      if (fromSrcFileName != null) {
+        Common.SetValueByPath(toObject, new string[] { "src", "fileName" }, fromSrcFileName);
+      }
+
       return toObject;
     }
 
