@@ -14,8 +14,15 @@
  * limitations under the License.
  */
 
+using System;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Net.Sockets;
+using System.Security.Authentication;
+using System.Threading;
+using System.Threading.Tasks;
 
 using Google.Apis.Auth.OAuth2;
 using Google.GenAI;
@@ -78,10 +85,77 @@ public class TestServer {
       }
     };
 
-    var server = new TestServerProcess(options);
+    var server = CreateWithRetry(
+        () => new TestServerProcess(options), options.BinaryPath, logPath);
     server.StartAsync().GetAwaiter().GetResult();
 
     return server;
+  }
+
+  internal const int MaxServerInitAttempts = 3;
+
+  internal static T CreateWithRetry<T>(
+      Func<T> createServer,
+      string? binaryPath,
+      string logPath,
+      Action<TimeSpan>? sleep = null,
+      int maxAttempts = MaxServerInitAttempts) {
+    if (maxAttempts < 1) {
+      throw new ArgumentOutOfRangeException(nameof(maxAttempts));
+    }
+    var wait = sleep ?? Thread.Sleep;
+    bool binaryExistedBeforeInit = !string.IsNullOrEmpty(binaryPath) && File.Exists(binaryPath);
+
+    for (int attempt = 1;; attempt++) {
+      try {
+        return createServer();
+      } catch (Exception ex) when (!binaryExistedBeforeInit
+          && attempt < maxAttempts
+          && IsTransientInstallFailure(ex)) {
+        if (!string.IsNullOrEmpty(binaryPath) && File.Exists(binaryPath)) {
+          try {
+            File.Delete(binaryPath);
+          } catch (Exception) {
+            // Best-effort cleanup of a partially downloaded binary before retrying.
+          }
+        }
+        var delay = TimeSpan.FromSeconds(2 * attempt);
+        var rootCause = ex.GetBaseException();
+        var msg = $"[RETRY {attempt}/{maxAttempts}] TestServerProcess initialization failed "
+            + $"({rootCause.GetType().Name}: {rootCause.Message}); "
+            + $"retrying in {delay.TotalSeconds}s...";
+        Console.Error.WriteLine(msg);
+        try {
+          File.AppendAllText(logPath, msg + "\n");
+        } catch (Exception) {
+          // Ignore log write failure if directory doesn't exist yet.
+        }
+        wait(delay);
+      }
+    }
+  }
+
+  internal static bool IsTransientInstallFailure(Exception ex) {
+    for (Exception? current = ex; current != null; current = current.InnerException) {
+      if (current is AggregateException agg) {
+        return agg.Flatten().InnerExceptions.Any(IsTransientInstallFailure);
+      }
+      if (current is HttpRequestException httpEx) {
+        return httpEx.StatusCode is null
+            || httpEx.StatusCode == HttpStatusCode.RequestTimeout
+            || httpEx.StatusCode == HttpStatusCode.TooManyRequests
+            || (int)httpEx.StatusCode.Value >= 500;
+      }
+      if (current is SocketException
+          || current is AuthenticationException
+          || current is TaskCanceledException
+          || current is TimeoutException
+          || current is EndOfStreamException
+          || current.GetType() == typeof(IOException)) {
+        return true;
+      }
+    }
+    return false;
   }
 
   public static void StopTestServer(TestServerProcess? server) {
