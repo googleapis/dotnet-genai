@@ -87,6 +87,7 @@ public class EmbedContentTest {
         model: modelName, contents: contents, config: new EmbedContentConfig { OutputDimensionality = 10 });
 
     Assert.IsNotNull(vertexResponse.Embeddings);
+    Assert.AreEqual(5.0, vertexResponse.Embeddings[0].Statistics?.TokenCount);
   }
 
   [TestMethod]
@@ -106,6 +107,7 @@ public class EmbedContentTest {
         model: modelName, contents: "What is your name?", config: new EmbedContentConfig { OutputDimensionality = 10 });
 
     Assert.IsNotNull(vertexResponse.Embeddings);
+    Assert.AreEqual(5.0, vertexResponse.Embeddings[0].Statistics?.TokenCount);
   }
 
   [TestMethod]
@@ -200,6 +202,7 @@ public class EmbedContentTest {
 
       Assert.IsNotNull(vertexResponse);
       Assert.IsNotNull(vertexResponse.Embeddings);
+      Assert.AreEqual(5.0, vertexResponse.Embeddings[0].Statistics?.TokenCount);
   }
 
   [TestMethod]
@@ -257,6 +260,23 @@ public class EmbedContentTest {
     }
 
     [TestMethod]
+    public async Task EmbedContentNewApiMaasListOfContentsErrorVertexTest()
+    {
+        var contents = new List<Content> {
+            new Content { Parts = new List<Part> { new Part { Text = "hello" } } },
+            new Content { Parts = new List<Part> { new Part { Text = "world" } } }
+        };
+        var exception = await Assert.ThrowsExceptionAsync<ArgumentException>(
+            () => vertexClient.Models.EmbedContentAsync(
+                model: "publishers/intfloat/models/multilingual-e5-large-instruct-maas",
+                contents: contents));
+
+        Assert.AreEqual(
+            "The embedContent API for this model only supports one content at a time.",
+            exception.Message);
+    }
+
+    [TestMethod]
     public async Task EmbedContentNewApiGcsImageVertexTest()
     {
         var contents = new List<Content> {
@@ -290,14 +310,27 @@ public class EmbedContentTest {
     [TestMethod]
     public async Task EmbedContentNewApiListOfContentsVertexTest()
     {
+        var globalVertexClient = new Client(
+            project: System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_PROJECT"),
+            location: "global", vertexAI: true,
+            credential: TestServer.GetCredentialForTestMode(),
+            httpOptions: new HttpOptions {
+                Headers = new Dictionary<string, string> { { "Test-Name",
+                                                             $"{GetType().Name}.{TestContext.TestName}" } },
+                BaseUrl = "http://localhost:1455"
+            });
         var contents = new List<Content> {
             new Content { Parts = new List<Part> { new Part { Text = "hello" } } },
             new Content { Parts = new List<Part> { new Part { Text = "world" } } }
         };
-        var exception = await Assert.ThrowsExceptionAsync<ArgumentException>(
-            () => vertexClient.Models.EmbedContentAsync(model: multimodalModelName, contents: contents, config: null));
+        var vertexResponse = await globalVertexClient.Models.EmbedContentAsync(
+            model: "gemini-embedding-2", contents: contents,
+            config: new EmbedContentConfig { OutputDimensionality = 10 });
 
-        Assert.IsTrue(exception.Message.Contains("The embedContent API for this model only supports one content at a time."));
+        Assert.IsNotNull(vertexResponse);
+        Assert.IsNotNull(vertexResponse.Embeddings);
+        Assert.AreEqual(2, vertexResponse.Embeddings.Count);
+        Assert.IsNotNull(vertexResponse.UsageMetadata?.TrafficType);
     }
 
     [TestMethod]

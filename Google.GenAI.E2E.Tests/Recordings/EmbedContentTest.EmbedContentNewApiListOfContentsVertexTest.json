@@ -1,0 +1,109 @@
+{
+  "recordID": "EmbedContentTest.EmbedContentNewApiListOfContentsVertexTest",
+  "interactions": [
+    {
+      "request": {
+        "method": "POST",
+        "url": "/v1beta1/projects/REDACTED/locations/global/publishers/google/models/gemini-embedding-2:batchEmbedContents",
+        "request": "POST /v1beta1/projects/REDACTED/locations/global/publishers/google/models/gemini-embedding-2:batchEmbedContents HTTP/1.1",
+        "headers": {
+          "Content-Length": "194",
+          "Content-Type": "application/json; charset=utf-8",
+          "Test-Name": "EmbedContentTest.EmbedContentNewApiListOfContentsVertexTest"
+        },
+        "bodySegments": [
+          {
+            "requests": [
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "hello"
+                    }
+                  ]
+                },
+                "embedContentConfig": {
+                  "outputDimensionality": 10
+                }
+              },
+              {
+                "content": {
+                  "parts": [
+                    {
+                      "text": "world"
+                    }
+                  ]
+                },
+                "embedContentConfig": {
+                  "outputDimensionality": 10
+                }
+              }
+            ]
+          }
+        ],
+        "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
+        "serverAddress": "aiplatform.googleapis.com",
+        "port": 443,
+        "protocol": "https"
+      },
+      "shaSum": "fcd56eab4c72dcf23fed85ccc331bfdef5e52f2caa3aefd70fae365968bb611b",
+      "response": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=UTF-8",
+          "Date": "Mon, 09 Nov 2026 22:55:37 GMT",
+          "Server": "scaffolding on HTTPServer2",
+          "Vary": "Origin, X-Origin, Referer",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Xss-Protection": "0"
+        },
+        "bodySegments": [
+          {
+            "embeddings": [
+              {
+                "values": [
+                  -0.1412324,
+                  0.24212286,
+                  0.3289088,
+                  0.09157379,
+                  -0.22029103,
+                  0.05441322,
+                  0.18058188,
+                  0.45441052,
+                  0.15950535,
+                  -0.69916636
+                ]
+              },
+              {
+                "values": [
+                  0.32305884,
+                  0.23205203,
+                  0.32724804,
+                  -0.3902057,
+                  0.09127207,
+                  -0.046185613,
+                  -0.17103538,
+                  -0.3556777,
+                  0.049601723,
+                  -0.6432334
+                ]
+              }
+            ],
+            "usageMetadata": {
+              "promptTokenCount": 2,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 2
+                }
+              ],
+              "totalTokenCount": 2,
+              "trafficType": "ON_DEMAND"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

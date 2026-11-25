@@ -4,21 +4,24 @@
     {
       "request": {
         "method": "POST",
-        "url": "/v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-embedding-001:predict",
-        "request": "POST /v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-embedding-001:predict HTTP/1.1",
+        "url": "/v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-embedding-001:embedContent",
+        "request": "POST /v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-embedding-001:embedContent HTTP/1.1",
         "headers": {
-          "Content-Length": "89",
+          "Content-Length": "116",
           "Content-Type": "application/json; charset=utf-8",
           "Test-Name": "EmbedContentTest.EmbedContentSingleStringVertexTest"
         },
         "bodySegments": [
           {
-            "instances": [
-              {
-                "content": "What is your name?"
-              }
-            ],
-            "parameters": {
+            "content": {
+              "parts": [
+                {
+                  "text": "What is your name?"
+                }
+              ],
+              "role": "user"
+            },
+            "embedContentConfig": {
               "outputDimensionality": 10
             }
           }
@@ -28,45 +31,39 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "70bf401e67fe887810510c8d0d438b8ff8a1c4fa832d164b5850425dab68d8e1",
+      "shaSum": "6d04a966e1271b8adb4dd4b9b4a2299b83e9c29d9ef400c1e6ff182f43539f79",
       "response": {
         "statusCode": 200,
         "headers": {
           "Content-Type": "application/json; charset=UTF-8",
-          "Date": "Thu, 09 Apr 2026 18:58:31 GMT",
+          "Date": "Mon, 09 Nov 2026 22:55:37 GMT",
           "Server": "scaffolding on HTTPServer2",
           "Vary": "Origin, X-Origin, Referer",
           "X-Content-Type-Options": "nosniff",
           "X-Frame-Options": "SAMEORIGIN",
+          "X-Vertex-Ai-Llm-Request-Type": "dedicated",
           "X-Xss-Protection": "0"
         },
         "bodySegments": [
           {
-            "metadata": {
-              "billableCharacterCount": 15
+            "embedding": {
+              "values": [
+                -0.018861085,
+                -0.011005508,
+                0.019352917,
+                -0.05101798,
+                -0.0016475387,
+                0.015815651,
+                0.006764366,
+                -0.020334508,
+                -0.002372919,
+                0.011398057
+              ]
             },
-            "predictions": [
-              {
-                "embeddings": {
-                  "statistics": {
-                    "token_count": 5,
-                    "truncated": false
-                  },
-                  "values": [
-                    -0.018861085176467896,
-                    -0.011005507782101631,
-                    0.01935291662812233,
-                    -0.05101798102259636,
-                    -0.0016475387383252382,
-                    0.015815651044249535,
-                    0.006764365825802088,
-                    -0.020334508270025253,
-                    -0.0023729191161692142,
-                    0.011398057453334332
-                  ]
-                }
-              }
-            ]
+            "usageMetadata": {
+              "promptTokenCount": 5,
+              "trafficType": "PROVISIONED_THROUGHPUT"
+            }
           }
         ]
       }

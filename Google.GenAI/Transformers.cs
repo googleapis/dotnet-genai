@@ -738,10 +738,12 @@ namespace Google.GenAI
 
     internal static bool TIsVertexEmbedContentModel(string model)
     {
-      // Gemini Embeddings except gemini-embedding-001.
-      return (model.Contains("gemini") && model != "gemini-embedding-001")
-          // Open-source MaaS embedding models.
-          || model.Contains("maas");
+      return GetModelId(model).Contains("gemini") || TIsVertexMaasModel(model);
+    }
+
+    internal static bool TIsVertexMaasModel(string model)
+    {
+      return GetModelId(model).Contains("maas");
     }
 
     /// <summary>Formats a resource name given the resource name and resource prefix.</summary>
@@ -905,6 +907,12 @@ namespace Google.GenAI
       }
 
       return speechConfig;
+    }
+
+    private static string GetModelId(string model)
+    {
+      int lastSlash = model.LastIndexOf('/');
+      return lastSlash >= 0 ? model.Substring(lastSlash + 1) : model;
     }
   }
 }

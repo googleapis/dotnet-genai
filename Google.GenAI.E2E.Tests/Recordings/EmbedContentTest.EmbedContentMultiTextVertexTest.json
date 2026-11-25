@@ -4,30 +4,45 @@
     {
       "request": {
         "method": "POST",
-        "url": "/v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-embedding-001:predict",
-        "request": "POST /v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-embedding-001:predict HTTP/1.1",
+        "url": "/v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-embedding-001:batchEmbedContents",
+        "request": "POST /v1beta1/projects/REDACTED/locations/us-central1/publishers/google/models/gemini-embedding-001:batchEmbedContents HTTP/1.1",
         "headers": {
-          "Content-Length": "225",
+          "Content-Length": "321",
           "Content-Type": "application/json; charset=utf-8",
           "Test-Name": "EmbedContentTest.EmbedContentMultiTextVertexTest"
         },
         "bodySegments": [
           {
-            "instances": [
+            "requests": [
               {
-                "content": "What is your name?",
-                "task_type": "RETRIEVAL_DOCUMENT",
-                "title": "test_title"
+                "content": {
+                  "parts": [
+                    {
+                      "text": "What is your name?"
+                    }
+                  ]
+                },
+                "embedContentConfig": {
+                  "outputDimensionality": 10,
+                  "taskType": "RETRIEVAL_DOCUMENT",
+                  "title": "test_title"
+                }
               },
               {
-                "content": "I am a model.",
-                "task_type": "RETRIEVAL_DOCUMENT",
-                "title": "test_title"
+                "content": {
+                  "parts": [
+                    {
+                      "text": "I am a model."
+                    }
+                  ]
+                },
+                "embedContentConfig": {
+                  "outputDimensionality": 10,
+                  "taskType": "RETRIEVAL_DOCUMENT",
+                  "title": "test_title"
+                }
               }
-            ],
-            "parameters": {
-              "outputDimensionality": 10
-            }
+            ]
           }
         ],
         "previousRequest": "b4d6e60a9b97e7b98c63df9308728c5c88c0b40c398046772c63447b94608b4d",
@@ -35,65 +50,62 @@
         "port": 443,
         "protocol": "https"
       },
-      "shaSum": "1aa989ec4791f3d0804a2075b4b84e4b897c034bd104fff70f0f19a848bf0330",
+      "shaSum": "9c997013a66b7041e2d34240b9866f308b596ba99e56a62329c78e0c90a3f3cb",
       "response": {
         "statusCode": 200,
         "headers": {
           "Content-Type": "application/json; charset=UTF-8",
-          "Date": "Thu, 09 Apr 2026 18:58:31 GMT",
+          "Date": "Mon, 09 Nov 2026 22:55:37 GMT",
           "Server": "scaffolding on HTTPServer2",
           "Vary": "Origin, X-Origin, Referer",
           "X-Content-Type-Options": "nosniff",
           "X-Frame-Options": "SAMEORIGIN",
+          "X-Vertex-Ai-Llm-Request-Type": "dedicated",
           "X-Xss-Protection": "0"
         },
         "bodySegments": [
           {
-            "metadata": {
-              "billableCharacterCount": 45
-            },
-            "predictions": [
+            "embeddings": [
               {
-                "embeddings": {
-                  "statistics": {
-                    "token_count": 8,
-                    "truncated": false
-                  },
-                  "values": [
-                    -0.03950208052992821,
-                    0.0007256423123180866,
-                    0.03689415380358696,
-                    -0.06420937180519104,
-                    0.007837503217160702,
-                    0.007016174495220184,
-                    -0.013046161271631718,
-                    0.004000839311629534,
-                    0.019140515476465225,
-                    -0.0029148892499506474
-                  ]
-                }
+                "values": [
+                  -0.03950208,
+                  0.0007256423,
+                  0.036894154,
+                  -0.06420937,
+                  0.007837503,
+                  0.0070161745,
+                  -0.013046161,
+                  0.0040008393,
+                  0.019140515,
+                  -0.0029148892
+                ]
               },
               {
-                "embeddings": {
-                  "statistics": {
-                    "token_count": 8,
-                    "truncated": false
-                  },
-                  "values": [
-                    -0.03709328547120094,
-                    0.010633465833961964,
-                    0.022869333624839783,
-                    -0.06662951409816742,
-                    -0.006756313610821962,
-                    0.01239081472158432,
-                    -0.009692389518022537,
-                    -0.0016614407068118453,
-                    -0.0002718711912166327,
-                    -0.01078079454600811
-                  ]
-                }
+                "values": [
+                  -0.037093285,
+                  0.010633466,
+                  0.022869334,
+                  -0.066629514,
+                  -0.0067563136,
+                  0.012390815,
+                  -0.0096923895,
+                  -0.0016614407,
+                  -0.0002718712,
+                  -0.010780795
+                ]
               }
-            ]
+            ],
+            "usageMetadata": {
+              "promptTokenCount": 16,
+              "promptTokensDetails": [
+                {
+                  "modality": "TEXT",
+                  "tokenCount": 16
+                }
+              ],
+              "totalTokenCount": 16,
+              "trafficType": "PROVISIONED_THROUGHPUT"
+            }
           }
         ]
       }
